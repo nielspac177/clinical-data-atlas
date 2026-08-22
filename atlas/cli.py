@@ -13,8 +13,9 @@ from __future__ import annotations
 
 import argparse
 import dataclasses
-import json
 import sys
+from collections.abc import Callable
+from pathlib import Path
 from typing import TypeVar
 
 from atlas import config, harvest, io, normalize, schema
@@ -24,19 +25,42 @@ from atlas.normalize import common
 _T = TypeVar("_T")
 
 
+class _NoSuchSource(Exception):
+    """Raised by `_select` when `--source` is given, the registry isn't
+    empty, and `--source` doesn't match anything in it -- the caller
+    should treat this as a user error (exit 2), distinct from "nothing
+    registered at all"."""
+
+    def __init__(self, source: str, available: list[str]) -> None:
+        super().__init__(source)
+        self.source = source
+        self.available = available
+
+
 def _select(registry: dict[str, _T], source: str | None) -> dict[str, _T]:
     """Filter `registry` down to `--source`'s single entry, or return it
     whole when no `--source` was given.
 
-    A `--source` value that matches nothing resolves to `{}` -- on
-    purpose indistinguishable from "nothing registered at all", so
-    callers only need one "nothing to do" branch.
+    Raises `_NoSuchSource` when `--source` is given against a non-empty
+    registry that doesn't contain it. A `--source` value given against a
+    *truly empty* registry is deliberately left alone (returns `{}`,
+    same as no `--source` at all): with nothing registered, every
+    possible `--source` value is equally "not found", so the caller's
+    own "nothing registered" message is more useful than an "available:"
+    list with nothing in it.
     """
     if source is None:
         return registry
     if source in registry:
         return {source: registry[source]}
+    if registry:
+        raise _NoSuchSource(source, sorted(registry))
     return {}
+
+
+def _print_unknown_source(exc: _NoSuchSource) -> None:
+    available = ", ".join(exc.available)
+    print(f"unknown source {exc.source!r} (available: {available})", file=sys.stderr)
 
 
 # ---------------------------------------------------------------------------
@@ -99,14 +123,18 @@ def _cmd_harvest(args: argparse.Namespace) -> int:
     """Run harvesters from the registry (`atlas.harvest.get_registry`).
 
     Exit codes: 0 when there's nothing to do (no sources registered at
-    all, or `--source` matched none) or when every selected source's run
-    completed without every one of them failing; 1 when `--probe` found
-    at least one source unreachable; 3 when a plain harvest ran and
-    *every* selected source failed. A single source raising never aborts
-    the others -- its exception is caught and reported as a `"failed"`
-    result like any other failure.
+    all) or when a plain harvest ran without every selected source
+    failing; 1 when `--probe` found at least one source unreachable; 2
+    when `--source` doesn't match anything in a non-empty registry; 3
+    when a plain harvest ran and *every* selected source failed. A
+    single source raising never aborts the others -- its exception is
+    caught and reported as a `"failed"` result like any other failure.
     """
-    selected = _select(harvest.get_registry(), args.source)
+    try:
+        selected = _select(harvest.get_registry(), args.source)
+    except _NoSuchSource as exc:
+        _print_unknown_source(exc)
+        return 2
     if not selected:
         print("no sources registered")
         return 0
@@ -142,57 +170,85 @@ def _cmd_harvest(args: argparse.Namespace) -> int:
 # ---------------------------------------------------------------------------
 
 
+def _normalize_source(source: str, normalize_fn: Callable, out_dir: Path) -> str:
+    """Normalize one source's raw store; returns `"ok"` or `"skipped"`
+    (this source has never been harvested -- no manifest yet). Any other
+    problem (a corrupt manifest, a normalizer bug, a `Record`
+    `ValidationError`, ...) propagates, for `_cmd_normalize` to catch
+    and report as a per-source failure rather than aborting the run.
+    """
+    store = RawStore(source)
+    manifest = store.manifest()
+    if manifest is None:
+        print(f"{source}: skipped (no raw data)")
+        return "skipped"
+
+    harvested_at = manifest["harvested_at"]
+    envelopes = store.load_all()
+
+    records: list[schema.Record] = []
+    excluded: list[common.Excluded] = []
+    for native_id, envelope in envelopes.items():
+        first_seen = manifest["records"][native_id]["first_seen"]
+        outcome = normalize_fn(
+            envelope, harvested_at=harvested_at, first_seen=first_seen
+        )
+        if isinstance(outcome, common.Excluded):
+            excluded.append(outcome)
+        else:
+            records.append(outcome)
+
+    records.sort(key=lambda record: record.id)
+    excluded.sort(key=lambda item: item.native_id)
+
+    io.write_jsonl(
+        out_dir / f"{source}.jsonl",
+        [record.model_dump(mode="json") for record in records],
+    )
+    io.write_jsonl(
+        out_dir / f"{source}.excluded.jsonl",
+        [dataclasses.asdict(item) for item in excluded],
+    )
+    print(f"{source}: {len(records)} records, {len(excluded)} excluded")
+    return "ok"
+
+
 def _cmd_normalize(args: argparse.Namespace) -> int:
     """Normalize each selected source's raw store into the canonical
     schema, writing `data/catalog/normalized/<source>.jsonl` (records,
     canonical-JSONL, sorted by id) and `<source>.excluded.jsonl`
     (records a normalizer deliberately left out).
 
-    Always returns 0: with no normalizers registered (`atlas.normalize.
-    get_normalizers`) -- or `--source` matching none -- it prints `no
-    normalizers registered` and does nothing else. Unlike `harvest`,
-    per-source failures aren't isolated here: that isolation is the
-    `refresh` orchestrator's job (Task 2.7), which tries harvest+
-    normalize together per source; this is the lower-level, one-source-
-    at-a-time debugging command.
+    Exit codes: 0 when there's nothing to do (no normalizers registered
+    at all) or when at least one selected source didn't fail; 2 when
+    `--source` doesn't match anything in a non-empty registry; 3 when
+    every selected source failed. A source that has never been harvested
+    (no manifest yet) is reported `skipped`, not a failure. A single
+    source's exception -- a normalizer bug, a `Record` `ValidationError`,
+    a missing/corrupt manifest, anything -- is caught and reported like
+    any other failure; it never aborts the others.
     """
-    selected = _select(normalize.get_normalizers(), args.source)
+    try:
+        selected = _select(normalize.get_normalizers(), args.source)
+    except _NoSuchSource as exc:
+        _print_unknown_source(exc)
+        return 2
     if not selected:
         print("no normalizers registered")
         return 0
 
     out_dir = config.CATALOG / "normalized"
+    statuses: list[str] = []
     for source, (normalize_fn, _enrichment_text_fn) in sorted(selected.items()):
-        store = RawStore(source)
-        manifest = json.loads(store.manifest_path.read_text(encoding="utf-8"))
-        harvested_at = manifest["harvested_at"]
-        envelopes = store.load_all()
+        try:
+            status = _normalize_source(source, normalize_fn, out_dir)
+        except Exception as exc:  # noqa: BLE001 -- one bad source must not kill the run
+            print(f"{source}: FAILED {type(exc).__name__}: {exc}")
+            status = "failed"
+        statuses.append(status)
 
-        records: list[schema.Record] = []
-        excluded: list[common.Excluded] = []
-        for native_id, envelope in envelopes.items():
-            first_seen = manifest["records"][native_id]["first_seen"]
-            outcome = normalize_fn(
-                envelope, harvested_at=harvested_at, first_seen=first_seen
-            )
-            if isinstance(outcome, common.Excluded):
-                excluded.append(outcome)
-            else:
-                records.append(outcome)
-
-        records.sort(key=lambda record: record.id)
-        excluded.sort(key=lambda item: item.native_id)
-
-        io.write_jsonl(
-            out_dir / f"{source}.jsonl",
-            [record.model_dump(mode="json") for record in records],
-        )
-        io.write_jsonl(
-            out_dir / f"{source}.excluded.jsonl",
-            [dataclasses.asdict(item) for item in excluded],
-        )
-        print(f"{source}: {len(records)} records, {len(excluded)} excluded")
-
+    if all(status == "failed" for status in statuses):
+        return 3
     return 0
 
 

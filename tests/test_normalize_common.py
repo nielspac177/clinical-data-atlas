@@ -221,7 +221,9 @@ def test_excluded_carries_native_id_and_reason():
 # ---------------------------------------------------------------------------
 
 
-def test_get_normalizers_is_empty_with_no_source_modules():
+def test_get_normalizers_is_empty_with_no_source_modules(monkeypatch):
+    monkeypatch.setattr(normalize_pkg, "NORMALIZERS", {})
+    monkeypatch.setattr(normalize_pkg.pkgutil, "iter_modules", lambda path: [])
     assert normalize_pkg.get_normalizers() == {}
 
 
@@ -343,3 +345,104 @@ def test_get_normalizers_caches_result_across_calls_once_non_empty(monkeypatch):
 
     assert first == second == {"cached_source": (fake_normalize, fake_enrichment_text)}
     assert call_count == 1  # discovery only ran once; second call served from cache
+
+
+def test_discover_records_import_error_and_continues(monkeypatch, capsys):
+    monkeypatch.setattr(normalize_pkg, "NORMALIZERS", {})
+    monkeypatch.setattr(normalize_pkg, "DISCOVERY_ERRORS", {})
+
+    def good_normalize(envelope, *, harvested_at, first_seen):
+        raise NotImplementedError
+
+    def good_enrichment_text(envelope):
+        raise NotImplementedError
+
+    good_module = types.ModuleType("atlas.normalize.good_source")
+    good_module.normalize = good_normalize
+    good_module.enrichment_text = good_enrichment_text
+    good_module.SOURCE = "good_source"
+
+    def fake_import_module(name):
+        if name.endswith(".broken_source"):
+            raise ImportError("boom: missing dependency")
+        return good_module
+
+    monkeypatch.setattr(
+        normalize_pkg.pkgutil,
+        "iter_modules",
+        lambda path: [
+            SimpleNamespace(name="broken_source"),
+            SimpleNamespace(name="good_source"),
+        ],
+    )
+    monkeypatch.setattr(normalize_pkg.importlib, "import_module", fake_import_module)
+
+    registry = normalize_pkg.get_normalizers()
+
+    assert registry == {"good_source": (good_normalize, good_enrichment_text)}
+    assert normalize_pkg.DISCOVERY_ERRORS == {
+        "broken_source": "boom: missing dependency"
+    }
+    stderr = capsys.readouterr().err
+    assert (
+        "[normalize] failed to import atlas.normalize.broken_source: "
+        "boom: missing dependency" in stderr
+    )
+
+
+def test_discover_raises_on_duplicate_source_across_modules(monkeypatch):
+    monkeypatch.setattr(normalize_pkg, "NORMALIZERS", {})
+
+    def normalize_one(envelope, *, harvested_at, first_seen):
+        raise NotImplementedError
+
+    def enrichment_text_one(envelope):
+        raise NotImplementedError
+
+    def normalize_two(envelope, *, harvested_at, first_seen):
+        raise NotImplementedError
+
+    def enrichment_text_two(envelope):
+        raise NotImplementedError
+
+    # Functions defined in this test module default to __module__ ==
+    # this test file; override so the collision message can name two
+    # distinct "source modules", as it would for two real files.
+    normalize_one.__module__ = "atlas.normalize.dup_one"
+    enrichment_text_one.__module__ = "atlas.normalize.dup_one"
+    normalize_two.__module__ = "atlas.normalize.dup_two"
+    enrichment_text_two.__module__ = "atlas.normalize.dup_two"
+
+    module_one = types.ModuleType("atlas.normalize.dup_one")
+    module_one.normalize = normalize_one
+    module_one.enrichment_text = enrichment_text_one
+    module_one.SOURCE = "dup_source"
+
+    module_two = types.ModuleType("atlas.normalize.dup_two")
+    module_two.normalize = normalize_two
+    module_two.enrichment_text = enrichment_text_two
+    module_two.SOURCE = "dup_source"
+
+    modules_by_name = {
+        "atlas.normalize.dup_one": module_one,
+        "atlas.normalize.dup_two": module_two,
+    }
+
+    monkeypatch.setattr(
+        normalize_pkg.pkgutil,
+        "iter_modules",
+        lambda path: [
+            SimpleNamespace(name="dup_one"),
+            SimpleNamespace(name="dup_two"),
+        ],
+    )
+    monkeypatch.setattr(
+        normalize_pkg.importlib, "import_module", lambda name: modules_by_name[name]
+    )
+
+    with pytest.raises(RuntimeError) as exc_info:
+        normalize_pkg.get_normalizers()
+    message = str(exc_info.value)
+    assert "dup_source" in message
+    assert "atlas.normalize.dup_one" in message
+    assert "atlas.normalize.dup_two" in message

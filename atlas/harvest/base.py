@@ -145,6 +145,17 @@ class RawStore:
             return None
         return json.loads(self.manifest_path.read_text(encoding="utf-8"))
 
+    def manifest(self) -> dict | None:
+        """The *current* on-disk manifest in full (`None` if this source
+        has never been harvested yet) -- `source`, `harvested_at`,
+        `endpoints`, `status`, `error`, `counts`, and `records`. Public
+        counterpart to `_read_manifest` for callers outside this module
+        (e.g. `atlas.cli`'s `normalize` subcommand) that need more than
+        just the `records` map `existing()` returns -- `harvested_at` in
+        particular.
+        """
+        return self._read_manifest()
+
     def existing(self) -> dict[str, dict]:
         """The *current* on-disk manifest's ``records`` map, re-read
         fresh from ``manifest.json`` on every call (``{}`` if this source

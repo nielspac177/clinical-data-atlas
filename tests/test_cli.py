@@ -5,9 +5,9 @@
 `schema` and the no-args help path are already covered in
 tests/test_schema.py. Nothing here touches the network or the real
 `data/` tree: harvesters are fakes injected via monkeypatching
-`atlas.harvest.get_registry`, and the one `normalize` round-trip test
-monkeypatches `atlas.cli.RawStore` and `atlas.config.CATALOG` so it only
-ever touches `tmp_path`.
+`atlas.harvest.get_registry`, and the `normalize` tests monkeypatch
+`atlas.cli.RawStore` and `atlas.config.CATALOG` so they only ever touch
+`tmp_path`.
 """
 
 from __future__ import annotations
@@ -17,7 +17,7 @@ import json
 import pytest
 
 from atlas import cli, config, harvest, normalize, schema
-from atlas.harvest.base import Harvester, HarvestResult
+from atlas.harvest.base import Harvester, HarvestResult, RawStore
 from atlas.normalize import common as normalize_common
 
 # ---------------------------------------------------------------------------
@@ -82,11 +82,37 @@ def test_harvest_no_sources_registered_prints_message_and_returns_0(
     assert capsys.readouterr().out.strip() == "no sources registered"
 
 
-def test_harvest_unmatched_source_flag_is_treated_as_no_sources(monkeypatch, capsys):
-    fake = _make_fake_harvester(name="fake")
-    monkeypatch.setattr(harvest, "get_registry", lambda: {"fake": fake})
-    assert cli.main(["harvest", "--source", "does-not-exist"]) == 0
+def test_harvest_source_flag_on_empty_registry_still_prints_no_sources(
+    monkeypatch, capsys
+):
+    monkeypatch.setattr(harvest, "get_registry", dict)
+    assert cli.main(["harvest", "--source", "anything"]) == 0
     assert capsys.readouterr().out.strip() == "no sources registered"
+
+
+def test_harvest_unknown_source_prints_available_and_returns_2(monkeypatch, capsys):
+    a = _make_fake_harvester(name="a")
+    b = _make_fake_harvester(name="b")
+    monkeypatch.setattr(harvest, "get_registry", lambda: {"b": b, "a": a})
+
+    assert cli.main(["harvest", "--source", "does-not-exist"]) == 2
+
+    captured = capsys.readouterr()
+    assert captured.out == ""
+    assert captured.err.strip() == "unknown source 'does-not-exist' (available: a, b)"
+
+
+def test_harvest_probe_unknown_source_prints_available_and_returns_2(
+    monkeypatch, capsys
+):
+    a = _make_fake_harvester(name="a")
+    monkeypatch.setattr(harvest, "get_registry", lambda: {"a": a})
+
+    assert cli.main(["harvest", "--probe", "--source", "does-not-exist"]) == 2
+
+    captured = capsys.readouterr()
+    assert captured.out == ""
+    assert captured.err.strip() == "unknown source 'does-not-exist' (available: a)"
 
 
 # ---------------------------------------------------------------------------
@@ -208,16 +234,31 @@ def test_normalize_no_normalizers_registered_prints_message_and_returns_0(
     assert capsys.readouterr().out.strip() == "no normalizers registered"
 
 
-def test_normalize_unmatched_source_flag_is_treated_as_no_normalizers(
+def test_normalize_source_flag_on_empty_registry_still_prints_no_normalizers(
     monkeypatch, capsys
 ):
+    monkeypatch.setattr(normalize, "get_normalizers", dict)
+    assert cli.main(["normalize", "--source", "anything"]) == 0
+    assert capsys.readouterr().out.strip() == "no normalizers registered"
+
+
+def test_normalize_unknown_source_prints_available_and_returns_2(monkeypatch, capsys):
     monkeypatch.setattr(
         normalize,
         "get_normalizers",
-        lambda: {"curated": (lambda **kw: None, lambda e: "")},
+        lambda: {
+            "curated": (lambda **kw: None, lambda e: ""),
+            "openneuro": (lambda **kw: None, lambda e: ""),
+        },
     )
-    assert cli.main(["normalize", "--source", "does-not-exist"]) == 0
-    assert capsys.readouterr().out.strip() == "no normalizers registered"
+    assert cli.main(["normalize", "--source", "does-not-exist"]) == 2
+
+    captured = capsys.readouterr()
+    assert captured.out == ""
+    assert (
+        captured.err.strip()
+        == "unknown source 'does-not-exist' (available: curated, openneuro)"
+    )
 
 
 def _fake_envelope(native_id: str, title: str) -> dict:
@@ -257,17 +298,18 @@ def _fake_enrichment_text(envelope: dict) -> str:
     return envelope["payload"]["title"]
 
 
-def _make_fake_rawstore_cls(envelopes: dict, manifest: dict, tmp_path):
+def _make_fake_rawstore_cls(envelopes: dict, manifest: dict | None):
     """A stand-in for `atlas.harvest.base.RawStore`, injected via
-    monkeypatching `atlas.cli.RawStore` -- serves canned envelopes and a
-    canned manifest without ever touching `data/raw/`."""
-    manifest_path = tmp_path / "manifest.json"
-    manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
+    monkeypatching `atlas.cli.RawStore` -- serves a canned manifest
+    (`None` simulates a source that was never harvested) and canned
+    envelopes without ever touching `data/raw/`."""
 
     class _FakeRawStore:
         def __init__(self, source: str) -> None:
             self.source = source
-            self.manifest_path = manifest_path
+
+        def manifest(self) -> dict | None:
+            return manifest
 
         def load_all(self) -> dict:
             return dict(envelopes)
@@ -301,9 +343,7 @@ def test_normalize_writes_sorted_records_and_excluded_jsonl(
             "good-1": {"hash": "sha256:ccc", "first_seen": "2026-03-01"},
         },
     }
-    monkeypatch.setattr(
-        cli, "RawStore", _make_fake_rawstore_cls(envelopes, manifest, tmp_path)
-    )
+    monkeypatch.setattr(cli, "RawStore", _make_fake_rawstore_cls(envelopes, manifest))
     monkeypatch.setattr(
         normalize,
         "get_normalizers",
@@ -332,6 +372,123 @@ def test_normalize_writes_sorted_records_and_excluded_jsonl(
     assert good_2["provenance"]["harvested_at"] == "2026-01-01"  # first_seen
     assert good_2["provenance"]["last_verified"] == "2026-08-20"  # this run
     assert excluded == [{"native_id": "bad-1", "reason": "wrong species"}]
+
+
+def test_normalize_missing_manifest_is_skipped_not_failed(monkeypatch, capsys):
+    monkeypatch.setattr(
+        cli, "RawStore", _make_fake_rawstore_cls(envelopes={}, manifest=None)
+    )
+    monkeypatch.setattr(
+        normalize,
+        "get_normalizers",
+        lambda: {"curated": (_fake_normalize, _fake_enrichment_text)},
+    )
+
+    exit_code = cli.main(["normalize", "--source", "curated"])
+
+    assert exit_code == 0
+    assert capsys.readouterr().out.strip() == "curated: skipped (no raw data)"
+
+
+def test_normalize_exception_in_one_source_does_not_abort_others(
+    monkeypatch, tmp_path, capsys
+):
+    catalog_dir = tmp_path / "catalog"
+    monkeypatch.setattr(config, "CATALOG", catalog_dir)
+
+    ok_manifest = {
+        "harvested_at": "2026-08-20",
+        "records": {"good-1": {"hash": "sha256:aaa", "first_seen": "2026-01-01"}},
+    }
+    ok_envelopes = {"good-1": _fake_envelope("good-1", "Good Dataset")}
+
+    class _OkStore:
+        def __init__(self, source: str) -> None:
+            self.source = source
+
+        def manifest(self) -> dict:
+            return ok_manifest
+
+        def load_all(self) -> dict:
+            return dict(ok_envelopes)
+
+    class _BadStore:
+        def __init__(self, source: str) -> None:
+            self.source = source
+
+        def manifest(self) -> dict:
+            return {"harvested_at": "2026-08-20", "records": {}}
+
+        def load_all(self) -> dict:
+            raise RuntimeError("disk on fire")
+
+    def fake_rawstore(source: str):
+        return _OkStore(source) if source == "ok_source" else _BadStore(source)
+
+    monkeypatch.setattr(cli, "RawStore", fake_rawstore)
+    monkeypatch.setattr(
+        normalize,
+        "get_normalizers",
+        lambda: {
+            "ok_source": (_fake_normalize, _fake_enrichment_text),
+            "bad_source": (_fake_normalize, _fake_enrichment_text),
+        },
+    )
+
+    exit_code = cli.main(["normalize"])
+
+    assert exit_code == 0  # not every source failed
+    out = capsys.readouterr().out
+    assert "bad_source: FAILED RuntimeError: disk on fire" in out
+    assert "ok_source: 1 records, 0 excluded" in out
+
+    # the good source's output was still written despite the other's failure
+    assert (catalog_dir / "normalized" / "ok_source.jsonl").exists()
+    assert not (catalog_dir / "normalized" / "bad_source.jsonl").exists()
+
+
+def test_normalize_all_sources_failed_returns_3(monkeypatch, capsys):
+    class _AlwaysBadStore:
+        def __init__(self, source: str) -> None:
+            self.source = source
+
+        def manifest(self) -> dict:
+            raise RuntimeError("boom")
+
+    monkeypatch.setattr(cli, "RawStore", _AlwaysBadStore)
+    monkeypatch.setattr(
+        normalize,
+        "get_normalizers",
+        lambda: {
+            "a": (_fake_normalize, _fake_enrichment_text),
+            "b": (_fake_normalize, _fake_enrichment_text),
+        },
+    )
+
+    assert cli.main(["normalize"]) == 3
+
+
+# ---------------------------------------------------------------------------
+# atlas.harvest.base.RawStore.manifest() -- accessor added for _cmd_normalize
+# ---------------------------------------------------------------------------
+
+
+def test_rawstore_manifest_returns_none_before_first_harvest_then_the_manifest(
+    tmp_path,
+):
+    store = RawStore("demo", root=tmp_path)
+    assert store.manifest() is None
+
+    store.write("d1", {"title": "Demo"}, harvest_method="api", endpoints=[])
+    store.finalize(
+        listed_ids={"d1"}, harvested_at="2026-01-01", endpoints=[], status="ok"
+    )
+
+    manifest = RawStore("demo", root=tmp_path).manifest()
+
+    assert manifest is not None
+    assert manifest["harvested_at"] == "2026-01-01"
+    assert manifest["records"]["d1"]["first_seen"] == "2026-01-01"
 
 
 # ---------------------------------------------------------------------------
