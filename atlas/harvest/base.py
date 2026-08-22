@@ -127,7 +127,7 @@ class RawStore:
         self.records_dir = self.root / "records"
         self.manifest_path = self.root / "manifest.json"
 
-        # Filename -> native id claimed so far *this run* (collision guard).
+        # Case-folded filename -> native id claimed so far *this run*.
         self._filenames: dict[str, str] = {}
         # Native id -> {"hash", "first_seen"} for every write() call this run.
         self._run_records: dict[str, dict] = {}
@@ -146,14 +146,23 @@ class RawStore:
         return json.loads(self.manifest_path.read_text(encoding="utf-8"))
 
     def existing(self) -> dict[str, dict]:
-        """The previous manifest's ``records`` map, or ``{}`` if this
-        source has never been harvested (no manifest yet)."""
+        """The *current* on-disk manifest's ``records`` map, re-read
+        fresh from ``manifest.json`` on every call (``{}`` if this source
+        has never been harvested). Distinct from `self._previous`, the
+        frozen snapshot taken once at construction time that `write()`
+        and `finalize()` compare against for the rest of this run.
+        """
         manifest = self._read_manifest()
         return dict(manifest["records"]) if manifest else {}
 
     def load(self, native_id: str) -> dict:
         """The envelope previously written for `native_id`."""
         path = self.records_dir / _filename_for(native_id)
+        if not path.exists():
+            raise FileNotFoundError(
+                f"no raw record for source={self.source!r} native_id={native_id!r} "
+                f"(expected {path})"
+            )
         return json.loads(path.read_text(encoding="utf-8"))
 
     def load_all(self) -> dict[str, dict]:
@@ -179,14 +188,24 @@ class RawStore:
 
     def _claim_filename(self, native_id: str) -> str:
         """Resolve and reserve the filename for `native_id` this run,
-        raising if a *different* native id already claimed it."""
+        raising if a *different* native id already claimed it.
+
+        Collisions are tracked case-insensitively (`str.casefold`), not
+        just by exact match: "ABC" and "abc" both produce safe, distinct
+        filenames ("ABC.json" / "abc.json"), but macOS/Windows filesystems
+        treat those as the *same* file while Linux treats them as two --
+        letting that through would make committed `data/raw/` content
+        depend on which OS harvested it. The returned filename keeps its
+        real case; only the collision check is case-folded.
+        """
         filename = _filename_for(native_id)
-        claimant = self._filenames.setdefault(filename, native_id)
+        key = filename.casefold()
+        claimant = self._filenames.setdefault(key, native_id)
         if claimant != native_id:
             raise ValueError(
                 f"native ids {claimant!r} and {native_id!r} both map to "
-                f"filename {filename!r} within this run -- rename one of "
-                "them at the source"
+                f"filename {filename!r} within this run (case-insensitively) "
+                "-- rename one of them at the source"
             )
         return filename
 
@@ -248,14 +267,27 @@ class RawStore:
 
         - `status="failed"` (the harvest itself raised): nothing is ever
           deleted; `records` is the previous manifest merged with
-          whatever *was* written before the failure.
+          whatever *was* written via `write()` before the failure.
         - otherwise, if the listing shrank more than 20% versus the
           previous manifest (a likely paging/rate-limit glitch, not a
           real mass deletion at the source): `status` is forced to
           "failed", an explanatory `error` is set, nothing is deleted,
-          and `records` is kept exactly as the previous manifest had it.
-        - otherwise: native ids no longer in `listed_ids` are deleted
-          (file + manifest entry) and counted as `removed`.
+          and -- same as the failed case -- `records` is the previous
+          manifest merged with whatever was written this run, so a
+          record that genuinely changed before the guard fired is
+          reflected correctly rather than the manifest quietly
+          contradicting the file `write()` already put on disk.
+        - otherwise: every file under ``records/`` whose filename isn't
+          one of `listed_ids`'s expected filenames is deleted and counted
+          as `removed` -- scanning the directory itself rather than just
+          the previous manifest's ids, so a stray file left behind by
+          e.g. a crash before some earlier `finalize()` call gets cleaned
+          up too, not just ids the manifest already knew to expect.
+
+        Resets this instance's per-run bookkeeping (`write()`'s counts
+        and hashes) afterward, using this call's `records` as the new
+        baseline -- so a second `write()`/`finalize()` round-trip on the
+        same `RawStore` starts fresh instead of double-counting.
         """
         previous = self._previous
         resolved_this_run = {
@@ -265,32 +297,32 @@ class RawStore:
             }
             for native_id, entry in self._run_records.items()
         }
+        merged = {**previous, **resolved_this_run}
         removed = 0
 
         if status == "failed":
-            records = {**previous, **resolved_this_run}
+            records = merged
             final_status, final_error = "failed", error
         else:
             n_previous = len(previous)
             shrank = bool(previous) and len(listed_ids) < 0.8 * n_previous
             if shrank:
-                records = dict(previous)
+                records = merged
                 final_status = "failed"
                 final_error = (
                     f"listing shrank from {n_previous} to {len(listed_ids)} "
                     "(>20%); keeping previous records"
                 )
             else:
-                merged = {**previous, **resolved_this_run}
-                stale_ids = [nid for nid in previous if nid not in listed_ids]
-                for native_id in stale_ids:
-                    (self.records_dir / _filename_for(native_id)).unlink(
-                        missing_ok=True
-                    )
+                expected_filenames = {_filename_for(nid) for nid in listed_ids}
+                if self.records_dir.exists():
+                    for path in self.records_dir.glob("*.json"):
+                        if path.name not in expected_filenames:
+                            path.unlink()
+                            removed += 1
                 records = {
                     nid: entry for nid, entry in merged.items() if nid in listed_ids
                 }
-                removed = len(stale_ids)
                 final_status, final_error = status, error
 
         manifest = {
@@ -308,6 +340,16 @@ class RawStore:
             "records": records,
         }
         io.write_atomic(self.manifest_path, io.pretty_json(manifest))
+
+        # This run is done: the manifest we just wrote is the new
+        # baseline, and a subsequent write()/finalize() round-trip on
+        # this same instance should start counting fresh.
+        self._previous = records
+        self._filenames = {}
+        self._run_records = {}
+        self._written = 0
+        self._unchanged = 0
+
         return manifest
 
 

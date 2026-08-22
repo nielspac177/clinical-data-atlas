@@ -270,6 +270,35 @@ def test_write_same_native_id_twice_is_not_a_collision(tmp_path):
     store.write("A/B", {"title": "one"}, harvest_method="api", endpoints=[])
 
 
+def test_write_case_insensitive_collision_raises_value_error(tmp_path):
+    store = RawStore("demo", root=tmp_path)
+    store.write("ABC", {"title": "one"}, harvest_method="api", endpoints=[])
+    with pytest.raises(ValueError) as exc_info:
+        store.write("abc", {"title": "two"}, harvest_method="api", endpoints=[])
+    message = str(exc_info.value)
+    assert "ABC" in message
+    assert "abc" in message
+
+
+def test_write_case_insensitive_collision_does_not_lose_the_first_record(tmp_path):
+    store = RawStore("demo", root=tmp_path)
+    store.write("ABC", {"title": "one"}, harvest_method="api", endpoints=[])
+    with pytest.raises(ValueError):
+        store.write("abc", {"title": "two"}, harvest_method="api", endpoints=[])
+    # the first record is untouched -- no silent overwrite on a
+    # case-insensitive filesystem, no ambiguity about which one "won".
+    written_files = list((tmp_path / "demo" / "records").glob("*.json"))
+    assert len(written_files) == 1
+    envelope = json.loads(written_files[0].read_text(encoding="utf-8"))
+    assert envelope == {
+        "source": "demo",
+        "native_id": "ABC",
+        "harvest_method": "api",
+        "endpoints": [],
+        "payload": {"title": "one"},
+    }
+
+
 # ---------------------------------------------------------------------------
 # RawStore.existing / load / load_all
 # ---------------------------------------------------------------------------
@@ -311,6 +340,32 @@ def test_load_returns_verbatim_envelope(tmp_path):
         "endpoints": ["https://api/x"],
         "payload": {"title": "Demo"},
     }
+
+
+def test_load_missing_native_id_raises_clear_error(tmp_path):
+    store = RawStore("demo", root=tmp_path)
+    with pytest.raises(FileNotFoundError) as exc_info:
+        store.load("missing")
+    message = str(exc_info.value)
+    assert "demo" in message
+    assert "missing" in message
+
+
+def test_load_all_missing_file_for_manifest_entry_raises_clear_error(tmp_path):
+    store = RawStore("demo", root=tmp_path)
+    store.write("a", {"v": 1}, harvest_method="api", endpoints=[])
+    store.finalize(
+        listed_ids={"a"}, harvested_at="2026-01-01", endpoints=[], status="ok"
+    )
+    # the file vanishes out from under an otherwise-valid manifest entry
+    (tmp_path / "demo" / "records" / "a.json").unlink()
+
+    fresh_store = RawStore("demo", root=tmp_path)
+    with pytest.raises(FileNotFoundError) as exc_info:
+        fresh_store.load_all()
+    message = str(exc_info.value)
+    assert "demo" in message
+    assert "a" in message
 
 
 def test_load_all_uses_manifest_records(tmp_path):
@@ -417,6 +472,36 @@ def test_finalize_removes_stale_record_and_counts_removed(tmp_path):
     assert not e_path.exists()
 
 
+def test_finalize_removes_orphan_record_file_not_tracked_by_any_manifest(tmp_path):
+    store = RawStore("demo", root=tmp_path)
+    store.write("a", {"id": "a"}, harvest_method="api", endpoints=[])
+    # Simulate a stray file left behind by e.g. a crash before finalize()
+    # ever ran -- it has no manifest entry to be "stale" against, so only
+    # a directory scan (not a previous-manifest diff) can catch it.
+    orphan_path = tmp_path / "demo" / "records" / "zz.json"
+    orphan_path.write_text(
+        io.pretty_json(
+            {
+                "source": "demo",
+                "native_id": "zz",
+                "harvest_method": "api",
+                "endpoints": [],
+                "payload": {},
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    manifest = store.finalize(
+        listed_ids={"a"}, harvested_at="2026-01-01", endpoints=[], status="ok"
+    )
+
+    assert manifest["status"] == "ok"
+    assert manifest["counts"]["removed"] == 1
+    assert "zz" not in manifest["records"]
+    assert not orphan_path.exists()
+
+
 def test_finalize_shrink_guard_triggers_failed_and_keeps_files(tmp_path):
     ids = ["a", "b", "c", "d", "e"]
     store1 = RawStore("demo", root=tmp_path)
@@ -441,6 +526,65 @@ def test_finalize_shrink_guard_triggers_failed_and_keeps_files(tmp_path):
     assert set(manifest["records"]) == set(ids)
     for nid in ids:
         assert (tmp_path / "demo" / "records" / f"{nid}.json").exists()
+
+
+def test_finalize_shrink_guard_reflects_a_record_changed_this_run(tmp_path):
+    ids = ["a", "b", "c", "d", "e"]
+    store1 = RawStore("demo", root=tmp_path)
+    for nid in ids:
+        store1.write(nid, {"id": nid, "v": 1}, harvest_method="api", endpoints=[])
+    store1.finalize(
+        listed_ids=set(ids), harvested_at="2026-01-01", endpoints=[], status="ok"
+    )
+
+    store2 = RawStore("demo", root=tmp_path)
+    store2.write(
+        "a", {"id": "a", "v": 2}, harvest_method="api", endpoints=[]
+    )  # changed
+    manifest = store2.finalize(
+        listed_ids={"a"}, harvested_at="2026-01-02", endpoints=[], status="ok"
+    )
+
+    assert manifest["status"] == "failed"  # the guard still fires
+    # ...but the manifest reflects what write() actually put on disk for
+    # "a", instead of silently reverting to the pre-run hash while the
+    # file itself already shows the new content (a sticky-forever
+    # mismatch if the source later reverted to v1: write() would then
+    # report "unchanged" against the stale v1 hash and never fix it).
+    assert manifest["records"]["a"]["hash"] == io.content_hash({"id": "a", "v": 2})
+    assert manifest["records"]["a"]["first_seen"] == "2026-01-01"  # still preserved
+    path = tmp_path / "demo" / "records" / "a.json"
+    assert json.loads(path.read_text(encoding="utf-8"))["payload"] == {
+        "id": "a",
+        "v": 2,
+    }
+    # the untouched previous ids are still exactly as they were
+    for nid in ["b", "c", "d", "e"]:
+        assert manifest["records"][nid]["hash"] == io.content_hash({"id": nid, "v": 1})
+
+
+def test_finalize_shrink_guard_adds_a_brand_new_id_written_this_run(tmp_path):
+    ids = ["a", "b", "c", "d", "e"]
+    store1 = RawStore("demo", root=tmp_path)
+    for nid in ids:
+        store1.write(nid, {"id": nid}, harvest_method="api", endpoints=[])
+    store1.finalize(
+        listed_ids=set(ids), harvested_at="2026-01-01", endpoints=[], status="ok"
+    )
+
+    store2 = RawStore("demo", root=tmp_path)
+    store2.write("a", {"id": "a"}, harvest_method="api", endpoints=[])
+    store2.write(
+        "f", {"id": "f"}, harvest_method="api", endpoints=[]
+    )  # never seen before
+    manifest = store2.finalize(
+        listed_ids={"a", "f"}, harvested_at="2026-01-02", endpoints=[], status="ok"
+    )
+
+    assert manifest["status"] == "failed"  # the guard still fires
+    assert manifest["records"]["f"]["hash"] == io.content_hash({"id": "f"})
+    assert manifest["records"]["f"]["first_seen"] == "2026-01-02"
+    assert (tmp_path / "demo" / "records" / "f.json").exists()
 
 
 def test_finalize_failed_status_keeps_previous_records_and_deletes_nothing(tmp_path):
@@ -494,6 +638,27 @@ def test_finalize_failed_status_merges_records_written_before_the_exception(tmp_
     assert manifest["records"]["z"]["first_seen"] == "2026-01-02"
 
 
+def test_finalize_twice_on_same_instance_does_not_double_count(tmp_path):
+    store = RawStore("demo", root=tmp_path)
+    store.write("a", {"v": 1}, harvest_method="api", endpoints=[])
+    first = store.finalize(
+        listed_ids={"a"}, harvested_at="2026-01-01", endpoints=[], status="ok"
+    )
+    assert first["counts"] == {"listed": 1, "written": 1, "unchanged": 0, "removed": 0}
+
+    store.write(
+        "a", {"v": 1}, harvest_method="api", endpoints=[]
+    )  # unchanged this round
+    store.write("b", {"v": 2}, harvest_method="api", endpoints=[])  # new this round
+    second = store.finalize(
+        listed_ids={"a", "b"}, harvested_at="2026-01-02", endpoints=[], status="ok"
+    )
+
+    assert second["counts"] == {"listed": 2, "written": 1, "unchanged": 1, "removed": 0}
+    assert second["records"]["a"]["first_seen"] == "2026-01-01"  # not re-stamped
+    assert second["records"]["b"]["first_seen"] == "2026-01-02"
+
+
 # ---------------------------------------------------------------------------
 # Harvester
 # ---------------------------------------------------------------------------
@@ -542,7 +707,11 @@ def test_harvester_default_constructs_rawstore_named_after_class(monkeypatch):
 # ---------------------------------------------------------------------------
 
 
-def test_get_registry_is_empty_with_no_source_modules():
+def test_get_registry_is_empty_when_there_are_no_source_modules_to_discover(
+    monkeypatch,
+):
+    monkeypatch.setattr(harvest_pkg, "REGISTRY", {})
+    monkeypatch.setattr(harvest_pkg.pkgutil, "iter_modules", lambda path: [])
     assert harvest_pkg.get_registry() == {}
 
 
@@ -603,6 +772,107 @@ def test_discover_registers_harvester_subclass_from_a_fake_module(monkeypatch):
     registry = harvest_pkg.get_registry()
 
     assert registry == {"fake_source": _FakeSourceHarvester}
+
+
+def test_discover_records_import_error_and_continues(monkeypatch, capsys):
+    monkeypatch.setattr(harvest_pkg, "REGISTRY", {})
+    monkeypatch.setattr(harvest_pkg, "DISCOVERY_ERRORS", {})
+
+    class _GoodHarvester(Harvester):
+        name = "good_source"
+        harvest_method = "api"
+
+        def probe(self) -> dict:
+            return {}
+
+        def harvest(
+            self, *, fast: bool = False, limit: int | None = None
+        ) -> HarvestResult:
+            return HarvestResult(source=self.name, status="ok")
+
+    good_module = types.ModuleType("atlas.harvest.good_source")
+    good_module.GoodHarvester = _GoodHarvester
+
+    def fake_import_module(name):
+        if name.endswith(".broken_source"):
+            raise ImportError("boom: missing dependency")
+        return good_module
+
+    monkeypatch.setattr(
+        harvest_pkg.pkgutil,
+        "iter_modules",
+        lambda path: [
+            SimpleNamespace(name="broken_source"),
+            SimpleNamespace(name="good_source"),
+        ],
+    )
+    monkeypatch.setattr(harvest_pkg.importlib, "import_module", fake_import_module)
+
+    registry = harvest_pkg.get_registry()
+
+    assert registry == {"good_source": _GoodHarvester}
+    assert harvest_pkg.DISCOVERY_ERRORS == {"broken_source": "boom: missing dependency"}
+    stderr = capsys.readouterr().err
+    assert (
+        "[harvest] failed to import atlas.harvest.broken_source: "
+        "boom: missing dependency" in stderr
+    )
+
+
+def test_discover_raises_on_duplicate_harvester_name_across_modules(monkeypatch):
+    monkeypatch.setattr(harvest_pkg, "REGISTRY", {})
+
+    class _FirstHarvester(Harvester):
+        name = "dup_source"
+        harvest_method = "api"
+
+        def probe(self) -> dict:
+            return {}
+
+        def harvest(
+            self, *, fast: bool = False, limit: int | None = None
+        ) -> HarvestResult:
+            return HarvestResult(source=self.name, status="ok")
+
+    class _SecondHarvester(Harvester):
+        name = "dup_source"
+        harvest_method = "scrape"
+
+        def probe(self) -> dict:
+            return {}
+
+        def harvest(
+            self, *, fast: bool = False, limit: int | None = None
+        ) -> HarvestResult:
+            return HarvestResult(source=self.name, status="ok")
+
+    _FirstHarvester.__module__ = "atlas.harvest.dup_one"
+    _SecondHarvester.__module__ = "atlas.harvest.dup_two"
+
+    module_one = types.ModuleType("atlas.harvest.dup_one")
+    module_one.FirstHarvester = _FirstHarvester
+    module_two = types.ModuleType("atlas.harvest.dup_two")
+    module_two.SecondHarvester = _SecondHarvester
+    modules_by_name = {
+        "atlas.harvest.dup_one": module_one,
+        "atlas.harvest.dup_two": module_two,
+    }
+
+    monkeypatch.setattr(
+        harvest_pkg.pkgutil,
+        "iter_modules",
+        lambda path: [SimpleNamespace(name="dup_one"), SimpleNamespace(name="dup_two")],
+    )
+    monkeypatch.setattr(
+        harvest_pkg.importlib, "import_module", lambda name: modules_by_name[name]
+    )
+
+    with pytest.raises(RuntimeError) as exc_info:
+        harvest_pkg.get_registry()
+    message = str(exc_info.value)
+    assert "dup_source" in message
+    assert "atlas.harvest.dup_one" in message
+    assert "atlas.harvest.dup_two" in message
 
 
 def test_get_registry_caches_result_across_calls_once_non_empty(monkeypatch):
