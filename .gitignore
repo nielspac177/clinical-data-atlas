@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+
+# uv / venv
+.venv/
+
+# HTTP / misc caches
+.cache/
+
+# Site build output and generated site data (never hand-commit a build)
+_site/
+site/data/
+
+# Node (JS test tooling, if any)
+node_modules/
+
+# OS
+.DS_Store
+
+# Test / lint tooling
+.pytest_cache/
+.ruff_cache/
+tests/e2e/artifacts/
+test-results/
+
+# Secrets
+.env
+
+# SDD scratch (self-ignored internally too; kept here for safety)
+.superpowers/
+
+# Parallel-agent worktrees
+.worktrees/
