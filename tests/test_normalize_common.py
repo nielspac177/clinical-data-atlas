@@ -221,7 +221,12 @@ def test_excluded_carries_native_id_and_reason():
 # ---------------------------------------------------------------------------
 
 
-def test_get_normalizers_is_empty_with_no_source_modules():
+def test_get_normalizers_is_empty_with_no_source_modules(monkeypatch):
+    # Same stubs as the atlas.harvest twin in tests/test_rawstore.py: the
+    # assertion is about an *empty package*, so discovery has to be shown
+    # an empty package rather than whatever source modules now exist.
+    monkeypatch.setattr(normalize_pkg, "NORMALIZERS", {})
+    monkeypatch.setattr(normalize_pkg.pkgutil, "iter_modules", lambda path: [])
     assert normalize_pkg.get_normalizers() == {}
 
 
