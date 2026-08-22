@@ -1,0 +1,80 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "MATCH-S1",
+  "payload": {
+    "dbgap_accession_number": "phs002153",
+    "disease_type": [
+      "Neoplasms, NOS",
+      "Complex Mixed and Stromal Neoplasms",
+      "Epithelial Neoplasms, NOS",
+      "Adenomas and Adenocarcinomas",
+      "Gliomas"
+    ],
+    "id": "MATCH-S1",
+    "name": "Genomic Characterization CS-MATCH-0007 Arm S1",
+    "primary_site": [
+      "Other and unspecified female genital organs",
+      "Bronchus and lung",
+      "Colon",
+      "Stomach",
+      "Breast"
+    ],
+    "program": {
+      "dbgap_accession_number": null,
+      "name": "MATCH",
+      "program_id": "893b0820-b50b-5c75-85f5-3b028e251811"
+    },
+    "project_id": "MATCH-S1",
+    "releasable": false,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 41,
+      "data_categories": [
+        {
+          "case_count": 39,
+          "data_category": "Simple Nucleotide Variation",
+          "file_count": 492
+        },
+        {
+          "case_count": 41,
+          "data_category": "Sequencing Reads",
+          "file_count": 184
+        },
+        {
+          "case_count": 41,
+          "data_category": "Biospecimen",
+          "file_count": 41
+        },
+        {
+          "case_count": 41,
+          "data_category": "Clinical",
+          "file_count": 41
+        },
+        {
+          "case_count": 37,
+          "data_category": "Transcriptome Profiling",
+          "file_count": 74
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 40,
+          "experimental_strategy": "WXS",
+          "file_count": 565
+        },
+        {
+          "case_count": 37,
+          "experimental_strategy": "RNA-Seq",
+          "file_count": 333
+        }
+      ],
+      "file_count": 980,
+      "file_size": 3465142447714
+    }
+  },
+  "source": "gdc"
+}

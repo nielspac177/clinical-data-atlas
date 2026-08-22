@@ -1,0 +1,88 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "TCGA-GBM",
+  "payload": {
+    "dbgap_accession_number": null,
+    "disease_type": [
+      "Gliomas",
+      "Not Reported"
+    ],
+    "id": "TCGA-GBM",
+    "name": "Glioblastoma Multiforme",
+    "primary_site": [
+      "Brain"
+    ],
+    "program": {
+      "dbgap_accession_number": "phs000178",
+      "name": "TCGA",
+      "program_id": "b80aa962-9650-5110-b3eb-bd087da808db"
+    },
+    "project_id": "TCGA-GBM",
+    "releasable": true,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 617,
+      "data_categories": [
+        {
+          "case_count": 601,
+          "data_category": "Simple Nucleotide Variation",
+          "file_count": 9789
+        },
+        {
+          "case_count": 428,
+          "data_category": "Sequencing Reads",
+          "file_count": 3251
+        },
+        {
+          "case_count": 617,
+          "data_category": "Biospecimen",
+          "file_count": 2920
+        },
+        {
+          "case_count": 617,
+          "data_category": "Clinical",
+          "file_count": 1219
+        },
+        {
+          "case_count": 600,
+          "data_category": "Copy Number Variation",
+          "file_count": 6981
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 401,
+          "experimental_strategy": "WXS",
+          "file_count": 7897
+        },
+        {
+          "case_count": 293,
+          "experimental_strategy": "RNA-Seq",
+          "file_count": 3519
+        },
+        {
+          "case_count": 347,
+          "experimental_strategy": "WGS",
+          "file_count": 4688
+        },
+        {
+          "case_count": 273,
+          "experimental_strategy": "miRNA-Seq",
+          "file_count": 834
+        },
+        {
+          "case_count": 9,
+          "experimental_strategy": "ATAC-Seq",
+          "file_count": 9
+        }
+      ],
+      "file_count": 30587,
+      "file_size": 263105695079950
+    }
+  },
+  "source": "gdc"
+}

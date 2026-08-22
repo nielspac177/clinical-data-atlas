@@ -8,3 +8,4 @@ endpoints verified so far. Per-source notes live in `docs/sources/<source>.md`.
 
 | Source | Endpoint | Auth | Politeness | Verified | Count | Notes |
 |---|---|---|---|---|---|---|
+| GDC | `https://api.gdc.cancer.gov/projects` | none | 350 ms/host | 2026-08-22 | 93 projects | One page in practice (`size=100`), paged defensively via `from=`; no robots.txt. See `docs/sources/gdc.md`. |
