@@ -1,0 +1,715 @@
+{
+  "$defs": {
+    "Author": {
+      "additionalProperties": false,
+      "description": "An author or maintainer of the dataset.",
+      "properties": {
+        "name": {
+          "description": "Author name.",
+          "title": "Name",
+          "type": "string"
+        },
+        "orcid": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "ORCID id, if known.",
+          "title": "Orcid"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "title": "Author",
+      "type": "object"
+    },
+    "Condition": {
+      "additionalProperties": false,
+      "description": "A clinical condition studied by the dataset.",
+      "properties": {
+        "label": {
+          "description": "Condition name, as reported or canonicalized.",
+          "title": "Label",
+          "type": "string"
+        },
+        "mesh_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "MeSH descriptor id for `label`, if resolved.",
+          "title": "Mesh Id"
+        }
+      },
+      "required": [
+        "label"
+      ],
+      "title": "Condition",
+      "type": "object"
+    },
+    "EnrichmentProv": {
+      "additionalProperties": false,
+      "description": "Provenance of the enrichment (classification/summarization) applied.",
+      "properties": {
+        "at": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Date this enrichment was applied.",
+          "title": "At"
+        },
+        "fields": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "Per-field origin, e.g. `{\"domains\": \"rules\"}`.",
+          "title": "Fields",
+          "type": "object"
+        },
+        "method": {
+          "description": "How the enrichment fields were produced.",
+          "enum": [
+            "rules",
+            "llm",
+            "rules+llm",
+            "curated"
+          ],
+          "title": "Method",
+          "type": "string"
+        },
+        "model": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "LLM model id, if `method` used one.",
+          "title": "Model"
+        },
+        "prompt_version": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Prompt version, if `method` used an LLM.",
+          "title": "Prompt Version"
+        }
+      },
+      "required": [
+        "method",
+        "fields"
+      ],
+      "title": "EnrichmentProv",
+      "type": "object"
+    },
+    "Institution": {
+      "additionalProperties": false,
+      "description": "An institution associated with the dataset.",
+      "properties": {
+        "country": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "ISO-3166-1 alpha-2 country code, if known.",
+          "title": "Country"
+        },
+        "name": {
+          "description": "Institution name.",
+          "title": "Name",
+          "type": "string"
+        },
+        "ror_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Research Organization Registry id, if resolved.",
+          "title": "Ror Id"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "title": "Institution",
+      "type": "object"
+    },
+    "Paper": {
+      "additionalProperties": false,
+      "description": "A paper linked to the dataset.",
+      "properties": {
+        "doi": {
+          "description": "Paper DOI.",
+          "title": "Doi",
+          "type": "string"
+        },
+        "relation": {
+          "description": "How this paper relates to the dataset.",
+          "enum": [
+            "describes",
+            "cites",
+            "is_cited_by",
+            "other"
+          ],
+          "title": "Relation",
+          "type": "string"
+        },
+        "title": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Paper title, if known.",
+          "title": "Title"
+        }
+      },
+      "required": [
+        "doi",
+        "relation"
+      ],
+      "title": "Paper",
+      "type": "object"
+    },
+    "Provenance": {
+      "additionalProperties": false,
+      "description": "Provenance of a record: how, when, and by what method it was produced.",
+      "properties": {
+        "enrichment": {
+          "$ref": "#/$defs/EnrichmentProv",
+          "description": "Provenance of enrichment applied to this record."
+        },
+        "harvested_at": {
+          "description": "Date this record was first captured (first-seen date).",
+          "format": "date",
+          "title": "Harvested At",
+          "type": "string"
+        },
+        "harvested_via": {
+          "description": "Harvest method (e.g. the API endpoint, or 'curated').",
+          "title": "Harvested Via",
+          "type": "string"
+        },
+        "last_verified": {
+          "description": "Date the source listing last confirmed this record.",
+          "format": "date",
+          "title": "Last Verified",
+          "type": "string"
+        },
+        "raw_hash": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Hash of the raw source payload this record was normalized from.",
+          "title": "Raw Hash"
+        }
+      },
+      "required": [
+        "harvested_via",
+        "harvested_at",
+        "last_verified",
+        "enrichment"
+      ],
+      "title": "Provenance",
+      "type": "object"
+    },
+    "Related": {
+      "additionalProperties": false,
+      "description": "A link to another atlas record.",
+      "properties": {
+        "id": {
+          "description": "Id of the related atlas record (must exist among the records).",
+          "title": "Id",
+          "type": "string"
+        },
+        "relation": {
+          "description": "How the two records relate.",
+          "enum": [
+            "same_cohort",
+            "duplicate_of",
+            "derived_from",
+            "part_of"
+          ],
+          "title": "Relation",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "relation"
+      ],
+      "title": "Related",
+      "type": "object"
+    },
+    "Years": {
+      "additionalProperties": false,
+      "description": "Temporal coverage of the data collection, when known.",
+      "properties": {
+        "end": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Last year of data collection.",
+          "title": "End"
+        },
+        "start": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "First year of data collection.",
+          "title": "Start"
+        }
+      },
+      "title": "Years",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "description": "One catalog record: a single dataset or resource from one source.",
+  "properties": {
+    "access": {
+      "description": "Least-restrictive tier at which substantive data is usable.",
+      "enum": [
+        "open",
+        "registration",
+        "credentialed",
+        "application",
+        "purchase"
+      ],
+      "title": "Access",
+      "type": "string"
+    },
+    "access_howto": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Practical steps for obtaining access beyond `open`.",
+      "title": "Access Howto"
+    },
+    "access_notes": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Prose nuance for `access`/`access_tiers` (e.g. mixed open + controlled access).",
+      "title": "Access Notes"
+    },
+    "access_tiers": {
+      "description": "All access tiers present across the source's access paths.",
+      "items": {
+        "enum": [
+          "open",
+          "registration",
+          "credentialed",
+          "application",
+          "purchase"
+        ],
+        "type": "string"
+      },
+      "title": "Access Tiers",
+      "type": "array"
+    },
+    "authors": {
+      "description": "Author(s) or maintainer(s) of the dataset.",
+      "items": {
+        "$ref": "#/$defs/Author"
+      },
+      "title": "Authors",
+      "type": "array"
+    },
+    "conditions": {
+      "description": "Condition(s) studied.",
+      "items": {
+        "$ref": "#/$defs/Condition"
+      },
+      "title": "Conditions",
+      "type": "array"
+    },
+    "countries": {
+      "description": "ISO-3166-1 alpha-2 country codes for where the data was collected.",
+      "items": {
+        "pattern": "^[A-Z]{2}$",
+        "type": "string"
+      },
+      "title": "Countries",
+      "type": "array"
+    },
+    "dataset_doi": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "DOI for the dataset, version-collapsed (no `.vX.Y.Z` suffix).",
+      "title": "Dataset Doi"
+    },
+    "domains": {
+      "description": "Clinical domain(s) this dataset serves.",
+      "items": {
+        "enum": [
+          "neurology",
+          "psychiatry",
+          "neuroscience",
+          "cardiology",
+          "oncology",
+          "pulmonology",
+          "critical_care",
+          "surgery",
+          "pediatrics",
+          "obstetrics_gynecology",
+          "infectious_disease",
+          "endocrinology_metabolism",
+          "gastroenterology_hepatology",
+          "nephrology_urology",
+          "musculoskeletal",
+          "public_health",
+          "other"
+        ],
+        "type": "string"
+      },
+      "title": "Domains",
+      "type": "array"
+    },
+    "id": {
+      "description": "Stable identifier: `<source>:<source_native_id-derived slug>`.",
+      "pattern": "^[a-z_]+:[A-Za-z0-9._-]+$",
+      "title": "Id",
+      "type": "string"
+    },
+    "institutions": {
+      "description": "Institution(s) associated with the dataset.",
+      "items": {
+        "$ref": "#/$defs/Institution"
+      },
+      "title": "Institutions",
+      "type": "array"
+    },
+    "keywords": {
+      "description": "Free-text keywords from the source, unclassified.",
+      "items": {
+        "type": "string"
+      },
+      "title": "Keywords",
+      "type": "array"
+    },
+    "license": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "License identifier: SPDX when mappable via `vocab.LICENSE_MAP`, else the source's verbatim string.",
+      "title": "License"
+    },
+    "modalities": {
+      "description": "Data modality (or modalities) captured.",
+      "items": {
+        "enum": [
+          "MRI",
+          "fMRI",
+          "dMRI",
+          "MRS",
+          "PET",
+          "SPECT",
+          "CT",
+          "xray",
+          "mammography",
+          "ultrasound",
+          "radiotherapy",
+          "pathology",
+          "EEG",
+          "MEG",
+          "iEEG",
+          "fNIRS",
+          "ECG",
+          "EMG",
+          "PPG",
+          "physiological_signals",
+          "wearable",
+          "eye_tracking",
+          "behavioral",
+          "genomics",
+          "transcriptomics",
+          "proteomics",
+          "EHR",
+          "clinical_notes",
+          "claims",
+          "registry",
+          "survey",
+          "clinical_tabular",
+          "other"
+        ],
+        "type": "string"
+      },
+      "title": "Modalities",
+      "type": "array"
+    },
+    "name": {
+      "description": "Dataset or resource title.",
+      "title": "Name",
+      "type": "string"
+    },
+    "papers": {
+      "description": "Related paper(s) describing or citing the dataset.",
+      "items": {
+        "$ref": "#/$defs/Paper"
+      },
+      "title": "Papers",
+      "type": "array"
+    },
+    "population": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Free-text description of the study population.",
+      "title": "Population"
+    },
+    "provenance": {
+      "$ref": "#/$defs/Provenance",
+      "description": "How, when, and by what method this record was produced."
+    },
+    "published": {
+      "anyOf": [
+        {
+          "format": "date",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Date the source first published this record.",
+      "title": "Published"
+    },
+    "record_status": {
+      "description": "Lifecycle status of this record in the catalog.",
+      "enum": [
+        "active",
+        "needs_review",
+        "removed"
+      ],
+      "title": "Record Status",
+      "type": "string"
+    },
+    "related": {
+      "description": "Other atlas records related to this one.",
+      "items": {
+        "$ref": "#/$defs/Related"
+      },
+      "title": "Related",
+      "type": "array"
+    },
+    "sample_size": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Size of the dataset, in `sample_unit` units.",
+      "title": "Sample Size"
+    },
+    "sample_unit": {
+      "anyOf": [
+        {
+          "enum": [
+            "participants",
+            "cases",
+            "admissions",
+            "records",
+            "images",
+            "studies",
+            "series",
+            "households",
+            "surveys",
+            "other"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Unit that `sample_size` counts.",
+      "title": "Sample Unit"
+    },
+    "size_bytes": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Total data size in bytes, if the source reports it.",
+      "title": "Size Bytes"
+    },
+    "source": {
+      "description": "Which harvester produced this record.",
+      "enum": [
+        "openneuro",
+        "physionet",
+        "gdc",
+        "tcia",
+        "scientific_data",
+        "data_in_brief",
+        "dhs",
+        "worldbank",
+        "curated"
+      ],
+      "title": "Source",
+      "type": "string"
+    },
+    "source_native_id": {
+      "description": "This record's identifier in the source system, verbatim.",
+      "title": "Source Native Id",
+      "type": "string"
+    },
+    "species": {
+      "description": "Species studied.",
+      "enum": [
+        "human",
+        "animal",
+        "mixed",
+        "phantom",
+        "simulated",
+        "unknown"
+      ],
+      "title": "Species",
+      "type": "string"
+    },
+    "summary": {
+      "description": "One- to two-sentence description, at most 40 words.",
+      "title": "Summary",
+      "type": "string"
+    },
+    "url": {
+      "description": "Canonical link to the source's own page for this record.",
+      "pattern": "^https?://",
+      "title": "Url",
+      "type": "string"
+    },
+    "version": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Source-reported version label, if the source versions its datasets.",
+      "title": "Version"
+    },
+    "years": {
+      "$ref": "#/$defs/Years",
+      "description": "Start/end year of data collection, when known."
+    }
+  },
+  "required": [
+    "id",
+    "source",
+    "source_native_id",
+    "name",
+    "summary",
+    "url",
+    "species",
+    "access",
+    "record_status",
+    "provenance"
+  ],
+  "title": "Record",
+  "type": "object"
+}
