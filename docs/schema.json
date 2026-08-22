@@ -136,6 +136,7 @@
         "country": {
           "anyOf": [
             {
+              "pattern": "^[A-Z]{2}$",
               "type": "string"
             },
             {
@@ -446,6 +447,7 @@
     },
     "id": {
       "description": "Stable identifier: `<source>:<source_native_id-derived slug>`.",
+      "minLength": 1,
       "pattern": "^[a-z_]+:[A-Za-z0-9._-]+$",
       "title": "Id",
       "type": "string"
@@ -524,6 +526,7 @@
     },
     "name": {
       "description": "Dataset or resource title.",
+      "minLength": 1,
       "title": "Name",
       "type": "string"
     },
@@ -593,8 +596,7 @@
           "type": "null"
         }
       ],
-      "default": null,
-      "description": "Size of the dataset, in `sample_unit` units.",
+      "description": "Size of the dataset, in `sample_unit` units. Required but nullable: explicitly `null` when the source doesn't report a size.",
       "title": "Sample Size"
     },
     "sample_unit": {
@@ -618,8 +620,7 @@
           "type": "null"
         }
       ],
-      "default": null,
-      "description": "Unit that `sample_size` counts.",
+      "description": "Unit that `sample_size` counts. Required but nullable: explicitly `null` when `sample_size` is unknown.",
       "title": "Sample Unit"
     },
     "size_bytes": {
@@ -653,6 +654,7 @@
     },
     "source_native_id": {
       "description": "This record's identifier in the source system, verbatim.",
+      "minLength": 1,
       "title": "Source Native Id",
       "type": "string"
     },
@@ -671,11 +673,13 @@
     },
     "summary": {
       "description": "One- to two-sentence description, at most 40 words.",
+      "minLength": 1,
       "title": "Summary",
       "type": "string"
     },
     "url": {
       "description": "Canonical link to the source's own page for this record.",
+      "minLength": 1,
       "pattern": "^https?://",
       "title": "Url",
       "type": "string"
@@ -695,7 +699,7 @@
     },
     "years": {
       "$ref": "#/$defs/Years",
-      "description": "Start/end year of data collection, when known."
+      "description": "Start/end year of data collection. Required but its own `start`/`end` are individually nullable \u2014 pass `{}` when both are unknown."
     }
   },
   "required": [
@@ -706,6 +710,9 @@
     "summary",
     "url",
     "species",
+    "sample_size",
+    "sample_unit",
+    "years",
     "access",
     "record_status",
     "provenance"

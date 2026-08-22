@@ -88,7 +88,7 @@ class Institution(_StrictModel):
     ror_id: str | None = Field(
         default=None, description="Research Organization Registry id, if resolved."
     )
-    country: str | None = Field(
+    country: CountryCode | None = Field(
         default=None, description="ISO-3166-1 alpha-2 country code, if known."
     )
 
@@ -170,18 +170,22 @@ class Record(_StrictModel):
 
     id: str = Field(
         pattern=_ID_PATTERN,
+        min_length=1,
         description="Stable identifier: `<source>:<source_native_id-derived slug>`.",
     )
     source: SourceLiteral = Field(description="Which harvester produced this record.")
     source_native_id: str = Field(
-        description="This record's identifier in the source system, verbatim."
+        min_length=1,
+        description="This record's identifier in the source system, verbatim.",
     )
-    name: str = Field(description="Dataset or resource title.")
+    name: str = Field(min_length=1, description="Dataset or resource title.")
     summary: str = Field(
-        description="One- to two-sentence description, at most 40 words."
+        min_length=1,
+        description="One- to two-sentence description, at most 40 words.",
     )
     url: str = Field(
         pattern=_URL_PATTERN,
+        min_length=1,
         description="Canonical link to the source's own page for this record.",
     )
 
@@ -216,10 +220,12 @@ class Record(_StrictModel):
     species: SpeciesLiteral = Field(description="Species studied.")
 
     sample_size: int | None = Field(
-        default=None, description="Size of the dataset, in `sample_unit` units."
+        description="Size of the dataset, in `sample_unit` units. Required but "
+        "nullable: explicitly `null` when the source doesn't report a size."
     )
     sample_unit: SampleUnitLiteral | None = Field(
-        default=None, description="Unit that `sample_size` counts."
+        description="Unit that `sample_size` counts. Required but nullable: "
+        "explicitly `null` when `sample_size` is unknown."
     )
     size_bytes: int | None = Field(
         default=None, description="Total data size in bytes, if the source reports it."
@@ -230,8 +236,8 @@ class Record(_StrictModel):
         description="ISO-3166-1 alpha-2 country codes for where the data was collected.",
     )
     years: Years = Field(
-        default_factory=Years,
-        description="Start/end year of data collection, when known.",
+        description="Start/end year of data collection. Required but its own "
+        "`start`/`end` are individually nullable — pass `{}` when both are unknown."
     )
 
     access: AccessLiteral = Field(
@@ -312,19 +318,16 @@ def validate_records(records: list[dict]) -> tuple[list[str], list[str]]:
     Errors: pydantic validation failures (one message per underlying issue,
     prefixed with the record's `id` or, when no usable id is available, its
     index in `records`), duplicate ids, and `related[].id` values that don't
-    match any id among `records`.
+    match the id of any *successfully validated* record — deliberately
+    stricter than matching against all raw input ids, so that a record
+    referencing another record which itself failed validation is still
+    reported as dangling (its target doesn't exist as a valid record either).
 
     Warnings: empty `domains`, empty `modalities`, `access != "open"` with
     no `access_notes`, and `sample_size` set without `sample_unit`.
     """
     errors: list[str] = []
     warnings: list[str] = []
-
-    known_ids = {
-        raw["id"]
-        for raw in records
-        if isinstance(raw, dict) and isinstance(raw.get("id"), str)
-    }
 
     seen_ids: set[str] = set()
     parsed: list[Record] = []
@@ -347,6 +350,8 @@ def validate_records(records: list[dict]) -> tuple[list[str], list[str]]:
         else:
             seen_ids.add(record.id)
         parsed.append(record)
+
+    known_ids = {record.id for record in parsed}
 
     for record in parsed:
         for rel in record.related:

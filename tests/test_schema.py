@@ -120,6 +120,72 @@ def test_url_without_http_scheme_is_error():
 
 
 # --------------------------------------------------------------------------
+# required strings must be non-empty (min_length=1)
+# --------------------------------------------------------------------------
+
+
+@pytest.mark.parametrize("field", ["id", "name", "summary", "url", "source_native_id"])
+def test_required_string_fields_reject_empty_string(field):
+    with pytest.raises(ValidationError):
+        schema.Record.model_validate(_minimal_record(**{field: ""}))
+
+
+# --------------------------------------------------------------------------
+# sample_size / sample_unit / years: required (nullable), not defaulted
+# --------------------------------------------------------------------------
+
+
+def test_sample_size_is_required():
+    record = _minimal_record()
+    del record["sample_size"]
+    with pytest.raises(ValidationError):
+        schema.Record.model_validate(record)
+
+
+def test_sample_unit_is_required():
+    record = _minimal_record()
+    del record["sample_unit"]
+    with pytest.raises(ValidationError):
+        schema.Record.model_validate(record)
+
+
+def test_years_is_required():
+    record = _minimal_record()
+    del record["years"]
+    with pytest.raises(ValidationError):
+        schema.Record.model_validate(record)
+
+
+def test_sample_size_and_sample_unit_may_be_explicitly_null():
+    record = schema.Record.model_validate(
+        _minimal_record(sample_size=None, sample_unit=None)
+    )
+    assert record.sample_size is None
+    assert record.sample_unit is None
+
+
+def test_years_start_and_end_default_to_none_when_omitted():
+    record = schema.Record.model_validate(_minimal_record(years={}))
+    assert record.years.start is None
+    assert record.years.end is None
+
+
+# --------------------------------------------------------------------------
+# Institution.country: same ISO-3166-1 alpha-2 constraint as Record.countries
+# --------------------------------------------------------------------------
+
+
+def test_institution_country_lowercase_is_error():
+    with pytest.raises(ValidationError):
+        schema.Institution.model_validate({"name": "Example U.", "country": "usa"})
+
+
+def test_institution_country_valid_alpha2_passes():
+    inst = schema.Institution.model_validate({"name": "Example U.", "country": "US"})
+    assert inst.country == "US"
+
+
+# --------------------------------------------------------------------------
 # validate_records: duplicate ids, dangling related
 # --------------------------------------------------------------------------
 
@@ -145,6 +211,22 @@ def test_related_id_present_among_records_is_not_dangling():
     rec2 = _minimal_record(id="openneuro:ds000002")
     errors, _warnings = schema.validate_records([rec1, rec2])
     assert errors == []
+
+
+def test_related_id_pointing_to_a_record_that_failed_validation_is_dangling():
+    # A references B, but B itself fails validation (bad url) — B never
+    # becomes a known id, so A's reference to it must be reported dangling
+    # too, not silently accepted just because *some* dict with that id was
+    # present in the input batch.
+    rec_a = _minimal_record(
+        id="openneuro:ds000001",
+        related=[{"id": "openneuro:ds000002", "relation": "same_cohort"}],
+    )
+    rec_b_invalid = _minimal_record(id="openneuro:ds000002", url="not-a-url")
+    errors, _warnings = schema.validate_records([rec_a, rec_b_invalid])
+    assert any(
+        "openneuro:ds000001" in e and "does not match any record" in e for e in errors
+    )
 
 
 def test_validate_records_uses_index_when_no_usable_id():
@@ -269,10 +351,20 @@ def test_vocab_license_map_spot_checks():
 
 def test_vocab_condition_aliases_spot_checks():
     assert vocab.CONDITION_ALIASES["parkinson's disease"] == "parkinson disease"
-    assert vocab.CONDITION_ALIASES["pd"] == "parkinson disease"
     assert vocab.CONDITION_ALIASES["covid"] == "covid-19"
     assert vocab.CONDITION_ALIASES["breast cancer"] == "breast neoplasms"
     assert vocab.CONDITION_ALIASES["osa"] == "sleep apnea, obstructive"
+    assert vocab.CONDITION_ALIASES["multiple sclerosis"] == "multiple sclerosis"
+
+
+def test_vocab_condition_aliases_excludes_ambiguous_abbreviations():
+    # "asd"/"pd"/"ms" have competing, non-neuro/psych expansions (atrial
+    # septal defect, peritoneal dialysis/panic disorder, mitral stenosis)
+    # and must not be guessed at; the unambiguous abbreviations stay.
+    for ambiguous in ("asd", "pd", "ms"):
+        assert ambiguous not in vocab.CONDITION_ALIASES
+    for unambiguous in ("afib", "tbi", "mdd", "chf", "osa", "adhd"):
+        assert unambiguous in vocab.CONDITION_ALIASES
 
 
 # --------------------------------------------------------------------------
@@ -294,6 +386,9 @@ def test_export_json_schema_required_fields():
         "summary",
         "url",
         "species",
+        "sample_size",
+        "sample_unit",
+        "years",
         "access",
         "record_status",
         "provenance",
@@ -306,12 +401,15 @@ def test_export_json_schema_required_fields():
 
 
 def test_docs_schema_json_matches_export():
-    on_disk = json.loads(schema.SCHEMA_JSON_PATH.read_text())
-    assert on_disk == schema.export_json_schema()
+    # Byte-level text comparison (not just parsed-JSON equality) so this
+    # also catches formatting drift (indent, key order, trailing newline) —
+    # the same exact text `atlas schema --export` would write.
+    on_disk = schema.SCHEMA_JSON_PATH.read_text(encoding="utf-8")
+    assert on_disk == schema.export_json_schema_text()
 
 
 def test_docs_schema_md_matches_render():
-    assert schema.SCHEMA_MD_PATH.read_text() == schema.render_markdown()
+    assert schema.SCHEMA_MD_PATH.read_text(encoding="utf-8") == schema.render_markdown()
 
 
 # --------------------------------------------------------------------------
@@ -333,8 +431,8 @@ def test_cli_schema_export_writes_both_files(tmp_path, monkeypatch):
 
     assert cli.main(["schema", "--export"]) == 0
 
-    assert json.loads(json_path.read_text()) == schema.export_json_schema()
-    assert md_path.read_text() == schema.render_markdown()
+    assert json_path.read_text(encoding="utf-8") == schema.export_json_schema_text()
+    assert md_path.read_text(encoding="utf-8") == schema.render_markdown()
 
 
 def test_cli_schema_check_passes_when_in_sync(tmp_path, monkeypatch):
@@ -351,8 +449,8 @@ def test_cli_schema_check_passes_when_in_sync(tmp_path, monkeypatch):
 def test_cli_schema_check_detects_drift(tmp_path, monkeypatch):
     json_path = tmp_path / "schema.json"
     md_path = tmp_path / "schema.md"
-    json_path.write_text("{}")
-    md_path.write_text("stale content")
+    json_path.write_text("{}", encoding="utf-8")
+    md_path.write_text("stale content", encoding="utf-8")
     monkeypatch.setattr(schema, "SCHEMA_JSON_PATH", json_path)
     monkeypatch.setattr(schema, "SCHEMA_MD_PATH", md_path)
 

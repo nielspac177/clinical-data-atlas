@@ -20,8 +20,8 @@ def _cmd_schema(args: argparse.Namespace) -> int:
     md_text = schema.render_markdown()
 
     if args.export:
-        schema.SCHEMA_JSON_PATH.write_text(json_text)
-        schema.SCHEMA_MD_PATH.write_text(md_text)
+        schema.SCHEMA_JSON_PATH.write_text(json_text, encoding="utf-8")
+        schema.SCHEMA_MD_PATH.write_text(md_text, encoding="utf-8")
         print(f"wrote {schema.SCHEMA_JSON_PATH}")
         print(f"wrote {schema.SCHEMA_MD_PATH}")
         return 0
@@ -30,12 +30,12 @@ def _cmd_schema(args: argparse.Namespace) -> int:
         drifted = []
         if (
             not schema.SCHEMA_JSON_PATH.exists()
-            or schema.SCHEMA_JSON_PATH.read_text() != json_text
+            or schema.SCHEMA_JSON_PATH.read_text(encoding="utf-8") != json_text
         ):
             drifted.append(str(schema.SCHEMA_JSON_PATH))
         if (
             not schema.SCHEMA_MD_PATH.exists()
-            or schema.SCHEMA_MD_PATH.read_text() != md_text
+            or schema.SCHEMA_MD_PATH.read_text(encoding="utf-8") != md_text
         ):
             drifted.append(str(schema.SCHEMA_MD_PATH))
         if drifted:

@@ -23,11 +23,11 @@ One JSONL line per record (`data/catalog/catalog.jsonl`), keys sorted.
 | keywords | list[str] | No | Free-text keywords from the source, unclassified. |
 | population | str \| null | No | Free-text description of the study population. |
 | species | enum: species | Yes | Species studied. |
-| sample_size | int \| null | No | Size of the dataset, in `sample_unit` units. |
-| sample_unit | enum: sample_unit \| null | No | Unit that `sample_size` counts. |
+| sample_size | int \| null | Yes | Size of the dataset, in `sample_unit` units. Required but nullable: explicitly `null` when the source doesn't report a size. |
+| sample_unit | enum: sample_unit \| null | Yes | Unit that `sample_size` counts. Required but nullable: explicitly `null` when `sample_size` is unknown. |
 | size_bytes | int \| null | No | Total data size in bytes, if the source reports it. |
 | countries | list[str] | No | ISO-3166-1 alpha-2 country codes for where the data was collected. |
-| years | Years | No | Start/end year of data collection, when known. |
+| years | Years | Yes | Start/end year of data collection. Required but its own `start`/`end` are individually nullable — pass `{}` when both are unknown. |
 | access | enum: access | Yes | Least-restrictive tier at which substantive data is usable. |
 | access_tiers | list[enum: access] | No | All access tiers present across the source's access paths. |
 | access_notes | str \| null | No | Prose nuance for `access`/`access_tiers` (e.g. mixed open + controlled access). |

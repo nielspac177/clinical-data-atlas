@@ -181,13 +181,21 @@ LICENSE_MAP: dict[str, str] = {
 # Lowercase source-reported condition label -> canonical label used for
 # MeSH lookup. Seed set (~20 canonical targets); later tasks extend this
 # table as new conditions show up during enrichment.
+#
+# Every alias must be unambiguous across all clinical specialties a source
+# might come from. Bare 2-3 letter abbreviations are only included when
+# they have no plausible competing expansion (e.g. "tbi", "chf"); ambiguous
+# ones are deliberately left out even when one meaning is common in
+# neuro/psych datasets — e.g. "asd" (autism spectrum disorder, but also
+# atrial septal defect in cardiac data), "pd" (parkinson disease, but also
+# peritoneal dialysis / panic disorder), "ms" (multiple sclerosis, but also
+# mitral stenosis). Prefer the full (non-abbreviated) source string instead.
 CONDITION_ALIASES: dict[str, str] = {
     "healthy / control": "healthy controls",
     "lung adenocarcinoma": "adenocarcinoma of lung",
     "glioblastoma multiforme": "glioblastoma",
     "parkinson's disease": "parkinson disease",
     "parkinson disease": "parkinson disease",
-    "pd": "parkinson disease",
     "alzheimer's disease": "alzheimer disease",
     "afib": "atrial fibrillation",
     "atrial fibrillation": "atrial fibrillation",
@@ -195,12 +203,11 @@ CONDITION_ALIASES: dict[str, str] = {
     "covid-19": "covid-19",
     "sars-cov-2 infection": "covid-19",
     "tbi": "traumatic brain injury",
-    "ms": "multiple sclerosis",
+    "multiple sclerosis": "multiple sclerosis",
     "mdd": "depressive disorder, major",
     "major depression": "depressive disorder, major",
     "schizophrenia": "schizophrenia",
     "autism": "autism spectrum disorder",
-    "asd": "autism spectrum disorder",
     "adhd": "attention deficit disorder with hyperactivity",
     "stroke": "stroke",
     "ischemic stroke": "stroke",
