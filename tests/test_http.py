@@ -200,8 +200,10 @@ def test_get_json_retries_default_is_3(online, monkeypatch):
     calls = _install_sequence(
         monkeypatch, [_http_error(500), _http_error(500), _http_error(500)]
     )
+    sleeps = _install_sleep_recorder(monkeypatch)
     assert http.get_json("http://host-a.test/x") is None
     assert len(calls) == 3
+    assert sleeps == [1.0, 2.0]
 
 
 # ---------------------------------------------------------------------------
@@ -461,6 +463,19 @@ def test_post_json_429_is_retried(online, monkeypatch):
     assert http.post_json("http://host-a.test/x", {}, retries=2) == {"ok": 1}
     assert len(calls) == 2
     assert sleeps == [1.0]
+
+
+def test_post_json_shares_backoff_with_get_json(online, monkeypatch):
+    """post_json and get_json both delegate to atlas.http._request_json, so
+    a 429->429->200 sequence must produce the exact same [1.0, 2.0] backoff
+    get_json's own 429 test produces (see test_get_json_429_is_retried_then_succeeds)."""
+    calls = _install_sequence(
+        monkeypatch, [_http_error(429), _http_error(429), _json_response({"ok": 1})]
+    )
+    sleeps = _install_sleep_recorder(monkeypatch)
+    assert http.post_json("http://host-a.test/x", {}, retries=3) == {"ok": 1}
+    assert len(calls) == 3
+    assert sleeps == [1.0, 2.0]
 
 
 def test_post_json_exhausts_retries_returns_none(online, monkeypatch, capsys):

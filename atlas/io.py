@@ -126,6 +126,9 @@ def slugify(s: str) -> str:
     return _SLUG_INVALID_RE.sub("-", without_accents).strip("-")
 
 
+_SCRIPT_STYLE_RE = re.compile(
+    r"<(script|style|noscript)\b[^>]*>.*?</\1>", re.IGNORECASE | re.DOTALL
+)
 _TAG_RE = re.compile(r"<[^>]+>")
 _WHITESPACE_RE = re.compile(r"\s+")
 
@@ -134,13 +137,17 @@ def strip_html(s: str) -> str:
     """Plain text from an HTML fragment: tags removed, entities unescaped,
     whitespace collapsed.
 
-    Tags are replaced with a single space (not deleted outright) so that
-    block-level markup such as ``<p>a</p><p>b</p>`` -- common in dataset
-    descriptions pulled from source APIs -- reads as "a b" rather than the
+    ``<script>``/``<style>``/``<noscript>`` elements are dropped *with*
+    their contents first -- source APIs (e.g. PhysioNet abstracts) embed
+    HTML that can carry these, and their text is never part of the visible
+    description. Remaining tags are then replaced with a single space (not
+    deleted outright) so that block-level markup such as ``<p>a</p><p>b</p>``
+    -- common in dataset descriptions -- reads as "a b" rather than the
     words running together as "ab"; the whitespace collapse below then
     absorbs the extra spacing this introduces around inline tags.
     """
-    without_tags = _TAG_RE.sub(" ", s)
+    without_scripts = _SCRIPT_STYLE_RE.sub(" ", s)
+    without_tags = _TAG_RE.sub(" ", without_scripts)
     unescaped = html.unescape(without_tags)
     return _WHITESPACE_RE.sub(" ", unescaped).strip()
 

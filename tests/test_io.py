@@ -200,6 +200,23 @@ def test_strip_html_strips_leading_trailing_whitespace():
     assert io.strip_html("  <b>hi</b>  ") == "hi"
 
 
+def test_strip_html_drops_script_contents():
+    assert io.strip_html("<script>alert(1);</script>Hello") == "Hello"
+
+
+def test_strip_html_drops_style_contents():
+    assert io.strip_html("<style>.a{color:red}</style>Hello") == "Hello"
+
+
+def test_strip_html_drops_noscript_contents():
+    assert io.strip_html("<noscript>Enable JS</noscript>Hello") == "Hello"
+
+
+def test_strip_html_drops_script_contents_amid_other_text():
+    html_in = "<p>Before</p><script>var x = '<p>fake</p>';</script><p>After</p>"
+    assert io.strip_html(html_in) == "Before After"
+
+
 # ---------------------------------------------------------------------------
 # first_words
 # ---------------------------------------------------------------------------

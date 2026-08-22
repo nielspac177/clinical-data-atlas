@@ -22,6 +22,13 @@ Design carried over unchanged:
   outright (403/405/501) -- some servers do, and that is not evidence the
   linked resource itself is broken.
 
+:func:`get_json` and :func:`post_json` share one private attempt loop,
+:func:`_request_json` -- politeness, retries, backoff, and diagnostics live
+in exactly one place, so the retry contract can't drift between the two
+(e.g. one honoring ``quiet`` and the other always printing). Each public
+function stays a thin wrapper: `get_json` adds params/cache handling around
+a GET request, `post_json` builds a POST request and never caches.
+
 Both the offline guard and the cache read :data:`atlas.config.OFFLINE`,
 :data:`atlas.config.HTTP_CACHE`, and :data:`atlas.config.ROOT` through the
 ``config`` module object at call time rather than importing the values
@@ -119,6 +126,54 @@ def _write_cache(path: Path, url: str, body: Any) -> None:
     io.write_atomic(path, io.canonical_json(envelope))
 
 
+_FAILED = object()  # sentinel: "every attempt failed", distinct from a
+# legitimate successful JSON `null` response body (which is plain `None`)
+
+
+def _request_json(
+    req: urllib.request.Request,
+    *,
+    host: str,
+    timeout: int,
+    retries: int,
+    quiet: bool,
+) -> Any:
+    """Shared GET/POST attempt loop: politeness, retries, backoff, diagnostics.
+
+    Returns the parsed JSON body on success (which may legitimately be
+    ``None`` for a JSON ``null`` response), or the :data:`_FAILED` sentinel
+    once every attempt has failed -- callers translate that sentinel to
+    whatever their own public "failure" return value is. A ``429`` or any
+    non-``HTTPError`` exception is treated as transient and retried with
+    exponential backoff (1, 2, 4, ... seconds); any other ``4xx`` is not
+    retried.
+    """
+    url = req.full_url
+    backoff = 1.0
+    last_reason = "unknown"
+    for attempt in range(retries):
+        _polite(host)
+        try:
+            with urllib.request.urlopen(req, timeout=timeout) as resp:
+                body = json.loads(resp.read().decode("utf-8"))
+        except urllib.error.HTTPError as e:
+            if e.code != 429 and 400 <= e.code < 500:
+                _log(quiet, f"[http] {e.code} {url}")
+                return _FAILED
+            last_reason = str(e.code)
+        except Exception as e:  # noqa: BLE001 -- one dead source must not abort a run
+            last_reason = type(e).__name__
+        else:
+            return body
+
+        if attempt < retries - 1:
+            time.sleep(backoff)
+            backoff *= 2
+
+    _log(quiet, f"[http] failed ({last_reason}) {url}")
+    return _FAILED
+
+
 # ---------------------------------------------------------------------------
 # Public API
 # ---------------------------------------------------------------------------
@@ -161,80 +216,44 @@ def get_json(
     _ensure_online(url)
 
     host = urllib.parse.urlparse(url).netloc
-    backoff = 1.0
-    last_reason = "unknown"
-    for attempt in range(retries):
-        _polite(host)
-        req = urllib.request.Request(
-            url, headers={"User-Agent": config.UA, "Accept": "application/json"}
-        )
-        try:
-            with urllib.request.urlopen(req, timeout=timeout) as resp:
-                body = json.loads(resp.read().decode("utf-8"))
-        except urllib.error.HTTPError as e:
-            if e.code != 429 and 400 <= e.code < 500:
-                _log(quiet, f"[http] {e.code} {url}")
-                return None
-            last_reason = str(e.code)
-        except Exception as e:  # noqa: BLE001 -- one dead source must not abort a run
-            last_reason = type(e).__name__
-        else:
-            if cache_path is not None:
-                _write_cache(cache_path, url, body)
-            return body
-
-        if attempt < retries - 1:
-            time.sleep(backoff)
-            backoff *= 2
-
-    _log(quiet, f"[http] failed ({last_reason}) {url}")
-    return None
+    req = urllib.request.Request(
+        url, headers={"User-Agent": config.UA, "Accept": "application/json"}
+    )
+    result = _request_json(
+        req, host=host, timeout=timeout, retries=retries, quiet=quiet
+    )
+    if result is _FAILED:
+        return None
+    if cache_path is not None:
+        _write_cache(cache_path, url, result)
+    return result
 
 
 def post_json(url: str, payload: Any, *, timeout: int = 30, retries: int = 2) -> Any:
     """POST `payload` as JSON and return the parsed JSON response, or
     ``None`` if every attempt fails. Never cached (POST is not idempotent).
 
-    Retry semantics mirror :func:`get_json`: a 429 or a network error is
-    retried with exponential backoff, any other 4xx returns ``None``
-    immediately.
+    Retry semantics are exactly :func:`get_json`'s, via the same
+    :func:`_request_json` helper: a 429 or a network error is retried with
+    exponential backoff, any other 4xx returns ``None`` immediately.
     """
     _ensure_online(url)
 
     host = urllib.parse.urlparse(url).netloc
     body = json.dumps(payload).encode("utf-8")
-    backoff = 1.0
-    last_reason = "unknown"
-    for attempt in range(retries):
-        _polite(host)
-        req = urllib.request.Request(
-            url,
-            data=body,
-            headers={
-                "User-Agent": config.UA,
-                "Accept": "application/json",
-                "Content-Type": "application/json",
-            },
-        )
-        try:
-            with urllib.request.urlopen(req, timeout=timeout) as resp:
-                result = json.loads(resp.read().decode("utf-8"))
-        except urllib.error.HTTPError as e:
-            if e.code != 429 and 400 <= e.code < 500:
-                print(f"[http] {e.code} {url}", file=sys.stderr)
-                return None
-            last_reason = str(e.code)
-        except Exception as e:  # noqa: BLE001 -- one dead source must not abort a run
-            last_reason = type(e).__name__
-        else:
-            return result
-
-        if attempt < retries - 1:
-            time.sleep(backoff)
-            backoff *= 2
-
-    print(f"[http] failed ({last_reason}) {url}", file=sys.stderr)
-    return None
+    req = urllib.request.Request(
+        url,
+        data=body,
+        headers={
+            "User-Agent": config.UA,
+            "Accept": "application/json",
+            "Content-Type": "application/json",
+        },
+    )
+    result = _request_json(
+        req, host=host, timeout=timeout, retries=retries, quiet=False
+    )
+    return None if result is _FAILED else result
 
 
 def head_status(url: str, timeout: int = 20) -> tuple[int, str]:
@@ -243,7 +262,9 @@ def head_status(url: str, timeout: int = 20) -> tuple[int, str]:
     Tries HEAD first; falls back to GET if a server rejects HEAD outright
     (403/405/501) rather than treating that as a broken link. Returns
     ``(0, url)`` if both attempts fail outright (DNS/timeout/connection
-    errors, not HTTP error responses).
+    errors, not HTTP error responses). Kept separate from
+    :func:`_request_json`: it has no backoff/retry-count contract to share,
+    just a HEAD-then-GET fallback on specific status codes.
     """
     _ensure_online(url)
 
