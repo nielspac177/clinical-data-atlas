@@ -84,11 +84,14 @@ schema).
 1. Probe the live API by hand first; record the verified endpoint, auth,
    and quirks in `docs/sources/<src>.md` (and update `docs/sources.md`'s
    index row).
-2. Write `atlas/harvest/<src>.py` exposing a `HARVESTER` that fetches and
-   caches raw records under `data/raw/<src>/`.
-3. Write `atlas/normalize/<src>.py` exposing `normalize()` (raw record ->
-   canonical schema instance) and `enrichment_text()` (text fed to LLM
-   classification).
+2. Write `atlas/harvest/<src>.py` defining a `Harvester` subclass (class
+   attrs `name`, `harvest_method`) that fetches and caches raw records
+   under `data/raw/<src>/` — it is auto-discovered by
+   `atlas.harvest.get_registry()`, no registration call.
+3. Write `atlas/normalize/<src>.py` defining `SOURCE`, `normalize()` (raw
+   record -> canonical schema instance), and `enrichment_text()` (text fed
+   to LLM classification) — auto-discovered by
+   `atlas.normalize.get_normalizers()`.
 4. Add fixtures under `tests/fixtures/<src>/` and unit tests against them;
    add one `live`-marked smoke test against the real API.
 5. Run `make refresh SOURCE=<src>` to harvest just that source end to end.
