@@ -1,0 +1,222 @@
+{
+  "endpoints": [
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getCollectionValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getModalityValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getBodyPartValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getPatient",
+    "https://api.datacite.org/dois?prefix=10.7937"
+  ],
+  "harvest_method": "api:nbia+datacite",
+  "native_id": "ACRIN-Contralateral-Breast-MR",
+  "payload": {
+    "datacite": {
+      "citationCount": 2,
+      "container": {},
+      "contentUrl": [],
+      "contributors": [],
+      "created": "2021-01-13T18:09:04Z",
+      "creators": [
+        {
+          "affiliation": [],
+          "familyName": "Kinahan",
+          "givenName": "Paul",
+          "name": "Kinahan, Paul",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0001-6461-3306",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Muzi",
+          "givenName": "Mark",
+          "name": "Muzi, Mark",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-8767-191X",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Bialecki",
+          "givenName": "Brian",
+          "name": "Bialecki, Brian",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0003-1835-7449",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Herman",
+          "givenName": "Benjamin",
+          "name": "Herman, Benjamin",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0001-6649-0354",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Coombs",
+          "givenName": "Laura",
+          "name": "Coombs, Laura",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0001-5267-3555",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        }
+      ],
+      "dates": [],
+      "descriptions": [
+        {
+          "description": "This dataset relates to NCI Clinical trial, \"Magnetic Resonance Imaging in Women Recently Diagnosed With Unilateral Breast Cancer (ACRIN-6667)\".\nEven after careful clinical and mammographic evaluation, cancer is found in the contralateral breast in up to 10% of women who have received treatment for unilateral breast cancer. ACRIN 6667 was conducted to determine whether magnetic resonance imaging (MRI) could improve on clinical breast examination and mammography in detecting contralateral breast cancer soon after the initial diagnosis of unilateral breast cancer.\nA total of 969 women with a recent diagnosis of unilateral breast cancer and no abnormalities on mammographic and clinical examination of the contralateral breast underwent breast MRI. ",
+          "descriptionType": "Abstract",
+          "lang": null
+        }
+      ],
+      "doi": "10.7937/q1ee-j082",
+      "downloadCount": 0,
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "ACRIN-Contralateral-Breast-MR",
+          "identifierType": "TCIA Short Name"
+        }
+      ],
+      "isActive": true,
+      "language": null,
+      "metadataVersion": 12,
+      "partCount": 0,
+      "partOfCount": 0,
+      "publicationYear": 2021,
+      "published": null,
+      "publisher": "The Cancer Imaging Archive",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2021-01-29T16:36:24Z",
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "10.1148/rycan.230100",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        }
+      ],
+      "relatedItems": [],
+      "rightsList": [
+        {
+          "rights": "Creative Commons Attribution 4.0 International",
+          "rightsIdentifier": "cc-by-4.0",
+          "rightsIdentifierScheme": "SPDX",
+          "rightsUri": "https://creativecommons.org/licenses/by/4.0/legalcode",
+          "schemeUri": "https://spdx.org/licenses/"
+        }
+      ],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "fabricaForm",
+      "state": "findable",
+      "subjects": [],
+      "titles": [
+        {
+          "lang": null,
+          "title": "ACRIN-Contralateral-Breast-MR (ACRIN 6667)",
+          "titleType": null
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2025-06-01T01:01:07Z",
+      "url": "https://www.cancerimagingarchive.net/collection/acrin-contralateral-breast-mr/",
+      "version": "1",
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 2280
+    },
+    "nbia": {
+      "body_parts": [
+        "BREAST"
+      ],
+      "collection": "ACRIN-Contralateral-Breast-MR",
+      "modalities": [
+        "CR",
+        "MR"
+      ],
+      "patients": [
+        {
+          "Collection": "ACRIN-Contralateral-Breast-MR",
+          "PatientId": "ACRIN-Contralateral-Breast-MR-001",
+          "PatientName": "ACRIN-Contralateral-Breast-MR-001",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-Contralateral-Breast-MR",
+          "PatientId": "ACRIN-Contralateral-Breast-MR-003",
+          "PatientName": "ACRIN-Contralateral-Breast-MR-003",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-Contralateral-Breast-MR",
+          "PatientId": "ACRIN-Contralateral-Breast-MR-006",
+          "PatientName": "ACRIN-Contralateral-Breast-MR-006",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-Contralateral-Breast-MR",
+          "PatientId": "ACRIN-Contralateral-Breast-MR-007",
+          "PatientName": "ACRIN-Contralateral-Breast-MR-007",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-Contralateral-Breast-MR",
+          "PatientId": "ACRIN-Contralateral-Breast-MR-010",
+          "PatientName": "ACRIN-Contralateral-Breast-MR-010",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        }
+      ]
+    }
+  },
+  "source": "tcia"
+}
