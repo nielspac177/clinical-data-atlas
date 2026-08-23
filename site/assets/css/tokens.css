@@ -204,6 +204,8 @@
 
   /* Layout constants. Media queries can't read custom properties, so the
      breakpoint below is documentation — layout.css hard-codes 900px. */
+  /* Redefined to 88px at <=640px, where the nav wraps to its own row
+     (layout.css). Read it from here, never hard-code 56. */
   --header-h: 56px;
   --rail-w: 260px;
   --drawer-w: 380px;

@@ -37,6 +37,9 @@ pytestmark = pytest.mark.e2e
 #: Every page the site ships, as linked from the header and the sitemap.
 PAGES = ("index.html", "table.html", "about.html", "whats-new.html", "404.html")
 
+#: The pages that carry the site header; 404.html deliberately has none.
+NAV_PAGES = tuple(name for name in PAGES if name != "404.html")
+
 #: `table.js` renders this many rows before "Show more".
 CHUNK = 100
 
@@ -135,6 +138,75 @@ def test_no_horizontal_scroll_on_a_small_phone(page: Page, name: str) -> None:
            })"""
     )
     assert overflow["scroll"] <= overflow["inner"], f"{name} overflows: {overflow}"
+
+
+@pytest.mark.parametrize("name", NAV_PAGES)
+def test_the_whole_nav_is_on_screen_on_a_phone(page: Page, name: str) -> None:
+    """Every primary link is reachable *and* visible at 375px.
+
+    Q-G: the nav used to be a 121px scroller holding 252px of links, so
+    "What's new" and "About" sat off its end behind a 14px fade nobody
+    reads as an affordance. It now takes a row of its own. Asserted as
+    "no link is clipped by the nav's own box or by the viewport" rather
+    than by pinning a header height, so a future header that solves it
+    some other way still passes.
+    """
+    page.set_viewport_size(MOBILE)
+    page.goto(name)
+    nav = page.locator(".site-nav")
+    expect(nav).to_be_visible()
+
+    geometry = nav.evaluate(
+        """(nav) => {
+             const clip = nav.getBoundingClientRect();
+             return {
+               scrollWidth: nav.scrollWidth,
+               clientWidth: nav.clientWidth,
+               links: [...nav.querySelectorAll('a')].map((a) => {
+                 const r = a.getBoundingClientRect();
+                 return {
+                   text: a.textContent.trim(),
+                   hidden:
+                     r.left < clip.left - 0.5 ||
+                     r.right > clip.right + 0.5 ||
+                     r.left < -0.5 ||
+                     r.right > window.innerWidth + 0.5,
+                 };
+               }),
+             };
+           }"""
+    )
+    assert geometry["links"], f"{name} has no nav links"
+    clipped = [link["text"] for link in geometry["links"] if link["hidden"]]
+    assert not clipped, f"{name}: {clipped} clipped out of the nav ({geometry})"
+    assert geometry["scrollWidth"] <= geometry["clientWidth"] + 1, geometry
+
+
+@pytest.mark.parametrize("name", NAV_PAGES)
+def test_the_header_reserves_exactly_its_own_height_on_a_phone(
+    page: Page, name: str
+) -> None:
+    """`--header-h` is the fixed header's height *and* the body's padding.
+
+    The phone header is two rows tall (see above), which only works
+    because every frame offset on the site reads the same token. If one
+    of them stops tracking it, the header starts covering the first
+    screenful of content -- a failure that is invisible to a smoke test
+    but not to a reader.
+    """
+    page.set_viewport_size(MOBILE)
+    page.goto(name)
+    expect(page.locator(".site-header")).to_be_visible()
+    offsets = page.evaluate(
+        """() => ({
+             header: document.querySelector('.site-header').getBoundingClientRect().height,
+             padding: parseFloat(getComputedStyle(document.body).paddingTop),
+           })"""
+    )
+    assert offsets["header"] == pytest.approx(offsets["padding"], abs=1), (
+        name,
+        offsets,
+    )
 
 
 # ---------------------------------------------------------------------------
