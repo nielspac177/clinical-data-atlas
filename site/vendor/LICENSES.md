@@ -31,9 +31,11 @@ published it). Every one is MIT-licensed.
 | accessor-fn | `1` | MIT | https://github.com/vasturiano/accessor-fn |
 
 `three-forcegraph` in turn brings in
-[d3-force-3d](https://github.com/vasturiano/d3-force-3d) (MIT), the
+[d3-force-3d](https://github.com/vasturiano/d3-force-3d), the
 three-dimensional fork of Mike Bostock's `d3-force`, which is what actually
-lays the graph out.
+lays the graph out. Its licence was checked directly against the registry
+(`npm view d3-force-3d license` -> `MIT`, v3.0.6), because the upstream
+`d3-force` it derives from is ISC rather than MIT.
 
 ## MIT License
 

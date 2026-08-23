@@ -12,7 +12,7 @@ export const BUILD = "__BUILD__";
 /** Path prefix the site is served under, e.g. `/clinical-data-atlas/`. */
 export const BASE_URL = "__BASE_URL__";
 
-export const REPO_URL = "https://github.com/nielspac177/clinical-data-atlas";
+export const REPO_URL = "__REPO_URL__";
 
 export const SITE_NAME = "Clinical Data Atlas";
 

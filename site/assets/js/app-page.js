@@ -19,11 +19,16 @@ function initCopyButtons() {
     const target = document.querySelector(button.getAttribute("data-copy"));
     if (!target) continue;
 
+    // Captured once, before any click can overwrite it, and each button
+    // owns its restore timer — otherwise a second click while the first
+    // is still showing "Copied" would make that the permanent label.
+    const label = button.textContent;
+    let restore = null;
+
     button.addEventListener("click", async () => {
-      const text = target.textContent ?? "";
-      const label = button.textContent;
+      if (restore !== null) clearTimeout(restore);
       try {
-        await navigator.clipboard.writeText(text);
+        await navigator.clipboard.writeText(target.textContent ?? "");
         button.textContent = "Copied";
         announce("Citation copied to the clipboard.");
       } catch {
@@ -37,7 +42,8 @@ function initCopyButtons() {
         button.textContent = "Selected — press ⌘/Ctrl+C";
         announce("Citation selected. Press Command or Control C to copy.");
       }
-      setTimeout(() => {
+      restore = setTimeout(() => {
+        restore = null;
         button.textContent = label;
       }, 2500);
     });

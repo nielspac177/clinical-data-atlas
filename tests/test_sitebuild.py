@@ -17,7 +17,7 @@ from pathlib import Path
 
 import pytest
 
-from atlas import config, sitebuild
+from atlas import config, io, schema, sitebuild, vocab
 
 FIXTURES = Path(__file__).parent / "fixtures" / "site"
 SITE_DIR = config.ROOT / "site"
@@ -185,6 +185,98 @@ def test_vendor_bundle_is_copied_untouched(built: Path) -> None:
     copied = built / "vendor" / "3d-force-graph.min.js"
     assert copied.read_bytes() == source.read_bytes()
     assert PLACEHOLDER_RE.search(copied.read_text())  # __THREE__ lives here
+
+
+def test_changelog_html_is_escaped_not_executed(tmp_path: Path) -> None:
+    """Changelog prose comes from harvested, submitter-controlled dataset
+    names, and `markdown` passes raw HTML straight through — so any tag in
+    an entry must arrive as visible text."""
+    changelogs = tmp_path / "changelog"
+    changelogs.mkdir()
+    (changelogs / "2026-09-01.md").write_text(
+        "Added **<img src=x onerror=alert(1)>** and "
+        "<script>alert(2)</script> and <b>bold</b>.\n"
+    )
+
+    out = tmp_path / "_site"
+    assert build(out, **{"--changelog-dir": changelogs}) == 0
+
+    page = (out / "whats-new.html").read_text()
+    body = page.split("<!--CHANGELOG:START-->")[1].split("<!--CHANGELOG:END-->")[0]
+
+    assert "<img" not in body
+    assert "<script>" not in body
+    assert "onerror" in body  # present, but as text
+    assert "&lt;img src=x onerror=alert(1)&gt;" in body
+    assert "&lt;script&gt;alert(2)&lt;/script&gt;" in body
+    # Entities, not double-escaped entities.
+    assert "&amp;lt;" not in body
+    # Real markdown still renders.
+    assert "<strong>" in body
+
+
+def test_every_asset_reference_is_cache_busted(built: Path) -> None:
+    """A stale CSS or JS file after a deploy is a support burden; every
+    first-party asset reference must carry the build hash."""
+    pattern = re.compile(r'(?:href|src)="([^"]*\.(?:css|js))(\?[^"]*)?"')
+    checked = 0
+    for page in sorted(built.glob("*.html")):
+        for path, query in pattern.findall(page.read_text()):
+            checked += 1
+            assert query == f"?v={BUILD_ID}", f"{page.name} -> {path}{query}"
+    assert checked >= 20  # 4 CSS + 1 JS per page, plus the vendor bundle
+
+
+def test_missing_markers_fail_the_build(tmp_path: Path) -> None:
+    site = tmp_path / "site"
+    shutil.copytree(SITE_DIR, site)
+    page = site / "whats-new.html"
+    page.write_text(page.read_text().replace("<!--CHANGELOG:END-->", ""))
+
+    assert build(tmp_path / "_site", **{"--site-dir": site}) == 1
+
+
+def test_lastmod_and_urldate_appear_only_when_dated(tmp_path: Path) -> None:
+    dated = tmp_path / "dated"
+    assert build(dated) == 0
+    assert "<lastmod>2026-08-22</lastmod>" in (dated / "sitemap.xml").read_text()
+    assert "urldate = {2026-08-22}" in (dated / "about.html").read_text()
+    assert "Updated 2026-08-22" in (dated / "about.html").read_text()
+
+    undated = tmp_path / "undated"
+    assert build(undated, **{"--changelog-dir": tmp_path / "nope"}) == 0
+    sitemap = (undated / "sitemap.xml").read_text()
+    about = (undated / "about.html").read_text()
+    assert "lastmod" not in sitemap
+    assert sitemap.count("<loc>") == 4  # still valid, still complete
+    assert "urldate" not in about
+    assert "Not yet published" in about
+    assert "Updated" not in about.split('<footer class="site-footer">')[1]
+    assert "<!--?" not in sitemap and "<!--?" not in about
+
+
+def test_repo_url_placeholder_is_substituted(built: Path) -> None:
+    for name in ("index.html", "table.html", "whats-new.html", "about.html"):
+        page = (built / name).read_text()
+        assert config.REPO_URL in page, name
+    js = (built / "assets" / "js" / "config.js").read_text()
+    assert f'export const REPO_URL = "{config.REPO_URL}";' in js
+
+
+def test_every_page_has_exactly_one_h1(built: Path) -> None:
+    for page in sorted(built.glob("*.html")):
+        assert page.read_text().count("<h1") == 1, page.name
+
+
+def test_catalog_fixture_matches_the_frozen_schema() -> None:
+    """The fixture other site tasks build against must be a real catalog."""
+    rows = io.read_jsonl(FIXTURES / "catalog.jsonl")
+    errors, _warnings = schema.validate_records(rows)
+    assert errors == []
+    assert len(rows) == 6
+    assert {row["source"] for row in rows} == {"openneuro", "physionet"}
+    # All five access tiers are represented, so badge styling is exercised.
+    assert {row["access"] for row in rows} == set(vocab.ACCESS_ORDER)
 
 
 def test_nojekyll_is_written(built: Path) -> None:

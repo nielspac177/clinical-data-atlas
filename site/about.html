@@ -115,7 +115,7 @@
           <span class="visually-hidden">Light theme</span>
         </button>
 
-        <a class="icon-btn github-link" href="https://github.com/nielspac177/clinical-data-atlas" rel="noopener">
+        <a class="icon-btn github-link" href="__REPO_URL__" rel="noopener">
           <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
             <path
               fill="currentColor"
@@ -156,7 +156,7 @@
           The data files are the product; this site is a view of them. Every
           record, the raw responses it was built from, and the code that did
           the building live in the
-          <a href="https://github.com/nielspac177/clinical-data-atlas" rel="noopener"
+          <a href="__REPO_URL__" rel="noopener"
             >repository</a
           >, so any number in the graph can be traced back to the API response
           that produced it.
@@ -239,7 +239,7 @@
           explicitly null rather than guessed. Per-source endpoint notes,
           quirks, and verification dates are kept in
           <a
-            href="https://github.com/nielspac177/clinical-data-atlas/blob/main/docs/sources.md"
+            href="__REPO_URL__/blob/main/docs/sources.md"
             rel="noopener"
             >docs/sources.md</a
           >.
@@ -249,17 +249,17 @@
         <p>
           One record shape covers every source. It is defined once as a
           <a
-            href="https://github.com/nielspac177/clinical-data-atlas/blob/main/atlas/schema.py"
+            href="__REPO_URL__/blob/main/atlas/schema.py"
             rel="noopener"
             >pydantic model</a
           >, and the human and machine-readable copies
           (<a
-            href="https://github.com/nielspac177/clinical-data-atlas/blob/main/docs/schema.md"
+            href="__REPO_URL__/blob/main/docs/schema.md"
             rel="noopener"
             >docs/schema.md</a
           >,
           <a
-            href="https://github.com/nielspac177/clinical-data-atlas/blob/main/docs/schema.json"
+            href="__REPO_URL__/blob/main/docs/schema.json"
             rel="noopener"
             >docs/schema.json</a
           >) are generated from it, so they cannot drift.
@@ -348,7 +348,7 @@
           &mdash; and cite each dataset you actually use in the way its own
           source asks. The
           <a
-            href="https://github.com/nielspac177/clinical-data-atlas/blob/main/CITATION.cff"
+            href="__REPO_URL__/blob/main/CITATION.cff"
             rel="noopener"
             >CITATION.cff</a
           >
@@ -366,7 +366,7 @@
   year    = {2026},
   url     = {__SITE_URL__},
   version = {__BUILD__},
-  urldate = {__UPDATED__},
+  urldate = {__UPDATED__},<!--?updated-->
   note    = {Catalog metadata licensed CC BY 4.0}
 }</code></pre>
 
@@ -379,7 +379,7 @@
         <ul>
           <li>
             <a
-              href="https://github.com/nielspac177/clinical-data-atlas/issues/new?template=propose-dataset.yml"
+              href="__REPO_URL__/issues/new?template=propose-dataset.yml"
               rel="noopener"
               >Propose a dataset</a
             >
@@ -387,7 +387,7 @@
           </li>
           <li>
             <a
-              href="https://github.com/nielspac177/clinical-data-atlas/issues/new?template=dataset-edit.yml"
+              href="__REPO_URL__/issues/new?template=dataset-edit.yml"
               rel="noopener"
               >Correct a record</a
             >
@@ -405,7 +405,7 @@
         <ul>
           <li>
             <strong>Code</strong> &mdash; the pipeline and this site are
-            <a href="https://github.com/nielspac177/clinical-data-atlas/blob/main/LICENSE" rel="noopener"
+            <a href="__REPO_URL__/blob/main/LICENSE" rel="noopener"
               >MIT</a
             >.
           </li>
@@ -471,7 +471,7 @@
         <p>
           Found something that doesn&rsquo;t work with your setup? That is a bug
           worth reporting &mdash;
-          <a href="https://github.com/nielspac177/clinical-data-atlas/issues" rel="noopener"
+          <a href="__REPO_URL__/issues" rel="noopener"
             >open an issue</a
           >.
         </p>
@@ -493,10 +493,11 @@
           Catalog data
           <a href="https://creativecommons.org/licenses/by/4.0/" rel="license noopener">CC BY 4.0</a>
         </li>
-        <li>Updated __UPDATED__</li>
+        <li>Updated __UPDATED__</li><!--?updated-->
+        <li>Not yet published</li><!--?not-updated-->
         <li>
           <a
-            href="https://github.com/nielspac177/clinical-data-atlas/issues/new?template=propose-dataset.yml"
+            href="__REPO_URL__/issues/new?template=propose-dataset.yml"
             rel="noopener"
             >Propose a dataset</a
           >

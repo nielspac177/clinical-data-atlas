@@ -6,19 +6,24 @@ The steps, in order: copy `site/` wholesale, copy the three generated graph
 JSON files next to it as `data/`, split the catalog into one lazily-fetched
 file per record, render the newest changelogs into `whats-new.html`, then
 substitute the build-time placeholders (`__BUILD__`, `__BASE_URL__`,
-`__SITE_URL__`, `__UPDATED__`, `__MAINTAINER__`) throughout. A placeholder
-that survives that pass fails the build rather than shipping to a reader.
+`__SITE_URL__`, `__REPO_URL__`, `__UPDATED__`, `__MAINTAINER__`)
+throughout. A placeholder that survives that pass fails the build rather
+than shipping to a reader.
 
 Missing pipeline output is a warning, not an error: the site must be
 buildable before the first harvest has ever run.
 
-Two conventions the rest of the repo relies on:
+Three conventions the rest of the repo relies on:
 
 - A changelog file is named `YYYY-MM-DD.md` and does **not** repeat its own
   date as a heading — this module wraps each one in
   ``<article><h2><time datetime=…>…</time></h2>…</article>``. Bodies should
   start at `###`. `latest.md` is a duplicate of the newest entry and is
   skipped.
+- A source line ending in `<!--?updated-->` survives only when there is a
+  changelog date to substitute, and one ending in `<!--?not-updated-->`
+  only when there isn't — so a `<lastmod>` element or a BibTeX `urldate`
+  is omitted entirely rather than filled with a placeholder date.
 - A record's per-file name is the part of its `id` after the first colon
   (`openneuro:ds000001` -> `records/openneuro/ds000001.json`); the schema's
   id pattern already guarantees that part is filename-safe.
@@ -38,13 +43,21 @@ import markdown
 from atlas import config, io
 
 GRAPH_FILES = ("graph.json", "search-index.json", "stats.json")
-TEXT_SUFFIXES = frozenset({".html", ".js", ".txt", ".xml"})
+TEXT_SUFFIXES = frozenset({".html", ".js", ".css", ".svg", ".txt", ".xml"})
 CHANGELOG_LIMIT = 12
 MARKER_START = "<!--CHANGELOG:START-->"
 MARKER_END = "<!--CHANGELOG:END-->"
 VENDOR_DIR = "vendor"
 PLACEHOLDER_RE = re.compile(r"__[A-Z][A-Z0-9_]*__")
 NO_CHANGELOG_HTML = '<p class="muted">No refreshes have been recorded yet.</p>'
+NO_DATE = "not yet published"
+
+# Line-level conditionals. A source line ending in `<!--?updated-->` is kept
+# only when a changelog date exists (the marker is then stripped); one ending
+# in `<!--?not-updated-->` is kept only when there is none. Both markers are
+# HTML/XML comments, so an unbuilt source file still renders correctly.
+IF_DATED = "<!--?updated-->"
+IF_UNDATED = "<!--?not-updated-->"
 
 
 def _warn(message: str) -> None:
@@ -107,6 +120,20 @@ def changelog_entries(changelog_dir: Path) -> list[Path]:
     return entries[:CHANGELOG_LIMIT]
 
 
+def _defang(markdown_text: str) -> str:
+    """Neutralize embedded HTML in changelog markdown.
+
+    `markdown` passes raw HTML straight through, and changelog entries are
+    generated from harvested dataset names — i.e. from strings a dataset
+    submitter controls. Escaping `<` and `>` before rendering turns any
+    embedded tag into visible text. Neither character is markdown syntax
+    in anything the pipeline emits, and `markdown` recognizes the
+    resulting entities rather than double-escaping them, so `&lt;b&gt;`
+    still renders as the literal text `<b>`.
+    """
+    return markdown_text.replace("<", "&lt;").replace(">", "&gt;")
+
+
 def render_changelog(entries: Sequence[Path]) -> str:
     """Render each entry as its own dated `<article>`."""
     renderer = markdown.Markdown(extensions=["tables", "fenced_code"])
@@ -114,7 +141,7 @@ def render_changelog(entries: Sequence[Path]) -> str:
     for path in entries:
         date = path.stem
         renderer.reset()
-        body = renderer.convert(path.read_text(encoding="utf-8"))
+        body = renderer.convert(_defang(path.read_text(encoding="utf-8")))
         articles.append(
             f'<article>\n<h2><time datetime="{date}">{date}</time></h2>\n'
             f"{body}\n</article>"
@@ -151,11 +178,19 @@ def _text_files(out: Path) -> list[Path]:
     )
 
 
-def substitute(out: Path, values: dict[str, str]) -> None:
-    """Replace every placeholder in every text asset under `out`."""
+def resolve_conditionals(text: str, *, dated: bool) -> str:
+    """Apply the `IF_DATED` / `IF_UNDATED` line markers (see their docs)."""
+    keep, drop = (IF_DATED, IF_UNDATED) if dated else (IF_UNDATED, IF_DATED)
+    lines = [line for line in text.splitlines(keepends=True) if drop not in line]
+    return "".join(line.replace(keep, "") for line in lines)
+
+
+def substitute(out: Path, values: dict[str, str], *, dated: bool) -> None:
+    """Resolve conditional lines, then replace every placeholder, in every
+    text asset under `out`."""
     for path in _text_files(out):
         text = path.read_text(encoding="utf-8")
-        replaced = text
+        replaced = resolve_conditionals(text, dated=dated)
         for token, value in values.items():
             replaced = replaced.replace(token, value)
         if replaced != text:
@@ -205,15 +240,18 @@ def build(
         return 1
 
     prefix = base_url if base_url.endswith("/") else f"{base_url}/"
+    updated = entries[0].stem if entries else ""
     substitute(
         out,
         {
             "__BUILD__": build_id,
             "__BASE_URL__": prefix,
             "__SITE_URL__": config.SITE_URL,
-            "__UPDATED__": entries[0].stem if entries else "—",
+            "__REPO_URL__": config.REPO_URL,
+            "__UPDATED__": updated or NO_DATE,
             "__MAINTAINER__": config.MAINTAINER,
         },
+        dated=bool(updated),
     )
 
     if leftovers := remaining_placeholders(out):

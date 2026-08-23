@@ -98,7 +98,8 @@ body {
     flex: 0 1 auto;
   }
 
-  .site-nav a {
+  /* `.site-nav a` (components.css, loaded later) sets padding too. */
+  .site-header .site-nav a {
     padding: var(--sp-1) var(--sp-2);
   }
 
