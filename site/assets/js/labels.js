@@ -43,6 +43,30 @@ function cmpId(a, b) {
   return a < b ? -1 : a > b ? 1 : 0;
 }
 
+/**
+ * Do two camera poses describe the same view?
+ *
+ * `cameraPosition()` reports where the camera is and the point it looks
+ * at, which between them pin down both translation and rotation. Exact
+ * comparison is what we want: these are the very floats the last frame
+ * was drawn from, so "unchanged" means bit-for-bit unchanged.
+ *
+ * Exported for testing; the frame loop is the only caller.
+ */
+export function samePose(a, b) {
+  if (!a || !b) return false;
+  const from = a.lookAt ?? {};
+  const to = b.lookAt ?? {};
+  return (
+    a.x === b.x &&
+    a.y === b.y &&
+    a.z === b.z &&
+    from.x === to.x &&
+    from.y === to.y &&
+    from.z === to.z
+  );
+}
+
 function truncate(text, max) {
   const value = String(text ?? "");
   return value.length > max ? `${value.slice(0, max - 1)}…` : value;
@@ -57,6 +81,10 @@ function truncate(text, max) {
  * - `index` — the graph index, for node lookups, degrees and neighbours.
  * - `getVisible()` — the ids currently in the scene, as a Set.
  * - `getFocus()` — `{hovered, selected}` ids, or nulls.
+ * - `isDimmed(node)` — the node is filtered out, so its label reads quiet.
+ * - `isSettled()` — the force engine has stopped, so nothing moves unless
+ *   the camera does. Lets the frame loop skip its work while the reader
+ *   just sits and looks.
  * - `onSelect(node)` — a label was clicked.
  * - `mobile` — trims the budgets.
  *
@@ -66,7 +94,16 @@ function truncate(text, max) {
  */
 export function createLabelLayer(
   host,
-  { graph, index, getVisible, getFocus, onSelect, mobile = false } = {},
+  {
+    graph,
+    index,
+    getVisible,
+    getFocus,
+    isDimmed,
+    isSettled,
+    onSelect,
+    mobile = false,
+  } = {},
 ) {
   const layer = document.createElement("div");
   layer.className = "node-labels";
@@ -77,6 +114,9 @@ export function createLabelLayer(
   const pool = new Map();
   let frameId = null;
   let running = false;
+
+  /** The camera pose the labels were last positioned for. */
+  let lastPose = null;
 
   layer.addEventListener("click", (event) => {
     const button = event.target.closest("button[data-id]");
@@ -167,9 +207,11 @@ export function createLabelLayer(
         id === focus.selected ||
         id === focus.hovered ||
         (hasFocus && index.adj.get(focus.selected ?? focus.hovered)?.has(id));
-      const quiet = hasFocus
-        ? !inFocus
-        : node.type === "condition" || node.type === "institution";
+      const quiet = isDimmed?.(node)
+        ? true // filtered out by the legend
+        : hasFocus
+          ? !inFocus
+          : node.type === "condition" || node.type === "institution";
 
       if (quiet) button.dataset.quiet = "true";
       else delete button.dataset.quiet;
@@ -179,15 +221,19 @@ export function createLabelLayer(
   }
 
   /** Move every label to its node's current screen position. */
-  function position() {
+  function position(pose) {
     if (pool.size === 0) return;
 
     // Read the layout once, before any writes: interleaving the two would
-    // force a synchronous reflow on every label, every frame.
+    // force a synchronous reflow on every label, every frame. Zero means
+    // the box has never been laid out (a backgrounded tab skips layout
+    // entirely), in which case there is no stage to clip against yet.
     const width = layer.clientWidth;
     const height = layer.clientHeight;
+    const clip = width > 0 && height > 0;
 
-    const camera = graph.cameraPosition();
+    const camera = pose ?? graph.cameraPosition();
+    lastPose = camera;
     const target = camera?.lookAt ?? { x: 0, y: 0, z: 0 };
     let fx = target.x - camera.x;
     let fy = target.y - camera.y;
@@ -225,10 +271,11 @@ export function createLabelLayer(
       // Off-stage labels are clipped anyway; hiding them keeps them out of
       // the tab order and off the frame's work list.
       if (
-        point.x < -MARGIN ||
-        point.y < -MARGIN ||
-        point.x > width + MARGIN ||
-        point.y > height + MARGIN
+        clip &&
+        (point.x < -MARGIN ||
+          point.y < -MARGIN ||
+          point.x > width + MARGIN ||
+          point.y > height + MARGIN)
       ) {
         hide(button);
         continue;
@@ -246,7 +293,15 @@ export function createLabelLayer(
 
   function frame() {
     if (!running) return;
-    position();
+    // While the layout runs, every node is moving and every frame counts.
+    // Once it has settled, only the camera can change where a label
+    // belongs — hover and selection changes arrive through refresh().
+    if (!isSettled?.()) {
+      position();
+    } else {
+      const pose = graph.cameraPosition();
+      if (!samePose(lastPose, pose)) position(pose);
+    }
     frameId = requestAnimationFrame(frame);
   }
 
@@ -264,6 +319,7 @@ export function createLabelLayer(
 
   function destroy() {
     stop();
+    lastPose = null;
     pool.clear();
     layer.remove();
   }

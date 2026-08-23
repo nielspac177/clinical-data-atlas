@@ -111,8 +111,8 @@ export function toRGBA(color, alpha) {
  * keep the stats bar's "in view" figure honest.
  *
  * Returns the controls the page drives: `showBackbone`, `expand`,
- * `collapse`, `focus`, `highlight`, `setDomainFilter`, `reset`,
- * `setColors`, `pause`, `resume` (plus `counts` and `destroy`).
+ * `collapse`, `focus`, `highlight`, `clearSelection`, `setDomainFilter`,
+ * `reset`, `setColors`, `pause`, `resume` (plus `counts` and `destroy`).
  */
 export function createGraph(
   el,
@@ -147,6 +147,7 @@ export function createGraph(
   let egoAlpha = FADE_ALPHA;
   let domainFilter = null;
   let fitted = false;
+  let settled = false; // the engine has stopped and positions are final
   let pointer = { x: 0, y: 0 };
 
   // ------------------------------------------------------------ appearance
@@ -253,6 +254,8 @@ export function createGraph(
     index,
     getVisible: () => visible,
     getFocus: () => ({ hovered: hoveredId, selected: selectedId }),
+    isDimmed: (node) => !passesFilter(node),
+    isSettled: () => settled,
     onSelect: (node) => selectFromScene(node),
     mobile,
   });
@@ -329,6 +332,7 @@ export function createGraph(
 
     // The same node objects every time: d3 keeps their positions, so an
     // expansion grows the scene instead of reshuffling it.
+    settled = false;
     g.graphData({ nodes, links });
     labels.refresh();
     onCounts?.(counts());
@@ -438,9 +442,16 @@ export function createGraph(
     if (!expanded.has(hubId)) return api;
     expanded.delete(hubId);
 
+    // Collapsing puts the scene back the way it was, so the selection goes
+    // with it: leaving it set would keep the map dimmed around a node the
+    // reader just dismissed. Callers clear `?node=` to match.
+    selectedId = null;
+    egoIds = null;
+    hoveredId = null;
+    showTooltip(null);
+
     // A dataset may hang off two expanded hubs; only drop the orphans.
     const keep = new Set(pinned);
-    if (selectedId) keep.add(selectedId);
     for (const [otherId, shown] of expanded) {
       for (const id of index.neighbours(otherId, "dataset").slice(0, shown)) {
         keep.add(id);
@@ -511,9 +522,11 @@ export function createGraph(
           ? domains
           : new Set(domains);
     refreshColors();
+    labels.refresh(); // dimmed nodes get quiet labels
     return api;
   }
 
+  /** Drop the selection, the ego highlight and the tooltip. */
   function clearSelection() {
     selectedId = null;
     egoIds = null;
@@ -521,6 +534,7 @@ export function createGraph(
     showTooltip(null);
     refreshColors();
     labels.refresh();
+    return api;
   }
 
   function reset() {
@@ -608,6 +622,7 @@ export function createGraph(
     onSelect?.(null);
   });
   g.onEngineStop(() => {
+    settled = true;
     if (!fitted) {
       fitted = true;
       g.zoomToFit(prefersReducedMotion() ? 0 : ZOOM_MS, ZOOM_PADDING);
@@ -621,15 +636,16 @@ export function createGraph(
   };
   // `pointerover`/`down` as well as `move`, so the tooltip is never
   // stranded at the origin when the pointer arrives without moving.
-  el.addEventListener("pointermove", trackPointer);
-  el.addEventListener("pointerover", trackPointer);
-  el.addEventListener("pointerdown", trackPointer);
-  el.addEventListener("pointerleave", () => {
+  const onPointerLeave = () => {
     if (hoveredId === null) return;
     hoveredId = null;
     showTooltip(null);
     labels.refresh();
-  });
+  };
+  el.addEventListener("pointermove", trackPointer);
+  el.addEventListener("pointerover", trackPointer);
+  el.addEventListener("pointerdown", trackPointer);
+  el.addEventListener("pointerleave", onPointerLeave);
 
   const observer = new ResizeObserver(() => {
     g.width(el.clientWidth).height(el.clientHeight);
@@ -640,6 +656,10 @@ export function createGraph(
   function destroy() {
     observer.disconnect();
     document.removeEventListener("visibilitychange", onVisibility);
+    el.removeEventListener("pointermove", trackPointer);
+    el.removeEventListener("pointerover", trackPointer);
+    el.removeEventListener("pointerdown", trackPointer);
+    el.removeEventListener("pointerleave", onPointerLeave);
     labels.destroy();
     showTooltip(null);
     g._destructor?.();
@@ -653,6 +673,7 @@ export function createGraph(
     collapse,
     focus,
     highlight,
+    clearSelection,
     setDomainFilter,
     reset,
     setColors,

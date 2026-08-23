@@ -12,7 +12,7 @@
  */
 
 import { announce, initA11y, onEscape } from "./a11y.js";
-import { initTheme, readDomainColors } from "./theme.js";
+import { currentTheme, initTheme, readDomainColors } from "./theme.js";
 import { BUILD, REPO_URL } from "./config.js";
 import { loadGraph, loadStats, loadIndex, loadRecord } from "./data.js";
 import { buildIndex } from "./graph-index.js";
@@ -44,7 +44,10 @@ async function optionalModule(name) {
   const url = new URL(`./${name}?v=${encodeURIComponent(BUILD)}`, import.meta.url);
   try {
     return await import(url.href);
-  } catch {
+  } catch (error) {
+    // Expected while the module is unbuilt, but a syntax error in a
+    // deployed one looks identical from here — so say which and why.
+    console.warn(`Optional module ${name} did not load; using the fallback.`, error);
     return null;
   }
 }
@@ -139,10 +142,14 @@ function builtinPanel(root) {
   title?.setAttribute("tabindex", "-1");
 
   function open(heading) {
-    if (root.hidden) returnFocus = document.activeElement;
+    // Only a hidden -> visible transition moves focus. "Show more"
+    // re-renders the same open panel, and yanking focus back to the title
+    // on every click would strand the reader mid-list.
+    const opening = root.hidden;
+    if (opening) returnFocus = document.activeElement;
     if (title) title.textContent = heading;
     root.hidden = false;
-    title?.focus();
+    if (opening) title?.focus();
   }
 
   function closePanel() {
@@ -226,7 +233,7 @@ function builtinPanel(root) {
         more.className = "btn";
         more.textContent = "Show more";
         more.addEventListener("click", onMore);
-        actions.append(more, " ");
+        actions.append(more);
       }
       if (onCollapse) {
         const collapse = document.createElement("button");
@@ -271,7 +278,7 @@ async function main() {
   const hubByLabel = new Map();
   for (const [id, node] of index.nodes) {
     if (node.type === "dataset") continue;
-    hubByLabel.set(`${node.type} ${String(node.label).toLowerCase()}`, id);
+    hubByLabel.set(`${node.type}\u0000${String(node.label).toLowerCase()}`, id);
   }
 
   let rowsById = null; // search-index rows, once something needs them
@@ -290,7 +297,7 @@ async function main() {
     colors: readDomainColors(),
     onSelect: handleSelect,
     onExpand: handleExpand,
-    onCounts: ({ datasets }) => setStat("visible", fmtNumber(datasets)),
+    onCounts: ({ nodes }) => setStat("visible", fmtNumber(nodes)),
   });
   graph.showBackbone();
 
@@ -314,7 +321,20 @@ async function main() {
   }
 
   function applyLegend({ silent = false } = {}) {
-    const active = activeDomains();
+    let active = activeDomains();
+
+    // Turning the last chip off would dim every dataset at once, with no
+    // affordance saying why. Treat it as "show everything" instead of
+    // parking the map in a state nobody can read.
+    if (active.length === 0) {
+      for (const chip of chips) chip.setAttribute("aria-pressed", "true");
+      active = activeDomains();
+      graph.setDomainFilter(null);
+      urlState.writeState({ domain: [] });
+      announce("All domains shown.");
+      return;
+    }
+
     const all = active.length === chips.length;
     graph.setDomainFilter(all ? null : new Set(active));
     urlState.writeState({ domain: all ? [] : active });
@@ -349,7 +369,7 @@ async function main() {
       setLegend(new Set([value]));
       return;
     }
-    const id = hubByLabel.get(`${kind} ${String(value).toLowerCase()}`);
+    const id = hubByLabel.get(`${kind}\u0000${String(value).toLowerCase()}`);
     if (id) {
       graph.focus(id);
       return;
@@ -387,8 +407,11 @@ async function main() {
       total,
       onMore: shown < total ? () => graph.expand(hub.id, { more: true }) : null,
       onCollapse: () => {
+        // graph.collapse() drops the selection with the datasets it
+        // removes; leaving `?node=` behind would reopen this on reload.
         graph.collapse(hub.id);
         panel.close();
+        urlState.writeState({ node: null });
         announce(`Collapsed ${hub.label ?? hub.id}.`);
       },
     });
@@ -444,7 +467,7 @@ async function main() {
 
   // ----------------------------------------------------------- URL state
 
-  function applyState(state, { push = false } = {}) {
+  function applyState(state) {
     if (state.domain?.length) setLegend(new Set(state.domain), { silent: true });
     if (state.q && searchInput) {
       searchInput.value = state.q;
@@ -463,19 +486,29 @@ async function main() {
           panel.showDataset(state.node, { node, row: rowFor(state.node) });
           announce(`Selected ${node.label ?? state.node}.`);
         }
+      } else {
+        // A stale or hand-edited link: say so rather than sit there
+        // looking like the page failed to load.
+        console.warn(`No node in the graph for id ${state.node}.`);
+        announce(`No dataset with id ${state.node}.`);
       }
-    } else if (push) {
+    } else {
+      // No node in the URL means no selection: going back to a clean
+      // entry has to leave a clean scene, not a dimmed one.
+      graph.clearSelection();
       panel.close();
     }
   }
 
   applyState(urlState.readState());
-  urlState.onChange?.((state) => applyState(state, { push: true }));
+  urlState.onChange?.((state) => applyState(state));
 
   // ------------------------------------------------------------- theming
 
-  document.addEventListener("themechange", () => {
+  document.addEventListener("themechange", (event) => {
     graph.setColors(readDomainColors());
+    const theme = event.detail?.theme ?? currentTheme();
+    announce(theme === "light" ? "Light theme" : "Dark theme");
   });
 }
 

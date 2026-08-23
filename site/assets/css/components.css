@@ -929,3 +929,11 @@ button.node-label:hover {
 .node-labels .node-label {
   pointer-events: auto;
 }
+
+/* Buttons in the record panel's entity view ("Show more" / "Collapse"). */
+.panel-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+  margin: var(--sp-3) 0 0;
+}
