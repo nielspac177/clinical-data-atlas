@@ -23,6 +23,7 @@ from __future__ import annotations
 
 import copy
 import json
+import re
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
@@ -234,9 +235,40 @@ _MAX_PATHS_PER_RECORD = 10
 _TRUNCATE_AT = 120
 
 
-def _escape_cell(value: str) -> str:
-    """Escape literal `|` so it can't be mistaken for a column separator."""
-    return value.replace("|", "\\|")
+# Non-whitespace control characters (deliberately excludes tab/LF/VT/FF/CR --
+# 0x09-0x0d -- which are whitespace and handled by the collapse below instead
+# of being stripped outright).
+_CONTROL_CHARS_RE = re.compile(r"[\x00-\x08\x0e-\x1f\x7f]")
+_WHITESPACE_RUN_RE = re.compile(r"\s+")
+
+
+def _plain(text: str) -> str:
+    """Make free text safe to interpolate anywhere in the rendered
+    markdown. Every value this is applied to (a name, url, error message,
+    or diff value) can originate from a harvested source and is otherwise
+    untrusted -- without this, one nasty field could split a table row,
+    forge a heading, or break out of a backtick span.
+
+    Non-whitespace control characters are dropped outright; every run of
+    whitespace -- carriage returns, newlines, tabs, or plain spaces --
+    collapses to a single space and the ends are trimmed, so the result
+    is always one line no matter how many newlines (or blank lines) were
+    in the input. That single-line guarantee is what keeps a multi-line
+    `HarvestResult.error` on one Sources table row and stops a value with
+    a blank line followed by a leading `#` from forging a heading.
+    Finally, backticks become `'` (so a value can't break out of the
+    surrounding `` `...` `` span it's rendered in) and `|` is escaped (so
+    it can't be mistaken for a table column separator -- harmless outside
+    a table too).
+
+    Not applied to ids or json-pointer paths: both are built from
+    schema-controlled strings (the id regex, fixed field names/list
+    indices), never from free text.
+    """
+    text = _CONTROL_CHARS_RE.sub("", text)
+    text = _WHITESPACE_RUN_RE.sub(" ", text).strip()
+    text = text.replace("`", "'")
+    return text.replace("|", "\\|")
 
 
 def _table(headers: tuple[str, ...], rows: list[tuple[str, ...]]) -> str:
@@ -245,23 +277,21 @@ def _table(headers: tuple[str, ...], rows: list[tuple[str, ...]]) -> str:
         "|" + "|".join("---" for _ in headers) + "|",
     ]
     for row in rows:
-        lines.append("| " + " | ".join(_escape_cell(cell) for cell in row) + " |")
+        lines.append("| " + " | ".join(_plain(cell) for cell in row) + " |")
     return "\n".join(lines)
 
 
 def _display(value: Any) -> str:
-    """Human-readable rendering of one diff leaf value: `None` as
+    """Turn one diff leaf value into its raw string form: `None` as
     `"null"` (these are JSON records), dicts/lists as compact JSON,
-    everything else via `str()` -- with any literal backtick swapped for
-    a plain quote so a value can never break out of the surrounding
-    `` `...` `` span."""
+    everything else via `str()`. Markdown-safety (control characters,
+    newlines, backticks, `|`) is `_plain`'s job, applied separately by
+    the caller."""
     if value is None:
-        text = "null"
-    elif isinstance(value, (dict, list)):
-        text = json.dumps(value, sort_keys=True, ensure_ascii=False)
-    else:
-        text = str(value)
-    return text.replace("`", "'")
+        return "null"
+    if isinstance(value, (dict, list)):
+        return json.dumps(value, sort_keys=True, ensure_ascii=False)
+    return str(value)
 
 
 def _truncate(text: str, limit: int = _TRUNCATE_AT) -> str:
@@ -313,7 +343,7 @@ def _sources_section(results: list[HarvestResult]) -> str:
 def _failure_line(result: HarvestResult) -> str:
     line = f"- `{result.source}`: {result.status}"
     if result.error:
-        line += f" — {result.error}"
+        line += f" — {_plain(result.error)}"
     return line
 
 
@@ -328,7 +358,9 @@ def _failures_section(results: list[HarvestResult]) -> str:
 
 
 def _record_line(record: dict) -> str:
-    return f"- `{record['id']}` — {record.get('name', '')} — {record.get('url', '')}"
+    name = _plain(record.get("name", ""))
+    url = _plain(record.get("url", ""))
+    return f"- `{record['id']}` — {name} — {url}"
 
 
 def _record_list_section(heading: str, records: list[dict]) -> str:
@@ -344,10 +376,10 @@ def _record_list_section(heading: str, records: list[dict]) -> str:
 def _changed_record_block(
     record_id: str, diffs: list[tuple[str, Any, Any]], name: str
 ) -> str:
-    lines = [f"- `{record_id}` — {name}"]
+    lines = [f"- `{record_id}` — {_plain(name)}"]
     for path, old_v, new_v in diffs[:_MAX_PATHS_PER_RECORD]:
-        old_text = _truncate(_display(old_v))
-        new_text = _truncate(_display(new_v))
+        old_text = _truncate(_plain(_display(old_v)))
+        new_text = _truncate(_plain(_display(new_v)))
         lines.append(f"  - `{path}`: `{old_text}` → `{new_text}`")
     remaining = len(diffs) - _MAX_PATHS_PER_RECORD
     if remaining > 0:
@@ -375,11 +407,11 @@ def _enrichment_section(stats: dict | None) -> str:
     if stats is None:
         return "## Enrichment\n\nnot run"
     lines = [
-        f"- backend: `{stats.get('backend', 'unknown')}`",
-        f"- calls: {stats.get('calls', 0)}",
-        f"- cache_hits: {stats.get('cache_hits', 0)}",
-        f"- guard_drops: {stats.get('guard_drops', 0)}",
-        f"- failures: {stats.get('failures', 0)}",
+        f"- backend: `{_plain(str(stats.get('backend', 'unknown')))}`",
+        f"- calls: {_plain(str(stats.get('calls', 0)))}",
+        f"- cache_hits: {_plain(str(stats.get('cache_hits', 0)))}",
+        f"- guard_drops: {_plain(str(stats.get('guard_drops', 0)))}",
+        f"- failures: {_plain(str(stats.get('failures', 0)))}",
     ]
     return "## Enrichment\n\n" + "\n".join(lines)
 
@@ -447,12 +479,12 @@ def write_changelog(
 
 
 def summary_title(d: Diff, *, date: str) -> str:
-    """One-line PR-title-style summary, e.g. `"Refresh 2026-09-01: +14
-    new, ~37 changed, -2 removed"` -- the same counts as `d.counts` /
-    `render_changelog`'s summary line, minus `unchanged` (not
-    newsworthy in a title)."""
+    """One-line PR-title-style summary, e.g. `"Monthly refresh
+    2026-09-01: +14 new, ~37 changed, -2 removed"` -- the same counts as
+    `d.counts` / `render_changelog`'s summary line, minus `unchanged`
+    (not newsworthy in a title)."""
     counts = d.counts
     return (
-        f"Refresh {date}: +{counts['added']} new, "
+        f"Monthly refresh {date}: +{counts['added']} new, "
         f"~{counts['changed']} changed, -{counts['removed']} removed"
     )

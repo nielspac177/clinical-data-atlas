@@ -158,6 +158,23 @@ def test_empty_ignore_list_compares_everything():
     assert old_rec["id"] in d.changed
 
 
+def test_ignore_path_absent_from_record_does_not_crash_and_stays_unchanged():
+    # `ignore` naming a path that exists on neither side (or only
+    # partway, e.g. a missing parent dict) must be a silent no-op, not
+    # a KeyError/AttributeError.
+    old_rec = _record()
+    new_rec = _record()
+
+    d = diff.diff_catalog(
+        [old_rec],
+        [new_rec],
+        ignore=("nonexistent_field", "provenance.nonexistent", "no.such.nesting"),
+    )
+
+    assert d.changed == {}
+    assert d.counts["unchanged"] == 1
+
+
 def test_diff_catalog_does_not_mutate_inputs():
     old_rec = _record()
     new_rec = _record()
@@ -203,6 +220,20 @@ def test_list_of_different_length_is_compared_as_whole_value():
     d = diff.diff_catalog([old_rec], [new_rec])
 
     assert d.changed[old_rec["id"]] == [("/modalities", ["MRI"], ["MRI", "CT"])]
+
+
+def test_pure_list_reordering_counts_as_changed():
+    # Same elements, same length, different order -- element-wise
+    # comparison means this is NOT treated as unchanged just because
+    # the set of modalities is identical.
+    old_rec = _record(modalities=["MRI", "CT"])
+    new_rec = _record(modalities=["CT", "MRI"])
+
+    d = diff.diff_catalog([old_rec], [new_rec])
+
+    assert old_rec["id"] in d.changed
+    paths = {path for path, _old, _new in d.changed[old_rec["id"]]}
+    assert paths == {"/modalities/0", "/modalities/1"}
 
 
 # ---------------------------------------------------------------------------
@@ -504,6 +535,79 @@ def test_render_changelog_validation_warnings_count():
 
 
 # ---------------------------------------------------------------------------
+# render_changelog: free text can never corrupt the markdown structure
+# ---------------------------------------------------------------------------
+
+# Every heading line this module ever emits starts with one of these.
+_KNOWN_HEADING_PREFIXES = (
+    "# ",
+    "## Sources",
+    "## Failures",
+    "## Added",
+    "## Removed",
+    "## Changed",
+    "## Enrichment",
+    "## Validation warnings:",
+)
+
+
+def test_render_changelog_sources_multiline_error_stays_on_one_row():
+    result = HarvestResult(
+        source="gdc", status="failed", error="line1\nline2\r\nline3\ttabbed"
+    )
+    d = diff.diff_catalog([], [])
+
+    md = diff.render_changelog(d, date="2026-09-01", source_results=[result])
+
+    sources_table = md.split("## Sources\n\n", 1)[1].split("\n\n", 1)[0]
+    table_lines = sources_table.split("\n")
+    assert len(table_lines) == 3  # header + separator + exactly one data row
+    assert "line1 line2 line3 tabbed" in table_lines[2]
+
+
+def test_render_changelog_added_bullet_survives_nasty_name():
+    nasty_name = "Weird | Name `with` backticks\nand a newline"
+    rec = _record("openneuro:nasty", name=nasty_name, url="https://x/nasty")
+    d = diff.diff_catalog([], [rec])
+
+    md = diff.render_changelog(d, date="2026-09-01", source_results=[])
+
+    added_section = md.split("## Added (1)\n\n", 1)[1].split("\n\n", 1)[0]
+    lines = added_section.split("\n")
+    assert len(lines) == 1
+    line = lines[0]
+    assert line.startswith("- `openneuro:nasty` — ")
+    assert line.endswith("https://x/nasty")
+    assert "Weird \\| Name 'with' backticks and a newline" in line
+
+
+def test_render_changelog_nasty_free_text_cannot_forge_a_heading():
+    nasty = "normal text\n\n# Fake Heading\n## Another fake\ntrailing"
+    old_rec = _record("openneuro:nasty", name=nasty, access="open")
+    new_rec = _record("openneuro:nasty", name=nasty, access=nasty)
+    added_rec = _record("openneuro:added", name=nasty, url=nasty)
+    failed = HarvestResult(source="gdc", status="failed", error=nasty)
+
+    d = diff.diff_catalog([old_rec], [new_rec, added_rec])
+    md = diff.render_changelog(
+        d,
+        date="2026-09-01",
+        source_results=[failed],
+        enrich_stats={
+            "backend": nasty,
+            "calls": 1,
+            "cache_hits": 0,
+            "guard_drops": 0,
+            "failures": 0,
+        },
+    )
+
+    for line in md.split("\n"):
+        if line.startswith("#"):
+            assert line.startswith(_KNOWN_HEADING_PREFIXES), line
+
+
+# ---------------------------------------------------------------------------
 # render_changelog: determinism
 # ---------------------------------------------------------------------------
 
@@ -572,11 +676,11 @@ def test_summary_title_format():
 
     title = diff.summary_title(d, date="2026-09-01")
 
-    assert title == "Refresh 2026-09-01: +14 new, ~37 changed, -2 removed"
+    assert title == "Monthly refresh 2026-09-01: +14 new, ~37 changed, -2 removed"
 
 
 def test_summary_title_zero_counts():
     d = Diff(added=[], removed=[], changed={})
     assert diff.summary_title(d, date="2026-01-01") == (
-        "Refresh 2026-01-01: +0 new, ~0 changed, -0 removed"
+        "Monthly refresh 2026-01-01: +0 new, ~0 changed, -0 removed"
     )
