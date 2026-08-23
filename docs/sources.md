@@ -8,3 +8,4 @@ endpoints verified so far. Per-source notes live in `docs/sources/<source>.md`.
 
 | Source | Endpoint | Auth | Politeness | Verified | Count | Notes |
 |---|---|---|---|---|---|---|
+| OpenNeuro | POST `https://openneuro.org/crn/graphql` (GraphQL, paged 100/req) | none | 350 ms/host | 2026-08-22 | 1,864 | SPA site -- GraphQL only; robots.txt fully permissive; ~0.6% of nodes/page fail server-side and come back as a `null` edge (skipped, not fatal); see `docs/sources/openneuro.md` |
