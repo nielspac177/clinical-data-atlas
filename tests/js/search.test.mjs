@@ -1,10 +1,16 @@
-// Pure-logic tests for search.js's ranker. `createSearchBox` is a DOM
-// adapter and is exercised by hand/e2e, not here; importing this module
-// under Node must not touch `document`/`window` at load time.
+// Pure-logic tests for search.js's ranker and the combobox's query-state
+// helpers. `createSearchBox` itself is a DOM adapter and is exercised by
+// hand/e2e, not here; importing this module under Node must not touch
+// `document`/`window` at load time.
 import assert from "node:assert/strict";
 import test from "node:test";
 
-import { buildSearch } from "../../site/assets/js/search.js";
+import {
+  LOADING_MESSAGE,
+  buildSearch,
+  needsRerun,
+  searchState,
+} from "../../site/assets/js/search.js";
 
 // A small fixture-like row set, shaped like search-index.json rows.
 const rows = [
@@ -161,4 +167,98 @@ test("rows missing an id are skipped rather than crashing", () => {
 test("buildSearch tolerates a missing/empty rows argument", () => {
   assert.deepEqual(buildSearch()("anything"), []);
   assert.deepEqual(buildSearch([])("anything"), []);
+});
+
+// --------------------------------------------------------------- searchState
+//
+// The search index is a second download, fetched lazily (on focus, in
+// app-graph.js). `searchState` is the pure part of what the combobox does
+// with a query: it has to tell "the index isn't here yet" apart from "the
+// index says nothing matches", so a query typed during the fetch can be
+// re-run once the index lands instead of being stuck on "No results".
+
+test("searchState: an empty query is idle, with nothing to announce", () => {
+  for (const q of ["", "   ", null, undefined]) {
+    const state = searchState(q, buildSearch(rows));
+    assert.equal(state.status, "idle");
+    assert.deepEqual(state.items, []);
+    assert.equal(state.message, "");
+  }
+});
+
+test("searchState: no search function yet is 'loading', never 'No results'", () => {
+  for (const notReady of [null, undefined]) {
+    const state = searchState("mimic", notReady);
+    assert.equal(state.status, "loading");
+    assert.deepEqual(state.items, []);
+    assert.equal(state.message, LOADING_MESSAGE);
+    assert.ok(!/No results/.test(state.message));
+  }
+});
+
+test("searchState: a query that matches reports its results", () => {
+  const state = searchState("mimic", buildSearch(rows));
+  assert.equal(state.status, "results");
+  assert.equal(state.items[0].id, "physionet:mimic-cxr");
+  assert.equal(state.message, `${state.items.length} results for "mimic"`);
+});
+
+test("searchState: one result is announced in the singular", () => {
+  const state = searchState("antiepileptic", buildSearch(rows));
+  assert.equal(state.items.length, 1);
+  assert.equal(state.message, '1 result for "antiepileptic"');
+});
+
+test("searchState: a loaded index with no match is 'empty'", () => {
+  const state = searchState("nothingmatchesthis", buildSearch(rows));
+  assert.equal(state.status, "empty");
+  assert.deepEqual(state.items, []);
+  assert.equal(state.message, 'No results for "nothingmatchesthis"');
+});
+
+test("searchState: honours the limit and trims the query", () => {
+  assert.equal(searchState("  mimic  ", buildSearch(rows), 1).items.length, 1);
+  assert.equal(searchState("  mimic  ", buildSearch(rows)).query, "mimic");
+});
+
+test("needsRerun: only a pending query still showing loading/no-results", () => {
+  const loading = searchState("mimic", null);
+  const empty = searchState("nothingmatchesthis", buildSearch(rows));
+  const results = searchState("mimic", buildSearch(rows));
+
+  assert.equal(needsRerun(loading, "mimic"), true);
+  assert.equal(needsRerun(empty, "nothingmatchesthis"), true);
+  // Already answered by a live index, or the reader cleared the box while
+  // the fetch was in flight: leave what's on screen alone.
+  assert.equal(needsRerun(results, "mimic"), false);
+  assert.equal(needsRerun(loading, ""), false);
+  assert.equal(needsRerun(loading, "   "), false);
+  assert.equal(needsRerun(undefined, "mimic"), false);
+});
+
+test("a query typed before the index lands is answered once it arrives", async () => {
+  // Exactly the race the combobox hits: the reader types while the index
+  // is still downloading, so `getSearch()` returns null and the debounced
+  // query has nothing to run against.
+  let search = null;
+  const ready = Promise.resolve().then(() => {
+    search = buildSearch(rows);
+  });
+
+  let state = searchState("mimic", search);
+  assert.equal(state.status, "loading");
+  assert.equal(state.message, LOADING_MESSAGE);
+
+  await ready;
+
+  // The box re-runs the query it still holds rather than leaving the
+  // reader on a stale, wrong "No results".
+  assert.equal(needsRerun(state, "mimic"), true);
+  state = searchState("mimic", search);
+  assert.equal(state.status, "results");
+  assert.deepEqual(
+    state.items.map((r) => r.id),
+    ["physionet:mimic-cxr", "physionet:mimic-iv", "physionet:icu-registry"],
+  );
+  assert.ok(!/No results/.test(state.message));
 });

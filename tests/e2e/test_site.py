@@ -110,16 +110,12 @@ def test_page_loads_without_console_errors(page: Page, name: str) -> None:
     response = page.goto(name)
     assert response is not None and response.ok, name
     expect(page).to_have_title(re.compile("Clinical Data Atlas"))
-    # "Exactly one <h1>" is asserted at build time by
-    # tests/test_sitebuild.py; here it only has to have arrived.
-    #
-    # TODO: tighten to `to_have_count(1)` once the changelog writer emits
-    # `###` bodies. Today a real-data `whats-new.html` carries a second
-    # <h1> ("Monthly refresh …") because `atlas/diff.py` writes `#` where
-    # `atlas/sitebuild.py` documents `###`, and the fixture changelog the
-    # sitebuild test uses is well-formed -- so nothing catches it. Fix
-    # belongs in the diff writer plus a realistically-shaped fixture.
-    expect(page.locator("h1").first).to_be_attached()
+    # Also asserted at build time (tests/test_sitebuild.py), but worth
+    # re-asserting in the browser: `whats-new.html`'s single <h1> depends
+    # on `sitebuild.demote_headings` shifting each embedded changelog --
+    # whose markdown is a standalone `#`-titled document -- under the
+    # page's own heading.
+    expect(page.locator("h1")).to_have_count(1)
     # The console guard in conftest.py asserts the "0 errors" half.
 
 

@@ -94,7 +94,11 @@ function main() {
   let allRows = [];
   let rowsById = new Map();
   let filterState = {};
-  let searchFn = () => [];
+  // Null, not an empty searcher, until the index lands: the search box
+  // needs "not loaded yet" to be distinguishable from "nothing matched".
+  let searchFn = null;
+  // The in-flight (or settled) index fetch, memoized by `loadIndex()`.
+  let indexReady = null;
 
   function selectRow(id) {
     const row = rowsById.get(id);
@@ -143,6 +147,10 @@ function main() {
   // open) reaches the panel's handler. See a11y.js's `onEscape`.
   createSearchBox(searchInput, {
     getSearch: () => searchFn,
+    // A query typed while the index is still downloading is re-run once
+    // it arrives, rather than answered "No results" by an empty index --
+    // and a query typed after a failed load starts a fresh attempt.
+    ready: () => loadIndex(),
     onSelect(id) {
       selectRow(id);
     },
@@ -269,17 +277,38 @@ function main() {
 
   onChange((state) => applyUrlState(state));
 
-  fetchJSON("data/search-index.json")
-    .then((rows) => {
-      allRows = Array.isArray(rows) ? rows : [];
-      rowsById = new Map(allRows.map((r) => [r.id, r]));
-      searchFn = buildSearch(allRows);
-      applyUrlState(readState());
-    })
-    .catch((err) => {
-      if (statusEl) statusEl.textContent = "Couldn't load the catalog. Try reloading the page.";
-      console.error(err);
-    });
+  /**
+   * Fetch the catalog once, memoized, and hand back the promise the search
+   * box waits on (`ready` above).
+   *
+   * A failed attempt forgets itself -- exactly as app-graph.js's
+   * `ensureSearch()` does -- so the next query retries instead of leaving
+   * the combobox waiting forever on an index that will never arrive. The
+   * failure is announced as well as shown: `#table-status` is a plain
+   * paragraph, and everything else that writes it (table.js's `setStatus`)
+   * announces through the shared `#a11y-live` region rather than making
+   * this element a second live region and saying everything twice.
+   */
+  function loadIndex() {
+    if (indexReady) return indexReady;
+    indexReady = fetchJSON("data/search-index.json")
+      .then((rows) => {
+        allRows = Array.isArray(rows) ? rows : [];
+        rowsById = new Map(allRows.map((r) => [r.id, r]));
+        searchFn = buildSearch(allRows);
+        applyUrlState(readState());
+      })
+      .catch((err) => {
+        indexReady = null;
+        const message = "Couldn't load the catalog. Try reloading the page.";
+        if (statusEl) statusEl.textContent = message;
+        announce(message);
+        console.error(err);
+      });
+    return indexReady;
+  }
+
+  loadIndex();
 }
 
 main();
