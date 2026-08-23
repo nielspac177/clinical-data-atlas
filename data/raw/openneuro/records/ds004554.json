@@ -1,0 +1,99 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004554",
+  "payload": {
+    "created": "2023-04-21T15:35:10.523Z",
+    "id": "ds004554",
+    "latestSnapshot": {
+      "created": "2023-04-28T08:59:42.000Z",
+      "description": {
+        "Authors": [
+          "V. Volpert",
+          "B. Xu",
+          "A. Tchechmedjiev",
+          "S. Harispe",
+          "A. Aksenov",
+          "Q. Mesnildrey and A. Beuter"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004554.v1.0.4",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Forced Picture Naming Task",
+        "ReferencesAndLinks": [
+          "Characterization of spatiotemporal dynamics in EEG data during picture naming with optical flow patterns. {Volpert, V.; Xu, B.; Tchechmedjiev, A.; Harispe, S.; Aksenov, A.; Mesnildrey, Q. & Beuter, A.}. {Mathematical Biosciences and Engineering, 2023, 20, 11429-11463}. https://doi.org/10.3934/mbe.2023507"
+        ]
+      },
+      "readme": "This is the preprocessed dataset used for study \"Characterization of spatiotemporal dynamics in EEG data during picture naming with optical flow patterns\". \n\nThe Picture Naming Task study included sixteen native French-speaking men, ranging in age from 18 to 70 years old. The participants met the inclusion criteria, which required normal or corrected-to-normal vision and hearing, as well as right-handedness, as determined by a handedness questionnaire [Oldfield1971assessment]. Exclusion criteria were in place to ensure that participants had no history of neurological or psychiatric disorders, drug addiction, or head trauma. In total 20 subjects were included in the study. The four first subjects' data was excluded due to hardware failure. \n\nParticipants were required to name the pictures shown on a screen. Each event (random pictures) has three phases: [-2s, 0s] is the baseline (pre-visual-stimulation); at time 0 picture is shown on screen; then [0s, 1.5s] post-stimulation phase; [1.5s, 3s], naming phase. Pictures used in the task were selected from the Snodgrass & Vanderwart black-and-white line drawing corpus [Snodgrass1980standardized]. \"./code/experiment_schema.pdf\" showed the task design.\n\nData pre-processing pipeline is illustrated in \"./code/preprocess_pipeline.pdf\". In total, 270 trials each for the 16 subjects.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "eeg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [],
+        "size": 9432071415,
+        "subjects": [
+          "S05",
+          "S06",
+          "S07",
+          "S08",
+          "S09",
+          "S10",
+          "S11",
+          "S12",
+          "S13",
+          "S14",
+          "S15",
+          "S16",
+          "S17",
+          "S18",
+          "S19",
+          "S20"
+        ],
+        "tasks": [
+          "picturenaming"
+        ],
+        "totalFiles": 101
+      },
+      "tag": "1.0.4"
+    },
+    "metadata": {
+      "affirmedDefaced": false,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "10.3934/mbe.2023507",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "eeg"
+      ],
+      "species": "Human",
+      "studyDesign": "Forced Picture Naming Task",
+      "studyDomain": "",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2023-04-21T16:15:57.675Z"
+  },
+  "source": "openneuro"
+}

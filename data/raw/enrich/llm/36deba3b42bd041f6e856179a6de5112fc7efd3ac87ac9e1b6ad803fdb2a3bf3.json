@@ -1,0 +1,30 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:36deba3b42bd041f6e856179a6de5112fc7efd3ac87ac9e1b6ad803fdb2a3bf3",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "critically ill patients admitted to an intensive care unit (ICU)",
+        "label": "critically ill"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "critical_care"
+    ],
+    "id": "physionet:mimic3-carevue",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "A subset of the MIMIC-III Clinical Database",
+        "value": "EHR"
+      }
+    ],
+    "population": "Patients admitted from 2001 - 2008 to an intensive care unit at the Beth Israel Deaconess Medical Center, excluding those present in MIMIC-IV",
+    "summary": "Subset of the MIMIC-III clinical database covering ICU patients admitted from 2001 to 2008 who are not in MIMIC-IV, provided so the two databases can be combined without overlapping admissions."
+  },
+  "prompt_version": "v1"
+}

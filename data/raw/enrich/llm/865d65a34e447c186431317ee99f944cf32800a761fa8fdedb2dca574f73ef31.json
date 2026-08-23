@@ -1,0 +1,44 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:865d65a34e447c186431317ee99f944cf32800a761fa8fdedb2dca574f73ef31",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Clinical Proteomic Tumor Analysis Consortium Acute Myeloid Leukemia (CPTAC-AML) cohort",
+        "label": "Acute Myeloid Leukemia"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "tcia:cptac-aml",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "CT US",
+        "value": "CT"
+      },
+      {
+        "evidence": "CT US",
+        "value": "ultrasound"
+      },
+      {
+        "evidence": "Radiology and pathology images",
+        "value": "pathology"
+      },
+      {
+        "evidence": "large-scale proteome and genome analysis, or proteogenomics",
+        "value": "genomics"
+      },
+      {
+        "evidence": "large-scale proteome and genome analysis, or proteogenomics",
+        "value": "proteomics"
+      }
+    ],
+    "population": "Subjects from the National Cancer Institute's Clinical Proteomic Tumor Analysis Consortium Acute Myeloid Leukemia (CPTAC-AML) cohort, CPTAC Phase 3 patients",
+    "summary": "Radiology and pathology images from CPTAC Phase 3 acute myeloid leukemia patients, released so researchers can investigate cancer phenotypes that may correlate with corresponding proteomic, genomic and clinical data."
+  },
+  "prompt_version": "v1"
+}

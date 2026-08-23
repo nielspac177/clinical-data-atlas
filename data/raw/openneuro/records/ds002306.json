@@ -1,0 +1,73 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds002306",
+  "payload": {
+    "created": "2019-11-06T04:21:49.990Z",
+    "id": "ds002306",
+    "latestSnapshot": {
+      "created": "2020-01-27T01:32:20.000Z",
+      "description": {
+        "Authors": [
+          "Tomoya Nakai",
+          "Shinji Nishimoto"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds002306.v1.1.0",
+        "Funding": [],
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "Over 100 Task fMRI Dataset",
+        "ReferencesAndLinks": [
+          "Nakai and Nishimoto (2019) Data-driven models reveal the organization of diverse cognitive functions in the brain. bioRxiv. https://www.biorxiv.org/content/10.1101/614081v1.full"
+        ]
+      },
+      "readme": "README \r\n\r\nOver 100 Task fMRI Dataset by Tomoya Nakai and Shinji Nishimoto\r\n\r\nWe measured brain activity using functional MRI while six subjects (“sub-01”, …, “sub-06”) performed 103 cognitive tasks.\r\n\r\nThe entire folder consists of subject-wise subfolders (“sub-01”,…). Each subject’s folder contains the following subfolders:\r\n1) anat: T1-weighted structural images\r\n2) func: functional signals (multi-band echo-planar images)\r\n\r\nEach subject performed 18 runs consisting of 12 training runs and 6 test runs. The training and test data were assigned with the following notations:\r\n Training data: sub-0*_task-training_run-**_bold.json\r\n Test data: sub-0*_task-test_run-**_bold.json\r\n\r\nEach *_event.tsv file contains following information:\r\n ONSET: stimulus onset\r\n DURATION: stimulus duration\r\n TRIAL_TYPE: task type (out of 103 tasks)\r\n\r\nThe analysis codes and preprocessed data that were used in the original article are available at Open Science Framework (OSF, https://osf.io/ea2jc/).\r\n\r\n***Caution***\r\nThis dataset can be used for research purposes only. The data were anonymised, and users shall not perform analyses to re-identify individual subjects.\r\n\r\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "t1w",
+          "bold",
+          "events"
+        ],
+        "secondaryModalities": [],
+        "sessions": [],
+        "size": 22522283130,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06"
+        ],
+        "tasks": [
+          "test",
+          "training"
+        ],
+        "totalFiles": 339
+      },
+      "tag": "1.1.0"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": null,
+      "associatedPaperDOI": "https://doi.org/10.1101/614081",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": null,
+      "modalities": [
+        "t1w",
+        "bold",
+        "events"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2020-01-27T01:22:56.638Z"
+  },
+  "source": "openneuro"
+}

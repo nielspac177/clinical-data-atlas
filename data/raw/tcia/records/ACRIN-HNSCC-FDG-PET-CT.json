@@ -1,0 +1,2525 @@
+{
+  "endpoints": [
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getCollectionValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getModalityValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getBodyPartValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getPatient",
+    "https://api.datacite.org/dois?prefix=10.7937"
+  ],
+  "harvest_method": "api:nbia+datacite",
+  "native_id": "ACRIN-HNSCC-FDG-PET-CT",
+  "payload": {
+    "datacite": {
+      "citationCount": 3,
+      "container": {},
+      "contentUrl": [],
+      "contributors": [],
+      "created": "2016-02-12T16:47:42Z",
+      "creators": [
+        {
+          "affiliation": [],
+          "familyName": "Kinahan",
+          "givenName": "Paul",
+          "name": "Kinahan, Paul",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0001-6461-3306",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Muzi",
+          "givenName": "Mark",
+          "name": "Muzi, Mark",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-8767-191X",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Bialecki",
+          "givenName": "Brian",
+          "name": "Bialecki, Brian",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Coombs",
+          "givenName": "Laura",
+          "name": "Coombs, Laura",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2019",
+          "dateInformation": null,
+          "dateType": "Issued"
+        }
+      ],
+      "descriptions": [
+        {
+          "description": "ACRIN-HNSCC-FDG-PET/CT (ACRIN 6685) is a Multicenter Trial of FDG-PET/CT Staging of Head and Neck Cancer and its Impact on the N0 Neck Surgical Treatment in Head and Neck Cancer Patients. The objective of this study was to determine the negative predictive value (NPV) of positron emission tomography (PET)/computed tomography CT for clinically N0 neck based upon pathologic sampling of the neck lymph nodes and to determine PET/CT’s potential to change treatment of the N0 neck.",
+          "descriptionType": "Abstract",
+          "lang": null
+        }
+      ],
+      "doi": "10.7937/k9/tcia.2016.jqejzzng",
+      "downloadCount": 0,
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "ACRIN-HNSCC-FDG-PET-CT",
+          "identifierType": "TCIA Short Name"
+        }
+      ],
+      "isActive": true,
+      "language": null,
+      "metadataVersion": 15,
+      "partCount": 0,
+      "partOfCount": 0,
+      "publicationYear": 2020,
+      "published": null,
+      "publisher": "TCIA",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2016-02-12T16:47:43Z",
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "10.1038/s41597-024-03337-6",
+          "relatedIdentifierType": "DOI",
+          "relatedMetadataScheme": null,
+          "relationType": "IsCitedBy",
+          "resourceTypeGeneral": null,
+          "schemeType": null,
+          "schemeUri": null
+        },
+        {
+          "relatedIdentifier": "10.1016/j.compmedimag.2024.102462",
+          "relatedIdentifierType": "DOI",
+          "relatedMetadataScheme": null,
+          "relationType": "IsCitedBy",
+          "resourceTypeGeneral": null,
+          "schemeType": null,
+          "schemeUri": null
+        }
+      ],
+      "relatedItems": [],
+      "rightsList": [
+        {
+          "rights": "NIH Controlled Data Access Policy",
+          "rightsUri": "https://www.cancerimagingarchive.net/nih-controlled-data-access-policy/"
+        },
+        {
+          "rights": "Creative Commons Attribution 4.0 International",
+          "rightsIdentifier": "cc-by-4.0",
+          "rightsIdentifierScheme": "SPDX",
+          "rightsUri": "https://creativecommons.org/licenses/by/4.0/legalcode",
+          "schemeUri": "https://spdx.org/licenses/"
+        }
+      ],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "fabricaForm",
+      "state": "findable",
+      "subjects": [],
+      "titles": [
+        {
+          "lang": null,
+          "title": "Data from the ACRIN 6685 Trial HNSCC-FDG-PET/CT",
+          "titleType": null
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceType": "Dataset",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2025-12-17T15:16:05Z",
+      "url": "https://www.cancerimagingarchive.net/collection/acrin-hnscc-fdg-pet-ct/",
+      "version": "1.1",
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 3340
+    },
+    "nbia": {
+      "body_parts": [
+        "ABDOMEN",
+        "CHEST",
+        "HEAD",
+        "HEADNECK",
+        "NECK"
+      ],
+      "collection": "ACRIN-HNSCC-FDG-PET-CT",
+      "modalities": [
+        "RTSTRUCT"
+      ],
+      "patients": [
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-001",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-001",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-002",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-002",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-003",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-003",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-005",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-005",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-006",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-006",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-007",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-007",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-008",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-008",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-010",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-010",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-011",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-011",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-012",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-012",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-013",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-013",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-014",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-014",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-015",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-015",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "EthnicGroup": "01",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-016",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-016",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-017",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-017",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-018",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-018",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-019",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-019",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "EthnicGroup": "01",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-020",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-020",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-021",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-021",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-022",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-022",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-023",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-023",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-024",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-024",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-025",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-025",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-027",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-027",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "EthnicGroup": "01",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-028",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-028",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "EthnicGroup": "5",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-029",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-029",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-030",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-030",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-031",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-031",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-032",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-032",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "EthnicGroup": "01",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-033",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-033",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-034",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-034",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-035",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-035",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-036",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-036",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-037",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-037",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-038",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-038",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-040",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-040",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-041",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-041",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-042",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-042",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-043",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-043",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "EthnicGroup": "anonymous",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-044",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-044",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "EthnicGroup": "anonymous",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-045",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-045",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "EthnicGroup": "anonymous",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-046",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-046",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-047",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-047",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-048",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-048",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-049",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-049",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-050",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-050",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-051",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-051",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-052",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-052",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-054",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-054",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-055",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-055",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-056",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-056",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-057",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-057",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-058",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-058",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-059",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-059",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-060",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-060",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-061",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-061",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-062",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-062",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "EthnicGroup": "ETHNICGRP2663",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-063",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-063",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-064",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-064",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-065",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-065",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-066",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-066",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "EthnicGroup": "anonymous",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-067",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-067",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-068",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-068",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-069",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-069",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "EthnicGroup": "anonymous",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-070",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-070",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "EthnicGroup": "1",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-071",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-071",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-072",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-072",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-073",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-073",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "EthnicGroup": "anonymous",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-074",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-074",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-075",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-075",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-076",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-076",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-077",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-077",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-078",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-078",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-079",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-079",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-080",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-080",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-081",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-081",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-082",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-082",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-083",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-083",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-084",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-084",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-085",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-085",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-086",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-086",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-087",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-087",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-088",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-088",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-089",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-089",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-090",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-090",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-091",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-091",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-092",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-092",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-093",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-093",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-094",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-094",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-095",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-095",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "EthnicGroup": "anonymous",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-096",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-096",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-097",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-097",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-098",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-098",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-100",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-100",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-101",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-101",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-102",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-102",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-103",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-103",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-104",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-104",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-105",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-105",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-106",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-106",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-107",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-107",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-108",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-108",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "EthnicGroup": "anonymous",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-109",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-109",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-110",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-110",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "EthnicGroup": "CA",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-111",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-111",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-112",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-112",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-113",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-113",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-114",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-114",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-115",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-115",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-116",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-116",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-117",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-117",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-118",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-118",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-119",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-119",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-120",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-120",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-121",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-121",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-122",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-122",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-123",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-123",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-124",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-124",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "EthnicGroup": "5",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-125",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-125",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-126",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-126",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "EthnicGroup": "Other",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-127",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-127",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-128",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-128",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-129",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-129",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-130",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-130",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-131",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-131",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-132",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-132",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-133",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-133",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-134",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-134",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-135",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-135",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "EthnicGroup": "anonymous",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-136",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-136",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "EthnicGroup": "Caucasian",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-137",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-137",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "EthnicGroup": "Caucasian",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-138",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-138",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-139",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-139",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-140",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-140",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-141",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-141",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-142",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-142",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-143",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-143",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "EthnicGroup": "7",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-144",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-144",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-145",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-145",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "EthnicGroup": "Caucasian",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-146",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-146",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-147",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-147",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-148",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-148",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-149",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-149",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-150",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-150",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-151",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-151",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-152",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-152",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-153",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-153",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-154",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-154",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-155",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-155",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-156",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-156",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-157",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-157",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-158",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-158",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-159",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-159",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-160",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-160",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-161",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-161",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-162",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-162",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-163",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-163",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-164",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-164",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-165",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-165",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-166",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-166",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-167",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-167",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "EthnicGroup": "Not Hispanic or",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-168",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-168",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-169",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-169",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-170",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-170",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-172",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-172",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "EthnicGroup": "Caucasian",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-173",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-173",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "EthnicGroup": "Caucasian",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-174",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-174",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-175",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-175",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "EthnicGroup": "Caucasian",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-176",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-176",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-177",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-177",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-178",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-178",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-179",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-179",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-180",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-180",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-181",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-181",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-182",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-182",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-183",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-183",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-184",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-184",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-185",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-185",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-186",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-186",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "EthnicGroup": "anonymous",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-187",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-187",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-188",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-188",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-189",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-189",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "EthnicGroup": "Caucasian",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-190",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-190",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-192",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-192",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-193",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-193",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-194",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-194",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "EthnicGroup": "anonymous",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-195",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-195",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-196",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-196",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-197",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-197",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-198",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-198",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-199",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-199",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-200",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-200",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-201",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-201",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-202",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-202",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-203",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-203",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-204",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-204",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-205",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-205",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-206",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-206",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-207",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-207",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-208",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-208",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-209",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-209",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-210",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-210",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-211",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-211",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "EthnicGroup": "anonymous",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-212",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-212",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-213",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-213",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "EthnicGroup": "C",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-214",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-214",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-215",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-215",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-216",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-216",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-217",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-217",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-218",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-218",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "EthnicGroup": "2",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-219",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-219",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-220",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-220",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-221",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-221",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "EthnicGroup": "Black",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-222",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-222",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-223",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-223",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-224",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-224",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-225",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-225",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-226",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-226",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-227",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-227",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-228",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-228",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-229",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-229",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-230",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-230",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-231",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-231",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-232",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-232",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "EthnicGroup": "B",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-233",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-233",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-234",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-234",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "EthnicGroup": "Caucasian",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-235",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-235",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-236",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-236",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-237",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-237",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-238",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-238",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-239",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-239",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-240",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-240",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-241",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-241",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-242",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-242",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-243",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-243",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-244",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-244",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "EthnicGroup": "W",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-245",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-245",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "EthnicGroup": "6",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-246",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-246",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "EthnicGroup": "1",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-247",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-247",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-248",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-248",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-249",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-249",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-250",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-250",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-251",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-251",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-252",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-252",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-253",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-253",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-254",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-254",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-255",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-255",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-257",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-257",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-258",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-258",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-260",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-260",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-261",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-261",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-262",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-262",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-263",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-263",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-264",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-264",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-266",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-266",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-267",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-267",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-268",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-268",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACRIN-HNSCC-FDG-PET-CT",
+          "PatientId": "ACRIN-HNSCC-FDG-PET-CT-276",
+          "PatientName": "ACRIN-HNSCC-FDG-PET-CT-276",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        }
+      ]
+    }
+  },
+  "source": "tcia"
+}

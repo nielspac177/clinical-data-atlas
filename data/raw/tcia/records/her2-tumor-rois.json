@@ -1,0 +1,168 @@
+{
+  "endpoints": [
+    "https://api.datacite.org/dois?prefix=10.7937"
+  ],
+  "harvest_method": "api:nbia+datacite",
+  "native_id": "her2-tumor-rois",
+  "payload": {
+    "datacite": {
+      "citationCount": 7,
+      "container": {},
+      "contentUrl": [],
+      "contributors": [],
+      "created": "2022-03-25T18:31:24Z",
+      "creators": [
+        {
+          "affiliation": [],
+          "familyName": null,
+          "givenName": null,
+          "name": "Farahmand, Saman",
+          "nameIdentifiers": [],
+          "nameType": null
+        },
+        {
+          "affiliation": [],
+          "familyName": null,
+          "givenName": null,
+          "name": "Fernandez, Aileen I",
+          "nameIdentifiers": [],
+          "nameType": null
+        },
+        {
+          "affiliation": [],
+          "familyName": null,
+          "givenName": null,
+          "name": "Ahmed, Fahad Shabbir",
+          "nameIdentifiers": [],
+          "nameType": null
+        },
+        {
+          "affiliation": [],
+          "familyName": null,
+          "givenName": null,
+          "name": "Rimm, David L.",
+          "nameIdentifiers": [],
+          "nameType": null
+        },
+        {
+          "affiliation": [],
+          "familyName": null,
+          "givenName": null,
+          "name": "Chuang, Jeffrey H.",
+          "nameIdentifiers": [],
+          "nameType": null
+        },
+        {
+          "affiliation": [],
+          "familyName": null,
+          "givenName": null,
+          "name": "Reisenbichler, Emily",
+          "nameIdentifiers": [],
+          "nameType": null
+        },
+        {
+          "affiliation": [],
+          "familyName": null,
+          "givenName": null,
+          "name": "Zarringhalam, Kourosh",
+          "nameIdentifiers": [],
+          "nameType": null
+        }
+      ],
+      "dates": [],
+      "descriptions": [
+        {
+          "description": "The current standard of care for many patients with HER2-positive breast cancer is neoadjuvant chemotherapy in combination with anti-HER2 agents, based on HER2 amplification as detected by in situ hybridization (ISH) or protein immunohistochemistry (IHC). However, hematoxylin & eosin (H&E) tumor stains are more commonly available, and accurate prediction of HER2 status and anti-HER2 treatment response from H&E would reduce costs and increase the speed of treatment selection. Computational algorithms for H&E have been effective in predicting a variety of cancer features and clinical outcomes, including moderate success in predicting HER2 status. We trained a CNN classifier on 188 H&E whole slide images (WSIs) manually annotated for tumor regions of interest (ROIs) by our pathology team. Our classifier achieved an area under the curve (AUC) of 0.90 in cross-validation of slide-level HER2 status and 0.81 on an independent TCGA test set. Moreover, we trained our classifier on pre-treatment samples from 187 HER2+ patients that subsequently received trastuzumab therapy. Our classifier achieved an AUC of 0.80 in a five-fold cross validation. Our work provides an H&E-based algorithm that can predict HER2 status and trastuzumab response in breast cancer at an accuracy that may benefit clinical evaluations. Here, we are providing the datasets used in the study to facilitate development of other HER2+ diagnosis and trastuzumab response applications.",
+          "descriptionType": "Abstract",
+          "lang": null
+        }
+      ],
+      "doi": "10.7937/e65c-am96",
+      "downloadCount": 0,
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "HER2 tumor ROIs",
+          "identifierType": "TCIA Short Name"
+        }
+      ],
+      "isActive": true,
+      "language": null,
+      "metadataVersion": 10,
+      "partCount": 0,
+      "partOfCount": 0,
+      "publicationYear": 2022,
+      "published": null,
+      "publisher": "The Cancer Imaging Archive",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2022-04-28T14:03:48Z",
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "10.1007/s00371-023-03131-2",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "https:/doi.org/10.1038/s41523-024-00620-y",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1038/s43018-024-00793-2",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1088/1748-3190/ad6825",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1038/s41523-024-00620-y",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        }
+      ],
+      "relatedItems": [],
+      "rightsList": [
+        {
+          "rights": "Creative Commons Attribution 4.0 International",
+          "rightsIdentifier": "cc-by-4.0",
+          "rightsIdentifierScheme": "SPDX",
+          "rightsUri": "https://creativecommons.org/licenses/by/4.0/legalcode",
+          "schemeUri": "https://spdx.org/licenses/"
+        }
+      ],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "fabricaForm",
+      "state": "findable",
+      "subjects": [],
+      "titles": [
+        {
+          "lang": null,
+          "title": "HER2 and trastuzumab treatment response H&E slides with tumor ROI annotations",
+          "titleType": null
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2025-06-01T01:01:11Z",
+      "url": "https://www.cancerimagingarchive.net/collection/her2-tumor-rois/",
+      "version": "3",
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 6799
+    },
+    "nbia": null
+  },
+  "source": "tcia"
+}

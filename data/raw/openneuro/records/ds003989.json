@@ -1,0 +1,78 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003989",
+  "payload": {
+    "created": "2022-01-11T20:14:40.960Z",
+    "id": "ds003989",
+    "latestSnapshot": {
+      "created": "2022-01-11T04:53:57.000Z",
+      "description": {
+        "Authors": [
+          "Vanessa De Castro",
+          "Benoit Cottereau",
+          "Jean-Baptiste Durand"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds003989.v1.0.0",
+        "Funding": [
+          "The Centre National de la Recherche Scientifique (CNRS) from the Agence Nationale de la Recherche (ANR-18-CE37–0022)"
+        ],
+        "HowToAcknowledge": "Please cite the paper in References and Links when using this data",
+        "License": "CC0",
+        "Name": "Structural, diffusion and rs-functional MRI data in Macaque Monkeys",
+        "ReferencesAndLinks": [
+          "De Castro V, Smith AT, Beer AL, Leguen C, Vayssière N, Héjja-Brichard Y, Audurier P, Cottereau BR, Durand JB. Connectivity of the Cingulate Sulcus Visual Area (CSv) in Macaque Monkeys. Cereb Cortex. 31(2):1347-1364. doi: 10.1093/cercor/bhaa301"
+        ]
+      },
+      "readme": "This dataset contains unprocessed structural, diffusion and rs-functional MRI data acquired in 3 female\nrhesus macaques. Each monkey underwent multiple sessions. For each session they were lightly \nanesthetized with Zoletil 100:10 mg/kg and Medetodimine 0.04 mg/kg. The animals were installed in sphinx position with their head restrained by a head-post.\nWhole-brain images were acquired on a 3 Tesla clinical MR scanner (Philips Achieva) using a custom 8-channel phased array coil (RapidBiomed) specially designed to fit the skull of the animals. \n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural",
+          "mri_diffusion"
+        ],
+        "sessions": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05"
+        ],
+        "size": 1892663106,
+        "subjects": [
+          "01",
+          "02",
+          "03"
+        ],
+        "tasks": [
+          "rest"
+        ],
+        "totalFiles": 83
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": false,
+      "ages": null,
+      "associatedPaperDOI": "10.1093/cercor/bhaa301",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "ANR (Agence Nationale de la Recherche)",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Monkey",
+      "studyDesign": "",
+      "studyDomain": "MRI",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2022-01-11T20:28:50.701Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:24d174636cb38be7ceb8ee87800f274f01aa6ba811ffe78dd7c4c0a1ecfde0cf",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "patients diagnosed with B-lineage acute lymphoid leukemia",
+        "label": "B-lineage acute lymphoid leukemia"
+      },
+      {
+        "evidence": "acute lymphoid leukemia and multiple myeloma",
+        "label": "multiple myeloma"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "tcia:sn-am",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Microscopic images were captured from bone marrow aspirate slides",
+        "value": "pathology"
+      }
+    ],
+    "population": "Patients diagnosed with B-lineage acute lymphoid leukemia and multiple myeloma",
+    "summary": "Microscopic images of bone marrow aspirate slides stained with Jenner-Giemsa and H&E, captured at 1000x magnification, assembled to test stain normalization methods for white blood cancers."
+  },
+  "prompt_version": "v1"
+}

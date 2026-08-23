@@ -1,0 +1,52 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006777",
+  "payload": {
+    "created": "2025-10-13T12:35:00.402Z",
+    "id": "ds006777",
+    "latestSnapshot": {
+      "created": "2025-10-13T17:24:36.000Z",
+      "description": {
+        "Authors": [
+          "Theo Vanneau",
+          "John J. Foxe",
+          "Shlomit Beker",
+          "Daniella Cohen",
+          "Albulena Sejdu",
+          "Sophie Molholm"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006777.v1.0.0",
+        "Funding": [
+          "This work was supported by a grant from the Simons Foundation Autism Research Initiative (SFARI Award # 874845, SM).  Support for recruitment and phenotyping of participants was provided by the Human Clinical Phenotyping Core of the NICHD funded Rose. F. Kennedy Intellectual and Developmental Disabilities Research Center (P50  HD105352, SM). "
+        ],
+        "HowToAcknowledge": "Please cite: <your paper / DOI>",
+        "License": "CC0",
+        "Name": "SFARI AVSRT EEG",
+        "ReferencesAndLinks": [
+          "https://www.cognitiveneurolab.com/"
+        ]
+      },
+      "readme": "# SFARI AVSRT EEG (Raw)\r\n\r\n## Overview\r\nEEG recorded during an audiovisual simple reaction-time task (AVSRT) in children.\r\nData are organized according to BIDS 1.10.1 (DatasetType: raw).\r\n\r\n## Description of the task\r\n- Participants were seated in a chair in an electrically shielded room (International Acoustics Company, Bronx, New York), 70 cm away from the visual display (Dell UltraSharp 1704FPT). The stimuli, controlled by Presentation software (Neurobehavioral Systems), included three types: a red disc ('Visual'), a 1000Hz tone ('Audio'), and their simultaneous presentation ('Audiovisual'). Participants were instructed to press a button as quickly as possible upon detecting any stimulus. The auditory stimulus was 1000Hz, 60ms tone presented binaurally (75 dB SPL). The visual stimulus was a red disc subtending to 1.5 degrees, displayed above a fixation cross. The audiovisual stimulus was a simultaneous presentation of both. Each trial presented a pseudo randomly chosen stimulus (A, V, or AV; represented equiprobably), with stimuli delivered through headphones (XX) and displayed on a flat-panel LCD (60Hz). A jittered randomly sampled interstimulus interval (1000-3000ms) reduced onset predictability. The task consisted of 400 trials across 4 blocks (100 trials per block), each block lasting approximately 3 minutes and 40 seconds. Button presses were recorded using a response pad (Logitech Wingman Precision Gamepad). Triggers indicating stimulus latency were sent from the PC acquisition computer via Presentation software.\r\n\r\n## Acquisition\r\n- System: BioSemi ActiveTwo, 64 channels (BioSemi64 montage)\r\n- Sampling rate: 512 Hz\r\n- Power line frequency: 60 Hz\r\n- Trigger channel: Status (BioSemi)\r\n\r\n## Events\r\n- Codes: AV=3, A=4, V=5\r\n- Onsets are stimulus onsets derived from the Status channel.\r\n- See each `*_events.tsv` for per-run details.\r\n\r\n## Participants\r\n- To be included in the ASD group, participants had to meet diagnostic criteria for ASD on the basis of the following measures: 1) autism diagnostic observation schedule 2 (ADOS-2) (Lord et al., 1994); 2) diagnostic criteria for autistic disorder from the Diagnostic and Statistical Manual of Mental Disorders (DSM-5 (American Psychiatric, 2022)); 3) clinical impression of a licensed clinician with extensive experience in diagnosis of children with ASD. Due to precautions during the COVID-19 pandemic, a subset of ASD participants (n=9) was not able to complete the ADOS-2 (Lord et al., 1994), as masking requirements impacted administration. These participants instead underwent the Childhood Autism Rating Scale 2 (CARS-2) and Autism Diagnostic Interview-Revised (ADI-R) (Rutter et al., 2003) for diagnostic assessment. Participants in the TD group met the following inclusion criteria: no history of neurological, developmental, or psychiatric disorders, no first-degree relatives diagnosed with ASD, and enrollment in an age-appropriate grade in school. The SIB group participants met the same criteria as the TD group, except that they had a sibling diagnosed with ASD. Exclusion criteria for all groups included: (1) a known genetic syndrome associated with an IDD (including syndromic forms of ASD), (2) a history of or current use of medication for seizures in the past 2 years, (3) significant physical limitations (e.g., vision or hearing impairments, as screened over the phone and on the day of testing), (4) premature birth (<35 weeks) or having experienced significant prenatal/perinatal complications, or (5) a Full Scale IQ (FS-IQ) of less than 80.\r\n\r\n- See `participants.tsv` and `participants.json` for age/sex/handedness/group.\r\n\r\n## Notes\r\n- This work was supported by a grant from the Simons Foundation Autism Research Initiative (SFARI Award # 874845, SM).  Support for recruitment and phenotyping of participants was provided by the Human Clinical Phenotyping Core of the NICHD funded Rose. F. Kennedy Intellectual and Developmental Disabilities Research Center (P50  HD105352, SM)..\r\n\r\n",
+      "summary": null,
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": false,
+      "ages": null,
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Autism",
+      "grantFunderName": "SFARI",
+      "modalities": [],
+      "species": "Human",
+      "studyDesign": "Presentation of visual-only, auditory-only and audiovisual stimulation",
+      "studyDomain": "Multisensory integration in autism",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2025-10-13T17:26:18.137Z"
+  },
+  "source": "openneuro"
+}

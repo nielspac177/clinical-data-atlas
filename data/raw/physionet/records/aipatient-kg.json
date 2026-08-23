@@ -1,0 +1,32 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "aipatient-kg",
+  "payload": {
+    "abstract": "<p>This study integrates the MIMIC-III and CORAL electronic health records into knowledge graphs to enhance their utility for advanced medical analysis and decision-making. MIMIC-III contains comprehensive data from over 40,000 patients, while CORAL focuses on oncology-specific information from 40 patients, aiding in complex medical reasoning. We used a LLM (Large Language Model)-based Named Entity Recognition approach to extract relevant medical information from these datasets, independently verified by domain experts, and constructed the AIPatient and CORAL Knowledge Graph in Neo4j. This graph supports the AIPatient system, which simulates patient interactions for advanced decision support. Additionally, we introduce MIMIC-III and CORAL Question and Answering sets, which are created for evaluating system performance such as accuracy, robustness and stability.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 127659,
+    "core_doi": "10.13026/jxcs-fq11",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 1408577,
+    "public_project_uuid": "3709d29e-ed78-47d4-bd32-ac2553589061",
+    "publish_date": "2025-04-15",
+    "resource_type": "Database",
+    "short_description": "This project integrates MIMIC-III and CORAL electronic health records into knowledge graphs to improve medical analysis and enhance decision-making capabilities. Resources include two knowledge graph snapshots and two question-and-answering datasets.",
+    "slug": "aipatient-kg",
+    "source_url": "https://physionet.org/content/aipatient-kg/1.0.0/",
+    "title": "AIPatient KG: MIMIC-III and CORAL Electronic Health Records based Patient Knowledge Graph",
+    "topics": [],
+    "version": "1.0.0",
+    "version_doi": "10.13026/vjrq-9328"
+  },
+  "source": "physionet"
+}

@@ -1,0 +1,44 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:95483ce9c5c006cd4ea449dd0dc79816b66f4b031645c22d80e6271a17ee4883",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "advanced cervical cancer",
+        "label": "advanced cervical cancer"
+      },
+      {
+        "evidence": "uterine cervical neoplasms",
+        "label": "uterine cervical neoplasms"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "tcia:cc-tumor-heterogeneity",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "MRI",
+        "value": "MRI"
+      },
+      {
+        "evidence": "PET",
+        "value": "PET"
+      },
+      {
+        "evidence": "CT",
+        "value": "CT"
+      },
+      {
+        "evidence": "Radiation Therapy Course",
+        "value": "radiotherapy"
+      }
+    ],
+    "population": "Patients with advanced cervical cancer imaged across the radiation therapy course; 23 participants per source facts.",
+    "summary": "Serial functional and molecular imaging of advanced cervical cancer before and during the radiation therapy course, to assess intra-tumoral heterogeneity of the tumor microenvironment spatially and longitudinally."
+  },
+  "prompt_version": "v1"
+}

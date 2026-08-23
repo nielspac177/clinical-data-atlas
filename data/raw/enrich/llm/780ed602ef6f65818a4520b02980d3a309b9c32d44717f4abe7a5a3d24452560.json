@@ -1,0 +1,41 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:780ed602ef6f65818a4520b02980d3a309b9c32d44717f4abe7a5a3d24452560",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "patients with intermediate or high risk prostate cancer",
+        "label": "prostate cancer"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "nephrology_urology"
+    ],
+    "id": "tcia:nadt-prostate",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "automated immunohistochemistry",
+        "value": "pathology"
+      },
+      {
+        "evidence": "MRI-visible lesions",
+        "value": "MRI"
+      },
+      {
+        "evidence": "gene expression profile by RNA-seq",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "exome sequencing",
+        "value": "genomics"
+      }
+    ],
+    "population": "Patients with intermediate or high risk prostate cancer treated with intense neoadjuvant therapy",
+    "summary": "Targeted prostate biopsies and radical prostatectomy tissues from patients given intense neoadjuvant hormonal therapy, with scanned immunohistochemistry slides, RNA-seq expression, exome sequencing of microdissected tumor, and germline whole-genome data; therapy response known."
+  },
+  "prompt_version": "v1"
+}

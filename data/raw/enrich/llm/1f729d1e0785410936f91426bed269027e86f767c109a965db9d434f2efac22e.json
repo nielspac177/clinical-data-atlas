@@ -1,0 +1,49 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:1f729d1e0785410936f91426bed269027e86f767c109a965db9d434f2efac22e",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Kidney Chromophobe",
+        "label": "Kidney Chromophobe"
+      },
+      {
+        "evidence": "Adenomas and Adenocarcinomas",
+        "label": "Adenomas and Adenocarcinomas"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "nephrology_urology"
+    ],
+    "id": "gdc:TCGA-KICH",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Diagnostic Slide, Tissue Slide",
+        "value": "pathology"
+      },
+      {
+        "evidence": "WXS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "RNA-Seq",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Reverse Phase Protein Array",
+        "value": "proteomics"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "113 human cases",
+    "summary": "TCGA molecular profiling of chromophobe kidney tumors, including exome, genome, RNA and miRNA sequencing, methylation and genotyping arrays, protein arrays, diagnostic and tissue slides, plus clinical and biospecimen data."
+  },
+  "prompt_version": "v1"
+}

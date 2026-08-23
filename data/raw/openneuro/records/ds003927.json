@@ -1,0 +1,84 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003927",
+  "payload": {
+    "created": "2021-11-22T16:37:55.664Z",
+    "id": "ds003927",
+    "latestSnapshot": {
+      "created": "2025-11-10T08:36:00.000Z",
+      "description": {
+        "Authors": [
+          "Ning Mei",
+          "Roberto Santana",
+          "David Soto"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds003927.v1.0.3",
+        "Funding": [
+          "the BERC 2018-2021 program, from the Spanish Ministry of Economy and Competitiveness, through the 'Severo Ochoa' Programme for Centres/Units of Excellence in R & D (CEX2020-001010-S)",
+          "PSI2016-76443-P and PID2019-105494GB-I00 from MINECO",
+          "the Basque Government (IT1244-19 and ELKARTEK programs)",
+          "the Spanish Ministry of Economy and Competitiveness MINECO (project TIN2016-78365-R)"
+        ],
+        "HowToAcknowledge": "Please cite this paper:  Mei, N., Santana, R. & Soto, D. Informative neural representations of unseen contents during higher-order processing in human brains and deep artificial networks. Nat Hum Behav 6, 720–731 (2022). https://doi.org/10.1038/s41562-021-01274-7",
+        "License": "CC0",
+        "Name": "Informative neural representations of unseen contents during higher-order processing in human brains and deep artificial networks",
+        "ReferencesAndLinks": null
+      },
+      "readme": "This fMRI dataset was collected for the study \"Informative neural representations of unseen contents during higher-order processing in human brains and deep artificial networks\".\n\n---\n\nCode corresponding to the dataste: https://github.com/nmningmei/unconfeats\n\n---\n\n# System Information\n\n- [Platform](https://dipc.ehu.es):      Linux-3.10.0-514.el7.x86_64-x86_64-with-centos-7.3.1611-Core\n- CPU:           x86_64: 16 cores\n\n## Python environment\n\n- Python:        3.6.3 |Anaconda, Inc.| (default, Nov 20 2017, 20:41:42)  [GCC 7.2.0]\n- Numpy:         1.19.1 {blas=mkl_rt, lapack=mkl_rt}\n- Scipy:         1.3.1\n- Matplotlib:    3.1.3 {backend=agg}\n- Scikit-learn:  0.24.2\n- Seaborn:       0.11.1\n- Pandas:        1.0.1\n- Tensorflow:    2.0.0\n- Pytorch:       1.7.1\n- Nilearn:       0.7.1\n- Nipype:        1.4.2\n- [LegrandNico/metadPy](https://github.com/LegrandNico/metadPy)\n## R environment - R base\n- R:             4.0.3 # for 3-way repeated measure ANOVAs\n## Brain image processing backends\n- mricrogl\n- mricron:       10.2014\n- FSL:           6.0.0\n- Freesurfer:    6.0.0",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "02",
+          "01",
+          "03",
+          "05",
+          "04",
+          "06",
+          "07"
+        ],
+        "size": 153344263696,
+        "subjects": [
+          "03",
+          "07",
+          "02",
+          "01",
+          "06",
+          "04",
+          "05"
+        ],
+        "tasks": [
+          "recog"
+        ],
+        "totalFiles": 1150
+      },
+      "tag": "1.0.3"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": "https://doi.org/10.1101/2021.01.12.426428 ",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "Within-subject",
+      "studyDomain": "Consciousness",
+      "studyLongitudinal": "Other"
+    },
+    "publishDate": "2021-11-23T10:00:42.903Z"
+  },
+  "source": "openneuro"
+}

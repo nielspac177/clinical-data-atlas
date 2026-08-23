@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:5c59c724695c0dc7ce451c8272b4e12bee4a15c571783ec1c6bdb2917cecd909",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "cardiology",
+      "critical_care",
+      "oncology"
+    ],
+    "id": "physionet:alott",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "telemetry waveforms, such as electrocardiogram",
+        "value": "ECG"
+      },
+      {
+        "evidence": "temperature, pulse, and perfusion measurements at two-second intervals",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "linked to Electronic Medical Record (EMR) data",
+        "value": "EHR"
+      }
+    ],
+    "population": "270 beds and over 15,000 hospital admissions from September 2018 through November 2020 at The James Cancer Hospital and Ross Heart Hospital",
+    "summary": "Deidentified high-resolution bedside telemetry waveforms and vital measurements linked to electronic medical record data, built to support algorithms predicting emergency response team events."
+  },
+  "prompt_version": "v1"
+}

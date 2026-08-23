@@ -1,0 +1,35 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "minute-level-step-count-nhanes",
+  "payload": {
+    "abstract": "<p>The National Health and Nutrition Examination Survey (NHANES) is a nationally representative study that collects demographic, socioeconomic, dietary, and health-related information from 10,000 Americans annually. In Wave G (2011-2012) and Wave H (2013-2014), participants wore an ActiGraph GT3X+ on the non-dominant wrist for seven consecutive days. Publicly available data include minute-level wear predictions (wake wear, sleep wear, unknown, nonwear), data quality flags, and monitor-independent movement summary units (MIMS). Additionally, raw triaxial accelerometer data recorded at 80 Hz are provided, enabling detailed analyses beyond MIMS.</p>\n<p>We applied five step counting algorithms and the ActiGraph Activity Count (AC) algorithm to the raw data to create a dataset of minute-level step counts. The dataset also includes minute level AC, MIMS, wear predictions, and wear flags for all participants who wore accelerometers in NHANES 2011&ndash;2014. These data facilitate detailed investigations of accelerometry-measured physical activity patterns in a nationally representative U.S. population. Potential analyses include examination of within-day activity patterns and their association with health outcomes.</p>",
+    "access_policy": "Open",
+    "compressed_storage_size": 2865040605,
+    "core_doi": "10.13026/5htm-7515",
+    "dua": null,
+    "is_latest_version": true,
+    "license": {
+      "name": "Creative Commons Zero 1.0 Universal Public Domain Dedication"
+    },
+    "main_storage_size": 2865163804,
+    "public_project_uuid": "a9b1b181-a53c-4418-aa9c-868e8b1687e3",
+    "publish_date": "2026-08-07",
+    "resource_type": "Database",
+    "short_description": "Minute level step counts obtained from five step counting algorithms for raw accelerometry data, and minute level Activity Counts, MIMS, wear predictions, and wear flags for all participants who wore accelerometers in NHANES 2011-2014.",
+    "slug": "minute-level-step-count-nhanes",
+    "source_url": "https://physionet.org/content/minute-level-step-count-nhanes/1.0.2/",
+    "title": "Minute level step counts and physical activity data from the National Health and Nutrition Examination Survey (NHANES) 2011-2014",
+    "topics": [
+      "nhanes",
+      "physical activity",
+      "accelerometry",
+      "steps"
+    ],
+    "version": "1.0.2",
+    "version_doi": "10.13026/d7sw-f662"
+  },
+  "source": "physionet"
+}

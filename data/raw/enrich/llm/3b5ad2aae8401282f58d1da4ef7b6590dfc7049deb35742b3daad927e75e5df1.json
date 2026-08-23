@@ -1,0 +1,50 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:3b5ad2aae8401282f58d1da4ef7b6590dfc7049deb35742b3daad927e75e5df1",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "glioma specimens",
+        "label": "glioma"
+      },
+      {
+        "evidence": "the treatment of brain tumors",
+        "label": "brain tumors"
+      },
+      {
+        "evidence": "Repository of Molecular Brain Neoplasia Data (REMBRANDT)",
+        "label": "Molecular Brain Neoplasia"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "oncology",
+      "surgery"
+    ],
+    "id": "tcia:rembrandt",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "pre-surgical magnetic resonance (MR) multi-sequence images",
+        "value": "MRI"
+      },
+      {
+        "evidence": "gene expression arrays",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "copy number arrays",
+        "value": "genomics"
+      },
+      {
+        "evidence": "clinical phenotype data points",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "glioma specimens from the Glioma Molecular Diagnostic Initiative; pre-surgical MR images from 130 REMBRANDT patients",
+    "summary": "Repository linking clinical information with genomic characterization of glioma specimens, including gene expression and copy number arrays and clinical phenotype data. This image collection adds pre-surgical multi-sequence brain MR images for a subset of patients."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,110 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004102",
+  "payload": {
+    "created": "2022-04-18T13:07:30.522Z",
+    "id": "ds004102",
+    "latestSnapshot": {
+      "created": "2023-04-06T10:49:13.000Z",
+      "description": {
+        "Authors": [
+          "Damien Brevers",
+          "Chris Baeken",
+          "Stefanie De Smet",
+          "Beatriz Catoira",
+          "Sara De Witte",
+          "Qingha He",
+          "Pierre Maurage",
+          "Laimi Schultze",
+          "Guillaume Sescousse",
+          "Claudia Vila Verde",
+          "Claus Vögele",
+          "Joël Billieux"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004102.v1.0.1",
+        "Funding": [
+          "This work is supported by Luxembourg National Research Fund (FNR); CORE – Junior Track [BETHAB]"
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Stimulation of the dorsolateral prefrontsal cortex modulates brain cue reactivity to reward(un)availability",
+        "ReferencesAndLinks": null
+      },
+      "readme": "The work of D.B. is supported by the Luxembourg National Research Fund (FNR); CORE – Junior Track [BETHAB; C18/BM/12552025].\n\nThe experimental task code and stimuli are available on github: https://github.com/dbrevers/sports_betting_study/tree/task/(un)availability_task\n\nThe unthresholded statistical maps are available on Neurovault.org: https://neurovault.org/collections/12480/\n\nNote. In the event .tsv file (see func/ folder): event 1 = available betting trials;  event 2 = non-available betting trials.",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "active",
+          "sham"
+        ],
+        "size": 33438187788,
+        "subjects": [
+          "1",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "17",
+          "18",
+          "19",
+          "2",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "3",
+          "30",
+          "31",
+          "32",
+          "33",
+          "34",
+          "35",
+          "4",
+          "6",
+          "7",
+          "8",
+          "9"
+        ],
+        "tasks": [
+          "cueexposure"
+        ],
+        "totalFiles": 547
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": null,
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "FNR",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "sham vs verum within-subject conditions",
+      "studyDomain": "Brain stimulation",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2022-04-19T07:43:08.233Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,110 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007862",
+  "payload": {
+    "created": "2026-05-27T22:16:27.948Z",
+    "id": "ds007862",
+    "latestSnapshot": {
+      "created": "2026-05-28T11:38:35.000Z",
+      "description": {
+        "Authors": [
+          "Emerson, Joseph H.",
+          "Navarro, Karen",
+          "Olman, Cheryl A."
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007862.v1.0.1",
+        "Funding": [
+          "HHS-NIH-OD 1S10OD017974-01",
+          "HHS-NIH-NIBIB 5P41EB027061",
+          "HHS-NIH-NINDS 2P30NS076408",
+          "HHS-NIH-NIMH 5R01MH111447-05",
+          "HHS-NIH-NIDA 5T32MH115886-04",
+          "HHS-NIH-NIMH 5T32MH115886-04",
+          "HHS-NIH-NIDA 5R01NS123842",
+          "HHS-NIH-NINDS 5R01NS123842"
+        ],
+        "HowToAcknowledge": "If you use this dataset, please cite our preprint. doi: 10.64898/2025.12.12.694066",
+        "License": "CC0",
+        "Name": "OriSeg",
+        "ReferencesAndLinks": null
+      },
+      "readme": "# OriSeg\n\n## Change Log\n\nUploaded by Joseph Emerson 05/27/2026\n\n## Description\nThis dataset measures blood-oxygenation-level-dependent (BOLD) responses from human visual cortex during a visual orientation-discrimination task under different image segmentation conditions. Data were acquired at 7T with 0.6 mm isotropic resolution for the purpose of measuring BOLD responses across the cortical depth. The experiment was designed to probe the effects of visual spatial context on the depth-dependent profiles of surround suppression in primary visual cortex (V1).\n\nAuthors: Emerson, Joseph H., Navarro, Karen, & Olman, Cheryl A.\n\nCorresponding Author: Emerson, Joseph H.; Email: emers245@umn.edu\n\nCitation: Emerson, Joseph H., Navarro, Karen, & Olman Cheryl A. \"Orientation-tuned surround suppression exhibits a unique laminar signature in human primary visual cortex\". Proc. Natl. Acad. Sci. U.S.A. (forthcoming).\n\nPreprint: https://doi.org/10.64898/2025.12.12.694066\n\nFunding: \n- HHS | NIH | NIH Office of the Director (OD), 1S10OD017974-01\n- HHS | NIH | National Institute of Biomedical Imaging and Bioengineering (NIBIB), 5P41EB027061\n- HHS | NIH | National Institute of Neurological Disorders and Stroke (NINDS), 5R01MH111447-05, 5R01NS123842\n- HHS | NIH | National Institute on Drug Abuse (NIDA), 5T32MH115886-04, 5R01NS123842\n- HHS | NIH | National Institute of Mental Health (NIMH), 5R01MH111447-05, 5T32MH115886-04\n\n## Participants\n\nSixteen healthy adults (10 female, 5 male, 1 non-binary with undisclosed sex) participated in this study. Data from all sixteen participants are included without exclusion. See citation for details on exclusion criteria.\n\n## Task\n\nPlease see our manuscript for full details about the task. A summary is provided below. Behavioral data are available upon request.\n\n### Visual Stimuli\nParticipants fixated at center-screen while viewing stimuli constructed from sine-wave gratings. Stimuli consisted of three components:\n- a large sine wave grating subtending 25 degrees visual angle\n- a central grating subtending 1.25 degrees visual angle at fixation\n- two target gratings subtending 2.5 degrees visual angle at 3.25 degrees eccentricity rotated 30 degrees below the horizontal meridian\n\nAll components were shown at 40% contrast and 1.6 cycles per degree for all conditions. Stimuli were presented in 12 sec. blocks with eight trials each. For each trial, the following stimulus sequence was used: \n1. all components flashed on screen simultaneously for 250 ms\n2. gray screen with fixation point for 200 ms\n3. all components flashed on screen simultaneously for 250 ms rotated uniformly relative to the first presentation\n4. gray screen with fixation point during 300 ms response window\n5. red (incorrect) or green (correct) circle flashed around fixation point indicating accuracy on previous response for 100 ms\n\nIn the second presentation of the stimulus within the trial, each component was rotated in the same clockwise or counterclockwise direction by the same amount relative to the first presentation. The average orientation within blocks was one of eight orientations arranged in equal intervals between 0 and 157.5 degrees. Participants performed a two-alternative forced choice (2AFC) task by responding in the subsequent 300 ms grayscreen window with a button press, indicating whether the orientation of the second presentation was shifted clockwise or counterclockwise relative to the first presentation. Orientation shifts between the first and second presentation ranged from 1 to 16 degrees. The size of the shifts were determined by a three-down, one-up staircase. Trials were interspersed with jitters of 0, 300, or 600 ms. Blocks are organized by condition and orientation, with the condition and mean orientation remaining constant within blocks.\n\n### Experiment Conditions\nThis dataset contains two scan types: localizer and task. Participants performed the same orientation-discrimination task in both scan types and the stimulus sequence was identical in both. The localizer scan was used to identify the retinotopic representations of target and surround components in visual cortex. Localizer scans had two conditions:\n1. *surround*: target gratings were replaced with gray disks \n2. *center*: the surround grating was replaced with neutral gray \n\nTotal number of localizer blocks per session: 51 \n\nTask scans were used to measure the effects of different contextual conditions on surround suppression. These scans included four experimental conditions plus a rest condition: \n1. *iso0*: the surround and target gratings were matched in orientation and phase, such that there was no discernable boundary between the surround and target disks\n2. *iso90*: the surround was shifted 90-degrees in phase relative to the target inducing a perceptual boundary between the surround and target gratings\n3. *orth*: the surround was rotated 90-degrees in orientation relative to the target orientation \n4. *sur*: identical to the *surround* condition from the localizer experiment.\n5. *rest*: gray screen with fixation grating only\n\nTotal number of task blocks per session: 128\n\nWithin each session, there were three localizer scans and four task scans.\n\n## MRI Acquisitions\nAll MRI data were acquired at the Center for Magnetic Resonance Research at the University of Minnesota.\n\n### ses-01\nSession 1 contains functional data from 7T.\n\n#### func\nFunctional data can be found in the *func* datatype.  All functional data were acquired on two 7T Siemens scanners equipped with a custom head coil with a 32-channel transmit and 4-channel receive. The following participants were scanned on a Siemens MAGNETOM 7T Plus:\n- sub-pnr102\n- sub-pnr256\n- sub-pnr328\n- sub-pnr510\n- sub-pnr739\n- sub-pnr756\n\nThe following participants were scanned on a Siemens MAGNETOM 7T Terra:\n- sub-pnr143\n- sub-pnr161\n- sub-pnr352\n- sub-pnr495\n- sub-pnr579\n- sub-pnr668\n- sub-pnr685\n- sub-pnr713\n- sub-pnr822\n- sub-pnr947\n\nWe employed a T2\\*-weighted gradient echo-planar imaging (GE EPI) with field of view covering the posterior occipital lobe: \n- TR: 2 sec \n- TE: 32.2 ms\n- 24 or 25 coronal slices \n- Resolution: 0.6 mm isotropic\n- FOV: 124.8 mm x 153.6 mm, posterior occipital \n- Matrix size: 208 x 256\n- GRAPPA in-plane parallel acceleration imaging factor: 3\n- 6/8 partial Fourier\n- echo-spacing 1.2 ms \n\nThe number of coronal slices depended on the SAR limits for the two scanners used. Participants scanned on the Siemens MAGNETOM 7T Plus had 25 coronal slices, while participants scanned on the Siemens MAGNETOM 7T Terra had 24 coronal slices. Phase-encoding was right-to-left in all participants except sub-pnr510, who had left-to-right phase encoding.\n\n#### fmap\nEach session also included a T1-weighted GE EPI matched to the functional space to delineate gray matter. These are included in the *fmap* datatype. A reverse phase encode T1-weighted GE EPI was used for distortion compensation. Since, the T1-weighted GE EPI was acquired at identical resolution, sampling, and echo spacing as the T2\\*-weighted functional data, these acquisitions have matching distortions and the WARP field generated from the T1-weighted GE EPI can be used to compensate distortion in the T2\\*-weighted data.\n\n#### anat\nMost participants also have in-session T1w anatomical scans used for initial registration and alignment of the 3T anatomical data. Three participants did not have these in-session anatomies: sub-pnr161, sub-pnr510, and sub-pnr947.\n\n### ses-02\nSession 2 contains anatomical data from 3T.\n\n#### anat\nAnatomical data were acquired on a Siemens 3T scanner. All participants have a full-brain T1-weighted MP-RAGE scan with 0.8 mm isotropic resolution. Several participants also have a T2-weighted SPACE scan with matching resolution. A few participants have multiple T1w scans within the same session. Unless otherwise specified, surface reconstruction was performed by averaging multiple T1w scans after between-scan motion compensation. However, the following subjects used only one of the T1w scans for surface reconstruction as indicated below:\n- sub-pnr256: sub-pnr256_ses-02_run-04_T1w.nii.gz\n- sub-pnr510: sub-pnr510_ses-02_run-01_T1w.nii.gz\n- sub-pnr713: sub-pnr713_ses-02_run-02_T1w.nii.gz\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "02",
+          "01"
+        ],
+        "size": 99526495582,
+        "subjects": [
+          "pnr256",
+          "pnr328",
+          "pnr685",
+          "pnr352",
+          "pnr756",
+          "pnr102",
+          "pnr739",
+          "pnr161",
+          "pnr495",
+          "pnr822",
+          "pnr143",
+          "pnr579",
+          "pnr510",
+          "pnr668",
+          "pnr713",
+          "pnr947"
+        ],
+        "tasks": [
+          "task",
+          "localizer"
+        ],
+        "totalFiles": 788
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        23,
+        32,
+        40,
+        25,
+        49,
+        22,
+        26,
+        35,
+        21,
+        27,
+        21,
+        35,
+        27,
+        25,
+        34,
+        22
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2026-05-28T11:08:16.517Z"
+  },
+  "source": "openneuro"
+}

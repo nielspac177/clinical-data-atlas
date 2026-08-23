@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:33c7fb5d6e4f0e03c93659a9ef9cd0224bd91ccd783071e4321ab51657a0040b",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "GABAergic anesthetic unconsciousness",
+        "label": "anesthetic unconsciousness"
+      },
+      {
+        "evidence": "10 healthy volunteers",
+        "label": "healthy volunteers"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "surgery",
+      "neuroscience"
+    ],
+    "id": "physionet:eeg-power-anesthesia",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "electroencephalography (EEG) multitaper spectra",
+        "value": "EEG"
+      }
+    ],
+    "population": "10 healthy volunteers undergoing stereotyped anesthetic administration and 44 patients receiving anesthesia care in an operating room context",
+    "summary": "EEG multitaper spectra with conscious/unconscious labels from healthy volunteers undergoing stereotyped anesthetic administration and from patients receiving anesthesia in an operating room, including propofol TIVA and sevoflurane cases. Used to train unconsciousness classification models."
+  },
+  "prompt_version": "v1"
+}

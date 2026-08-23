@@ -1,0 +1,161 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003702",
+  "payload": {
+    "created": "2021-06-15T15:03:49.921Z",
+    "id": "ds003702",
+    "latestSnapshot": {
+      "created": "2024-09-17T17:40:13.000Z",
+      "description": {
+        "Authors": [
+          "Samantha Gregory",
+          "Hongfang Wang",
+          "Klaus Kessler"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds003702.v1.0.2",
+        "Funding": [
+          "This work was supported by a Leverhulme Trust early career fellowship [ECF-2018-130] awarded to S.E.A. Gregory.)."
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Social Memory cuing",
+        "ReferencesAndLinks": [
+          "Samantha E A Gregory, Hongfang Wang, Klaus Kessler, EEG Alpha and Theta Signatures of Socially and Non-Socially Cued Working Memory in Virtual Reality, Social Cognitive and Affective Neuroscience, 2021;, nsab123 https://academic.oup.com/scan/advance-article/doi/10.1093/scan/nsab123/6437613?searchresult=1",
+          "Gregory, S. E. A., Wang, H., & Kessler, K. (2022). A dataset of EEG recordings from 47 participants collected during a virtual reality working memory task where attention was cued by a social avatar and non-social stick cue. Data in Brief, 41, 107827. https://doi.org/10.1016/j.dib.2022.107827"
+        ]
+      },
+      "readme": "EEG Raw and processed data for a memory task presented in virtual reality, \n\nThe full task is on OSF: https://osf.io/s9xmu/files\n\nDerivatives:\n\nBehavioral data from the task in derivatives\n\nProcessed data is in the derivatives \n\nCode\n\nEvent codes are listed in the code file\n\nTrial function, preprocessing, data cleaning and analysis are also in the code file as .txt files which can be converted back to .m files. \n\nThe code uses information contained in matlab data files: layout_64WG.mat and neighbours.mat  due to the structure of these, they have been uploaded as .mat files. \n\nTask:\n\nWearing a head mounted display to display the task in virtual reality participants completed a visual working memory task \nIn the task they had to remember the status of and details about presented objects. \n\nA person or a stick cued the items such that it could look left or right and items could appear on the left or right. Sometimes the cue was valid (i.e. pointed where objects appeared) and sometimes it was invalid (pointed away from where objects appeared) \n\nThe objects were always a bowl, a cup, a plate and a teapot. Each could have a different status that needed to be remembered \nparticipants were probed on memory for item location and then item status\n\n\nEvent codes within the data set are as follows. Trial function is included in code folder. \n\nFor the avatar cue\n\ns3021 Character shown - i.e. moment the avatar appears\n\ns3022 Objects shown - i.e. moment that the memory targets appear\n\ns3023 Maintenance interval - i.e. moment the memory objects leave the screen and the blank maintenance interval occurs\n\ns3024 Probe object shown - i.e. moment that participant is presented with location probe\n\ns3025 Resp 1 made - i.e. moment that the participants have responded to the location probe\n\ns3026 Q2 shown - i.e. moment that participants are asked a question about the status of the objects\n\ns3027 Resp 2 made - i.e. moment that the participants have responded to the status probe\n\n\nFor the stick cue\n\ns3041 Stick shown - i.e. moment the stick appears\n\ns3042 Objects shown - i.e. moment that the memory targets appear\n\ns3043 Maintenance interval - i.e. moment the memory objects leave the screen and the blank maintenance interval occurs\n\ns3044 Probe object shown - i.e. moment that participant is presented with location probe\n\ns3045 Resp 1 made - i.e. moment that the participants have responded to the location probe\n\ns3046 Q2 shown - i.e. moment that participants are asked a question about the status of the objects\n\ns3047 Resp 2 made - i.e. moment that the participants have responded to the status probe\n\n\n\nTrial info EEG processed data\n\n1: Main condition (MainCon)\n\n\t1 = Stick Congruent \n\n\t2 = Stick Incongruent\n\n\t3 = Avatar Congruent\n\n\t4 = Avatar Incongruent\n\n2: Cue condition left or right (MConCueLR)\n\n\t1 = Stick Congruent Cue shifts left\n\n\t2 = Stick Congruent Cue shifts right\n\n\t3 = Stick Incongruent Cue shifts left\n\n\t4 = Stick Incongruent Cue shifts right\n\n\t5 = Avatar Congruent Cue shifts left\n\n\t6 = Avatar Congruent Cue shifts right\n\n\t7 = Avatar Incongruent Cue shifts left\n\n\t8 = Avatar Incongruent Cue shifts right\n\n3: Condition from experiment build (con) \n\n\t1 = Congruent, cueshift L, items Left, same location \n\n\t2 = Congruent, cueshift L, items Left, dif location \n\n\t3 = Congruent, cueshift R, items Right, same location \n\n\t4 = Congruent, cueshift R, items Right, dif location \n\n\t5 = Incongruent, cueshift L, items Right, same location \n\n\t6 = Incongruent, cueshift L, items Right, dif location \n\n\t7 = Incongruent, cueshift R, items Left, same location \n\n\t8 = Incongruent, cueshift R, items Left, dif location \n\n4: Validity \n\n\t1 = valid (congruent)\n\n\t2= invalid (incongruent)\n\n5: Location\n\n\t1 = Same (i.e. probe at same location as when initially presented)\n\n\t2 = Different (i.e. probe at different location as when initially presented)\n\n6 Cue \n\n\t1 = Stick cue\n\n\t2 = Avatar cue\n\n7 Left or Right cue (LorR) specific to  the cue shift\n\n\t1 = Left Stick\n\n\t2 = Right Stick\n\n\t3 = Left Avatar\n\n\t4 = Right Avatar\n\n8 Start: Sample time for start of the trial\n\n9 Cue: Sample time for cue onset\n\n10 Targets: Sample time for target onset\n\n11 Maintenance: Sample time for start of maintenance interval \n\n12 Location probe: Sample time for location probe being shown\n\n13 Location response time: Sample time for response to location probe being made\n\n14 Status question: Sample time for status question being asked\n\n15 Status response time: Sample time for response to status question being made\n\n16 Accuracy for the location question\n\n17 Accuracy for the status question",
+      "summary": {
+        "dataProcessed": true,
+        "modalities": [
+          "eeg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [],
+        "size": 18784103504,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31",
+          "32",
+          "33",
+          "34",
+          "35",
+          "36",
+          "37",
+          "38",
+          "39",
+          "40",
+          "41",
+          "43",
+          "44",
+          "45",
+          "46",
+          "48",
+          "49",
+          "50"
+        ],
+        "tasks": [
+          "Social Memory cuing"
+        ],
+        "totalFiles": 240
+      },
+      "tag": "1.0.2"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": true,
+      "dxStatus": "",
+      "grantFunderName": "Leverhulme trust",
+      "modalities": [
+        "eeg"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2021-06-15T17:10:15.320Z"
+  },
+  "source": "openneuro"
+}

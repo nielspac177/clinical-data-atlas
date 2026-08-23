@@ -1,0 +1,28 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:84ec48beaa6104cecc1f43e12e41725ab8b367396c8d0bcd5d76607a5040ad42",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "patients diagnosed with multiple myeloma",
+        "label": "multiple myeloma"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "tcia:mimm_sbilab",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Microscopic images were captured from bone marrow aspirate slides",
+        "value": "pathology"
+      }
+    ],
+    "population": "Patients diagnosed with multiple myeloma as per the standard guidelines",
+    "summary": "Microscopic images of Jenner-Giemsa stained bone marrow aspirate slides from patients diagnosed with multiple myeloma, stain normalized and provided as an annotated set with plasma cells marked for segmentation."
+  },
+  "prompt_version": "v1"
+}

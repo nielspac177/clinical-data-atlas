@@ -1,0 +1,39 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "mietic",
+  "payload": {
+    "abstract": "<p>Emergency department (ED) overcrowding leads to delayed care, increased patient risk, and inefficient resource use. The MIMIC-IV-Ext Triage Instruction Corpus (MIETIC) addresses this by providing 9,629 structured triage cases from MIMIC-IV, aligned with the Emergency Severity Index (ESI).</p>\n<p>MIETIC supports large language model (LLM) training for AI-assisted triage, improving accuracy, consistency, and risk assessment. The dataset includes chief complaints, vital signs, demographics, and medical history, ensuring realistic triage decision-making. Developed through automated quality control and expert validation, MIETIC enhances model performance in high-risk and moderate-risk classification.</p>\n<p>Available in CSV formats, MIETIC enables research in clinical NLP, AI-driven triage, and decision-support tools. The dataset module includes:</p>\n<ol>\n<li>Structured triage cases with ESI labels.</li>\n<li>Triage case generation prompts for instruction tuning.</li>\n<li>Expert-validated samples for quality control.</li>\n<li>SQL scripts for data extraction and validation, hosted on GitHub.</li>\n</ol>\n<p>MIETIC provides a standardized, reproducible dataset to advance AI-driven emergency triage, optimizing accuracy, efficiency, and resource allocation.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 4470612,
+    "core_doi": "10.13026/nf30-0z23",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 23815677,
+    "public_project_uuid": "147c6c90-374c-4dfc-83dd-6fb468b820c6",
+    "publish_date": "2025-03-04",
+    "resource_type": "Database",
+    "short_description": "MIMIC-IV-Ext Triage Instruction Corpus includes 9,629 ED triage cases organized by the five-level ESI, enabling LLMs to improve triage accuracy. It provides CSV data, generation prompts, expert validation samples, and SQL QC scripts.",
+    "slug": "mietic",
+    "source_url": "https://physionet.org/content/mietic/1.0.0/",
+    "title": "MIMIC-IV-Ext Triage Instruction Corpus",
+    "topics": [
+      "large language models",
+      "machine learning",
+      "nlp",
+      "clinical decision support",
+      "emergency severity index",
+      "emergency triage"
+    ],
+    "version": "1.0.0",
+    "version_doi": "10.13026/q1nc-2e47"
+  },
+  "source": "physionet"
+}

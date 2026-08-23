@@ -1,0 +1,140 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004958",
+  "payload": {
+    "created": "2024-02-09T19:21:24.268Z",
+    "id": "ds004958",
+    "latestSnapshot": {
+      "created": "2024-02-12T21:43:00.000Z",
+      "description": {
+        "Authors": [
+          "Douglas N. Greve",
+          "Bruce Fischl"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004958.v1.0.0",
+        "Funding": [
+          "R01EB023281"
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "The FreeSurfer Maintenance Dataset",
+        "ReferencesAndLinks": [
+          "https://surfer.nmr.mgh.harvard.edu/fswiki/FsmData",
+          "https://freesurfer.net/",
+          "https://surfer.nmr.mgh.harvard.edu/fswiki/MiDeFace",
+          "https://github.com/pwighton/fsm2bids/"
+        ]
+      },
+      "readme": "The FreeSurfer Maintenance Dataset\n\nThis data was collected as part of the FreeSurfer Maintenance grant (FSM; R01EB023281) to support development and testing of FreeSurfer.  \n\nThe dataset contains the following scans:\n\n- Anatomical\n  - 12-echo gradient echo (GRE); magnitude and phase\n  - MP2RAGE; both inversion contrasts, T1 map and uniform image\n  - 4-echo MPRAGE with volumetric navigators (vNavs); magnitude, phase and RMS\n  - T2-SPACE with volumetric navigators (vNavs)\n- Diffusion\n  - Multi-shell diffusion data\n- Functional\n  - 50-repetition resting state data\n- Field Map\n  - GRE phase-difference field maps\n  - EPI blip-reversed field maps\n\nNotes:\n\n- All anatomical data was defaced with mideface (surfer.nmr.mgh.harvard.edu/fswiki/MiDeFace)\n- More details on how the dataset was curated is available at github.com/pwighton/fsm2bids/\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural",
+          "mri_diffusion",
+          "mri_functional"
+        ],
+        "sessions": [],
+        "size": 45692791535,
+        "subjects": [
+          "fsm02cd",
+          "fsm07tz",
+          "fsm08un",
+          "fsm10cv",
+          "fsm11ni",
+          "fsm14pu",
+          "fsm21em",
+          "fsm22db",
+          "fsm23qf",
+          "fsm24dz",
+          "fsm25na",
+          "fsm27uz",
+          "fsm30gy",
+          "fsm39ap",
+          "fsm40mn",
+          "fsm42wk",
+          "fsm46th",
+          "fsm50ww",
+          "fsm54jc",
+          "fsm57hp",
+          "fsm64ps",
+          "fsm66oo",
+          "fsm67lq",
+          "fsm70qy",
+          "fsm72kl",
+          "fsm76cw",
+          "fsm79bf",
+          "fsm84zy",
+          "fsm85fp",
+          "fsm87qb",
+          "fsm90ao",
+          "fsm93cs",
+          "fsm96ry",
+          "fsm99tc"
+        ],
+        "tasks": [
+          "rest"
+        ],
+        "totalFiles": 2717
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        54,
+        36,
+        35,
+        40,
+        20,
+        31,
+        29,
+        30,
+        26,
+        23,
+        19,
+        27,
+        29,
+        62,
+        70,
+        62,
+        76,
+        68,
+        68,
+        63,
+        25,
+        24,
+        72,
+        67,
+        69,
+        47,
+        23,
+        42,
+        41,
+        38,
+        50,
+        37,
+        66,
+        56
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": "NIH",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2024-02-12T22:06:53.690Z"
+  },
+  "source": "openneuro"
+}

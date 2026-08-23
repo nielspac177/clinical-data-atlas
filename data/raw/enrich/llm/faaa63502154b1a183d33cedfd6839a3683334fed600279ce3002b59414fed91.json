@@ -1,0 +1,27 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:faaa63502154b1a183d33cedfd6839a3683334fed600279ce3002b59414fed91",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "other"
+    ],
+    "id": "physionet:rad-eval-x",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "from the corresponding X-ray image",
+        "value": "xray"
+      },
+      {
+        "evidence": "candidate radiology reports",
+        "value": "clinical_notes"
+      }
+    ],
+    "population": null,
+    "summary": "Radiologist annotations of clinically significant and insignificant errors, across eight categories, in automatically generated chest radiology reports compared with ground-truth reports, for evaluating automated metrics."
+  },
+  "prompt_version": "v1"
+}

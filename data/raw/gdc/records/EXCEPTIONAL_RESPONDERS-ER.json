@@ -1,0 +1,109 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "EXCEPTIONAL_RESPONDERS-ER",
+  "payload": {
+    "dbgap_accession_number": null,
+    "disease_type": [
+      "Neoplasms, NOS",
+      "Complex Mixed and Stromal Neoplasms",
+      "Adenomas and Adenocarcinomas",
+      "Gliomas",
+      "Myomatous Neoplasms",
+      "Nevi and Melanomas",
+      "Epithelial Neoplasms, NOS",
+      "Ductal and Lobular Neoplasms",
+      "Squamous Cell Neoplasms"
+    ],
+    "id": "EXCEPTIONAL_RESPONDERS-ER",
+    "name": "Exceptional Responders",
+    "primary_site": [
+      "Esophagus",
+      "Stomach",
+      "Skin",
+      "Unknown",
+      "Bladder",
+      "Connective, subcutaneous and other soft tissues",
+      "Breast",
+      "Pancreas",
+      "Rectum",
+      "Other and unspecified female genital organs",
+      "Colon",
+      "Other and ill-defined sites",
+      "Anus and anal canal",
+      "Other and ill-defined digestive organs",
+      "Ovary",
+      "Bronchus and lung",
+      "Other and unspecified parts of biliary tract",
+      "Brain",
+      "Uterus, NOS",
+      "Kidney"
+    ],
+    "program": {
+      "dbgap_accession_number": "phs001145",
+      "name": "EXCEPTIONAL_RESPONDERS",
+      "program_id": "49f872b8-e9b8-5233-80a9-1d045a44d4a7"
+    },
+    "project_id": "EXCEPTIONAL_RESPONDERS-ER",
+    "releasable": false,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 84,
+      "data_categories": [
+        {
+          "case_count": 20,
+          "data_category": "Simple Nucleotide Variation",
+          "file_count": 490
+        },
+        {
+          "case_count": 84,
+          "data_category": "Sequencing Reads",
+          "file_count": 491
+        },
+        {
+          "case_count": 84,
+          "data_category": "Clinical",
+          "file_count": 151
+        },
+        {
+          "case_count": 84,
+          "data_category": "Biospecimen",
+          "file_count": 132
+        },
+        {
+          "case_count": 70,
+          "data_category": "Transcriptome Profiling",
+          "file_count": 188
+        },
+        {
+          "case_count": 70,
+          "data_category": "Structural Variation",
+          "file_count": 374
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 82,
+          "experimental_strategy": "WXS",
+          "file_count": 427
+        },
+        {
+          "case_count": 69,
+          "experimental_strategy": "Targeted Sequencing",
+          "file_count": 272
+        },
+        {
+          "case_count": 70,
+          "experimental_strategy": "RNA-Seq",
+          "file_count": 844
+        }
+      ],
+      "file_count": 1826,
+      "file_size": 4717135371662
+    }
+  },
+  "source": "gdc"
+}

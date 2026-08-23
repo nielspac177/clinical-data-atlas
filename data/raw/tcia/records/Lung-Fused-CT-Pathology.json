@@ -1,0 +1,233 @@
+{
+  "endpoints": [
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getCollectionValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getModalityValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getBodyPartValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getPatient",
+    "https://api.datacite.org/dois?prefix=10.7937"
+  ],
+  "harvest_method": "api:nbia+datacite",
+  "native_id": "Lung-Fused-CT-Pathology",
+  "payload": {
+    "datacite": {
+      "citationCount": 2,
+      "container": {},
+      "contentUrl": [],
+      "contributors": [
+        {
+          "affiliation": [],
+          "contributorType": "Other",
+          "familyName": null,
+          "givenName": null,
+          "name": "TCIA Team",
+          "nameIdentifiers": [],
+          "nameType": null
+        }
+      ],
+      "created": "2018-10-01T22:17:16Z",
+      "creators": [
+        {
+          "affiliation": [],
+          "familyName": "Madabhushi",
+          "givenName": "Anant",
+          "name": "Madabhushi, Anant",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-5741-0399",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Rusu",
+          "givenName": "Mirabela",
+          "name": "Rusu, Mirabela",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-0372-0367",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2018",
+          "dateInformation": null,
+          "dateType": "Issued"
+        }
+      ],
+      "descriptions": [
+        {
+          "description": "Data collection and analysis was provided by Case Western Reserve University. This is the first attempt of mapping the extent of Invasive Adenocarcinoma onto in vivo lung CT. The mappings constitute ground truth of disease and may be used to further investigate the imaging signatures of Invasive Adenocarcinoma in ground glass pulmonary nodules. Patient with small ground glass nodules with &gt;2 histology slices per nodule were included. Patients with solid large nodules (&gt;40mm), with &lt;3 histology slices or with histology slices showing substantial artifacts were excluded from this study.",
+          "descriptionType": "Abstract",
+          "lang": null
+        }
+      ],
+      "doi": "10.7937/k9/tcia.2018.smt36lpn",
+      "downloadCount": 0,
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "Lung-Fused-CT-Pathology",
+          "identifierType": "TCIA Short Name"
+        }
+      ],
+      "isActive": true,
+      "language": null,
+      "metadataVersion": 8,
+      "partCount": 0,
+      "partOfCount": 0,
+      "publicationYear": 2018,
+      "published": null,
+      "publisher": "The Cancer Imaging Archive",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2018-10-01T22:17:18Z",
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "10.1016/j.patter.2022.100464",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1148/rycan.230100",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        }
+      ],
+      "relatedItems": [],
+      "rightsList": [
+        {
+          "rights": "Creative Commons Attribution 3.0 Unported",
+          "rightsIdentifier": "cc-by-3.0",
+          "rightsIdentifierScheme": "SPDX",
+          "rightsUri": "https://creativecommons.org/licenses/by/3.0/legalcode",
+          "schemeUri": "https://spdx.org/licenses/"
+        }
+      ],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "fabricaForm",
+      "state": "findable",
+      "subjects": [
+        {
+          "subject": "Invasive Adenocarcinoma"
+        },
+        {
+          "subject": "Computed Tomography"
+        },
+        {
+          "subject": "Pathology"
+        },
+        {
+          "subject": "Pulmonary Nodules"
+        }
+      ],
+      "titles": [
+        {
+          "lang": null,
+          "title": "Fused Radiology-Pathology Lung (Lung-Fused-CT-Pathology)",
+          "titleType": null
+        },
+        {
+          "lang": null,
+          "title": "Lung-Fused-CT-Pathology",
+          "titleType": "AlternativeTitle"
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceType": "Imaging",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2025-06-01T01:01:23Z",
+      "url": "https://www.cancerimagingarchive.net/collection/lung-fused-ct-pathology/",
+      "version": "1",
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 2160
+    },
+    "nbia": {
+      "body_parts": [
+        "ABDOMEN",
+        "CHEST",
+        "FUSION",
+        "SEG"
+      ],
+      "collection": "Lung-Fused-CT-Pathology",
+      "modalities": [
+        "CT",
+        "FUSION",
+        "SEG"
+      ],
+      "patients": [
+        {
+          "Collection": "Lung-Fused-CT-Pathology",
+          "PatientId": "LungFCP-01-0002",
+          "PatientName": "LungFCP-01-0002",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Lung-Fused-CT-Pathology",
+          "PatientId": "LungFCP-01-0005",
+          "PatientName": "LungFCP-01-0005",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Lung-Fused-CT-Pathology",
+          "PatientId": "LungFCP-01-0006",
+          "PatientName": "LungFCP-01-0006",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Lung-Fused-CT-Pathology",
+          "PatientId": "LungFCP-01-0001",
+          "PatientName": "LungFCP-01-0001",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Lung-Fused-CT-Pathology",
+          "PatientId": "LungFCP-01-0004",
+          "PatientName": "LungFCP-01-0004",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Lung-Fused-CT-Pathology",
+          "PatientId": "LungFCP-01-0003",
+          "PatientName": "LungFCP-01-0003",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        }
+      ]
+    }
+  },
+  "source": "tcia"
+}

@@ -1,0 +1,45 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "lunguage",
+  "payload": {
+    "abstract": "<p>Radiology reports convey detailed clinical observations and capture diagnostic reasoning that evolves over time. However, existing evaluation methods are limited to single-report settings and rely on coarse metrics that fail to capture fine-grained clinical semantics and temporal dependencies. We introduce <b>LUNGUAGE</b>, a benchmark dataset of structured radiology reports that serves as a gold standard for evaluating structured report frameworks. It is designed to support comprehensive assessment of both single-report interpretation and longitudinal reasoning. Constructed from a subset of the MIMIC-CXR test set, LUNGUAGE comprises 1,473 chest X-ray reports from 230 patients, annotated with over 17,000 expert-verified entities and 23,000 relation&ndash;attribute pairs across 18 relation types. An additional subset of 80 sequential reports from 10 patients captures disease progression across 3 to 14 studies per patient, covering time intervals from 1 to 1,200 days. These are annotated with over 41,000 pairwise comparisons, grouped into semantically and temporally coherent groups. The dataset also includes a schema-aligned vocabulary covering diagnostic entities and attributes. All annotations were conducted and verified by board-certified radiologists, resulting in a clinically grounded resource for structured understanding and temporal reasoning in radiology.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 1034332,
+    "core_doi": "10.13026/t075-g517",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 17656579,
+    "public_project_uuid": "2257c23e-154e-4dbd-9f4f-0876e12513c3",
+    "publish_date": "2026-01-12",
+    "resource_type": "Database",
+    "short_description": "A radiologist-annotated benchmark of structured chest X-ray reports at single and sequential levels, comprising 1,473 reports across 18 relation types and 80 longitudinal cases.",
+    "slug": "lunguage",
+    "source_url": "https://physionet.org/content/lunguage/1.0.0/",
+    "title": "Lunguage: A Benchmark for Structured and Sequential Chest X-ray Interpretation",
+    "topics": [
+      "fine-grained structured reports",
+      "attribute-level clinical reasoning",
+      "medical text structuring",
+      "longitudinal clinical reasoning",
+      "chest x-ray report parsing",
+      "medical information structuring",
+      "benchmark dataset for radiology report",
+      "medical information extraction",
+      "structured radiology reports",
+      "temporal relation extraction",
+      "radiology report benchmarking",
+      "longitudinal clinical understanding"
+    ],
+    "version": "1.0.0",
+    "version_doi": "10.13026/pk42-4v91"
+  },
+  "source": "physionet"
+}

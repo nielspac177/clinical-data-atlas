@@ -1,0 +1,41 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:e75a09aa988444afc353c01e61653f9888373e2f825b8b011412b43c06bf9ee1",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "patients with prostate cancer",
+        "label": "prostate cancer"
+      },
+      {
+        "evidence": "suspected or known bone involvement",
+        "label": "bone involvement"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "nephrology_urology"
+    ],
+    "id": "tcia:naf-prostate",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "positron emission tomography/computed tomography (PET/CT) images",
+        "value": "PET"
+      },
+      {
+        "evidence": "The CT component of the scanner is a 16 slice helical CT",
+        "value": "CT"
+      },
+      {
+        "evidence": "low X-ray dose of 120KV",
+        "value": "xray"
+      }
+    ],
+    "population": "Patients with prostate cancer, with suspected or known bone involvement",
+    "summary": "F-18 NaF PET/CT images from patients with prostate cancer and suspected or known bone involvement, with detailed scanner and reconstruction parameters; some patients have repeat baseline studies and post-therapy follow-up imaging."
+  },
+  "prompt_version": "v1"
+}

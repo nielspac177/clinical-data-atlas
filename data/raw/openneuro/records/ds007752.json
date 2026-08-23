@@ -1,0 +1,140 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007752",
+  "payload": {
+    "created": "2026-05-05T09:45:11.159Z",
+    "id": "ds007752",
+    "latestSnapshot": {
+      "created": "2026-07-03T08:59:10.000Z",
+      "description": {
+        "Authors": [
+          "Yushi Sugimoto",
+          "Masayuki Asahara",
+          "Hyeonjeong Jeong",
+          "Akitake Kanno",
+          "Masatoshi Koizumi",
+          "Yohei Oseki"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007752.v1.1.1",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "BCCWJ-fMRI",
+        "ReferencesAndLinks": null
+      },
+      "readme": "## Overview\nThis dataset includes fMRI data in which Japanese native speakers read Japanese newspapers from Balanced corpus of contemporary written Japanese (BCCWJ, Maekawa et al., 2014) in the scanner. Stimuli were presented word by word. This dataset is part of BCCWJ-Brain; three types of brain data (fMRI, MEG, and EEG) were acquired from separate groups of participants using the same stimuli, enabling cross-modality comparisons of language processing with high spatial and temporal resolution respectively.\nThe BCCWJ-Brain collection consists of the following datasets:\n\n- BCCWJ-fMRI: ds007752 ([https://openneuro.org/datasets/ds007752](https://openneuro.org/datasets/ds007752))\n- BCCWJ-MEG: ds007763 ([https://openneuro.org/datasets/ds007763](https://openneuro.org/datasets/ds007763))\n- BCCWJ-EEG: ds007753 ([https://openneuro.org/datasets/ds007753](https://openneuro.org/datasets/ds007753))\n\n\n## Participants\nData from thirty-six participants were included in the dataset (15 females and 21 males; mean age= 21.27 (SD = 1.68)). All participants were right-handed, had no neurological illness, and had normal or corrected-to-normal vision. \n\n## Data Acquisition\nMRI images were acquired using a Philips Achieva 3.0T MRI scanner. Functional images were collected using an echo-planar imaging pulse sequence (TR = 2,000 ms, echo time = 30 ms, flip angle = 80°, slice thickness = 4 mm, no slice gap, field of view = 192 × 192 mm, matrix = 64 × 64, voxel size = 3 × 3 × 4 mm). T1-weighted images were also collected;  slice thickness of 1 mm, field of view of 256 × 25699\nmm, matrix size of 368 × 368, repetition time (TR) of 1,100 ms, and echo time (TE) of 5.1ms. Facial structures were removed from T1-weighted images using PyDeface (Gulban et al., 2022).\n\n## Experiment Procedure\nTwenty Japanese newspaper articles from were used as stimuli. Stimuli were presented word by word using rapid serial visual presentation (RSVP) implemented in PsychoPy (Peirce, 2007, 2009). Each stimulus was presented for 500 ms, followed by a 500 ms blank screen. The experiment comprised four runs, with the 20 articles divided into four blocks (1, 2, 3, 4). Each block lasted approximately 7 minutes, with no stimuli presented during the first 20 seconds.\n\n## Data Preprocessing\nAll fMRI data were preprocessed using MATLAB (MathWorks, Natick, MA, USA) and Statistical Parametric Mapping (SPM12). Preprocessing steps included head motion correction (realignment), slice timing correction, co-registration to the anatomical image, spatial normalization to the MNI template, and smoothing with a Gaussian kernel (FWHM = 8 mm).\n\nThe dataset was used and analyzed in the following publication:\n\nYushi Sugimoto, Ryo Yoshida, Hyeonjeong Jeong, Masatoshi Koizumi, Jonathan R. Brennan, Yohei Oseki; Localizing Syntactic Composition with Left-Corner Recurrent Neural Network Grammars. Neurobiology of Language 2024; 5 (1): 201–224. doi: https://doi.org/10.1162/nol_a_00118\n\n\n## Notes\nSince the BCCWJ texts are not copyright-free, texts for the experiment is not included in this dataset. To obtain the text, users must register for access to BCCWJ ([https://bccwj-data.ninjal.ac.jp/](https://bccwj-data.ninjal.ac.jp/)) separately. See [https://clrd.ninjal.ac.jp/bccwj/en/subscription.html](https://clrd.ninjal.ac.jp/bccwj/en/subscription.html) for the details. Once access is granted, we provide a script to incorporate the text into the corresponding ``events.tsv`` files.\n\n## References\nGulban, O. F., Nielson, D., Poldrack, Lee, J., R., Gorgolewski, C., Vanessasaurus, & Ghosh, S. (2022). poldracklab/pydeface: v2.0.2 [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.3524401\n\nMaekawa, K., Yamazaki, K., Ogiso, T., Maruyama, T., Ogura, H., Kashino. W., Koiso, H.,  Yamaguchi, M., Tanaka, M., and Den, Y. (2014). Balanced corpus of contemporary written Japanese.  *Lang Resources & Evaluation* 48, 345–371 (2014). https://doi.org/10.1007/s10579-013-9261-0\n\nPeirce, J. W. (2007). PsychoPy—Psychophysics software in Python. *Journal of Neuroscience Methods*, 162(1–2), 8–13. https://doi.org/10.1016/j.jneumeth.2006.11.017\n\nPeirce, J. W. (2009). Generating stimuli for neuroscience using PsychoPy. *Frontiers in Neuroinformatics*, 2, 10. https://doi.org/10.3389/neuro.11.010.2008",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 7366750719,
+        "subjects": [
+          "27",
+          "19",
+          "12",
+          "39",
+          "04",
+          "34",
+          "38",
+          "10",
+          "26",
+          "06",
+          "07",
+          "30",
+          "17",
+          "24",
+          "14",
+          "32",
+          "21",
+          "15",
+          "41",
+          "31",
+          "16",
+          "11",
+          "18",
+          "37",
+          "29",
+          "05",
+          "13",
+          "33",
+          "08",
+          "36",
+          "09",
+          "40",
+          "22",
+          "25",
+          "23",
+          "20"
+        ],
+        "tasks": [
+          "BCCWJ Reading"
+        ],
+        "totalFiles": 499
+      },
+      "tag": "1.1.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        21,
+        20,
+        21,
+        20,
+        20,
+        21,
+        21,
+        20,
+        20,
+        23,
+        19,
+        20,
+        22,
+        20,
+        22,
+        20,
+        23,
+        20,
+        24,
+        22,
+        25,
+        19,
+        21,
+        19,
+        20,
+        26,
+        23,
+        21,
+        21,
+        22,
+        20,
+        22,
+        22,
+        20,
+        24,
+        22
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2026-07-06T01:35:27.784Z"
+  },
+  "source": "openneuro"
+}

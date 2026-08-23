@@ -1,0 +1,35 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "annotation-dataset-sdoh",
+  "payload": {
+    "abstract": "<p><span><span><span><span><span><span>Social determinants of health (SDoH) have an important impact on patient outcomes but are incompletely collected from the electronic health records (EHR). This study researched the ability of large language models to extract SDoH from free text in EHRs, where they are most commonly documented, and explored the role of synthetic clinical text for improving the extraction of these scarcely documented, yet extremely valuable, clinical data. </span></span></span></span></span></span>We developed annotation guidelines for sentence-level annotation of SDoH that are not reliably available as structured data in the EHR:&nbsp;<span><span><span><span><span><span>employment, housing, transportation, parental status, relationship, and social support. Sentences were labeled for both the presence of an SDoH mention and the presence of an adverse SDoH mention. After finalizing the annotation guidelines, two annotators manually annotated a separate corpus, which cannot be released due to PHI. A total of 300/800 (37.5%) of these notes underwent dual annotation. Before adjudication, dually-annotated notes had a Krippendorf&rsquo;s alpha agreement of 0.86 and Cohen&rsquo;s Kappa of 0.86 for any SDoH mention categories. For adverse SDoH mentions, notes had a Krippendorf&rsquo;s alpha agreement of 0.76 and Cohen&rsquo;s Kappa of 0.76. As an external validation, 200 notes from MIMIC-III written by physicians, social workers, and nurses were manually annotated by a single annotator. Here, we release this manually annotated corpus of 200 MIMC-III notes.</span></span></span></span></span></span></p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 530477,
+    "core_doi": "10.13026/p8zc-cs44",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 1760080,
+    "public_project_uuid": "7ef1253d-32e8-46ba-bb5e-3156fcc40d1c",
+    "publish_date": "2024-01-25",
+    "resource_type": "Database",
+    "short_description": "Annotation dataset of social determinants of health from MIMC-III Clinical Care Database notes.",
+    "slug": "annotation-dataset-sdoh",
+    "source_url": "https://physionet.org/content/annotation-dataset-sdoh/1.0.1/",
+    "title": "Annotation dataset of social determinants of health from MIMIC-III Clinical Care Database",
+    "topics": [
+      "social determinants of health",
+      "natural language processing"
+    ],
+    "version": "1.0.1",
+    "version_doi": "10.13026/zsgv-8w31"
+  },
+  "source": "physionet"
+}

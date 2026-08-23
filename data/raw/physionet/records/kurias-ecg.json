@@ -1,0 +1,37 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "kurias-ecg",
+  "payload": {
+    "abstract": "<p>The 12-lead electrocardiogram (ECG) is the fundamental test used to evaluate the electrophysiological state of the heart. Most previous ECG databases use the diagnosis confirmed by experts. Therefore, ECG diagnosis is not standardized and its quality is not uniform. In addition, there is a problem in that the diagnosis statements differ depending on the ECG machine. This limits the use of the database for further research, such as artificial intelligence and clinical research. Of note, modern ECG machines provide computerized rule-based ECG diagnoses comparable to physicians&rsquo; interpretations.</p>\n\n<p>Here a high-quality 12-lead ECG database with standard vocabularies (SNOMED-CT and OMOP-CDM), which was transformed from a computerized ECG diagnosis of ECG machines was developed. A total of 147 ECG diagnoses were grouped into 10 categories of the Minnesota code classification. To improve the quality of the database, ECG cases of inappropriate ECG, such as poor quality, reverse arm ECG, and missing data, were removed. In addition, to minimize skew of the database, 2000 ECG cases were extracted for each Minnesota classification category. As a result of database construction, the database consisted of 20000 records for 10 categories of the Minnesota code classification from 13862 patients. The standardized database can be utilized for comprehensive research on the diagnosis of cardiac disease and the development of robust artificial intelligence technology.</p>",
+    "access_policy": "Restricted",
+    "compressed_storage_size": 2444074363,
+    "core_doi": "10.13026/ksw4-4y55",
+    "dua": {
+      "name": "PhysioNet Restricted Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Restricted Health Data License 1.5.0"
+    },
+    "main_storage_size": 3347583596,
+    "public_project_uuid": "5a25382c-e590-4dc9-a9c6-cde4041484d0",
+    "publish_date": "2021-11-08",
+    "resource_type": "Database",
+    "short_description": "The KURIAS-ECG database is a high-quality 12-lead ECG DB including standard vocabulary (SNOMED CT, OMOP-CDM), and ECG diagnoses of our DB are grouped into 10 diagnoses by applying the minnesota code.",
+    "slug": "kurias-ecg",
+    "source_url": "https://physionet.org/content/kurias-ecg/1.0/",
+    "title": "KURIAS-ECG: a 12-lead electrocardiogram database with standardized diagnosis ontology",
+    "topics": [
+      "12-lead",
+      "ecg",
+      "snomed",
+      "minnesota"
+    ],
+    "version": "1.0",
+    "version_doi": "10.13026/kga0-0270"
+  },
+  "source": "physionet"
+}

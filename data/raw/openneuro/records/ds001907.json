@@ -1,0 +1,126 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds001907",
+  "payload": {
+    "created": "2019-05-08T19:55:14.659Z",
+    "id": "ds001907",
+    "latestSnapshot": {
+      "created": "2025-06-16T12:10:37.000Z",
+      "description": {
+        "Authors": [
+          "Trevor K. M. Day",
+          "Tara M. Madyastha",
+          "Peter Boord",
+          "Mary K. Askren",
+          "Nicholas J. Wapstra",
+          "Thomas J. Montine",
+          "Thomas J. Grabowski"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds001907.v3.2.0",
+        "Funding": [
+          "NIH RC4 NS073008",
+          "NIH P50 NS062684",
+          "Ruth L. Kirschstein National Research Service Award T32AG0000258"
+        ],
+        "HowToAcknowledge": "Please cite the data paper: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7217223/",
+        "License": "CC0",
+        "Name": "ANT: Healthy aging and Parkinson's disease",
+        "ReferencesAndLinks": [
+          "doi.org/10.1016/j.nicl.2016.11.004",
+          "doi.org/10.1089/brain.2014.0248"
+        ]
+      },
+      "readme": "This project contains 46 healthy aging (n = 25, RC41\\*) participants and\nparticipants with Parkinson's disease (n = 21, RC42\\*) at two sessions each. At\neach session, subjects acquired 6 repetitions of the ANT task (1-6). ANT task\nscans are the same by number across subjects, although they were presented in \nvarying orders. Task timing, anatomical scans, resting scans, and DTI scans \nby session are also included.\n\nThe `derivatives/` directory contains AFNI-preprocessed scans as well as\nanatomical scans skullstripped before defacing. The derivatives have been\nslice-timing corrected already, so 0s are provided for that field.\n\nAt the top level is complete demographic information and the AFNI script for\npreprocessing.\n\nExceptions\n----------\nOne subject (RC4206) had an acquisition error during their second session\nstructural scan. Correspondingly, their structural scan from their first\nsession has been copied for their second session to create a valid\nBIDS directory.\n\nDTI scans are not present for four subjects for the first session (RC4106, RC4204,\nRC4205, RC4226) and three subjects for the second session (RC4103, RC4106, RC4205).\n\nDTI scans for the first session of two participants have a larger dimension\nsize compared to other DTI scans (RC4101, RC4201).\n\nChange Log\n----------\n\n3.0.0   (2022/03/03)    Upload rest and DTI data\n\n2.0.3 \t(2019/05/15)\tRename project\n\n2.0.1-2\t(2019/05/10)\tTweaks to README\n\n2.0.0\t(2019/05/09)\tAdd processsed derivatives\n\n1.1.0\t(2019/05/08)\tUpload all subjects raw data + skullstrips\n\n1.0.0\t(2019/05/08)\tUpload one subject (API being weird)\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_diffusion",
+          "mri_structural"
+        ],
+        "sessions": [
+          "2",
+          "1"
+        ],
+        "size": 4697472463,
+        "subjects": [
+          "RC4212",
+          "RC4116",
+          "RC4122",
+          "RC4211",
+          "RC4126",
+          "RC4107",
+          "RC4113",
+          "RC4210",
+          "RC4227",
+          "RC4103",
+          "RC4123",
+          "RC4109",
+          "RC4130",
+          "RC4208",
+          "RC4206",
+          "RC4118",
+          "RC4226",
+          "RC4117",
+          "RC4106",
+          "RC4205",
+          "RC4219",
+          "RC4215",
+          "RC4218",
+          "RC4111",
+          "RC4201",
+          "RC4131",
+          "RC4128",
+          "RC4213",
+          "RC4121",
+          "RC4114",
+          "RC4221",
+          "RC4217",
+          "RC4101",
+          "RC4110",
+          "RC4225",
+          "RC4115",
+          "RC4119",
+          "RC4120",
+          "RC4224",
+          "RC4207",
+          "RC4220",
+          "RC4129",
+          "RC4214",
+          "RC4125",
+          "RC4204",
+          "RC4112"
+        ],
+        "tasks": [
+          "rest",
+          "ANT"
+        ],
+        "totalFiles": 905
+      },
+      "tag": "3.2.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": "Longitudinal"
+    },
+    "publishDate": "2019-05-08T20:29:13.691Z"
+  },
+  "source": "openneuro"
+}

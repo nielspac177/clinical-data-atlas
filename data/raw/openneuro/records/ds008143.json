@@ -1,0 +1,130 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds008143",
+  "payload": {
+    "created": "2026-07-08T13:03:55.554Z",
+    "id": "ds008143",
+    "latestSnapshot": {
+      "created": "2026-07-24T08:49:00.000Z",
+      "description": {
+        "Authors": [
+          "Kailong Peng",
+          "Kenneth A. Norman",
+          "Nicholas B. Turk-Browne",
+          "Jeffrey D. Wammes"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds008143.v1.0.0",
+        "Funding": [
+          "NIH R01 MH069456",
+          "China Scholarship Council",
+          "CIFAR"
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Synthesizing images to localize CNN layers in the human brain",
+        "ReferencesAndLinks": null
+      },
+      "readme": "# Synthesizing images to localize CNN layers in the human brain\n\n**Associated article:** Peng K, Norman KA, Turk-Browne NB, Wammes JD. *Synthesizing images to localize CNN layers in the human brain.* Under revision at *PLOS Computational Biology* (manuscript PCOMPBIOL-D-25-02319). DOI will be added upon acceptance.\n\n**Analysis code:** [https://github.com/KailongPeng/localize_paper](https://github.com/KailongPeng/localize_paper)\n\nThis directory contains the raw fMRI data and de-identified anatomical scans used in the manuscript, together with the preprocessed per-image responses (betas) and the CNN layer activations that the analyses compare. During scanning, participants viewed 16 images that we had synthesized to drive individual layers of a convolutional neural network (Inception V1). To reproduce the analyses and figures, use the GitHub repository above; it reads these files.\n\nThe data follow the [BIDS](https://bids.neuroimaging.io/) format (version 1.9.0): raw acquisitions sit under each `sub-XXX/`, and preprocessed outputs under `derivatives/`.\n\n## Participants\n\n30 participants, labeled `sub-001` … `sub-033` in the original study numbering. This release omits the three excluded participants (006, 018, and 026). See `participants.tsv`.\n\n## De-identification\n\n[pydeface](https://github.com/poldracklab/pydeface) defaced every structural (T1-weighted) image: it registers a facial template with FSL FLIRT, then zeroes the voxels over the face, mouth, and ears, leaving the brain and skull intact. Defacing removed 13–33 % of the nonzero voxels per scan. The functional (BOLD) images are native-resolution EPI and carry no reconstructable facial detail.\n\n## File formats\n\nAll `.nii` / `.nii.gz` volumes are NIfTI and open with [FSL](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki), [FreeSurfer](https://surfer.nmr.mgh.harvard.edu/), or any NIfTI reader (e.g. Python `nibabel`). The `.tsv` and `.json` files are plain text; `features.npy` is a NumPy array (load with `numpy.load`); the `.png` files are the visual stimuli.\n\n## Task\n\n`task-localize`: each participant completed up to **8 runs**, viewing the **16 synthesized images** in `stimuli/`. We collected the data at 3 T on a Siemens scanner (TR = 1.5 s). Each run's `*_events.tsv` file records the onset, duration, and image for every trial.\n\n## Description of the data and file structure\n\n### Top level\n\n- **`dataset_description.json`**: BIDS dataset metadata (name, authors, CC0 license).\n- **`task-localize_bold.json`**: BOLD acquisition parameters shared across runs (TR = 1.5 s, 3 T, Siemens).\n- **`participants.tsv`**, **`participants.json`**: the participant list.\n- **`stimuli/stim-imageNN.png`** (NN = 01–16): the 16 synthesized images shown during the task (the curated \"final\" set).\n- **`README`**, **`CHANGES`**, **`.bidsignore`**.\n\n### Per participant — `sub-XXX/`\n\n- **`sub-XXX/anat/sub-XXX_T1w.nii.gz`**: whole-head T1-weighted anatomical image, **defaced**.\n- **`sub-XXX/func/sub-XXX_task-localize_run-RR_bold.nii.gz`** (RR = 01–08): raw BOLD time series for one run (native EPI, 128 × 128 × 90 voxels at 1.5 mm, ≈259 volumes, TR = 1.5 s).\n  *Runs present per participant:* most participants have all 8. `sub-002`, `sub-003`, `sub-020`, and `sub-033` lack `run-08`; `sub-011`, `sub-015`, and `sub-025` lack `run-07` and `run-08`. Those runs were not acquired for these participants; the betas below are complete for all 30.\n- **`sub-XXX/func/sub-XXX_task-localize_run-RR_events.tsv`**: trial timing for that run, with columns:\n  - `onset`: trial onset (seconds from run start)\n  - `duration`: trial duration (seconds)\n  - `trial_type`: which synthesized image was shown, `image01` … `image16`\n  - `stim_file`: the matching file in `stimuli/`\n\n### Derivatives — `derivatives/`\n\nPreprocessed, analysis-ready outputs. `.bidsignore` lists them so the BIDS validator reads the top level as a clean raw dataset; each derivative folder carries its own `dataset_description.json` recording provenance.\n\n- **`derivatives/fsl-feat/`**: per-image response estimates from FSL FEAT.\n  - **`sub-XXX/sub-XXX_task-localize_desc-imageNN_beta.nii.gz`** (NN = 01–16): the response estimate (FEAT higher-level cope) for image NN, in that participant's functional space. 16 maps per participant, 480 in all. These form the brain side of the RSA.\n  - **`sub-XXX/sub-XXX_task-localize_desc-brain_mask.nii.gz`**: that participant's brain mask.\n  - `dataset_description.json`: provenance (GeneratedBy: FSL FEAT).\n- **`derivatives/model-activations/`**: CNN features.\n  - **`features.npy`**: Inception V1 layer activations for the 16 synthesized images (NumPy array). These form the model side of the RSA.\n  - `dataset_description.json`: provenance (GeneratedBy: Inception V1 image synthesis).\n\n### ROIs\n\nThis release provides whole-brain betas and a per-participant brain mask. The analysis code defines and applies the anatomical ROIs used in the paper (see the repository above); the dataset does not store them.\n\n## Third-party data NOT redistributed here\n\nWe seeded the synthesized stimuli from the **Natural Scenes Dataset (NSD; Allen et al., 2022)** and **NSD-Synthetic (Gifford et al., 2025)**. Those datasets carry their own data-use agreements, so this deposit does not redistribute them. Instead, the analysis code lists the image indices we sampled, which lets anyone with NSD access rebuild the exact seed set.\n\n## Code / Software\n\nThe scripts in the [`localize_paper`](https://github.com/KailongPeng/localize_paper) repository reproduce the paper's analyses and figures from the files here. Follow that repository's README for the expected directory layout and run order.\n\nQuestions about the data or analyses can be directed to Kailong Peng, [kailong.peng@yale.edu](mailto:kailong.peng@yale.edu) or [kailongpeng001@gmail.com](mailto:kailongpeng001@gmail.com).\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 105451558718,
+        "subjects": [
+          "001",
+          "033",
+          "011",
+          "005",
+          "007",
+          "020",
+          "029",
+          "030",
+          "016",
+          "025",
+          "014",
+          "009",
+          "032",
+          "013",
+          "028",
+          "017",
+          "024",
+          "008",
+          "003",
+          "022",
+          "021",
+          "002",
+          "004",
+          "019",
+          "010",
+          "012",
+          "031",
+          "027",
+          "023",
+          "015"
+        ],
+        "tasks": [
+          "localize"
+        ],
+        "totalFiles": 497
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2026-07-24T08:49:08.920Z"
+  },
+  "source": "openneuro"
+}

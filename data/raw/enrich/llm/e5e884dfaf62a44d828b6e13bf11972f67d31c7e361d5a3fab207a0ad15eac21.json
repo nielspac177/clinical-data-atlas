@@ -1,0 +1,30 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:e5e884dfaf62a44d828b6e13bf11972f67d31c7e361d5a3fab207a0ad15eac21",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "pediatrics",
+      "oncology"
+    ],
+    "id": "tcia:pediatric-ct-seg",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "CT images in DICOM format",
+        "value": "CT"
+      },
+      {
+        "evidence": "expert contours of up to twenty-nine structures in DICOM RTSS format",
+        "value": "radiotherapy"
+      }
+    ],
+    "population": "359 pediatric chest-abdomen-pelvis or abdomen-pelvis exams acquired from three CT scanners, representing random pediatric cases based upon routine clinical indications.",
+    "summary": "Pediatric chest-abdomen-pelvis and abdomen-pelvis CT exams in DICOM format with expert organ contours, collected to support development of rapid, patient-specific CT organ dose estimation tools."
+  },
+  "prompt_version": "v1"
+}

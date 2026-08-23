@@ -1,0 +1,135 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004021",
+  "payload": {
+    "created": "2022-02-11T02:19:16.906Z",
+    "id": "ds004021",
+    "latestSnapshot": {
+      "created": "2025-09-11T18:00:01.000Z",
+      "description": {
+        "Authors": [
+          "Dominic Standage",
+          "Joseph Y. Nashed",
+          "J. Randall Flanagan",
+          "Jason. P Gallivan"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004021.v1.0.1",
+        "Funding": null,
+        "HowToAcknowledge": "Standage, D., Nashed, J.Y., Flanagan, J.R., and Gallivan J.P.,  (2022). Visuomotor Rotation Adaptation Experiment. OpenNeuro. [Dataset] doi:10.18112/openneuro.ds004021.v1.0.0",
+        "License": "CC0",
+        "Name": "Visuomotor Rotation Adaptation Experiment",
+        "ReferencesAndLinks": null
+      },
+      "readme": "# DESCRIPTION\n\n## Experiment\n\nSubjects (N = 32) performed a visuomotor rotation task in two sessions on two consecutive days. The task required subjects to aim to intercept a target using an MRI compatible force sensor. On each trial, a target appeared in one of 8 locations on a circular ring around a start location at the center of the screen. The subject then used the force sensor to move the cursor to hit the target. After a baseline block (120 trials), the correspondence between the force sensor and the cursor was rotation by 45 deg., so that the subject had to learn to aim counter to the rotation in order to hit the target (learning block; 320 trials). Finally, the rotation was removed during a washout block of 120 trials.\n\nOn each day, the scan sequence was as follows:\n\n- Resting state scan (6 min; 180 imaging volumes)\n- A baseline block (120 trials) and learning block (320) were performed during a single contiguous scan (a total of 896 imaging volumes)\n- Resting state scan (6 min; 180 imaging volumes)\n- Washout block (120 trials)\n- Resting state scan (6 min; 180 imaging volumes)\n\n## Behavioral data\n\nOn each trial, we recorded the response time (sec.; the time from the appearance of the target to the initiation of the movement) and the angle error between the location of the target and the final cursor position on the circular ring (deg.). The variables are included in the *_events.tsv files.\n\n## MRI acquisition\n\nSubjects were scanned using a 3T Siemens TIM MAGNETOM Trial MRI scanner located at the Centre for Neuroscience Studies at Queens University (Kingston, Ontario, Canada). \n\n- T1w-weighted ADNI MPRAGE (TR = 1760 ms, TE = 2.98 ms, FOV = 192 x 240 x 256 mm, flip angle = 9 deg., 1mm isotropic voxels).\n- Functional volumes were collected using a 32-channel head coil and T2*-weighted single-shot gradient-echo echo-planar imaging (TR = 2000 ms, slice thickness = 4, in-plane resolution = 3 x 3 mm, TE = 30 ms, FOV = 240 x 240 mm, flip angle = 90 deg.)\n\nPydeface was used on all anatomical images to ensure de-identification of subjects.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "02",
+          "01"
+        ],
+        "size": 26119236896,
+        "subjects": [
+          "22",
+          "15",
+          "16",
+          "18",
+          "21",
+          "10",
+          "29",
+          "28",
+          "25",
+          "06",
+          "14",
+          "01",
+          "37",
+          "27",
+          "39",
+          "30",
+          "23",
+          "19",
+          "02",
+          "11",
+          "31",
+          "20",
+          "13",
+          "12",
+          "03",
+          "34",
+          "26",
+          "24",
+          "07",
+          "09",
+          "36",
+          "08"
+        ],
+        "tasks": [
+          "Visuomotor Rotation Task",
+          "Resting State",
+          "Washout Task"
+        ],
+        "totalFiles": 903
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "Motor learning, motor control",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2022-03-17T04:18:35.870Z"
+  },
+  "source": "openneuro"
+}

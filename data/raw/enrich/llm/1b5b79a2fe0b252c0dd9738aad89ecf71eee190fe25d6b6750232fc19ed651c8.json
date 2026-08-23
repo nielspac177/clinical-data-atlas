@@ -1,0 +1,23 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:1b5b79a2fe0b252c0dd9738aad89ecf71eee190fe25d6b6750232fc19ed651c8",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "tcia:pelvic-reference-data",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Landmark points for each CT/CBCT image pair",
+        "value": "CT"
+      }
+    ],
+    "population": "58 pelvic cases, each with a CT/CBCT image pair and an average of 154 (range: 91-212) selected landmark pairs.",
+    "summary": "Expert-selected landmark points on paired pelvic CT and cone-beam CT images, providing a statistically characterized reference dataset for validating rigid image registration against an estimated ground truth."
+  },
+  "prompt_version": "v1"
+}

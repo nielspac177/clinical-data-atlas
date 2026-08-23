@@ -1,0 +1,102 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "CGCI-HTMCP-LC",
+  "payload": {
+    "dbgap_accession_number": "phs000530",
+    "disease_type": [
+      "Neoplasms, NOS",
+      "Complex Epithelial Neoplasms",
+      "Adenomas and Adenocarcinomas",
+      "Paragangliomas and Glomus Tumors",
+      "Epithelial Neoplasms, NOS",
+      "Squamous Cell Neoplasms"
+    ],
+    "id": "CGCI-HTMCP-LC",
+    "name": "HIV+ Tumor Molecular Characterization Project - Lung Cancer",
+    "primary_site": [
+      "Bronchus and lung"
+    ],
+    "program": {
+      "dbgap_accession_number": "phs000235",
+      "name": "CGCI",
+      "program_id": "d339a424-ad52-5351-a499-493973249414"
+    },
+    "project_id": "CGCI-HTMCP-LC",
+    "releasable": false,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 39,
+      "data_categories": [
+        {
+          "case_count": 39,
+          "data_category": "Sequencing Reads",
+          "file_count": 226
+        },
+        {
+          "case_count": 37,
+          "data_category": "Simple Nucleotide Variation",
+          "file_count": 214
+        },
+        {
+          "case_count": 39,
+          "data_category": "Biospecimen",
+          "file_count": 123
+        },
+        {
+          "case_count": 36,
+          "data_category": "Clinical",
+          "file_count": 41
+        },
+        {
+          "case_count": 36,
+          "data_category": "Copy Number Variation",
+          "file_count": 140
+        },
+        {
+          "case_count": 38,
+          "data_category": "Transcriptome Profiling",
+          "file_count": 150
+        },
+        {
+          "case_count": 36,
+          "data_category": "Somatic Structural Variation",
+          "file_count": 138
+        },
+        {
+          "case_count": 38,
+          "data_category": "Structural Variation",
+          "file_count": 152
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 38,
+          "experimental_strategy": "RNA-Seq",
+          "file_count": 342
+        },
+        {
+          "case_count": 39,
+          "experimental_strategy": "WGS",
+          "file_count": 567
+        },
+        {
+          "case_count": 37,
+          "experimental_strategy": "miRNA-Seq",
+          "file_count": 111
+        },
+        {
+          "case_count": 27,
+          "experimental_strategy": "Tissue Slide",
+          "file_count": 84
+        }
+      ],
+      "file_count": 1184,
+      "file_size": 23983027977568
+    }
+  },
+  "source": "gdc"
+}

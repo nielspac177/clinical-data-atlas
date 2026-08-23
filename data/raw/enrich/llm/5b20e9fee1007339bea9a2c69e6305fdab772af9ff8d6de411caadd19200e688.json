@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:5b20e9fee1007339bea9a2c69e6305fdab772af9ff8d6de411caadd19200e688",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "positive and negative COVID-19 tests",
+        "label": "COVID-19"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "infectious_disease",
+      "pulmonology"
+    ],
+    "id": "physionet:covid-19-thermal",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "vital signs",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "PCR results, demographics, vital signs, participant activities, medications, respiratory symptoms",
+        "value": "clinical_tabular"
+      },
+      {
+        "evidence": "thermal video session",
+        "value": "other"
+      }
+    ],
+    "population": "252 participants with positive and negative COVID-19 tests",
+    "summary": "Prospective pilot cohort collecting upper body thermal videos during breath-holds in four positions, alongside PCR results, demographics, vital signs, medications, activities, and respiratory symptoms, to test thermal imaging for early COVID-19 diagnosis."
+  },
+  "prompt_version": "v1"
+}

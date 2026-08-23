@@ -1,0 +1,98 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds000172",
+  "payload": {
+    "created": "2018-03-07T18:37:14.293Z",
+    "id": "ds000172",
+    "latestSnapshot": {
+      "created": "2019-05-16T21:08:43.000Z",
+      "description": {
+        "Authors": [
+          "Hsu AL",
+          "Chou KH",
+          "Chao YP",
+          "Fan HY",
+          "Wu CW",
+          "Chen JH"
+        ],
+        "DatasetDOI": "",
+        "Funding": [
+          "This study was supported in part by Ministry of Science and Technology (MOST 104- 2321-B-002-040, MOST 103-2320-B-008-001, and MOST 104-2221-E-008-123), Veterans General Hospitals University System of Taiwan Joint Research Program (VGHUST103-G1-4-3), the Chang Gung Memorial Hospital (BMRPC78) and Chang Gung University Research Project (UERPD2D0081)."
+        ],
+        "HowToAcknowledge": "",
+        "License": "PDDL",
+        "Name": "Physiological Contribution in Spontaneous Oscillations: An Approximate Quality - Assurance Index for Resting-State fMRI Signals",
+        "ReferencesAndLinks": [
+          "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4752279/"
+        ]
+      },
+      "readme": "This dataset was obtained from the OpenfMRI project (http://www.openfmri.org).\n\nAccession #: ds000172\nDescription: Physiological Contribution in Spontaneous Oscillations: An Approximate Quality- Assurance Index for Resting-State fMRI Signals\n\nFor validating the sensitivity of the proposed PICSO index (a new quality-assurance index for rs- fMRI) to functional connectivity, both fMRI dataset of phantom and human during resting state were acquired. The resting-state human dataset (n=12, age: 26.4 ± 2.1 y, females/males: 6/6) was acquired at four image resolutions (1.3×1.3×2,2×2×2,3×3×3,and5×5×5mm^3). Moreover, a spherical water phantom was scanned using identical imaging protocols. Besides, T1-weighted structural images and B0 field map were acquired as well.\n\nPlease cite the following references if you use these data:\n\nRelease History:\n\n\t1.0.0 - Initial release\n\nThis dataset is made available under the Public Domain Dedication and License \nv1.0, whose full text can be found at \nhttp://www.opendatacommons.org/licenses/pddl/1.0/.\n\nWe hope that all users will follow the ODC Attribution/Share-Alike \nCommunity Norms (http://www.opendatacommons.org/norms/odc-by-sa/); \nin particular, while not legally required, we hope that all users \nof the data will acknowledge the OpenfMRI project and NSF Grant \nOCI-1131441 (R. Poldrack, PI) in any publications.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 2988974530,
+        "subjects": [
+          "control01",
+          "control02",
+          "control03",
+          "control04",
+          "control05",
+          "control06",
+          "control08",
+          "control09",
+          "control10",
+          "control11",
+          "control13",
+          "control14",
+          "phantom02"
+        ],
+        "tasks": [
+          "Resting State"
+        ],
+        "totalFiles": 201
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2018-03-07T18:37:14.293Z"
+  },
+  "source": "openneuro"
+}

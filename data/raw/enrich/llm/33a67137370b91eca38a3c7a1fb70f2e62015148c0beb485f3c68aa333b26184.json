@@ -1,0 +1,38 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:33a67137370b91eca38a3c7a1fb70f2e62015148c0beb485f3c68aa333b26184",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "patients with intracranial meningiomas",
+        "label": "meningioma"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "oncology",
+      "surgery"
+    ],
+    "id": "tcia:meningioma-seg-class",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "pre-operative T1, T1-CE, and T2-FLAIR MR images",
+        "value": "MRI"
+      },
+      {
+        "evidence": "A neuropathology team reviewed histopathology",
+        "value": "pathology"
+      },
+      {
+        "evidence": "Clinical information includes grade, subtype, type of surgery",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "96 consecutive treatment naïve patients with intracranial meningiomas treated with surgical resection from 2010 to 2019",
+    "summary": "Pre-operative T1, T1-contrast-enhanced, and T2-FLAIR MRI from treatment-naive patients with intracranial meningiomas who underwent surgical resection, with manual tumor contours and clinical information including confirmed grade and subtype."
+  },
+  "prompt_version": "v1"
+}

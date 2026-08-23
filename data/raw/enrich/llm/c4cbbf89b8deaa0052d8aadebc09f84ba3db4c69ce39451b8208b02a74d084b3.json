@@ -1,0 +1,27 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:c4cbbf89b8deaa0052d8aadebc09f84ba3db4c69ce39451b8208b02a74d084b3",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "other"
+    ],
+    "id": "physionet:mimic-ext-synth-trial-question",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "extracting information from clinical notes",
+        "value": "clinical_notes"
+      },
+      {
+        "evidence": "synthetic training examples in the form of question-answer pairs",
+        "value": "other"
+      }
+    ],
+    "population": "Not stated; the released items are 1000 manually reviewed synthetic examples.",
+    "summary": "Manually reviewed synthetic question-answer examples resembling clinical trial eligibility criteria, generated with Llama-3.1-70B-Instruct and released to fine-tune smaller open-source models for extracting clinical information from notes."
+  },
+  "prompt_version": "v1"
+}

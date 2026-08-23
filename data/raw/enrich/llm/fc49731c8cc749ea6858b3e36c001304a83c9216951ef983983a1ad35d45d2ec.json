@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:fc49731c8cc749ea6858b3e36c001304a83c9216951ef983983a1ad35d45d2ec",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "cardiology",
+      "pulmonology"
+    ],
+    "id": "physionet:openox-repo",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "pulse oximeter readings",
+        "value": "PPG"
+      },
+      {
+        "evidence": "continuous ECG",
+        "value": "ECG"
+      },
+      {
+        "evidence": "high frequency processed and unprocessed waveforms",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "patient demographics and comorbidities",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "Participants in controlled laboratory desaturation studies, with real-world prospective clinical trial data planned",
+    "summary": "A repository of matched arterial blood gas and pulse oximeter readings with high-frequency physiologic waveforms, skin color measurements, and demographics, for studying factors affecting pulse oximeter performance."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,108 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003458",
+  "payload": {
+    "created": "2021-01-04T22:31:04.426Z",
+    "id": "ds003458",
+    "latestSnapshot": {
+      "created": "2021-01-04T22:45:44.000Z",
+      "description": {
+        "Authors": [
+          "James F Cavanagh  jcavanagh@unm.edu"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds003458.v1.1.0",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "EEG: Three armed bandit gambling task",
+        "ReferencesAndLinks": [
+          "PMID: 25676913"
+        ]
+      },
+      "readme": "Healthy control college students.  23 subjects completed the 3-armed bandit task with oscillating probabilities.    For example, the 'blue' stim would slowly move from 20% reinforcing to 90% then back to 20 over many trials.  The other 'red' and 'green' stims would move similarly, but in different phase.  See Fig 1 of the paper.  This makes the task great for investigating reward processing & reward prediction error in the service of novel task set generation.\n\nTask included in Matlab programming language.  \n\nData collected in 2014 in the Cognitive Rhythms and Computation Lab, University of New Mexico.   \n\nI also collected Corrugator EMG (may be labeled EKG) and Skin Conductance on most people.  But quality was dubious so I never did much with it.  Check .xls sheet under code folder.\n\nSome pre-processing scripts are included in code folder as well.   \n\n- James F Cavanagh 01/04/2021",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "eeg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [],
+        "size": 5065148524,
+        "subjects": [
+          "001",
+          "002",
+          "003",
+          "004",
+          "005",
+          "006",
+          "007",
+          "008",
+          "009",
+          "010",
+          "011",
+          "012",
+          "013",
+          "014",
+          "015",
+          "016",
+          "017",
+          "018",
+          "019",
+          "020",
+          "021",
+          "022",
+          "023"
+        ],
+        "tasks": [
+          "ThreeArmedBandit"
+        ],
+        "totalFiles": 201
+      },
+      "tag": "1.1.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        20,
+        18,
+        20,
+        18,
+        21,
+        19,
+        19,
+        20,
+        19,
+        21,
+        19,
+        19,
+        18,
+        23,
+        21,
+        22,
+        19,
+        22,
+        24,
+        19,
+        19,
+        20,
+        19
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "eeg"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2021-01-04T22:45:12.739Z"
+  },
+  "source": "openneuro"
+}

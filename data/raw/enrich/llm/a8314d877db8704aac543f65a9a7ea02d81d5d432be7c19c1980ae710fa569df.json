@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:a8314d877db8704aac543f65a9a7ea02d81d5d432be7c19c1980ae710fa569df",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "characterize opioid use disorder and related contextual factors",
+        "label": "opioid use disorder"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "critical_care",
+      "psychiatry"
+    ],
+    "id": "physionet:annotation-opioid-use-notes",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "hospital discharge summaries",
+        "value": "clinical_notes"
+      },
+      {
+        "evidence": "electronic health records (EHRs)",
+        "value": "EHR"
+      },
+      {
+        "evidence": "clinical, behavioral, and environmental factors",
+        "value": "behavioral"
+      }
+    ],
+    "population": "De-identified patients with International Classification of Diseases (ICD-9) OUD diagnostic codes; two annotators reviewed discharge summaries from a random sample of 100 of these patients.",
+    "summary": "Annotated corpus of MIMIC-III discharge summaries from patients with ICD-9 opioid use disorder codes, using a 33-class schema covering problematic opioid use and psychosocial context, built to support natural language processing methods."
+  },
+  "prompt_version": "v1"
+}

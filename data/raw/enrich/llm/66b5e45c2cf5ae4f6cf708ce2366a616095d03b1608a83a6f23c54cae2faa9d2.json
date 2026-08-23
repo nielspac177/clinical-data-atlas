@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:66b5e45c2cf5ae4f6cf708ce2366a616095d03b1608a83a6f23c54cae2faa9d2",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "head-and-neck squamous cell carcinoma (HNSCC) patients",
+        "label": "head-and-neck squamous cell carcinoma"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "surgery"
+    ],
+    "id": "tcia:hnscc-3dct-rt",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "fan-beam CT scans",
+        "value": "CT"
+      },
+      {
+        "evidence": "Patients underwent radiotherapy treatment",
+        "value": "radiotherapy"
+      },
+      {
+        "evidence": "patient age and weight",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "31 head-and-neck squamous cell carcinoma (HNSCC) patients treated with radiotherapy, scanned pre-treatment, mid-treatment, and post-treatment",
+    "summary": "Serial fan-beam CT scans acquired before, during, and after radiotherapy in head-and-neck squamous cell carcinoma patients, with radiotherapy contours of anatomical structures plus treatment, toxicity, and patient detail records."
+  },
+  "prompt_version": "v1"
+}

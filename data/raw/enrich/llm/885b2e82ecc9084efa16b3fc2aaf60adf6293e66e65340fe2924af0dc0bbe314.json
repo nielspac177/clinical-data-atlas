@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:885b2e82ecc9084efa16b3fc2aaf60adf6293e66e65340fe2924af0dc0bbe314",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "atrial fibrillation or flutter",
+        "label": "atrial fibrillation"
+      },
+      {
+        "evidence": "atrial fibrillation or flutter",
+        "label": "atrial flutter"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:iafdb",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "3 surface ECG leads",
+        "value": "ECG"
+      },
+      {
+        "evidence": "endocardial recordings from the right atria",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": "8 patients in atrial fibrillation or flutter",
+    "summary": "Endocardial recordings from the right atria of patients in atrial fibrillation or flutter, using a decapolar catheter placed in four heart regions, with bipolar signals recorded alongside surface ECG leads."
+  },
+  "prompt_version": "v1"
+}

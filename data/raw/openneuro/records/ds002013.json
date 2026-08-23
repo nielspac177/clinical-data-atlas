@@ -1,0 +1,78 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds002013",
+  "payload": {
+    "created": "2019-07-04T13:36:06.014Z",
+    "id": "ds002013",
+    "latestSnapshot": {
+      "created": "2022-11-04T21:14:00.000Z",
+      "description": {
+        "Authors": [
+          "Jakob Heinzle (data acquisition)",
+          "Kai Goergen (data curation)",
+          "Joram Soch (BIDS conversion)"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds002013.v1.0.3",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "StimDisc",
+        "ReferencesAndLinks": [
+          "Heinzle J, Kahnt T, Haynes JD (2011): Topographically specific functional connectivity between visual field maps in the human brain. NeuroImage, vol. 56, pp. 1426-1436; DOI: 10.1016/j.neuroimage.2011.02.077.",
+          "Soch J, Allefeld C, Haynes JD (2019): Inverse Transformed Encoding Models - a solution to the problem of correlated trial-by-trial parameter estimates in fMRI decoding. NeuroImage, vol. 209, art. 116449, pp. 1-19; DOI: 10.1016/j.neuroimage.2019.116449.",
+          "Soch J, Haynes JD (2022): Searchlight-based trial-wise fMRI decoding in the presence of trial-by-trial correlations. Poster presented at OHBM 2022, Glasgow, June 2022; URL: https://github.com/JoramSoch/OHBM_2022/blob/main/Posters/OHBM_2022_Poster_A_ITEM.pdf."
+        ]
+      },
+      "readme": "Visual Receptive Field Mapping Experiment\r\n=========================================\r\n\r\nThis BIDS data set encompasses the data underlying the analyses reported in Heinzle et al. (2011) and Soch et al. (2019).\r\n\r\nAlongside with the files required by the BIDS format, this data set contains the following additional files:\r\n\r\n- /sub-X/data2BIDS_X.mat: SPM jobs used for converting raw data to the BIDS format;\r\n\r\n- /sub-X/preproc_X.mat: an SPM job for pre-processing the data according to Soch et al. (2019);\r\n\r\n- /sub-X/anat/sub-X_roi-Z.nii: region of interest (ROI) images for visual cortices in pre-processed EPI space;\r\n\r\n- /sub-X/func/sub-X_task-Y_events.mat: all experimental design information in SPM format (\"names, onsets, durations\");\r\n\r\n- /sub-X/func/sub-X_task-Y_events.xls: all experimental design information in Excel format (trials of interest vs. control fixation task).",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 1739580622,
+        "subjects": [
+          "AAA02",
+          "AAA03",
+          "AAX01",
+          "AAX02"
+        ],
+        "tasks": [
+          "CircCon",
+          "CircRun"
+        ],
+        "totalFiles": 89
+      },
+      "tag": "1.0.3"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        27,
+        24,
+        28,
+        25
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2019-07-29T13:57:37.789Z"
+  },
+  "source": "openneuro"
+}

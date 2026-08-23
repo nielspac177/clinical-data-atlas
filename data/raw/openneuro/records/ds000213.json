@@ -1,0 +1,122 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds000213",
+  "payload": {
+    "created": "2018-03-14T23:50:11.918Z",
+    "id": "ds000213",
+    "latestSnapshot": {
+      "created": "2018-07-18T02:23:59.000Z",
+      "description": {
+        "Authors": [
+          "Xiao Gao",
+          "Xiao Deng",
+          "Xin Wen",
+          "Ying She",
+          "Petra Corianne Vinke",
+          "Hong Chen"
+        ],
+        "DatasetDOI": null,
+        "Funding": [],
+        "HowToAcknowledge": "This data was obtained from the OpenfMRI database. Its accession number is ds000213",
+        "License": "PDDL",
+        "Name": "Neural mechanism underlying appearance social comparison",
+        "ReferencesAndLinks": [
+          "https://www.ncbi.nlm.nih.gov/pubmed/27764116"
+        ]
+      },
+      "readme": "### Comments added by Openfmri Curators ###\n===========================================\n\nDefacing\n--------\n- Pydeface was used on all anatomical images (except sub-02 and sub-11) to ensure \ndeindentification of subjects. The code can be found at https://github.com/poldracklab/pydeface\n- Pydeface removed part of brain from the anatomical images for sub-02 and sub-11. Thus, defacing\n was performed using mri_deface instead on these images. Information about mri_deface can be found \nhere: https://surfer.nmr.mgh.harvard.edu/fswiki/mri_deface\n\nQuality Control\n---------------\nMriqc output was not run on this dataset due to issues we are having with the software. It\nwill be included in the next revision.\n\nWhere to discuss the dataset\n----------------------------\n1) www.openfmri.org/dataset/ds******/ See the comments section at the bottom of the dataset\npage.\n2) www.neurostars.org Please tag any discussion topics with the tags openfmri and dsXXXXXX\naccession number.\n3) Send an email to submissions@openfmri.org. Please include the dsXXXXXX accession number in\nyour email.\n\nBids-validator Output\n---------------------\n\n\t1: You should define 'SliceTiming' for this file. If you don't provide this information slice time correction will not be possible. (code: 13 - SLICE_TIMING_NOT_DEFINED)\n\t\t/sub-01/func/sub-01_task-socialcomparison_bold.nii.gz\n\t\t\tYou should define 'SliceTiming' for this file. If you don't provide this information slice time correction will not be possible. It can be included one of the following locations: /task-socialcomparison_bold.json, /sub-01/sub-01_task-socialcomparison_bold.json, /sub-01/func/sub-01_task-socialcomparison_bold.json\n\t\t/sub-02/func/sub-02_task-socialcomparison_bold.nii.gz\n\t\t\tYou should define 'SliceTiming' for this file. If you don't provide this information slice time correction will not be possible. It can be included one of the following locations: /task-socialcomparison_bold.json, /sub-02/sub-02_task-socialcomparison_bold.json, /sub-02/func/sub-02_task-socialcomparison_bold.json\n\t\t/sub-03/func/sub-03_task-socialcomparison_bold.nii.gz\n\t\t\tYou should define 'SliceTiming' for this file. If you don't provide this information slice time correction will not be possible. It can be included one of the following locations: /task-socialcomparison_bold.json, /sub-03/sub-03_task-socialcomparison_bold.json, /sub-03/func/sub-03_task-socialcomparison_bold.json\n\t\t/sub-04/func/sub-04_task-socialcomparison_bold.nii.gz\n\t\t\tYou should define 'SliceTiming' for this file. If you don't provide this information slice time correction will not be possible. It can be included one of the following locations: /task-socialcomparison_bold.json, /sub-04/sub-04_task-socialcomparison_bold.json, /sub-04/func/sub-04_task-socialcomparison_bold.json\n\t\t/sub-05/func/sub-05_task-socialcomparison_bold.nii.gz\n\t\t\tYou should define 'SliceTiming' for this file. If you don't provide this information slice time correction will not be possible. It can be included one of the following locations: /task-socialcomparison_bold.json, /sub-05/sub-05_task-socialcomparison_bold.json, /sub-05/func/sub-05_task-socialcomparison_bold.json\n\t\t/sub-06/func/sub-06_task-socialcomparison_bold.nii.gz\n\t\t\tYou should define 'SliceTiming' for this file. If you don't provide this information slice time correction will not be possible. It can be included one of the following locations: /task-socialcomparison_bold.json, /sub-06/sub-06_task-socialcomparison_bold.json, /sub-06/func/sub-06_task-socialcomparison_bold.json\n\t\t/sub-07/func/sub-07_task-socialcomparison_bold.nii.gz\n\t\t\tYou should define 'SliceTiming' for this file. If you don't provide this information slice time correction will not be possible. It can be included one of the following locations: /task-socialcomparison_bold.json, /sub-07/sub-07_task-socialcomparison_bold.json, /sub-07/func/sub-07_task-socialcomparison_bold.json\n\t\t/sub-08/func/sub-08_task-socialcomparison_bold.nii.gz\n\t\t\tYou should define 'SliceTiming' for this file. If you don't provide this information slice time correction will not be possible. It can be included one of the following locations: /task-socialcomparison_bold.json, /sub-08/sub-08_task-socialcomparison_bold.json, /sub-08/func/sub-08_task-socialcomparison_bold.json\n\t\t/sub-09/func/sub-09_task-socialcomparison_bold.nii.gz\n\t\t\tYou should define 'SliceTiming' for this file. If you don't provide this information slice time correction will not be possible. It can be included one of the following locations: /task-socialcomparison_bold.json, /sub-09/sub-09_task-socialcomparison_bold.json, /sub-09/func/sub-09_task-socialcomparison_bold.json\n\t\t/sub-10/func/sub-10_task-socialcomparison_bold.nii.gz\n\t\t\tYou should define 'SliceTiming' for this file. If you don't provide this information slice time correction will not be possible. It can be included one of the following locations: /task-socialcomparison_bold.json, /sub-10/sub-10_task-socialcomparison_bold.json, /sub-10/func/sub-10_task-socialcomparison_bold.json\n\t\t/sub-11/func/sub-11_task-socialcomparison_bold.nii.gz\n\t\t\tYou should define 'SliceTiming' for this file. If you don't provide this information slice time correction will not be possible. It can be included one of the following locations: /task-socialcomparison_bold.json, /sub-11/sub-11_task-socialcomparison_bold.json, /sub-11/func/sub-11_task-socialcomparison_bold.json\n\t\t/sub-12/func/sub-12_task-socialcomparison_bold.nii.gz\n\t\t\tYou should define 'SliceTiming' for this file. If you don't provide this information slice time correction will not be possible. It can be included one of the following locations: /task-socialcomparison_bold.json, /sub-12/sub-12_task-socialcomparison_bold.json, /sub-12/func/sub-12_task-socialcomparison_bold.json\n\t\t/sub-13/func/sub-13_task-socialcomparison_bold.nii.gz\n\t\t\tYou should define 'SliceTiming' for this file. If you don't provide this information slice time correction will not be possible. It can be included one of the following locations: /task-socialcomparison_bold.json, /sub-13/sub-13_task-socialcomparison_bold.json, /sub-13/func/sub-13_task-socialcomparison_bold.json\n\t\t/sub-14/func/sub-14_task-socialcomparison_bold.nii.gz\n\t\t\tYou should define 'SliceTiming' for this file. If you don't provide this information slice time correction will not be possible. It can be included one of the following locations: /task-socialcomparison_bold.json, /sub-14/sub-14_task-socialcomparison_bold.json, /sub-14/func/sub-14_task-socialcomparison_bold.json\n\t\t/sub-15/func/sub-15_task-socialcomparison_bold.nii.gz\n\t\t\tYou should define 'SliceTiming' for this file. If you don't provide this information slice time correction will not be possible. It can be included one of the following locations: /task-socialcomparison_bold.json, /sub-15/sub-15_task-socialcomparison_bold.json, /sub-15/func/sub-15_task-socialcomparison_bold.json\n\t\t/sub-16/func/sub-16_task-socialcomparison_bold.nii.gz\n\t\t\tYou should define 'SliceTiming' for this file. If you don't provide this information slice time correction will not be possible. It can be included one of the following locations: /task-socialcomparison_bold.json, /sub-16/sub-16_task-socialcomparison_bold.json, /sub-16/func/sub-16_task-socialcomparison_bold.json\n\t\t/sub-19/func/sub-19_task-socialcomparison_bold.nii.gz\n\t\t\tYou should define 'SliceTiming' for this file. If you don't provide this information slice time correction will not be possible. It can be included one of the following locations: /task-socialcomparison_bold.json, /sub-19/sub-19_task-socialcomparison_bold.json, /sub-19/func/sub-19_task-socialcomparison_bold.json\n\t\t/sub-20/func/sub-20_task-socialcomparison_bold.nii.gz\n\t\t\tYou should define 'SliceTiming' for this file. If you don't provide this information slice time correction will not be possible. It can be included one of the following locations: /task-socialcomparison_bold.json, /sub-20/sub-20_task-socialcomparison_bold.json, /sub-20/func/sub-20_task-socialcomparison_bold.json\n\t\t/sub-21/func/sub-21_task-socialcomparison_bold.nii.gz\n\t\t\tYou should define 'SliceTiming' for this file. If you don't provide this information slice time correction will not be possible. It can be included one of the following locations: /task-socialcomparison_bold.json, /sub-21/sub-21_task-socialcomparison_bold.json, /sub-21/func/sub-21_task-socialcomparison_bold.json\n\t\t/sub-22/func/sub-22_task-socialcomparison_bold.nii.gz\n\t\t\tYou should define 'SliceTiming' for this file. If you don't provide this information slice time correction will not be possible. It can be included one of the following locations: /task-socialcomparison_bold.json, /sub-22/sub-22_task-socialcomparison_bold.json, /sub-22/func/sub-22_task-socialcomparison_bold.json\n\t\t/sub-23/func/sub-23_task-socialcomparison_bold.nii.gz\n\t\t\tYou should define 'SliceTiming' for this file. If you don't provide this information slice time correction will not be possible. It can be included one of the following locations: /task-socialcomparison_bold.json, /sub-23/sub-23_task-socialcomparison_bold.json, /sub-23/func/sub-23_task-socialcomparison_bold.json\n\t\t/sub-24/func/sub-24_task-socialcomparison_bold.nii.gz\n\t\t\tYou should define 'SliceTiming' for this file. If you don't provide this information slice time correction will not be possible. It can be included one of the following locations: /task-socialcomparison_bold.json, /sub-24/sub-24_task-socialcomparison_bold.json, /sub-24/func/sub-24_task-socialcomparison_bold.json\n\t\t/sub-25/func/sub-25_task-socialcomparison_bold.nii.gz\n\t\t\tYou should define 'SliceTiming' for this file. If you don't provide this information slice time correction will not be possible. It can be included one of the following locations: /task-socialcomparison_bold.json, /sub-25/sub-25_task-socialcomparison_bold.json, /sub-25/func/sub-25_task-socialcomparison_bold.json\n\t\t/sub-26/func/sub-26_task-socialcomparison_bold.nii.gz\n\t\t\tYou should define 'SliceTiming' for this file. If you don't provide this information slice time correction will not be possible. It can be included one of the following locations: /task-socialcomparison_bold.json, /sub-26/sub-26_task-socialcomparison_bold.json, /sub-26/func/sub-26_task-socialcomparison_bold.json\n\t\t/sub-27/func/sub-27_task-socialcomparison_bold.nii.gz\n\t\t\tYou should define 'SliceTiming' for this file. If you don't provide this information slice time correction will not be possible. It can be included one of the following locations: /task-socialcomparison_bold.json, /sub-27/sub-27_task-socialcomparison_bold.json, /sub-27/func/sub-27_task-socialcomparison_bold.json\n\t\t/sub-28/func/sub-28_task-socialcomparison_bold.nii.gz\n\t\t\tYou should define 'SliceTiming' for this file. If you don't provide this information slice time correction will not be possible. It can be included one of the following locations: /task-socialcomparison_bold.json, /sub-28/sub-28_task-socialcomparison_bold.json, /sub-28/func/sub-28_task-socialcomparison_bold.json\n\n        Summary:                Available Tasks:         Available Modalities: \n        59 Files, 1.72GB        social comparison        T1w                   \n        26 - Subjects                                    bold                  \n        1 - Session                                                            \n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural",
+          "mri_functional"
+        ],
+        "sessions": [],
+        "size": 1846408641,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28"
+        ],
+        "tasks": [
+          "social comparison"
+        ],
+        "totalFiles": 59
+      },
+      "tag": "00002"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2018-03-14T23:50:11.918Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,39 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "curated-oncology-reports",
+  "payload": {
+    "abstract": "<p><span><span><span><span><span><span>Both medical care and observational studies in oncology require a thorough understanding of a patient&#39;s disease progression and treatment history, often elaborately documented within clinical notes. As large language models (LLMs) are becoming more popular, it becomes important to evaluate their potential in oncology. However, no current information representation schema fully encapsulates the diversity of oncology information within clinical notes, and no comprehensively annotated oncology notes exist publicly, thereby limiting a thorough evaluation. We curated a new fine-grained, expert-labeled dataset of 40 de-identified breast and pancreatic cancer progress notes at University of California, San Francisco, and assessed three recent LLMs (GPT-4, GPT-3.5-turbo, and FLAN-UL2) in </span></span></span></span></span></span><span><span><span><span><em><span>zero-shot</span></em></span></span></span></span><span><span><span><span><span><span> extraction of detailed oncological information from two narrative sections of clinical progress notes. Model performance was quantified with BLEU-4, ROUGE-1, and exact match (EM) F1-score evaluation metrics. Our team of oncology fellows and medical students manually annotated 9028 entities, 9986 modifiers, and 5312 relationships. The GPT-4 model exhibited overall best performance, with an average BLEU score of 0.73, an average ROUGE score of 0.72, an average EM-F1-score of 0.51, and an average accuracy of 68% (expert manual evaluation on 20 notes). GPT-4 was proficient in tumor characteristics and medication extraction, and demonstrated superior performance in inferring symptoms due to cancer and considerations of future medications. Common errors included partial responses with missing information and hallucinations with note-specific information. LLMs are promising for performing reliable information extraction for clinical research, complex population management, and documenting quality patient care, but there is a need for further improvements.</span></span></span></span></span></span></p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 2780829,
+    "core_doi": "10.13026/vwq3-fj85",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 22867408,
+    "public_project_uuid": "6d50eccf-7c9f-40e0-8507-a46b4b57223a",
+    "publish_date": "2024-02-07",
+    "resource_type": "Database",
+    "short_description": "Medical oncology progress notes annotated with advanced, comprehensive oncology-relevant concepts and relationships.",
+    "slug": "curated-oncology-reports",
+    "source_url": "https://physionet.org/content/curated-oncology-reports/1.0/",
+    "title": "CORAL: expert-Curated medical Oncology Reports to Advance Language model inference",
+    "topics": [
+      "oncology",
+      "natural language processing",
+      "information extraction",
+      "artificial intelligence",
+      "large language models",
+      "electronic health records"
+    ],
+    "version": "1.0",
+    "version_doi": "10.13026/v69y-xa45"
+  },
+  "source": "physionet"
+}

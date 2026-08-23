@@ -1,0 +1,50 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:57888e40538c2c81a22ecac24d07668c215f9935a56aca2f1c57c3d87ec2bed2",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "covid19-positive patients admitted to the SBU hospital",
+        "label": "covid19"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "infectious_disease",
+      "pulmonology",
+      "critical_care"
+    ],
+    "id": "tcia:covid-19-ny-sbu",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "CR CT DX MR NM OT PT SR",
+        "value": "CT"
+      },
+      {
+        "evidence": "CR CT DX MR NM OT PT SR",
+        "value": "MRI"
+      },
+      {
+        "evidence": "CR CT DX MR NM OT PT SR",
+        "value": "PET"
+      },
+      {
+        "evidence": "CR CT DX MR NM OT PT SR",
+        "value": "SPECT"
+      },
+      {
+        "evidence": "CR CT DX MR NM OT PT SR",
+        "value": "xray"
+      },
+      {
+        "evidence": "csv files which comply with OMOP Common Data Model data elements",
+        "value": "EHR"
+      }
+    ],
+    "population": "covid19-positive patients admitted to the SBU hospital",
+    "summary": "De-identified radiology imaging linked to clinical data for covid19-positive patients admitted to a university hospital. Clinical data covers diagnoses, procedures, lab tests and covid19-specific values, stored as csv files following the OMOP Common Data Model."
+  },
+  "prompt_version": "v1"
+}

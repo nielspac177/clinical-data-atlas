@@ -1,0 +1,1166 @@
+{
+  "endpoints": [
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getCollectionValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getModalityValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getBodyPartValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getPatient",
+    "https://api.datacite.org/dois?prefix=10.7937"
+  ],
+  "harvest_method": "api:nbia+datacite",
+  "native_id": "ARAR0331",
+  "payload": {
+    "datacite": {
+      "citationCount": 0,
+      "container": {},
+      "contentUrl": [],
+      "contributors": [],
+      "created": "2022-10-21T22:31:03Z",
+      "creators": [
+        {
+          "affiliation": [],
+          "familyName": "Rodriguez-Galindo",
+          "givenName": "Carlos",
+          "name": "Rodriguez-Galindo, Carlos",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Krailo",
+          "givenName": "Mark D.",
+          "name": "Krailo, Mark D.",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Krasin",
+          "givenName": "Matthew J.",
+          "name": "Krasin, Matthew J.",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Huang",
+          "givenName": "Li",
+          "name": "Huang, Li",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "McCarville",
+          "givenName": "M. Beth",
+          "name": "McCarville, M. Beth",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Hicks",
+          "givenName": "John",
+          "name": "Hicks, John",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Pashankar",
+          "givenName": "Farzana",
+          "name": "Pashankar, Farzana",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Pappo",
+          "givenName": "Alberto S.",
+          "name": "Pappo, Alberto S.",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        }
+      ],
+      "dates": [],
+      "descriptions": [
+        {
+          "description": "This collection contains data from the Children’s Oncology Group (COG) Clinical Trial NCT00274937, “Radiation Therapy, Amifostine, and Chemotherapy in Treating Young Patients With Newly Diagnosed Nasopharyngeal Cancer\". It was sponsored by NCI and performed by the Children's Oncology Group under study number ARAR0331. This phase III trial is studying how well radiation therapy, amifostine, and chemotherapy work in treating young patients with newly diagnosed nasopharyngeal cancer. Radiation therapy uses high-energy x-rays to kill tumor cells. Drugs, such as amifostine, may protect normal cells from the side effects of radiation therapy. Drugs used in chemotherapy, such as cisplatin and fluorouracil, work in different ways to stop the growth of tumor cells, either by killing the cells or by stopping them from dividing. Giving radiation therapy together with amifostine and chemotherapy may kill more tumor cells.",
+          "descriptionType": "Abstract",
+          "lang": null
+        }
+      ],
+      "doi": "10.7937/wtec-mn22",
+      "downloadCount": 0,
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "ARAR0331",
+          "identifierType": "TCIA Short Name"
+        }
+      ],
+      "isActive": true,
+      "language": null,
+      "metadataVersion": 5,
+      "partCount": 0,
+      "partOfCount": 0,
+      "publicationYear": 2022,
+      "published": null,
+      "publisher": "The Cancer Imaging Archive",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2022-10-21T22:32:43Z",
+      "relatedIdentifiers": [],
+      "relatedItems": [],
+      "rightsList": [
+        {
+          "rights": "NCTN Data Archive License",
+          "rightsUri": "https://nctn-data-archive.nci.nih.gov/sites/default/files/DUA/NCTN_NCORP_Data_Archive_DUA_No%20CA_v2019-06-12.pdf"
+        }
+      ],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "fabricaForm",
+      "state": "findable",
+      "subjects": [],
+      "titles": [
+        {
+          "lang": null,
+          "title": "Radiation Therapy, Amifostine, and Chemotherapy in Treating Young Patients With Newly Diagnosed Nasopharyngeal Cancer (ARAR0331)",
+          "titleType": null
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2025-06-01T01:01:11Z",
+      "url": "https://www.cancerimagingarchive.net/collection/arar0331/",
+      "version": "1",
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 1211
+    },
+    "nbia": {
+      "body_parts": [
+        "ABDOMEN",
+        "CHEST",
+        "HEADNECK",
+        "NECK"
+      ],
+      "collection": "ARAR0331",
+      "modalities": [
+        "RTSTRUCT"
+      ],
+      "patients": [
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PATJVB",
+          "PatientName": "ARAR0331-PATJVB",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PAPYSU",
+          "PatientName": "ARAR0331-PAPYSU",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PASIGH",
+          "PatientName": "ARAR0331-PASIGH",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PATITH",
+          "PatientName": "ARAR0331-PATITH",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PATXIN",
+          "PatientName": "ARAR0331-PATXIN",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PAUILY",
+          "PatientName": "ARAR0331-PAUILY",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PASBUP",
+          "PatientName": "ARAR0331-PASBUP",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PAUPUJ",
+          "PatientName": "ARAR0331-PAUPUJ",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PASRWH",
+          "PatientName": "ARAR0331-PASRWH",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PATLAX",
+          "PatientName": "ARAR0331-PATLAX",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PAURVZ",
+          "PatientName": "ARAR0331-PAURVZ",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "EthnicGroup": "B",
+          "PatientId": "ARAR0331-PATLHE",
+          "PatientName": "ARAR0331-PATLHE",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "EthnicGroup": "B",
+          "PatientId": "ARAR0331-PASZYH",
+          "PatientName": "ARAR0331-PASZYH",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PARXDY",
+          "PatientName": "ARAR0331-PARXDY",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PAUPJL",
+          "PatientName": "ARAR0331-PAUPJL",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PASUUW",
+          "PatientName": "ARAR0331-PASUUW",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "EthnicGroup": "Black",
+          "PatientId": "ARAR0331-PAUIAC",
+          "PatientName": "ARAR0331-PAUIAC",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "EthnicGroup": "H",
+          "PatientId": "ARAR0331-PAUEJZ",
+          "PatientName": "ARAR0331-PAUEJZ",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PARTEJ",
+          "PatientName": "ARAR0331-PARTEJ",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "EthnicGroup": "2",
+          "PatientId": "ARAR0331-PASECR",
+          "PatientName": "ARAR0331-PASECR",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "EthnicGroup": "REMOVED",
+          "PatientId": "ARAR0331-PASYSK",
+          "PatientName": "ARAR0331-PASYSK",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "EthnicGroup": "CD:218377",
+          "PatientId": "ARAR0331-PASSLR",
+          "PatientName": "ARAR0331-PASSLR",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PASNLU",
+          "PatientName": "ARAR0331-PASNLU",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PARVTX",
+          "PatientName": "ARAR0331-PARVTX",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PATPNV",
+          "PatientName": "ARAR0331-PATPNV",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PAUFNW",
+          "PatientName": "ARAR0331-PAUFNW",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "EthnicGroup": "2",
+          "PatientId": "ARAR0331-PATTNS",
+          "PatientName": "ARAR0331-PATTNS",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PARIEE",
+          "PatientName": "ARAR0331-PARIEE",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PAPWTD",
+          "PatientName": "ARAR0331-PAPWTD",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "EthnicGroup": "REMOVED",
+          "PatientId": "ARAR0331-PATXDI",
+          "PatientName": "ARAR0331-PATXDI",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PASRUL",
+          "PatientName": "ARAR0331-PASRUL",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PATVJN",
+          "PatientName": "ARAR0331-PATVJN",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PARXDX",
+          "PatientName": "ARAR0331-PARXDX",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "EthnicGroup": "2",
+          "PatientId": "ARAR0331-PAPJZT",
+          "PatientName": "ARAR0331-PAPJZT",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PATVJB",
+          "PatientName": "ARAR0331-PATVJB",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "EthnicGroup": "White [1]",
+          "PatientId": "ARAR0331-PATUXD",
+          "PatientName": "ARAR0331-PATUXD",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "EthnicGroup": "CD:309316",
+          "PatientId": "ARAR0331-PATDXI",
+          "PatientName": "ARAR0331-PATDXI",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PAUFZY",
+          "PatientName": "ARAR0331-PAUFZY",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PASGJY",
+          "PatientName": "ARAR0331-PASGJY",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PARHAV",
+          "PatientName": "ARAR0331-PARHAV",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "EthnicGroup": "W",
+          "PatientId": "ARAR0331-PATBCG",
+          "PatientName": "ARAR0331-PATBCG",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PATCME",
+          "PatientName": "ARAR0331-PATCME",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PAPZJM",
+          "PatientName": "ARAR0331-PAPZJM",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PASSEZ",
+          "PatientName": "ARAR0331-PASSEZ",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "EthnicGroup": "CD:669099",
+          "PatientId": "ARAR0331-PAUSLP",
+          "PatientName": "ARAR0331-PAUSLP",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PATFTX",
+          "PatientName": "ARAR0331-PATFTX",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PAUCEA",
+          "PatientName": "ARAR0331-PAUCEA",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PAPXKG",
+          "PatientName": "ARAR0331-PAPXKG",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "EthnicGroup": "5",
+          "PatientId": "ARAR0331-PAURLM",
+          "PatientName": "ARAR0331-PAURLM",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PASKFC",
+          "PatientName": "ARAR0331-PASKFC",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PARZBD",
+          "PatientName": "ARAR0331-PARZBD",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PARWRW",
+          "PatientName": "ARAR0331-PARWRW",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PAUJCY",
+          "PatientName": "ARAR0331-PAUJCY",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "EthnicGroup": "HAWAIIA",
+          "PatientId": "ARAR0331-PARFPU",
+          "PatientName": "ARAR0331-PARFPU",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PASREN",
+          "PatientName": "ARAR0331-PASREN",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "EthnicGroup": "WHITE",
+          "PatientId": "ARAR0331-PARYNS",
+          "PatientName": "ARAR0331-PARYNS",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "EthnicGroup": "B",
+          "PatientId": "ARAR0331-PAPSJD",
+          "PatientName": "ARAR0331-PAPSJD",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "EthnicGroup": "B",
+          "PatientId": "ARAR0331-PATLVR",
+          "PatientName": "ARAR0331-PATLVR",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PASNWA",
+          "PatientName": "ARAR0331-PASNWA",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PASZMJ",
+          "PatientName": "ARAR0331-PASZMJ",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PAPRBM",
+          "PatientName": "ARAR0331-PAPRBM",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "EthnicGroup": "CD:218377",
+          "PatientId": "ARAR0331-PASUSG",
+          "PatientName": "ARAR0331-PASUSG",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PAUBAU",
+          "PatientName": "ARAR0331-PAUBAU",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PAPZZV",
+          "PatientName": "ARAR0331-PAPZZV",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PASTRC",
+          "PatientName": "ARAR0331-PASTRC",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PAUGUM",
+          "PatientName": "ARAR0331-PAUGUM",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PATSCC",
+          "PatientName": "ARAR0331-PATSCC",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "EthnicGroup": "C",
+          "PatientId": "ARAR0331-PASJLJ",
+          "PatientName": "ARAR0331-PASJLJ",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PARIMW",
+          "PatientName": "ARAR0331-PARIMW",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PASFCU",
+          "PatientName": "ARAR0331-PASFCU",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PAUBWM",
+          "PatientName": "ARAR0331-PAUBWM",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PAUREM",
+          "PatientName": "ARAR0331-PAUREM",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PATTAJ",
+          "PatientName": "ARAR0331-PATTAJ",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "EthnicGroup": "2",
+          "PatientId": "ARAR0331-PARTNW",
+          "PatientName": "ARAR0331-PARTNW",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PATVRU",
+          "PatientName": "ARAR0331-PATVRU",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "EthnicGroup": "Caucasian",
+          "PatientId": "ARAR0331-PAUEXB",
+          "PatientName": "ARAR0331-PAUEXB",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PATLIW",
+          "PatientName": "ARAR0331-PATLIW",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PARFVN",
+          "PatientName": "ARAR0331-PARFVN",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PASZPW",
+          "PatientName": "ARAR0331-PASZPW",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PARRJY",
+          "PatientName": "ARAR0331-PARRJY",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PATIDW",
+          "PatientName": "ARAR0331-PATIDW",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PARGGU",
+          "PatientName": "ARAR0331-PARGGU",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PAUKVG",
+          "PatientName": "ARAR0331-PAUKVG",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PASJPS",
+          "PatientName": "ARAR0331-PASJPS",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "EthnicGroup": "Black",
+          "PatientId": "ARAR0331-PATRKW",
+          "PatientName": "ARAR0331-PATRKW",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PASXXY",
+          "PatientName": "ARAR0331-PASXXY",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PARLEX",
+          "PatientName": "ARAR0331-PARLEX",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PAUPUS",
+          "PatientName": "ARAR0331-PAUPUS",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PARDXT",
+          "PatientName": "ARAR0331-PARDXT",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "EthnicGroup": "B",
+          "PatientId": "ARAR0331-PATNUM",
+          "PatientName": "ARAR0331-PATNUM",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PARLIK",
+          "PatientName": "ARAR0331-PARLIK",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PARJKW",
+          "PatientName": "ARAR0331-PARJKW",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "EthnicGroup": "2",
+          "PatientId": "ARAR0331-PATTWL",
+          "PatientName": "ARAR0331-PATTWL",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PARPCX",
+          "PatientName": "ARAR0331-PARPCX",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PARVGC",
+          "PatientName": "ARAR0331-PARVGC",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PASEXM",
+          "PatientName": "ARAR0331-PASEXM",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "EthnicGroup": "HAWAIIA",
+          "PatientId": "ARAR0331-PAPRTE",
+          "PatientName": "ARAR0331-PAPRTE",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "EthnicGroup": "CD:218377",
+          "PatientId": "ARAR0331-PARYDY",
+          "PatientName": "ARAR0331-PARYDY",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PAUDLC",
+          "PatientName": "ARAR0331-PAUDLC",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PATUGJ",
+          "PatientName": "ARAR0331-PATUGJ",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PAPUSD",
+          "PatientName": "ARAR0331-PAPUSD",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PAUELG",
+          "PatientName": "ARAR0331-PAUELG",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PATSDC",
+          "PatientName": "ARAR0331-PATSDC",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PAPKSW",
+          "PatientName": "ARAR0331-PAPKSW",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PATRKY",
+          "PatientName": "ARAR0331-PATRKY",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "EthnicGroup": "9",
+          "PatientId": "ARAR0331-PARWMU",
+          "PatientName": "ARAR0331-PARWMU",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "EthnicGroup": "CD:218377",
+          "PatientId": "ARAR0331-PARYKZ",
+          "PatientName": "ARAR0331-PARYKZ",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ARAR0331",
+          "PatientId": "ARAR0331-PASZWF",
+          "PatientName": "ARAR0331-PASZWF",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        }
+      ]
+    }
+  },
+  "source": "tcia"
+}

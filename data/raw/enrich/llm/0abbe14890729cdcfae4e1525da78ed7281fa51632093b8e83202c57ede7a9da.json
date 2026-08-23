@@ -1,0 +1,45 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:0abbe14890729cdcfae4e1525da78ed7281fa51632093b8e83202c57ede7a9da",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Opioid-related aberrant behaviors",
+        "label": "Opioid-related aberrant behaviors"
+      },
+      {
+        "evidence": "Diagnosed opioid dependency",
+        "label": "Diagnosed opioid dependency"
+      },
+      {
+        "evidence": "novel risk factors for opioid overdose",
+        "label": "opioid overdose"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "psychiatry",
+      "public_health"
+    ],
+    "id": "physionet:nlp-opioid-behavior-detection",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "publicly available EHR notes",
+        "value": "clinical_notes"
+      },
+      {
+        "evidence": "electronic health record notes",
+        "value": "EHR"
+      },
+      {
+        "evidence": "survey",
+        "value": "survey"
+      }
+    ],
+    "population": "Patients whose electronic health record notes document opioid related aberrant behaviors",
+    "summary": "Expert-annotated benchmark of electronic health record notes labeled for opioid-related aberrant behaviors, with multi-label categories covering confirmed and suggested aberrant behavior, opioids, indications, dependency, medication changes and social determinants of health."
+  },
+  "prompt_version": "v1"
+}

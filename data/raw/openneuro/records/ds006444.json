@@ -1,0 +1,104 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006444",
+  "payload": {
+    "created": "2025-07-03T22:13:23.112Z",
+    "id": "ds006444",
+    "latestSnapshot": {
+      "created": "2026-01-28T20:27:12.000Z",
+      "description": {
+        "Authors": [
+          "Jessica Archibald",
+          "Kay Chioma Igwe",
+          "Antonia Kaiser",
+          "Karl Landheer",
+          "Jaimie Lee",
+          "John Kramer",
+          "Niklaus Zölch",
+          "Aaron Gudmundson",
+          "Helge J. Zöllner",
+          "Candace C. Fleischer",
+          "Georg Oeltzschner",
+          "Jamie Near",
+          "Mark Mikkelsen"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006444.v1.0.10",
+        "Funding": [
+          "National Institute of Biomedical Imaging and Bioengineering (NIBIB) grant K99EB028828"
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "The Impact and Reliability of Tissue Segmentation on In Vivo Magnetic Resonance Spectroscopy Metabolite Quantification",
+        "ReferencesAndLinks": null
+      },
+      "readme": "# The Impact and Reliability of Tissue Segmentation on In Vivo Magnetic Resonance Spectroscopy Metabolite Quantification\n\nContact: [mam4041@med.cornell.edu](mailto:mam4041@med.cornell.edu)\n\n## Overview\n\nThese data were collected as part of a study to assess the test-retest reliability of multi-metabolite edited MRS editing schemes and the [sLASER](https://doi.org/10.1002/mrm.21302) localization approach.\nThe resulting dataset was also used to evaluate the impact of anatomical segmentation on estimated metabolite concentrations.\n\nData types included are defaced *T*<sub>1</sub>-weighted 3D structural MRI images and sLASER data.\n\n## Methods\n\n### Subjects\n\nSixteen healthy adults (10 females, 6 males, mean age = 38.4 years).\n\n### MR protocol\n\nMR data were acquired using a 3T GE Discovery MR750 MRI scanner using a <sup>1</sup>H 32-channel RF phased-array head coil for receive and a body coil for transmit.\n\n#### MRI\n\n*T*<sub>1</sub>-weighted FSPGR BRAVO structural MRI acquisition parameters:\n\n- Voxel resolution = 0.9 × 0.9 × 1.5 mm<sup>3</sup>\n- TE/TR/TI (ms) = 5.2/12.2/725\n- Flip angle = 7°\n- Slices = 124\n- FOV = 256 × 256 mm<sup>2</sup>\n- Matrix size = 256 × 256\n- Parallel acquisition technique: GRAPPA\n- Parallel acquisition factor: 2\n\n#### MRS\n\nGeneral MRS acquisition parameters:\n\n- Volume of interest = medial parietal lobe\n- Voxel resolution = 30 × 30 × 30 mm<sup>3</sup>\n- Spectral width = 5000 Hz\n- Number of points = 4096\n\n##### sLASER\n\n- TE/TR = 35/2000 ms\n- Number of transients = 64\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural"
+        ],
+        "sessions": [
+          "02",
+          "01"
+        ],
+        "size": 421568336,
+        "subjects": [
+          "12",
+          "15",
+          "10",
+          "02",
+          "01",
+          "07",
+          "08",
+          "03",
+          "11",
+          "13",
+          "16",
+          "09",
+          "04"
+        ],
+        "tasks": [],
+        "totalFiles": 59
+      },
+      "tag": "1.0.10"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        23,
+        66,
+        39,
+        30,
+        39,
+        20,
+        21,
+        19,
+        30,
+        25,
+        31,
+        59,
+        25,
+        53
+      ],
+      "associatedPaperDOI": "https://www.biorxiv.org/content/10.1101/2025.06.07.657685v1",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "NIH",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2025-07-04T13:11:04.650Z"
+  },
+  "source": "openneuro"
+}

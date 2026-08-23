@@ -1,0 +1,925 @@
+{
+  "endpoints": [
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getCollectionValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getModalityValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getBodyPartValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getPatient",
+    "https://api.datacite.org/dois?prefix=10.7937"
+  ],
+  "harvest_method": "api:nbia+datacite",
+  "native_id": "SPIE-AAPM Lung CT Challenge",
+  "payload": {
+    "datacite": {
+      "citationCount": 40,
+      "container": {},
+      "contentUrl": [],
+      "contributors": [],
+      "created": "2015-04-23T13:59:23Z",
+      "creators": [
+        {
+          "affiliation": [],
+          "familyName": null,
+          "givenName": null,
+          "name": "Armato III, Samuel G.; Hadjiiski, Lubomir; Tourassi, Georgia D.; Drukker, Karen; Giger, Maryellen L.; Li, Feng; Redmond, George; Farahani, Keyvan; Kirby, Justin S.; Clarke, Laurence P.",
+          "nameIdentifiers": [],
+          "nameType": null
+        }
+      ],
+      "dates": [
+        {
+          "date": "2015",
+          "dateInformation": null,
+          "dateType": "Issued"
+        }
+      ],
+      "descriptions": [
+        {
+          "description": "As part of the 2015 SPIE Medical Imaging Conference, SPIE – with the support of American Association of Physicists in Medicine (AAPM) and the National Cancer Institute (NCI) – conducted a “Grand Challenge” on quantitative image analysis methods for the diagnostic classification of malignant and benign lung nodules. The LUNGx Challenge provides a unique opportunity for participants to compare their algorithms to those of others from academia, industry, and government in a structured, direct way using the same data sets.\n10 contrast-enhanced CT scans (5 scans with malignant nodules and 5 with benign nodules, prefix “CT-Training”) are a calibration dataset, representative of the technical properties of the test dataset (60 scans, prefix “LUNGx”). Dataset contains: Images, Nodule locations and 'truth' labels. \nIf you use these data outside the LUNGx Challenge please acknowledge the SPIE, the NCI, the AAPM, and The University of Chicago. An article describing the lessons learned is at https://doi.org/10.1117/1.JMI.2.2.020103.  The corresponding scientific manuscript is at https://doi.org/10.1117/1.JMI.3.4.044506 .  For the full data set, including the answers to the test data, see the SPIE-AAPM-NCI Lung Nodule Classification Challenge page.",
+          "descriptionType": "Abstract",
+          "lang": null
+        }
+      ],
+      "doi": "10.7937/k9/tcia.2015.uzlsu3fl",
+      "downloadCount": 0,
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "SPIE-AAPM Lung CT Challenge",
+          "identifierType": "TCIA Short Name"
+        }
+      ],
+      "isActive": true,
+      "language": null,
+      "metadataVersion": 30,
+      "partCount": 0,
+      "partOfCount": 0,
+      "publicationYear": 2015,
+      "published": null,
+      "publisher": "The Cancer Imaging Archive",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2015-04-23T13:59:25Z",
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "10.1117/1.jmi.3.4.044506",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1155/2015/230830",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1155/2015/267807",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.3390/diagnostics6010013",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.acra.2016.11.007",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.15439/2018f176",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1002/mp.13592",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.media.2019.07.004",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.3389/fonc.2019.00627",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.cmpb.2020.105839",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.3390/e22050517",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1007/s00500-020-05081-6",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.7742/jksr.2020.14.3.211",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1007/s11045-020-00703-6",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1371/journal.pone.0249450",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.48161/qaj.v1n1a33",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1186/s40644-021-00413-7",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.crad.2022.04.012",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.18421/tem111-37",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1109/iccke57176.2022.9960025",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1504/ijbet.2022.120868",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1002/ima.22719",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.jik.2023.100313",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1088/1748-0221/18/11/c11017",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1109/iccpct58313.2023.10244814",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.xcrp.2024.101940",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1109/tmi.2018.2876510",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1007/s42600-021-00138-3",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1109/access.2021.3054735",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1097/cco.0000000000000796",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.3389/fmedt.2022.980735",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1177/08465371231180844",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1007/s00500-023-07877-8",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.14201/gredos.153240",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1109/access.2024.3403106",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.17077/etd.66kk-u2b1",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        }
+      ],
+      "relatedItems": [],
+      "rightsList": [
+        {
+          "rights": "Creative Commons Attribution 3.0 Unported",
+          "rightsIdentifier": "cc-by-3.0",
+          "rightsIdentifierScheme": "SPDX",
+          "rightsUri": "https://creativecommons.org/licenses/by/3.0/legalcode",
+          "schemeUri": "https://spdx.org/licenses/"
+        }
+      ],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "fabricaForm",
+      "state": "findable",
+      "subjects": [],
+      "titles": [
+        {
+          "lang": null,
+          "title": "SPIE-AAPM-NCI Lung Nodule Classification Challenge Dataset",
+          "titleType": null
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2025-06-01T01:01:16Z",
+      "url": "https://www.cancerimagingarchive.net/collection/spie-aapm-lung-ct-challenge/",
+      "version": "2",
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 3415
+    },
+    "nbia": {
+      "body_parts": [
+        "LUNG"
+      ],
+      "collection": "SPIE-AAPM Lung CT Challenge",
+      "modalities": [
+        "CT"
+      ],
+      "patients": [
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "CT-Training-BE006",
+          "PatientName": "CT-Training-BE006",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "CT-Training-BE002",
+          "PatientName": "CT-Training-BE002",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "CT-Training-LC001",
+          "PatientName": "CT-Training-LC001",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "CT-Training-LC008",
+          "PatientName": "CT-Training-LC008",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "CT-Training-LC002",
+          "PatientName": "CT-Training-LC002",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "CT-Training-BE010",
+          "PatientName": "CT-Training-BE010",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "CT-Training-LC009",
+          "PatientName": "CT-Training-LC009",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "CT-Training-BE007",
+          "PatientName": "CT-Training-BE007",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "CT-Training-BE001",
+          "PatientName": "CT-Training-BE001",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "CT-Training-LC003",
+          "PatientName": "CT-Training-LC003",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT001",
+          "PatientName": "LUNGx-CT001",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT038",
+          "PatientName": "LUNGx-CT038",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT039",
+          "PatientName": "LUNGx-CT039",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT009",
+          "PatientName": "LUNGx-CT009",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT003",
+          "PatientName": "LUNGx-CT003",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT023",
+          "PatientName": "LUNGx-CT023",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT036",
+          "PatientName": "LUNGx-CT036",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT015",
+          "PatientName": "LUNGx-CT015",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT058",
+          "PatientName": "LUNGx-CT058",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT057",
+          "PatientName": "LUNGx-CT057",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT059",
+          "PatientName": "LUNGx-CT059",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT053",
+          "PatientName": "LUNGx-CT053",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT017",
+          "PatientName": "LUNGx-CT017",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT029",
+          "PatientName": "LUNGx-CT029",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT046",
+          "PatientName": "LUNGx-CT046",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT011",
+          "PatientName": "LUNGx-CT011",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT034",
+          "PatientName": "LUNGx-CT034",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT033",
+          "PatientName": "LUNGx-CT033",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT044",
+          "PatientName": "LUNGx-CT044",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT027",
+          "PatientName": "LUNGx-CT027",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT014",
+          "PatientName": "LUNGx-CT014",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT056",
+          "PatientName": "LUNGx-CT056",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT054",
+          "PatientName": "LUNGx-CT054",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT010",
+          "PatientName": "LUNGx-CT010",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT045",
+          "PatientName": "LUNGx-CT045",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT022",
+          "PatientName": "LUNGx-CT022",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT012",
+          "PatientName": "LUNGx-CT012",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT007",
+          "PatientName": "LUNGx-CT007",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT031",
+          "PatientName": "LUNGx-CT031",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT042",
+          "PatientName": "LUNGx-CT042",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT032",
+          "PatientName": "LUNGx-CT032",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT052",
+          "PatientName": "LUNGx-CT052",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT050",
+          "PatientName": "LUNGx-CT050",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT008",
+          "PatientName": "LUNGx-CT008",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT020",
+          "PatientName": "LUNGx-CT020",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT026",
+          "PatientName": "LUNGx-CT026",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT035",
+          "PatientName": "LUNGx-CT035",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT021",
+          "PatientName": "LUNGx-CT021",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT049",
+          "PatientName": "LUNGx-CT049",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT006",
+          "PatientName": "LUNGx-CT006",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT004",
+          "PatientName": "LUNGx-CT004",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT060",
+          "PatientName": "LUNGx-CT060",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT055",
+          "PatientName": "LUNGx-CT055",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT019",
+          "PatientName": "LUNGx-CT019",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT048",
+          "PatientName": "LUNGx-CT048",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT024",
+          "PatientName": "LUNGx-CT024",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT025",
+          "PatientName": "LUNGx-CT025",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT040",
+          "PatientName": "LUNGx-CT040",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT030",
+          "PatientName": "LUNGx-CT030",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT005",
+          "PatientName": "LUNGx-CT005",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT041",
+          "PatientName": "LUNGx-CT041",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT037",
+          "PatientName": "LUNGx-CT037",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT016",
+          "PatientName": "LUNGx-CT016",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT018",
+          "PatientName": "LUNGx-CT018",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT013",
+          "PatientName": "LUNGx-CT013",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT028",
+          "PatientName": "LUNGx-CT028",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT043",
+          "PatientName": "LUNGx-CT043",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT002",
+          "PatientName": "LUNGx-CT002",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT047",
+          "PatientName": "LUNGx-CT047",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "SPIE-AAPM Lung CT Challenge",
+          "PatientId": "LUNGx-CT051",
+          "PatientName": "LUNGx-CT051",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        }
+      ]
+    }
+  },
+  "source": "tcia"
+}

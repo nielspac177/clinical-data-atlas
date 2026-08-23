@@ -1,0 +1,131 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004161",
+  "payload": {
+    "created": "2022-06-15T13:17:05.293Z",
+    "id": "ds004161",
+    "latestSnapshot": {
+      "created": "2022-06-15T16:19:08.000Z",
+      "description": {
+        "Authors": [
+          "David A.Barrière",
+          "Ella Arsène",
+          "Hans Andriaesen",
+          "Chesneau Didier",
+          "Lomet Didier",
+          "Otten Winfried",
+          "Boissy Alain",
+          "Dardente Hugues",
+          "Poirier Colline",
+          "Calandreau Ludivic",
+          "Keller Matthieu"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004161.v1.0.0",
+        "Funding": [
+          "This project was funded by grants from the  French National Research Institute for Agriculture, Food and Environment - ( Starter programm )"
+        ],
+        "HowToAcknowledge": "Please cite the following publication describing the dataset: ***. The Turone Sheep Chronic Stress Project, is a longitudinal study dedicated to study the effect of chronic stress onto the brain in sheep. When acknowledging the TSCS project study should consider including The Turone Sheep Brain Template and Atlas (TSBTA) resource used for spatial sheep brain spatial normalization and labelisation (https://www.nitrc.org/projects/tsbta_2019/) and cite followinf papers : i/ Barrière DA, Ella A, Adriaensen H, Roselli CE, Chemineau P, Keller M. In vivo magnetic resonance imaging reveals the effect of gonadal hormones on morphological and functional brain sexual dimorphisms in adult sheep. Psychoneuroendocrinology. 2019 Nov;109:104387. doi: 10.1016/j.psyneuen.2019.104387. Epub 2019 Aug 13. PMID: 31465941. ii/ Ella A, Keller M. Construction of an MRI 3D high resolution sheep brain template. Magn Reson Imaging. 2015 Dec;33(10):1329-1337. doi: 10.1016/j.mri.2015.09.001. Epub 2015 Sep 9. PMID: 26363468. iii/ Ella A, Delgadillo JA, Chemineau P, Keller M. Computation of a high-resolution MRI 3D stereotaxic atlas of the sheep brain. J Comp Neurol. 2017 Feb 15;525(3):676-692. doi: 10.1002/cne.24079. Epub 2016 Aug 9. PMID: 27503489.",
+        "License": "CC0",
+        "Name": "Turone Sheep Chronic Stress (TSCS)",
+        "ReferencesAndLinks": [
+          "The Turone Sheep Brain Template and Atlas (TSBTA) have been used to analyse this dataset",
+          "https://www.nitrc.org/projects/tsbta_2019/"
+        ]
+      },
+      "readme": "A free form text ( README ) describing the dataset in more details that SHOULD be provided\n\nThe raw BIDS data was created using BIDScoin 3.7.2\nAll provenance information and settings can be found in ./code/bidscoin\nFor more information see: https://github.com/Donders-Institute/bidscoin\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_diffusion",
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "01",
+          "02"
+        ],
+        "size": 17128164217,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24"
+        ],
+        "tasks": [
+          "topup",
+          "Resting-State"
+        ],
+        "totalFiles": 821
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": false,
+      "ages": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "associatedPaperDOI": "https://doi.org/10.1016/j.psyneuen.2019.104387",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Sheep",
+      "studyDesign": "3 Groups / 2 Sessions",
+      "studyDomain": "Chronic Stress",
+      "studyLongitudinal": "Longitudinal"
+    },
+    "publishDate": "2022-06-15T16:19:40.841Z"
+  },
+  "source": "openneuro"
+}

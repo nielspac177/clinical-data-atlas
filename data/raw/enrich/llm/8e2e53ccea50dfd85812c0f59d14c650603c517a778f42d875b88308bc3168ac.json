@@ -1,0 +1,34 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:8e2e53ccea50dfd85812c0f59d14c650603c517a778f42d875b88308bc3168ac",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "patients with different heart diseases",
+        "label": "heart diseases"
+      },
+      {
+        "evidence": "collected from healthy volunteers",
+        "label": "healthy controls"
+      }
+    ],
+    "countries": [
+      "DE"
+    ],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:ptbdb",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "compilation of digitized ECGs",
+        "value": "ECG"
+      }
+    ],
+    "population": "290 subjects; healthy volunteers and patients with different heart diseases",
+    "summary": "Digitized ECG recordings from subjects, collected with a non-commercial prototype recorder, provided for research, algorithmic benchmarking, or teaching."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,117 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007046",
+  "payload": {
+    "created": "2025-12-09T12:08:49.909Z",
+    "id": "ds007046",
+    "latestSnapshot": {
+      "created": "2026-01-28T11:17:47.000Z",
+      "description": {
+        "Authors": [
+          "Clemens G. Bartnik",
+          "Steven Scholte",
+          "Iris I.A. Groen"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007046.v1.0.0",
+        "Funding": [
+          "VI.Veni.194030"
+        ],
+        "HowToAcknowledge": "OPTIONAL. Instructions how researchers using this dataset should acknowledge the original authors. This field can also be used to define a publication that should be cited in publications that use the dataset",
+        "License": "CC0",
+        "Name": "Vision for action",
+        "ReferencesAndLinks": [
+          "https://doi.org/10.1073/pnas.2414005122",
+          "https://osf.io/v3rcq/overview"
+        ]
+      },
+      "readme": "# README — Vision for Action fMRI Dataset\n\n## Dataset Overview\nThis 3T fMRI dataset was collected for the **Vision for Action** project to investigate how the human visual system represents **locomotive action affordances**—the actions that environments afford for navigating through them (e.g., walking, biking, climbing).\n\nThe dataset accompanies the publication:\n\n**Bartnik et al. (2025). _Representation of locomotive action affordances in human behavior, brains, and deep neural networks_. PNAS.**\n\nData were collected at the **FMG Research Lab**, University of Amsterdam (REC, Amsterdam, The Netherlands).\n\n---\n\n## Contents\n\nEach participant completed **four scanning sessions**:\n\n### **Session 1 (ses-001): Functional Localizer + Scene pRF**\n- Six runs of a **category localizer** (block design) with six object/scene categories.\n- One or more **population receptive field (pRF)** mapping runs.\n- One **T1-weighted anatomical scan**.\n- BOLD fMRI acquisitions and corresponding fieldmaps.\n\n### **Sessions 2–4 (ses-002, ses-003, ses-004): Main Vision-for-Action Tasks**\nAcross these three sessions, participants performed three different tasks using the same set of 90 scene images:\n\n1. **Locomotive Action Affordance Task**  \n   Participants indicated which locomotive actions the environment afforded (walking, biking, driving, climbing, swimming, boating).\n\n2. **Object Presence Task**  \n   Participants selected which object categories were present (building/wall, plant/tree, furniture, road/street, body of water, stones).\n\n3. **Fixation Color Task (Control)**  \n   Participants reported the color of the fixation cross (blue, red, orange, purple, yellow, cyan), independent of scene content.\n\nThe order of tasks was **counterbalanced across subjects**.\n\nEach of these sessions contains:\n- Six functional **BOLD** runs (event-related design)\n- A **T1-weighted anatomical scan**\n- Optional fieldmaps\n- Associated `*_events.tsv` files\n\n---\n\n## Stimuli\n\nA subset of **90 natural scene photographs** was selected from a larger set of 231 images to:\n\n- Sample indoor, outdoor-natural, and outdoor-manmade environments  \n- Maximize variance in **locomotive action affordance ratings**  \n- Cover the first two principal components of affordance space\n\nEach scene was shown for **1 s**, followed by a jittered ISI of **2.2–5.4 s**.  \nStimuli subtended approximately **20° of visual angle**.\n\n---\n\n## fMRI Acquisition\n\nAll data were collected on a **Philips Achieva 3T** scanner using a **32-channel SENSE head coil**.\n\n### **Functional Localizer (ses-001)**\n- EPI sequence  \n- TR = 2000 ms, TE = 27.63 ms  \n- 36 slices, 3×3×3 mm  \n- 140 volumes per run  \n\n### **Main Task Sessions (ses-002 to ses-004)**\n- Multiband EPI  \n- TR = 1600 ms, TE = 30 ms  \n- 56 slices, 2×2×2 mm  \n- Multiband factor = 4  \n- 281 volumes per run  \n- Acquisition label in BIDS: `acq-Mb4Mm2Tr1600`\n\n### **Structural Imaging**\nA **T1-weighted anatomical scan** (1 mm isotropic) was collected at the start of each session.\n\nRaw BIDS data provided here are **unprocessed**.\n\n---\n\n## Events Files\n\nFor each functional run in sessions 2–4:\n\n- An `*_events.tsv` file is provided\n- Contains onset times, durations, and trial-type information\n- Response prompts and button presses are included where applicable\n\nThe event structure follows the task design described in the corresponding publication.\n\n---\n\n## Behavioral Task Structure\n\nEach run contained:\n- **90 trials** (all stimuli presented once per run)\n- Randomly interspersed **response screens** (3.8 s)\n- Tasks allowed **multiple responses** in the affordance and object conditions\n\nThe fixation task required a single color judgment on each response screen.\n\n---\n\n## Anonymity\n\nTo comply with University of Amsterdam regulations:\n\n1. All participants signed consent permitting data sharing.  \n2. No mapping exists between personal information and subject IDs.  \n3. All structural data have been **defaced** using `pydeface`.  \n4. Subject identifiers (`sub-XXX`) were randomly assigned.\n\n---\n\n## Citation\n\nIf using this dataset, please cite:\n\n**Bartnik, C. G., Sartzetaki, C., Puigseslloses Sanchez, A., Molenkamp, E., Bommer, S., Vukšić, N., & Groen, I. I. A. (2025). Representation of locomotive action affordances in human behavior, brains, and deep neural networks. _Proceedings of the National Academy of Sciences_.**\n\n---\n\n## Contact\n\nFor questions about the dataset, please contact:  \n**I. I. A. Groen** — i.i.a.groen@uva.nl\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "004",
+          "003",
+          "002",
+          "001"
+        ],
+        "size": 71568032567,
+        "subjects": [
+          "020",
+          "012",
+          "007",
+          "003",
+          "005",
+          "017",
+          "013",
+          "006",
+          "009",
+          "011",
+          "008",
+          "018",
+          "014",
+          "015",
+          "016",
+          "002",
+          "004",
+          "010",
+          "019",
+          "001"
+        ],
+        "tasks": [
+          "VISACT",
+          "ScenePRF",
+          "CategorySix"
+        ],
+        "totalFiles": 2911
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        25,
+        null,
+        null,
+        21,
+        18,
+        20,
+        null,
+        25,
+        25,
+        29,
+        21,
+        27,
+        22,
+        23,
+        23,
+        24,
+        24,
+        27,
+        25,
+        33
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "event-related",
+      "studyDomain": "visual perception",
+      "studyLongitudinal": "within-subject task-based fMRI"
+    },
+    "publishDate": "2026-01-28T11:57:22.590Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,27 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:8b1c10c1050c7805239b5a4aa18a18d43fbafdf550349eb741d0c048e1296968",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "other"
+    ],
+    "id": "physionet:discq",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "read a discharge summary line-by-line",
+        "value": "clinical_notes"
+      },
+      {
+        "evidence": "electronic health records (EHR)",
+        "value": "EHR"
+      }
+    ],
+    "population": "Medical experts generating questions from 100+ MIMIC-III, version 1.4, discharge summaries",
+    "summary": "Questions asked by medical experts reading MIMIC-III discharge summaries, each paired with the text snippet that triggered it, released to support research on clinical question answering and question generation."
+  },
+  "prompt_version": "v1"
+}

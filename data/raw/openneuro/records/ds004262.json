@@ -1,0 +1,104 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004262",
+  "payload": {
+    "created": "2022-09-07T11:58:29.943Z",
+    "id": "ds004262",
+    "latestSnapshot": {
+      "created": "2022-09-07T12:37:47.000Z",
+      "description": {
+        "Authors": [
+          "Cameron D. Hassall",
+          "Yan Yan",
+          "Laurence T. Hunt"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004262.v1.0.0",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Continuous Feedback Processing",
+        "ReferencesAndLinks": null
+      },
+      "readme": "# Continuous Feedback Processing\n\nTwenty-one participants learned to predict the final level of an animated rising bar. Following the appearance of a fixation cross, participants used the mouse to indicate their guess (i.e., how high they thought the bar would rise). After a delay, participants watched the bar rise to its final level. Points were awarded based on the distance between their guess and the actual level. Each round was cued by the appearance of a gnome (cover story: the gnomes are playing a strongman game while visiting a fair). Cues varied in the degree to which the outcome was predictable (highly predictable, somewhat predictable, unpredictable).  \n\nParticipant 11 was excluded from the analysis due to excessive artifacts.  \n\nTiming  \nfixation cross (400-600 ms) -> gnome cue (1500 ms) -> bar outline (until response) -> animation (1 degree per second until complete) -> final outcome (1000 ms)\n\nConditions (Gnome Types)  \n1: highly predictable - consistently low  \n2: highly predictable - consistently high  \n3: unpredictable - low or high with equal probability  \n4: somewhat predictable - usually (80%) low, sometimes high  \n5: somewhat predictable - usually (80%) high, sometimes low  \n6: unpredictable - random uniform distribution  \n\nTrigger Modifiers  \nAdd 0: Fixation cross  \nAdd 10: Cue (gnome) onset  \nAdd 20: Bar outline appears  \nAdd 30: Participant response  \nAdd 40: Start of animation  \nAdd 50: End of animation (and start of 1-second delay)",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "eeg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [],
+        "size": 3728371669,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21"
+        ],
+        "tasks": [
+          "gnomes"
+        ],
+        "totalFiles": 194
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        23,
+        22,
+        23,
+        25,
+        27,
+        29,
+        26,
+        41,
+        33,
+        25,
+        24,
+        25,
+        24,
+        22,
+        28,
+        27,
+        21,
+        23,
+        24,
+        26,
+        24
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "eeg"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2022-09-07T12:52:02.040Z"
+  },
+  "source": "openneuro"
+}

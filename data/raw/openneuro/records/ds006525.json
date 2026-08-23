@@ -1,0 +1,141 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006525",
+  "payload": {
+    "created": "2025-08-01T16:44:42.411Z",
+    "id": "ds006525",
+    "latestSnapshot": {
+      "created": "2025-08-01T17:19:32.000Z",
+      "description": {
+        "Authors": [
+          "Computational Neuroimaging and Neuroengineering Lab ar the University of Oklahoma"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006525.v1.0.0",
+        "Funding": [
+          "OPTIONAL. List of sources of funding (grant numbers)"
+        ],
+        "HowToAcknowledge": "Cite the following paper.\n33.\tShou GF, Yuan H, Li C, Chen YF, Chen YX, and Ding L: Whole-brain Electrophysiological Functional Connectivity Dynamics in Resting-state EEG, Journal of Neural Engineering, 17(2): 026016, 2020.",
+        "License": "CC0",
+        "Name": "Resting EEG",
+        "ReferencesAndLinks": [
+          "OPTIONAL. List of references to publication that contain information on the dataset, or links",
+          "https://github.com/Donders-Institute/bidscoin",
+          "doi: 10.1088/1741-2552/ab7ad3",
+          "doi: 10.1016/j.neuroimage.2022.119461",
+          "doi: 10.1016/j.neuroimage.2025.121408"
+        ]
+      },
+      "readme": "Introduction: The EEG data was recorded using the 128-channel Amps 300 amplifier (Electrical Geodesics Inc., OR, USA) at a sampling frequency of 1000 Hz. \nThe EEG data acquisition was conducted  during the resting.\nStructural MRI data for the same participants were acquired at the University of Oklahoma Health Science Center (OUHSC) MRI facility using a GE MR750 scanner. The scans were obtained with GE’s BRAVO sequence, with a field of view (FOV) of 240 mm and 180 axial slices per slab\n\nPreprocessing in EEGLAB: After the data acquisition, a band-pass filter (0.5–100 Hz) and a notch filter (58–62 Hz) were applied to remove noise. \nNoisy channels and artifacts (e.g., from eye blinks, muscle movements, or heartbeats) were identified and removed. \nBad channels were replaced using interpolation, and the data was re-referenced to the average of all electrodes. \nThe data was then sampled down to 250 Hz to reduce file size while keeping enough detail. No data segments were removed to ensure the continuity needed for later analysis. \n\n\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "eeg",
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 3223158965,
+        "subjects": [
+          "032",
+          "002",
+          "031",
+          "034",
+          "033",
+          "053",
+          "037",
+          "024",
+          "028",
+          "027",
+          "005",
+          "052",
+          "036",
+          "026",
+          "010",
+          "042",
+          "023",
+          "039",
+          "030",
+          "020",
+          "012",
+          "013",
+          "029",
+          "017",
+          "043",
+          "059",
+          "007",
+          "046",
+          "035",
+          "004",
+          "011",
+          "051",
+          "001",
+          "047"
+        ],
+        "tasks": [
+          "rest",
+          "resting"
+        ],
+        "totalFiles": 311
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "10.1016/j.neuroimage.2022.119461",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "NSF",
+      "modalities": [
+        "eeg",
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "Resting",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2025-08-01T17:20:18.812Z"
+  },
+  "source": "openneuro"
+}

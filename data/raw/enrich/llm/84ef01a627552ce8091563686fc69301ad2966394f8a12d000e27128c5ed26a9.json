@@ -1,0 +1,52 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:84ef01a627552ce8091563686fc69301ad2966394f8a12d000e27128c5ed26a9",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "histopathologically-proven high-grade gliomas",
+        "label": "high-grade glioma"
+      },
+      {
+        "evidence": "post-operative high-grade glioma multimodal MRI",
+        "label": "post-operative brain tumor"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "neurology",
+      "oncology",
+      "surgery"
+    ],
+    "id": "tcia:ucsd-ptgbm",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "multimodal MRI (UCSD-PTGBM) dataset",
+        "value": "MRI"
+      },
+      {
+        "evidence": "multishell diffusion and perfusion imaging techniques",
+        "value": "dMRI"
+      },
+      {
+        "evidence": "histopathologically-proven high-grade gliomas",
+        "value": "pathology"
+      },
+      {
+        "evidence": "IDH mutation status and MGMT promoter methylation status",
+        "value": "genomics"
+      },
+      {
+        "evidence": "overall survival and progression free survival information",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "243 timepoints from 178 subjects (mean age 56 +/- 13 years [std], 116 men, 62 women) with histopathologically-proven high-grade gliomas",
+    "summary": "Post-operative brain MRI from patients with high-grade glioma, imaged on 3 Tesla scanners with 3D, diffusion and perfusion sequences, plus tumor segmentations, IDH and MGMT status, and survival information."
+  },
+  "prompt_version": "v1"
+}

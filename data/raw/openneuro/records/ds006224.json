@@ -1,0 +1,56 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006224",
+  "payload": {
+    "created": "2025-05-12T22:15:22.062Z",
+    "id": "ds006224",
+    "latestSnapshot": {
+      "created": "2025-05-13T19:38:10.000Z",
+      "description": {
+        "Authors": [
+          "Hunter P Twedt",
+          "Brooke E Yeager",
+          "Jacob Simmering",
+          "Jordan L Schultz",
+          "Nandakumar S Narayanan"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006224.v1.0.0",
+        "Funding": null,
+        "HowToAcknowledge": "Please cite the PPMI dataset (Marek, K., Chowdhury, S., Siderowf, A., Lasch, S., Coffey, C. S., Caspell‐Garcia, C., ... & Larsen, L. (2018). The Parkinson's progression markers initiative (PPMI)–establishing a PD biomarker cohort. Annals of clinical and translational neurology, 5(12), 1460-1477)",
+        "License": "CC0",
+        "Name": "Cortical connectivity predicts cognition across time in Parkinson's Disease",
+        "ReferencesAndLinks": null
+      },
+      "readme": "Cortical connectivity predicts cognition across time in Parkinson's disease\r\nHunter P. Twedt, Brooke E. Yeager, Jacob Simmering, Jordan L. Schultz, & Nandakumar S. Narayanan\r\n\r\nDataset description:\r\n\r\n27 participants were selected from the PPMI dataset.\r\nThese data are found within the folder 'BIDS'.\r\nWithin 'BIDS' are each participant's folders containing their respective MRI data.\r\nWithin each of these participant folders are three sessions corresponding to Visits 1, 2, and 3 that are discussed in the manuscript.\r\nIn this regard, 'ses-01' corresponds to 'Visit 1', 'ses-02' corresponds to 'Visit 2', and 'ses-03' corresponds to 'Visit 3'.\r\nWithin each 'ses-' folder are 'anat' and 'func' folders containing respective MRI data in .nii format.\r\nRaw DICOMs from the PPMI database were converted to NIFTI using MRIcroGL.\r\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [],
+        "secondaryModalities": [],
+        "sessions": [],
+        "size": 3429,
+        "subjects": [],
+        "tasks": [],
+        "totalFiles": 3
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": "10.1002/acn3.644",
+      "dataProcessed": null,
+      "dxStatus": "Parkinson's Disease",
+      "grantFunderName": "",
+      "modalities": [],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": "Longitudinal"
+    },
+    "publishDate": "2025-05-13T19:38:59.048Z"
+  },
+  "source": "openneuro"
+}

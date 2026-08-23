@@ -1,0 +1,54 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006557",
+  "payload": {
+    "created": "2025-08-13T11:51:14.396Z",
+    "id": "ds006557",
+    "latestSnapshot": {
+      "created": "2025-09-29T17:05:19.000Z",
+      "description": {
+        "Authors": [
+          "František Váša",
+          "Carly Bennallick",
+          "Niall J. Bourke",
+          "Francesco Padormo",
+          "Paul Cawley",
+          "Tomoki Arichi",
+          "Tobias C. Wood",
+          "Robert Leech",
+          "Steven C. R. Williams"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006557.v1.0.2",
+        "Funding": [
+          "National Institute for Health and Care Research (NIHR)",
+          "Bill & Melinda Gates Foundation"
+        ],
+        "HowToAcknowledge": "Please cite: Váša et al. Imaging Neuroscience 2025, https://direct.mit.edu/imag/article/doi/10.1162/IMAG.a.930",
+        "License": "CC0",
+        "Name": "Ultra-low-field brain MRI: test-retest reliability and correspondence to high-field MRI",
+        "ReferencesAndLinks": null
+      },
+      "readme": "# Ultra-low-field brain MRI: test-retest reliability and correspondence to high-field MRI\n\nContact: [frantisek.vasa@kcl.ac.uk](mailto:frantisek.vasa@kcl.ac.uk)\n\n## Overview\n\nThese data were collected as part of a study to assess the test-retest reliability of 64 mT ultra-low-field MRI morphometry, and correspondence to 3T high-field MRI (https://direct.mit.edu/imag/article/doi/10.1162/IMAG.a.930).\n\nData types included are defaced T<sub>1</sub>-weighted and T<sub>2</sub>-weighted structural MRI images. At 64 mT, images were acquired in multiple orientations and voxel resolutions.\n\n## Methods\n\n### Subjects\n\n23 healthy adults (11 females, 12 males, age = 20 to 69 years). To obtain a sample balanced for age and sex, a minimum of 2 male and 2 female participants were recruited from each of the following 5 age-strata: 20-29 years, 30-39 years, 40-49 years, 50-59 years and 60-69 years.\n\n### MR protocol\n\nMRI data for each participant were acquired during two scanning sessions, held no more than 36 days apart. During the first session, at the Centre for Neuroimaging Sciences (CNS; Institute of Psychiatry, Psychology and Neuroscience, King’s College London), participants were scanned for 45 minutes on a GE SIGNA Premier 3 T high-field scanner with a 48-channel head coil (GE Healthcare, Waukesha, WI), followed immediately by a 1-hour protocol on a Hyperfine Swoop 64 mT ultra-low-field scanner (Hyperfine Inc., Guildford, CT). During the second session, at the Evelina Newborn Imaging Centre (ENIC; St. Thomas’s Hospital, Guys and St. Thomas’s NHS Foundation Trust), participants were scanned for 1 hour on a second Hyperfine Swoop system, identical to the first, and running the same software version (rc8.6.0).\n\n#### 3 T MRI\n\nThe 3 T GE Premier high-field protocol is denoted ses-GE. This included T<sub>1</sub>-weighted and T<sub>2</sub>-weighted scans, acquired at 1×1×1 mm<sup>3</sup> resolution.\n\n#### 64 mT MRI\n\nThe 64 mT protocols are denoted ses-HFC (Centre for Neuroimaging Sciences, acquired on the same day as ses-GE) and ses-HFE (Evelina Newborn Imaging Centre, acquired during a second session, no more than 36 days later). Both sessions included T<sub>1</sub>w and T<sub>2</sub>w scans, acquired using non-isotropic product sequences (T<sub>1</sub>w: 1.6×1.6×5 mm<sup>3</sup>; T<sub>2</sub>w: 1.5×1.5×5 mm<sup>3</sup>) with high resolution in the axial, sagittal or coronal plane, respectively referred to as AXI, SAG, and COR. Additionally, a research agreement with Hyperfine Inc. enabled acquisition of a custom isotropic sequence (T<sub>1</sub>w: 2.3×2.3×2.3 mm<sup>3</sup>, T<sub>2</sub>w: 2.2×2.2×2.2 mm<sup>3</sup>), referred to as ISO. All scans were acquired on both scanners, except T<sub>1</sub>w ISO scans, which were only acquired during the first scanning session (HFC).",
+      "summary": null,
+      "tag": "1.0.2"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": null,
+      "associatedPaperDOI": "https://doi.org/10.1101/2024.08.14.607942",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "National Institutes of Health Research (NIHR), Gates Foundation",
+      "modalities": [],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2025-08-13T16:45:09.645Z"
+  },
+  "source": "openneuro"
+}

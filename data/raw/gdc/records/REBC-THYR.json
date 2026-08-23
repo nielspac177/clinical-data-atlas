@@ -1,0 +1,88 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "REBC-THYR",
+  "payload": {
+    "dbgap_accession_number": null,
+    "disease_type": [
+      "Epithelial Neoplasms, NOS",
+      "Adenomas and Adenocarcinomas"
+    ],
+    "id": "REBC-THYR",
+    "name": "Comprehensive genomic characterization of radiation-related papillary thyroid cancer in the Ukraine",
+    "primary_site": [
+      "Thyroid gland"
+    ],
+    "program": {
+      "dbgap_accession_number": "phs001134",
+      "name": "REBC",
+      "program_id": "e0b1fbd1-2a75-5c16-b93a-6c506addec68"
+    },
+    "project_id": "REBC-THYR",
+    "releasable": true,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 449,
+      "data_categories": [
+        {
+          "case_count": 449,
+          "data_category": "Sequencing Reads",
+          "file_count": 4814
+        },
+        {
+          "case_count": 394,
+          "data_category": "Simple Nucleotide Variation",
+          "file_count": 2692
+        },
+        {
+          "case_count": 394,
+          "data_category": "Copy Number Variation",
+          "file_count": 1804
+        },
+        {
+          "case_count": 9,
+          "data_category": "Biospecimen",
+          "file_count": 9
+        },
+        {
+          "case_count": 439,
+          "data_category": "Transcriptome Profiling",
+          "file_count": 3814
+        },
+        {
+          "case_count": 394,
+          "data_category": "Somatic Structural Variation",
+          "file_count": 1810
+        },
+        {
+          "case_count": 439,
+          "data_category": "Structural Variation",
+          "file_count": 3640
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 395,
+          "experimental_strategy": "WGS",
+          "file_count": 7403
+        },
+        {
+          "case_count": 438,
+          "experimental_strategy": "RNA-Seq",
+          "file_count": 8168
+        },
+        {
+          "case_count": 437,
+          "experimental_strategy": "miRNA-Seq",
+          "file_count": 3003
+        }
+      ],
+      "file_count": 18583,
+      "file_size": 390154717102470
+    }
+  },
+  "source": "gdc"
+}

@@ -1,0 +1,41 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:c250807e626304eabc0ce0ee048f4ca6a600cc41824b3a87f5ea6573ccfeedca",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Soft Tissue Tumors and Sarcomas, NOS",
+        "label": "Soft Tissue Tumors and Sarcomas, NOS"
+      },
+      {
+        "evidence": "sarcoma",
+        "label": "sarcoma"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "pulmonology"
+    ],
+    "id": "gdc:CMI-ASC",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "WXS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "Transcriptome Profiling",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "36 human cases of angiosarcoma across multiple anatomic sites",
+    "summary": "Patient-partnered Count Me In angiosarcoma project covering tumors at many sites including lung, breast, heart, skin and bladder, with whole-exome sequencing, RNA-Seq, structural variation and clinical data."
+  },
+  "prompt_version": "v1"
+}

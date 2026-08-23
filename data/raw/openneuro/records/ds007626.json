@@ -1,0 +1,113 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007626",
+  "payload": {
+    "created": "2026-04-02T23:42:39.941Z",
+    "id": "ds007626",
+    "latestSnapshot": {
+      "created": "2026-05-08T21:53:59.000Z",
+      "description": {
+        "Authors": [
+          "Hindy, Nicholas C.",
+          "Coleman, Ryan",
+          "Selvam, Surya Rajan Meenakshi"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007626.v1.0.0",
+        "Funding": [],
+        "HowToAcknowledge": "Please cite: Hindy, N. C., Coleman, R., & Selvam, S. R. M. (in press). Hippocampal reactivation trades episodic detail for semantic gist in human memory. Journal of Cognitive Neuroscience.",
+        "License": "CC0",
+        "Name": "Hippocampal Reactivation Trades Episodic Detail for Semantic Gist in Human Memory",
+        "ReferencesAndLinks": []
+      },
+      "readme": "# Hippocampal Reactivation Trades Episodic Detail for Semantic Gist in Human Memory\n\n## Overview\n\nThis dataset accompanies Hindy, Coleman, and Selvam (in press, Journal of Cognitive Neuroscience). Twenty-four participants encoded auditory DRM word lists spoken in male or female voices, creating orthogonal semantic (list theme) and episodic (voice source) information. Using high-resolution fMRI, we tracked list-specific reactivation in hippocampal subfields during a 90-second post-encoding delay. CA1 reactivation frequency showed opposing relationships with subsequent memory: greater reactivation predicted increased false recognition of semantic lures (gist extraction) and decreased accuracy for voice discrimination (source memory).\n\n## Task Description\n\nEach of five fMRI runs contained three phases:\n\n1. **Encoding**: Five 6-word DRM lists presented auditorily (male/female synthetic voices, 3 words per voice per list, randomly intermixed). Each list occupied 24 s with 8-s inter-list intervals. Participants indicated word voice via button press.\n2. **Delay**: 90-second post-encoding period with self-paced odd/even parity judgments on single digits.\n3. **Test**: Recognition confidence (6-point scale) for targets, gist lures, and foils; source voice discrimination (male/female) with 3-point confidence for items endorsed as \"old.\"\n\n## Participants\n\n- N = 24 (16 female, 8 male)\n- Age range: 19-31 years\n- Recruited from the University of Louisville community\n- Compensated $20/hour\n- No participants excluded\n\n## MRI Acquisition\n\nAll data were collected on a 3T Siemens Skyra with a 20-channel head coil at the University of Louisville.\n\n### Functional (task-drm)\nT2*-weighted multi-band EPI (CMRR sequence), TR = 1.6 s, TE = 30 ms, flip angle = 66 deg, voxel size = 1.745 x 1.745 x 1.9 mm, 63 axial slices (interleaved), 110 x 110 matrix, 192 mm FOV, multiband acceleration factor 3, in-plane GRAPPA factor 4. Partial coverage focused on medial temporal lobes. 280 volumes per run, 5 runs per subject. Each run began with 8 s of rest to approach steady-state magnetization.\n\n### Diffusion (dwi)\nSingle-shell diffusion-weighted EPI (ep2d_diff), TR = 6.8 s, TE = 94 ms, flip angle = 90 deg, voxel size = 2.5 mm isotropic, 49 axial slices (interleaved), 96 x 96 matrix, 240 mm FOV, b = 2000 s/mm2 with 50 diffusion directions and 6 interspersed b=0 volumes per run (56 volumes total). 12 runs per subject (600 diffusion-weighted volumes total).\n\n### T1w structural\nMPRAGE, 0.8 mm isotropic.\n\n### T2w structural\nTurbo spin-echo, 0.44 x 0.44 x 1.5 mm. Used for hippocampal subfield segmentation with ASHS.\n\n### Fieldmap\nGRE magnitude and phase images collected at end of experiment for B0 distortion correction.\n\n## Ethics\n\nUniversity of Louisville IRB Protocol #17.1065\n\n## Contact\n\nNicholas C. Hindy\nDepartment of Psychology\nCollege of Charleston\nhindync@cofc.edu\n\n## License\n\nCC0\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 50737459810,
+        "subjects": [
+          "19",
+          "12",
+          "04",
+          "10",
+          "06",
+          "07",
+          "17",
+          "24",
+          "14",
+          "21",
+          "15",
+          "16",
+          "11",
+          "18",
+          "05",
+          "13",
+          "08",
+          "09",
+          "22",
+          "01",
+          "02",
+          "03",
+          "23",
+          "20"
+        ],
+        "tasks": [
+          "drm"
+        ],
+        "totalFiles": 415
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        22,
+        24,
+        25,
+        25,
+        26,
+        23,
+        null,
+        22,
+        31,
+        24,
+        28,
+        25,
+        25,
+        25,
+        23,
+        21,
+        19,
+        18,
+        21,
+        20,
+        20,
+        20,
+        18,
+        19
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "Within-subjects, event-related",
+      "studyDomain": "Memory",
+      "studyLongitudinal": "Task-Based fMRI"
+    },
+    "publishDate": "2026-07-03T20:00:49.974Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,82 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007486",
+  "payload": {
+    "created": "2026-03-07T00:55:44.228Z",
+    "id": "ds007486",
+    "latestSnapshot": {
+      "created": "2026-03-13T17:06:06.000Z",
+      "description": {
+        "Authors": [
+          "TODO:",
+          "First1 Last1",
+          "First2 Last2",
+          "..."
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007486.v1.0.0",
+        "Funding": [],
+        "HowToAcknowledge": "TODO: describe how to acknowledge -- either cite a corresponding paper, or just in acknowledgement section",
+        "License": "CC0",
+        "Name": "Social Reward Processing, Response Inhibition, and Cue Reactivity in Problem Gamblers",
+        "ReferencesAndLinks": [
+          "TODO",
+          "List of papers or websites"
+        ]
+      },
+      "readme": "# This Dataset is a Work in Progress\n\n### Persons responsible for dataset \n\n- Dr. David V. Smith (david.v.smith@temple.edu; Laboratory PI)\n- Cooper Joseph Sharp (cooper.sharp@temple.edu or cooperjosephsharp@gmail.com; Project Lead)\n\n## Overview\n\n- **Project Name:** G25\n- **Data collection:** Occurring from 2025 to 2026\n\n### Purpose\n\nThis project investigates differences in reward and social processing between gamblers and non-gamblers. Using fMRI and behavioral measures, the study examines three key domains: social decision-making and reward sensitivity (Trust Task), inhibitory control and risk-taking (Stop Signal Task), and neural responses to gambling-related advertising (Passive Ad Viewing).\n\n### Tasks\n\n#### Trust Task (Investment Game)\nMeasures monetary reward response, response to social reciprocation and defection, sharing behaviors, and whether perceived closeness impacts sharing or brain response. Participants interact with four partners whose closeness ratings were collected during an online portion of the study using the Inclusion of Others in the Self scale. Reciprocation occurs when a partner shares the invested amount back with the participant; defection occurs when they do not.\n\n#### SST (Stop Signal Task)\nMeasures inhibitory control between gamblers and non-gamblers, as well as betting behaviors. Participants can bet $0, $10, or $20 before each round in hopes of doubling their bet based on their performance. Betting decisions are made after learning about performance on the previous round.\n\n#### Passive Ad Viewing (adview)\nMeasures whether gamblers have different brain responses to gambling-specific advertisements compared to normally enticing ads and basic product ads. The task includes 30 real ads in each category (90 ads total).\n\n### Dataset Contents\n\n- **Expected sample size:** 60 participants (30 gamblers, 30 non-gamblers)\n- **Status:** Data collection ongoing\n- **Data types:** \n  - fMRI data (imaging and response) for all three tasks\n  - DTI data (optional/supplementary, when time permits)\n  - Behavioral data (partner closeness ratings, advertisement recall post-scan)\n\n### Control Variables\n\n- **Subject pool:** Age 18-30, top two quintiles on BAS subscale (BIS/BAS) and Sensitivity to Reward subscale (SPSRQ) based on pilot data\n- **Environment:** All scanning performed on same 3T Siemens Prisma scanner with XA60 software at Temple University\n- **Task order:** Fixed across all participants (not counterbalanced)\n\n## Methods\n\n### Subjects\n\nThis study recruits two groups of participants aged 18-30 years:\n\n**Gamblers** are defined as individuals who:\n- Have gambled at least once in the past 30 days\n- Have endorsed at least one item on the Brief Biosocial Gambling Screen (BBGS)\n- Have a score of 1-4 on the South Oaks Gambling Screen (SOGS)\n\n**Non-gamblers** are defined as individuals who:\n- Have not gambled in the past 30 days\n- Have a score of 0 on the South Oaks Gambling Screen (SOGS)\n- Have not endorsed any items on the BBGS\n\n**Inclusion criteria:**\n- Age 18-30 years\n- Score in the top two quintiles on the BAS subscale of the BIS/BAS scale\n- Score in the top two quintiles on the Sensitivity to Reward subscale of the SPSRQ\n\n**Exclusion criteria:**\n- Bipolar disorder\n- Schizophrenia\n- Obsessive-compulsive disorder (OCD)\n- Standard MRI safety contraindications\n\n### Apparatus\n\nAll scanning is performed on a 3 Tesla Siemens Prisma scanner with XA60 software at Temple University in Philadelphia, PA.\n\n### Task Organization\n\nTasks are administered in a fixed order without counterbalancing:\n1. Trust Task (3 runs)\n2. Stop Signal Task (3 runs)\n3. Passive Ad Viewing (1 run)\n\nDTI data is collected when time permits as optional/supplementary data. No breaks are provided between tasks.\n\n### Task Details\n\n#### Trust Task (Investment Game)\n- **Runs:** 3\n- **Trials per run:** 48\n- **Partners:** 4 (closeness ratings collected during online portion of study using Inclusion of Others in the Self scale)\n- **Structure:** Participants make investment decisions and observe partner responses (reciprocation or defection)\n\n#### Stop Signal Task (SST)\n- **Runs:** 3\n- **Trials per run:** 74\n- **Betting:** Participants bet $0, $10, or $20 before each round after learning about their performance on the previous round, with the opportunity to double their bet based on performance\n\n#### Passive Ad Viewing\n- **Runs:** 1\n- **Stimuli:** 90 real advertisements (30 gambling-specific, 30 normally enticing, 30 basic product)\n- **Post-scan assessment:** Advertisement recall task\n\n### Additional Data Acquired\n\n- **Pre-scan:** Online closeness ratings for Trust Task partners (Inclusion of Others in the Self scale)\n- **Post-scan:** Advertisement recall assessment\n- **Optional:** DTI data (collected when time permits)\n\n### Experimental Location\n\nTemple University, Philadelphia, PA\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural",
+          "mri_diffusion"
+        ],
+        "sessions": [],
+        "size": 45170298170,
+        "subjects": [
+          "11028",
+          "11039",
+          "10665",
+          "11450",
+          "10562"
+        ],
+        "tasks": [
+          "adview",
+          "SST",
+          "trust"
+        ],
+        "totalFiles": 1291
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        19,
+        23,
+        24,
+        23,
+        27
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2026-03-13T17:30:30.099Z"
+  },
+  "source": "openneuro"
+}

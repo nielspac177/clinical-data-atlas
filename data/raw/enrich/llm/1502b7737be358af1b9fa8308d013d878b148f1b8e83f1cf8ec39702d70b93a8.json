@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:1502b7737be358af1b9fa8308d013d878b148f1b8e83f1cf8ec39702d70b93a8",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "93 patients with idiopathic PD",
+        "label": "idiopathic PD"
+      },
+      {
+        "evidence": "73 healthy controls",
+        "label": "healthy controls"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology"
+    ],
+    "id": "physionet:gaitpdb",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "vertical ground reaction force records",
+        "value": "wearable"
+      },
+      {
+        "evidence": "measures of gait",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": "93 patients with idiopathic PD (mean age: 66.3 years; 63% men) and 73 healthy controls (mean age: 66.3 years; 55% men).",
+    "summary": "Gait measures from patients with idiopathic Parkinson's disease and healthy controls, recorded as vertical ground reaction forces while walking at a self-selected pace on level ground for about two minutes."
+  },
+  "prompt_version": "v1"
+}

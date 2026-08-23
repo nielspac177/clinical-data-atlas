@@ -1,0 +1,61 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:c9857a4936a920cdcbdd739d615182edbb85598750a5e718b27263aa99be9f78",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Cervical Squamous Cell Carcinoma and Endocervical Adenocarcinoma",
+        "label": "Cervical Squamous Cell Carcinoma and Endocervical Adenocarcinoma"
+      },
+      {
+        "evidence": "Adenomas and Adenocarcinomas",
+        "label": "Adenomas and Adenocarcinomas"
+      },
+      {
+        "evidence": "Cystic, Mucinous and Serous Neoplasms",
+        "label": "Cystic, Mucinous and Serous Neoplasms"
+      },
+      {
+        "evidence": "Complex Epithelial Neoplasms",
+        "label": "Complex Epithelial Neoplasms"
+      },
+      {
+        "evidence": "Squamous Cell Neoplasms",
+        "label": "Squamous Cell Neoplasms"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "obstetrics_gynecology"
+    ],
+    "id": "gdc:TCGA-CESC",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Tissue Slide, Diagnostic Slide",
+        "value": "pathology"
+      },
+      {
+        "evidence": "WXS, miRNA-Seq, WGS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "RNA-Seq",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Proteome Profiling",
+        "value": "proteomics"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "307 human cases; sites ovary and cervix uteri",
+    "summary": "TCGA project on cervical squamous cell carcinoma and endocervical adenocarcinoma, sampling ovary and cervix uteri. Covers sequencing reads, variation, transcriptome profiling, DNA methylation, proteome profiling, biospecimen and clinical data, plus slides."
+  },
+  "prompt_version": "v1"
+}

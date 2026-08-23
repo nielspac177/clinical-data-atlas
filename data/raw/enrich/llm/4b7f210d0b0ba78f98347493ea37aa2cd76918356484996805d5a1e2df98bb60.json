@@ -1,0 +1,28 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:4b7f210d0b0ba78f98347493ea37aa2cd76918356484996805d5a1e2df98bb60",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "pulmonology",
+      "other"
+    ],
+    "id": "physionet:mimic-cxr-jpg",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Chest x-rays in JPG format",
+        "value": "xray"
+      },
+      {
+        "evidence": "structured labels derived from free-text radiology reports",
+        "value": "clinical_notes"
+      }
+    ],
+    "population": null,
+    "summary": "Processed version of MIMIC-CXR providing 377,110 JPG chest radiographs with structured labels derived from 227,827 free-text radiology reports, plus standard reference data splits and image labels."
+  },
+  "prompt_version": "v1"
+}

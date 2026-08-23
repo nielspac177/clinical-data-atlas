@@ -1,0 +1,99 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004661",
+  "payload": {
+    "created": "2023-08-05T16:52:47.866Z",
+    "id": "ds004661",
+    "latestSnapshot": {
+      "created": "2024-09-06T14:53:36.000Z",
+      "description": {
+        "Authors": [
+          "Tony Johnson",
+          "Stephen Gordon",
+          "Jon Touryan",
+          "Kevin King"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004661.v1.1.0",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "ANDI",
+        "ReferencesAndLinks": [
+          ""
+        ]
+      },
+      "readme": "Participants (N=17, all males) with an average age of 32.8 years performed a guided visual search task in parallel with a second binaurally presented auditory task (Ries, et al., 2016). EEG data from each participant were recorded using a 64-channel BioSemi ActiveTwo system digitized at 512 Hz. Four external electrodes were used to record bipolar horizontal and vertical EOG signals, and a single external electrode was placed on each of the left and right mastoids to provide the reference signals. Fourteen participants were included in the original study, with three additional participants later added, resulting in 17 participants.\n\nThe visual search task for this experiment required participants to follow a red annulus around the screen and press a button if the annulus stopped at a prespecified target. The auditory task for this experiment was an N-back matching task in which participants listened to a string of numbers presented at approximately 2 second intervals and were required to indicate whether the current number matched a previously presented number. For the N=0, this would be the number immediately prior. For N=1 this would be the number one level before that, and so on. In the example string “1”, “1”, “2”, “1”, “3”, “2”, the second “1” should generate a match in the N=0 condition, the third “1” should generate a match in the N=1 condition, and the second “2” should generate a match in the N=2 condition. The task was composed of a baseline condition in which participants were presented with both visual and auditory stimuli but were instructed to ignore the auditory component. Next, were three dual-task conditions with N-back levels of N=0, N=1, and N=2. \n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "eeg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [],
+        "size": 1505576944,
+        "subjects": [
+          "003",
+          "012",
+          "011",
+          "013",
+          "010",
+          "005",
+          "007",
+          "014",
+          "016",
+          "002",
+          "001",
+          "009",
+          "008",
+          "004",
+          "006",
+          "015",
+          "017"
+        ],
+        "tasks": [
+          "nback"
+        ],
+        "totalFiles": 90
+      },
+      "tag": "1.1.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "eeg"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2023-08-05T16:56:43.370Z"
+  },
+  "source": "openneuro"
+}

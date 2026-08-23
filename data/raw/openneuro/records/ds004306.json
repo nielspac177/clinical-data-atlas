@@ -1,0 +1,97 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004306",
+  "payload": {
+    "created": "2022-10-25T17:34:10.377Z",
+    "id": "ds004306",
+    "latestSnapshot": {
+      "created": "2023-09-27T14:44:14.000Z",
+      "description": {
+        "Authors": [
+          "Holly Wilson",
+          "Mohammad Golbabaee",
+          "Michael Proulx",
+          "Eamonn O'Neill"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004306.v1.0.2",
+        "Funding": [
+          "EPSRC"
+        ],
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "EEG Semantic Imagination and Perception Dataset",
+        "ReferencesAndLinks": [
+          "",
+          "",
+          ""
+        ]
+      },
+      "readme": "\nThis dataset consists of electroencephalography (EEG) signals acquired with a 124 EEG ANT-Neuro device. \n\n### Participants and Sessions\nThere are 13 participants included, ten performed one session and three performed two sessions. All participants had normal or corrected vision and hearing, apart from sub-16.\n\n### Task\nThe task consisted of imagining and perceiving stimuli from three modalities; visual pictorial, visual orthographic (writing) or auditory. Each of the stimuli belonged to one of three categories: guitar, flower and penguin. These categories were selected based on being semantically dissimilar to one another, and because there were all of 2 syllables. \n\n### Dataset Versions\nThe dataset provided consists of the raw EEG data, a pre-processed version, and an epoched version. \n\n",
+      "summary": {
+        "dataProcessed": true,
+        "modalities": [
+          "eeg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [
+          "01",
+          "02",
+          "03"
+        ],
+        "size": 686761341,
+        "subjects": [
+          "010",
+          "011",
+          "012",
+          "013",
+          "014",
+          "015",
+          "016",
+          "017",
+          "018",
+          "019",
+          "03",
+          "08"
+        ],
+        "tasks": [
+          "experiment"
+        ],
+        "totalFiles": 514
+      },
+      "tag": "1.0.2"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": true,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "eeg"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "EEG Neural Decoding",
+      "studyLongitudinal": "Other"
+    },
+    "publishDate": "2023-01-24T22:01:03.726Z"
+  },
+  "source": "openneuro"
+}

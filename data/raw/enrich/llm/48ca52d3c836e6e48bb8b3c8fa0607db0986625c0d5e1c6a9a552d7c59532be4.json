@@ -1,0 +1,28 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:48ca52d3c836e6e48bb8b3c8fa0607db0986625c0d5e1c6a9a552d7c59532be4",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "paroxysmal or sustained atrial fibrillation (AF)",
+        "label": "atrial fibrillation"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:ltafdb",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "84 long-term ECG recordings",
+        "value": "ECG"
+      }
+    ],
+    "population": "Subjects with paroxysmal or sustained atrial fibrillation",
+    "summary": "Long-term ECG recordings from subjects with paroxysmal or sustained atrial fibrillation; each record holds two simultaneously recorded signals, with record durations typically spanning about a day."
+  },
+  "prompt_version": "v1"
+}

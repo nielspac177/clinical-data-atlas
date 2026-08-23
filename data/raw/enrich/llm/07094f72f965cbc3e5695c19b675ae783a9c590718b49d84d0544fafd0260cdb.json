@@ -1,0 +1,45 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:07094f72f965cbc3e5695c19b675ae783a9c590718b49d84d0544fafd0260cdb",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "264 patients with glioblastoma",
+        "label": "glioblastoma"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "surgery"
+    ],
+    "id": "tcia:cfb-gbm",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Pre-treatment MRI (t0) was acquired for all patients",
+        "value": "MRI"
+      },
+      {
+        "evidence": "diffusion weighted imaging",
+        "value": "dMRI"
+      },
+      {
+        "evidence": "CTscan machine",
+        "value": "CT"
+      },
+      {
+        "evidence": "radiotherapy dose and tumor delineation",
+        "value": "radiotherapy"
+      },
+      {
+        "evidence": "Clinical data : survival, age, WHO status, gender",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "264 patients with glioblastoma involved in the clinical routine",
+    "summary": "Pre- and post-treatment MRI from glioblastoma patients seen in clinical routine, with CT, radiotherapy dose and tumor delineation for some, plus clinical variables including survival, IDH status and MGMT methylation."
+  },
+  "prompt_version": "v1"
+}

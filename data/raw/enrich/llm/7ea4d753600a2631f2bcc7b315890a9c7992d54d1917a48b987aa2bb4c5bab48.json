@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:7ea4d753600a2631f2bcc7b315890a9c7992d54d1917a48b987aa2bb4c5bab48",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "critical_care",
+      "public_health"
+    ],
+    "id": "physionet:mimiciii",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "vital sign measurements made at the bedside",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "caregiver notes",
+        "value": "clinical_notes"
+      },
+      {
+        "evidence": "deidentified health-related data",
+        "value": "EHR"
+      }
+    ],
+    "population": "Over forty thousand patients who stayed in critical care units of the Beth Israel Deaconess Medical Center between 2001 and 2012",
+    "summary": "Deidentified records from critical care stays, covering demographics, bedside vital signs, laboratory results, procedures, medications, caregiver notes, imaging reports and mortality, supporting epidemiology, clinical decision-rule and tool development studies."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,46 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:8fd6f0f10f18a18f64df2efe7038bda727e231af5b4b4d990c3580e7c9b66374",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "pediatric patients with high-grade gliomas",
+        "label": "pediatric high-grade glioma"
+      },
+      {
+        "evidence": "diffuse midline gliomas (DMGs)",
+        "label": "diffuse midline glioma"
+      },
+      {
+        "evidence": "Pediatric central nervous system (CNS) tumors",
+        "label": "pediatric central nervous system tumors"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "oncology",
+      "pediatrics"
+    ],
+    "id": "tcia:brats-peds",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "multiparametric structural MRI",
+        "value": "MRI"
+      },
+      {
+        "evidence": "DMG/DIPG Registry",
+        "value": "registry"
+      },
+      {
+        "evidence": "demographic variables, and clinical outcomes such as overall and progression-free survival",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "457 pediatric patients with high-grade gliomas, primarily diffuse midline gliomas",
+    "summary": "Multi-institutional pediatric brain tumor resource with multiparametric structural MRI, expert tumor segmentations, acquisition parameters, demographics and survival outcomes, aggregated from pediatric neuro-oncology consortia for segmentation research."
+  },
+  "prompt_version": "v1"
+}

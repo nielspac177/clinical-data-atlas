@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:d16fa3a1f867622b638659570e7415f4f50b9b28755375f40a02d66b3c855f3b",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "invasive fungal infection (IFI)",
+        "label": "invasive fungal infection"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "infectious_disease",
+      "other"
+    ],
+    "id": "physionet:corpus-fungal-infections",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "cytology and histopathology reports",
+        "value": "pathology"
+      },
+      {
+        "evidence": "pathologist-produced free-text reports",
+        "value": "clinical_notes"
+      }
+    ],
+    "population": "283 de-identified cytology and histopathology reports",
+    "summary": "Corpus of de-identified cytology and histopathology reports annotated by infectious diseases physicians for invasive fungal infection concepts, certainty cues, and relations, released with the annotation schema for named entity and relation extraction work."
+  },
+  "prompt_version": "v1"
+}

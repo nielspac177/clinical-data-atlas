@@ -1,0 +1,103 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005574",
+  "payload": {
+    "created": "2024-10-15T20:04:55.411Z",
+    "id": "ds005574",
+    "latestSnapshot": {
+      "created": "2025-02-17T13:52:37.000Z",
+      "description": {
+        "Authors": [
+          "Zaid Zada",
+          "Samuel A. Nastase",
+          "Bobbi Aubrey",
+          "Itamar Jalon",
+          "Ariel Goldstein",
+          "Sebastian Michelmann",
+          "Haocheng Wang",
+          "Liat Hasenfratz",
+          "Werner Doyle",
+          "Daniel Friedman",
+          "Patricia Dugan",
+          "Lucia Melloni",
+          "Sasha Devore",
+          "Orrin Devinsky",
+          "Adeen Flinker",
+          "Uri Hasson"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005574.v1.0.2",
+        "Funding": [
+          "National Institutes of Health grant DP1HD091948",
+          "National Institutes of Health grant R01NS109367"
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "The \"Podcast\" ECoG dataset",
+        "ReferencesAndLinks": [
+          "https://hassonlab.github.io/podcast-ecog-tutorials",
+          "https://github.com/hassonlab/podcast-ecog-paper"
+        ]
+      },
+      "readme": "The \"Podcast\" ECoG dataset for modeling neural activity during natural story listening.\n\nWe introduce the “Podcast” electrocorticography (ECoG) dataset for modeling neural activity supporting natural narrative comprehension. This dataset combines the exceptional spatiotemporal resolution of human intracranial electrophysiology with a naturalistic experimental paradigm for language comprehension. In addition to the raw data, we provide a minimally preprocessed version in the high-gamma spectral band to showcase a simple pipeline and to make it easier to use. Furthermore, we include the auditory stimuli, an aligned word-level transcript, and linguistic features ranging from low-level acoustic properties to large language model (LLM) embeddings. We also include tutorials replicating previous findings and serve as a pedagogical resource and a springboard for new research. The dataset comprises 9 participants with 1,330 electrodes, including grid, depth, and strip electrodes. The participants listened to a 30-minute story with over 5,000 words. By using a natural story with high-fidelity, invasive neural recordings, this dataset offers a unique opportunity to investigate language comprehension.",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "ieeg",
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 3483284760,
+        "subjects": [
+          "08",
+          "06",
+          "05",
+          "09",
+          "01",
+          "04",
+          "02",
+          "03",
+          "07"
+        ],
+        "tasks": [
+          "podcast"
+        ],
+        "totalFiles": 77
+      },
+      "tag": "1.0.2"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "ieeg",
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2025-01-08T20:20:42.861Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,32 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "dfci-cancer-outcomes-ehr",
+  "payload": {
+    "abstract": "<p>Databases that link molecular data to clinical outcomes can inform precision cancer research into novel prognostic and predictive biomarkers. However, outside of clinical trials, cancer outcomes are typically recorded only in text form within electronic health records (EHRs). Artificial intelligence (AI) models have been trained to extract outcomes from individual EHRs. However, patient privacy restrictions have historically precluded dissemination of these models beyond the centers at which they were trained. In this study, the vulnerability of text classification models trained directly on protected health information to membership inference attacks was confirmed. A teacher-student distillation approach was applied to develop shareable models for annotating outcomes from imaging reports and medical oncologist notes. &lsquo;Teacher&rsquo; models trained on EHR data from Dana-Farber Cancer Institute (DFCI) were used to label imaging reports and discharge summaries from the Medical Information Mart for Intensive Care (MIMIC)-IV dataset. &lsquo;Student&rsquo; models were trained to use these MIMIC documents to predict the labels assigned by teacher models and sent to Memorial Sloan Kettering (MSK) for evaluation. The student models exhibited high discrimination across outcomes in both the DFCI and MSK test sets. These student models, &ldquo;DFCI-imaging-student&rdquo; and &ldquo;DFCI-medonc-student,&rdquo; are shared here.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 961999998,
+    "core_doi": "10.13026/mjv2-8h15",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 1038013498,
+    "public_project_uuid": "05dfa633-654d-40e8-a460-18043bf28f3d",
+    "publish_date": "2024-10-24",
+    "resource_type": "Model",
+    "short_description": "The DFCI-imaging-student and DFCI-medonc-student AI models for extracting cancer outcomes from imaging reports and medical oncologist notes from electronic health records.",
+    "slug": "dfci-cancer-outcomes-ehr",
+    "source_url": "https://physionet.org/content/dfci-cancer-outcomes-ehr/1.0.0/",
+    "title": "Shareable Artificial Intelligence to Extract Cancer Outcomes from Electronic Health Records for Precision Oncology Research",
+    "topics": [],
+    "version": "1.0.0",
+    "version_doi": "10.13026/h2nj-p344"
+  },
+  "source": "physionet"
+}

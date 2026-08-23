@@ -1,0 +1,94 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004091",
+  "payload": {
+    "created": "2022-03-31T07:27:05.096Z",
+    "id": "ds004091",
+    "latestSnapshot": {
+      "created": "2025-10-15T12:00:23.000Z",
+      "description": {
+        "Authors": [
+          "Martin Szinte",
+          "Gilles de Hollander",
+          "Marco Aqil",
+          "Serge Dumoulin",
+          "Tomas Knapen"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004091.v2.1.0",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "GAZE PRF \n",
+        "ReferencesAndLinks": null
+      },
+      "readme": "GAZE_PRF\n\nBy : Martin Szinte<br/>\nWith : Gilles de Hollander, Marco Aqil, Serge Dumoulin & Tomas Knapen<br/>\n\n## Experiment description\n\nExperiment in which we first used a full screen 4 direction (left/right/up/down)\nbar pass stimuli in a attetion to fixation or attention to the bar experiment.\nNext, we use the same tasks using a bar pass restricted to an aperture and \ndisplayed at 3 different position surrounding the fixation target put at the screen center \nor displaced to the left or to the right.<br/>\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "02",
+          "01",
+          "03"
+        ],
+        "size": 25618601590,
+        "subjects": [
+          "003",
+          "001",
+          "005",
+          "008",
+          "002",
+          "007",
+          "004",
+          "006"
+        ],
+        "tasks": [
+          "AttendStimGazeRight",
+          "AttendFixGazeRight",
+          "AttendStimGazeLeft",
+          "AttendStimGazeCenterFS",
+          "AttendFixGazeCenterFS",
+          "AttendFixGazeCenter",
+          "AttendStimGazeCenter",
+          "AttendFixGazeLeft"
+        ],
+        "totalFiles": 901
+      },
+      "tag": "2.1.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        40,
+        34,
+        26,
+        21,
+        34,
+        25,
+        33,
+        26
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": "Other"
+    },
+    "publishDate": "2022-04-05T07:38:08.512Z"
+  },
+  "source": "openneuro"
+}

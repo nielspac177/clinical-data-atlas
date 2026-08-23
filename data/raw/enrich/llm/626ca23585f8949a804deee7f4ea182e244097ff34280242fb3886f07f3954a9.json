@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:626ca23585f8949a804deee7f4ea182e244097ff34280242fb3886f07f3954a9",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Vapers, asthmatics, smokers, and otherwise healthy people",
+        "label": "asthmatics"
+      },
+      {
+        "evidence": "Vapers, asthmatics, smokers, and otherwise healthy people",
+        "label": "otherwise healthy people"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "pulmonology"
+    ],
+    "id": "physionet:respiratory-dataset",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "pressure, flow, volume, dynamic circumference",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "aeration data from electrical impedance tomography (EIT)",
+        "value": "other"
+      }
+    ],
+    "population": "80 adults, including vapers, asthmatics, smokers, and otherwise healthy people",
+    "summary": "Airway pressure, flow, volume, thoracic and abdominal circumference, and electrical impedance tomography aeration recorded from 80 adults breathing on CPAP as PEEP was raised from 4 to 12 cmH2O, with rapid expiratory occlusions."
+  },
+  "prompt_version": "v1"
+}

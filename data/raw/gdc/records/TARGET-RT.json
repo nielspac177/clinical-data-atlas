@@ -1,0 +1,89 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "TARGET-RT",
+  "payload": {
+    "dbgap_accession_number": "phs000470",
+    "disease_type": [
+      "Complex Mixed and Stromal Neoplasms"
+    ],
+    "id": "TARGET-RT",
+    "name": "Rhabdoid Tumor",
+    "primary_site": [
+      "Liver and intrahepatic bile ducts",
+      "Lip",
+      "Kidney"
+    ],
+    "program": {
+      "dbgap_accession_number": "phs000218",
+      "name": "TARGET",
+      "program_id": "f1c391e9-8488-55a8-b777-302e786ea11d"
+    },
+    "project_id": "TARGET-RT",
+    "releasable": true,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 69,
+      "data_categories": [
+        {
+          "case_count": 69,
+          "data_category": "Sequencing Reads",
+          "file_count": 498
+        },
+        {
+          "case_count": 69,
+          "data_category": "Biospecimen",
+          "file_count": 2
+        },
+        {
+          "case_count": 69,
+          "data_category": "Clinical",
+          "file_count": 5
+        },
+        {
+          "case_count": 66,
+          "data_category": "Transcriptome Profiling",
+          "file_count": 282
+        },
+        {
+          "case_count": 68,
+          "data_category": "DNA Methylation",
+          "file_count": 204
+        },
+        {
+          "case_count": 63,
+          "data_category": "Structural Variation",
+          "file_count": 138
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 63,
+          "experimental_strategy": "RNA-Seq",
+          "file_count": 483
+        },
+        {
+          "case_count": 66,
+          "experimental_strategy": "miRNA-Seq",
+          "file_count": 216
+        },
+        {
+          "case_count": 69,
+          "experimental_strategy": "WGS",
+          "file_count": 219
+        },
+        {
+          "case_count": 68,
+          "experimental_strategy": "Methylation Array",
+          "file_count": 204
+        }
+      ],
+      "file_count": 1129,
+      "file_size": 48006365141384
+    }
+  },
+  "source": "gdc"
+}

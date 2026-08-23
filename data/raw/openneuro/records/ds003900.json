@@ -1,0 +1,69 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003900",
+  "payload": {
+    "created": "2021-11-17T16:03:07.832Z",
+    "id": "ds003900",
+    "latestSnapshot": {
+      "created": "2022-08-16T15:26:14.000Z",
+      "description": {
+        "Authors": [
+          "Philippe Poulin",
+          "Guillaume Theaud",
+          "Pierre-Marc Jodoin",
+          "Maxime Descoteaux"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds003900.v1.1.1",
+        "Funding": [
+          "FRQNT grant #206270",
+          "Compute Canada (www.computecanada.com)",
+          "CBRAIN (www.cbrain.ca)"
+        ],
+        "HowToAcknowledge": "This data was obtained from the OpenNeuro database (https://openneuro.org/datasets/ds003900). Its accession number is ds003900. Please cite the TractoInferno paper if you use this dataset: https://doi.org/10.1101/2021.11.29.470422",
+        "License": "CC0",
+        "Name": "TractoInferno: A large-scale, open-source, multi-site database for machine learning dMRI tractography",
+        "ReferencesAndLinks": [
+          "https://doi.org/10.1101/2021.11.29.470422 "
+        ]
+      },
+      "readme": "# TractoInferno Machine Learning Tractography Dataset\n\nThe /derivatives folder contains the pre-split training/validation/testing datasets, each containing unique subjects with the following: \n\n- T1W image \n- DTI metrics maps (FA/AD/MD/RD)\n- DWI image with bval/bvec \n- fodf map + fodf peaks \n- White matter/grey matter/csf masks\n- DWI SH map (SH of order 6 fitted to the DWI signal, using the `descoteaux07` basis: https://dipy.org/documentation/1.3.0./theory/sh_basis/)\n- Tractograms of the following delineated bundles \n  - AF_L\n  - AF_R\n  - CC_Fr_1\n  - CC_Fr_2\n  - CC_Oc\n  - CC_Pa\n  - CC_Pr_Po\n  - CG_L\n  - CG_R\n  - FAT_L\n  - FAT_R\n  - FPT_L\n  - FPT_R\n  - IFOF_L\n  - IFOF_R\n  - ILF_L\n  - ILF_R\n  - MCP\n  - MdLF_L\n  - MdLF_R\n  - OR_ML_L\n  - OR_ML_R\n  - POPT_L\n  - POPT_R\n  - PYT_L\n  - PYT_R\n  - SLF_L\n  - SLF_R\n  - UF_L\n  - UF_R\n\nAll tractograms contain compressed streamlines to reduce disk space, which means that the step size is variable. If your algorithm requires a fixed step size, you have to manually resample the streamlines, which can be done using SCILPY (https://github.com/scilus/scilpy) and the scil_resample_streamlines.py script: https://github.com/scilus/scilpy/blob/master/scripts/scil_resample_streamlines.py\n\nTo evaluate a candidate tractogram, refer to: https://github.com/scil-vital/TractoInferno/\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 9540614,
+        "subjects": [
+          "1001"
+        ],
+        "tasks": [],
+        "totalFiles": 4
+      },
+      "tag": "1.1.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": null,
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "Machine learning tractography",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2021-11-22T20:52:50.394Z"
+  },
+  "source": "openneuro"
+}

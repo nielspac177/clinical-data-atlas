@@ -1,0 +1,44 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:079fac26d977dc60fb36631a7c9e2a472d26b6634f45b4ae3d40d156d8c5ef59",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "230 cases of glioblastoma and low-grade glioma patients",
+        "label": "glioblastoma"
+      },
+      {
+        "evidence": "glioblastoma and low-grade glioma patients",
+        "label": "low-grade glioma"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "neurology",
+      "oncology",
+      "surgery"
+    ],
+    "id": "tcia:glis-rt",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "routine post-surgical MRI examination",
+        "value": "MRI"
+      },
+      {
+        "evidence": "CT scans were acquired after diagnostic imaging",
+        "value": "CT"
+      },
+      {
+        "evidence": "adjuvant radiotherapy at Massachusetts General Hospital",
+        "value": "radiotherapy"
+      }
+    ],
+    "population": "230 cases of glioblastoma and low-grade glioma patients treated with surgery and adjuvant radiotherapy at Massachusetts General Hospital",
+    "summary": "Post-surgical brain MRI (contrast-enhanced 3D-T1 and T2 FLAIR) with radiotherapy planning CT, plus manually delineated gross and clinical target volumes; a subset adds delineations of anatomical barriers and organs at risk."
+  },
+  "prompt_version": "v1"
+}

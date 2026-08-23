@@ -1,0 +1,101 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005429",
+  "payload": {
+    "created": "2024-08-26T14:54:36.161Z",
+    "id": "ds005429",
+    "latestSnapshot": {
+      "created": "2024-08-30T05:31:09.000Z",
+      "description": {
+        "Authors": [
+          "Renate Rutiku",
+          "Chiara Fiscone",
+          "Marcello Massimini",
+          "Simone Sarasso"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005429.v1.0.0",
+        "Funding": null,
+        "HowToAcknowledge": "Please cite: \nRutiku, R., Fiscone, C., Massimini, M., & Sarasso, S. (2024). Assessing mismatch negativity (MMN) and P3b within‐individual sensitivity — A comparison between the local–global paradigm and two specialized oddball sequences. European Journal of Neuroscience, 59(5), 842-859.",
+        "License": "CC0",
+        "Name": "Auditory oddball comparison (Optimum-1, Learning-oddball, and the local–global paradigm)",
+        "ReferencesAndLinks": [
+          "Rutiku, R., Fiscone, C., Massimini, M., & Sarasso, S. (2024). Assessing mismatch negativity (MMN) and P3b within‐individual sensitivity — A comparison between the local–global paradigm and two specialized oddball sequences. European Journal of Neuroscience, 59(5), 842-859."
+        ]
+      },
+      "readme": "## Introduction\n\nThis is the raw EEG data used in: \nRutiku, R., Fiscone, C., Massimini, M., & Sarasso, S. (2024). Assessing mismatch negativity (MMN) and P3b within‐individual sensitivity — A comparison between the local–global paradigm and two specialized oddball sequences. European Journal of Neuroscience, 59(5), 842-859.\n\n### What's in this dataset\n\nEach participant (n=15) completed three different auditory oddball sequences: the Optimum-1 for MMN, the learning-oddball for P3b, and the local–global paradigm for the local and global effect. The tasks are formatted as different sessions but they were all recorded consecutively within one EEG experiment (order differed between participants). The local-global sequence was recorded in two separate EEG files (except for participant 5; see below for exception notes). Note that whereas the .vmrk files contain the original triggers for each recording, the _events files contain the correct event samples used in the analysis (in the fieldtrip cfg.trl format). It namely sometimes happened that some triggers were skipped by the recording system and these triggers needed to be interpolated using the event timestamps from the psychtoolbox output that was used to run the stimulation sequence (see below). Note also that the local-global sequence contains triggers for every single sound, but trials should be cut only for the first sound of every quintlet. The _events files already take that into account. \n\n| Subject | Session      | Run   |\n| ------- |--------------|-------|  \n| sub-01  | ses-MMN      |       | \n| sub-01  | ses-P3b      |       |\n| sub-01  | ses-LGeffect | run-1 |\n| sub-01  | ses-LGeffect | run-2 | \n\n\n### Auditory stimulation specs\n\nThe stimulation sequence information is provided in the original .mat format in the sourcedata folder. \nThere are two files for each sequence: a file containing the sound definitions (_stimulation_SEQUENCE) and a file containing the timestamps for each sound (_critical_events).\nThe code used to run these sequences is included in the paradigms folder. \n\n\n### Exceptions\n\nParticipant 13 was recorded with 5000 Hz EEG sampling rate whereas all other participants were recorded with 2500 Hz EEG sampling rate. \nParticipants 13, 14, and 15 were recorded chronologically first and they have slightly more trials for the oddball sequences. After inspecting their data, it was decided that trial numbers can be reduced for the rest of the participants in order to keep the recording time as short as possible while still having good sensitivity for the effects of interest. \nParticipant 5 has three runs for the local-global task due to a need for an extra break by the participant. \n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "eeg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [
+          "LGeffect",
+          "MMN",
+          "P3b"
+        ],
+        "size": 17684554701,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15"
+        ],
+        "tasks": [
+          "LocalGlobal",
+          "Optimum1",
+          "LearningOddball"
+        ],
+        "totalFiles": 430
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        20,
+        19,
+        25,
+        null,
+        23,
+        25,
+        26,
+        23,
+        32,
+        null,
+        24,
+        26,
+        49,
+        40,
+        28
+      ],
+      "associatedPaperDOI": "https://doi.org/10.1002/ana.24779; https://doi.org/10.1093/cercor/bhad031; https://doi.org/10.1016/j.clinph.2020.07.015",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "European Union’s Horizon 2020 Framework Program for Research and Innovation, Grant/Award Number: 945539; Tiny Blue Dot Foundation; National Science Centre, Grant/Award Number: 2021/42/E/HS6/00425; Canadian Institute for Advanced Research; Ministero dell’Università e della Ricerca, Grant/Award Number: PRIN2022; European Research Council, Grant/Award Number: ERC-2022-SYG–101071900–NEMESIS",
+      "modalities": [
+        "eeg"
+      ],
+      "species": "Human",
+      "studyDesign": "Within-participant comparison of three different auditory sequences for evoking the MMN/P3b effect.",
+      "studyDomain": "auditory perception",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2024-09-25T13:46:21.673Z"
+  },
+  "source": "openneuro"
+}

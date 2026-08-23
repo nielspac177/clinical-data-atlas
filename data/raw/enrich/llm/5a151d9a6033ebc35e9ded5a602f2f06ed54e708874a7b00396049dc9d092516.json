@@ -1,0 +1,49 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:5a151d9a6033ebc35e9ded5a602f2f06ed54e708874a7b00396049dc9d092516",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Uterine Carcinosarcoma",
+        "label": "Uterine Carcinosarcoma"
+      },
+      {
+        "evidence": "Complex Mixed and Stromal Neoplasms",
+        "label": "Complex Mixed and Stromal Neoplasms"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "obstetrics_gynecology"
+    ],
+    "id": "gdc:TCGA-UCS",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Diagnostic Slide, Tissue Slide",
+        "value": "pathology"
+      },
+      {
+        "evidence": "WXS, WGS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "RNA-Seq",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Reverse Phase Protein Array",
+        "value": "proteomics"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "57 human cases with uterine carcinosarcoma",
+    "summary": "TCGA uterine carcinosarcoma project of the uterine corpus, with slide images, sequencing, copy number, methylation, protein array and clinical data."
+  },
+  "prompt_version": "v1"
+}

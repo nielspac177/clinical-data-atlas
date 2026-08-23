@@ -1,0 +1,112 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds001491",
+  "payload": {
+    "created": "2018-08-30T15:06:10.187Z",
+    "id": "ds001491",
+    "latestSnapshot": {
+      "created": "2018-08-31T22:04:34.000Z",
+      "description": {
+        "Authors": [
+          "Jelle R. Dalenberg",
+          "Liselore Weitkamp",
+          "Remco J. Renken",
+          "Gert J. ter Horst"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds001491.v1.0.0",
+        "Funding": [],
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "Valence processing differs across stimulus modalities (Multi-echo)",
+        "ReferencesAndLinks": [
+          "Jelle R. Dalenberg, Liselore Weitkamp, Remco J. Renken, Gert J. ter Horst. Valence processing differs across stimulus modalities. NeuroImage. 2018. https://doi.org/10.1016/j.neuroimage.2018.08.059."
+        ]
+      },
+      "readme": "Data acquisition methods have been described in detail in Jelle R. Dalenberg, Liselore Weitkamp, Remco J. Renken, Gert J. ter Horst. Valence processing differs across stimulus modalities. NeuroImage. 2018. https://doi.org/10.1016/j.neuroimage.2018.08.059.\n\n_______________________________\n##  Important notes  ##\n_______________________________\n\nMissing data:\nsub-02, participant withdrew from the study before scanning\nsub-05, flavor run 2, failed run due to reconstruction error\nsub-11, flavor run 3, failed run due to error in operating the gustometer\nsub-13, flavor run 4, failed run due to error in operating the gustometer\nsub-15, flavor run 1, failed run due to error in operating the gustometer\nsub-21, flavor run 2, failed run due to reconstruction error\n\n_______________________________\n##  Stimulus info  ##\n_______________________________\n#Flavors\nAn ‘orange’ (1250kJ/100ml) and a ‘tropical’ (1255kJ/100ml) flavor (Karvan Cévitam) were chosen as stimuli. Typically, these flavors are diluted in water to create a sugar sweetened flavored beverage. Prior to the experiment, participants ware asked whether they preferred orange or tropical flavored beverages. The less preferred flavor was used as the unpleasant stimulus and was mixed with fish sauce (Squid Fish Sauce, 221kJ/100gr, 77% anchovies extract, 20% salt, 3% sugar) to a 1:3 fish sauce to syrup ratio. Subsequently, a range of beverages was made for both the pleasant and the unpleasant flavors by manipulating the flavor concentrations. Concentrations increased logarithmically from a 0.03:1 to 1:1 syrup to water ratio in 12 steps. All beverages were made isocaloric matching the maximum energy density of the pleasant beverage by using the tasteless carbohydrate maltodextrin (Nutricia Fantomalt).\nPrior to the MRI session, participants rated the beverages on pleasantness. Based on these ratings, four pleasant and four unpleasant flavor concentrations were selected for the fMRI session. For the pleasant range, the flavor concentration with the (first) highest rating and 3 preceding concentrations was selected, whereas for the unpleasant range, the (first) minimum rating and 3 preceding concentrations was selected. If the highest or lowest rating was among the first 4 concentrations, we chose these first 4 concentrations for the remainder of the study.\n\n#Images\n40 images were used from the International Affective Picture System, IAPS. Based on norm scores, we randomly selected images that varied from high to low arousal (HA, LA) and negative to positive valence (NV, PV). The set contained 10 HA-NV, 10 LA-NV, 10 LA-PV, and 10 HA-PV images. \r\rUsed images:\n1460.jpg\r1630.jpg\r1710.jpg\r1750.jpg\r1947.jpg\r2035.jpg\r2340.jpg\r2392.jpg\r2525.jpg\r2730.jpg\r3001.jpg\r3064.jpg\r3110.jpg\r3185.jpg\r3195.jpg\r3530.jpg\r4002.jpg\r4007.jpg\r4085.jpg\r4505.jpg\r4612.jpg\r5621.jpg\r5725.jpg\r5825.jpg\r5829.jpg\r5833.jpg\r6220.jpg\r7043.jpg\r7054.jpg\r7279.jpg\r8190.jpg\r9043.jpg\r9075.jpg\r9183.jpg\r9185.jpg\r9220.jpg\r9302.jpg\r9560.jpg\r9561.jpg\r9940.jpg\r\n\n_______________________________\n##  Task Events info  ##\n_______________________________\n\nEvent files for [task-FlavorRun1;task-FlavorRun2;task-FlavorRun3;task-FlavorRun4] contain the following variables:\n\n- onset: condition onset time in seconds\n- duration: condition duration time in seconds\n- condition: condition labels. \n\n\tPossible conditions:\n\t\n\tWater1_TasteAndSwallow:\tTasting and swallowing water stimulus 1\r\n\tWater1_RatingScreens:\tPleasantness and intensity rating screen for water stimulus 1\r\n\tWater1_RinseProcedure:\tRinsing procedure for water stimulus 1\r\n\tPos1_TasteAndSwallow:\tTasting and swallowing pleasant beverage stimulus 1\r\n\tPos1_RatingScreens:\t\tPleasantness and intensity rating screen for pleasant beverage stimulus 1\r\n\tPos1_RinseProcedure:\tRinsing procedure for pleasant beverage stimulus 1\r\n\tPos2_TasteAndSwallow:\tTasting and swallowing pleasant beverage stimulus 2\r\n\tPos2_RatingScreens:\t\tPleasantness and intensity rating screen for pleasant beverage stimulus 2\r\n\tPos2_RinseProcedure:\tRinsing procedure for pleasant beverage stimulus 2\r\n\tPos3_TasteAndSwallow:\tTasting and swallowing pleasant beverage stimulus 3\r\n\tPos3_RatingScreens:\t\tPleasantness and intensity rating screen for pleasant beverage stimulus 3\r\n\tPos3_RinseProcedure:\tRinsing procedure for pleasant beverage stimulus 3\r\n\tPos4_TasteAndSwallow:\tTasting and swallowing pleasant beverage stimulus 4\r\n\tPos4_RatingScreens:\t\tPleasantness and intensity rating screen for pleasant beverage stimulus 4\r\n\tPos4_RinseProcedure:\tRinsing procedure for pleasant beverage stimulus 4\r\n\tWater2_TasteAndSwallow:\tTasting and swallowing water stimulus 2\r\n\tWater2_RatingScreens:\tPleasantness and intensity rating screen for water stimulus 2\r\n\tWater2_RinseProcedure:\tRinsing procedure for water stimulus 2\r\n\tNeg1_TasteAndSwallow:\tTasting and swallowing unpleasant beverage stimulus 1\r\n\tNeg1_RatingScreens:\t\tPleasantness and intensity rating screen for unpleasant beverage stimulus 1\r\n\tNeg1_RinseProcedure:\tRinsing procedure for unpleasant beverage stimulus 1\r\n\tNeg2_TasteAndSwallow:\tTasting and swallowing unpleasant beverage stimulus 2\r\n\tNeg2_RatingScreens:\t\tPleasantness and intensity rating screen for unpleasant beverage stimulus 2\r\n\tNeg2_RinseProcedure:\tRinsing procedure for unpleasant beverage stimulus 2\r\n\tNeg3_TasteAndSwallow:\tTasting and swallowing unpleasant beverage stimulus 3\r\n\tNeg3_RatingScreens:\t\tPleasantness and intensity rating screen for unpleasant beverage stimulus 3\r\n\tNeg3_RinseProcedure:\tRinsing procedure for unpleasant beverage stimulus 3\r\n\tNeg4_TasteAndSwallow:\tTasting and swallowing unpleasant beverage stimulus 4\r\n\tNeg4_RatingScreens:\t\tPleasantness and intensity rating screen for unpleasant beverage stimulus 4\r\n\tNeg4_RinseProcedure:\tRinsing procedure for unpleasant beverage stimulus 4\n\n- trial_action: variable containing labels for actions within a complete trial (i.e. a more simplified condition label that groups specific actions per stimulus trial)\n\n\tPossible trial actions:\n\t\n\tTasteAndSwallow:\t\tTasting and swallowing a stimulus (6.5 sec)\n\tRating:\t\t\t\t\tRating screens (self-paced)\n\tRinse:\t\t\t\t\tRinsing procedure (18.8 sec for a single rinse or 25 sec for a double rinse)\n\n- stimulus_trial: numeric variable that numbers the trials within the fMRI task.\n- pleasantness_response: perceived pleasantness response of participant (9-point likert scale)\n- intensity_response: perceived intensity response of participant (9-point likert scale)\n- stimulus_type: categorical variable coding the stimulus type.\n\n\tPossible stimulus types:\n\t\n\tWater:\tNeutral water stimulus\n\tPleasant_flavor: Pleasant flavor\n\tUnpleasant_flavor: Unpleasant flavor\n_______________________________\n\n#Event files for [task-images] contain the following variables:\n\n- onset: condition onset time in seconds\n- duration: condition duration time in seconds\n- condition: condition labels. \n\n\tPossible conditions:\n\t\n\tImgXXXX_Image:\t\t\tViewing IAPS image XXXX\n\tImgXXXX_RatingScreens:\tPleasantness and intensity rating screen for image XXXX \n\n- trial_action: variable containing labels for actions within a complete trial (i.e. a more simplified condition label that groups specific actions per stimulus trial)\n\n\tPossible trial actions:\n\t\n\tImage:\tViewing an IAPS image (4 sec)\n\tRating:\tRating screens (self-paced)\n\n\n- stimulus_trial: numeric variable that numbers the trials within the fMRI task.\n- pleasantness_response: perceived pleasantness response of participant (9-point likert scale)\n- intensity_response: perceived intensity response of participant (9-point likert scale)\n\n_______________________________\n## Multi-echo exam card  ##\n_______________________________\n\nCoil selection 1 =\t\t\"SENSE-Head-32P\";\r\n     element selection =\t\"selection 1\";\r\nCoil selection 2 =\t\t\"SENSE-Head-32AH\";\r\n     element selection =\t\"selection 1\";\r\nDual coil =\t\t\t\"yes\";\r\nCLEAR =\t\t\t\t\"yes\";\r\n    body tuned =\t\t\"no\";\r\nFOV          RL (mm) =\t\t224;\r\n             AP (mm) =\t\t224;\r\n             FH (mm) =\t\t157.5;\r\nVoxel size   RL (mm) =\t\t3.5;\r\n             AP (mm) =\t\t3.5;\r\nSlice thickness (mm) =\t\t3.5;\r\nRecon voxel size (mm) =\t\t3.5;\r\nFold-over suppression =\t\t\"no\";\r\nReconstruction matrix =\t\t64;\r\nSENSE =\t\t\t\t\"yes\";\r\n    P reduction (AP) =\t\t3;\r\n    P os factor =\t\t1;\r\nStacks =\t\t\t1;\r\n    type =\t\t\t\"parallel\";\r\n    slices =\t\t\t45;\r\n    slice gap =\t\t\t\"user defined\";\r\n          gap (mm) =\t\t0;\r\n    slice orientation =\t\t\"transverse\";\r\n    fold-over direction =\t\"AP\";\r\n    fat shift direction =\t\"A\";\r\nStack Offc. AP (P=+mm) =\t-7.5924015;\r\n            RL (L=+mm) =\t2.5429709;\r\n            FH (H=+mm) =\t12.8062849;\r\n      Ang.  AP (deg) =\t\t0.905718386;\r\n            RL (deg) =\t\t-5.66648006;\r\n            FH (deg) =\t\t0.284474969;\r\nMinimum number of packages =\t1;\r\nSlice scan order =\t\t\"descend\";\r\nLarge table movement =\t\t\"no\";\r\nPlanAlign =\t\t\t\"no\";\r\nREST slabs =\t\t\t0;\r\nInteractive positioning =\t\"no\";\r\nPatient position =\t\t\"head first\";\r\n        orientation =\t\t\"supine\";\r\nScan type =\t\t\t\"Imaging\";\r\nScan mode =\t\t\t\"MS\";\r\n    technique =\t\t\t\"FFE\";\r\nContrast enhancement =\t\t\"no\";\r\nAcquisition mode =\t\t\"cartesian\";\r\nFast Imaging mode =\t\t\"EPI\";\r\n    shot mode =\t\t\t\"single-shot\";\r\nEchoes =\t\t\t3;\r\n    partial echo =\t\t\"no\";\r\n    shifted echo =\t\t\"no\";\r\nTE  first =\t\t\t\"shortest\";\r\n    echospacing =\t\t\"shortest\";\r\nFlip angle (deg) =\t\t80;\r\nTR =\t\t\t\t\"user defined\";\r\n    (ms) =\t\t\t2450;\r\nHalfscan =\t\t\t\"no\";\r\nWater-fat shift =\t\t\"minimum\";\r\nShim =\t\t\t\t\"auto\";\r\nFat suppression =\t\t\"SPIR\";\r\n   strength =\t\t\t\"strong\";\r\n   frequency offset =\t\t\"default\";\r\nWater suppression =\t\t\"no\";\r\nMTC =\t\t\t\t\"no\";\r\nResearch prepulse =\t\t\"no\";\r\nDiffusion mode =\t\t\"no\";\r\nSAR mode =\t\t\t\"high\";\r\nB1 mode =\t\t\t\"default\";\r\nPNS mode =\t\t\t\"high\";\r\nGradient mode =\t\t\t\"default\";\r\nSofTone mode =\t\t\t\"no\";\r\nCardiac synchronization =\t\"no\";\r\nRespiratory compensation =\t\"no\";\r\nNavigator respiratory comp =\t\"no\";\r\nFlow compensation =\t\t\"no\";\r\nTemporal slice spacing =\t\"minimal\";\r\nfMRI echo stabilisation =\t\"no\";\r\nNSA =\t\t\t\t1;\r\nAngio / Contrast enh. =\t\t\"no\";\r\nQuantitative flow =\t\t\"no\";\r\nManual start =\t\t\t\"yes\";\r\nDynamic study =\t\t\t\"individual\";\r\n    dyn scans =\t\t\t360;\r\n    dyn scan times =\t\t\"shortest\";\r\n    FOV time mode =\t\t\"default\";\r\n    dummy scans =\t\t2;\r\n    immediate subtraction =\t\"no\";\r\n    fast next scan =\t\t\"no\";\r\n    synch. ext. device =\t\"yes\";\r\n        start at dyn. =\t\t1;\r\n        interval (dyn) =\t1;\r\n    dyn stabilization =\t\t\"yes\";\r\n    prospect. motion corr. =\t\"no\";\r\nKeyhole =\t\t\t\"no\";\r\nArterial Spin labeling =\t\"no\";\r\nPreparation phases =\t\t\"auto\";\r\nInteractive F0 =\t\t\"no\";\r\nB0 field map =\t\t\t\"no\";\r\nB1 field map =\t\t\t\"no\";\r\nMIP/MPR =\t\t\t\"no\";\r\nImages =\t\t\t\" M\", (3) \" no\";\r\nAutoview image =\t\t\" M\";\r\nCalculated images =\t\t(4) \" no\";\r\nReference tissue =\t\t\"White matter\";\r\nPreset window contrast =\t\"soft\";\r\nReconstruction mode =\t\t\"real time\";\r\n    reuse memory =\t\t\"no\";\r\nSave raw data =\t\t\t\"no\";\r\nHardcopy protocol =\t\t\"no\";\r\nRinging filtering =\t\t\"default\";\r\nGeometry correction =\t\t\"default\";\r\nIF_info_seperator =\t\t1634755923;\r\nTotal scan duration =\t\t\"14:51.8\";\r\nRel. signal level (%) =\t\t100;\r\nAct. TR/TE1/delta TE (ms) =\t\"2450 / 8.0 / 14.0\";\r\nDyn. scan time =\t\t\"00:02.5\";\r\nTime to k0 =\t\t\t\"00:01.2\";\r\nACQ matrix M x P =\t\t\"64 x 61\";\r\nACQ voxel MPS (mm) =\t\t\"3.50 / 3.65 / 3.50\";\r\nREC voxel MPS (mm) =\t\t\"3.50 / 3.50 / 3.50\";\r\nScan percentage (%) =\t\t95.8333359;\r\nPackages =\t\t\t1;\r\nMin. slice gap (mm) =\t\t0;\r\nEPI factor =\t\t\t23;\r\nAct. WFS (pix) / BW (Hz) =\t\"5.643 / 77.0\";\r\nBW in EPI freq. dir. (Hz) =\t\"3097.9\";\r\nMin. WFS (pix) / Max. BW (Hz) =\t\"5.640 / 77.0\";\r\nMin. TR/TE1/delta TE (ms) =\t\"2427 / 8.0 / 14\";\r\nSAR / head =\t\t\t\"<  33 %\";\r\nWhole body / level =\t\t\"< 0.1 W/kg / normal\";\r\nB1 rms =\t\t\t\"1.35 uT\";\r\nPNS / level =\t\t\t\"63 % / normal\";\r\nSound Pressure Level (dB) =\t24.2084637;",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 17499370543,
+        "subjects": [
+          "01",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21"
+        ],
+        "tasks": [
+          "task-FlavorRun1",
+          "task-FlavorRun2",
+          "task-FlavorRun3",
+          "task-FlavorRun4",
+          "task-images"
+        ],
+        "totalFiles": 425
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        27,
+        21,
+        24,
+        28,
+        27,
+        18,
+        22,
+        29,
+        27,
+        24,
+        26,
+        22,
+        23,
+        23,
+        22,
+        20,
+        21,
+        21,
+        25,
+        27
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2018-08-30T15:06:10.187Z"
+  },
+  "source": "openneuro"
+}

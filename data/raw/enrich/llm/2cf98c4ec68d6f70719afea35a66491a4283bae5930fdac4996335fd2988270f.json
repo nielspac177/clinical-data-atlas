@@ -1,0 +1,27 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:2cf98c4ec68d6f70719afea35a66491a4283bae5930fdac4996335fd2988270f",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "other"
+    ],
+    "id": "physionet:medication-labels-mimic-note",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "600 discharge summaries",
+        "value": "clinical_notes"
+      },
+      {
+        "evidence": "MIMIC-IV-Note Clinical Database",
+        "value": "EHR"
+      }
+    ],
+    "population": "600 discharge summaries from the 2023 MIMIC-IV-Note dataset",
+    "summary": "Medication extraction labels for discharge summaries in MIMIC-IV-Note, generated with a large language model pipeline and following the schema of the 2009 i2b2 NLP challenge dataset."
+  },
+  "prompt_version": "v1"
+}

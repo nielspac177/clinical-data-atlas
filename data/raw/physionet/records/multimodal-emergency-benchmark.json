@@ -1,0 +1,39 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "multimodal-emergency-benchmark",
+  "payload": {
+    "abstract": "<p>Measurable progress in the development of medical decision support systems has been hindered by a lack of comprehensive datasets. Many available datasets focus on narrow prediction tasks and do not include a diverse range of data types, which limits their effectiveness in real-world clinical settings. This issue is particularly critical in emergency care, where accurate and timely diagnoses and the ability to predict patient deterioration are essential.</p>\n\n<p>To address these challenges, we present a new dataset derived from MIMIC-IV, created specifically for benchmarking multimodal decision support systems in emergency departments. This dataset includes data from the first 1.5 hours after the patient&#39;s arrival, covering demographics, biometrics, vital signs (including trends), lab results (including trends), and ECG waveforms. It allows for the evaluation of predictive models across a broad spectrum of clinical conditions, including both cardiac and non-cardiac conditions (1428 ICD-10 codes), as well as clinical deterioration measures (15 labels covering 6 clinical deterioration conditions, ICU admission at two horizons, and mortality at 7 different time horizons).</p>\n\n<p>The integration of diverse data types aims to enhance the clinical relevance and robustness of decision support systems, facilitating more accurate and timely predictions in acute care scenarios. We release this dataset to encourage further research and innovation in emergency medicine and to provide a resource for the reliable benchmarking of multimodal AI models in the field.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 45538585,
+    "core_doi": "10.13026/fm1f-2558",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 587734798,
+    "public_project_uuid": "fff7e608-ebd6-4906-b626-414d197a59d0",
+    "publish_date": "2024-09-12",
+    "resource_type": "Database",
+    "short_description": "MIMIC-IV-ext-MDS-ED proposes a dataset to benchmark multimodal decision support in the emergency department. It features multimodal input (including ECG waveforms) and a comprehensive set of prediction targets (diagnoses and deterioration prediction)",
+    "slug": "multimodal-emergency-benchmark",
+    "source_url": "https://physionet.org/content/multimodal-emergency-benchmark/1.0.0/",
+    "title": "MIMIC-IV-Ext-MDS-ED: Multimodal Decision Support in the Emergency Department - a Benchmark Dataset for Diagnoses and Deterioration Prediction in Emergency Medicine",
+    "topics": [
+      "multimodal",
+      "emergency department",
+      "benchmark",
+      "diagnoses prediction",
+      "ecg",
+      "deterioration prediction"
+    ],
+    "version": "1.0.0",
+    "version_doi": "10.13026/p90d-vd84"
+  },
+  "source": "physionet"
+}

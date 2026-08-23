@@ -1,0 +1,42 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:6d0a1f58b77caca5f6b466b47c2f116c5bbe9471aea49e18f9c15cc33a25c45c",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Clear Cell Sarcoma of the Kidney",
+        "label": "Clear Cell Sarcoma of the Kidney"
+      },
+      {
+        "evidence": "Complex Mixed and Stromal Neoplasms",
+        "label": "Complex Mixed and Stromal Neoplasms"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "pediatrics",
+      "nephrology_urology"
+    ],
+    "id": "gdc:TARGET-CCSK",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "WGS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "RNA-Seq",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "13 human cases",
+    "summary": "TARGET collection of clear cell sarcoma of the kidney, with whole-genome and RNA sequencing, genotyping and methylation arrays, copy number and structural variation, plus clinical and biospecimen records."
+  },
+  "prompt_version": "v1"
+}

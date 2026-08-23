@@ -1,0 +1,79 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007543",
+  "payload": {
+    "created": "2026-03-21T04:47:24.644Z",
+    "id": "ds007543",
+    "latestSnapshot": {
+      "created": "2026-04-20T15:44:08.000Z",
+      "description": {
+        "Authors": [
+          "Wei-Tang Chang",
+          "",
+          ""
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007543.v1.0.1",
+        "Funding": [
+          "",
+          "",
+          ""
+        ],
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "Open data of VNfMRI",
+        "ReferencesAndLinks": [
+          "",
+          "",
+          ""
+        ]
+      },
+      "readme": "This dataset contains fMRI data acquired at 0.9 mm spatial resolution with a TR of 4 seconds. Both raw and processed images are included. \nFor each subject in the visuomotor task, four sessions are provided. The first through fourth sessions correspond to the following conditions: TE = 30 ms, TE = 38 ms, b = 6, and b = 8, respectively.",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional"
+        ],
+        "sessions": [
+          "02",
+          "01",
+          "04",
+          "03"
+        ],
+        "size": 23323039163,
+        "subjects": [
+          "01"
+        ],
+        "tasks": [
+          "vm"
+        ],
+        "totalFiles": 14
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        48
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": "Other"
+    },
+    "publishDate": "2026-04-20T15:42:34.384Z"
+  },
+  "source": "openneuro"
+}

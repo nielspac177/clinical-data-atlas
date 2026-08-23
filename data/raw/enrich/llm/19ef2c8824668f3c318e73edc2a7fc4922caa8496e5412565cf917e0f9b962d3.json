@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:19ef2c8824668f3c318e73edc2a7fc4922caa8496e5412565cf917e0f9b962d3",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "depression status",
+        "label": "depression"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "psychiatry",
+      "public_health"
+    ],
+    "id": "physionet:globem",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "wear a fitness tracker",
+        "value": "wearable"
+      },
+      {
+        "evidence": "location, phone usage, calls, Bluetooth, physical activity, and sleep behavior",
+        "value": "behavioral"
+      },
+      {
+        "evidence": "participants completed weekly short surveys",
+        "value": "survey"
+      }
+    ],
+    "population": "705 person-years (497 unique participants) with diverse racial, ability, and immigrant backgrounds.",
+    "summary": "Multi-year mobile and wearable passive sensing datasets collected over four years, ten weeks each year, combined with weekly and comprehensive surveys on health behaviors, social well-being, emotional states, and mental health."
+  },
+  "prompt_version": "v1"
+}

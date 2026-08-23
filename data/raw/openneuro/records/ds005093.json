@@ -1,0 +1,85 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005093",
+  "payload": {
+    "created": "2024-04-17T18:58:04.815Z",
+    "id": "ds005093",
+    "latestSnapshot": {
+      "created": "2024-04-18T15:56:43.000Z",
+      "description": {
+        "Authors": [
+          "Lucero Aceves-Serrano",
+          "Jason L Neva",
+          "Jonathan Munro",
+          "Irene M Vavasour",
+          "Martin Parent",
+          "Lara Boyd",
+          "Doris J Doudet"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005093.v1.0.2",
+        "Funding": [
+          "BRAIN CANADA [F14-02712]"
+        ],
+        "HowToAcknowledge": "PLOS ONE. 2024; ",
+        "License": "CC0",
+        "Name": "Evaluation of microglia activation related markers following a clinical course of TBS: a non-human primate study",
+        "ReferencesAndLinks": [
+          "Aceves-Serrano L, Sossi V, Doudet DJ. Comparison of Invasive and Non-invasive Estimation of [11C]PBR28 Binding in Non-human Primates. Mol Imaging Biol. 2021. doi:10.1007/s11307-021-01661-6"
+        ]
+      },
+      "readme": "This dataset was gathered between 2017 and 2018 as part of \"Evaluation of microglia activation related markers following a clinical course of TBS: a non-human primate study\". \nThis dataset consists of 11 healthy nonhuman primates and their imaging data, including PET (PBR28) and MRS. MRS data was acquired from two different voxels placed over the left and right putamen. \n\nPET images were acquired on a Siemens High-Resolution Research Tomograph (ECAT HRRT, CPS Innovations, Knoxville, TN, USA) with a 3-dimensional resolution of 2.5 mm.\n\nMRS data was acquired on a Philips Achieva 3.0 T whole-body MRI scanner (Philips Healthcare, Best, The Netherlands), with an eight-channel sensitivity encoding head coil. We acquired spectra from two voxels placed over the left and right putamen. \n\nNote that for some of the stimulation cycles, only PET or MRS data was acquired.\nThis data set also includes an excel file with postmortem IHC-TSPO data. \n\nFor more details about the paper, authors, or dataset see the attached dataset_description.json or the participants.txt.",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "pet"
+        ],
+        "secondaryModalities": [],
+        "sessions": [
+          "postitbs",
+          "postsham",
+          "preitbs",
+          "presham",
+          "postctbs",
+          "prectbs"
+        ],
+        "size": 33209465899,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11"
+        ],
+        "tasks": [],
+        "totalFiles": 39
+      },
+      "tag": "1.0.2"
+    },
+    "metadata": {
+      "affirmedDefaced": false,
+      "ages": null,
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "Brain Canada",
+      "modalities": [
+        "pet"
+      ],
+      "species": "Non-Human Primates",
+      "studyDesign": "",
+      "studyDomain": "Brain Stimulation",
+      "studyLongitudinal": "Longitudinal"
+    },
+    "publishDate": "2024-04-18T14:56:37.274Z"
+  },
+  "source": "openneuro"
+}

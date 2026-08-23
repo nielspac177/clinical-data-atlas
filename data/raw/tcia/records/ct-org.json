@@ -1,0 +1,186 @@
+{
+  "endpoints": [
+    "https://api.datacite.org/dois?prefix=10.7937"
+  ],
+  "harvest_method": "api:nbia+datacite",
+  "native_id": "ct-org",
+  "payload": {
+    "datacite": {
+      "citationCount": 15,
+      "container": {},
+      "contentUrl": [],
+      "contributors": [
+        {
+          "affiliation": [],
+          "contributorType": "DataCurator",
+          "name": "TCIA Team",
+          "nameIdentifiers": []
+        }
+      ],
+      "created": "2019-10-25T19:01:32Z",
+      "creators": [
+        {
+          "affiliation": [],
+          "familyName": "Rister",
+          "givenName": "Blaine",
+          "name": "Rister, Blaine",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Shivakumar",
+          "givenName": "Kaushik",
+          "name": "Shivakumar, Kaushik",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Nobashi",
+          "givenName": "Tomomi",
+          "name": "Nobashi, Tomomi",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Rubin",
+          "givenName": "Daniel L.",
+          "name": "Rubin, Daniel L.",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2019",
+          "dateType": "Issued"
+        }
+      ],
+      "descriptions": [
+        {
+          "description": "This dataset consists of 140 computed tomography (CT) scans, each with five organs labeled in 3D: lung, bones, liver, kidneys and bladder. The brain is also labeled on the minority of scans which show it.\nPatients were included based on the presence of lesions in one or more of the labeled organs. Most of the images exhibit liver lesions, both benign and malignant. Some also exhibit metastatic disease in other organs such as bones and lungs.\nThe images come from a wide variety of sources, including abdominal and full-body; contrast and non-contrast; low-dose and high-dose CT scans. 130 images are dedicated CTs, the remaining 10 are the CT component taken from PET-CT exams. This makes the dataset ideal for training and evaluating organ segmentation algorithms, which ought to perform well in a wide variety of imaging conditions.\nThe dataset includes large and easily-located organs such as the lungs, as well as small and difficult ones like the bladder. We hope the dataset will enable widespread adoption of multi-class organ segmentation, as well as competitive benchmarking of algorithms for it.\nThe data are divided into a testing set of 21 CT scans, and a training set of the remaining 119. For the training set, the lungs and bones were automatically segmented by morphological image processing. For the testing set, the lungs and bones were segmented manually. All other organs were segmented manually in both the training and testing sets. Manual segmentations were done with ITK-SNAP (https://www.itksnap.org), starting with semi-automatic active contour segmentation followed by manual clean-up. The source code for the morphological algorithms is available at:\n- https://github.com/bbrister/ctOrganSegmentation.git\nMany images were borrowed from the Liver Tumor Segmentation (LiTS) challenge, which the organizers have generously allowed us to distribute. For more information, see the following website and paper:\n- https://lits-challenge.com\n- Arxiv [1901.04056] The Liver Tumor Segmentation Benchmark (LiTS) (https://arxiv.org/abs/1901.04056)\nThis work was supported in part by grants from the National Cancer Institute, National Institutes of Health, 1U01CA190214 and 1U01CA187947.",
+          "descriptionType": "Abstract",
+          "lang": null
+        }
+      ],
+      "doi": "10.7937/tcia.2019.tt7f4v7o",
+      "downloadCount": 0,
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "CT-ORG",
+          "identifierType": "TCIA Short Name"
+        }
+      ],
+      "isActive": true,
+      "language": null,
+      "metadataVersion": 7,
+      "partCount": 0,
+      "partOfCount": 0,
+      "publicationYear": 2019,
+      "published": null,
+      "publisher": "The Cancer Imaging Archive",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2019-10-25T19:01:32Z",
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "10.1016/j.eswa.2021.115686",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.3390/diagnostics12030672",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1109/jbhi.2023.3296142",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1186/s12911-024-02457-8",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1038/s41597-020-00715-8",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.compmedimag.2021.101938",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.neucom.2021.08.157",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1109/embc48229.2022.9871288",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1117/12.2613101",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.engappai.2022.105532",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.media.2023.102918",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        }
+      ],
+      "relatedItems": [],
+      "rightsList": [
+        {
+          "rights": "Creative Commons Attribution 3.0 Unported",
+          "rightsIdentifier": "cc-by-3.0",
+          "rightsIdentifierScheme": "SPDX",
+          "rightsUri": "https://creativecommons.org/licenses/by/3.0/legalcode",
+          "schemeUri": "https://spdx.org/licenses/"
+        }
+      ],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "fabricaForm",
+      "state": "findable",
+      "subjects": [],
+      "titles": [
+        {
+          "lang": null,
+          "title": "CT-ORG: A Dataset of CT Volumes With Multiple Organ Segmentations ",
+          "titleType": null
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2025-06-01T01:01:14Z",
+      "url": "https://www.cancerimagingarchive.net/collection/ct-org/",
+      "version": "1",
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 13670
+    },
+    "nbia": null
+  },
+  "source": "tcia"
+}

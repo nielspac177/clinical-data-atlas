@@ -1,0 +1,152 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003233",
+  "payload": {
+    "created": "2020-10-01T14:56:41.307Z",
+    "id": "ds003233",
+    "latestSnapshot": {
+      "created": "2021-05-05T14:19:32.000Z",
+      "description": {
+        "Authors": [
+          "Meir Meshulam",
+          "Liat Hasenfratz",
+          "Hanna Hillman",
+          "Yun-Fei Liu",
+          "Mai Nguyen",
+          "Kenneth A. Norman",
+          "Uri Hasson"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds003233.v1.2.1",
+        "Funding": null,
+        "HowToAcknowledge": "Meshulam M, Hasenfratz L, Hillman H, Liu Y-F, Nguyen M, Norman KA, Hasson U. Neural alignment predicts learning outcomes in students taking an introduction to computer science course. Nat Commun 12, 1922 (2021). https://doi.org/10.1038/s41467-021-22202-3",
+        "License": "CC0",
+        "Name": "Think Like an Expert",
+        "ReferencesAndLinks": []
+      },
+      "readme": "Description: Think Like an Expert\n\nPlease cite the following reference if you use these data:\n\nMeshulam M, Hasenfratz L, Hillman H, Liu Y-F, Nguyen M, Norman KA, Hasson U. Neural alignment predicts learning outcomes in students taking an introduction to computer science course. Nat Commun 12, 1922 (2021). https://doi.org/10.1038/s41467-021-22202-3\n\nThis dataset contains data from 20 'student' and 5 'expert' participants. Students enrolled in an introduction to computer science course underwent six fMRI scanning sessions throughout the course. During the first five sessions, students were shown course lecture videos. On the final session, students were shown five recaps with highlights from previous weeks. In addition, participants were given a self-paced final exam in which they were asked to give verbal responses to visually presented questions. Experts underwent the final scan only.\n\nAt the beginning and end of each task, we appended 20-30 seconds of unrelated 'filler' audiovisual clips (from YouTube 'oddly satisfying' compilations, featuring, for example, objects being assembled neatly). The corresponding TRs were trimmed and are not included in the data.\n\nT1 scans were obtained in every session. High definition T1 scans were obtained on ses-wk2 (students) and ses-wk6 (experts).\n\nBehavioral data about the final exam is provided in the 'sourcedata' folder. Response onset/offset information is provided in exam_timing.tsv. Exam scores are provided in exam_scores.tsv.\n\nA summary of the available task files is provided below.\n\nTask\t            Description\t        Lecture\t                     Number of TRs\nwk1_vid1\t    Lecture segment\tConditionals & Loops\t173\nwk1_vid2\t    Lecture segment\tConditionals & Loops\t304\nwk1_vid3\t    Lecture segment\tConditionals & Loops\t161\nwk1_vid4\t    Lecture segment\tConditionals & Loops\t289\nwk1_vid5\t    Lecture segment\tConditionals & Loops\t319\nwk2_vid1\t    Lecture segment\tFunctions & Libraries\t414\nwk2_vid2\t    Lecture segment\tFunctions & Libraries\t449\nwk2_vid3\t    Lecture segment\tFunctions & Libraries\t310\nwk3_vid1\t    Lecture segment\tAbstract Data Types\t    \t183\nwk3_vid2\t    Lecture segment\tAbstract Data Types\t    \t456\nwk3_vid3\t    Lecture segment\tAbstract Data Types\t    \t332\nwk3_vid4\t    Lecture segment\tAbstract Data Types\t    \t113\nwk4_vid1\t    Lecture segment\tPerformance\t            \t313\nwk4_vid2\t    Lecture segment\tPerformance\t            \t299\nwk4_vid3\t    Lecture segment\tPerformance\t            \t321\nwk4_vid4\t    Lecture segment\tPerformance\t            \t270\nwk5_vid1\t    Lecture segment\tTheory of computing\t146\nwk5_vid2\t    Lecture segment\tTheory of computing\t251\nwk5_vid3\t    Lecture segment\tTheory of computing\t290\nwk5_vid4\t    Lecture segment\tTheory of computing\t367\nwk5_vid5\t    Lecture segment\tTheory of computing\t145\nwk6_recap1\t    Recap\t        \tConditionals & Loops\t99\nwk6_recap2\t    Recap\t        \tFunctions & Libraries\t98\nwk6_recap3\t    Recap\t        \tAbstract Data Types\t\t97\nwk6_recap4\t    Recap\t        \tPerformance\t\t\t88\nwk6_recap5\t    Recap\t       \tTheory of computing\t95\nwk6_placement\tExam\t        \tN/A\t                    \t\tN/A",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "wk1",
+          "wk2",
+          "wk3",
+          "wk4",
+          "wk5",
+          "wk6"
+        ],
+        "size": 29128641745,
+        "subjects": [
+          "s102",
+          "s103",
+          "s105",
+          "s106",
+          "s107",
+          "s108",
+          "s110",
+          "s111",
+          "s112",
+          "s113",
+          "s114",
+          "s116",
+          "s118",
+          "s120",
+          "s121",
+          "s122",
+          "s125",
+          "s126",
+          "s127",
+          "s129",
+          "s201",
+          "s213",
+          "s214",
+          "s215",
+          "s216"
+        ],
+        "tasks": [
+          "wk1_vid1",
+          "wk1_vid2",
+          "wk1_vid4",
+          "wk1_vid3",
+          "wk2_vid1",
+          "wk1_vid5",
+          "wk2_vid2",
+          "wk2_vid3",
+          "wk3_vid3",
+          "wk3_vid2",
+          "wk3_vid1",
+          "wk3_vid4",
+          "wk4_vid2",
+          "wk4_vid3",
+          "wk4_vid4",
+          "wk4_vid1",
+          "wk5_vid1",
+          "wk5_vid2",
+          "wk5_vid3",
+          "wk5_vid4",
+          "wk6_wk1recap",
+          "wk6_placement",
+          "wk6_wk2recap",
+          "wk6_wk3recap",
+          "wk5_vid5",
+          "wk6_wk4recap",
+          "wk6_wk5recap"
+        ],
+        "totalFiles": 1379
+      },
+      "tag": "1.2.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        19,
+        18,
+        18,
+        19,
+        19,
+        19,
+        18,
+        18,
+        18,
+        18,
+        19,
+        18,
+        18,
+        19,
+        18,
+        18,
+        19,
+        19,
+        20,
+        20,
+        23,
+        24,
+        27,
+        31,
+        31
+      ],
+      "associatedPaperDOI": "https://doi.org/10.1038/s41467-021-22202-3",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "NIH",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "The neural basis of real-life learning",
+      "studyLongitudinal": "Longitudinal"
+    },
+    "publishDate": "2020-10-06T16:30:04.929Z"
+  },
+  "source": "openneuro"
+}

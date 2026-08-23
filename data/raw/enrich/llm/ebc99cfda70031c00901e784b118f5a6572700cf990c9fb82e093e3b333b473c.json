@@ -1,0 +1,42 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:ebc99cfda70031c00901e784b118f5a6572700cf990c9fb82e093e3b333b473c",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "AURORA US Metastatic Breast Cancer project",
+        "label": "Metastatic Breast Cancer"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "oncology"
+    ],
+    "id": "tcia:aurora-metastatic-breast-multiomics",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "whole genome DNA sequencing, whole exome DNA sequencing",
+        "value": "genomics"
+      },
+      {
+        "evidence": "RNA sequencing",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "H&E slides are available for 184 specimens",
+        "value": "pathology"
+      },
+      {
+        "evidence": "DNA methylation arrays",
+        "value": "other"
+      }
+    ],
+    "population": "55 patients with 31 primary tissues and 102 metastases, including adjacent normal tissues",
+    "summary": "Primary and metastatic breast tumor samples profiled by genome and exome sequencing, methylation arrays, and RNA sequencing, with H&E slides and HLA-A immunofluorescence; molecular data hosted in dbGaP and GEO."
+  },
+  "prompt_version": "v1"
+}

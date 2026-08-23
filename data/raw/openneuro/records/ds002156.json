@@ -1,0 +1,71 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds002156",
+  "payload": {
+    "created": "2019-09-03T15:14:55.477Z",
+    "id": "ds002156",
+    "latestSnapshot": {
+      "created": "2020-06-01T20:11:58.000Z",
+      "description": {
+        "Authors": [
+          "Dylan M. Nielson",
+          "Argyris Stringaris"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds002156.v2.0.0",
+        "Funding": [
+          "Collection of this data was supported byt the National Institutes of Health, Intramural Research Program, grant number ZIAMH002957-01."
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Multi-echo masking test dataset",
+        "ReferencesAndLinks": null
+      },
+      "readme": "This is one run of multi-echo resting state data and accompanying defaced anatomical scans shared to help debug masking issues with multiecho datasets.  \nThis data was collected as part of a longitudinal study of adolescent depression that will be released in 2020.\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "01",
+          "02",
+          "03",
+          "04"
+        ],
+        "size": 564475933,
+        "subjects": [
+          "23638"
+        ],
+        "tasks": [
+          "rest"
+        ],
+        "totalFiles": 76
+      },
+      "tag": "2.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": null,
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2019-09-03T15:18:05.364Z"
+  },
+  "source": "openneuro"
+}

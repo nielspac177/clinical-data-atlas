@@ -1,0 +1,72 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:d523d6587ad6a73460199db33dc12d23ee57770ddc514e301adcf7cd39e4d5ab",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Neoplasms, NOS",
+        "label": "Neoplasms, NOS"
+      },
+      {
+        "evidence": "Osseous and Chondromatous Neoplasms",
+        "label": "Osseous and Chondromatous Neoplasms"
+      },
+      {
+        "evidence": "Adenomas and Adenocarcinomas",
+        "label": "Adenomas and Adenocarcinomas"
+      },
+      {
+        "evidence": "Gliomas",
+        "label": "Gliomas"
+      },
+      {
+        "evidence": "Myomatous Neoplasms",
+        "label": "Myomatous Neoplasms"
+      },
+      {
+        "evidence": "Nevi and Melanomas",
+        "label": "Nevi and Melanomas"
+      },
+      {
+        "evidence": "Epithelial Neoplasms, NOS",
+        "label": "Epithelial Neoplasms, NOS"
+      },
+      {
+        "evidence": "Squamous Cell Neoplasms",
+        "label": "Squamous Cell Neoplasms"
+      },
+      {
+        "evidence": "Soft Tissue Tumors and Sarcomas, NOS",
+        "label": "Soft Tissue Tumors and Sarcomas, NOS"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "neurology",
+      "pulmonology",
+      "gastroenterology_hepatology",
+      "nephrology_urology"
+    ],
+    "id": "gdc:MATCH-I",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Simple Nucleotide Variation",
+        "value": "genomics"
+      },
+      {
+        "evidence": "Transcriptome Profiling",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "60 human cases with tumors across many primary sites (esophagus, skin, brain, lung, colon, kidney and others)",
+    "summary": "Genomic characterization of MATCH trial Arm I: whole-exome and RNA sequencing with structural and simple nucleotide variation, biospecimen and clinical data, from tumors at many primary sites including brain, lung, colon and kidney."
+  },
+  "prompt_version": "v1"
+}

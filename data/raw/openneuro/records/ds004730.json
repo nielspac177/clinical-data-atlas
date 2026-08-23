@@ -1,0 +1,111 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004730",
+  "payload": {
+    "created": "2023-08-31T19:58:39.016Z",
+    "id": "ds004730",
+    "latestSnapshot": {
+      "created": "2023-12-08T22:54:41.000Z",
+      "description": {
+        "Authors": [
+          "Shrinivas Bishu",
+          "Kathleen C Schmidt",
+          "Thomas V Burlin",
+          "Michael A Charming",
+          "Lisa Horowitz",
+          "Tianjiang Huang",
+          "Zhong-Hua Liu",
+          "Mei Qin",
+          "B-K Vuong",
+          "Aaron J Unterman",
+          "Zengyan Xia",
+          "Alan Zametkin",
+          "Peter Herscovitch",
+          "Zenaide Quezado",
+          "Carolyn B Smith"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004730.v1.0.0",
+        "Funding": [
+          "1ZIAMH000889"
+        ],
+        "HowToAcknowledge": "Cite https://doi.org/10.1038/jcbfm.2009.7 and the dataset DOI on OpenNeuro for the dataset version you are using",
+        "License": "CC0",
+        "Name": "Effects of propofol anesthesia on rates of cerebral protein synthesis",
+        "ReferencesAndLinks": [
+          "https://doi.org/10.1038/jcbfm.2009.7",
+          "https://doi.org/10.1038/sj.jcbfm.9600067",
+          "https://doi.org/10.1038/sj.jcbfm.9600066",
+          "https://doi.org/10.1038/jcbfm.2008.43",
+          "https://doi.org/10.1038/jcbfm.2009.52",
+          "https://doi.org/10.1038/s41598-017-18890-x",
+          "https://doi.org/10.1371/journal.pone.0195580",
+          "https://doi.org/10.1177/0271678X18771242"
+        ]
+      },
+      "readme": "# Effects of propofol anesthesia on rates of cerebral protein synthesis (rCPS)\n\n## Introduction\n\nIn this dataset all subjects (n=10) are males between the ages of 20 and 24 years (M=22.1, SD=1.6). See the `participants.tsv` file at the root of the dataset for full participant information. See [the reference below](#reference) for more information about this dataset.\n\nIncluded in this dataset are L-[1-<sup>11</sup>C]Leucine 4D Positron Emission Tomography (PET) images, co-registered defaced 3D anatomical Magnetic Resonanace Imaging (MRI) T1-weighted images, blood sampling data, FreeSurfer derivative files, and FreeSurfer \"fsaverage\" group-averaged rCPS left and right hemisphere surface statistical maps. All data were collected on the NIH campus in Bethesda, Maryland, USA. For descriptions of data acquisition and processing methods, please see the methods sections of the published papers listed in the `dataset_description.json` file.\n\n## Data Overview\n\nThis dataset contains both BIDS rawdata and BIDS derivatives. The rawdata is composed of:\n\n1. `sub-*/ses-MRI/anat/*_T1w.{nii.gz,json}`: Defaced/anonymized anatomical MRI T1-weighted images\n    - These T1-weighted images were converted to BIDS NIfTI using MATLAB's `niftiwrite` function, then co-registered to the rCPS derivative images, and then defaced with [FreeSurfer's MiDeFace](https://surfer.nmr.mgh.harvard.edu/fswiki/MiDeFace) to anonymize faces. All defaced images passed a visual inspection using [Dr. Pradeep Raamana's VisualQC](https://github.com/raamana/visualqc) to ensure that no identifiable facial features were present.\n2. `sub-*/ses-{SESSION}/pet/*_pet.{nii.gz,json}`: PET data\n    - The PET data are shared as-acquired after BIDS conversion. `{SESSION}` above is either `Awake` or `Propofol`.\n3. `sub-*/ses-{SESSION}/pet/*_blood.{tsv,json}`: Blood sampling data\n    - Blood samples were measured throughout the PET sessions. The timing and measurements are recorded in these files.\n\nThe derivatives dataset is composed of:\n\n1. `derivatives/freesurfer/`: FreeSurfer recon-all derivative files\n    - The FreeSurfer recon-all derivative files are commonly provided derivatives from FreeSurfer including (but not limited to) the white matter boundary and pial boundary surfaces, cortical thickness, and cortical parcellation.\n2. `derivatives/rCPS/`: Originally computed rCPS statistical maps\n    - Provided by the authors, these are the original statistical maps from the paper.\n3. `derivatives/rcps-modified-petprep/sub-*/`: Modified \"PETprep-matlab\" (scripts made just for these data) derivative files. The code used to make these is [located here on Zenodo](https://doi.org/10.5281/zenodo.7768340).\n    - The intermediary files used produced by [`rcps-modified-petprep`](https://doi.org/10.5281/zenodo.7768340) to calculate the group-averaged rCPS surface maps.\n4. `derivatives/rcps-modified-petprep/group/`: Modified \"PETprep-matlab\" (scripts made just for these data) group-averaged statistical maps.\n    - FreeSurfer \"fsaverage\" group-averaged rCPS left and right hemisphere surface maps, each with 163,842 vertices.\n\n## Notes\n\n1. The following datasets were prepared to the Brain Imaging Data Structure (BIDS) standard at the same time with the same filename and folder organizations due to their similarity:\n\n    - [rCPS in subjects with fragile X syndrome](https://openneuro.org/datasets/ds004654)\n    - [Effects of propofol anesthesia on rCPS](https://openneuro.org/datasets/ds004730)\n    - [rCPS and memory formation during sleep](https://openneuro.org/datasets/ds004731)\n    - [rCPS in stages of sleep](https://openneuro.org/datasets/ds004733)\n\n2. There is currently no BIDS standard for rCPS statistical maps. As such, their naming was inspired by [a currently unnumbered BIDS Extension Proposal, linked here](https://docs.google.com/document/d/1KHzp-yk8KXvkUIhtN71WU0m4P4kKT9C1yvI-i9_kNeY/edit?usp=sharing).\n\n## Reference\n\n*Bishu, S., Schmidt, K. C., Burlin, T. V., Charming, M. A., Horowitz, L., Huang, T., Liu, Z., Qin, M., Vuong, B.-K., Unterman, A. J., Xia, Z., Zametkin, A., Herscovitch, P., Quezado, Z., & Smith, C. B. (2009). Propofol Anesthesia Does Not Alter Regional Rates of Cerebral Protein Synthesis Measured with L-[1-<sup>11</sup>C]Leucine and PET in Healthy Male Subjects. Journal of Cerebral Blood Flow & Metabolism, 29(5), 1035–1047. [https://doi.org/10.1038/jcbfm.2009.7](https://doi.org/10.1038/jcbfm.2009.7)*\n\n## Questions or feedback\n\nFor dataset questions or feedback, please email the NIMH Data Science & Sharing Team at [nimhdsst@mail.nih.gov](mailto:nimhdsst@mail.nih.gov).\n",
+      "summary": {
+        "dataProcessed": true,
+        "modalities": [
+          "pet",
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural"
+        ],
+        "sessions": [
+          "Awake",
+          "MRI",
+          "Propofol"
+        ],
+        "size": 20109105395,
+        "subjects": [
+          "S13",
+          "S15",
+          "S16",
+          "S17",
+          "S19",
+          "S22",
+          "S31",
+          "S32",
+          "S33",
+          "S34"
+        ],
+        "tasks": [],
+        "totalFiles": 115
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        21,
+        20,
+        22,
+        24,
+        21,
+        22,
+        23,
+        24,
+        24,
+        20
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": true,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": null,
+      "modalities": [
+        "pet",
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2023-12-21T21:31:43.922Z"
+  },
+  "source": "openneuro"
+}

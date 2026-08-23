@@ -1,0 +1,28 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:2d6963f0dfabe42127344fc9e8496708158b19de3482382cadde65fe95b7dcaa",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Breast cancer",
+        "label": "Breast cancer"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "physionet:vindr-mammo",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "full-field digital mammography",
+        "value": "mammography"
+      }
+    ],
+    "population": "5,000 four-view mammography exams",
+    "summary": "Full-field digital mammography exams, each four-view and double read by mammographers, with BI-RADS cancer assessment and breast density plus bounding rectangles marking abnormalities needing further examination."
+  },
+  "prompt_version": "v1"
+}

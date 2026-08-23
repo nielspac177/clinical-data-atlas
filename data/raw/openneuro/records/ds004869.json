@@ -1,0 +1,150 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004869",
+  "payload": {
+    "created": "2023-12-04T10:31:38.824Z",
+    "id": "ds004869",
+    "latestSnapshot": {
+      "created": "2026-06-26T12:26:04.000Z",
+      "description": {
+        "Authors": [
+          "Xuefeng Yan",
+          "Martin Noergaard",
+          "Cheryl L. Morse",
+          "Jeih-San Liow",
+          "Jinsoo Hong",
+          "Sanjay Telu",
+          "Min-Jeong Kim",
+          "Jose A Montero Santamaria",
+          "Anthony Galassi",
+          "Ningping Feng",
+          "Sarah K. Williams Avram",
+          "Ted B. Usdin",
+          "Shawn Wu",
+          "Andrea Zhang",
+          "Lester Manly",
+          "Madeline Jenkins",
+          "Maia Van Buskirk",
+          "Adrian Lee",
+          "Sami S. Zoghbi",
+          "Victor W Pike",
+          "Robert B Innis",
+          "Paolo Zanotti-Fregonara"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004869.v1.4.0",
+        "Funding": [
+          "ZIA-MH002852 (RBI)/NIH/Intramural NIH HHS/United States",
+          "ZIA-MH002793 (RBI)/ImNIH/Intramural NIH HHS/United States",
+          "NCT03912428 (RBI)/ImNIH/Intramural NIH HHS/United States",
+          "NCT04396873 (RBI)/ImNIH/Intramural NIH HHS/United States"
+        ],
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "Positron emission tomography (PET) quantification in healthy humans of cyclooxygenase-2 (COX-2), a potential biomarker of neuroinflammation",
+        "ReferencesAndLinks": [
+          "Kim MJ, Lee JH, Juarez Anaya F, Hong J, Miller W, Telu S, Singh P, Cortes MY, Henry K, Tye GL, Frankland MP, Montero Santamaria JA, Liow JS, Zoghbi SS, Fujita M, Pike VW, Innis RB. First-in-human evaluation of [11C]PS13, a novel PET radioligand, to quantify cyclooxygenase-1 in the brain. Eur J Nucl Med Mol Imaging. 2020 Dec;47(13):3143-3151. doi: 10.1007/s00259-020-04855-2. Epub 2020 May 12. PMID: 32399622; PMCID: PMC8261645.",
+          "PET Imaging of the Dopamine Transporter with 18F-FECNT: A Polar Radiometabolite Confounds Brain Radioligand Measurements Sami S. Zoghbi, H. Umesha Shetty, Masanori Ichise, Masahiro Fujita, Maao Imaizumi, Jeih-San Liow, Jay Shah, John L. Musachio, Victor W. Pike, Robert B. Innis Journal of Nuclear Medicine Mar 2006, 47 (3) 520-527;"
+        ]
+      },
+      "readme": "Abstract:\nCyclooxygenase-2 (COX-2) is markedly upregulated in peripheral inflammation and its inhibition is an effective anti-inflammatory treatment. This study assessed whether the positron emission tomography (PET) radioligand [11C]MC1 has adequate sensitivity to measure the low density of COX-2 in healthy human brain. First, to confirm the ability of the radioligand to detect neuroinflammation, we imaged rats after injection of an inflammogen. Subsequently, healthy human volunteers were imaged under three conditions: first, to identify the optimal measurement technique; second, following the administration of the COX-2 selective inhibitor, celecoxib; and third, within a test-retest study to assess reliability and variability. In rat brain, LPS-induced inflammation increased COX-2 expression two- to eight-fold. In humanized COX-2 mice, [11C]MC1 was found to bind to the human but not the rodent form of COX-2. After intravenous administration in 27 healthy human participants, [11C]MC1 bound to COX-2 in the neocortex, with virtually no specific binding in subcortical regions. This distribution was confirmed with parallel measurement of COX-2 gene transcript in postmortem human brain. The pharmacological specificity for COX-2 was confirmed by almost complete blockade by celecoxib, which is highly selective for COX-2 vs. COX-1. The test-retest study found that a simple reference region (cerebellum) provided accurate values versus gold-standard kinetic modeling and reduced intersubject variability by ~40%, which would reduce necessary sample sizes in future clinical studies. Thus, [11C]MC1 has adequate sensitivity to measure the low density of COX-2 in healthy human brain as well as to quantify the COX-2 elevations expected in human disorders associated with neuroinflammation. \n\nParticipants:\nGroup 1: Ten healthy participants (5 males, 5 females, average age 39±12 years, average weight 72±12 kg) underwent two brain PET scans two hours apart – baseline and post-celecoxib blockade (600 mg p.o.).\n\nGroup 2: Seventeen healthy volunteers (7 males, 10 females, average age 33±7 years, average weight 74±13 kg) participated in a test-retest imaging study.\n\nParticipants were screened for medical and psychiatric illnesses via medical history, physical examinations, ECG, and laboratory blood tests. None had taken nonsteroidal anti-inflammatory drugs in the two weeks prior.",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "pet",
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural"
+        ],
+        "sessions": [
+          "test",
+          "retest",
+          "blocked",
+          "baseline"
+        ],
+        "size": 8369362722,
+        "subjects": [
+          "12",
+          "19",
+          "15",
+          "25",
+          "10",
+          "23",
+          "02",
+          "01",
+          "14",
+          "06",
+          "20",
+          "26",
+          "17",
+          "07",
+          "08",
+          "27",
+          "21",
+          "03",
+          "11",
+          "24",
+          "05",
+          "22",
+          "13",
+          "16",
+          "18",
+          "09",
+          "04"
+        ],
+        "tasks": [],
+        "totalFiles": 278
+      },
+      "tag": "1.4.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        24,
+        42,
+        25,
+        53,
+        41,
+        40,
+        56,
+        27,
+        55,
+        30,
+        32,
+        22,
+        23,
+        32,
+        34,
+        39,
+        38,
+        43,
+        36,
+        35,
+        30,
+        28,
+        22,
+        26,
+        42,
+        33,
+        40
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "pet",
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": "Longitudinal"
+    },
+    "publishDate": "2024-04-18T06:36:01.224Z"
+  },
+  "source": "openneuro"
+}

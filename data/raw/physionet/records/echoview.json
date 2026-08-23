@@ -1,0 +1,32 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "echoview",
+  "payload": {
+    "abstract": "<p>The development of robust echocardiography analyses has been limited by the scarcity of well-annotated, labeled echocardiogram datasets. We introduce the Structured Viewing Classification Annotations From the MIMIC-IV-ECHO Dataset (ECHOVIEW), a derived dataset providing transthoracic (TTE) echocardiogram viewing classifications for a derived subset of the MIMIC-IV-ECHO dataset. This derived dataset includes viewing classifications for 29,196 echocardiograms across 717 studies, from 463 patients. Each study contains multiple echocardiogram views and sometimes uses multiple ultrasound techniques, with changes in the position and angle of the ultrasound probe corresponding to different views. Likewise, each patient can have multiple studies. The ECHOVIEW dataset features 23 separate viewing classifications predicted for each echocardiogram, which are produced by a machine learning (ML) classifier. Our model provides classification probabilities for echocardiograms with at least 10 frames of data. We validated our predictions by having a licensed cardiologist and an intensivist independently review a sample of 50 echocardiograms. Their evaluations were then compared against the ML view classifications. With the release of this dataset, we provide machine-generated view classifications for the MIMIC-IV-ECHO dataset and hope to encourage the development of further echocardiography analyses and models.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 696215,
+    "core_doi": "10.13026/av0c-x376",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 4129137,
+    "public_project_uuid": "9f5b692d-5c8e-4346-9bf2-f4280c4dd1ae",
+    "publish_date": "2026-03-17",
+    "resource_type": "Database",
+    "short_description": "ECHOVIEW provides structured viewing class annotations for 29,196 transthoracic echocardiograms derived from MIMIC-IV-ECHO using a pretrained CNN. Manual clinician review shows substantial agreement (κ=0.69) with these annotations.",
+    "slug": "echoview",
+    "source_url": "https://physionet.org/content/echoview/0.1/",
+    "title": "Structured Viewing Classification Annotations From the MIMIC-IV-ECHO Dataset (ECHOVIEW)",
+    "topics": [],
+    "version": "0.1",
+    "version_doi": "10.13026/ywz0-5b62"
+  },
+  "source": "physionet"
+}

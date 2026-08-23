@@ -1,0 +1,56 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:5ee543fc200ddf438add8f009cb12086e7c36434bf3ea4280f0300eca5d72cd1",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "established a cohort of Veterans diagnosed with cancer",
+        "label": "cancer"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "tcia:varepop-apollo",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "CR CT DX MR NM PT RF US",
+        "value": "MRI"
+      },
+      {
+        "evidence": "CR CT DX MR NM PT RF US",
+        "value": "CT"
+      },
+      {
+        "evidence": "CR CT DX MR NM PT RF US",
+        "value": "PET"
+      },
+      {
+        "evidence": "CR CT DX MR NM PT RF US",
+        "value": "SPECT"
+      },
+      {
+        "evidence": "CR CT DX MR NM PT RF US",
+        "value": "xray"
+      },
+      {
+        "evidence": "CR CT DX MR NM PT RF US",
+        "value": "ultrasound"
+      },
+      {
+        "evidence": "had genomic analyses performed on their tumor tissue as part of the standard of care",
+        "value": "genomics"
+      },
+      {
+        "evidence": "patient demographics, comorbidities, genomic analysis, treatments, medications, lab values, imaging studies, and outcomes",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "Veterans diagnosed with cancer who had genomic analyses performed on their tumor tissue as part of standard of care; all participants consented and signed HIPAA authorization.",
+    "summary": "Multi-modality imaging across many body regions for a Veterans cancer cohort, collected alongside demographics, comorbidities, genomic analysis, treatments, medications, lab values and outcomes under the RePOP program."
+  },
+  "prompt_version": "v1"
+}

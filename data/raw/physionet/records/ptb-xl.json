@@ -1,0 +1,35 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "ptb-xl",
+  "payload": {
+    "abstract": "<p>Electrocardiography (ECG) is a key diagnostic tool to assess the cardiac condition of a patient. Automatic ECG interpretation algorithms as diagnosis support systems promise large reliefs for the medical personnel - only on the basis of the number of ECGs that are routinely taken. However, the development of such algorithms requires large training datasets and clear benchmark procedures. In our opinion, both aspects are not covered satisfactorily by existing freely accessible ECG datasets.</p>\n\n<p>The PTB-XL ECG dataset is a large dataset of 21799 clinical 12-lead ECGs from 18869 patients of 10 second length. The raw waveform data was annotated by up to two cardiologists, who assigned potentially multiple ECG statements to each record. The in total 71 different ECG statements conform to the SCP-ECG standard and cover diagnostic, form, and rhythm statements. To ensure comparability of machine learning algorithms trained on the dataset, we provide recommended splits into training and test sets. In combination with the extensive annotation, this turns the dataset into a rich resource for the training and the evaluation of automatic ECG interpretation algorithms. The dataset is complemented by extensive metadata on demographics, infarction characteristics, likelihoods for diagnostic ECG statements as well as annotated signal properties.</p>",
+    "access_policy": "Open",
+    "compressed_storage_size": 1839504686,
+    "core_doi": "10.13026/6sec-a640",
+    "dua": null,
+    "is_latest_version": true,
+    "license": {
+      "name": "Creative Commons Attribution 4.0 International Public License"
+    },
+    "main_storage_size": 3181524022,
+    "public_project_uuid": "c63b8ff1-6ecd-4548-8b7b-b6e012d72fe3",
+    "publish_date": "2022-11-09",
+    "resource_type": "Database",
+    "short_description": "The PTB-XL ECG dataset is a large dataset of 21801 clinical 12-lead ECGs from 18869 patients of 10 second length. The raw signal data has been annotated by up to two cardiologists with 71 different ECG statements and is supplemented by rich metadata.",
+    "slug": "ptb-xl",
+    "source_url": "https://physionet.org/content/ptb-xl/1.0.3/",
+    "title": "PTB-XL, a large publicly available electrocardiography dataset",
+    "topics": [
+      "ecg",
+      "ptb-xl",
+      "ptb",
+      "electrocardiography"
+    ],
+    "version": "1.0.3",
+    "version_doi": "10.13026/kfzx-aw45"
+  },
+  "source": "physionet"
+}

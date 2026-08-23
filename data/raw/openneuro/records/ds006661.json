@@ -1,0 +1,90 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006661",
+  "payload": {
+    "created": "2025-09-12T07:26:15.912Z",
+    "id": "ds006661",
+    "latestSnapshot": {
+      "created": "2026-05-30T12:50:21.000Z",
+      "description": {
+        "Authors": [
+          "Yoichi Miyawaki",
+          "Kenshu Koiso",
+          "Daniel A Handwerker",
+          "Javier Gonzalez-Castillo",
+          "Laurentius Huber",
+          "Arman Khojandi",
+          "Yuhui Chai",
+          "Daniel Glen",
+          "Peter A Bandettini"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006661.v1.0.4",
+        "Funding": [
+          "JSPS KAKENHI (JP20H00600, JP18KK0311, JP17H01755, JP25H01138)",
+          "JST PRESTO (JPMJPR1778)",
+          "Yamada Science Foundation",
+          "National Institute of Mental Health ZIAMH002783",
+          "National Institue of Mental Health ZICMH002888"
+        ],
+        "HowToAcknowledge": "Please cite https://www.biorxiv.org/content/10.1101/2025.07.21.665938v1",
+        "License": "CC0",
+        "Name": "Rapid decoding of neural information representation from ultra-fast functional magnetic resonance imaging signals",
+        "ReferencesAndLinks": null
+      },
+      "readme": "# Rapid decoding of neural information representation from ultra-fast functional magnetic resonance imaging signals\n\n## Original paper\nYoichi Miyawaki, Kenshu Koiso, Daniel A Handwerker, Javier Gonzalez-Castillo, Laurentius Huber, Arman Khojandi, Yuhui Chai, Daniel Glen, Peter A Bandettini, Rapid decoding of neural information representation from ultra-fast functional magnetic resonance imaging signals (2025)\nhttps://www.biorxiv.org/content/10.1101/2025.07.21.665938v1\n\n## Dataset\n\n### MRI data\nThis dataset contains fMRI data from 13 participants ('sub-001', 'sub-002', 'sub-003', 'sub-005', 'sub-006', 'sub-007', 'sub-008', 'sub-009', 'sub-010', 'sub-011', 'sub-012', 'sub-013', and 'sub-014'). 'sub-004' was disqualified due to reported peripheral nerve stimulation during the experiment and has thus been excluded from sharing. The participants took part in two types of fMRI experiments: (1) decoding session and (2) functional localizer session.\n\nHereafter, 'xxx' in the file names indicates the participant ID in three digits (e.g., 001, 002...) and 'yy' indicates the run ID in two digits (e.g., 01, 02...). \n\n- 'func/sub-xxx_task-main_run-yy_bold.nii.gz': fMRI data of slow event-related design presenting naturalistic object images  (8-10 runs)\n- 'func/sub-xxx_task-floc_run-yy_bold.nii.gz': fMRI data of block design presenting naturalistic object images and their scrambled versions (1 run)\n\nBoth scanning sessions consisted of functional EPI images covering the occipital and occipitotemporal areas with nine slices (TR, 125 ms; TE, 20.8 ms; flip angle, 15 deg; in-plane voxel size, 3 x 3 mm; slice thickness, 5 mm; slice gap, 0 mm; in-plane acceleration (iPAT) factor, 2; multiband factor, 3).\n\nThe dataset also includes a whole-head anatomical image for each participant (T1-weighted magnetization-prepared 2 rapid acquisition gradient echo (MP2RAGE) sequence was used; TR, 6000 ms; TE, 3.02 ms; TI1/TI2, 800/2700 ms; flip angle, 1/2, 4/5 deg; in-plane voxel size, 0.7 x 0.7 mm; slice thickness, 0.7 mm; field of view, 224 x 224 mm; number of slices, 224).\nThe T1-weighted anatomical images are stored in 'anat' directories with the name of 'sub-xxx_T1w.nii.gz'.\nThe T1-weighted images were defaced by BioImage Suite Web (https://bioimagesuiteweb.github.io/webapp/).\n\nAdditionally, eight participants ('sub-002', 'sub-003', 'sub-006', 'sub-007', 'sub-008', 'sub-010', 'sub-012', and 'sub-014') also underwent the susceptibility-weighted image (SWI) acquisition (T2*-weighted gradient-echo 3D fast low angle shot (3D-FLASH) sequence was used; TR, 23 ms; TE, 15 ms; flip angle, 20 deg, in-plane voxel size, 0.491 x 0.491 mm; slice thickness, 0.5 mm; field of view, 220 x 165 mm; number of slices, 128). The spatial coverage was adjusted to match the functional images. The SWI images are stored in 'swi' directories with the name of 'sub-xxx_swi.nii.gz'. If there is no 'swi' directory, it means that the corresponding participant did not take part in the SWI acquisition.\n\nAll DICOM files were converted to NIfTI-1 format by dcm2niix_afni in AFNI (https://afni.nimh.nih.gov/).\n\nThe number of runs for each participant is as follows:\n\n- sub-001: 8\n- sub-002, sub-006, sub-010: 9\n- sub-003, sub-005, sub-007, sub-008, sub-009, sub-011, sub-012, sub-013, sub-014: 10\n\n\n### Physiological data\nThis dataset also contains physiological data (respiratory and cardiac signals) measured simultaneously during fMRI scanning. \nThe physiological data are stored in 'func' directories with the name of 'sub-xxx_task-main_run-yy_physio.tsv.gz' or 'sub-xxx_task-floc_run-yy_physio.tsv.gz'.\n\n\n### Task event files\nTask event files contain recorded events during fMRI runs.\nIn task event files for the decoding session, each column represents:\n\n- 'onset': onset time of an event (sec)\n- 'duration': duration of the event (sec)\n- 'trial_type': type of the event ('image': presentation of stimulus image, 'fixation_change': fixation color change, 'response': button press in response to fixation color change)\n- 'image_category': presented image category name ('n/a' in 'fixation_change' and 'response')\n- 'imnet_filename': presented image file name in ImageNet\n- 'reaction_time': reaction time to fixation color change (elapsed time from the previous 'fixation_change' event (sec)). If participants pressed the button more than once for a fixation color change, each elapsed time from the previous fixation color change to each button press is calculated.\n\nIn task event files for the functional localizer session, each column represents:\n\n- 'onset': onset time of an event (sec)\n- 'duration': duration of the event (sec)\n- 'trial_type': type of the event ('image': presentation of stimulus image, 'scramble': presentation of scrambled stimulus image, 'fixation_change': fixation color change, 'response': button press in response to fixation color change)\n- 'image_category': presented image category name ('n/a' in 'fixation_change' and 'response')\n- 'imnet_filename': presented image file name in ImageNet\n- 'reaction_time': reaction time to fixation color change (elapsed time from the previous 'fixation_change' event (sec)). If participants pressed the button more than once for a fixation color change, each elapsed time from the previous fixation color change to each button press is calculated.\n\n\n### Stimulus images\nDue to licensing issues, this dataset does not include the stimulus image files used in the experiments. The original images can be downloaded from ImageNet (https://www.image-net.org/). The background of the original images was removed by hand and the image size was cropped to fit the experiments. The scrambled images were made by first dividing the original (intact) images into 20 x 20 blocks and then scrambling the block locations.\n\n\n## Contact\n- Email: yoichi.miyawaki@uec.ac.jp\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 15520431434,
+        "subjects": [
+          "007",
+          "006",
+          "011",
+          "013",
+          "014",
+          "001",
+          "003",
+          "012",
+          "010",
+          "009",
+          "008",
+          "005",
+          "002"
+        ],
+        "tasks": [
+          "main",
+          "floc"
+        ],
+        "totalFiles": 746
+      },
+      "tag": "1.0.4"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": "Other"
+    },
+    "publishDate": "2025-09-12T08:02:21.774Z"
+  },
+  "source": "openneuro"
+}

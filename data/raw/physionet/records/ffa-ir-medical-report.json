@@ -1,0 +1,37 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "ffa-ir-medical-report",
+  "payload": {
+    "abstract": "<p>Automatic medical report generation (MRG) towards describing life-threatening lesions from given medical images, such as Chest X-ray and Fundus Fluorescein Angiography (FFA), has been a long-standing research topic in machine learning and automatic medical diagnosis fields. However, existing MRG benchmarks only provide medical images and free-text reports without explainable annotations and reliable evaluation tools, hindering the current research advances from two aspects: First, existing methods can only predict reports without accurate explanation, undermining the trustworthiness of the diagnostic methods; Second, the comparison between predicted reports from MRG methods is unreliable based on the natural language generation (NLG) metrics.</p>\n\n<p>To address these issues, we propose an explainable and reliable MRG benchmark based on FFA Images and Reports (FFA-IR). Specifically, our FFA-IR dataset is featured from the following aspects: 1) Large-scale medical dataset. FFA-IR collects 766 reports along with 47,247 FFA images from clinical practice. 2) Explainable annotation. FFA-IR annotates 46 categories of lesions with a total of 12,166 regions. 3) Bilingual reports. FFA-IR provides both English and Chinese reports for each case. We hope that our FFA-IR can significantly advance research from both vision-and-language and medicine fields and improve the conventional retinal disease diagnosis procedure.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 13101881873,
+    "core_doi": "10.13026/k5rp-9h43",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 13105215970,
+    "public_project_uuid": "b2948fb6-8fc8-414a-b182-5fe27e4e4ef1",
+    "publish_date": "2025-01-21",
+    "resource_type": "Database",
+    "short_description": "Benchmark dataset for report generation based on fundus fluorescein angiography images and reports.",
+    "slug": "ffa-ir-medical-report",
+    "source_url": "https://physionet.org/content/ffa-ir-medical-report/1.1.0/",
+    "title": "FFA-IR: Towards an Explainable and Reliable Medical Report Generation Benchmark",
+    "topics": [
+      "fundus fluorescein angiography",
+      "medical report generation",
+      "vision and language",
+      "explainable and reliable evaluation"
+    ],
+    "version": "1.1.0",
+    "version_doi": "10.13026/f7w3-gm74"
+  },
+  "source": "physionet"
+}

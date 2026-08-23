@@ -1,0 +1,94 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005329",
+  "payload": {
+    "created": "2024-07-11T00:31:39.060Z",
+    "id": "ds005329",
+    "latestSnapshot": {
+      "created": "2025-08-13T07:37:23.000Z",
+      "description": {
+        "Authors": [
+          "Angelique Volfart",
+          "Katie McMahon",
+          "Catherine Liégeois-Chauvel",
+          "Vitoria Piai",
+          "Greig de Zubicaray"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005329.v2.0.0",
+        "Funding": [
+          "Australian Research Council DP200100127"
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Are the ventral anterior temporal lobes involved in accessing conceptual knowledge during spoken word production? fMRI evidence from auditory naming",
+        "ReferencesAndLinks": null
+      },
+      "readme": "This dataset is associated with the manuscript entitled \"Are the ventral anterior temporal lobes crucial for processing conceptual knowledge during spoken word production? fMRI evidence from auditory naming\" authored by Angelique Volfart, Katie McMahon, Catherine Liegeois-Chauvel, Vitoria Piai and Greig de Zubicaray. \n\nIt includes raw BOLD fMRI data (~400 3D volumes converted to one 4D .nii file per task and run), associated events, field maps and structural T1 images of 25 healthy participants (subjects 004, 019 and 023 were excluded from analysis due to technical issues or incidental findings). \n\nIt also includes the processed structural MRI (forward transform from native to MNI space), processed fMRI data of each participant (~400 3D volumes converted to one 4D .nii file per task and run after normalization, smoothing and global signal removal), the first-level analysis SPM batch files and SPM.mat result files for each participant as derivatives of their functional data, and the second-level analysis (full factorial group analysis) SPM batch file and SPM.mat result file (see \"derivatives\" folder at the root of the dataset). \n\nThe task performed by participants during functional runs involves naming to auditory definitions or to environmental sounds, and to reverse definitions or white noise stimuli. ",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 21799430561,
+        "subjects": [
+          "024",
+          "003",
+          "018",
+          "001",
+          "005",
+          "017",
+          "008",
+          "011",
+          "028",
+          "002",
+          "020",
+          "007",
+          "013",
+          "016",
+          "021",
+          "026",
+          "027",
+          "012",
+          "022",
+          "010",
+          "015",
+          "006",
+          "014",
+          "009",
+          "025"
+        ],
+        "tasks": [
+          "NamingToDefinitions",
+          "NamingToSounds"
+        ],
+        "totalFiles": 407
+      },
+      "tag": "2.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "Australian Research Council",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "Multiband EPI fMRI",
+      "studyDomain": "Language Production",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2025-03-04T08:21:50.281Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:7375ef545a35286959a4702b97e0def94d4535df0d0edca95afbae47c7c29ebd",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "FDG-PET/CT Staging of Head and Neck Cancer",
+        "label": "head and neck cancer"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "surgery"
+    ],
+    "id": "tcia:acrin-hnscc-fdg-pet-ct",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "positron emission tomography (PET)",
+        "value": "PET"
+      },
+      {
+        "evidence": "computed tomography CT",
+        "value": "CT"
+      },
+      {
+        "evidence": "RTSTRUCT",
+        "value": "radiotherapy"
+      }
+    ],
+    "population": "Head and neck cancer patients with a clinically N0 neck undergoing pathologic sampling of neck lymph nodes.",
+    "summary": "Multicenter trial collection (ACRIN 6685) assessing the negative predictive value of FDG-PET/CT for the clinically N0 neck against pathologic lymph node sampling, and its potential to change neck treatment."
+  },
+  "prompt_version": "v1"
+}

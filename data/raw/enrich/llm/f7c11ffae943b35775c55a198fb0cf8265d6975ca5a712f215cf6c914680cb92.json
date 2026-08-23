@@ -1,0 +1,34 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:f7c11ffae943b35775c55a198fb0cf8265d6975ca5a712f215cf6c914680cb92",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "distinguishing between macular and optic nerve diseases",
+        "label": "macular and optic nerve diseases"
+      }
+    ],
+    "countries": [
+      "ES"
+    ],
+    "domains": [
+      "other"
+    ],
+    "id": "physionet:perg-ioba-dataset",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "1354 transient PERG responses",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "age, gender, and diagnoses, is provided in CSV format",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "304 subjects evaluated at the Institute of Applied Ophthalmobiology (IOBA), University of Valladolid, from 2003 to 2022",
+    "summary": "Pattern electroretinogram recordings in CSV format from subjects evaluated at IOBA, with at least one signal per eye, plus age, gender, diagnoses, and logMar visual acuity."
+  },
+  "prompt_version": "v1"
+}

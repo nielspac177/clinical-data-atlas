@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:5609364c9d305a687edfed775c063a7458f49b8e53c35a849a9c428ae777455e",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "neoadjuvant chemotherapy (NACT) for invasive breast cancer",
+        "label": "invasive breast cancer"
+      },
+      {
+        "evidence": "stage II or III locally advanced breast cancer",
+        "label": "locally advanced breast cancer"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "tcia:breast-mri-nact-pilot",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Longitudinal DCE MRI studies",
+        "value": "MRI"
+      }
+    ],
+    "population": "68 patients with stage II or III locally advanced breast cancer recruited; longitudinal DCE MRI studies of 64 patients available.",
+    "summary": "Single-site pilot study of serial dynamic contrast-enhanced breast MRI during neoadjuvant chemotherapy, with segmentations. Longitudinal studies are available for 64 of the 68 recruited patients."
+  },
+  "prompt_version": "v1"
+}

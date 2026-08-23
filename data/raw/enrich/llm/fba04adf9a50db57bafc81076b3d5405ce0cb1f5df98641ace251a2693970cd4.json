@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:fba04adf9a50db57bafc81076b3d5405ce0cb1f5df98641ace251a2693970cd4",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "automatically identify cardiac abnormalities in 12-lead ECG recordings",
+        "label": "cardiac abnormalities"
+      },
+      {
+        "evidence": "such as cardiac arrhythmias",
+        "label": "cardiac arrhythmias"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:challenge-2020",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "12-lead ECG recordings",
+        "value": "ECG"
+      }
+    ],
+    "population": null,
+    "summary": "Challenge dataset of 12-lead ECG recordings for building open-source algorithms that automatically identify cardiac abnormalities, drawing on data from multiple sources rather than a single homogeneous dataset."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,156 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003500",
+  "payload": {
+    "created": "2021-02-02T18:03:43.438Z",
+    "id": "ds003500",
+    "latestSnapshot": {
+      "created": "2021-04-20T00:54:28.000Z",
+      "description": {
+        "Authors": [
+          "James R. Booth",
+          "Douglas D. Burman",
+          "Darren R. Gitelman",
+          "Marisa N. Lytle",
+          "Marsel M. Mesulam",
+          "Joel R. Meyer Jr.",
+          "Todd R. Parrish",
+          "Barbara Trommer"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds003500.v1.2.0",
+        "Funding": [
+          "Northwestern University, Volwiler Research Fund, General Electric Company"
+        ],
+        "HowToAcknowledge": "Please cite this dataset and the accompanying data descriptor when using this dataset: \n\nLytle MN, Burman DD, & Booth JR (2021). Response inhibition and selective attention in adults and children with and without ADHD. OpenNeuro. 10.18112/openneuro.ds003500\n\nLytle MN, Burman DD & Booth JR (under review). A neuroimaging dataset on response inhibition and selective attention in adults and children with and without ADHD. Data in Brief.\n",
+        "License": "CC0",
+        "Name": "Response inhibition and selective attention in adults and children with and without ADHD",
+        "ReferencesAndLinks": [
+          "Booth, J. R., Burman, D. D., Meyer, J. R., Lei, Z., Trommer, B. L., Davenport, N. D., Li, W., Parrish, T. B., Gitelman, D. R., & Mesulam, M. M. (2005). Larger deficits in brain networks for response inhibition than for visual selective attention in attention deficit hyperactivity disorder (ADHD). Journal of Child Psychology and Psychiatry and Allied Disciplines, 46(1), 94–111.",
+          "Booth, J. R., Burman, D. D., Meyer, J. R., Lei, Z., Trommer, B. L., Davenport, N. D., Li, W., Parrish, T. B., Gitelman, D. R., & Mesulam, M. M. (2003). Neural development of selective attention and response inhibition. NeuroImage, 20(2), 737–751."
+        ]
+      },
+      "readme": "# Dataset Description\n\nThis dataset contains functional MRI data from 11 adults, 12 children with ADHD, and 15 aged matched children without ADHD while they completed selective attention and response inhibition tasks. Task performance data is stored in the events.tsv files accompanying each BOLD image within the subject folder. See the task json files at the root level of the dataset for descriptions of each task and MRI collection parameters. Each subject also completed T1-weigted structural MRI at each visit. See Acq section below for description of visit file naming schema. Children also completed standardized cognitive assessments. Scores from these assessments are organized by tasks in the phenotype directory of the dataset. Tasks were presented with PsyScope. Related task scripts are stored in the code directory. Stimuli used for all tasks are stored in the stimuli directory.\n\n# Acq\n\nAcq-a,b indicate the visit day that tasks were completed. Corresponding shifted acquisition dates can be found in the participants.tsv. These were not separated into different session folders as they were not considered to be separate for analysis\n\n# Defacing\n\nAll SPGR anatomical files were defaced using pydeface\n\n# Known Issues\n\n* Images were converted from img and hdr files using mri_convert with default settings as orientation files were not present\n* Sub-226 has variation in T1 structural imaging parameters for unknown reasons\n* BIDS validator generates warning that stimuli are not referenced in events files, this is due to the block design structure of the events files. All stimuli from all tasks are included in stimuli directory and were used in the task protocol.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 5730270659,
+        "subjects": [
+          "213",
+          "214",
+          "218",
+          "219",
+          "220",
+          "221",
+          "222",
+          "223",
+          "224",
+          "225",
+          "226",
+          "228",
+          "229",
+          "230",
+          "231",
+          "232",
+          "233",
+          "234",
+          "235",
+          "236",
+          "237",
+          "238",
+          "240",
+          "241",
+          "242",
+          "245",
+          "246",
+          "248",
+          "250",
+          "251",
+          "253",
+          "254",
+          "256",
+          "258",
+          "259",
+          "260",
+          "262",
+          "268"
+        ],
+        "tasks": [
+          "Conjunction Target, 1 and 9 shapes, Feature Selection",
+          "Conjunction Target, 9 shapes, Response Inhibition",
+          "Conjunction Target, 1 shape, Response Inhibition",
+          "Feature Target, 1 shape, Response Inhibition",
+          "Feature Target, 1 and 9 shapes, Feature Selection",
+          "Feature Target, 9 shapes, Response Inhibition"
+        ],
+        "totalFiles": 608
+      },
+      "tag": "1.2.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2021-02-25T14:18:45.648Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,82 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004187",
+  "payload": {
+    "created": "2022-07-01T07:11:13.138Z",
+    "id": "ds004187",
+    "latestSnapshot": {
+      "created": "2023-07-14T23:55:12.000Z",
+      "description": {
+        "Authors": [
+          "Irem Yildirim",
+          "Khan Hekmatyar",
+          "Keith A. Schneider"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004187.v1.0.2",
+        "Funding": [
+          "National Institutes of Health Grant (NIH/NEI 1R01EY028266)"
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "LGN Layers Data",
+        "ReferencesAndLinks": [
+          "Yildirim, I., Hekmatyar, K., & Schneider, K. A. (under revision). Evaluating quantitative and functional MRI as potential techniques to identify the layers in the human lateral geniculate nucleus. Invited resubmission to NeuroImage",
+          "Link will be inserted upon publication"
+        ]
+      },
+      "readme": "3T MRI data from 3 young adults.\n\nThe session folders are numerated such that: \n\nses-01, ses-02, ses-03, ses-04 were the quantitative MRI sessions. These sessions can also be found under derivates. This folder includes qT1 maps that were used to find LGN anatomically. \n\nses-05 was the fMRI session used as an LGN localizer. Ss were presented with the visual stimulus on each visual hemifield alternately. The visual stimulus was a black and white checkerboard, hemifield radius of 8.5°, flicking at 4 Hz on a neutral gray background. The GLM results were used to adjust the anatomically created LGN masks for functionally significant activation. The contrast for the right vs left hemifield was used for the left LGN and vice versa for the right LGN.\n\nses-06 was the fMRI session to segregate the eye-specific signals in a monocular fashion. Ss were presented with the visual stimulus while they closed each eye alternately. The visual stimulus was the full-field 4 Hz flickering checkerboard (17° diameter, 0.5° central gap).\n\nses-07 was the fMRI session to segregate the eye-specific signals in a dichoptic fashion. Ss wore circularly polarized eyeglasses, synched with a circularly polarized filter, so that the stimulus was presented to each eye alternately while the other eye was presented with blank. The visual stimulus was the full-field 4 Hz flickering checkerboard (12.5° diameter, 0.5° central gap).\n\nThe FSL and MATLAB codes can be found at https://github.com/yirem/LGN_layers.\n\t \nMore information will be found Yildirim, I., Hekmatyar, K., & Schneider, K. A. (under revision). Evaluating quantitative and functional MRI as potential techniques to identify the subdivisions in the human lateral geniculate nucleus. Invited resubmission to NeuroImage in September 2022.",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural",
+          "mri_functional"
+        ],
+        "sessions": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07"
+        ],
+        "size": 41588722777,
+        "subjects": [
+          "01",
+          "02",
+          "03"
+        ],
+        "tasks": [
+          "Visual hemifield stimulation",
+          "Monocular viewing of eye-specific stimulation",
+          "Dichoptic viewing of eye-specific stimulation"
+        ],
+        "totalFiles": 409
+      },
+      "tag": "1.0.2"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": null,
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "National Institutes of Health",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2022-07-02T20:36:08.597Z"
+  },
+  "source": "openneuro"
+}

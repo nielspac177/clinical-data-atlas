@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:d8cd42cd5c218ea8ecd77e76c275662c02ba5dd0764dce48796f5f56513d5de6",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "pulmonary embolism (PE) adjudication",
+        "label": "pulmonary embolism"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "pulmonology"
+    ],
+    "id": "physionet:mimic-iv-ext-pe",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "computed tomography pulmonary angiogram",
+        "value": "CT"
+      },
+      {
+        "evidence": "radiology reports",
+        "value": "clinical_notes"
+      },
+      {
+        "evidence": "diagnosis codes",
+        "value": "EHR"
+      }
+    ],
+    "population": "CTPA radiology reports in MIMIC-IV (n=19,942), reviewed and labeled by two physicians",
+    "summary": "Pulmonary embolism labels added to CT pulmonary angiography radiology reports in MIMIC-IV. Two physicians reviewed extracted snippets and labeled 19,942 reports as positive (1,591) or negative (18,351), marking subsegmental cases."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,53 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:ba91123701a620551d7dfd8cb30381cef2bf372ef64237180bb291e0dd5d6e3a",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Neoplasms, NOS",
+        "label": "Neoplasms, NOS"
+      },
+      {
+        "evidence": "Cystic, Mucinous and Serous Neoplasms",
+        "label": "Cystic, Mucinous and Serous Neoplasms"
+      },
+      {
+        "evidence": "Adenomas and Adenocarcinomas",
+        "label": "Adenomas and Adenocarcinomas"
+      },
+      {
+        "evidence": "Epithelial Neoplasms, NOS",
+        "label": "Epithelial Neoplasms, NOS"
+      },
+      {
+        "evidence": "Squamous Cell Neoplasms",
+        "label": "Squamous Cell Neoplasms"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "pulmonology"
+    ],
+    "id": "gdc:MATCH-Q",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "WXS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "RNA-Seq",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "35 human cases with tumors of female genital organs, lung, cervix, colon, biliary tract, uterus, gallbladder, rectum, ovary and parotid gland",
+    "summary": "Genomic characterization of MATCH trial Arm Q: whole-exome and RNA sequencing with variant, biospecimen and clinical data, from tumors of female genital organs, lung, colon, biliary tract, rectum and ovary."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,44 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "vet-diagnosis-coding",
+  "payload": {
+    "abstract": "<p>Veterinary medical records represent a large data resource for application to veterinary and One Health clinical research efforts. Use of the data is limited by interoperability challenges including inconsistent data formats and data siloing. Clinical coding using standardized medical terminologies enhances the quality of medical records and facilitates their interoperability with veterinary and human health records from other sites. Previous studies, such as DeepTag and VetTag, evaluated the application of Natural Language Processing (NLP) to automate veterinary diagnosis coding, employing long short-term memory (LSTM) and transformer models to infer a subset of Systematized Nomenclature of Medicine - Clinical Terms (SNOMED-CT) diagnosis codes from free-text clinical notes. This study expands on these efforts by incorporating all 7,739 distinct SNOMED-CT diagnosis codes recognized by the Colorado State University (CSU) Veterinary Teaching Hospital (VTH) and by leveraging the increasing availability of pre-trained language models (LMs). Twelve freely-available pre-trained LMs (GatorTron, MedicalAI ClinicalBERT, medAlpaca, VetBERT, PetBERT, BERT, BERT Large, RoBERTa, GPT-2, GPT-2 XL, DeBERTa V3, and ModernBERT) were fine-tuned on the free-text notes from 246,473 manually-coded veterinary patient visits included in the CSU VTH's electronic health records (EHRs), which resulted in superior performance relative to previous efforts. The most accurate results were obtained when expansive labeled data were used to fine-tune relatively large clinical LMs, but the study also showed that comparable results can be obtained using more limited resources and non-clinical LMs. The results of this study contribute to the improvement of the quality of veterinary EHRs by investigating accessible methods for automated coding and support both animal and human health research by paving the way for more integrated and comprehensive health databases that span species and institutions.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 13086948640,
+    "core_doi": "10.13026/e5w8-1018",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 15757113806,
+    "public_project_uuid": "afcba537-9de4-47d5-9834-aa8bb99b64c4",
+    "publish_date": "2026-01-25",
+    "resource_type": "Model",
+    "short_description": "Fine-tuned GatorTron LLM for veterinary diagnosis coding to 7,739 SNOMED-CT codes based on clinical summary text from the Colorado State University Veterinary Teaching Hospital.",
+    "slug": "vet-diagnosis-coding",
+    "source_url": "https://physionet.org/content/vet-diagnosis-coding/1.0.0/",
+    "title": "Fine-tuning foundational models to code diagnoses from veterinary health records",
+    "topics": [
+      "foundational models",
+      "one health",
+      "diagnoses",
+      "snomed-ct",
+      "veterinary medicine",
+      "large language models",
+      "omop cdm",
+      "veterinary medical records",
+      "transformers",
+      "natural language processing",
+      "clinical coding"
+    ],
+    "version": "1.0.0",
+    "version_doi": "10.13026/akca-bb83"
+  },
+  "source": "physionet"
+}

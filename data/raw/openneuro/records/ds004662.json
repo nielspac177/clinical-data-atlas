@@ -1,0 +1,83 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004662",
+  "payload": {
+    "created": "2023-08-06T05:12:01.523Z",
+    "id": "ds004662",
+    "latestSnapshot": {
+      "created": "2023-10-30T17:59:57.000Z",
+      "description": {
+        "Authors": [
+          "Neha A Reddy",
+          "Kristina M Zvolanek",
+          "Molly G Bright"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004662.v1.1.0",
+        "Funding": [
+          "NIH Funded Training Program (NAR, KMZ) T32EB025766"
+        ],
+        "HowToAcknowledge": "Please cite this paper: Neha A. Reddy, Kristina M. Zvolanek, Stefano Moia, Cesar Caballero-Gaudes, Molly G. Bright (2023) Denoising task-correlated head motion from motor-task fMRI data with multi-echo ICA; bioRxiv 2023.07.19.549746; doi: https://doi.org/10.1101/2023.07.19.549746",
+        "License": "CC0",
+        "Name": "Denoising task-correlated head motion from motor-task fMRI data with multi-echo ICA",
+        "ReferencesAndLinks": null
+      },
+      "readme": "Please cite the following reference if you use these data:\nNeha A. Reddy, Kristina M. Zvolanek, Stefano Moia, Cesar Caballero-Gaudes, Molly G. Bright (2023) Denoising task-correlated head motion from motor-task fMRI data with multi-echo ICA; bioRxiv 2023.07.19.549746; doi: https://doi.org/10.1101/2023.07.19.549746\n\nRelease history:\n08/06/2023: initial upload\n10/30/2023: addition of hand-grasp and end-tidal CO2 regressors\n",
+      "summary": {
+        "dataProcessed": true,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 13053603945,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08"
+        ],
+        "tasks": [
+          "hand grasp"
+        ],
+        "totalFiles": 381
+      },
+      "tag": "1.1.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        25,
+        24,
+        23,
+        25,
+        28,
+        26,
+        30,
+        28
+      ],
+      "associatedPaperDOI": "https://doi.org/10.1101/2023.07.19.549746",
+      "dataProcessed": true,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2023-08-06T18:06:55.462Z"
+  },
+  "source": "openneuro"
+}

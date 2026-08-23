@@ -1,0 +1,80 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003059",
+  "payload": {
+    "created": "2020-08-07T02:56:10.653Z",
+    "id": "ds003059",
+    "latestSnapshot": {
+      "created": "2020-08-07T08:05:11.000Z",
+      "description": {
+        "Authors": [
+          "Robin Carhart-Harris et al."
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds003059.v1.0.0",
+        "Funding": null,
+        "HowToAcknowledge": "Please cite this paper: https://www.pnas.org/content/113/17/4853.short",
+        "License": "CC0",
+        "Name": "Neural correlates of the LSD experience revealed by multimodal neuroimaging",
+        "ReferencesAndLinks": null
+      },
+      "readme": "Rest1 and Rest3 are resting state\r\nRest2 is music, three subjects had technical problems with the music and should not be used (S03, S12, S15)\r\nratings: subjects rated the questions with a VAS after each scan.  The 11D-ASC was rated at the end of the scanning day.\r\n\r\nLSD, BOLD Pre-processing  \r\nFour different but complementary imaging software packages were used to analyse the fMRI data. Specifically, FMRIB Software Library (FSL), AFNI , Freesurfer and Advanced Normalization Tools (ANTS) were used. One subject did not complete the BOLD scans due to anxiety and an expressed desire to exit the scanner and four others were discarded from the group analyses due to excessive head movement. Principally, motion was measured using frame-wise displacement (FD) (Power et al., 2014). The criterion for exclusion was subjects with >15%  scrubbed volumes when the scrubbing threshold is FD = 0.5. After discarding these subjects we reduced the threshold to FD = 0.4. The between-condition difference in mean FD for the 4 subjects that were discarded was 0.323±0.254 and for the 15 subjects that were used in the analysis the difference in mean FD was 0.046 ±0.032. The following pre-processing stages were performed: 1) removal of the first three volumes; 2) de-spiking (3dDespike, AFNI); 3) slice time correction (3dTshift, AFNI); 4) motion correction (3dvolreg, AFNI) by registering each volume to the volume most similar, in the least squares sense, to all others (in-house code); 5) brain extraction (BET, FSL); 6) rigid body registration to anatomical scans (twelve subjects with FSL’s BBR, one subject with Freesurfer’s bbregister and two subjects manually); 7) non-linear registration to 2mm MNI brain (Symmetric Normalization (SyN), ANTS); 8) scrubbing (Power et al., 2012) - using an FD threshold of 0.4  (the mean percentage of volumes scrubbed for placebo and LSD was 0.4 ±0.8% and 1.7 ±2.3%, respectively). The maximum number of scrubbed volumes per scan was 7.1%) and scrubbed volumes were replaced with the mean of the surrounding volumes. Additional pre-processing steps included: 9) spatial smoothing (FWHM) of 6mm (3dBlurInMask, AFNI); 10) band-pass filtering between 0.01 to 0.08 Hz (3dFourier, AFNI); 11) linear and quadratic de-trending (3dDetrend, AFNI); 12) regressing out 9 nuisance regressors (all nuisance regressors were bandpassed filtered with the same filter as in step 10): out of these, 6 were motion-related (3 translations, 3 rotations) and 3 were anatomically-related (not smoothed). Specifically, the anatomical nuisance regressors were: 1) ventricles (Freesurfer, eroded in 2mm space), 2) draining veins (DV) (FSL’s CSF minus Freesurfer’s Ventricles, eroded in 1mm space) and 3) local white matter (WM) (FSL’s WM minus Freesurfer’s subcortical grey matter (GM) structures, eroded in 2mm space). Regarding WM regression, AFNI’s 3dLocalstat was used to calculate the mean local WM time-series for each voxel, using a 25mm radius sphere centred on each voxel (Jo et al., 2010).\r\n\r\nfMRI motion correction \r\nAfter discarding four subjects due to head motion, fifteen were left for the BOLD analysis. There was still a significant between-condition difference in motion for these subjects however (mean FD of placebo = 0.074 ±0.032, mean FD of LSD = 0.12 ±0.05, p = 0.0002). RSFC analysis is extremely sensitive to head motion (Power et al., 2012) and therefore special consideration was given to the pre-processing pipeline to account for motion. This section goes into more detail about the pre-processing steps that were performed to reduce artefacts associated with motion as well as other non-neural sources of noise. \r\nDe-spiking has been shown to improve motion-correction and create more accurate FD values (Jo et al., 2013) and low-pass filtering at 0.08 Hz has been shown to perform well in removing high frequency motion (Satterthwaite et al., 2013). Six motion regressors were used as covariates in linear regression. It was decided that using more than six (e.g., “Friston 24-parameter motion regression” (Friston et al., 1996)) would be redundant and may impinge on neural signal (Bright and Murphy, 2015) (especially when other rigorous processes such as scrubbing (Power et al., 2012) and local WM were applied (Jo et al., 2010)) . Using anatomical regressors is also a common step to clean noise and ventricles, DV and local WM were used in the pipeline employed in the present analyses. local WM regression has been suggested to perform better than global WM regression (Jo et al., 2013).\r\nIt has previously been shown that head motion biases functional connectivity results in a distance-dependant manner (Power et al., 2014). Therefore, as a quality control step, at the end of the pre-processing procedure, cloud plots were constructed to test for relationships between inter-node Euclidian distance and correlations between FD and RSFC across subjects. In cases in which motion is affecting the results, proximal nodes will have high FD-RSFC correlations and distal nodes will have low FD-RSFC correlations. This would result in a negative correlation between distance and FD-RSFC correlation. In the present dataset, the distance to FD-RSFC correlation was very close to zero for both the placebo and LSD conditions (Fig. S7), suggesting that the extensive pre-processing measures had successfully controlled for distance-related motion artefacts. The final quality control step was to correlate the results with mean FD across subjects (Table S6). Reassuringly, very few results correlated with mean motion (FD) and these were: vmPFC-PCC (r = -0.48, p = 0.035), V1-bilateral angular gyrus (r = 0.56, p=0.015). The significant correlation between changes in vmPFC-PCC RSFC and FD is also mentioned in (Power et al., 2012) and (Van Dijk et al., 2012); therefore, we decided not to elaborate on this result in the manuscript as it may have been an artifact of motion.\r\n\r\n\r\nFig. S7. Correlation between inter-node Euclidian distance (mm) and FD-RSFC correlation (r) for both LSD (a) and placebo (b). Nodes were defined using the Craddock atlas with 240 parcellations, excluding supplementary motor and motor areas. For each pair of nodes, RSFC was calculated with pearson’s r and transformed into z using fisher transformation. For each pair of nodes, a correlation across subjects was calculated between mean FD and RSFC (r) and transformed into z using fisher’s transformation. This correlation is plotted against the distance between nodes (mm). The correlations for LSD and placebo were r = -0.0009 (p = 0.089) and r = -0.025 (p < 0.001), respectively, suggesting that motion did not affect RSFC in a distant dependant manner after pre-processing. \r\n\r\nREFERENCES\r\nBright MG, Murphy K (2015) Is fMRI “noise” really noise? Resting state nuisance regressors remove variance with network structure. NeuroImage 114:158-169.\r\nFriston KJ, Williams S, Howard R, Frackowiak RS, Turner R (1996) Movement‐related effects in fMRI time‐series. Magnetic resonance in medicine 35:346-355.\r\nJo HJ, Saad ZS, Simmons WK, Milbury LA, Cox RW (2010) Mapping sources of correlation in resting state FMRI, with artifact detection and removal. Neuroimage 52:571-582.\r\nJo HJ, Gotts SJ, Reynolds RC, Bandettini PA, Martin A, Cox RW, Saad ZS (2013) Effective preprocessing procedures virtually eliminate distance-dependent motion artifacts in resting state FMRI. Journal of applied mathematics 2013.\r\nPower JD, Barnes KA, Snyder AZ, Schlaggar BL, Petersen SE (2012) Spurious but systematic correlations in functional connectivity MRI networks arise from subject motion. Neuroimage 59:2142-2154.\r\nPower JD, Mitra A, Laumann TO, Snyder AZ, Schlaggar BL, Petersen SE (2014) Methods to detect, characterize, and remove motion artifact in resting state fMRI. Neuroimage 84:320-341.\r\nSatterthwaite TD, Elliott MA, Gerraty RT, Ruparel K, Loughead J, Calkins ME, Eickhoff SB, Hakonarson H, Gur RC, Gur RE (2013) An improved framework for confound regression and filtering for control of motion artifact in the preprocessing of resting-state functional connectivity data. Neuroimage 64:240-256.\r\nVan Dijk KR, Sabuncu MR, Buckner RL (2012) The influence of head motion on intrinsic functional connectivity MRI. Neuroimage 59:431-438.\r\n\nEmail leor.roseman13@imperial.ac.uk for any questions\r\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "LSD",
+          "PLCB"
+        ],
+        "size": 15370199456,
+        "subjects": [
+          "001",
+          "002",
+          "003",
+          "004",
+          "006",
+          "009",
+          "010",
+          "011",
+          "012",
+          "013",
+          "015",
+          "017",
+          "018",
+          "019",
+          "020"
+        ],
+        "tasks": [
+          "Rest"
+        ],
+        "totalFiles": 138
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": null,
+      "associatedPaperDOI": "https://doi.org/10.1073/pnas.1518377113, https://doi.org/10.1016/j.cub.2016.02.010, https://doi.org/10.1007/s00213-015-4014-y, https://doi.org/10.1016/j.euroneuro.2016.03.018, https://doi.org/10.1002/hbm.23234, https://doi.org/10.1038/s41598-017-17546-0",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "Resting State fMRI",
+      "studyDomain": "Pharmacological fMRI with Lysergic Acid Diethylamide",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2020-08-07T14:20:11.503Z"
+  },
+  "source": "openneuro"
+}

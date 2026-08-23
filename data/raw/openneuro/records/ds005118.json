@@ -1,0 +1,85 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005118",
+  "payload": {
+    "created": "2024-05-01T18:20:09.936Z",
+    "id": "ds005118",
+    "latestSnapshot": {
+      "created": "2024-05-02T00:15:34.000Z",
+      "description": {
+        "Authors": [
+          "Charles J. Lynch",
+          "Conor Liston"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005118.v1.0.0",
+        "Funding": [
+          ""
+        ],
+        "HowToAcknowledge": "When using this data, please cite Lynch et al. 2020 Cell Reports",
+        "License": "CC0",
+        "Name": "Weill Cornell Medicine Multi-echo (WCM-ME) Dataset",
+        "ReferencesAndLinks": [
+          "https://pubmed.ncbi.nlm.nih.gov/33357444/"
+        ]
+      },
+      "readme": "This dataset contains extensive structural (T1w, T2w) and multi-band, multi-echo resting-state fMRI data from a single individual (\"ME01\", study author CJL). In addition to the raw data, there are several derivatives from a surface-based (fs_LR_32k space) processing pipeline, including individual-specific functional brain networks.   \n\nThis data was originally collected as a part of a study exploring the potential benefits of multi-echo fMRI for precision functional mapping (PFM). It is being made publicly available now as an example dataset for implementing PFM routines related to Lynch et al., 2024 XXX (Link TBD). \n\nThe original manuscript (Lynch et al., 2020 Cell Reports; https://pubmed.ncbi.nlm.nih.gov/33357444/) should be cited when publishing work that uses this data.  \n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "func01",
+          "func02",
+          "func03",
+          "func04",
+          "func05",
+          "func06",
+          "func07",
+          "func08",
+          "func09",
+          "func10",
+          "struct01",
+          "struct02",
+          "struct03",
+          "struct04",
+          "struct05",
+          "struct06"
+        ],
+        "size": 111314269932,
+        "subjects": [
+          "ME01"
+        ],
+        "tasks": [
+          "rest"
+        ],
+        "totalFiles": 712
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": false,
+      "ages": null,
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "Functional brain organization",
+      "studyLongitudinal": "Longitudinal"
+    },
+    "publishDate": "2024-05-02T00:21:11.147Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,125 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds000224",
+  "payload": {
+    "created": "2017-09-20T20:32:48.506Z",
+    "id": "ds000224",
+    "latestSnapshot": {
+      "created": "2023-02-07T18:59:24.000Z",
+      "description": {
+        "Authors": [
+          "Evan M. Gordon",
+          "Timothy O. Laumann ",
+          "Adrian W. Gilmore",
+          "Dillan J. Newbold",
+          "Deanna J. Greene",
+          "Jeffrey J. Berg",
+          "Mario Ortega",
+          "Catherine Hoyt-Drazen",
+          "Caterina Gratton",
+          "Haoxin Sun",
+          "Jacqueline M. Hampton",
+          "Rebecca S. Coalson",
+          "Annie Nguyen",
+          "Kathleen B. McDermott",
+          "Joshua S. Shimony",
+          "Abraham Z. Snyder",
+          "Bradley L. Schlaggar",
+          "Steven E. Petersen",
+          "Steven M. Nelson",
+          "Nico U.F. Dosenbach"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds000224.v1.0.4",
+        "Funding": [
+          "This work was supported by National Institutes of Health Grants NS088590, TR000448 (NUFD), MH104592 (DJG), and HD087011 (to the Intellectual and Developmental Disabilities Research Center at Washington University); the Jacobs Foundation (NUFD); the Child Neurology Foundation (NUFD); the McDonnell Center for Systems Neuroscience (NUFD, BLS); the Mallinckrodt Institute of Radiology (NUFD); the Hope Center for Neurological Disorders (NUFD, BLS, SEP); and Dart Neuroscience LLC."
+        ],
+        "HowToAcknowledge": "When using this data, please cite Gordon et al., Precision Functional Mapping of Individual Human Brains, 2017 and include the following: 'This data was obtained from the OpenNeuro database. Its accession number is ds000224'",
+        "License": "CC0",
+        "Name": "The Midnight Scan Club (MSC) dataset",
+        "ReferencesAndLinks": [
+          "http://www.cell.com/neuron/fulltext/S0896-6273(17)30613-X"
+        ]
+      },
+      "readme": "This dataset contains the Midnight Scanning Club (MSC) data, a dataset focused on the precise characterization of ten individual subjects via collection of large amounts of per-individual data. Each subject underwent twelve separate two-hour scanning sessions. In the first two sessions we collected four T1 images, four T2 images, four MR angiograms, and eight MR venograms. In the last ten sessions we collected five hours of resting-state fMRI data and over five and a half hours of task fMRI data across three different tasks. Participants also underwent extensive neuropsychological testing. These raw data are all provided here.\n\nIn addition to the raw data, we also provide several derivatives processed using both a volumetric (Talaraich-space) and a surface-based (fs_LR_32k space) pipeline. Volumetric derivatives include cross-session-average T1 and T2 images linearly registered to atlas (Talaraich) space; as well as resting-state data from each scanning session that has been fully preprocessed, motion-censored, and confound-regressed. Surface pipeline derivatives include cortical surfaces which were segmented from the T1 scans using freesurfer, hand-edited, and registered to fs_LR atlas space; resting-state data from each scanning session that has been fully preprocessed, motion-censored, and confound-regressed in CIFTI format (cortical: fs_LR32k; subcortical: Talaraich); cortical parcellations estimated from the resting-state data; vertex-wise whole-brain networks estimated from the resting-state data; task timecourses in CIFTI (cortical: fs_LR32k; subcortical: Talaraich) space; a selection of task contrast images in CIFTI (cortical: fs_LR32k; subcortical: Talaraich) space; myelin maps estimated from the T1- and T2-weighted anatomical scans; and matrices describing the physical geodesic/euclidean distances between every two points in the cifti image.\n\nDetails of this dataset are more fully described in Gordon EM, Laumann TO, Gilmore AW, Newbold DJ, Greene DJ, Berg JJ, Ortega M, Hoyt-Drazen C, Gratton C, Sun H, et al. (2017). Precision Functional Mapping of Individual Human Brains. Neuron 95, 791–807. This manuscript should be cited when publishing work using this data.",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "func01",
+          "func02",
+          "func03",
+          "func04",
+          "func05",
+          "func06",
+          "func07",
+          "func08",
+          "func09",
+          "func10",
+          "struct01",
+          "struct02",
+          "func11"
+        ],
+        "size": 27048178748,
+        "subjects": [
+          "MSC01",
+          "MSC02",
+          "MSC03",
+          "MSC04",
+          "MSC05",
+          "MSC06",
+          "MSC07",
+          "MSC08",
+          "MSC09",
+          "MSC10"
+        ],
+        "tasks": [
+          "glasslexical",
+          "memoryfaces",
+          "memoryscenes",
+          "memorywords",
+          "motor",
+          "rest"
+        ],
+        "totalFiles": 2189
+      },
+      "tag": "1.0.4"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        34,
+        34,
+        29,
+        28,
+        27,
+        24,
+        31,
+        27,
+        26,
+        31
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2017-09-20T20:32:48.506Z"
+  },
+  "source": "openneuro"
+}

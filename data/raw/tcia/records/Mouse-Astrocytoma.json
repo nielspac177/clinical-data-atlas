@@ -1,0 +1,581 @@
+{
+  "endpoints": [
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getCollectionValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getModalityValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getBodyPartValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getPatient",
+    "https://api.datacite.org/dois?prefix=10.7937"
+  ],
+  "harvest_method": "api:nbia+datacite",
+  "native_id": "Mouse-Astrocytoma",
+  "payload": {
+    "datacite": {
+      "citationCount": 5,
+      "container": {},
+      "contentUrl": [],
+      "contributors": [
+        {
+          "affiliation": [],
+          "contributorType": "DataCurator",
+          "familyName": null,
+          "givenName": null,
+          "name": "TCIA Team",
+          "nameIdentifiers": [],
+          "nameType": null
+        }
+      ],
+      "created": "2017-03-30T19:31:40Z",
+      "creators": [
+        {
+          "affiliation": [],
+          "familyName": "Jansen",
+          "givenName": "Sunny",
+          "name": "Jansen, Sunny",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Van Dyke",
+          "givenName": "Terry",
+          "name": "Van Dyke, Terry",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2017",
+          "dateInformation": null,
+          "dateType": "Issued"
+        }
+      ],
+      "descriptions": [
+        {
+          "description": "This collection consists of magnetic resonance images (MRI) of genetically engineered mouse models (GEMMs) of high grade astrocytoma, including glioblastoma multiforme (GBM). In these GEMMs, the most commonly disregulated networks in GBM -- RB, KRAS and/or PI3K signaling -- are perturbed at the genetic level. These genetic aberrations induce development of high grade astrocytoma in the mouse with properties similar to that of human disease. MRI was used to perform a qualitative and quantitative phenotypic characterization of the different genotypes and molecular subtypes. Additionally, mouse MRI images were compared human GBM imaging parameters using the VASARI lexicon. The MRI data contained herein includes anatomic T2 weighted images and dynamic contrast enhanced MRI. For more information, please contact Dr. Sunny Jansen (jansensa0@gmail.com) or Dr. Nailing Zhang (nailing9970@gmail.com).",
+          "descriptionType": "Abstract",
+          "lang": null
+        }
+      ],
+      "doi": "10.7937/k9tcia.2017.sgw7caqw",
+      "downloadCount": 0,
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "Mouse-Astrocytoma",
+          "identifierType": "TCIA Short Name"
+        }
+      ],
+      "isActive": true,
+      "language": null,
+      "metadataVersion": 8,
+      "partCount": 0,
+      "partOfCount": 0,
+      "publicationYear": 2015,
+      "published": null,
+      "publisher": "The Cancer Imaging Archive",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2017-03-30T19:31:41Z",
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "10.1007/s11045-020-00746-9",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1186/s40478-023-01509-w",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.compbiomed.2020.103772",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        }
+      ],
+      "relatedItems": [],
+      "rightsList": [
+        {
+          "rights": "Creative Commons Attribution 3.0 Unported",
+          "rightsIdentifier": "cc-by-3.0",
+          "rightsIdentifierScheme": "SPDX",
+          "rightsUri": "https://creativecommons.org/licenses/by/3.0/legalcode",
+          "schemeUri": "https://spdx.org/licenses/"
+        }
+      ],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "fabricaForm",
+      "state": "findable",
+      "subjects": [],
+      "titles": [
+        {
+          "lang": null,
+          "title": "TCIA Mouse-Astrocytoma Collection",
+          "titleType": null
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceType": "DICOM",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2025-06-01T01:01:15Z",
+      "url": "https://www.cancerimagingarchive.net/collection/mouse-astrocytoma/",
+      "version": "1",
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 613
+    },
+    "nbia": {
+      "body_parts": [
+        "SKULL"
+      ],
+      "collection": "Mouse-Astrocytoma",
+      "modalities": [
+        "MR"
+      ],
+      "patients": [
+        {
+          "Collection": "Mouse-Astrocytoma",
+          "PatientId": "TVD_GBM_IC2_11311014_021811",
+          "PatientName": "TVD_GBM_IC2_11311014_021811",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Astrocytoma",
+          "PatientId": "TVD_GBM_U87_4534_121511",
+          "PatientName": "TVD_GBM_U87_4534_121511",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Astrocytoma",
+          "PatientId": "TVD_GBM_U87_4494_121511",
+          "PatientName": "TVD_GBM_U87_4494_121511",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Astrocytoma",
+          "PatientId": "TVD_GBM_IC2_11311021_020111",
+          "PatientName": "TVD_GBM_IC2_11311021_020111",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Astrocytoma",
+          "PatientId": "TVD_GBM_U87_1202252_021512",
+          "PatientName": "TVD_GBM_U87_1202252_021512",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Astrocytoma",
+          "PatientId": "TVD_GBM_U87_4541_121411",
+          "PatientName": "TVD_GBM_U87_4541_121411",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Astrocytoma",
+          "PatientId": "TVD_GBM_IC2_11311002_020811",
+          "PatientName": "TVD_GBM_IC2_11311002_020811",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Astrocytoma",
+          "PatientId": "TVD_GBM_IC2_11311008_020111",
+          "PatientName": "TVD_GBM_IC2_11311008_020111",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Astrocytoma",
+          "PatientId": "TVD_GBM_U87_4540_121411",
+          "PatientName": "TVD_GBM_U87_4540_121411",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Astrocytoma",
+          "PatientId": "TVD_GBM_IC2_11311023_020111",
+          "PatientName": "TVD_GBM_IC2_11311023_020111",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Astrocytoma",
+          "PatientId": "TVD_GBM_U87_1202141_021412",
+          "PatientName": "TVD_GBM_U87_1202141_021412",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Astrocytoma",
+          "PatientId": "TVD_GBM_IC2_11311063_021811",
+          "PatientName": "TVD_GBM_IC2_11311063_021811",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Astrocytoma",
+          "PatientId": "TVD_GBM_U87_4536_121511",
+          "PatientName": "TVD_GBM_U87_4536_121511",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Astrocytoma",
+          "PatientId": "TVD_GBM_U87_4493_121511",
+          "PatientName": "TVD_GBM_U87_4493_121511",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Astrocytoma",
+          "PatientId": "TVD_GBM_IC2_11311017_020811",
+          "PatientName": "TVD_GBM_IC2_11311017_020811",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Astrocytoma",
+          "PatientId": "TVD_GBM_U87_1202253_021512",
+          "PatientName": "TVD_GBM_U87_1202253_021512",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Astrocytoma",
+          "PatientId": "TVD_GBM_IC2_11311004_020811",
+          "PatientName": "TVD_GBM_IC2_11311004_020811",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Astrocytoma",
+          "PatientId": "TVD_GBM_U87_1202145_021412",
+          "PatientName": "TVD_GBM_U87_1202145_021412",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Astrocytoma",
+          "PatientId": "TVD_GBM_IC1_070610_16_100110",
+          "PatientName": "TVD_GBM_IC1_070610_16_100110",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Astrocytoma",
+          "PatientId": "TVD_GBM_IC1_070610_51_093010",
+          "PatientName": "TVD_GBM_IC1_070610_51_093010",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Astrocytoma",
+          "PatientId": "TVD_GBM_IC2_11311045_022311",
+          "PatientName": "TVD_GBM_IC2_11311045_022311",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Astrocytoma",
+          "PatientId": "TVD_GBM_IC2_11311082_021511",
+          "PatientName": "TVD_GBM_IC2_11311082_021511",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Astrocytoma",
+          "PatientId": "TVD_GBM_IC2_11311019_020811",
+          "PatientName": "TVD_GBM_IC2_11311019_020811",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Astrocytoma",
+          "PatientId": "TVD_GBM_U87_4535_121411",
+          "PatientName": "TVD_GBM_U87_4535_121411",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Astrocytoma",
+          "PatientId": "TVD_GBM_IC2_11311072_021811",
+          "PatientName": "TVD_GBM_IC2_11311072_021811",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Astrocytoma",
+          "PatientId": "TVD_GBM_IC2_11311024_020111",
+          "PatientName": "TVD_GBM_IC2_11311024_020111",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Astrocytoma",
+          "PatientId": "TVD_GBM_IC1_070610_22_093010",
+          "PatientName": "TVD_GBM_IC1_070610_22_093010",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Astrocytoma",
+          "PatientId": "TVD_GBM_IC2_11311010_021511",
+          "PatientName": "TVD_GBM_IC2_11311010_021511",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Astrocytoma",
+          "PatientId": "TVD_GBM_IC2_11311022_020111",
+          "PatientName": "TVD_GBM_IC2_11311022_020111",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Astrocytoma",
+          "PatientId": "TVD_GBM_U87_1202795_022312",
+          "PatientName": "TVD_GBM_U87_1202795_022312",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Astrocytoma",
+          "PatientId": "TVD_GBM_U87_1202444_022112",
+          "PatientName": "TVD_GBM_U87_1202444_022112",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Astrocytoma",
+          "PatientId": "TVD_GBM_IC2_11311059_021811",
+          "PatientName": "TVD_GBM_IC2_11311059_021811",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Astrocytoma",
+          "PatientId": "TVD_GBM_IC2_11311007_020111",
+          "PatientName": "TVD_GBM_IC2_11311007_020111",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Astrocytoma",
+          "PatientId": "TVD_GBM_U87_1202255_021512",
+          "PatientName": "TVD_GBM_U87_1202255_021512",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Astrocytoma",
+          "PatientId": "TVD_GBM_IC2_11311070_021811",
+          "PatientName": "TVD_GBM_IC2_11311070_021811",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Astrocytoma",
+          "PatientId": "TVD_GBM_U87_4593_121411",
+          "PatientName": "TVD_GBM_U87_4593_121411",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Astrocytoma",
+          "PatientId": "TVD_GBM_U87_1202143_021412",
+          "PatientName": "TVD_GBM_U87_1202143_021412",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Astrocytoma",
+          "PatientId": "TVD_GBM_U87_4538_121511",
+          "PatientName": "TVD_GBM_U87_4538_121511",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Astrocytoma",
+          "PatientId": "TVD_GBM_IC1_070610_33_100110",
+          "PatientName": "TVD_GBM_IC1_070610_33_100110",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Astrocytoma",
+          "PatientId": "TVD_GBM_IC2_11311020_020811",
+          "PatientName": "TVD_GBM_IC2_11311020_020811",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Astrocytoma",
+          "PatientId": "TVD_GBM_IC2_11311011_021511",
+          "PatientName": "TVD_GBM_IC2_11311011_021511",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Astrocytoma",
+          "PatientId": "TVD_GBM_IC2_11311013_020811",
+          "PatientName": "TVD_GBM_IC2_11311013_020811",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Astrocytoma",
+          "PatientId": "TVD_GBM_IC1_070610_19",
+          "PatientName": "TVD_GBM_IC1_070610_19",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Astrocytoma",
+          "PatientId": "TVD_GBM_IC2_11311061_021811",
+          "PatientName": "TVD_GBM_IC2_11311061_021811",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Astrocytoma",
+          "PatientId": "TVD_GBM_U87_1202445_022112",
+          "PatientName": "TVD_GBM_U87_1202445_022112",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Astrocytoma",
+          "PatientId": "TVD_GBM_U87_1202144_021412",
+          "PatientName": "TVD_GBM_U87_1202144_021412",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Astrocytoma",
+          "PatientId": "TVD_GBM_IC1_070610_34",
+          "PatientName": "TVD_GBM_IC1_070610_34",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Astrocytoma",
+          "PatientId": "TVD_GBM_U87_1202254_021512",
+          "PatientName": "TVD_GBM_U87_1202254_021512",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        }
+      ]
+    }
+  },
+  "source": "tcia"
+}

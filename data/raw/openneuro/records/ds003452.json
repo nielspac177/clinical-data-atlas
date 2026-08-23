@@ -1,0 +1,107 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003452",
+  "payload": {
+    "created": "2020-12-22T20:05:56.845Z",
+    "id": "ds003452",
+    "latestSnapshot": {
+      "created": "2021-01-04T19:28:52.000Z",
+      "description": {
+        "Authors": [
+          "Joset A. Etzel",
+          "Mitch Jeffers",
+          "Todd S. Braver"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds003452.v1.0.1",
+        "Funding": [
+          "This research was supported by NIH R37MH066078 and NIH R21AG058206 to Todd Braver.",
+          "Image acquisition is partially supported by Mallinckrodt Institute of Radiology, Washington University in St. Louis."
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "DMCC13benchmark",
+        "ReferencesAndLinks": [
+          "https://sites.wustl.edu/ccplab/",
+          "https://sites.wustl.edu/dualmechanisms",
+          "https://nda.nih.gov/edit_collection.html?id=2970",
+          "https://osf.io/6jd9e/"
+        ]
+      },
+      "readme": "Introduction\r\n------------\r\nThis dataset contains a small subset of the task fMRI runs collected in the ongoing Dual Mechanisms of Cognitive Control project (DMCC, http://sites.wustl.edu/dualmechanisms/), intended for use as a benchmark dataset for comparing preprocessing pipelines or other analytic procedures. We have carried out comparisons of preprocessing with fMRIPrep and the HCP Pipelines using this dataset, described in a series of posts beginning with http://mvpa.blogspot.com/2019/01/comparing-fmriprep-and-hcp-pipelines.html,poster Th580 at OHBM 2019 (https://ww5.aievolution.com/hbm1901/index.cfm?do=abs.viewAbs&abs=3941), and OHBM 2020 posters 1930 (https://github.com/datalad-datasets/ohbm2020-posters/files/4827285/OHBM2020_Poster1930_Etzel_b.pdf) and 644 (https://cdn-akamai.6connex.com/645/1827//BraverDMCC_OHBM2020_poster_15922356197908355.pdf). Preprocessed versions of the images will be included under derivatives, for both fMRIprep (version 1.3.2) and HCP (version 3.17.0; this version used Freesurfer alignment, not MSMSulc). \r\n\r\nFor pipeline comparison/analysis testing we believe it is best to have well-understood analysis targets; \"positive control\" tasks in which it is possible to predict the direction and location of task-related BOLD activity differences. Primary motor and visual cortices have most often been used as controls (e.g., a contrast of finger button press events should show focal activation in the motor cortex), and are especially appropriate when visual or motor responses are of high experimental interest. However, primary sensory cortices do not share the expected activity profile (or physical location) with higher-order cognitive tasks (e.g., primary motor cortex often has higher SNR than prefrontal cortices), and so may be less useful for benchmarking other systems; positive control tasks targeting a wider array of brain areas and cognitive processes are needed.\r\n\r\nWe propose that contrasting task conditions requiring \"high\" and \"low\" cognitive control/effort can serve as such a positive control task: frontoparietal areas should have high > low in BOLD signal. Many task paradigms can be seen as containing high and low cognitive control conditions. We use four here, since they make up our DMCC project. It is certainly not the case that these are the only tasks that could be used for benchmarking (e.g., N-back should also work well), merely that these are the data we have available. It is appealing to use multiple tasks, each of which involves somewhat different stimuli, responses, and timing, as we want to avoid tying any conclusions about preprocessing effectiveness to a particular task. We do not expect identical activation patterns from every task, even for this simple high > low contrast, but the brain areas in each should be broadly similar.\r\n\r\nNote that additional control analyses can be carried out with this dataset by contrasting every trial against baseline (i.e., all onset times listed in the _events.tsv, even n/a) for  a \"task\" vs. \"not-task\" contrast, which should show activity in the visual, motor, as well as cognitive control areas. The contrast \"button-push\" vs. \"not-button-push\" is also possible for Cuedts and Stern (add the response_time to the onset in _events.tsv for the time of the button push events), but not Stroop (verbal, rather than button-press responses) nor Axcpt (multiple button-press responses required per trial).\r\n\r\nPlease contact Jo Etzel (jetzel@wustl.edu) or Todd Braver (tbraver@wustl.edu) with questions and comments, including about access to additional data.\r\n\r\n\r\nAcquisition and Analysis Notes\r\n------------------------------\r\nThe 13 participants included here are unrelated. Nine of them were participants in the Young Adult HCP project (https://www.humanconnectome.org/study/hcp-young-adult); the subject key mapping the subject IDs used here to the HCP IDs is in the HCP ConnectomeDB, titled  \"DMCC (Dual Mechanisms of Cognitive Control) subject key\".\r\n\r\nAll scans were collected on a 3T Siemens Prisma with a 32-channel head coil, without in-plane acceleration (iPat = none). CMRR multiband sequences were used, multiband factor 4, 2.4 mm isotropic voxels, 1.2 s TR. The physio recordings were made with Siemens equipment (finger plethysmograph and respiration belt); the recordings were extracted using https://github.com/CMRR-C2P/MB/blob/master/readCMRRPhysio.m then converted to plain text and reformatted for BIDS; no filtering or other processing was performed. All recordings we have are included here (several are missing due to equipment or software errors), regardless of quality or number of channels; they should be examined carefully (including onset and trigger times), as the signal clarity varies substantially between participants and runs.\r\n\r\nFunctional runs were collected with both A to P and P to A encoding directions (\"AP\" and \"PA\", respectively, included in the acq name fields); run 1 is always the first run of each task each session and is AP; the second (run 2) is always PA. The two runs of each task (except Rest) were performed together (i.e., Stroop run 1 is always followed by Stroop run 2), but the order of the four tasks was randomly assigned to each person (i.e., one participant might complete Stroop first, then Cuedts, then Axcpt, and finally Sternberg; another participant might complete Sternberg first). There are two resting state runs each session, each of which is 5 minutes long (for 10 minutes total per session). Most often the first (AP) resting state run was before any task runs (but after the anatomical), and the second (PA) after two tasks had been completed. This separation of approximately 45 minutes is unlike the task runs (which were always temporally adjacent) and was done in the hope of reducing participant fatigue.\r\n\r\nEach task scanning run followed a mixed, block/event-related format (e.g., Petersen & Dubis, 2011 Neuroimage), in which each of three task blocks was preceded and followed by a 30 second fixation block. Each task block lasted approximately 180 seconds, with the task trials within each separated by varying inter-trial intervals to facilitate event-related estimation. The standard DMCC GLMs (results of which were used for our fMRIPrep and HCP pipeline comparisons) model both the event and block (sustained) effects. Briefly, event-related analyses were carried out with an FIR-type estimation approach using AFNI software (TENTzero function), with a “knot” (beta coefficient) estimated for every 2 TRs. The number of estimated knots varied across the different tasks, following each task’s trial duration. It is of course not necessary to model both the blocks and events (e.g., modeling the events only with a canonical HRF may work well, particularly for short events such as the button presses), but these are the GLMs of most interest for the DMCC project.\r\n\r\nThe full DMCC protocol contains three scanning sessions (baseline, proactive, reactive), with task details varying somewhat between the sessions. This DMCC13benchmark dataset contains task runs from the first (baseline) session only (“bas” in the ses- part of the BIDS filenames), so the baseline versions of each task are briefly described here. We defined a particular condition and part of each task as requiring \"high\" and \"low\" cognitive control demands, as described below. Note that only a subset of trials in each task are labeled as “high” or “low” for control purposes. Given our TENT modeling of the events, we defined the time during each trial at which we expect maximal high > low activation difference, listed as the “target knot”. These timings can be ignored or converted to seconds (1 TR is 1.2 s) as appropriate if other event modeling is used (e.g., canonical HRF or boxcar averaging).\r\n\r\n\r\nTask Description: AX-CPT (Axcpt)\r\n--------------------------------\r\nThe baseline version of the DMCC AX-CPT task (http://sites.wustl.edu/dualmechanisms/axcpt-task) uses letter stimuli (press button 2 only if the current letter is X and the previous letter was A, press button 1 in all other cases and stimuli), with numbers as a no-go condition (i.e., withhold a button press to these stimuli). We consider \"BX\" trials (first letter not A, but second X) as requiring \"high\" cognitive control and \"BY\" trials (neither first nor second letter indicate a target response) as \"low\". Target knot for high > low is 4, 8 TRs after trial onset.\r\n\r\n\r\nTask Description: Cued Task-Switching (Cuedts)\r\n----------------------------------------------\r\nThe DMCC Cued task-switching task (http://sites.wustl.edu/dualmechanisms/task-switching) included trial pre-cues that indicated to either \"Attend Number\" or \"Attend Letter\" as the task for the upcoming target. Target stimuli were composed of a letter-digit pair presented side-by-side. If the cue was \"Attend Number\", the task was to make an odd/even discrimination (press button 1 if even, button 2 if odd). If the cue was \"Attend Letter”, the task was to make a vowel/consonant discrimination (press button 1 if vowel, button 2 if consonant). All baseline trials were performed without reward or punishment incentives. Incongruent trials (those in which the stimulus combination requires different responses, depending on whether it is Letter or Number task; e.g., A 1 or B 2) are considered \"high\"; congruent trials (the stimulus combination would lead to the same response irrespective of the task; e.g., A 2 or B 1) are considered \"low\". Target knot for high > low is 4, 8 TRs after trial onset.\r\n\r\n\r\nTask Description: Sternberg (Stern)\r\n-----------------------------------\r\nThe DMCC (http://sites.wustl.edu/dualmechanisms/sternberg-task) uses the \"recent probes\" variant of the Sternberg task (Jonides & Nee 2006, PMID: 16337090, DOI: 10.1016/j.neuroscience.2005.06.042). On each trial, a memory set consisting of a word list (ranging from 5 to 8 items) is presented, followed by a short delay period (retention interval), and then a single probe item, which requires a target (probe was in the memory set) or nontarget response (probe was not in the memory set). For the high - low cognitive control contrast, only trials with 5 words are used, with \"RN\" trials (\"recent negative\": the probe item was not in the memory set of the current trial, but was in the memory set of the previous trial) as \"high\" and \"NN\" trials (\"novel negative\": the probe was not present in the current or any previous trial memory sets) as “low”. Target knot for high > low is 6, 12 TRs after trial onset.\r\n\r\n\r\nTask Description: Stroop (Stroop)\r\n---------------------------------\r\nThe DMCC Stroop task (http://sites.wustl.edu/dualmechanisms/stroop), is the color/word Stroop, with responses (color names) spoken aloud in the scanner. Incongruent trials (word and color do not match) are considered \"high\", congruent trials (word and color match) are considered \"low\". Target knot for high > low is 2, 4 TRs after event onset.\r\n\r\n\r\nTask Description: Rest\r\n----------------------\r\nThese directions appeared on the screen and were read aloud to the participants prior to each resting state run: “During the next five minutes you will see a + in the center of the screen. Please clear your mind and remain fixated on the +. You may blink as needed, however please try to remain awake, and as still as possible.” A camera was set to show one of the participants eyes, and the feed monitored for sleepiness. \r\n\r\nDataset QC Comments\r\n----------------------\r\nAcquisition stopped slightly early for f1951tt's second Stroop run, so the run has fewer volumes than expected.\r\n\r\nThe anatomy (anat) is under ses-wave1bas for all participants except f1951tt, for whom it is under ses-wave1pro. Anatomical scans were collected during the baseline session (ses-wave1bas), and then repeated in later sessions if needed until one of sufficient quality was obtained.\r\n\r\nThe frontal dropout is more pronounced in f5407sl, particularly for task-Stern_acq-mb4PA. We judged the quality to be sufficient for inclusion.\r\n\r\n\r\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "wave1bas",
+          "wave1pro",
+          "wave1rea"
+        ],
+        "size": 60784156905,
+        "subjects": [
+          "f1031ax",
+          "f1552xo",
+          "f1659oa",
+          "f1670rz",
+          "f1951tt",
+          "f3300jh",
+          "f3720ca",
+          "f5004cr",
+          "f5407sl",
+          "f5416zj",
+          "f8113do",
+          "f8570ui",
+          "f9057kp"
+        ],
+        "tasks": [
+          "Axcpt",
+          "Cuedts",
+          "Rest",
+          "Stern",
+          "Stroop"
+        ],
+        "totalFiles": 1294
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        39,
+        null,
+        null,
+        29,
+        null,
+        38,
+        38,
+        null,
+        null
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2020-12-23T18:05:10.839Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,145 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds001814",
+  "payload": {
+    "created": "2019-03-23T18:07:28.752Z",
+    "id": "ds001814",
+    "latestSnapshot": {
+      "created": "2020-07-16T15:57:02.000Z",
+      "description": {
+        "Authors": [
+          "Samuel Zorowitz",
+          "Alexander P Rockhill",
+          "Kristen K Kellard",
+          "Katherine E Link",
+          "Todd Herrington",
+          "Diego A Pizzagalli",
+          "Alik S Widge",
+          "Thilo Deckersbach",
+          "Darin D Dougherty"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds001814.v1.0.7",
+        "Funding": [
+          "This research was sponsored by the U.S. Army Research Office and Defense Advanced Research Projects Agency under Cooperative Agreement Number W911NF-14-2-0045. The views and conclusions contained in this document are those of the authors and should not be interpreted as representing the official policies, either expressed or implied, of the funding sources. Cluster computing resources made possible by Instrumentation Grants 1S10RR023401, 1S10RR019307, and 1S10RR023043. DAP was partially supported by R37 MH068376 and R01 MH101521. KKE was partially supported by NIH National Institute of Neurological Disorders and Stroke (NINDS) Training Program in Recovery and Restoration of CNS Health and Function (T32 NS100663-01)."
+        ],
+        "HowToAcknowledge": "Zorowitz S, Rockhill AP, Link K, Herrington T, Pizzagalli DA, Dougherty DD, Widge AS, Deckersbach T (2019). The Neural Basis of Decision Conflict: A Model Based Analysis. Submitted.",
+        "License": "CC0",
+        "Name": "Neuroanatomical correlates of approach-avoidance conflict (fMRI)",
+        "ReferencesAndLinks": []
+      },
+      "readme": "Description: Neuroanatomical correlates of approach-avoidance conflict (fMRI) \n\nPlease cite the following reference if you use these data:\n\nZorowitz S, Rockhill AP, Ellard KK, Link K, Herrington T, Pizzagalli DA, Widge AS, Deckersbach T, Dougherty DD (2019) The Neural Basis of Decision Conflict: A Model Based Analysis. eNeuro, Submitted.\n\narc\n------\nWe employed a modified version of the Aversion-Reward Conflict (ARC) task (Sierra-Mercado et al., 2014). During this task, participants make a series of choices between two options: a safe option or a risky option. Selecting the safe option returns a monetary reward of $0.01 and never electrical stimulation. In contrast, selecting the risky option returns a monetary reward between $0.05 and $0.95, and electrical stimulation with probability 10%, 50% or 90%, as indicated by a bar in the center of the screen. This required participants to evaluate their preference for more reward and risk of shock relative to smaller reward and no risk of shock. Participants were instructed to choose as fast as possible without choosing randomly, and were informed that their choices would be reflected in their final study payment. Prior to starting the task, participants were asked to report back the instructions so that their comprehension could be verified. After, they completed ten practice trials to become accustomed to the timing of the task.\n\nThe ARC task has three levels of risk: 10%, 50%, and 90% likelihood of shock. Rewards ranged continuously between $0.05 and $0.95. Trials were counterbalanced such that there were an equal number of trials at each risk level, and such that monetary rewards were uniformly and equally sampled within each risk level. Each participant completed 108 total trials and the order of trials was kept constant for all the participants. Long inter-trial intervals of 10.5 ± 0.875 seconds separated sequential trials in the task (yielding a slow event-related design). The duration of the full task was 28.5 minutes. \n\nElectrical stimulation was administered to the ankle through a Coulbourn Aversive Finger Stimulator (Harvard Apparatus, E13-22; maximum level of stimulation = 4.0 mA). The amperage of electrical stimulation was calibrated individually for each participant prior to performing the ARC task. Participants experienced increasing levels of stimulation until they reported reaching a subjective threshold qualified as “highly annoying but not painful”. For five participants this threshold could not be established because the highest stimulation setting of 4.0 mA was too painful, but penultimate 2.3 mA setting was not experienced as annoying. These participants did not exhibit behavioral variation (i.e., they always accepted the risky choice).",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "t1w",
+          "bold",
+          "events"
+        ],
+        "secondaryModalities": [],
+        "sessions": [],
+        "size": 28154059730,
+        "subjects": [
+          "hc001",
+          "hc002",
+          "hc003",
+          "hc004",
+          "hc005",
+          "hc006",
+          "hc007",
+          "hc008",
+          "hc009",
+          "hc010",
+          "hc011",
+          "hc012",
+          "hc013",
+          "hc015",
+          "hc016",
+          "hc017",
+          "hc018",
+          "hc019",
+          "hc020",
+          "hc021",
+          "hc022",
+          "hc023",
+          "hc024",
+          "hc025",
+          "hc026",
+          "hc027",
+          "hc028",
+          "hc029",
+          "hc030",
+          "hc031",
+          "hc032",
+          "hc033",
+          "hc034",
+          "hc035",
+          "hc036"
+        ],
+        "tasks": [
+          "ARC"
+        ],
+        "totalFiles": 112
+      },
+      "tag": "1.0.7"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        32,
+        27,
+        31,
+        52,
+        36,
+        31,
+        55,
+        30,
+        32,
+        49,
+        32,
+        35,
+        45,
+        30,
+        46,
+        36,
+        37,
+        33,
+        39,
+        37,
+        30,
+        30,
+        33,
+        43,
+        42,
+        28,
+        50,
+        23,
+        27,
+        24,
+        26,
+        23,
+        23,
+        26,
+        24,
+        25
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "t1w",
+        "bold",
+        "events"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2019-03-23T18:07:28.752Z"
+  },
+  "source": "openneuro"
+}

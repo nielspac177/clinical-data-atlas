@@ -1,0 +1,109 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004868",
+  "payload": {
+    "created": "2023-12-04T10:25:50.565Z",
+    "id": "ds004868",
+    "latestSnapshot": {
+      "created": "2025-01-10T18:15:58.000Z",
+      "description": {
+        "Authors": [
+          "Nafiseh Ghazanfari",
+          "Jeih-San Liow",
+          "Min-Jeong Kim",
+          "Raven Cureton",
+          "Adrian Lee",
+          "Carson Knoer",
+          "Madeline Jenkins",
+          "Jinsoo Hong",
+          "Jose A. Montero Santamaria",
+          "H. Umesha Shetty",
+          "Anthony Galassi",
+          "Paul Wighton",
+          "Martin Norgaard",
+          "Douglas N. Greve",
+          "Sami S. Zoghbi",
+          "Victor W Pike",
+          "Robert B Innis",
+          "Paolo Zanotti-Fregonara"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004868.v1.0.4",
+        "Funding": [
+          "This study was funded by the Intramural Research Program of the National Institute of Mental Health (ZIAMH002852)",
+          "This study was funded by the Intramural Research Program of the National Institute of Mental Health (NCT04396873)",
+          "BRAIN Initiative grant (R24MH120004)"
+        ],
+        "HowToAcknowledge": "Submitted to Journal of Nuclear Medicine as an Original Research Article, April 2024",
+        "License": "CC0",
+        "Name": "[11C]PS13 demonstrates pharmacologically selective and substantial binding to cyclooxygenase-1 (COX-1) in the human brain",
+        "ReferencesAndLinks": [
+          "Kim MJ, Lee JH, Juarez Anaya F, Hong J, Miller W, Telu S, Singh P, Cortes MY, Henry K, Tye GL, Frankland MP, Montero Santamaria JA, Liow JS, Zoghbi SS, Fujita M, Pike VW, Innis RB. First-in-human evaluation of [11C]PS13, a novel PET radioligand, to quantify cyclooxygenase-1 in the brain. Eur J Nucl Med Mol Imaging. 2020 Dec;47(13):3143-3151. doi: 10.1007/s00259-020-04855-2. Epub 2020 May 12. PMID: 32399622; PMCID: PMC8261645."
+        ]
+      },
+      "readme": "Abstract: Our laboratory recently developed [11C]PS13 as a positron emission tomography (PET) radioligand to selectively measure cyclooxygenase-1 (COX-1). The COX enzyme family converts arachidonic acid into prostaglandins and thromboxanes, which mediate inflammation. The total brain uptake of [11C]PS13, which is composed of both target and background binding, can be accurately quantified with gold standard methods of compartmental modeling. This study sought to quantify the specific binding of [11C]PS13 to COX-1 in healthy human brain using scans performed with arterial input function at baseline and after blockade by the COX-1 selective inhibitor ketoprofen.\nMethods: Eight healthy volunteers underwent two 90-minute [11C]PS13 PET scans with radiometabolite-corrected arterial input function, at baseline and about two hours after oral administration of ketoprofen (75 mg).\nResults: Two-tissue compartment modeling effectively identified the total uptake of radioactivity in brain (as distribution volume (VT)), showing highest densities in the hippocampus, occipital cortex, and the banks of the central sulcus. All brain regions exhibited displaceable/specific binding and, thus, none could be used as a reference region. Ketoprofen blocked ~84% of the binding sites on COX-1 in the whole brain. After extrapolating to full occupancy, the average whole brain values (mL • cm-3) of [11C]PS13 were: specific uptake (VS)=1.6±0.8; background uptake (VND)=1.7±0.6; and target to background ratio (BPND)=1.1±0.5. The hippocampus had the highest BPND value (2.7±0.9). Conclusion: [11C]PS13 exhibited high specific binding to COX-1 in the human brain, but its quantification requires arterial blood sampling.\n\nData:\nGroup 1: Eight healthy volunteers (five females and three males, 38.7±7.1 y, 73.4±16.6 kg) participated in this study (NCT04396873). All participants were medically healthy based on medical history, medical records, physical examination, blood laboratory tests, and electrocardiogram. No participants had taken any non-steroidal anti-inflammatory drugs (NSAIDs) for at least two weeks or aspirin for four weeks before the PET scans. All participants gave written informed consent. Study procedures were approved by the NIH Institutional Review Board.\n\nGroup 2: Four additional subjects received a test-retest scan, and these were included in the dataset as well. ",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "pet",
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural"
+        ],
+        "sessions": [
+          "baseline",
+          "blocked",
+          "rescan"
+        ],
+        "size": 3164452600,
+        "subjects": [
+          "PSBB06",
+          "PSTRT18",
+          "PSBB01",
+          "PSBB02",
+          "PSTRT19",
+          "PSTRT17",
+          "PSTRT01",
+          "PSBB03",
+          "PSBB05",
+          "PSBB07"
+        ],
+        "tasks": [],
+        "totalFiles": 102
+      },
+      "tag": "1.0.4"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        38,
+        36,
+        38,
+        39,
+        31,
+        50,
+        36,
+        38,
+        43,
+        38
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "pet",
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": "Longitudinal"
+    },
+    "publishDate": "2024-04-19T09:21:41.451Z"
+  },
+  "source": "openneuro"
+}

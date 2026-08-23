@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:f252780634f4bd67e8a22c559d51cae2e48406c16dd9d6cb8735a9c10da726f0",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "detection of colorectal neoplasia",
+        "label": "colorectal neoplasia"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "gastroenterology_hepatology"
+    ],
+    "id": "tcia:ct-colonography",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "825 cases of CT colonography imaging",
+        "value": "CT"
+      },
+      {
+        "evidence": "accompanying spreadsheets that provide polyp descriptions",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "Male and female outpatients, aged 50 years or older, scheduled for screening colonoscopy, who have not had a colonoscopy in the past five years.",
+    "summary": "CT colonography imaging from the ACRIN 6664 screening trial, with spreadsheets describing polyps and their colon segment locations, released to support development of computer-aided polyp detection algorithms."
+  },
+  "prompt_version": "v1"
+}

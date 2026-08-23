@@ -1,0 +1,123 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004341",
+  "payload": {
+    "created": "2022-11-21T18:51:29.154Z",
+    "id": "ds004341",
+    "latestSnapshot": {
+      "created": "2023-08-01T09:32:27.000Z",
+      "description": {
+        "Authors": [
+          "Loris Naspi",
+          "Paul Hoffman",
+          "Alexa Morcom"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004341.v1.0.0",
+        "Funding": null,
+        "HowToAcknowledge": " Please cite this dataset with https://doi.org/10.1523/JNEUROSCI.0677-21.2021",
+        "License": "CC0",
+        "Name": "semantic_encoding",
+        "ReferencesAndLinks": [
+          "Behavioural data and code at: https://osf.io/z4c62/"
+        ]
+      },
+      "readme": "# Loris Naspi, 22 October 2019\r\n\r\n# List of relevant files\r\n\r\n# behavioral_data          : data of behavioral task acquired during the encoding phase\r\n# code                     : code for running anatomical normalisation and functional smoothing (over all participants)\r\n# code_loris*              : temporary files that need deleting after preprocessing is finished. The different files are reduntant\r\n                             but needed for running different batches of participants in parallel.\r\n# derivatives              : the results of preprocessing in BIDS format\r\n# pilot                    : participant \"zero\": it refers to the analisis run prior to starting testing\r\n# sub-*                    : a copy of renamed raw data.\r\n# dataset_description.json : it contains two mandatory fields: \"Name\": \"semantic_encoding\",\r\n                                                               \"BIDSVersion\": \"1.2.0\",\r\n                                         one optional field:   \"Authors\": \"Loris Naspi\", \"Paul Hoffman\", \"Alexa Morcom\".\r\n# log_step1_prepareImages_10-Oct-2019.txt : Results of DICOM to NIFTI conversion from scanner, files have been renamed, stored in BIDS format, \r\n                                            3 dummy scans were removed\r\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 72175982295,
+        "subjects": [
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31",
+          "32",
+          "33"
+        ],
+        "tasks": [
+          "semantic"
+        ],
+        "totalFiles": 1069
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        19,
+        23,
+        35,
+        19,
+        21,
+        23,
+        23,
+        21,
+        29,
+        28,
+        23,
+        22,
+        19,
+        22,
+        21,
+        22,
+        26,
+        24,
+        22,
+        21,
+        20,
+        21,
+        23,
+        28,
+        21,
+        23,
+        21,
+        26
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "Memory",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2023-08-01T09:53:37.827Z"
+  },
+  "source": "openneuro"
+}

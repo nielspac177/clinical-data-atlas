@@ -1,0 +1,164 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "HCMI-CMDC",
+  "payload": {
+    "dbgap_accession_number": null,
+    "disease_type": [
+      "Ductal and Lobular Neoplasms",
+      "Complex Mixed and Stromal Neoplasms",
+      "Blood Vessel Tumors",
+      "Fibromatous Neoplasms",
+      "Epithelial Neoplasms, NOS",
+      "Mature T- and NK-Cell Lymphomas",
+      "Transitional Cell Papillomas and Carcinomas",
+      "Complex Epithelial Neoplasms",
+      "Squamous Cell Neoplasms",
+      "Soft Tissue Tumors and Sarcomas, NOS",
+      "Lymphoid Leukemias",
+      "Cystic, Mucinous and Serous Neoplasms",
+      "Gliomas",
+      "Myomatous Neoplasms",
+      "Neuroepitheliomatous Neoplasms",
+      "Malignant Lymphomas, NOS or Diffuse",
+      "Acinar Cell Neoplasms",
+      "Osseous and Chondromatous Neoplasms",
+      "Synovial-like Neoplasms",
+      "Miscellaneous Bone Tumors",
+      "Nevi and Melanomas",
+      "Adenomas and Adenocarcinomas"
+    ],
+    "id": "HCMI-CMDC",
+    "name": "NCI Cancer Model Development for the Human Cancer Model Initiative",
+    "primary_site": [
+      "Other and unspecified parts of tongue",
+      "Stomach",
+      "Bronchus and lung",
+      "Larynx",
+      "Uterus, NOS",
+      "Kidney",
+      "Esophagus",
+      "Other and ill-defined sites",
+      "Skin",
+      "Colon",
+      "Thyroid gland",
+      "Bladder",
+      "Adrenal gland",
+      "Eye and adnexa",
+      "Gallbladder",
+      "Connective, subcutaneous and other soft tissues",
+      "Rectosigmoid junction",
+      "Breast",
+      "Pancreas",
+      "Small intestine",
+      "Corpus uteri",
+      "Other and unspecified parts of mouth",
+      "Liver and intrahepatic bile ducts",
+      "Nasal cavity and middle ear",
+      "Hematopoietic and reticuloendothelial systems",
+      "Brain",
+      "Other and unspecified parts of biliary tract",
+      "Bones, joints and articular cartilage of other and unspecified sites",
+      "Rectum",
+      "Unknown",
+      "Lymph nodes",
+      "Ovary"
+    ],
+    "program": {
+      "dbgap_accession_number": "phs001486",
+      "name": "HCMI",
+      "program_id": "a5448c11-d46a-56aa-a5e1-5c1aa06404df"
+    },
+    "project_id": "HCMI-CMDC",
+    "releasable": true,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 805,
+      "data_categories": [
+        {
+          "case_count": 606,
+          "data_category": "Simple Nucleotide Variation",
+          "file_count": 17244
+        },
+        {
+          "case_count": 805,
+          "data_category": "Sequencing Reads",
+          "file_count": 7936
+        },
+        {
+          "case_count": 805,
+          "data_category": "Clinical",
+          "file_count": 805
+        },
+        {
+          "case_count": 530,
+          "data_category": "Biospecimen",
+          "file_count": 1123
+        },
+        {
+          "case_count": 590,
+          "data_category": "Copy Number Variation",
+          "file_count": 2687
+        },
+        {
+          "case_count": 783,
+          "data_category": "Transcriptome Profiling",
+          "file_count": 3950
+        },
+        {
+          "case_count": 703,
+          "data_category": "DNA Methylation",
+          "file_count": 3066
+        },
+        {
+          "case_count": 590,
+          "data_category": "Somatic Structural Variation",
+          "file_count": 2237
+        },
+        {
+          "case_count": 781,
+          "data_category": "Structural Variation",
+          "file_count": 4614
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 721,
+          "experimental_strategy": "WXS",
+          "file_count": 14470
+        },
+        {
+          "case_count": 804,
+          "experimental_strategy": "WGS",
+          "file_count": 11357
+        },
+        {
+          "case_count": 781,
+          "experimental_strategy": "RNA-Seq",
+          "file_count": 10375
+        },
+        {
+          "case_count": 520,
+          "experimental_strategy": "miRNA-Seq",
+          "file_count": 2466
+        },
+        {
+          "case_count": 703,
+          "experimental_strategy": "Methylation Array",
+          "file_count": 3066
+        },
+        {
+          "case_count": 382,
+          "experimental_strategy": "Tissue Slide",
+          "file_count": 810
+        }
+      ],
+      "file_count": 43662,
+      "file_size": 317056197061374
+    }
+  },
+  "source": "gdc"
+}

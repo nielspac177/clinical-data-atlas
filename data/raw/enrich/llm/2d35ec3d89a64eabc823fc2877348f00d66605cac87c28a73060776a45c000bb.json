@@ -1,0 +1,49 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:2d35ec3d89a64eabc823fc2877348f00d66605cac87c28a73060776a45c000bb",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Glioblastoma Multiforme",
+        "label": "Glioblastoma Multiforme"
+      },
+      {
+        "evidence": "Brain Gliomas",
+        "label": "Gliomas"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "oncology"
+    ],
+    "id": "gdc:TCGA-GBM",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Diagnostic Slide",
+        "value": "pathology"
+      },
+      {
+        "evidence": "WXS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "RNA-Seq",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Reverse Phase Protein Array",
+        "value": "proteomics"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "617 human cases",
+    "summary": "TCGA molecular profiling of glioblastoma multiforme brain tumors, covering exome, genome, RNA and miRNA sequencing, methylation and genotyping arrays, protein arrays, diagnostic and tissue slides, plus clinical and biospecimen data."
+  },
+  "prompt_version": "v1"
+}

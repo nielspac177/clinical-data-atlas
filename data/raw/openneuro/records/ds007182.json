@@ -1,0 +1,47 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007182",
+  "payload": {
+    "created": "2026-01-09T10:29:15.320Z",
+    "id": "ds007182",
+    "latestSnapshot": {
+      "created": "2026-01-10T09:49:49.000Z",
+      "description": {
+        "Authors": [
+          "Joe Bathelt",
+          "Steven Scholte",
+          "Hilde Geurts"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007182.v1.0.0",
+        "Funding": [],
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "PRIMAS: Precision Functional Imaging in Autism",
+        "ReferencesAndLinks": [
+          "to be added"
+        ]
+      },
+      "readme": "The PRISMA dataset is organised according to the Brain Imaging Data Structure \n(BIDS) specification version 1.10.1 and is publicly available at [REPOSITORY] \nunder accession number [DOI/ACCESSION].\n\n### Key naming conventions:\n\n- Participant labels: sub-001 to sub-067\n- Session labels: ses-01, ses-02, ses-03\n- Task labels: rest, news, realitytv\n- Run labels: run-01, run-02, run-03, ...\n- Direction labels (dwi/fmap): AP (anterior-posterior), PA (posterior-anterior)\n\n### File Formats\n\nAll neuroimaging data are stored as compressed NIfTI files (.nii.gz) with \naccompanying JSON sidecar files containing acquisition parameters. Physiological \nrecordings are stored as compressed tab-separated value files (.tsv.gz) following \nBIDS specification for physiological recordings. Behavioural and phenotypic data \nare provided as tab-separated value files (.tsv) with JSON metadata files.\n\n### Metadata Files\n\n- `dataset_description.json`: Dataset-level metadata including BIDS version, \n  dataset name, authors, and acknowledgements\n- `participants.tsv`: Demographic information for all participants (age, sex, \n  handedness, group assignment, education level, time between sessions)\n- `participants.json`: Data dictionary for participants.tsv\n- `README`: Detailed dataset description, experimental procedures, and data \n  collection protocols\n- `CHANGES`: Version history and dataset updates\n- `*_scans.tsv`: Scan-specific metadata (acquisition time, quality notes)\n\n\n### Derivatives\n\nPreprocessed data are provided in `derivatives/` following BIDS Derivatives \nspecification:\n\n- `fmriprep/`: Functional MRI data preprocessed with fMRIPrep version X.X.X, \n  including motion-corrected, spatially normalised, and surface-projected data\n- `qsiprep/`: Diffusion MRI data preprocessed with QSIPrep version X.X.X, \n  including denoised, distortion-corrected, and eddy-current-corrected data\n- `qsirecon/`: Structural connectomes derived using mrtrix_singleshell_ss3t \n  pipeline with anatomically constrained tractography\n- `physio/`: Processed physiological data including peak detection, heart rate \n  variability, and respiratory volume per time calculations\n\nEach derivative directory contains a `dataset_description.json` file specifying \nthe generating software and version.\n\n### Defacing and Privacy\n\nAll structural images have been defaced using MiDeFace 2, which is part of \nFreeSurfer v7.4.1 Docker image. The de-facing mask was derived using the \nT1-weighted images and applied to the T2-weighted images after corregistration \nusing the ‘mri_coreg’ function of FreeSurfer.  \n\n\n### Missing Data\n\nNot all participants have complete data across all modalities and sessions. \nData availability is documented in:\n- `participants.tsv`: Indicates which sessions each participant completed\n- `sub-<label>_sessions.tsv`: Session-specific completion status\n- Individual `*_scans.tsv` files: Scan-level quality notes and usability flags\n\nKnown missing data patterns:\n- T1w images: 65/65 participants (100%)\n- T2w images: 62/65 participants (95.4%)\n- DWI: 61/65 participants (94.8%)\n- Functional scans: See Scientific Data publication for detailed breakdown\n- Physiological recordings: See Scientific Data publication for detailed breakdown\n\n### Data Access and Licensing\n\nThe dataset is available on OpenNeuro under Creative Commons CC0. Users must cite this data \ndescriptor publication when using the dataset.\n\nDOI: [insert DOI once available]\nRepository: [insert repository URL]\nAccession number: [insert accession number]\n\n### Data Use Agreement\n\nAll participants provided written informed consent for public data sharing. \nUsers are required to:\n1. Cite this data descriptor in any publications using the dataset\n2. Respect participant privacy by not attempting re-identification\n3. Follow repository-specific terms of use\n\nTechnical Validation data and analysis code are available at [GitHub/OSF URL].\n",
+      "summary": null,
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": null,
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": "Autism",
+      "grantFunderName": "Dutch Research Council (NWO)",
+      "modalities": [],
+      "species": "Human",
+      "studyDesign": "Precision-Imaging Study",
+      "studyDomain": "Autism",
+      "studyLongitudinal": "Precision imaging study with 3 sessions with at least 5 days between sessions"
+    },
+    "publishDate": "2026-01-12T09:11:23.043Z"
+  },
+  "source": "openneuro"
+}

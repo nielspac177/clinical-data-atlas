@@ -1,0 +1,40 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "insulin4rl",
+  "payload": {
+    "abstract": "<p>Offline reinforcement learning (RL) holds promise for improving healthcare decision-making. However, most existing approaches rely on discretising patient trajectories into strictly regular time intervals. This is done to improve compatibility with neural networks and standard Markov Decision Process (MDP) frameworks, but in doing so, it introduces artefacts of missingness and risks out-of-distribution errors at deployment by training on fictitious representations of the data. Additionally, recent research suggests that retrospective evaluation using binned data can lead to significantly biased estimates of model performance.</p>\n<p>We present <strong>Insulin4RL</strong>, the first freely available dataset designed to encourage RL research on healthcare data with naturally irregular time intervals &ndash; both for inputs and labelled decisions. Each label corresponds to a decision regarding the insulin infusion rate, inferred based on proximity to recent blood glucose measurements. This yields over 375,000 labelled decisions from 12,214 patients in the Medical Information Mart for Intensive Care (MIMIC-IV). Clinical rules are applied to robustly identify clinician decisions and subsequent patient states, ensuring immediate compatibility with standard RL methods. Because these decisions occur at irregular intervals, the resulting trajectories can be treated as a semi-Markov Decision Process (SMDP).</p>\n<p>The associated state information consists of a sequence of retrospective medical events - including laboratory results, nutritional data, and medication changes - represented as tuples <math> <semantics><mrow><mo stretchy=\"false\">(</mo><mi>f</mi><mo>,</mo><mi>v</mi><mo>,</mo><mi>t</mi><mo stretchy=\"false\">)</mo></mrow><annotation encoding=\"application/x-tex\">(f, v, t)</annotation></semantics></math> capturing feature, value, and time data. This event-based representation allows direct processing of irregularly sampled data using embedding networks, eliminating the need for discretisation, imputation, or artificially regularised time steps. We hope this approach will encourage research in healthcare RL using data that aligns more closely with real-world practice, using inpatient glycaemic control as a benchmarked example.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 963982914,
+    "core_doi": "10.13026/sfvn-y974",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 975660402,
+    "public_project_uuid": "b21d34da-9d46-49f4-80f0-13ebeb118567",
+    "publish_date": "2026-06-16",
+    "resource_type": "Database",
+    "short_description": "Openly available research dataset intended for offline reinforcement learning (ORL) using natively irregular healthcare data. The dataset is intended to encourage further research into ORL methods using naturally sporadic decision intervals.",
+    "slug": "insulin4rl",
+    "source_url": "https://physionet.org/content/insulin4rl/1.0.0/",
+    "title": "Insulin4RL: Real-Time Insulin Infusions For Offline Reinforcement Learning",
+    "topics": [
+      "insulin",
+      "intensive care",
+      "semi-markov decision process",
+      "diabetes",
+      "blood glucose",
+      "offline reinforcement learning",
+      "machine learning"
+    ],
+    "version": "1.0.0",
+    "version_doi": "10.13026/swen-q904"
+  },
+  "source": "physionet"
+}

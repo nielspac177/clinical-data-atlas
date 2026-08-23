@@ -1,0 +1,24 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:1c05f00111b3048b98303c33cf38b100dc8b71e29b615351dc484fdbb2799251",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "other"
+    ],
+    "id": "physionet:aipatient-kg",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "electronic health records into knowledge graphs",
+        "value": "EHR"
+      }
+    ],
+    "population": "MIMIC-III data from over 40,000 patients and CORAL oncology-specific information from 40 patients",
+    "summary": "Knowledge graph snapshots and question-answering sets built from MIMIC-III and CORAL electronic health records using LLM-based named entity recognition, expert-verified, to support medical reasoning and decision support."
+  },
+  "prompt_version": "v1"
+}

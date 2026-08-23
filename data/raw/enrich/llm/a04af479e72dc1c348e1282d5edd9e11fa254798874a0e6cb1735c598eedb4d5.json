@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:a04af479e72dc1c348e1282d5edd9e11fa254798874a0e6cb1735c598eedb4d5",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "non–small cell (NSCLC) lung cancer",
+        "label": "non-small cell lung cancer"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "pulmonology"
+    ],
+    "id": "tcia:rider-lung-ct",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "same-day repeat CT scans",
+        "value": "CT"
+      },
+      {
+        "evidence": "RTSTRUCT",
+        "value": "radiotherapy"
+      }
+    ],
+    "population": "Thirty-two NSCLC patients receiving systemic therapy, each of whom underwent two CT scans of the chest within 15 minutes using the same imaging protocol",
+    "summary": "Same-day repeat chest CT scans in non-small cell lung cancer patients on systemic therapy, each scan reconstructed at multiple slice thicknesses and algorithms, to evaluate variability of tumor size measurements."
+  },
+  "prompt_version": "v1"
+}

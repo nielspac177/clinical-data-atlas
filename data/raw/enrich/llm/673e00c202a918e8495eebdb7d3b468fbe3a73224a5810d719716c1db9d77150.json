@@ -1,0 +1,27 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:673e00c202a918e8495eebdb7d3b468fbe3a73224a5810d719716c1db9d77150",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:mimic-iv-ecg-ext-icd-labels",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "links ECG records from MIMIC-IV-ECG",
+        "value": "ECG"
+      },
+      {
+        "evidence": "ED discharge and hospital discharge diagnoses",
+        "value": "EHR"
+      }
+    ],
+    "population": "Patients with ECG records in MIMIC-IV-ECG that could be linked to MIMIC-IV discharge diagnoses",
+    "summary": "Derived label set linking MIMIC-IV-ECG records to emergency department and hospital discharge diagnoses, giving clinical ground truth for training and benchmarking ECG-based prediction models."
+  },
+  "prompt_version": "v1"
+}

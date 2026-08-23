@@ -1,0 +1,27 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:ea53e07c445622616a6c5ffd14e36e295b3667e941b7c90046da81b9b63dc268",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "other"
+    ],
+    "id": "physionet:rumednli-russian-inference",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "a dataset based on MIMIC-III records",
+        "value": "EHR"
+      },
+      {
+        "evidence": "grounded in the medical history of patients",
+        "value": "clinical_notes"
+      }
+    ],
+    "population": null,
+    "summary": "Russian-language natural language inference dataset for the clinical domain, translated from MedNLI, which was built on MIMIC-III records and annotated by doctors. Part of the RuMedBench benchmark."
+  },
+  "prompt_version": "v1"
+}

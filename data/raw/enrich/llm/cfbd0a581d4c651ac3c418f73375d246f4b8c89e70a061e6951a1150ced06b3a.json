@@ -1,0 +1,66 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:cfbd0a581d4c651ac3c418f73375d246f4b8c89e70a061e6951a1150ced06b3a",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Neoplasms, NOS",
+        "label": "Neoplasms, NOS"
+      },
+      {
+        "evidence": "Complex Epithelial Neoplasms",
+        "label": "Complex Epithelial Neoplasms"
+      },
+      {
+        "evidence": "Adenomas and Adenocarcinomas",
+        "label": "Adenomas and Adenocarcinomas"
+      },
+      {
+        "evidence": "Paragangliomas and Glomus Tumors",
+        "label": "Paragangliomas and Glomus Tumors"
+      },
+      {
+        "evidence": "Squamous Cell Neoplasms",
+        "label": "Squamous Cell Neoplasms"
+      },
+      {
+        "evidence": "lung neoplasms",
+        "label": "lung neoplasms"
+      },
+      {
+        "evidence": "HIV+",
+        "label": "HIV+"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "pulmonology",
+      "infectious_disease"
+    ],
+    "id": "gdc:CGCI-HTMCP-LC",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "WGS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "RNA-Seq",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Tissue Slide",
+        "value": "pathology"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "39 human cases of lung cancer in HIV-positive patients",
+    "summary": "Molecular characterization of lung cancer in HIV-positive patients, with whole-genome sequencing, RNA-Seq, miRNA-Seq, copy number and structural variation, tissue slides, biospecimen and clinical data."
+  },
+  "prompt_version": "v1"
+}

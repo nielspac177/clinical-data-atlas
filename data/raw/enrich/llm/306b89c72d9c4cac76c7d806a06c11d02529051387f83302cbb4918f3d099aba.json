@@ -1,0 +1,30 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:306b89c72d9c4cac76c7d806a06c11d02529051387f83302cbb4918f3d099aba",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Hepatocellular carcinoma (HCC) is the most common primary liver",
+        "label": "Hepatocellular carcinoma (HCC)"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "gastroenterology_hepatology",
+      "surgery"
+    ],
+    "id": "tcia:hcc-tace-seg",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "pre- and post-procedure CT imaging studies",
+        "value": "CT"
+      }
+    ],
+    "population": "105 confirmed HCC patients who underwent TACE between 2002 and 2012 with an available treatment outcome",
+    "summary": "Retrospective pre- and post-procedure CT studies of hepatocellular carcinoma patients treated with transarterial chemoembolization, with curated semiautomatic segmentations of liver, tumor and blood vessels plus treatment outcome data."
+  },
+  "prompt_version": "v1"
+}

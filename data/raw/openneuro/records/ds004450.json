@@ -1,0 +1,69 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004450",
+  "payload": {
+    "created": "2023-01-25T19:18:18.772Z",
+    "id": "ds004450",
+    "latestSnapshot": {
+      "created": "2023-02-21T19:42:27.000Z",
+      "description": {
+        "Authors": [
+          "Will be updated"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004450.v1.0.1",
+        "Funding": [],
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "XCP_WALKTHROUGH\n",
+        "ReferencesAndLinks": []
+      },
+      "readme": "\n# Executive Function\nTo find out more about this study, you can examine the documentation and scan protocols[here](https://pennlinc.github.io/executivefunction/).\n\nThis repository contains a set of\n[BIDS-compatible](https://bids.neuroimaging.io/) datasets with T1s, two rest runs\nand corresponding functional maps for three subjects. Both .nii.gz and .json\nfiles are available for each of these, along with a dataset_description.json, as well as their \nfMRIPrep derivatives.\n\n\n### Information about Files: \n|FileType                                                              |Counts|EchoTime|EffectiveEchoSpacing|FlipAngle|HasFieldmap|KeyGroupCount|Modality|MultibandAccelerationFactor|NSliceTimes|ParallelReductionFactorInPlane|PartialFourier|PhaseEncodingDirection|RepetitionTime|TotalReadoutTime|UsedAsFieldmap|\n|----------------------------------------------------------------------|------|--------|--------------------|---------|-----------|-------------|--------|---------------------------|-----------|------------------------------|--------------|----------------------|--------------|----------------|--------------|\n|datatype-anat_suffix-T1w                                              |3     |0.0029  |                    |8        |FALSE      |3            |anat    |                           |0          |2.0                           |1             |                      |2.5           |                |FALSE         |\n|acquisition-fMRIdistmap_datatype-fmap_direction-AP_fmap-epi_suffix-epi|3     |0.08    |0.00051             |90       |FALSE      |3            |fmap    |                           |60         |                              |1             |j-                    |7.03          |0.045           |TRUE          |\n|acquisition-fMRIdistmap_datatype-fmap_direction-PA_fmap-epi_suffix-epi|3     |0.08    |0.00051             |90       |FALSE      |3            |fmap    |                           |60         |                              |1             |j                     |7.03          |0.045           |TRUE          |\n|datatype-func_run-1_suffix-bold_task-restbold                         |3     |0.03    |0.00051             |52       |TRUE       |3            |func    |6.0                        |60         |                              |1             |j                     |0.8           |0.045           |FALSE         |\n|datatype-func_run-2_suffix-bold_task-restbold                         |3     |0.03    |0.00051             |52       |TRUE       |3            |func    |6.0                        |60         |                              |1             |j                     |0.8           |0.045           |FALSE         |\n\n### Provenance: \n\nThese files were obtained from Flywheel, defaced and run through fMRIPrep. \n",
+      "summary": {
+        "dataProcessed": true,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "12367",
+          "12412",
+          "12368"
+        ],
+        "size": 1274030755,
+        "subjects": [
+          "20712",
+          "21112",
+          "21325"
+        ],
+        "tasks": [
+          "restbold"
+        ],
+        "totalFiles": 33
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": null,
+      "associatedPaperDOI": "",
+      "dataProcessed": true,
+      "dxStatus": "Healthy, ADHD, PS",
+      "grantFunderName": "NIMH ",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": "Longitudinal"
+    },
+    "publishDate": "2023-02-20T14:06:21.765Z"
+  },
+  "source": "openneuro"
+}

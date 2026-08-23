@@ -1,0 +1,25 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:98e50d7102970eaeb4780978b612a944e89fc6f10f9da9630e863a92f471515d",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [
+      "VN"
+    ],
+    "domains": [
+      "pulmonology"
+    ],
+    "id": "physionet:vindr-cxr",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "chest X-ray scans",
+        "value": "xray"
+      }
+    ],
+    "population": "Patients whose chest X-ray scans were retrospectively collected from two major hospitals in Vietnam",
+    "summary": "Chest X-ray images in DICOM format, retrospectively collected from two hospitals, annotated by radiologists with local bounding-box labels for abnormalities and global labels for suspected diseases, split into training and test sets."
+  },
+  "prompt_version": "v1"
+}

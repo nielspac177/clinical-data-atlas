@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:f6b478ecbf53907f1659c9624765c8ee26af6b61bc1ff4ae72ead9e97d61107a",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "242 consecutive patients with vestibular schwannoma (VS)",
+        "label": "vestibular schwannoma"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "oncology"
+    ],
+    "id": "tcia:vestibular-schwannoma-seg",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "a labelled dataset of MRI images",
+        "value": "MRI"
+      },
+      {
+        "evidence": "radiation therapy (RT) dataset including the RTDose, RTStructures and RTPlan",
+        "value": "radiotherapy"
+      }
+    ],
+    "population": "242 consecutive patients with vestibular schwannoma undergoing Gamma Knife stereotactic radiosurgery",
+    "summary": "Labelled contrast-enhanced T1 and high-resolution T2 brain MRI from vestibular schwannoma patients treated with Gamma Knife stereotactic radiosurgery, each paired with radiation therapy dose, structure and plan data."
+  },
+  "prompt_version": "v1"
+}

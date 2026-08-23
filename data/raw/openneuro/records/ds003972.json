@@ -1,0 +1,84 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003972",
+  "payload": {
+    "created": "2022-01-04T10:57:32.326Z",
+    "id": "ds003972",
+    "latestSnapshot": {
+      "created": "2021-12-10T18:20:54.000Z",
+      "description": {
+        "Authors": [
+          "Schellekens, W.",
+          "Bakker, C.",
+          "Ramsey, N.F.",
+          "Petridou, N."
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds003972.v1.0.0",
+        "Funding": [
+          "This work was supported by the National Institute of Mental Health of the National Institutes of Health under award number RO1MH111417"
+        ],
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "Body Motor",
+        "ReferencesAndLinks": []
+      },
+      "readme": "In vivo 7T MRI dataset following sets of T1w anatomical scans and whole-body motor fMRI tasks. The data was collected at the UMC Utrecht, Netherlands, by Wouter Schellekens, Carlijn Bakker, Nick F. Ramsey, and Natalia Petridou.\n\nThe whole-body motor task entails the movement of 18 different body parts, mentioned in the \"task-bodymotor_bold.json\", and correspondingly referred to in the \"*_events.tsv\" in the \"func\" folders. The onset and duration in the \"*_events.tsv\" files is presented in ms.\n\nIn line with privacy policies of the UMC Utrecht, the participants are randomized and the age is rounded according to: 18<=age<=22 -> 20 and 23<=age -> 30\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 3890373796,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08"
+        ],
+        "tasks": [
+          "Body Motor"
+        ],
+        "totalFiles": 122
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        30,
+        20,
+        20,
+        30,
+        30,
+        20,
+        30,
+        20
+      ],
+      "associatedPaperDOI": "doi: https://doi.org/10.1101/2020.11.12.379339",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "This work was supported by the National Institute Of Mental Health of the National Institutes of Health",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "Event-related",
+      "studyDomain": "Brain; Motor cortex",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2022-01-05T10:54:30.193Z"
+  },
+  "source": "openneuro"
+}

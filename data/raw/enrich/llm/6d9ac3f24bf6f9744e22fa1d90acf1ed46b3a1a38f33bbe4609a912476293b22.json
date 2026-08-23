@@ -1,0 +1,27 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:6d9ac3f24bf6f9744e22fa1d90acf1ed46b3a1a38f33bbe4609a912476293b22",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "other"
+    ],
+    "id": "physionet:rexerr-v1",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Chest X-Ray reports containing synthetic errors",
+        "value": "clinical_notes"
+      },
+      {
+        "evidence": "Chest X-Ray reports",
+        "value": "xray"
+      }
+    ],
+    "population": null,
+    "summary": "Chest x-ray reports derived from MIMIC-CXR with synthetic errors injected by large language models at report and sentence level, sampled from errors frequently made by human and AI report writers."
+  },
+  "prompt_version": "v1"
+}

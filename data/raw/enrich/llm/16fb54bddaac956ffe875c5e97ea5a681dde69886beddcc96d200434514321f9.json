@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:16fb54bddaac956ffe875c5e97ea5a681dde69886beddcc96d200434514321f9",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "physionet:sleep-edfx",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "containing EEG, EOG, chin EMG, and event markers",
+        "value": "EEG"
+      },
+      {
+        "evidence": "chin EMG",
+        "value": "EMG"
+      },
+      {
+        "evidence": "Some records also contain respiration and body temperature",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": null,
+    "summary": "Expanded collection of 197 whole-night polysomnographic recordings with EEG, EOG, chin EMG and event markers, some with respiration and body temperature, plus manually scored hypnograms."
+  },
+  "prompt_version": "v1"
+}

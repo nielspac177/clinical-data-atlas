@@ -1,0 +1,36 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "glucose-management-mimic",
+  "payload": {
+    "abstract": "<p>Analysis of real-world glucose and insulin clinical data recorded in electronic health records can provide insights into tailored approaches to clinical care, but still present many analytic challenges. The present data subsets are the result of a detailed curation process that extracts and pairs glucose readings to insulin therapy on a per-patient basis during an admission to the Intensive Care Unit (ICU) in the Medical Information Mart for Intensive Care (MIMIC-III) database. Curated data include over 500,000 glucose readings and more than 140,000 insulin entries for nearly 9,600 patients distributed in more than 11,000 ICU stays. Also, the proposed curation process involved the creation of glucose - insulin pairing rules according to clinical expert-defined physiologic and pharmacologic parameters. With the proposed rules, it was possible to pair nearly 76% of insulin administration events to a preceding blood glucose reading. The two shared data subsets have the potential to reveal insights regarding real-world practice for the glycemic control in the ICU. Moreover, the shared material serves as a framework for future studies of glucose management and insulin therapy replacement in the ICU, which may allow researchers to tailor queries and data processing to their own study objectives.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 15706708,
+    "core_doi": "10.13026/46zt-f692",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 137609127,
+    "public_project_uuid": "e34a1458-1048-4c7f-96cc-dfac75d345b3",
+    "publish_date": "2021-04-19",
+    "resource_type": "Database",
+    "short_description": "The data subsets consist of time series files that includes all the curated entries of glucose readings and insulin inputs from MIMIC-III database.",
+    "slug": "glucose-management-mimic",
+    "source_url": "https://physionet.org/content/glucose-management-mimic/1.0.1/",
+    "title": "Curated Data for Describing Blood Glucose Management in the Intensive Care Unit",
+    "topics": [
+      "insulin replacement therapy",
+      "glycemic control",
+      "critical care"
+    ],
+    "version": "1.0.1",
+    "version_doi": "10.13026/517s-2q57"
+  },
+  "source": "physionet"
+}

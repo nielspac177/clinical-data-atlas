@@ -1,0 +1,23 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:5d3005944a3d35442eaf0f5f755de0b841d8ec9b2f71e0155cd61f5db4654587",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "other"
+    ],
+    "id": "physionet:ann-pt-summ",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "MIMIC patient summaries (discharge instructions)",
+        "value": "clinical_notes"
+      }
+    ],
+    "population": "100 original MIMIC patient summaries (discharge instructions) and 100 Large Language Model (LLM) generated patient summaries",
+    "summary": "Medical expert annotations marking unsupported facts in doctor-written discharge instructions and hallucinations in LLM-generated patient summaries, plus preprocessed versions of the source discharge instruction notes."
+  },
+  "prompt_version": "v1"
+}

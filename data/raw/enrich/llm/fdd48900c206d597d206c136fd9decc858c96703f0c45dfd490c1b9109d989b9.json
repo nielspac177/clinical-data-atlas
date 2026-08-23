@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:fdd48900c206d597d206c136fd9decc858c96703f0c45dfd490c1b9109d989b9",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "musculoskeletal",
+      "neuroscience"
+    ],
+    "id": "physionet:multimodal-gait-dataset",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "scalp electroencephalography",
+        "value": "EEG"
+      },
+      {
+        "evidence": "surface electromyography of 12 lower-limb muscles",
+        "value": "EMG"
+      },
+      {
+        "evidence": "inertial sensors capturing kinematics",
+        "value": "wearable"
+      },
+      {
+        "evidence": "bilateral force plates measuring three-dimensional forces",
+        "value": "other"
+      }
+    ],
+    "population": "59 healthy adults with a mean age of 24 ± 5 years, representing both sexes and different body mass index categories",
+    "summary": "Treadmill walking recordings at three controlled speeds combining scalp EEG, surface EMG of lower-limb muscles, inertial kinematics and force plate ground reaction data, supporting study of brain-body interactions during gait."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,56 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:b2cb9943dcdd34f0b8a77531d41a21d7b098dfa92efa1b6c0077249ceeb7ace4",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "pre-diabetes",
+        "label": "pre-diabetes"
+      },
+      {
+        "evidence": "Type 2 diabetes",
+        "label": "Type 2 diabetes"
+      },
+      {
+        "evidence": "obesity",
+        "label": "obesity"
+      },
+      {
+        "evidence": "healthy adults",
+        "label": "healthy adults"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "endocrinology_metabolism"
+    ],
+    "id": "physionet:cgmacros",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "two continuous glucose monitors (CGM)",
+        "value": "wearable"
+      },
+      {
+        "evidence": "physical activity",
+        "value": "wearable"
+      },
+      {
+        "evidence": "anthropometric measurements and health parameters",
+        "value": "clinical_tabular"
+      },
+      {
+        "evidence": "food photographs",
+        "value": "other"
+      },
+      {
+        "evidence": "gut microbiome profiles",
+        "value": "other"
+      }
+    ],
+    "population": "45 study participants (15 healthy adults, 16 with pre-diabetes, and 14 with Type 2 diabetes)",
+    "summary": "Multimodal diet and metabolism dataset pairing readings from two continuous glucose monitors with food macronutrients, food photographs, physical activity, demographics, anthropometrics, blood analyses and gut microbiome profiles during free-living meals of known composition."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,44 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:d5b641a8431897a3a98198c113d512d7c40b7ff821091bb35700edb8a3df6774",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Oropharyngeal cancer makes up 50% of the population",
+        "label": "Oropharyngeal cancer"
+      },
+      {
+        "evidence": "with larynx, nasopharynx, and hypopharynx cancer",
+        "label": "larynx, nasopharynx, and hypopharynx cancer"
+      },
+      {
+        "evidence": "Computed Tomography Images from Large Head and Neck Cohort",
+        "label": "Head and Neck"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "tcia:radcure",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "computed tomography (CT) images with corresponding normal and non-normal tissue contours",
+        "value": "CT"
+      },
+      {
+        "evidence": "collected clinically for radiation therapy treatment planning",
+        "value": "radiotherapy"
+      },
+      {
+        "evidence": "images are linked to clinical data for each patient and includes demographic, clinical and treatment information",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "3,346 head and neck cancer patients; median patient age is 63, with the final dataset including 80% males",
+    "summary": "Head and neck cancer CT scans collected clinically for radiation therapy planning, with normal and non-normal tissue contours reviewed at quality assurance rounds, linked to demographic, clinical, treatment and follow-up data."
+  },
+  "prompt_version": "v1"
+}

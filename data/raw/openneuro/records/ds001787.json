@@ -1,0 +1,115 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds001787",
+  "payload": {
+    "created": "2019-03-09T00:48:05.425Z",
+    "id": "ds001787",
+    "latestSnapshot": {
+      "created": "2024-06-17T01:24:01.000Z",
+      "description": {
+        "Authors": [
+          "Arnaud Delorme",
+          "Tracy Brandmeyer"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds001787.v1.1.1",
+        "Funding": [],
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "EEG meditation study",
+        "ReferencesAndLinks": [
+          "https://www.ncbi.nlm.nih.gov/pubmed/27815577"
+        ]
+      },
+      "readme": "This meditation experiment contains 24 subjects. Subjects were\nmeditating and were interupted about every 2 minutes to indicate\ntheir level of concentration and mind wandering. The scientific\narticle (see Reference) contains all methodological details.\n\nNote that although the original files were recorded at 2048 Hz, they were downsampled to 256 Hz using the BDF decimator provided by BIOSEMI (https://www.biosemi.com/download.htm).\n\n- Arnaud Delorme (October 17, 2018; updated June 2024)",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "eeg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [
+          "01",
+          "02",
+          "03"
+        ],
+        "size": 6112012191,
+        "subjects": [
+          "001",
+          "002",
+          "003",
+          "004",
+          "005",
+          "006",
+          "007",
+          "008",
+          "009",
+          "010",
+          "011",
+          "012",
+          "013",
+          "014",
+          "015",
+          "016",
+          "017",
+          "018",
+          "019",
+          "020",
+          "021",
+          "022",
+          "023",
+          "024"
+        ],
+        "tasks": [
+          "meditation"
+        ],
+        "totalFiles": 141
+      },
+      "tag": "1.1.1"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        32,
+        35,
+        41,
+        29,
+        34,
+        32,
+        32,
+        32,
+        43,
+        33,
+        62,
+        65,
+        47,
+        52,
+        78,
+        77,
+        32,
+        null,
+        42,
+        41,
+        41,
+        31,
+        50,
+        38
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "eeg"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2019-03-09T00:48:05.425Z"
+  },
+  "source": "openneuro"
+}

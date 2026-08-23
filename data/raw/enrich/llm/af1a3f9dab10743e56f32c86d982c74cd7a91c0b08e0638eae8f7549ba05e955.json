@@ -1,0 +1,27 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:af1a3f9dab10743e56f32c86d982c74cd7a91c0b08e0638eae8f7549ba05e955",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "other"
+    ],
+    "id": "physionet:rexpref-prior",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "findings and impression sections of chest X-ray reports",
+        "value": "clinical_notes"
+      },
+      {
+        "evidence": "chest X-ray reports",
+        "value": "xray"
+      }
+    ],
+    "population": null,
+    "summary": "An adapted version of MIMIC-CXR in which GPT-4 removed references to prior exams from the findings and impression sections of chest x-ray reports, for training and benchmarking report generation models."
+  },
+  "prompt_version": "v1"
+}

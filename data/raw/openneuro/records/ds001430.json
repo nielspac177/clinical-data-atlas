@@ -1,0 +1,132 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds001430",
+  "payload": {
+    "created": "2018-07-24T17:21:46.901Z",
+    "id": "ds001430",
+    "latestSnapshot": {
+      "created": "2019-09-03T21:08:08.000Z",
+      "description": {
+        "Authors": [
+          "Kim, G.",
+          "Norman, K.A.",
+          "Turk-Browne, N.B."
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds001430.v1.0.2",
+        "Funding": [],
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "Neural Overlap in Item Representations Across Episodes Impairs Context Memory",
+        "ReferencesAndLinks": [
+          "https://www.ncbi.nlm.nih.gov/pubmed/29897407"
+        ]
+      },
+      "readme": " Behavioral data\n\t Column information:\n\t\tOnset\n\t\tDuration\n\t\tBlock\n\t\tTrial: Trial (within a block)\n\t\tTask: task (1:artist, 2:function; task info. of the learning phase for the item repetition and source memory test phases)\n\t\tStim cat: Stimulus category (1:natural, 2:manmade)\n\t\tRepetition: Repetition (1: repeated, 2: once)\n\t\tReaction_time: Reaction time (in sec)\n\t\tResponse\n\t\tAccuracy: Accuracy (1: correct, 0: incorrect in the source test phase; NaN for the other phases)\n\t\tConfidence_lvl: Confidence level (1: highly unsure, 4: highly sure in the source test phase; n/a for the other phases)\n\t\tRT_confidence: RT of confidence report (n/a for the non-test phases)\n\t\t\n Stimulus presentation time\n\tPhase 1 (encoding phase): 1s\n\tPhase 2 (item repetition phase): 1s\n\tPhase 3 (source memory test phase): 6s",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 9793843730,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "tasks": [
+          "Task Localizer",
+          "Initial Encoding",
+          "Source Memory Test",
+          "Item Repetition"
+        ],
+        "totalFiles": 1272
+      },
+      "tag": "1.0.2"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        20,
+        19,
+        21,
+        19,
+        20,
+        24,
+        23,
+        21,
+        26,
+        27,
+        19,
+        19,
+        19,
+        24,
+        18,
+        24,
+        19,
+        19,
+        30,
+        19,
+        18,
+        19,
+        19,
+        19,
+        21,
+        29,
+        19,
+        21,
+        33,
+        22,
+        21
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2018-07-24T17:21:46.901Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:da2c72ecf92e12a658f99260f84a10a0367a0905ac18b776411209fdea9e2c34",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "hypothermia, fever, or sepsis cases",
+        "label": "sepsis"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "critical_care",
+      "public_health"
+    ],
+    "id": "physionet:therlid",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "derived dataset from 3 Electronic Health Record databases",
+        "value": "EHR"
+      },
+      {
+        "evidence": "paired temperature readings (contact and infrared)",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": "Patients from MIMIC-IV, eICU-CRD-1 and eICU-CRD-2 contributing 13,251 temperature pairs with values between 30°C to 45°C",
+    "summary": "Paired contact and infrared temperature measurements taken within one hour of each other, linked to demographics and hospital data, to study racial and ethnic disparities in infrared thermometry."
+  },
+  "prompt_version": "v1"
+}

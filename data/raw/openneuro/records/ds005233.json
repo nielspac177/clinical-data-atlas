@@ -1,0 +1,95 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005233",
+  "payload": {
+    "created": "2024-06-04T19:22:41.378Z",
+    "id": "ds005233",
+    "latestSnapshot": {
+      "created": "2024-06-05T15:22:02.000Z",
+      "description": {
+        "Authors": [
+          "Stuart D. Washington, PhD",
+          "Kyle Shattuck",
+          "Jan Steckel",
+          "Herbert Peremans",
+          "Elisabeth Jonckers",
+          "Rukun Hinz",
+          "Tom Venneman",
+          "Monica Van den Berg",
+          "Lisbeth Van Ruijssevelt",
+          "Thomas Verellen",
+          "Dominique L. Pritchett",
+          "Jan Scholliers",
+          "Sayuan Liang",
+          "Paul C. Wang",
+          "Marleen Verhoye",
+          "Karl-Heinz Esser",
+          "Annemie Van der Linden",
+          "Georgios A. Keliris"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005233.v1.0.2",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Bat rsfMRI",
+        "ReferencesAndLinks": null
+      },
+      "readme": "Written June 4, 2024\r\nby Stuart D. Washington, PhD\r\n\r\n***********************************\r\n*    Regarding Functional Scans   *\r\n***********************************\r\nStructural scans are in the folder \"func\" for each subject.\r\n\r\nResting state scans are called \"sub-N_ses-1_task-restingstate_run-1_bold\" where \"N\" is the subject number.\r\n\r\nNoiseband scans are called \"sub-2_ses-1_task-ultrasonicnoise_run-1_bold\" where \"N\" is the subject number.\r\n\r\nWe named the bats by a specific number when they were first introduced to the colony.  \r\nWe simplified the naming of bats for readability in the text of Washington et al (2024) and its Supplemental Information.  \r\nIn these folders, the bat's subject data are listed by their actual, original numbers rather than their numbers in the text. \r\nHowever, it is easy to follow the change.\r\n\r\nText_Animal# --> Actual_Animal# --> Subject#\r\n\r\nBat1 --> Bat2  --> sub-2\r\nBat2 --> Bat6  --> sub-6\r\nBat3 --> Bat9  --> sub-9\r\nBat4 --> Bat10 --> sub-10\r\nBat5 --> Bat11 --> sub-11\r\nBat6 --> Bat12 --> sub-12\r\nBat7 --> Bat13 --> sub-13\r\nBat8 --> Bat14 --> sub-14\r\nBat9 --> Bat1  --> sub-1\r\n\r\n***********************************\r\n*    Regarding Structural Scans   *\r\n***********************************\r\n\r\nStructural scans are in the folder \"anat\" for each subject.\r\n\r\nAxial T2-weighted scans are \"sub-N_ses-1_acq-axial_T2w\" where \"N\" is the subject number.\r\n\r\nCoronal T2-weighted scans are \"sub-N_ses-1_acq-coronal_T2w\" where \"N\" is the subject number.\r\n\r\n\"Axial\" and \"Coronal\" are based on the \"prone\" position common in animal MRI studies, not the \"supine\" position common in human studies.\r\nThus, in the images in the \"Axial\" subfolder contains typically \"coronal\" images, and the \"Coronal\" subfolder contains \"axial\" images.    \r\n\r\nWe were able to get structural scans for 13 out of an original set of 15 bats.\r\n\r\nBats were assigned names and numbers before experiments were carried out.  \r\n\r\nTechnical difficulties prevented any successful scanning of \"Bat_3 (sub-3)\" or \"Bat_8 (sub-8)\".\r\n\r\nThere were no reported analyses performed on structural data except for the creation of a study-based template.\r\n\r\nThus the names of animals and numbers for structural scans are not as directly relevant to the results reported as are the functional scans.\r\n\r\nThe list of animals by name and number for structural scans follows the pattern above.\r\n\r\nAnimals that did not have functional scans but did have structural scans are labeled \"NoF\" (no functional) in the left column below.\r\n\r\nText_Animal# --> Actual_Animal# --> Subject#\r\n\r\nBat1 --> Bat2  --> sub-2\r\n(No Bat3 --> No sub_3)\r\nNoF  --> Bat4  --> sub-4\r\nNoF  --> Bat5  --> sub-5\r\nBat2 --> Bat6  --> sub-6\r\nNoF  --> Bat7  --> sub-7\r\n(No Bat8 --> No sub_8)\r\nBat3 --> Bat9  --> sub-9\r\nBat4 --> Bat10 --> sub-10\r\nBat5 --> Bat11 --> sub-11\r\nBat6 --> Bat12 --> sub-12\r\nBat7 --> Bat13 --> sub-13\r\nBat8 --> Bat14 --> sub-14\r\nBat9 --> Bat1  --> sub-1",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "1"
+        ],
+        "size": 5993371471,
+        "subjects": [
+          "1",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "2",
+          "4",
+          "5",
+          "6",
+          "7",
+          "9"
+        ],
+        "tasks": [
+          "Ultrasonic noise",
+          "Resting State"
+        ],
+        "totalFiles": 57
+      },
+      "tag": "1.0.2"
+    },
+    "metadata": {
+      "affirmedDefaced": false,
+      "ages": null,
+      "associatedPaperDOI": "https://doi.org/10.1073/pnas.2306029121",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "Erasmus Mundus; NIH/NIMHD U54MD007597; NIH/NICHD P50HD105328",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Bat",
+      "studyDesign": "",
+      "studyDomain": "Resting-State",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2024-06-04T22:22:59.835Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,35 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "discharge-summary-templates",
+  "payload": {
+    "abstract": "<p>We introduce a dataset of people&rsquo;s names and clinical note templates to support research on the demographic bias of de-identification systems. The dataset contains 16 name sets that vary along four demographic dimensions: gender, race, name popularity, and the decade of popularity. It also includes 100 clinical templates manually curated from MIMIC-IV discharge summaries. These templates are then populated with names generated from the 16 name sets to investigate the demographic bias in nine public and private de-identification methods. The dataset provides a valuable resource for researchers who are interested in understanding and mitigating the unfairness of de-identification systems.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 31610896,
+    "core_doi": "10.13026/ngc0-0f54",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 416611683,
+    "public_project_uuid": "f4800eb7-3c9b-42d3-ac97-5f49a95e1b28",
+    "publish_date": "2023-07-05",
+    "resource_type": "Database",
+    "short_description": "Annotated MIMIC-IV discharge summaries used to explore deidentification of names",
+    "slug": "discharge-summary-templates",
+    "source_url": "https://physionet.org/content/discharge-summary-templates/1.0/",
+    "title": "Annotated MIMIC-IV discharge summaries for a study on deidentification of names",
+    "topics": [
+      "fairness",
+      "deidentification"
+    ],
+    "version": "1.0",
+    "version_doi": "10.13026/63ab-qf77"
+  },
+  "source": "physionet"
+}

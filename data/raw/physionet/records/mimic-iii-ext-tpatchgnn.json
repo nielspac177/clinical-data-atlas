@@ -1,0 +1,32 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "mimic-iii-ext-tpatchgnn",
+  "payload": {
+    "abstract": "<p>This dataset is a curated subset of MIMIC-III (v1.4), specifically formatted to facilitate reproducibility of the experiments in the work t-PatchGNN. It serves as part of a benchmark designed for forecasting irregular multivariate clinical time series, that is, given a set of historical Irregular Multivariate Time Series (IMTS) observations and forecasting queries, the forecasting problem aims to accurately forecast the values in correspondence to these queries. This requires addressing key challenges such as missing data, variable sampling rates, and complex temporal dependencies. The dataset includes patient records with diverse physiological measurements, each sampled at irregular intervals, reflecting real-world clinical scenarios. It is structured to capture both short-term and long-term temporal patterns, making it well-suited for evaluating machine learning models in medical time series forecasting. By providing a standardized benchmark, this dataset aims to advance research in predictive modeling for healthcare, enabling the development of robust algorithms that can handle irregular and sparse clinical data. The dataset&rsquo;s applications extend to critical areas such as early disease detection, patient risk stratification, and treatment outcome prediction, making it a valuable resource for the medical AI and machine learning communities.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 39959752,
+    "core_doi": "10.13026/rzea-ah40",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 872044252,
+    "public_project_uuid": "58802e8b-fe77-4d3d-abb2-6b8ab7cad5ac",
+    "publish_date": "2025-04-09",
+    "resource_type": "Database",
+    "short_description": "The processed MIMIC-III dataset for the benchmark of Irregular Multivariate Time Series Forecasting: A Transformable Patching Graph Neural Networks Approach.",
+    "slug": "mimic-iii-ext-tpatchgnn",
+    "source_url": "https://physionet.org/content/mimic-iii-ext-tpatchgnn/1.0.0/",
+    "title": "MIMIC-III-Ext-tPatchGNN",
+    "topics": [],
+    "version": "1.0.0",
+    "version_doi": "10.13026/ckn0-3868"
+  },
+  "source": "physionet"
+}

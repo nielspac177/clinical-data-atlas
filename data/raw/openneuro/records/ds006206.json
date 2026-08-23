@@ -1,0 +1,100 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006206",
+  "payload": {
+    "created": "2025-05-06T18:55:24.650Z",
+    "id": "ds006206",
+    "latestSnapshot": {
+      "created": "2026-07-29T20:50:36.000Z",
+      "description": {
+        "Authors": [
+          "Shuxian Qu",
+          "Jiaen Liu",
+          "Peter van Gelderen",
+          "Jacco A. de Zwart",
+          "Jeff H. Duyn",
+          "Matt Waks",
+          "Russell Lagore",
+          "Alexander Bratch",
+          "Andrea Grant",
+          "Edward Auerbach",
+          "Lance Delabarre",
+          "Alireza Sadeghi-Tarakameh",
+          "Yigitcan Eryaman",
+          "Gregor Adriany",
+          "Kamil Ugurbil",
+          "Xiaoping Wu"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006206.v2.2.0",
+        "Funding": [
+          "R01 NS136490",
+          "P41 EB027061",
+          "U01 EB025144",
+          "S10 RR029672"
+        ],
+        "HowToAcknowledge": "Advancing whole-brain BOLD fMRI in humans at 10.5 Tesla with motion-robust 3D EPI, parallel transmission and high-density RF receive coils. Shuxian Qu, Jiaen Liu, Peter van Gelderen, Jacco A. de Zwart, Jeff H. Duyn, Matt Waks, Russell Lagore, Alexander Bratch, Andrea Grant, Edward Auerbach, Lance Delabarre, Alireza Sadeghi-Tarakameh, Yigitcan Eryaman, Gregor Adriany, Kamil Ugurbil, and Xiaoping Wu. MRM 2025.",
+        "License": "CC0",
+        "Name": "Motion-robust resting-state BOLD functional MRI in healthy adults at 10.5 Tesla",
+        "ReferencesAndLinks": [
+          "Custom built workflow for data processing:"
+        ]
+      },
+      "readme": "DESCRIPTION\n\nHere we share the unprocessed and preprocessed BOLD functional MRI (fMRI) data from the paper: Advancing whole-brain BOLD functional MRI in humans at 10.5 T with motion-robust 3D echo-planar imaging, parallel transmission, and high-density radiofrequency receive coils. Shuxian Qu, Jiaen Liu, Peter van Gelderen, Jacco A. de Zwart, Jeff H. Duyn, Matt Waks, Russell Lagore, Alexander Bratch, Andrea Grant, Edward Auerbach, Lance Delabarre, Alireza Sadeghi-Tarakameh, Yigitcan Eryaman, Gregor Adriany, Kamil Ugurbil, and Xiaoping Wu. Magn Reson Med. 2025 Oct 17. doi: 10.1002/mrm.70110. Epub ahead of print. PMID: 41108198.\n\nBelow we provide a brief description of the data. A detailed description of the data including acquisition, reconstruction, processing and analysis can be found in the paper cited above. \n\nPARTICIPANTS\n\nFive healthy adults who signed a consent form were scanned. \n\nDATA ACQUISITION\n\nWe performed human experiments on a Siemens Magnetom 10.5 T MR scanner (Siemens Healthineers, Erlangen, Germany) retrofitted with 16-channel RF transmission and 128-channel signal reception systems, and equipped with a whole-body gradient (70 mT/m maximum strength and 200 T/m/s maximum slew rate). A custom-built 16Tx80Rx RF head array, with an FDA-approved investigational device exemption, was used to acquire human brain images. \n\nFor each volunteer, we collected whole-brain resting state fMRI data at two resting conditions: eyes open (EO) and eyes closed (EC). At both conditions, the volunteer was not instructed explicitly to stay still. At the EO condition, the volunteer was asked to fix at crosshairs centered on a gray background projected onto a screen, whereas at the EC condition, the volunteer was asked to keep their eyes closed.   \n\nFor each condition, two runs of fMRI data were collected. Each run was acquired using a custom-built, pTx-enabled, motion-robust 3D GRE EPI sequence with navigators, relevant imaging parameters being: scan time=~6 min, resolution=isotropic 1.58 mm, FOV=256×237×190 mm3, orientation=sagittal, TR/TE=39/21 ms, FA=10°, volume TR=2.34 s, bandwidth=385.6 kHz, number of interleaves=2 (i.e., two shots per kz plane), 2D acceleration rate=3×4 with CAIPI, image volumes=150. The two runs were obtained with opposite phase encoding directions: one with Anterior–Posterior (AP) and another PA phase encoding directions to reduce susceptibility-induced signal dropout in the combined timeseries, leading to a total of 300 image volumes acquired in ~12 min. \n\nFor each volunteer, we acquired fully sampled calibration data in a separate reference scan using a custom pTx-enabled, multi-echo 3D GRE sequence. This data was used for estimating multi-coil sensitivity maps needed for parallel image reconstruction as well as deriving a field map for EPI susceptibility distortion correction in fMRI preprocessing. Specifically, three-echo GRE images were acquired using the same pTx pulses as used for the BOLD fMRI data acquisition. Other relevant imaging parameters were: resolution=4 mm isotropic, TR/TE1/TE2/TE3=30/3/3.73/4.46 ms, FA=12°, matrix size=74×60×48, orientation=sagittal, and scan time=~1.5 min. \n\nTo facilitate subsequent anatomy-based fMRI processing and analysis, we collected whole-brain anatomical reference images using a T1-weighted 3D magnetization prepared two rapid acquisition gradient echoes (MP2RAGE) sequence. For each volunteer, the MP2RAGE was acquired at 1 mm isotropic resolution with CP mode excitation. Other relevant imaging parameters were: TR/TE=5000/1.64 ms, TI1/TI2= 1100/2500 ms, FA1/FA2=5˚/5˚ and scan time=~7 min. \n\nWe reconstructed fMRI timeseries on a volume-by-volume basis using in-house MATLAB software made publicly available at https://github.com/jiaen-liu/moco. In particular, fMRI timeseries were reconstructed with navigator-based joint motion and field correction (restEO, restEC). For comparison, the same k-space raw data were also used to reconstruct fMRI timeseries without motion or field correction (restNocoEO, restNocoEC). \n\nPREPROCESSING\n\nWe conducted fMRI preprocessing using the fMRIPrep pipeline (https://fmriprep.org/en/latest).\n\nUSAGE NOTES\n\nIf you use the data, please consider citing the paper mentioned above.\n\nCONTACT\n\nIf you have any questions about the data, please reach out to Shuxian Qu at qu000109@umn.edu",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 62985459196,
+        "subjects": [
+          "049",
+          "054",
+          "050",
+          "037",
+          "039"
+        ],
+        "tasks": [
+          "restEC",
+          "rest",
+          "restEO",
+          "restNoco",
+          "restNocoEO",
+          "restNocoEC",
+          "restNomocoEO",
+          "restNomoco"
+        ],
+        "totalFiles": 198
+      },
+      "tag": "2.2.0"
+    },
+    "metadata": {
+      "affirmedDefaced": false,
+      "ages": [
+        34,
+        12,
+        33
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "This is a methodological resting-state fMRI study. The motivation was to demonstrate the the feasibility of whole-brain BOLD fMRI in humans at 10.5 T by the combination of the motion-robust imaging method, parallel transmission, and high-channel-count RF receive coils.",
+      "studyDomain": "Resting-State; Methodological",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2025-05-07T22:18:36.208Z"
+  },
+  "source": "openneuro"
+}

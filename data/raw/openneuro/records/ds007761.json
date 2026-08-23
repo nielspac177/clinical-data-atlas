@@ -1,0 +1,105 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007761",
+  "payload": {
+    "created": "2026-05-05T20:43:57.228Z",
+    "id": "ds007761",
+    "latestSnapshot": {
+      "created": "2026-05-06T16:45:40.000Z",
+      "description": {
+        "Authors": [
+          "Nicholas G. Cicero",
+          "Michaela Klimova",
+          "Louis Vinke",
+          "Sam Ling",
+          "Laura D. Lewis"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007761.v1.0.1",
+        "Funding": [
+          "NIH R01-EY028163",
+          "NIH U19-NS128613",
+          "NIH F31-NS139696",
+          "Pew Biomedical Scholars Program",
+          "Sloan Fellowship",
+          "McKnight Scholar Award"
+        ],
+        "HowToAcknowledge": "Please cite the paper and cite Cicero, N. G., Klimova, M., Vinke, L., Ling, S., Lewis, L. D.(2026). Cortex-specific inversion of visual responses during sleep. Nature Communications",
+        "License": "CC0",
+        "Name": "Cortex-specific inversion of visual responses during sleep",
+        "ReferencesAndLinks": null
+      },
+      "readme": "This dataset contains raw 3T fMRI data from 15 subjects who first completed three runs of a functional localizer and then completed a visual task with their eyes closed while resting and spontaneously transitioning between sleep-wake states. \n\nVisual stimulus for the functional localizer was a checkerboard flickering stimulus with a 16 second on-off block design. Participants completed three runs of the functional localizer.\n\nVisual stimulus for the resting run was a full-field flickering stimulus with no spatial contrast with a 16 second on-off block design. On blocks were either a high temporal contrast trial, with 100% contrast modulation flickering from a completely white to black screen at 7Hz, or  a low temporal trial, with a 10% contrast modulation flickering between midling grey intensities at 7Hz. Off blocks were non-flickering median luminance screens.\n\n\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 100292453081,
+        "subjects": [
+          "12",
+          "04",
+          "10",
+          "06",
+          "07",
+          "14",
+          "15",
+          "11",
+          "05",
+          "13",
+          "08",
+          "09",
+          "01",
+          "02",
+          "03"
+        ],
+        "tasks": [
+          "checker",
+          "luminance"
+        ],
+        "totalFiles": 214
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        43,
+        27,
+        25,
+        27,
+        21,
+        26,
+        30,
+        33,
+        24,
+        22,
+        23,
+        29,
+        26,
+        24,
+        21
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2026-05-06T16:44:16.095Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,55 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:7649304dbb494b67721bbabf24ddcf9d7abb169deaa9b1848c78fb613c9ed19e",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Cancer Moonshot Biobank-Prostate Cancer (CMB-PCA) cohort",
+        "label": "Prostate Cancer"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "oncology",
+      "nephrology_urology"
+    ],
+    "id": "tcia:cmb-pca",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "CT DX MR NM PT RF",
+        "value": "CT"
+      },
+      {
+        "evidence": "CT DX MR NM PT RF",
+        "value": "MRI"
+      },
+      {
+        "evidence": "CT DX MR NM PT RF",
+        "value": "PET"
+      },
+      {
+        "evidence": "CT DX MR NM PT RF",
+        "value": "SPECT"
+      },
+      {
+        "evidence": "CT DX MR NM PT RF",
+        "value": "xray"
+      },
+      {
+        "evidence": "de-identified radiology and histopathology imaging",
+        "value": "pathology"
+      },
+      {
+        "evidence": "Associated genomic, phenotypic and clinical data",
+        "value": "genomics"
+      }
+    ],
+    "population": "Subjects in NCI's Cancer Moonshot Biobank-Prostate Cancer (CMB-PCA) cohort: patients receiving standard of care cancer treatment at multiple NCI Community Oncology Research Program (NCORP) sites.",
+    "summary": "De-identified radiology and histopathology imaging from the Cancer Moonshot Biobank prostate cancer cohort, spanning CT, MR, nuclear medicine and PET. Associated genomic, phenotypic and clinical data are hosted by dbGaP and other NCI databases."
+  },
+  "prompt_version": "v1"
+}

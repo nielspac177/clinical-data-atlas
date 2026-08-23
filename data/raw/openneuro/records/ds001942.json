@@ -1,0 +1,103 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds001942",
+  "payload": {
+    "created": "2019-05-23T20:34:36.456Z",
+    "id": "ds001942",
+    "latestSnapshot": {
+      "created": "2019-08-20T10:17:23.000Z",
+      "description": {
+        "Authors": [
+          "Omer Faruk Gulban",
+          "Kevin R. Sitek",
+          "Satrajit S. Ghosh",
+          "Michelle Moerel",
+          "Federico De Martino"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds001942.v1.2.0",
+        "Funding": [
+          "Data collected by Omer Faruk Gulban and Federico De Martino under NWO VIDI grant 864-13-012. ",
+          "Data also collected by Michelle Moerel under NWO VENI grant 451-15-012."
+        ],
+        "HowToAcknowledge": "Please cite as Sitek & Gulban, et al. (2019): https://elifesciences.org/articles/48932",
+        "License": "CC0",
+        "Name": "Auditory localization with 7T fMRI",
+        "ReferencesAndLinks": [
+          "See https://github.com/sitek/subcortical-auditory-atlas for analysis details and code.",
+          "See https://osf.io/hxekn/ for derived images and videos."
+        ]
+      },
+      "readme": "In vivo 7T MRI dataset probing the auditory system (cortical and subcortical) collected at Maastricht University by Faruk Gulban, Federico De Martino, and Michelle Moerel. Includes two experiments: All ten participants have at least three sessions (Experiment 1), while six of these participants have an additional two sessions (Experiment 2). Functional MRI FOV is restricted anterior-posteriorly.\n\nSession 1: High resolution anatomical MRI; diffusion-weighted MRI; resting state fMRI; standard resolution anatomical MRI\n\nSessions 2 & 3: Standard resolution anatomical MRI; task functional MRI (Experiment 1; 10 of 10 participants)\n\nSessions 4 & 5: Standard resolution anatomical MRI; task functional MRI (Experiment 2; 6 of 10 participants)",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural",
+          "mri_diffusion"
+        ],
+        "sessions": [
+          "SES01",
+          "SES02",
+          "SES03",
+          "SES04",
+          "SES05"
+        ],
+        "size": 165275130171,
+        "subjects": [
+          "S01",
+          "S02",
+          "S03",
+          "S05",
+          "S06",
+          "S07",
+          "S08",
+          "S09",
+          "S10",
+          "S11"
+        ],
+        "tasks": [
+          "rest",
+          "auditory",
+          "TODO: full task name for auditory",
+          "TODO: full task name for rest"
+        ],
+        "totalFiles": 2062
+      },
+      "tag": "1.2.0"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        30,
+        30,
+        25,
+        30,
+        24,
+        26,
+        23,
+        27,
+        29,
+        27
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2020-01-21T20:24:57.555Z"
+  },
+  "source": "openneuro"
+}

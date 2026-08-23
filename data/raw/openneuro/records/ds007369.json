@@ -1,0 +1,104 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007369",
+  "payload": {
+    "created": "2026-02-04T19:42:51.575Z",
+    "id": "ds007369",
+    "latestSnapshot": {
+      "created": "2026-02-05T04:24:29.000Z",
+      "description": {
+        "Authors": [
+          "Sanaz Hosseini, Fabian A. Soto"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007369.v1.0.0",
+        "Funding": [
+          "This work was supported by the National Science Foundation under grant No. 2020982 to Fabian A. Soto"
+        ],
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "Invariant Versus Context-Specific Representation of Face Shape and Motion in the Face Network",
+        "ReferencesAndLinks": [
+          ""
+        ]
+      },
+      "readme": "# Invariant Versus Context-Specific Representation of Face Shape and Motion in the Face Network\n\nThis repository contains the fMRI dataset associated with the study:\n\n> Hosseini, S. S., & Soto, F. A. (2025). *Invariant versus context-specific representation of face shape and motion in the face network.* Preprint.\n\n## Dataset overview\n\nThis dataset includes whole-brain fMRI data from **12 participants** who viewed dynamic synthetic face stimuli in which **facial shape and facial motion were independently manipulated**. The experiment was designed to test whether neural representations of face shape and motion in face-selective cortical regions are invariant or context-specific.\n\nParticipants viewed short videos generated from 3D face models, combining:\n- 3 facial shapes (identities)\n- 3 facial motion patterns (pose-preserving and pose-changing)\n\nThe dataset includes:\n- Raw functional and anatomical MRI data in **BIDS format**\n- Event timing files for all runs\n- Functional localizer data for defining face-selective ROIs\n\nAll anatomical images have been **defaced** to protect participant privacy.\n\n## Experimental design\n\nThe experiment consisted of:\n- A behavioral familiarization session\n- A face localizer task (faces vs objects)\n- A main event-related task with dynamic face stimuli\n\nParticipants performed a one-back repetition detection task during scanning.\n\nFull details of stimuli, procedure, and analysis are provided in the paper.\n\n## Related resources\n\nDerived data, statistical maps, beta estimates, and full analysis code are available on OSF:\n\n👉 https://osf.io/q2v68\n\nThe OSF repository includes:\n- Single-trial beta estimates\n- ROI masks\n- Decoding analysis scripts (Python)\n- Reproduction code for all figures in the paper\n\nThis OpenNeuro dataset contains only the **raw MRI data** required to reproduce those analyses.\n\n## Data structure\n\nThe dataset follows the Brain Imaging Data Structure (BIDS) specification:\n\n- `sub-*/ses-*/anat/` – T1-weighted anatomical images  \n- `sub-*/ses-*/func/` – Functional runs (main task and localizer)  \n- `events.tsv` files – Trial-level timing and condition labels  \n- `dataset_description.json` – Dataset metadata  \n\n## How to cite\n\nIf you use this dataset, please cite:\n\nHosseini, S. S., & Soto, F. A. (2025). *Invariant versus context-specific representation of face shape and motion in the face network.*\n\nAnd include a link to this OpenNeuro dataset.\n\n## License\n\nThis dataset is released under the **CC0 1.0 Public Domain Dedication**.  \nYou are free to use, share, and adapt the data without restriction.\n\n## Notes\n\n- This dataset is intended for research and educational use.\n- All participants provided informed consent for public data sharing.\n- Faces in anatomical images have been removed via automated defacing.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "02",
+          "01"
+        ],
+        "size": 35041726438,
+        "subjects": [
+          "001",
+          "006",
+          "005",
+          "014",
+          "009",
+          "013",
+          "008",
+          "003",
+          "002",
+          "004",
+          "010",
+          "012"
+        ],
+        "tasks": [
+          "fMRI_TASK_5",
+          "fMRI_TASK_4",
+          "fMRI_TASK_3",
+          "fMRI_TASK_2",
+          "fMRI_TASK_7",
+          "fMRI_TASK_6",
+          "fMRI_TASK_8",
+          "fMRI_TASK_1",
+          "fMRI_ROI_3",
+          "fMRI_ROI_2",
+          "fMRI_ROI_1"
+        ],
+        "totalFiles": 561
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2026-02-05T04:24:57.653Z"
+  },
+  "source": "openneuro"
+}

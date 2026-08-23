@@ -1,0 +1,29 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:4bf586a9d1db2ae852d06f3b4e8f2ce1c6d3118c88ef3c556621bac427778780",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "thorax disease classification on chest X-rays",
+        "label": "thorax disease"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "pulmonology",
+      "cardiology"
+    ],
+    "id": "physionet:cxr-lt-iccv-workshop-cvamd",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "long-tailed labels for 45 diseases",
+        "value": "xray"
+      }
+    ],
+    "population": "Expanded dataset of 377,110 chest X-rays labeled for 45 diseases",
+    "summary": "Long-tailed, multi-label disease labels for chest X-rays from the CXR-LT 2023 and 2024 MICCAI challenges, covering 45 disease labels including rare findings, plus zero-shot generalization to five unseen findings."
+  },
+  "prompt_version": "v1"
+}

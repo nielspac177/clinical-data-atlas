@@ -1,0 +1,32 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "llava-rad-mimic-cxr-annotation",
+  "payload": {
+    "abstract": "<p><strong>LLaVA-Rad MIMIC-CXR</strong> features more accurate section extractions from MIMIC-CXR free-text radiology reports. Traditionally, rule-based methods were used to extract sections such as the reason for exam, findings, and impression. However, these approaches often fail due to inconsistencies in report structure and clinical language. In this work, we leverage GPT-4 to extract these sections more reliably, adding 237,073 image-text pairs to the training split and 1,952 pairs to the validation split. This enhancement afforded the development and fine-tuning of LLaVA-Rad, a multimodal large language model (LLM) tailored for radiology applications, achieving improved performance on report generation tasks.</p>\n\n<p>This resource is provided to support reproducibility and for the benefit of the research community, enabling further exploration in vision&ndash;language modeling. For more details, please refer to the accompanying paper [1].</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 65694683,
+    "core_doi": "10.13026/6ey5-df78",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 868423093,
+    "public_project_uuid": "939dde12-eb5c-48fb-9b2a-5e452da0b61c",
+    "publish_date": "2025-01-24",
+    "resource_type": "Database",
+    "short_description": "This dataset provides GPT-4 extracted sections of radiology reports from MIMIC-CXR, complementing rule-based section extractions with additional reports with findings, and removing references to priors from findings.",
+    "slug": "llava-rad-mimic-cxr-annotation",
+    "source_url": "https://physionet.org/content/llava-rad-mimic-cxr-annotation/1.0.0/",
+    "title": "LLaVA-Rad MIMIC-CXR Annotations",
+    "topics": [],
+    "version": "1.0.0",
+    "version_doi": "10.13026/4ma4-k740"
+  },
+  "source": "physionet"
+}

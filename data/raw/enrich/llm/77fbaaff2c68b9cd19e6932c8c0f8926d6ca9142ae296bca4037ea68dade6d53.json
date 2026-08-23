@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:77fbaaff2c68b9cd19e6932c8c0f8926d6ca9142ae296bca4037ea68dade6d53",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "cardiac conditions such as ischemia",
+        "label": "ischemia"
+      },
+      {
+        "evidence": "ischemia and myocardial infarction",
+        "label": "myocardial infarction"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:myocardial-perfusion-spect",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "myocardial perfusion scintigraphy images in DICOM format",
+        "value": "SPECT"
+      }
+    ],
+    "population": "patients undergoing scintigraphy examinations to investigate cardiac conditions, age range 20 to 90 years",
+    "summary": "Anonymized myocardial perfusion scintigraphy images in DICOM format with metadata and segmentation masks in NIfTI format, covering diverse perfusion patterns and cardiac conditions, for image processing and algorithm development."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,140 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "CPTAC-3",
+  "payload": {
+    "dbgap_accession_number": "phs001287",
+    "disease_type": [
+      "Not Applicable",
+      "Transitional Cell Papillomas and Carcinomas",
+      "Ductal and Lobular Neoplasms",
+      "Adenomas and Adenocarcinomas",
+      "Gliomas",
+      "Epithelial Neoplasms, NOS",
+      "Complex Epithelial Neoplasms",
+      "Complex Mixed and Stromal Neoplasms",
+      "Lipomatous Neoplasms",
+      "Squamous Cell Neoplasms",
+      "Myeloid Leukemias",
+      "Nevi and Melanomas"
+    ],
+    "id": "CPTAC-3",
+    "name": "CPTAC-Brain, Head and Neck, Kidney, Lung, Pancreas, Uterus",
+    "primary_site": [
+      "Stomach",
+      "Other and ill-defined sites in lip, oral cavity and pharynx",
+      "Unknown",
+      "Colon",
+      "Other and unspecified urinary organs",
+      "Floor of mouth",
+      "Other and unspecified parts of mouth",
+      "Gum",
+      "Bronchus and lung",
+      "Oropharynx",
+      "Other and unspecified parts of tongue",
+      "Base of tongue",
+      "Breast",
+      "Other and ill-defined sites",
+      "Larynx",
+      "Lip",
+      "Uterus, NOS",
+      "Hematopoietic and reticuloendothelial systems",
+      "Kidney",
+      "Brain",
+      "Skin",
+      "Pancreas",
+      "Tonsil"
+    ],
+    "program": {
+      "dbgap_accession_number": null,
+      "name": "CPTAC",
+      "program_id": "fe856b91-d4a1-51dd-ba58-ea71644ff5cd"
+    },
+    "project_id": "CPTAC-3",
+    "releasable": true,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 1866,
+      "data_categories": [
+        {
+          "case_count": 1815,
+          "data_category": "Simple Nucleotide Variation",
+          "file_count": 41875
+        },
+        {
+          "case_count": 1866,
+          "data_category": "Sequencing Reads",
+          "file_count": 20472
+        },
+        {
+          "case_count": 1817,
+          "data_category": "DNA Methylation",
+          "file_count": 7830
+        },
+        {
+          "case_count": 1762,
+          "data_category": "Copy Number Variation",
+          "file_count": 7703
+        },
+        {
+          "case_count": 1858,
+          "data_category": "Transcriptome Profiling",
+          "file_count": 11436
+        },
+        {
+          "case_count": 1753,
+          "data_category": "Somatic Structural Variation",
+          "file_count": 8135
+        },
+        {
+          "case_count": 1835,
+          "data_category": "Structural Variation",
+          "file_count": 12626
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 1844,
+          "experimental_strategy": "WXS",
+          "file_count": 34293
+        },
+        {
+          "case_count": 73,
+          "experimental_strategy": "Targeted Sequencing",
+          "file_count": 424
+        },
+        {
+          "case_count": 1824,
+          "experimental_strategy": "RNA-Seq",
+          "file_count": 26704
+        },
+        {
+          "case_count": 1827,
+          "experimental_strategy": "WGS",
+          "file_count": 32629
+        },
+        {
+          "case_count": 1826,
+          "experimental_strategy": "miRNA-Seq",
+          "file_count": 7977
+        },
+        {
+          "case_count": 30,
+          "experimental_strategy": "scRNA-Seq",
+          "file_count": 220
+        },
+        {
+          "case_count": 1817,
+          "experimental_strategy": "Methylation Array",
+          "file_count": 7830
+        }
+      ],
+      "file_count": 110077,
+      "file_size": 816871963467036
+    }
+  },
+  "source": "gdc"
+}

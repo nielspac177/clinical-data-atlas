@@ -1,0 +1,23 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:8c356e4ea484909476c820fe85e3d6bd7774d00a822626fde0001708caf0b29e",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "other"
+    ],
+    "id": "physionet:mimic-iii-clinical-action",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "718 discharge summaries",
+        "value": "clinical_notes"
+      }
+    ],
+    "population": "718 discharge summaries, representing 107,494 sentences, from MIMIC-III patients.",
+    "summary": "Physician-annotated clinical action items over 718 MIMIC-III discharge summaries, released as character-level spans and sentence-level labels of seven types, with the sentence tokenizer, surrogate data generator and train/validation/test document IDs."
+  },
+  "prompt_version": "v1"
+}

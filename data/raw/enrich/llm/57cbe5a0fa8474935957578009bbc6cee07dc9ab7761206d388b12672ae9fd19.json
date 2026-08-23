@@ -1,0 +1,41 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:57cbe5a0fa8474935957578009bbc6cee07dc9ab7761206d388b12672ae9fd19",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "pulmonary edema severity grades",
+        "label": "pulmonary edema"
+      },
+      {
+        "evidence": "patients with acutely decompensated heart failure",
+        "label": "acutely decompensated heart failure"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "cardiology",
+      "pulmonology"
+    ],
+    "id": "physionet:mimic-cxr-pe-severity",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "consensus labeling from chest radiographs",
+        "value": "xray"
+      },
+      {
+        "evidence": "by expert labeling from radiology reports",
+        "value": "clinical_notes"
+      },
+      {
+        "evidence": "containing 3 metadata files",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": null,
+    "summary": "Metadata files layered on MIMIC-CXR giving pulmonary edema severity grades obtained by regular expression from reports, expert labeling of reports, and consensus labeling of chest radiographs, with subject, study and DICOM identifiers."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:6f4597c73cf2f37405e27e0fb3f63009f06bef3bdfb749f8cf43616b819e7cd0",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "The diagnosis of epilepsy",
+        "label": "epilepsy"
+      },
+      {
+        "evidence": "the classification of seizures according to the criteria of the International League Against Epilepsy",
+        "label": "seizures"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology"
+    ],
+    "id": "physionet:siena-scalp-eeg",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "EEG recordings of 14 epileptic patients",
+        "value": "EEG"
+      },
+      {
+        "evidence": "1 or 2 EKG signals",
+        "value": "ECG"
+      }
+    ],
+    "population": "14 epileptic patients: 9 males aged 25-71 and 5 females aged 20-58.",
+    "summary": "Video-EEG recordings of epileptic patients from a neurology and neurophysiology unit, sampled at 512 Hz with 10-20 electrode placement; most recordings also include EKG. Diagnosis and seizure classification by an expert clinician."
+  },
+  "prompt_version": "v1"
+}

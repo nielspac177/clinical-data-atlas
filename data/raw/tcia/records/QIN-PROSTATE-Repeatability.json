@@ -1,0 +1,307 @@
+{
+  "endpoints": [
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getCollectionValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getModalityValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getBodyPartValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getPatient",
+    "https://api.datacite.org/dois?prefix=10.7937"
+  ],
+  "harvest_method": "api:nbia+datacite",
+  "native_id": "QIN-PROSTATE-Repeatability",
+  "payload": {
+    "datacite": {
+      "citationCount": 8,
+      "container": {},
+      "contentUrl": [],
+      "contributors": [],
+      "created": "2018-09-28T03:32:11Z",
+      "creators": [
+        {
+          "affiliation": [],
+          "familyName": "Fedorov",
+          "givenName": "Andriy",
+          "name": "Fedorov, Andriy",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Tempany",
+          "givenName": "Clare",
+          "name": "Tempany, Clare",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Fennessy",
+          "givenName": "Fiona",
+          "name": "Fennessy, Fiona",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2019",
+          "dateType": "Issued"
+        }
+      ],
+      "descriptions": [
+        {
+          "description": "This is a dataset with multiparametric MRI protocol applied in a test-retest setting, allowing to evaluate repeatability of the MRI-based measurements in the prostate. There is very limited data about the repeatability in mpMRI of the prostate, while such information is critical for imaging biomarker development. Data was provided by Brigham and Women's Hospital, PI Dr. Fiona Fennessy.Type of cancer: Confirmed or suspected prostate cancer",
+          "descriptionType": "Abstract",
+          "lang": null
+        }
+      ],
+      "doi": "10.7937/k9/tcia.2018.mr1ckgnd",
+      "downloadCount": 0,
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "QIN-PROSTATE-Repeatability",
+          "identifierType": "TCIA Short Name"
+        }
+      ],
+      "isActive": true,
+      "language": null,
+      "metadataVersion": 11,
+      "partCount": 1,
+      "partOfCount": 0,
+      "publicationYear": 2019,
+      "published": null,
+      "publisher": "The Cancer Imaging Archive",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2018-09-28T03:32:12Z",
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "doi:10.7937/k9/tcia.2018.mr1ckgnd/0rpghh",
+          "relatedIdentifierType": "DOI",
+          "relationType": "HasPart"
+        },
+        {
+          "relatedIdentifier": "10.1038/s41598-019-45766-z",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.cmpb.2020.105572",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.imu.2021.100582",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1038/s41467-024-44824-z",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.21037/tau.2019.03.01",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.clinimag.2020.10.014",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1038/s41597-024-03977-8",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        }
+      ],
+      "relatedItems": [],
+      "rightsList": [
+        {
+          "rights": "Creative Commons Attribution 4.0 International",
+          "rightsIdentifier": "cc-by-4.0",
+          "rightsIdentifierScheme": "SPDX",
+          "rightsUri": "https://creativecommons.org/licenses/by/4.0/legalcode",
+          "schemeUri": "https://spdx.org/licenses/"
+        }
+      ],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "fabricaForm",
+      "state": "findable",
+      "subjects": [],
+      "titles": [
+        {
+          "lang": null,
+          "title": "Data From QIN-PROSTATE-Repeatability",
+          "titleType": null
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2025-06-01T01:01:19Z",
+      "url": "https://www.cancerimagingarchive.net/collection/qin-prostate-repeatability/",
+      "version": "2",
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 2287
+    },
+    "nbia": {
+      "body_parts": [
+        "PROSTATE"
+      ],
+      "collection": "QIN-PROSTATE-Repeatability",
+      "modalities": [
+        "MR",
+        "SEG",
+        "SR"
+      ],
+      "patients": [
+        {
+          "Collection": "QIN-PROSTATE-Repeatability",
+          "PatientId": "PCAMPMRI-00015",
+          "PatientName": "PCAMPMRI-00015",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "QIN-PROSTATE-Repeatability",
+          "PatientId": "PCAMPMRI-00006",
+          "PatientName": "PCAMPMRI-00006",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "QIN-PROSTATE-Repeatability",
+          "PatientId": "PCAMPMRI-00012",
+          "PatientName": "PCAMPMRI-00012",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "QIN-PROSTATE-Repeatability",
+          "PatientId": "PCAMPMRI-00002",
+          "PatientName": "PCAMPMRI-00002",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "QIN-PROSTATE-Repeatability",
+          "PatientId": "PCAMPMRI-00014",
+          "PatientName": "PCAMPMRI-00014",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "QIN-PROSTATE-Repeatability",
+          "PatientId": "PCAMPMRI-00011",
+          "PatientName": "PCAMPMRI-00011",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "QIN-PROSTATE-Repeatability",
+          "PatientId": "PCAMPMRI-00010",
+          "PatientName": "PCAMPMRI-00010",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "QIN-PROSTATE-Repeatability",
+          "PatientId": "PCAMPMRI-00013",
+          "PatientName": "PCAMPMRI-00013",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "QIN-PROSTATE-Repeatability",
+          "PatientId": "PCAMPMRI-00005",
+          "PatientName": "PCAMPMRI-00005",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "QIN-PROSTATE-Repeatability",
+          "PatientId": "PCAMPMRI-00009",
+          "PatientName": "PCAMPMRI-00009",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "QIN-PROSTATE-Repeatability",
+          "PatientId": "PCAMPMRI-00004",
+          "PatientName": "PCAMPMRI-00004",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "QIN-PROSTATE-Repeatability",
+          "PatientId": "PCAMPMRI-00008",
+          "PatientName": "PCAMPMRI-00008",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "QIN-PROSTATE-Repeatability",
+          "PatientId": "PCAMPMRI-00001",
+          "PatientName": "PCAMPMRI-00001",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "QIN-PROSTATE-Repeatability",
+          "PatientId": "PCAMPMRI-00007",
+          "PatientName": "PCAMPMRI-00007",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "QIN-PROSTATE-Repeatability",
+          "PatientId": "PCAMPMRI-00003",
+          "PatientName": "PCAMPMRI-00003",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        }
+      ]
+    }
+  },
+  "source": "tcia"
+}

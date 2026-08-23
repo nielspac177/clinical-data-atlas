@@ -1,0 +1,131 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007342",
+  "payload": {
+    "created": "2026-01-28T06:41:51.049Z",
+    "id": "ds007342",
+    "latestSnapshot": {
+      "created": "2026-01-28T19:30:26.000Z",
+      "description": {
+        "Authors": [
+          "Agata Wolna"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007342.v1.0.0",
+        "Funding": [
+          "NCN PRELUDIUM 2022/45/N/HS6/01256"
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Bilingual language processing: reading words, sentences, and narratives with functional localizers",
+        "ReferencesAndLinks": null
+      },
+      "readme": "This dataset includes data from thirty-one Polish-English bilinguals who completed a series of tasks:\n\nReading task in L1 and L2, including:\n    - reading lists of single words\n    - reading lists of unrelated sentences\n    - reading short narratives\nLanguage localizer in L1 (Alice version, see Malik Moraleda, Ayyash et al., 2020)\nMultiple Demand localizer (based on visual working memory task, see Fedorenko et al., 2013)\nTheory of Mind localizer in L1 (adapted to Polish from Dodell-Feder et al., 2010)\n\nEach participant completed four runs of the reading task and two runs of each of the localizer tasks sessions, with the following exceptions:\n    - sub-WF29031 who only completed 1 run of the language localizer task. \n\nWithin the reading task, each run includes the following conditions in L1, L2, and baseline (false fonts):\n    - reading lists of words (1s per word, 30 words per block)\n    - reading lists of unrelated sentences (5s per sentence, 6 sentences per block)\n    - reading short, 6-sentence long narratives (30s per narrative, 1 narrative per block)\n\nThe dataset includes anatomical (T1 weighted), functional, and fieldmap scans for each participant.\n\nIn case of any questions please contact Agata Wolna (awolna@mit.edu).\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 21549996711,
+        "subjects": [
+          "WF29021",
+          "WF29012",
+          "WF29028",
+          "WF29024",
+          "WF29025",
+          "WF29030",
+          "WF29029",
+          "WF29014",
+          "WF29027",
+          "WF29001",
+          "WF29018",
+          "WF29006",
+          "WF29022",
+          "WF29013",
+          "WF29017",
+          "WF29010",
+          "WF29004",
+          "WF29026",
+          "WF29002",
+          "WF29023",
+          "WF29015",
+          "WF29019",
+          "WF29009",
+          "WF29031",
+          "WF29007",
+          "WF29011",
+          "WF29020",
+          "WF29032",
+          "WF29003",
+          "WF29005",
+          "WF29016"
+        ],
+        "tasks": [
+          "readingS",
+          "TOM",
+          "AliceLocalizer",
+          "VisualWM"
+        ],
+        "totalFiles": 1210
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        19,
+        34,
+        27,
+        24,
+        31,
+        27,
+        31,
+        20,
+        21,
+        20,
+        22,
+        23,
+        26,
+        22,
+        23,
+        24,
+        18,
+        21,
+        22,
+        24,
+        29,
+        19,
+        25,
+        20,
+        20,
+        22,
+        23,
+        22,
+        18,
+        20,
+        18,
+        23
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "National Science Centre in Poland",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "language processing, bilingualism",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2026-01-28T19:30:39.526Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,34 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:6295ff0f19a6058a2ecf5b5581ab8080926a1a3a65a2dca6b27e741e2e371462",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "physionet:bidsleep-dataset",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "EEG Sleep Stage Labels",
+        "value": "EEG"
+      },
+      {
+        "evidence": "3-axis accelerometry from the Apple Watch",
+        "value": "wearable"
+      },
+      {
+        "evidence": "instantaneous heart rate (IHR)",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": "47 healthy adult volunteers with no history of sleep disorders, recruited from the local community",
+    "summary": "Multi-night recordings of instantaneous heart rate and 3-axis accelerometry from an Apple Watch, paired with sleep stage labels from a Dreem 2 EEG headband scored by AASM standard, over 253 nights."
+  },
+  "prompt_version": "v1"
+}

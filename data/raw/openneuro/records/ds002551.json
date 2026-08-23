@@ -1,0 +1,83 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds002551",
+  "payload": {
+    "created": "2020-02-13T12:27:38.844Z",
+    "id": "ds002551",
+    "latestSnapshot": {
+      "created": "2020-03-12T11:26:12.000Z",
+      "description": {
+        "Authors": [
+          "Norio Takata",
+          "Nobuhiko Sato",
+          "Yuji Komaki",
+          "Hideyuki Okano",
+          "Kenji F. Tanaka"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds002551.v1.0.1",
+        "Funding": [
+          "This work was supported by KAKENHI (16K07032, 16H01620, 18H04952 to N.T.)."
+        ],
+        "HowToAcknowledge": "Please cite this paper: \nTakata et al. \nFlexible annotation atlas of the mouse brain: combining and dividing brain structures of the Allen Brain Atlas while maintaining anatomical hierarchy\nhttps://www.biorxiv.org/content/10.1101/2020.02.17.953547v2\ndoi: https://doi.org/10.1101/2020.02.17.953547 ",
+        "License": "CC0",
+        "Name": "Mouse_rest_awake",
+        "ReferencesAndLinks": null
+      },
+      "readme": "# Raw data for resting state functional MRI in awake mice using a CryoProbe\n\n## SUBJECTS\n8 male adult C57BL/6J mice (JAX Mice)\n\n## Scans\nBruker 7T MRI at CIEA, Japan\n\nMeasurements: August 22 - October 27, 2016\n\n### T2w Anatomical\n2D RARE\nresolution: 0.75 x 0.75 x 3 mm^3\nmatrix: 256 x 256 x 52\n\n### T2*w GE-EPI\n15 runs\nGE-EPI\nresolution: 0.2 x 0.2 x 0.75 mm^3\nmatrix: 64 x 64 x 18\nTR: 1.5 s\nTE: 15 ms\nVolume: 400 without dummy scan\nscan time: 10 min\n\n## Preprocess\nThe scale dimension unit was x10 of naive space.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 551457491,
+        "subjects": [
+          "KKY921",
+          "KKY922",
+          "SNT099",
+          "SNT101",
+          "SNT102",
+          "SNT103",
+          "SNT104"
+        ],
+        "tasks": [
+          "rest"
+        ],
+        "totalFiles": 45
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "mouse",
+      "studyDesign": "resting state fMRI",
+      "studyDomain": "",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2020-02-20T07:10:03.993Z"
+  },
+  "source": "openneuro"
+}

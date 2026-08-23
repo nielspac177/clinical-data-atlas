@@ -1,0 +1,370 @@
+{
+  "endpoints": [
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getCollectionValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getModalityValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getBodyPartValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getPatient",
+    "https://api.datacite.org/dois?prefix=10.7937"
+  ],
+  "harvest_method": "api:nbia+datacite",
+  "native_id": "CMB-PCA",
+  "payload": {
+    "datacite": {
+      "citationCount": 4,
+      "container": {},
+      "contentUrl": [],
+      "contributors": [],
+      "created": "2022-07-29T14:18:10Z",
+      "creators": [
+        {
+          "affiliation": [],
+          "familyName": null,
+          "givenName": null,
+          "name": "Cancer Moonshot Biobank",
+          "nameIdentifiers": [],
+          "nameType": "Organizational"
+        }
+      ],
+      "dates": [],
+      "descriptions": [
+        {
+          "description": "The Cancer Moonshot Biobank is a National Cancer Institute initiative to support current and future investigations into drug resistance and sensitivity and other NCI-sponsored cancer research initiatives, with an aim of improving researchers' understanding of cancer and how to intervene in cancer initiation and progression. During the course of this study, biospecimens (blood and tissue removed during medical procedures) and associated data will be collected longitudinally from at least 1000 patients across at least 10 cancer types, who represent the demographic diversity of the U.S. and receiving standard of care cancer treatment at multiple NCI Community Oncology Research Program (NCORP) sites.\n\nThis collection contains de-identified radiology and histopathology imaging procured from subjects in NCI’s Cancer Moonshot Biobank-Prostate Cancer (CMB-PCA) cohort. Associated genomic, phenotypic and clinical data will be hosted by The Database of Genotypes and Phenotypes (dbGaP) and other NCI databases.",
+          "descriptionType": "Abstract",
+          "lang": null
+        }
+      ],
+      "doi": "10.7937/25t7-6y12",
+      "downloadCount": 0,
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "CMB-PCA",
+          "identifierType": "TCIA Short Name"
+        }
+      ],
+      "isActive": true,
+      "language": null,
+      "metadataVersion": 18,
+      "partCount": 0,
+      "partOfCount": 0,
+      "publicationYear": 2022,
+      "published": null,
+      "publisher": "The Cancer Imaging Archive",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2022-08-01T20:48:54Z",
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "10.1016/j.xcrm.2024.101506",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1038/s41746-025-01441-4",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        }
+      ],
+      "relatedItems": [],
+      "rightsList": [
+        {
+          "rights": "Creative Commons Attribution 4.0 International",
+          "rightsIdentifier": "cc-by-4.0",
+          "rightsIdentifierScheme": "SPDX",
+          "rightsUri": "https://creativecommons.org/licenses/by/4.0/legalcode",
+          "schemeUri": "https://spdx.org/licenses/"
+        }
+      ],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "fabricaForm",
+      "state": "findable",
+      "subjects": [],
+      "titles": [
+        {
+          "lang": null,
+          "title": "Cancer Moonshot Biobank - Prostate Cancer Collection (CMB-PCA)",
+          "titleType": null
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2026-06-30T19:59:49Z",
+      "url": "https://www.cancerimagingarchive.net/collection/cmb-pca/",
+      "version": "12",
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 5716
+    },
+    "nbia": {
+      "body_parts": [
+        "ABDOMEN",
+        "ABDOMENPELVIS",
+        "CHEST",
+        "CHESTABDOMEN",
+        "CHESTABDPELVIS",
+        "HEAD",
+        "LSPINE",
+        "PELVIS",
+        "PROSTATE",
+        "TLSPINE",
+        "WHOLEBODY"
+      ],
+      "collection": "CMB-PCA",
+      "modalities": [
+        "CT",
+        "DX",
+        "MR",
+        "NM",
+        "PT",
+        "RF"
+      ],
+      "patients": [
+        {
+          "Collection": "CMB-PCA",
+          "PatientId": "MSB-03973",
+          "PatientName": "MSB-03973",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-PCA",
+          "PatientId": "MSB-02917",
+          "PatientName": "MSB-02917",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-PCA",
+          "PatientId": "MSB-08178",
+          "PatientName": "MSB-08178",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-PCA",
+          "EthnicGroup": "Non-Hispanic [9]",
+          "PatientId": "MSB-07483",
+          "PatientName": "MSB-07483",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-PCA",
+          "PatientId": "MSB-05563",
+          "PatientName": "MSB-05563",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-PCA",
+          "PatientId": "MSB-07436",
+          "PatientName": "MSB-07436",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-PCA",
+          "PatientId": "MSB-04415",
+          "PatientName": "MSB-04415",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-PCA",
+          "EthnicGroup": "Not Hispanic, La",
+          "PatientId": "MSB-02472",
+          "PatientName": "MSB-02472",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-PCA",
+          "PatientId": "MSB-08965",
+          "PatientName": "MSB-08965",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-PCA",
+          "PatientId": "MSB-07666",
+          "PatientName": "MSB-07666",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-PCA",
+          "PatientId": "MSB-01956",
+          "PatientName": "MSB-01956",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-PCA",
+          "PatientId": "MSB-01118",
+          "PatientName": "MSB-01118",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-PCA",
+          "PatientId": "MSB-06894",
+          "PatientName": "MSB-06894",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-PCA",
+          "PatientId": "MSB-06184",
+          "PatientName": "MSB-06184",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-PCA",
+          "PatientId": "MSB-02538",
+          "PatientName": "MSB-02538",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-PCA",
+          "PatientId": "MSB-06094",
+          "PatientName": "MSB-06094",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-PCA",
+          "PatientId": "MSB-09876",
+          "PatientName": "MSB-09876",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-PCA",
+          "PatientId": "MSB-08309",
+          "PatientName": "MSB-08309",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-PCA",
+          "PatientId": "MSB-06178",
+          "PatientName": "MSB-06178",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-PCA",
+          "PatientId": "MSB-04780",
+          "PatientName": "MSB-04780",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-PCA",
+          "PatientId": "MSB-07313",
+          "PatientName": "MSB-07313",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-PCA",
+          "PatientId": "MSB-00504",
+          "PatientName": "MSB-00504",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-PCA",
+          "PatientId": "MSB-02858",
+          "PatientName": "MSB-02858",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-PCA",
+          "PatientId": "MSB-05517",
+          "PatientName": "MSB-05517",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-PCA",
+          "PatientId": "MSB-05969",
+          "PatientName": "MSB-05969",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-PCA",
+          "PatientId": "MSB-02368",
+          "PatientName": "MSB-02368",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        }
+      ]
+    }
+  },
+  "source": "tcia"
+}

@@ -1,0 +1,131 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006729",
+  "payload": {
+    "created": "2025-09-28T09:19:51.096Z",
+    "id": "ds006729",
+    "latestSnapshot": {
+      "created": "2025-09-29T09:21:15.000Z",
+      "description": {
+        "Authors": [
+          "V. Oliva",
+          "S. Bédard",
+          "K.A. Weber II"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006729.v1.0.0",
+        "Funding": [
+          "National Institute of  Neurological Disorders and Stroke (grant numbers K23NS104211, L30NS108301, R01NS128478, and K24NS126781)"
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "R01_Neuromuscular_Signature_Pilot",
+        "ReferencesAndLinks": [
+          "https://doi.org/10.1162/IMAG.a.159"
+        ]
+      },
+      "readme": "Oliva Mapping Hand Function Imaging Neuroscience 2025\n\n\nData includes:\n\n- Anatomical brain-extracted T1w image\n- Functional brain data for Finger Tapping and Force Matching tasks\n- Anatomical defaced T2w spinal cord image\n- Functional spinal cord data for Finger Tapping and Force Matching tasks\n\n\tIn derivatives/labels:\t\n\t- Anatomical T2w spinal cord image registered to PAM50 template\n\t- Segmentation of spinal cord functional images (Finger Tapping and Force Matching tasks)\n\n\tIn derivatives/physio:\n\t- Raw and processed physio files (cardiac pulse and respiration)\n\n\nNote: \n\n- The following subjects completed the tasks in two separate days due to technical issues: sub-NSPilot006, sub-NSPilot014\n- Task regressors are shared in GitHub at the following link: https://github.com/NeuromuscularInsightLab/Oliva_Mapping_Hand_Functon_Imaging_Neuroscience_2025/tree/main/trialwise_analysis\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "01spinalcord",
+          "01brain",
+          "02spinalcord",
+          "02brain"
+        ],
+        "size": 5171221837,
+        "subjects": [
+          "NSPilot042",
+          "NSPilot040",
+          "NSPilot006",
+          "NSPilot022",
+          "NSPilot045",
+          "NSPilot035",
+          "NSPilot016",
+          "NSPilot012",
+          "NSPilot014",
+          "NSPilot027",
+          "NSPilot032",
+          "NSPilot023",
+          "NSPilot033",
+          "NSPilot047",
+          "NSPilot043",
+          "NSPilot009",
+          "NSPilot048",
+          "NSPilot034",
+          "NSPilot015",
+          "NSPilot026",
+          "NSPilot044",
+          "NSPilot024",
+          "NSPilot021",
+          "NSPilot041",
+          "NSPilot010",
+          "NSPilot030",
+          "NSPilot007",
+          "NSPilot019"
+        ],
+        "tasks": [
+          "ForcePercent",
+          "FingerTap"
+        ],
+        "totalFiles": 319
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "DOI:10.1162/IMAG.a.159",
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": null,
+      "studyDomain": "Hand function; dexterity; grip strength ",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2025-09-29T09:22:06.836Z"
+  },
+  "source": "openneuro"
+}

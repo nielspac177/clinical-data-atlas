@@ -1,0 +1,68 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "CMI-MPC",
+  "payload": {
+    "dbgap_accession_number": "phs001939",
+    "disease_type": [
+      "Adenomas and Adenocarcinomas"
+    ],
+    "id": "CMI-MPC",
+    "name": "Count Me In (CMI): The Metastatic Prostate Cancer (MPC) Project",
+    "primary_site": [
+      "Prostate gland",
+      "Lymph nodes"
+    ],
+    "program": {
+      "dbgap_accession_number": null,
+      "name": "CMI",
+      "program_id": "82bbf180-0679-5344-86f4-9f3d6b00b7ef"
+    },
+    "project_id": "CMI-MPC",
+    "releasable": true,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 63,
+      "data_categories": [
+        {
+          "case_count": 60,
+          "data_category": "Simple Nucleotide Variation",
+          "file_count": 840
+        },
+        {
+          "case_count": 63,
+          "data_category": "Sequencing Reads",
+          "file_count": 237
+        },
+        {
+          "case_count": 38,
+          "data_category": "Transcriptome Profiling",
+          "file_count": 76
+        },
+        {
+          "case_count": 38,
+          "data_category": "Structural Variation",
+          "file_count": 152
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 63,
+          "experimental_strategy": "WXS",
+          "file_count": 963
+        },
+        {
+          "case_count": 38,
+          "experimental_strategy": "RNA-Seq",
+          "file_count": 342
+        }
+      ],
+      "file_count": 1305,
+      "file_size": 4426774305000
+    }
+  },
+  "source": "gdc"
+}

@@ -1,0 +1,139 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005850",
+  "payload": {
+    "created": "2025-01-16T12:46:33.797Z",
+    "id": "ds005850",
+    "latestSnapshot": {
+      "created": "2025-01-17T13:52:15.000Z",
+      "description": {
+        "Authors": [
+          "Lanfang Liu",
+          "Jiahao Jiang",
+          "Guosheng Ding",
+          "Hehui Li"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005850.v1.0.0",
+        "Funding": [
+          "This work was supported by grants from the National Natural Science Foundation of China (NSFC: 32471100, 31900802 ), Guangdong Basic and Applied Basic Research Foundation (2024A1515030046)"
+        ],
+        "HowToAcknowledge": "Please cite:  Liu Lanfang, Jiang Jiahao, Li Hehui, Ding Guosheng (2024) Tripartite organization of brain state dynamics underlying spoken narrative comprehension. eLife ",
+        "License": "CC0",
+        "Name": "Spoken narrative comprehension in Chinese",
+        "ReferencesAndLinks": [
+          "https://doi.org/10.7554/eLife.99997.1"
+        ]
+      },
+      "readme": "This dataset consists of the raw and preprocessed  fMRI data from a total of 68 participants when they listening a 10 mins story in Chinese, a 10 mins story in Mongolian (MG) and in resting state, as reported in Liu, Lanfang, Jiang Jiahao, Hehui Li and Guosheng Ding (2024). Tripartite organization of brain state dynamics underlying spoken narrative comprehension. https://doi.org/10.7554/eLife.99997.1\n \nEach run in the raw data contains 312 (or 310) TRs. The first 12 (or 10) TRs correspond to a fixation period, which were set to allow the noise-canceling auditory equipment to learn the MRI scanner's noise pattern. They were discarded in the preprocessing.  For the left 300 TRs,  participants listened to a continuously-played 10-min story. \n\nParticipants' behavioral data and  the audio files of those stories along with their transcriptions  are available at: https://github.com/liulanfang11/Tripartite-brain-states/upload/main.\n\n\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 10575952984,
+        "subjects": [
+          "11",
+          "05",
+          "27",
+          "02",
+          "37",
+          "17",
+          "04",
+          "28",
+          "53",
+          "43",
+          "46",
+          "52",
+          "32",
+          "64",
+          "03",
+          "21",
+          "39",
+          "13",
+          "12",
+          "08",
+          "47",
+          "56",
+          "42",
+          "44",
+          "14",
+          "15",
+          "51",
+          "63",
+          "20",
+          "18",
+          "06",
+          "07",
+          "57",
+          "59",
+          "60",
+          "19",
+          "26",
+          "49",
+          "62",
+          "24",
+          "36",
+          "67",
+          "66",
+          "68",
+          "35",
+          "58",
+          "50",
+          "33",
+          "01",
+          "23",
+          "41",
+          "65",
+          "34",
+          "45",
+          "22",
+          "48",
+          "31",
+          "10",
+          "38",
+          "40",
+          "61",
+          "25",
+          "09",
+          "29",
+          "55",
+          "30",
+          "16",
+          "54"
+        ],
+        "tasks": [
+          "story",
+          "MG",
+          "rest"
+        ],
+        "totalFiles": 547
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": "10.7554/eLife.99997.1",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "naturalistic experiment design",
+      "studyDomain": "cognitive neuroscience of language",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2025-01-17T13:56:24.365Z"
+  },
+  "source": "openneuro"
+}

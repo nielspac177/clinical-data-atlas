@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:1e70c996b527b7cb4133ad352279272cac8c73e47f9eb7c001b53440ccd27785",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Ovarian Cancer",
+        "label": "Ovarian Cancer"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "tcia:tcga-ov",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "CT MR OT",
+        "value": "CT"
+      },
+      {
+        "evidence": "CT MR OT",
+        "value": "MRI"
+      },
+      {
+        "evidence": "Genomic Data Commons (GDC) Data Portal",
+        "value": "genomics"
+      }
+    ],
+    "population": "Ovarian cancer patients drawn from The Cancer Genome Atlas; imaging mostly acquired during routine care rather than a controlled study (143 participants per source facts).",
+    "summary": "Radiology images of ovarian cancer patients, matched by patient identifier to TCGA clinical, genetic and pathological data, so researchers can relate genotype to radiological phenotype and outcomes."
+  },
+  "prompt_version": "v1"
+}

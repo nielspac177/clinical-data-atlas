@@ -1,0 +1,75 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds000105",
+  "payload": {
+    "created": "2016-10-14T22:57:58.620Z",
+    "id": "ds000105",
+    "latestSnapshot": {
+      "created": "2023-03-24T18:52:32.000Z",
+      "description": {
+        "Authors": [
+          "Haxby, J.V.",
+          "Gobbini, M.I.",
+          "Furey, M.L.",
+          "Ishai, A.",
+          "Schouten, J.L.",
+          "Pietrini, P."
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds000105.v3.0.0",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Visual object recognition",
+        "ReferencesAndLinks": [
+          "Haxby, J.V., Gobbini, M.I., Furey, M.L., Ishai, A., Schouten, J.L., Pietrini, P. (2001). Distributed and overlapping representations of faces and objects in ventral temporal cortex. Science, 293(5539):2425-30\n\nHanson, S.J., Matsuka, T., Haxby, J.V. (2004). Combinatorial codes in ventral temporal lobe for object recognition: Haxby (2001) revisited: is there a \"face\" area? Neuroimage. 23(1):156-66\n\nO'Toole, A.J., Jiang, F., Abdi, H., Haxby, J.V. (2005). Partially distributed representations of objects and faces in ventral temporal cortex. J Cogn Neurosci, 17(4):580-90"
+        ]
+      },
+      "readme": "This dataset was obtained from the OpenfMRI project (http://www.openfmri.org).\nAccession #: ds105\nDescription: Visual object recognition\n\nPlease cite the following references if you use these data:\n\nHaxby, J.V., Gobbini, M.I., Furey, M.L., Ishai, A., Schouten, J.L., Pietrini, P. (2001). Distributed and overlapping representations of faces and objects in ventral temporal cortex. Science, 293(5539):2425-30\n\n\n\nHanson, S.J., Matsuka, T., Haxby, J.V. (2004). Combinatorial codes in ventral temporal lobe for object recognition: Haxby (2001) revisited: is there a \"face\" area? Neuroimage. 23(1):156-66\n\n\n\nO'Toole, A.J., Jiang, F., Abdi, H., Haxby, J.V. (2005). Partially distributed representations of objects and faces in ventral temporal cortex. J Cogn Neurosci, 17(4):580-90\n\n\nRelease history:\n10/12/2011: initial release\n10/29:2012: updated release, corrected a problem with initial release in which one extra timepoint was incorrectly added to the end of runs 1-11 for each subject. \n3/21/2013: Updated release with QA information\n\nThis dataset is made available under the Public Domain Dedication and License \nv1.0, whose full text can be found at \nhttp://www.opendatacommons.org/licenses/pddl/1.0/. \nWe hope that all users will follow the ODC Attribution/Share-Alike \nCommunity Norms (http://www.opendatacommons.org/norms/odc-by-sa/); \nin particular, while not legally required, we hope that all users \nof the data will acknowledge the OpenfMRI project and NSF Grant \nOCI-1131441 (R. Poldrack, PI) in any publications.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 1878504923,
+        "subjects": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "tasks": [
+          "object viewing"
+        ],
+        "totalFiles": 152
+      },
+      "tag": "3.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": null,
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2016-10-14T22:57:58.620Z"
+  },
+  "source": "openneuro"
+}

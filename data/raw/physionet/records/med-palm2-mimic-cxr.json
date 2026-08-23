@@ -1,0 +1,34 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "med-palm2-mimic-cxr",
+  "payload": {
+    "abstract": "<p>MIMIC-CXR is a large, open source dataset that is widely-used in medical AI research. One of the limitations of this dataset is the lack of ground truth labels for the chest X-ray studies. Prior work has extracted structured labels from the MIMIC-CXR radiology report text using CheXpert, a natural language processing (NLP) model. As comprehensive expert validation of these labels is cost-prohibitive, there exists a need for scalable methods of identifying NLP-derived labels that would benefit from manual review. We have developed prompts for extraction of clinically-relevant labels using a clinically-trained large language model, Med-PaLM 2, which we selectively applied to MIMIC-CXR radiology reports. A subset of cases where the Med-PaLM 2 results differed from the previously published CheXpert labels were reviewed by three US board certified radiologists to establish a ground truth. Of these differing labels, Med-PaLM 2 achieved an accuracy of 66%, compared to 19% of CheXpert. Our results demonstrate the potential use of medically-oriented large language models such as Med-PaLM 2 in both label extraction and identifying cases for manual review. This dataset offers 1,378 radiologist-verified ground truth labels to the MIMIC-CXR project.</p>",
+    "access_policy": "Restricted",
+    "compressed_storage_size": 39324,
+    "core_doi": "10.13026/a8e5-yx97",
+    "dua": {
+      "name": "PhysioNet Restricted Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Restricted Health Data License 1.5.0"
+    },
+    "main_storage_size": 395576,
+    "public_project_uuid": "023bf002-7109-4f30-a376-300e5b1e50d1",
+    "publish_date": "2025-02-04",
+    "resource_type": "Database",
+    "short_description": "This work further refines the labels associated with CheXpert in MIMIC-CXR-JPG 2.0.0 by filtering with Med-PaLM 2 followed by verification by manual review by three US board-certified radiologists.",
+    "slug": "med-palm2-mimic-cxr",
+    "source_url": "https://physionet.org/content/med-palm2-mimic-cxr/1.0.0/",
+    "title": "Application of Med-PaLM 2 in the refinement of MIMIC-CXR labels",
+    "topics": [
+      "mimic-cxr labels"
+    ],
+    "version": "1.0.0",
+    "version_doi": "10.13026/7wmp-jx90"
+  },
+  "source": "physionet"
+}

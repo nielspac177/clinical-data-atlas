@@ -1,0 +1,54 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:1fe6fe9e804a59749c3ec91572a93e3ab6cd245b4bb9670b4e1c24daa7c591b5",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Invasive Breast Carcinoma",
+        "label": "Invasive Breast Carcinoma"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "oncology"
+    ],
+    "id": "tcia:cmb-brca",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "CT MG MR PT US",
+        "value": "CT"
+      },
+      {
+        "evidence": "CT MG MR PT US",
+        "value": "mammography"
+      },
+      {
+        "evidence": "CT MG MR PT US",
+        "value": "MRI"
+      },
+      {
+        "evidence": "CT MG MR PT US",
+        "value": "PET"
+      },
+      {
+        "evidence": "CT MG MR PT US",
+        "value": "ultrasound"
+      },
+      {
+        "evidence": "histopathology imaging",
+        "value": "pathology"
+      },
+      {
+        "evidence": "Associated genomic, phenotypic and clinical data",
+        "value": "genomics"
+      }
+    ],
+    "population": "Patients in the Cancer Moonshot Biobank invasive breast carcinoma cohort, receiving standard of care cancer treatment at NCI Community Oncology Research Program sites; 50 participants per source facts.",
+    "summary": "De-identified radiology and histopathology imaging from the Cancer Moonshot Biobank invasive breast carcinoma cohort. Associated genomic, phenotypic and clinical data are hosted by dbGaP and other NCI databases."
+  },
+  "prompt_version": "v1"
+}

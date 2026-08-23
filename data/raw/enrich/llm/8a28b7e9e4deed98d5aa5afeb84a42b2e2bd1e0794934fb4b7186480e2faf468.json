@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:8a28b7e9e4deed98d5aa5afeb84a42b2e2bd1e0794934fb4b7186480e2faf468",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "cardiology",
+      "obstetrics_gynecology"
+    ],
+    "id": "physionet:ninfea",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "non-invasive electrophysiological recordings",
+        "value": "ECG"
+      },
+      {
+        "evidence": "fetal pulsed-wave Doppler (PWD)",
+        "value": "ultrasound"
+      },
+      {
+        "evidence": "maternal respiration signal (through a resistive thoracic belt)",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": "60 entries from 39 voluntary pregnant women, between the 21st and the 27th week of gestation",
+    "summary": "Open dataset of simultaneous non-invasive electrophysiological recordings, fetal pulsed-wave Doppler and maternal respiration signals, giving ground truth on fetal heart activity when an invasive scalp lead is unavailable."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,80 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003427",
+  "payload": {
+    "created": "2020-12-15T14:55:12.155Z",
+    "id": "ds003427",
+    "latestSnapshot": {
+      "created": "2020-12-15T15:25:22.000Z",
+      "description": {
+        "Authors": [
+          "Olivia W Stanley",
+          "Alan B Kuurstra",
+          "L Martyn Klassen",
+          "Ravi S Menon",
+          "Joseph S Gati"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds003427.v1.0.0",
+        "Funding": [
+          "Canadian Institutes of Health Research Foundation Grant #148453",
+          "Brain Canada Platform Support Grant",
+          "Canadian Open Neuroscience Platform Student Scholar Award",
+          "Canada First Research Excellence Fund to BrainsCAN"
+        ],
+        "HowToAcknowledge": "To use this data please cite the corresponding manuscript, DOI: 10.1016/j.neuroimage.2020.117631",
+        "License": "CC0",
+        "Name": "Effects of Phase Regression on High-Resolution Functional MRI of the Primary Visual Cortex",
+        "ReferencesAndLinks": null
+      },
+      "readme": "Effects of Phase Regression on High-Resolution Functional MRI of the Primary Visual Cortex\n\nHigh-resolution functional MRI studies have become a powerful tool to non-invasively probe the sub-millimeter functional organization of the human cortex. Advances in MR hardware, imaging techniques and sophisticated post-processing methods have allowed high resolution fMRI to be used in both the clinical and academic neurosciences. However, consensus within the community regarding the use of gradient echo (GE) or spin echo (SE) based acquisition remains largely divided. On one hand, GE provides a high temporal signal-to-noise ratio (tSNR) technique sensitive to both the macro- and micro-vascular signal while SE based methods are more specific to microvasculature but suffer from lower tSNR and specific absorption rate limitations, especially at high field and short repetition times.\n\nFortunately, the phase of the GE-EPI signal is sensitive to vessel size and this provides a potential avenue to reduce the macrovascular weighting of the signal (phase regression, Menon 2002). In order to determine the efficacy of this technique at high-resolution, phase regression was applied to GE-EPI timeseries and compared to SE-EPI to determine if GE-EPI’s specificity to the microvascular compartment improved.  To do this, functional data was collected from seven subjects on a neuro-optimized 7 T system at 800 μm isotropic resolution with both GE-EPI and SE-EPI while observing an 8Hz contrast reversing checkerboard. Phase data from the GE-EPI was used to create a microvasculature-weighted time series (GE-EPI-PR). Anatomical imaging (MP2RAGE) was also collected to allow for surface segmentation so that the functional results could be projected onto a surface. A multi-echo gradient echo sequence was collected and used to identify venous vasculature. \nPlease let us know if you have any questions or concerns: ostanle2@uwo.ca\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 8847690454,
+        "subjects": [
+          "03",
+          "04",
+          "05",
+          "07"
+        ],
+        "tasks": [
+          "8Hz Contrast Reversing Checkerboard"
+        ],
+        "totalFiles": 118
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2020-12-15T16:27:04.543Z"
+  },
+  "source": "openneuro"
+}

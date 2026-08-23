@@ -1,0 +1,88 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds008599",
+  "payload": {
+    "created": "2026-08-04T23:33:09.800Z",
+    "id": "ds008599",
+    "latestSnapshot": {
+      "created": "2026-08-06T16:38:00.000Z",
+      "description": {
+        "Authors": [
+          "Bunge Lab"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds008599.v1.0.0",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Bunge Lab 7T Diffusion (NexGen 7T)",
+        "ReferencesAndLinks": null
+      },
+      "readme": "Bunge Lab 7T Diffusion (NexGen 7T)\n\nDiffusion MRI acquired on the Berkeley NexGen 7T (Siemens), CMRR\nmultiband EPI, four phase-encoding directions (AP, PA, LR, RL).\nAnatomical: MP2RAGE UNI.\n\nEach diffusion direction is exported by the scanner as both a\nmagnitude and a phase reconstruction; only the MAGNITUDE series are\nincluded here.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_diffusion",
+          "mri_structural"
+        ],
+        "sessions": [
+          "01",
+          "02"
+        ],
+        "size": 550339947,
+        "subjects": [
+          "7Ts020",
+          "7Ts030",
+          "7Ts017",
+          "7Ts0013Ts032",
+          "7Ts008",
+          "7Ts004",
+          "7Ts023",
+          "7Ts005",
+          "7Ts009",
+          "7Ts014",
+          "7Ts024",
+          "7Ts0113Ts033"
+        ],
+        "tasks": [],
+        "totalFiles": 181
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2026-08-06T16:48:10.560Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,79 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004776",
+  "payload": {
+    "created": "2023-09-28T17:51:47.701Z",
+    "id": "ds004776",
+    "latestSnapshot": {
+      "created": "2023-09-28T17:53:34.000Z",
+      "description": {
+        "Authors": [
+          "Katyucia de Macedo Rodrigues",
+          "Emma Ben-Avi",
+          "Danielle D. Sliva",
+          "Myong-sun Choe",
+          "Marie Drottar",
+          "Ruopeng Wang",
+          "Bruce Fischl",
+          "Patricia E. Grant",
+          "Lilla Zöllei"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004776.v1.0.0",
+        "Funding": [
+          "1K99HD061485-01A1",
+          "R00HD061485-03",
+          "3R01HD093578-03S1",
+          "R01HD085813"
+        ],
+        "HowToAcknowledge": "de Macedo Rodrigues, K., Ben-Avi, E., Sliva, D.D., Choe, M.S., Drottar, M., Wang, R., Fischl, B., Grant, P.E. and Zöllei, L., 2015. A FreeSurfer-compliant consistent manual segmentation of infant brains spanning the 0–2 year age range. Frontiers in human neuroscience, 9, p.21. doi.org/10.3389/fnhum.2015.00021",
+        "License": "CC0",
+        "Name": "Infant FreeSurfer test subject (CNYBCH)",
+        "ReferencesAndLinks": [
+          "https://surfer.nmr.mgh.harvard.edu/fswiki/infantFS",
+          "doi.org/10.3389/fnhum.2015.00021",
+          "doi.org/10.1016/j.neuroimage.2020.116946"
+        ]
+      },
+      "readme": "Infant FreeSurfer test subject (CNYBCH)\n=======================================\n\nThis mprage dataset can be used to test FreeSurfer's infant pipeline.\n\nNote that the subject age is recorded in years.  This should be converted to months when running the infant pipeline.\n\nSee:\n\n  - https://surfer.nmr.mgh.harvard.edu/fswiki/infantFS\n  - https://doi.org/10.3389/fnhum.2015.00021\n  - https://doi.org/10.1016/j.neuroimage.2020.116946\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 5761944,
+        "subjects": [
+          "01"
+        ],
+        "tasks": [],
+        "totalFiles": 7
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        1
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2023-09-28T19:33:39.341Z"
+  },
+  "source": "openneuro"
+}

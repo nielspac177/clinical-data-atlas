@@ -1,0 +1,40 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:d61d28eab732fcd43ceb5090516e877a860e5894f6c65125630a5aa7a5b2a0a0",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "10 cases of DCISM",
+        "label": "ductal carcinoma in situ with microinvasion (DCISM)"
+      },
+      {
+        "evidence": "1 case of DCIS",
+        "label": "ductal carcinoma in situ (DCIS)"
+      },
+      {
+        "evidence": "1 case of invasive breast cancer",
+        "label": "invasive breast cancer"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "tcia:he-vs-mpm",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "H&E-stained histopathology images",
+        "value": "pathology"
+      },
+      {
+        "evidence": "79 multiphoton images",
+        "value": "other"
+      }
+    ],
+    "population": "12 breast cancer patients, including 10 cases of DCISM, 1 case of DCIS, and 1 case of invasive breast cancer",
+    "summary": "H&E histopathology and CK5/6 immunohistochemical images of breast cancer slides, plus multiphoton images of suspicious microinvasive cancer nest regions, supporting diagnostic research on ductal carcinoma in situ with microinvasion."
+  },
+  "prompt_version": "v1"
+}

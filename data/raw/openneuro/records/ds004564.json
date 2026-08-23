@@ -1,0 +1,74 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004564",
+  "payload": {
+    "created": "2023-05-16T16:58:07.036Z",
+    "id": "ds004564",
+    "latestSnapshot": {
+      "created": "2023-05-16T17:10:00.000Z",
+      "description": {
+        "Authors": [
+          "Paul Broca",
+          "Carl Wernicke"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004564.v1.0.1",
+        "Funding": [
+          "National Institute of Neuroscience Grant F378236MFH1",
+          "National Institute of Neuroscience Grant 5RMZ0023106"
+        ],
+        "HowToAcknowledge": "Please cite this paper: https://www.ncbi.nlm.nih.gov/pubmed/001012092119281",
+        "License": "CC0",
+        "Name": "Demo",
+        "ReferencesAndLinks": [
+          "https://www.ncbi.nlm.nih.gov/pubmed/001012092119281",
+          "Alzheimer A., & Kraepelin, E. (2015). Neural correlates of presenile dementia in humans. Journal of Neuroscientific Data, 2, 234001. http://doi.org/1920.8/jndata.2015.7"
+        ]
+      },
+      "readme": "# BIDS Resting State fMRI Dataset\n\nThis dataset contains preprocessed resting state fMRI data collected from 2 subjects using a Siemens 3T MRI scanner. Each subject completed a single resting state scan lasting approximately 6 minutes.\n\n## Subjects\n\n- sub-17017\n- sub-19738\n\n## Scanning Parameters\n\n- TR = 2.0 s\n- TE = 30 ms\n- Flip angle = 90 degrees\n- 32-channel head coil\n- Resolution = 3mm isotropic\n\n## Preprocessing\n\nThe fMRI data were preprocessed using FSL (version 6.0.4) and included motion correction, slice-timing correction, spatial smoothing with a 6mm FWHM Gaussian kernel, and high-pass filtering with a cutoff of 0.01 Hz.\n\n## Data Organization\n\nThe dataset is organized according to the BIDS specification (version 1.6.0), with each subject's data contained within a separate directory. The directory structure is as follows:\n\ndataset/\n├── sub-17017/\n│ ├── anat/\n│ ├── func/\n│ ├── fmap/\n│ ├── dwi/\n│ └── ...\n├── sub-19738/\n│ ├── anat/\n│ ├── func/\n│ ├── fmap/\n│ ├── dwi/\n│ └── ...\n└── README\n\n\nPlease see the BIDS specification for further details on the organization of the data.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 109562107,
+        "subjects": [
+          "17017",
+          "19738"
+        ],
+        "tasks": [
+          "rest"
+        ],
+        "totalFiles": 10
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2023-05-16T17:09:37.658Z"
+  },
+  "source": "openneuro"
+}

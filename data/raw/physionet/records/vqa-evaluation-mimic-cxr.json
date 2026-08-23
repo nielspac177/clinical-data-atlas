@@ -1,0 +1,32 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "vqa-evaluation-mimic-cxr",
+  "payload": {
+    "abstract": "<p>MIMIC CXR [1] is a large publicly available dataset of chest radiographs in DICOM format with free-text radiology reports. In addition, labels for the presence of 12 different chest-related pathologies, as well as of any support devices, and overall normal/abnormal status were made available via the MIMIC Chest X-ray JPG (MIMIC-CXR-JPG) [2] labels, which were generated using the CheXpert and NegBio algorithms.</p>\n\n<p>Based on these labels, we created a visual question answering dataset comprising 224 questions for 48 cases from the official test set, and 111 questions for 23 validation cases. A majority (68%) of the questions are close-ended (answerable with yes or no), and focus on the presence of one out of 15 chest pathologies, or any support device, or generically on any abnormality, whereas the remaining open-ended questions inquire about the location, size, severity or type of a pathology/device, if present in the specific case, indicated by the MIMIC-CXR-JPG labels.</p>\n\n<p>For each question and case we also provide a reference answer, which was authored by a board-certified radiologist (with 17 years of post-residency experience) based on the chest X-ray and original radiology report</p>",
+    "access_policy": "Restricted",
+    "compressed_storage_size": 114265,
+    "core_doi": "10.13026/tz5h-1w39",
+    "dua": {
+      "name": "PhysioNet Restricted Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Restricted Health Data License 1.5.0"
+    },
+    "main_storage_size": 177623,
+    "public_project_uuid": "97dad99f-5d45-4e3c-9087-acff385801c7",
+    "publish_date": "2025-01-28",
+    "resource_type": "Database",
+    "short_description": "This dataset provides 224 VQAs for 40 test set cases, and 111 VQAs for 23 validation set cases of the MIMIC CXR dataset.",
+    "slug": "vqa-evaluation-mimic-cxr",
+    "source_url": "https://physionet.org/content/vqa-evaluation-mimic-cxr/1.0.0/",
+    "title": "Visual Question Answering evaluation dataset for MIMIC CXR",
+    "topics": [],
+    "version": "1.0.0",
+    "version_doi": "10.13026/cvsk-ny21"
+  },
+  "source": "physionet"
+}

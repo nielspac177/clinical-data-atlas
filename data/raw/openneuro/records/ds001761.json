@@ -1,0 +1,86 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds001761",
+  "payload": {
+    "created": "2019-02-15T10:15:58.670Z",
+    "id": "ds001761",
+    "latestSnapshot": {
+      "created": "2020-07-22T18:55:37.000Z",
+      "description": {
+        "Authors": [
+          "VanRullen, R.",
+          "Reddy, L."
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds001761.v2.0.1",
+        "Funding": [
+          "ERC Consolidator Grant P-CYCLES (614244), Bial Foundation grant 109/16, French ANR AI-REPS, NVIDIA Corporation"
+        ],
+        "HowToAcknowledge": "Please cite the paper and mention that the dataset was downloaded from the OpenNeuro database.",
+        "License": "CC0",
+        "Name": "Reconstructing Faces from fMRI Patterns using Deep Generative Neural Networks.",
+        "ReferencesAndLinks": [
+          "VanRullen, R., & Reddy, L. (2018). Reconstructing Faces from fMRI Patterns using Deep Generative Neural Networks. arXiv preprint arXiv:1810.03856."
+        ]
+      },
+      "readme": "# Reconstructing Faces from fMRI Patterns using Deep Generative Neural Networks\nData folder related to the paper: [\"Reconstructing Faces from fMRI Patterns using Deep Generative Neural Networks\"](https://arxiv.org/abs/1810.03856) by VanRullen &amp; Reddy (2019)\n### General: \n4 participants participated in 8 (f)MRI sessions. Each of these 8 sessions consisted of between 11 and 14 runs.\n\nThe stimuli folder contains the stimuli that were used on each trial (see description of Events.tsv below). The stimuli folder also contains a file called ImageNames2Celeba.txt, which links each stimulus with the original files in the celeba imageset.\n\nThe derivatives folder : see the corresponding README file within the derivatives folder.\n\n### The data folder for each participant is organized as follows:\n* sub/ses/anat: contains the T1 anatomical scans (defaced) for this session. Most anat folders contain one T1.nii.gz file. However, when a subject was taken out of the scanner and re-positioned during a session, a second T1 scan was performed. As a result the anat folder for this session will contain two T1.nii.gz files. Defacing was performed using Freesurfer's mri_deface (https://surfer.nmr.mgh.harvard.edu/fswiki/mri_deface).\n* sub/ses/func/: contains the *_bold.nii.gz and *-events.tsv files for each experimental run. \n  * Task Names for BOLD runs\n      *  Face task: This consists of the main task during which subjects viewed unique face images on each trial.    \n      * Localizer tasks: In addition, a few localizer runs were performed which consisted of blocks of faces and objects. \n  * Events.tsv contains stimulus information for each run.\n      * onset of each event\n      * duration of each event.\n      * For face tasks:\n         * trial_type : \"fix\" (fixation trial), \"train_face\" (a face from the training set), \"test_face\" (a face from the test set), \"img\" (an imagery trial).\n         * stimulus: path to the stimulus that was displayed. The stimuli used during the experiment are in the stimulus folder.\n         * one_back: a code of 1 indicates that this was a one-back trial.\n      * For localizer tasks:\n         * trial_type : \"fix\", \"face\" or \"object\" blocks\n\n\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08"
+        ],
+        "size": 21782829989,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04"
+        ],
+        "tasks": [
+          "faces",
+          "loc"
+        ],
+        "totalFiles": 36947
+      },
+      "tag": "2.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        44,
+        31,
+        24,
+        29
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2019-02-15T10:15:58.670Z"
+  },
+  "source": "openneuro"
+}

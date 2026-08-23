@@ -1,0 +1,27 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:d568bbe3d7b98f48bd6c4d7db95d17d5c611a293c49edba073fc8ea892e5cf2c",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:echoview",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "transthoracic echocardiograms",
+        "value": "ultrasound"
+      },
+      {
+        "evidence": "\"modalities\":[\"ultrasound\",\"EHR\"]",
+        "value": "EHR"
+      }
+    ],
+    "population": "463 patients from MIMIC-IV-ECHO contributing 717 transthoracic echocardiogram studies and 29,196 echocardiograms.",
+    "summary": "Machine-generated viewing-class annotations for transthoracic echocardiograms derived from MIMIC-IV-ECHO, produced by a pretrained CNN and checked against independent review by a cardiologist and an intensivist."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,42 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:bfcfc81d387a1ae1e113e1faf90ac200d329f386065729862a0df3cbedb20a25",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Osteosarcoma",
+        "label": "Osteosarcoma"
+      },
+      {
+        "evidence": "Osseous and Chondromatous Neoplasms",
+        "label": "Osseous and Chondromatous Neoplasms"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "pediatrics",
+      "musculoskeletal"
+    ],
+    "id": "gdc:TARGET-OS",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "WGS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "RNA-Seq",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "383 human cases",
+    "summary": "TARGET osteosarcoma collection of bone, joint and cartilage tumors, with whole-exome, whole-genome, targeted and RNA sequencing, genotyping and methylation arrays, variation calls, clinical and biospecimen data."
+  },
+  "prompt_version": "v1"
+}

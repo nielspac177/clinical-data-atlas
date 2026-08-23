@@ -1,0 +1,114 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005431",
+  "payload": {
+    "created": "2024-08-27T05:21:54.256Z",
+    "id": "ds005431",
+    "latestSnapshot": {
+      "created": "2026-03-18T06:29:22.000Z",
+      "description": {
+        "Authors": [
+          "Kumamoto, T",
+          "Komaki, Y",
+          "Tsurugizawa, T"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005431.v1.3.0",
+        "Funding": null,
+        "HowToAcknowledge": "Please cite our upcoming publication.",
+        "License": "CC0",
+        "Name": "Animal Brain Collection Project",
+        "ReferencesAndLinks": null
+      },
+      "readme": "# 1. Sample Preparation\n\n- Brain tissues were fixed in 4% paraformaldehyde (PFA).\n- Before MRI scanning, samples were immersed in a 0.2 mM gadolinium-containing 0.1 M phosphate-buffered saline (PBS PH: 7.4) for at least one week.\n- During MRI measurements, samples were immersed in Fluorinert (Sumitomo 3M Limited, Tokyo, Japan) to minimize background signal.\n\n# 2. MRI Scanners and Coil Selection\n## a. For Small to Medium-sized Brains\n- Scanner: 7T MRI scanner (BioSpec 70/16, Bruker Biospin GmbH, Ettlingen, Germany)\n- Gradient System: Actively shielded gradients with a maximum strength of 700 mT/m\n- Coils:\n  - Volume coils: φ 22 mm, 38 mm, 62 mm, and 72 mm (Bruker Biospin GmbH, Ettlingen, Germany)\n  - Solenoid coils: φ 16 mm and 30 mm (Takashima Seisakusho, Tokyo, Japan)\nCoil selection was based on sample size.\n\n## b. For Large Brains (e.g., bamboo mouse)\n- Scanner: 3T Philips MRI scanner (Ingenia, Philips, Netherlands)\n- Coil: 32-channel head coil\n\n# 3. Imaging Sequences and Parameters\n## a. 3D Anatomical Imaging (rapid acquisition with relaxation enhancement (RARE) sequence)\n- Method: RARE\n- Parameters:\n  - Echo time (TE): 20 ms\n  - Repetition time (TR): 300 ms\n  - RARE factor: 4\n  - Number of averages: 1–8 (adjusted to maintain signal-to-noise ratio >20)\n  - Spatial resolution: 100–200 µm (depending on sample and scanner)\n## b. 3D DTI\n- Method: Spin echo-based DTI\n- Parameters:\n  - TE: Minimum\n  - TR: 200 ms\n  - MPG gradient duration (δ): 3.5 ms\n  - MPG gradient separation (Δ): 9.5 ms\n  - b-value: 2000 s/mm²\n  - Diffusion directions: 30\n  - Number of 1 b0 images: 5\n  - Number of averages: 1\n  - Spatial resolution: 100–200 µm",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_diffusion",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 11713375380,
+        "subjects": [
+          "32Mallard",
+          "10JSquirrelAdult",
+          "13GSOpossum",
+          "33BStilt",
+          "16MarmosetP8",
+          "51JBoar",
+          "26NRHornbillAdult",
+          "12Ferret",
+          "43Hagfish",
+          "25LCrowAdult",
+          "53JMacaque",
+          "41CSTurtle",
+          "08JSquirrelP4",
+          "39JFSalamander",
+          "34BStilt",
+          "03LJFMouseAdult",
+          "19ChickenP7",
+          "52JSSnake",
+          "06RabbitAdult",
+          "22ChickenAdult",
+          "31MDuck",
+          "36BHeronAdult",
+          "21ChickenP21",
+          "28BLapwing",
+          "15MarmosetE100",
+          "47CGecko",
+          "18ChickE20",
+          "37GPenguin",
+          "40MGGeckoAdult",
+          "44BDragon",
+          "17ChickE18",
+          "46MPalmCivet",
+          "02MouseICR",
+          "04Rat4w",
+          "50JRFox",
+          "01MouseAdult",
+          "14GPig",
+          "49PChameleon",
+          "48PChameleon",
+          "42ALamprey",
+          "05CBRatAdult",
+          "38HPenguin1w",
+          "30MDuck",
+          "07ERousetteAdult",
+          "29BLapwing",
+          "09JSquirrelNewBorn",
+          "35TToucanAdult",
+          "20ChickenP14",
+          "24CPatridge",
+          "27NRHornbillAdult",
+          "45JRaccoonDog",
+          "11HShrew"
+        ],
+        "tasks": [],
+        "totalFiles": 249
+      },
+      "tag": "1.3.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Other",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": "Other"
+    },
+    "publishDate": "2025-03-19T06:22:09.511Z"
+  },
+  "source": "openneuro"
+}

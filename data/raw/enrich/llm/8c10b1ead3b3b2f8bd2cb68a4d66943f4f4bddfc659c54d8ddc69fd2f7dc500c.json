@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:8c10b1ead3b3b2f8bd2cb68a4d66943f4f4bddfc659c54d8ddc69fd2f7dc500c",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "episodes of sustained ventricular tachycardia",
+        "label": "sustained ventricular tachycardia"
+      },
+      {
+        "evidence": "ventricular flutter",
+        "label": "ventricular flutter"
+      },
+      {
+        "evidence": "ventricular fibrillation",
+        "label": "ventricular fibrillation"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:cudb",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "eight-minute ECG recordings",
+        "value": "ECG"
+      }
+    ],
+    "population": "35 eight-minute ECG recordings of human subjects who experienced episodes of sustained ventricular tachycardia, ventricular flutter, and ventricular fibrillation",
+    "summary": "Eight-minute ECG recordings from human subjects who experienced episodes of sustained ventricular tachycardia, ventricular flutter, and ventricular fibrillation."
+  },
+  "prompt_version": "v1"
+}

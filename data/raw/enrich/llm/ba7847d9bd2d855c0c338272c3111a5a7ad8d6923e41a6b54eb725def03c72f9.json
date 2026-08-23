@@ -1,0 +1,43 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:ba7847d9bd2d855c0c338272c3111a5a7ad8d6923e41a6b54eb725def03c72f9",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "patients with brain metastasis from primary lung cancer",
+        "label": "brain metastasis"
+      },
+      {
+        "evidence": "brain metastasis from primary lung cancer",
+        "label": "primary lung cancer"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "oncology",
+      "pulmonology",
+      "surgery"
+    ],
+    "id": "tcia:brain-mets-lung-mri-path-segs",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "pre-operative T1-weighted contrast-enhanced (T1CE) and fluid attenuated inversion recovery (FLAIR) MR images",
+        "value": "MRI"
+      },
+      {
+        "evidence": "matched whole slide images of formalin-fixed, paraffin-embedded (FFPE) brain metastasis biopsies",
+        "value": "pathology"
+      },
+      {
+        "evidence": "radiomic features, and clinical information",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "103 cases of patients with brain metastasis from primary lung cancer.",
+    "summary": "Matched pre-operative brain MR imaging and whole slide pathology from biopsies in patients with brain metastasis from primary lung cancer, plus segmentations of contrast enhancement and FLAIR hyperintensity, radiomic features, and clinical information."
+  },
+  "prompt_version": "v1"
+}

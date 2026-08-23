@@ -1,0 +1,23 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:f2918ad93fc1113c934e3e036693a6161b2cf9cf860c6baf91332a998256746d",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "critical_care"
+    ],
+    "id": "physionet:mimicel-ed",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "each table records the individual activities of patients along their journey in the emergency department",
+        "value": "EHR"
+      }
+    ],
+    "population": "Emergency department patients recorded in the MIMIC-IV-ED dataset",
+    "summary": "An event log extracted from the MIMIC-IV-ED dataset that reconstructs each patient's end-to-end journey through the emergency department, intended for analysing patient flows and process efficiency."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,72 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds002574",
+  "payload": {
+    "created": "2020-02-19T09:03:44.144Z",
+    "id": "ds002574",
+    "latestSnapshot": {
+      "created": "2020-03-06T21:50:45.000Z",
+      "description": {
+        "Authors": [
+          "Tomas Knapen",
+          "Wietske van der Zwaag",
+          "Daan van Es"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds002574.v1.0.1",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Cerebellum Retinotopic Mapping",
+        "ReferencesAndLinks": null
+      },
+      "readme": "OpenNeuro curator note: This dataset was previously accessible at ds001851. The dataset was reuploaded due to privacy considerations. \n\nthis dataset contains the data of 3 subjects performing a retinotopic mapping experiment, using the population receptive field (pRF) method. Parts of this dataset were published in Current Biology in 2019, (https://doi.org/10.1016/j.cub.2019.04.012) and Cerebral Cortex in 2020 (https://doi.org/10.1093/cercor/bhz323)\n\nEach subject performed 3 or 4 sessions, totalling up to 43 three-minute runs. The stimulus design and pRF analysis code are available at https://github.com/daanvanes/cerebellum_prf\n\nThe visual design matrix for pRF analyses can be found at https://osf.io/5bmdn/",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "01",
+          "02",
+          "03",
+          "04"
+        ],
+        "size": 10808451063,
+        "subjects": [
+          "01",
+          "02",
+          "03"
+        ],
+        "tasks": [
+          "prf"
+        ],
+        "totalFiles": 324
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": null,
+      "associatedPaperDOI": "10.1016/j.cub.2019.04.012, 10.1093/cercor/bhz323",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "NWO",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "population receptive field",
+      "studyDomain": "Vision",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2020-02-19T09:32:42.252Z"
+  },
+  "source": "openneuro"
+}

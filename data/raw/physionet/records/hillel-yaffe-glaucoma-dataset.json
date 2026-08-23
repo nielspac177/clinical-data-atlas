@@ -1,0 +1,38 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "hillel-yaffe-glaucoma-dataset",
+  "payload": {
+    "abstract": "<p>Glaucomatous optic neuropathy (GON) is a leading cause of irreversible blindness worldwide, affecting an estimated 64.3 million people globally with projections reaching 111.8 million by 2040. Approximately 50% of cases remain undiagnosed until advanced stages when vision loss becomes noticeable. Traditional diagnosis requires comprehensive ophthalmic examinations by specialists, creating accessibility barriers in many regions.</p>\n<p>The Hillel Yaffe Glaucoma Dataset (HYGD) addresses a critical limitation in existing GON datasets: the lack of gold-standard annotations. Unlike most publicly available datasets where glaucoma labels are determined solely from digital fundus images (DFIs), HYGD's labels are based on comprehensive ophthalmic examinations, including visual acuity assessment, intraocular pressure measurement, optical coherence tomography (OCT), visual field tests, and at least one year of follow-up monitoring.</p>\n<p>The dataset is structured to include both the DFIs and a labels file containing patient IDs, GON classifications, and image quality scores. All DFIs were taken using a TOPCON DRI OCT Triton retinal camera with a 45&deg; FOV and underwent deidentification and standardization processing.</p>\n<p>HYGD enables researchers to train and benchmark models on rigorously annotated data, potentially improving their reliability. This dataset serves as a valuable resource for developing generalizable models that can function across diverse patient populations and clinical settings, ultimately supporting earlier detection and treatment of GON.</p>",
+    "access_policy": "Open",
+    "compressed_storage_size": 124214721,
+    "core_doi": "10.13026/pdxv-m215",
+    "dua": null,
+    "is_latest_version": true,
+    "license": {
+      "name": "Open Data Commons Attribution License v1.0"
+    },
+    "main_storage_size": 131865715,
+    "public_project_uuid": "40deac33-f432-4984-b8e0-21409822d6c6",
+    "publish_date": "2026-03-17",
+    "resource_type": "Database",
+    "short_description": "HYGD is a rigorously annotated fundus image dataset with gold-standard clinical labels designed to improve and benchmark deep learning models for accurate glaucoma detection.",
+    "slug": "hillel-yaffe-glaucoma-dataset",
+    "source_url": "https://physionet.org/content/hillel-yaffe-glaucoma-dataset/1.1.0/",
+    "title": "Hillel Yaffe Glaucoma Dataset (HYGD): A Gold-Standard Annotated Fundus Dataset for Glaucoma Detection",
+    "topics": [
+      "ophthalmology",
+      "glaucoma",
+      "dfi",
+      "gon",
+      "fundus",
+      "gold-standard",
+      "retina"
+    ],
+    "version": "1.1.0",
+    "version_doi": "10.13026/m92s-0z95"
+  },
+  "source": "physionet"
+}

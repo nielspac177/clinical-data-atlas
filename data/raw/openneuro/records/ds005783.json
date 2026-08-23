@@ -1,0 +1,103 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005783",
+  "payload": {
+    "created": "2025-01-02T19:59:03.745Z",
+    "id": "ds005783",
+    "latestSnapshot": {
+      "created": "2025-01-02T21:21:49.000Z",
+      "description": {
+        "Authors": [
+          "Frederik S. Kamps",
+          "Emily M. Chen",
+          "Nancy Kanwisher",
+          "Rebecca Saxe"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005783.v1.0.1",
+        "Funding": [
+          "NIH grant R01HD103847 to R.S."
+        ],
+        "HowToAcknowledge": "Please cite the following preprint or the publication: \nKamps, F. S., Chen, E. M., Kanwisher, N., & Saxe, R. (2024). Representation of navigational affordances and ego-motion in the occipital place area. bioRxiv, 2024-04.\nFrederik S. Kamps, Emily M. Chen, Nancy Kanwisher, Rebecca Saxe; Representation of navigational affordances and ego-motion in the occipital place area. Imaging Neuroscience 2024; doi: https://doi.org/10.1162/imag_a_00424.",
+        "License": "CC0",
+        "Name": "Representation of navigational affordances and ego-motion in the occipital place area - dataset",
+        "ReferencesAndLinks": [
+          "https://doi.org/10.1162/imag_a_00424"
+        ]
+      },
+      "readme": "17 adult participants (17 participants consented to open data sharing and are included here) watched short, ~3s video clips of the first-person perspective of walking through rooms. Rooms had a door on either the left, right, or both, and ego-motion was forward, backward, left or right. Code and stimuli descriptions shared here: https://osf.io/6yehp. We also scanned participants on a dynamic scene, face, and object localizer task.\n\nMain Experiment (EXP)\nExperimental stimuli consisted of 14 conditions (Conditions 1-10 are shown in Figure 2; Example stimuli and results from conditions 11-14 are shown in Supplemental Figure 3). All stimuli were created using Unity software and depicted 3 second clips of the first-person experience of walking through scenes. Navigational affordances were manipulated by including an open doorway to either the left side, right side, or both sides. To help control for low-level visual confounds, the non-doorway side always included a distractor object, either a painting (conditions 1-10) or an inverted doorway (conditions 11-14). Furthermore, the textures applied to the painting and the walls through the doorways were counterbalanced, such that each texture appeared equally on either side across the full stimulus set. Ego-motion was manipulated by changing the direction of ego-motion through scene, which could either be forward (conditions 1-3, 11-14), backward (conditions 4-6), a left turn (conditions 7-8) or a right turn (conditions 9-10). To help prevent visual adaptation over the course of the experiment, the 14 experimental conditions were counterbalanced across 8 room types, which differed from one another based on the textures applied to the walls, floor and ceiling, and to a lesser extent, by the size and shape of the doorways and corresponding distractor (Figure 5). Stimuli were presented at 13.1 x 18.6 DVA in an event-related paradigm. Each stimulus was presented for 2.5s, followed by a minimum inter-stimulus-interval (ISI) of 3.5s and a maximum ISI of 9.5s, optimized separately for each run using OptSeq2. Participants viewed 4 repetitions of each condition per run, and completed 8 experimental runs, yielding 32 total repetitions per condition across the experiment. To help ensure participants paid attention throughout the experiment, participants performed a one-back task, responding via button press whenever the exact same video stimulus repeated on back-to-back trials. Participants were also instructed to lie still, keep their eyes open, and try to pay attention to and immerse themselves in the stimuli.\n\nLocalizer (LOC)\nLocalizer stimuli consisted of 3s videos of dynamic Scenes, Objects, Faces, and Scrambled Objects, as described previously in Kamps et al., 2016 and 2020. Stimuli were presented using a block design at 13.7 x 18.1 degrees of visual angle. Each run was 315s long and contained 4 blocks per stimulus category. The order of the first set of blocks was pseudorandomized across runs (e.g., Faces, Objects, Scenes, Scrambled) and the order of the second set of blocks was the palindrome of the first (e.g., Scrambled, Scenes, Objects, Faces). Each block consisted of 5 2.8s video clips from a single condition, with an ISI of 0.2s, resulting in 15s blocks. Each run also included 5 fixation blocks: one at the beginning, three evenly spaced throughout the run, and one at the end. Participants completed 3 Localizer runs, interleaved between every 2 Experimental Runs.}",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 24003535657,
+        "subjects": [
+          "SAXANA1015",
+          "SAXANA1006",
+          "SAXANA1016",
+          "SAXANA1004",
+          "SAXANA1011",
+          "SAXANA1017",
+          "SAXANA1012",
+          "SAXANA1010",
+          "SAXANA1001",
+          "SAXANA1013",
+          "SAXANA1014",
+          "SAXANA1008",
+          "SAXANA1003",
+          "SAXANA1005",
+          "SAXANA1002",
+          "SAXANA1007"
+        ],
+        "tasks": [
+          "LOC",
+          "EXP"
+        ],
+        "totalFiles": 570
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        34,
+        22,
+        32,
+        26,
+        26,
+        24,
+        24,
+        46,
+        30,
+        28,
+        24,
+        38,
+        24,
+        20,
+        46,
+        38
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2025-01-02T21:17:58.719Z"
+  },
+  "source": "openneuro"
+}

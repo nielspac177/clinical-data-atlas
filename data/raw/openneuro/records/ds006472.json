@@ -1,0 +1,158 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006472",
+  "payload": {
+    "created": "2025-07-14T20:44:35.035Z",
+    "id": "ds006472",
+    "latestSnapshot": {
+      "created": "2025-07-16T20:03:28.000Z",
+      "description": {
+        "Authors": [
+          "Daniel A. Stehr",
+          "Yiyuan Zhang",
+          "Anusha Patgiri",
+          "Alexis Kidder",
+          "Kendrick Kay",
+          "Bradley Duchaine"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006472.v1.0.0",
+        "Funding": [
+          "National Institute of Health Grant R01EY034118 (K.K.)",
+          "National Institute of Health Grant 1R01EY030613-01A1 (B.D.)"
+        ],
+        "HowToAcknowledge": "Stehr DA, Zhang Y, Patgiri A, Kidder A, Kay K, Duchaine BD. 2025. Developmental prosopagnosics have normal spatial integration in posterior ventral face-selective regions. In preparation",
+        "License": "CC0",
+        "Name": "Population Receptive Fields in Developmental Prosopagnosics and Controls",
+        "ReferencesAndLinks": [
+          "Paper: ",
+          "Code: "
+        ]
+      },
+      "readme": "# Developmental prosopagnosics have normal spatial integration in posterior ventral face-selective regions\n\n## Overview\n\nHere we provide the raw fMRI responses from the paper *[Developmental\nprosopagnosics have normal spatial integration in posterior ventral face-\nselective regions](paperlink)* (Daniel A. Stehr, Yiyuan Zhang, Anusha Patgiri, Alexis Kidder,\nKendrick N. Kay, Bradley C. Duchaine)\n\nEach participant underwent two fMRI data collection sessions. The first session\nconsisted of an anatomical (T1w) scan and four runs of a multi-category\nlocalizer used to define face- and scene-selective regions. The second\nsession consisted of five runs of a population receptive field (pRF) mapping\nexperiment used to define V1, V2, V3, hV4 and estimate pRF properties in all\ncategory-selective regions.\n\nThe file *used_mri_sequences.pdf* contains technical details regarding the MRI\nsequences used.\n\n## Analysis\nCode for performing the preprocessing of the raw fMRI data and fitting population receptive fields is available [here](https://figshare.com/articles/dataset/Population_Receptive_Field_Properties_in_Developmental_Prosopagnosics_and_Controls/29582888).\n\n## Contact\n\nFor any questions regarding the project data or code you can get in touch with\nDaniel Stehr (daniel.a.stehr@dartmouth.edu)\n\n# Citation\n\nIf you use any of our data or code, please cite the paper:\n\n> Stehr DA, Zhang Y, Patgiri A, Kidder A, Kay KN, Duchaine B. 2025.\nDevelopmental prosopagnosics have normal spatial integration in posterior\nventral face-selective regions. In Preparation. DOI: []\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "01",
+          "02"
+        ],
+        "size": 115087521553,
+        "subjects": [
+          "2592",
+          "2671",
+          "2582",
+          "2699",
+          "2617",
+          "2750",
+          "2432",
+          "2645",
+          "2706",
+          "2820",
+          "2733",
+          "2538",
+          "2637",
+          "2363",
+          "2935",
+          "1832",
+          "2455",
+          "1803",
+          "2622",
+          "2859",
+          "1821",
+          "2600",
+          "2598",
+          "2828",
+          "2621",
+          "0002",
+          "2607",
+          "2490",
+          "2739",
+          "2709",
+          "2427",
+          "2346",
+          "2779",
+          "2338",
+          "2629",
+          "2375",
+          "2687",
+          "2804",
+          "2550",
+          "2507"
+        ],
+        "tasks": [
+          "multi-category localizer",
+          "pRF experiment"
+        ],
+        "totalFiles": 1132
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        29,
+        49,
+        31,
+        34,
+        56,
+        32,
+        27,
+        45,
+        53,
+        25,
+        42,
+        54,
+        24,
+        48,
+        54,
+        29,
+        30,
+        41,
+        25,
+        55,
+        58,
+        26,
+        39,
+        28,
+        48,
+        35,
+        20,
+        34,
+        21,
+        21,
+        36,
+        35,
+        34,
+        35,
+        32,
+        52,
+        28,
+        36,
+        27,
+        57
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "NIH",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "Visual Perception",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2025-07-16T20:03:57.184Z"
+  },
+  "source": "openneuro"
+}

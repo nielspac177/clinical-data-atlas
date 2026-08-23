@@ -1,0 +1,142 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004767",
+  "payload": {
+    "created": "2023-09-17T11:53:21.963Z",
+    "id": "ds004767",
+    "latestSnapshot": {
+      "created": "2023-09-18T01:00:10.000Z",
+      "description": {
+        "Authors": [
+          "Sadhana Ravikumar",
+          "Amanda E. Denning",
+          "Sydney Lim",
+          "Eunice Chung",
+          "Niyousha Sadeghpour",
+          "Ranjit Ittyerah",
+          "Laura E.M. Wisse",
+          "Sandhitsu R. Das",
+          "Long Xie",
+          "John L. Robinson",
+          "Theresa Schuck",
+          "Edward B. Lee",
+          "M. Dylan Tisdall",
+          "Karthik Prabhakaran",
+          "John A. Detre",
+          "Gabor Mizsei",
+          "Maria Mercedes Iniguez de Onzono Martin",
+          "Maria del Mar Arroyo Jimenez",
+          "Monica Munoz",
+          "Maria del Pilar Marcos Rabal",
+          "Sandra Cebada Sanchez",
+          "Jose Carlos Delgado Gonzalez",
+          "Carlo de la Rosa Prieto",
+          "David J. Irwin",
+          "David A. Wolk",
+          "Ricardo Insausti",
+          "Paul A. Yushkevich"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004767.v1.0.0",
+        "Funding": [
+          "NIH Grants R01 AG056014, RF1 AG069474, P30 AG072979, P01 AG066597 and U19 AG062418, by MultiPark - A Strategic Research Area at Lund University and a UCLM research grant to the Human Neuroanatomy Laboratory."
+        ],
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "Characterizing medial temporal lobe vulnerability to neurofibrillary tangle pathology in Alzheimer’s disease using a 3-D ex vivo MRI atlas and serial histology",
+        "ReferencesAndLinks": []
+      },
+      "readme": "Dataset description === This is a dataset to accompany the 2023 journal submission \"Characterizing medial temporal lobe vulnerability to neurofibrillary tangle pathology in Alzheimer’s disease using a 3-D ex vivo MRI atlas and serial histology\" by Ravikumar et al. This is a following up to the study presented in \nRavikumar, Sadhana, et al. Acta neuropathologica communications 9.1 (2021). \n\nThe dataset contains ex vivo MRI scans and medial temporal lobe (MTL) segmentations of 55 human temporal lobe specimens, a computational atlas constructed using a custom groupwise registration pipeline applied to all 55 specimens, a consensus labelling of the MTL subregions and subfields in the atlas based on cytoarchitectural boundaries defined in 17 specimens, and derived tau neurofibrillary tangle burden maps for 25 brain donors.\n\nBIDS Directory Structure\n\nSubject-level data --- Raw MRI images at 9.4T \n\n    sub-{id}/anat\n\nSubject-level manual segmentations and MRI images in axis-aligned space:\n\n    derivatives/manual_segmentation/sub-{id}\n\nSubject-level MRI and manual segmentations warped to template space, and where applicable, the reconstructed histological data in template space:\n\n    derivatives/template /sub-{id}\n\nIn template space - average MRI image and consensus MTL subregion segmentation, average NFT burden map and frequency maps computed across all 25 specimens, and average NFT burden maps computed separately for low and high Braak cases (Figure 2)\n\n    derivatives/template/template\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 3546615030,
+        "subjects": [
+          "00xCNDR01",
+          "00xCNDR02",
+          "00xCNDR03",
+          "00xCNDR04",
+          "00xCNDR05",
+          "00xCNDR06",
+          "00xCNDR07",
+          "00xCNDR08",
+          "00xCNDR09",
+          "00xCNDR10",
+          "00xCNDR11",
+          "00xCNDR12",
+          "00xCNDR13",
+          "00xCNDR14",
+          "00xCNDR15",
+          "00xCNDR16",
+          "00xCNDR17",
+          "00xCNDR18",
+          "00xCNDR19",
+          "00xCNDR20",
+          "00xCNDR21",
+          "00xCNDR22",
+          "00xCNDR23",
+          "00xCNDR24",
+          "00xCNDR25",
+          "00xCNDR26",
+          "00xCNDR27",
+          "00xCNDR28",
+          "00xCNDR29",
+          "00xCNDR30",
+          "00xCNDR31",
+          "00xCNDR32",
+          "00xCNDR33",
+          "00xCNDR34",
+          "00xHNL01",
+          "00xHNL02",
+          "00xHNL03",
+          "00xHNL04",
+          "00xHNL05",
+          "00xHNL06",
+          "00xHNL07",
+          "00xHNL08",
+          "00xHNL09",
+          "00xHNL10",
+          "00xHNL11",
+          "00xHNL12",
+          "00xHNL13",
+          "00xHNL14",
+          "00xHNL15",
+          "00xHNL16",
+          "00xHNL17",
+          "00xHNL18",
+          "00xHNL19",
+          "00xHNL20",
+          "00xHNL21"
+        ],
+        "tasks": [],
+        "totalFiles": 113
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": null,
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2023-09-18T01:09:40.480Z"
+  },
+  "source": "openneuro"
+}

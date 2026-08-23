@@ -1,0 +1,107 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004312",
+  "payload": {
+    "created": "2022-10-26T19:03:04.256Z",
+    "id": "ds004312",
+    "latestSnapshot": {
+      "created": "2023-02-20T17:07:59.000Z",
+      "description": {
+        "Authors": [
+          "Jason A Avery",
+          "Madeline Carrington",
+          "Alex Martin"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004312.v1.0.3",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "A common neural code for representing imagined and inferred tastes",
+        "ReferencesAndLinks": null
+      },
+      "readme": "Dataset description\n===================\n\nA common neural code for representing imagined and inferred tastes\n\nAuthors: Jason A Avery, Madeline Carrington, and Alex Martin.\n\nProgress in Neurobiology (2023; in press). DOI: https://doi.org/10.1016/j.pneurobio.2023.102423.\n\nInferences about the taste of foods are a key aspect of our everyday experience of food choice. Despite this, gustatory mental imagery is a relatively under-studied aspect of our mental lives. In the present study, we examined subjects during high-field fMRI as they actively imagined basic tastes and subsequently viewed pictures of foods dominant in those specific taste qualities. Imagined tastes elicited activity in the bilateral dorsal mid-insula, one of the primary cortical regions responsive to the experience of taste. In addition, within this region we reliably decoded imagined tastes according to their dominant quality - sweet, sour, or salty – thus indicating that, like actual taste, imagined taste activates distinct quality-specific neural patterns. Using a cross-task decoding analysis, we found that the neural patterns for imagined tastes and food pictures in the mid-insula were reliably similar and quality-specific, suggesting a common code for representing taste quality regardless of whether explicitly imagined or automatically inferred when viewing food. \n\nFunctional MRI data was acquired at ultra-high voxel resolution (1.2mm x 1.2mm x 1.2mm) at high magnetic field strength (7-Tesla). Echo-planar images (EPI) were acquired in 58 axial slices. \n\nMRI Files included are: \nA) Skull-stripped T1w anatomical scans from MP2RAGE acquisition (uni_den volume) resolution 0.7mm X 0.7mm X 0.7mm. \nB) 8 task epi files from two tasks - (194vol, 245vol), acquired Anterior-to-Posterior\nC) 1 epi file (fmap) - 20vol, acquired Posterior-to-Anterior, for topup spatial distortion correction \n\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "01"
+        ],
+        "size": 91920662667,
+        "subjects": [
+          "060",
+          "061",
+          "062",
+          "063",
+          "064",
+          "065",
+          "066",
+          "067",
+          "068",
+          "069",
+          "070",
+          "071",
+          "072",
+          "073",
+          "074",
+          "075",
+          "076",
+          "077",
+          "078",
+          "079"
+        ],
+        "tasks": [
+          "Food Pictures"
+        ],
+        "totalFiles": 371
+      },
+      "tag": "1.0.3"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        25,
+        27,
+        21,
+        22,
+        22,
+        23,
+        22,
+        24,
+        42,
+        22,
+        23,
+        24,
+        26,
+        64,
+        42,
+        18,
+        23,
+        25,
+        23,
+        22
+      ],
+      "associatedPaperDOI": " https://doi.org/10.1101/2022.10.24.513537",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "National Institutes of Health",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "Cognition, Taste",
+      "studyLongitudinal": "Within-Subjects"
+    },
+    "publishDate": "2023-02-19T05:52:28.399Z"
+  },
+  "source": "openneuro"
+}

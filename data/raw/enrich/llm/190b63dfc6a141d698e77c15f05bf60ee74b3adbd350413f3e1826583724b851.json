@@ -1,0 +1,35 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:190b63dfc6a141d698e77c15f05bf60ee74b3adbd350413f3e1826583724b851",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "patients who were admitted with heart failure",
+        "label": "heart failure"
+      }
+    ],
+    "countries": [
+      "CN"
+    ],
+    "domains": [
+      "cardiology",
+      "public_health"
+    ],
+    "id": "physionet:heart-failure-zigong",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "electronic health data collected from patients",
+        "value": "EHR"
+      },
+      {
+        "evidence": "The dataset includes 168 variables for 2,008 patients",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "Patients admitted with heart failure to Zigong Fourth People's Hospital, Sichuan, China between 2016 and 2019",
+    "summary": "Retrospective electronic health record data on 2,008 patients hospitalized with heart failure at a hospital in Sichuan, China between 2016 and 2019, covering 168 variables plus external outcome data."
+  },
+  "prompt_version": "v1"
+}

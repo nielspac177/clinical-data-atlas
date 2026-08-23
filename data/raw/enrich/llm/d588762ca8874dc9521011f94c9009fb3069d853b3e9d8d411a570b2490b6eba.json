@@ -1,0 +1,29 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:d588762ca8874dc9521011f94c9009fb3069d853b3e9d8d411a570b2490b6eba",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "diagnostic classification of clinically significant prostate lesions",
+        "label": "prostate lesions"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "nephrology_urology"
+    ],
+    "id": "tcia:prostatex",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "MR SEG",
+        "value": "MRI"
+      }
+    ],
+    "population": "Human participants with prostate MRI studies used for the challenge",
+    "summary": "Prostate MRI released for a grand challenge on quantitative image analysis methods for diagnostic classification of clinically significant prostate lesions, letting participants compare algorithms on the same data sets."
+  },
+  "prompt_version": "v1"
+}

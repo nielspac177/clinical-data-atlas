@@ -1,0 +1,37 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "archehr-qa-bionlp-task-2025",
+  "payload": {
+    "abstract": "<p>Patient&rsquo;s unique information needs about their hospitalization can be addressed using clinical evidence from electronic health records (EHRs) and artificial intelligence (AI). However, robust datasets to assess the factuality and relevance of AI-generated responses are lacking and, to our knowledge, none capture patient information needs in the context of their EHRs. To address this gap, we introduce ArchEHR-QA, an expert-annotated dataset of 134 cases from intensive care unit and emergency department settings to evaluate the grounding capabilities of models for responding to patient-initiated queries. The dataset consists of patient-initiated questions posted in public domain, the corresponding clinician-interpreted questions, the excerpts of the EHRs annotated at the sentence-level with relevance to the question, and clinician-generated free-text answers to the questions grounded with EHR sentences. We collect true patient health information needs expressed in real-world health forum messages, we then align the messages to publicly accessible real EHRs. To our knowledge, this is the first public dataset that encapsulates patient questions and relevant clinical evidence from EHRs. We further provide an evaluation framework to assess two critical aspects of a grounded EHR QA system: does it identify relevant information from given clinical evidence and does it use this information in responding to user queries.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 214535,
+    "core_doi": "10.13026/zzax-sy62",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 1155892,
+    "public_project_uuid": "22586be7-3b1f-41ac-92fd-cf80325e877d",
+    "publish_date": "2026-01-02",
+    "resource_type": "Challenge",
+    "short_description": "A dataset for grounded question answering (QA) from electronic health records (EHRs).",
+    "slug": "archehr-qa-bionlp-task-2025",
+    "source_url": "https://physionet.org/content/archehr-qa-bionlp-task-2025/1.3/",
+    "title": "ArchEHR-QA: A Dataset for Addressing Patient's Information Needs related to Clinical Course of Hospitalization",
+    "topics": [
+      "question answering",
+      "electronic health record",
+      "patient portals",
+      "clinicians"
+    ],
+    "version": "1.3",
+    "version_doi": "10.13026/n708-sn25"
+  },
+  "source": "physionet"
+}

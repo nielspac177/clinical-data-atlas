@@ -1,0 +1,38 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:b150e2587b2746f722bd6b6b363b7502ff5e78e45767fd5486590ca3d8b2cd03",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "collected from healthy volunteers",
+        "label": "healthy volunteers"
+      },
+      {
+        "evidence": "The patients had various cardiovascular diseases",
+        "label": "cardiovascular diseases"
+      },
+      {
+        "evidence": "some of them had pacemakers",
+        "label": "pacemakers"
+      }
+    ],
+    "countries": [
+      "RU"
+    ],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:ludb",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "200 10-second 12-lead ECG signal records",
+        "value": "ECG"
+      }
+    ],
+    "population": "Healthy volunteers and hospital patients with various cardiovascular diseases, some with pacemakers, recorded in 2017–2018",
+    "summary": "Twelve-lead ECG records with P and T wave and QRS complex boundaries and peaks manually annotated by cardiologists, each record labelled with its diagnosis, for training and testing ECG delineation algorithms."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,170 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004934",
+  "payload": {
+    "created": "2024-01-17T17:41:50.930Z",
+    "id": "ds004934",
+    "latestSnapshot": {
+      "created": "2024-01-17T20:26:19.000Z",
+      "description": {
+        "Authors": [
+          "Shari Liu",
+          "Kirsten Lydic",
+          "Lingjie Mei",
+          "Rebecca Saxe"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004934.v1.0.0",
+        "Funding": [
+          "NIH NRSA (F32HD103363)",
+          "DARPA  Machine  Common  Sense  Program  (CW3013552)"
+        ],
+        "HowToAcknowledge": "Please cite forthcoming paper in Imaging Neuroscience",
+        "License": "CC0",
+        "Name": "fMRI dataset: Violations of psychological and physical expectations in human adult brains",
+        "ReferencesAndLinks": [
+          "Liu, S., Lydic, K., Mei, L., & Saxe, R. (in press). Violations of physical and psychological expectations in the human adult brain. Imaging Neuroscience",
+          "Liu, S., Lydic, K., Mei, L., & Saxe, R. (2023). Violations of physical and psychological expectations in the human adult brain. Proceedings of the Annual Meeting of the Cognitive Science Society, 45(45). https://escholarship.org/uc/item/0gd2j3g8"
+        ]
+      },
+      "readme": "# Dataset description\n\nThis dataset contains fMRI data from adults from one paper, with two experiments in it: \n\nLiu, S., Lydic, K., Mei, L., & Saxe, R. (in press, Imaging Neuroscience). Violations of physical and psychological expectations in the human adult brain. Preprint: https://doi.org/10.31234/osf.io/54x6b\n\nAll subjects who contributed data to this repository consented explicitly to share their de-faced brain images publicly on OpenNeuro. Experiment 1 has 16 subjects who gave consent to share (17 total), and Experiment 2 has 29 subjects who gave consent to share (32 total). Experiment 1 subjects have subject IDs starting with \"SAXNES*\", and Experiment 2 subjects have subject IDs starting with \"SAXNES2*\".\n\n- code/ contains contrast files used in published work\n- sub-SAXNES*/ contains anatomical and functional images, and event files for each functional image. Event files contains the onset, duration, and condition labels\n- CHANGES will be logged in this file\n\n# Tasks\n\n- VOE (Experiment 1 version): Novel task using hand-crafted stimuli from developmental psychology, showing violations of object solidity and support, and violations of goal-directed and efficient action. There were only 4 sets of stimuli in this experiment, that repeated across runs. Shown in mini-blocks of familization + two test events. \n- VOE (Experiment 2 version): Novel task including all stimuli from Experiment 1 except for support, showing violations of object permanence and continuity (from ADEPT dataset; Smith et al. 2019) and violations of goal-directed and efficient action (from AGENT dataset; Shu et al. 2021). Shown in pairs of familiarization + one test event (either expected or unexpected). All subjects saw one set of stimuli in runs 1-2, and a second set of stimuli in runs 3-4. If someone saw an expected outcome from a scenario in one run, they saw the unexpected outcome from the same scenario in the other run. \n- DOTS (2 runs, both Exp 1-2): Task contrasting social and physical interaction (Fischer et al. 2016, PNAS). Designed to localize regions like the STS and SMG.\n- Motion: Task contrasting coherent and incoherent motion (Robertson et al. 2014, Brain). Designed to localize area MT.\n- spWM: Task contrasting a hard vs easy spatial working memory task (Fedorenko et al., 2013, PNAS). Designed to localize multiple demand regions.\n\nThere are (anonymized) event files associated with each run, subject and task, and contrast files.\n\n# Event files \n\nAll event files, for all tasks, have the following cols: `onset_time`, `duration`, `trial_type` and `response_time`. Below are notes about subject-specific event files.\n\n- sub-SAXNES2s001: The original MotionLoc outputs list the first block, 10s into the experiment, as the first event. This was preceded by a 10s fixation. For s001, prior to updating the script to reflect this 10s lag, we had to do some estimation - we saw that on average, each block was 11.8s but there was usually a .05s delay, such that each block started ~11.85s after the previous one. Thus we calculated start times as 11.85 after the previous block. For the rest of the subjects, the outputs were not manipulated - we just added an event to the start of the run.\n- sub-SAXNES2s013: no event files for DOTS run2; event files use approximate timings instead based on inferred information about block order\n- sub-SAXNES2s018 (excluded from sample): no event files, because this subject stopped participating without having contributed a complete, low-motion run, for which it was clear they were following the instructions for the task\n- sub-SAXNES2s019: no time to do run2 of DOTS or Motion, so only 1 run for those two \n- sub-SAXNES2s023, the event files from spWM run 1 did not save during scanning. We use timings from the default settings of condition 1 but we do not have trial-level data from this person. \n\n\nFor the DOTS and VOE event files from Experiment 1, we have the additional columns: \n\n- `experimentName` ('DotsSocPhys' or 'VOESocPhys')\n- `correct`: at the end of the trial, subs made a response. In DOTS, they indicated whether the dot that disappeared reappeared at a plausible location. In VOE, they pressed a button when the fixation appeared as a cross rather than a plus sign. This col indicates whether the sub responded correctly (1/0)\n- `stim_path`: path to the stimuli, relative to the root BIDS directory, i.e. `BIDS/stimuli/DOTS/xxxx`\n\nFor the DOTS event files from Experiment 2, we have the additional columns:\n\n- `participant`: redundant with the file name\n- `experiment_name`: name of the task, redundant with file name\n- `block_order`: which order the dots trials happened in (1 or 2)\n- `prop_correct`: the proportion of correct responses over the entire run\n\nFor the Motion event files from Experiment 2,  we have the additional columns:\n\n- `experiment_name`: name of the task, redundant with file name\n- `block_order`: which order the dots trials happened in (1 or 2)\n- `event`: the index of the current event (0-22)\n\nFor the spWM event files from Experiment 2, we have the additional columns:\n\n- `experiment_name`: name of the task, redundant with file name\n- `participant`: redundant with the file name\n- `block_order`: which order the dots trials happened in (1 or 2)\n- `run_accuracy_hard`: the proportion of correct responses for the hard trials in this run\n- `run_accuracy_easy`: the proportion of correct responses for the easy trials in this run\n\nFor the VOE event files from Experiment 2, we have the additional columns:\n\n- `trial_type_specific`: identifies trials at one more level of granularity, with respect to domain task and event (e.g. psychology_efficiency_unexp)\n- `trial_type_morespecific`: similar to `trial_type_specific` but includes information about domain task scenario and event (e.g. psychology_efficiency_trial-15-over_unexp)\n- `experiment_name`: name of the task, redundant with file name\n- `participant`: redundant with the file name\n- `correct`: whether the response for this trial was correct (1, or 0)\n- `time_elapsed`: how much time as elapsed by the end of this trial, in ms\n- `trial_n`: the index of the current event \n- `correct_answer`: what the correct answer was for the attention check (yes or no)\n- `subject_correct`: whether the subject in fact was correct in their response\n- `event`: fam, expected, or unexpected\n- `identical_tests`: were the test events identical, for this trial?\n- `stim_ID`: numerical string picking out each unique stimulus\n- `scenario_string`: string identifying each scenario within each task\n- `domain`: physics, psychology (psychology-action), both (psychology-environment)\n- `task`: solidity, permanence, goal, efficiency, infer-constraints, or agent-solidity\n- `prop_correct`:the proportion of correct responses over the entire run\n- `stim_path`: path to the stimuli, relative to the root BIDS directory, i.e. `BIDS/stimuli/VOE/xxxx`\n\n# Associated Links\n\n- OSF: https://osf.io/sa7jy/",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 20003215726,
+        "subjects": [
+          "SAXNES2s001",
+          "SAXNES2s002",
+          "SAXNES2s003",
+          "SAXNES2s004",
+          "SAXNES2s005",
+          "SAXNES2s006",
+          "SAXNES2s007",
+          "SAXNES2s008",
+          "SAXNES2s009",
+          "SAXNES2s010",
+          "SAXNES2s011",
+          "SAXNES2s012",
+          "SAXNES2s014",
+          "SAXNES2s015",
+          "SAXNES2s017",
+          "SAXNES2s018b",
+          "SAXNES2s019",
+          "SAXNES2s020",
+          "SAXNES2s021",
+          "SAXNES2s022",
+          "SAXNES2s024",
+          "SAXNES2s025",
+          "SAXNES2s026",
+          "SAXNES2s027",
+          "SAXNES2s028",
+          "SAXNES2s029",
+          "SAXNES2s030",
+          "SAXNES2s031",
+          "SAXNES2s032",
+          "SAXNESs004",
+          "SAXNESs005",
+          "SAXNESs006",
+          "SAXNESs007",
+          "SAXNESs009",
+          "SAXNESs010",
+          "SAXNESs011",
+          "SAXNESs012",
+          "SAXNESs013",
+          "SAXNESs014",
+          "SAXNESs015",
+          "SAXNESs016",
+          "SAXNESs017",
+          "SAXNESs018",
+          "SAXNESs019"
+        ],
+        "tasks": [
+          "DOTS",
+          "Motion",
+          "VOE",
+          "spWM",
+          "DOTS (contrasting physical and social prediction, Fischer et al. 2016)",
+          "Motion perception task (Robertson et al. 2014)",
+          "VOE (contrasting physical and psychological violation of expectation)",
+          "spWM (spatial working memory localizer, Fedorenko et al. 2013)"
+        ],
+        "totalFiles": 1548
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        24,
+        22,
+        26,
+        28,
+        20,
+        22,
+        30,
+        22,
+        20,
+        22,
+        24,
+        22,
+        46,
+        30,
+        32,
+        32,
+        28,
+        28,
+        28,
+        38,
+        22,
+        44,
+        38,
+        36,
+        30,
+        30,
+        20,
+        20,
+        26,
+        30,
+        40,
+        18,
+        20,
+        20,
+        32,
+        22,
+        28,
+        24,
+        24,
+        20,
+        24,
+        20,
+        20,
+        22,
+        20,
+        20,
+        26
+      ],
+      "associatedPaperDOI": "https://doi.org/10.31234/osf.io/54x6b",
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": "DARPA, NIH",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": null,
+      "studyDomain": "social cognition; physical reasoning; working memory",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2024-01-17T21:24:21.241Z"
+  },
+  "source": "openneuro"
+}

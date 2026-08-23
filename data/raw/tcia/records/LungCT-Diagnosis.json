@@ -1,0 +1,958 @@
+{
+  "endpoints": [
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getCollectionValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getModalityValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getBodyPartValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getPatient",
+    "https://api.datacite.org/dois?prefix=10.7937"
+  ],
+  "harvest_method": "api:nbia+datacite",
+  "native_id": "LungCT-Diagnosis",
+  "payload": {
+    "datacite": {
+      "citationCount": 27,
+      "container": {},
+      "contentUrl": [],
+      "contributors": [
+        {
+          "affiliation": [],
+          "contributorType": "Other",
+          "familyName": null,
+          "givenName": null,
+          "name": "TCIA Team",
+          "nameIdentifiers": [],
+          "nameType": null
+        }
+      ],
+      "created": "2015-01-10T02:17:57Z",
+      "creators": [
+        {
+          "affiliation": [],
+          "familyName": "Grove",
+          "givenName": "Olya",
+          "name": "Grove, Olya",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Berglund",
+          "givenName": "Anders E.",
+          "name": "Berglund, Anders E.",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-0393-3530",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Schabath",
+          "givenName": "Matthew B.",
+          "name": "Schabath, Matthew B.",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0003-3241-3216",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Aerts",
+          "givenName": "Hugo J.W.L.",
+          "name": "Aerts, Hugo J.W.L.",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-2122-2003",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Dekker",
+          "givenName": "Andre",
+          "name": "Dekker, Andre",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-0422-7996",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Wang",
+          "givenName": "Hua",
+          "name": "Wang, Hua",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Velazquez",
+          "givenName": "Emmanuel Rios",
+          "name": "Velazquez, Emmanuel Rios",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Lambin",
+          "givenName": "Philippe",
+          "name": "Lambin, Philippe",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-9034-0177",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Gu",
+          "givenName": "Yuhua",
+          "name": "Gu, Yuhua",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Balagurunathan",
+          "givenName": "Yoganand",
+          "name": "Balagurunathan, Yoganand",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-5598-4727",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Eikman",
+          "givenName": "Edward",
+          "name": "Eikman, Edward",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Gatenby",
+          "givenName": "Robert A.",
+          "name": "Gatenby, Robert A.",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-1621-1510",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Eschrich",
+          "givenName": "Steven",
+          "name": "Eschrich, Steven",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-9833-2788",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Gillies",
+          "givenName": "Robert J.",
+          "name": "Gillies, Robert J.",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-8888-7747",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2015",
+          "dateInformation": null,
+          "dateType": "Issued"
+        }
+      ],
+      "descriptions": [
+        {
+          "description": "This is a small set of 61 diagnostic contrast enhanced CT scans with known tumors.  The images were retrospectively acquired, to ensure sufficient patient follow-up. Slice thickness is variable : between 3 and 6 mm. All images were done at diagnosis and prior to surgery.",
+          "descriptionType": "Abstract",
+          "lang": null
+        }
+      ],
+      "doi": "10.7937/k9/tcia.2015.a6v7jiwx",
+      "downloadCount": 0,
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "LungCT-Diagnosis",
+          "identifierType": "TCIA Short Name"
+        }
+      ],
+      "isActive": true,
+      "language": null,
+      "metadataVersion": 25,
+      "partCount": 0,
+      "partOfCount": 0,
+      "publicationYear": 2015,
+      "published": null,
+      "publisher": "The Cancer Imaging Archive",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2015-01-10T02:18:00Z",
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "10.1371/journal.pone.0118261",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.3390/diagnostics6010013",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1109/discover50404.2020.9278052",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1002/ima.22608",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1631/fitee.2000234",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1186/s40644-021-00400-y",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1200/cci.21.00096",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.bspc.2020.102123",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1186/s40644-021-00413-7",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1186/s13244-022-01204-9",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.bspc.2022.103791",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1007/s11042-023-16557-6",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.jik.2023.100313",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1063/5.0122531",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1148/rycan.230100",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.tranon.2017.08.007",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1109/tmi.2017.2714640",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1007/978-3-030-00665-5_101",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1155/2019/4909846",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1002/ima.22425",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1155/2021/6078524",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1097/cco.0000000000000796",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.3389/fmedt.2022.980735",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1109/jbhi.2024.3405907",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        }
+      ],
+      "relatedItems": [],
+      "rightsList": [
+        {
+          "rights": "Creative Commons Attribution 3.0 Unported",
+          "rightsIdentifier": "cc-by-3.0",
+          "rightsIdentifierScheme": "SPDX",
+          "rightsUri": "https://creativecommons.org/licenses/by/3.0/legalcode",
+          "schemeUri": "https://spdx.org/licenses/"
+        }
+      ],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "fabricaForm",
+      "state": "findable",
+      "subjects": [],
+      "titles": [
+        {
+          "lang": null,
+          "title": "Data from: Quantitative computed tomographic descriptors associate tumor shape complexity and intratumor heterogeneity with prognosis in lung adenocarcinoma",
+          "titleType": null
+        },
+        {
+          "lang": null,
+          "title": "LungCT-Diagnosis",
+          "titleType": "AlternativeTitle"
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceType": "DICOM",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2025-06-01T01:01:13Z",
+      "url": "https://www.cancerimagingarchive.net/collection/lungct-diagnosis/",
+      "version": "1",
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 5890
+    },
+    "nbia": {
+      "body_parts": [
+        "LUNG"
+      ],
+      "collection": "LungCT-Diagnosis",
+      "modalities": [
+        "CT"
+      ],
+      "patients": [
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_168",
+          "PatientName": "R_168",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_004",
+          "PatientName": "R_004",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_006",
+          "PatientName": "R_006",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_029",
+          "PatientName": "R_029",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_035",
+          "PatientName": "R_035",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_056",
+          "PatientName": "R_056",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_065",
+          "PatientName": "R_065",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_108",
+          "PatientName": "R_108",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_111",
+          "PatientName": "R_111",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_126",
+          "PatientName": "R_126",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_141",
+          "PatientName": "R_141",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_210",
+          "PatientName": "R_210",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_266",
+          "PatientName": "R_266",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_274",
+          "PatientName": "R_274",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_013",
+          "PatientName": "R_013",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_022",
+          "PatientName": "R_022",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_043",
+          "PatientName": "R_043",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_066",
+          "PatientName": "R_066",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_075",
+          "PatientName": "R_075",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_078",
+          "PatientName": "R_078",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_093",
+          "PatientName": "R_093",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_124",
+          "PatientName": "R_124",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_143",
+          "PatientName": "R_143",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_150",
+          "PatientName": "R_150",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_170",
+          "PatientName": "R_170",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_175",
+          "PatientName": "R_175",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_185",
+          "PatientName": "R_185",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_208",
+          "PatientName": "R_208",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_237",
+          "PatientName": "R_237",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_239",
+          "PatientName": "R_239",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_273",
+          "PatientName": "R_273",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_014",
+          "PatientName": "R_014",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_036",
+          "PatientName": "R_036",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_053",
+          "PatientName": "R_053",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_069",
+          "PatientName": "R_069",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_117",
+          "PatientName": "R_117",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_137",
+          "PatientName": "R_137",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_191",
+          "PatientName": "R_191",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_209",
+          "PatientName": "R_209",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_019",
+          "PatientName": "R_019",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_020",
+          "PatientName": "R_020",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_098",
+          "PatientName": "R_098",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_180",
+          "PatientName": "R_180",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_193",
+          "PatientName": "R_193",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_033",
+          "PatientName": "R_033",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_064",
+          "PatientName": "R_064",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_127",
+          "PatientName": "R_127",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_146",
+          "PatientName": "R_146",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_061",
+          "PatientName": "R_061",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_116",
+          "PatientName": "R_116",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_144",
+          "PatientName": "R_144",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_232",
+          "PatientName": "R_232",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_233",
+          "PatientName": "R_233",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_256",
+          "PatientName": "R_256",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_259",
+          "PatientName": "R_259",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_267",
+          "PatientName": "R_267",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_214",
+          "PatientName": "R_214",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_172",
+          "PatientName": "R_172",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_157",
+          "PatientName": "R_157",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_102",
+          "PatientName": "R_102",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "LungCT-Diagnosis",
+          "PatientId": "R_077",
+          "PatientName": "R_077",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        }
+      ]
+    }
+  },
+  "source": "tcia"
+}

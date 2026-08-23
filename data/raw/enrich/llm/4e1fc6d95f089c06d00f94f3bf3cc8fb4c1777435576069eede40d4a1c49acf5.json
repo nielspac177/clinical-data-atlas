@@ -1,0 +1,49 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:4e1fc6d95f089c06d00f94f3bf3cc8fb4c1777435576069eede40d4a1c49acf5",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Pancreatic Adenocarcinoma",
+        "label": "Pancreatic Adenocarcinoma"
+      },
+      {
+        "evidence": "Ductal and Lobular Neoplasms",
+        "label": "Ductal and Lobular Neoplasms"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "gastroenterology_hepatology"
+    ],
+    "id": "gdc:TCGA-PAAD",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Tissue Slide, Diagnostic Slide",
+        "value": "pathology"
+      },
+      {
+        "evidence": "WXS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "Transcriptome Profiling",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Proteome Profiling",
+        "value": "proteomics"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "Human cases with pancreatic adenocarcinoma",
+    "summary": "TCGA project on pancreatic adenocarcinoma, combining sequencing, copy number, methylation, transcriptome and proteome profiling with clinical, biospecimen and tissue slide data."
+  },
+  "prompt_version": "v1"
+}

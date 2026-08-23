@@ -1,0 +1,31 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:4d28a017963aa829b423158eb0bf6fb37af0dfa4886f43333bd7ca7bf31c674d",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:echograph-note2num-annotations",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "echocardiography reports",
+        "value": "ultrasound"
+      },
+      {
+        "evidence": "echocardiogram reports",
+        "value": "clinical_notes"
+      },
+      {
+        "evidence": "\"modalities\":[\"ultrasound\",\"EHR\"]",
+        "value": "EHR"
+      }
+    ],
+    "population": "Patients whose echocardiography reports appear in the MIMIC-III-derived ECHO-NOTE2NUM dataset; the model was developed on Mayo Clinic reports and validated on MIMIC-EchoNote reports.",
+    "summary": "MIMIC-III echocardiography reports annotated by EchoGraph, a BERT-based extraction model, with entity and relation labels covering clinical observations, anatomical structures, measurements and relation types, supporting clinical NLP and echocardiography AI research."
+  },
+  "prompt_version": "v1"
+}

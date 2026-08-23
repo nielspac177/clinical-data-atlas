@@ -1,0 +1,27 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:1badb03bb2601636a03519607f671993309b3ea5e3836ff7fdd3581628b9892d",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "other"
+    ],
+    "id": "physionet:ehrcon-consistency-of-notes",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "105 clinical notes",
+        "value": "clinical_notes"
+      },
+      {
+        "evidence": "using the MIMIC-III EHR dataset",
+        "value": "EHR"
+      }
+    ],
+    "population": "Clinical notes from the MIMIC-III EHR dataset, with 4,101 annotated entities across 105 clinical notes",
+    "summary": "Dataset and task for checking consistency between structured EHR tables and unstructured clinical notes, with manual entity annotations in MIMIC-III notes checked against database entries. Released in original MIMIC-III and OMOP CDM schema versions."
+  },
+  "prompt_version": "v1"
+}

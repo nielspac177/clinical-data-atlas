@@ -1,0 +1,28 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:87923f79a1e46a3821d268ae98c8588396f8c6fd8b9d714d0769e43cf1e93967",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "classify cardiac abnormalities from twelve-lead",
+        "label": "cardiac abnormalities"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:challenge-2021",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "classify cardiac abnormalities from twelve-lead, six-lead, four-lead, three-lead, and two-lead ECGs",
+        "value": "ECG"
+      }
+    ],
+    "population": null,
+    "summary": "Challenge dataset of ECG recordings with varying lead counts (twelve, six, four, three, and two leads) for algorithms classifying cardiac abnormalities, testing whether reduced-lead systems carry comparable diagnostic information."
+  },
+  "prompt_version": "v1"
+}

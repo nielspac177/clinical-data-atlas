@@ -1,0 +1,31 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:80bf8b42ed974a72f18d7ce48c8886bba3f04d034a5a306b93c0560f3bab04bd",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:mimic-iv-ecg",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "diagnostic electrocardiograms",
+        "value": "ECG"
+      },
+      {
+        "evidence": "link the waveform to the report",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "MIMIC-IV Clinical Database",
+        "value": "EHR"
+      }
+    ],
+    "population": "Patients from the MIMIC-IV Clinical Database who had diagnostic ECGs recorded",
+    "summary": "Diagnostic 12-lead electrocardiograms, 10 seconds long and sampled at 500 Hz, for patients who also appear in the MIMIC-IV Clinical Database, with links to cardiologist reports where available."
+  },
+  "prompt_version": "v1"
+}

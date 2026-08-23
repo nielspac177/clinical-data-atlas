@@ -1,0 +1,40 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:a27bbb2a1e1f5f3e32186b7583af48653c8bf99ea74b585e3b6fd332124c8298",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Diffuse Large B-Cell Lymphoma (DLBCL)",
+        "label": "Diffuse Large B-Cell Lymphoma (DLBCL)"
+      },
+      {
+        "evidence": "Mature B-Cell Lymphomas",
+        "label": "Mature B-Cell Lymphomas"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "gdc:CTSP-DLBCL1",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "WXS, Targeted Sequencing",
+        "value": "genomics"
+      },
+      {
+        "evidence": "RNA-Seq",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "45 human cases of diffuse large B-cell lymphoma from the CALGB 50303 trial",
+    "summary": "Diffuse large B-cell lymphoma cases from the CALGB 50303 trial, with exome, targeted and RNA sequencing plus clinical and biospecimen records, mainly from lymph node samples."
+  },
+  "prompt_version": "v1"
+}

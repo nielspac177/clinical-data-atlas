@@ -1,0 +1,69 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003642",
+  "payload": {
+    "created": "2021-04-27T15:16:30.230Z",
+    "id": "ds003642",
+    "latestSnapshot": {
+      "created": "2021-04-27T16:22:50.000Z",
+      "description": {
+        "Authors": [
+          "Michele Svanera",
+          "Lars Muckli"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds003642.v1.1.0",
+        "Funding": [
+          "This project has received funding from the European Union Horizon 2020 Framework Programme for Research and Innovation under the Specific Grant Agreement No. 785907 and 945539 (Human Brain Project SGA2 and SGA3)."
+        ],
+        "HowToAcknowledge": "Svanera, M., Benini, S., Bontempi, D., & Muckli, L. (2020). CEREBRUM-7T: Fast and Fully-volumetric Brain Segmentation of 7 Tesla MR Volumes. bioRxiv.",
+        "License": "CC0",
+        "Name": "CEREBRUM-7T: Fast and Fully-volumetric Brain Segmentation of 7 Tesla MR Volumes",
+        "ReferencesAndLinks": []
+      },
+      "readme": "Visit the [project website](https://rocknroll87q.github.io/cerebrum7t/) for more.\n\nThe dataset is composed by 3 subjects, scanned at the Imaging Centre of Excellence (ICE) at the Queen Elizabeth University Hospital, Glasgow (UK).\nThe full database consists of 142 out-of-the-scanner volumes obtained with a MP2RAGE sequence at 0.63 mm3 isotropic resolution, using a 7-Tesla MRI scanner with 32-channel head coil.\nThese data serve as testing dataset for the paper:\n\n\tSvanera, M., Benini, S., Bontempi, D., & Muckli, L. (2020). \n\tCEREBRUM-7T: fast and fully-volumetric brain segmentation of out-of-the-scanner 7T MR volumes. \n\tbioRxiv.\n\nFor every subject, two folders are provided, containing:\n\nanat/\n\n* INV1\n* INV2\n* UNI_Images (T1w)\n\nderivatives/\n\n* manual annotations of 8 regions of widely interest in neuroscience\n\tearly visual cortex (EVC)\n\thigh-level visual areas (HVC)\n\tmotor cortex (MCX)\n\tcerebellum (CER)\n\thippocampus (HIP)\n\tearly auditory cortex (EAC)\n\tbrainstem (BST)\n\tbasal ganglia (BGA)\n* automatic segmentation by FreeSurfer (v6 and v7)\n* automatic segmentation by Fracasso16\n* automatic segmentation by our method (CEREBRUM7T) with probability maps (CEREBRUM7T_probMap)\n* automatic segmentation by nighres\n* labels used for training our method\n\n\nProject: [link](https://rocknroll87q.github.io/cerebrum7t/)\nCode: [link](https://github.com/rockNroll87q/cerebrum7t)\nPaper: [link](https://www.biorxiv.org/content/10.1101/2020.07.07.191536v2)\nFull dataset: [link](https://search.kg.ebrains.eu/instances/Dataset/2b24466d-f1cd-4b66-afa8-d70a6755ebea)",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural"
+        ],
+        "sessions": [
+          "003",
+          "002",
+          "001"
+        ],
+        "size": 109032381,
+        "subjects": [
+          "025",
+          "045",
+          "075"
+        ],
+        "tasks": [],
+        "totalFiles": 9
+      },
+      "tag": "1.1.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": null,
+      "associatedPaperDOI": "https://doi.org/10.1101/2020.07.07.191536",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "Human Brain Project",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "anatomical acquisition",
+      "studyDomain": "MRI segmentation",
+      "studyLongitudinal": "Other"
+    },
+    "publishDate": "2021-04-27T16:11:02.327Z"
+  },
+  "source": "openneuro"
+}

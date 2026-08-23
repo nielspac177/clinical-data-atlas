@@ -1,0 +1,223 @@
+{
+  "endpoints": [
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getCollectionValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getModalityValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getBodyPartValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getPatient",
+    "https://api.datacite.org/dois?prefix=10.7937"
+  ],
+  "harvest_method": "api:nbia+datacite",
+  "native_id": "CMB-GEC",
+  "payload": {
+    "datacite": {
+      "citationCount": 2,
+      "container": {},
+      "contentUrl": [],
+      "contributors": [],
+      "created": "2022-07-29T14:06:11Z",
+      "creators": [
+        {
+          "affiliation": [],
+          "familyName": null,
+          "givenName": null,
+          "name": "Cancer Moonshot Biobank",
+          "nameIdentifiers": [],
+          "nameType": "Organizational"
+        }
+      ],
+      "dates": [],
+      "descriptions": [
+        {
+          "description": "The Cancer Moonshot Biobank is a National Cancer Institute initiative to support current and future investigations into drug resistance and sensitivity and other NCI-sponsored cancer research initiatives, with an aim of improving researchers' understanding of cancer and how to intervene in cancer initiation and progression. During the course of this study, biospecimens (blood and tissue removed during medical procedures) and associated data will be collected longitudinally from at least 1000 patients across at least 10 cancer types, who represent the demographic diversity of the U.S. and receiving standard of care cancer treatment at multiple NCI Community Oncology Research Program (NCORP) sites.\n\nThis collection contains de-identified radiology and histopathology imaging procured from subjects in NCI’s Cancer Moonshot Biobank-Multiple Myeloma (CMB-GEC) cohort. Associated genomic, phenotypic and clinical data will be hosted by The Database of Genotypes and Phenotypes (dbGaP) and other NCI databases.",
+          "descriptionType": "Abstract",
+          "lang": null
+        }
+      ],
+      "doi": "10.7937/e7kh-r486",
+      "downloadCount": 0,
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "CMB-GEC",
+          "identifierType": "TCIA Short Name"
+        }
+      ],
+      "isActive": true,
+      "language": null,
+      "metadataVersion": 12,
+      "partCount": 0,
+      "partOfCount": 0,
+      "publicationYear": 2022,
+      "published": null,
+      "publisher": "The Cancer Imaging Archive",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2022-08-01T20:45:37Z",
+      "relatedIdentifiers": [],
+      "relatedItems": [],
+      "rightsList": [
+        {
+          "rights": "Creative Commons Attribution 4.0 International",
+          "rightsIdentifier": "cc-by-4.0",
+          "rightsIdentifierScheme": "SPDX",
+          "rightsUri": "https://creativecommons.org/licenses/by/4.0/legalcode",
+          "schemeUri": "https://spdx.org/licenses/"
+        }
+      ],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "fabricaForm",
+      "state": "findable",
+      "subjects": [],
+      "titles": [
+        {
+          "lang": null,
+          "title": "Cancer Moonshot Biobank - Gastroesophageal Cancer Collection (CMB-GEC)",
+          "titleType": null
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2026-06-30T14:12:58Z",
+      "url": "https://www.cancerimagingarchive.net/collection/cmb-gec/",
+      "version": "9",
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 4396
+    },
+    "nbia": {
+      "body_parts": [
+        "ABDOMEN",
+        "ABDOMENPELVIS",
+        "CHEST",
+        "WHOLEBODY"
+      ],
+      "collection": "CMB-GEC",
+      "modalities": [
+        "CT",
+        "MR",
+        "PT"
+      ],
+      "patients": [
+        {
+          "Collection": "CMB-GEC",
+          "EthnicGroup": "Non-Hispanic [9]",
+          "PatientId": "MSB-06857",
+          "PatientName": "MSB-06857",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-GEC",
+          "PatientId": "MSB-01493",
+          "PatientName": "MSB-01493",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-GEC",
+          "PatientId": "MSB-09348",
+          "PatientName": "MSB-09348",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-GEC",
+          "EthnicGroup": "Hispanic or Lati",
+          "PatientId": "MSB-04437",
+          "PatientName": "MSB-04437",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-GEC",
+          "PatientId": "MSB-01594",
+          "PatientName": "MSB-01594",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-GEC",
+          "PatientId": "MSB-03738",
+          "PatientName": "MSB-03738",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-GEC",
+          "PatientId": "MSB-09006",
+          "PatientName": "MSB-09006",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-GEC",
+          "PatientId": "MSB-06469",
+          "PatientName": "MSB-06469",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-GEC",
+          "PatientId": "MSB-09102",
+          "PatientName": "MSB-09102",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-GEC",
+          "PatientId": "MSB-03527",
+          "PatientName": "MSB-03527",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-GEC",
+          "PatientId": "MSB-00142",
+          "PatientName": "MSB-00142",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-GEC",
+          "PatientId": "MSB-01842",
+          "PatientName": "MSB-01842",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        }
+      ]
+    }
+  },
+  "source": "tcia"
+}

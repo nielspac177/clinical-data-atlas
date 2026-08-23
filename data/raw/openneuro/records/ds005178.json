@@ -1,0 +1,94 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005178",
+  "payload": {
+    "created": "2024-05-24T08:18:02.675Z",
+    "id": "ds005178",
+    "latestSnapshot": {
+      "created": "2024-05-31T23:06:26.000Z",
+      "description": {
+        "Authors": [
+          "Yousef Rezaei Tabar",
+          "Kaare Mikkelsen",
+          "Laura Birch",
+          "Nelly Shenton",
+          "Simon L Kappel",
+          "Astrid R Bertelsen",
+          "Reza Nikbakht",
+          "Hans O Toft",
+          "Chris H Henriksen",
+          "Martin C Hemmsen",
+          "Mike L Rank",
+          "Marit Otto",
+          "Preben Kidmose"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005178.v1.0.0",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Ear-EEG Sleep Monitoring 2023 (EESM23)",
+        "ReferencesAndLinks": null
+      },
+      "readme": "Ear-EEG Sleep Monitoring 2023 (EESM23) data set\r\n\r\n**Overview**\r\n\r\nThis dataset was collected as part of a research project on ear-EEG sleep monitoring which took place in 2020-2022.\r\n\r\nThe data set contains nightly EEG recordings from 10 healthy participants ('subjects'). The first two recordings consist of polysomnogrpahy (PSG) measurements and ear-EEG measurements. The remaining ten recordings consist of only ear-EEG measurements, though a few subjects were asked to repeat a recording. Only the accepted recordings can be found in the BIDS formatted data set.\r\n\r\nEach file consists of a video sequence followed by a sleep sequence. After the video sequence, the subject sent triggers to distinguish between the two sequences. Due to potential variability in triggering the device, the sequences remain in one file though it should be possible to manually sort the file into distinct video and sleep sequences.\r\nThere are no events.tsv files for Ear-EEG.\r\n\r\n\r\n**Task description**\r\n\r\nThe patient performed tasks prior to going to bed. These recordings are labeled with 'video' as task. After his, the real recording started, which took place during the night and began when the subject went to bed. These recordings are labeled as having task 'sleep'.\r\nFor the first two recordings, the recording equipment was mounted in the afternoon. For the remaining recordings, the subject mounted the ear-EEG equipment by themselves immediately prior to going to bed. All recordings took place at the subject's home.\r\n\r\nAs can be seen in the diaries accompanying the recordings, the subjects wrote down recording start, electrode test start, when they went to bed, lights-out and recording end, and marked these in the data files using the trigger button on the equipment.\r\n\r\n\r\n**Format**\r\n\r\nThe dataset is formatted according to the Brain Imaging Data Structure. See the 'dataset_description.json' file for the specific BIDS version used. The EEG data format chosen is the '.set' format of EEGLAB.\r\n\r\nFor more information, see the following link:\r\nhttps://bids-specification.readthedocs.io/en/stable/01-introduction.html\r\n\r\n\r\n**Contact**\r\n\r\nFor questions regarding this data set, contact: \r\nPreben Kidmose, pki@ece.au.dk, https://orcid.org/0000-0001-8628-8057 \r\nKaare Mikkelsen, Mikkelsen.kaare@ece.au.dk, https://orcid.org/0000-0002-7360-8629",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "eeg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [
+          "001",
+          "002",
+          "003",
+          "004",
+          "005",
+          "006",
+          "007",
+          "008",
+          "009",
+          "010",
+          "011",
+          "012"
+        ],
+        "size": 27636341897,
+        "subjects": [
+          "001",
+          "002",
+          "003",
+          "004",
+          "005",
+          "006",
+          "007",
+          "008",
+          "009",
+          "010"
+        ],
+        "tasks": [
+          "sleep"
+        ],
+        "totalFiles": 707
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": null,
+      "associatedPaperDOI": "https://doi.org/10.3389/fnins.2023.987578",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "Innovation Fund Denmark",
+      "modalities": [
+        "eeg"
+      ],
+      "species": "Human",
+      "studyDesign": "single arm",
+      "studyDomain": "Automatic sleep scoring with ear-EEG",
+      "studyLongitudinal": "Device test"
+    },
+    "publishDate": "2025-01-29T12:32:48.338Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,29 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:abb4a81b462c295107cb6a1df409b696469d330b3eb02897a84f68960b8b05c1",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "critical_care"
+    ],
+    "id": "physionet:gossis-1-eicu",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "derived from the eICU Collaborative Research Database (eICU-CRD)",
+        "value": "EHR"
+      },
+      {
+        "evidence": "the dataset with required missing data imputed",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "131,051 unique patients from 204 hospitals from ICU admissions discharged in 2014-15.",
+    "summary": "The USA subset of the GOSSIS-1 in-hospital mortality dataset derived from eICU-CRD, with an imputed version, GOSSIS-1 predictions, identifiers linking back to eICU-CRD, and marked training and test sets."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,29 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:cbab724e10a09ff863b30b1b6c1788fd941b44e3e710b3f9d37250f79e54c508",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "diabetes",
+        "label": "diabetes"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "critical_care",
+      "endocrinology_metabolism"
+    ],
+    "id": "physionet:insulin4rl",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Medical Information Mart for Intensive Care (MIMIC-IV)",
+        "value": "EHR"
+      }
+    ],
+    "population": "12,214 patients in the Medical Information Mart for Intensive Care (MIMIC-IV)",
+    "summary": "Insulin infusion decisions with naturally irregular time intervals derived from MIMIC-IV intensive care records, pairing blood glucose measurements with clinician insulin rate decisions, intended for offline reinforcement learning research."
+  },
+  "prompt_version": "v1"
+}

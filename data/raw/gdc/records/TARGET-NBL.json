@@ -1,0 +1,122 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "TARGET-NBL",
+  "payload": {
+    "dbgap_accession_number": "phs000467",
+    "disease_type": [
+      "Not Applicable",
+      "Neuroepitheliomatous Neoplasms"
+    ],
+    "id": "TARGET-NBL",
+    "name": "Neuroblastoma",
+    "primary_site": [
+      "Other endocrine glands and related structures",
+      "Stomach",
+      "Meninges",
+      "Skin",
+      "Unknown",
+      "Bones, joints and articular cartilage of limbs",
+      "Connective, subcutaneous and other soft tissues",
+      "Lymph nodes",
+      "Hematopoietic and reticuloendothelial systems",
+      "Renal pelvis",
+      "Bones, joints and articular cartilage of other and unspecified sites",
+      "Retroperitoneum and peritoneum",
+      "Adrenal gland",
+      "Liver and intrahepatic bile ducts",
+      "Other and ill-defined sites",
+      "Spinal cord, cranial nerves, and other parts of central nervous system",
+      "Peripheral nerves and autonomic nervous system",
+      "Heart, mediastinum, and pleura",
+      "Uterus, NOS",
+      "Kidney"
+    ],
+    "program": {
+      "dbgap_accession_number": "phs000218",
+      "name": "TARGET",
+      "program_id": "f1c391e9-8488-55a8-b777-302e786ea11d"
+    },
+    "project_id": "TARGET-NBL",
+    "releasable": true,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 1132,
+      "data_categories": [
+        {
+          "case_count": 696,
+          "data_category": "Simple Nucleotide Variation",
+          "file_count": 9744
+        },
+        {
+          "case_count": 778,
+          "data_category": "Sequencing Reads",
+          "file_count": 1953
+        },
+        {
+          "case_count": 1132,
+          "data_category": "Biospecimen",
+          "file_count": 2
+        },
+        {
+          "case_count": 842,
+          "data_category": "Clinical",
+          "file_count": 3
+        },
+        {
+          "case_count": 155,
+          "data_category": "Transcriptome Profiling",
+          "file_count": 324
+        },
+        {
+          "case_count": 136,
+          "data_category": "Combined Nucleotide Variation",
+          "file_count": 146
+        },
+        {
+          "case_count": 225,
+          "data_category": "DNA Methylation",
+          "file_count": 705
+        },
+        {
+          "case_count": 155,
+          "data_category": "Structural Variation",
+          "file_count": 648
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 155,
+          "experimental_strategy": "RNA-Seq",
+          "file_count": 1458
+        },
+        {
+          "case_count": 143,
+          "experimental_strategy": "WGS",
+          "file_count": 173
+        },
+        {
+          "case_count": 222,
+          "experimental_strategy": "WXS",
+          "file_count": 3522
+        },
+        {
+          "case_count": 499,
+          "experimental_strategy": "Targeted Sequencing",
+          "file_count": 7662
+        },
+        {
+          "case_count": 225,
+          "experimental_strategy": "Methylation Array",
+          "file_count": 705
+        }
+      ],
+      "file_count": 13525,
+      "file_size": 22658436080084
+    }
+  },
+  "source": "gdc"
+}

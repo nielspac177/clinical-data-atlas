@@ -1,0 +1,125 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005139",
+  "payload": {
+    "created": "2024-05-16T04:07:39.897Z",
+    "id": "ds005139",
+    "latestSnapshot": {
+      "created": "2024-05-16T11:42:45.000Z",
+      "description": {
+        "Authors": [
+          "Binke Yuan",
+          "Junjie Yang"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005139.v1.0.7",
+        "Funding": [
+          ""
+        ],
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "SCNU-Mandarin-Cantonese-dataset",
+        "ReferencesAndLinks": []
+      },
+      "readme": "The SCNU Mandarin/Cantonese Dataset comprises Mandarin and Cantonese renditions of three narratives: \"Du Jiang Yan\" (Dujiangyan), \"Liang Shan Bo Yu Zhu Ying Tai\" (Butterfly Lovers), and \"Shen Bi Ma Liang\" (MaLiang and His Magical Writing Brush). It encompasses narrative fMRI data, where 27 Mandarin-Cantonese bilingual adults listened to both Mandarin and Cantonese renditions of these three narratives.\n\n## Stories\n\n- The Mandarin version of the story \"Du jiang Yan (Dujiangyan)\", abbreviated as \"djyg, has a stimulating audio duration of 16:24.\n\n- The Cantonese version of the story \"Du jiang Yan (Dujiangyan)\", abbreviated as \"djyy,\" has a stimulating audio duration of 14:22.\n\n- The Mandarin version of the story \"Liang Shan Bo Yu Zhu Ying Tai (Butterfly Lovers)\", abbreviated as \"lsbg,\" has a stimulating audio duration of 13:04.\n\n- The Cantonese version of the story \"Liang Shan Bo Yu Zhu Ying Tai (Butterfly Lovers)\", abbreviated as \"lsby,\" has a stimulating audio duration of 11:05.\n\n- The Mandarin version of the story \"Shen Bi Ma Liang (MaLiang and His Magical Writing Brush)\", abbreviated as \"mlg,\" has a stimulating audio duration of 07:38.\n\n- The Cantonese version of the story \"Shen Bi Ma Liang (MaLiang and His Magical Writing Brush)\", abbreviated as \"mly,\" has a stimulating audio duration of 07:11.\n\nEach participant undergoes a 6-second (4 TRs) silent scan at the beginning and the end of the stimulating audio. Therefore, we recommend removing the first and last 4 TRs of data.\n\n\n\n## Participants \n\nAll participants were recruited from undergraduate and graduate students at South China Normal University. The total number of participants was 27, comprising 10 males and 17 females, with ages ranging from 20 to 26 years old. They were all native to Guangdong Province and have been bilingual in Cantonese and Mandarin since childhood. The proficiency of all participants in Cantonese was assessed by two experienced language instructors to ensure fluent communication. Before entering the MRI scanner, participants were equipped with headphones and tested to ensure clear auditory perception of stimulus sounds. Following the MRI scan, all participants completed a follow-up questionnaire to confirm their attentive listening and comprehension of the stories.\n\n## MRI imaging\n\nMRI data were collected using a Siemens 3-Tesla Prisma Fit scanner equipped with a 20-channel head coil (Siemens, Erlangen, Germany) at the Brain Imaging Center of South China Normal University. To minimize head motion, participants were instructed to fixate on the central crosshair displayed on the screen throughout the scanning procedure.\n\nT1-weighted anatomical images were acquired using a 3D Magnetization Prepared Rapid Gradient Echo (MPRAGE) sequence [repetition time (TR) = 1900 ms; echo time (TE) = 2.27 ms; inversion time (TI) = 1100 ms; bandwidth = 190 Hz/Px; flip angle = 7°; field of view (FOV) = 256 mm; matrix size = 256 × 256 × 208; voxel size = 1 × 1 × 1 mm3 in-plane acceleration factor (iPAT) = 2]. Functional MRI data were obtained with an echo-planar imaging (EPI) pulse sequence [TR = 1500 ms; TE = 30 ms; flip angle = 90°; FOV = 192 mm; voxel size = 3 × 3 × 3 mm3; 43 slices; bandwidth = 2520 Hz/Px; in-plane acceleration factor (iPAT) = 2].\n\n## Preprocessing\n\nThe DICOM files were coverted into BIDS format. No further preprocessing step were perofmed.\n\nCorrespondence: yuanbinke@m.scnu.edu.cn, Ph.D., South China Normal University, Guang Zhou, China;  ",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 17551254509,
+        "subjects": [
+          "001",
+          "002",
+          "003",
+          "004",
+          "006",
+          "007",
+          "008",
+          "009",
+          "010",
+          "011",
+          "012",
+          "013",
+          "014",
+          "015",
+          "016",
+          "017",
+          "018",
+          "019",
+          "020",
+          "021",
+          "022",
+          "023",
+          "024",
+          "025",
+          "026",
+          "027",
+          "028"
+        ],
+        "tasks": [
+          "djyg",
+          "djyy",
+          "lsbg",
+          "lsby",
+          "mlg",
+          "mly"
+        ],
+        "totalFiles": 373
+      },
+      "tag": "1.0.7"
+    },
+    "metadata": {
+      "affirmedDefaced": false,
+      "ages": [
+        24,
+        23,
+        24,
+        22,
+        23,
+        23,
+        22,
+        21,
+        23,
+        23,
+        21,
+        21,
+        20,
+        26,
+        23,
+        20,
+        23,
+        21,
+        21,
+        20,
+        22,
+        20,
+        26,
+        20,
+        24,
+        21,
+        25
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2024-05-16T06:23:54.328Z"
+  },
+  "source": "openneuro"
+}

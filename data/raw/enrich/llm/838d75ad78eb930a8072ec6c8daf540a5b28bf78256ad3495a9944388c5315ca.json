@@ -1,0 +1,29 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:838d75ad78eb930a8072ec6c8daf540a5b28bf78256ad3495a9944388c5315ca",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "160 patients with a single sporadic Vestibular Schwannoma (VS)",
+        "label": "Vestibular Schwannoma"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "oncology"
+    ],
+    "id": "tcia:vestibular-schwannoma-mc-rc",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Segmentation of Vestibular Schwannoma from Magnetic Resonance Imaging",
+        "value": "MRI"
+      }
+    ],
+    "population": "160 patients with a single sporadic Vestibular Schwannoma referred from 10 medical sites and consecutively seen at a single center, with 428 timepoints and 487 3D-images.",
+    "summary": "Routine clinical MRI from multiple scanners and vendors with manual expert-validated segmentations of vestibular schwannoma, including intrameatal and extrameatal components, across repeated timepoints for automatic surveillance research."
+  },
+  "prompt_version": "v1"
+}

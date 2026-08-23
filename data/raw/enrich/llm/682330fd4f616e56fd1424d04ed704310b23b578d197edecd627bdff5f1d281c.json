@@ -1,0 +1,30 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:682330fd4f616e56fd1424d04ed704310b23b578d197edecd627bdff5f1d281c",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "diagnosed with Acute Myeloid Leukemia",
+        "label": "Acute Myeloid Leukemia"
+      }
+    ],
+    "countries": [
+      "DE"
+    ],
+    "domains": [
+      "oncology"
+    ],
+    "id": "tcia:aml-cytomorphology_lmu",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "single-cell images taken from peripheral blood smears",
+        "value": "pathology"
+      }
+    ],
+    "population": "100 patients diagnosed with Acute Myeloid Leukemia at Munich University Hospital between 2014 and 2017, and 100 patients without signs of hematological malignancy",
+    "summary": "Expert-labeled single-cell images from peripheral blood smears of patients with acute myeloid leukemia and of patients without hematological malignancy, classified into a standard morphological scheme, with a subset re-annotated to quantify rater variability."
+  },
+  "prompt_version": "v1"
+}

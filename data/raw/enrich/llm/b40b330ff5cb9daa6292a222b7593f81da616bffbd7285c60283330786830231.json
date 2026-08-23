@@ -1,0 +1,49 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:b40b330ff5cb9daa6292a222b7593f81da616bffbd7285c60283330786830231",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Pheochromocytoma and Paraganglioma",
+        "label": "Pheochromocytoma and Paraganglioma"
+      },
+      {
+        "evidence": "Paragangliomas and Glomus Tumors",
+        "label": "Paragangliomas and Glomus Tumors"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "endocrinology_metabolism"
+    ],
+    "id": "gdc:TCGA-PCPG",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Tissue Slide, Diagnostic Slide",
+        "value": "pathology"
+      },
+      {
+        "evidence": "WXS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "Transcriptome Profiling",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Proteome Profiling",
+        "value": "proteomics"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "Human cases with pheochromocytoma and paraganglioma of adrenal gland, endocrine glands and other sites",
+    "summary": "TCGA project on pheochromocytoma and paraganglioma across adrenal, endocrine and other sites, with sequencing, copy number, methylation, transcriptome and proteome profiling plus clinical, biospecimen and slide data."
+  },
+  "prompt_version": "v1"
+}

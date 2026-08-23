@@ -1,0 +1,67 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005412",
+  "payload": {
+    "created": "2024-08-15T05:08:23.143Z",
+    "id": "ds005412",
+    "latestSnapshot": {
+      "created": "2024-08-15T05:23:16.000Z",
+      "description": {
+        "Authors": [
+          "Grant",
+          "None"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005412.v1.0.0",
+        "Funding": [
+          "None"
+        ],
+        "HowToAcknowledge": "Please cite this dataset if you use it.",
+        "License": "CC0",
+        "Name": "Grant DataSet",
+        "ReferencesAndLinks": [
+          "None"
+        ]
+      },
+      "readme": "# Grant DataSet\r\n\r\n## Overview\r\nThis dataset contains MRI scans acquired from a single participant for the purpose of studying [brief description of the study's purpose, e.g., \"brain structure and function in a healthy 13-year-old male.\"].\r\n\r\n## Dataset Structure\r\n- `sub-01/`: Contains all data related to the participant identified as `sub-01`.\r\n  - `anat/`: Contains anatomical MRI data.\r\n    - `sub-01_T1w_acq-sagittal.nii.gz`: Sagittal T1-weighted scan.\r\n    - `sub-01_T2w_acq-axial-fse.nii.gz`: Axial T2-weighted scan using Fast Spin Echo.\r\n    - [Include any other relevant scans with brief descriptions]\r\n  - `dwi/`: Contains diffusion-weighted imaging data.\r\n    - `sub-01_dwi.nii.gz`: Primary diffusion-weighted scan.\r\n    - `sub-01_dwi.bval`, `sub-01_dwi.bvec`: Gradient directions and b-values for DWI.\r\n  - `func/`: Contains functional MRI (fMRI) data if applicable.\r\n    - `sub-01_task-rest_bold.nii.gz`: Resting-state BOLD fMRI scan.\r\n\r\n## Methods\r\n- **Scanner**: [Details of the MRI scanner used, e.g., \"GE Signa HDxt 1.5T\"]\r\n- **Software**: [Details of software used for data acquisition and processing, if applicable]\r\n\r\n## Notes\r\n- The dataset follows BIDS version 1.9.0 standards.\r\n- [Any other notes relevant to users of the dataset, e.g., \"No preprocessing has been applied to the data.\"]\r\n\r\n## Acknowledgments\r\nThanks to XYZ for supporting this research.\r\n\r\n## Funding\r\nThis research was supported by [None or specify any funding sources].\r\n\r\n## References\r\nNone at this time.\r\n\r\n## How to Acknowledge\r\nPlease cite this dataset if you use it.\r\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 10594233,
+        "subjects": [
+          "01"
+        ],
+        "tasks": [],
+        "totalFiles": 7
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": false,
+      "ages": [
+        13
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": "Personal"
+    },
+    "publishDate": "2024-08-15T05:25:13.627Z"
+  },
+  "source": "openneuro"
+}

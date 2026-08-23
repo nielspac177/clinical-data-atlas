@@ -1,0 +1,40 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "nosocomialriskdata",
+  "payload": {
+    "abstract": "<p>Reliable longitudinal risk prediction for hospitalized patients is needed to provide quality care. Our goal is to foster the development of generalizable models capable of leveraging clinical notes to predict healthcare-associated diseases 24&ndash;96 hours in advance. We developed data to explore the problem of predicting the risk of hospital acquired (occurring <math> <semantics> <mo>≥</mo> <annotation encoding=\"application/x-tex\">\\geq</annotation> </semantics> </math> 48 hours after admission) acute kidney injury, pressure injury, or anemia <math> <semantics> <mo>≥</mo> <annotation encoding=\"application/x-tex\">\\geq</annotation> </semantics> </math> 24 hours before it is implicated by the patient&rsquo;s chart, labs, or notes. We relied on the MIMIC-III critical care database and extract distinct positive and negative cohorts for each disease. We retrospectively determine the date-of-event using structured and unstructured criteria so that it may be used as a form of indirect supervision to train and evaluate automatic systems for predicting disease risk using clinical notes. This data was used as the experimental basis for the CANTRIP project.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 324022675,
+    "core_doi": "10.13026/p7ww-c390",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 1590205887,
+    "public_project_uuid": "6725c9d9-b9d7-4ec0-88dd-cfdf99ffab71",
+    "publish_date": "2022-09-15",
+    "resource_type": "Database",
+    "short_description": "Text-based Longitudinal Data for Predicting Nosocomial Disease Risk as used by CANTRIP.",
+    "slug": "nosocomialriskdata",
+    "source_url": "https://physionet.org/content/nosocomialriskdata/1.0/",
+    "title": "Nosocomial Risk Datasets from MIMIC-III",
+    "topics": [
+      "pressure injury",
+      "natural language processing",
+      "risk prediction",
+      "acute kidney injury",
+      "deep learning",
+      "anemia",
+      "forecasting"
+    ],
+    "version": "1.0",
+    "version_doi": "10.13026/pm60-0g49"
+  },
+  "source": "physionet"
+}

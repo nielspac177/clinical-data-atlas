@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:c559c91098b3fad1ef1a1120c84a30b5ba30dccdc0dfdac46eb69ed5922abb61",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "primary breast cancer patients",
+        "label": "breast cancer"
+      },
+      {
+        "evidence": "early brain tumor response to therapy",
+        "label": "brain tumor"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "neurology"
+    ],
+    "id": "tcia:rider-breast-mri",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "proposed as an MRI imaging biomarker",
+        "value": "MRI"
+      }
+    ],
+    "population": "Primary breast cancer patients measured in response to onset of neoadjuvant chemotherapy from interval exams separated by only 8-11 days",
+    "summary": "Breast MRI dataset applying functional diffusion or parametric response mapping to measure apparent diffusion coefficient changes in primary breast cancer patients from interval exams after starting neoadjuvant chemotherapy."
+  },
+  "prompt_version": "v1"
+}

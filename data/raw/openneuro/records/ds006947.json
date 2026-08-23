@@ -1,0 +1,135 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006947",
+  "payload": {
+    "created": "2025-11-20T18:51:23.469Z",
+    "id": "ds006947",
+    "latestSnapshot": {
+      "created": "2026-02-21T19:19:09.000Z",
+      "description": {
+        "Authors": [
+          "J. Michael Tyszka",
+          "Zachary Diamandis",
+          "Umit Keles",
+          "Yue Xu",
+          "Na Yeon Kim",
+          "Wenying Zhu",
+          "Qianying Wu",
+          "David A. Kahn",
+          "Ralph Adolphs"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006947.v1.0.1",
+        "Funding": [
+          "T&C Chen Center for Social and Decision Neuroscience Award, 2020"
+        ],
+        "HowToAcknowledge": "Pending",
+        "License": "CC0",
+        "Name": "Dense complex-valued partial brain BOLD of passive audiovisual movie presentations",
+        "ReferencesAndLinks": [
+          "https://openneuro.org/datasets/ds006947/"
+        ]
+      },
+      "readme": "## Data Access\n\n### Data user agreement\nThis data is released under a Creative Commons Zero (CC0) license.\n\n### Contact person\nJ. Michael Tyszka, Ph.D.\n\n### Data Access Details\nThis dataset can be downloaded in BIDS format from OpenNeuro ds006947\n\n## Overview\n\n### Project name\n\nWhat does the amygdala do? A dense fMRI study in three individuals\n\n### Dataset description\n\nDense complex-valued partial brain BOLD of passive audiovisual movie presentations\n\n### Year(s) that the project ran\n\nData was acquired at the Caltech Brain Imaging Center between February and June 2022\n\n### Brief overview of the tasks in the experiment\n\nSlab-selective, short-TR BOLD fMRI was acquired in three healthy individuals while they watched rich audiovisual stimuli drawn from movies, TV series and movie trailers. In total, approximately 15 hours of complex-valued BOLD fMRI data was acquired per individual, with associated physiological recordings and pupilometry.\n\n### Description of the contents of the dataset\n\n| Summary | Available Tasks | Available Modalities |\n| :--- | :--- | :--- |\n| 3392 Files, 146 GB | gump0 | MRI |\n| 3 - Subjects 12 - Sessions | trailer | |                                        \n| | gump1 | |\n| | gump1R | |\n| | gump2 | |\n| | gump3 | |\n| | gump3R | |\n| | gump4 | |\n| | gump5 | |\n| | gump5R | |\n| | gump6 | |\n| | gump7 | |\n| | gump7R | |\n| | planetearth1p0 | |\n| | planetearth1p1 | |\n| | planetearth1p1R | |\n| | planetearth1p2 | |\n| | planetearth2p0 | |\n| | planetearth2p0R | |\n| | planetearth2p1 | |\n| | planetearth2p2 | |\n| | planetearth2p2R | |\n| | jiro0 | |\n| | jiro1 | |\n| | jiro1R | |\n| | jiro2 | |\n| | jiro3 | |\n| | budapest1 | |\n| | budapest2 | |\n| | budapest1R | |\n| | budapest2 | |\n| | budapest3 | |\n| | budapest3R | |\n| | budapest4 | |\n| | budapest5 | |\n| | budapest5R | |\n\n\n### Independent variables\n\nPassive movie watching with audio contains a rich set of independent variables ranging from low-level visual features to social and emotional features.\n\n### Dependent variables\n\nComplex-valued (magnitude and phase) T2*-weighted multislice EPI\n4-channel ECG waveforms synchronized to fMRI scanning\nPhase derived respiratory waveform estimates synchronized to fMRI scanning\nPupilometry during movie watching synchronized to fMRI scanning\nHigh resolution and high CNR individual T1w and T2w structural templates\n\n### Control variables\n\nAll individuals watched identical audiovisual stimuli with individually calibrated audio presentation\n\n## Methods\n\n### Subjects\n\nThe participants in this experiment were three adult volunteers drawn from the laboratory of Ralph Adolphs\nat the California Institute of Technology. All recruitment and experiments were performed under a protocol approved\nby the Caltech IRB (IR).\n\n### Apparatus\n\nAll MRI data was acquired using a 3T Siemens Prisma.Fit equipped with a 32 channel head array.\n\n### Experimental location\n\nAll MRI data was acquired at the Caltech Brain Imaging Center located at\nB102 Broad 114-96\n360 South Wilson Ave,\nPasadena, CA 91125\nUSA\n\n### Notes\n\nFull method details with quality assements can be found in the associated release paper (REF)\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri",
+          "beh"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "1",
+          "3",
+          "2",
+          "4",
+          "funcloc",
+          "8",
+          "15",
+          "13",
+          "14",
+          "gumpv2a",
+          "6",
+          "gumpv2b",
+          "5",
+          "7",
+          "12"
+        ],
+        "size": 102349658538,
+        "subjects": [
+          "Damy003",
+          "Damy001",
+          "Damy002"
+        ],
+        "tasks": [
+          "gump1",
+          "gump0",
+          "trailer",
+          "gump4",
+          "gump5",
+          "gump3R",
+          "gump3",
+          "gump2",
+          "gump1R",
+          "gump6",
+          "gump7",
+          "gump5R",
+          "fobs",
+          "planetearth1p0",
+          "planetearth1p1",
+          "budapest5R",
+          "jiro3",
+          "jiro2",
+          "jiro1R",
+          "planetearth2p2",
+          "planetearth2p1",
+          "planetearth2p0R",
+          "jiro0",
+          "jiro1",
+          "planetearth2p2R",
+          "budapest3",
+          "budapest2",
+          "budapest1R",
+          "budapest0",
+          "budapest1",
+          "gump7R",
+          "budapest5",
+          "budapest4",
+          "budapest3R",
+          "planetearth2p0",
+          "planetearth1p2",
+          "planetearth1p1R"
+        ],
+        "totalFiles": 2475
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        59,
+        25,
+        56
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "T&C Chen Center for Social and Decision Neuroscience",
+      "modalities": [
+        "mri",
+        "beh"
+      ],
+      "species": "Human",
+      "studyDesign": "Dense, multi-session passive movie viewing",
+      "studyDomain": "Emotional Cognition",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2026-02-21T19:14:10.607Z"
+  },
+  "source": "openneuro"
+}

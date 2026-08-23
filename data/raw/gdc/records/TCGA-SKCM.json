@@ -1,0 +1,156 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "TCGA-SKCM",
+  "payload": {
+    "dbgap_accession_number": null,
+    "disease_type": [
+      "Nevi and Melanomas"
+    ],
+    "id": "TCGA-SKCM",
+    "name": "Skin Cutaneous Melanoma",
+    "primary_site": [
+      "Skin",
+      "Connective, subcutaneous and other soft tissues",
+      "Lymph nodes",
+      "Nasal cavity and middle ear",
+      "Vulva",
+      "Breast",
+      "Bones, joints and articular cartilage of other and unspecified sites",
+      "Retroperitoneum and peritoneum",
+      "Vagina",
+      "Colon",
+      "Adrenal gland",
+      "Corpus uteri",
+      "Other and ill-defined sites",
+      "Liver and intrahepatic bile ducts",
+      "Anus and anal canal",
+      "Spinal cord, cranial nerves, and other parts of central nervous system",
+      "Small intestine",
+      "Bronchus and lung",
+      "Brain",
+      "Parotid gland"
+    ],
+    "program": {
+      "dbgap_accession_number": "phs000178",
+      "name": "TCGA",
+      "program_id": "b80aa962-9650-5110-b3eb-bd087da808db"
+    },
+    "project_id": "TCGA-SKCM",
+    "releasable": true,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 470,
+      "data_categories": [
+        {
+          "case_count": 470,
+          "data_category": "Simple Nucleotide Variation",
+          "file_count": 9508
+        },
+        {
+          "case_count": 470,
+          "data_category": "Sequencing Reads",
+          "file_count": 3976
+        },
+        {
+          "case_count": 470,
+          "data_category": "Biospecimen",
+          "file_count": 1900
+        },
+        {
+          "case_count": 470,
+          "data_category": "Clinical",
+          "file_count": 973
+        },
+        {
+          "case_count": 470,
+          "data_category": "Copy Number Variation",
+          "file_count": 5869
+        },
+        {
+          "case_count": 469,
+          "data_category": "Transcriptome Profiling",
+          "file_count": 1850
+        },
+        {
+          "case_count": 470,
+          "data_category": "DNA Methylation",
+          "file_count": 1425
+        },
+        {
+          "case_count": 350,
+          "data_category": "Proteome Profiling",
+          "file_count": 352
+        },
+        {
+          "case_count": 321,
+          "data_category": "Somatic Structural Variation",
+          "file_count": 881
+        },
+        {
+          "case_count": 469,
+          "data_category": "Structural Variation",
+          "file_count": 2047
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 448,
+          "experimental_strategy": "miRNA-Seq",
+          "file_count": 1356
+        },
+        {
+          "case_count": 469,
+          "experimental_strategy": "RNA-Seq",
+          "file_count": 4257
+        },
+        {
+          "case_count": 443,
+          "experimental_strategy": "WGS",
+          "file_count": 4866
+        },
+        {
+          "case_count": 470,
+          "experimental_strategy": "WXS",
+          "file_count": 7552
+        },
+        {
+          "case_count": 13,
+          "experimental_strategy": "ATAC-Seq",
+          "file_count": 13
+        },
+        {
+          "case_count": 470,
+          "experimental_strategy": "Genotyping Array",
+          "file_count": 6087
+        },
+        {
+          "case_count": 470,
+          "experimental_strategy": "Methylation Array",
+          "file_count": 1425
+        },
+        {
+          "case_count": 350,
+          "experimental_strategy": "Reverse Phase Protein Array",
+          "file_count": 352
+        },
+        {
+          "case_count": 469,
+          "experimental_strategy": "Tissue Slide",
+          "file_count": 475
+        },
+        {
+          "case_count": 433,
+          "experimental_strategy": "Diagnostic Slide",
+          "file_count": 475
+        }
+      ],
+      "file_count": 28781,
+      "file_size": 261410023601526
+    }
+  },
+  "source": "gdc"
+}

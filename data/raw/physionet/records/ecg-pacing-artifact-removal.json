@@ -1,0 +1,35 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "ecg-pacing-artifact-removal",
+  "payload": {
+    "abstract": "<p>Pacing artifacts in electrocardiogram (ECG) signals can interfere with accurate waveform analysis, making their detection and removal essential for reliable interpretation. We present an algorithm and provide MATLAB code to detect and remove pacing artifacts from raw digital 12-lead ECG recordings. The algorithm was developed using the Chronic Renal Insufficiency Cohort (CRIC) data, which includes 493 paced ECGs, and validated on an external dataset (273 paced ECGs). A graphical user interface (GUI) was designed to allow user-friendly quality control of automated algorithm performance. Users can adjust settings to achieve the desired result: complete removal of the pacing spike without removing the ECG waveform. The algorithm automatically detected and removed pacing artifacts in 82.8% of the 10-second ECG files in the validation set, while the remaining files required user input. The overall sensitivity and specificity for pacing artifact detection were 98.4% and 76.5%, respectively. In summary, the proposed algorithm effectively detects and removes ECG pacing artifacts with high automation, thereby minimizing the need for manual fine-tuning.</p>",
+    "access_policy": "Open",
+    "compressed_storage_size": 982725,
+    "core_doi": "10.13026/xd1x-zt03",
+    "dua": null,
+    "is_latest_version": true,
+    "license": {
+      "name": "MIT License"
+    },
+    "main_storage_size": 1022275,
+    "public_project_uuid": "95952578-72fe-4cb8-8f04-5706b6c34dc5",
+    "publish_date": "2026-04-24",
+    "resource_type": "Software",
+    "short_description": "The software application (written in MATLAB) automatically detects pacing spikes (pacing artifacts) on a 12-lead ECG signal and automatically removes them. User-friendly GUI permits reviewing the results and adjusting settings to achieve perfection.",
+    "slug": "ecg-pacing-artifact-removal",
+    "source_url": "https://physionet.org/content/ecg-pacing-artifact-removal/1.0.0/",
+    "title": "Automated Detection and Removal of Pacing Artifacts from ECG Signal",
+    "topics": [
+      "cardiac pacing",
+      "artifact",
+      "digital signal processing",
+      "electrocardiogram"
+    ],
+    "version": "1.0.0",
+    "version_doi": "10.13026/hq2h-8p89"
+  },
+  "source": "physionet"
+}

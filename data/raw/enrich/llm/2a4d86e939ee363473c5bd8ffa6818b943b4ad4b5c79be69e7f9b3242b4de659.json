@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:2a4d86e939ee363473c5bd8ffa6818b943b4ad4b5c79be69e7f9b3242b4de659",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "diagnosed with Non-Small Cell Lung Cancer (NSCLC)",
+        "label": "Non-Small Cell Lung Cancer (NSCLC)"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "oncology",
+      "pulmonology",
+      "surgery"
+    ],
+    "id": "tcia:qin-lung-ct",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "CT SEG",
+        "value": "CT"
+      }
+    ],
+    "population": "Patients diagnosed with Non-Small Cell Lung Cancer of mixed stage and histology who underwent surgical resection and had corresponding pre-surgery diagnostic CTs.",
+    "summary": "Pre-surgery diagnostic CT scans with segmentations from patients diagnosed with non-small cell lung cancer of mixed stage and histology who underwent surgical resection at a single cancer center."
+  },
+  "prompt_version": "v1"
+}

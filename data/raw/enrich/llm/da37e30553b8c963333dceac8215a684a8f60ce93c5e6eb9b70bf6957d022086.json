@@ -1,0 +1,53 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:da37e30553b8c963333dceac8215a684a8f60ce93c5e6eb9b70bf6957d022086",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "COVID-19 patients",
+        "label": "COVID-19"
+      },
+      {
+        "evidence": "kidney failure",
+        "label": "kidney failure"
+      },
+      {
+        "evidence": "cardiovascular diseases",
+        "label": "cardiovascular diseases"
+      },
+      {
+        "evidence": "malignancies",
+        "label": "malignancies"
+      },
+      {
+        "evidence": "immunosuppression",
+        "label": "immunosuppression"
+      }
+    ],
+    "countries": [
+      "ES"
+    ],
+    "domains": [
+      "infectious_disease",
+      "cardiology",
+      "nephrology_urology",
+      "oncology"
+    ],
+    "id": "physionet:carmen-i",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "anonymized electronic health records",
+        "value": "EHR"
+      },
+      {
+        "evidence": "discharge letters, referrals, and radiology reports",
+        "value": "clinical_notes"
+      }
+    ],
+    "population": "2,000 clinical records of COVID-19 patients with comorbidities from Hospital Clínic of Barcelona, March 2020 to March 2022",
+    "summary": "Anonymized Spanish and Catalan clinical corpus of 2,000 records — discharge letters, referrals and radiology reports — with expert annotation of symptoms, diseases, procedures and medications for training and testing clinical NLP tools."
+  },
+  "prompt_version": "v1"
+}

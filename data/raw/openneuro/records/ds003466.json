@@ -1,0 +1,120 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003466",
+  "payload": {
+    "created": "2021-01-11T15:41:43.779Z",
+    "id": "ds003466",
+    "latestSnapshot": {
+      "created": "2021-01-19T14:20:59.000Z",
+      "description": {
+        "Authors": [
+          "Jiajia Yang",
+          "Peter J. Molfese",
+          "Yinghua Yu",
+          "Daniel A. Handwerker",
+          "Gang Chen",
+          "Paul A. Taylor",
+          "Yoshimichi Ejima",
+          "Jinglong Wu",
+          "Peter A. Bandettini"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds003466.v1.1.1",
+        "Funding": [],
+        "HowToAcknowledge": "Please cite this paper: \nYang J, Molfese PJ, Yu Y, Handwerker DA, Chen G, Taylor PA, Ejima Y, Wu J, Bandettini PA (2021): Different activation signatures in the primary sensorimotor and higher-level regions for haptic three-dimensional curved surface exploration. NeuroImage\nhttps://www.sciencedirect.com/science/article/pii/S1053811921000318 ",
+        "License": "CC0",
+        "Name": "Haptic three-dimensional curved surface exploration fMRI dataset",
+        "ReferencesAndLinks": [
+          "https://www.sciencedirect.com/science/article/pii/S1053811921000318 "
+        ]
+      },
+      "readme": "## Image acquisition\nMRI scans were performed on each participant using a GE Discovery MR750 3T MRI scanner (GE Healthcare, Chicago, IL). Each scanning session consisted of acquiring the following fMRI datasets: an individual finger somatotopic mapping run that was 10 min (240 volumes) in duration, followed by three or four haptic task runs that were each 11 min in duration (265 volumes). Standard T2*-weighted echo planar imaging (EPI) sequence parameters were used to obtain the functional images and ten reverse-blip volumes with the following parameters: repetition time (TR) = 2500 ms, echo time (TE) = 30 ms, phase encoding = A to P, flip angle = 75°, matrix = 77 × 77, axial slices = 42, in-plane field of view = 186 × 186 mm^2, in-plane resolution = 2.58 × 2.58 mm^2, and slice thickness = 3.0 mm (whole-brain coverage). After the fMRI acquisition, a T1-weighted magnetization prepared rapid gradient echo (MPRAGE) high-resolution anatomical volume was obtained with the following parameters: voxel size = 1.0 × 1.0 × 1.0 mm^3, TR = 7040 ms, TE = 3480 ms, matrix = 256 × 256 × 172, and duration = 5 min.\n\n## FMRI tasks\nEach participant was asked to perform four fMRI task runs that focused on roughness estimation (RE), curve estimation (CE) and hand motion and visual control (HMVC). Each fMRI task run consisted of 48 trials (16 trials × 3 tasks), which were pseudorandomly presented. Participants were informed that a series of surfaces would be presented. Their task was to estimate the roughness or curve of each stimulus or to move their fingers. For detail, please reach the paper https://www.sciencedirect.com/science/article/pii/S1053811921000318.\n\n## Data analysis\nFMRI data were analyzed using `afni_proc.py”` with the AFNI/SUMA in the original paper. The full `afni_proc.py` command used to generate the processing stream, and quality control is provided in the Supplementary material of the paper. For further information, please contact the corresponding author **(J. Yang: yang (at) okayama-u.ac.jp). **",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "01"
+        ],
+        "size": 8645690323,
+        "subjects": [
+          "004",
+          "005",
+          "006",
+          "007",
+          "008",
+          "009",
+          "010",
+          "011",
+          "012",
+          "013",
+          "014",
+          "015",
+          "016",
+          "017",
+          "018",
+          "019",
+          "020",
+          "021",
+          "022",
+          "023",
+          "024"
+        ],
+        "tasks": [
+          "motor",
+          "rest",
+          " haptic three-dimensional curved surface exploration task and finger somatotopic mapping task, ",
+          "Rest Localizer EPI"
+        ],
+        "totalFiles": 413
+      },
+      "tag": "1.1.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        29,
+        21,
+        25,
+        27,
+        24,
+        28,
+        23,
+        22,
+        22,
+        27,
+        21,
+        26,
+        21,
+        23,
+        23,
+        21,
+        23,
+        20,
+        28,
+        22,
+        24
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2021-01-19T14:21:44.545Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,29 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:1c783a31a348252d8975abe225d93edda46f9b9d98e21e02cc88515bda88b6e9",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "COVID-19 chest imaging",
+        "label": "COVID-19"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "pulmonology",
+      "infectious_disease"
+    ],
+    "id": "tcia:midrc-ricord-1c",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Chest x-ray, Covid+",
+        "value": "xray"
+      }
+    ],
+    "population": null,
+    "summary": "Chest x-ray imaging from COVID-19 positive cases in the RSNA International COVID Radiology Database, published through MIDRC as an expert-annotated, freely available resource for machine learning research and education."
+  },
+  "prompt_version": "v1"
+}

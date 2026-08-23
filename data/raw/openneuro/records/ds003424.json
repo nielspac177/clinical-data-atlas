@@ -1,0 +1,130 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003424",
+  "payload": {
+    "created": "2020-12-11T11:00:57.856Z",
+    "id": "ds003424",
+    "latestSnapshot": {
+      "created": "2026-03-30T14:02:48.000Z",
+      "description": {
+        "Authors": [
+          "Maria Geraldine Veldhuizen",
+          "Michael C. Farruggia",
+          "Xiao Gao",
+          "Yuko Nakamura",
+          "Barry G. Green",
+          "Dana Small"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds003424.v1.0.1",
+        "Funding": [
+          "National Institutes of Health training grant T32NS041228 (M.C.F.)",
+          "Yale Medical School Fellowship (M.C.F.)",
+          "National Institutes of Health R01 DC006706 (D.M.S.)"
+        ],
+        "HowToAcknowledge": "This data was obtained from the OpenNEURO database. Its accession number is ds003424, DOI: 10.18112/openneuro.ds003424.v1.0.0. \n\nPlease cite this paper: https://doi.org/10.1523/JNEUROSCI.2618-19.2020\n",
+        "License": "CC0",
+        "Name": "Identification of an Amygdala-Thalamic Circuit That Acts as a Central Gain Mechanism in Taste Perception",
+        "ReferencesAndLinks": null
+      },
+      "readme": "Data acquisition methods have been described in detail in Veldhuizen et al. (2020) \"Identification of an Amygdala-Thalamic Circuit That Acts as a Central Gain Mechanism in Taste Perception\". Journal of Neuroscience 24 June 2020, 40 (26) 5051-5062; DOI: https://doi.org/10.1523/JNEUROSCI.2618-19.2020\n\nSubjects\nThirty right-handed, non-smoking participants [21 women, 9 men, mean age 27.53 ± 4.99 years with a range of 18-38, mean body mass index (BMI) 21.67 ± 2.88 kg/m2 with a range of 16.08-26.93], with a mean Edinburgh Handedness Inventory (Oldfield, 1971) score of 90.17 ± 11.41, participated in the current study. \n\nTraining and taste psychophysics session\nStimuli\nThe taste stimuli consisted of a sweet (0.32 M sucrose, Su, Sigma-Aldrich, St. Louis, MO), sour (5.6 × 10-3 M citric acid, CA), salty (0.14 M sodium chloride, NaCl), bitter (3.2 × 10-5 M quinine sulfate, Qu), and a “tasteless” solution designed to mimic the ionic components of saliva\nProcedure\nThis session served to select an appropriate tasteless solution for each participant, assess reliable intensity ratings of 4 tastants representing sweet, sour, salty, and bitter qualities. Taste intensity ratings made on the gLMS for each trial and each participant were first log10 transformed before statistical analysis. Eight intensity ratings for each of the tastants and the tasteless solution were then averaged within each participant, respectively. \n\nfMRI scanning session. The fMRI scanning session took place on a separate day after the training and taste intensity rating session. Participants provided internal state ratings as well as perceptual ratings of the stimuli before and after scanning. Four taste runs were completed during this session. Each run was 9 minutes and 40 seconds (s) long, and consisted of the uncued delivery of five different types of stimuli in eight blocks. Blocks had either 4, 6, or 8 repeats of the same stimulus. Each run consisted of one block for each of the four taste qualities (throughout this paper referred to as taste(Su), taste(CA), taste(NaCl), and taste(Qu)) and four tasteless blocks. A tasteless block was coded as the tasteless control for the tastant that, within a given run, had the same number of repeats in a block (referred to as tasteless(Su), tasteless(CA), tasteless(NaCl), and tasteless(Qu)). In a block, a repeat of a stimulus presentation consisted of an “on” period of 3 seconds, during which we presented 0.5 ml of liquid, which was followed by a 6 second interval during which the subject is instructed to swallow (Figure 1C). Following each block there is a 1ml rinse with water followed by a 10 second rest. The participants were instructed to swallow after receiving each liquid and to keep their eyes closed during the entire run. The order of four taste stimuli blocks and four tasteless blocks within each run was counterbalanced, and the order of the runs was counterbalanced across participants. The number of repeats across taste blocks in this protocol was designed for collapsing across taste qualities and to provide balanced presentation of taste and tasteless blocks. Block-design was chosen to improve power within participants and is favored for dynamic causal modelling (DCM) analyses (Daunizeau et al., 2011). \nImages were acquired on a Siemens TIM Trio 3T MRI Scanner equipped with a 32-channel head coil. Echo planar imaging was used to measure the BOLD signal as an indication of cerebral brain activation. A susceptibility-weighted echo planar method with multiband acceleration factor 4 and GRAPPA factor 2 was used to image the regional distribution of the BOLD signal with the following parameters: TR, 1000 ms; TE, 30 ms; flip angle, 60°; FOV, 220 mm; matrix, 64 × 64; slice thickness, 2.5 mm; number of slices, 60. Slices were acquired in an interleaved mode, to reduce the cross talk of the slice selection pulse, and in coronal orientation, to cover the medulla oblongata of the brainstem, where the nucleus of the solitary tract is located. In total, 2376 volumes (594 volumes per run) were acquired. At the beginning of each functional run, the MR signal was allowed to equilibrate over two scans (“dummy images”) for a total of 2 s, which were then excluded from analysis. Anatomical scans were acquired with T1-weighted magnetization-prepared rapid gradient-echo (MPRAGE) sequence (TR/TE, 1900/2.52 ms; flip angle, 9°; FOV, 256; matrix, 256 × 256; slice thickness, 1 mm; number of slices, 176). EPI-based field maps were also acquired to correct for susceptibility-induced geometric distortions. \n\nsub-01 - tasteless4 missing from run_01.tsv (pump ran out)\nsub-08 - MPRAGE from a different session\nsub-18 - DWI and taste_run_03 and fmap_run_02 files from a different day\nsub-26 - run 4 excluded, technical problems\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_diffusion",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 53259084922,
+        "subjects": [
+          "12",
+          "19",
+          "15",
+          "25",
+          "10",
+          "23",
+          "02",
+          "01",
+          "14",
+          "06",
+          "20",
+          "26",
+          "17",
+          "07",
+          "08",
+          "27",
+          "21",
+          "28",
+          "03",
+          "11",
+          "24",
+          "05",
+          "22",
+          "13",
+          "16",
+          "18",
+          "09",
+          "04"
+        ],
+        "tasks": [
+          "taste",
+          "rest"
+        ],
+        "totalFiles": 846
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        25,
+        35,
+        26,
+        33,
+        23,
+        21,
+        29,
+        26,
+        31,
+        18,
+        27,
+        33,
+        28,
+        24,
+        21,
+        29,
+        27,
+        27,
+        27,
+        30,
+        25,
+        37,
+        36,
+        28,
+        21,
+        27,
+        22,
+        24
+      ],
+      "associatedPaperDOI": "https://doi.org/10.1523/JNEUROSCI.2618-19.2020",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "NIH NIDCD",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "Block",
+      "studyDomain": "Taste perception",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2020-12-15T11:46:13.214Z"
+  },
+  "source": "openneuro"
+}

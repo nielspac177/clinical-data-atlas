@@ -1,0 +1,44 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:0bb3e63fd490b1432c63fa059d78ede3d492c8fd9c6f6f6c446c074d76033b45",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Cystic, Mucinous and Serous Neoplasms",
+        "label": "Cystic, Mucinous and Serous Neoplasms"
+      },
+      {
+        "evidence": "Adenomas and Adenocarcinomas",
+        "label": "Adenomas and Adenocarcinomas"
+      },
+      {
+        "evidence": "Ductal and Lobular Neoplasms",
+        "label": "Ductal and Lobular Neoplasms"
+      },
+      {
+        "evidence": "Squamous Cell Neoplasms",
+        "label": "Squamous Cell Neoplasms"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "gdc:CPTAC-2",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "WXS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "miRNA-Seq, RNA-Seq",
+        "value": "transcriptomics"
+      }
+    ],
+    "population": "342 human cases with breast, colon, rectal or ovarian tumors",
+    "summary": "CPTAC phase 2 breast, colon and ovarian tumor collection, with whole-exome sequencing, RNA-Seq, miRNA-Seq, simple nucleotide variation and structural variation across breast, colon, rectum, ovary and peritoneum."
+  },
+  "prompt_version": "v1"
+}

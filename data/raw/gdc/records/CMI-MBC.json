@@ -1,0 +1,67 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "CMI-MBC",
+  "payload": {
+    "dbgap_accession_number": "phs001709",
+    "disease_type": [
+      "Ductal and Lobular Neoplasms"
+    ],
+    "id": "CMI-MBC",
+    "name": "Count Me In (CMI): The Metastatic Breast Cancer (MBC) Project",
+    "primary_site": [
+      "Breast"
+    ],
+    "program": {
+      "dbgap_accession_number": null,
+      "name": "CMI",
+      "program_id": "82bbf180-0679-5344-86f4-9f3d6b00b7ef"
+    },
+    "project_id": "CMI-MBC",
+    "releasable": true,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 200,
+      "data_categories": [
+        {
+          "case_count": 174,
+          "data_category": "Simple Nucleotide Variation",
+          "file_count": 3217
+        },
+        {
+          "case_count": 199,
+          "data_category": "Sequencing Reads",
+          "file_count": 1019
+        },
+        {
+          "case_count": 140,
+          "data_category": "Transcriptome Profiling",
+          "file_count": 406
+        },
+        {
+          "case_count": 140,
+          "data_category": "Structural Variation",
+          "file_count": 812
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 180,
+          "experimental_strategy": "WXS",
+          "file_count": 3627
+        },
+        {
+          "case_count": 140,
+          "experimental_strategy": "RNA-Seq",
+          "file_count": 1827
+        }
+      ],
+      "file_count": 5454,
+      "file_size": 13899731269468
+    }
+  },
+  "source": "gdc"
+}

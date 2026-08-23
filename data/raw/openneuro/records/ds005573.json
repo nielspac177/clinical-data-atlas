@@ -1,0 +1,89 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005573",
+  "payload": {
+    "created": "2024-10-15T13:43:06.296Z",
+    "id": "ds005573",
+    "latestSnapshot": {
+      "created": "2024-10-15T14:18:19.000Z",
+      "description": {
+        "Authors": [
+          "Jarod L Roland",
+          "Carl D Hacker",
+          "Abraham Z Snyder",
+          "Joshua S Shimony",
+          "JOhn M Zempel",
+          "David D Limbrick",
+          "Matthew D Smyth",
+          "Eric C Leuthardt"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005573.v1.0.0",
+        "Funding": [
+          "NIH NINDS R01-CA203861",
+          "NIH NINDS R25-NS090978",
+          "NIH NICHHD U54 HD087011"
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "A comparison of resting state functional magnetic resonance imaging to invasive electrocortical stimulation for sensorimotor mapping in pediatric patients",
+        "ReferencesAndLinks": null
+      },
+      "readme": "Resting state fMRI data used in the manuscript \"A comparison of resting state functional magnetic resonance imaging to invasive electrocortical stimulation for sensorimotor mapping in pediatric patients\" (doi:10.1016/j.nicl.2019.101850)\nThe MLP derivatives directory contains the output of the multi-layer perceptron (MLP) resting state network classifier as described by Hacker C, and colleauges, in the manuscript \"Resting state network estimation in individual subjects\" (doi:10.1016/j.neuroimage.2013.05.108)\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural",
+          "mri_functional"
+        ],
+        "sessions": [],
+        "size": 1247001676,
+        "subjects": [
+          "EP175",
+          "EP178",
+          "EP179",
+          "EP180",
+          "EP181",
+          "EP182",
+          "EP184",
+          "EP185",
+          "EP186",
+          "EP187",
+          "EP188",
+          "EP189",
+          "EP190",
+          "EP191",
+          "EP193",
+          "EP195"
+        ],
+        "tasks": [
+          "Rest"
+        ],
+        "totalFiles": 132
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": null,
+      "associatedPaperDOI": "10.1016/j.nicl.2019.101850",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2024-10-15T14:18:47.063Z"
+  },
+  "source": "openneuro"
+}

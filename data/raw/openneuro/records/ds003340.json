@@ -1,0 +1,110 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003340",
+  "payload": {
+    "created": "2020-10-19T16:20:29.433Z",
+    "id": "ds003340",
+    "latestSnapshot": {
+      "created": "2023-03-13T17:27:40.000Z",
+      "description": {
+        "Authors": [
+          "Jason A Avery",
+          "Alexander G Liu",
+          "John E Ingeholm",
+          "Stephen J Gotts",
+          "Alex Martin"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds003340.v1.0.4",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Tasting Pictures: Viewing Images of Foods Evokes Taste-Quality-Specific Activity in Gustatory Insular Cortex",
+        "ReferencesAndLinks": null
+      },
+      "readme": "Dataset description\n===================\n\nAvery, J. A., Liu, A. G., Ingeholm, J. E., Gotts, S. J., & Martin, A. (2021). Viewing images of foods evokes taste quality-specific activity in gustatory insular cortex. Proceedings of the National Academy of Sciences of the United States of America, 118(2), e2010932118. http://doi.org/10.1073/pnas.2010932118\n\nPrevious studies have shown that the conceptual representation of food involves brain regions associated with taste perception. The specificity of this response, however, is unknown. Does viewing pictures of food produce a general, non-specific response in taste-sensitive regions of the brain? Or, is the response specific for how a particular food tastes? Building on recent findings that specific tastes can be decoded from taste-sensitive regions of insular cortex, we asked whether viewing pictures of foods associated with a specific taste (e.g., sweet, salty, sour) can also be decoded from these same regions and if so, are the patterns of neural activity elicited by the pictures and their associated tastes similar? Using ultra-high resolution functional magnetic resonance imaging at high magnetic field strength (7-Tesla), we were able to decode specific tastes delivered during scanning, as well as the specific taste category associated with food pictures within the dorsal mid-insula, a primary taste responsive region of brain. During scanning, male and female participants tasted sweet, salty, sour and tasteless liquids, delivered via a custom-built MRI-compatible tastant-delivery system. In another task, they viewed pictures of sweet, sour, salty and foods, as well as non-food objects. Functional MRI data was acquired at ultra-high voxel resolution (1.2mm x 1.2mm x 1.2mm) at high magnetic field strength (7-Tesla). Echo-planar images (EPI) were acquired in 58 axial slices. \n\nMRI Files included are: \nA) Skull-stripped T1w anatomical scans from MP2RAGE acquisition (uni_den volume) resolution 0.7mm X 0.7mm X 0.7mm. \nB) 8 task epi files from two tasks - (194vol, 245vol), acquired Anterior-to-Posterior\nC) 1 epi file (fmap) - 20vol, acquired Posterior-to-Anterior, for topup spatial distortion correction \nD) Analysis code in 'code' folder\nE) ROIs and group brain mask in 'derivatives' folder\n\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "01"
+        ],
+        "size": 66133872400,
+        "subjects": [
+          "008",
+          "022",
+          "031",
+          "032",
+          "033",
+          "037",
+          "038",
+          "039",
+          "041",
+          "043",
+          "044",
+          "045",
+          "046",
+          "048",
+          "049",
+          "050",
+          "052",
+          "053",
+          "054",
+          "055"
+        ],
+        "tasks": [
+          "Taste Mapping",
+          "Food Pictures"
+        ],
+        "totalFiles": 342
+      },
+      "tag": "1.0.4"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        23,
+        24,
+        22,
+        41,
+        25,
+        22,
+        24,
+        21,
+        24,
+        37,
+        21,
+        21,
+        24,
+        25,
+        21,
+        26,
+        22,
+        29,
+        26,
+        45
+      ],
+      "associatedPaperDOI": "https://doi.org/10.1101/2020.10.14.307454",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "National Institute of Mental Health",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "Block Design",
+      "studyDomain": "Vision, Taste",
+      "studyLongitudinal": "Other"
+    },
+    "publishDate": "2020-10-25T00:51:54.363Z"
+  },
+  "source": "openneuro"
+}

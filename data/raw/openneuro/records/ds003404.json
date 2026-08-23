@@ -1,0 +1,109 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003404",
+  "payload": {
+    "created": "2020-11-30T18:55:38.591Z",
+    "id": "ds003404",
+    "latestSnapshot": {
+      "created": "2025-08-20T22:57:55.000Z",
+      "description": {
+        "Authors": [
+          "Brian P Keane",
+          "Deanna M Barch",
+          "Ravi Mill",
+          "Steven M Silverstein",
+          "Bart Krekelberg",
+          "Michael W Cole"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds003404.v1.0.8",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Brain Network Mechanisms of Visual Shape Completion",
+        "ReferencesAndLinks": null
+      },
+      "readme": "Dataset description\n===================\n\nBrain Network Mechanisms of Shape Completion\n\nKeane, B. P., Barch, D. M., Mill, R. D., Silverstein, S. M., Krekelberg, B., & Cole, M. W. (2021). Brain network mechanisms of visual shape completion. NeuroImage, 236, 118069. https://doi.org/10.1016/j.neuroimage.2021.118069\n\nVisual shape completion reveals object shape, size, and number from spatially segregated edges. What brain regions, networks, and functional connections underlie the process? To shed light on the topic, we scanned (fMRI) healthy adults during rest and during a task in which they discriminated pac-man configurations that formed or failed to form completed shapes (illusory and fragmented condition, respectively).  Task activation differences (illusory-fragmented), resting-state functional connectivity, and multivariate pattern differences were identified on the cortical surface using 360 predefined parcels and 12 functional networks composed of such parcels.  Brain activity flow mapping (“ActFlow”) was used to evaluate the likely involvement of resting-state connections for shape completion.  We identified 34 differentially-active parcels including a posterior temporal region, PH, whose activity was consistent across all 20 observers. Significant task regions primarily occupied the secondary visual network but also incorporated the frontoparietal, dorsal attention, default mode, and cingulo-opercular networks.  Each parcel’s task activation difference could be modeled via its resting-state connections with the remaining parcels (r=.62, p<10-9), suggesting that such connections undergird shape completion.  Functional connections from the dorsal attention network were key in modeling activation differences in the secondary visual network and across all remaining networks.  Taken together, these results suggest that shape completion relies upon a distributed but densely interconnected network coalition that is centered in the secondary visual network, orchestrated by the dorsal attention network, and inclusive of at least three other networks.\n\nMRI Files included are:\nA) Skull-stripped and defaced T1w and T2w structurals with a resolution of 0.8mm isotropic.\nB) 5 task epi files including a 10 minute rest scan - (281vol x 4, 765vol)\nC) field maps (fmap) - AP/PA field map pair for the task scans and another pair for the rest scan\n\nResting-state data were collected with an eyes open protocol. Note that one subject, sub-C23, did not complete a resting-state scan. Note also that for the structurals, the first reconstruction (rec-1) was without prescan normalize and the second reconstruction (rec-2) was with prescan normalize. Also, the scan time stamp year has been altered for anonymization.\n\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 18249383104,
+        "subjects": [
+          "C43",
+          "C05",
+          "C29",
+          "C27",
+          "C41",
+          "C34",
+          "C36",
+          "C23",
+          "C15",
+          "C25",
+          "C14",
+          "C45",
+          "C33",
+          "C13",
+          "C32",
+          "C50",
+          "C40",
+          "C22",
+          "C39",
+          "C26"
+        ],
+        "tasks": [
+          "viscomp",
+          "rest"
+        ],
+        "totalFiles": 737
+      },
+      "tag": "1.0.8"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2022-05-23T16:07:46.585Z"
+  },
+  "source": "openneuro"
+}

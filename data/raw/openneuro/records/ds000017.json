@@ -1,0 +1,85 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds000017",
+  "payload": {
+    "created": "2016-11-07T21:54:56.213Z",
+    "id": "ds000017",
+    "latestSnapshot": {
+      "created": "2018-07-14T02:23:23.000Z",
+      "description": {
+        "Authors": [
+          "Rizk-Jackson",
+          "Aron",
+          "Russell A. Poldrack"
+        ],
+        "DatasetDOI": null,
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "This dataset is made available under the Public Domain Dedication and License \nv1.0, whose full text can be found at \nhttp://www.opendatacommons.org/licenses/pddl/1.0/. \nWe hope that all users will follow the ODC Attribution/Share-Alike \nCommunity Norms (http://www.opendatacommons.org/norms/odc-by-sa/); \nin particular, while not legally required, we hope that all users \nof the data will acknowledge the OpenfMRI project and NSF Grant \nOCI-1131441 (R. Poldrack, PI) in any publications.",
+        "Name": "ds000017",
+        "ReferencesAndLinks": null
+      },
+      "readme": "This dataset was obtained from the OpenfMRI project (http://www.openfmri.org).\nAccession #: ds017A\nDescription: Classification learning and stop-signal (1 year test-retest)\n\nRelease history:\n10/06/2011: initial release\n3/21/2013: Updated release with QA information\n\nThis dataset is made available under the Public Domain Dedication and License \nv1.0, whose full text can be found at \nhttp://www.opendatacommons.org/licenses/pddl/1.0/. \nWe hope that all users will follow the ODC Attribution/Share-Alike \nCommunity Norms (http://www.opendatacommons.org/norms/odc-by-sa/); \nin particular, while not legally required, we hope that all users \nof the data will acknowledge the OpenfMRI project and NSF Grant \nOCI-1131441 (R. Poldrack, PI) in any publications.\n\nKnown Issues\n------------\n\n\nDefacing\n--------\nPydeface was used on all anatomical images to ensure deindentification of subjects. The code\ncan be found at https://github.com/poldracklab/pydeface\n\n\nWhere to discuss the dataset\n----------------------------\n1) www.openfmri.org/dataset/ds******/ See the comments section at the bottom of the dataset\npage.\n2) www.neurostars.org Please tag any discussion topics with the tags openfmri and dsXXXXXX\naccession number.\n3) Send an email to submissions@openfmri.org. Please include the dsXXXXXX accession number in\nyour email.\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "timepoint1",
+          "timepoint2"
+        ],
+        "size": 2531161760,
+        "subjects": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8"
+        ],
+        "tasks": [
+          "probabilistic classification",
+          "selective stop-signal task"
+        ],
+        "totalFiles": 202
+      },
+      "tag": "00001"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        null,
+        44,
+        null,
+        49,
+        49,
+        25,
+        null,
+        50
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2016-11-07T21:54:56.213Z"
+  },
+  "source": "openneuro"
+}

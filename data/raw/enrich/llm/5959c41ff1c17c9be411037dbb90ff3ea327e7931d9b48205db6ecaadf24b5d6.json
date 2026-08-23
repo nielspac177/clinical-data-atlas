@@ -1,0 +1,34 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:5959c41ff1c17c9be411037dbb90ff3ea327e7931d9b48205db6ecaadf24b5d6",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "35 advanced-stage colorectal cancer (CRC) patients",
+        "label": "colorectal cancer"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "gastroenterology_hepatology",
+      "surgery"
+    ],
+    "id": "tcia:crc_ffpe-codex_cellneighs",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "tissue regions from the tumor invasive front",
+        "value": "pathology"
+      },
+      {
+        "evidence": "We have used CODEX to image 56 proteins simultaneously",
+        "value": "proteomics"
+      }
+    ],
+    "population": "140 tissue regions from the tumor invasive front of 35 advanced-stage colorectal cancer (CRC) patients, selected from an initial cohort of 715 CRC patients",
+    "summary": "Multiplexed CODEX protein imaging of tissue regions from the tumor invasive front of advanced-stage colorectal cancer patients, split between Crohn's-like reaction and diffuse inflammatory infiltration groups matched for age, sex and tumor characteristics."
+  },
+  "prompt_version": "v1"
+}

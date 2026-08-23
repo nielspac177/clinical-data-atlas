@@ -1,0 +1,152 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006731",
+  "payload": {
+    "created": "2025-09-29T16:21:42.171Z",
+    "id": "ds006731",
+    "latestSnapshot": {
+      "created": "2026-06-01T20:33:35.000Z",
+      "description": {
+        "Authors": [
+          "Ekaete Ekpo, Lysianne Beynel, Bruce Luber, Zhi-De Deng, Timothy J. Strauman, and Sarah H. Lisanby"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006731.v1.0.1",
+        "Funding": [
+          "Ekpo, E., Beynel, L., Luber, B., Deng, Z-D., and Lisanby, S.H. are supported by the NIMH Intramural Research Program (ZIAMH002955). The funder had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript"
+        ],
+        "HowToAcknowledge": "We thank Dr. Allison Nugent for collaborating with us. We thank Drs. Eudora Jones, William Re-genold, and Tyler Torrico for their clinical evaluations and support. We thank the members of the NIH Noninvasive Neuromodulation Unit for their hard work with running participant visits and presenting fMRI stimuli. We thank the NIH Nuclear Magnetic Resonance Team. We thank the research volunteers who participated in our study",
+        "License": "CC0",
+        "Name": "Resting state and task based functional connectivity reveal distinct mPFC and hippocampal network alterations in major depressive disorder.",
+        "ReferencesAndLinks": [
+          ""
+        ]
+      },
+      "readme": "This dataset contains T1, T2 and DTi as well as functional scans (resting state and goal priming task) for participants with and without depression\n\n---\n\nBIDS Specification: https://bids-specification.readthedocs.io/en/stable/\n\n---\n\nBIDS directory overview\nhttps://bids-specification.readthedocs.io/en/stable/02-common-principles.html#single-session-example\n\n---\n\nparticipants.tsv and participants.json\nhttps://bids-specification.readthedocs.io/en/stable/02-common-principles.html#tabular-files\nhttps://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#participants-file\n\n---\n\ndataset_description.json\nhttps://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#dataset_description\n\n---\n\nREADME\nhttps://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#readme\n\n---\n\nCHANGES\nhttps://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#changes\n\n---\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural",
+          "mri_diffusion"
+        ],
+        "sessions": [
+          "1"
+        ],
+        "size": 13715852016,
+        "subjects": [
+          "T017",
+          "T007",
+          "HVS14",
+          "T013",
+          "HVS11",
+          "HVS5",
+          "T014",
+          "HVS7",
+          "T015",
+          "T020",
+          "HVS17",
+          "T011",
+          "T019",
+          "HVS15",
+          "HVS6",
+          "HVS10",
+          "HVS2",
+          "HVS8",
+          "HVS4",
+          "T016",
+          "T023",
+          "HVS13",
+          "T018",
+          "T024",
+          "T021",
+          "T026",
+          "T012",
+          "HVS9",
+          "T010",
+          "T006",
+          "T009",
+          "T027",
+          "T008",
+          "T022",
+          "HVS12",
+          "HVS3",
+          "HVS1",
+          "T028",
+          "T025"
+        ],
+        "tasks": [
+          "Prevmismatch",
+          "Promismatch",
+          "Promatch",
+          "rest",
+          "Prevmatch"
+        ],
+        "totalFiles": 719
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        31,
+        35,
+        41,
+        25,
+        33,
+        26,
+        54,
+        22,
+        58,
+        31,
+        22,
+        21,
+        22,
+        49,
+        33,
+        21,
+        65,
+        56,
+        18,
+        52,
+        50,
+        25,
+        48,
+        50,
+        45,
+        34,
+        27,
+        33,
+        42,
+        34,
+        42,
+        53,
+        46,
+        30,
+        35,
+        31,
+        31,
+        70,
+        64
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "depression",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2025-09-29T17:32:22.966Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,82 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005028",
+  "payload": {
+    "created": "2024-03-11T23:10:26.788Z",
+    "id": "ds005028",
+    "latestSnapshot": {
+      "created": "2024-03-11T23:12:16.000Z",
+      "description": {
+        "Authors": [
+          "Nand Chandravadia",
+          "Shrita Pendekanti",
+          "Dustin Roberts",
+          "Robert Tran",
+          "Saarang Panchavati",
+          "Corey Arnold",
+          "Nader Pouratian",
+          "William Speier"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005028.v1.0.0",
+        "Funding": [
+          "National Science Foundation Graduate Research Fellowship Program under grant no. DGE-2034835"
+        ],
+        "HowToAcknowledge": "If you reference this dataset in your publications, please acknowledge its authors.",
+        "License": "CC0",
+        "Name": "Comparing P300 Flashing paradigms in online typing with language models",
+        "ReferencesAndLinks": [
+          "Chandravadia, Pendekanti, Roberts, Tran, Panchavati, Arnold, Pouratian, Speier. Comparing P300 flashing paradigms in online typing with language models. medRxiv 2022.06.24.22276882."
+        ]
+      },
+      "readme": "This dataset was created using BCI2000. The goal of this study was to explore the online typing performance of the P300 speller using language models and various flashing paradigms. For more information see Chandravadia et al. (https://www.medrxiv.org/content/10.1101/2022.06.24.22276882v1).\r\n\r\nIf you reference this dataset in your publications, please acknowledge its authors.\r\n\r\nThis dataset is made available under CC0.\r\n\r\nNote: subject 5 was not included in the analysis because the testing stage did not include all three flashing paradigms.",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "eeg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [
+          "test",
+          "train"
+        ],
+        "size": 442568172,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11"
+        ],
+        "tasks": [],
+        "totalFiles": 108
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": null,
+      "associatedPaperDOI": "https://doi.org/10.1101/2022.06.24.22276882",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "N/A",
+      "modalities": [
+        "eeg"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "P300 Speller",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2024-03-24T01:05:36.566Z"
+  },
+  "source": "openneuro"
+}

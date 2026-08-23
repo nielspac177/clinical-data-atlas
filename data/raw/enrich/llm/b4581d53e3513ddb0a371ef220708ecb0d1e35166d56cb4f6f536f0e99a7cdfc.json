@@ -1,0 +1,49 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:b4581d53e3513ddb0a371ef220708ecb0d1e35166d56cb4f6f536f0e99a7cdfc",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "stress resilience",
+        "label": "stress resilience"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience",
+      "psychiatry"
+    ],
+    "id": "physionet:neuro-stress-resilience-hci",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "electroencephalography",
+        "value": "EEG"
+      },
+      {
+        "evidence": "functional near-infrared spectroscopy",
+        "value": "fNIRS"
+      },
+      {
+        "evidence": "blood volume pulse",
+        "value": "PPG"
+      },
+      {
+        "evidence": "electrodermal activity",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "accelerometer readings",
+        "value": "wearable"
+      },
+      {
+        "evidence": "10-item Connor-Davidson Resilience Scale",
+        "value": "survey"
+      }
+    ],
+    "population": "35 participants engaged in a computer-based task under stress",
+    "summary": "Multimodal neurophysiological and physiological recordings during a computer-based stressful task, spanning baseline, stress and recovery phases, with synchronized event markers, subjective resilience scores and demographic variables."
+  },
+  "prompt_version": "v1"
+}

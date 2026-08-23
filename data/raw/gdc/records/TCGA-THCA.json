@@ -1,0 +1,139 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "TCGA-THCA",
+  "payload": {
+    "dbgap_accession_number": null,
+    "disease_type": [
+      "Epithelial Neoplasms, NOS",
+      "Adenomas and Adenocarcinomas",
+      "Squamous Cell Neoplasms"
+    ],
+    "id": "TCGA-THCA",
+    "name": "Thyroid Carcinoma",
+    "primary_site": [
+      "Thyroid gland"
+    ],
+    "program": {
+      "dbgap_accession_number": "phs000178",
+      "name": "TCGA",
+      "program_id": "b80aa962-9650-5110-b3eb-bd087da808db"
+    },
+    "project_id": "TCGA-THCA",
+    "releasable": true,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 507,
+      "data_categories": [
+        {
+          "case_count": 507,
+          "data_category": "Simple Nucleotide Variation",
+          "file_count": 10699
+        },
+        {
+          "case_count": 507,
+          "data_category": "Sequencing Reads",
+          "file_count": 4589
+        },
+        {
+          "case_count": 507,
+          "data_category": "Biospecimen",
+          "file_count": 2182
+        },
+        {
+          "case_count": 507,
+          "data_category": "Clinical",
+          "file_count": 1064
+        },
+        {
+          "case_count": 507,
+          "data_category": "Copy Number Variation",
+          "file_count": 6824
+        },
+        {
+          "case_count": 507,
+          "data_category": "Transcriptome Profiling",
+          "file_count": 2290
+        },
+        {
+          "case_count": 507,
+          "data_category": "DNA Methylation",
+          "file_count": 1713
+        },
+        {
+          "case_count": 377,
+          "data_category": "Proteome Profiling",
+          "file_count": 381
+        },
+        {
+          "case_count": 471,
+          "data_category": "Somatic Structural Variation",
+          "file_count": 1497
+        },
+        {
+          "case_count": 505,
+          "data_category": "Structural Variation",
+          "file_count": 2533
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 477,
+          "experimental_strategy": "WGS",
+          "file_count": 6854
+        },
+        {
+          "case_count": 502,
+          "experimental_strategy": "WXS",
+          "file_count": 8081
+        },
+        {
+          "case_count": 506,
+          "experimental_strategy": "miRNA-Seq",
+          "file_count": 1719
+        },
+        {
+          "case_count": 505,
+          "experimental_strategy": "RNA-Seq",
+          "file_count": 5148
+        },
+        {
+          "case_count": 14,
+          "experimental_strategy": "ATAC-Seq",
+          "file_count": 14
+        },
+        {
+          "case_count": 505,
+          "experimental_strategy": "Genotyping Array",
+          "file_count": 6616
+        },
+        {
+          "case_count": 507,
+          "experimental_strategy": "Methylation Array",
+          "file_count": 1713
+        },
+        {
+          "case_count": 377,
+          "experimental_strategy": "Reverse Phase Protein Array",
+          "file_count": 381
+        },
+        {
+          "case_count": 506,
+          "experimental_strategy": "Tissue Slide",
+          "file_count": 639
+        },
+        {
+          "case_count": 506,
+          "experimental_strategy": "Diagnostic Slide",
+          "file_count": 519
+        }
+      ],
+      "file_count": 33772,
+      "file_size": 318139694095340
+    }
+  },
+  "source": "gdc"
+}

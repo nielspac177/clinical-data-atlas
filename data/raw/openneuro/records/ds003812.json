@@ -1,0 +1,98 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003812",
+  "payload": {
+    "created": "2021-09-20T20:13:29.427Z",
+    "id": "ds003812",
+    "latestSnapshot": {
+      "created": "2024-09-27T18:54:21.000Z",
+      "description": {
+        "Authors": [
+          "William F. Broderick",
+          "Jonathan Winawer",
+          "Eero P. Simoncelli"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds003812.v2.0.0",
+        "Funding": [
+          "GRANT NIH R01EY027401 (JW)",
+          "GRANT NIH R01EY027964 (JW)",
+          "NSF GRFP (WFB)",
+          "HHMI (EPS)"
+        ],
+        "HowToAcknowledge": "If you use this dataset, please cite both the data set (using the DatasetDOI in this file) and the corresponding paper (as given in ReferencesandLinks).",
+        "License": "CC0",
+        "Name": "spatial_frequency_preferences",
+        "ReferencesAndLinks": [
+          "Preprint link: https://www.biorxiv.org/content/10.1101/2021.09.27.462032",
+          "Github repo with all project code (use for reproducing analyses presented in paper and re-analyzing this dataset): https://github.com/billbrod/spatial-frequency-preferences"
+        ]
+      },
+      "readme": "# README\n\nThis `spatial_frequency_preferences` dataset contains the data from the paper\n\"Mapping Spatial Frequency Preferences Across Human Primary Visual Cortex\", by\nWilliam F. Broderick, Eero P. Simoncelli, and Jonathan Winawer, the preprint for\nwhich can be found on\n[biorxiv](https://www.biorxiv.org/content/10.1101/2021.09.27.462032).\n\nIn this experiment, we measured the BOLD responses of 12 human observers to a\nset of novel grating stimuli in order to measure the spatial frequency tuning in\nprimary visual cortex across eccentricities, retinotopic angles, and stimulus\norientations. We then fit a parametric model which fits all voxels for a given\nsubject simultaneously, predicting each voxel's response as a function of the\nvoxel's retinotopic location and the stimulus local spatial frequency and\norientation.\n\nThis dataset contains the minimally pre-processed, BIDS-compliant data required\nto reproduce the analyses presented in the paper. In addition to the task\nimaging data and stimuli files, it contains three `derivatives` directories:\n\n- `freesurfer`: freesurfer subject directories for each subject, with one\n  change: the contents of `mri/` directories have been defaced.\n\n- `prf_solutions`: solutions to the population receptive field models from a\n  separate retinotopy experiment for each subject, fit using\n  [VistaSoft](https://github.com/vistalab/vistasoft). Also contains the Benson\n  retinotopic atlases for each subject (Benson et al., 2014) and the solutions\n  for Bayesian retinotopic analyses (Benson and Winawer, 2018) -- the solutions\n  to the Bayesian retinotopy are what we actually use in the paper.\n\n- `preprocessed`: the preprocessed data (a custom script was used for\n  preprocessing, found on the [Winawer Lab\n  Github](https://github.com/WinawerLab/MRI_tools/), see [Winawer Lab\n  wiki](https://wikis.nyu.edu/pages/viewpage.action?pageId=86054639) for more\n  details). See paper for description of steps taken. Results should not change\n  substantially if fMRIPrep were to be used for preprocessing instead, as long\n  as data is kept in individual subject space.\n\nThis dataset is presented with the intention of enabling re-running our analyses\nto reproduce our results with our accompanying [Github\nrepo](https://github.com/billbrod/spatial-frequency-preferences). This dataset\nshould contain sufficient information for re-analysis with a novel method, but\nthere are no guarantees.\n\n## Details related to access to the data\n\nContact person: William F. Broderick, ORCID 0000-0002-8999-9003, wfb229@nyu.edu\n\nIf you use this dataset in a publication, please cite the corresponding paper.\n\nThis dataset is hosted on OpenNeuro, and can be downloaded from there.\nAdditionally, we present two additional variants of this data, see the [Github\nREADME](https://github.com/billbrod/spatial-frequency-preferences) for details\non how to obtain:\n\n- Fully-processed data: contains the final output of our analyses, the data\n  required to reproduce the figures as they appear in the paper. \n\n- Partially-processed data: contains the outputs of GLMdenoise and all data\n  required to start fitting the spatial frequency response functions.\n  \nThe partially-processed data set builds on top of this one and so requires the\ndata contained here as well, while fully-processed stands alone.\n  \nAll of the variants may be downloaded using code found in the [Github\nrepo](https://github.com/billbrod/spatial-frequency-preferences), see the README\nthere for more details.\n\n## Overview\n\n- Spatial frequency preferences\n\n- Year(s) that the project ran: started gathering pilot data in 2017, this\n  dataset was gathered in the springs of 2019 and 2020. Paper written in 2020\n  and 2021, submitted fall 2021.\n\n- Brief overview of the tasks in the experiment: subjects viewed the stimuli,\n  fixating on the center of the images. A sequence of digits, alternating black\n  and white, was presented at fixation; subjects pressed a button whenever a\n  digit repeated. See paper for more details.\n\n- Description of the contents of the dataset:\n  - Summary:\n    - 768 Files\n    - 12 subjects\n    - 1 session each\n  - Available tasks: \n    - sfprescaled\n  - Available modalities:\n    - MRI\n\n- Quality assessment of the data: the MRIQC reports for each included scan can\n  be found [on this project's OSF page](https://osf.io/zrq6b/)\n\n## Methods\n\n### Subjects\n\nSubjects were recruited from graduate students and postdocs at NYU, all\nexperienced MRI participants.\n \n### Apparatus\n\nData was gathered on NYU's Center for Brain Imaging's Siemens Prisma 3T MRI\nscanner in a shielded room. Data was gathered with subjects lying down, with the\nstimuli projected onto a screen above their head.\n\n### Initial setup\n\nWhen subjects arrived, subjects were briefed on the task, given the experimental\nconsent form to read and sign, and talked through the screener form.\n\n### Task organization\n\nThis experiment has only a single task.\n\n### Task details\n\nSubjects passively viewed the stimuli while performing the distractor task\ndescribed above: viewing a stream of alternating black and white digits and\npressing a button whenever a digit repeated. Their button presses were recorded.\nEach subject's `events.tsv` files gives the behavioral results (\"hit\", \"miss\",\n\"correct_rejection\", or \"false_alarm\").\n\n### Additional data acquired\n\nNo additional data gathered.\n\n### Experimental location\n\nAll data gathered at NYU's Center for Brain Imaging in New York, NY.\n\n### Missing data\n\nOne subject (sub-wlsubj045) only has 7 of the 12 runs, due to technical issues\nthat came up during the run. The quality of their GLMdenoise fits and their\nfinal model fits do not appear to vary much from that of the other subjects.\n",
+      "summary": {
+        "dataProcessed": true,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional"
+        ],
+        "sessions": [
+          "04"
+        ],
+        "size": 43528854675,
+        "subjects": [
+          "wlsubj001",
+          "wlsubj006",
+          "wlsubj007",
+          "wlsubj045",
+          "wlsubj046",
+          "wlsubj062",
+          "wlsubj064",
+          "wlsubj081",
+          "wlsubj095",
+          "wlsubj114",
+          "wlsubj115",
+          "wlsubj121"
+        ],
+        "tasks": [
+          "sfprescaled"
+        ],
+        "totalFiles": 768
+      },
+      "tag": "2.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        28,
+        35,
+        30,
+        27,
+        35,
+        34,
+        22,
+        27,
+        31,
+        30,
+        33,
+        31
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": true,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2021-09-22T17:07:21.221Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,69 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006181",
+  "payload": {
+    "created": "2025-04-28T17:29:11.414Z",
+    "id": "ds006181",
+    "latestSnapshot": {
+      "created": "2025-04-28T18:11:19.000Z",
+      "description": {
+        "Authors": [
+          "Gabriel Ramos-Llordén",
+          "Hong-Hsi Lee",
+          "Yixin Ma",
+          "Hansol Lee",
+          "Susie Y. Huang"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006181.v1.0.0",
+        "Funding": [
+          "U24NS137077"
+        ],
+        "HowToAcknowledge": "Please cite: Ramos-Llordén, G., et al. 'Connectome 2.0: Next-Generation Connectomics and Microstructure MRI Scanner for Imaging of Human Brain Circuits across Scales.' Nature Biomedical Engineering, in press, 2025.",
+        "License": "CC0",
+        "Name": "Connectome 2.0 Diffusion MRI (in vivo)",
+        "ReferencesAndLinks": [
+          "https://connectome2.martinos.org/"
+        ]
+      },
+      "readme": "This repository contains in vivo diffusion MRI data acquired on the Connectome 2.0 scanner (Siemens MAGNETOM Connectom.X, Erlangen, Germany) at the Athinoula A. Martinos Center for Biomedical Imaging. The Connectome 2.0 system features ultra high gradient strength (up to 500 mT/m) and advanced slew rates (600 mT/m/s) for high fidelity microstructural imaging.\n\nAll diffusion data were acquired with:\n\n- Pulse width: 6 ms  \n- Diffusion times (D): 13 ms and 30 ms  \n  - At D= 13 ms, b values = 50, 350, 800, 1500, 2400, 3450, 4750, 6000 s/mm<sup>2</sup>\n  - At D = 30 ms, b values = 200, 950, 2300, 4250, 6750, 9850, 13500, 17800 s/mm<sup>2</sup>\n- Number of directions: 32 for b < 2300 s/mm<sup>2</sup>; 64 for b > 2300 s/mm<sup>2</sup>\n- Echo time: 53 ms  \n- Voxel size: 2 mm isotropic  \n- GRAPPA = 2 \n- SMS = 2  \n\nThe dataset includes:\n- **Raw diffusion weighted images (DWIs)** and corresponding b=0 images  \n- **Metadata** (b values, b vectors, phase encoding directions, pulse width, and diffusion time parameters)  \n- **T1 weighted anatomical scan**  \n- **Preprocessed DWIs** ([preprocessing scripts](https://github.com/connectome20/diffusion_preproc_C2))\n\nPlease note that subject privacy and IRB guidelines were strictly followed in collecting and sharing these data.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_diffusion",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 250477396,
+        "subjects": [
+          "01"
+        ],
+        "tasks": [],
+        "totalFiles": 19
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "National Institute of Neurological Disorders and Stroke",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2025-04-28T18:12:36.411Z"
+  },
+  "source": "openneuro"
+}

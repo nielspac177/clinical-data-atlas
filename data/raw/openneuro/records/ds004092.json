@@ -1,0 +1,125 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004092",
+  "payload": {
+    "created": "2022-03-31T07:31:56.287Z",
+    "id": "ds004092",
+    "latestSnapshot": {
+      "created": "2022-04-01T16:02:45.000Z",
+      "description": {
+        "Authors": [
+          "Isabel Wank",
+          "Lisa Kutsche",
+          "Silke Kreitz",
+          "Peter Reeh",
+          "Andreas Hess"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004092.v1.0.1",
+        "Funding": [
+          ""
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Imaging the influence of peripheral TRPV1-signaling on cerebral nociceptive processing applying fMRI-based graph theory in a resiniferatoxin rat model",
+        "ReferencesAndLinks": null
+      },
+      "readme": "This dataset contains functional and anatomical MRI raw data underlying the paper published in PLOS ONE in 2022\r\n\"Imaging the influence of peripheral TRPV1-signaling on cerebral nociceptive processing applying fMRI-based graph theory in a resiniferatoxin rat model\"\r\nShort Title: Influence of TRPV1-desensitization on central nociception\r\n\r\nAuthors: Isabel Wank1¶, Lisa Kutsche1¶, Silke Kreitz1, Peter Reeh2, Andreas Hess1*\r\n\r\n1 Institute of Experimental and Clinical Pharmacology and Toxicology, Friedrich-Alexander University Erlangen-Nuremberg, Fahrstrasse 17, 91054 Erlangen, Germany\r\n\r\n2 Institute of Physiology and Pathophysiology, Friedrich-Alexander University Erlangen-Nuremberg, Universitätsstrasse 17, 91054 Erlangen, Germany\r\n\r\n* Corresponding author\r\nE-mail: andreas.hess@fau.de\r\n\r\n¶These authors contributed equally to this work.\r\n\r\n\r\nFor information about study design and stimulation please refer to the paper.\r\n\r\nABSTRACT\r\n\r\nResiniferatoxin (RTX), an extract from the spurge plant Euphorbia resinifera, is a potent agonist of the transient receptor potential cation channel subfamily V member 1 (TRPV1), \r\nmainly expressed on peripheral nociceptors - a prerequisite for nociceptive heat perception. Systemic overdosing of RTX can be used to desensitize specifically TRPV1-expressing \r\nneurons, and was therefore utilized here to selectively characterize the influence of TRPV1-signaling on central nervous system (CNS) temperature processing.\r\nResting state and CNS temperature processing of male rats were assessed via functional magnetic resonance imaging before and after RTX injection. General linear model-based and \r\ngraph-theoretical network analyses disentangled the underlying distinct CNS circuitries.\r\nAt baseline, rats displayed an increase of nociception-related response amplitude and activated brain volume that correlated highly with increasing stimulation temperatures. \r\nIn contrast, RTX-treated rats showed a clear disruption of thermal nociception, reflected in a missing increase of CNS responses to temperatures above 48 °C. Graph-theoretical \r\nanalyses revealed two distinct brain subnetworks affected by RTX: one subcortical (brainstem, lateral and medial thalamus, hippocampus, basal ganglia and amygdala), and one \r\ncortical (primary sensory, motor and association cortices). Resting state analysis revealed first, that peripheral desensitization of TRPV1-expressing neurons did not disrupt \r\nthe basic resting-state-network of the brain. Second, only at baseline, but not after RTX, noxious stimulation modulated the RS-network in regions associated with memory formation\r\n(e.g. hippocampus).\r\nAltogether, the combination of whole-brain functional\r\n magnetic resonance imaging and RTX-mediated desensitization of TRPV1-signaling provided further detailed insight into \r\ncerebral processing of noxious temperatures.\r\n\r\n\r\n\r\n\r\n\r\nThis dataset has been converted using BrkRaw (vRTX_5.json)at 2022-03-30 23:19:07.666876.\r\n## How to cite?\r\n - https://doi.org/10.5281/zenodo.3818615",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "1"
+        ],
+        "size": 12861668292,
+        "subjects": [
+          "BL01",
+          "BL02",
+          "BL03",
+          "BL04",
+          "BL05",
+          "BL06",
+          "BL07",
+          "BL08",
+          "BL09",
+          "BL10",
+          "BL11",
+          "BL12",
+          "BL13",
+          "BL14",
+          "BL15",
+          "BL16",
+          "BL17",
+          "BL18",
+          "RTX01",
+          "RTX02",
+          "RTX03",
+          "RTX04",
+          "RTX05",
+          "RTX06",
+          "RTX07",
+          "RTX08",
+          "RTX09"
+        ],
+        "tasks": [
+          "Value was not specified"
+        ],
+        "totalFiles": 222
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Rat",
+      "studyDesign": "",
+      "studyDomain": "Influence of TRPV1 receptors on central nociception",
+      "studyLongitudinal": "Longitudinal"
+    },
+    "publishDate": "2022-03-31T11:19:47.800Z"
+  },
+  "source": "openneuro"
+}

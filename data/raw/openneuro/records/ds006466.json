@@ -1,0 +1,138 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006466",
+  "payload": {
+    "created": "2025-07-12T17:05:31.158Z",
+    "id": "ds006466",
+    "latestSnapshot": {
+      "created": "2025-10-06T18:46:57.000Z",
+      "description": {
+        "Authors": [
+          "Andy Jeesu Kim",
+          "Santiago Morales",
+          "Joshua Senior",
+          "Mara Mather"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006466.v1.0.1",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "HeartBEAM: Older Adult Resting State and Auditory Oddball Task EEG Data",
+        "ReferencesAndLinks": [
+          "Kim, A. J., Morales, S., Senior, J., & Mather, M. (2025). Electroencephalography, pupillometry, and behavioral evidence for locus coeruleus-noradrenaline system related tonic hyperactivity in older adults. Preprint: doi.org/10.1101/2025.10.02.680040"
+        ]
+      },
+      "readme": "# Older Adult Resting State and Auditory Oddball Task EEG Data\n\n## What is included\n- This dataset includes resting state and auditory oddball task EEG data for two conditions: control and arousal (under threat of unpredictable shock).\n\n## Event labels\n100 - 5 minutes eyes open resting, control condition, begin  \n101 - 5 minutes eyes open resting, control condition, end  \n102 - 5 minutes eyes closed resting, control condition, begin  \n103 - 5 minutes eyes closed resting, control condition, end  \n\n104 - passive auditory oddball task, control condition, run begin  \n105 - passive auditory oddball task, control condition, trial start  \n106 - passive auditory oddball task, control condition, standard tone  \n107 - passive auditory oddball task, control condition, target tone  \n108 - passive auditory oddball task, control condition, distractor tone  \n109 - passive auditory oddball task, control condition, trial end  \n110 - passive auditory oddball task, control condition, run end  \n\n111 - active auditory oddball task, control condition, run begin  \n112 - active auditory oddball task, control condition, trial start  \n113 - active auditory oddball task, control condition, standard tone  \n114 - active auditory oddball task, control condition, target tone  \n115 - active auditory oddball task, control condition, distractor tone  \n116 - active auditory oddball task, control condition, start of response period  \n117 - active auditory oddball task, control condition, manual button response recorded  \n118 - active auditory oddball task, control condition, run end\n\n119 - 5 minutes eyes open resting, shock condition, begin  \n120 - 5 minutes eyes open resting, shock condition, end  \n121 - 5 minutes eyes closed resting, shock condition, begin  \n122 - 5 minutes eyes closed resting, shock condition, end  \n\n123 - passive auditory oddball task, shock condition, run begin  \n124 - passive auditory oddball task, shock condition, trial start  \n125 - passive auditory oddball task, shock condition, standard tone  \n126 - passive auditory oddball task, shock condition, target tone  \n127 - passive auditory oddball task, shock condition, distractor tone  \n128 - passive auditory oddball task, shock condition, trial end  \n129 - passive auditory oddball task, shock condition, run end  \n\n130 - active auditory oddball task, shock condition, run begin  \n131 - active auditory oddball task, shock condition, trial start  \n132 - active auditory oddball task, shock condition, standard tone  \n133 - active auditory oddball task, shock condition, target tone  \n134 - active auditory oddball task, shock condition, distractor tone  \n135 - active auditory oddball task, shock condition, start of response period  \n136 - active auditory oddball task, shock condition, manual button response recorded  \n137 - active auditory oddball task, shock condition, run end  \n\n## Citations\nNashiro, K., Yoo, H. J., Cho, C., Kim, A. J., Nasseri, P., Min, J., ... & Mather, M. (2024). Heart rate and breathing effects on attention and memory (HeartBEAM): Study protocol for a randomized controlled trial in older adults. Trials, 25(1), 190.\n\nKim, A. J., Morales, S., Senior, J., & Mather, M. (2025). Electroencephalography, pupillometry, and behavioral evidence for locus coeruleus-noradrenaline system related tonic hyperactivity in older adults. Preprint: doi.org/10.1101/2025.10.02.680040\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "eeg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [
+          "post",
+          "pre"
+        ],
+        "size": 126131448388,
+        "subjects": [
+          "EpicAwl",
+          "DearSop",
+          "FourSpy",
+          "FirmPhi",
+          "WavyErg",
+          "ManyAba",
+          "SomeNip",
+          "SameDad",
+          "CampHum",
+          "HewnMod",
+          "OticNip",
+          "LessRim",
+          "HepViol",
+          "OffCode",
+          "LiveRub",
+          "ManyPug",
+          "HeldSou",
+          "FitHame",
+          "LaicTax",
+          "HepBleu",
+          "TiedNit",
+          "SourTun",
+          "AzoAgon",
+          "TornEra",
+          "SageSir",
+          "AgoBurn",
+          "LessGob",
+          "FarTube",
+          "EyedEgo",
+          "KindVow",
+          "DrySolo",
+          "NeeStop",
+          "AgoHake",
+          "ShyCorn",
+          "DryGear",
+          "FivePly",
+          "MidiHob",
+          "EvenBox",
+          "LowAnna",
+          "NewTone",
+          "EpicOla",
+          "TenWays",
+          "PatPart",
+          "CampOhm",
+          "TiedFin",
+          "WanYogi",
+          "AvidJar",
+          "AridWar",
+          "AuldEve",
+          "SafeOar",
+          "LeanMud",
+          "ArcoWeb",
+          "SoldGet",
+          "BossBob",
+          "FeyHeat",
+          "HomeDye",
+          "CalmJib",
+          "BoneSip",
+          "SkewWhy",
+          "ModCurd",
+          "ShyStag",
+          "PinkLug",
+          "ZeroBud",
+          "BossRip",
+          "RareNit",
+          "LealOca"
+        ],
+        "tasks": [
+          "passive",
+          "restingS",
+          "active",
+          "resting",
+          "activeS",
+          "passiveS"
+        ],
+        "totalFiles": 5049
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "eeg"
+      ],
+      "species": "",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2025-07-13T05:07:52.771Z"
+  },
+  "source": "openneuro"
+}

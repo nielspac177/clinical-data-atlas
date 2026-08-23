@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:af933e2ef7324f8dcda19f855fb6d900e40a09ccb9fba4d3df3192838e1d54a0",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "100 sleep abnormal patients with sleep apnea",
+        "label": "sleep apnea"
+      },
+      {
+        "evidence": "individuals with irregular sleep patterns or sleep disorders",
+        "label": "sleep disorders"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "pulmonology"
+    ],
+    "id": "physionet:dreamt",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "high-resolution signals from a smartwatch",
+        "value": "wearable"
+      },
+      {
+        "evidence": "polysomnography (PSG) data",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": "100 participants; sleep abnormal patients with sleep apnea",
+    "summary": "Wearable smartwatch signals from 100 participants with sleep apnea, paired with polysomnography, expert sleep technician-annotated sleep stage labels, and clinical metadata, for real-time sleep stage estimation."
+  },
+  "prompt_version": "v1"
+}

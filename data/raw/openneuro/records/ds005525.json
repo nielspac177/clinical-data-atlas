@@ -1,0 +1,102 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005525",
+  "payload": {
+    "created": "2024-09-24T20:18:24.760Z",
+    "id": "ds005525",
+    "latestSnapshot": {
+      "created": "2024-10-03T13:54:21.000Z",
+      "description": {
+        "Authors": [
+          "Luis Martinez Agulleiro",
+          "Bowen Deng",
+          "Yuliya Yoncheva",
+          "Chao-Gan Yan",
+          "F Xavier Castellanos",
+          "Marie-Pierre St-Onge"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005525.v1.0.0",
+        "Funding": [
+          "NIH 5R01HL128226"
+        ],
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "Circadian misalignment and energy balance",
+        "ReferencesAndLinks": []
+      },
+      "readme": "**Overview of the dataset**\n\nThis dataset includes fMRI data from a clinical trial aimed to investigate the consequences of altered timing of sleep and meal episodes while maintaining sufficient sleep duration. The study was carried out between 8/17/2016 and 5/31/2021 and was registered in ClinicalTrials.gov (NCT03663530). The project was supported by NIH grant 5R01HL128226.\n\nIn brief, the study aimed to determine how misalignment between sleeping and eating schedules may affect energy balance and insulin resistance, and how this might be mediated by changes in brain connectivity and reward valuation of food. To achieve the latter, all participants were scanned under two conditions:\n-\tCircadian aligned: sleep from 0-8 am, meals at 1, 5, 11 and 12.5 h after awakening.\n-\tCircadian misaligned: sleep from 0-8 am, meals at 4.5, 8.5, 14.5 and 16 h after awakening.\n\nAll participants were scanned twice under each condition: once on day 3 and again on day 14 of the same condition (i.e., every participant has 4 scans). The order of conditions was randomized between subjects (A = circadian aligned; B = circadian misaligned):\n\n|participant_id|ses-1|ses-2|ses-3|ses-4|\n|:------|:------:|:------:|:------:|:------:|\n|CM101|A|A|B|B|\n|CM102|B|B|A|A|\n|CM103|B|B|A|A|\n|CM104|B|B|A|A|\n|CM106|B|B|A|A|\n|CM201|B|B|A|A|\n|CM202|A|A|B|B|\n|CM204|B|B|A|A|\n|CM205|A|A|B|B|\n|CM207|A|A|B|B|\n|CM209|A|A|B|B|\n\n**Image acquisition**\n\nMRI data acquisition was performed with a Siemens 3-Tesla MAGNETOM Skyra scanner equipped with a 20-channel Siemens head coil.\nFunctional images were collected using T2*-weighted echo planar pulse sequence imaging depicting BOLD signal (TE = 30 ms, TR = 2500 ms, flip angle = 80°, spatial resolution 3 x 3 x 3 mm isotropic voxels, transversal orientation, slice thickness = 3 mm, 37 slices fully covering the cerebral cortex and the cerebellum). For resting-state functional images we acquired 131 volumes (acquisition time = 5 min 27.5 s). For anatomical reference a high-resolution isotropic MPRAGE sequence was acquired (TE = 2.98 ms, TR = 2300 ms, flip angle = 9°, sagittal orientation, spatial resolution 1 x 1 x 1 mm isotropic voxels, slice thickness = 1 mm).\n\n**Scanning conditions**\n\nParticipants were scanned under three conditions:\n•\tFix (“task-rest”; resting-state): participants were asked to hold still and fixate their gaze on a centrally located cross. Participants underwent two consecutive resting-state runs during each session.\n•\tFood stimulus (“task-ab” and “task-cd”; task-based): 2-by-2 design protocol which included 4 runs (~3 mins each). Each run consisted of 4 blocks (2 foods and 2 non-foods) during which participants view 5 items presented for 4 s each (total = 20 s) using E-Prime 2 (Psychology Software Tools, Inc., Pittsburgh, PA). Each block was separated by a 20 s baseline period during which participants view a fixation cross.\n\n**Outstanding issues with task events**\n\nDue to technical issues, data related to task events (i.e., event onset, duration, etc.) was lost or was incomplete for several participants. To support future research efforts, we provide the available E-Prime events.txt files, as well as the stimuli used during the tasks. These files can be found in the \"events\" directory. These may be of use for those interested.\n\n**Participants**\n\nIncluded were men and pre-menopausal women, age 20-49 years with BMI 25-34.9 kg/m2. To be eligible, participants were required to be physically inactive (<150 min/week of moderate or <75 min/week of vigorous aerobic physical activity); right-handed; and present normal scores on the Pittsburg Quality of Sleep Questionnaire, Epworth Sleepiness Scale, Berlin Questionnaire, Sleep Disorders Inventory Questionnaire, Beck Depression Inventory, Composite Scale of Morningness/Eveningness and Three Factor Eating Questionnaire. Participant were also required to eat within 1 hour after wake ≥5 days/week; as well as having normal bedtimes with habitual sleep of 7-9 hours in bed at night, no daytime naps and a midpoint of sleep earlier than 4 am.\nParticipants were excluded if they had current or past neurological, medical or psychiatric disorders (including sleep and eating disorder and diabetes mellitus); current or past (<3 years) nicotine use; contraindications for MRI scanning; travel across time zones in the previous 4 weeks; history of drug and alcohol abuse; were shift or rotating sift workers, heavy equipment operators or commercial long-distance drivers; had a caffeine intake >300 mg/day; excessive daytime sleepiness; hematocrit <30%; or were pregnant or within 1 year post-partum.\n\n**Contact:** Marie-Pierre St-Onge (ms2554@cumc.columbia.edu); F. Xavier Castellanos (Francisco.Castellanos@nyulangone.org)",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "size": 10323386053,
+        "subjects": [
+          "CM101",
+          "CM102",
+          "CM103",
+          "CM104",
+          "CM106",
+          "CM201",
+          "CM202",
+          "CM204",
+          "CM205",
+          "CM207",
+          "CM209"
+        ],
+        "tasks": [
+          "ab",
+          "cd",
+          "rest",
+          "TODO: full task name for ab",
+          "TODO: full task name for cd",
+          "TODO: full task name for rest"
+        ],
+        "totalFiles": 1458
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        42,
+        24,
+        26,
+        28,
+        39,
+        43,
+        42,
+        46,
+        39,
+        43,
+        26
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "NIH",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "Clinical trial",
+      "studyDomain": "",
+      "studyLongitudinal": "Longitudinal"
+    },
+    "publishDate": "2024-10-03T13:57:39.745Z"
+  },
+  "source": "openneuro"
+}

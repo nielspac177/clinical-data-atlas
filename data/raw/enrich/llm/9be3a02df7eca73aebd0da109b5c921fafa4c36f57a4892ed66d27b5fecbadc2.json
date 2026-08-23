@@ -1,0 +1,29 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:9be3a02df7eca73aebd0da109b5c921fafa4c36f57a4892ed66d27b5fecbadc2",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:staffiii",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "The database consists of ECG recordings from 104 patients",
+        "value": "ECG"
+      },
+      {
+        "evidence": "variability of heart rhythm and waveform morphology",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": "104 patients receiving elective PTCA in one of the major coronary arteries; patients with ventricular tachycardia, emergency procedures, or signal loss were excluded",
+    "summary": "ECG recordings acquired during elective percutaneous transluminal coronary angioplasty procedures using single prolonged balloon inflation, capturing inter-patient variability in heart rhythm and waveform morphology."
+  },
+  "prompt_version": "v1"
+}

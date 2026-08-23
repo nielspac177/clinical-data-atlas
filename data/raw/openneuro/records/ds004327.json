@@ -1,0 +1,171 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004327",
+  "payload": {
+    "created": "2022-11-02T20:45:05.627Z",
+    "id": "ds004327",
+    "latestSnapshot": {
+      "created": "2023-08-21T13:22:53.000Z",
+      "description": {
+        "Authors": [
+          "Emily E. Perszyk",
+          "Jessica Trinh",
+          "Xue S. Davis",
+          "Zach Hutelin",
+          "Leonie Koban",
+          "Maria G. Veldhuizen",
+          "Jelena Djordjevic",
+          "Marilyn Jones-Gotman",
+          "Tor Wager",
+          "Hedy Kober",
+          "Dana M. Small"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004327.v1.0.3",
+        "Funding": [
+          "NIH NIDDKF31 DK130556, NSF GRFP 2139841, Modern Diet and Physiology Research Center Gift."
+        ],
+        "HowToAcknowledge": "Please see our publication at https://www.nature.com/articles/s42255-023-00874-z.",
+        "License": "CC0",
+        "Name": "Odour-imagery ability is linked to food craving, intake, and adiposity change in humans",
+        "ReferencesAndLinks": [
+          "https://www.nature.com/articles/s42255-023-00874-z"
+        ]
+      },
+      "readme": "_______________________________\n## ACCESS ##\n_______________________________\n\nContact Person #1: Dana M. Small (dana.small@mcgill.ca, ORCID: 0000-0001-7363-1100)\n\nContact Person #2: Emily E. Perszyk (emily.perszyk@gmail.com, ORCID: 0000-0002-8902-4644)\n\nAdditional information: Please see our publication at https://www.nature.com/articles/s42255-023-00874-z.\n\n_______________________________\n## OVERVIEW ##\n_______________________________\n\nProject Name: Odour-imagery ability is linked to food craving, intake, and adiposity change in humans\n\nData Collection Period: 2020 - 2021 (scans were run between the hours of 8:00am-1:00pm local time)\n\nStudy goals: Mental imagery is thought to play a key role in food craving and other forms of cue reactivity. Here we tested contributions from imagery in the olfactory domain (i.e., odor imagery). We used fMRI in the creation of a novel neural measure of odor imagery ability. Specifically, we leveraged the fact that different odors activate distinct fMRI patterns in the piriform primary olfactory cortex. We used multivariate pattern analyses to decode imagined odor patterns, and found that the resulting decoding accuracies mapped onto other subjective (i.e., self-reported) and objective (i.e., psychophysical) measures of odor imagery ability.\n\nContents of the Dataset: 47 participants (1 session each, 5 odor BOLD runs per session)\n\nVariables: Our primary fMRI conditions were: smell rose, smell cookie, smell clean air, imagine rose, imagine cookie, imagine clean air. Subjects were instructed to sniff on all trials and the downsampled and normalized sniff airflow traces were used as regressors in our first level models to help control for sniffing. \n\n_______________________________\n## METHODS ##\n_______________________________\n\nSubjects: Participants were recruited from the local New Haven, CT, USA community and university population via flyer and social media advertisements. Individuals needed to be free from known taste or smell dysfunction, dieting behaviors, food restrictions, nicotine or drug use, serious medical conditions including metabolic, neurologic, and psychiatric disorders or medications used to treat these, cognitive deficits or memory loss that could impact mental imagery, and any MRI-contraindications (e.g., being left-handed, pregnant, or having metal in the body). We also ensured that they did not have recent smell loss due to COVID-19 and did not intend to leave the greater New Haven, CT area over the next year. \n\nApparatus and Setup: A custom olfactometer was used to deliver the odors and clean air to participants lying in the MRI scanner. They received auditory cues via headphones and were instructed to keep their eyes closed and to sniff while both smelling and imagining. The odors included “phenylethyl alcohol white extra” (rose, #001059147) and “cookie dough” (cookie, #10610208) from International Flavors and Fragrances (New York, NY, USA) diluted in food-grade propylene glycol.\n\nTask Organization: Each participant completed five BOLD runs (using five different pre-set and counterbalanced trial orders). The fMRI scan occurred as each participant's fourth session at baseline (after completing behavioral measures in the lab during the first three sessions). Participants also returned to the lab one year later to assess adiposity change. \n\nTask Details: Each trial began with a 5s auditory cue of “smell” or “imagine” followed by the name of the odor (e.g., rose) and the countdown “three, two, one, sniff.” Odor/clean air delivery (3s) was time-locked to sniff onset. Participants completed 30 trials per run (five of each type) and five runs per scan. Runs were ~9min long and separated by ~2min breaks to prevent olfactory habituation. \n\nExperimental Location: The MR data was collected at the Yale Magnetic Resonance Research Center at The Anlyan Center (300 Cedar St, New Haven, CT, USA). All other measures were collected at our lab space in the Modern Diet and Physiology Research Center at Yale (1 Church St, New Haven, CT, USA).\n\n_______________________________\n## ADDITIONAL DATA ACQUIRED ##\n_______________________________\n\nIn addition to the (f)MRI data, we collected demographic information (e.g., sex, age, education, household income, race, and ethnicity) and body measurements (height, weight, BMI, visceral adipose tissue, and body fat percentage) at both baseline and a one-year followup session. We also measured olfactory function (rose and odor detection thresholds), took pre- and post-scan odor (liking, edibility, intensity, and familiarity) and internal state (hunger, fullness, thirst, anxiety, and need to urinate) ratings. We quantified self-reported odor, flavor, and visual imagery ability with questionnaires and obtained another objective measure of odor imagery ability using an established psychophysical task. We assessed food cue reactivity with a food craving paradigm and a bogus taste test. Finally, participants completed further questionnaires of their typical monthly consumption of fatty and sugary foods (the DFS) and of their physical activity (the IPAQ). For further information on these measures or access to additional data that is not reported in the participants.tsv and .json files, please see our upcoming publication and affiliated source data.\n\n_______________________________\n## MISSING DATA ##\n_______________________________\n\nsub-2459: Did not return for one-year follow-up session (missing follow-up body measures)\n\n_______________________________\n## NOT ANALYZED ##\n_______________________________\n\nsub-2484: Excluded entirely after inability to obtain proper odor thresholds (detection accuracy was below 50% chance)\n\nsub-2505: Excluded entirely after inability to obtain proper odor thresholds (detection accuracy was below 50% chance)\n\nsub-2509: Excluded entirely after inability to obtain proper odor thresholds (detection accuracy was below 50% chance)\n\nsub-1681: Excluded from from food intake analyses after eating more than 3SD above the mean during the bogus taste test\n\nsub-2507: Excluded from adiposity change analyses after beginning a strict diet and losing more than 3 SD above the mean in weight",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 112335720006,
+        "subjects": [
+          "1681",
+          "2020",
+          "2129",
+          "2162",
+          "2306",
+          "2369",
+          "2397",
+          "2435",
+          "2438",
+          "2455",
+          "2457",
+          "2459",
+          "2460",
+          "2461",
+          "2463",
+          "2464",
+          "2467",
+          "2468",
+          "2472",
+          "2476",
+          "2477",
+          "2479",
+          "2480",
+          "2481",
+          "2482",
+          "2483",
+          "2484",
+          "2485",
+          "2487",
+          "2488",
+          "2489",
+          "2490",
+          "2491",
+          "2492",
+          "2497",
+          "2498",
+          "2499",
+          "2502",
+          "2503",
+          "2507",
+          "2508",
+          "2509",
+          "2510",
+          "2518",
+          "2526",
+          "2528",
+          "2533"
+        ],
+        "tasks": [
+          "odor"
+        ],
+        "totalFiles": 1284
+      },
+      "tag": "1.0.3"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        31,
+        33,
+        27,
+        21,
+        33,
+        19,
+        26,
+        31,
+        24,
+        22,
+        19,
+        24,
+        29,
+        25,
+        23,
+        30,
+        26,
+        35,
+        20,
+        28,
+        36,
+        24,
+        37,
+        19,
+        22,
+        23,
+        34,
+        21,
+        25,
+        27,
+        32,
+        27,
+        18,
+        19,
+        42,
+        35,
+        21,
+        33,
+        37,
+        33,
+        28,
+        27,
+        28,
+        24,
+        20,
+        25,
+        28
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "The Modern Diet and Physiology Research Center",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "5 BOLD runs (30 trials per run, 5 trials each of the following 6 types: smell rose odor, smell cookie odor, smell clean air, imagine rose odor, imagine cookie odor, imagine clean air)",
+      "studyDomain": "Olfaction / Imagery",
+      "studyLongitudinal": "Observational"
+    },
+    "publishDate": "2023-07-10T18:13:54.932Z"
+  },
+  "source": "openneuro"
+}

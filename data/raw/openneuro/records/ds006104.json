@@ -1,0 +1,119 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006104",
+  "payload": {
+    "created": "2025-04-08T01:43:51.139Z",
+    "id": "ds006104",
+    "latestSnapshot": {
+      "created": "2025-04-08T12:14:54.000Z",
+      "description": {
+        "Authors": [
+          "João Pedro Carvalho Moreira",
+          "Vinícius Rezende Carvalho",
+          "Eduardo Mazoni Andrade Marçal Mendes",
+          "Ariah Fallah",
+          "Terrence J. Sejnowski",
+          "Claudia Lainscsek",
+          "Lindy Comstock"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006104.v1.0.1",
+        "Funding": [],
+        "HowToAcknowledge": "Please cite: Moreira et al. \"An open-access EEG dataset for speech decoding: Exploring the role of articulation and coarticulation\"",
+        "License": "CC0",
+        "Name": "EEG dataset for speech decoding",
+        "ReferencesAndLinks": null
+      },
+      "readme": "EEG dataset for speech decoding\n============================\n\nDataset Overview\n---------------\n\nThis dataset contains EEG recordings from a phoneme discrimination task with TMS.\nThe data were collected during two related studies in 2019 and 2021.\n\nStudy 1 (2019, Session 01):\n- 8 participants (P01-P08)\n- Focus on CV and VC phoneme pairs\n- 2 blocks: CV pairs and VC pairs\n- TMS targeted to LipM1 (-56, -8, 46) and TongueM1 (-60, -10, 25)\n\nStudy 2 (2021, Session 02):\n- 16 participants (S01-S16)\n- Expanded to include single phonemes and phoneme triplets\n- 4 blocks: single phonemes, CV pairs, real words, and pseudowords\n- Additional TMS targets included Broca's area (BA 44: -51, 7, 23) and verbal memory region (BA 6: -46, 1, 41)\n\nTask Description\n---------------\n\nParticipants listened to speech sounds and identified stimuli with a button-press response.\nThe stimuli included:\n1. Single phonemes - Consonants (/b/, /p/, /d/, /t/, /s/, /z/) and vowels (/i/, /E/, /A/, /u/, /oU/)\n2. Phoneme pairs - CV and VC combinations of the phonemes\n3. Phoneme triplets - Real and pseudowords constructed of CVC sequences\n\nTMS Methodology\n--------------\n\nDetailed information about TMS parameters can be found in the sourcedata/tms_metadata/tms_parameters.json file.\nTMS was applied using a Magstim Super Rapid Plus1 stimulator with a figure-of-eight 40 mm coil.\nStimulation was delivered at 110% of resting motor threshold as paired pulses with 50ms interpulse interval.\n\nDetailed information about the methodology and results can be found in the associated publication:\nMoreira et al. \"An open-access EEG dataset for speech decoding: Exploring the role of articulation and coarticulation\"\n\n\n\nDirectory Structure\n------------------\n\nThe dataset follows BIDS convention with the following structure:\n/sub-[subject]/ses-[session]/eeg/\nWhere subject is P01-P08 for Study 1 and S01-S16 for Study 2.\nSession is 01 for Study 1 and 02 for Study 2.\n\nContact Information\n------------------\n\nFor questions about this dataset, please contact Lindy Comstock at lbcomstock@ucla.edu\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "eeg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [
+          "01",
+          "02"
+        ],
+        "size": 46128446170,
+        "subjects": [
+          "P07",
+          "P05",
+          "S14",
+          "S04",
+          "P06",
+          "S15",
+          "S16",
+          "S07",
+          "P04",
+          "S03",
+          "S12",
+          "P02",
+          "S02",
+          "S05",
+          "S08",
+          "P01",
+          "S09",
+          "S13",
+          "S11",
+          "P03",
+          "P08",
+          "S10",
+          "S01",
+          "S06"
+        ],
+        "tasks": [
+          "phonemes",
+          "Words",
+          "single-phoneme"
+        ],
+        "totalFiles": 309
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "U.S. Russia Foundation",
+      "modalities": [
+        "eeg"
+      ],
+      "species": "Human",
+      "studyDesign": "Repeated measures",
+      "studyDomain": "Language",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2025-04-08T11:50:08.283Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,99 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004829",
+  "payload": {
+    "created": "2023-10-27T17:03:16.223Z",
+    "id": "ds004829",
+    "latestSnapshot": {
+      "created": "2026-04-19T09:59:31.000Z",
+      "description": {
+        "Authors": [
+          "Ana F. Palenciano",
+          "Carlos González-García",
+          "Jan de Houwer",
+          "Baptist Lieefoghe",
+          "Marcel Brass"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004829.v1.0.2",
+        "Funding": null,
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "Concurrent response and action effect representations across the somatomotor cortices during novel task preparation.",
+        "ReferencesAndLinks": [
+          "",
+          ""
+        ]
+      },
+      "readme": "This dataset contains the raw fMRI BIDS dataset from the work \"Concurrent responses and action effect representations across the somatomotor cortices during novel task preparation\" by Ana F. Palenciano, Carlos González-García, Jan De Houwer, Baptist Lieefoghe and Marcel Brass.\n\nThe dataset includes, per participant (N = 30): \n\n- De-faced anatomical T1-weighted scan (/anat).\n\n- T2* EPI images from 7 functional runs (/func), 4 of them corresponding to the main experimental paradigm and 3 additional localizer runs. TSV event files containing onset and durations of the main events of interest are  \nalso included. \n\n\n- Field mapping phase and magnitud images (/fmap).\n\n\nThe processed individual and group-level fMRI and behavioral data and the scripts used for the analyses are available on OSF (https://osf.io/dq6v5/)\n\nFor a full description of the experimental tasks and methodology employed in our work, please read the publication: https://doi.org/10.1016/j.cortex.2024.05.003",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 45644188569,
+        "subjects": [
+          "15",
+          "28",
+          "30",
+          "19",
+          "16",
+          "32",
+          "22",
+          "06",
+          "11",
+          "35",
+          "23",
+          "17",
+          "03",
+          "34",
+          "25",
+          "26",
+          "31",
+          "36",
+          "21",
+          "27",
+          "29",
+          "20",
+          "37",
+          "05",
+          "10",
+          "13",
+          "18",
+          "08",
+          "33",
+          "09"
+        ],
+        "tasks": [
+          ""
+        ],
+        "totalFiles": 874
+      },
+      "tag": "1.0.2"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "within-subjects",
+      "studyDomain": "Cognitive control, task preparation",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2023-10-30T11:28:43.712Z"
+  },
+  "source": "openneuro"
+}

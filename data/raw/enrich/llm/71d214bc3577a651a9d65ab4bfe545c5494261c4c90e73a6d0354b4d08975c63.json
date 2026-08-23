@@ -1,0 +1,45 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:71d214bc3577a651a9d65ab4bfe545c5494261c4c90e73a6d0354b4d08975c63",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "The Cancer Genome Atlas Uterine Corpus Endometrial Carcinoma (TCGA-UCEC) data collection",
+        "label": "Uterine Corpus Endometrial Carcinoma"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "obstetrics_gynecology"
+    ],
+    "id": "tcia:tcga-ucec",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "CR CT MR PT",
+        "value": "MRI"
+      },
+      {
+        "evidence": "CR CT MR PT",
+        "value": "CT"
+      },
+      {
+        "evidence": "CR CT MR PT",
+        "value": "PET"
+      },
+      {
+        "evidence": "CR CT MR PT",
+        "value": "xray"
+      },
+      {
+        "evidence": "Clinical, genetic, and pathological data resides in the Genomic Data Commons (GDC) Data Portal",
+        "value": "genomics"
+      }
+    ],
+    "population": "Subjects from The Cancer Genome Atlas whose tissues were collected from many sites all over the world; images mostly acquired as part of routine care.",
+    "summary": "Abdomen and uterus imaging of endometrial carcinoma patients, matched by identifier to clinical, genetic and pathological data in the Genomic Data Commons for genotype-phenotype-outcome research."
+  },
+  "prompt_version": "v1"
+}

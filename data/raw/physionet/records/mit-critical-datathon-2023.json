@@ -1,0 +1,36 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "mit-critical-datathon-2023",
+  "payload": {
+    "abstract": "<p>Pulse oximeters are medical devices used to assess peripheral arterial&nbsp;oxygen saturation (<math> <semantics> <mrow> <mi>S</mi> <mi>p</mi> <msub> <mi>O</mi> <mn>2</mn> </msub> </mrow> <annotation encoding=\"application/x-tex\">SpO_2</annotation> </semantics> </math>) noninvasively. In contrast,&nbsp;the &quot;gold standard&quot; requires arterial blood to be drawn to measure the arterial oxygen saturation (<math> <semantics> <mrow> <mi>S</mi> <mi>a</mi> <msub> <mi>O</mi> <mn>2</mn> </msub> </mrow> <annotation encoding=\"application/x-tex\">SaO_2</annotation> </semantics> </math>). Pulse oximeters currently on the market measure <math> <semantics> <mrow> <mi>S</mi> <mi>p</mi> <msub> <mi>O</mi> <mn>2</mn> </msub> </mrow> <annotation encoding=\"application/x-tex\">SpO_2</annotation> </semantics> </math>&nbsp;in populations with darker skin tones with lower accuracy. Pulse oximetry inaccuracies can fail to detect episodes of hidden hypoxemia, i.e., low&nbsp;<math> <semantics> <mrow> <mi>S</mi> <mi>a</mi> <msub> <mi>O</mi> <mrow class=\"MJX-TeXAtom-ORD\"> <mn>2</mn> </mrow> </msub> </mrow> <annotation encoding=\"application/x-tex\">SaO_{2}</annotation> </semantics> </math><span>&nbsp;with high</span> <math> <semantics> <mrow> <mi>S</mi> <mi>p</mi> <msub> <mi>O</mi> <mn>2</mn> </msub> </mrow> <annotation encoding=\"application/x-tex\">SpO_2</annotation> </semantics> </math>. Hidden hypoxemias can result in less treatment and increased mortality. Yet flawed, pulse oximeters remain ubiquitously used because of their ease of use; debiasing the underlying algorithms could alleviate the downstream repercussions of hidden hypoxemia. The dataset supports the building of pulse oximetry correction models. Derived from MIMIC-IV v2.2, it includes 81,797 Intensive Care Unit (ICU)&nbsp;<math> <semantics> <mrow> <mi>S</mi> <mi>a</mi> <msub> <mi>O</mi> <mn>2</mn> </msub> <mo>−</mo> <mi>S</mi> <mi>p</mi> <msub> <mi>O</mi> <mn>2</mn> </msub> </mrow> <annotation encoding=\"application/x-tex\">SaO_2 - SpO_2</annotation> </semantics> </math>&nbsp;pairs.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 13369819,
+    "core_doi": "10.13026/8vsr-1f85",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 52488339,
+    "public_project_uuid": "f7f47719-bf6b-4fa5-b5cf-3b544dc2df71",
+    "publish_date": "2023-05-08",
+    "resource_type": "Challenge",
+    "short_description": "A SaO2-SpO2 Pairs Dataset derived from MIMIC-IV",
+    "slug": "mit-critical-datathon-2023",
+    "source_url": "https://physionet.org/content/mit-critical-datathon-2023/1.0.0/",
+    "title": "MIT Critical Datathon 2023: a MIMIC-IV Derived Dataset for Pulse Oximetry Correction Models",
+    "topics": [
+      "pulse oximetry",
+      "health equity",
+      "machine learning"
+    ],
+    "version": "1.0.0",
+    "version_doi": "10.13026/jfpc-pz79"
+  },
+  "source": "physionet"
+}

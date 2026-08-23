@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:64f4f93a52af70b59e54d86bcee66804d3fd1e2a34853e7479b620bceb4f39da",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Adrenocortical carcinoma (ACC) is a rare tumor of the adrenal cortex",
+        "label": "Adrenocortical carcinoma (ACC)"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "endocrinology_metabolism"
+    ],
+    "id": "tcia:adrenal-acc-ki67-seg",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "contrast enhanced CT imaging studies",
+        "value": "CT"
+      },
+      {
+        "evidence": "histopathological parameters from resected tumors",
+        "value": "pathology"
+      },
+      {
+        "evidence": "with available clinical, pathological data includes Ki-67 index",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "53 confirmed ACC patients imaged between 2006 to 2018",
+    "summary": "Retrospective contrast-enhanced CT studies of 53 confirmed adrenocortical carcinoma patients with clinical and pathological data including Ki-67 index, plus semi-automatic tumor segmentations refined by a radiologist for radiomic feature extraction."
+  },
+  "prompt_version": "v1"
+}

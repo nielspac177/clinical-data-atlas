@@ -1,0 +1,89 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005427",
+  "payload": {
+    "created": "2024-08-25T03:31:52.173Z",
+    "id": "ds005427",
+    "latestSnapshot": {
+      "created": "2024-08-25T11:36:32.000Z",
+      "description": {
+        "Authors": [
+          "Juan Pablo Franco",
+          "Peter Bossaerts",
+          "Carsten Murawski"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005427.v1.1.1",
+        "Funding": [
+          "JPF was supported by a University of Melbourne Graduate Research Scholarship from the Faculty of Business and Economics. PB acknowledges financial support through a R@MAP Chair from the University of Melbourne."
+        ],
+        "HowToAcknowledge": "Please cite this paper: https://www.biorxiv.org/content/10.1101/2022.01.05.475102v1",
+        "License": "CC0",
+        "Name": "The neural dynamics associated with computational complexity",
+        "ReferencesAndLinks": [
+          "https://osf.io/g4h7y/",
+          "https://www.biorxiv.org/content/10.1101/2022.01.05.475102v1"
+        ]
+      },
+      "readme": "## Access to the Data\n\n### Contact Person\nFor additional information, please contact:\n- Carsten Murawski, carstenm@unimelb.edu.au\n- J. Pablo Franco at jpfranco@unimelb.edu.au\n\n## Overview\n\n### Project Name\nThe Neural Dynamics Associated with Computational Complexity\n\n### Year(s) the Project Ran\nData acquisition happened between October 2017 and February 2018. \n\n### Brief Overview of the Tasks in the Experiment\nThe experiment aimed to investigate the neural processes associated with solving computationally complex problems, specifically focusing on the 0-1 knapsack problem, a combinatorial optimization problem. Participants solved several instances of this problem while undergoing ultra-high field (7T) functional magnetic resonance imaging (fMRI). The instances varied in computational hardness, and the study aimed to characterize the neural dynamics as a function of computational complexity.\n\n### Description of the Contents of the Dataset\nThe dataset includes a structural MRI image (T1w) and BOLD data from 20 participants. The BOLD dataset was collected while participants performend the knapsack decision task.\n\n### Independent Variables\n- **Typical-Case Complexity (TCC)**: High vs. Low\n- **Satisfiability**: Satisfiable vs. Unsatisfiable\n\n### Dependent Variables\n- **Behavioral Performance**: Accuracy of the responses in the knapsack decision task.\n- **Neural Activation**: BOLD signal changes measured via fMRI.\n\n### Control Variables\n- **Subject Pool**: Right-handed volunteers aged 18-35 years.\n- **Environmental Conditions**: Experiments conducted in a controlled MRI environment.\n- **Task Setup**: Standardized instructions and practice sessions before the actual task.\n\n### Quality Assessment of the Data\nThe quality of the fMRI data was ensured through preprocessing steps including motion correction, slice-time correction, and normalization.\n\n## Methods\n\n### Subjects\n- **Subject Pool**: 20 right-handed volunteers from Melbourne University and the surrounding community (14 female, 5 male, 1 other; age range = 18-35 years, mean age = 26.6 years).\n- **Inclusion Criteria**: Minimum age of 18 years, maximum age of 40 years, right-handedness.\n\n### Apparatus\nThe experiment was performed using a 7 Tesla Siemens MAGNETOM scanner with a 32-channel radio frequency coil. The BOLD signal was measured using a multiband echo-planar imaging sequence.\n\n### Initial Setup\nParticipants filled out an MRI screening form, read a plain language statement, provided written informed consent, and completed a practice session of the knapsack decision task before going into the scanner.\n\n### Task Organization\nParticipants performed the knapsack decision task inside the scanner and a set of complementary tasks outside the scanner, including the knapsack optimization task and cognitive function tasks from the CANTAB battery. The order of tasks was standardized across participants.\n\n### Task Details\n- **Knapsack Decision Task**: In each trial, they were shown a set of items with different values and weights, as well as a capacity constraint and a target profit. Participants had to decide whether there exists a subset of those items for which (1) the sum of weights is lower or equal to the capacity constraint and (2) the sum of values yields at least the target profit. Participants solved 56 instances of the (0-1) knapsack decision problem, presented in a randomized order. Each trial consisted of an items stage (3 seconds), solving stage (22 seconds), response stage (2 seconds), and a jittered inter-trial interval (8-12 seconds).\n\n![exp_design](https://github.com/jpfranco123/KS-Decision-T2/assets/26372744/77f7302c-9658-4f01-8a5c-a52c91131459)\n\n### Additional Data Acquired\nBehavioral data from the knapsack optimization task and cognitive function assessments were collected.\n- **Knapsack Optimization Task**: Participants were asked to find a subset of items that maximized total value subject to a capacity constraint. They solved a totla of 18 instances of the problem and had up to 60 seconds to solve each instance. \n- **Cognitive Function Tasks**: Included Reaction Time (RTI), Paired Associates Learning (PAL), Spatial Working Memory (SWM), and Spatial Span (SSP) from the CANTAB battery, as well as a mental arithmetic task.\n\n### Experimental Location\nThe experiment was conducted at the Melbourne Brain Centre, Parkville, Victoria, Australia.\n\n### Missing Data\nNo participants or trials were excluded from the data analysis of the knapsack decision task. \n\n## Notes\n- Additional data collected and the paradigm are available at the Open Science Framework (OSF): [https://osf.io/g4h7y/](https://osf.io/g4h7y/).\n- Additional information about the experiment is available in the associated manuscript [here](https://www.biorxiv.org/content/10.1101/2022.01.05.475102v1).",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 82303126327,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20"
+        ],
+        "tasks": [
+          "ksdp"
+        ],
+        "totalFiles": 746
+      },
+      "tag": "1.1.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": null,
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "problem-solving, decision-making",
+      "studyLongitudinal": "Other"
+    },
+    "publishDate": "2024-08-25T11:52:17.427Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,31 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:7c4756d7971357a5fa73eea5d6653fa344b5a08b9cb651d84ec68b41f6054316",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "colorectal cancer screening",
+        "label": "colorectal cancer"
+      }
+    ],
+    "countries": [
+      "HU"
+    ],
+    "domains": [
+      "oncology",
+      "gastroenterology_hepatology"
+    ],
+    "id": "tcia:hungarian-colorectal-screening",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "digital whole-slide images",
+        "value": "pathology"
+      }
+    ],
+    "population": "Colorectal biopsy samples selected from the archives of the 2nd Department of Pathology of Semmelweis University, Budapest",
+    "summary": "Whole-slide images of hematoxylin-eosin stained colorectal biopsies from a Hungarian colorectal cancer screening archive, scanned at 40x magnification in raw MIRAX format at a single center."
+  },
+  "prompt_version": "v1"
+}

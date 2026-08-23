@@ -1,0 +1,72 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds001379",
+  "payload": {
+    "created": "2018-05-22T19:01:46.170Z",
+    "id": "ds001379",
+    "latestSnapshot": {
+      "created": "2022-05-24T13:15:20.000Z",
+      "description": {
+        "Authors": [
+          "Christopher Baldassano"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds001379.v1.0.0",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Loci case study",
+        "ReferencesAndLinks": null
+      },
+      "readme": "This dataset was obtained in three sessions over two days with a single subject (PM), a competitive memory champion who uses the method of loci.\n\nThe four task types were:\n1) task-loci: Walking through the (empty) loci\n2) task-encode: Given one two-digit number at a time, construct a memorable event at each locus\n3) task-recall: Recall events and corresponding numbers from most recent encoding session\n4) task-forget: Walk through loci, attempting to remove associated event from memory\n\nThe order of the scans was:\n\nSession 1 (Day 1, AM)\n1) sub-01_ses-01_task-loci_run-01_bold\n2) sub-01_ses-01_task-loci_run-02_bold\n3) sub-01_ses-01_task-encode_run-01_bold (list #1)\n4) sub-01_ses-01_task-recall_run-01_bold (list #1)\n5) sub-01_ses-01_task-recall_run-02_bold (list #1)\n6) sub-01_ses-01_task-forget_run-01_bold\n7) sub-01_ses-01_task-encode_run-02_bold (list #2)\n8) sub-01_ses-01_task-recall_run-03_bold (list #2)\n9) sub-01_ses-01_task-recall_run-04_bold (list #2)\n10) sub-01_ses-01_task-forget_run-02_bold\n\n\nSession 2 (Day 1, PM)\n1) sub-01_ses-02_task-loci_run-01_bold\n2) sub-01_ses-02_task-loci_run-02_bold\n3) sub-01_ses-02_task-encode_run-01_bold (list #3)\n4) sub-01_ses-02_task-recall_run-01_bold (list #3)\n5) sub-01_ses-02_task-encode_run-02_bold (list #3)\n6) sub-01_ses-02_task-recall_run-02_bold (list #3)\n7) sub-01_ses-02_task-recall_run-03_bold (list #3)\n8) sub-01_ses-02_task-forget_run-01_bold\n\n\nSession 3 (Day 2, AM)\n1) sub-01_ses-03_task-loci_run-01_bold\n2) sub-01_ses-03_task-loci_run-02_bold\n3) sub-01_ses-03_task-encode_run-01_bold (list #4)\n4) sub-01_ses-03_task-recall_run-01_bold (list #4)\n5) sub-01_ses-03_task-recall_run-02_bold (list #4)\n6) sub-01_ses-03_task-forget_run-01_bold\n7) sub-01_ses-03_task-encode_run-02_bold (list #5)\n8) sub-01_ses-03_task-recall_run-03_bold (list #5)\n9) sub-01_ses-03_task-recall_run-04_bold (list #5)\n10) sub-01_ses-03_task-forget_run-02_bold\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "01",
+          "02",
+          "03"
+        ],
+        "size": 5511702455,
+        "subjects": [
+          "01"
+        ],
+        "tasks": [
+          "encode",
+          "forget",
+          "loci",
+          "recall"
+        ],
+        "totalFiles": 78
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        59
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2022-05-24T13:14:44.072Z"
+  },
+  "source": "openneuro"
+}

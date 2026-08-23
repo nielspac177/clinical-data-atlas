@@ -1,0 +1,41 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:581f24aded5d3e2f76345455f12862a85835d39a5845d02f442a9f9ee75375b3",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Ultrasound data of a variety of liver masses",
+        "label": "liver masses"
+      },
+      {
+        "evidence": "characterize indeterminate liver lesions",
+        "label": "indeterminate liver lesions"
+      },
+      {
+        "evidence": "available for many HCC cases",
+        "label": "HCC"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "gastroenterology_hepatology"
+    ],
+    "id": "tcia:b-mode-and-ceus-liver",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Ultrasound data was obtained on a variety of state of the art ultrasound scanners",
+        "value": "ultrasound"
+      },
+      {
+        "evidence": "reference standard used for lesion characterization included tissue pathology",
+        "value": "pathology"
+      }
+    ],
+    "population": "Patients with liver masses enrolled in two ongoing clinical trials of contrast-enhanced ultrasound",
+    "summary": "B-mode and contrast-enhanced ultrasound images and cine-loops of liver masses from two ongoing clinical trials, with tissue pathology and cross-sectional imaging as reference standards and treatment response after transarterial chemoembolization for many cases."
+  },
+  "prompt_version": "v1"
+}

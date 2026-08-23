@@ -1,0 +1,28 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:586dc793699392379e5ac4ea9c5cfb8723d6b2e567e0761ed13a31dd5ef0ba09",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "pulmonology"
+    ],
+    "id": "tcia:rider-pilot",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "longitudinal studies using X-ray CT",
+        "value": "CT"
+      },
+      {
+        "evidence": "X-ray CT",
+        "value": "xray"
+      }
+    ],
+    "population": null,
+    "summary": "Longitudinal X-ray CT imaging collected to monitor response to drug or radiation therapy, from M.D. Anderson Cancer Center and LIDC academic sites. Much of the data is unannotated; only the QIBA-VolCT-NoChange-1B subset is hosted here."
+  },
+  "prompt_version": "v1"
+}

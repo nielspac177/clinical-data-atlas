@@ -1,0 +1,204 @@
+{
+  "endpoints": [
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getCollectionValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getModalityValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getBodyPartValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getPatient",
+    "https://api.datacite.org/dois?prefix=10.7937"
+  ],
+  "harvest_method": "api:nbia+datacite",
+  "native_id": "TCGA-READ",
+  "payload": {
+    "datacite": {
+      "citationCount": 8,
+      "container": {},
+      "contentUrl": [],
+      "contributors": [
+        {
+          "affiliation": [],
+          "contributorType": "Other",
+          "familyName": null,
+          "givenName": null,
+          "name": "TCIA Team",
+          "nameIdentifiers": [],
+          "nameType": null
+        }
+      ],
+      "created": "2016-01-29T13:04:22Z",
+      "creators": [
+        {
+          "affiliation": [],
+          "familyName": "Kirk",
+          "givenName": "Shanah",
+          "name": "Kirk, Shanah",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Lee",
+          "givenName": "Yueh",
+          "name": "Lee, Yueh",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0003-1846-7680",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Sadow",
+          "givenName": "Cheryl A.",
+          "name": "Sadow, Cheryl A.",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Levine",
+          "givenName": "Seth",
+          "name": "Levine, Seth",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2016",
+          "dateInformation": null,
+          "dateType": "Issued"
+        }
+      ],
+      "descriptions": [
+        {
+          "description": "The Cancer Genome Atlas Rectum Adenocarcinoma (TCGA-READ) data collection is part of a larger effort to build a research community focused on connecting cancer phenotypes to genotypes by providing clinical images matched to subjects from The Cancer Genome Atlas (TCGA). Clinical, genetic, and pathological data resides in the Genomic Data Commons (GDC) Data Portal while the radiological data is stored on The Cancer Imaging Archive (TCIA). Matched TCGA patient identifiers allow researchers to explore the TCGA/TCIA databases for correlations between tissue genotype, radiological phenotype and patient outcomes. Tissues for TCGA were collected from many sites all over the world in order to reach their accrual targets, usually around 500 specimens per cancer type. For this reason the image data sets are also extremely heterogeneous in terms of scanner modalities, manufacturers and acquisition protocols. In most cases the images were acquired as part of routine care and not as part of a controlled research study or clinical trial.",
+          "descriptionType": "Abstract",
+          "lang": null
+        }
+      ],
+      "doi": "10.7937/k9/tcia.2016.f7ppnpnu",
+      "downloadCount": 0,
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "TCGA-READ",
+          "identifierType": "TCIA Short Name"
+        }
+      ],
+      "isActive": true,
+      "language": null,
+      "metadataVersion": 14,
+      "partCount": 0,
+      "partOfCount": 0,
+      "publicationYear": 2016,
+      "published": null,
+      "publisher": "The Cancer Imaging Archive",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2016-01-29T13:04:23Z",
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "10.1038/s41698-024-00539-4",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.3233/xst-230090",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1109/tetci.2024.3502404",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1001/jamanetworkopen.2022.52553",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        }
+      ],
+      "relatedItems": [],
+      "rightsList": [
+        {
+          "rights": "Creative Commons Attribution 3.0 Unported",
+          "rightsIdentifier": "cc-by-3.0",
+          "rightsIdentifierScheme": "SPDX",
+          "rightsUri": "https://creativecommons.org/licenses/by/3.0/legalcode",
+          "schemeUri": "https://spdx.org/licenses/"
+        }
+      ],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "fabricaForm",
+      "state": "findable",
+      "subjects": [],
+      "titles": [
+        {
+          "lang": null,
+          "title": "The Cancer Genome Atlas Rectum Adenocarcinoma Collection (TCGA-READ)",
+          "titleType": null
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceType": "DICOM",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2025-06-01T01:01:15Z",
+      "url": "https://www.cancerimagingarchive.net/collection/tcga-read/",
+      "version": "3",
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 4327
+    },
+    "nbia": {
+      "body_parts": [
+        "RECTUM"
+      ],
+      "collection": "TCGA-READ",
+      "modalities": [
+        "CT",
+        "MR"
+      ],
+      "patients": [
+        {
+          "Collection": "TCGA-READ",
+          "PatientId": "TCGA-BM-6198",
+          "PatientName": "TCGA-BM-6198",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-READ",
+          "PatientId": "TCGA-CL-5917",
+          "PatientName": "TCGA-CL-5917",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-READ",
+          "PatientId": "TCGA-CL-4957",
+          "PatientName": "TCGA-CL-4957",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        }
+      ]
+    }
+  },
+  "source": "tcia"
+}

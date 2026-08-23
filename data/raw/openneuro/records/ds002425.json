@@ -1,0 +1,84 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds002425",
+  "payload": {
+    "created": "2020-01-23T13:10:03.230Z",
+    "id": "ds002425",
+    "latestSnapshot": {
+      "created": "2025-04-08T19:43:36.000Z",
+      "description": {
+        "Authors": [
+          "Tomoyasu Horikawa",
+          "Alan S. Cowen",
+          "Dacher Keltner",
+          "Yukiyasu Kamitani"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds002425.v1.0.2",
+        "Funding": [
+          "This research was supported by grants from the New Energy and Industrial Technology Development Organization (NEDO); Tateishi Science and Technology Foundation; JSPS KAKENHI Grant number JP15H05710, JP15H05920, and JP17K12771; JST CREST Grant Number JPMJCR18A5; and JST PRESTO Grant Number JPMJPR185B Japan."
+        ],
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "The neural representation of visually evoked emotion is high-dimensional, categorical, and distributed across transmodal brain regions",
+        "ReferencesAndLinks": [
+          "Horikawa, T., Cowen, A.S., Keltner, D., Kamitani, Y., The neuralrepresentation of visually evoked emotion is high-dimensional, categorical, and distributed acrosstransmodal brain regions, ISCIENCE (2020), doi: https://doi.org/10.1016/j.isci.2020.101060"
+        ]
+      },
+      "readme": "# The neural representation of visually evoked emotion is high-dimensional, categorical, and distributed across transmodal brain regions\n\n## Original paper\n\nHorikawa, T., Cowen, A.S., Keltner, D., Kamitani, Y., The neuralrepresentation of visually evoked emotion is high-dimensional, categorical, and distributed acrosstransmodal brain regions, ISCIENCE (2020), doi: <https://doi.org/10.1016/j.isci.2020.101060>\n\n## Dataset\n\n### MRI data\n\nThis dataset contains fMRI data from five subjects ('sub-01', 'sub-02', 'sub-03', 'sub-04', and 'sub-05'). The subjects performed eight sessions of fMRI experiments ('ses-01', 'ses-02', ..., 'ses-08').\nEach scanning session consisted of functional (EPI) and anatomical (inplane T2) images.\nThe functional EPI images covered the entire brain (TR, 2000 ms; TE, 43 ms; flip angle, 80°; voxel size, 2 × 2 × 2 mm; FOV, 192 × 192 mm; number of slices, 76; slice gap, 0 mm; multiband factor, 4) and inplane T2-weighted anatomical images were acquired with the same slices used for the EPI (TR, 11,000 ms; TE, 59 ms; flip angle, 160°; voxel size, 0.75 × 0.75 × 2.0 mm; FOV, 192 × 192 mm).\nThe dataset also includes a T1-weighted anatomical reference image for each subject (TR, 2250 ms; TE, 3.06 ms; TI, 900 ms; flip angle, 9°; voxel size, 1.0 × 1.0 × 1.0 mm; FOV, 256 × 256 mm).\nThe T1-weighted images were scanned only once for each subject in a separate scanning session and are stored in 'ses-anatomy' directories.\nThe T1-weighted images were defaced by pydeface (<https://pypi.python.org/pypi/pydeface>).\nAll DICOM files are converted to Nifti-1 files by mri_convert in FreeSurfer.\n\n\n### Task event files\n\nTask event files ('sub-\\*_ses-\\*_task-CowenKeltnerEmotionMovie_run-\\*_events.tsv') contains recorded event during fMRI runs. Each column of the task event files represents:\n\n- 'onset': onset time of an event (sec)\n- 'duration': duration of the event (sec)\n- 'trial_type': type of the event (1: Stimulus presentation block, -1 and -2: Initial and post rest blocks without visual stimulus)\n- 'stimulus_name': stimulus file name of the video presented in a stimulus block ('n/a' in rest blocks)\n- 'stimulus_index': stimulus ID of the video presented in a stimulus block ('n/a' in rest blocks)\n\n### Stimulus videos\n\nWe used the videos collected by [Cowen & Keltner (2017)](https://doi.org/10.1073/pnas.1702247114), and you can request the videos from <https://goo.gl/forms/XErJw9sBeyuOyp5Q2>.\n\n\n## Contact\n\n- Email: <brainliner-admin@atr.jp>\n- We also accept inqueries at [issues on GitHub/KamitaniLab/OpenData](https://github.com/KamitaniLab/OpenData/issues).",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "07",
+          "02",
+          "anatomy",
+          "06",
+          "01",
+          "03",
+          "08",
+          "05",
+          "04"
+        ],
+        "size": 58029524128,
+        "subjects": [
+          "05",
+          "01",
+          "02",
+          "03",
+          "04"
+        ],
+        "tasks": [
+          "CowenKeltnerEmotionMovie"
+        ],
+        "totalFiles": 963
+      },
+      "tag": "1.0.2"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [],
+      "associatedPaperDOI": "https://doi.org/10.1016/j.isci.2020.101060",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2020-04-24T09:16:55.330Z"
+  },
+  "source": "openneuro"
+}

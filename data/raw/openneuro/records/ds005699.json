@@ -1,0 +1,73 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005699",
+  "payload": {
+    "created": "2024-12-07T15:56:57.080Z",
+    "id": "ds005699",
+    "latestSnapshot": {
+      "created": "2024-12-08T20:13:32.000Z",
+      "description": {
+        "Authors": [
+          "Rovai, Antonin"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005699.v1.0.0",
+        "Funding": [],
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "Connectomix test dataset 2",
+        "ReferencesAndLinks": [
+          ""
+        ]
+      },
+      "readme": "# Connectomix test dataset 2\n\nThis dataset is designed to test features of Connectomix. For more information, please visit the GitHub repository:\n\n[https://github.com/ln2t/connectomix](https://github.com/ln2t/connectomix)\n\nThe dataset contains data for 4 participants.\n\n## Rawdata\n\n- Anatomical: T1w image (defaced)\n- Functional: A standard 6 minutes resting-state scan\n- Groups: the participants are split in `control` and `patient` groups in the `participants.tsv` file. This split has been done artificially and serves only testing purposes.\n\n## Derivatives\n- fmriprep: preprocessed data using fMRIPrep\n- connectomix: results of the connectomix software (see below for details)\n\n## Commands\nThe exact commands to run the analyzes depends on your installation of fMRIPrep.\nIn what follows, we simply assume that `fmriprep` is the command for fMRIPrep.\nWe show here the simplest version of the commands, assuming you adapt those depending on your setup (e.g. if you use Docker).\n\nWe also assume that the data are at the following locations:\n```bash\nbids_dir='/data/ds005699'\nderivatives_dir='/data/ds005699/derivatives'\n```\n\n### Preprocessing (fMRIPrep)\n```bash\nfmriprep $bids_dir ${derivatives_dir}/fmriprep participant --fs-license-file /path/to/fs/license\n```\n\n### Analysis: connectomix\n*Note:* The following has been tested for connectomix version 1.0.1.\n\nFirst set-up path to connectomix script:\n```bash\nconnectomix_cmd='/path/to/connectomix/connectomix/connectomix.py'\n```\n\nSecond, set-up paths to config directory:\n```bash\nconfig_dir='/data/ds005625/code/connectomix/config'\n```\n\n#### Participant-level\n```bash\n$connectomix_cmd ${bids_dir} ${derivatives_dir}/connectomix participant --derivatives fmriprep=\"${derivatives_dir}/fmriprep\" --config \"${config_dir}/participant_level_config.yaml\"\n```\n\n#### Group-level\n*Notes:*\n- this is an example of **Independent two-samples t-test**\n- Since the dataset contains only four subjects (two subjects per group), the number of possible permutations is very low. For this reason, the number of computed permutations is set to 4, and connectomix can then complete the group level-analysis. Of course, realistic cases should not only include much more participants, but also a much larger number of permutations (see connectomix documentation).\n\n```bash\n$connectomix_cmd ${bids_dir} ${derivatives_dir}/connectomix group --config \"${config_dir}/group_level_config.yaml\"\n```\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural",
+          "mri_functional"
+        ],
+        "sessions": [],
+        "size": 460622457,
+        "subjects": [
+          "001",
+          "037",
+          "042",
+          "004"
+        ],
+        "tasks": [
+          "restingstate"
+        ],
+        "totalFiles": 21
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        29,
+        39,
+        50,
+        47
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "resting-state",
+      "studyDomain": "",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2024-12-11T12:57:11.912Z"
+  },
+  "source": "openneuro"
+}

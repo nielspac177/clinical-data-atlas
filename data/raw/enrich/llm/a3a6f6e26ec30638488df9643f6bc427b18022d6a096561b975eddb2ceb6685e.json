@@ -1,0 +1,38 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:a3a6f6e26ec30638488df9643f6bc427b18022d6a096561b975eddb2ceb6685e",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "paroxysmal atrial fibrillation (PAF)",
+        "label": "paroxysmal atrial fibrillation"
+      },
+      {
+        "evidence": "Atrial fibrillation (AF)",
+        "label": "atrial fibrillation"
+      }
+    ],
+    "countries": [
+      "CN"
+    ],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:cpsc2021",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "dynamic ECG records",
+        "value": "ECG"
+      },
+      {
+        "evidence": "dynamic or wearable ECGs",
+        "value": "wearable"
+      }
+    ],
+    "population": null,
+    "summary": "Dynamic ECG database built for a challenge on locating the onsets and ends of paroxysmal atrial fibrillation episodes, released with a scoring metric for evaluating event detection methods."
+  },
+  "prompt_version": "v1"
+}

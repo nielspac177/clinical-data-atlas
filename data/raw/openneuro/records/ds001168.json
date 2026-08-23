@@ -1,0 +1,124 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds001168",
+  "payload": {
+    "created": "2017-11-30T19:01:26.945Z",
+    "id": "ds001168",
+    "latestSnapshot": {
+      "created": "2019-01-07T21:50:54.000Z",
+      "description": {
+        "Authors": [
+          "Chris Gorgolewski",
+          " Natacha Mendes",
+          "Domenica Wilfling",
+          "Elisabeth Wladimirow",
+          "Claudine J. Gauthier",
+          "Tyler Bonnen",
+          "Florence J.M. Ruby",
+          "Robert Trampel",
+          "Pierre-Louis Bazin",
+          "Roberto Cozatl",
+          "Jonathan Smallwood",
+          "Daniel S. Margulies"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds001168.v1.0.1",
+        "Funding": [],
+        "HowToAcknowledge": "Please cite https://doi.org/10.1038/sdata.2014.54",
+        "License": "CC0",
+        "Name": "A high resolution 7-Tesla resting-state fMRI test-retest dataset with cognitive and physiological measures",
+        "ReferencesAndLinks": [
+          "https://doi.org/10.1038/sdata.2014.54",
+          "http://fcon_1000.projects.nitrc.org/indi/CoRR/html/mpg_1.html"
+        ]
+      },
+      "readme": "Here we present a test-retest dataset of functional magnetic resonance imaging (fMRI) data acquired at rest. 22 participants were scanned during two sessions spaced one week apart. Each session includes two 1.5 mm isotropic whole-brain scans and one 0.75 mm isotropic scan of the prefrontal cortex, giving a total of six time-points. Additionally, the dataset includes measures of mood, sustained attention, blood pressure, respiration, pulse, and the content of self-generated thoughts (mind wandering). This data enables the investigation of sources of both intra- and inter-session variability not only limited to physiological changes, but also including alterations in cognitive and affective states, at high spatial resolution. The dataset is accompanied by a detailed experimental protocol and source code of all stimuli used.\n\n### Structural scan\n\nFor structural images a 3D MP2RAGE29 sequence was used: 3D-acquisition with field of view 224×224×168 mm3 (H-F; A-P; R-L), imaging matrix 320×320×240, 0.7 mm3 isotropic voxel size, Time of Repetition (TR)=5.0 s, Time of Echo (TE)=2.45 ms, Time of Inversion (TI) 1/2=0.9 s/2.75 s, Flip Angle (FA) 1/2=5°/3°, Bandwidth (BW)=250 Hz/Px, Partial Fourier 6/8, and GRAPPA acceleration with iPAT factor of 2 (24 reference lines).\n\n### Field map\n\nFor estimating B0 inhomogeneities, a 2D gradient echo sequence was used. It was acquired in axial orientation with field of view 192×192 mm2 (R-L; A-P), imaging matrix 64×64, 35 slices with 3.0 mm thickness, 3.0 mm3 isotropic voxel size, TR=1.5 s, TE1/2=6.00 ms/7.02 ms (which gives delta TE=1.02 ms), FA=72°, and BW=256 Hz/Px.\n\n### Whole-brain rs-fMRI\n\nWhole-brain rs-fMRI scans were acquired using a 2D sequence. It used axial orientation, field of view 192×192 mm2 (R-L; A-P), imaging matrix 128×128, 70 slices with 1.5 mm thickness, 1.5 mm3 isotropic voxel size, TR=3.0 s, TE=17 ms, FA=70°, BW=1,116 Hz/Px, Partial Fourier 6/8, GRAPPA acceleration with iPAT factor of 3 (36 reference lines), and 300 repetitions resulting in 15 min of scanning time. Before the scan subjects were instructed to stay awake, keep their eyes open and focus on a cross. In order to avoid a pronounced g-factor penalty30 when using a 24 channel receive coil, the acceleration factor was kept at a maximum of 3, preventing the acquisition of whole-brain data sets at submillimeter resolution. However, as 7 T provides the necessary SNR for such high spatial resolutions a second experiment was performed with only partial brain coverage but with an 0.75 mm isotropic resolution.\n\n### Prefrontal cortex rs-fMRI\n\nThe submillimeter rs-fMRI scan was acquired with a zoomed EPI31 2D acquisition sequence. It was acquired in axial orientation with skewed saturation pulse32 suppressing signal from posterior part of the brain (see Figure 2). The position of the field of view was motivated by the involvement of medial prefrontal cortex in the default mode network and mindwandering33. This location can also improve our understanding of functional anatomy of the prefrontal cortex which is understudied in comparison to primary sensory cortices. Field of view was 150×45 mm2 (R-L; A-P), imaging matrix=200×60, 40 slices with 0.75 mm thickness, 0.75 mm3 isotropic voxel size, TR=4.0 s, TE=26 ms, FA=70°, BW=1,042 Hz/Px, Partial Fourier 6/8. A total of 150 repetitions were acquired resulting in 10 min of scanning time. Before the scan subjects were instructed to stay awake, keep their eyes open and focus on a cross.\n\n### Known issues\n\n- sub-07\tSession 1 & 2\t Shimming window was offset causing minor signal deterioration. The same shimming window was used for both sessions.\n- sub-08\tSession  1\tThe lightbulb in the projector died during the first resting state scan. A projector from another scanner was used as a replacement. The replacement took approximately 30 min. The participant was in the scanner during this time.\n- sub-11\tSession  1 & 2\tAll whole-brain scans were accidentally acquired with voxel size 3 mm instead of 1.5 mm.\n- sub-12\tSession  1 & 2\tSecond fieldmap was run after second whole-brain not before, the same order was used for the second session.\n- sub-13\tSession  1\tSecond magnitude image of the first fieldmap was damaged during transfer from the scanner (one slice is missing). The phase image is intact so the fieldmap can still be reconstructed.\n- sub-19\tSession  1\tSecond physiological recording (corresponding to second whole-brain scan) was stopped before the scan finished, third physiological recording (corresponding to the prefrontal scan) was started after the scan started.",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "1",
+          "2"
+        ],
+        "size": 46477596979,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22"
+        ],
+        "tasks": [
+          "Rest"
+        ],
+        "totalFiles": 732
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2017-11-30T19:01:26.945Z"
+  },
+  "source": "openneuro"
+}

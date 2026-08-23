@@ -1,0 +1,133 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "TCGA-UVM",
+  "payload": {
+    "dbgap_accession_number": null,
+    "disease_type": [
+      "Nevi and Melanomas",
+      "Paragangliomas and Glomus Tumors"
+    ],
+    "id": "TCGA-UVM",
+    "name": "Uveal Melanoma",
+    "primary_site": [
+      "Eye and adnexa"
+    ],
+    "program": {
+      "dbgap_accession_number": "phs000178",
+      "name": "TCGA",
+      "program_id": "b80aa962-9650-5110-b3eb-bd087da808db"
+    },
+    "project_id": "TCGA-UVM",
+    "releasable": true,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 80,
+      "data_categories": [
+        {
+          "case_count": 80,
+          "data_category": "Simple Nucleotide Variation",
+          "file_count": 1849
+        },
+        {
+          "case_count": 80,
+          "data_category": "Sequencing Reads",
+          "file_count": 724
+        },
+        {
+          "case_count": 80,
+          "data_category": "Biospecimen",
+          "file_count": 320
+        },
+        {
+          "case_count": 80,
+          "data_category": "Clinical",
+          "file_count": 172
+        },
+        {
+          "case_count": 80,
+          "data_category": "Copy Number Variation",
+          "file_count": 1202
+        },
+        {
+          "case_count": 80,
+          "data_category": "Transcriptome Profiling",
+          "file_count": 320
+        },
+        {
+          "case_count": 80,
+          "data_category": "DNA Methylation",
+          "file_count": 240
+        },
+        {
+          "case_count": 12,
+          "data_category": "Proteome Profiling",
+          "file_count": 12
+        },
+        {
+          "case_count": 71,
+          "data_category": "Somatic Structural Variation",
+          "file_count": 378
+        },
+        {
+          "case_count": 80,
+          "data_category": "Structural Variation",
+          "file_count": 370
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 80,
+          "experimental_strategy": "RNA-Seq",
+          "file_count": 720
+        },
+        {
+          "case_count": 75,
+          "experimental_strategy": "WGS",
+          "file_count": 1569
+        },
+        {
+          "case_count": 80,
+          "experimental_strategy": "WXS",
+          "file_count": 1280
+        },
+        {
+          "case_count": 80,
+          "experimental_strategy": "miRNA-Seq",
+          "file_count": 240
+        },
+        {
+          "case_count": 80,
+          "experimental_strategy": "Genotyping Array",
+          "file_count": 1034
+        },
+        {
+          "case_count": 80,
+          "experimental_strategy": "Methylation Array",
+          "file_count": 240
+        },
+        {
+          "case_count": 12,
+          "experimental_strategy": "Reverse Phase Protein Array",
+          "file_count": 12
+        },
+        {
+          "case_count": 80,
+          "experimental_strategy": "Diagnostic Slide",
+          "file_count": 80
+        },
+        {
+          "case_count": 70,
+          "experimental_strategy": "Tissue Slide",
+          "file_count": 70
+        }
+      ],
+      "file_count": 5587,
+      "file_size": 39672207186200
+    }
+  },
+  "source": "gdc"
+}

@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:7e8d431c5577ef7192485cb4d50e3cb0a04142981faf676ea95b830e4f527065",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "spontaneous episode of ventricular tachycardia (VT)",
+        "label": "ventricular tachycardia"
+      },
+      {
+        "evidence": "ventricular fibrillation (VF)",
+        "label": "ventricular fibrillation"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:mvtdb",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "RR interval time series",
+        "value": "ECG"
+      }
+    ],
+    "population": "78 subjects with implanted cardioverter defibrillators",
+    "summary": "Paired RR interval time series recorded by implanted cardioverter defibrillators, each pair containing one series with a spontaneous ventricular tachycardia or fibrillation episode and one sample of intrinsic, usually sinus, rhythm."
+  },
+  "prompt_version": "v1"
+}

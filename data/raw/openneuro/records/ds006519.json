@@ -1,0 +1,120 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006519",
+  "payload": {
+    "created": "2025-07-31T09:11:55.018Z",
+    "id": "ds006519",
+    "latestSnapshot": {
+      "created": "2025-07-31T09:16:09.000Z",
+      "description": {
+        "Authors": [
+          "Andrei Barborica",
+          "Cristina Ghita",
+          "Laurentiu Tofan",
+          "Irina Oane",
+          "Ioana Mindruta"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006519.v1.0.0",
+        "Funding": [
+          "Romanian UEFISCDI PN-III-P4-ID-PCE-2020-0935"
+        ],
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "Dataset of intracranial EEG during cortical stimulations evoking negative motor responses",
+        "ReferencesAndLinks": null
+      },
+      "readme": "In this dataset we included iEEG recordings of responses to 41 intracranial high frequency stimulations evoking \r\nnegative motor responses, in 23 patients undergoing stereo-EEG presurgical evaluation for drug-resistant epilepsy.\r\n\r\nThe dataset contains 24 seconds of iEEG data around each stimulation, 9-10 seconds before the start of the stimulation, \r\nup to 5 seconds of intracranial stimulation and 9-10 seconds after the end of the stimulation. Each recording contains\r\ntwo 5 second epochs, pre-stimulation (used as baseline in the connectivity analysis) and post-stimulation.\r\n\r\nWe have used high-frequency bipolar stimulations of different areas of the brain, using biphasic pulses having a duration \r\nof 1 ms, at a frequency of 43.2 Hz (alternating polarity) or 50 Hz (non-alternating), current intensity between 0.25 to 3 mA, \r\nfor up to 5 s. \r\n\r\nThe contact pair on which stimulation is applied, the current intensity level and evoked effect are specified \r\nin the events tsv. \r\n\r\nNot all patients in which stimulations evoked negative motor responses met the inclusion criteria for network analysis \r\nthat requires running the freesurfer pipeline, for instance patients having prior resections, therefore there are subjects\r\nthat do not contain anatomy data and are not included in the dataset. However, they are included in the numbering of patients \r\nto match the table in the companion manuscript.\r\n\r\nContact: andrei.barborica@fizica.unibuc.ro\r\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "ieeg",
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural"
+        ],
+        "sessions": [
+          "01",
+          "02",
+          "04",
+          "03",
+          "05"
+        ],
+        "size": 1118742821,
+        "subjects": [
+          "18",
+          "17",
+          "11",
+          "08",
+          "20",
+          "06",
+          "15",
+          "22",
+          "21",
+          "23",
+          "16",
+          "10",
+          "09",
+          "13",
+          "12",
+          "01",
+          "04",
+          "02",
+          "03",
+          "14",
+          "07"
+        ],
+        "tasks": [
+          "dcs"
+        ],
+        "totalFiles": 397
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        35,
+        24,
+        33,
+        11,
+        9,
+        28,
+        36,
+        29,
+        28,
+        42,
+        41,
+        20,
+        27,
+        26,
+        24,
+        18,
+        20,
+        26,
+        29,
+        54,
+        29,
+        35,
+        42
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Drug-resistant epilepsy",
+      "grantFunderName": "Romanian Executive Unit for Financing Higher Education, Research, Development and Innovation (UEFISCDI)",
+      "modalities": [
+        "ieeg",
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "Epilepsy",
+      "studyLongitudinal": "Observational"
+    },
+    "publishDate": "2025-07-31T11:08:48.262Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:7cb28464b708ad2d6874984378aed480f10551099a3b1fd78237f062a8b90bf5",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "head and neck squamous cell carcinoma patients",
+        "label": "head and neck squamous cell carcinoma"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "tcia:mri-dir",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "T1-, and T2-weighted images",
+        "value": "MRI"
+      },
+      {
+        "evidence": "The markers were visible on the CT scans",
+        "value": "CT"
+      },
+      {
+        "evidence": "pre-, mid-, and post-radiotherapy treatment MR scans",
+        "value": "radiotherapy"
+      }
+    ],
+    "population": "A porcine phantom imaged in four compressed positions, plus synthetic images derived from 28 head and neck squamous cell carcinoma patients with pre-, mid-, and post-radiotherapy MR scans",
+    "summary": "Two image sets for evaluating deformable image registration accuracy: CT and T1/T2-weighted scans of a porcine phantom with implanted gold markers, and synthetic images derived from head and neck cancer patients."
+  },
+  "prompt_version": "v1"
+}

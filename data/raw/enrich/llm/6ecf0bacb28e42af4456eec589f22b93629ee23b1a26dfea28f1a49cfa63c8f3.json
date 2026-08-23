@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:6ecf0bacb28e42af4456eec589f22b93629ee23b1a26dfea28f1a49cfa63c8f3",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "1,104 healthy volunteers",
+        "label": "healthy volunteers"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "cardiology",
+      "neurology"
+    ],
+    "id": "physionet:autonomic-aging-cardiovascular",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Electrocardiogram and continuous non-invasive blood pressure signals were recorded",
+        "value": "ECG"
+      },
+      {
+        "evidence": "continuous noninvasive blood pressure",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": "Healthy volunteers recorded at rest; the database contains recordings of 1,104 healthy volunteers, with signals recorded in 1,121 healthy volunteers.",
+    "summary": "Simultaneous resting electrocardiogram and continuous non-invasive blood pressure recordings from healthy volunteers, collected to describe how cardiovascular autonomic regulation changes with healthy aging."
+  },
+  "prompt_version": "v1"
+}

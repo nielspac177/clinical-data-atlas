@@ -1,0 +1,115 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003397",
+  "payload": {
+    "created": "2020-11-24T01:04:23.632Z",
+    "id": "ds003397",
+    "latestSnapshot": {
+      "created": "2026-08-12T06:57:16.000Z",
+      "description": {
+        "Authors": [
+          "Sharna D Jamadar",
+          "Emma X Liang",
+          "Phillip GD Ward",
+          "Alexandra Carey",
+          "Richard McIntyre",
+          "Zhaolin Chen",
+          "Shenjun Zhong",
+          "Gary F Egan"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds003397.v1.2.7",
+        "Funding": [
+          "Australian Research Council (ARC) Linkage Project (LP170100494) that includes financial support from Siemens Healthineers",
+          "ARC Centre of Excellence for Integrative Brain Function (CE140100007)",
+          "ARC Discovery Early Career Researcher Award (DE150100406)",
+          "National Health and Medical Research Council Fellowship (APP1174164)"
+        ],
+        "HowToAcknowledge": "Please cite this paper:\nJamadar, Liang, Zhong, Ward, Carey, McIntyre, Chen, Egan (2021). Monash DaCRA fPET-fMRI: A DAtaset for Comparison of Radiotracer Administration for high temporal resolution functional FDG-PET. bioRXiv, https://doi.org/10.1101/2021.08.02.454708",
+        "License": "CC0",
+        "Name": "Monash DaCRA fPET-fMRI",
+        "ReferencesAndLinks": [
+          "Jamadar, Ward, Li, Sforazzini, Baran, Chen, Egan (2019). Simultaneous task-based BOLD-fMRI and [18-F] FDG functional PET for measurement of neuronal metabolism in the human visual cortex. Neuroimage, 189, 258-266.",
+          "Jamadar, Ward, Carey, McIntyre, Parkes, Sasan, Fallon, Orchard, Li, Chen, Egan. (2019). Radiotracer administration for high temporal resolution positron emission tomography of the human brain: application to FDG-fPET. JoVe, DOI: 10.3791/60259",
+          "Jamadar, Ward, Close, Fornito, Premaratne, O'Brien, Stab, Chen, Shah, Egan (2020). Simultaneous BOLD-fMRI and constant infusion FDG-PET data of the resting human brain. Scientific Data, 7, 1-12.",
+          "Jamadar, Ward, Liang, Orchard, Chen, Egan (2021). Metabolic and Hemodynamic Resting-State Connectivity of the Human Brain: A High-Temporal Resolution Simultaneous BOLD-fMRI and FDG-fPET Multimodality Study. Cerebral Cortex, 31, 2855-2867.",
+          "Jamadar, Zhong, Carey, McIntyre, Ward, Fornito, Premaratne, Shah, O'Brien, Stab, Chen, Egan (2021). Task-evoked simultaneous FDG-PET and fMRI data for measurement of neural metabolism in the human visual cortex. Scientific Data, 8, 1-9."
+        ]
+      },
+      "readme": "This dataset comprises of n=15 individuals who underwent simultaneous MRI-PET imaging. FDG-PET data was acquired using three different radiotracer administration protocols: bolus, constant infusion, and 50% bolus + 50% infusion. n=5 subjects were acquired with each administration protocol. BOLD-fMRI and FDG-PET was acquired while participants viewed a flickering checkerboard stimulus, presented in an embedded block design.\n\n(IMPORTANT: Please note that the UTE, Dixon, 16 seconds reconstructed PET data, fPET information and unconstracted PET listmode data) are not compatible with the current BIDS specifications. They are in the corresponding directories:\n\nUTE: /sub-*/ute\nDixon: /sub-*/dixon\nReconstrcuted PET: /sub-*/pet\nfPET information:/pet_info\nlistmode data: /sourcedata/sub-*/pet\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri",
+          "pet"
+        ],
+        "secondaryModalities": [
+          "pet_dynamic",
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 76226504790,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "10",
+          "11",
+          "09",
+          "13",
+          "12",
+          "14",
+          "15"
+        ],
+        "tasks": [
+          "Flashing checkerboard",
+          "checkerboard"
+        ],
+        "totalFiles": 321
+      },
+      "tag": "1.2.7"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        20,
+        18,
+        19,
+        20,
+        19,
+        19,
+        19,
+        19,
+        20,
+        20,
+        19,
+        19,
+        19,
+        20,
+        20
+      ],
+      "associatedPaperDOI": "https://doi.org/10.1101/2021.08.02.454708",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "Australian Research Council",
+      "modalities": [
+        "mri",
+        "pet"
+      ],
+      "species": "Human",
+      "studyDesign": "Between-subjects",
+      "studyDomain": "Brain",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2021-08-09T00:55:36.490Z"
+  },
+  "source": "openneuro"
+}

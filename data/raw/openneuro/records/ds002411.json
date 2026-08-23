@@ -1,0 +1,138 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds002411",
+  "payload": {
+    "created": "2020-01-17T08:32:15.570Z",
+    "id": "ds002411",
+    "latestSnapshot": {
+      "created": "2020-01-30T05:42:11.000Z",
+      "description": {
+        "Authors": [
+          "Yoshiharu Ikutani",
+          "Takatomi Kubo",
+          "Satoshi Nishida",
+          "Hideaki Hata",
+          "Kenichi Matsumoto",
+          "Kazushi Ikeda",
+          "Shinji Nishimoto"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds002411.v1.1.0",
+        "Funding": [
+          "JST ERATO Grant Number JPMJER1801",
+          "JSPS KAKENHI Grant Number JP15H05311",
+          "JSPS KAKENHI Grant Number JP16H05857",
+          "JSPS KAKENHI Grant Number JP16H06569",
+          "JSPS KAKENHI Grant Number JP17H01797",
+          "JSPS KAKENHI Grant Number JP18K18108",
+          "JSPS KAKENHI Grant Number JP18K18141",
+          "JSPS KAKENHI Grant Number JP18J22957"
+        ],
+        "HowToAcknowledge": "Y. Ikutani, T. Kubo, S. Nishida, H. Hata, K. Matsumoto, K. Ikeda, and S. Nishimoto, \"fMRI dataset on program comprehension and expertise\", OpenNeuro https://openneuro.org/datasets/ds002411, doi:10.18112/openneuro.ds002411.v1.0.0, (2020).",
+        "License": "CC0",
+        "Name": "fMRI dataset on program comprehension and expertise",
+        "ReferencesAndLinks": [
+          ""
+        ]
+      },
+      "readme": "# fMRI dataset on program comprehension and expertise (fMRI on Java program comprehension)\n\n## Original paper\n\nY. Ikutani, T. Kubo, S. Nishida, H. Hata, K. Matsumoto, K. Ikeda, and S. Nishimoto, \"Expert programmers have fine-tuned cortical representations of source code\", 2020. (Preprint is available at https://www.biorxiv.org/content/10.1101/2020.01.28.923953v1 )\n\n## Overview\n\nIn this study, fMRI data was recorded while subjects were categorizing source code snippets into one of four functional categories. The experiment consisted of six separate runs (36 trials plus one dummy trial for each run) and a total of 72 Java code snippets were each presented three times. In each trial, a Java code snippet was displayed for ten seconds after a fixation-cross presentation for two seconds. Then, subjects classified the given code snippet into one of four category classes within four seconds by pressing a button. We recruited top- and middle-rated programmers as well as novice controls to cover a wide range of programming expertise using programmers' rate in the competitive programming contest 'AtCoder'. fMRI data in each subject were used to train and evaluate models (decoders) to predict functional category or subcategory of seen Java code snippets. Searchlight-based decoding accuracies were assessed to identify the brain regions that contribute expert programmers' outstanding performances on program comprehension.\n\nSource code for preprocessing and analyses is available from our GitHub repository.\nhttps://github.com/Yoshiharu-Ikutani/DecodingCodeFromTheBrain\n\n## Dataset\n\n### MRI files\n\nThis dataset contains fMRI data from twenty-nine subjects ('sub-01', 'sub-02', ..., 'sub-29'). Each subject data contains anatomical and functional MRI data. Functional scans were collected over six scanning runs.\n\nThe functional EPI scans covered the entire brain (TR, 2000 ms; TE, 30 ms; flip angle, 75°; voxel size, 2 × 2 × 2.01 mm; FOV, 192 × 192 mm; slice gap, 0 mm). The dataset also includes a T1-weighted anatomical reference image for each subject (TR, 2530 ms; TE, 3.26 ms; flip angle, 9°; voxel size, 1.0 × 1.0 × 1.0 mm; FOV, 256 × 256 mm). The T1-weighted images were scanned only once for each subject. The T1-weighted images were defaced using mri_deface (<https://surfer.nmr.mgh.harvard.edu/fswiki/mri_deface>). All DICOM files are converted to Nifti by dcm2niix (version v1.0.20190902).\n\nNote: We used MRI data from thirty subjects in the original paper. Twenty-nine subjects approved to open their MRI data to the public but one subject declined. Thus, we published the MRI data only from subjects who approved to make it open.\n\n### Subject information\n\nThe subject information file ('participants.tsv') denote the background information of each subject (age, sex, handedness, etc.). You can find what each column of the subject information files represents in './participants.json'. \n\n### Task event files\n\nTask event files (‘sub-\\*_func_task-ProgramCategorization_run-\\*_events.tsv’) denote recorded event (stimuli code, subject responses, etc.) during fMRI runs. You can find what each column of the task event files represents in './task-ProgramCategorization_events.json'. \n\n### Java code snippets as the experimental stimuli\n\nJava code snippets used in the study were stored in the stimuli directory ('./stimuli'). They were collected from an open codeset provided by AIZU ONLINE JUDGE (<http://judge.u-aizu.ac.jp/onlinejudge/>) and preprocessed by the authors to normalize indentation styles and names of user-defined functions. The 'stim_file' column in the task event files indicate one of the Java code snippets in the stimuli directory to specify which code snippet was used in each trial of the experiment.\n\n## Contact\n\n- Email: <takatomi-k@is.naist.jp>",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 60450221754,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29"
+        ],
+        "tasks": [
+          "ProgramCategorization"
+        ],
+        "totalFiles": 659
+      },
+      "tag": "1.1.0"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        23,
+        21,
+        23,
+        24,
+        22,
+        22,
+        24,
+        23,
+        23,
+        21,
+        24,
+        22,
+        22,
+        23,
+        21,
+        23,
+        23,
+        22,
+        22,
+        23,
+        24,
+        21,
+        22,
+        21,
+        23,
+        22,
+        22,
+        21,
+        20
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "Programming expertise",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2020-01-29T01:40:40.232Z"
+  },
+  "source": "openneuro"
+}

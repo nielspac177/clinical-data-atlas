@@ -1,0 +1,39 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:d9ab7b752f15db68e21fe5f99c0eca23cca8cb70d242c995411ee538544aace9",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "male patients with suspected or diagnosed prostate carcinoma",
+        "label": "prostate carcinoma"
+      }
+    ],
+    "countries": [
+      "DE"
+    ],
+    "domains": [
+      "oncology",
+      "nephrology_urology"
+    ],
+    "id": "tcia:psma-pet-ct-lesions",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "whole-body PSMA-PET/CT studies",
+        "value": "PET"
+      },
+      {
+        "evidence": "whole-body PSMA-PET/CT studies",
+        "value": "CT"
+      },
+      {
+        "evidence": "a TSV file with patient age at imaging, PET/CT manufacturer and model name",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "Male patients with suspected or diagnosed prostate carcinoma scanned at LMU University Hospital, LMU Munich (2014–2022)",
+    "summary": "Whole-body PSMA-PET/CT studies from male patients with suspected or diagnosed prostate carcinoma, with manually segmented PSMA-avid lesions, anonymized DICOM files, segmentation masks, and a tabular file of patient and scanner details."
+  },
+  "prompt_version": "v1"
+}

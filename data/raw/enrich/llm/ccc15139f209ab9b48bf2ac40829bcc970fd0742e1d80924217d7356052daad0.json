@@ -1,0 +1,41 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:ccc15139f209ab9b48bf2ac40829bcc970fd0742e1d80924217d7356052daad0",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "head and neck squamous cell carcinoma (HNSCC) patients",
+        "label": "head and neck squamous cell carcinoma (HNSCC)"
+      },
+      {
+        "evidence": "patients with lung or head-and-neck cancer",
+        "label": "lung cancer"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "pulmonology"
+    ],
+    "id": "tcia:head-neck-radiomics-hn1",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "computed tomography (CT) from 137 head and neck squamous cell carcinoma (HNSCC) patients",
+        "value": "CT"
+      },
+      {
+        "evidence": "patients treated by radiotherapy",
+        "value": "radiotherapy"
+      },
+      {
+        "evidence": "This collection contains clinical data",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "137 head and neck squamous cell carcinoma (HNSCC) patients treated by radiotherapy",
+    "summary": "Clinical data and pre-treatment CT scans with manually delineated gross tumor volumes from head and neck squamous cell carcinoma patients treated by radiotherapy; the H&N1 dataset of a published radiomics study."
+  },
+  "prompt_version": "v1"
+}

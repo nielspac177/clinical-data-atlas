@@ -1,0 +1,151 @@
+{
+  "endpoints": [
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getCollectionValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getModalityValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getBodyPartValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getPatient",
+    "https://api.datacite.org/dois?prefix=10.7937"
+  ],
+  "harvest_method": "api:nbia+datacite",
+  "native_id": "Lung Phantom",
+  "payload": {
+    "datacite": {
+      "citationCount": 3,
+      "container": {},
+      "contentUrl": [],
+      "contributors": [
+        {
+          "affiliation": [],
+          "contributorType": "Other",
+          "familyName": null,
+          "givenName": null,
+          "name": "TCIA Team",
+          "nameIdentifiers": [],
+          "nameType": null
+        }
+      ],
+      "created": "2015-07-15T22:42:53Z",
+      "creators": [
+        {
+          "affiliation": [],
+          "familyName": "Zhao",
+          "givenName": "Binsheng",
+          "name": "Zhao, Binsheng",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0003-1835-7916",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2015",
+          "dateInformation": null,
+          "dateType": "Issued"
+        }
+      ],
+      "descriptions": [
+        {
+          "description": "The FDA anthropomorphic thorax phantom with 12 phantom lesions of different sizes (10 and 20 mm in effective diameter), shapes (spherical, elliptical, lobulated, and spiculated), and densities (−630,−10, and +100 HU) was scanned at Columbia University Medical Center on a 64-detector row scanner (LightSpeed VCT, GE Healthcare, Milwaukee, WI). The CT scanning parameters were 120 kVp, 100 mAs, 64x0.625 collimation, and pitch of 1.375. The images were reconstructed with the lung kernel using 1.25 mm slice thickness. This data set was provided to TCIA for use in the National Cancer Institute's Quantiatitive Imaging Network (QIN) Lung CT Segmentation Challenge.",
+          "descriptionType": "Abstract",
+          "lang": null
+        }
+      ],
+      "doi": "10.7937/k9/tcia.2015.08a1ixoo",
+      "downloadCount": 0,
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "Lung Phantom",
+          "identifierType": "TCIA Short Name"
+        }
+      ],
+      "isActive": true,
+      "language": null,
+      "metadataVersion": 12,
+      "partCount": 0,
+      "partOfCount": 0,
+      "publicationYear": 2015,
+      "published": null,
+      "publisher": "The Cancer Imaging Archive",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2015-07-15T22:42:55Z",
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "10.23919/iccas55662.2022.10003847",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1007/s11042-018-7003-4",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        }
+      ],
+      "relatedItems": [],
+      "rightsList": [
+        {
+          "rights": "Creative Commons Attribution 3.0 Unported",
+          "rightsIdentifier": "cc-by-3.0",
+          "rightsIdentifierScheme": "SPDX",
+          "rightsUri": "https://creativecommons.org/licenses/by/3.0/legalcode",
+          "schemeUri": "https://spdx.org/licenses/"
+        }
+      ],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "fabricaForm",
+      "state": "findable",
+      "subjects": [],
+      "titles": [
+        {
+          "lang": null,
+          "title": "Lung Phantom",
+          "titleType": null
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceType": "DICOM",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2025-06-01T01:01:20Z",
+      "url": "https://www.cancerimagingarchive.net/collection/lung-phantom/",
+      "version": "2",
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 1711
+    },
+    "nbia": {
+      "body_parts": [],
+      "collection": "Lung Phantom",
+      "modalities": [
+        "CT",
+        "SEG"
+      ],
+      "patients": [
+        {
+          "Collection": "Lung Phantom",
+          "PatientBirthDate": "1900-01-01 00:00:00.0",
+          "PatientId": "4482356",
+          "PatientName": "ASSURANCE^QUALITY",
+          "PatientSex": "M",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        }
+      ]
+    }
+  },
+  "source": "tcia"
+}

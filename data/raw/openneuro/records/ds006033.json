@@ -1,0 +1,80 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006033",
+  "payload": {
+    "created": "2025-03-19T10:16:24.423Z",
+    "id": "ds006033",
+    "latestSnapshot": {
+      "created": "2025-05-08T09:02:04.000Z",
+      "description": {
+        "Authors": [
+          "Foteini Simistira Liwicki"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006033.v1.0.1",
+        "Funding": [
+          "Kompetensutveckling till professor, Lulea University of Technology, Sweden [LTU-154-2023]",
+          "Labbfonden Medel för infrastruktur vid Luleå tekniska universitet, 2023 [LTU-4908-2022]",
+          "Kempe Foundation, Sweden [JCSMK23-0102]"
+        ],
+        "HowToAcknowledge": "Please cite: [Your Publication or DOI]",
+        "License": "CC0",
+        "Name": "Synchronous EEG and fMRI dataset on inner speech",
+        "ReferencesAndLinks": [
+          " https://your-lab-website.com"
+        ]
+      },
+      "readme": "# Inner Speech EEG-fMRI Dataset\n\n## Description\nThis dataset contains simultaneous EEG-fMRI recordings for inner speech experiments. Data were collected using a 3T MRI scanner and 64-channel BrainProducts EEG system. The EEG data have undergone preprocessing, including pulse artifact removal, using the BrainVision Analyzer software. No further data transformations have been applied to ensure the dataset remains BIDS-compliant as \"raw\".\n\n## Subjects\n- Number of subjects: 3\n- Sessions per subject: 2\n- Tasks: Inner speech\n\n## Experimental Protocol\n- Each trial includes a fixation period (2s), stimulus display (2s), and rest (12s).\n- 8 words were presented in random order, each repeated 40 times.\n- EEG sampled at 5000 Hz, fMRI acquired with TR=2s.\n\n## Data Organization\n- Functional MRI data: `sub-xx/ses-xx/func/`\n- EEG data: `sub-xx/ses-xx/eeg/`\n- Event markers: `events.tsv`\n- BIDS-compatible metadata included in JSON sidecars.\n\n## Contact\nFor inquiries, contact: Foteini Simistira Liwicki (Foteini.liwicki@ltu.se)\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri",
+          "eeg"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "02",
+          "01"
+        ],
+        "size": 16449271220,
+        "subjects": [
+          "01",
+          "02",
+          "03"
+        ],
+        "tasks": [
+          "innerspeech"
+        ],
+        "totalFiles": 63
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": false,
+      "ages": [
+        35,
+        35,
+        25
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri",
+        "eeg"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "inner speech",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2025-03-20T15:37:36.190Z"
+  },
+  "source": "openneuro"
+}

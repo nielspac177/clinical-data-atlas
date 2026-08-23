@@ -1,0 +1,41 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:7b20d05fb0aec138787184d6050c844f3892f66c2bcea844777bdd327053586f",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Acute Lymphoblastic Leukemia",
+        "label": "Acute Lymphoblastic Leukemia"
+      },
+      {
+        "evidence": "Lymphoid Leukemias",
+        "label": "Lymphoid Leukemias"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "pediatrics"
+    ],
+    "id": "gdc:TARGET-ALL-P1",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "WGS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "RNA-Seq",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": null,
+    "summary": "TARGET phase I acute lymphoblastic leukemia study of hematopoietic and reticuloendothelial samples, providing sequencing reads, simple nucleotide and copy number variation, biospecimen and clinical data, transcriptome profiling and structural variation from RNA-Seq and WGS."
+  },
+  "prompt_version": "v1"
+}

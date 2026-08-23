@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:685a4eead40e1d16b51c755a94364ba3f46bce868ef0a784231ea34fbc01e68e",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "nephrology_urology"
+    ],
+    "id": "tcia:prostate-mri-us-biopsy",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "preoperative MRI",
+        "value": "MRI"
+      },
+      {
+        "evidence": "3D transrectal ultrasound scan",
+        "value": "ultrasound"
+      },
+      {
+        "evidence": "With Pathology and Coordinates",
+        "value": "pathology"
+      }
+    ],
+    "population": "Patients who underwent tracked prostate biopsy sessions using the Artemis biopsy system, most with MRI-ultrasound fusion targeting and systematic 12-core template sampling.",
+    "summary": "Tracked prostate biopsy sessions fusing real-time transrectal ultrasound with preoperative multiparametric MRI. Targeted and systematic core locations were recorded relative to the ultrasound, with MRI biopsy coordinates and T2-weighted images provided."
+  },
+  "prompt_version": "v1"
+}

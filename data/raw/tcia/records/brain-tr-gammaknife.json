@@ -1,0 +1,221 @@
+{
+  "endpoints": [
+    "https://api.datacite.org/dois?prefix=10.7937"
+  ],
+  "harvest_method": "api:nbia+datacite",
+  "native_id": "brain-tr-gammaknife",
+  "payload": {
+    "datacite": {
+      "citationCount": 5,
+      "container": {},
+      "contentUrl": [],
+      "contributors": [],
+      "created": "2023-03-10T15:53:37Z",
+      "creators": [
+        {
+          "affiliation": [],
+          "familyName": "Wang",
+          "givenName": "Yibin",
+          "name": "Wang, Yibin",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-8761-5387",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Duggar",
+          "givenName": "William",
+          "name": "Duggar, William",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-9558-519X",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Caballero",
+          "givenName": "David",
+          "name": "Caballero, David",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0003-4709-3294",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Vengaloor Thomas",
+          "givenName": "Toms",
+          "name": "Vengaloor Thomas, Toms",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-8372-2003",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Adari",
+          "givenName": "Neha",
+          "name": "Adari, Neha",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-1473-7797",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "mundra",
+          "givenName": "eswarakumar",
+          "name": "mundra, eswarakumar",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0009-0005-0106-1547",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Wang",
+          "givenName": "Haifeng",
+          "name": "Wang, Haifeng",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-6827-5751",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        }
+      ],
+      "dates": [],
+      "descriptions": [
+        {
+          "description": "Here we release a brain cancer MRI dataset with the companion Gamma Knife treatment planning and follow-up data for the purpose of tumor recurrence prediction. The dataset consisted of 47 subjects. A total of 244 lesions were collected with annotations. The dataset contains original patient MRI images (in DICOM format), radiation therapy structure data (in DICOM and NRRD format), code, and clinical information. First, dose MRI images were resampled to original MRI spacing via a linear transformation. Second, each region in each patient's MRI was extracted and cropped out; note that one patient may have multiple lesions and or multiple imaging sessions. Third, the corresponding radiation dose information was cropped out to the resampled aligned lesion mask. In this way, each lesion MRI is paired with its radiation dose MRI. The release of this dataset is expected to contribute to the development of automated brain tumor recurrence prediction algorithms.",
+          "descriptionType": "Abstract",
+          "lang": null
+        }
+      ],
+      "doi": "10.7937/xb6d-py67",
+      "downloadCount": 0,
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "Brain-TR-GammaKnife",
+          "identifierType": "TCIA Short Name"
+        }
+      ],
+      "isActive": true,
+      "language": null,
+      "metadataVersion": 16,
+      "partCount": 0,
+      "partOfCount": 0,
+      "publicationYear": 2023,
+      "published": null,
+      "publisher": "The Cancer Imaging Archive",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2023-03-10T18:41:38Z",
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "10.1148/rycan.230100",
+          "relatedIdentifierType": "DOI",
+          "relatedMetadataScheme": null,
+          "relationType": "IsCitedBy",
+          "resourceTypeGeneral": null,
+          "schemeType": null,
+          "schemeUri": null
+        },
+        {
+          "relatedIdentifier": "10.1038/s41467-024-44824-z",
+          "relatedIdentifierType": "DOI",
+          "relatedMetadataScheme": null,
+          "relationType": "IsCitedBy",
+          "resourceTypeGeneral": null,
+          "schemeType": null,
+          "schemeUri": null
+        },
+        {
+          "relatedIdentifier": "10.1038/s41597-023-02683-1",
+          "relatedIdentifierType": "DOI",
+          "relatedMetadataScheme": null,
+          "relationType": "IsCitedBy",
+          "resourceTypeGeneral": null,
+          "schemeType": null,
+          "schemeUri": null
+        }
+      ],
+      "relatedItems": [],
+      "rightsList": [
+        {
+          "rights": "NIH Controlled Data Access Policy",
+          "rightsUri": "https://www.cancerimagingarchive.net/nih-controlled-data-access-policy/"
+        },
+        {
+          "rights": "Creative Commons Attribution 4.0 International",
+          "rightsIdentifier": "cc-by-4.0",
+          "rightsIdentifierScheme": "SPDX",
+          "rightsUri": "https://creativecommons.org/licenses/by/4.0/legalcode",
+          "schemeUri": "https://spdx.org/licenses/"
+        }
+      ],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "fabricaForm",
+      "state": "findable",
+      "subjects": [],
+      "titles": [
+        {
+          "lang": null,
+          "title": "Brain Tumor Recurrence Prediction after Gamma Knife Radiotherapy from MRI and Related DICOM-RT: An Open Annotated Dataset and Baseline Algorithm (Brain-TR-GammaKnife)",
+          "titleType": null
+        },
+        {
+          "lang": null,
+          "title": "Brain-TR-GammaKnife",
+          "titleType": "AlternativeTitle"
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2025-12-17T19:28:39Z",
+      "url": "https://www.cancerimagingarchive.net/collection/brain-tr-gammaknife/",
+      "version": "1",
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 5301
+    },
+    "nbia": null
+  },
+  "source": "tcia"
+}

@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:03f55c16468e541cc64f3d46d5ee4dc38c835ff3c8c353d0c7be04ca32af41ff",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "4 with atrial fibrillation",
+        "label": "atrial fibrillation"
+      },
+      {
+        "evidence": "most had an actual cardiac arrest",
+        "label": "cardiac arrest"
+      },
+      {
+        "evidence": "All patients had a sustained ventricular tachyarrhythmia",
+        "label": "sustained ventricular tachyarrhythmia"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:sddb",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "complete Holter recordings",
+        "value": "ECG"
+      }
+    ],
+    "population": "18 patients with underlying sinus rhythm (4 with intermittent pacing), 1 who was continuously paced, and 4 with atrial fibrillation",
+    "summary": "Holter electrocardiogram recordings assembled to support sudden cardiac death research, including patients with sinus rhythm, pacing, and atrial fibrillation, all with sustained ventricular tachyarrhythmia."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,50 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007378",
+  "payload": {
+    "created": "2026-02-06T17:35:26.671Z",
+    "id": "ds007378",
+    "latestSnapshot": {
+      "created": "2026-03-11T16:18:26.000Z",
+      "description": {
+        "Authors": null,
+        "DatasetDOI": null,
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": null,
+        "Name": "ds007378",
+        "ReferencesAndLinks": null
+      },
+      "readme": "This dataset contains the FreeSurfer derivatives for the hyperface study,\n*a naturalistic fMRI dataset to characterize human face processing*, by\nMatteo Visconti di Oleggio Castello, Guo Jiahui, Ma Feilong, Manon de\nVillemejane, James V. Haxby, and M. Ida Gobbini.\n\nBecause all 21 subjects also took part in the Grand Budapest Hotel study\nand 11 subjects took part in the Identity Decoding study, this\nderivative dataset can be used also when analyzing those datasets.\n\nSample code for the QA analyses is available at\nhttps://github.com/mvdoc/hyperface-data-paper.\n\nThe hyperface raw data is available at\nhttps://openneuro.org/datasets/ds007329.\n\nThe hyperface fMRIPrep derivatives are available at\nhttps://openneuro.org/datasets/ds007384.\n\nThe Grand Budapest Hotel raw data is available at\nhttps://openneuro.org/datasets/ds003017. See also the associated paper:\nVisconti di Oleggio Castello, M., Chauhan, V., Jiahui, G., & Gobbini, M.\nI. (2020). *An fMRI dataset in response to \"The Grand Budapest Hotel\", a\nsocially-rich, naturalistic movie*. Scientific Data, 7(1), 1-9.\nhttps://doi.org/10.1038/s41597-020-00735-4\n\nThe identity decoding raw data is available at\nhttps://openneuro.org/datasets/ds003834. See also the associated paper:\nVisconti di Oleggio Castello, M., Haxby, J.V., & Gobbini, M.I. (2021).\n*Shared neural codes for visual and semantic information about familiar\nfaces in a common representational space*. Proceedings of the National\nAcademy of Sciences. https://doi.org/10.1073/pnas.2110474118\n\nSee also the associated paper:\nJiahui, G., Feilong, M., Visconti di Oleggio Castello, M., Nastase, S.A.,\nHaxby, J.V., & Gobbini, M.I. (2023). *Modeling naturalistic face processing\nin humans with deep convolutional neural networks*. Proceedings of the National\nAcademy of Sciences. https://doi.org/10.1073/pnas.2304085120\n\nIf you use this dataset or the code, please cite the corresponding\npaper: TODO\n\n### Notes\n\nAll anatomicals (T1w, T2w) were defaced with `pydeface` prior to\nrunning FreeSurfer's `recon-all` (version 7.3.2).\n\n### Contact information\n\nFor questions on this dataset, please contact Matteo Visconti di Oleggio\nCastello (matteo.visconti@berkeley.edu).\n",
+      "summary": {
+        "dataProcessed": true,
+        "modalities": [],
+        "secondaryModalities": [],
+        "sessions": [],
+        "size": 3984,
+        "subjects": [],
+        "tasks": [],
+        "totalFiles": 3
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": null,
+      "dataProcessed": true,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2026-03-11T16:18:31.981Z"
+  },
+  "source": "openneuro"
+}

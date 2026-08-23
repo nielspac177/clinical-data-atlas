@@ -1,0 +1,101 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006319",
+  "payload": {
+    "created": "2025-06-09T06:30:46.531Z",
+    "id": "ds006319",
+    "latestSnapshot": {
+      "created": "2026-07-30T01:15:10.000Z",
+      "description": {
+        "Authors": [
+          "Jong-Yun Park",
+          "Mitsuaki Tsukamoto",
+          "Misato Tanaka",
+          "Yukiyasu Kamitani"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006319.v1.0.1",
+        "Funding": [
+          "Japan Society for the Promotion of Science (JSPS KAKENHI), Grant Numbers JP25H00450, JP20H05705 and JP20H05954",
+          "New Energy and Industrial Technology Development Organization (NEDO), Grant Number JPNP20006",
+          "Japan Science and Technology Agency (JST CREST), Grant Numbers JPMJCR22P3"
+        ],
+        "HowToAcknowledge": "If you use this dataset in your research, please acknowledge and cite:\n- OpenNeuro dataset DOI: 10.18112/openneuro.ds006319\n- Park, J.-Y., Tsukamoto, M., Tanaka, M., & Kamitani, Y. (2025). Natural sounds can be reconstructed from human neuroimaging data using deep neural network representation. PLOS Biology, 23(7), e3003293. https://doi.org/10.1371/journal.pbio.3003293",
+        "License": "CC0",
+        "Name": "Sound Reconstruction",
+        "ReferencesAndLinks": [
+          "Park, J.-Y., Tsukamoto, M., Tanaka, M., & Kamitani, Y. (2025). Natural sounds can be reconstructed from human neuroimaging data using deep neural network representation. PLOS Biology, 23(7), e3003293. https://doi.org/10.1371/journal.pbio.3003293"
+        ]
+      },
+      "readme": "# Sound Reconstruction\n\n## Original Paper\n\nPark, J.-Y., Tsukamoto, M., Tanaka, M., & Kamitani, Y. (2025). Natural sounds can be reconstructed from human neuroimaging data using deep neural network representation. PLOS Biology, 23(7), e3003293. https://doi.org/10.1371/journal.pbio.3003293\n\n## Dataset\n\nThis dataset contains fMRI scans acquired while participants listened to various sound stimuli, designed for training and testing sound reconstruction models.\n\nThe following three types of data are included for five subjects:\n- SoundTraining\n- SoundTest\n- SoundAttention\n\n## Code\n\nSee: [https://github.com/KamitaniLab/SoundReconstruction](https://github.com/KamitaniLab/SoundReconstruction).\n\n## Contact\n\nEmail: kamitanilab@gmail.com",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "SoundTraining03",
+          "SoundTraining14",
+          "SoundTest01",
+          "SoundTraining02",
+          "SoundTraining13",
+          "SoundTraining01",
+          "SoundTraining12",
+          "SoundTraining09",
+          "SoundTraining06",
+          "SoundTraining11",
+          "SoundTraining10",
+          "SoundTraining05",
+          "SoundTraining08",
+          "SoundAttention01",
+          "SoundTraining07",
+          "SoundTest02",
+          "SoundAttention02",
+          "anatomy",
+          "SoundTraining04",
+          "SoundTraining15",
+          "SoundTraining16"
+        ],
+        "size": 111020995413,
+        "subjects": [
+          "S3",
+          "S2",
+          "S4",
+          "S1",
+          "S5"
+        ],
+        "tasks": [
+          "vggsoundtrain",
+          "vggsoundtest",
+          "vggsoundattention",
+          "AADDichotic"
+        ],
+        "totalFiles": 2113
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "JSPS KAKENHI, NEDO, JST CREST",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": null,
+      "studyDomain": "auditory",
+      "studyLongitudinal": "Longitudinal"
+    },
+    "publishDate": "2025-07-30T05:08:40.829Z"
+  },
+  "source": "openneuro"
+}

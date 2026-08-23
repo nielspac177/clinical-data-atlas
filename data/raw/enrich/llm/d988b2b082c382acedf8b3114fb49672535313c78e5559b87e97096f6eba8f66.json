@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:d988b2b082c382acedf8b3114fb49672535313c78e5559b87e97096f6eba8f66",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Glioma DSC-MRI Perfusion Data",
+        "label": "Glioma"
+      },
+      {
+        "evidence": "MR images of both low and high grade glial brain lesions",
+        "label": "low and high grade glial brain lesions"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "oncology"
+    ],
+    "id": "tcia:qin-brain-dsc-mri",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "post-contrast T1w images with co-registered volumes of dynamic susceptibility contrast (DSC) MR images",
+        "value": "MRI"
+      }
+    ],
+    "population": "patients with low and high grade glial brain lesions",
+    "summary": "MR images of low and high grade glial brain lesions, including post-contrast T1-weighted and dynamic susceptibility contrast perfusion volumes in DICOM, with binary regions of interest for lesion, arterial input function, white matter, cortex and whole brain."
+  },
+  "prompt_version": "v1"
+}

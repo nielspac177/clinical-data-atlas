@@ -1,0 +1,149 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007544",
+  "payload": {
+    "created": "2026-03-22T09:51:16.360Z",
+    "id": "ds007544",
+    "latestSnapshot": {
+      "created": "2026-07-30T14:00:04.000Z",
+      "description": {
+        "Authors": [
+          "Yijie Zhang",
+          "Wenli Tao",
+          "Yin Wang",
+          "Yushan Wen"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007544.v2.0.0",
+        "Funding": null,
+        "HowToAcknowledge": "Please cite the associated Data Descriptor describing the Naturalistic Social Mind Neuroimaging Database (NSM) and include the dataset DOI in any publications that use these data.",
+        "License": "CC0",
+        "Name": "Naturalistic Social Mind Neuroimaging Dataset (NSM)",
+        "ReferencesAndLinks": null
+      },
+      "readme": "# Naturalistic Social Mind Neuroimaging Database (NSM)\n\n## Overview\n\nThe Naturalistic Social Mind Neuroimaging Database (NSM) is a BIDS-formatted dataset for studying social cognition in naturalistic settings. The dataset combines functional MRI data with time-resolved social annotations aligned to the fMRI repetition time (TR).\n\nNSM includes:\n- fMRI data from 41 healthy adults\n- 1 resting-state scan (6 min)\n- 8 audiovisual videos (~30 min total)\n- manual social annotations sampled at 2 s resolution\n\nThe annotation framework quantifies social information across 3 layers, 5 attributes, and 25 dimensions:\n- **Person**: State, Trait, Action\n- **Interpersonal**: Relationship\n- **Context**: Situation\n\n## Participants\n\n- **N = 41** healthy adults\n- **20 females**\n- mean age: **24.51 ± 3.65 years**\n- right-handed\n- native Mandarin speakers\n- normal or corrected-to-normal vision\n- no reported psychiatric or neurological disorders\n\nAll participants provided written informed consent. The study was approved by the Institutional Review Board of Beijing Normal University.\n\n## Tasks and stimuli\n\nThe imaging session included:\n- a **6-minute resting-state scan** (eyes open, central fixation)\n- a **movie-viewing task** with 8 videos\n\nVideos:\n- Give in to Giving\n- Snack Attack\n- Lou\n- Bao\n- Ne Zha\n- A Little Reunion\n- A Little Dilemma\n- Banana Kong\n\nThe stimulus set spans positive and negative social interactions, dialogue-present and dialogue-absent clips, and animated and live-action materials. *Banana Kong* serves as a non-social control condition.\n\n## Social annotations\n\nNSM provides manual annotations of social information at **2 s resolution**, matched to the fMRI TR.\n\nEach segment was annotated using a standardized two-step procedure:\n1. **attribute coding** using categorical labels\n2. **dimensional rating** using theory-based dimensions\n\nAnnotations are provided as time-resolved social feature files and can be used for:\n- encoding models\n- representational similarity analysis (RSA)\n- reverse correlation\n- event segmentation\n- benchmarking computational models of social cognition\n\n## MRI acquisition\n\nData were acquired on a **3T Siemens MAGNETOM Prisma** scanner with a **20-channel head coil**.\n\n### Functional MRI\n- gradient-echo EPI\n- TR = 2000 ms\n- TE = 30 ms\n- 58 slices\n- voxel size = 2.5 × 2.5 × 2.5 mm³\n- matrix size = 84 × 84\n- flip angle = 90°\n- field of view = 210 mm\n- multiband factor = 2\n\n### Anatomical MRI\n- T1-weighted MPRAGE\n- 208 slices\n- TR = 2530 ms\n- TE = 2.27 ms\n- voxel size = 1.0 × 1.0 × 1.0 mm³\n- flip angle = 7°\n- field of view = 256 mm\n\n## Preprocessing\n\nRaw MRI data were converted to NIfTI and organized according to **BIDS v1.9.0** using **dcm2bids**.\n\nAnatomical images were defaced before release.\n\nPreprocessing was performed with **fMRIPrep**. Additional post-processing included:\n- 6 mm FWHM spatial smoothing\n- nuisance regression\n- voxelwise denoising\n- removal of motion- and artifact-related variance\n\nPreprocessed files are available in `derivatives/`.\n\n## Dataset structure\n\nThe dataset follows the Brain Imaging Data Structure (**BIDS**) specification.\n\nExample paths for neuroimaging files:\n\n### Anatomical MRI\n`sub-<ID>/anat/sub-<ID>_T1w.nii.gz`  \n`sub-<ID>/anat/sub-<ID>_T1w.json`  \n`derivatives/sub-<ID>/anat/sub-<ID>_desc-preproc_T1w.nii.gz`\n\n### Resting-state fMRI\n`sub-<ID>/func/sub-<ID>_task-rest_bold.nii.gz`  \n`sub-<ID>/func/sub-<ID>_task-rest_bold.json`  \n`derivatives/sub-<ID>/func/sub-<ID>_task-rest_desc-preproc_bold.nii.gz`\n\n### Movie-viewing fMRI\n`sub-<ID>/func/sub-<ID>_task-<TASK>_bold.nii.gz`  \n`sub-<ID>/func/sub-<ID>_task-<TASK>_bold.json`  \n`derivatives/sub-<ID>/func/sub-<ID>_task-<TASK>_desc-preproc_bold.nii.gz`\n\n### Stimuli and annotations\nStimulus videos and annotation files are included in the repository in dedicated stimulus/annotation directories. Please refer to the released file tree for exact folder names.\n\n## Notes for reuse\n\n- Social features in naturalistic stimuli often co-vary.\n- Regularized models or methods that account for shared variance may be useful.\n- Different social features may have different temporal dynamics.\n- Flexible HRF modeling (for example, FIR-based approaches) may be helpful in some analyses.\n\n## Ethics and privacy\n\nPotentially identifying information has been removed from all shared records. Anatomical images were defaced prior to release.\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 28411607136,
+        "subjects": [
+          "15",
+          "28",
+          "30",
+          "19",
+          "16",
+          "32",
+          "22",
+          "24",
+          "12",
+          "06",
+          "11",
+          "35",
+          "40",
+          "23",
+          "17",
+          "02",
+          "03",
+          "39",
+          "07",
+          "34",
+          "25",
+          "38",
+          "14",
+          "26",
+          "31",
+          "36",
+          "21",
+          "27",
+          "29",
+          "20",
+          "41",
+          "37",
+          "05",
+          "10",
+          "04",
+          "13",
+          "18",
+          "01",
+          "08",
+          "33",
+          "09"
+        ],
+        "tasks": [
+          "rest",
+          "movie"
+        ],
+        "totalFiles": 674
+      },
+      "tag": "2.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        33,
+        12,
+        33,
+        29,
+        25,
+        25,
+        27,
+        26,
+        26,
+        27,
+        23,
+        28,
+        25,
+        23,
+        25,
+        23,
+        24,
+        30,
+        21,
+        27,
+        26,
+        23,
+        26,
+        24,
+        24,
+        21,
+        24,
+        21,
+        22,
+        22,
+        26,
+        22,
+        22,
+        22,
+        21,
+        27,
+        19,
+        26,
+        27,
+        23,
+        25
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": "Other"
+    },
+    "publishDate": "2026-08-01T02:35:51.563Z"
+  },
+  "source": "openneuro"
+}

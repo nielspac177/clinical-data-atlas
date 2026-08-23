@@ -1,0 +1,125 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds002322",
+  "payload": {
+    "created": "2019-11-15T20:11:59.200Z",
+    "id": "ds002322",
+    "latestSnapshot": {
+      "created": "2020-06-22T18:44:18.000Z",
+      "description": {
+        "Authors": [
+          "Shohini Bhattasali",
+          "Jonathan R. Brennan",
+          "Wen-Ming Luh",
+          "Berta Franzluebbers",
+          "John T. Hale"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds002322.v1.0.4",
+        "Funding": [
+          "NIH grant S10RR025145",
+          "NSF grants #1607251 and # 1607441"
+        ],
+        "HowToAcknowledge": "When using this dataset, please cite:\nBhattasali, S., Brennan, J. R, Luh, W. M., Franzluebbers, B., & Hale, J. T. (2020). The Alice Datasets: fMRI & EEG Observations of Natural Language Comprehension. In Proceedings of the Twelfth International Conference on Language Resources and Evaluation (LREC 2020)",
+        "License": "CC0",
+        "Name": "The Alice Dataset: fMRI Dataset to Study Natural Language Comprehension in the Brain",
+        "ReferencesAndLinks": [
+          "Bhattasali, S., Brennan, J. R., Luh, W. M., Franzluebbers, B., & Hale, J. T. (2020). The Alice Datasets: fMRI & EEG Observations of Natural Language Comprehension. In Proceedings of the Twelfth International Conference on Language Resources and Evaluation (LREC 2020).",
+          "Brennan, J. R., Stabler, E. P., Van Wagenen, S. E., Luh, W. M., & Hale, J. T. (2016). Abstract linguistic structure correlates with temporal activity during naturalistic comprehension. Brain and language, 157, 81-94. doi:10.1016/j.bandl.2016.04.008"
+        ]
+      },
+      "readme": "Participants \nTwenty-nine college-age volunteers participated for pay (17 women and 12 men, 18–24 years old). All qualified as righthanded on the Edinburgh handedness inventory Oldfield, 1971. They self-identified as native English speakers and gave their informed consent. Data from one participant were excluded due to excessive head movement and data from two participants were excluded due to poor behavioral performance, leaving data from twenty-six particpants in the dataset (15 women, 11 men). \n\nStudy Design \nThe audio stimulus was Kristen McQuillan’s reading of the first chapter of Lewis Carroll’s Alice in Wonderland from librivox.org, available in the stimuli folder. To improve comprehensibility in the noisy scanner, the audio was normalized to 70 dB and slowed by 20% with the pitch-preserving PSOLA algorithm implemented in Praat software. This moderate amount of time-dilation did not introduce recognizable distortion and was judged by an independent rater to sound natural and to be easier to comprehend than the raw audio recording. The audio presentation lasted 12.4 min. After giving their informed consent, participants were familiarized with the MRI facility and assumed a supine position on the scanner gurney. Auditory stimuli were delivered through MRIsafe, high-fidelity headphones (Confon HP-VS01, MR Confon, Magdeburg, Germany) inside the head coil. The headphones were secured against the plastic frame of the coil using foam blocks. Using a spoken recitation of the US Constitution, an experimenter increased the volume stepwise until participants reported that they could hear clearly. Participants then listened passively to the audio storybook. Upon emerging from the scanner, participants completed a twelve-question multiple-choice questionnaire concerning events and situations described in the story. The entire session lasted less than an hour.\n\nData collection and analysis \nImaging was performed using a 3T MRI scanner (Discovery MR750, GE Healthcare, Milwaukee, WI) with a 32-channel head coil at the Cornell MRI Facility. Blood Oxygen Level Dependent (BOLD) signals were collected from twenty-nine participants. Thirteen participants were scanned using a T2-weighted echo planar imaging (EPI) sequence with: a repetition time of 2000 ms, echo time of 27 ms, flip angle of 77, image acceleration of 2X, field of view of 216 216 mm, and a matrix size of 72 72. Under these parameters we obtained 44 oblique slices with 3 mm isotropic voxels. Sixteen participants were scanned with a three-echo EPI sequence where the field of view was 240 240 mm resulting in 33 slices with an in-plane resolution of 3.75 mm2 and thickness 3.8 mm. Data from this second group provided are images from the second EPI echo, where the echo time was 27.5 ms. All other parameters were exactly the same. This selection of the second-echo images renders the two sets of functional images as comparable as possible.\n\nPreprocessing \nPreprocessing was done with SPM8. Data were spatially realigned based on 6-parameter rigid body transformation using the 2nd degree B-spline method. Functional (EPI) and structural (MP-RAGE) images were co-registered via mutual information and functional images were smoothed with a 3 mm isotropic gaussian filter. We used the ICBM template provided with SPM8 to put our data into MNI stereotaxic coordinates. The data were high pass filtered at 1/128 Hz and we\ndiscarded the first 10 functional volumes. These processed data are available in the derivatives directory and preprocessing.mat files are included to provide input parameters used.\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural",
+          "mri_functional"
+        ],
+        "sessions": [],
+        "size": 2466381331,
+        "subjects": [
+          "18",
+          "22",
+          "23",
+          "24",
+          "26",
+          "28",
+          "30",
+          "31",
+          "35",
+          "36",
+          "37",
+          "38",
+          "39",
+          "41",
+          "42",
+          "43",
+          "44",
+          "45",
+          "46",
+          "47",
+          "48",
+          "49",
+          "50",
+          "51",
+          "52",
+          "53"
+        ],
+        "tasks": [
+          "alice"
+        ],
+        "totalFiles": 110
+      },
+      "tag": "1.0.4"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        22,
+        22,
+        19,
+        21,
+        21,
+        18,
+        19,
+        20,
+        19,
+        21,
+        20,
+        19,
+        19,
+        19,
+        21,
+        21,
+        22,
+        19,
+        21,
+        19,
+        20,
+        21,
+        20,
+        18,
+        20,
+        26
+      ],
+      "associatedPaperDOI": "https://doi.org/10.1016/j.bandl.2016.04.008",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "The audio stimulus was Kristen McQuillan’s reading of the first chapter of Lewis Carroll’s Alice in Wonderland from librivox.org, available in the stimuli folder. To improve comprehensibility in the noisy scanner, the audio was normalized to 70 dB and slowed by 20% with the pitch-preserving PSOLA algorithm implemented in Praat software. This moderate amount of time-dilation did not introduce recognizable distortion and was judged by an independent rater to sound natural and to be easier to comprehend than the raw audio recording. The audio presentation lasted 12.4 min. After giving their informed consent, participants were familiarized with the MRI facility and assumed a supine position on the scanner gurney. Auditory stimuli were delivered through MRIsafe, high-fidelity headphones (Confon HP-VS01, MR Confon, Magdeburg, Germany) inside the head coil. The headphones were secured against the plastic frame of the coil using foam blocks. Using a spoken recitation of the US Constitution, an experimenter increased the volume stepwise until participants reported that they could hear clearly. Participants then listened passively to the audio storybook. Upon emerging from the scanner, participants completed a twelve-question multiple-choice questionnaire concerning events and situations described in the story. The entire session lasted less than an hour.",
+      "studyDomain": "Natural Language Comprehension",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2019-11-15T22:49:46.404Z"
+  },
+  "source": "openneuro"
+}

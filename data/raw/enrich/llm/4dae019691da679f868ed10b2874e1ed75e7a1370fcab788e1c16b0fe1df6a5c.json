@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:4dae019691da679f868ed10b2874e1ed75e7a1370fcab788e1c16b0fe1df6a5c",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "locally-advanced, non-small cell lung cancer patients",
+        "label": "non-small cell lung cancer"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "pulmonology"
+    ],
+    "id": "tcia:4d-lung",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "four-dimensional (4D) fan beam (4D-FBCT) and 4D cone beam CT (4D-CBCT)",
+        "value": "CT"
+      },
+      {
+        "evidence": "used for therapy planning",
+        "value": "radiotherapy"
+      }
+    ],
+    "population": "20 locally-advanced, non-small cell lung cancer patients",
+    "summary": "Four-dimensional fan beam and cone beam CT images acquired during chemoradiotherapy of non-small cell lung cancer patients, sorted into breathing phases using an external respiratory surrogate, including weekly imaging during therapy."
+  },
+  "prompt_version": "v1"
+}

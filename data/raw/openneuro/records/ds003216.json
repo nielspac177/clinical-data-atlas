@@ -1,0 +1,100 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003216",
+  "payload": {
+    "created": "2020-10-01T10:30:14.974Z",
+    "id": "ds003216",
+    "latestSnapshot": {
+      "created": "2023-10-30T17:10:13.000Z",
+      "description": {
+        "Authors": [
+          "Kenshu Koiso",
+          "Sebastian Dresbach",
+          "Christopher J Wiggins",
+          "Omer Faruk Gulban",
+          "Anna Katharina Mueller",
+          "Miriam Heynckes",
+          "Yuhui Chai",
+          "Yoichi Miyawaki",
+          "Benedikt A Poser",
+          "Renzo Huber"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds003216.v3.0.11",
+        "Funding": [
+          "Anna Katharina Mueller was supported for this projec by a fellowship from the Goethe-University in Frankfurt am Main",
+          "Laurentius Huber was funded form the NWO VENI project 016.Veni.198.032",
+          "Benedikt Poser is partially funded by the NWO VIDI grant 16.Vidi.178.052 and by the National Institute for Health grant (R01MH/111444) (PI David Feinberg)",
+          "Miriam Heynckes is funded by The Netherlands Organization for Scientific Research (NWO) Research Talent Grant 406.17.200",
+          "Kenshu Koiso is funded by Japan Public-Private Partnership Student Study Abroad Program (TOBITATE! Young Ambassador Program), by Japan Student Services Organization (JASSO) and by UEC fund"
+        ],
+        "HowToAcknowledge": "Please use ISMRM abstract upon acceptance. Until then, please cite openneuro DOI. ",
+        "License": "CC0",
+        "Name": "Acquisition and processing methods of whole-brain layer-fMRI VASO and BOLD: The Kenshu dataset",
+        "ReferencesAndLinks": [
+          "none yet"
+        ]
+      },
+      "readme": "Acquisition and processing methods of whole-brain layer-fMRI VASO and BOLD: The Kenshu dataset\n\nPaper: https://doi.org/10.52294/001c.87961\n\nOverview:\nHere, we provide a whole-brain layer-dependent connectome dataset with cerebral blood volume and BOLD contrast. It is coming along with a quality assessment comprising metrics of skew, kurtosis, tSNR and sharpness. The purpose of this dataset is \n1.) to characterize the prospects and challenges of whole brain layer-fMRI acquisition sequences in a test-retest setting \n2.) and to provide a test bed for developing and benchmarking new layer-dependent analysis tools that may be able to  address novel neuroscientific  research  questions. \nNote that these data have been acquired with a CBV-sensitive VASO sequence, thus the datatype is rather unconventional compared to standard fMRI datasets. TRs as well as resolution is variable across time and contrasts within one run. Please notice, this is an initial release of an ongoing study. We are happy to share the data via SIEMENS C2P (The sequence is avaliable on the SIEMENS app store Teamplay)\n\nThe first participant was aquired with a previous version of the sequence, which turned out to be too artifact dominated to be usable for neuroscience-based applications. \nThe second participant sub-02 is the main participant. The first three sessions of the first participant refer to protocol optimication with standard text-bed fingertapping tasks and flickering checkerboards. \nThe sessions 4-13 are contain the main data of interest. Namely 51 runs of movie watching. \n\nData Acquisition:\nScanning was performed at Scannexus as part of the Maastricht Brain Imaging Centre (MBIC) embedded in the Maastricht University, Maastricht, The Netherlands. VASO and BOLD contrasts of the whole brain were obtained from one participant at a 'classical' SIEMENS MAGNETOM 7T scanner during watching the Human Connectome Project (HCP) audio movie.\nThe link to the psychopy stimulation script is: Link to the movie: https://github.com/layerfMRI/Phychopy_git/tree/master/movie). \nThe link to the movie file is here: https://youtu.be/qndD3ErUaEE (or here, in case of Youtube restrictions: https://drive.google.com/drive/folders/1Jw6FSvX8IHaFQBZncEMjnmYUggNGkwQB?usp=sharing )\nFor information about detailed scanning parameters see: \n-> For the first (unusable) participant: https://github.com/layerfMRI/Sequence_Github/blob/master/Whole_brain_layers/Ann_WB_VASO_fMRI.pdf.\n-> For the main data (session 4-13 of the main participant 2): https://github.com/layerfMRI/Sequence_Github/blob/master/Whole_brain_layers/20211012_KEN.pdf\n-> This participant is acquired at TRs of alternating 5.1s and 5.2s. Please ignore the value in the nii header (1.5s).\n\nData processing:\nDefacing was performed with freeSurfer. Motion correction (MOCO), BOLD correction (BOCO), and segmentation of grey + white matter were performed. The additional folder \"derivatives\" contains the processed data in steps: MOCO, BOCO, and segmentation of grey + white matter. For detailed information see: https://github.com/layerfMRI/repository/tree/master/stand_alone_VASO_NEURODEBIAN (MOCO), https://doi.org/10.1002/mrm.24916 (BOCO), and https://github.com/kenshukoiso/Whole_Brain_Project (preprocessing pipeline and script)\n\nPresenting on ISMRM 2022:\nYou can find our abstract draft here: https://layerfmri.page.link/ISMRM2022_WB. The main participant of this abstract is subject 02 on this open dataset.\n\nPaper: https://doi.org/10.52294/001c.87961",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "01",
+          "02",
+          "04",
+          "05",
+          "06",
+          "03",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13"
+        ],
+        "size": 86333263604,
+        "subjects": [
+          "01",
+          "02",
+          "03"
+        ],
+        "tasks": [
+          "test",
+          "movie",
+          "tapping"
+        ],
+        "totalFiles": 218
+      },
+      "tag": "3.0.11"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        29
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "NWO VENI",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "naturalistic free movie watching",
+      "studyDomain": "brain",
+      "studyLongitudinal": "case study"
+    },
+    "publishDate": "2020-10-01T13:49:39.700Z"
+  },
+  "source": "openneuro"
+}

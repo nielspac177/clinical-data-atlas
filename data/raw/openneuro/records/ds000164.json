@@ -1,0 +1,92 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds000164",
+  "payload": {
+    "created": "2017-08-24T19:14:43.636Z",
+    "id": "ds000164",
+    "latestSnapshot": {
+      "created": "2018-07-17T14:38:59.000Z",
+      "description": {
+        "Authors": [
+          "Timothy D. Verstynen"
+        ],
+        "DatasetDOI": null,
+        "Funding": [],
+        "HowToAcknowledge": "This data was obtained from the OpenfMRI database. Its accession number is ds000164.",
+        "License": "PDDL",
+        "Name": "Stroop Task",
+        "ReferencesAndLinks": [
+          "https://www.ncbi.nlm.nih.gov/pubmed/25143543"
+        ]
+      },
+      "readme": "README for OpenfMRI dataset ds000164\n\n\n### Comments added by Openfmri Curators ###\n===========================================\n\nGeneral Comments\n----------------\n- In the events files, all the events have a duration of 1 seconds. This was the actual \nlength of the events. However, in their models, the authors used a duration equal to one TR \nlength (1.5s).\n\nDefacing\n--------\nPydeface was used on all anatomical images to ensure \ndeindentification of subjects. The code\ncan be found at https://github.com/poldracklab/pydeface\n\n\nQuality Control\n---------------\nWe are having difficulties running MRIQC and have not included the results in this \nrevision. These should be present in the next revision.\n\nWhere to discuss the dataset\n----------------------------\n1) www.openfmri.org/dataset/ds******/ See the comments \nsection at the bottom of the dataset\npage.\n2) www.neurostars.org Please tag any discussion topics with \nthe tags openfmri and dsXXXXXX\naccession number.\n3) Send an email to submissions@openfmri.org. Please \ninclude the dsXXXXXX accession number in\nyour email.\n\n\nKnown Issues\n------------\nThe header information for the functional files conflicts with the information provided in the manuscript (.e.g., the voxel size is 3.2 mm × 3.2 mm × 4 mm in the manuscript but 3.5 mm isotropic in the header). The acquired voxel size was 3.5mm isotropic.\n\nBids-validator Output\n---------------------\n\nThis dataset appears to be BIDS compatible.\n        Summary:                Available Tasks:        Available Modalities:\n        89 Files, 1.57GB        Stroop Task             T1w\n        28 - Subjects                                   bold\n        1 - Session\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 1689473877,
+        "subjects": [
+          "001",
+          "002",
+          "003",
+          "004",
+          "005",
+          "006",
+          "007",
+          "008",
+          "009",
+          "010",
+          "011",
+          "012",
+          "013",
+          "014",
+          "015",
+          "016",
+          "017",
+          "018",
+          "019",
+          "020",
+          "021",
+          "022",
+          "023",
+          "024",
+          "025",
+          "026",
+          "027",
+          "028"
+        ],
+        "tasks": [
+          "Stroop Task"
+        ],
+        "totalFiles": 92
+      },
+      "tag": "00001"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": null,
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2017-08-24T19:14:43.636Z"
+  },
+  "source": "openneuro"
+}

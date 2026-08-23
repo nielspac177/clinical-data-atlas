@@ -1,0 +1,77 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds001497",
+  "payload": {
+    "created": "2018-09-04T13:43:56.034Z",
+    "id": "ds001497",
+    "latestSnapshot": {
+      "created": "2020-01-27T23:15:04.000Z",
+      "description": {
+        "Authors": [
+          "Lewis-Peacock, J",
+          "Postle, BR",
+          "Cox, CR",
+          "Rogers, TT"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds001497.v1.0.2",
+        "Funding": [
+          "NIH grant MH064498 (B.R.P.)"
+        ],
+        "HowToAcknowledge": "Cite this paper: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2699183/",
+        "License": "CC0",
+        "Name": "Long-term Memory (LTM) for famous Faces, Places, and common Objects",
+        "ReferencesAndLinks": []
+      },
+      "readme": "# Long-term Memory (LTM) for famous Faces, Places, and common Objects\n\nData were initially published by Jarrod A. Lewis-Peacock & Bradley R. Postle (2008) in the Journal of Neuroscience in an article titled \"Temporary activation of long-term memory supports working memory\". The fMRI data shared here are from the *stimulus judgment task*, also referred to as the \"LTM task\". This data has been reanalyzed and entered into BIDS format (1.1.0)  by Christopher R. Cox and Timothy T. Rogers. These data are published with the kind permission of Lewis-Peacock and Postle, and shared under the CC-BY license. \"Licensees may copy, distribute, display and perform the work and make derivative works and remixes based on it only if they give the author or licensor the credits (attribution) in the manner specified by these.\"\n\nThe original work and image acquisition was supported by NIH grant MH064498 (B.R.P.).\n\nIf you use this data, please cite this paper: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2699183/\", and reference the access key on **OpenNeuro**.\n\nThe related paper is open access, and describes all pertinent fMRI acquisition and task details.\n\n## Slice acquisition details\nThe 30 axial slices were acquired in \"alt+z\" order. Assuming that the\nfirst slice is **slice 0**, and lumping in 0 with the even numbers, \"alt+z\" order means that the even numbered slices are acquired first, in order of ascending z, followed by the odd numbered slices. See AFNI\ndocumentation for 3dTshift for more detail.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 2384758066,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10"
+        ],
+        "tasks": [
+          "LTM"
+        ],
+        "totalFiles": 253
+      },
+      "tag": "1.0.2"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": null,
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2018-09-04T13:43:56.034Z"
+  },
+  "source": "openneuro"
+}

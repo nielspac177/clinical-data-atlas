@@ -1,0 +1,40 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:85301df6cedb42725e53252d30bb02cda4746d8ced4807812801a23a76952365",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "evaluation of chronic obstructive sleep apnea syndrome",
+        "label": "chronic obstructive sleep apnea syndrome"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "cardiology",
+      "pulmonology",
+      "neurology"
+    ],
+    "id": "physionet:slpdb",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "sleep eeg ecg multiparameter respiration apnea",
+        "value": "EEG"
+      },
+      {
+        "evidence": "sleep eeg ecg multiparameter respiration apnea",
+        "value": "ECG"
+      },
+      {
+        "evidence": "Recordings of multiple physiologic signals during sleep",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": "18 subjects monitored at Boston's Beth Israel Hospital Sleep Laboratory",
+    "summary": "Multiple physiologic signals recorded during sleep in subjects evaluated for chronic obstructive sleep apnea and tested for the effects of constant positive airway pressure therapy."
+  },
+  "prompt_version": "v1"
+}

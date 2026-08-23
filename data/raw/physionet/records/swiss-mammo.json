@@ -1,0 +1,37 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "swiss-mammo",
+  "payload": {
+    "abstract": "<p>This dataset, Swiss-Mammo, contains 28 manually constructed German mammography reports, each paired with an English translation. The reports are stratified across BI-RADS categories 0 through 6, with four reports per category. All reports were manually created by a radiology resident without the use of generative AI and independently reviewed by a senior radiologist specialized in breast imaging to ensure clinical plausibility and linguistic accuracy.</p>\n<p>Swiss-Mammo was developed to support research on information extraction from radiology reports using large language models (LLMs) and frame semantics. The dataset provides a high-quality, controlled benchmark for evaluating systems designed to structure free-text radiological narratives. It is particularly suited for applications in natural language processing, clinical informatics, and decision support systems in breast imaging.</p>",
+    "access_policy": "Restricted",
+    "compressed_storage_size": 58008,
+    "core_doi": "10.13026/gqzb-fg27",
+    "dua": {
+      "name": "PhysioNet Restricted Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Restricted Health Data License 1.5.0"
+    },
+    "main_storage_size": 98458,
+    "public_project_uuid": "755848f6-8822-4ba5-8921-753227c1a44e",
+    "publish_date": "2025-06-24",
+    "resource_type": "Database",
+    "short_description": "Swiss-Mammo: A physician-written, synthetic dataset of 28 German mammography reports. The dataset is stratified based on BI-RADS categories and available in German and English.",
+    "slug": "swiss-mammo",
+    "source_url": "https://physionet.org/content/swiss-mammo/1.0.1/",
+    "title": "Swiss-Mammo: A physician-written, synthetic dataset of German mammography reports",
+    "topics": [
+      "mammography",
+      "structured reporting",
+      "radiology",
+      "bi-rads"
+    ],
+    "version": "1.0.1",
+    "version_doi": "10.13026/95cy-rc09"
+  },
+  "source": "physionet"
+}

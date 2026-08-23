@@ -1,0 +1,23 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:9ebdb3c7d52726d3e69b8fb14062bda8c04db77a9f599cce336370b0bb75a8ae",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:mimic-iv-echo-ext-lvvol-a4c",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "apical four-chamber cine loops",
+        "value": "ultrasound"
+      }
+    ],
+    "population": "806 unique patients contributing 1,064 de-identified apical four-chamber DICOM video sequences",
+    "summary": "Curated subset of MIMIC-IV-ECHO with apical four-chamber cine loops, manual region-of-interest masks and left-ventricular volumetric labels, plus downsampled MP4 and NPZ derivatives for segmentation and ejection-fraction model development."
+  },
+  "prompt_version": "v1"
+}

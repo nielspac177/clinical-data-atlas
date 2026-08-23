@@ -1,0 +1,40 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:5431125cd7e863d44321d570508d90f5e665a20f43678839e1bc2e237cd73073",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "203 glioma patients",
+        "label": "glioma"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "neurology",
+      "oncology",
+      "surgery"
+    ],
+    "id": "tcia:mu-glioma-post",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "MR imaging from 203 glioma patients",
+        "value": "MRI"
+      },
+      {
+        "evidence": "patient demographics, genomics, and treatment details",
+        "value": "genomics"
+      },
+      {
+        "evidence": "Clinical data includes patient demographics",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "203 glioma patients with 617 different post-treatment MR time points",
+    "summary": "Post-treatment MR imaging from glioma patients across multiple time points with tumor segmentations produced by a deep learning pipeline and validated by neuroradiologists, plus demographics, genomics, and treatment details."
+  },
+  "prompt_version": "v1"
+}

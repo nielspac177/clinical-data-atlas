@@ -1,0 +1,35 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:9702e0ea948e38300afa828ae46e7cf8ac23d0f9ed67a9cc80063b6fb9040021",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "age-related macular degeneration (AMD) diagnosis",
+        "label": "age related macular degeneration (AMD)"
+      },
+      {
+        "evidence": "190 diabetic retinopathy (DR) patients",
+        "label": "diabetic retinopathy"
+      }
+    ],
+    "countries": [
+      "IL"
+    ],
+    "domains": [
+      "other",
+      "endocrinology_metabolism"
+    ],
+    "id": "physionet:hillel-yaffe-fundus-amd",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "1,560 high-resolution fundus images",
+        "value": "other"
+      }
+    ],
+    "population": "325 patients examined at the Hillel Yaffe Medical Center; 147 with AMD aged 54–94 and 190 diabetic retinopathy controls aged 24–92",
+    "summary": "Longitudinal set of 1,560 digital fundus images from 325 patients examined at an Israeli medical center between 2021 and 2024, comprising 147 AMD patients and 190 diabetic retinopathy controls, for validating AMD detection models."
+  },
+  "prompt_version": "v1"
+}

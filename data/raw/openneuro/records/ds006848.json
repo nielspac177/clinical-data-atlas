@@ -1,0 +1,129 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006848",
+  "payload": {
+    "created": "2025-10-27T14:10:06.799Z",
+    "id": "ds006848",
+    "latestSnapshot": {
+      "created": "2025-10-28T07:46:08.000Z",
+      "description": {
+        "Authors": [
+          "Alexandra I. Kosachenko",
+          "Danil I. Syttykov",
+          "Dmitry A. Tarasov",
+          "Alexander I. Kotyusov",
+          "Yuri G. Pavlov"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006848.v1.0.0",
+        "Funding": null,
+        "HowToAcknowledge": "If you reference this dataset in a publication, please acknowledge its authors and cite the paper: Kosachenko, A. I., Syttykov, D. I., Tarasov, D. A., Kotyusov, A. I., Kasanov, D., Kotchoubey, B., & Pavlov, Y. G. (2025). Alpha activity during verbal working memory retention depends on the stimulus presentation mode. bioRxiv, 2025-05. https://doi.org/10.1101/2025.05.04.652111",
+        "License": "CC0",
+        "Name": "AlphaDirection1: EEG, ECG, PPG in the resting state and working memory for sequentially and simultaneously presented digits",
+        "ReferencesAndLinks": [
+          "in prep"
+        ]
+      },
+      "readme": "Overview\n\nThis dataset consists of raw 64-channel EEG, electrocardiography (ECG), photoplethysmography (PPG), and behavioral data recorded from 30 healthy young adults during two experimental conditions: resting state and a verbal working memory (digit span) task with serial recall.\n\nResting-state recording\n\nDuring the resting-state session, participants alternated between four 1-minute blocks of eyes-closed and eyes-open resting, followed by 3 minutes 52 seconds of passive cartoon watching (“The Man Who Was Afraid of Falling”, 2011).\nEEG, ECG, and PPG were recorded continuously throughout this session.\n\nVerbal working memory task\n\nIn the verbal working memory task, participants were presented visually with sequences of seven digits under four different presentation modes:\n 1. Simultaneous – all seven digits presented together for 2800 ms;\n 2. Fast sequential – each digit presented for 400 ms;\n 3. Fast + delay sequential – each digit presented for 400 ms with a 600 ms inter-stimulus interval (ISI);\n 4. Slow sequential – each digit presented for 1000 ms.\n\nThey were instructed to memorize each sequence and type the digits in serial order using the right hand on the numpad. Behavioral accuracy and partial-score measures were computed for each trial.\n\nData organization\n\nEach participant folder (sub-XXX) contains:\n • eeg/ — EEG, ECG, and PPG recordings in BrainVision format (.vhdr, .vmrk, .eeg) accompanied by event (_events.tsv) and metadata (.json) files.\nWhen available, both the resting-state (task-rest) and working-memory (task-verbalwm) recordings are stored here.\n • beh/ — behavioral data (_beh.tsv and _beh.json) with trial-by-trial recall accuracy, sequence information, and response measures.\n\nParticipants\n\nThe dataset includes 30 participants (age range 18–32 years; 23 females, 7 males). Most were right-handed, with a few left-handed or ambidextrous.\nAll participants contributed working memory EEG and behavioral data. Several lacked resting state data for EEG, PPG, and ECG: sub-002, sub-003, sub-004, sub-005, sub-006, sub-008, sub-009, sub-011.\n\nPotential applications\n\nThis dataset can be used to:\n1. Develop algorithms that classify working memory load.\n2. Study neural signals, including event-related potentials and oscillations, alongside peripheral physiology from ECG and PPG during encoding, maintenance, and retrieval at a fine time scale for each sequential item.\n3. Examine how neural and physiological signals relate to behavioral accuracy and retrieval time on a trial-by-trial basis.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "eeg",
+          "beh"
+        ],
+        "secondaryModalities": [],
+        "sessions": [],
+        "size": 44416584256,
+        "subjects": [
+          "032",
+          "002",
+          "031",
+          "034",
+          "003",
+          "006",
+          "024",
+          "028",
+          "025",
+          "027",
+          "005",
+          "026",
+          "010",
+          "023",
+          "016",
+          "020",
+          "012",
+          "021",
+          "009",
+          "013",
+          "008",
+          "015",
+          "017",
+          "022",
+          "007",
+          "035",
+          "004",
+          "011",
+          "018",
+          "001"
+        ],
+        "tasks": [
+          "rest",
+          "verbalwm"
+        ],
+        "totalFiles": 520
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        20,
+        19,
+        21,
+        21,
+        22,
+        18,
+        20,
+        18,
+        20,
+        23,
+        18,
+        19,
+        18,
+        19,
+        19,
+        21,
+        18,
+        19,
+        19,
+        18,
+        19,
+        19,
+        19,
+        18,
+        20,
+        19,
+        19,
+        19,
+        23,
+        32
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "eeg",
+        "beh"
+      ],
+      "species": "",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2025-10-28T07:47:16.202Z"
+  },
+  "source": "openneuro"
+}

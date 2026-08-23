@@ -1,0 +1,100 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds001506",
+  "payload": {
+    "created": "2018-09-07T12:49:39.374Z",
+    "id": "ds001506",
+    "latestSnapshot": {
+      "created": "2020-01-27T22:52:30.000Z",
+      "description": {
+        "Authors": [
+          "Guohua Shen",
+          "Tomoyasu Horikawa",
+          "Kei Majima",
+          "Yukiyasu Kamitani"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds001506.v1.3.1",
+        "Funding": [],
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "Deep Image Reconstruction",
+        "ReferencesAndLinks": [
+          "Shen, Horikawa, Majima, and Kamitani (2017) Deep image reconstruction from human brain activity. bioRxiv. https://www.biorxiv.org/content/early/2017/12/30/240317",
+          "Shen, Horikawa, Majima, and Kamitani (2019) Deep image reconstruction from human brain activity. PLOS Computational Biology. http://dx.doi.org/10.1371/journal.pcbi.1006633"
+        ]
+      },
+      "readme": "# Deep Image Reconstruction\n\n## Original paper\n\nShen, Horikawa, Majima, and Kamitani (2019) Deep image reconstruction from human brain activity. PLOS Computational Biology. <http://dx.doi.org/10.1371/journal.pcbi.1006633>\n\n## Dataset\n\n### MRI data\n\nThis dataset contains fMRI data from from three subjects ('sub-01', 'sub-02', and 'sub-03').\nEach subject data contains five types of MRI data collected over multiple scanning sessions.\n\n- 'ses-perceptionNaturalImageTraining': fMRI data from the training natural image sessions in the image presentation experiment (120 runs; 15 sessions)\n- 'ses-perceptionNaturalImageTest': fMRI data from the test natural image sessions in the image presentation experiment (24 runs; 3 sessions)\n- 'ses-perceptionArtificialImage': fMRI data from the geometric shape sessions in the image presentation experiment (20 runs; 2-3 sessions)\n- 'ses-perceptionLetterImage': fMRI data from the alphabetical letter sessions in the image presentation experiment (12 runs; 1 session)\n- 'ses-imagery': fMRI data in the imagery experiment (20 runs; 3-4 sessions)\n\nEach scanning session consisted of functional (EPI) and anatomical (inplane T2) images.\nThe functional EPI images covered the entire brain (TR, 2000 ms; TE, 43 ms; flip angle, 80°; voxel size, 2 × 2 × 2 mm; FOV, 192 × 192 mm; number of slices, 76; slice gap, 0 mm; multiband factor, 4) and inplane T2-weighted anatomical images were acquired with the same slices used for the EPI (TR, 11,000 ms; TE, 59 ms; flip angle, 160°; voxel size, 0.75 × 0.75 × 2.0 mm; FOV, 192 × 192 mm).\nThe dataset also includes a T1-weighted anatomical reference image for each subject (TR, 2250 ms; TE, 3.06 ms; TI, 900 ms; flip angle, 9°; voxel size, 1.0 × 1.0 × 1.0 mm; FOV, 256 × 256 mm).\nThe T1-weighted images were scanned only once for each subject in a separate scanning session and are stored in 'ses-anatomy' directories.\nThe T1-weighted images were defaced by pydeface (<https://pypi.python.org/pypi/pydeface>).\nAll DICOM files are converted to Nifti-1 files by mri_convert in FreeSurfer.\nIn addition, the dataset contains mask images of manually defined ROIs for each subject in 'sourcedata' directory (See 'README' in 'sourcedata' for more details).\n\n### Task event files\n\nTask event files ('sub-\\*_ses-\\*_task-\\*_run-\\*_events.tsv') contains recorded event (stimuli presentation, subject responses, etc.) during fMRI runs.\nIn task event files for image presentation experiments ('task-perception'), each column represents:\n\n- 'onset': onset time of an event (sec)\n- 'duration': duration of the event (sec)\n- 'event_type': type of the event (1: Stimulus presentation block, 2: Repetition block, -1, -2, and -3: Initial, inter-trial, and post rest blocks without visual stimulus)\n- 'stimulus_id': stimulus ID of the image presented in a stimulus block ('n/a' in rest blocks)\n- 'stimulus_name': stimulus file name of the image presented in a stimulus block ('n/a' in rest blocks)\n- 'response_time': time of button press in the block, elapsed time from the beginning of each run (sec; 'n/a' 'n/a' when the subject did not press the button in the block)\n- Additional columns 'category_index' and 'image_index' are for internal use.\n\nIn task event files for imagery experiments ('task-imagery'), each column in represents:\n\n- 'onset': onset time (sec) of an event\n- 'duration': duration (sec) of the event\n- 'trial_no': trial (block) number of the event\n- 'event_type': type of the event (-1: rest block, 1: cue presentation period, 2: imagery period, 3: evaluation of imagery quality period, 4: inter-trial and post rest period)\n- 'category_id': ImageNet/WordNet synset ID of a synset (category) which the subject was instructed to imagine at the block ('n/a' in rest blocks)\n- 'category_name': ImageNet/WordNet synset (category) which the subject was instructed to imagine at the block ('n/a' in rest blocks)\n- 'response_time': time of button press for imagery quality evaluation at the block, elapsed time from the beginning of each run (sec; 'n/a' when the subject did not press the button in the block)\n- 'evaluation': vividness of their mental imagery evaluated by the subject (5: very vivid, 4: fairly vivid, 3: rather vivid, 2: not vivid, 1: cannot recognize the target image)\n- Additional column 'category_index' is for internal use.\n\n#### Image/category labels\n\nIn the natural image presentation experiments, the stimulus images are named as 'n03626115_19498', where 'n03626115' is ImageNet/WorNet ID for a synset (category) and '19498' is image ID. In the geometric shape and alphabetical letter presentation experiments, the stimuli consisted of a total of 40 combinations of 5 shapes (filled square, small opened square, large opened square, +, and X) and 8 colors (red, green, blue, cyan, magenta, yellow, white, and black). The stimuli were named as 'colorExpStim\\<ID\\>\\_\\<color\\>\\_\\<shape\\>' (e.g, 'colorExpStim01_red_square'). In the alphabetical letter presentation experiments, 'A', 'C', 'E', 'I', 'N', 'O', 'R', 'S', 'T', and 'U' were used as visual stimuli. The stimuli were named as 'letter_black_img\\<number\\>\\_\\<letter\\>' (e.g., 'letter_black_img011_A'). In the imagery experiments, the categories are named as the ImageNet/WordNet sysnet ID (e.g., 'n03626115'). The stimulus and category names are included in the task event files as 'stimulus_name' and 'category_name', respectively. For use in analysis code, the task event files also contain 'stimulus_id' and 'category_id', which are float or integer numbers generated based on the stimulus or category names (e.g., '1518878.005958' represents image 'n01518878_5958').\n\nThe mapping between stimulus names and IDs (the first and second column from the left in each file is 'stimulus_name' and 'stimulus_id', respectively):\n\n- [stimulus_NaturalImageTraining.tsv](https://ndownloader.figshare.com/files/14876741)\n- [stimulus_NaturalImageTest.tsv](https://ndownloader.figshare.com/files/14876738)\n- [stimulus_LetterImage.tsv](https://ndownloader.figshare.com/files/14876732)\n- [stimulus_ArtificialImage.tsv](https://ndownloader.figshare.com/files/14876798)\n\n### Stimulus images\n\nDue to license issues, our dataset do not include the stimulus images used in the natural image presentation experiments. A script downloading the stimulus images from ImageNet are available at <https://github.com/KamitaniLab/GenericObjectDecoding>.\n\nThe stimulus images used in the geometric shape and alphabetical letter presentation experiments are available at [figshare](https://doi.org/10.6084/m9.figshare.7033577).\n\n- [Geometrical shape images](https://ndownloader.figshare.com/files/14876801) (ses-perceptionArtificialImage)\n- [Alphabetical letter images](https://ndownloader.figshare.com/files/14876735) (ses-perceptionLetterImage)\n\n## Contact\n\n- Email: <brainliner-admin@atr.jp>\n- We also accept inqueries at [issues on GitHub/KamitaniLab/OpenData](https://github.com/KamitaniLab/OpenData/issues).",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "anatomy",
+          "imagery01",
+          "imagery02",
+          "imagery03",
+          "imagery04",
+          "perceptionArtificialImage01",
+          "perceptionArtificialImage02",
+          "perceptionLetterImage01",
+          "perceptionNaturalImageTest01",
+          "perceptionNaturalImageTest02",
+          "perceptionNaturalImageTest03",
+          "perceptionNaturalImageTraining01",
+          "perceptionNaturalImageTraining02",
+          "perceptionNaturalImageTraining03",
+          "perceptionNaturalImageTraining04",
+          "perceptionNaturalImageTraining05",
+          "perceptionNaturalImageTraining06",
+          "perceptionNaturalImageTraining07",
+          "perceptionNaturalImageTraining08",
+          "perceptionNaturalImageTraining09",
+          "perceptionNaturalImageTraining10",
+          "perceptionNaturalImageTraining11",
+          "perceptionNaturalImageTraining12",
+          "perceptionNaturalImageTraining13",
+          "perceptionNaturalImageTraining14",
+          "perceptionNaturalImageTraining15",
+          "perceptionArtificialImage03"
+        ],
+        "size": 104829104123,
+        "subjects": [
+          "01",
+          "02",
+          "03"
+        ],
+        "tasks": [
+          "imagery",
+          "perception"
+        ],
+        "totalFiles": 1844
+      },
+      "tag": "1.3.1"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": null,
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2018-09-07T12:49:39.374Z"
+  },
+  "source": "openneuro"
+}

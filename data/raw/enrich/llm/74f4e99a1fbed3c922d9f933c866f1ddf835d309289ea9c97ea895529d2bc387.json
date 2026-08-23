@@ -1,0 +1,59 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:74f4e99a1fbed3c922d9f933c866f1ddf835d309289ea9c97ea895529d2bc387",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Uterine Corpus Endometrial Carcinoma (CPTAC-UCEC) cohort",
+        "label": "Uterine Corpus Endometrial Carcinoma"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "oncology",
+      "obstetrics_gynecology"
+    ],
+    "id": "tcia:cptac-ucec",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "CT MR PT RTSTRUCT US",
+        "value": "CT"
+      },
+      {
+        "evidence": "CT MR PT RTSTRUCT US",
+        "value": "MRI"
+      },
+      {
+        "evidence": "CT MR PT RTSTRUCT US",
+        "value": "PET"
+      },
+      {
+        "evidence": "CT MR PT RTSTRUCT US",
+        "value": "radiotherapy"
+      },
+      {
+        "evidence": "CT MR PT RTSTRUCT US",
+        "value": "ultrasound"
+      },
+      {
+        "evidence": "Radiology and pathology images from CPTAC patients",
+        "value": "pathology"
+      },
+      {
+        "evidence": "large-scale proteome and genome analysis",
+        "value": "genomics"
+      },
+      {
+        "evidence": "large-scale proteome and genome analysis",
+        "value": "proteomics"
+      }
+    ],
+    "population": "Subjects from the CPTAC Uterine Corpus Endometrial Carcinoma cohort",
+    "summary": "Radiology and pathology images from the CPTAC uterine corpus endometrial carcinoma cohort, released by The Cancer Imaging Archive so imaging phenotypes can be correlated with proteomic, genomic and clinical data."
+  },
+  "prompt_version": "v1"
+}

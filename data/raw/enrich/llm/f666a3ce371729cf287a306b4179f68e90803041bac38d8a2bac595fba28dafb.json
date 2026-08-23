@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:f666a3ce371729cf287a306b4179f68e90803041bac38d8a2bac595fba28dafb",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Ovarian Serous Cystadenocarcinoma (CPTAC-OV) cohort",
+        "label": "Ovarian Serous Cystadenocarcinoma"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "obstetrics_gynecology"
+    ],
+    "id": "tcia:cptac-ov",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Pathology images from CPTAC patients",
+        "value": "pathology"
+      },
+      {
+        "evidence": "large-scale proteome and genome analysis",
+        "value": "genomics"
+      },
+      {
+        "evidence": "large-scale proteome and genome analysis",
+        "value": "proteomics"
+      }
+    ],
+    "population": "subjects from the National Cancer Institute's Clinical Proteomic Tumor Analysis Consortium Ovarian Serous Cystadenocarcinoma (CPTAC-OV) cohort",
+    "summary": "Pathology images from the CPTAC ovarian serous cystadenocarcinoma cohort, released so researchers can relate cancer phenotypes to matching proteomic, genomic and clinical data."
+  },
+  "prompt_version": "v1"
+}

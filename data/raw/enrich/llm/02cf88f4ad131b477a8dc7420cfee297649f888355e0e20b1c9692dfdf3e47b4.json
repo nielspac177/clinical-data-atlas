@@ -1,0 +1,27 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:02cf88f4ad131b477a8dc7420cfee297649f888355e0e20b1c9692dfdf3e47b4",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "other"
+    ],
+    "id": "physionet:labelled-notes-hospital-course",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "preprocessed and labeled clinical notes",
+        "value": "clinical_notes"
+      },
+      {
+        "evidence": "derived from the MIMIC-IV-Note database",
+        "value": "EHR"
+      }
+    ],
+    "population": null,
+    "summary": "Preprocessed and labeled clinical discharge notes derived from MIMIC-IV-Note, each paired with a brief hospital course summary, intended for training machine learning models on hospital course summarization."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,149 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "TCGA-SARC",
+  "payload": {
+    "dbgap_accession_number": null,
+    "disease_type": [
+      "Lipomatous Neoplasms",
+      "Fibromatous Neoplasms",
+      "Synovial-like Neoplasms",
+      "Myomatous Neoplasms",
+      "Nerve Sheath Tumors",
+      "Soft Tissue Tumors and Sarcomas, NOS"
+    ],
+    "id": "TCGA-SARC",
+    "name": "Sarcoma",
+    "primary_site": [
+      "Colon",
+      "Stomach",
+      "Meninges",
+      "Corpus uteri",
+      "Uterus, NOS",
+      "Other and unspecified male genital organs",
+      "Kidney",
+      "Peripheral nerves and autonomic nervous system",
+      "Retroperitoneum and peritoneum",
+      "Bones, joints and articular cartilage of limbs",
+      "Other and unspecified parts of tongue",
+      "Connective, subcutaneous and other soft tissues",
+      "Ovary"
+    ],
+    "program": {
+      "dbgap_accession_number": "phs000178",
+      "name": "TCGA",
+      "program_id": "b80aa962-9650-5110-b3eb-bd087da808db"
+    },
+    "project_id": "TCGA-SARC",
+    "releasable": true,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 261,
+      "data_categories": [
+        {
+          "case_count": 261,
+          "data_category": "Simple Nucleotide Variation",
+          "file_count": 5115
+        },
+        {
+          "case_count": 261,
+          "data_category": "Sequencing Reads",
+          "file_count": 2090
+        },
+        {
+          "case_count": 261,
+          "data_category": "Biospecimen",
+          "file_count": 1422
+        },
+        {
+          "case_count": 261,
+          "data_category": "Clinical",
+          "file_count": 576
+        },
+        {
+          "case_count": 261,
+          "data_category": "Copy Number Variation",
+          "file_count": 3332
+        },
+        {
+          "case_count": 261,
+          "data_category": "Transcriptome Profiling",
+          "file_count": 1056
+        },
+        {
+          "case_count": 261,
+          "data_category": "DNA Methylation",
+          "file_count": 807
+        },
+        {
+          "case_count": 223,
+          "data_category": "Proteome Profiling",
+          "file_count": 226
+        },
+        {
+          "case_count": 215,
+          "data_category": "Somatic Structural Variation",
+          "file_count": 609
+        },
+        {
+          "case_count": 260,
+          "data_category": "Structural Variation",
+          "file_count": 1171
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 259,
+          "experimental_strategy": "RNA-Seq",
+          "file_count": 2385
+        },
+        {
+          "case_count": 259,
+          "experimental_strategy": "miRNA-Seq",
+          "file_count": 789
+        },
+        {
+          "case_count": 255,
+          "experimental_strategy": "WXS",
+          "file_count": 4101
+        },
+        {
+          "case_count": 223,
+          "experimental_strategy": "WGS",
+          "file_count": 2734
+        },
+        {
+          "case_count": 261,
+          "experimental_strategy": "Genotyping Array",
+          "file_count": 3364
+        },
+        {
+          "case_count": 261,
+          "experimental_strategy": "Methylation Array",
+          "file_count": 807
+        },
+        {
+          "case_count": 223,
+          "experimental_strategy": "Reverse Phase Protein Array",
+          "file_count": 226
+        },
+        {
+          "case_count": 261,
+          "experimental_strategy": "Tissue Slide",
+          "file_count": 290
+        },
+        {
+          "case_count": 254,
+          "experimental_strategy": "Diagnostic Slide",
+          "file_count": 600
+        }
+      ],
+      "file_count": 16404,
+      "file_size": 143032356079050
+    }
+  },
+  "source": "gdc"
+}

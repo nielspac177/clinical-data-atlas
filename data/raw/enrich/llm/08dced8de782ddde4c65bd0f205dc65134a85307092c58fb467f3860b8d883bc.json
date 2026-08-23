@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:08dced8de782ddde4c65bd0f205dc65134a85307092c58fb467f3860b8d883bc",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "clinical stage IIB/III non-small cell lung carcinoma",
+        "label": "non-small cell lung carcinoma"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "pulmonology"
+    ],
+    "id": "tcia:acrin-nsclc-fdg-pet",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "FDG-PET imaging both pre- and post-chemoradiotherapy",
+        "value": "PET"
+      },
+      {
+        "evidence": "definitive concurrent chemoradiotherapy",
+        "value": "radiotherapy"
+      }
+    ],
+    "population": "Patients older than 18 years with AJCC-criteria clinical stage IIB/III non-small cell lung carcinoma planned for definitive concurrent chemoradiotherapy (inoperable disease).",
+    "summary": "Multicenter ACRIN 6668 trial collection with FDG-PET imaging before and after chemoradiotherapy in locally advanced non-small cell lung carcinoma, testing whether post-treatment standardized uptake value predicts long-term survival."
+  },
+  "prompt_version": "v1"
+}

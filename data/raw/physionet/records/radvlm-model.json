@@ -1,0 +1,32 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "radvlm-model",
+  "payload": {
+    "abstract": "<p>We present RadVLM, a compact (7B) multitask conversational foundation model designed for CXR interpretation. Its development relies on the curation of a large-scale instruction dataset comprising over 1 million image-instruction pairs containing both single-turn tasks - such as report generation, abnormality classification, and visual grounding - and multi-turn, multi-task conversational interactions. Our experiments show that RadVLM, fine-tuned on this instruction dataset, achieves state-of-the-art performance in conversational capabilities and visual grounding while remaining competitive in other radiology tasks (report generation, classification). Ablation studies further highlight the benefit of joint training across multiple tasks, particularly for scenarios with limited annotated data. Together, these findings highlight the potential of the RadVLM model as a clinically relevant AI assistant, providing structured CXR interpretation and conversational capabilities to support more effective and accessible diagnostic workflows.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 12382956105,
+    "core_doi": "10.13026/wg4j-wp53",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 16077691077,
+    "public_project_uuid": "58f11978-c77a-4fbb-96bc-6b4e53108676",
+    "publish_date": "2025-10-08",
+    "resource_type": "Model",
+    "short_description": "RadVLM is a 7B-parameter vision-language model fine-tuned on public chest-X-ray data that drafts reports, lists abnormalities, grounds findings, and chats about a CXR through a single image-to-text interface.",
+    "slug": "radvlm-model",
+    "source_url": "https://physionet.org/content/radvlm-model/1.0.0/",
+    "title": "RadVLM model",
+    "topics": [],
+    "version": "1.0.0",
+    "version_doi": "10.13026/50kn-p490"
+  },
+  "source": "physionet"
+}

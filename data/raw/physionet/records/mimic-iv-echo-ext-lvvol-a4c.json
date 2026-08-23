@@ -1,0 +1,53 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "mimic-iv-echo-ext-lvvol-a4c",
+  "payload": {
+    "abstract": "<p><b>MIMIC-IV-ECHO-Ext-LVVOLUMES-A4C-ROI</b>is a curated, credentialed subset of <i>MIMIC-IV-ECHO v0.1 </i>focusing on apical four-chamber (A4C) echocardiographic views with accompanying left-ventricular volumetric labels. The release includes 1,064 de-identified A4C DICOM video sequences from 806 unique patients, each paired with a manually annotated region-of-interest (ROI) mask in both PNG and JSON formats at the original DICOM 4D resolution. ROI-applied, downsampled (256 &times; 256) MP4 and NPZ derivatives are provided for efficient model development. The full-resolution masks preserve native geometry, enabling regeneration of higher-resolution datasets directly from the source DICOMs.</p>\n<p>This resource supports three primary use cases: (i) as an <i>out-of-distribution (OOD) PoCUS external test set </i>for evaluating state-of-the-art LV volume and ejection fraction (EF) models trained on laboratory echocardiography; (ii) <i>training and benchmarking ROI segmentation models </i>for background and overlay removal; and (iii) <i>developing LV-focused video models </i>using preprocessed MP4/NPZ inputs that eliminate DICOM parsing overhead.</p>\n<p>Both single-plane (A4C) and biplane (BP) volumetric and EF labels are included, enabling transparent comparison between monoplane interpretability and biplane geometric precision. Access is provided under the PhysioNet Credentialed Health Data License (v1.5.0).</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 9870212039,
+    "core_doi": "10.13026/ft1n-4y69",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 10673285801,
+    "public_project_uuid": "e5988ab0-e3d1-4a71-8a7d-bd0e0987f918",
+    "publish_date": "2026-02-27",
+    "resource_type": "Database",
+    "short_description": "A curated subset of MIMIC-IV-ECHO providing apical four-chamber cine loops with manual ROI masks, volumetric labels, and ready-to-use MP4/NPZ derivatives for robust LV volume and ejection fraction research.",
+    "slug": "mimic-iv-echo-ext-lvvol-a4c",
+    "source_url": "https://physionet.org/content/mimic-iv-echo-ext-lvvol-a4c/1.0.0/",
+    "title": "MIMIC-IV-ECHO-Ext-LVVOLUMES-A4C-ROI: Annotated Subset of Apical Four-Chamber Echocardiography for PoCUS-Style LV Volume and Function Analysis",
+    "topics": [
+      "lvesv",
+      "roi segmentation",
+      "cardiac video analysis",
+      "left ventricular volume",
+      "mimic-iv-echo",
+      "apical four-chamber",
+      "quantitative cardiology",
+      "biplane simpson",
+      "transformer models",
+      "lvef",
+      "ejection fraction",
+      "echocardiography",
+      "deep learning",
+      "a4c",
+      "pocus",
+      "ultrasound",
+      "lvedv",
+      "medical imaging",
+      "domain adaptation",
+      "dicom"
+    ],
+    "version": "1.0.0",
+    "version_doi": "10.13026/713s-z339"
+  },
+  "source": "physionet"
+}

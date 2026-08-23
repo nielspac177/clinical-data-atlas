@@ -1,0 +1,81 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "CPTAC-2",
+  "payload": {
+    "dbgap_accession_number": "phs000892",
+    "disease_type": [
+      "Not Reported",
+      "Cystic, Mucinous and Serous Neoplasms",
+      "Adenomas and Adenocarcinomas",
+      "Ductal and Lobular Neoplasms",
+      "Squamous Cell Neoplasms"
+    ],
+    "id": "CPTAC-2",
+    "name": "CPTAC-Breast, Colon, Ovary",
+    "primary_site": [
+      "Other and unspecified female genital organs",
+      "Colon",
+      "Breast",
+      "Retroperitoneum and peritoneum",
+      "Rectum",
+      "Ovary"
+    ],
+    "program": {
+      "dbgap_accession_number": null,
+      "name": "CPTAC",
+      "program_id": "fe856b91-d4a1-51dd-ba58-ea71644ff5cd"
+    },
+    "project_id": "CPTAC-2",
+    "releasable": true,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 342,
+      "data_categories": [
+        {
+          "case_count": 328,
+          "data_category": "Simple Nucleotide Variation",
+          "file_count": 4586
+        },
+        {
+          "case_count": 341,
+          "data_category": "Sequencing Reads",
+          "file_count": 1998
+        },
+        {
+          "case_count": 340,
+          "data_category": "Transcriptome Profiling",
+          "file_count": 1300
+        },
+        {
+          "case_count": 340,
+          "data_category": "Structural Variation",
+          "file_count": 1360
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 340,
+          "experimental_strategy": "WXS",
+          "file_count": 5254
+        },
+        {
+          "case_count": 310,
+          "experimental_strategy": "miRNA-Seq",
+          "file_count": 930
+        },
+        {
+          "case_count": 340,
+          "experimental_strategy": "RNA-Seq",
+          "file_count": 3060
+        }
+      ],
+      "file_count": 9244,
+      "file_size": 40135758407376
+    }
+  },
+  "source": "gdc"
+}

@@ -1,0 +1,537 @@
+{
+  "endpoints": [
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getCollectionValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getModalityValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getBodyPartValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getPatient",
+    "https://api.datacite.org/dois?prefix=10.7937"
+  ],
+  "harvest_method": "api:nbia+datacite",
+  "native_id": "VAREPOP-APOLLO",
+  "payload": {
+    "datacite": {
+      "citationCount": 0,
+      "container": {},
+      "contentUrl": null,
+      "contributors": [],
+      "created": "2024-12-03T15:38:49Z",
+      "creators": [
+        {
+          "affiliation": [],
+          "familyName": null,
+          "givenName": null,
+          "name": "The Research for Precision Oncology Program  and the Applied Proteogenomics Organizational Learning and Outcomes (APOLLO) Research Network",
+          "nameIdentifiers": [],
+          "nameType": null
+        }
+      ],
+      "dates": [],
+      "descriptions": [
+        {
+          "description": "Imaging data in this collection is produced through the VA RePOP activity in conjunction with the The Applied Proteogenomics OrganizationaL Learning and Outcomes (APOLLO) program. The Research for Precision Oncology Program (RePOP) is a research activity that established a cohort of Veterans diagnosed with cancer and had genomic analyses performed on their tumor tissue as part of the standard of care. All data relevant to a patient’s cancer and cancer care were collected under RePOP, including patient demographics, comorbidities, genomic analysis, treatments, medications, lab values, imaging studies, and outcomes. All RePOP participants signed/verbal informed consent and signed HIPAA authorization to have their data stored and shared from RePOP’s Precision Oncology Program Data Repository (PODR).",
+          "descriptionType": "Abstract",
+          "lang": null
+        }
+      ],
+      "doi": "10.7937/ghkn-md15",
+      "downloadCount": 0,
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "VAREPOP-APOLLO",
+          "identifierType": "TCIA Short Name"
+        }
+      ],
+      "isActive": true,
+      "language": null,
+      "metadataVersion": 4,
+      "partCount": 0,
+      "partOfCount": 0,
+      "publicationYear": 2024,
+      "published": null,
+      "publisher": "The Cancer Imaging Archive",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2024-12-04T14:44:55Z",
+      "relatedIdentifiers": [],
+      "relatedItems": [],
+      "rightsList": [
+        {
+          "rights": "Creative Commons Attribution 4.0 International",
+          "rightsIdentifier": "cc-by-4.0",
+          "rightsIdentifierScheme": "SPDX",
+          "rightsUri": "https://creativecommons.org/licenses/by/4.0/legalcode",
+          "schemeUri": "https://spdx.org/licenses/"
+        }
+      ],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "fabricaForm",
+      "state": "findable",
+      "subjects": [],
+      "titles": [
+        {
+          "lang": null,
+          "title": "VA Research Precision Oncology Program - APOLLO (VAREPOP-APOLLO)",
+          "titleType": null
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceType": "Radiology/Images",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2025-10-02T16:00:10Z",
+      "url": "https://www.cancerimagingarchive.net/collection/varepop-apollo/",
+      "version": "3",
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 4449
+    },
+    "nbia": {
+      "body_parts": [
+        "ABDOMEN",
+        "ABDOMENPELVIS",
+        "ADRENAL",
+        "CHEST",
+        "CHESTABDOMEN",
+        "CHESTABDPELVIS",
+        "CSPINE",
+        "CTSPINE",
+        "ELBOW",
+        "EXTREMITY",
+        "FEMORALA",
+        "HEAD",
+        "HEART",
+        "HIP",
+        "KNEE",
+        "LSPINE",
+        "NECK",
+        "PELVIS",
+        "SHOULDER",
+        "THORAX"
+      ],
+      "collection": "VAREPOP-APOLLO",
+      "modalities": [
+        "CR",
+        "CT",
+        "DX",
+        "MR",
+        "NM",
+        "PT",
+        "RF",
+        "US"
+      ],
+      "patients": [
+        {
+          "Collection": "VAREPOP-APOLLO",
+          "EthnicGroup": "BLACK OR AFRICAN",
+          "PatientId": "AP-AMT4",
+          "PatientName": "AP-AMT4",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "VAREPOP-APOLLO",
+          "EthnicGroup": "WHITE",
+          "PatientId": "AP-ZUCQ",
+          "PatientName": "AP-ZUCQ",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "VAREPOP-APOLLO",
+          "EthnicGroup": "WHITE",
+          "PatientId": "AP-7DC5",
+          "PatientName": "AP-7DC5",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "VAREPOP-APOLLO",
+          "EthnicGroup": "ASIAN",
+          "PatientId": "AP-DKMN",
+          "PatientName": "AP-DKMN",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "VAREPOP-APOLLO",
+          "EthnicGroup": "WHITE",
+          "PatientId": "AP-E7LJ",
+          "PatientName": "AP-E7LJ",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "VAREPOP-APOLLO",
+          "EthnicGroup": "WHITE",
+          "PatientId": "AP-GNDK",
+          "PatientName": "AP-GNDK",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "VAREPOP-APOLLO",
+          "PatientId": "AP-R45K",
+          "PatientName": "AP-R45K",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "VAREPOP-APOLLO",
+          "EthnicGroup": "BLACK OR AFRICAN",
+          "PatientId": "AP-Z5MF",
+          "PatientName": "AP-Z5MF",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "VAREPOP-APOLLO",
+          "EthnicGroup": "WHITE",
+          "PatientId": "AP-DCLM",
+          "PatientName": "AP-DCLM",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "VAREPOP-APOLLO",
+          "EthnicGroup": "WHITE",
+          "PatientId": "AP-X6NA",
+          "PatientName": "AP-X6NA",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "VAREPOP-APOLLO",
+          "EthnicGroup": "WHITE",
+          "PatientId": "AP-ZPHN",
+          "PatientName": "AP-ZPHN",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "VAREPOP-APOLLO",
+          "EthnicGroup": "WHITE",
+          "PatientId": "AP-V7RJ",
+          "PatientName": "AP-V7RJ",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "VAREPOP-APOLLO",
+          "EthnicGroup": "WHITE",
+          "PatientId": "AP-YGJE",
+          "PatientName": "AP-YGJE",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "VAREPOP-APOLLO",
+          "EthnicGroup": "WHITE",
+          "PatientId": "AP-RMFZ",
+          "PatientName": "AP-RMFZ",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "VAREPOP-APOLLO",
+          "EthnicGroup": "BLACK OR AFRICAN",
+          "PatientId": "AP-FMPL",
+          "PatientName": "AP-FMPL",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "VAREPOP-APOLLO",
+          "EthnicGroup": "WHITE",
+          "PatientId": "AP-E87U",
+          "PatientName": "AP-E87U",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "VAREPOP-APOLLO",
+          "PatientId": "AP-97PG",
+          "PatientName": "AP-97PG",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "VAREPOP-APOLLO",
+          "EthnicGroup": "WHITE",
+          "PatientId": "AP-CUHF",
+          "PatientName": "AP-CUHF",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "VAREPOP-APOLLO",
+          "PatientId": "AP-95DK",
+          "PatientName": "AP-95DK",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "VAREPOP-APOLLO",
+          "EthnicGroup": "WHITE",
+          "PatientId": "AP-LCEW",
+          "PatientName": "AP-LCEW",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "VAREPOP-APOLLO",
+          "EthnicGroup": "WHITE",
+          "PatientId": "AP-EXQB",
+          "PatientName": "AP-EXQB",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "VAREPOP-APOLLO",
+          "PatientId": "AP-6H6G",
+          "PatientName": "AP-6H6G",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "VAREPOP-APOLLO",
+          "PatientId": "AP-6M60",
+          "PatientName": "AP-6M60",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "VAREPOP-APOLLO",
+          "PatientId": "AP-9GTR",
+          "PatientName": "AP-9GTR",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "VAREPOP-APOLLO",
+          "EthnicGroup": "WHITE",
+          "PatientId": "AP-GDKX",
+          "PatientName": "AP-GDKX",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "VAREPOP-APOLLO",
+          "PatientId": "AP-DRVN",
+          "PatientName": "AP-DRVN",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "VAREPOP-APOLLO",
+          "PatientId": "AP-CL9I",
+          "PatientName": "AP-CL9I",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "VAREPOP-APOLLO",
+          "EthnicGroup": "WHITE",
+          "PatientId": "AP-ZVBM",
+          "PatientName": "AP-ZVBM",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "VAREPOP-APOLLO",
+          "EthnicGroup": "WHITE",
+          "PatientId": "AP-78LL",
+          "PatientName": "AP-78LL",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "VAREPOP-APOLLO",
+          "EthnicGroup": "WHITE",
+          "PatientId": "AP-R39K",
+          "PatientName": "AP-R39K",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "VAREPOP-APOLLO",
+          "EthnicGroup": "UNKNOWN BY PATIE",
+          "PatientId": "AP-GUEM",
+          "PatientName": "AP-GUEM",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "VAREPOP-APOLLO",
+          "EthnicGroup": "ASIAN",
+          "PatientId": "AP-JS5B",
+          "PatientName": "AP-JS5B",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "VAREPOP-APOLLO",
+          "EthnicGroup": "WHITE",
+          "PatientId": "AP-GEH6",
+          "PatientName": "AP-GEH6",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "VAREPOP-APOLLO",
+          "EthnicGroup": "WHITE",
+          "PatientId": "AP-22P7",
+          "PatientName": "AP-22P7",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "VAREPOP-APOLLO",
+          "EthnicGroup": "BLACK OR AFRICAN",
+          "PatientId": "AP-SNKW",
+          "PatientName": "AP-SNKW",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "VAREPOP-APOLLO",
+          "EthnicGroup": "WHITE",
+          "PatientId": "AP-2CM3",
+          "PatientName": "AP-2CM3",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "VAREPOP-APOLLO",
+          "EthnicGroup": "BLACK OR AFRICAN",
+          "PatientId": "AP-27ZN",
+          "PatientName": "AP-27ZN",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "VAREPOP-APOLLO",
+          "EthnicGroup": "WHITE",
+          "PatientId": "AP-26JK",
+          "PatientName": "AP-26JK",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "VAREPOP-APOLLO",
+          "EthnicGroup": "WHITE",
+          "PatientId": "AP-ANXW",
+          "PatientName": "AP-ANXW",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "VAREPOP-APOLLO",
+          "EthnicGroup": "WHITE",
+          "PatientId": "AP-2BGM",
+          "PatientName": "AP-2BGM",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "VAREPOP-APOLLO",
+          "EthnicGroup": "WHITE",
+          "PatientId": "AP-7CQ6",
+          "PatientName": "AP-7CQ6",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        }
+      ]
+    }
+  },
+  "source": "tcia"
+}

@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:226f90ba786af3020897b4bf3f1b7154d202da4aa30347d3242148382165a4c2",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "COVID-19 diagnostic testing",
+        "label": "COVID-19"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "infectious_disease",
+      "public_health"
+    ],
+    "id": "physionet:covidentify",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "wearable device data from Fitbit, Garmin, and Apple Watch users",
+        "value": "wearable"
+      },
+      {
+        "evidence": "resting heart rate and steps",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": "2,887 participants who connected their smartwatches to the CovIdentify platform, including 1,689 Garmin, 1,091 Fitbit, and 107 Apple smartwatches",
+    "summary": "Date-shifted commercial smartwatch data from Fitbit, Garmin, and Apple Watch users, supporting a study that used continuous digital biomarkers such as resting heart rate and steps to allocate COVID-19 diagnostic testing."
+  },
+  "prompt_version": "v1"
+}

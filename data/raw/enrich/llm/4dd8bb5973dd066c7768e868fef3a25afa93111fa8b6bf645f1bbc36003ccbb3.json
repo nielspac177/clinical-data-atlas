@@ -1,0 +1,34 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:4dd8bb5973dd066c7768e868fef3a25afa93111fa8b6bf645f1bbc36003ccbb3",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "patients with newly diagnosed glioblastoma",
+        "label": "glioblastoma"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "oncology",
+      "surgery"
+    ],
+    "id": "tcia:qin-gbm-treatment-response",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "“double baseline” multi-parametric MRI images",
+        "value": "MRI"
+      },
+      {
+        "evidence": "Diffusion Weighted (DW) Imaging",
+        "value": "dMRI"
+      }
+    ],
+    "population": "patients with newly diagnosed glioblastoma, scanned after surgery but prior to the start of therapy",
+    "summary": "Repeat baseline multi-parametric brain MRI in newly diagnosed glioblastoma, acquired after surgery but before therapy. Includes structural sequences plus diffusion-weighted, dynamic contrast-enhanced and dynamic susceptibility contrast MRI to establish test-retest characteristics of derived parameters."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,32 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "image-embeddings-mimic-cxr",
+  "payload": {
+    "abstract": "<p>This database contains image embeddings from the DICOM images of the MIMIC V2.0.0 Chest X-Ray database, generated using the approach described in &ldquo;<em>Simplified Transfer Learning for Chest Radiography Models Using Less Data</em>&rdquo;. The image embeddings are compact, information-rich numerical vectors that can be used for classification tasks. Given the nature of the embeddings, less compute resources and even less data are necessary to achieve the same classification performance as the full CXR image in training a model.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 1408110263,
+    "core_doi": "10.13026/t3kp-ve72",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 1422718023,
+    "public_project_uuid": "5354479b-807b-4c92-83fb-32fd4926aaee",
+    "publish_date": "2023-02-22",
+    "resource_type": "Database",
+    "short_description": "This database contains compact information-rich embeddings of the MIMIC-CXR Database v2.0.0 using the CXR Foundation API v1.0.",
+    "slug": "image-embeddings-mimic-cxr",
+    "source_url": "https://physionet.org/content/image-embeddings-mimic-cxr/1.0/",
+    "title": "Generalized Image Embeddings for the MIMIC Chest X-Ray dataset",
+    "topics": [],
+    "version": "1.0",
+    "version_doi": "10.13026/pxc2-vx69"
+  },
+  "source": "physionet"
+}

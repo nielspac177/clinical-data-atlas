@@ -1,0 +1,154 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds000217",
+  "payload": {
+    "created": "2018-03-27T16:47:29.067Z",
+    "id": "ds000217",
+    "latestSnapshot": {
+      "created": "2020-09-24T23:20:25.000Z",
+      "description": {
+        "Authors": [
+          "Avi J H Chanales",
+          "Ashima Oza",
+          "Serra E Favila",
+          "Brice A Kuhl"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds000217.v1.0.0",
+        "Funding": [
+          "National Institutes of Health Grant (1RO1NS089729) to B.A.K"
+        ],
+        "HowToAcknowledge": "This data was obtained from the OpenfMRI database. Its accession number is ds000217",
+        "License": "CC0",
+        "Name": "Route Learning",
+        "ReferencesAndLinks": [
+          "http://biorxiv.org/content/early/2017/01/10/099226"
+        ]
+      },
+      "readme": "### Comments added by Openfmri Curators ###\n===========================================\n\nDefacing\n--------\nDefacing was performed by the submitter.\n\nQuality Control\n---------------\nMriqc was run on the dataset. Results are located in derivatives/mriqc. Learn more about it \nhere: https://mriqc.readthedocs.io/en/latest/\n\nWhere to discuss the dataset\n----------------------------\n1) www.openfmri.org/dataset/ds000217/ See the comments section at the bottom of the dataset\npage.\n2) www.neurostars.org Please tag any discussion topics with the tags openfmri and ds000217\naccession number.\n3) Send an email to submissions@openfmri.org. Please include the ds000217 accession number in\nyour email.\n\nBids-validator Output\n---------------------\n\n\n        Summary:                    Available Tasks:        Available Modalities:\n        3095 Files, 102.19GB        localizer               T1w\n        41 - Subjects               route learning          inplaneT1\n        1 - Session                                         inplaneT2\n                                                            bold\n                                                            fieldmap\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 109726488609,
+        "subjects": [
+          "Exp1s01",
+          "Exp1s02",
+          "Exp1s03",
+          "Exp1s04",
+          "Exp1s05",
+          "Exp1s06",
+          "Exp1s07",
+          "Exp1s08",
+          "Exp1s09",
+          "Exp1s10",
+          "Exp1s11",
+          "Exp1s12",
+          "Exp1s13",
+          "Exp1s14",
+          "Exp1s15",
+          "Exp1s16",
+          "Exp1s17",
+          "Exp1s18",
+          "Exp1s19",
+          "Exp1s20",
+          "Exp2s01",
+          "Exp2s02",
+          "Exp2s03",
+          "Exp2s04",
+          "Exp2s05",
+          "Exp2s06",
+          "Exp2s07",
+          "Exp2s08",
+          "Exp2s09",
+          "Exp2s10",
+          "Exp2s11",
+          "Exp2s12",
+          "Exp2s13",
+          "Exp2s14",
+          "Exp2s15",
+          "Exp2s16",
+          "Exp2s17",
+          "Exp2s18",
+          "Exp2s19",
+          "Exp2s20",
+          "Exp2s21"
+        ],
+        "tasks": [
+          "localizer",
+          "route learning",
+          "picture test"
+        ],
+        "totalFiles": 3095
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        20,
+        19,
+        19,
+        24,
+        31,
+        23,
+        25,
+        18,
+        19,
+        26,
+        19,
+        27,
+        23,
+        19,
+        19,
+        21,
+        21,
+        23,
+        26,
+        21,
+        25,
+        20,
+        23,
+        20,
+        21,
+        20,
+        20,
+        31,
+        23,
+        26,
+        27,
+        27,
+        19,
+        24,
+        20,
+        24,
+        24,
+        28,
+        25,
+        18,
+        25
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2018-03-27T16:47:29.067Z"
+  },
+  "source": "openneuro"
+}

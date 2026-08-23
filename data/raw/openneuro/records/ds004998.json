@@ -1,0 +1,98 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004998",
+  "payload": {
+    "created": "2024-03-04T17:45:27.695Z",
+    "id": "ds004998",
+    "latestSnapshot": {
+      "created": "2024-09-09T08:26:28.000Z",
+      "description": {
+        "Authors": [
+          "Fayed Rassoulou",
+          "Alexandra Steina",
+          "Christian J. Hartmann",
+          "Jan Vesper",
+          "Markus Butz",
+          "Alfons Schnitzler",
+          "Jan Hirschmann"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004998.v1.2.2",
+        "Funding": [
+          "The project was funded by ERA-NET Neuron for 3 years."
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Exploring the electrophysiology of Parkinson's disease - magnetoencephalography combined with deep brain recordings from the subthalamic nucleus. ",
+        "ReferencesAndLinks": [
+          "Rassoulou, F., Steina, A., Hartmann, C. J., Vesper, J., Butz, M., Schnitzler, A., & Hirschmann, J. (2024). Exploring the electrophysiology of Parkinson's disease with magnetoencephalography and deep brain recordings. Scientific data, 11(1), 889. https://doi.org/10.1038/s41597-024-03768-1"
+        ]
+      },
+      "readme": "This dataset contains data from externalized DBS patients undergoing simultaneous MEG - STN LFP recordings with (MedOn) and without (MedOn) dopaminergic medication. It has two movement conditions: 1) 5 min of rest followed by static forearm extension (hold) and 2) 5 min of rest followed by self-paced fist-clenching (move). The movement parts contain pauses. Some patients were recorded in resting-state only (rest). The project aimed to understand the neurophysiology of basal ganglia-cortex loops and its modulation by movement and medication.\n\nCode for quickly start is available here:\nhttps://github.com/Fayed-Rsl/RHM_preprocessing\n\nReferences\n----------\nRassoulou, F., Steina, A., Hartmann, C. J., Vesper, J., Butz, M., Schnitzler, A., & Hirschmann, J. (2024). Exploring the electrophysiology of Parkinson's disease with magnetoencephalography and deep brain recordings. Scientific data, 11(1), 889. https://doi.org/10.1038/s41597-024-03768-1\n\nAppelhoff, S., Sanderson, M., Brooks, T., Vliet, M., Quentin, R., Holdgraf, C., Chaumon, M., Mikulan, E., Tavabi, K., Höchenberger, R., Welke, D., Brunner, C., Rockhill, A., Larson, E., Gramfort, A. and Jas, M. (2019). MNE-BIDS: Organizing electrophysiological data into the BIDS format and facilitating their analysis. Journal of Open Source Software 4: (1896). https://doi.org/10.21105/joss.01896\n\nNiso, G., Gorgolewski, K. J., Bock, E., Brooks, T. L., Flandin, G., Gramfort, A., Henson, R. N., Jas, M., Litvak, V., Moreau, J., Oostenveld, R., Schoffelen, J., Tadel, F., Wexler, J., Baillet, S. (2018). MEG-BIDS, the brain imaging data structure extended to magnetoencephalography. Scientific Data, 5, 180110. https://doi.org/10.1038/sdata.2018.110\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "meg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [
+          "PeriOp"
+        ],
+        "size": 173691728283,
+        "subjects": [
+          "0cGdk9",
+          "2IU8mi",
+          "2IhVOz",
+          "6m9kB5",
+          "8RgPiG",
+          "AB2PeX",
+          "AbzsOg",
+          "BYJoWR",
+          "FIyfdR",
+          "FYbcap",
+          "PuPVlx",
+          "QZTsn6",
+          "VopvKx",
+          "dCsWjQ",
+          "gNX5yb",
+          "hnetKS",
+          "i4oK0F",
+          "iDpl28",
+          "jyC0j3",
+          "oLNpHd"
+        ],
+        "tasks": [
+          "HoldL",
+          "MoveL",
+          "noise",
+          "HoldR",
+          "MoveR",
+          "Rest",
+          "HoldB",
+          "MoveB"
+        ],
+        "totalFiles": 576
+      },
+      "tag": "1.2.2"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": null,
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Parkinson",
+      "grantFunderName": "ERA-NET Neuron",
+      "modalities": [
+        "meg"
+      ],
+      "species": "Human",
+      "studyDesign": "RestHoldMove",
+      "studyDomain": "Basal Ganglia in Parkinson",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2024-03-06T18:07:06.866Z"
+  },
+  "source": "openneuro"
+}

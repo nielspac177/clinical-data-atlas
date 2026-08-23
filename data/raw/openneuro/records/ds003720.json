@@ -1,0 +1,80 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003720",
+  "payload": {
+    "created": "2021-07-11T10:31:02.945Z",
+    "id": "ds003720",
+    "latestSnapshot": {
+      "created": "2023-08-23T09:12:24.000Z",
+      "description": {
+        "Authors": [
+          "Tomoya Nakai",
+          "Naoko Koide-Majima",
+          "Shinji Nishimoto"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds003720.v1.0.1",
+        "Funding": [
+          "MEXT/JSPS KAKENHI grant numbers JP20K07718",
+          "JP20H05023 in #4903",
+          "JP15H05311",
+          "JP18H05522",
+          "JST CREST JPMJCR18A5",
+          "ERATO JPMJER1801"
+        ],
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "Music Genre fMRI Dataset",
+        "ReferencesAndLinks": [
+          "Nakai, Koide-Majima, and Nishimoto (2021). Correspondence of categorical and feature-based representations of music in the human brain. Brain and Behavior. 11(1), e01936. https://doi.org/10.1002/brb3.1936",
+          "Nakai, Koide-Majima, and Nishimoto (2022). Music genre neuroimaging dataset. Data in Brief. 40, 107675. https://doi.org/10.1016/j.dib.2021.107675"
+        ]
+      },
+      "readme": "## Music Genre fMRI Dataset by Tomoya Nakai, Naoko Koide-Majima, and Shinji Nishimoto\r\n\nReferences:\n\n1. Nakai, Koide-Majima, and Nishimoto (2021). Correspondence of categorical and feature-based representations of music in the human brain. Brain and Behavior. 11(1), e01936. https://doi.org/10.1002/brb3.1936\n\n2. Nakai, Koide-Majima, and Nishimoto (2022). Music genre neuroimaging dataset. Data in Brief. 40, 107675. https://doi.org/10.1016/j.dib.2021.107675\n\n\r\nWe measured brain activity using functional MRI while five subjects (“sub-001”, …, “sub-005”) listened to music stimuli of 10 different genres.\r\n\r\nThe entire folder consists of subject-wise subfolders (“sub-001”,…). Each subject’s folder contains the following subfolders:\n\n1. anat: T1-weighted structural images\r\n\n2. func: functional signals (multi-band echo-planar images)\r\n\n\r\nEach subject performed 18 runs consisting of 12 training runs and 6 test runs. The training and test data were assigned with the following notations:\r\n\n1. Training data: sub-00*_task-Training_run-**_bold.json\r\n\n2. Test data: sub-00*_task-Test_run-**_bold.json\r\n\n\r\nEach *_event.tsv file contains following information:\n\n1. Onset: stimulus onset\r\n\n2. Genre: genre type (out of 10 genres)\n\n3. Track: index to identify the original track\n\n4. Start: onset of excerpt from the original track (second)\n\n5. End: offset of excerpt from the original track (second)\r\n\n\nThe duration of all stimuli is 15s.　For each clip, 2 s of fade-in and fade-out effects were applied, and the overall signal intensity was normalized in terms of the root mean square.\n\nFor the training runs, the 1st stimulus (0-15s) is the same as the last stimulus of the previous run (600-615s). For the test runs, the1st stimulus (0-15s) is the same as the last stimulus of the same run (600-615s). \n\nPreprocessed data are available from Zenodo (https://doi.org/10.5281/zenodo.8275363). Experimental stimuli can be generated using GTZAN_Preprocess.py included in the same repository.\n\nThe original music stimuli (GTZAN dataset) can be found here:\nhttps://www.kaggle.com/datasets/andradaolteanu/gtzan-dataset-music-genre-classification\r\n\r\n***Caution***\r\nThis dataset can be used for research purposes only. The data were anonymized, and users shall not perform analyses to re-identify individual subjects.\r\n\r\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 46522551853,
+        "subjects": [
+          "001",
+          "002",
+          "003",
+          "004",
+          "005"
+        ],
+        "tasks": [
+          "Test",
+          "Training"
+        ],
+        "totalFiles": 283
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": null,
+      "associatedPaperDOI": "https://doi.org/10.1002/brb3.1936",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "Small-N design",
+      "studyDomain": "Auditory Neuroscience",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2021-08-11T15:52:18.355Z"
+  },
+  "source": "openneuro"
+}

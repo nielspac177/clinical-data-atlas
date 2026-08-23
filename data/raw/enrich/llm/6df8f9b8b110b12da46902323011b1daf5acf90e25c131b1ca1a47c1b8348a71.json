@@ -1,0 +1,39 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:6df8f9b8b110b12da46902323011b1daf5acf90e25c131b1ca1a47c1b8348a71",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Most of the images exhibit liver lesions, both benign and malignant",
+        "label": "liver lesions"
+      },
+      {
+        "evidence": "metastatic disease in other organs such as bones and lungs",
+        "label": "metastatic disease"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "pulmonology",
+      "gastroenterology_hepatology",
+      "neurology"
+    ],
+    "id": "tcia:ct-org",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "140 computed tomography (CT) scans",
+        "value": "CT"
+      },
+      {
+        "evidence": "the CT component taken from PET-CT exams",
+        "value": "PET"
+      }
+    ],
+    "population": "Patients included based on the presence of lesions in one or more of the labeled organs",
+    "summary": "CT volumes with 3D segmentations of lung, bones, liver, kidneys and bladder, plus brain where visible, drawn from varied scan types, and split into training and testing sets for organ segmentation."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,103 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds001344",
+  "payload": {
+    "created": "2018-04-27T17:19:13.837Z",
+    "id": "ds001344",
+    "latestSnapshot": {
+      "created": "2018-09-11T13:25:00.000Z",
+      "description": {
+        "Authors": [
+          "Jessica-Lily Harvey",
+          "Lysia Demetriou",
+          "John McGonigle",
+          "Matthew B. Wall"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds001344.v1.0.0",
+        "Funding": [],
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "phfMRI_Control_Tasks",
+        "ReferencesAndLinks": [
+          "Preprint on biorXiv here: https://www.biorxiv.org/content/early/2017/12/14/233783"
+        ]
+      },
+      "readme": "\r\nApril 2018, Jessica-Lily Harvey, Lysia Demetriou, John McGonigle, Matthew B. Wall\r\n**********************************************************************\r\n\r\nThis is data from an fMRI experiment which tests a number of basic sensory and cognitive functions.\r\n\r\nFull details of the task and methods can be found in our pre-print on BiorXiv.org; https://www.biorxiv.org/content/early/2017/12/14/233783\r\n\r\nThere are two variants of the experiment. Both contain visual, auditory, and motor trials but one version also includes eye-movement trials, and another includes working-memory trials. They are labelled 'eye-movement' and 'working_memory' accordingly.\r\n\r\nTwo identical scanning sessions were conducted on each of 15 subjects. This enabled calculation of reliability statistics (ICC) as well as standard activation analyses.\r\n\r\nUnthresholded activation maps and ICC maps are available here: https://neurovault.org/collections/3264/\r\n\r\nStimulus code for the tasks was written in PsychoPy and is also available here: https://figshare.com/articles/fMRI_control_task_zip/5162065 (DOI:\r\n384 10.6084/m9.figshare.5162065).\r\n\r\nAny questions or difficulties, please email Matt Wall: mbwall@gmail.com\r\n\r\n**********************************************************************",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "scan1",
+          "scan2"
+        ],
+        "size": 1856724851,
+        "subjects": [
+          "001",
+          "002",
+          "003",
+          "004",
+          "005",
+          "008",
+          "009",
+          "011",
+          "012",
+          "013",
+          "014",
+          "015",
+          "017",
+          "018",
+          "019"
+        ],
+        "tasks": [
+          "Eye Movemement Variant",
+          "Working Memory Variant",
+          "Eye Movement Variant"
+        ],
+        "totalFiles": 246
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        23,
+        41,
+        26,
+        33,
+        23,
+        22,
+        23,
+        22,
+        23,
+        24,
+        24,
+        26,
+        34,
+        23,
+        22
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2018-04-27T17:19:13.837Z"
+  },
+  "source": "openneuro"
+}

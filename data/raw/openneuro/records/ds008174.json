@@ -1,0 +1,114 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds008174",
+  "payload": {
+    "created": "2026-07-10T04:08:50.587Z",
+    "id": "ds008174",
+    "latestSnapshot": {
+      "created": "2026-08-10T04:12:44.000Z",
+      "description": {
+        "Authors": [
+          "Morrison-Ham, J.",
+          "Younger, E.F.P.",
+          "Ellis, E.G.",
+          "Parsons, N.",
+          "Hart, T.",
+          "Speranza, B.",
+          "Dipnall, L.",
+          "Do, M.",
+          "Perellon-Alfonso, R.",
+          "Pecoraro, P.M.",
+          "di Biase, L.",
+          "Aguis, P.A.",
+          "Bertram, K.",
+          "Morgante, F.",
+          "Joutsa, J.",
+          "Hill, A.T.",
+          "Enticott, P.G.",
+          "Corp, D.T."
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds008174.v1.0.0",
+        "Funding": [
+          "Dystonia Network of Australia",
+          "Dystonia Coalition NS065701, TR001456, and NS116025"
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Continuous theta-burst stimulation to a lesion network in cervical dystonia: a randomized, double-blind, sham-controlled, pilot trial",
+        "ReferencesAndLinks": null
+      },
+      "readme": "### Data\n\nThis dataset includes T1-weighted and resting-state fMRI scans from idiopathic cervical dystonia patients. All data were collected at Monash Biomedical Imaging on a Siemens Skyra scanner with a 32-channel head coil. T1w images were de-identified using pydeface.\n\nData collected are from 13 idiopathic cervical dystonia patients who completed two, 2-week blocks of active and sham (10 sessions per block; order randomised, counterbalanced) cTBS to the bilateral somatosensory cortex (S1). The target for cTBS was personalised to each individuals session one T1w scan using neuronavigation and the following coordinates: +/- 45, 30, -58 (Corp et al., 2019, Brain). Patients completed a range outcomes including clinical rating scales (TWSTRS), single pulse TMS, and motion sensor movement tasks at various timepoints across each block.\n\nThe MRI data were acquired before the application of cTBS, and 90mins post-cTBS in each block (4 scans). However, due to discomfort or anxiety during prolonged scanning, or unforeseen circumstances, some patients were unable to complete all four scans.",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "02",
+          "03",
+          "01",
+          "04"
+        ],
+        "size": 31948870068,
+        "subjects": [
+          "P05",
+          "P15",
+          "P07",
+          "P09",
+          "P04",
+          "P06",
+          "P02",
+          "P03",
+          "P08",
+          "P10",
+          "P13",
+          "P11",
+          "P12"
+        ],
+        "tasks": [
+          "rest"
+        ],
+        "totalFiles": 246
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        72,
+        61,
+        66,
+        60,
+        53,
+        66,
+        56,
+        54,
+        47,
+        56,
+        77,
+        46,
+        38
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Cervical Dystonia",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "Crossover",
+      "studyDomain": "",
+      "studyLongitudinal": "Longitudinal"
+    },
+    "publishDate": "2026-08-10T04:13:04.830Z"
+  },
+  "source": "openneuro"
+}

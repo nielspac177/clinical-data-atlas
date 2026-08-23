@@ -1,0 +1,181 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006693",
+  "payload": {
+    "created": "2025-09-18T17:06:07.764Z",
+    "id": "ds006693",
+    "latestSnapshot": {
+      "created": "2025-09-30T16:20:03.000Z",
+      "description": {
+        "Authors": [
+          "Qingfang Liu",
+          "Daria Porter",
+          "Hadeel Damra",
+          "Yao Zhao",
+          "Joel L. Voss",
+          "Geoffrey Schoenbaum",
+          "Thorsten Kahnt"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006693.v1.2.0",
+        "Funding": [
+          "NIH NIDCD R01DC015426 (to T.K.)",
+          "NIH NIDA ZIA DA000642 (to T.K.)",
+          "NIH NIDA DA000587 (to G.S.)",
+          "Intramural Research Program of the NIH"
+        ],
+        "HowToAcknowledge": "Please cite our paper: Liu et al., 'Distinct contributions of anterior and posterior orbitofrontal cortex to outcome-guided behavior', *Current Biology* (in press). Add DOI when available.",
+        "License": "CC0",
+        "Name": "NODEAP fMRI dataset",
+        "ReferencesAndLinks": [
+          "https://openneuro.org",
+          "https://bids.neuroimaging.io/"
+        ]
+      },
+      "readme": "# NODEAP: Distinct contributions of anterior and posterior OFC to outcome-guided behavior\n\n**Summary**  \nThis dataset includes defaced anatomical T1-weighted MRI and raw multi-echo resting-state fMRI data from a study investigating the distinct roles of the anterior (aOFC) and posterior (pOFC) lateral orbitofrontal cortex in outcome-guided (goal-directed) behavior.  \nParticipants underwent odor–reward learning and outcome devaluation across multiple sessions. To probe causal contributions of OFC subregions, network-targeted TMS was applied to either aOFC or pOFC in separate sessions, and its effects on learning versus inference were assessed.\n\n- For project code, behavioral data, and full analysis pipelines (including preprocessing of multi-echo resting-state fMRI), see:  \n  👉 [project-nodeap-core](https://github.com/QingfangLiu/project-nodeap-core)\n\n- For standalone analyses using functional connectivity derived from this dataset with deep learning methods (e.g., CVAEs), see:  \n  👉 [project-nodeap-fmri-cvae](https://github.com/QingfangLiu/project-nodeap-fmri-cvae)\n\n**Participants**  \n- N = 48 healthy adults  \n- See `participants.tsv` for sex, age, stimulation group (aOFC vs. pOFC), and counterbalanced TMS and meal orders  \n\n**Sessions / tasks**  \nEach subject may have several MRI sessions; session labels match the original collection schedule:  \n- `ses-D0` – baseline/resting-state MRI (no devaluation).  \n- `ses-S1D1`, `ses-S1D2`, `ses-S2D1`, `ses-S2D2`, `ses-S3D1`, `ses-S3D2` – study days spanning learning (Day 1) and post-meal devaluation/choice (Day 2). Some sessions include network-targeted TMS (aOFC or pOFC).  \n- Functional scans are resting-state; multi-echo acquisitions are provided as separate echoes.\n\n**What’s included**  \n- `sub-*/anat/`  \n  - Defaced T1w MRI: `sub-XX_T1w.nii.gz` (+ JSON sidecar if available).  \n- `sub-*/ses-*/func/`  \n  - Raw multi-echo BOLD: `sub-XX_ses-YY_task-rest_run-01_echo-{1,2,3}_bold.nii.gz` (+ matching JSON sidecars when available).  \n- Top-level: `dataset_description.json`, `participants.tsv`, `participants.json`, `README.md`.\n\n**Notes on data quality & privacy**  \n- T1w images were defaced prior to sharing.  \n- Functional files are raw (converted with dcm2niix); files with SPM-style prefixes (r/w/y/s*) were excluded.\n\n**Folder conventions (BIDS)**  \n```\nnodeap-bids/\n  sub-01/\n    anat/sub-01_T1w.nii.gz\n    ses-D0/func/sub-01_ses-D0_task-rest_run-01_echo-1_bold.nii.gz\n    ses-D0/func/sub-01_ses-D0_task-rest_run-01_echo-2_bold.nii.gz\n    ses-D0/func/sub-01_ses-D0_task-rest_run-01_echo-3_bold.nii.gz\n    ses-S1D1/func/...\n  sub-02/ ...\n```\n\n**How to cite**  \nPlease cite our paper: Liu et al., 'Distinct contributions of anterior and posterior orbitofrontal cortex to outcome-guided behavior', Current Biology (in press). Add DOI when available.\n\n**Contacts**  \n- Qingfang Liu — psychliuqf@gmail.com  \n(You may also contact the corresponding author from the manuscript.)\n\n**License**  \nThis dataset is shared under **CC0**.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "S3D2",
+          "D0",
+          "S1D2",
+          "S2D1",
+          "S1D1",
+          "S3D1",
+          "S2D2"
+        ],
+        "size": 186249251541,
+        "subjects": [
+          "18",
+          "27",
+          "28",
+          "17",
+          "24",
+          "11",
+          "08",
+          "33",
+          "41",
+          "20",
+          "31",
+          "43",
+          "06",
+          "38",
+          "32",
+          "05",
+          "48",
+          "35",
+          "15",
+          "19",
+          "22",
+          "21",
+          "23",
+          "16",
+          "10",
+          "37",
+          "09",
+          "13",
+          "12",
+          "36",
+          "47",
+          "39",
+          "30",
+          "25",
+          "40",
+          "42",
+          "45",
+          "29",
+          "01",
+          "04",
+          "34",
+          "02",
+          "03",
+          "46",
+          "44",
+          "14",
+          "07",
+          "26"
+        ],
+        "tasks": [
+          "rest"
+        ],
+        "totalFiles": 2094
+      },
+      "tag": "1.2.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        31,
+        32,
+        26,
+        22,
+        24,
+        21,
+        33,
+        27,
+        22,
+        26,
+        21,
+        28,
+        31,
+        28,
+        22,
+        30,
+        20,
+        22,
+        23,
+        25,
+        29,
+        26,
+        25,
+        25,
+        20,
+        20,
+        40,
+        32,
+        21,
+        20,
+        23,
+        26,
+        27,
+        23,
+        25,
+        26,
+        25,
+        25,
+        26,
+        26,
+        27,
+        24,
+        24,
+        20,
+        20,
+        18,
+        25,
+        25
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2025-09-18T19:14:45.762Z"
+  },
+  "source": "openneuro"
+}

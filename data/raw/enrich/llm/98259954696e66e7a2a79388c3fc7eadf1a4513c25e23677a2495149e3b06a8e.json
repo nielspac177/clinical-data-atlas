@@ -1,0 +1,45 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:98259954696e66e7a2a79388c3fc7eadf1a4513c25e23677a2495149e3b06a8e",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "patients with primary glioblastoma",
+        "label": "glioblastoma"
+      },
+      {
+        "evidence": "treatment response status (tumour progression, tumour pseudoprogression, treatment response)",
+        "label": "tumour progression"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "neurology"
+    ],
+    "id": "tcia:burdenko-gbm-progression",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "4 MRI sequences (T1, T1C, T2, FLAIR)",
+        "value": "MRI"
+      },
+      {
+        "evidence": "a topometric CT scan",
+        "value": "CT"
+      },
+      {
+        "evidence": "associated radiotherapy planning files (RTSTRUCT, RTPlan, and RTDose)",
+        "value": "radiotherapy"
+      },
+      {
+        "evidence": "Additional genetic information (IDH1/2, MGMT mutations)",
+        "value": "genomics"
+      }
+    ],
+    "population": "180 patients with primary glioblastoma treated at the Burdenko National Medical Research Center of Neurosurgery between 2014 and 2020",
+    "summary": "Imaging collection for glioblastoma patients covering radiotherapy planning MRI and CT with planning files, plus repeated follow-up MRI, with genetic mutation status and treatment response labels for a subset."
+  },
+  "prompt_version": "v1"
+}

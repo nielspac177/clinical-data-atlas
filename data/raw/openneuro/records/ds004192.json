@@ -1,0 +1,103 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004192",
+  "payload": {
+    "created": "2022-07-01T18:42:09.249Z",
+    "id": "ds004192",
+    "latestSnapshot": {
+      "created": "2024-09-09T13:40:47.000Z",
+      "description": {
+        "Authors": [
+          "Martin N. Hebart",
+          "Oliver Contier",
+          "Lina Teichmann",
+          "Adam H. Rockter",
+          "Charles Zheng",
+          "Alexis Kidder",
+          "Anna Corriveau",
+          "Maryam Vaziri-Pashkam",
+          "Chris I. Baker"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004192.v1.0.7",
+        "Funding": null,
+        "HowToAcknowledge": "Please cite this paper: https://doi.org/10.7554/eLife.82580",
+        "License": "CC0",
+        "Name": "THINGS-fMRI",
+        "ReferencesAndLinks": [
+          "fMRI & MEG Paper: Hebart, M. N., Contier, O., Teichmann, L., Rockter, A. H., Zheng, C. Y., Kidder, A., ... & Baker, C. I. (2023). THINGS-data, a multimodal collection of large-scale datasets for investigating object representations in human brain and behavior. Elife, 12, e82580.",
+          "Code: https://github.com/ViCCo-Group/THINGS-data",
+          "Image Database Paper: Hebart M. N., Dickter A. H., Kidder A., Kwok W.  Y., Corriveau A., et al. (2019) THINGS: A database of 1,854 object concepts and more than 26,000 naturalistic object images. PLOS ONE 14(10): e0223792. https://doi.org/10.1371/journal.pone.0223792",
+          "Image Database: https://osf.io/jum2f/",
+          "Behavioral Triplet Odd-one-out dataset: https://osf.io/f5rn6/",
+          "THINGS-MEG dataset: doi:10.18112/openneuro.ds004212.v2.0.0",
+          "THINGS-EEG1 dataset: doi:10.18112/openneuro.ds003825.v1.2.0"
+        ]
+      },
+      "readme": "# THINGS-fMRI\n\nUnderstanding object representations visual and semantic processing of objects requires a broad, comprehensive sampling of the objects in our visual world\nwith dense measurements of brain activity and behavior. This densely sampled fMRI dataset is part of THINGS-data, a multimodal collection\nof large-scale datasets comprising functional MRI, magnetoencephalographic recordings, and 4.70 million behavioral judgments in response to thousands of photographic images\nfor up to 1,854 object concepts. THINGS-data is unique in its breadth of richly-annotated objects, allowing for testing countless novel hypotheses at scale while assessing\nthe reproducibility of previous findings. The multimodal data allows for studying both the temporal and spatial dynamics of object representations and their relationship\nto behavior and additionally provides the means for combining these datasets for novel insights into object processing. THINGS-data constitutes the core release of\nthe [THINGS initiative](https://things-initiative.org) for bridging the gap between disciplines and the advancement of cognitive neuroscience.\n\n# Dataset overview\nWe collected extensively sampled object representations using functional MRI (fMRI). To this end, we drew on the THINGS database (Hebart et al., 2019), a richly-annotated database of 1,854 object concepts representative of the American English language which contains 26,107 manually-curated naturalistic object images.\n\nDuring the fMRI experiment, participants were shown a representative subset of THINGS images, spread across 12 separate sessions (N=3, 8740 unique images of 720 objects). Images were shown in fast succession (4.5s), and participants were instructed to maintain central fixation. To ensure engagement, participants performed an oddball detection task responding to occasional artificially-generated images. A subset of images (n=100) were shown repeatedly in each session.\n\nBeyond the core functional imaging data in response to THINGS images, additional structural and functional imaging data were gathered. We collected high-resolution anatomical images (T1- and T2-weighted), measures of brain vasculature (Time-of-Flight angiography, T2*-weighted) and gradient-echo field maps. In addition, we ran a functional localizer to identify numerous functionally specific brain regions, a retinotopic localizer for estimating population receptive fields, and an additional run without external stimulation for estimating resting-state functional connectivity.\n\nBesides raw data this datasets holds\n\n- brainmasks (fmriprep)\n- cortical flat maps (pycoretx_filestore)\n- single trial response estimations (ICA-betas)\n\nMore derivatives can be found on [figshare](https://doi.org/10.25452/figshare.plus.c.6161151.v1).\n\n# Provenance\n\nProvenance information is given in 'dataset_description.json' as well as in the [paper](https://doi.org/10.7554/eLife.82580) and preprocessing and analysis code is shared on [GitHub](https://github.com/ViCCo-Group/THINGS-data).",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "things05",
+          "things03",
+          "things11",
+          "things12",
+          "things02",
+          "things08",
+          "things04",
+          "localizer1",
+          "things07",
+          "things10",
+          "things09",
+          "things01",
+          "things06",
+          "localizer2"
+        ],
+        "size": 105794162895,
+        "subjects": [
+          "03",
+          "02",
+          "01"
+        ],
+        "tasks": [
+          "things",
+          "rest",
+          "6cat",
+          "pRF"
+        ],
+        "totalFiles": 2459
+      },
+      "tag": "1.0.7"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        29,
+        24,
+        23
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2023-01-05T14:13:33.621Z"
+  },
+  "source": "openneuro"
+}

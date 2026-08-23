@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:5b6c41da33c454c0fd7d6ce9ec647e5f9b5bd82692e208dfff76c59d3f23a1ab",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Esophageal Carcinoma",
+        "label": "Esophageal Carcinoma"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "gastroenterology_hepatology"
+    ],
+    "id": "tcia:tcga-esca",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "CT",
+        "value": "CT"
+      },
+      {
+        "evidence": "Genomic Data Commons (GDC) Data Portal",
+        "value": "genomics"
+      }
+    ],
+    "population": "Human participants with esophageal carcinoma enrolled in The Cancer Genome Atlas (16 participants per source metadata)",
+    "summary": "Esophageal CT imaging from patients in The Cancer Genome Atlas, matched by patient identifier to clinical, genetic and pathological data in the Genomic Data Commons. Scanners and acquisition protocols vary across contributing sites."
+  },
+  "prompt_version": "v1"
+}

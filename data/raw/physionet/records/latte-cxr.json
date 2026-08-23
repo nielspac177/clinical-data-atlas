@@ -1,0 +1,44 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "latte-cxr",
+  "payload": {
+    "abstract": "<p>Local annotation of medical data is both expensive and time-consuming due to the high cost of expert annotators, the precision required for accurate annotation, and the inherent challenges of medical diagnosis. To address these  problems, we developed LATTE-CXR, a chest X-ray dataset with locally aligned image-text pairs, derived from the  REFLACX dataset. LATTE-CXR supports tasks requiring local image-text annotations, such as phrase grounding,  caption-guided object detection, and image captioning with region-level descriptions. By extracting statements from  radiology reports corresponding to REFLACX annotated abnormalities, this dataset includes 3926 bounding box-statement pairs (with repeating statements) from 1668 MIMIC-CXR image readings in the REFLACX dataset.  Additionally, we automatically generated 13751 bounding box-sentence pairs from 2,742 chest X-ray readings,  utilizing timestamped eye-tracking data and transcribed reports from REFLACX. The eye-tracking bounding boxes  are linked to corresponding annotated bounding boxes if they share a sentence, providing a comprehensive  framework for assessing model explainability.</p>",
+    "access_policy": "Restricted",
+    "compressed_storage_size": 2180946,
+    "core_doi": "10.13026/0c10-gm86",
+    "dua": {
+      "name": "PhysioNet Restricted Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Restricted Health Data License 1.5.0"
+    },
+    "main_storage_size": 4896529,
+    "public_project_uuid": "c11692f6-fbe5-4d78-bed6-9f69b13a2de9",
+    "publish_date": "2025-02-04",
+    "resource_type": "Database",
+    "short_description": "This dataset includes bounding box-statement pairs for chest X-ray images, derived from radiologists’ eye-tracking data (for explainability) and annotations, for local visual-language models.",
+    "slug": "latte-cxr",
+    "source_url": "https://physionet.org/content/latte-cxr/1.0.0/",
+    "title": "LATTE-CXR: Locally Aligned TexT and imagE, Explainable dataset for Chest X-Rays",
+    "topics": [
+      "chest x-ray dataset",
+      "eye-tracking",
+      "automatically generated dataset",
+      "caption-guided object detection",
+      "localization",
+      "image captioning with region-level description",
+      "grounded radiology report generation",
+      "phrase grounding",
+      "xai",
+      "multi-modal learning",
+      "local visual-language models"
+    ],
+    "version": "1.0.0",
+    "version_doi": "10.13026/0pw2-je90"
+  },
+  "source": "physionet"
+}

@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:b793e1185aaec40a86bd06d07daa1d2beedd8447978c21767f3c8813e4071983",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "pathological or clinical diagnosis of metastases to the brain",
+        "label": "metastases to the brain"
+      },
+      {
+        "evidence": "A Large Open Access Dataset of Brain Metastasis 3D Segmentations",
+        "label": "Brain Metastasis"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "oncology"
+    ],
+    "id": "tcia:pretreat-metstobrain-masks",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "pretreatment T1, T1 post-contrast, T2, and FLAIR MR images",
+        "value": "MRI"
+      },
+      {
+        "evidence": "An excel sheet of the following clinical and imaging information",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "200 patients with pathological or clinical diagnosis of metastases to the brain",
+    "summary": "Pretreatment brain MRI (T1, T1 post-contrast, T2, FLAIR) for patients with brain metastases, with manual segmentation masks of edema, enhancing tumor and necrosis, plus a spreadsheet of clinical and imaging variables."
+  },
+  "prompt_version": "v1"
+}

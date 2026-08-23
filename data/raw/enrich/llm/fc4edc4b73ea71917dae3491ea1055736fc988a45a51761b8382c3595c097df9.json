@@ -1,0 +1,41 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:fc4edc4b73ea71917dae3491ea1055736fc988a45a51761b8382c3595c097df9",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "the presence of one out of 15 chest pathologies",
+        "label": "chest pathologies"
+      },
+      {
+        "evidence": "the presence of 12 different chest-related pathologies, as well as of any support devices",
+        "label": "support devices"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "pulmonology",
+      "other"
+    ],
+    "id": "physionet:vqa-evaluation-mimic-cxr",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "chest radiographs in DICOM format",
+        "value": "xray"
+      },
+      {
+        "evidence": "free-text radiology reports",
+        "value": "clinical_notes"
+      },
+      {
+        "evidence": "visual question answering dataset",
+        "value": "other"
+      }
+    ],
+    "population": "40 test set cases and 23 validation set cases of the MIMIC CXR dataset",
+    "summary": "Visual question answering evaluation set built on MIMIC CXR test and validation cases, with close-ended and open-ended questions and reference answers authored by a board-certified radiologist."
+  },
+  "prompt_version": "v1"
+}

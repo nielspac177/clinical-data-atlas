@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:dcaf13571ce8d9875a3dbdd116ddb2619db9db32f7e8cdf426dce856dd60b215",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "fenestration and dehiscence (FD) in anterior teeth",
+        "label": "fenestration and dehiscence"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "other",
+      "surgery"
+    ],
+    "id": "physionet:fdtooth",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "cone-beam computed tomography (CBCT) images",
+        "value": "CT"
+      },
+      {
+        "evidence": "intraoral photographs",
+        "value": "other"
+      }
+    ],
+    "population": "241 patients aged 9 to 55 years",
+    "summary": "Dental dataset of intraoral photographs with matched cone-beam CT images and annotated bounding boxes, for automated detection of fenestration and dehiscence in anterior teeth."
+  },
+  "prompt_version": "v1"
+}

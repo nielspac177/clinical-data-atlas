@@ -1,0 +1,95 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003858",
+  "payload": {
+    "created": "2021-10-26T03:24:24.070Z",
+    "id": "ds003858",
+    "latestSnapshot": {
+      "created": "2021-10-26T08:34:46.000Z",
+      "description": {
+        "Authors": [
+          "Leili Mortazavi",
+          "Tara Srirangarajan",
+          "Tiago Bortolini",
+          "Jorge Moll",
+          "Brian Knutson"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds003858.v1.0.1",
+        "Funding": [
+          "This work was supported by a Neurochoice Initiative Big Ideas grant from Stanford’s Wu Tsai Neurosciences Institute, as well as a National Institute of Health Grant 5P50DA04201205 to BK."
+        ],
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "Monetary Incentive Delay task",
+        "ReferencesAndLinks": [
+          "Srirangarajan, T., Mortazavi, L., Bortolini, T., Moll, J., & Knutson, B. (2021). Multi‐band FMRI compromises detection of mesolimbic reward responses. NeuroImage, 244, 118617. https://doi.org/10.1016/j.neuroimage.2021.118617"
+        ]
+      },
+      "readme": "The goal of this experiment was to test the effects of simultaneous multi-slice imaging (or multi-band acquisition) on detectability of fMRI signal in the mesolimbic reward circuitry. In this dataset, participants performed three runs of the Monetary Incentive Delay Task within the same session each acquired with either single-slice, multi-band factor of 4, or multi-band factor of 8. The order of the runs were counterbalanced across participants. ",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 8412030772,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12"
+        ],
+        "tasks": [
+          "MID"
+        ],
+        "totalFiles": 92
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        19,
+        20,
+        21,
+        18,
+        21,
+        20,
+        26,
+        23,
+        21,
+        21,
+        20,
+        21
+      ],
+      "associatedPaperDOI": "https://doi.org/10.1016/j.neuroimage.2021.118617",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "Experiment",
+      "studyDomain": "",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2021-10-26T22:20:40.026Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,100 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003151",
+  "payload": {
+    "created": "2020-09-16T04:31:44.812Z",
+    "id": "ds003151",
+    "latestSnapshot": {
+      "created": "2021-04-06T00:43:36.000Z",
+      "description": {
+        "Authors": [
+          "Alexandra Ycaza Herrera",
+          "Padideh Nasseri",
+          "Ricardo Velasco",
+          "Sophia Faude",
+          "Jessica D. White",
+          "Philipp C. Opitz",
+          "Ringo Huang",
+          "Kristie Tu",
+          "Mara Mather"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds003151.v2.0.1",
+        "Funding": [
+          "National Institute on Aging (R21AG048463 and R01AG025340; PI: M.Mather)"
+        ],
+        "HowToAcknowledge": "For working memory fMRI results, please cite:\n\nHerrera, A. Y., Velasco, R., Faude, S., White, J. D., Opitz, P. C., Huang, R., Tu, K., & Mather, M. (2020). Brain activity during a post-stress working memory task differs between the hormone-present and hormone-absent phase of hormonal contraception. Neurobiology of Stress, 13, 100248.\n\nFor ASL resting state results, please cite:\n\nNasseri, P., Herrera, A. Y., Gillette, K., Faude, S., White, J. D., Velasco, R., & Mather, M. (2020). Hormonal contraceptive phases matter: Resting-state functional connectivity of emotion-processing regions under stress. Neurobiology of Stress, 13, 100276.",
+        "License": "CC0",
+        "Name": "Stress-associated brain activation across the hormonal contraceptive cycle",
+        "ReferencesAndLinks": [
+          "Herrera, A. Y., Velasco, R., Faude, S., White, J. D., Opitz, P. C., Huang, R., Tu, K., & Mather, M. (2020). Brain activity during a post-stress working memory task differs between the hormone-present and hormone-absent phase of hormonal contraception. Neurobiology of Stress, 13, 100248. https://doi.org/10.1016/j.ynstr.2020.100248",
+          "Nasseri, P., Herrera, A. Y., Gillette, K., Faude, S., White, J. D., Velasco, R., & Mather, M. (2020). Hormonal contraceptive phases matter: Resting-state functional connectivity of emotion-processing regions under stress. Neurobiology of Stress, 13, 100276. https://doi.org/10.1016/j.ynstr.2020.100276",
+          "Behavioral and demographic data can be found at https://osf.io/b3znw/?view_only=c30f4b45a7a544e782c22188026c11db"
+        ]
+      },
+      "readme": "These task-associated and resting state fMRI data have been published in:\n\t\nHerrera, A. Y., Velasco, R., Faude, S., White, J. D., Opitz, P. C., Huang, R., Tu, K., & Mather, M. (2020). Brain activity during a post-stress working memory task differs between the hormone-present and hormone-absent phase of hormonal contraception. Neurobiology of Stress, 13, 100248.\n\t\nNasseri, P., Herrera, A. Y., Gillette, K., Faude, S., White, J. D., Velasco, R., & Mather, M. (2020). Hormonal contraceptive phases matter: Resting-state functional connectivity of emotion-processing regions under stress. Neurobiology of Stress, 13, 100276.\n\t\nDemographic and behavioral data can be found at https://osf.io/b3znw/?view_only=c30f4b45a7a544e782c22188026c11db\n\t\nThere are folders for each participant with their subject number (e.g., “sub-170”). Each participant folder contains one folder each for the hormone-present and hormone-absent phases. Within each phase folder there are 3 folders:\n\t\n1) anat - includes a T1 structural scan.\n2) func - all nback-related BOLD scans are included in this folder with event timings indicated in .tsv files. Please see paper for more details.\n3) perf - resting state arterial spin labeling scans are included in this folder.",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_perfusion",
+          "mri_structural"
+        ],
+        "sessions": [
+          "hormoneabsent",
+          "hormonepresent"
+        ],
+        "size": 3548995595,
+        "subjects": [
+          "170",
+          "172",
+          "173",
+          "174",
+          "175",
+          "176",
+          "177",
+          "179",
+          "180",
+          "181",
+          "182",
+          "183",
+          "184",
+          "185",
+          "186",
+          "187",
+          "188",
+          "190",
+          "191",
+          "192"
+        ],
+        "tasks": [
+          "n-back"
+        ],
+        "totalFiles": 403
+      },
+      "tag": "2.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": null,
+      "associatedPaperDOI": "https://doi.org/10.1016/j.ynstr.2020.100248",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "National Institute on Aging",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "within-subject",
+      "studyDomain": "working memory, stress",
+      "studyLongitudinal": "Longitudinal"
+    },
+    "publishDate": "2020-09-16T14:48:53.673Z"
+  },
+  "source": "openneuro"
+}

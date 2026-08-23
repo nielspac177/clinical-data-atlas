@@ -1,0 +1,85 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006001",
+  "payload": {
+    "created": "2025-03-12T22:20:44.218Z",
+    "id": "ds006001",
+    "latestSnapshot": {
+      "created": "2025-09-19T08:01:44.000Z",
+      "description": {
+        "Authors": [
+          "Olchanyi M. D.",
+          "Schreier D. R.",
+          "Li J.",
+          "Maffei C.",
+          "Sorby-Adams A.",
+          "Kinney H. C.",
+          "Healy, B. C.",
+          "Freeman H. J.",
+          "Shless J.",
+          "Destrieux, C.",
+          "Tregidgo H.",
+          "Eugenio Iglesias J.",
+          "Brown E. N.",
+          "Edlow B. L."
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006001.v1.1.0",
+        "Funding": [
+          "This work was supported by the National Institutes of Health Director’s Office (DP2hd101400), National Institute for Neurological Disorders and Stroke (R21NS109627, K23NS094538, 1R21NS138995, U01NS086625, R01NS0525851, R21NS072652, R01NS070963, R01NS083534, uh3NS095554, U24NS10059103, R01NS105820, and RF1NS115268), National Institute for Biomedical Imaging and Bioengineering (P41EB030006, R01EB023281, R01EB006758, R21EB018907, R01EB019956, and 1R01EB031114), National Institute of Child Health and Human Development (R01hd102616 and R21hd095338), National Institute on Deafness and Other Communication Disorders (R21dc015888), National Institute on Aging (1R01AG070988, R21AG082082, R01AG064027, R01AG008122, 1RF1AG080371, R01AG016495, and R01AG070988), National Institute on Mental Health (1RF1MH123195, UM1MH130981, R01MH123195, 1UM1MH130981, R01MH121885, and RF1MH123195), Brain Initiative Cell Census Network (U01MH117023 and UM1MH130981), James S. McDonnell Foundation, American Academy of Neurology/American Brain Foundation, Center for Integration of Medicine and Innovative Technology (Boston, MA), Rappaport Foundation, American SidS Institute, Chen Institute MGH Research Scholar Award, and the MIT/MGH Brain Arousal State Control Innovation Center (BAScic) project. Additional support was provided by the Blueprint for Neuroscience Research (U01MH093765), part of the multi-institutional Human Connectome Project. This research was also made possible by the resources provided by NIH grant P41rr014075 and shared instrumentation grants S10rr023401, S10rr019307, and S10rr023043. Computational resources for this research were generously provided by the Massachusetts Life Sciences Center (www.masslifesciences.com/). MDO received funding from the MIT-Takeda fellowship and the MIT IMES fellowship.  DRS received funding from the Swiss National Science Foundation (SNSF) [P500PM_210834]. ASA received funding from the American Heart Association-Tedy’s Team postdoctoral fellowship award (24POST1023166)."
+        ],
+        "HowToAcknowledge": "Olchanyi, M. et al. Data from: Probabilistic Mapping and Automated Segmentation of Human Brainstem White Matter Bundles. OpenNeuro https://openneuro.org/datasets/ds006001, doi:10.18112/openneuro.ds006001.v1.0.1 (2025).",
+        "License": "CC0",
+        "Name": "Probabilistic Mapping and Automated Segmentation of Human Brainstem White Matter Bundles",
+        "ReferencesAndLinks": [
+          "https://surfer.nmr.mgh.harvard.edu",
+          "https://histopath.nmr.mgh.harvard.edu/images/?page=images&selectionType=collection&selectionId=50",
+          "https://github.com/markolchanyi/BSBT"
+        ]
+      },
+      "readme": "Brainstem white matter bundles are essential conduits for neural signals that modulate human consciousness and homeostasis. Yet, their small size and complex architecture make segmentation challenging in neuroimaging studies. We leveraged diffusion MRI tractography to create the BrainStem Bundle Tool (BSBT), which automatically segments eight brainstem white matter bundles. BSBT performs unsupervised segmentation with a convolutional neural network on a custom probabilistic fiber map generated from tractography. Validation on healthy subject in vivo diffusion MRI, ex vivo diffusion MRI with histology, and test-retest analyses show BSBT's robustness across diffusion MRI acquisition protocols. We demonstrate the generalizability of BSBT through discrimination tasks in Alzheimer's disease, Parkinson's disease, and traumatic brain injury cohorts. Finally, we explore the prognostic utility of BSBT in a longitudinal analysis of a comatose patient with a midbrain lesion. BSBT creates opportunities to map brainstem white matter and investigate its role in a broad spectrum of neurological disorders.\n\n-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\nIncluded in this dataset are: The **raw diffusion MRI** volumes for each brain specimen, the corresponding **ultra-high resolution FLASH** sequences (200um isotropic spatial resolution for C1/C2/EXC007/EXC012/EXC020/EXC021 and 550um isotropic spatial resolution for C4), and the representative reconstructed **Probabilistic Fiber Maps** (PFM) in the brainstem. Manual annotations and corresponding BSBT segmentations for all HCP, ADNI3 and ex vivo cases used for validation are included in the derivatives folder. Original HCP and ADNI3 dMRI scans on which this validation was performed on (with the same subject IDs can be accessed at https://db.humanconnectome.org and https://adni.loni.usc.edu respectively.\n\nIn the main manuscript, each brain specimen is referenced as follows:\n\nsub-C1: **S1** <br> \nsub-C2: **S2** <br> \nsub-C4: **S3** <br> \nsub-EXC007: **S4** <br>\nsub-EXC012: **S5** <br>\nsub-EXC020: **S6** <br>\nsub-EXC021: **S7** <br>\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_diffusion"
+        ],
+        "sessions": [],
+        "size": 34508470817,
+        "subjects": [
+          "EXC012",
+          "EXC020",
+          "EXC021",
+          "C1",
+          "EXC007",
+          "C4",
+          "C2"
+        ],
+        "tasks": [],
+        "totalFiles": 24
+      },
+      "tag": "1.1.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "ex vivo Diffusion MRI",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2025-03-13T14:24:42.922Z"
+  },
+  "source": "openneuro"
+}

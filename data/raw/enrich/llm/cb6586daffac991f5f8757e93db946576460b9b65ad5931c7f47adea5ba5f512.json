@@ -1,0 +1,43 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:cb6586daffac991f5f8757e93db946576460b9b65ad5931c7f47adea5ba5f512",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "ventricular tachycardia (VT) arrhythmia alarm database",
+        "label": "ventricular tachycardia"
+      },
+      {
+        "evidence": "False arrhythmia alarms are a persistent problem in intensive care units",
+        "label": "arrhythmia"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "cardiology",
+      "critical_care"
+    ],
+    "id": "physionet:vtac",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "at least two electrocardiogram (ECG) leads",
+        "value": "ECG"
+      },
+      {
+        "evidence": "photoplethysmogram (PPG or PLETH)",
+        "value": "PPG"
+      },
+      {
+        "evidence": "arterial blood pressure (ABP) waveforms",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": "Patients monitored in ICUs at three major US hospitals",
+    "summary": "Benchmark of waveform recordings around ventricular tachycardia alarms from ICU bedside monitors, each alarm labeled true or false by at least two expert annotators, spanning three hospitals and three monitor manufacturers."
+  },
+  "prompt_version": "v1"
+}

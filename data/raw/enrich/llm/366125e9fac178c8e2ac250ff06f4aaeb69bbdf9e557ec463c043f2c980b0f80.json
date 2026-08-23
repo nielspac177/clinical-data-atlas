@@ -1,0 +1,35 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:366125e9fac178c8e2ac250ff06f4aaeb69bbdf9e557ec463c043f2c980b0f80",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "adult patients with unilateral vestibular schwannoma",
+        "label": "vestibular schwannoma"
+      }
+    ],
+    "countries": [
+      "GB"
+    ],
+    "domains": [
+      "oncology",
+      "neurology"
+    ],
+    "id": "tcia:vestibular-schwannoma-mc-rc2",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "contrast-enhanced T1-weighted (T1CE) scans and 133 T2 scans",
+        "value": "MRI"
+      },
+      {
+        "evidence": "demographic data (sex, ethnicity, age) and clinical decisions recorded at each time point",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "190 adult patients with unilateral vestibular schwannoma (VS), referred to King's College Hospital, London, UK; patients with neurofibromatosis type 2 (NF2) were excluded",
+    "summary": "Multi-center routine clinical MRI of adults with unilateral vestibular schwannoma, with longitudinal scans, consensus deep-learning-derived tumor segmentations, demographics and clinical decisions, supporting surveillance, segmentation and growth modeling research."
+  },
+  "prompt_version": "v1"
+}

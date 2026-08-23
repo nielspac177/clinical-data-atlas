@@ -1,0 +1,91 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006005",
+  "payload": {
+    "created": "2025-03-13T14:40:26.113Z",
+    "id": "ds006005",
+    "latestSnapshot": {
+      "created": "2025-03-13T15:21:40.000Z",
+      "description": {
+        "Authors": [
+          "Daniel E.P. Gomez",
+          "Jonathan R. Polimeni",
+          "Laura D. Lewis"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006005.v1.0.1",
+        "Funding": null,
+        "HowToAcknowledge": "Please cite our Imaging Neuroscience publication, Gomez et al. 2024; https://doi.org/10.1162/imag_a_00399",
+        "License": "CC0",
+        "Name": "The temporal specificity of BOLD fMRI is systematically related to anatomical and vascular features of the human brain",
+        "ReferencesAndLinks": null
+      },
+      "readme": "Dataset associated with \"The temporal specificity of BOLD fMRI is systematically related to anatomical and vascular features of the human brain\"\n\nIn the anat folder, three additional files beyond the T1w MPRAGE can be found:\n\n1. An inversion recovery T1 shuffled EPI, named with acq-epi and a suffix _inplaneT1.\n2. A point spread function (PSF) mapping scan, named with acq-psf and a suffix _T2starw.\n3. A larger field of view dataset used to aid registration, named with acq-epi and a suffix _T2starw.\n\nThe larger field of view dataset was used in the work that resulted in our publication, but the T1 shuffled EPI and the PSF were not. They are added here though in the hope that they may be for other purposes useful.\n\n\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 23499126136,
+        "subjects": [
+          "11",
+          "08",
+          "06",
+          "05",
+          "10",
+          "09",
+          "12",
+          "01",
+          "04",
+          "02",
+          "03",
+          "07"
+        ],
+        "tasks": [
+          "Oscillatory Flickering Stimulus with frequency 0.05Hz",
+          "Oscillatory Flickering Stimulus with frequency 0.10Hz",
+          "Oscillatory Flickering Stimulus with frequency 0.20Hz"
+        ],
+        "totalFiles": 476
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        25,
+        29,
+        29,
+        26,
+        27,
+        27,
+        22,
+        31,
+        21,
+        30,
+        24,
+        29
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2025-03-13T15:21:55.947Z"
+  },
+  "source": "openneuro"
+}

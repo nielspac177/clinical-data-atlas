@@ -1,0 +1,110 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds002278",
+  "payload": {
+    "created": "2019-10-29T12:50:20.636Z",
+    "id": "ds002278",
+    "latestSnapshot": {
+      "created": "2024-04-30T17:19:38.000Z",
+      "description": {
+        "Authors": [
+          "Katherine L. Bottenhorn",
+          "Taylor Salo",
+          "Julio A. Peraza",
+          "Michael C. Riedel",
+          "Jessica S. Flannery",
+          "Adam Kimbler",
+          "Alfredo Toll",
+          "Diego Suarez",
+          "Francis M. Cruz",
+          "Israel Zagales",
+          "Nayade Caldes",
+          "Olivia Dolan",
+          "Ruth Zagales",
+          "Matthew T. Sutherland",
+          "Robert W. Laird",
+          "Angela R. Laird"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds002278.v2.0.0",
+        "Funding": null,
+        "HowToAcknowledge": "Please cite the preprint (https://doi.org/10.1101/2024.04.16.589598) when using this dataset.",
+        "License": "CC0",
+        "Name": "Dense Investigation of Variability of Affect (DIVA)",
+        "ReferencesAndLinks": [
+          "https://nbclab.github.io/projects/diva",
+          "https://github.com/NBCLab/localizer-task",
+          "https://github.com/NBCLab/film-viewing-task",
+          "https://github.com/NBCLab/probabilistic-selection-task",
+          "https://github.com/NBCLab/eirt-task",
+          "https://github.com/NBCLab/sorpf-task",
+          "https://github.com/NBCLab/arithmetic-task"
+        ]
+      },
+      "readme": "# Dense Investigation of Variability of Affect\n\nDense Investigation of Variability of Affect (DIVA) was a pilot study acquired at Florida International University in early 2020.\nDIVA involves a large amount of neuroimaging, neuropsychological, demographic, and physiological data for a small sample of ~3 participants.\n\nData collection was stopped early due to the COVID-19 pandemic.\n\n## Data Availability\n\nThe current OpenNeuro DIVA dataset includes imaging, physiological, and in-scanner task data.\nAdditional, possibly sensitive data, such as hormone measures and questionnaire answers, are currently being reviewed and will likely be shared within a data use agreement framework in the future.\n\n## Notes on Data Quality\n\nsub-PILOT_ses-01_task-localizerDetection_run-1, sub-PILOT_ses-01_task-localizerDetection_run-1, and sub-PILOT_ses-01_task-strangerthings_run-1 were run without audio.\n\n## Contact Information\n\nPlease contact Taylor Salo (salot at pennmedicine dot upenn dot edu) and Katie Bottenhorn (bottenho at usc dot edu) if you observe any irregularities in the dataset.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural",
+          "mri_diffusion"
+        ],
+        "sessions": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05"
+        ],
+        "size": 198166933296,
+        "subjects": [
+          "Blossom",
+          "Bubbles",
+          "Buttercup",
+          "PILOT",
+          "PILOT02"
+        ],
+        "tasks": [
+          "Emotion Induction and Regulation Test",
+          "probabilistic selection task",
+          "rest (eyes open)",
+          "Stranger Things",
+          "M1/V1/A1 localization",
+          "M1/V1/A1 HRF estimation",
+          "Dual Self and Other Referential Processing and Flanker Task",
+          "arithmetic"
+        ],
+        "totalFiles": 5457
+      },
+      "tag": "2.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        25,
+        31,
+        29,
+        24,
+        39
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": "Longitudinal"
+    },
+    "publishDate": "2019-10-29T14:57:53.267Z"
+  },
+  "source": "openneuro"
+}

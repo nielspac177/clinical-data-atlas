@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:231594f4f246c234cf825a11d8432098cb75f533794f047e9c3388d41bf29cf5",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "such as pneumonia and pneumothorax",
+        "label": "pneumonia"
+      },
+      {
+        "evidence": "pneumonia and pneumothorax",
+        "label": "pneumothorax"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "pulmonology"
+    ],
+    "id": "physionet:chest-imagenome",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "scene graph dataset with additional chronological comparison relations for chest X-rays",
+        "value": "xray"
+      },
+      {
+        "evidence": "labels extracted from text reports",
+        "value": "clinical_notes"
+      }
+    ],
+    "population": "automatically labeled frontal MIMIC CXRs, with a manually annotated gold standard for 500 patients",
+    "summary": "Scene graph dataset for chest X-rays with chronological comparison relations, automatically derived from MIMIC-CXR using NLP and bounding box detection, plus a manually annotated gold standard for 500 patients."
+  },
+  "prompt_version": "v1"
+}

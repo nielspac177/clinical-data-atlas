@@ -1,0 +1,119 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "TARGET-OS",
+  "payload": {
+    "dbgap_accession_number": "phs000468",
+    "disease_type": [
+      "Osseous and Chondromatous Neoplasms"
+    ],
+    "id": "TARGET-OS",
+    "name": "Osteosarcoma",
+    "primary_site": [
+      "Not Reported",
+      "Bones, joints and articular cartilage of other and unspecified sites",
+      "Bones, joints and articular cartilage of limbs"
+    ],
+    "program": {
+      "dbgap_accession_number": "phs000218",
+      "name": "TARGET",
+      "program_id": "f1c391e9-8488-55a8-b777-302e786ea11d"
+    },
+    "project_id": "TARGET-OS",
+    "releasable": true,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 383,
+      "data_categories": [
+        {
+          "case_count": 145,
+          "data_category": "Simple Nucleotide Variation",
+          "file_count": 2412
+        },
+        {
+          "case_count": 266,
+          "data_category": "Sequencing Reads",
+          "file_count": 850
+        },
+        {
+          "case_count": 31,
+          "data_category": "Combined Nucleotide Variation",
+          "file_count": 43
+        },
+        {
+          "case_count": 383,
+          "data_category": "Biospecimen",
+          "file_count": 2
+        },
+        {
+          "case_count": 293,
+          "data_category": "Clinical",
+          "file_count": 4
+        },
+        {
+          "case_count": 90,
+          "data_category": "Copy Number Variation",
+          "file_count": 387
+        },
+        {
+          "case_count": 88,
+          "data_category": "Transcriptome Profiling",
+          "file_count": 176
+        },
+        {
+          "case_count": 86,
+          "data_category": "DNA Methylation",
+          "file_count": 258
+        },
+        {
+          "case_count": 3,
+          "data_category": "Somatic Structural Variation",
+          "file_count": 6
+        },
+        {
+          "case_count": 88,
+          "data_category": "Structural Variation",
+          "file_count": 176
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 113,
+          "experimental_strategy": "WXS",
+          "file_count": 1638
+        },
+        {
+          "case_count": 58,
+          "experimental_strategy": "WGS",
+          "file_count": 277
+        },
+        {
+          "case_count": 88,
+          "experimental_strategy": "RNA-Seq",
+          "file_count": 616
+        },
+        {
+          "case_count": 168,
+          "experimental_strategy": "Targeted Sequencing",
+          "file_count": 1186
+        },
+        {
+          "case_count": 88,
+          "experimental_strategy": "Genotyping Array",
+          "file_count": 333
+        },
+        {
+          "case_count": 86,
+          "experimental_strategy": "Methylation Array",
+          "file_count": 258
+        }
+      ],
+      "file_count": 4314,
+      "file_size": 28558264020154
+    }
+  },
+  "source": "gdc"
+}

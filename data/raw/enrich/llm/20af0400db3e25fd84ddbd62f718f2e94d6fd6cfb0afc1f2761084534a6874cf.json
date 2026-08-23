@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:20af0400db3e25fd84ddbd62f718f2e94d6fd6cfb0afc1f2761084534a6874cf",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "patients diagnosed with traumatic brain injury",
+        "label": "traumatic brain injury"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "cardiology"
+    ],
+    "id": "physionet:charisdb",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Multi-channel recordings of ECG",
+        "value": "ECG"
+      },
+      {
+        "evidence": "arterial blood pressure (ABP), and intracranial pressure (ICP)",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": "patients diagnosed with traumatic brain injury (TBI)",
+    "summary": "Multi-channel recordings of ECG, arterial blood pressure, and intracranial pressure from traumatic brain injury patients, supporting work on data-driven predictors of acute clinical events in acute brain injury."
+  },
+  "prompt_version": "v1"
+}

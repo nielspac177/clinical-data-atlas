@@ -1,0 +1,122 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006746",
+  "payload": {
+    "created": "2025-09-30T20:59:53.442Z",
+    "id": "ds006746",
+    "latestSnapshot": {
+      "created": "2025-10-01T22:18:16.000Z",
+      "description": {
+        "Authors": [
+          "Taylor W. Uselman",
+          "Russell E. Jacobs",
+          "Elaine L. Bearer"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006746.v1.0.0",
+        "Funding": [
+          "NIH NIH R01MH096093",
+          "Beckman Institute at Caltech",
+          "Harvey Family Endowment at UNM"
+        ],
+        "HowToAcknowledge": "Please cite our papers Uselman, Barto et al. 2020 [URL](https://pubmed.ncbi.nlm.nih.gov/32474079/) and Uselman et al. 2025 [URL](https://pubmed.ncbi.nlm.nih.gov/38328213/)",
+        "License": "CC0",
+        "Name": "Raw MRI data from 'Reconfiguration of brain-wide neural activity after early life adversity'",
+        "ReferencesAndLinks": [
+          "https://pubmed.ncbi.nlm.nih.gov/38328213/",
+          "https://pubmed.ncbi.nlm.nih.gov/32474079/"
+        ]
+      },
+      "readme": "# Raw MR data from 'Reconfiguration of brain-wide neural activity after early life adversity'.\n\n# Overview\nThis dataset contains 3D RARE Mn(II)-enhanced MR images of 24 mice (12 C57BL/6J with standard rearing at JAX; 12 C57BL/6J with limited bedding and nesting at Caltech) from across a series of longitudinal conditions. Images were acquired on an 11.7T Bruker Avance DRX500 across variousscanning sessions/conditions: 1) before MnCl<sub>2</sub> injection (0.3 mmol/kg, IP) (pre-Mn); 4) ~23h after after injection and before an acute threat exposure (pre-TMT); 3) ~24-26h after injection and 30min to 2h after acute threat exposure (post-TMT); 4) 8 days after threat exposure and before a second MnCl<sub>2</sub> injection (0.3 mmol/kg, IP) (D9pre-Mn); and 5) ~24h after the second injection (D9-post). Please see [Uselman et al. (2025) _bioRxiv_](https://doi.org/10.1101/2023.09.10.55705) for experimental procedure and the associated [Bearer Lab GitHub Repo](https://github.com/bearerlab/memri-ela-vs-std) for code used in processing and analysis.\n\nImage Info: Raw Bruker files were converted to NIfTI (.nii) via the [NIfTI](https://imagej.net/ij/plugins/nifti.html) plug-in in ImageJ (1.54g [DOI](10.1038/nmeth.2089)). Header information (voxel units and geometry) from a template in the data set were copied to all other images using _fslcpgeom_ from [FSL](https://web.mit.edu/fsl_v5.0.10/fsl/doc/wiki/FSL.html) (_fslcpgeom_). For upload to OpenNeuro, NII images were converted to NII_GZ via _fslchfiletype_. Scan metadata (json files) were created manually from Bruker files (Paravision 4.0).\n\n\n__Authors__: Taylor W. Uselman, Russell E. Jacobs, Elaine L. Bearer<sup>*</sup>\n\n_*Corresponding Author_: \n-   Email: elaine.bearer@gmail.com\n-   ORCID: https://orcid.org/0000-0002-8390-8529\n\n\n__How to Acknowledge:__ Please cite our papers [Uselman et al. (2025)](https://doi.org/10.1101/2023.09.10.55705) and [Uselman, Barto et al. (2020) _NeuroImage_](https://doi-org/10.1016/j.neuroimage.2020.116975). Also see the [Bearer Lab GitHub Repo](https://github.com/bearerlab/memri-ela-vs-std) for additional methodological details on image processing and analysis. \n\nNot all images from Uselman, Barto et al. (2020) are provided in this dataset. Please email the authors to request access to those additional images.\n\n__Acknowledgements:__ The authors acknowledge the scientific and technical assistance provided by students, staff, and faculty at the Biological Imaging Center and Beckman Institute at California Institute of Technology. Data collection was supported by NIH R01MH096093, the Beckman Institute at Caltech, and the Harvey Family Endowment at the University of New Mexico. ",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural"
+        ],
+        "sessions": [
+          "preMn",
+          "postTMT",
+          "preTMT",
+          "d9postMn"
+        ],
+        "size": 363642102,
+        "subjects": [
+          "ela05",
+          "std07",
+          "ela06",
+          "ela08",
+          "ela03",
+          "ela09",
+          "std08",
+          "std02",
+          "ela07",
+          "std04",
+          "std06",
+          "std01",
+          "ela01",
+          "std03",
+          "std12",
+          "ela02",
+          "ela04",
+          "std11",
+          "ela10",
+          "std09",
+          "std05",
+          "ela11",
+          "ela12",
+          "std10"
+        ],
+        "tasks": [],
+        "totalFiles": 197
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        12,
+        12,
+        13,
+        11,
+        12,
+        13,
+        9,
+        10,
+        11,
+        11,
+        12,
+        13,
+        11,
+        10,
+        11,
+        11,
+        12,
+        12,
+        11,
+        11,
+        11,
+        11,
+        12,
+        12
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "National Institutes of Health (NIH)",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Mouse",
+      "studyDesign": "",
+      "studyDomain": "Early life adversity and acute threat",
+      "studyLongitudinal": "Longitudinal with Cross-sectional groups"
+    },
+    "publishDate": "2025-10-01T22:45:06.182Z"
+  },
+  "source": "openneuro"
+}

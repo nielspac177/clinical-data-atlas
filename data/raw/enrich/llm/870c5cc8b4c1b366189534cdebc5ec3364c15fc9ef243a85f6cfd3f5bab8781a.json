@@ -1,0 +1,48 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:870c5cc8b4c1b366189534cdebc5ec3364c15fc9ef243a85f6cfd3f5bab8781a",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Lymphoid Neoplasm Diffuse Large B-cell Lymphoma",
+        "label": "Lymphoid Neoplasm Diffuse Large B-cell Lymphoma"
+      },
+      {
+        "evidence": "Mature B-Cell Lymphomas",
+        "label": "Mature B-Cell Lymphomas"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "gdc:TCGA-DLBC",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Tissue Slide, Diagnostic Slide",
+        "value": "pathology"
+      },
+      {
+        "evidence": "WXS, miRNA-Seq, WGS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "RNA-Seq",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Reverse Phase Protein Array",
+        "value": "proteomics"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "58 human cases of diffuse large B-cell lymphoma; tissue from many anatomic sites",
+    "summary": "TCGA project on diffuse large B-cell lymphoma, with tissue sampled across many sites including lymph nodes and hematopoietic systems. Covers sequencing reads, variation, transcriptome profiling, DNA methylation, proteome profiling, clinical data, and slides."
+  },
+  "prompt_version": "v1"
+}

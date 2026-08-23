@@ -1,0 +1,91 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds001946",
+  "payload": {
+    "created": "2019-05-24T14:52:31.532Z",
+    "id": "ds001946",
+    "latestSnapshot": {
+      "created": "2019-10-08T17:52:09.000Z",
+      "description": {
+        "Authors": [
+          "Hindy, N.C.",
+          "Avery, E.W.",
+          "Turk-Browne, N.B."
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds001946.v1.0.3",
+        "Funding": [],
+        "HowToAcknowledge": "Hindy, N. C., Avery, E. W. & Turk-Browne, N. B. Hippocampal-neocortical interactions sharpen over time for predictive actions. Nature Communications 10, 3989 (2019). doi: https://doi.org/10.1038/s41467-019-12016-9",
+        "License": "CC0",
+        "Name": "Hippocampal-neocortical interactions sharpen over time for predictive actions",
+        "ReferencesAndLinks": [
+          "Hindy, N. C., Avery, E. W. & Turk-Browne, N. B. Hippocampal-neocortical interactions sharpen over time for predictive actions. Nature Communications 10, 3989 (2019). doi: https://doi.org/10.1038/s41467-019-12016-9"
+        ]
+      },
+      "readme": "This dataset includes structural and functional MRI data collected from 24 participants, and is described in more detail in a manuscript available on bioRxiv: \n\nHindy, N.C., Avery, E.A., & Turk-Browne, N.B. Hippocampal-neocortical interactions sharpen over time for predictive actions. Preprint available on bioRxiv. doi: https://doi.org/10.1101/483115.\n\nStructural and functional MRI data were collected on a 3T Siemens Skyra scanner with a 20-channel head coil. Structural data included a T1-weighted magnetization prepared rapid acquisition gradient-echo (MPRAGE) sequence (1 mm isotropic) for registration and segmentation of EVC, and two T2-weighted turbo spin-echo (TSE) sequences (0.44 × 0.44 × 1.5 mm) for hippocampal segmentation. Functional data consisted of T2*-weighted multi-band echo-planar imaging sequences with 42 oblique slices (16° transverse to coronal) acquired in an interleaved order (1,500 ms repetition time (TR), 40 ms echo time, 1.5 mm isotropic voxels, 128 × 128 matrix, 192 mm field of view, 71° flip angle, acceleration factor 3, shift 2). These slices produced only a partial volume for each participant, parallel to the hippocampus and covering the temporal and occipital lobes. Collecting a partial volume instead of the full brain allowed us to maximize spatial and temporal resolution over our a priori ROIs. Data acquisition in each functional run began with 6 s of rest to approach steady-state magnetization. A B0 field map was collected at the end of the experiment.\n\nFunctional data for each participant includes 9 total runs: 8 runs of an action-based prediction (cue-action-outcome) task and 1 run of a functional localizer task.\n\nThe cue-action-outcome task includes eight 6-minute runs. Within each run, four blocks of predictive actions alternated with four blocks of nonpredictive actions. Each block included five trials and lasted 22.5 s, followed by 18 s of fixation. Each trial within a block included three parts: a cue stimulus for 1000 ms, an action prompt consisting of a double-headed arrow below the cue that remained on screen until a button press or until the 1500 ms response window elapsed, and an outcome stimulus for 1000 ms. Participants used a separate response box for each hand to press the left and right buttons. If participants did not press a button within the response window, the cue stimulus and action prompt were replaced with a fixation cross that remained on screen until the next trial.\n\nDuring the functional localizer scan, participants detected one-back repetitions of fractals and scrambled images that had been masked to the same shapes (square, diamond) and sizes as the experimental stimuli. Fractal and scrambled stimuli were arranged into 16 blocks, each 15 s in duration with 9 s fixation between blocks. Within each block, 10 stimuli were each presented for 1,000 ms followed by 500 ms fixation between trials. In total, the localizer run was ∼7 min in duration, and included 72 unique fractal images, along with 72 phase-scrambled versions of those images. \n\nThe complete stimulus set is also included. The primary stimulus set included 24 fractal-like images that were masked to be either square or diamond in shape. An additional 144 unique fractal and phase-scrambled images were included in a localizer to identify V1/V2 voxels reliably responsive to the experimental stimuli. All fractal images were created using ArtMatic Pro (www.artmatic.com). Both square- and diamond-masked stimuli subtended ∼4° of visual angle in diameter on the training/testing laptop computer, and 4.5° in the scanner. Fractal images were randomly assigned to serve as cues or outcomes, counterbalanced across conditions.",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 44889883317,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24"
+        ],
+        "tasks": [
+          "cue-action-outcome",
+          "Functional Localizer"
+        ],
+        "totalFiles": 948
+      },
+      "tag": "1.0.3"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": null,
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2019-08-10T19:47:09.378Z"
+  },
+  "source": "openneuro"
+}

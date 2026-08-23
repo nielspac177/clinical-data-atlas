@@ -1,0 +1,40 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:b08a7b343434f9cc533e86d43cc9fe3295719430210ef7f48dbd91ab0764e544",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Acute Lymphoblastic Leukemia",
+        "label": "Acute Lymphoblastic Leukemia"
+      },
+      {
+        "evidence": "Lymphoid Leukemias",
+        "label": "Lymphoid Leukemias"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "gdc:MP2PRT-ALL",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Simple Nucleotide Variation, Sequencing Reads",
+        "value": "genomics"
+      },
+      {
+        "evidence": "Transcriptome Profiling",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "1510 human cases with acute lymphoblastic leukemia / lymphoid leukemias of the hematopoietic and reticuloendothelial systems",
+    "summary": "Molecular profiling to predict treatment response in acute lymphoblastic leukemia. Provides WXS, WGS and RNA-Seq reads with simple nucleotide, copy number, somatic structural and structural variation calls, transcriptome profiling and clinical data."
+  },
+  "prompt_version": "v1"
+}

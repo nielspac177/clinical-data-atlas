@@ -1,0 +1,51 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:55dff4da8c4adde5eee9751acb36465bbcf120a4c0c150ce5d22f14d503d22e4",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Gastroesophageal Cancer Collection",
+        "label": "Gastroesophageal Cancer"
+      },
+      {
+        "evidence": "Multiple Myeloma",
+        "label": "Multiple Myeloma"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "oncology",
+      "gastroenterology_hepatology"
+    ],
+    "id": "tcia:cmb-gec",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "CT MR PT",
+        "value": "CT"
+      },
+      {
+        "evidence": "CT MR PT",
+        "value": "MRI"
+      },
+      {
+        "evidence": "CT MR PT",
+        "value": "PET"
+      },
+      {
+        "evidence": "histopathology imaging",
+        "value": "pathology"
+      },
+      {
+        "evidence": "Associated genomic, phenotypic and clinical data",
+        "value": "genomics"
+      }
+    ],
+    "population": "Patients in a Cancer Moonshot Biobank cohort receiving standard of care cancer treatment at NCI Community Oncology Research Program sites; 12 participants per source facts.",
+    "summary": "De-identified radiology and histopathology imaging from a Cancer Moonshot Biobank cohort; the title names gastroesophageal cancer while the description names multiple myeloma. Genomic, phenotypic and clinical data hosted by dbGaP."
+  },
+  "prompt_version": "v1"
+}

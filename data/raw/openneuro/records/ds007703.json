@@ -1,0 +1,86 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007703",
+  "payload": {
+    "created": "2026-04-24T22:42:33.999Z",
+    "id": "ds007703",
+    "latestSnapshot": {
+      "created": "2026-05-04T18:19:32.000Z",
+      "description": {
+        "Authors": [
+          "Harvey Huang",
+          "Kendrick N Kay",
+          "Nicholas M Gregg",
+          "Gabriela Ojeda Valencia",
+          "Myung-Ho In",
+          "Christoph Kapeller",
+          "Yunhong Shu",
+          "Gregory A Worrell",
+          "Kai J Miller",
+          "Dora Hermes"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007703.v1.0.0",
+        "Funding": [
+          "R01 MH122258: CRCNS: Processing speed in the human connectome across the lifespan",
+          "R01 EY035533: Electrical stimulation to control feedback modulation of perception",
+          "U01 NS128612: An Ecosystem of Technology and Protocols for Adaptive Neuromodulation Research in Humans",
+          "T32 GM145408: MSTP at Mayo Clinic Rochester",
+          "937450: American Epilepsy Society Predoctoral Research Fellowship"
+        ],
+        "HowToAcknowledge": "This dataset is part of the paper on 'Single pulse electrical stimulation in white matter modulates iEEG visual responses in human early visual cortex' by H Harvey, KN Kay, NM Gregg, G Ojeda Valencia, M In, C Kapeller, Y Shu, GA Worrell, KJ Miller, and D Hermes. This project was funded by the National Institutes of Health [R01 MH122258 to DH; R01 EY035533 to DH, KNK, and GAW; U01 NS128612 to KJM and GAW; T32 GM145408 to the Mayo Clinic MSTP], and by the American Epilepsy Society [937450 to HH]. The data was collected by Harvey Huang (Mayo Clinic), Zeeshan Qadir (Mayo Clinic), Dora Hermes (Mayo Clinic), and Nicholas M. Gregg (Mayo Clinic). The BIDS formatting was performed by Harvey Huang (Mayo Clinic), Dora Hermes (Mayo Clinic), and Gabriela Ojeda Valencia (Mayo Clinic). The iEEG data collection was facilitated by Gregory A. Worrell (Mayo Clinic) and Kai J. Miller (Mayo Clinic)",
+        "License": "CC0",
+        "Name": "Single pulse electrical stimulation in white matter modulates iEEG visual responses in human early visual cortex",
+        "ReferencesAndLinks": [
+          "doi: https://doi.org/10.1101/2025.05.05.652264"
+        ]
+      },
+      "readme": "# SPES + Visual iEEG dataset\n\nThis dataset contains intracranial EEG recordings from two patients during single pulse electrical stimulation (SPES) and visual stimulation as described in:\n \nH Harvey, KN Kay, NM Gregg, G Ojeda Valencia, M In, C Kapeller, Y Shu, GA Worrell, KJ Miller, and D Hermes (2025). Single pulse electrical stimulation in white matter modulates iEEG visual responses in human early visual cortex. (Under Review)\n\nA preprint is available currently at doi: https://doi.org/10.1101/2025.05.05.652264. Note that stimulation data contained in the raw data files but which are not relevant to this publication (i.e., other stimulation sites) have been removed (replaced with 0), as those data are being used to answer other scientific questions and will be released in time with other manuscripts. This does not impact the analysis in this publication.\n\nPlease cite this work when using the data. Research reported in this publication was supported by the National Institutes of Health [R01 MH122258 to DH; R01 EY035533 to DH, KNK, and GAW; U01 NS128612 to KJM and GAW; T32 GM145408 to the Mayo Clinic MSTP] and by the American Epilepsy Society [937450 to HH]. The content is solely the responsibility of the authors and does not necessarily represent the official views of the National Institutes of Health. The data was collected by Harvey Huang, Nicholas M Gregg, Zeeshan Qadir, and Dora Hermes. The BIDS formatting was performed by Harvey Huang, Dora Hermes, and Gabriela Ojeda Valencia.\n\nThe data can be analyzed using Matlab code available on GitHub: https://github.com/hharveygit/SPES_Visual.\n\n## Format\nData are formatted according to BIDS version 1.10.0\n\n## Single pulse stimulation\nSubjects lay in bed awake at rest during the SPES-only task, while SPES was delivered at approximately 0.3 Hz. Subjects sat upright in bed viewing images shown on a computer screen during the SPES+Visual task, while SPES was delivered at approximately 0.2 Hz. SPES was biphasic with 200 microseconds total duration (100 microseconds per phase), and with amplitude of 6 mA.\n\n## Contact\nPlease contact Harvey Huang (huang.harvey@mayo.edu) or Dora Hermes (hermes.dora@mayo.edu) for questions. \n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "ieeg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [
+          "ieeg01"
+        ],
+        "size": 12294429866,
+        "subjects": [
+          "1",
+          "2"
+        ],
+        "tasks": [
+          "Visual stimuli + CCEPs",
+          "Cortico-cortical evoked potentials - CCEPs",
+          "Cortico cortical Evoked Potentials, CCEPs",
+          "Cortico Cortical Evoked Potentials"
+        ],
+        "totalFiles": 55
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        21,
+        18
+      ],
+      "associatedPaperDOI": "https://doi.org/10.1101/2025.05.05.652264",
+      "dataProcessed": null,
+      "dxStatus": "Epilepsy",
+      "grantFunderName": "National Institutes of Health, American Epilepsy Society",
+      "modalities": [
+        "ieeg"
+      ],
+      "species": "Human",
+      "studyDesign": "Single pulse electrical stimulation",
+      "studyDomain": "",
+      "studyLongitudinal": "iEEG"
+    },
+    "publishDate": "2026-07-16T16:33:08.289Z"
+  },
+  "source": "openneuro"
+}

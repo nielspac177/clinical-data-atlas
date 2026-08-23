@@ -1,0 +1,98 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "MATCH-Z1D",
+  "payload": {
+    "dbgap_accession_number": "phs001859",
+    "disease_type": [
+      "Neoplasms, NOS",
+      "Cystic, Mucinous and Serous Neoplasms",
+      "Complex Mixed and Stromal Neoplasms",
+      "Adenomas and Adenocarcinomas",
+      "Gliomas",
+      "Myomatous Neoplasms",
+      "Ductal and Lobular Neoplasms",
+      "Squamous Cell Neoplasms"
+    ],
+    "id": "MATCH-Z1D",
+    "name": "Genomic Characterization CS-MATCH-0007 Arm Z1D",
+    "primary_site": [
+      "Esophagus",
+      "Other and unspecified female genital organs",
+      "Other endocrine glands and related structures",
+      "Stomach",
+      "Other and unspecified parts of biliary tract",
+      "Breast",
+      "Liver and intrahepatic bile ducts",
+      "Corpus uteri",
+      "Prostate gland",
+      "Brain",
+      "Uterus, NOS",
+      "Other and unspecified major salivary glands",
+      "Small intestine",
+      "Bones, joints and articular cartilage of other and unspecified sites",
+      "Thyroid gland"
+    ],
+    "program": {
+      "dbgap_accession_number": null,
+      "name": "MATCH",
+      "program_id": "893b0820-b50b-5c75-85f5-3b028e251811"
+    },
+    "project_id": "MATCH-Z1D",
+    "releasable": false,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 36,
+      "data_categories": [
+        {
+          "case_count": 34,
+          "data_category": "Simple Nucleotide Variation",
+          "file_count": 440
+        },
+        {
+          "case_count": 36,
+          "data_category": "Sequencing Reads",
+          "file_count": 169
+        },
+        {
+          "case_count": 36,
+          "data_category": "Biospecimen",
+          "file_count": 36
+        },
+        {
+          "case_count": 36,
+          "data_category": "Clinical",
+          "file_count": 36
+        },
+        {
+          "case_count": 35,
+          "data_category": "Transcriptome Profiling",
+          "file_count": 70
+        },
+        {
+          "case_count": 35,
+          "data_category": "Structural Variation",
+          "file_count": 140
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 34,
+          "experimental_strategy": "WXS",
+          "file_count": 504
+        },
+        {
+          "case_count": 35,
+          "experimental_strategy": "RNA-Seq",
+          "file_count": 315
+        }
+      ],
+      "file_count": 891,
+      "file_size": 3282605560716
+    }
+  },
+  "source": "gdc"
+}

@@ -1,0 +1,27 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:ba0cc9a76519dacc7f7ce03911ebe03c93074e6b15950a8f422df8018750e746",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:mimic-iv-ecg-demo",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "659 diagnostic electrocardiograms",
+        "value": "ECG"
+      },
+      {
+        "evidence": "part of the MIMIC-IV Clinical Database",
+        "value": "EHR"
+      }
+    ],
+    "population": "92 unique patients who overlap with the MIMIC-IV Clinical Demo",
+    "summary": "Open demo subset of MIMIC-IV-ECG with 659 diagnostic 12-lead ECGs from 92 patients, sampled at 500 Hz, so researchers can assess whether the full module suits their work."
+  },
+  "prompt_version": "v1"
+}

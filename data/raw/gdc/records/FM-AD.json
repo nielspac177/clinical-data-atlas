@@ -1,0 +1,120 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "FM-AD",
+  "payload": {
+    "dbgap_accession_number": "phs001179",
+    "disease_type": [
+      "Not Reported",
+      "Cystic, Mucinous and Serous Neoplasms",
+      "Miscellaneous Tumors",
+      "Germ Cell Neoplasms",
+      "Complex Mixed and Stromal Neoplasms",
+      "Thymic Epithelial Neoplasms",
+      "Ductal and Lobular Neoplasms",
+      "Adnexal and Skin Appendage Neoplasms",
+      "Transitional Cell Papillomas and Carcinomas",
+      "Meningiomas",
+      "Mesothelial Neoplasms",
+      "Mucoepidermoid Neoplasms",
+      "Neuroepitheliomatous Neoplasms",
+      "Acinar Cell Neoplasms",
+      "Adenomas and Adenocarcinomas",
+      "Gliomas",
+      "Nevi and Melanomas",
+      "Specialized Gonadal Neoplasms",
+      "Squamous Cell Neoplasms",
+      "Complex Epithelial Neoplasms",
+      "Paragangliomas and Glomus Tumors",
+      "Epithelial Neoplasms, NOS",
+      "Basal Cell Neoplasms"
+    ],
+    "id": "FM-AD",
+    "name": "Foundation Medicine Adult Cancer Clinical Dataset (FM-AD)",
+    "primary_site": [
+      "Not Reported",
+      "Esophagus",
+      "Other endocrine glands and related structures",
+      "Stomach",
+      "Skin",
+      "Unknown",
+      "Bladder",
+      "Nasopharynx",
+      "Vulva",
+      "Other and unspecified major salivary glands",
+      "Breast",
+      "Testis",
+      "Pancreas",
+      "Trachea",
+      "Penis",
+      "Retroperitoneum and peritoneum",
+      "Rectum",
+      "Ureter",
+      "Vagina",
+      "Other and unspecified female genital organs",
+      "Colon",
+      "Adrenal gland",
+      "Liver and intrahepatic bile ducts",
+      "Other and ill-defined sites",
+      "Prostate gland",
+      "Other and ill-defined digestive organs",
+      "Spinal cord, cranial nerves, and other parts of central nervous system",
+      "Anus and anal canal",
+      "Small intestine",
+      "Peripheral nerves and autonomic nervous system",
+      "Other and unspecified urinary organs",
+      "Thyroid gland",
+      "Ovary",
+      "Thymus",
+      "Cervix uteri",
+      "Bronchus and lung",
+      "Other and unspecified parts of biliary tract",
+      "Heart, mediastinum, and pleura",
+      "Uterus, NOS",
+      "Kidney",
+      "Gallbladder",
+      "Eye and adnexa"
+    ],
+    "program": {
+      "dbgap_accession_number": null,
+      "name": "FM",
+      "program_id": "0d16cb85-f351-5d41-8b03-0429419716a3"
+    },
+    "project_id": "FM-AD",
+    "releasable": true,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 18004,
+      "data_categories": [
+        {
+          "case_count": 18004,
+          "data_category": "Simple Nucleotide Variation",
+          "file_count": 54012
+        },
+        {
+          "case_count": 18004,
+          "data_category": "Biospecimen",
+          "file_count": 42
+        },
+        {
+          "case_count": 18004,
+          "data_category": "Clinical",
+          "file_count": 42
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 18004,
+          "experimental_strategy": "Targeted Sequencing",
+          "file_count": 54012
+        }
+      ],
+      "file_count": 54096,
+      "file_size": 301802073
+    }
+  },
+  "source": "gdc"
+}

@@ -1,0 +1,85 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004457",
+  "payload": {
+    "created": "2023-02-01T14:05:34.238Z",
+    "id": "ds004457",
+    "latestSnapshot": {
+      "created": "2023-06-02T19:39:03.000Z",
+      "description": {
+        "Authors": [
+          "Harvey Huang",
+          "Nicholas M Gregg",
+          "Gabriela Ojeda Valencia",
+          "Benjamin H Brinkmann",
+          "Brian N Lundstrom",
+          "Gregory A Worrell",
+          "Kai J Miller",
+          "Dora Hermes"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004457.v1.0.2",
+        "Funding": [
+          "R01 MH122258 CRCNS: Processing speed in the human connectome across the lifespan",
+          "T32 GM065841: Medical Scientist Training Program at Mayo Clinic"
+        ],
+        "HowToAcknowledge": "This dataset is part of the paper on 'Electrical stimulation of temporal and limbic circuitry produces distinct responses in human ventral temporal cortex' by H Huang, NM Gregg, G Ojeda Valencia, BH Brinkmann, BN Lundstrom, GA Worrell, KJ Miller, and D Hermes. This project is funded by the National Institute Of Mental Health of the National Institutes of Health under Award Number R01MH122258 to Dora Hermes (Mayo Clinic) and by the National Institute of General Medical Sciences of the National Institutes of Health under Award Number T32GM065841 to the Medical Scientist Training Program at Mayo Clinic. The data was collected by Harvey Huang (Mayo Clinic), Dora Hermes (Mayo Clinic), Nick Gregg (Mayo Clinic), Brian Lundstrom (Mayo Clinic) and Cindy Nelson (Mayo Clinic). The BIDS formatting was performed by Harvey Huang (Mayo Clinic), Dora Hermes (Mayo Clinic) and Gabriela Ojeda Valencia (Mayo Clinic). The iEEG data collection was facilitated by Gregory Worrell and Kai J. Miller (Mayo Clinic)",
+        "License": "CC0",
+        "Name": "Electrical stimulation of temporal and limbic circuitry produces distinct responses in human ventral temporal cortex",
+        "ReferencesAndLinks": [
+          "https://doi.org/10.1101/2022.07.06.498994"
+        ]
+      },
+      "readme": "# Basis Profile Curve identification in the human ventral temporal cortex\n\nThis dataset contains intracranial EEG recordings from five patients during single pulse electrical stimulation as described in:\n \n* Huang, H., Gregg, N. M., Valencia, G. O., Brinkmann, B. H., Lundstrom, B. N., Worrell, G. A., ... & Hermes, D. (2023). Electrical stimulation of temporal and limbic circuitry produces distinct responses in human ventral temporal cortex. Journal of Neuroscience.\nDOI: https://doi.org/10.1523/JNEUROSCI.1325-22.2023\n\nPlease cite this work when using the data. These data were recorded at the Mayo Clinic in Rochester, MN, as part of the NIH Brain Initiative supported project R01 MH122258 \"CRCNS: Processing speed in the human connectome across the lifespan\". Research reported in this publication was supported by the National Institute Of Mental Health of the National Institutes of Health under Award Number R01MH122258 and by the National Institute of General Medical Sciences of the National Institutes of Health under Award Number T32GM065841. The content is solely the responsibility of the authors and does not necessarily represent the official views of the National Institutes of Health. The data was collected by Harvey Huang, Dora Hermes, Nick Gregg, Brian Lundstrom, Cindy Nelson, Gregg Worrell and Kai J. Miller. The BIDS formatting was performed by Harvey Huang, Dora Hermes and Gabriela Ojeda Valencia. \n\nData can be analyzed using the Matlab code at: \n* https://github.com/hharveygit/VTCBPC_JNS_Manu\n\n## Format\nData are formatted according to BIDS version 1.9.9\n\n## Single pulse stimulation\nThe patient were resting in the hospital bed, while single pulse stimulation was performed with a frequency of ~0.2 Hz. The stimulation had a duration of 200 microseconds, was biphasic and had an amplitude of 6mA.\n\n## Contact\nPlease contact Dora Hermes (hermes.dora@mayo.edu) for questions. \n",
+      "summary": {
+        "dataProcessed": true,
+        "modalities": [
+          "ieeg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [
+          "ieeg01"
+        ],
+        "size": 11705318065,
+        "subjects": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "tasks": [
+          "ccep task with annotations",
+          "ccep and movement task with annotations, downsampled"
+        ],
+        "totalFiles": 2751
+      },
+      "tag": "1.0.2"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        13,
+        30,
+        20,
+        46,
+        18
+      ],
+      "associatedPaperDOI": "https://doi.org/10.1523/JNEUROSCI.1325-22.2023",
+      "dataProcessed": true,
+      "dxStatus": "Epilepsy",
+      "grantFunderName": "National Institute Of Mental Health of the National Institutes of Health",
+      "modalities": [
+        "ieeg"
+      ],
+      "species": "Human",
+      "studyDesign": "Single Pulse Electrical Stimulation",
+      "studyDomain": "",
+      "studyLongitudinal": "iEEG"
+    },
+    "publishDate": "2023-05-17T20:25:49.251Z"
+  },
+  "source": "openneuro"
+}

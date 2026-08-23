@@ -1,0 +1,41 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:b7f0e7a105c9881230ce607df46e460c1f098743a3421441abc3a1e7ff705fb5",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "during and after the COVID-19 pandemic",
+        "label": "COVID-19"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "critical_care",
+      "infectious_disease"
+    ],
+    "id": "physionet:mc-med",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "electrocardiogram",
+        "value": "ECG"
+      },
+      {
+        "evidence": "photoplethysmogram",
+        "value": "PPG"
+      },
+      {
+        "evidence": "continuously monitored vital signs, physiologic waveforms",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "the electronic health record",
+        "value": "EHR"
+      }
+    ],
+    "population": "118,385 adult ED visits to an academic medical center from 2020 to 2022",
+    "summary": "Deidentified emergency department dataset combining continuous physiologic monitoring waveforms and vital signs with electronic health record data: demographics, medical histories, orders, medications, laboratory and imaging results, and visit outcomes."
+  },
+  "prompt_version": "v1"
+}

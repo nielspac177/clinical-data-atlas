@@ -1,0 +1,90 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007819",
+  "payload": {
+    "created": "2026-05-20T19:05:56.377Z",
+    "id": "ds007819",
+    "latestSnapshot": {
+      "created": "2026-05-21T10:06:33.000Z",
+      "description": {
+        "Authors": [
+          "Anna Zier",
+          "Philipp Deutsch",
+          "Jochen Kaiser",
+          "Christoph Bledowski"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007819.v1.0.0",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "BindingWM",
+        "ReferencesAndLinks": null
+      },
+      "readme": "# BindingWM — Studie-BWM-1\n\nThis dataset contains fMRI data for the BindingWM study (Studie-BWM-1),\ninvestigating feature binding in visual working memory.\n\nSubjects: 20 healthy adults\nSessions: 4 per subject (ses-01 to ses-04)\nTasks:\n  - task-bwm       (binding working memory task)\n\nData were acquired on a Siemens Prisma 3T scanner at Cooperative Brain Imaging Center (CoBIC) in Frankfurt, Germany.",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "02",
+          "04",
+          "03",
+          "01"
+        ],
+        "size": 193004179296,
+        "subjects": [
+          "19",
+          "12",
+          "04",
+          "10",
+          "06",
+          "07",
+          "17",
+          "14",
+          "15",
+          "16",
+          "11",
+          "18",
+          "05",
+          "13",
+          "08",
+          "09",
+          "01",
+          "02",
+          "03",
+          "20"
+        ],
+        "tasks": [
+          "bindingWM"
+        ],
+        "totalFiles": 2285
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "Deutsche Forschungsgemeinschaft (DFG)",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "Event-related",
+      "studyDomain": "Visual Working Memory",
+      "studyLongitudinal": "Repeated Measure"
+    },
+    "publishDate": "2026-05-21T12:21:32.752Z"
+  },
+  "source": "openneuro"
+}

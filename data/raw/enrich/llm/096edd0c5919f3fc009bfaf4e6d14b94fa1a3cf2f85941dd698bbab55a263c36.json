@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:096edd0c5919f3fc009bfaf4e6d14b94fa1a3cf2f85941dd698bbab55a263c36",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "critical_care",
+      "other"
+    ],
+    "id": "physionet:mietic",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "structured triage cases from MIMIC-IV",
+        "value": "EHR"
+      },
+      {
+        "evidence": "chief complaints, vital signs, demographics, and medical history",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "Available in CSV formats",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "9,629 ED triage cases from MIMIC-IV",
+    "summary": "Structured emergency department triage cases drawn from MIMIC-IV and labeled with the Emergency Severity Index, plus generation prompts, expert-validated samples and SQL quality-control scripts, for language-model triage research."
+  },
+  "prompt_version": "v1"
+}

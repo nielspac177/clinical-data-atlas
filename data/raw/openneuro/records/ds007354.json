@@ -1,0 +1,147 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007354",
+  "payload": {
+    "created": "2026-02-02T11:36:25.550Z",
+    "id": "ds007354",
+    "latestSnapshot": {
+      "created": "2026-07-06T02:53:59.000Z",
+      "description": {
+        "Authors": [
+          "Gengchen Ye",
+          "Mo Wang",
+          "Chiyin Li",
+          "Yihao Peng",
+          "Yilin Qian",
+          "Yutao Wang",
+          "Xinyi Si",
+          "Shaoxin Xiang",
+          "Fanzhi Jiang",
+          "Lu Wang",
+          "Ming Zhang"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007354.v2.0.1",
+        "Funding": [
+          "The Health Research and Innovation Capacity Strengthening Platform Program of Shaanxi Province (grant number: 2023PT-09)"
+        ],
+        "HowToAcknowledge": " ",
+        "License": "CC0",
+        "Name": "A 5.0T Ultra-High-Field fMRI Dataset for Naturalistic Visual Scene Processing",
+        "ReferencesAndLinks": []
+      },
+      "readme": "Modeling neural responses under naturalistic visual stimulation is an important goal in computational neuroscience and brain-computer interface research. Progress in this area depends on neuroimaging datasets that combine repeated measurements, shared stimulus anchors, and sufficient stimulus diversity for evaluating encoding and decoding models. Here, we present the Natural Vision Dataset (NVD), a publicly available 5.0 T fMRI dataset designed for static natural-image viewing. The field strength is reported as part of the acquisition context, and the dataset was not designed to isolate field-strength effects or to compare 5.0 T performance with 3 T or 7 T acquisitions. Twenty healthy participants viewed a shared set of 1,268 natural images and 500 participant-specific images per participant, yielding 10,000 participant-specific images across the dataset. Each image was presented three times across separate sessions. This hybrid shared-unique stimulus design supports assessment of response reliability, cross-participant alignment, and model generalization beyond a fixed shared image set. Functional data were acquired at 1.8 mm isotropic resolution with a TR of 1 s and are organized according to the Brain Imaging Data Structure, with both volumetric and surface-based derivatives provided. Image-level response estimates were derived using GLMsingle toolbox. Data quality and benchmark utility were characterized using motion, vigilance, tSNR, noise-ceiling, and brain-to-CLIP decoding analyses. NVD provides a standardized resource for investigating human visual representations and evaluating computational models of natural-image processing.\n\nStimulus images \nThe stimulus images are organized in the dataset-level stimuli/ directory. The full stimulus inventory is provided in stimuli/images.tsv, which contains 11,268 image entries. Each row corresponds to one stimulus image and includes the image identifier (image_id), image file name (image_name), COCO image identifier (coco_id), stimulus assignment set (stimulus_set), participant viewing scope (viewed_by), task identifier (task_id), Hard Subset membership (hard_subset), and Hard Subset cluster identifier (hard_subset_cluster_id). The stimulus_set column indicates whether the image belongs to the Shared or Unique stimulus set. The viewed_by column specifies whether the image was presented to all participants (all) or only to a specific participant, denoted by values of the form sub-<label>. The task_id column should be interpreted as a BIDS task label and stimulus-subset identifier rather than as a separate behavioral task. Participants performed the same viewing/vigilance paradigm throughout the experiment; the labels s1–s11 distinguish stimulus subsets used for BIDS organization and file naming. The hard_subset column indicates whether the image belongs to the Hard Subset selected from semantically dense CLIP embedding clusters. Missing values are encoded as n/a; specifically, hard_subset_cluster_id = n/a indicates that the image is not included in the Hard Subset and therefore has no Hard Subset cluster assignment. The accompanying metadata file, stimuli/images.json, provides column-level descriptions for the stimulus inventory.\nRaw MRI data\nThe folder for each participant consists of several session folders. The session folder in turn includes two or three folders, named “anat”, “func” or “fmap”, for corresponding modality data. In the “func” folder, the “sub-<subID>_ses-<sesID>_task-<taskID>_run-<runID>_events.tsv” file contains task events of each run. The stimulus information for each trial is listed in the last column of this events file, which is named “condition” for the experiments. As a result, the specific stimulus image for each trial can be located in the “stimuli” folder according to the stimuli information listed in the last column of the events file.\nPreprocessed volume and surface data from fMRIPrep\nFunctional MRI data were preprocessed using fMRIPrep with outputs in volumetric (T1w and MNI) and surface (fsLR) spaces. For each functional run, preprocessed BOLD time series in native anatomical space (T1w) are provided as: “sub-<subID>_ses-<sesID>_task-<taskID>_space-T1w_desc-preproc_bold.nii.gz”. Spatially normalized volumes in MNI space are available as: “sub-<subID>_ses-<sesID>_task-<taskID>_space-MNI152NLin2009cAsym_desc-preproc_bold.nii.gz”. Nuisance regressors estimated during preprocessing are stored in: “sub-<subID>_ses-<sesID>_task-<taskID>_desc-confounds_timeseries.tsv”. Surface-based outputs were generated in fsLR standard space. Combined cortical and subcortical time series are provided in CIFTI-2 format (91k grayordinates):  “sub-<subID>_ses-<sesID>_task-<taskID>_space-fsLR_den-91k_bold.dtseries.nii”. Hemisphere-specific cortical surface time series at 32k vertex density are provided: “sub-<subID>_ses-<sesID>_task-<taskID>_hemi-L_space-fsLR_den-32k_bold.func.gii”, \n“sub-<subID>_ses-<sesID>_task-<taskID>_hemi-R_space-fsLR_den-32k_bold.func.gii”.\nBrain activation data from surface-based analysis\nBrain activation data were derived from GLMsingle analyses and reorganized under “derivatives/glmsingle/”. For each subject and run, trial-wise GLMsingle beta estimates in the standard fsLR 91k grayordinate space are stored as CIFTI-2 dense scalar files: “derivatives/glmsingle/sub-<subID>/ses-<sesID>/func/sub-<subID>_ses-<sesID>_task-<taskID>_space-fsLR_den-91k_desc-rawBetasmd_betas.dscalar.nii”. Each run-level beta file is accompanied by a paired .tsv file with the same basename, in which each row corresponds to one trial/presentation represented in the CIFTI scalar axis. A sidecar .json file provides additional metadata, including the source files, image space, density, beta type, and row description. Subject-level condition-averaged beta maps, obtained by averaging GLMsingle betasmd estimates across all runs/repeats for the same condition, are stored separately as: “derivatives/glmsingle/sub-<subID>/avg/sub-<subID>_space-fsLR_den-91k_desc-avgBetasmd_betas.dscalar.nii”. The corresponding paired .tsv file contains the condition-level information, with each row matching one averaged condition in the CIFTI file. In addition to the full fsLR 91k outputs, visual-ROI-restricted beta maps are also provided. These files use the same organization but include VisualROIs in the description field, for example: “desc-rawBetasmdVisualROIs_betas.dscalar.nii”,  ”desc-avgBetasmdVisualROIs_betas.dscalar.nii”. The visual ROI definitions and grayordinate indices are provided under “derivatives/glmsingle/metadata/”, including the ROI table, visual grayordinate columns, visual ROI indices, and visual ROI roimap files. \n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "202",
+          "102",
+          "105",
+          "203",
+          "103",
+          "301",
+          "101",
+          "305",
+          "302",
+          "304",
+          "303",
+          "104",
+          "201",
+          "204",
+          "307",
+          "306",
+          "205",
+          "206",
+          "106",
+          "107"
+        ],
+        "size": 629091791427,
+        "subjects": [
+          "020",
+          "022",
+          "012",
+          "007",
+          "003",
+          "005",
+          "017",
+          "013",
+          "006",
+          "009",
+          "011",
+          "021",
+          "008",
+          "018",
+          "014",
+          "002",
+          "004",
+          "010",
+          "019",
+          "001"
+        ],
+        "tasks": [
+          "s6",
+          "s7",
+          "s5",
+          "s4",
+          "s3",
+          "s9",
+          "s10",
+          "s8",
+          "s1",
+          "rest",
+          "s2",
+          "s11"
+        ],
+        "totalFiles": 3489
+      },
+      "tag": "2.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        20,
+        19,
+        22,
+        34,
+        26,
+        21,
+        26,
+        29,
+        19,
+        20,
+        19,
+        22,
+        24,
+        20,
+        20,
+        19,
+        20,
+        19,
+        20,
+        21
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2026-05-07T02:21:59.163Z"
+  },
+  "source": "openneuro"
+}

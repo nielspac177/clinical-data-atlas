@@ -1,0 +1,79 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004510",
+  "payload": {
+    "created": "2023-02-21T23:13:13.183Z",
+    "id": "ds004510",
+    "latestSnapshot": {
+      "created": "2023-05-01T15:24:31.000Z",
+      "description": {
+        "Authors": [
+          "Jerry Tang",
+          "Amanda LeBel",
+          "Shailee Jain",
+          "Alexander G. Huth"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004510.v1.1.0",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "An fMRI dataset for testing semantic language decoders",
+        "ReferencesAndLinks": null
+      },
+      "readme": "## An fMRI dataset for testing semantic language decoders\n\nThis dataset contains data used in the paper \"Semantic reconstruction of continuous language from non-invasive brain recordings\" by Jerry Tang, Amanda LeBel, Shailee Jain, and Alexander G. Huth.\n\nTang, J., LeBel, A., Jain, S. et al. Semantic reconstruction of continuous language from non-invasive brain recordings. Nat Neurosci (2023). https://doi.org/10.1038/s41593-023-01304-9\n\n## Dataset Derivatives\n\n1. preprocessed data: fully preprocessed data as described in previous works.\n\n2. textgrids: aligned transcripts of the stimulus with start and end point for each word.",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional"
+        ],
+        "sessions": [
+          "1"
+        ],
+        "size": 2653792710,
+        "subjects": [
+          "UTS01",
+          "UTS02",
+          "UTS03"
+        ],
+        "tasks": [
+          "AttendMaleSpeaker",
+          "Imagined Speech",
+          "AttendFemaleSpeaker",
+          "laluna",
+          "partlycloudy",
+          "presto",
+          "sintel"
+        ],
+        "totalFiles": 33
+      },
+      "tag": "1.1.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        26,
+        36,
+        23
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2023-02-22T23:14:27.257Z"
+  },
+  "source": "openneuro"
+}

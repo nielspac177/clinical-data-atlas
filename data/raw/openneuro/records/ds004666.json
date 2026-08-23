@@ -1,0 +1,73 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004666",
+  "payload": {
+    "created": "2023-08-09T14:35:19.667Z",
+    "id": "ds004666",
+    "latestSnapshot": {
+      "created": "2026-01-25T11:28:38.000Z",
+      "description": {
+        "Authors": [
+          "Jose Pedro Manzano Patron",
+          "Steen Moeller",
+          "Jesper L.R. Andersson",
+          "Kamil Ugurbil",
+          "Essa Yacoub",
+          "Stamatios N. Sotiropoulos"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004666.v1.0.8",
+        "Funding": [
+          "ERC Consolidator 101000969",
+          "NIH U01EB025144"
+        ],
+        "HowToAcknowledge": "Please cite paper Manzano-Patron, J.P. et al, Denoising Diffusion MRI: Considerations and implications for analysis, Imaging Neuroscience, 2024 (https://doi.org/10.1162/imag_a_00060)",
+        "License": "CC0",
+        "Name": "EDDEN: Evaluation of Diffusion MRI DENoising",
+        "ReferencesAndLinks": null
+      },
+      "readme": "##EDDEN (Evaluation of DMRI DENoising)\n \n**EDDEN**  dataset corresponds to the publication: \n\n*Manzano-Patron, J.P. et al., Denoising Diffusion MRI: Considerations and implications for analysis. Imaging Neuroscience, 2024 (https://doi.org/10.1162/imag_a_00060)*. \n\nPlease, cite it if you use this dataset.\n\n ###Description of the dataset\n\n ####RAW\n Complex data (magnitude and phase) is acquired for a single subject at different SNR/resolution regimes, under *~/EDDEN/sub-01/ses-XXX/dwi/*:\n\n- **Dataset A (2mm)** \n\t- This dataset represents a relatively medium-to-high SNR regime.\n\t- 6 repeats of a 2mm isotropic multi-shell dataset each implementing the UK Biobank protocol (Miller et al., 2016)\n\t- TR=3s, TE=92ms, MB=3, no in-plane acceleration, scan time ∼6 minutes per repeat.\n\t- For each repeat, 116 volumes were acquired: 105 volumes with AP phase encoding direction, such as 5 b = 0 s/mm2 volumes, and 100 diffusion encoding orientations, with 50 b = 1000 s/mm2 and 50 b = 2000 s/mm2 volumes; and 4 b = 0 s/mm2 volumes with reversed phase encoding direction (PA) for susceptibility induced distortion correction (Andersson and Skare, 2002). \n\t- *NOTES*: Only 1 PA set of volumes was acquired for all the runs.\n\n- **Dataset B (1p5mm)**: \n\t- This is a low-to-medium SNR dataset, with relatively high resolution.\n\t- 5 repeats of a 1.5 mm isotropic multi-shell dataset, each implementing an HCP-like protocol in terms of q-space sampling (Sotiropoulos et al., 2013a).\n\t- TR=3.23 s, TE=89.2 ms, MB=4 no in-plane acceleration, scan time ∼16 minutes per repeat. \n\t- For each repeat, 300 volumes were acquired: 297 volumes with AP phase encoding direction, such as 27 b = 0 s/mm2 volumes, and 270 diffusion encoding orientations, with 90 b = 1000 s/mm2, 90 b = 2000 s/mm2, and 90 b = 3000 s/mm2 volumes; and 3 b = 0 s/mm2 volumes with PA phase encoding for susceptibility-induced distortion correction. \n\n- **Dataset C (0p9mm)**:\n\t- This is a very low SNR dataset to represent extremely noisy data that without denoising are expected to be borderline unusable (particularly for the higher b).\n\t- 4 repeats of an ultra-high-resolution multi-shell dataset with 0.9mm isotropic resolution.\n\t- TR=6.569 s, TE=91 ms, MB=3, in-plane GRAPPA=2, scan time ∼22 minutes per repeat. \n\t- For each repeat, 202 volumes were acquired with orientations as in (Harms et al., 2018): 199 volumes with AP phase encoding direction, such as 14 b = 0 s/mm2 volumes, and 185 diffusion encoding orientations, with 93 b = 1000 s/mm2, and 92 b = 2000 s/mm2 volumes; and 3 b = 0 s/mm2 volumes with PA phase encoding for susceptibility-induced distortion correction. \n\t- *NOTES*: The phase of the PAs is not available, and the same PA is used for runs 3 and 4.\n\nEach dataset contains their own T1w-MPRAGE under *~/EDDEN/sub-01/ses-XXX/anat/*. Each data set was acquired on a different day, to minimise fatigue, but all repeats within a dataset were acquired in the same session. All acquisitions were obtained parallel to the anterior and posterior commissure line, covering the entire cerebrum.\n\n\n###DERIVATIVES\n\nHere are the different denoised version of the raw data for the different datasets, the pre-processed data for the raw, denoised and averages, and the FA, MD and V1 outputs from the DTI model fitting (see *Data pre-processing* section below).\n\n- **Denoised data**:\n\t- *NLM* (**NLM**), for Non-Local Means denoising applied to magnitude raw data.\n\t- *MPPCA* (**|MPPCA|**), for Marchenko-Pastur PCA denoising applied to magnitude raw data.\n\t- *MPPCA_complex* (**MPPCA\\***), for Marchenko-Pastur PCA denoising applied to complex raw data.\n\t- *NORDIC* (**NORDIC**), for NORDIC applied to complex raw data.\n\t- *AVG_mag* (**|AVG|**), for the average of the multiple repeats in magnitude.\n\t- *AVG_complex* (**AVG\\***), for the average in the complex space of the multiple repeats.\n\n- **Masks**:\nUnder *~/EDDEN/derivatives/ses-XXX/masks* we can find different masks for each dataset: \n\t- *GM_mask*: Gray Matter mask.\n\t- *WM_mask*: White Matter mask.\n\t- *CC_mask*: Corpus Callosum Matter mask.\n\t- *CS_mask*: Centrum Semiovale mask.\n\t- *ventricles_mask*: CSF ventricles mask.\n\t- *nodif_brain_mask*: Eroded brain mask.\n\n\n\n#### Data pre-processing\nBoth magnitude and phase data were retained for each acquisition to allow evaluations of denoising in both magnitude and complex domains. In order to allow distortion correction and processing for complex data and avoid phase incoherence artifacts, the raw complex-valued diffusion data were rotated to the real axis using the phase information. A spatially varying phase-field was estimated and complex vectors were multiplied with the conjugate of the phase. The phase-field was estimated uniquely for each slice and volume by firstly removing the phase variations from k-space sampling and coil sensitivity combination, and secondly by removing an estimate of a smooth residual phase-field. The smooth residual phase-field was estimated using a low-pass filter with a narrowed tapered cosine filter (a Tukey filter with an FWHM of 58%). Hence, the final signal was rotated approximately along the real axis, subject to the smoothness constraints.\n\nHaving the magnitude and complex data for each dataset, denoising was applied using different approaches prior to any pre-processing to minimise potential changes in statistical properties of the raw data due to interpolations (Veraart et al., 2016b). For denoising, we used the following four algorithms:\n\n- **Denoising in the magnitude domain**: i) The Non-Local Means (**NLM**) (Buades et al., 2005) was applied as an exemplar of a simple non-linear filtering method adapted from traditional signal pre-processing. We used the default implementation in DIPY (Garyfallidis et al., 2014), where each dMRI volume is denoised independently. ii) The Marchenko-Pastur PCA (MPPCA) (denoted as **|MPPCA|** throughout the text) (Cordero-Grande et al., 2019; Veraart et al., 2016b), reflecting a commonly used approach that performs PCA over image patches and uses the MP theorem to identify noise components from the eigenspectrum. We used the default MrTrix3 implementation (Tournier et al., 2019).\n\n- **Denoising in the complex domain**: i) MPPCA applied to complex data (rotated along the real axis), denoted as **MPPCA***. We applied the MrTrix3 implementation of the magnitude MPPCA to the complex data rotated to the real axis (we found that this approach was more stable in terms of handling phase images and achieved better denoising, compared to the MrTrix3 complex MPPCA implementation). ii) The **NORDIC** algorithm (Moeller et al., 2021a), which also relies on the MP theorem, but performs variance spatial normalisation prior to noise component identification and filtering, to ensure noise stationarity assumptions are fulfilled.\n\nAll data, both raw and their four denoised versions, underwent the same pre-processing steps for distortion and motion correction (Sotiropoulos et al., 2013b) using an in-house pipeline (Mohammadi-Nejad et al., 2019). To avoid confounds from potential misalignment in the distortion-corrected diffusion native space obtained from each approach, we chose to compute a single susceptibility-induced off-resonance fieldmap using the raw data for each of the Datasets A, B and C; and then use the corresponding fieldmap for all denoising approaches in each dataset so that the reference native space stays the same for each of A, B and C. Note that differences between fieldmaps before and after denoising are small anyway, as the relatively high SNR b = 0 s/mm2 images are used to estimate them. But these small differences can cause noticeable misalignments between methods and confounds when attempting quantitative comparisons, which we avoid here using our approach. Hence, for each of the Datasets A, B and C, the raw blip-reversed b = 0 s/mm2 were used in FSL’s topup to generate a fieldmap (Andersson and Skare, 2002). This was then used into individual runs of FSL’s eddy for each approach (Andersson and Sotiropoulos, 2016) that applied the common fieldmap and performed corrections for eddy current and subject motion in a single interpolation step. FSL’s eddyqc (Bastiani et al.,2019) was used to generate quality control (QC) metrics, including SNR and angular CNR for each b value. The same T1w image was used within each dataset. A linear transformation estimated using with boundary-based registration (Greve and Fischl, 2009) was obtained from the corrected native diffusion space to the T1w space. The T1w image was skull-stripped and non-linearly registered to the MNI standard space allowing further analysis. Masks of white and grey matter were obtained from the T1w image using FSL’s FAST (Jenkinson et al., 2012) and they were aligned to diffusion space.",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_diffusion",
+          "mri_structural"
+        ],
+        "sessions": [
+          "1p5mm",
+          "2mm",
+          "0p9mm"
+        ],
+        "size": 31235339293,
+        "subjects": [
+          "01"
+        ],
+        "tasks": [],
+        "totalFiles": 65
+      },
+      "tag": "1.0.8"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": "https://doi.org/10.1101/2023.07.24.550348",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "Denoising diffusion MRI (dMRI)",
+      "studyLongitudinal": "Same subject - Different SNR/resolution"
+    },
+    "publishDate": "2023-12-15T18:13:07.099Z"
+  },
+  "source": "openneuro"
+}

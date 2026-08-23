@@ -1,0 +1,111 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004706",
+  "payload": {
+    "created": "2023-08-16T20:56:12.789Z",
+    "id": "ds004706",
+    "latestSnapshot": {
+      "created": "2023-08-22T12:13:59.000Z",
+      "description": {
+        "Authors": [
+          "Joseph H. Rudoler",
+          "Matthew R. Dougherty",
+          "Brandon S. Katerman",
+          "James P. Bruska",
+          "Woohyeuk Chang",
+          "David J. Halpern",
+          "Nicholas B. Diamond",
+          "Michael J. Kahana"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004706.v1.0.0",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Spatial memory and non-invasive closed-loop stimulus timing",
+        "ReferencesAndLinks": null
+      },
+      "readme": "This dataset contains behavioral events and electrophysiological recordings from an experiment run in the Computational Memory Lab at the University of Pennsylvania from 2021-2022 with funding from U.S. Army Medical Research and Development Command (USAMRDC) through the Medical Technology Enterprise Consortium (MTEC) project MTEC-20-06-MOM-013, \"Restoring memory with task-independent semi-chronic closed-loop direct brain stimulation and non-invasive closed-loop stimulus timing optimization\". This experiment constitutes the non-invasive portion of the project, which targeted memory improvement through classifier-based stimulus presentation. \n\nThe experiment is a hybrid spatial-navigation and free recall paradigm in which subjects play the role of a courier delivering items to stores across a virtual town, and are subsequently asked to recall their deliveries. There are two phases - \"read-only\" and \"closed-loop\". In read-only sessions, there is no classifier-based timing manipulation and participants simply perform the task in order to generate training data for the models used in subsequent closed-loop sessions. After collecting sufficient training data, classifier models predict recall in closed-loop sessions and the stimulus presentation is timed to coincide with predicted good or bad memory encoding.   \n\nTwo publications are based on this experiment:\n[\"Neural correlates of memory in an immersive spatiotemporal context\"](https://www.biorxiv.org/content/10.1101/2022.11.30.518606) studies the navigation and memory dynamics in read-only sessions, and \"Optimizing learning via real-time neural decoding\" (link pending) explores the results of the closed-loop manipulation.\n\nNote: memory dynamics in closed-loop sessions are potentially influenced by the closed-loop timing manipulation, and so may be biased in a way that precludes them from analyses of general mnemonic function. The read-only sessions, however, were not subject to this manipulation and therefore can be used for studying spatial and episodic memory (as in the first paper mentioned above).\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "eeg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8"
+        ],
+        "size": 1426144562699,
+        "subjects": [
+          "LTP448",
+          "LTP449",
+          "LTP451",
+          "LTP453",
+          "LTP454",
+          "LTP455",
+          "LTP457",
+          "LTP458",
+          "LTP462",
+          "LTP463",
+          "LTP468",
+          "LTP470",
+          "LTP473",
+          "LTP474",
+          "LTP475",
+          "LTP476",
+          "LTP477",
+          "LTP478",
+          "LTP479",
+          "LTP480",
+          "LTP481",
+          "LTP484",
+          "LTP486",
+          "LTP487",
+          "LTP488",
+          "LTP491",
+          "LTP493",
+          "LTP494",
+          "LTP495",
+          "LTP496",
+          "LTP497",
+          "LTP498",
+          "LTP499",
+          "LTP500"
+        ],
+        "tasks": [
+          "NiclsCourierClosedLoop",
+          "NiclsCourierReadOnly"
+        ],
+        "totalFiles": 2711
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": null,
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": "U.S. Army Medical Research and Development Command (USAMRDC) through the Medical Technology Enterprise Consortium (MTEC)",
+      "modalities": [
+        "eeg"
+      ],
+      "species": "Human",
+      "studyDesign": null,
+      "studyDomain": "episodic memory, spatial memory",
+      "studyLongitudinal": null
+    },
+    "publishDate": "2023-08-23T16:36:12.017Z"
+  },
+  "source": "openneuro"
+}

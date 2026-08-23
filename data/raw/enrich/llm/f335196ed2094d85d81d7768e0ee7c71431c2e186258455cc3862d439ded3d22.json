@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:f335196ed2094d85d81d7768e0ee7c71431c2e186258455cc3862d439ded3d22",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "predict hospital-onset infections for these pathogens",
+        "label": "hospital-onset infection"
+      },
+      {
+        "evidence": "nosocomial acquisition of a wide range of drug-susceptible and drug-resistant pathogens",
+        "label": "nosocomial acquisition of drug-susceptible and drug-resistant pathogens"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "infectious_disease"
+    ],
+    "id": "physionet:hospital-onset-infection",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "electronic health record (EHR) information",
+        "value": "EHR"
+      },
+      {
+        "evidence": "de-identified and curated patient-level dataset",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "All adult inpatients admitted to the Mass General Brigham health system between May 2015 and July 2024",
+    "summary": "Matched case/control patient-level dataset derived from health system electronic health records, covering eleven pathogens, with environmental and patient analyses of colonization pressure and prior antibiotic exposure. Each observation is a hospitalization."
+  },
+  "prompt_version": "v1"
+}

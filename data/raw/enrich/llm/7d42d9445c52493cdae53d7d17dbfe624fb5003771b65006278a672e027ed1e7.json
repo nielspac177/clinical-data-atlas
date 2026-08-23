@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:7d42d9445c52493cdae53d7d17dbfe624fb5003771b65006278a672e027ed1e7",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Breast Invasive Carcinoma",
+        "label": "Breast Invasive Carcinoma"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "tcia:tcga-brca",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "MG MR SR",
+        "value": "MRI"
+      },
+      {
+        "evidence": "MG MR SR",
+        "value": "mammography"
+      },
+      {
+        "evidence": "Genomic Data Commons (GDC) Data Portal",
+        "value": "genomics"
+      }
+    ],
+    "population": "Human participants with breast invasive carcinoma enrolled in The Cancer Genome Atlas (139 participants per source metadata)",
+    "summary": "Breast imaging from patients in The Cancer Genome Atlas, matched by patient identifier to clinical, genetic and pathological data in the Genomic Data Commons, supporting genotype-phenotype and outcome correlation studies. Images largely from routine care."
+  },
+  "prompt_version": "v1"
+}

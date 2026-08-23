@@ -1,0 +1,41 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:b3bed9c8a1f623e3110a327a48e44ce84162e499a77e49ebf429e053f01a86c6",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Lung Squamous Cell Carcinoma",
+        "label": "Lung Squamous Cell Carcinoma"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "pulmonology"
+    ],
+    "id": "tcia:tcga-lusc",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "CT NM PT",
+        "value": "CT"
+      },
+      {
+        "evidence": "CT NM PT",
+        "value": "PET"
+      },
+      {
+        "evidence": "CT NM PT",
+        "value": "SPECT"
+      },
+      {
+        "evidence": "Genomic Data Commons (GDC) Data Portal",
+        "value": "genomics"
+      }
+    ],
+    "population": "Lung squamous cell carcinoma patients drawn from The Cancer Genome Atlas; imaging mostly acquired during routine care rather than a controlled study (37 participants per source facts).",
+    "summary": "Radiology images of lung squamous cell carcinoma patients, matched by patient identifier to TCGA clinical, genetic and pathological data for correlating genotype, radiological phenotype and patient outcomes."
+  },
+  "prompt_version": "v1"
+}

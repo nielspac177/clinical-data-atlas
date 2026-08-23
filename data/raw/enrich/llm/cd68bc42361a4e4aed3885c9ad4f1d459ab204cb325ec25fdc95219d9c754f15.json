@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:cd68bc42361a4e4aed3885c9ad4f1d459ab204cb325ec25fdc95219d9c754f15",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "patients who underwent nephrectomy for kidney tumors",
+        "label": "kidney tumor"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "nephrology_urology"
+    ],
+    "id": "tcia:c4kc-kits",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "multi-phase CT imaging",
+        "value": "CT"
+      },
+      {
+        "evidence": "comprehensive clinical outcomes",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "300 patients who underwent nephrectomy for kidney tumors at the center between 2010 and 2018; 210 selected at random as the challenge training set.",
+    "summary": "KiTS19 challenge dataset of multi-phase contrast-enhanced CT, kidney and tumor segmentation masks, and clinical outcomes, supporting segmentation benchmarking and study of imaging biomarkers and tumor morphometry."
+  },
+  "prompt_version": "v1"
+}

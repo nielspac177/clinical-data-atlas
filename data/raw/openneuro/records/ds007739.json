@@ -1,0 +1,73 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007739",
+  "payload": {
+    "created": "2026-05-01T23:01:08.944Z",
+    "id": "ds007739",
+    "latestSnapshot": {
+      "created": "2026-05-02T05:46:39.000Z",
+      "description": {
+        "Authors": [
+          "Aneri Bhatt",
+          "Kwok-Shing Chan",
+          "Oakley Martin",
+          "Hansol Lee",
+          "Hong-Hsi Lee",
+          "Susie Y. Huang"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007739.v1.0.0",
+        "Funding": [
+          "U24NS137077"
+        ],
+        "HowToAcknowledge": "Please cite the dataset DOI and our article: Ramos-Llordén, G., Lee, HH., Davids, M. et al. Ultra-high gradient connectomics and microstructure MRI scanner for imaging of human brain circuits across scales. Nat. Biomed. Eng 10, 309?324 (2026). https://doi.org/10.1038/s41551-025-01457-x.",
+        "License": "CC0",
+        "Name": "Connectome 2.0 Diffusion MRI Training Datasets (in vivo)",
+        "ReferencesAndLinks": [
+          "https://connectome2.martinos.org/",
+          "https://github.com/Connectome20",
+          "https://doi.org/10.18112/openneuro.ds006181.v1.0.0"
+        ]
+      },
+      "readme": "This training repository contains 2 defaced datasets of in vivo diffusion MRI data acquired with a 72-channel in vivo head coil on the Connectome 2.0 scanner (Siemens MAGNETOM Connectom.X, Erlangen, Germany) at the MGH/HST Athinoula A. Martinos Center for Biomedical Imaging. This 3T MRI system is equipped with ultra-high gradients (gradient strength up to 500 mT/m) and advanced slew rates (slew rate up to 600 mT/m/s) for high fidelity microstructural imaging.\n\nThese defaced training datasets include:\n\n- Raw diffusion weighted images (DWIs)\n- Metadata (b values, b vectors, json files)\n- T1-weighted anatomical scans\n\nAll diffusion data was acquired with the following:\n\n- Pulse width: 6 ms\n\n- Diffusion times (D): 13 ms and 30 ms\n\n- At D= 13 ms, b values = 50, 350, 800, 1500, 2400, 3450, 4750, 6000 s/mm^2\n\n- At D = 30 ms, b values = 200, 950, 2300, 4250, 6750, 9850, 13500, 17800 s/mm^2\n\n- Number of directions: 32 for b < 2400 s/mm^2; 64 for b ≥ 2400 s/mm^2\n\n- Echo time: 53 ms\n\n- Voxel size: 2 mm isotropic\n\n- GRAPPA = 2\n\n- SMS = 2\n\nOur pre-processing pipeline for distribution can be found on our Connectome 2.0 GitHub page: https://github.com/Connectome20/Diffusion-PreProcessing-Pipeline-for-Distribution.\n\nOur first sample in vivo dataset (sub-01) includes raw and pre-processed files for reference, and can be found here: https://doi.org/10.18112/openneuro.ds006181.v1.0.0.\n\nFor general information, visit our website: https://connectome2.martinos.org/.\n\nData collection and dissemination are in strict compliance with Mass General Brigham institutional policies on subject privacy, HIPAA, and Institutional Review Board (IRB) requirements.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_diffusion",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 1280054769,
+        "subjects": [
+          "02",
+          "03"
+        ],
+        "tasks": [],
+        "totalFiles": 47
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2026-05-02T05:48:54.898Z"
+  },
+  "source": "openneuro"
+}

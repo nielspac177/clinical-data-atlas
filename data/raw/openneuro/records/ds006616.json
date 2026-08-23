@@ -1,0 +1,102 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006616",
+  "payload": {
+    "created": "2025-09-02T13:43:05.373Z",
+    "id": "ds006616",
+    "latestSnapshot": {
+      "created": "2026-06-08T12:13:55.000Z",
+      "description": {
+        "Authors": [
+          "Johannes Roth",
+          "Kendrick Kay",
+          "Yoichi Miyawaki",
+          "Martin N. Hebart"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006616.v1.0.0",
+        "Funding": [
+          "Max Planck Society research group grant to M.N.H., co-funded by the European Union (ERC Starting Grant COREDIM ERC-StG-2021-101039712).",
+          "LOEWE Start Professorship to M.N.H. (Hessian Ministry of Higher Education, Science, Research, and the Arts).",
+          "Deutsche Forschungsgemeinschaft (DFG) Germany’s Excellence Strategy (EXC 3066/1 'The Adaptive Mind', Project No. 533717223).",
+          "JSPS KAKENHI (25H01138, 20H00600, 18KK0311, 17H01755) to Y.M.",
+          "JST PRESTO (JPMJPR1778) to Y.M.",
+          "Yamada Science Foundation to Y.M.",
+          "The Naito Foundation to Y.M.",
+          "Murata Science and Education Foundation to Y.M."
+        ],
+        "HowToAcknowledge": "Please cite the accompanying manuscript 'The scope and limits of fast stimulus presentation rates for condition-rich fMRI studies of the visual system' (Roth, Kay, Miyawaki, Hebart) and reference this dataset as the object experiment.",
+        "License": "CC0",
+        "Name": "fast fMRI - object dataset",
+        "ReferencesAndLinks": [
+          "Manuscript: Evaluating fast stimulus presentation rates for event-related fMRI studies of the human visual system (Roth, Kay, Miyawaki, Hebart)",
+          "PsychoPy2: https://www.psychopy.org/",
+          "Nilearn: https://nilearn.github.io/",
+          "Nipype: https://nipype.readthedocs.io/",
+          "FSL: https://fsl.fmrib.ox.ac.uk/fsl/fslwiki",
+          "MRIQC: https://mriqc.readthedocs.io/",
+          "scikit-learn: https://scikit-learn.org/",
+          "rsatoolbox: https://rsatoolbox.readthedocs.io/",
+          "Neurosynth: https://neurosynth.org/",
+          "Harvard-Oxford atlas (FSL)",
+          "THINGS database: https://things-initiative.org/",
+          "fLoc localizer: https://osf.io/6vgb6/"
+        ]
+      },
+      "readme": "# Data of main experiment for the fast fMRI project\n\nThis BIDS dataset contains data collected at 7T in 4 subjects, over three sessions each. Each subject was shown naturalistic image stimuli from the THINGS dataset at three different presentation rates (0.5s, 1s, 4s), with a fixed (0.35s) or relative (75% of SOA) stimulus duration. Each run used one SOA and one duration type. Runs included a 6s ramp-up and 10s cool-down. Participants performed a fixation color-change task. TR=0.5s.\n\nWe used a total of 642 stimuli, with 55 test stimuli that were shown 6 times in the 4s condition, 24 times in the 1s condition and 48 times in the 0.5s condition. The remaining 587 stimuli were shown 1 time, 4 times and 8 times in the 4s, 1s and 0.5s conditions, respectively.\n\n## Notes\nSession 1 additionally contains a structural T1w image and a whole-brain single-volume reference EPI (in `func`). Sessions 2 and 3 contain two fLoc localizer runs each (in `func`). After each functional run, short PA EPI fieldmap data were collected for distortion correction. JSON sidecars include the presentation rate per run (key: `SOA`).\n\n`participants.tsv` contains which subjects used fixed vs relative durations; this can also be inferred from the stimulus durations in the `events.tsv` files.\n\n## Acquisition summary\n- TR: 0.5s, TE: 22ms, FA: 40°, multiband: 4, GRAPPA: 2\n- 40 interleaved slices; partial FoV covering occipital and temporal cortex\n- Fixation color-change task (0.5s red flashes, random 2–7s intervals)\n- No null trials\n\n## Derivatives\n- `derivatives/basic_preproc_v2` custom preprocessing (motion correction, distortion correction with PA EPIs, alignment to T1w and MNI). Outputs include space-T1w and space-MNI preprocessed BOLD, masks, and transforms.\n- `derivatives/floc_preprocessed` preprocessing outputs and events for fLoc runs.\n- `derivatives/single_trial_betas` single-trial beta estimates (LSS) and analysis outputs.\n- `derivatives/decoding` pairwise decoding accuracy maps per SOA.\n- `derivatives/spose_rsa_sl` searchlight RSA (SPoSE/object-dimensions) results.\n- `derivatives/localizer` localizer-based maps/ROIs derived from the main experiment.\n- `derivatives/atlases` auxiliary atlases and masks (Harvard-Oxford, Neurosynth LOC, object parcels).\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "02",
+          "03",
+          "01"
+        ],
+        "size": 112454378679,
+        "subjects": [
+          "02",
+          "03",
+          "04",
+          "01"
+        ],
+        "tasks": [
+          "wbref",
+          "fLoc",
+          "fixation"
+        ],
+        "totalFiles": 624
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        20,
+        20,
+        20,
+        20
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2026-06-16T09:15:24.758Z"
+  },
+  "source": "openneuro"
+}

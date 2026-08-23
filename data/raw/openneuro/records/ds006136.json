@@ -1,0 +1,87 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006136",
+  "payload": {
+    "created": "2025-04-16T16:28:47.452Z",
+    "id": "ds006136",
+    "latestSnapshot": {
+      "created": "2026-01-29T22:08:24.000Z",
+      "description": {
+        "Authors": [
+          "Vladimir Omelyusik",
+          "Tyler S. Davis",
+          "Satish S. Nair",
+          "Behrad Noudoost",
+          "Patrick Hackett",
+          "Elliot H. Smith",
+          "Shervin Rahimpour",
+          "John D. Rolston",
+          "Bornali Kundu"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006136.v1.0.1",
+        "Funding": [
+          "K12 grant from the Neurosurgery Career Development Award, parent award from the NINDS as well as a Neurosurgery Research Education Fund award",
+          "NIH/NINDS career development award to JDR (K23 NS114178)",
+          "NIMH MH122023 and NSF-OAC 2417875 (SSN)"
+        ],
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "OWM-Dataset",
+        "ReferencesAndLinks": []
+      },
+      "readme": "# OWM-Dataset\n\n## Description\nThe dataset contains processed intracranial EEG recordings from frontal (LMFG, RMFG) and temporal (LMTG, RMTG) areas of 13 subjects (epilepsy patients) while they performed a load-3 object working memory task. Please see the associated publication (Paper): https://doi.org/10.1016/j.neuroimage.2026.121718\n\n## Data structure\n\n### Included trials\nThe dataset includes trials which were used for the final analyses (i.e., after artifact rejection; see the Methods section of the Paper for a full description of preprocessing procedures). Note that since some artifact rejection procedures were performed at the single-trial level, trial indexes are not matched across channels even for the same subject (i.e., trial 1 of channel 1 may not correspond to trial 1 of channel 2) and have to be read separately. The sourcedata/ folder contains per-subject trial indexes for trial matching.\n\n### Trial structure\nEach trial is 6498 ms long (1000 ms of fixation, 1500 ms of encoding and 3998 ms of delay). \n\n### Storage format\nTo comply with the .edf format, trials for every channel were concatenated into a single one-dimensional array. Due to a different number of trials across channels, each array was padded with 0s on the right, ensuring the same data length for all channels within a subject. The total number of concatenated trials per channel and the padding length are recorded in the \"_channels.tsv\" file for each subject.\n\n### Performance\nThe sourcedata/ folder contains performance results for every subject. Rows of each table correspond to trials (the order matches LFP recordings). Columns represent whether the subject selected the presented stimuli during the search period (0 = no, 1 = yes).\n\n## Reading the data and replicating the results\nThe Paper repository (https://github.com/V-Marco/FT-bursting-WM) includes a Python function for reading the data, performing trial matching, appending performance information, and representing the recordings as a 2D table. The repository also includes examples on replicating the main figures. ",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "ieeg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [
+          "02",
+          "01"
+        ],
+        "size": 299778229,
+        "subjects": [
+          "P3",
+          "P1",
+          "MU5",
+          "P4",
+          "P2",
+          "P6",
+          "MU4",
+          "MU1",
+          "MU6",
+          "MU2",
+          "P7",
+          "P5",
+          "MU3"
+        ],
+        "tasks": [
+          "Object Working Memory"
+        ],
+        "totalFiles": 87
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "ieeg"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2026-01-29T22:09:26.200Z"
+  },
+  "source": "openneuro"
+}

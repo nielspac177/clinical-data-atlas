@@ -1,0 +1,124 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds008099",
+  "payload": {
+    "created": "2026-07-04T18:48:44.938Z",
+    "id": "ds008099",
+    "latestSnapshot": {
+      "created": "2026-07-04T18:51:21.000Z",
+      "description": {
+        "Authors": [
+          "[ADD AUTHORS]"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds008099.v1.0.0",
+        "Funding": [
+          "[ADD]"
+        ],
+        "HowToAcknowledge": "[ADD]",
+        "License": "CC0",
+        "Name": "Pizza-topping meat/vegetarian word categorization with consumer EEG (EMOTIV EPOC X)",
+        "ReferencesAndLinks": [
+          "[ADD]"
+        ]
+      },
+      "readme": "# Meat or vegetarian? An EEG and behavioural dataset from a colour-congruency food-word categorization task\n\nConsumer EEG (EMOTIV EPOC X, 14 channels, 128 Hz) from 30 participants during a\nmeat/vegetarian categorization of pizza-topping words (\"IS IT MEAT?\"), preceded by a\nshort eyes-open/eyes-closed resting baseline.\n\n## Task\nEach trial presents a topping word. Participants press M for meat items and V for\nvegetarian/cheese items, and were instructed to prioritise accuracy over speed (the task\nwas not speeded). Word ink colour is neutral (black), congruent, or incongruent with the\nitem's category, in randomized blocks (colour-congruency manipulation).\n\n## Released signal per participant\n- Fixed 20 s eyes-open + 20 s eyes-closed resting baseline, then the categorization block.\n- 14 EEG channels only (AF3 F7 F3 FC5 T7 P7 O1 O2 P8 T8 FC6 F4 F8 AF4). Device auxiliary\n  channels dropped; per-channel mean contact quality preserved in channels.tsv.\n- Recording timestamps removed (neutral placeholder date in EDF headers). All recordings\n  released at 128 Hz.\n\n## Events\nonset/duration/trial_type plus stimulus fields (stim_name, stim_id, stim_category,\nstim_class) and response fields (response, response_key, response_time, accuracy).\nResponses derive from the key CODE pressed (M=77 meat, V=86 vegetarian). See\ntask-foodword_events.json.\n\n## Notes for reuse\n- Behavioral accuracy is moderated by self-rated English proficiency (English word\n  stimuli); english_level_1to7 is provided as a covariate. Per-participant mean accuracy\n  ranges 0.50-0.98.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "eeg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [],
+        "size": 39821095,
+        "subjects": [
+          "12",
+          "19",
+          "15",
+          "25",
+          "10",
+          "23",
+          "02",
+          "01",
+          "14",
+          "29",
+          "06",
+          "20",
+          "26",
+          "30",
+          "17",
+          "07",
+          "08",
+          "27",
+          "21",
+          "28",
+          "03",
+          "11",
+          "24",
+          "05",
+          "22",
+          "13",
+          "16",
+          "18",
+          "09",
+          "04"
+        ],
+        "tasks": [
+          "foodword"
+        ],
+        "totalFiles": 188
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        35,
+        37,
+        36,
+        32,
+        38,
+        27,
+        20,
+        20,
+        28,
+        29,
+        27,
+        34,
+        22,
+        26,
+        40,
+        25,
+        37,
+        40,
+        25,
+        32,
+        31,
+        24,
+        26,
+        30,
+        24,
+        25,
+        38,
+        24,
+        30,
+        23
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "eeg"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "Cognitive and consumer neuroscience: EEG, behavioural performance, and colour-word congruency during food-word categorization.",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2026-07-04T18:51:33.202Z"
+  },
+  "source": "openneuro"
+}

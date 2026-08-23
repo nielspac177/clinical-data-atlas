@@ -1,0 +1,40 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:9d9d6935c8b2d8cf6713b005f8318b141c22f3d030592706416080d7c351c37b",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "chemo-refractory high grade serous ovarian cancer (HGSOC)",
+        "label": "high grade serous ovarian cancer (HGSOC)"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "tcia:ptrc-hgsoc",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Digital images of the H slides were recorded using a ScanScope AT Slide Scanner",
+        "value": "pathology"
+      },
+      {
+        "evidence": "we have generated proteomic and genomic",
+        "value": "proteomics"
+      },
+      {
+        "evidence": "whole genome sequencing",
+        "value": "genomics"
+      },
+      {
+        "evidence": "RNA sequencing",
+        "value": "transcriptomics"
+      }
+    ],
+    "population": "tumor biopsies from high grade serous ovarian cancer patients annotated for sensitivity to platinum chemotherapy",
+    "summary": "Proteomic and genomic profiling of high grade serous ovarian cancer tumor biopsies from FFPE tissue, annotated for platinum chemotherapy sensitivity, with digitized H-stained bookend pathology slide images shared in this collection."
+  },
+  "prompt_version": "v1"
+}

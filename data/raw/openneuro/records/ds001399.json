@@ -1,0 +1,97 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds001399",
+  "payload": {
+    "created": "2018-06-13T20:12:03.058Z",
+    "id": "ds001399",
+    "latestSnapshot": {
+      "created": "2022-06-22T19:37:32.000Z",
+      "description": {
+        "Authors": [
+          "Joset A. Etzel",
+          "Debbie Yee",
+          "Bidhan Lamichhane",
+          "Mitchell Jeffers",
+          "Elisa Di Rosa",
+          "Jenny Crawford",
+          "Hongyu An",
+          "Todd S. Braver"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds001399.v2.0.0",
+        "Funding": [
+          "This research was supported by NIH/NIA 5R01AG070139-02 to Tammy English, Renee J. Thompson, and Todd S. Braver.",
+          "This research was supported by NIH R37MH066078 and NIH R21AG058206 to Todd S. Braver.",
+          "This research was supported by NIH NINDS 1P30NS098577 to Hongyu An.",
+          "Image acquisition was partially supported by Mallinckrodt Institute of Radiology, Washington University in St. Louis."
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "multibandACQtests",
+        "ReferencesAndLinks": [
+          "https://sites.wustl.edu/ccplab/",
+          "https://sites.wustl.edu/dualmechanisms/",
+          "https://www.mir.wustl.edu/research/core-resources/center-for-clinical-imaging-research/"
+        ]
+      },
+      "readme": "# Introduction\nThis dataset has files from two different instances of task fMRI sequence testing. The first was in 2018 (sub-MOCCAG001, sub-MOCCAG002, sub-MOCCAG003); the second was in 2022 (sub-777, sub-888, sub-3252). The same scanner (a 3T Siemens Prisma at the Washington University in St. Louis [CCIR](https://www.mir.wustl.edu/research/core-resources/center-for-clinical-imaging-research/)) and 32-channel head coil was used for all sessions, but the participants, tasks, and acquisition sequences varied between the two.\n\n## 2022 tests (sub-777, sub-888, sub-3252)\nThree participants each performed four runs of the [DMCC](https://doi.org/10.1162/jocn_a_01768) Cued task-switching (Cuedts) task, [Proactive version](https://sites.wustl.edu/dualmechanisms/task-illustrations/#jp-carousel-771), with each run using a different acquisition sequence. In the Proactive Cuedts task an incentive (extra payment) is possible on subset of the trials, indicated by the Cue color; participants must respond to the trial quickly and accurately to receive the incentive. Multiple control analyses are possible with this task, including button-pressing, reward (Incentive > NoIncentive), and cognitive control load (Incongruent > Congruent).\n\nThe four runs were collected in the same order for all participants: acq-2p4MB4FA70, acq-2p4MB4FA20, acq-2p4MB2FA83, and acq-3p0MB4FA66. All runs used AP encoding.\n\n- 2p4MB4FA70: 2.4 mm isotropic voxels, MB4, 1.2 s TR, AP, 70 degree FA. This acquisition is the **\"baseline\"** since it is close to that used in the [DMCC project](https://sites.wustl.edu/dualmechanisms/), though DMCC uses a different Prisma scanner.\n- 2p4MB4FA20: 2.4 mm isotropic voxels, MB4, 1.2 s TR, AP, **20 degree FA**. (\"baseline\" with FA 20)\n- 2p4MB2FA83: 2.4 mm isotropic voxels, **MB2**, **2.3 s** TR, AP, 83 degree FA (\"baseline\" with MB2, and accompanying longer TR)\n- 3p0MB4FA66: **3.0 mm** isotropic voxels, MB4, **1.0 s** TR, AP, 66 degree FA (\"baseline\" with 3.0 mm voxels, and accompanying shorter TR)\n\n\n## 2018 tests (sub-MOCCAG001, sub-MOCCAG002, sub-MOCCAG003)\nThis dataset was collected to evaluate reward-related task fMRI activity under different acquisition protocols. Reward-related activity is generally strong and robust, but located in midbrain and frontal areas (e.g., http://neurosynth.org/analyses/terms/reward/) which often suffer from poor fMRI signal quality. Protocols for improving task signal have been suggested, such as tilting acquisitions (Optimized EPI for fMRI studies of the orbitofrontal cortex. R. Deichmann, J.A. Gottfried, C. Hutton, and R. Turner. NeuroImage 19 (2003) 430–441. https://doi.org/10.1016/S1053-8119(03)00073-9), but how these interact with multiband (simultaneous multi-slice) sequences and voxel size is unclear. In this study, several healthy young adults completed multiple runs of two reward-related tasks (\"reward\" and \"delay\", see below) under different acquisition protocols.\n\nThe acquisition protocols varied in:\n\n- acquired voxel size: 2.4 or 3.0 mm isotropic (2p4 or 3p0, respectively, in file names)\n\n- slice angle: flat (typical AC alignment) or tilted (30 degree upward tilt as in Deichmann et al., 2003; see Fig. 2).\n\n- multiband factor: 2 or 4 (all runs are MB4 unless MB2 is included in the file names)\n\n\nAll scans were collected on a 3T Siemens Prisma with a 32-channel head coil, without in-plane acceleration (iPat = none). Repetition time (TR) was allowed to vary between the protocols (e.g., TR = 1 s for 3p0flat, but 1.2 for 2p4flat); see the associated .json files. Runs were collected with both A to P and P to A encoding directions (AP and PA, respectively, included in the file names).\n \n# Tasks\n## Task Description: Cued Task-Switching (Cuedts)\nEach trial of the the [DMCC](https://doi.org/10.1162/jocn_a_01768) [Cued task-switching, Proactive](https://sites.wustl.edu/dualmechanisms/task-illustrations/) task starts with a Cue indicating whether \"Attend Number\" or \"Attend Letter\" is the task for the upcoming target, as well as whether an incentive is possible on the trial (by color). Target stimuli are a letter-digit pair presented side-by-side. If the cue is \"Attend Number\", the task is to make an odd/even discrimination (press button 1 if even, button 2 if odd). If the cue is \"Attend Letter\" the task is to make a vowel/consonant discrimination (press button 1 if vowel, button 2 if consonant). Cognitive control varies with trial congruency: Incongruent trials are those in which the stimulus combination requires different responses depending on whether it is Letter or Number task (e.g., A1 or B2). Congruent trials are those in which the stimulus leads to the same response irrespective of the task (e.g., A2 or B1). \n\nFor more information about the task and [DMCC55B](https://openneuro.org/datasets/ds003465/) dataset, please see [\"The Dual Mechanisms of Cognitive Control dataset, A theoretically-guided within-subject task fMRI battery\"](http://dx.doi.org/10.1038/s41597-022-01226-4) by Joset A. Etzel, Rachel E. Brough, Michael C. Freund, Alexander Kizhner, Yanli Lin, Matthew F. Singh, Rongxiang Tang, Allison Tay, Anxu Wang, and Todd S. Braver. Scientific Data (2022). [bioRxiv preprint](https://doi.org/10.1101/2021.05.28.446178). Accompanying analysis scripts and details are at <https://osf.io/vqe92/>. \n\n\n## Task Description: \"reward\" \nThis is a cued task-switching experimental paradigm, in which participants must classify an ambiguous letter-digit target pair based on the task cue, which precedes the target. If the cue states \"Attend Letter,\" the subject must classify the letter as a vowel or consonant with a finger button press (1 or 2). If the cue states \"Attend Number,\" the subject must classify the number as odd or even with a finger button press (1 or 2). The button response mappings are counterbalanced across individuals. The dollar signs above the task cue indicate whether the subject is able to earn monetary rewards, and if the subject is fast and accurate, they will receive visual feedback after each trial as to whether they have received rewards on that trial. \n\nThe times in the _events.tsv files are the cue onset times, with Reward indicating trials in which a reward was possible and NoReward trials without possible reward. All trials are included, regardless of whether a reward was received or not, and regardless of whether the response was correct or not.\n\nTrial timing: 300 msec cue; 2650 msec probe/target (response must occur within 2000 ms, which is also duration of the probe); 5650 msec feedback.\n\n\n## Task Description: \"delay\" \nThis is a rapid event design in which rewards are available on some trials, similar to that of Jacobs, E. A., & Hackenberg, T. D.(1996). Human's choices in situations of time-based diminishing returns: effects of fixed interval duration and progressive-interval step size. Journal of the Experimental Analysis of Behavior, 59(3), 445-470.  \n\nThe times in the _events.tsv files are the trial onsets (when the colored box stimuli appeared), with Wait indicating trials in which the person must respond but no reward is possible; Reward trials are when the trial choice produced a reward. \n",
+      "summary": {
+        "dataProcessed": true,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "1",
+          "01",
+          "02"
+        ],
+        "size": 11439832778,
+        "subjects": [
+          "3252",
+          "777",
+          "888",
+          "MOCCAG001",
+          "MOCCAG002",
+          "MOCCAG003"
+        ],
+        "tasks": [
+          "CuedtsPro",
+          "reward",
+          "delay"
+        ],
+        "totalFiles": 284
+      },
+      "tag": "2.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": true,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2018-06-13T20:12:03.058Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,90 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004620",
+  "payload": {
+    "created": "2023-06-24T10:19:52.319Z",
+    "id": "ds004620",
+    "latestSnapshot": {
+      "created": "2026-04-10T09:17:46.000Z",
+      "description": {
+        "Authors": [
+          "Yue Cui",
+          "Haibin Huang",
+          "Jialu Liu"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004620.v1.0.1",
+        "Funding": [
+          "This work is supported by STI 2030 - Major Projects (No. 2021ZD0200402)"
+        ],
+        "HowToAcknowledge": "None",
+        "License": "CC0",
+        "Name": "Macaque angiography dataset",
+        "ReferencesAndLinks": [
+          "If using this dataset, please cite our paper: FFCM-MRF: An accurate and generalizable cerebrovascular segmentation pipeline on TOF-MRA",
+          "For our cerebrovascular segmentation pipeline, please refer to https://github.com/YueCui-Labs/FFCM-MRF"
+        ]
+      },
+      "readme": "This is a macaque angiography dataset obtained from the Brainnetome Center, Chinese Academy of Sciences Institute of Automation.\nThis dataset set is composed of 8 TOF-MRA scans, of which 4 are scanned with 3 Tesla Siemens machine and other 4 are scanned with 7 Tesla Siemens machine.\n\nPlease cite the following reference if you use this dataset:\n\nYue Cui et al. \"FFCM-MRF: An accurate and generalizable cerebrovascular segmentation pipeline on TOF-MRA\".\n\nEvery original folder (i.e. non-derivative) contains the TOF-MRA and the T1w volume of the subjects. Instead, the \"derivatives\" folder contains 4 sub-folders:\n\n1) \"manual_masks\": It contains the skull-stripped TOF-MRA volume for each subject.\n\n2) \"N4_bias_field_corrected\": for each subject, it contains the corresponding N4-bias-field-corrected skull-stripped TOF-MRA volume using ANTS.\n\n3) \"vesselness\": for each subject, it contains the corresponding vessel enhancement image for skull-stripped TOF-MRA volume.\n\n4) \"labels\": for each subject, it contains the corresponding intracranial cerebrovascular labels within skull-stripped TOF-MRA volume.\n\nFor our cerebrovascular segmentation pipeline, please refer to https://github.com/YueCui-Labs/FFCM-MRF",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural"
+        ],
+        "sessions": [
+          "20211227",
+          "20230406",
+          "20211228",
+          "20220706",
+          "20230413",
+          "20220826"
+        ],
+        "size": 684665756,
+        "subjects": [
+          "M14A",
+          "M13B",
+          "M28A",
+          "M27A",
+          "M30A",
+          "M28B",
+          "M30B",
+          "M21B"
+        ],
+        "tasks": [],
+        "totalFiles": 23
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Macaque",
+      "studyDesign": "cerebrovascular segmentation and quantification",
+      "studyDomain": "angiography, T1w",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2025-12-03T03:15:21.989Z"
+  },
+  "source": "openneuro"
+}

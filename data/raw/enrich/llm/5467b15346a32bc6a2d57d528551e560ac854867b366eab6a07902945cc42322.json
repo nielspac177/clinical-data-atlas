@@ -1,0 +1,40 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:5467b15346a32bc6a2d57d528551e560ac854867b366eab6a07902945cc42322",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Atrial Fibrillation",
+        "label": "atrial fibrillation"
+      },
+      {
+        "evidence": "Atrial Flutter",
+        "label": "atrial flutter"
+      },
+      {
+        "evidence": "Premature Atrial Contraction",
+        "label": "premature atrial contraction"
+      },
+      {
+        "evidence": "Premature Ventricular contraction",
+        "label": "premature ventricular contraction"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:icentia11k-continuous-ecg",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "continuous raw electrocardiogram (ECG) signals",
+        "value": "ECG"
+      }
+    ],
+    "population": "11 thousand patients, average age of the patient is 62.2±17.4 years",
+    "summary": "Continuous single-lead raw ECG signals for representation learning, recorded with a chest-mounted probe for up to two weeks, with technologist annotations of each beat's type and rhythm."
+  },
+  "prompt_version": "v1"
+}

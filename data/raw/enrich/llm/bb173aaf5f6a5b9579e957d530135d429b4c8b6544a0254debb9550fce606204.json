@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:bb173aaf5f6a5b9579e957d530135d429b4c8b6544a0254debb9550fce606204",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "3D pathology dataset of prostate cancer",
+        "label": "prostate cancer"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "nephrology_urology"
+    ],
+    "id": "tcia:pca_bx_3dpathology",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "3D pathology dataset of prostate cancer",
+        "value": "pathology"
+      },
+      {
+        "evidence": "the clinical data for patient outcomes (biochemical recurrence)",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "50 patient cases with prostate biopsies and biochemical recurrence outcomes",
+    "summary": "Raw and fused 3D open-top light-sheet microscope images of prostate biopsies with H&E-analog staining, synthetic CK8 immunofluorescence, 3D gland segmentation masks, cancer-enriched region coordinates, and clinical biochemical recurrence outcomes."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,76 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006123",
+  "payload": {
+    "created": "2025-04-15T09:04:17.116Z",
+    "id": "ds006123",
+    "latestSnapshot": {
+      "created": "2026-04-04T06:01:52.000Z",
+      "description": {
+        "Authors": [
+          "Guillaume J.-P.C. Becq",
+          "Olivier Montigon",
+          "Sarvenaz Keshmiri",
+          "Aurélien Delphin",
+          "Paul Galloux",
+          "Hervé Mathieu",
+          "Benjamin Lemasson",
+          "Emmanuel L. Barbier"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006123.v1.0.3",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "2024Phantom3D",
+        "ReferencesAndLinks": [
+          "https://doi.org/10.5281/zenodo.15211130",
+          "https://github.com/gjpcbecq/phantom3D.git"
+        ]
+      },
+      "readme": "# 2024Phantom3D\nAcquisitions of a 3D phantom defined by a 3D printed system of markers of an anatomical coordinate system. This enables to validate the acquisition process and export data into NIfTI format without right-left errors. See publication for details.  \n\nData collected by: Guillaume J.-P. C. Becq (1), Olivier Montigon (2), Sarvenaz Keshmiri (2, 3), Aurélien Delphin (2), Paul Galloux (2), Hervé Mathieu (2), Benjamin Lemasson (4), Emmanuel L. Barbier (2, 4)\n(1) Univ. Grenoble Alpes, CNRS, Grenoble INP, Gipsa-lab, UMR 5216, Grenoble, France\n(2) Univ. Grenoble Alpes, Inserm, CHU Grenoble Alpes, CNRS, IRMaGe, 38000, Grenoble, France\n(3) Univ. Grenoble Alpes, Inserm, UA07 Synchrotron Radiation for Biomedicine, Grenoble, France\n(4) Univ. Grenoble Alpes, Inserm, U1216, Grenoble Institut Neurosciences, Grenoble, France\n\nAcquisitions done from 2024-05-13 to 2024-11-20 \n\n## sub-1\n- sub-1_ses-1: acquisitions in the 4.7 T MRI scanner for small animals \n- sub-1_ses-2: acquisitions in the microCT scanner for small animals\n- sub-1_ses-3: acquisitions in the portal camera images\n- sub-1_ses-4: acquisitions in the 3.0 T MRI scanner for human - phantom quadruped head first prone, acquisition biped head first prone. \n- sub-1_ses-5: acquisitions in the 3.0 T MRI scanner for human - phantom biped head first supine, acquisition biped head first supine. \n\n## list of devices and specs\n- IRM petit animal: Bruker 4.7 T MRI scanner\n- x-ray microCT VivaCT40-SCANCO\n- x-ray portal camera images of the SARRP\n- IRM humain: Philip 3.0 T MRI scanner\n\n### IRM petit animal\nIRM 4.7 T (BioSpec 47/40 USR, Bruker)\n\n### x-ray microCT scanner\nmicroCT VivaCT40-SCANCO (Voltage : 70 kVp, current: 112 µA, Integration time: 200 ms, resolution : 76 µm, binning: 4, 125 proj/180°). \n\n### x-ray portal camera of the SARRP \nsee publication \"Development and implementation of EPID-based quality assurance tests for the small animal radiation research platform (SARRP)\", Akbar Anvari, Yannick Poirier, and Amit Sawant\n_The SARRP system uses a single x-ray source with a focal spots at 0.4 mm for imaging. Imaging is performed with a 1-mm Al filter and a tube kV peak (kVp) ranging from 50 to 120. The x-ray source is mounted on a rotating gantry, with a nominal source-to-isocenter distance of 35 cm. \nThe in-built EPID is mounted directly on the SARRP gantry as shown in Figure 1. The detector consists of a 0.08-mm carbon fiber on top and an x-ray-to-visible light scintillation screen (DRZ-Plus; MCI Optonix, Sedona, AZ) coupled to a 16-bit CCD camera (Flea2G 1.3 MP; FLIR Systems, Wilsonville, OR; 1280 × 960 pixels) via a 45° tilted mirror + lens (Sony ICX445; Sony Corp, Tokyo, Japan), as shown in Figure 2._\n\n### IRM humain\nPhilips Achieva 3.0T MRI Scanner (Philips 3T Achieva dStream) \nMR Systems Achieva dStream Release 5.7 2021-01-08\nNominal Magnetic Field (B0) 3.0 T\nMain operation frequency for 1H 127.73 MHz\nFrequency range 1H 127.73 MHz - 128.09 MHz\nMaximum Gradient Output: 20.0 cm - 92.0 T/s; 40.0 cm - 125.0 T/s; 50.0 cm - 156.0 T/s\n\n\n## references\n3D models for printing (.blend and .stl) are available here: \nhttps://github.com/gjpcbecq/phantom3D.git\nhttps://doi.org/10.5281/zenodo.15211130\n\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural"
+        ],
+        "sessions": [
+          "1",
+          "4",
+          "5"
+        ],
+        "size": 100651714,
+        "subjects": [
+          "1"
+        ],
+        "tasks": [],
+        "totalFiles": 24
+      },
+      "tag": "1.0.3"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Other",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "3D printed phantom",
+      "studyDesign": "",
+      "studyDomain": "Validation of acquisition",
+      "studyLongitudinal": "Longitudinal"
+    },
+    "publishDate": "2025-04-15T14:57:09.316Z"
+  },
+  "source": "openneuro"
+}

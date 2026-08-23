@@ -1,0 +1,120 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007640",
+  "payload": {
+    "created": "2026-04-08T08:34:52.785Z",
+    "id": "ds007640",
+    "latestSnapshot": {
+      "created": "2026-05-07T17:08:00.000Z",
+      "description": {
+        "Authors": [
+          "Moon-A Yoo",
+          "Dong-Uk Kim",
+          "Soo-In Choi",
+          "Min-Young Kim",
+          "Sung-Phil Kim"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007640.v1.0.1",
+        "Funding": null,
+        "HowToAcknowledge": "TBD (Paper Citation)",
+        "License": "CC0",
+        "Name": "Dataset of emotion recognition using validated video stimuli with large-scale behavioral survey and MEG recordings",
+        "ReferencesAndLinks": null
+      },
+      "readme": "# Dataset of Emotion Recognition Using Validated Video Stimuli with Large-scale Behavioral Survey and MEG Recordings\n\n## General Description\nThis dataset was developed as part of research focused on brain signal-based emotion recognition by capturing high-fidelity Magnetoencephalography (MEG) signals during induced different emotional states. The dataset is organized into three primary components: \n\n1. **Phenotype (Online Survey)**: Stored within the 'phenotype' directory, this component contains the results of a large-scale subjective emotional assessment of the set of 40 video stimuli. It includes responses from 500 participants, providing robust behavioral baseline.  \n2. **Source Data (Head Digitization)**: Located in 'sourcedata' directory, this component contains head position information measured prior to each recording session. The resulting configuration files ('.cfg') store the 3D spatial coordinates (x, y, z) for anatomical landmarks and Head Position Indicator (HPI) coils, essential for accurate co-registration. \n3. **MEG Recording**: Comprehensive MEG neural recordings from 23 participants, who viewed the same 40 validated video clips used in the online survey. These recordings enable the investigation of emotion-specific neural signal patterns and are organized into subject-specific directories (e.g., 'sub-01'). \n\nTo capture the richness of emotional experiences, we employed a multi-faceted assessment paradigm. Beyond the standard Self-Assessment Manikin (SAM) responses for Valence and Arousal, our labels include discrete emotion categories (PrEmo) and temporal highlight scene selections, providing a more granular ‘ground truth’ for affective states. \n\n## Citation\nFor a detailed description of the stimulus selection, experimental design, and data acquisition process, please refer to the publication listed below. We kindly request that any research utilizing this dataset cites the following paper: \n[Add on Reference/DOI]\n\nIn addition, please cite the OpenNeuro dataset itself using its DOI:\ndoi:10.18112/openneuro.ds007640.v1.0.0\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "meg",
+          "beh"
+        ],
+        "secondaryModalities": [],
+        "sessions": [
+          "02",
+          "01",
+          "04",
+          "03"
+        ],
+        "size": 95397936396,
+        "subjects": [
+          "12",
+          "19",
+          "15",
+          "10",
+          "23",
+          "02",
+          "01",
+          "14",
+          "06",
+          "20",
+          "17",
+          "07",
+          "08",
+          "21",
+          "03",
+          "11",
+          "05",
+          "22",
+          "13",
+          "16",
+          "18",
+          "09",
+          "04"
+        ],
+        "tasks": [
+          "High Arousal Low Valence (HALV)",
+          "High Arousal High Valence (HAHV)",
+          "Low Arousal Low Valence (LALV)",
+          "Low Arousal High Valence (LAHV)"
+        ],
+        "totalFiles": 377
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "Agency for Defense Development (ADD), Republic of Korea",
+      "modalities": [
+        "meg",
+        "beh"
+      ],
+      "species": "Human",
+      "studyDesign": "MEG recordings during viewing of validated emotional video stimuli with behavioral emotion ratings",
+      "studyDomain": "Affective Neuroengineering",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2026-04-09T00:50:31.071Z"
+  },
+  "source": "openneuro"
+}

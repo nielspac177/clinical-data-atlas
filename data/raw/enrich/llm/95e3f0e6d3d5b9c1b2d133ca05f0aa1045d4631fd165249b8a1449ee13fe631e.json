@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:95e3f0e6d3d5b9c1b2d133ca05f0aa1045d4631fd165249b8a1449ee13fe631e",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "pulmonology",
+      "other"
+    ],
+    "id": "physionet:cxr-align",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "interpret negations in chest X-ray (CXR) reports",
+        "value": "xray"
+      },
+      {
+        "evidence": "systematically modified and anonymized clinical reports",
+        "value": "clinical_notes"
+      },
+      {
+        "evidence": "derived from the MIMIC-III database",
+        "value": "EHR"
+      }
+    ],
+    "population": null,
+    "summary": "Benchmark of systematically modified chest X-ray reports derived from MIMIC-III, with negations introduced to positive findings, used to test whether vision-language models interpret negated statements correctly. Normal CXR cases are excluded."
+  },
+  "prompt_version": "v1"
+}

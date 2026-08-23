@@ -1,0 +1,31 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:9ce947a31fb42dd6ab3aacae3b7a599e1a10cc55cebc470fa9bcee3d67634486",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:symile-mimic",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "chest X-rays (CXRs)",
+        "value": "xray"
+      },
+      {
+        "evidence": "electrocardiograms (ECGs)",
+        "value": "ECG"
+      },
+      {
+        "evidence": "blood laboratory tests",
+        "value": "EHR"
+      }
+    ],
+    "population": "11,622 admissions from MIMIC-IV and MIMIC-CXR, split into training, validation and test sets with no patient overlap",
+    "summary": "Multimodal dataset derived from MIMIC-IV and MIMIC-CXR pairing a chest X-ray, an electrocardiogram, and blood lab results per admission, with patient-disjoint splits, generation code, and a trained model checkpoint."
+  },
+  "prompt_version": "v1"
+}

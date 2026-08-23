@@ -1,0 +1,85 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds002885",
+  "payload": {
+    "created": "2020-06-05T12:06:29.489Z",
+    "id": "ds002885",
+    "latestSnapshot": {
+      "created": "2020-06-24T07:29:11.000Z",
+      "description": {
+        "Authors": [
+          "Ahmet Levent Kandemir",
+          "Vladimir Litvak",
+          "Esther Florin"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds002885.v1.0.1",
+        "Funding": [
+          "Volkswagen Foundation (Lichtenberg program 89387)"
+        ],
+        "HowToAcknowledge": "Please acknowledge the authors and cite the following reference: Ahmet Levent Kandemir, Vladimir Litvak, Esther Florin, The comparative performance of DBS artefact rejection methods for MEG recordings, NeuroImage, 2020, 117057, ISSN 1053-8119, https://doi.org/10.1016/j.neuroimage.2020.117057.",
+        "License": "CC0",
+        "Name": "DBS Phantom Recordings",
+        "ReferencesAndLinks": [
+          "Kandemir, A.L., Litvak, V., Florin, E., 2020. The comparative performance of DBS artefact rejection methods for MEG recordings, NeuroImage, 2020, https://doi.org/10.1016/j.neuroimage.2020.117057."
+        ]
+      },
+      "readme": "This dataset is a part of the data used for the study: 'Kandemir, A.L., Litvak, V., Florin, E., 2020. The comparative performance of DBS artefact rejection methods for MEG recordings, NeuroImage, 2020, https://doi.org/10.1016/j.neuroimage.2020.117057.'\n\r\n\r\nPlease use the latest version of the dataset.\n \r\n\r\nFor detailed information about measurement protocol please refer to https://doi.org/10.1016/j.neuroimage.2020.117057. Additional information about CTF Phantom measurement is provided below. \r\nThe customized Matlab code for artefact rejection methods is available at:  https://gitlab.com/lkandemir/dbs-artefact-rejection.\r\n\r\n--------------\r\nCTF Phantom Measurement \r\nStimulation reference signal is captured with EEG001\r\nMovement trigger is captured with UPPT001\r\nDipole activity is captured with HADC006\r\n\r\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "coordsystem",
+          "channels",
+          "meg",
+          "14",
+          "13",
+          "02",
+          "01"
+        ],
+        "secondaryModalities": [],
+        "sessions": [],
+        "size": 21543178912,
+        "subjects": [
+          "01",
+          "02"
+        ],
+        "tasks": [
+          "DSMW",
+          "EmptyRoom",
+          "Reference",
+          "DMW"
+        ],
+        "totalFiles": 115
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        null,
+        null
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "Volkswagen Foundation",
+      "modalities": [
+        "coordsystem",
+        "channels",
+        "meg",
+        "14",
+        "13",
+        "02",
+        "01"
+      ],
+      "species": "MEG DBS Phantom",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2020-06-24T07:31:04.731Z"
+  },
+  "source": "openneuro"
+}

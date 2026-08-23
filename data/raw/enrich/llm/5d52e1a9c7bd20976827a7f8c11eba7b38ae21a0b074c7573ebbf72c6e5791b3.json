@@ -1,0 +1,43 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:5d52e1a9c7bd20976827a7f8c11eba7b38ae21a0b074c7573ebbf72c6e5791b3",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Cancer Moonshot Biobank - Ovarian Carcinoma (CMB-OV) cohort",
+        "label": "Ovarian Carcinoma"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "oncology",
+      "obstetrics_gynecology"
+    ],
+    "id": "tcia:cmb-ov",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "CT MR",
+        "value": "CT"
+      },
+      {
+        "evidence": "CT MR",
+        "value": "MRI"
+      },
+      {
+        "evidence": "de-identified radiology and histopathology imaging",
+        "value": "pathology"
+      },
+      {
+        "evidence": "Associated genomic, phenotypic and clinical data",
+        "value": "genomics"
+      }
+    ],
+    "population": "Subjects in NCI's Cancer Moonshot Biobank - Ovarian Carcinoma (CMB-OV) cohort: patients receiving standard of care cancer treatment at multiple NCI Community Oncology Research Program (NCORP) sites.",
+    "summary": "De-identified radiology and histopathology imaging from the Cancer Moonshot Biobank ovarian carcinoma cohort, with CT and MR studies. Associated genomic, phenotypic and clinical data are hosted by dbGaP and other NCI databases."
+  },
+  "prompt_version": "v1"
+}

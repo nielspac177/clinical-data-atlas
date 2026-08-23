@@ -1,0 +1,115 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003342",
+  "payload": {
+    "created": "2020-10-21T14:56:04.544Z",
+    "id": "ds003342",
+    "latestSnapshot": {
+      "created": "2020-10-21T18:19:44.000Z",
+      "description": {
+        "Authors": [
+          "Ethan Knights",
+          "Courtney Mansfield",
+          "Diana Tonin",
+          "Janak Saada",
+          "Fraser W. Smith",
+          "Stephanie Rossit"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds003342.v1.0.0",
+        "Funding": [
+          "This work was funded by grant (184/14) from the BIAL Foundation awarded to S. Rossit & F.W. Smith."
+        ],
+        "HowToAcknowledge": "Please cite: https://www.biorxiv.org/content/10.1101/2020.10.14.339606v1",
+        "License": "CC0",
+        "Name": "Hand-selective visual regions represent how to grasp 3D tools for use: brain decoding during real actions",
+        "ReferencesAndLinks": [
+          "OSF Link: https://osf.io/zxnpv/",
+          "Code Repository Link: https://osf.io/zxnpv/"
+        ]
+      },
+      "readme": "How to Acknowledge\n=======================\nPlease cite:\nKnights, E., Mansfield, C., Tonin, D., Saada, J., Smith, F., & Rossit, S. (2020). Hand-selective visual regions represent how to grasp 3D tools for use: brain decoding during real actions. bioRxiv. doi: 10.1101/2020.10.14.339606\n\nDataset Description\n========================\nThis dataset accompanies work reported in https://www.biorxiv.org/content/10.1101/2020.10.14.339606v1, consisting of structural/functional MRI acquisitions for 19 participants during independent real action and visual localiser sessions.\n\nThe /derivates directory contains Region of Interest (ROI) definitions in BrainVoyager compatible .voi files.\n\nOSF Materials\n=======================\nFor stimulus models of 3D-printable object (.stl): https://osf.io/r5x8a/\nFor localiser picture stimuli please see Stefania Bracci et al.'s repository: https://osf.io/98rxh/\nFor ROI Decoding Accuracies: https://osf.io/r5x8a/\n\nCode Repositories\n=======================\nStimulation code for the action experiment: https://osf.io/r5x8a/\nStimulation code for the localiser experiment: https://osf.io/r5x8a/\nAnalysis code for ROI Multivoxel Pattern Analysis (MVPA): https://osf.io/r5x8a/\nAnalysis code for Searchlight MVPA: https://osf.io/r5x8a/\nBIDS conversion code: https://github.com/ethanknights/BIDSConvert_HandSelectiveCortex\n\nRun Exclusion\n=====================\nDue to participant errors that were identified during offline video screening, these 2 runs should be excluded from analysis:\n- sub-DT12_ses-action_task-grasp_run1.nii.gz (Hand errors throughout)\n- sub-KH02_ses-action_task-grasp_run1.nii.gz (Eye errors throughout)\n\nInconsistent Parameters\n=======================\nSlightly different aquisition parameters were used for the following participants: \n- sub-ST28_ses-action_task-grasp_run1.nii.gz contains 2 extra volumes (6300 vs. standard 6230) meaning the final 70 volumes (2*35 slices) should be discarded.\n- sub-DT12_ses-localiser_task-localiser_run*.nii.gz \n\nBIDS Conversion\n=======================\nConverted with dcm2bids 0.4.0.1 (fork at https://github.com/jooh/Dcm2Bids)\n\nContact\n=======================\nCorresponding author: Stephanie Rossit; https://www.stephanierossit.com/contact\nAdditional contact: Ethan Knights; http://www.mrc-cbu.cam.ac.uk/people/Ethan.Knights/\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "action",
+          "localiser"
+        ],
+        "size": 7804098082,
+        "subjects": [
+          "CR09",
+          "DT12",
+          "JM15",
+          "JR24",
+          "KH02",
+          "KL04",
+          "LB28",
+          "LP12",
+          "MC17",
+          "MK14",
+          "QP18",
+          "QR30",
+          "RE29",
+          "RL17",
+          "RS06",
+          "SC13",
+          "ST28",
+          "TS12",
+          "VB04"
+        ],
+        "tasks": [
+          "grasp",
+          "localiser"
+        ],
+        "totalFiles": 676
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "https://doi.org/10.1101/2020.10.14.339606",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "Bial Foundation",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "Within-subject",
+      "studyDomain": "Perception and Action",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2020-10-21T18:17:56.268Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,114 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds001378",
+  "payload": {
+    "created": "2018-05-22T13:38:12.750Z",
+    "id": "ds001378",
+    "latestSnapshot": {
+      "created": "2018-07-18T14:04:55.000Z",
+      "description": {
+        "Authors": [
+          "Mario Mascalchi"
+        ],
+        "DatasetDOI": "",
+        "Funding": null,
+        "HowToAcknowledge": "Mascalchi M, Marzi C, Giannelli M, Ciulli S, Bianchi A, Ginestroni A, Tessa C, Nicolai E, Aiello M, Salvatore E, Soricelli A, Diciotti S. DTI histogram analysis reveals progression of pontocerebellar degeneration in SCA2. DOI: 10.1371/journal.pone.0200258\n",
+        "License": "Creative Commons Attribution 4.0 International (CC-BY 4.0)",
+        "Name": "SCA2 Diffusion Tensor Imaging",
+        "ReferencesAndLinks": []
+      },
+      "readme": "Subjects and MRI protocol\n-------------------------------------\n\nNine SCA2 patients and 16 age-matched healthy controls, were examined twice (SCA2 patients 3.6±0.7 years and controls 3.3±1.0 years apart) on the same 1.5T MRI scanner (Philips Intera, Best, The Netherlands) by acquiring: \n-\tsagittal 3D T1-weighted turbo gradient echo images [repetition time (TR) = 8.1 ms, echo time (TE) = 3.7 ms, flip angle = 8°, inversion time = 764 ms, field of view (FOV) = 256 mm × 256 mm, matrix size = 256 × 256, 160 contiguous slices, slice thickness = 1 mm];\n-\taxial diffusion-weighted images by using a single-shot echo-planar imaging sequence (TR = 9394 ms, TE = 89 ms, FOV = 256 mm × 256 mm, matrix size = 128×128, 50 slices, slice thickness = 3 mm, no gap, number of excitations = 3). Diffusion sensitizing gradients were applied along 15 non-collinear and non-coplanar directions using b-value of 0 (b0 image) and 1000 s/mm2.\n\nDefacing\n------------\n\nPydeface was used on all anatomical images to ensure de-identification of subjects.",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_diffusion",
+          "mri_structural"
+        ],
+        "sessions": [
+          "01",
+          "02"
+        ],
+        "size": 645364684,
+        "subjects": [
+          "SCA201",
+          "SCA202",
+          "SCA203",
+          "SCA204",
+          "SCA205",
+          "SCA206",
+          "SCA207",
+          "SCA208",
+          "SCA209",
+          "control01",
+          "control02",
+          "control03",
+          "control04",
+          "control05",
+          "control06",
+          "control07",
+          "control08",
+          "control09",
+          "control10",
+          "control11",
+          "control12",
+          "control13",
+          "control14",
+          "control15",
+          "control16"
+        ],
+        "tasks": [],
+        "totalFiles": 254
+      },
+      "tag": "00003"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2018-05-22T13:38:12.750Z"
+  },
+  "source": "openneuro"
+}

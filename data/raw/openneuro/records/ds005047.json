@@ -1,0 +1,111 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005047",
+  "payload": {
+    "created": "2024-03-17T02:05:00.815Z",
+    "id": "ds005047",
+    "latestSnapshot": {
+      "created": "2024-10-15T01:36:56.000Z",
+      "description": {
+        "Authors": [
+          "Panpan Chen",
+          "Chi Zhang",
+          "Bao Li",
+          "Li Tong",
+          "Linyuan Wang",
+          "Shuxiao Ma",
+          "Long Cao",
+          "Ziya Yu",
+          "Bin Yan"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005047.v1.0.7",
+        "Funding": [
+          "Key Program of National Natural Science Foundation of China (62106285)",
+          "Major Projects of Technological Innovation 2030 of China (2022ZD0208500)",
+          "National Natural Science Foundation of China（82071884）"
+        ],
+        "HowToAcknowledge": "TODO: describe how to acknowledge -- either cite a corresponding paper, or just in acknowledgement section",
+        "License": "CC0",
+        "Name": "An fMRI dataset in response to large-scale short natural dynamic facial expression videos",
+        "ReferencesAndLinks": [
+          "TODO",
+          "List of papers or websites"
+        ]
+      },
+      "readme": "Summary\n\nFacial expression is among the most natural methods for human beings to convey their emotional information in daily life. Although the neural mechanisms of facial expression have been extensively studied employing lab-controlled images and a small number of lab-controlled video stimuli, how the human brain processes natural dynamic facial expression videos still needs to be investigated. To our knowledge, this type of data specifically on large-scale natural facial expression videos is currently missing. We describe here the natural Facial Expressions Dataset (NFED), an fMRI dataset including responses to 1,320 short (3-second) natural facial expression video clips. These video clips are annotated with three types of labels: emotion, gender, and ethnicity, along with accompanying metadata. We validate that the dataset has good quality within and across participants and, notably, can capture temporal and spatial stimuli features. NFED provides researchers with fMRI data for understanding of the visual processing of large number of natural facial expression videos.\n\nData Records\n\nData Records\nThe data, which is structured following the BIDS format53, were accessible at https://openneuro.org/datasets/ds00504754. The “sub-<subID>” folders store the raw data of each participant (Fig. 2c). The pre-processed volume data are saved in the “derivatives/pre-processed_volume_data/sub-<subID>” folders (Fig. 2d), while the pre-processed surface data are saved in the “derivatives/volumetosurface/sub-<subID>” folders (Fig. 2e).\n\nStimulus. Distinct folders store the stimuli for distinct fMRI experiments: \"stimuli/face-video\", \"stimuli/floc\", and \"stimuli/prf\" (Fig. 2b). The category labels and metadata corresponding to video stimuli are stored in the \"videos-stimuli_category_metadata.tsv”. The “videos-stimuli_description.json” file describes category and metadata information of video stimuli(Fig. 2b).\n\nRaw MRI data. Each participant's folder is comprised of 11 session folders: “sub-<subID>/ses-anat”, “sub-<subID>/ses-<sesID>” (Fig. 2c). The “ses-anat” folder comprises one folder, named “anat”. The “ses-<sesID>” folder comprises “fmap”and “func” folders. A “sub-<subID>_ses-<sesID>_scans.tsv” file stores the scan information for a scan session. The task events were saved as a “sub-<subID>/func/sub-<subID>_ses-<sesID>_task-<taskID>_run-<runID>_events.tsv” file for each run. The parameter descriptions in “events.tsv” are saved in”task-face_events.json”.\n\nVolume data from pre-processing. The pre-processed volume-based fMRI data were in the folder named “pre-processed_volume_data/sub-<subID>/ses-<sesID>” (Fig. 2d). A “sub-<subID>_ses-<sesID>_task-<taskID>_space-individual_desc-volume_run-<runID>.nii” file stores the pre-processed volumes data of a run. A “sub-<subID>_ses-<sesID>_task-<taskID>_space-individual_desc-volume_mean.nii” file stores the mean of the pre-processed volume data of a session. A “sub-<subID>_ses-<sesID>_task-<taskID>_space-individual_desc-volume_run-<runID>_timeseries.tsv” file stores the head motion of participants. The explanation of head motion parameters are in the folder named “sub-<subID>_ses-<sesID>_task-<taskID>_space-individual_desc-volume_run-<runID>_timeseries.json”. The parameters of co-registration alignment for a session were stored in the folder named “sub-<subID>_ses-<sesID>_task-<taskID>_alignment”. The process of the pre-processing based on volume is stored in “pre-processed_volume_data_description.json”.\n\nSurface data from pre-processing. The pre-processed surface-based data were stored in a file named “volumetosurface/sub-<subID>/ses-<sesID>/sub-<subID>_ses-<sesID>_task-<taskID>_run-<index>_hemi-lh/rh.surfacedata.gii” for each run (Fig. 2e). The process of the pre-processing based on surface is stored in “volumetosurface_data_description.json”.\n\nFreeSurfer recon-all. The results of reconstructing the cortical surface are saved as “recon-all-FreeSurfer/sub-<subID>” folders (Fig. 2f). The process of the recon-all and the information of FreeSurfer are stored in “recon-all-freesurfer_data_description.json”.\n\nSurface-based GLM analysis data. We have conducted GLMsingle on the data of the main experiment. There is a file named “sub--<subID>_ses-<sesID>_task-<taskID>_betas_FITHRF_GLMDENOISE_RR.hdf5”, which contains the betas from a scanning session. A “sub-<subID>_ses-<sesID>_task-<taskID>_FRACvalue.hdf5” file stores the the fractional ridge regression regularization level selected for individual voxels of a scanning session. A “sub-<subID>_ses-<sesID>_task-<taskID>_HRFindex.hdf5” file stores the 1-index of the best Hemodynamic Response Function(HRF) of a scanning session. The file named \"sub-<subID>_ses-<sesID>_task-<taskID>_HRFindexrun.hdf5\" stores HRF index which are segregated by run. A “sub-<subID>_ses-<sesID>_task-<taskID>_R2.hdf5” file stores the model accuracy. A “sub-<subID>_ses-<sesID>_task-<taskID>_R2run.hdf5” file stores R2 which is segregated by run. A “sub-<subID>_ses-<sesID>_task-<taskID>_mean.mat” file stores the mean of the GLM analysis data for the pRF and fLoc experiments (Fig. 2g). The process of the GLM analysis are stored in “surface-based_GLM_analysis_data_description.json”.\n\nValidation. The code of technical validation was saved in the “derivatives/validation/code” folder. The results of technical validation were saved in the “derivatives/validation/results” folder (Fig. 2h). The “README.md” describes the detailed information of code and results.",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "08",
+          "01",
+          "10",
+          "05",
+          "09",
+          "04",
+          "anat",
+          "11",
+          "06",
+          "07",
+          "02",
+          "03"
+        ],
+        "size": 189231587068,
+        "subjects": [
+          "05",
+          "02",
+          "04",
+          "03",
+          "01"
+        ],
+        "tasks": [
+          "08",
+          "05",
+          "01",
+          "010",
+          "09",
+          "04",
+          "011",
+          "06",
+          "07",
+          "02",
+          "03"
+        ],
+        "totalFiles": 2146
+      },
+      "tag": "1.0.7"
+    },
+    "metadata": {
+      "affirmedDefaced": false,
+      "ages": [
+        26,
+        28,
+        26,
+        32,
+        37
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2024-04-11T08:17:37.292Z"
+  },
+  "source": "openneuro"
+}

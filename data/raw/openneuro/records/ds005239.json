@@ -1,0 +1,82 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005239",
+  "payload": {
+    "created": "2024-06-11T16:03:56.431Z",
+    "id": "ds005239",
+    "latestSnapshot": {
+      "created": "2024-06-12T16:41:13.000Z",
+      "description": {
+        "Authors": [
+          "Veillette, J.",
+          "Nusbaum, H."
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005239.v1.0.1",
+        "Funding": [
+          "NSF BCS 2024923"
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "motor-fmri",
+        "ReferencesAndLinks": null
+      },
+      "readme": "This directory contains densely sampled data from 4 subjects who completed two motor tasks. In Session 1, they completed a simple motor control task in which they were asked to mimic hand postures (w/ motion tracking) that appeared on screen while in an MRI scanner. In Session 2, they completed the muscle stimulation protocol designed to manipulate the sense of agency over muscle movements described in Veillette et al. (2023). Most subjects also completed a 10-minute resting state (eyes open) scan during Session 2. Overall, 3.5 hours of BOLD data were collected per subject over 2 sessions totalling 5 hours.\n\nDue to the increased risk of identification with so few subjects, individual subject demographics are not listed in the participant information TSV. There were, however, 3 female and 1 male subjects, all right handed, who were between the ages of 24 and 28 at the time of data collection. The first subject is denoted sub-01, while other subjects are assigned a random letter ID (e.g. sub-dd) to obfuscate the order in which they were collected. \n\nWe may collect additional data from some of these subjects if they are willing to participate in further data collection. Please note the dataset version you download if you choose to use the data.\n\nChange log\n--------------\n* v1.0.1: For some reason, the fMRIPrep derivatives didn't upload correctly for all subjects in the original version. In this version, I've added the missing files so it is (hopefully) complete now. \n\nReferences\n--------------\nVeillette, J. P., Lopes, P., & Nusbaum, H. C. (2023). Temporal Dynamics of Brain Activity Predicting Sense of Agency over Muscle Movements. Journal of Neuroscience, 43(46), 7842-7852.\n",
+      "summary": {
+        "dataProcessed": true,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "1",
+          "2"
+        ],
+        "size": 4615841458,
+        "subjects": [
+          "01",
+          "dd",
+          "gg",
+          "uu"
+        ],
+        "tasks": [
+          "motor",
+          "calibration",
+          "agency",
+          "bids::sub-01/ses-2/func/sub-01_ses-2_task-rest_bold.nii.gz",
+          "bids::sub-gg/ses-2/func/sub-gg_ses-2_task-rest_bold.nii.gz",
+          "bids::sub-uu/ses-2/func/sub-uu_ses-2_task-rest_bold.nii.gz"
+        ],
+        "totalFiles": 747
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": true,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "National Science Foundation",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2024-07-01T17:42:45.270Z"
+  },
+  "source": "openneuro"
+}

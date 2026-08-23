@@ -1,0 +1,59 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:3fdc7a5a6496f06488f560b2edc3009a0f526e25e19de769f01c37a13da43b95",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Lung Cancer",
+        "label": "Lung Cancer"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "oncology",
+      "pulmonology"
+    ],
+    "id": "tcia:cmb-lca",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "CT DX MR NM PT US",
+        "value": "CT"
+      },
+      {
+        "evidence": "CT DX MR NM PT US",
+        "value": "xray"
+      },
+      {
+        "evidence": "CT DX MR NM PT US",
+        "value": "MRI"
+      },
+      {
+        "evidence": "CT DX MR NM PT US",
+        "value": "SPECT"
+      },
+      {
+        "evidence": "CT DX MR NM PT US",
+        "value": "PET"
+      },
+      {
+        "evidence": "CT DX MR NM PT US",
+        "value": "ultrasound"
+      },
+      {
+        "evidence": "histopathology imaging",
+        "value": "pathology"
+      },
+      {
+        "evidence": "Associated genomic, phenotypic and clinical data",
+        "value": "genomics"
+      }
+    ],
+    "population": "Patients in the Cancer Moonshot Biobank lung cancer cohort, receiving standard of care cancer treatment at NCI Community Oncology Research Program sites; 129 participants per source facts.",
+    "summary": "De-identified radiology and histopathology imaging from the Cancer Moonshot Biobank lung cancer cohort. Associated genomic, phenotypic and clinical data are hosted by dbGaP and other NCI databases."
+  },
+  "prompt_version": "v1"
+}

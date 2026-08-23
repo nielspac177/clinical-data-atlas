@@ -1,0 +1,132 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006480",
+  "payload": {
+    "created": "2025-07-18T06:46:14.790Z",
+    "id": "ds006480",
+    "latestSnapshot": {
+      "created": "2025-10-06T17:43:35.000Z",
+      "description": {
+        "Authors": [
+          "Andy Jeesu Kim",
+          "Mara Mather",
+          "Santiago Morales",
+          "Joshua Senior"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006480.v1.0.1",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Young Adult Resting State and Auditory Oddball Task EEG Data",
+        "ReferencesAndLinks": [
+          "Kim, A. J., Morales, S., Senior, J., & Mather, M. (2025). Electroencephalography, pupillometry, and behavioral evidence for locus coeruleus-noradrenaline system related tonic hyperactivity in older adults. Preprint: doi.org/10.1101/2025.10.02.680040"
+        ]
+      },
+      "readme": "# Young Adult Resting State and Auditory Oddball Task EEG Data\n\n## What is included\n- This dataset includes resting state and auditory oddball task EEG data for two conditions: control and arousal (under threat of unpredictable shock).\n\n## Event labels\n100 - 5 minutes eyes open resting, control condition, begin  \n101 - 5 minutes eyes open resting, control condition, end  \n102 - 5 minutes eyes closed resting, control condition, begin  \n103 - 5 minutes eyes closed resting, control condition, end  \n\n104 - passive auditory oddball task, control condition, run begin  \n105 - passive auditory oddball task, control condition, trial start  \n106 - passive auditory oddball task, control condition, standard tone  \n107 - passive auditory oddball task, control condition, target tone  \n108 - passive auditory oddball task, control condition, distractor tone  \n109 - passive auditory oddball task, control condition, trial end  \n110 - passive auditory oddball task, control condition, run end  \n\n111 - active auditory oddball task, control condition, run begin  \n112 - active auditory oddball task, control condition, trial start  \n113 - active auditory oddball task, control condition, standard tone  \n114 - active auditory oddball task, control condition, target tone  \n115 - active auditory oddball task, control condition, distractor tone  \n116 - active auditory oddball task, control condition, start of response period  \n117 - active auditory oddball task, control condition, manual button response recorded  \n118 - active auditory oddball task, control condition, run end\n\n119 - 5 minutes eyes open resting, shock condition, begin  \n120 - 5 minutes eyes open resting, shock condition, end  \n121 - 5 minutes eyes closed resting, shock condition, begin  \n122 - 5 minutes eyes closed resting, shock condition, end  \n\n123 - passive auditory oddball task, shock condition, run begin  \n124 - passive auditory oddball task, shock condition, trial start  \n125 - passive auditory oddball task, shock condition, standard tone  \n126 - passive auditory oddball task, shock condition, target tone  \n127 - passive auditory oddball task, shock condition, distractor tone  \n128 - passive auditory oddball task, shock condition, trial end  \n129 - passive auditory oddball task, shock condition, run end  \n\n130 - active auditory oddball task, shock condition, run begin  \n131 - active auditory oddball task, shock condition, trial start  \n132 - active auditory oddball task, shock condition, standard tone  \n133 - active auditory oddball task, shock condition, target tone  \n134 - active auditory oddball task, shock condition, distractor tone  \n135 - active auditory oddball task, shock condition, start of response period  \n136 - active auditory oddball task, shock condition, manual button response recorded  \n137 - active auditory oddball task, shock condition, run end  \n\n## Citations\nNashiro, K., Yoo, H. J., Cho, C., Kim, A. J., Nasseri, P., Min, J., ... & Mather, M. (2024). Heart rate and breathing effects on attention and memory (HeartBEAM): Study protocol for a randomized controlled trial in older adults. Trials, 25(1), 190.\n\nKim, A. J., Morales, S., Senior, J., & Mather, M. (2025). Electroencephalography, pupillometry, and behavioral evidence for locus coeruleus-noradrenaline system related tonic hyperactivity in older adults. Preprint: doi.org/10.1101/2025.10.02.680040\n",
+      "summary": {
+        "dataProcessed": true,
+        "modalities": [
+          "eeg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [],
+        "size": 68786099468,
+        "subjects": [
+          "10",
+          "34",
+          "48",
+          "03",
+          "35",
+          "44",
+          "52",
+          "19",
+          "07",
+          "53",
+          "67",
+          "27",
+          "55",
+          "42",
+          "60",
+          "20",
+          "57",
+          "23",
+          "66",
+          "68",
+          "41",
+          "14",
+          "28",
+          "13",
+          "61",
+          "63",
+          "02",
+          "45",
+          "56",
+          "24",
+          "15",
+          "01",
+          "65",
+          "49",
+          "43",
+          "29",
+          "38",
+          "40",
+          "21",
+          "22",
+          "30",
+          "06",
+          "17",
+          "51",
+          "26",
+          "47",
+          "32",
+          "62",
+          "37",
+          "59",
+          "16",
+          "50",
+          "39",
+          "58",
+          "12",
+          "11",
+          "31",
+          "18",
+          "46",
+          "64",
+          "09",
+          "08",
+          "25",
+          "36",
+          "54",
+          "33",
+          "04",
+          "05"
+        ],
+        "tasks": [
+          "ShockYA"
+        ],
+        "totalFiles": 412
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": "",
+      "dataProcessed": true,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "eeg"
+      ],
+      "species": "",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2025-07-18T17:39:11.091Z"
+  },
+  "source": "openneuro"
+}

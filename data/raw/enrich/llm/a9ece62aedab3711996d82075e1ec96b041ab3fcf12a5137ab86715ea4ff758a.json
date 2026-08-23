@@ -1,0 +1,42 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:a9ece62aedab3711996d82075e1ec96b041ab3fcf12a5137ab86715ea4ff758a",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "investigate cardiovascular disease in the intensive care unit",
+        "label": "cardiovascular disease"
+      },
+      {
+        "evidence": "valve regurgitation and stenosis",
+        "label": "valve regurgitation and stenosis"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "cardiology",
+      "critical_care",
+      "pulmonology"
+    ],
+    "id": "physionet:echo-note-to-num",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "notes obtained during echocardiogram studies",
+        "value": "ultrasound"
+      },
+      {
+        "evidence": "the clinical notes were transformed into a structured numerical format",
+        "value": "clinical_notes"
+      },
+      {
+        "evidence": "derived from MIMIC-III",
+        "value": "EHR"
+      }
+    ],
+    "population": "Intensive care unit patients at the Beth Israel Deaconess Medical Center between 2001 and 2012 who underwent echocardiogram studies",
+    "summary": "Structured echocardiogram data derived from observational notes taken during intensive care unit echocardiogram studies, covering cavity size, wall thickness, systolic and diastolic function, valve regurgitation and stenosis, and pulmonary pressures, with severity staged numerically."
+  },
+  "prompt_version": "v1"
+}

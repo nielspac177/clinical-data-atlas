@@ -1,0 +1,42 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:d1d0d5f1f943ea08930d406dc24c46bc939b51c61e4c5f8391a7d54afac65b46",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Obstructive sleep apnea",
+        "label": "Obstructive sleep apnea"
+      },
+      {
+        "evidence": "high blood pressure",
+        "label": "high blood pressure"
+      },
+      {
+        "evidence": "myocardial infarction",
+        "label": "myocardial infarction"
+      },
+      {
+        "evidence": "stroke",
+        "label": "stroke"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "cardiology",
+      "pulmonology",
+      "neurology"
+    ],
+    "id": "physionet:challenge-2000",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "features of the electrocardiogram",
+        "value": "ECG"
+      }
+    ],
+    "population": null,
+    "summary": "Challenge dataset for detecting and quantifying obstructive sleep apnea from the electrocardiogram, provided so ECG-based screening methods can be compared against conventional respiration-monitoring techniques for apnea detection."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,64 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds002358",
+  "payload": {
+    "created": "2019-12-14T13:28:05.360Z",
+    "id": "ds002358",
+    "latestSnapshot": {
+      "created": "2019-12-15T09:20:42.000Z",
+      "description": {
+        "Authors": [
+          "Renzo Huber",
+          "Emily Finn",
+          "et al.",
+          "Ben Poser",
+          "Peter Bandettini"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds002358.v1.0.0",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "columnar Finger representations",
+        "ReferencesAndLinks": null
+      },
+      "readme": "# Columnar Finger Representation\n\nThis dataset consists refers to the layer-fMRI study published in NeuroImgae: https://doi.org/10.1101/457002\n\nThe datatype is rather unconventional compared to standard fMRI datasets.\nIt is a VASO study, where the functional data are used as structiural data.\nTRs and resulution is variable across time and contrasts within one run. \n\nThus, the data are not easly compatible with BIDS. \nTherefore, see the 'actualfiles' folder for the files. \nPlease ignore the folder sub-emptyPlaceholder.\n\n\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 6506134,
+        "subjects": [
+          "emptyPlaceholder1"
+        ],
+        "tasks": [],
+        "totalFiles": 5
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": null,
+      "associatedPaperDOI": "https://doi.org/10.1101/457002",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "block",
+      "studyDomain": "fMRI Methods development, Motor cortex",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2019-12-15T09:49:13.788Z"
+  },
+  "source": "openneuro"
+}

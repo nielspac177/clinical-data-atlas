@@ -1,0 +1,84 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003484",
+  "payload": {
+    "created": "2021-01-22T19:55:22.557Z",
+    "id": "ds003484",
+    "latestSnapshot": {
+      "created": "2025-04-09T00:02:28.000Z",
+      "description": {
+        "Authors": [
+          "Brian Silston",
+          "Toby Wise",
+          "Song Qi",
+          "Xin Sui",
+          "Peter Dayan",
+          "Dean Mobbs"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds003484.v1.0.0",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Foraging in competitive and hazardous environments",
+        "ReferencesAndLinks": null
+      },
+      "readme": "This dataset contains fMRI data for the paper \"Neural encoding of socially adjusted value during competitive and hazardous foraging\" by Brian Silston, Toby Wise, Song Qi, Xin Sui, Peter Dayan & Dean Mobbs.\r\n\r\nRaw data is not provided (this will be added at a later date), but minimally preprocessed data from fmriprep are included in the `derivatives` folder. Structural files are included in the top level `sub-*` directory mainly for the purposes of passing BIDS validation.\r\n\r\nResults of the RSA and univariate analyses are also provided. First level maps used for the RSA analysis are included in `derivatives/first_level`, while outputs from the RSA analyses themselves are available in `derivatives/rsa_revised`. All outputs from the univariate analyses are provided in `derivatives/univariate`.\r\n\r\nCode to reproduce these analysis, along with behavioural data, is available on GitHub at https://github.com/mobbslab/foraging_paper. ",
+      "summary": {
+        "dataProcessed": true,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 715680394,
+        "subjects": [
+          "for21",
+          "for16",
+          "for23",
+          "for19",
+          "for02",
+          "for17",
+          "for13",
+          "for14",
+          "for22",
+          "for04",
+          "for18",
+          "for08",
+          "for01",
+          "for20",
+          "for15",
+          "for12",
+          "for11",
+          "for06",
+          "for10",
+          "for03"
+        ],
+        "tasks": [],
+        "totalFiles": 22
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": null,
+      "dataProcessed": true,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2021-02-04T01:44:28.431Z"
+  },
+  "source": "openneuro"
+}

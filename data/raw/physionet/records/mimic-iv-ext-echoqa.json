@@ -1,0 +1,32 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "mimic-iv-ext-echoqa",
+  "payload": {
+    "abstract": "<p>We present MIMICEchoQA, a benchmark dataset for echocardiogram-based question answering, built from the publicly available MIMIC-IV-ECHO database. Each echocardiographic study was paired with the closest discharge summary within a 7-day window, and the transthoracic echocardiography (TTE) and ECHO sections were extracted to serve as proxies for cardiologist-authored diagnostic reports. DICOM videos were converted to <code>.mp4</code> format, and a language model was used to generate multi-turn, closed-ended Q/A pairs grounded in these reports. To ensure anatomical consistency, a view classification model was used to label each video by its echocardiographic view (e.g., A4C, A3C), enabling the filtering of questions referencing structures not visible in the corresponding video. All generated Q/A pairs were manually reviewed by two board-certified cardiologists to ensure clinical validity. The final dataset consists of 622 high-quality, view-consistent Q/A pairs aligned with real-world echocardiogram videos, offering a valuable resource for developing and evaluating models in echocardiographic visual question answering.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 213523208,
+    "core_doi": "10.13026/bxc5-rc50",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 216254788,
+    "public_project_uuid": "77aba959-d7eb-4138-9b20-72620312fafe",
+    "publish_date": "2025-10-07",
+    "resource_type": "Database",
+    "short_description": "We present MIMICEchoQA, a benchmark dataset for echocardiogram-based question answering, built from the publicly available MIMIC-IV-ECHO database.",
+    "slug": "mimic-iv-ext-echoqa",
+    "source_url": "https://physionet.org/content/mimic-iv-ext-echoqa/1.0.0/",
+    "title": "MIMIC-IV-ECHO-Ext-MIMICEchoQA: A Benchmark Dataset for Echocardiogram-Based Visual Question Answering",
+    "topics": [],
+    "version": "1.0.0",
+    "version_doi": "10.13026/rndk-4s36"
+  },
+  "source": "physionet"
+}

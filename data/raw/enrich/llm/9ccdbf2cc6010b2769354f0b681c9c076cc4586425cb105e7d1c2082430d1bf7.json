@@ -1,0 +1,41 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:9ccdbf2cc6010b2769354f0b681c9c076cc4586425cb105e7d1c2082430d1bf7",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "any history of asthma",
+        "label": "asthma"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "cardiology",
+      "pulmonology"
+    ],
+    "id": "physionet:respiratory-heartrate-dataset",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "electrocardiogram (ECG)",
+        "value": "ECG"
+      },
+      {
+        "evidence": "Pressure, flow, aeration, and heart-rate data",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "self-reported questionnaire",
+        "value": "survey"
+      },
+      {
+        "evidence": "electrical impedance tomography (EIT) aeration",
+        "value": "other"
+      }
+    ],
+    "population": "20 subjects with no known significant respiratory abnormalities",
+    "summary": "Respiratory pressure and flow, electrical impedance tomography aeration, electrocardiogram, and heart-rate belt data from 20 subjects during resting breathing, CPAP at varied PEEP, breath-holds, and forced expiratory manoeuvres, plus self-reported demographics."
+  },
+  "prompt_version": "v1"
+}

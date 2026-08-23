@@ -1,0 +1,76 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007402",
+  "payload": {
+    "created": "2026-02-11T16:41:05.198Z",
+    "id": "ds007402",
+    "latestSnapshot": {
+      "created": "2026-06-29T18:19:35.000Z",
+      "description": {
+        "Authors": [
+          "Brooke L. Sevchik",
+          "Golia Shafiei",
+          "Kristin Murtha",
+          "Juliette B.H. Brook",
+          "Lia Brodrick",
+          "Kahini Mehta",
+          "Sage Rush",
+          "Matt Cieslak",
+          "Steven L. Meisler",
+          "Taylor Salo",
+          "S. Parker Singleton",
+          "Tien T. Tong",
+          "Mrugank Salunke",
+          "Dani S. Bassett",
+          "Monica E. Calkins",
+          "Mark A. Elliott",
+          "Raquel E. Gur",
+          "Ruben C. Gur",
+          "Tyler M. Moore",
+          "Kosha Ruparel",
+          "Russell T. Shinohara",
+          "M. Dylan Tisdal",
+          "Daniel H. Wolf",
+          "David R. Roalf",
+          "Theodore D. Satterthwaite"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007402.v1.0.2",
+        "Funding": null,
+        "HowToAcknowledge": "Please cite the PennLEAD paper (https://doi.org/10.1101/2025.11.10.687633) and the XCP-D paper (https://doi.org/10.1162/imag_a_00257), and include the generated citation boilerplate within the Methods section of the text.",
+        "License": "CC0",
+        "Name": "Penn LEAD: Penn Longitudinal Executive functioning in Adolescent Development - XCP-D Derivatives",
+        "ReferencesAndLinks": null
+      },
+      "readme": "## Description of Dataset\n\nPenn LEAD (Penn Longitudinal Executive functioning in Adolescent Development) is a data resource designed to investigate transdiagnostic executive function during development.\n\nThis repository contains data derivatives from running XCP-D.\nWe provide derivatives including post-processed clean BOLD time series that are denoised, filtered, and censored, and ALFF and ReHo derivative maps. Preprocessed data from running fMRIPrep, which was used as input for XCP-D, can be found [here.](https://openneuro.org/datasets/ds007088)\n\nThe link to the accompanying raw dataset is here: https://openneuro.org/datasets/ds007116 [accession number ds007116].\n\nThe Docker Hub link for XCP-D is [here.](https://hub.docker.com/layers/pennlinc/xcp_d/0.10.7/images/sha256-fa10fe96b9ed1cb63322cfebc7dff8a21b7dcca84487b977c06be3d2c863f33a)\n\nThe quality control recommendations for fMRI can be found on [Github](https://github.com/PennLINC/transdiagnostic_executive_function/tree/main/QC/qc_csvs/final_QC_csvs). Both QC recommendations for fMRI and T1 structural data should be taken into account for fMRI data.\n\n\nThe command used to XCP-D was:\n\n```\nxcp_d \\\n    /data/fmriprep \\\n    /data/xcp_d \\\n    participant \\\n    --stop-on-first-crash \\\n    --mode linc \\\n    --input-type fmriprep \\\n    --dummy-scans auto \\\n    --atlases \\\n        4S1056Parcels \\\n        4S156Parcels \\\n        4S256Parcels \\\n        4S356Parcels \\\n        4S456Parcels \\\n        4S556Parcels \\\n        4S656Parcels \\\n        4S756Parcels \\\n        4S856Parcels \\\n        4S956Parcels \\\n        Glasser \\\n        Gordon \\\n        HCP \\\n        MIDB \\\n        Tian\n```",
+      "summary": {
+        "dataProcessed": true,
+        "modalities": [],
+        "secondaryModalities": [],
+        "sessions": [],
+        "size": 3999,
+        "subjects": [],
+        "tasks": [],
+        "totalFiles": 3
+      },
+      "tag": "1.0.2"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": null,
+      "dataProcessed": true,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2026-02-12T16:36:37.984Z"
+  },
+  "source": "openneuro"
+}

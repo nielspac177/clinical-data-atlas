@@ -1,0 +1,43 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:16219d313dd5c2035a5434395a0e97f9436a4b533f4c50ec1a811f2c675c51a0",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "patients who tested positive for COVID-19",
+        "label": "COVID-19"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "infectious_disease",
+      "pulmonology"
+    ],
+    "id": "tcia:covid-19-ar",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "a collection of radiographic and CT imaging studies",
+        "value": "CT"
+      },
+      {
+        "evidence": "a collection of radiographic and CT imaging studies",
+        "value": "xray"
+      },
+      {
+        "evidence": "cross-linked to SARS-COV-2 cDNA sequence data",
+        "value": "genomics"
+      },
+      {
+        "evidence": "demographics, comorbidities, selected lab data and key radiology findings",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "Patients from a rural population in the southern United States who tested positive for COVID-19",
+    "summary": "Radiographic and CT imaging from a rural US population testing positive for COVID-19, with limited clinical correlates including demographics, comorbidities, lab data and radiology findings, cross-linked to SARS-COV-2 cDNA sequence data."
+  },
+  "prompt_version": "v1"
+}

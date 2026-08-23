@@ -1,0 +1,23 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:babe325d147ced428b1043f98d30cb5943130181359159fc2ff813d95824c9db",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "critical_care"
+    ],
+    "id": "physionet:mimic-seqex",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "electronic health records",
+        "value": "EHR"
+      }
+    ],
+    "population": "critical care patients at Beth Israel Deaconess Medical Center whose deidentified records appear in MIMIC-III",
+    "summary": "MIMIC-III patient records converted into TensorFlow SequenceExample format, with timestamped feature lists per encounter and labels for inpatient mortality and discharge diagnosis codes, for reproducible machine learning research."
+  },
+  "prompt_version": "v1"
+}

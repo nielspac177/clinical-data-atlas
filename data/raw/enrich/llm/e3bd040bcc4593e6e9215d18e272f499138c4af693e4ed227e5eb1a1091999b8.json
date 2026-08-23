@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:e3bd040bcc4593e6e9215d18e272f499138c4af693e4ed227e5eb1a1091999b8",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Stomach Adenocarcinoma",
+        "label": "Stomach Adenocarcinoma"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "tcia:tcga-stad",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "STOMACH\nCT",
+        "value": "CT"
+      },
+      {
+        "evidence": "Genomic Data Commons (GDC) Data Portal",
+        "value": "genomics"
+      }
+    ],
+    "population": "Stomach adenocarcinoma patients drawn from The Cancer Genome Atlas; imaging mostly acquired during routine care rather than a controlled study (46 participants per source facts).",
+    "summary": "Radiology images of stomach adenocarcinoma patients, matched by patient identifier to TCGA clinical, genetic and pathological data, supporting study of genotype, radiological phenotype and outcomes."
+  },
+  "prompt_version": "v1"
+}

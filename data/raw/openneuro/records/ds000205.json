@@ -1,0 +1,89 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds000205",
+  "payload": {
+    "created": "2017-09-04T19:44:16.161Z",
+    "id": "ds000205",
+    "latestSnapshot": {
+      "created": "2018-07-17T14:30:49.000Z",
+      "description": {
+        "Authors": [
+          "Jongwan Kim",
+          "Jing Wang",
+          "Svetlana V. Shinkareva",
+          "Douglas H. Wedell"
+        ],
+        "DatasetDOI": null,
+        "Funding": null,
+        "HowToAcknowledge": "In addition to any citation requirements in the dataset summary please use the following to cite this dataset: 'This data was obtained from the OpenfMRI database. Its accession number is ds000205'",
+        "License": "PDDL",
+        "Name": "Affective Videos",
+        "ReferencesAndLinks": null
+      },
+      "readme": "Data acquisition methods have been described in detail in Kim et al. (2016, PLoS ONE), but we outline them here and provide file information for clarity and ease of use.\n\n\n\r\n\r\n————————————————————————————————Materials\n————————————————————————————————\n\n\r\nParticipants viewed affect-eliciting audiovisual clips that varied on levels of valence and arousal. Eight stimuli were selected for each affective category corresponding to each of the four quadrants of the affective space: high arousal-negative valence (HN), low arousal-negative valence (LN), low arousal-positive valence (LP), and high arousal-positive valence (HP). \r\n\r\n————————————————————————————————\nBOLD fMRI DATA\n————————————————————————————————\r\nMRI data were acquired on a Siemens Magnetom Trio 3.0T whole-body scanner (Siemens, Erlangen, Germany) at the McCausland Center for Brain Imaging at the University of South Carolina. The functional images were acquired using a single-shot echo-planar imaging pulse sequence (TR = 2200ms, TE = 35ms, 90° flip angle) with a 12-channel head coil. Thirty-six 3 mm thick oblique-axial slices were imaged in interleaved scanning order with no gap. The acquisition matrix was 64×64 with 3×3×3 mm voxels.  Functional data was acquired using a slow event-related design in two scanning sessions (two runs for each session). High-resolution whole-brain anatomical images were acquired using a standard T1-weighted 3D MP-RAGE protocol (TR= 2250 ms, TE= 4.18 ms, FOV= 256 mm, flip angle= 9°, voxel size=1×1×1 mm) to facilitate normalization of the functional data.  \r\nData processing and statistical analyses were performed in MATLAB environment using standard procedures in Statistical Parametric Mapping software (SPM 8, Wellcome Department of Cognitive Neurology, London, UK). The data were corrected for motion and linear trend. Structural data were segmented into white and gray matter to facilitate the normalization. Functional and anatomical images were co-registered and spatially normalized into the standard Montreal Neurological Institute (MNI) space based on T1-derived normalization parameters. \r\nMain experiment To improve signal-to-noise ratio, the time-series data for each voxel were fit using GLMdenoise, a technique successfully used in MVPA and other applications [54, 55]. GLMdenoise used the four affective categories to estimate regressors of no interest.  Notably the procedure was blind to valence and arousal categories, and thus did not bias the results when comparing across combined categories (i.e., positive versus negative valence or high versus low arousal). Furthermore, to control for possible confounds arising from lower level features of the stimuli, five lower level feature components were regressed out as covariates of no interest together with six head motion parameter estimates. We used principal components to reduce the number of regressors, while keeping most of the variability in the data.The residuals from this analysis were used for all further analyses. The percent signal change (PSC) relative to the average activity in a voxel was computed for each voxel in every volume from the residuals. The mean PSC of two volumes, offset 4.4s from the stimulus onset (to account for the delay in hemodynamic response), was used as the input for further analyses. Data for each condition were standardized across voxels to have zero mean and unit variance. \r\n \r\n\r\n\n\n————————————————————————————————\nFUNCTIONAL LOCALIZER\n————————————————————————————————\n\r\nAreas responsive to naturalistic audiovisual presentation were identified in a separate localizer session for each participant. There were four experimental conditions: baseline, auditory (beep), dynamic visual (checkerboard), and a combined naturalistic audiovisual condition (audiovisual). Additionally, the functional localizer contained two other conditions that were not part of the present experiment. The conditions were presented in a block design with each block lasting 12s (Fig 2A). Baseline condition consisted of a black screen with a white fixation cross shown in the center of the screen and background noise. During an auditory condition, designed to localize primary auditory cortex, a binaural sine tone of 1,000 Hz pulsating at 6 Hz was presented. During a dynamic visual condition, designed to localize primary visual areas, there were 12s of high-contrast flickering checkerboard reversals, 200ms per cycle. During a naturalistic audiovisual condition, four 3s audiovisual clips sampled from the four affective quadrants were played back to back. There were eight runs in the localizer scan and each run consisted of six conditions presented in a pseudo randomized order such that the same condition was not presented twice in a row for the two subsequent runs. There were a total of 48 blocks resulting in 273 acquired volumes.\r\n\r\n\n\n\n\n————————————————————————————————\nPUBLICATIONS\n————————————————————————————————\n\n\r\nJongwan Kim, Jing Wang, Douglas H. Wedell, Svetlana V. Shinkareva (2016) “Identifying Core Affect in Individuals from fMRI Responses to Dynamic Naturalistic Audiovisual Stimuli” PLoS One",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 2975357457,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11"
+        ],
+        "tasks": [
+          "Functional localizer",
+          "Passive Viewing"
+        ],
+        "totalFiles": 53
+      },
+      "tag": "00001"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2017-09-04T19:44:16.161Z"
+  },
+  "source": "openneuro"
+}

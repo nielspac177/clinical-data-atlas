@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:6351748b7c081f328b7da7e007f47ed0feafaf1e03e76100363e1f9de7285639",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "non-small cell lung cancer (NSCLC) radiotherapy patients",
+        "label": "non-small cell lung cancer (NSCLC)"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "pulmonology"
+    ],
+    "id": "tcia:nsclc-radiomics-interobserver1",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "computed tomography (CT)",
+        "value": "CT"
+      },
+      {
+        "evidence": "radiotherapy patients",
+        "value": "radiotherapy"
+      },
+      {
+        "evidence": "clinical outcome data are available",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "Non-small cell lung cancer (NSCLC) radiotherapy patients, most with pre-treatment CT scans",
+    "summary": "Clinical data and CT from non-small cell lung cancer radiotherapy patients, with repeated blinded manual gross tumor volume delineations by five radiation oncologists and a second round using an autosegmentation tool with manual adjustment."
+  },
+  "prompt_version": "v1"
+}

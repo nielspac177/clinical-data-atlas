@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:c3a211e195732e9e09eee6b8e13bed0bc366afbc4794fe8ace53d19a180d495b",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Fetal cardiac arrhythmias",
+        "label": "fetal cardiac arrhythmias"
+      },
+      {
+        "evidence": "can cause fetal hydrops",
+        "label": "fetal hydrops"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "cardiology",
+      "obstetrics_gynecology"
+    ],
+    "id": "physionet:nifeadb",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "non-invasive fetal electrocardiography (NI-FECG) technique",
+        "value": "ECG"
+      }
+    ],
+    "population": "Fetuses with arrhythmias (n=12) and controls with normal rhythm (n=14)",
+    "summary": "Non-invasive fetal electrocardiography recordings of fetal arrhythmias together with control recordings of normal fetal rhythm, intended for study of irregular fetal cardiac rhythms."
+  },
+  "prompt_version": "v1"
+}

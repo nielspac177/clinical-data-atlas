@@ -1,0 +1,32 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "mimic-iii-ext-notes",
+  "payload": {
+    "abstract": "<p>Unstructured clinical documentation, such as progress notes, contains rich contextual information critical for clinical decision-making but remains underutilized in computational research due to the limited availability of annotated datasets. The MIMIC-III-Ext-Notes dataset was developed to address this gap by providing a resource for evaluating large language models (LLMs) and other natural language processing (NLP) systems in extracting and contextualizing clinical information.</p>\n<p>The dataset includes 150 clinical notes randomly sampled from the MIMIC-III Clinical Database, from which 2,288 clinical concepts were identified using MetaMap and annotated by clinicians for detection accuracy, encounter relevance, and negation status. The resulting dataset enables the evaluation of models&rsquo; abilities to recognize, interpret, and reason about symptom mentions and disease concepts within realistic clinical narratives. By incorporating both concept-level and contextual annotations, MIMIC-III-Ext-Notes provides a valuable benchmark for developing, testing, and validating NLP and LLM frameworks designed for clinical text understanding and decision support applications.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 202763,
+    "core_doi": "10.13026/2kv6-1s83",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 601542,
+    "public_project_uuid": "29a4fcec-d057-47b8-b579-03dbd6c06dbd",
+    "publish_date": "2026-02-27",
+    "resource_type": "Database",
+    "short_description": "We evaluated general large language models' performance in clinical information extraction on MIMIC-III notes.",
+    "slug": "mimic-iii-ext-notes",
+    "source_url": "https://physionet.org/content/mimic-iii-ext-notes/1.0.0/",
+    "title": "MIMIC-III-Ext-Notes",
+    "topics": [],
+    "version": "1.0.0",
+    "version_doi": "10.13026/9tfx-yx07"
+  },
+  "source": "physionet"
+}

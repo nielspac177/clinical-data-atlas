@@ -1,0 +1,46 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:fd6dbbc7c63a612b6d57d5f06fb2d079b640b98861255fe9893758873045a677",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "pulmonology",
+      "endocrinology_metabolism",
+      "nephrology_urology"
+    ],
+    "id": "tcia:midi-b-synthetic-test",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "CT",
+        "value": "CT"
+      },
+      {
+        "evidence": "MR",
+        "value": "MRI"
+      },
+      {
+        "evidence": "PT",
+        "value": "PET"
+      },
+      {
+        "evidence": "DX",
+        "value": "xray"
+      },
+      {
+        "evidence": "MG",
+        "value": "mammography"
+      },
+      {
+        "evidence": "US",
+        "value": "ultrasound"
+      }
+    ],
+    "population": null,
+    "summary": "Synthetic test split of a multi-modality imaging collection spanning many body regions, including abdomen, breast, chest, kidney, lung, pancreas, pelvis, prostate and thyroid."
+  },
+  "prompt_version": "v1"
+}

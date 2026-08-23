@@ -1,0 +1,103 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003774",
+  "payload": {
+    "created": "2021-08-23T10:09:25.546Z",
+    "id": "ds003774",
+    "latestSnapshot": {
+      "created": "2022-08-25T13:43:21.000Z",
+      "description": {
+        "Authors": [
+          "Krishna Prasad Miyapuram",
+          "Pankaj Pandey",
+          "Nashra Ahmad",
+          "Bharatesh R Shiraguppi",
+          "Esha Sharma",
+          "Prashant Lawhatre",
+          "Dhananjay Sonawane",
+          "Derek Lomas"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds003774.v1.0.2",
+        "Funding": [
+          "This research was funded by PlayPower Labs, USA"
+        ],
+        "HowToAcknowledge": "Pandey, P., Ahmad, N., Miyapuram, K. P., & Lomas, D. (2021, December). Predicting dominant beat frequency from brain responses while listening to music. In 2021 IEEE International Conference on Bioinformatics and Biomedicine (BIBM) (pp. 3058-3064). IEEE.\n\nPankaj Pandey, Gulshan Sharma, Krishna P. Miyapuram, Ramanathan Subramanian, Derek Lomas: Music Identification Using Brain Responses to Initial Snippets. ICASSP 2022: 1246-1250\n\nDhananjay Sonawane, Krishna Prasad Miyapuram, Bharatesh RS, Derek J. Lomas:\nGuessTheMusic: Song Identification from Electroencephalography response. COMAD/CODS 2021: 154-162\n",
+        "License": "CC0",
+        "Name": "Music Listening- Genre EEG dataset (MUSIN-G)",
+        "ReferencesAndLinks": [
+          ""
+        ]
+      },
+      "readme": "The dataset contains Electroencephalography (EEG) responses from 20 Indian participants, on 12 songs of different genres (from Indian Classical to Goth Rock). Each session indicates a song by its number. \n\nFor the experiment,  the participants were indicated to close their eyes indicated by a single beep, and the song was presented to them on speakers. After listening to each song, a double beep was presented, asking them to open their eyes and rate their familiarity and enjoyment to the song.  The responses were taken on a scale of 1 to 5, where 1 meant most familiar or most enjoyable, and 5 meant least familiar or least enjoyable. \n\nThe events timeline in segmented data must be ignored as these are inherited from rawdata",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "eeg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12"
+        ],
+        "size": 10863711359,
+        "subjects": [
+          "001",
+          "002",
+          "003",
+          "004",
+          "005",
+          "006",
+          "007",
+          "008",
+          "009",
+          "010",
+          "011",
+          "012",
+          "013",
+          "014",
+          "015",
+          "016",
+          "017",
+          "018",
+          "019",
+          "020"
+        ],
+        "tasks": [
+          "MusicListening"
+        ],
+        "totalFiles": 1685
+      },
+      "tag": "1.0.2"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": null,
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "eeg"
+      ],
+      "species": "Human",
+      "studyDesign": "20 Participants listened to 12 songs from different Genres",
+      "studyDomain": "Music",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2021-08-24T07:53:32.015Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:fbfad975c735a062fd0948c2a1ae78fb18f15c9b1ce2f752b16c286e5ba6177c",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "from stroke patients discharge summaries in MIMIC-III",
+        "label": "stroke"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "critical_care"
+    ],
+    "id": "physionet:stroke-scale-mimic-iii",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "discharge summaries",
+        "value": "clinical_notes"
+      },
+      {
+        "evidence": "Electronic Health Records (EHRs)",
+        "value": "EHR"
+      }
+    ],
+    "population": "Stroke cases with discharge summaries in the MIMIC-III database",
+    "summary": "Annotated corpus of NIHSS scale items and their scores extracted from stroke patients' discharge summaries in MIMIC-III, manually annotated by two annotators with medical informatics backgrounds, to support clinical natural language processing research."
+  },
+  "prompt_version": "v1"
+}

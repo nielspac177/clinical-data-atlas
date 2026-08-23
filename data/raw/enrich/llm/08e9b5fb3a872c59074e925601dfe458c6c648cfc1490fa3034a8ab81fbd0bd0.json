@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:08e9b5fb3a872c59074e925601dfe458c6c648cfc1490fa3034a8ab81fbd0bd0",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "patients who presented with head and neck cancer",
+        "label": "head and neck cancer"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "tcia:hnc-imrt-70-33",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "the planning computed tomography (CT) images",
+        "value": "CT"
+      },
+      {
+        "evidence": "radiotherapy plan (RTPLAN), and the calculated treatment dose (RTDOSE)",
+        "value": "radiotherapy"
+      }
+    ],
+    "population": "211 patients who presented with head and neck cancer and underwent external beam radiation therapy at a single institution",
+    "summary": "Complete radiotherapy treatment data in DICOM format for head and neck cancer patients treated with identical IMRT prescriptions, including planning CT, expert-defined structures with standardized organ-at-risk names, plans, and dose."
+  },
+  "prompt_version": "v1"
+}

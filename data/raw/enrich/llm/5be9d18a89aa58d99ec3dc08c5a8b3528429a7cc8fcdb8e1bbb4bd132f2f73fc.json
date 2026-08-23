@@ -1,0 +1,47 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:5be9d18a89aa58d99ec3dc08c5a8b3528429a7cc8fcdb8e1bbb4bd132f2f73fc",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "database comprising patients with infection",
+        "label": "infection"
+      },
+      {
+        "evidence": "have sepsis and/or septic shock",
+        "label": "sepsis"
+      },
+      {
+        "evidence": "sepsis and/or septic shock",
+        "label": "septic shock"
+      }
+    ],
+    "countries": [
+      "CN"
+    ],
+    "domains": [
+      "critical_care",
+      "infectious_disease"
+    ],
+    "id": "physionet:icu-infection-zigong-fourth",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "electronic healthcare records",
+        "value": "EHR"
+      },
+      {
+        "evidence": "laboratory findings, baseline characteristics, medications, ICD code",
+        "value": "clinical_tabular"
+      },
+      {
+        "evidence": "nursing charts",
+        "value": "clinical_notes"
+      }
+    ],
+    "population": "Patients with infection admitted to critical care units at Zigong Fourth People's Hospital, Sichuan, China, between January 2019 and December 2020; a large proportion have sepsis and/or septic shock.",
+    "summary": "Routinely collected critical care data from patients with infection admitted to intensive care units in Sichuan, China, covering laboratory findings, baseline characteristics, medications, ICD codes, nursing charts and follow-up results."
+  },
+  "prompt_version": "v1"
+}

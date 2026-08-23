@@ -1,0 +1,49 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:ba076a181d89e92b7185dd5e021a721e951c069a26c939e95047c624f1c9c259",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Cholangiocarcinoma",
+        "label": "Cholangiocarcinoma"
+      },
+      {
+        "evidence": "Adenomas and Adenocarcinomas",
+        "label": "Adenomas and Adenocarcinomas"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "gastroenterology_hepatology"
+    ],
+    "id": "gdc:TCGA-CHOL",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Diagnostic Slide, Tissue Slide",
+        "value": "pathology"
+      },
+      {
+        "evidence": "WXS, miRNA-Seq, WGS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "RNA-Seq",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Reverse Phase Protein Array",
+        "value": "proteomics"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "51 human cases of cholangiocarcinoma",
+    "summary": "TCGA project on cholangiocarcinoma, sampling liver and intrahepatic bile ducts, pancreas, and other biliary tract sites. Covers sequencing reads, variation, transcriptome profiling, DNA methylation, proteome profiling, biospecimen and clinical data, plus slides."
+  },
+  "prompt_version": "v1"
+}

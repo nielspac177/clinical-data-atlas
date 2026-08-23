@@ -1,0 +1,84 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003590",
+  "payload": {
+    "created": "2021-03-29T18:40:50.052Z",
+    "id": "ds003590",
+    "latestSnapshot": {
+      "created": "2021-08-03T12:49:34.000Z",
+      "description": {
+        "Authors": [
+          "Adria Casamitjana",
+          "Marco Lorenzi",
+          "Sebastiano Ferraris",
+          "Loïc Peter",
+          "Marc Modat",
+          "Allison Stevens",
+          "Bruce Fischl",
+          "Eugenio Iglesias"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds003590.v1.0.2",
+        "Funding": [
+          "This work was primarily funded by the European Research Council (Starting Grant 677697, project \\BUNGEE-TOOLS\").",
+          "EPSRC-funded UCL Centre for Doctoral Training in Medical Imaging (EP/L016478/1) 985 and Doctoral Training Grant (EP/M506448/1).",
+          "BRAIN Initiative (1RF1MH123195- 01, U01MH117023),",
+          "Biomedical Imaging and Bioengineering 990 (P41EB015896, 1R01EB023281, R01EB006758, R21EB018907, R01EB019956, P41EB030006)",
+          "National Institute on Aging (1R01AG070988-01, 1R56AG064027, 1R01AG064027, 5R01AG008122, R01AG016495)",
+          "National Institute of Men995 tal Health (R01 MH123195, R01 MH121885, 1RF1MH123195)",
+          "National Institute for Neurological Disorders and Stroke (R01NS0525851, R21NS072652, R01NS070963, R01NS083534, 5U01NS086625,5U24NS10059103, R01NS105820)",
+          "Shared Instrumentation Grants 1S10RR023401, 1S10RR019307, and 1S10RR023043.",
+          "NIH Blueprint for Neuroscience Research (5U01-MH093765), part 1005 of the multi-institutional Human Connectome Project.",
+          "Wellcome/EPSRC Centre for Medical En1015 gineering [WT203148/Z/16/Z; NS/A000049/1]",
+          "Alzheimer's Research UK (ARUK-IRG2019A-003)",
+          "NIH (1RF1MH123195-01, 1R01AG070988-01)"
+        ],
+        "HowToAcknowledge": "Casamitjana, Adrià, et al. \"Robust joint registration of multiple stains and MRI for multimodal 3D histology reconstruction: Application to the Allen human brain atlas.\" arXiv preprint arXiv:2104.14873 (2021).",
+        "License": "CC0",
+        "Name": "Robust joint registration of multiple stains  and MRI for multimodal 3D histology reconstruction: Application to the Allen human brain atlas",
+        "ReferencesAndLinks": [
+          "Code: https://github.com/acasamitjana/3dhirest"
+        ]
+      },
+      "readme": "This repository contains the following files:\n\nBIDS Directory Structure\n===\n\nRaw MRI volumes (T2w) at 7T\n\n    sub-01/ses-7T/anat/  -  MRI volume from the Allen Human Brain Atlas used as the reference for 3D histology reconstruction\n\nReconstructed MRI and histological data in subject space at 0.25mm isotropic\n\n    derivatives/historecon/sub-01/sub-01_res-0.25_<stain>  \n\nReconstructed MRI and histological data in subject space at 0.25mm isotropic (after revision 1)\n\n    derivatives/historecon-revision-1/sub-01/sub-01_res-0.25_<stain>  \n\nCorresponding MNI coordinates form the reconstructed volumes (4D volume with RAS/image coordinates). These files lie on the space of the histology reconstructions, thus, opening it on top of any of the reconstructed contrasts will directly give the image indices on MNI space\n\n    derivatives/mni-coordinates/sub-01/mni.coords.ijk.nii.gz\n    derivatives/mni-coordinates/sub-01/mni.coords.ijk.nii.gz\n\n===",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural"
+        ],
+        "sessions": [
+          "7T"
+        ],
+        "size": 15815415,
+        "subjects": [
+          "01"
+        ],
+        "tasks": [],
+        "totalFiles": 5
+      },
+      "tag": "1.0.2"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": null,
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2021-03-30T06:22:38.791Z"
+  },
+  "source": "openneuro"
+}

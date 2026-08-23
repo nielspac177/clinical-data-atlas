@@ -1,0 +1,67 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "NCICCR-DLBCL",
+  "payload": {
+    "dbgap_accession_number": null,
+    "disease_type": [
+      "Mature B-Cell Lymphomas"
+    ],
+    "id": "NCICCR-DLBCL",
+    "name": "Genomic Variation in Diffuse Large B Cell Lymphomas",
+    "primary_site": [
+      "Lymph nodes"
+    ],
+    "program": {
+      "dbgap_accession_number": "phs001444",
+      "name": "NCICCR",
+      "program_id": "cc2a2ade-ad20-58ce-a093-ea4b743b3254"
+    },
+    "project_id": "NCICCR-DLBCL",
+    "releasable": true,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 489,
+      "data_categories": [
+        {
+          "case_count": 489,
+          "data_category": "Sequencing Reads",
+          "file_count": 2400
+        },
+        {
+          "case_count": 481,
+          "data_category": "Transcriptome Profiling",
+          "file_count": 962
+        },
+        {
+          "case_count": 481,
+          "data_category": "Structural Variation",
+          "file_count": 1924
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 481,
+          "experimental_strategy": "RNA-Seq",
+          "file_count": 4329
+        },
+        {
+          "case_count": 485,
+          "experimental_strategy": "Targeted Sequencing",
+          "file_count": 485
+        },
+        {
+          "case_count": 472,
+          "experimental_strategy": "WXS",
+          "file_count": 472
+        }
+      ],
+      "file_count": 5286,
+      "file_size": 24031629435069
+    }
+  },
+  "source": "gdc"
+}

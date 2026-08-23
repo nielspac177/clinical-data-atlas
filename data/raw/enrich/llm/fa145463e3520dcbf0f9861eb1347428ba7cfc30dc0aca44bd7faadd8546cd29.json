@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:fa145463e3520dcbf0f9861eb1347428ba7cfc30dc0aca44bd7faadd8546cd29",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "their association with adverse pregnancy outcomes",
+        "label": "adverse pregnancy outcomes"
+      },
+      {
+        "evidence": "social support, occupation, and substance use",
+        "label": "substance use"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "obstetrics_gynecology",
+      "public_health"
+    ],
+    "id": "physionet:sdoh-adverse-pregnancy",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "discharge summary notes",
+        "value": "clinical_notes"
+      },
+      {
+        "evidence": "extracted from MIMIC-III and MIMIC-IV",
+        "value": "EHR"
+      }
+    ],
+    "population": "Patients whose MIMIC-III and MIMIC-IV discharge summaries were annotated for social determinants of health and pregnancy outcomes",
+    "summary": "Manually annotated de-identified dataset of social determinants of health — social support, occupation, substance use — drawn from MIMIC-III and MIMIC-IV discharge summaries and linked to adverse pregnancy outcomes, with model and preprocessing code."
+  },
+  "prompt_version": "v1"
+}

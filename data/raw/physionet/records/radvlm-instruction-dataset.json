@@ -1,0 +1,36 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "radvlm-instruction-dataset",
+  "payload": {
+    "abstract": "<p>We release the RadVLM instruction dataset, a large-scale resource used to train the RadVLM model on diverse radiology tasks. The dataset contains 1,115,021 image&ndash;instruction pairs spanning five task families: (i) report generation from frontal CXRs using filtered Findings/Impression text; (ii) abnormality classification for the standard 14 CheXpert labels; (iii) anatomy grounding; (iv) abnormality detection and grounding; and (v) phrase grounding from report sentences. To support interactive use, we include ~89k LLM-generated multi-turn, multi-task conversations (~3k with spatial grounding) derived from image-linked attributes (reports, labels, boxes). Creation involved curating datasets from public sources, excluding lateral views, removing prior-study references and other non-image context from reports, fusing multi-reader annotations, and harmonizing label and coordinate formats. The resource is intended for training CXR assistants across diverse radiology tasks and within a conversational format.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 88873766,
+    "core_doi": "10.13026/6wf1-7382",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 470326840,
+    "public_project_uuid": "557b7f8e-933f-4ee6-a269-bded4500c82e",
+    "publish_date": "2025-09-25",
+    "resource_type": "Database",
+    "short_description": "This dataset is designed to construct RadVLM, a vision–language model for chest X-ray interpretation. It includes instruction data for tasks such as report generation, abnormality detection, and region grounding, and multitask conversation.",
+    "slug": "radvlm-instruction-dataset",
+    "source_url": "https://physionet.org/content/radvlm-instruction-dataset/1.0.0/",
+    "title": "RadVLM Instruction Dataset",
+    "topics": [
+      "vision-language models",
+      "medical ai",
+      "chest x-rays"
+    ],
+    "version": "1.0.0",
+    "version_doi": "10.13026/et5g-h222"
+  },
+  "source": "physionet"
+}

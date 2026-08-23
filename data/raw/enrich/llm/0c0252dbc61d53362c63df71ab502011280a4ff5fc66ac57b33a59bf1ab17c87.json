@@ -1,0 +1,41 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:0c0252dbc61d53362c63df71ab502011280a4ff5fc66ac57b33a59bf1ab17c87",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Here we release a brain cancer MRI dataset",
+        "label": "brain cancer"
+      },
+      {
+        "evidence": "for the purpose of tumor recurrence prediction",
+        "label": "brain tumor recurrence"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "oncology"
+    ],
+    "id": "tcia:brain-tr-gammaknife",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "brain cancer MRI dataset",
+        "value": "MRI"
+      },
+      {
+        "evidence": "Gamma Knife treatment planning and follow-up data",
+        "value": "radiotherapy"
+      },
+      {
+        "evidence": "code, and clinical information",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "47 subjects with brain cancer treated with Gamma Knife radiotherapy; 244 annotated lesions",
+    "summary": "Brain MRI with paired Gamma Knife radiotherapy planning, dose data and clinical information for tumor recurrence prediction, including annotated lesions with DICOM images, structure sets and follow-up data."
+  },
+  "prompt_version": "v1"
+}

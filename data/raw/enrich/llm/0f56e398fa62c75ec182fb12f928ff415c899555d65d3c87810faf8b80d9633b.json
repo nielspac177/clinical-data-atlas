@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:0f56e398fa62c75ec182fb12f928ff415c899555d65d3c87810faf8b80d9633b",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "patients with prostate adenocarcinoma receiving definitive radiotherapy",
+        "label": "prostate adenocarcinoma"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "nephrology_urology"
+    ],
+    "id": "tcia:prostate-anatomical-edge-cases",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "seen on simulation CT and/or MRI imaging",
+        "value": "CT"
+      },
+      {
+        "evidence": "simulation CT and/or MRI imaging",
+        "value": "MRI"
+      },
+      {
+        "evidence": "used clinically for radiation treatment planning",
+        "value": "radiotherapy"
+      }
+    ],
+    "population": "From 950 consecutive patients with prostate adenocarcinoma receiving definitive radiotherapy between 2011 and 2019, 112 patients with anatomic variations (edge cases) plus a separate cohort of 19 randomly selected \"normal\" cases.",
+    "summary": "Simulation CT and MRI from prostate radiotherapy patients selected for anatomic variations such as hip arthroplasty, median lobe hypertrophy, or urinary catheters, with manual pelvic organ segmentations for stress-testing autosegmentation algorithms."
+  },
+  "prompt_version": "v1"
+}

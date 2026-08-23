@@ -1,0 +1,98 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003673",
+  "payload": {
+    "created": "2021-05-31T02:20:59.612Z",
+    "id": "ds003673",
+    "latestSnapshot": {
+      "created": "2022-08-01T17:39:43.000Z",
+      "description": {
+        "Authors": [
+          "Kangjoo Lee",
+          "Corey Horien",
+          "David O'Connor",
+          "Bronwen Garand-Sheridan",
+          "Fuyuze Tokoglu",
+          "Dustin Scheinost",
+          "Evelyn MR Lake",
+          "Todd R Constable"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds003673.v2.0.1",
+        "Funding": [],
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "Yale Resting State fMRI/Pupillometry: Arousal Study",
+        "ReferencesAndLinks": [
+          "Kangjoo Lee, Corey Horien, David O’Connor, Bronwen Garand-Sheridan, Fuyuze Tokoglu, Dustin Scheinost, Evelyn M.R. Lake, R. Todd Constable, “Arousal impacts distributed hubs modulating the integration of brain functional connectivity”, Neuroimage (2022), https://doi.org/10.1016/j.neuroimage.2022.119364"
+        ]
+      },
+      "readme": "Participants: 27 subjects (26.52 ± 4.04 years old; 16/11 females/males; 25/2 right/left-handed)\n\nData acquisition:\n\nImaging data were acquired using a Siemens 3.0T MAGNETOM Prisma MRI scanner at the Yale Magnetic Resonance Research Center. Data consists of one anatomical image and two resting state fMRI data with simultaneous in-scanner pupillometry data acquired from each subject.\n\n1. Imaging data - raw\n\nT1-weighted 3D anatomical images were acquired using a magnetization prepared rapid gradient echo (MPRAGE) pulse sequence with the following parameters: repetition time (TR) = 2,400 ms, echo time (TE) = 1.22 ms, flip angle = 8°, slice thickness = 1 mm, in-plane resolution = 1 × 1 mm, 208 contiguous slices acquired in the sagittal plane). \n\nFunctional T2*-weighted blood oxygen level-dependent (BOLD) images were acquired using a multiband gradient echo-planar imaging (EPI) pulse sequence using the following parameters: TR = 1000 ms, TE = 30 ms, flip angle = 55°, multiband acceleration factor = 5, slice thickness = 2 mm, in-plane resolution = 2 × 2 mm2, 75 contiguous slices acquired in the axial-oblique planes parallel to AC-PC line. Total duration of each functional run was 6:50 min (410 frames). We recommend to discard the first 10 s volumes in each resting state run to exclude frames when eye-tracking system was initialized and stabilized. \n\n2. Pupillometry data - minimally preprocessed\n\nEye-tracking data were recorded using a MR-compatible infrared EyeLink 1000 Plus eye-tracking system (SR Research Ltd. Ottawa, ON, Canada). \n\nEye-tracking data were minimally preprocessed. Eye blinks were automatically identified by EyeLink tracker’s online parser. Blink-induced artifacts were corrected using 4-point spline interpolation. Blinks that occurred shortly after each other (< 100 ms) were combined and treated as a single blink. The signals were low-pass filtered using a first-order Butterworth filter at cut-off 0.5 Hz, after which the first 10,000 data points (i.e., 10 s) were removed to synch with the fMRI data. The time-course was down-sampled by averaging 1,000 consecutive frames for each 1 s bin, to match the fMRI sampling frequency (1 Hz). \n\nMinimally preprocess eye-tracking data (pupil area) are available in the ‘derivatives’ folder.\n\nFor details, see:\n\n- Kangjoo Lee, Corey Horien, David O’Connor, Bronwen Garand-Sheridan, Fuyuze Tokoglu, Dustin Scheinost, Evelyn M.R. Lake, R. Todd Constable, “Arousal impacts distributed hubs modulating the integration of brain functional connectivity”, Neuroimage (2022), https://doi.org/10.1016/j.neuroimage.2022.119364\n\nFor concerns or requests, contact one of our admin members:\n\n- Admin member, Kangjoo Lee: kangjoo.lee@yale.edu\n- Admin member, Bronwen Garand-Sheridan: bronwen.garand-sheridan@yale.edu\n- Admin member, Corey Horien: horiencl@gmail.com\n- Principal Investigator, Todd constable: todd.constable@yale.edu\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 31952711597,
+        "subjects": [
+          "pa1372",
+          "pa1387",
+          "pa1393",
+          "pa1416",
+          "pa1560",
+          "pa1582",
+          "pa1604",
+          "pa1674",
+          "pa1700",
+          "pa1766",
+          "pa1792",
+          "pa1811",
+          "pa1834",
+          "pa1841",
+          "pa1859",
+          "pa1913",
+          "pa1940",
+          "pa1978",
+          "pa2079",
+          "pa2100",
+          "pa2106",
+          "pa2196",
+          "pa2213",
+          "pa2216",
+          "pa2220",
+          "pa2221",
+          "pa2226"
+        ],
+        "tasks": [
+          "Rest"
+        ],
+        "totalFiles": 165
+      },
+      "tag": "2.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": null,
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "Resting State",
+      "studyDomain": "",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2021-08-21T16:00:35.090Z"
+  },
+  "source": "openneuro"
+}

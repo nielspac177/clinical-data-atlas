@@ -1,0 +1,88 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "MP2PRT-ALL",
+  "payload": {
+    "dbgap_accession_number": "phs002005",
+    "disease_type": [
+      "Acute Lymphoblastic Leukemia",
+      "Lymphoid Leukemias"
+    ],
+    "id": "MP2PRT-ALL",
+    "name": "Molecular Profiling to Predict Response to Treatment for Acute Lymphoblastic Leukemia",
+    "primary_site": [
+      "Hematopoietic and reticuloendothelial systems"
+    ],
+    "program": {
+      "dbgap_accession_number": null,
+      "name": "MP2PRT",
+      "program_id": "710af5f1-9fd6-567e-9e10-226082994325"
+    },
+    "project_id": "MP2PRT-ALL",
+    "releasable": false,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 1510,
+      "data_categories": [
+        {
+          "case_count": 1510,
+          "data_category": "Simple Nucleotide Variation",
+          "file_count": 29474
+        },
+        {
+          "case_count": 1510,
+          "data_category": "Sequencing Reads",
+          "file_count": 10432
+        },
+        {
+          "case_count": 1510,
+          "data_category": "Clinical",
+          "file_count": 3
+        },
+        {
+          "case_count": 1504,
+          "data_category": "Copy Number Variation",
+          "file_count": 5994
+        },
+        {
+          "case_count": 1479,
+          "data_category": "Transcriptome Profiling",
+          "file_count": 2958
+        },
+        {
+          "case_count": 1504,
+          "data_category": "Somatic Structural Variation",
+          "file_count": 6019
+        },
+        {
+          "case_count": 1480,
+          "data_category": "Structural Variation",
+          "file_count": 5951
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 1494,
+          "experimental_strategy": "WXS",
+          "file_count": 23471
+        },
+        {
+          "case_count": 1479,
+          "experimental_strategy": "RNA-Seq",
+          "file_count": 13311
+        },
+        {
+          "case_count": 1507,
+          "experimental_strategy": "WGS",
+          "file_count": 24046
+        }
+      ],
+      "file_count": 60831,
+      "file_size": 595222092129654
+    }
+  },
+  "source": "gdc"
+}

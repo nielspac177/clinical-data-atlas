@@ -1,0 +1,40 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:a114cf9644fcc724281c1cf18591d9a5f4237b7425e8d4dfc3766865218f8fb7",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "appendicitis, cholecystitis, diverticulitis, and pancreatitis",
+        "label": "appendicitis"
+      },
+      {
+        "evidence": "appendicitis, cholecystitis, diverticulitis, and pancreatitis",
+        "label": "cholecystitis"
+      },
+      {
+        "evidence": "appendicitis, cholecystitis, diverticulitis, and pancreatitis",
+        "label": "diverticulitis"
+      },
+      {
+        "evidence": "appendicitis, cholecystitis, diverticulitis, and pancreatitis",
+        "label": "pancreatitis"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "gastroenterology_hepatology"
+    ],
+    "id": "physionet:mimic-iv-ext-cdm",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "HPI, physical examination, laboratory tests, and imaging",
+        "value": "EHR"
+      }
+    ],
+    "population": "2400 real patient cases from the MIMIC-IV database with four common abdominal pathologies",
+    "summary": "Curated emergency department clinical decision making cases from MIMIC-IV covering four abdominal pathologies, each with history, physical examination, laboratory tests, imaging and treatment information, for evaluating large language models."
+  },
+  "prompt_version": "v1"
+}

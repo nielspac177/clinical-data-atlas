@@ -1,0 +1,30 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:8810e4ad48377f0cfad1e43b66884300f2852f36b4155d3662746fde51c24314",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "less common but clinically significant arrhythmias",
+        "label": "arrhythmia"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:mitdb",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Two-channel ambulatory ECG recordings",
+        "value": "ECG"
+      }
+    ],
+    "population": "47 subjects studied by the BIH Arrhythmia Laboratory between 1975 and 1979, a mixed population of inpatients and outpatients",
+    "summary": "Half-hour excerpts of two-channel ambulatory electrocardiogram recordings from subjects studied at an arrhythmia laboratory, partly randomly selected and partly chosen to include less common arrhythmias."
+  },
+  "prompt_version": "v1"
+}

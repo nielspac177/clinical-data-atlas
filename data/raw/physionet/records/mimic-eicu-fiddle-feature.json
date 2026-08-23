@@ -1,0 +1,36 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "mimic-eicu-fiddle-feature",
+  "payload": {
+    "abstract": "<p>This is a preprocessed dataset derived&nbsp;from patient records in MIMIC-III and eICU, two large-scale electronic health record (EHR) databases. It contains features and labels&nbsp;for 5 prediction tasks involving 3 adverse outcomes (prediction times listed in parentheses):&nbsp;in-hospital mortality (48h), acute respiratory failure (4h and 12h), and shock (4h and 12h). We extracted comprehensive, high-dimensional feature representations (up to ~8,000 features) using FIDDLE (<strong>F</strong>lex<strong>I</strong>ble&nbsp;<strong>D</strong>ata-<strong>D</strong>riven pipe<strong>L</strong>in<strong>E</strong>), an open-source preprocessing pipeline for structured clinical data. These 5 prediction tasks were designed in consultation with a&nbsp;critical care physician for their clinical importance, and were used as part of the proof-of-concept experiments in the original paper to demonstrate FIDDLE&#39;s utility in aiding the&nbsp;feature engineering step of machine learning model development. The intent of this release is to share&nbsp;preprocessed MIMIC-III and eICU datasets used in the experiments to support and enable reproducible machine learning research on EHR data.&nbsp;</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 0,
+    "core_doi": "10.13026/zwds-nn76",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 1794482800,
+    "public_project_uuid": "fa1dd19e-f8c6-4c0d-b950-cfb4f5c540d4",
+    "publish_date": "2021-04-29",
+    "resource_type": "Database",
+    "short_description": "Features and labels from MIMIC-III and eICU-CRD produced by FIDDLE, an EHR preprocessing pipeline.",
+    "slug": "mimic-eicu-fiddle-feature",
+    "source_url": "https://physionet.org/content/mimic-eicu-fiddle-feature/1.0.0/",
+    "title": "MIMIC-III and eICU-CRD: Feature Representation by FIDDLE Preprocessing",
+    "topics": [
+      "electronic health record",
+      "preprocessing",
+      "machine learning"
+    ],
+    "version": "1.0.0",
+    "version_doi": "10.13026/2qtg-k467"
+  },
+  "source": "physionet"
+}

@@ -1,0 +1,89 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006826",
+  "payload": {
+    "created": "2025-10-22T10:01:03.153Z",
+    "id": "ds006826",
+    "latestSnapshot": {
+      "created": "2025-10-22T10:26:04.000Z",
+      "description": {
+        "Authors": [
+          "Tanya Wen",
+          "Chun-Chia Kung"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006826.v1.0.1",
+        "Funding": [
+          "Taiwan Ministry of Science and Technology"
+        ],
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "Using Functional Magnetic Resonance Imaging to Explore the Flashed Face Distortion Effect",
+        "ReferencesAndLinks": [
+          "https://pubmed.ncbi.nlm.nih.gov/25761281/"
+        ]
+      },
+      "readme": "# Using Functional Magnetic Resonance Imaging to Explore the Flashed Face Distortion Effect\n\n## Aims:\n\nIn this functional magnetic resonance imaging (fMRI) study, participants were presented with four conditions: (a) one face pair changing only its illumination; (b) two and (c) three alternating face pairs; and (d) nonrepeated face pairs. Participants rated the magnitude of each illusion immediately after each block.\n\n## Methods\n\n*fMRI:* This fMRI study investigated the shopping interactions of 30 college couples, one lying inside and the other outside the scanner, beholding the same item from two connected PCs, making preference ratings and subsequent buy/not-buy decisions.\n\n## General findings and importance:\n\nResults showed that the receptive region of the early visual cortex (V1-V4), and category-selective areas such as the fusiform face area (FFA) and occipital face area (OFA), responded proportionally to the participants' rated FFD strength. A random-effects voxelwise analysis further revealed positively correlated areas (including the medial and superolateral frontal areas) and negatively correlated areas (including the precuneus, postcentral gyrus, right insula, and bilateral middle frontal gyri) with respect to participants' ratings. Time series correlations among these nine ROIs (four positive and five negative) indicated that most participants showed a clustering of the two separate ROI types. Exploratory factor analysis (EFA) also demonstrated the segregation of the positive and negative ROIs; additionally, two subsystems were identified within the negative ROIs. \n\n## Sample Size\n\nFourteen human participants completed the experiments in the MRI scanner (In the uploaded sample, only thirteen out of the 20 were with complete FFD behavioral responses).\n\n\n### Comments added by Openfmri Curators ###\n===========================================\n\nGeneral Comments\n----------------\n\n\nWhere to discuss the dataset\n----------------------------\n1) www.openfmri.org/dataset/ds******/ See the comments section at the bottom of the dataset\npage.\n\nKnown Issues\n------------\n(In the uploaded sample, only thirteen out of the 20 were with complete FFD behavioral responses). The following 7 subjects' FFA localizers and retinotopic runs could still be used: sub-01, 07, 09, 12, 13, 17, and 19.\n\nBids-validator Output\n---------------------\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 7445927626,
+        "subjects": [
+          "10",
+          "03",
+          "19",
+          "07",
+          "20",
+          "14",
+          "13",
+          "02",
+          "15",
+          "01",
+          "06",
+          "17",
+          "16",
+          "12",
+          "11",
+          "18",
+          "09",
+          "08",
+          "04",
+          "05"
+        ],
+        "tasks": [
+          "PolAng",
+          "FFD",
+          "CatLoc"
+        ],
+        "totalFiles": 724
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": "10.1167/14.12.29",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "National Council of Science and Technology, Taiwan",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "blocked design",
+      "studyDomain": "perception",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2025-10-22T10:23:59.587Z"
+  },
+  "source": "openneuro"
+}

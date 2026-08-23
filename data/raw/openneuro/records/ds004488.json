@@ -1,0 +1,137 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004488",
+  "payload": {
+    "created": "2023-02-09T11:16:30.698Z",
+    "id": "ds004488",
+    "latestSnapshot": {
+      "created": "2026-03-31T14:53:35.000Z",
+      "description": {
+        "Authors": [
+          "Ming Zhou",
+          "Zhengxin Gong",
+          "Yuxuan Dai",
+          "Yushan Wen",
+          "Youyi Liu",
+          "Zonglei Zhen"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004488.v2.0.1",
+        "Funding": [
+          "Key Program of National Natural Science Foundation of China (62236001)",
+          "General Program of National Natural Science Foundation of China (31771251)"
+        ],
+        "HowToAcknowledge": "TODO: describe how to acknowledge -- either cite a corresponding paper, or just in acknowledgement section",
+        "License": "CC0",
+        "Name": "A large-scale fMRI dataset for human action recognition",
+        "ReferencesAndLinks": [
+          "TODO",
+          "List of papers or websites"
+        ]
+      },
+      "readme": "**Summary**\n\nHuman action recognition is one of our critical living abilities, allowing us to interact easily with the environment and others in everyday life. Although the neural basis of action recognition has been widely studied using a few categories of actions from simple contexts as stimuli, how the human brain recognizes diverse human actions in real-world environments still need to be explored. Here, we present the Human Action Dataset (HAD), a large-scale functional magnetic resonance imaging (fMRI) dataset for human action recognition. HAD contains fMRI responses to 21,600 video clips from 30 participants. The video clips encompass 180 human action categories and offer a comprehensive coverage of complex activities in daily life. We demonstrate that the data are reliable within and across participants and, notably, capture rich representation information of the observed human actions. This extensive dataset, with its vast number of action categories and exemplars, has the potential to deepen our understanding of human action recognition in natural environments.\n\n**Data record**\n\nThe data were organized according to the Brain-Imaging-Data-Structure (BIDS) Specification version 1.7.0 and can be accessed from the OpenNeuro public repository (accession number: ds004488). The raw data of each subject were stored in \"sub-< ID>\" directories. The preprocessed volume data and the derived surface-based data were stored in “derivatives/fmriprep” and “derivatives/ciftify” directories, respectively. The video clips stimuli were stored in “stimuli” directory.\n\n*Video clips stimuli*\nThe video clips stimuli selected from HACS are deposited in the \"stimuli\" folder. Each of the 180 action categories holds a folder in which 120 unique video clips are stored.\n\n*Raw data*\nThe data for each participant are distributed in three sub-folders, including the “anat” folder for the T1 MRI data, the “fmap” folder for the field map data, and the “func” folder for functional MRI data. The events file in “func” folder contains the onset, duration, trial type (category index) in specific scanning run.\n\n*Preprocessed volume data from fMRIprep*\nThe preprocessed volume-based fMRI data are in subject's native space, saved as “sub-<subID>_ses-<sesID>_task-<taskID>_run-<index>_space-T1w_desc-preproc_bold.nii.gz” for each functional run. A “sub-<subID>_ses-<sesID>_task-<taakID>_run-<index>_desc-confounds_timeseries.tsv” file stores the confounds variable extracted by fMRIPrep. Other auxiliary files can also be found under each session folder. \n\n*Preprocessed surface data from ciftify*\nUnder the “results” folder, the preprocessed surface-based data are saved in standard fsLR space, named as “sub-<subID>/results/ses-action01_task-action_run-<index>_Atlas.dtseries.nii” for each functional run. The standard and native fsLR surface can be found in the “standard_fsLR_surface” and “T1w_fsLR_surface” folders, respectively. \nThe brain activation data derived from GLM analyses are saved as “sub-<subID>/results/ses-action01_task-action_cycle-<cycleIndex>_beta.dscalar.nii” for each cycle corresponded with every three runs. The auxiliary information about labels or conditions can be found in “ses-action01_task-action_cycle-<cycleIndex>_label.txt”.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "action01"
+        ],
+        "size": 54018630276,
+        "subjects": [
+          "16",
+          "03",
+          "12",
+          "30",
+          "11",
+          "19",
+          "02",
+          "21",
+          "09",
+          "13",
+          "05",
+          "27",
+          "04",
+          "10",
+          "08",
+          "25",
+          "14",
+          "20",
+          "15",
+          "26",
+          "01",
+          "24",
+          "07",
+          "18",
+          "28",
+          "22",
+          "06",
+          "17",
+          "23",
+          "29"
+        ],
+        "tasks": [
+          "TODO: full task name for action",
+          "action"
+        ],
+        "totalFiles": 1394
+      },
+      "tag": "2.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        21,
+        25,
+        21,
+        23,
+        21,
+        22,
+        22,
+        19,
+        19,
+        23,
+        23,
+        20,
+        23,
+        23,
+        25,
+        19,
+        23,
+        25,
+        22,
+        20,
+        23,
+        27,
+        21,
+        23,
+        18,
+        22,
+        29,
+        22,
+        22,
+        19
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2023-03-05T11:20:48.865Z"
+  },
+  "source": "openneuro"
+}

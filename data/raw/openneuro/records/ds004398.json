@@ -1,0 +1,74 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004398",
+  "payload": {
+    "created": "2023-01-11T14:18:04.348Z",
+    "id": "ds004398",
+    "latestSnapshot": {
+      "created": "2023-01-25T04:25:53.000Z",
+      "description": {
+        "Authors": [
+          "G. Elliott Wimmer",
+          "Yunzhe Liu",
+          "Daniel C. McNamee",
+          "Raymond J. Dolan"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004398.v1.0.0",
+        "Funding": [
+          "G.E.W. was supported by a fellowship from the Deutsche Forschungsgemeinschaft (DFG) and an MRC Career Development Award (MR/V032429/1)",
+          "R.D. is supported by Wellcome Trust Investigator Award 098362/ Z/12/Z.",
+          "Y.L. was supported by the Open Research Fund of the State Key Laboratory of Cognitive Neuroscience and Learning.",
+          "D.C.M. was supported by a Sir Henry Wellcome Trust Postdoctoral Research Fellowship Q: (110257/Z/15/Z).",
+          "The Wellcome Centre for Human Neuroimaging is supported by core funding from the Wellcome Trust (203147/Z/16/Z).",
+          "The Max Planck University College London Centre is a joint initiative supported by University College London and the Max Planck Society."
+        ],
+        "HowToAcknowledge": "Please cite https://doi.org/10.1101/2021.11.08.467745 (update to PNAS)",
+        "License": "CC0",
+        "Name": "planmemreplay",
+        "ReferencesAndLinks": [
+          "https://github.com/gewimmer-neuro/multistep-replay",
+          "https://osf.io/szjxp/",
+          "https://doi.org/10.1101/2021.11.08.467745 (update to PNAS)"
+        ]
+      },
+      "readme": "The MEG files contain a channel with triggers necessary for event marking and timing. Separate event files with onsets are provided in the participant directories for completeness only; the MEG triggers should be used for actual onsets in analysis. The delay between the trigger and the visual onset of an on-screen event sent by the projector is approximately 20 ms, as estimated using a photodiode.\n\nLocalizer phase triggers: [Info to be added]\n\nStruct and Rew phase triggers: [Info to be added]\n\nPost triggers:  [Info to be added]",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "meg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [],
+        "size": 1373056065,
+        "subjects": [
+          "231"
+        ],
+        "tasks": [
+          "Memory"
+        ],
+        "totalFiles": 18
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": null,
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "meg"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2023-01-23T14:29:41.717Z"
+  },
+  "source": "openneuro"
+}

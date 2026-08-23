@@ -1,0 +1,39 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "chest-x-ray-segmentation",
+  "payload": {
+    "abstract": "<p><span><span><span><span><span><span>Chest X-ray(CXR) images are prominent among medical images and are commonly administered in emergency diagnosis and treatment corresponding to cardiac and respiratory diseases. Though there are robust solutions available for medical diagnosis, validation of artificial intelligence (AI) in radiology is still questionable. Segmentation is pivotal in chest radiographs that aid in improvising the existing AI-based medical diagnosis process. We provide the CXLSeg dataset: Chest X-ray with Lung Segmentation, a comparatively large dataset of segmented Chest X-ray radiographs based on the MIMIC-CXR dataset, a popular CXR image dataset. The dataset contains segmentation results of 243,324 frontal view images of the MIMIC-CXR dataset and corresponding masks. Additionally, this dataset can be utilized for computer vision-related deep learning tasks such as medical image classification, semantic segmentation and medical report generation. Models using segmented images yield better results since only the features related to the important areas of the image are focused. Thus images of this dataset can be manipulated to any visual feature extraction process associated with the original MIMIC-CXR dataset and enhance the results of the published or novel investigations. Furthermore, masks provided by this dataset can be used to train segmentation models when combined with the MIMIC-CXR-JPG dataset. The SA-UNet model achieved a 96.80% in dice similarity coefficient and 91.97% in IoU for lung segmentation using CXLSeg.</span></span></span></span></span></span></p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 4362042641,
+    "core_doi": "10.13026/pa5n-mc06",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 4626095644,
+    "public_project_uuid": "50e812ed-6dd2-4c64-84c8-1e0c9cd61cb8",
+    "publish_date": "2023-02-08",
+    "resource_type": "Database",
+    "short_description": "CXLSeg dataset: Chest X-ray with Lung Segmentation, a comparatively large dataset of segmented Chest X-ray radiographs based on the MIMIC-CXR dataset. This contains segmentation results of 243,324 frontal view images and corresponding masks.",
+    "slug": "chest-x-ray-segmentation",
+    "source_url": "https://physionet.org/content/chest-x-ray-segmentation/1.0.0/",
+    "title": "Chest X-ray Dataset with Lung Segmentation",
+    "topics": [
+      "medical reports",
+      "mimic-cxr",
+      "u-net",
+      "chest x-ray",
+      "chest radiographs",
+      "segmentation"
+    ],
+    "version": "1.0.0",
+    "version_doi": "10.13026/9cy4-f535"
+  },
+  "source": "physionet"
+}

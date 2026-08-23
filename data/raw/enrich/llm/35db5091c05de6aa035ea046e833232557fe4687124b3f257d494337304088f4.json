@@ -1,0 +1,28 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:35db5091c05de6aa035ea046e833232557fe4687124b3f257d494337304088f4",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Metastatic breast carcinoma is present in 36 of the WSI",
+        "label": "metastatic breast carcinoma"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "tcia:sln-breast",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "whole slide images of H&E stained axillary lymph node specimens",
+        "value": "pathology"
+      }
+    ],
+    "population": "78 patients with axillary lymph node specimens; metastatic breast carcinoma present in slides from 27 patients",
+    "summary": "Whole slide images of H&E stained axillary lymph node specimens with per-slide positive or negative labels taken from pathology reports, intended for comparing breast cancer metastasis detection algorithms."
+  },
+  "prompt_version": "v1"
+}

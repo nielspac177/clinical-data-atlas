@@ -1,0 +1,96 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003463",
+  "payload": {
+    "created": "2021-01-07T09:23:56.350Z",
+    "id": "ds003463",
+    "latestSnapshot": {
+      "created": "2022-10-25T14:16:18.000Z",
+      "description": {
+        "Authors": [
+          "Eugene Kim",
+          "Davide Di Censo",
+          "Mattia Baraldo",
+          "Camilla Simmons",
+          "Ilaria Rosa",
+          "Karen Randall",
+          "Clive Ballard",
+          "Ben Dickie",
+          "Steve Williams",
+          "Richard Killick",
+          "Diana Cash"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds003463.v1.0.2",
+        "Funding": [
+          "Alzheimer’s Society"
+        ],
+        "HowToAcknowledge": "Please cite the following article:\n\nKim, E., Di Censo, D., Baraldo, M. et al. In vivo multi-parametric manganese-enhanced MRI for detecting amyloid plaques in rodent models of Alzheimer’s disease. Sci Rep 11, 12419 (2021). https://doi.org/10.1038/s41598-021-91899-5",
+        "License": "CC0",
+        "Name": "In vivo multi-parametric manganese-enhanced MRI for detecting senile plaques in rodent models of Alzheimer’s disease",
+        "ReferencesAndLinks": null
+      },
+      "readme": "This dataset contains raw UTE, MP2RAGE, and MGE MR images of 14 5xFAD mice (8 transgenics, 6 wild-types) and 8 TgF344-AD rats (4 transgenics, 4 wild-types). Images were acquired on a 9.4T Bruker BioSpec, before (pre-Mn) or after (post-Mn) subcutaneous administration of MnCl2. \n\nThis dataset was converted using BrkRaw (0.3.3) at 2021-01-06 22:12:04.048740 (https://doi.org/10.5281/zenodo.3818615).\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural"
+        ],
+        "sessions": [
+          "postMn",
+          "preMn"
+        ],
+        "size": 1186718157,
+        "subjects": [
+          "m01",
+          "m02",
+          "m03",
+          "m04",
+          "m05",
+          "m06",
+          "m07",
+          "m08",
+          "m09",
+          "m10",
+          "m11",
+          "m12",
+          "m13",
+          "m14",
+          "r01",
+          "r02",
+          "r03",
+          "r04",
+          "r05",
+          "r06",
+          "r07",
+          "r08"
+        ],
+        "tasks": [],
+        "totalFiles": 227
+      },
+      "tag": "1.0.2"
+    },
+    "metadata": {
+      "affirmedDefaced": false,
+      "ages": null,
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Rat",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2021-01-07T14:25:33.770Z"
+  },
+  "source": "openneuro"
+}

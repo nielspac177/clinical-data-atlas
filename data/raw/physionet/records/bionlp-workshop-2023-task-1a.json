@@ -1,0 +1,36 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "bionlp-workshop-2023-task-1a",
+  "payload": {
+    "abstract": "<p>Automatically summarizing patients&rsquo; main problems from the daily care notes in the electronic health record can help mitigate information and cognitive overload for clinicians and provide augmented intelligence via computerized diagnostic decision support at the bedside. The task of Problem List Summarization aims to generate a list of diagnoses and problems in a patient&rsquo;s daily care plan using input from the provider&rsquo;s progress notes during hospitalization.</p>\n\n<p>This task aims to promote NLP model development for downstream applications in diagnostic decision support systems that could improve efficiency and reduce diagnostic errors in hospital care. The task contains 768 hospital daily progress notes and 2783 diagnoses in the training set, and a new set of 237 daily progress notes are recently annotated as the test set. The annotation methods and annotation quality have previously been reported.</p>\n\n<p>The dataset supports a more complex summarization task to generate a list of relevant diagnoses/problems given the information in the Subjective, Objective, and Assessment sections of the note. Only diagnoses/problems that are available in the progress note were labeled for the task.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 882753,
+    "core_doi": "10.13026/s8wk-ja78",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 2868767,
+    "public_project_uuid": "a48b3155-963a-4707-882a-82019a7d5ecc",
+    "publish_date": "2023-11-12",
+    "resource_type": "Challenge",
+    "short_description": "This is the data storage for BioNLP Workshop Shared Task 1A: Problem List Summarization.",
+    "slug": "bionlp-workshop-2023-task-1a",
+    "source_url": "https://physionet.org/content/bionlp-workshop-2023-task-1a/2.0.0/",
+    "title": "BioNLP Workshop 2023 Shared Task 1A: Problem List Summarization",
+    "topics": [
+      "bionlp",
+      "clinical natural language processing",
+      "electronic health record summarization"
+    ],
+    "version": "2.0.0",
+    "version_doi": "10.13026/mg5c-x807"
+  },
+  "source": "physionet"
+}

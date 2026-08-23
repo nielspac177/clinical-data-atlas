@@ -1,0 +1,108 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004645",
+  "payload": {
+    "created": "2023-07-20T19:26:16.488Z",
+    "id": "ds004645",
+    "latestSnapshot": {
+      "created": "2023-07-21T17:22:10.000Z",
+      "description": {
+        "Authors": [
+          "Sydney M. Bailes",
+          "Daniel E.P. Gomez",
+          "Beverly Setzer",
+          "Laura D. Lewis"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004645.v1.0.0",
+        "Funding": [
+          "NIH R00-MH111748",
+          "NIH U19-NS123717",
+          "NIH R01-AG070135",
+          "NIH P41-EB030006",
+          "Searle Scholars Program",
+          "Pew Biomedical Scholars Program",
+          "Sloan Fellowship",
+          "One Mind Risint Star award",
+          "NIH T32-GM008764"
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Resting-state fMRI signals contain spectral signatures of local hemodynamic response timing",
+        "ReferencesAndLinks": null
+      },
+      "readme": "# README\n\nThis dataset contains 7T fMRI data from 15 subjects collected between May-October 2021. \n\nSubjects underwent a total of 7 functional scans: 3 visual stimulus, 2 breath hold, and 2 resting-state runs (except sub-01 who only completed 1 breath hold run)\n\nThe visual stimulus run presented subjects with a 12 Hz counterphase flickering radial checkerboard with luminance contrast oscillating at 0.05 Hz (except for sub-01 who was presented with 0.1Hz oscillations).\n\nThe breath hold task consisted of 8 repetitions of a breath hold block with of 27 seconds of free breathing, 3 cycles of paced breathing (3 seconds breathe out, 3 seconds breathe in), and a 15 second breath hold. \n\nFor the resting state runs subjects were told to keep their eyes open and to stay awake. \n\nPhysiological data is available from the majority of runs and contains continuous measurements of pulse oximetry and respiration. \nsub-04 is missing physiological data for the 3rd visual run.\nsub-09 is missing physiological data from the 2nd breath hold run and 2nd resting-state run. \n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 45792109521,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15"
+        ],
+        "tasks": [
+          "breathhold",
+          "checker",
+          "rest"
+        ],
+        "totalFiles": 507
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        27,
+        25,
+        26,
+        22,
+        22,
+        29,
+        26,
+        26,
+        27,
+        22,
+        23,
+        27,
+        32,
+        34,
+        42
+      ],
+      "associatedPaperDOI": "doi: 10.1101/2023.01.25.525528",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2023-07-21T17:22:40.389Z"
+  },
+  "source": "openneuro"
+}

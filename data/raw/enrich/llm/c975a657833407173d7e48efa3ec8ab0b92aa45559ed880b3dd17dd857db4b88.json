@@ -1,0 +1,27 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:c975a657833407173d7e48efa3ec8ab0b92aa45559ed880b3dd17dd857db4b88",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "other"
+    ],
+    "id": "physionet:drugehrqa",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Electronic Health Records (EHR) contain patient records",
+        "value": "EHR"
+      },
+      {
+        "evidence": "unstructured clinical notes",
+        "value": "clinical_notes"
+      }
+    ],
+    "population": null,
+    "summary": "Medication-related question-answer pairs drawn from structured MIMIC-III tables and unstructured clinical notes, including natural language questions, corresponding SQL queries, and the answers retrieved from the tables."
+  },
+  "prompt_version": "v1"
+}

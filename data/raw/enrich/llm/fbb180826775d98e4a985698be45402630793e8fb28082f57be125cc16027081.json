@@ -1,0 +1,43 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:fbb180826775d98e4a985698be45402630793e8fb28082f57be125cc16027081",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Neuroblastoma",
+        "label": "Neuroblastoma"
+      },
+      {
+        "evidence": "Neuroepitheliomatous Neoplasms",
+        "label": "Neuroepitheliomatous Neoplasms"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "pediatrics",
+      "gastroenterology_hepatology",
+      "nephrology_urology"
+    ],
+    "id": "gdc:TARGET-NBL",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "WGS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "RNA-Seq",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "1132 human cases",
+    "summary": "TARGET neuroblastoma collection spanning many primary sites including adrenal gland, kidney, liver, bone and nervous system, with whole-genome, whole-exome, targeted and RNA sequencing, methylation arrays, clinical and biospecimen data."
+  },
+  "prompt_version": "v1"
+}

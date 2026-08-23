@@ -1,0 +1,45 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:f7bc415932f4428667a5cb17bffaceba6d2b7f927ab27afed4749589e25d9ead",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Non-Small Cell Lung Cancer (NSCLC) cohort",
+        "label": "Non-Small Cell Lung Cancer (NSCLC)"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "pulmonology"
+    ],
+    "id": "tcia:nsclc-radiogenomics",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Computed Tomography (CT)",
+        "value": "CT"
+      },
+      {
+        "evidence": "Positron Emission Tomography (PET)/CT images",
+        "value": "PET"
+      },
+      {
+        "evidence": "gene mutation",
+        "value": "genomics"
+      },
+      {
+        "evidence": "RNA sequencing data",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "clinical data, including survival outcomes",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "Subjects in a Non-Small Cell Lung Cancer (NSCLC) cohort, with tumor tissue surgically excised",
+    "summary": "CT and PET/CT images from a non-small cell lung cancer cohort, with tumor segmentations, semantic annotations, gene mutation and RNA sequencing data from excised tumor tissue, and clinical data including survival outcomes."
+  },
+  "prompt_version": "v1"
+}

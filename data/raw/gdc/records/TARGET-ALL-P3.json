@@ -1,0 +1,111 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "TARGET-ALL-P3",
+  "payload": {
+    "dbgap_accession_number": null,
+    "disease_type": [
+      "Leukemias, NOS",
+      "Myeloid Leukemias",
+      "Not Applicable",
+      "Lymphoid Leukemias"
+    ],
+    "id": "TARGET-ALL-P3",
+    "name": "Acute Lymphoblastic Leukemia - Phase III",
+    "primary_site": [
+      "Unknown",
+      "Hematopoietic and reticuloendothelial systems"
+    ],
+    "program": {
+      "dbgap_accession_number": "phs000218",
+      "name": "TARGET",
+      "program_id": "f1c391e9-8488-55a8-b777-302e786ea11d"
+    },
+    "project_id": "TARGET-ALL-P3",
+    "releasable": true,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 191,
+      "data_categories": [
+        {
+          "case_count": 108,
+          "data_category": "Simple Nucleotide Variation",
+          "file_count": 2140
+        },
+        {
+          "case_count": 131,
+          "data_category": "Sequencing Reads",
+          "file_count": 776
+        },
+        {
+          "case_count": 131,
+          "data_category": "Biospecimen",
+          "file_count": 1
+        },
+        {
+          "case_count": 112,
+          "data_category": "Clinical",
+          "file_count": 2
+        },
+        {
+          "case_count": 45,
+          "data_category": "Copy Number Variation",
+          "file_count": 112
+        },
+        {
+          "case_count": 110,
+          "data_category": "Transcriptome Profiling",
+          "file_count": 348
+        },
+        {
+          "case_count": 102,
+          "data_category": "DNA Methylation",
+          "file_count": 423
+        },
+        {
+          "case_count": 45,
+          "data_category": "Somatic Structural Variation",
+          "file_count": 112
+        },
+        {
+          "case_count": 110,
+          "data_category": "Structural Variation",
+          "file_count": 270
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 89,
+          "experimental_strategy": "WXS",
+          "file_count": 2145
+        },
+        {
+          "case_count": 38,
+          "experimental_strategy": "miRNA-Seq",
+          "file_count": 117
+        },
+        {
+          "case_count": 110,
+          "experimental_strategy": "RNA-Seq",
+          "file_count": 945
+        },
+        {
+          "case_count": 46,
+          "experimental_strategy": "WGS",
+          "file_count": 551
+        },
+        {
+          "case_count": 102,
+          "experimental_strategy": "Methylation Array",
+          "file_count": 423
+        }
+      ],
+      "file_count": 4184,
+      "file_size": 26757267236529
+    }
+  },
+  "source": "gdc"
+}

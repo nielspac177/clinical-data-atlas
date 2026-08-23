@@ -1,0 +1,100 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003758",
+  "payload": {
+    "created": "2021-08-04T01:13:27.850Z",
+    "id": "ds003758",
+    "latestSnapshot": {
+      "created": "2021-08-17T23:42:29.000Z",
+      "description": {
+        "Authors": [
+          "Kenji Kobayashi",
+          "Sangil Lee",
+          "Alexandre L. S. Filipowicz",
+          "Kara D. McGaughey",
+          "Joseph W. Kable",
+          "Matthew R. Nassar"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds003758.v1.0.2",
+        "Funding": null,
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "Dynamic representation of the subjective value of information",
+        "ReferencesAndLinks": [
+          "Kobayashi, K., Lee, S., Filipowicz, A. L. S., McGaughey, K. D., Kable, J. W. & Nassar, M. R. (2021). Dynamic representation of the subjective value of information. Journal of Neuroscience, https://doi.org/10.1523/JNEUROSCI.0423-21.2021."
+        ]
+      },
+      "readme": "This dataset has been published in the following paper:\n\nKobayashi, K., Lee, S., Filipowicz, A. L. S., McGaughey, K. D., Kable, J. W. & Nassar, M. R. (2021). Dynamic representation of the subjective value of information. Journal of Neuroscience, https://doi.org/10.1523/JNEUROSCI.0423-21.2021.\n \n15 participants completed a modified \"beads task\" paradigm, in which they decided whether to acquire costly information, across four scanning runs. In addition to raw data under sub-\\*/, preprocessed data are available under derivatives/fsl/sub-\\*/. \n\nCode for behavioral modeling are available at gitlab.com/kenji.k/beadsVOI/. Unthresholded group-level statistics maps are available at neurovault.org/collections/MORTKKAM/.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 17112671662,
+        "subjects": [
+          "BA3550",
+          "CC528",
+          "FL1136",
+          "FT3594",
+          "IA3593",
+          "IL3520",
+          "KQ3548",
+          "LL3555",
+          "MF3567",
+          "NN3554",
+          "NS950",
+          "OF3592",
+          "TK3556",
+          "TQ3543",
+          "TQ3600"
+        ],
+        "tasks": [
+          "beads"
+        ],
+        "totalFiles": 188
+      },
+      "tag": "1.0.2"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        24,
+        28,
+        22,
+        19,
+        24,
+        23,
+        18,
+        19,
+        19,
+        19,
+        21,
+        21,
+        21,
+        18,
+        23
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2021-08-17T23:40:05.231Z"
+  },
+  "source": "openneuro"
+}

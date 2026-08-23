@@ -1,0 +1,123 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "CCDI-MCI",
+  "payload": {
+    "dbgap_accession_number": "phs002790",
+    "disease_type": [
+      "Cystic, Mucinous and Serous Neoplasms",
+      "Granular Cell Tumors and Alveolar Soft Part Sarcomas",
+      "Specialized Gonadal Neoplasms",
+      "Neoplasms, NOS",
+      "Adenomas and Adenocarcinomas",
+      "Gliomas",
+      "Meningiomas",
+      "Acinar Cell Neoplasms",
+      "Odontogenic Tumors",
+      "Soft Tissue Tumors and Sarcomas, NOS",
+      "Nevi and Melanomas",
+      "Malignant Lymphomas, NOS or Diffuse",
+      "Epithelial Neoplasms, NOS",
+      "Thymic Epithelial Neoplasms"
+    ],
+    "id": "CCDI-MCI",
+    "name": "Molecular Characterization Initiative (MCI)",
+    "primary_site": [
+      "Other and unspecified parts of mouth",
+      "Rectosigmoid junction",
+      "Thyroid gland",
+      "Connective, subcutaneous and other soft tissues",
+      "Peripheral nerves and autonomic nervous system",
+      "Other endocrine glands and related structures",
+      "Retroperitoneum and peritoneum",
+      "Vagina",
+      "Other and ill-defined digestive organs",
+      "Pancreas",
+      "Renal pelvis",
+      "Bladder",
+      "Nasal cavity and middle ear",
+      "Meninges",
+      "Adrenal gland",
+      "Bones, joints and articular cartilage of limbs",
+      "Bones, joints and articular cartilage of other and unspecified sites",
+      "Breast",
+      "Skin",
+      "Thymus",
+      "Esophagus",
+      "Other and ill-defined sites in lip, oral cavity and pharynx",
+      "Larynx",
+      "Other and unspecified urinary organs",
+      "Brain",
+      "Testis",
+      "Heart, mediastinum, and pleura",
+      "Rectum",
+      "Nasopharynx",
+      "Palate",
+      "Prostate gland",
+      "Base of tongue",
+      "Accessory sinuses",
+      "Other and unspecified female genital organs",
+      "Lip",
+      "Spinal cord, cranial nerves, and other parts of central nervous system",
+      "Colon",
+      "Oropharynx",
+      "Other and ill-defined sites",
+      "Unknown",
+      "Other and ill-defined sites within respiratory system and intrathoracic organs",
+      "Other and unspecified male genital organs",
+      "Cervix uteri",
+      "Bronchus and lung",
+      "Eye and adnexa",
+      "Ovary",
+      "Small intestine",
+      "Lymph nodes",
+      "Stomach"
+    ],
+    "program": {
+      "dbgap_accession_number": null,
+      "name": "CCDI",
+      "program_id": "685f9a7e-6646-553e-8cb8-a4f96cdd61a6"
+    },
+    "project_id": "CCDI-MCI",
+    "releasable": false,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 3076,
+      "data_categories": [
+        {
+          "case_count": 3033,
+          "data_category": "Simple Nucleotide Variation",
+          "file_count": 36918
+        },
+        {
+          "case_count": 3040,
+          "data_category": "Sequencing Reads",
+          "file_count": 6079
+        },
+        {
+          "case_count": 2765,
+          "data_category": "DNA Methylation",
+          "file_count": 8301
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 3040,
+          "experimental_strategy": "WXS",
+          "file_count": 42997
+        },
+        {
+          "case_count": 2765,
+          "experimental_strategy": "Methylation Array",
+          "file_count": 8301
+        }
+      ],
+      "file_count": 51298,
+      "file_size": 689406497903932
+    }
+  },
+  "source": "gdc"
+}

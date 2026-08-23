@@ -1,0 +1,38 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:dd79b0a598adf641aa185809a5742334dd2b002b6229ac813f50651955b658e5",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "had small intestinal neuroendocrine tumors at surgery",
+        "label": "small intestinal neuroendocrine tumors"
+      },
+      {
+        "evidence": "Natural History of Familial Carcinoid Tumor",
+        "label": "Familial Carcinoid Tumor"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "gastroenterology_hepatology",
+      "surgery"
+    ],
+    "id": "tcia:capsule-endoscopy-sb-net",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "18F-DOPA PET scan",
+        "value": "PET"
+      },
+      {
+        "evidence": "Small Bowel Capsule Endoscopy (SB-CE)",
+        "value": "other"
+      }
+    ],
+    "population": "Derived from a prospective observational study of familial carcinoid tumor including 174 asymptomatic subjects; archived capsule endoscopy videos from 20 patients were reviewed.",
+    "summary": "Curated de-identified images extracted from small bowel capsule endoscopy videos, with abnormalities identified by expert readers and correlated with surgical findings, intended for training and testing automated tumor detection."
+  },
+  "prompt_version": "v1"
+}

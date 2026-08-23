@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:9dad8c12ffb26fd43d9935ee66bb8012f204162a8a08d82a394184457f93047e",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "acute hypotensive episode",
+        "label": "acute hypotensive episode"
+      },
+      {
+        "evidence": "hypertension",
+        "label": "hypertension"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:challenge-2009",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "multiparameter",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "ehr",
+        "value": "EHR"
+      }
+    ],
+    "population": "patients in the challenge dataset",
+    "summary": "PhysioNet/Computing in Cardiology Challenge 2009 asks participants to predict which patients in the challenge dataset will experience an acute hypotensive episode beginning within the forecast window."
+  },
+  "prompt_version": "v1"
+}

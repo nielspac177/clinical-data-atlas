@@ -1,0 +1,123 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004630",
+  "payload": {
+    "created": "2023-07-10T15:30:52.294Z",
+    "id": "ds004630",
+    "latestSnapshot": {
+      "created": "2025-01-22T15:15:34.000Z",
+      "description": {
+        "Authors": [
+          "Mengfan Zhang",
+          "Alexander Karner",
+          "Kathrin Kostorz",
+          "Sophia Shea",
+          "David Steyrl",
+          "Filip Melinscak",
+          "Ronald Sladky",
+          "Cindy Sumaly Lor",
+          "Frank Scharnowski"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004630.v1.1.3",
+        "Funding": [
+          "FM was funded by the Austrian Science Fund (FWF) [10.55776/ESP133]. KK was funded by the Austrian Science Fund (FWF) [10.55776/ESP286]. FS was supported by the Swiss National Science Foundation (BSSG10_155915, 100014_178841, 32003B_166566), the Foundation for Research in Science and the Humanities at the University of Zurich (STWF-17-012), and the Baugarten Stiftung."
+        ],
+        "HowToAcknowledge": "Zhang, M., Karner, A., Kostorz, K., Shea, S., Steyrl, D., Melinscak, F., Sladky, R., Lor, C., Scharnowski, F. (in prep.). SpiDa-MRI, behavioral and (f)MRI data of adults with fear of spiders.",
+        "License": "CC0",
+        "Name": "SpiDa-MRI-neuroimaging dataset",
+        "ReferencesAndLinks": null
+      },
+      "readme": "This dataset contains raw and derived fMRI data from the image viewing task of the study: \"SpiDa-MRI, behavioral and (f)MRI data of adults with fear of spiders\" (preprint doi: https://doi.org/10.1101/2024.02.07.578564).\n\nIn this study, we aim to gain a better understanding of how spider-phobic individuals perceive spider-related stimuli. Brain imaging data were recorded from 49 participants while they viewed spider-related images. For each participant, one anatomical scan, one before and one after resting state scan and five passive viewing scans were collected. \n\nThe scripts for the experimental presentation, data cleaning and pre-processing, and analysis are available on Github: https://github.com/univiemops/spider20-fmri-data.\n\nThe figures in the HTML files are included in SVG format, with file paths directing to each participant’s ‘figures’ folder (e.g., derivatives/sub-xx/figures). To view the figures, please download the HTML files and the corresponding SVG files to your local machine or click on the download button of SVG files under the derivatives/sub-xx/figures folder. Alternatively, we have also uploaded a PDF version of each HTML file. You can view these PDFs directly in your browser by clicking on the download button, which should display the file without needing to download it first. \n\nTo find the .nii and .tsv files for each subject, navigate to the derivatives folder, scroll past all the .pdf/.html files, and then navigate to the sub-xx folder for that subject (e.g. the sub-03 folder following the file sub-52.pdf). Within each subject folder you will see anat, figures and func subfolders. The func subfolder contains the desc-preproc_bold.nii.gz files, representing the preprocessed brain images, along with their corresponding brain_mask.nii.gz files. This folder also contains the desc-confounds_timeseries.tsv files, which contain the motion regressors, global signals, CSF and white matter signals, and other relevant parameters for each run.\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 132499686694,
+        "subjects": [
+          "15",
+          "28",
+          "43",
+          "51",
+          "30",
+          "19",
+          "16",
+          "48",
+          "32",
+          "52",
+          "22",
+          "24",
+          "12",
+          "44",
+          "42",
+          "06",
+          "11",
+          "35",
+          "40",
+          "47",
+          "49",
+          "23",
+          "17",
+          "03",
+          "39",
+          "07",
+          "34",
+          "25",
+          "38",
+          "14",
+          "26",
+          "31",
+          "36",
+          "46",
+          "21",
+          "45",
+          "27",
+          "29",
+          "20",
+          "41",
+          "37",
+          "05",
+          "10",
+          "13",
+          "50",
+          "18",
+          "08",
+          "33",
+          "09"
+        ],
+        "tasks": [
+          "restpre",
+          "passiveview",
+          "restpost"
+        ],
+        "totalFiles": 1327
+      },
+      "tag": "1.1.3"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2024-02-07T14:04:01.980Z"
+  },
+  "source": "openneuro"
+}

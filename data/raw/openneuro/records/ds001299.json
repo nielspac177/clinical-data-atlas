@@ -1,0 +1,112 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds001299",
+  "payload": {
+    "created": "2018-03-23T17:29:07.274Z",
+    "id": "ds001299",
+    "latestSnapshot": {
+      "created": "2019-06-05T17:39:56.000Z",
+      "description": {
+        "Authors": [
+          "Frank J. Kanayet  ",
+          "Andrew Mattarella-Micke  ",
+          "Peter J. Kohler",
+          "Anthony M. Norcia",
+          "Bruce D. McCandliss",
+          "James L. McClelland"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds001299.v1.0.0",
+        "Funding": [
+          "This work was supported in part by grant SNI-SG1-16 from the Stanford Neurosciences Institute."
+        ],
+        "HowToAcknowledge": "Kanayet FJ, Mattarella-Micke A, Kohler PJ, Norcia AM, McCandliss BD, McClelland JL (2018) Distinct Representations of Magnitude and Spatial Position within Parietal Cortex during Number–Space Mapping. Journal of Cognitive Neuroscience 30:200-218.",
+        "License": null,
+        "Name": "NumberlineMarking",
+        "ReferencesAndLinks": [
+          "http://www.mitpressjournals.org/doi/full/10.1162/jocn_a_01199"
+        ]
+      },
+      "readme": "Description of columns in event files (see the associated publication for more details): \n- onset: Onset of all events on the number line marking experiment, in seconds. Each trial was divided into two events, an “encoding” phase and a “marking” phase. Each trial is represented in 2 rows, one for each phase. As discussed in the paper, we found a 1 TR (2 seconds) displacement between the logged behavioral data and the fMRI data. To account for this, the onsets reported here have already been corrected by subtracting 2 seconds from the value logged on the behavioral protocol. \n- duration: Duration of the encoding phase corresponds to the time that the probe was presented (0.5s), plus the minimum time of the inter-trial interval (“hold” period) which corresponded to 2.5s, for a total of 3 seconds. We reasoned that this was our best estimate for the encoding phase since participants will begin monitoring the change of the hold signal at some time after the minimum hold time and begin preparing an action. Duration of the hold period can be inferred by calculating the difference between the (encoding + 0.5) and the marking phase onsets. During the marking phase, duration corresponds to the 3-second deadline to mark the line. \n- trial_type: “Pos” = 0 - 100 line; “Neg” = -100 - 100 line; “Word” = Word control task. “break” corresponds to the 6 seconds transition between trial types. \n- phase: encoding, marking. “break” corresponds to the 6-second transition between trial types. \n- probe: number or word presented to a participant on a given trial. \n- line_pct: proportion of line extent corresponding to the probe target location on each trial. - response: response coded as proportion of line extent \n- RT: reaction time measured from the moment the cursor is activated after the “go” signal. \n- RTHold: reaction time from the moment the “go” signal appears until the participant clicks to activate the cursor. - catch: 1 = catch trial; 0 = real trials - missed: 1 = participant failed to mark the line on time; 0 = participant marked the line in time. \n- problem_trial: Due to a computer error the screen froze during 15 trials divided among seven participants. In our analyses, we generated volume-scrubbing regressors that excluded these error trials.",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "01"
+        ],
+        "size": 60939027938,
+        "subjects": [
+          "02003",
+          "02004",
+          "02005",
+          "02006",
+          "02007",
+          "02010",
+          "02011",
+          "02012",
+          "02014",
+          "02015",
+          "02016",
+          "02017",
+          "02018",
+          "02019",
+          "02021",
+          "02022",
+          "02023",
+          "02024",
+          "02027"
+        ],
+        "tasks": [
+          "task-numbers"
+        ],
+        "totalFiles": 251
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2018-03-23T17:29:07.274Z"
+  },
+  "source": "openneuro"
+}

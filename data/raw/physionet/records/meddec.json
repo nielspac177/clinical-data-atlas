@@ -1,0 +1,38 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "meddec",
+  "payload": {
+    "abstract": "<p>Medical decisions directly impact individuals&rsquo; health and well-being. Extracting decision spans from clinical notes plays a crucial role in understanding medical decision-making processes. The MedDec dataset includes expert-annotated decisions of ten types, including defining problems, setting treatment goals, making drug-related decisions, performing therapeutic procedures, giving advice and precautions, and deferment decisions, spanning across eleven diverse patient phenotypes such as heart disease, lung disease, cancer, psychiatric disorders, and chronic pain, from 451 expert-annotated discharge summaries in the MIMIC-III database, where annotators identified decision spans within each discharge summary, noting character start and end positions alongside the decision type. The dataset enables the task of medical decision extraction, aiming to jointly extract and classify different types of medical decisions within clinical notes. This dataset also provides insights into medical decisions across diverse demographics, including gender, race, and English proficiency, sourced from the MIMIC-III database</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 2175853,
+    "core_doi": "10.13026/nmdc-na68",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 9757610,
+    "public_project_uuid": "10f309b7-fd9b-401c-b8ae-73ff631763d3",
+    "publish_date": "2024-10-16",
+    "resource_type": "Database",
+    "short_description": "Annotations of ten types of medical decisions from discharge summaries in the MIMIC-III database.",
+    "slug": "meddec",
+    "source_url": "https://physionet.org/content/meddec/1.0.0/",
+    "title": "MedDec: Medical Decisions for Discharge Summaries in the MIMIC-III Database",
+    "topics": [
+      "medical decisions",
+      "natural language processing",
+      "span classification",
+      "discharge summary",
+      "mimic"
+    ],
+    "version": "1.0.0",
+    "version_doi": "10.13026/nqnw-7d62"
+  },
+  "source": "physionet"
+}

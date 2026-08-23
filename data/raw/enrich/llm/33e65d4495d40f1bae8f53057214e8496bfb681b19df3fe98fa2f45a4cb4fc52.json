@@ -1,0 +1,43 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:33e65d4495d40f1bae8f53057214e8496bfb681b19df3fe98fa2f45a4cb4fc52",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "sleep-related arousals",
+        "label": "sleep-related arousals"
+      },
+      {
+        "evidence": "sleep disorders",
+        "label": "sleep disorders"
+      }
+    ],
+    "countries": [
+      "DE"
+    ],
+    "domains": [
+      "neurology",
+      "other"
+    ],
+    "id": "physionet:cps-dataset-sleep",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "polysomnographic sleep recordings",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "data from various questionnaires",
+        "value": "survey"
+      },
+      {
+        "evidence": "raw and derived data channels",
+        "value": "EEG"
+      }
+    ],
+    "population": "113 diagnostic polysomnographic sleep recordings assembled at Klinikum Esslingen, Germany, collected during 2021-2022",
+    "summary": "Diagnostic polysomnography recordings with many raw and derived channels, annotated event types, and questionnaire data, collected for a study on computer-aided diagnosis of sleep-related arousals using pulse wave analysis."
+  },
+  "prompt_version": "v1"
+}

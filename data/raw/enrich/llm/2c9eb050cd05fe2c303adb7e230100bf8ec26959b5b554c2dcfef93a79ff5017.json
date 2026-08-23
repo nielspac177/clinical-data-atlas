@@ -1,0 +1,34 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:2c9eb050cd05fe2c303adb7e230100bf8ec26959b5b554c2dcfef93a79ff5017",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "underwent bronchoalveolar lavage sampling because of pneumonia suspicion",
+        "label": "pneumonia"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "critical_care",
+      "pulmonology",
+      "infectious_disease"
+    ],
+    "id": "physionet:script-carpediem-dataset",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "113 clinical parameters for which data are present including vital signs, laboratory parameters, and mechanical support devices",
+        "value": "clinical_tabular"
+      },
+      {
+        "evidence": "vital signs",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": "704 patients enrolled in the SCRIPT study between June 2018 and May 2023, all of whom were critically ill patients on mechanical ventilation suspected of having pneumonia",
+    "summary": "Per-day clinical parameters, demographics, physician-adjudicated pneumonia episode information and outcomes for critically ill mechanically ventilated patients who underwent bronchoalveolar lavage. Deidentified under HIPAA Safe Harbor."
+  },
+  "prompt_version": "v1"
+}

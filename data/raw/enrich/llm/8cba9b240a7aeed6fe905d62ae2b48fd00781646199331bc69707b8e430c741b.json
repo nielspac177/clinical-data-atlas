@@ -1,0 +1,41 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:8cba9b240a7aeed6fe905d62ae2b48fd00781646199331bc69707b8e430c741b",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "a detailed view into the physiology of critically ill patients",
+        "label": "critically ill"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "cardiology",
+      "critical_care"
+    ],
+    "id": "physionet:mimic4wdb",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "electrocardiograms",
+        "value": "ECG"
+      },
+      {
+        "evidence": "photoplethysmograms",
+        "value": "PPG"
+      },
+      {
+        "evidence": "physiological signals and measurements from ICU bedside monitors",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "the clinical information available in MIMIC-IV",
+        "value": "EHR"
+      }
+    ],
+    "population": "Patients in intensive care units",
+    "summary": "Physiological signals and measurements taken directly from ICU bedside monitors, including electrocardiograms, photoplethysmograms, respiration and invasive and non-invasive blood pressure, intended to be combined with MIMIC-IV clinical information."
+  },
+  "prompt_version": "v1"
+}

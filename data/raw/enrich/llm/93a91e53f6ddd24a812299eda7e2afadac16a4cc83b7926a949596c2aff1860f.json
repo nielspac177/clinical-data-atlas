@@ -1,0 +1,28 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:93a91e53f6ddd24a812299eda7e2afadac16a4cc83b7926a949596c2aff1860f",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "12-lead Arrhythmia Database",
+        "label": "arrhythmia"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:incartdb",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Annotated ECG recordings extracted from 32 Holter records",
+        "value": "ECG"
+      }
+    ],
+    "population": null,
+    "summary": "Annotated 12-lead ECG recordings extracted from Holter records, each 30 minutes long and sampled at 257 Hz, with varying analog-to-digital gains, for arrhythmia analysis."
+  },
+  "prompt_version": "v1"
+}

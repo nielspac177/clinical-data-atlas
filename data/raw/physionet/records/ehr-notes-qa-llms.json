@@ -1,0 +1,32 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "ehr-notes-qa-llms",
+  "payload": {
+    "abstract": "<p>Discharge summaries in Electronic Health Records (EHRs) are crucial for clinical decision-making, but their length and complexity make information extraction challenging, especially when dealing with accumulated summaries across multiple patient admissions. Large Language Models (LLMs) show promise in addressing this challenge by efficiently analyzing vast and complex data. Existing benchmarks, however, fall short in properly evaluating LLMs&#39; capabilities in this context, as they typically focus on single-note information or limited topics, failing to reflect the real-world inquiries required by clinicians. To bridge this gap, we introduce EHRNoteQA, a novel benchmark built on the MIMIC-IV EHR, comprising 962 different QA pairs each linked to distinct patients&#39; discharge summaries. Every QA pair is initially generated using GPT-4 and then manually reviewed and refined by three clinicians to ensure clinical relevance. EHRNoteQA includes questions that require information across multiple discharge summaries and covers eight diverse topics, mirroring the complexity and diversity of real clinical inquiries.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 191848,
+    "core_doi": "10.13026/mjgm-x360",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 806274,
+    "public_project_uuid": "16379a15-401f-4bb0-93f4-e2a0d1e202b0",
+    "publish_date": "2024-06-26",
+    "resource_type": "Database",
+    "short_description": "An LLM Benchmark for Real-World Clinical Practice Using Discharge Summaries",
+    "slug": "ehr-notes-qa-llms",
+    "source_url": "https://physionet.org/content/ehr-notes-qa-llms/1.0.1/",
+    "title": "EHRNoteQA: An LLM Benchmark for Real-World Clinical Practice Using Discharge Summaries",
+    "topics": [],
+    "version": "1.0.1",
+    "version_doi": "10.13026/acga-ht95"
+  },
+  "source": "physionet"
+}

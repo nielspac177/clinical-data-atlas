@@ -1,0 +1,41 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "heart-rate-fragmentation-code",
+  "payload": {
+    "abstract": "<p>Heart rate fragmentation (HRF) is a new method for assessing neuroautonomic integrity based on the analysis of short-term (high-frequency [HF]) heart rate dynamics. The code (in AWK) provided here is for the computation of three different metrics, PIP, PNNLS, and PNNSS introduced in 2017 by Costa and colleagues.&nbsp;</p>\n\n<p>The motivation for developing HRF was the recognition that changes in heart rate (HR) above the respiratory frequency not only inflate the value of traditional heart rate variability (HRV) metrics, such as rMSSD and HF power, but are a dynamical marker of cardioautonomic dysfunction.</p>\n\n<p>In healthy subjects, HR increases with inspiration and decreases with expiration, defining a &ldquo;high-frequency&rdquo; pattern referred to as respiratory sinus arrhythmia. This physiologic oscillation is driven primarily by changes in vagal tone. In contexts in which cardio-respiratory coupling is degraded, e.g., with aging and disease, non-vagally mediated oscillations whose frequencies are higher than the breathing frequency may develop. Non-vagally mediated fluctuations are characterized by an excess of reversals in HR acceleration. The simplest measure of HRF is the percentage of &ldquo;inflection points,&rdquo; (PIP) i.e., of changes in HR acceleration sign. Of key importance is fact that traditional short-term HRV measures can be high for two opposite reasons, one healthy &ndash; respiratory sinus arrhythmia &ndash; consistent with high vagal tone modulation, and one pathologic &ndash; fragmented rhythms &ndash; consistent with decreased/impaired vagal activity.</p>\n\n<p>Increased HRF has been shown to be independently associated with higher risk of incident major adverse cardiovascular events and atrial fibrillation. These results have been independently confirmed, as described in Background section.</p>",
+    "access_policy": "Open",
+    "compressed_storage_size": 2307032,
+    "core_doi": "10.13026/krqe-pj80",
+    "dua": null,
+    "is_latest_version": true,
+    "license": {
+      "name": "GNU General Public License version 3"
+    },
+    "main_storage_size": 2619213,
+    "public_project_uuid": "3455d73e-1a38-42b5-b101-b488760ad768",
+    "publish_date": "2024-02-14",
+    "resource_type": "Software",
+    "short_description": "Heart rate fragmentation: a new method for the analysis of cardiac interbeat interval time series. The code provided can be run in Windows, Mac and Linux machines.",
+    "slug": "heart-rate-fragmentation-code",
+    "source_url": "https://physionet.org/content/heart-rate-fragmentation-code/1.0.0/",
+    "title": "Software for computing Heart Rate Fragmentation",
+    "topics": [
+      "cardiovascular disease",
+      "vagal tone",
+      "time series analysis",
+      "prediction of atrial fibrillation",
+      "cardiac autonomic function",
+      "prediction of cardiovascular events",
+      "prediction of cognitive decline",
+      "heart rate variability",
+      "heart rate fragmentation",
+      "aging"
+    ],
+    "version": "1.0.0",
+    "version_doi": "10.13026/0mzj-gn98"
+  },
+  "source": "physionet"
+}

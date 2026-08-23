@@ -1,0 +1,98 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004393",
+  "payload": {
+    "created": "2023-01-08T19:50:54.665Z",
+    "id": "ds004393",
+    "latestSnapshot": {
+      "created": "2023-01-17T15:54:17.000Z",
+      "description": {
+        "Authors": [
+          "Lauryn Burleigh",
+          "Steven Greening"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004393.v1.0.4",
+        "Funding": [
+          "A Louisiana Board of Regents Research Vompetitiveness Subprogram grant and an NSERC Discovery Grant (S.G.G.) "
+        ],
+        "HowToAcknowledge": "tbd",
+        "License": "CC0",
+        "Name": "Fear in the mind's eye: the neural correlates of differential fear acquisision to imagined conditioned stimuli",
+        "ReferencesAndLinks": null
+      },
+      "readme": "In the behaviour logs the trial types are numeric. The following code was used. \n\nFor session 1 runs:\ntrial_type: 1=csp shock; 2=csp view; 3=csp imagine; 4=csm view; 5=csm imagine\nshock: 1 = on; 2 = off\nOrientation: orientation of the gabor being viewed OR imagined\n\nSub-27 was not included in analyses due to technical issues with shock\n\n3 dummy volumes should be removed at the start of each event file\n\nThis dataset is made available under the Public Domain Dedication and License \nv1.0, whose full text can be found at \nhttp://www.opendatacommons.org/licenses/pddl/1.0/. \n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 12160462936,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31",
+          "32"
+        ],
+        "tasks": [
+          "ImAcq",
+          "VisAcq"
+        ],
+        "totalFiles": 2658
+      },
+      "tag": "1.0.4"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": null,
+      "associatedPaperDOI": "https://doi.org/10.1093/scan/nsac063",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "Cognition",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2023-01-16T18:34:10.894Z"
+  },
+  "source": "openneuro"
+}

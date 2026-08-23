@@ -1,0 +1,27 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:a3775495c703ced33ceb9565b6a43f05874fce047f3c50833677391c824fc3e4",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "other"
+    ],
+    "id": "physionet:mimic-iv-ext-direct",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "511 clinical notes (sourced from MIMIC-IV)",
+        "value": "clinical_notes"
+      },
+      {
+        "evidence": "sourced from MIMIC-IV",
+        "value": "EHR"
+      }
+    ],
+    "population": "511 clinical notes sourced from MIMIC-IV, each annotated by physicians",
+    "summary": "A diagnostic reasoning dataset of MIMIC-IV clinical notes annotated by physicians with the reasoning process from initial observations to final diagnosis, used to evaluate language model reasoning and interpretability against doctors."
+  },
+  "prompt_version": "v1"
+}

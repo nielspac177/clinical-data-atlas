@@ -1,0 +1,92 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004065",
+  "payload": {
+    "created": "2022-03-09T20:51:25.153Z",
+    "id": "ds004065",
+    "latestSnapshot": {
+      "created": "2022-06-21T20:19:13.000Z",
+      "description": {
+        "Authors": [
+          "Shai Sabbah",
+          "Michael S. Worden",
+          "Dimitrios D. Laniado",
+          "David M. Berson",
+          "Jerome N. Sanes"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004065.v1.0.0",
+        "Funding": [
+          "NIH P20GM103645",
+          "NIH R01 EY12793",
+          "National Institute of Psychobiology of Israel",
+          "Banting Postdoctoral Fellowship of Canada",
+          "Alcon Research Institute Award"
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Luminance",
+        "ReferencesAndLinks": null
+      },
+      "readme": "README for Luminance dataset\n\nContact person for additional information: Jerome Sanes\nJerome_Sanes@Brown.edu ORCID: 0000-0001-6320-7752\n\nor\n\nMichael Worden worden@Brown.edu ORCID: 0000-0002-7126-6178\n\n## OVERVIEW\n\nProject Name: LUMINANCE\nData collected: 2018\n\nStudies with experimental animals have revealed a mood-regulating neural\npathway linking intrinsically photosensitive retinal ganglion cells\n(ipRGCs) and the prefrontal cortex (PFC), involved in the\npathophysiology of mood disorders. Since humans also have\nlight-intensity-encoding ipRGCs, we investigated whether a similar\npathway exists in humans.\n\nDataset contains structural and functional MRI data and associated stimulus\ntiming files\n\n## Methods\n### Subjects\nSubjects 20 healthy female and male participants from the local Providence, RI\ncommunity (age 20-30 years old; 24.3 ± 3.7 years, mean ± s.d.).\n\nParticipants underwent five runs of six minutes each during a single\nscan session. Each run consisted of twelve 30-second epochs of constant\nlight intensity divided into three consecutive groups of four. Each\ngroup of four epochs contained all four light intensities [average\nlight-intensity (irradiance) across the 400-700 nm human visible\nspectrum 10.2, 12.1, 13.1, and 13.8 log photons cm-2 s-1] in\npseudorandom order. These light intensities corresponded to the\nfollowing quantum catches of melanopsin: 11.5, 13.6, 14.6, and 15.2 log\nphotons cm-2 s-1.\n\nParticipants wore Teflon goggles that diffused the light. The light\nstimulus, as reported by the participants, did not contain any patterned\nvisual information and covered the entire field of view. ). To ensure\nalertness during the scan session, participants performed an auditory\ntask in which they discriminated between two presented tones (1 and 2\nkHz, 100 msec duration) and indicated the perceived tone by pressing the\nleft button for the 1 kHz tone and the right button for the 2 kHz tone.\nWe recorded the time of the button press and response accuracy, finding\nno difference in reaction time or accuracy across the different light\nintensities. ",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 55222897386,
+        "subjects": [
+          "010",
+          "011",
+          "012",
+          "013",
+          "014",
+          "015",
+          "016",
+          "017",
+          "018",
+          "019",
+          "020",
+          "021",
+          "022",
+          "023",
+          "024",
+          "025",
+          "026",
+          "027",
+          "028",
+          "029"
+        ],
+        "tasks": [
+          "lum"
+        ],
+        "totalFiles": 344
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": null,
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "NIH",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "Block Design",
+      "studyDomain": "",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2022-07-01T14:31:24.801Z"
+  },
+  "source": "openneuro"
+}

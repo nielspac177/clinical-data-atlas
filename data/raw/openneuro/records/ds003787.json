@@ -1,0 +1,165 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003787",
+  "payload": {
+    "created": "2021-08-31T17:25:30.084Z",
+    "id": "ds003787",
+    "latestSnapshot": {
+      "created": "2021-09-27T21:10:24.000Z",
+      "description": {
+        "Authors": [
+          "Marc Himmelberg",
+          "Jan Kurzawski",
+          "Noah Benson",
+          "Denis Pelli",
+          "Marisa Carrasco",
+          "Jon Winawer"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds003787.v1.0.1",
+        "Funding": [
+          "US National Eye Institute R01-EY027401 to MC and JW",
+          "US National Eye Institute  R01-EY027964 to DGP and JW"
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "NYU Retinotopy Dataset\n\n",
+        "ReferencesAndLinks": [
+          "TODO",
+          "List of papers or websites"
+        ]
+      },
+      "readme": "The <b>New York University (NYU) Retinotopy Dataset</b> is a part of <i>'Cross-dataset reproducability of human retinotopic maps'</i> by Marc Himmelberg, Jan Kurzawski, Noah Benson, Denis Pelli, Marisa Carrasco, and Jonathan Winawer.\n\nThe full dataset consists of 44 subjects, including freesurfer processed anatomical data, raw and preprocessed (via fMRIprep) functional data on the fsnative and fsaverage surface, vistasoft pRF model output, V1, V2, V3, and hV4 ROIs, and bayesian inferred retinotopic maps and ROIs. \n\n<b><u>Dataset organisation:</u></b><br><br>\n\n\n<b>NYU_Retinotopy_Dataset:</b> This folder contains subject folders holding the raw, unprocessed data for each subject (nifti files).\n\n<b>NYU_Retinotopy_Dataset/derivatives/bayesian_inference_maps:</b> This folder contains subject folders holding bayesian inferred angle, eccentricity, and pRF size maps, and inferred visual areas (see https://elifesciences.org/articles/40224) (.mgz files)\n\n<b>NYU_Retinotopy_Dataset/derivatives/fmriprep:</b> This folder contains subject folders and fmriprep output logs. Within each subjects session folder you can find functional data on the fsnative and fsaverage surface (.mgz files)\n\n<b>NYU_Retinotopy_Dataset/derivatives/freesurfer:</b> This folder contains subject folders with standard freesurfer output (freesurfer v6)\n\n<b>NYU_Retinotopy_Dataset/derivatives/freesurfer:</b> This folder contains MRIQC output logs for each subject\n\n<b>NYU_Retinotopy_Dataset/derivatives/prfanalyze-vista:</b> Here you can find subject folders that house the vistasoft pRF model output on the fsnative surface for each subject (.mgz)<br>\n\n<i>eccen.mgz</i> - eccentricity maps\n<i>sigma.mgz</i> - pRF size maps\n<i>angle.mgz</i> - polar angle maps\n<i>angle_adj.mgz</i> - polar angle maps adjusted so that left hemifield is 0 - negative 180, right hemisfield 0 - positive 180.\n<i>vexpl.mgz</i> - variance explained\n<i>x.mgz</i> - x coordinates maps\n<i>y.mgz</i> - y coordinates maps\n\n<i>sub-wlsubj000</i> contains the pRF solutions from the group-average time-series (n=44).\n<i>sub-wlsubj_average_parameter</i> contains the median pRF solutions across all individual subjects on the fsaverage surface (n=44).\n\n<b>NYU_Retinotopy_Dataset/derivatives/ROIs:</b> These folders contain V1, V2, V3, and hV4 ROIS drawn on the fsnative surface using Neuropythy. Labels of 1, 2, 3, and 4, correspond to V1, V2, V3, and hV4, respectively.\n\n<b>NYU_Retinotopy_Dataset/derivatives/stimulus_apertures:</b> This folder contains the pRF bar stimulus aperture for each scan for those who wish to reprocess any data - note that all the apertures are the same for each subject (standard pRF bar runs)",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "anat",
+          "nyu3t01"
+        ],
+        "size": 74764045523,
+        "subjects": [
+          "wlsubj001",
+          "wlsubj004",
+          "wlsubj006",
+          "wlsubj007",
+          "wlsubj014",
+          "wlsubj019",
+          "wlsubj023",
+          "wlsubj042",
+          "wlsubj043",
+          "wlsubj045",
+          "wlsubj046",
+          "wlsubj055",
+          "wlsubj056",
+          "wlsubj057",
+          "wlsubj062",
+          "wlsubj064",
+          "wlsubj067",
+          "wlsubj071",
+          "wlsubj076",
+          "wlsubj079",
+          "wlsubj081",
+          "wlsubj083",
+          "wlsubj084",
+          "wlsubj085",
+          "wlsubj086",
+          "wlsubj087",
+          "wlsubj088",
+          "wlsubj090",
+          "wlsubj091",
+          "wlsubj092",
+          "wlsubj094",
+          "wlsubj095",
+          "wlsubj104",
+          "wlsubj105",
+          "wlsubj109",
+          "wlsubj114",
+          "wlsubj115",
+          "wlsubj116",
+          "wlsubj117",
+          "wlsubj118",
+          "wlsubj120",
+          "wlsubj121",
+          "wlsubj122",
+          "wlsubj126"
+        ],
+        "tasks": [
+          "prf"
+        ],
+        "totalFiles": 2002
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        29,
+        49,
+        37,
+        32,
+        32,
+        35,
+        27,
+        39,
+        29,
+        30,
+        37,
+        22,
+        23,
+        23,
+        37,
+        25,
+        35,
+        22,
+        26,
+        36,
+        29,
+        25,
+        23,
+        22,
+        24,
+        20,
+        21,
+        21,
+        21,
+        23,
+        29,
+        34,
+        28,
+        27,
+        31,
+        31,
+        34,
+        26,
+        30,
+        32,
+        24,
+        32,
+        32,
+        32
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "US National Eye Institute",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "Computational model",
+      "studyDomain": "Cortical vision",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2021-09-28T15:50:32.909Z"
+  },
+  "source": "openneuro"
+}

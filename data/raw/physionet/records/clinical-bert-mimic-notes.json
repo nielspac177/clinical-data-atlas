@@ -1,0 +1,32 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "clinical-bert-mimic-notes",
+  "payload": {
+    "abstract": "<p>This project contains the weights of 7 different BERT models trained over a surrogate re-identified set of MIMIC-III (v1.4) notes. Each model is suitable for direct compatibility with the HuggingFace framework; users can easily load and apply the model. We release these model weights with the intent of facilitating research into the dangers of revealing patient information via model sharing, specifically for models pretrained on non-deidentified electronic health record (EHR) data. We additionally release our post-processed data, which most importantly contains a mapping of patient subject id to condition(s) that the given patient has. The purpose of these &quot;subject id to condition&quot; files is to measure how much of a correlation can be extracted from a surrogate patient name and the medical conditions that the given patient has. This will allow users to quantify the amount of Protected Health Information (PHI) &quot;leakage&quot; these large pretrained language models may exhibit.&nbsp;</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 5604946282,
+    "core_doi": "10.13026/e4hr-yh29",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 9474970963,
+    "public_project_uuid": "20f97372-6da4-41c7-96f0-e06b2abbb669",
+    "publish_date": "2021-04-28",
+    "resource_type": "Model",
+    "short_description": "We explore recovering sensitive info from BERT trained over non-deidentified EHR. We make our models and data available to further facilitate research.",
+    "slug": "clinical-bert-mimic-notes",
+    "source_url": "https://physionet.org/content/clinical-bert-mimic-notes/1.0.0/",
+    "title": "Clinical BERT Models Trained on Pseudo Re-identified MIMIC-III Notes",
+    "topics": [],
+    "version": "1.0.0",
+    "version_doi": "10.13026/vk2z-bz63"
+  },
+  "source": "physionet"
+}

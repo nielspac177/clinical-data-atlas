@@ -1,0 +1,95 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003770",
+  "payload": {
+    "created": "2021-08-19T21:53:29.980Z",
+    "id": "ds003770",
+    "latestSnapshot": {
+      "created": "2023-06-30T20:39:06.000Z",
+      "description": {
+        "Authors": [
+          "Bezmaternykh DD",
+          "Melnikov ME",
+          "Savelov AA",
+          "Petrovskii ED"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds003770.v1.2.1",
+        "Funding": [
+          "The study was supported by Russian Science Foundation grant № 16-15-00183."
+        ],
+        "HowToAcknowledge": "Please cite:\nMel’nikov, M.Y., Bezmaternykh, D.D., Savelov, A.A. et al. Real-time fMRI neurofeedback compared to cognitive behavioral therapy in a pilot study for the treatment of mild and moderate depression. Eur Arch Psychiatry Clin Neurosci (2022).\nhttps://doi.org/10.1007/s00406-022-01462-0",
+        "License": "CC0",
+        "Name": "Depression Treatment by Medial Prefrontal Real-Time fMRI Neurofeedback",
+        "ReferencesAndLinks": [
+          "https://link.springer.com/article/10.1007/s00406-022-01462-0#citeas"
+        ]
+      },
+      "readme": "This dataset includes 8 sessions of medial prefrontal cortex continious rt-fmri biofeedback\r\nfor six patients with mild and moderate depression.\r\nEach session consists of 2 runs. The first run contains 900 scans (TR=1 s.) with 15 blocks (60 s. duration). \r\nEach block includes 20 s. ROI down-regulation and 40 s of up-regulation.\r\nThe second run contains 600 scans (TR=1 s.) with 10 blocks (60 s. duration).\r\nIn odd sessions, both parts is neurofeedback, while in even sessions the second part is a transfer session, \r\nduring which participants try to up- or downregulate the activity level of target area without feedback.\r\nA changeable column is used for representation of ROI activity. \r\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08"
+        ],
+        "size": 14943129199,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08"
+        ],
+        "tasks": [
+          "rt-fmri regulation of medial prefrontal cortex"
+        ],
+        "totalFiles": 236
+      },
+      "tag": "1.2.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        42,
+        22,
+        27,
+        23,
+        46,
+        27,
+        39,
+        20
+      ],
+      "associatedPaperDOI": "10.1007/s00406-022-01462-0",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "Russian Science Foundation",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "fmri",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2021-08-20T07:23:48.195Z"
+  },
+  "source": "openneuro"
+}

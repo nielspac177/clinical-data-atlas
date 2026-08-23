@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:8dc40cc24e4454aea77cc9ae617953933826168ec88e043eb0fd9e6e93f9c38e",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "patients with clinically confirmed brain metastases",
+        "label": "brain metastases"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "oncology"
+    ],
+    "id": "tcia:yale-brain-mets-longitudinal",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "11,892 longitudinal brain MRI studies",
+        "value": "MRI"
+      },
+      {
+        "evidence": "an Excel spreadsheet with patient demographic information, scanner details, and image acquisition parameters",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "1,430 patients with clinically confirmed brain metastases, contributing 11,892 longitudinal brain MRI studies",
+    "summary": "Longitudinal brain MRI studies in NIfTI format with T1 pre- and post-contrast, T2 and FLAIR sequences, plus a spreadsheet of demographics, scanner details and acquisition parameters."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,48 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:4d70af9b3fbbba4da1c7d4ea5bcebda4c14329bb936e9409f8fc8366af3f11ad",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Adrenocortical Carcinoma",
+        "label": "Adrenocortical Carcinoma"
+      },
+      {
+        "evidence": "Adenomas and Adenocarcinomas",
+        "label": "Adenomas and Adenocarcinomas"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "gdc:TCGA-ACC",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Diagnostic Slide, Tissue Slide",
+        "value": "pathology"
+      },
+      {
+        "evidence": "WXS, WGS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "RNA-Seq, miRNA-Seq",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Reverse Phase Protein Array",
+        "value": "proteomics"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "92 human cases of adrenocortical carcinoma (adrenal gland)",
+    "summary": "TCGA project on adrenocortical carcinoma of the adrenal gland. Covers sequencing reads, nucleotide and copy number variation, transcriptome profiling, DNA methylation, proteome profiling, biospecimen and clinical data, plus diagnostic and tissue slides."
+  },
+  "prompt_version": "v1"
+}

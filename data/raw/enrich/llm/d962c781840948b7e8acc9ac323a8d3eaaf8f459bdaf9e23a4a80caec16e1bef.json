@@ -1,0 +1,47 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:d962c781840948b7e8acc9ac323a8d3eaaf8f459bdaf9e23a4a80caec16e1bef",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Stomach Adenocarcinoma (CPTAC-STAD) cohort",
+        "label": "Stomach Adenocarcinoma"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "oncology",
+      "gastroenterology_hepatology"
+    ],
+    "id": "tcia:cptac-stad",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "CT US",
+        "value": "CT"
+      },
+      {
+        "evidence": "CT US",
+        "value": "ultrasound"
+      },
+      {
+        "evidence": "Radiology and pathology images from CPTAC patients",
+        "value": "pathology"
+      },
+      {
+        "evidence": "large-scale proteome and genome analysis",
+        "value": "genomics"
+      },
+      {
+        "evidence": "large-scale proteome and genome analysis",
+        "value": "proteomics"
+      }
+    ],
+    "population": "Subjects from the CPTAC Stomach Adenocarcinoma cohort",
+    "summary": "Radiology and pathology images from the CPTAC stomach adenocarcinoma cohort, released by The Cancer Imaging Archive for study alongside corresponding proteomic, genomic and clinical data."
+  },
+  "prompt_version": "v1"
+}

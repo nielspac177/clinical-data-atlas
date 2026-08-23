@@ -1,0 +1,49 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:dc12d9ccf76146f87ccc739979d7dae0ffbfc3170db056001c42074aea1aecdc",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Ovarian Serous Cystadenocarcinoma",
+        "label": "Ovarian Serous Cystadenocarcinoma"
+      },
+      {
+        "evidence": "Cystic, Mucinous and Serous Neoplasms",
+        "label": "Cystic, Mucinous and Serous Neoplasms"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "obstetrics_gynecology"
+    ],
+    "id": "gdc:TCGA-OV",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Diagnostic Slide, Tissue Slide",
+        "value": "pathology"
+      },
+      {
+        "evidence": "WXS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "Transcriptome Profiling",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Proteome Profiling",
+        "value": "proteomics"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "Human cases with ovarian serous cystadenocarcinoma (ovary, retroperitoneum and peritoneum)",
+    "summary": "TCGA project on ovarian serous cystadenocarcinoma of the ovary and peritoneum, with sequencing, copy number, methylation, transcriptome and proteome profiling plus clinical, biospecimen and slide data."
+  },
+  "prompt_version": "v1"
+}

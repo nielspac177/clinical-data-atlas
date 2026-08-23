@@ -1,0 +1,123 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds000102",
+  "payload": {
+    "created": "2016-10-14T22:49:40.674Z",
+    "id": "ds000102",
+    "latestSnapshot": {
+      "created": "2018-07-14T01:53:38.000Z",
+      "description": {
+        "Authors": [
+          "Kelly AMC",
+          "Uddin LQ",
+          "Biswal BB",
+          "Castellanos FX",
+          "Milham MP"
+        ],
+        "DatasetDOI": null,
+        "Funding": null,
+        "HowToAcknowledge": "This data was obtained from the OpenfMRI database. Its accession number is ds000102",
+        "License": "PDDL",
+        "Name": "Flanker task (event-related)",
+        "ReferencesAndLinks": [
+          "http://www.ncbi.nlm.nih.gov/pubmed/20974260",
+          "http://www.ncbi.nlm.nih.gov/pubmed/20079856",
+          "http://www.ncbi.nlm.nih.gov/pubmed/17919929"
+        ]
+      },
+      "readme": "This dataset was obtained from the OpenfMRI project (http://www.openfmri.org).\nAccession #: ds102\nDescription: Flanker task (event-related)\n\nThe \"NYU Slow Flanker\" dataset comprises data collected from 26 healthy\nadults (age and sex included in Slow_Flanker_age_sex.txt) while they \nperformed a slow event-related Eriksen Flanker task.\n\n**Please note that all data have been uploaded regardless of quality\nit is up to the user to check for data quality (movement etc).\n\nOn each trial (inter-trial interval (ITI) varied between 8 s and 14 s;\nmean ITI=12 s),participants used one of two buttons on a response pad\nto indicate the direction of a central arrow in an array of 5 arrows.\nIn congruent trials the flanking arrows pointed in the same direction\nas the central arrow (e.g., < < < < <), while in more demanding\nincongruent trials the flanking arrows pointed in the opposite\ndirection (e.g., < < > < <). \n\nSubjects performed two 5-minute blocks, each containing 12 congruent\nand 12 incongruent trials, presented in a pseudorandom order.\n\nFunctional imaging data were acquired using a research dedicated Siemens\nAllegra 3.0 T scanner, with a standard Siemens head coil, located at the\nNYU Center for Brain Imaging.\n\nWe obtained 146 contiguous echo planar imaging (EPI) whole-brainfunctional\nvolumes (TR=2000 ms; TE=30 ms; flip angle=80, 40 slices, matrix=64x64; FOV=192 mm; acquisition voxel size=3x3x4mm) during each of the two flanker task blocks. A high-resolution T1-weighted anatomical image was also acquired using a magnetization prepared gradient echo sequence (MPRAGE, TR=2500 ms; TE=\n3.93 ms; TI=900 ms; flip angle=8; 176 slices, FOV=256 mm).\n\nPlease cite one of the following references if you use these data:\n\nKelly, A.M., Uddin, L.Q., Biswal, B.B., Castellanos, F.X., Milham, M.P. (2008). Competition between functional brain networks mediates behavioral variability. Neuroimage, 39(1):527-37\n\nMennes, M., Kelly, C., Zuo, X.N., Di Martino, A., Biswal, B.B., Castellanos, F.X., Milham, M.P. (2010). Inter-individual differences in resting-state functional connectivity predict task-induced BOLD activity. Neuroimage, 50(4):1690-701. doi: 10.1016/j.neuroimage.2010.01.002. Epub 2010 Jan 15. Erratum in: Neuroimage. 2011 Mar 1;55(1):434\n\nMennes, M., Zuo, X.N., Kelly, C., Di Martino, A., Zang, Y.F., Biswal, B., Castellanos, F.X., Milham, M.P. (2011). Linking inter-individual differences in neural activation and behavior to intrinsic brain dynamics. Neuroimage, 54(4):2950-9. doi: 10.1016/j.neuroimage.2010.10.046\n\nThis dataset is made available under the Public Domain Dedication and License \nv1.0, whose full text can be found at \nhttp://www.opendatacommons.org/licenses/pddl/1.0/. \nWe hope that all users will follow the ODC Attribution/Share-Alike \nCommunity Norms (http://www.opendatacommons.org/norms/odc-by-sa/); \nin particular, while not legally required, we hope that all users \nof the data will acknowledge the OpenfMRI project and NSF Grant \nOCI-1131441 (R. Poldrack, PI) in any publications.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 1775588837,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26"
+        ],
+        "tasks": [
+          "Flanker"
+        ],
+        "totalFiles": 136
+      },
+      "tag": "00001"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        21,
+        22,
+        19,
+        25,
+        23,
+        23,
+        34,
+        22,
+        22,
+        25,
+        21,
+        26,
+        25,
+        49,
+        34,
+        49,
+        35,
+        24,
+        24,
+        34,
+        26,
+        27,
+        22,
+        27,
+        34,
+        32
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2016-10-14T22:49:40.674Z"
+  },
+  "source": "openneuro"
+}

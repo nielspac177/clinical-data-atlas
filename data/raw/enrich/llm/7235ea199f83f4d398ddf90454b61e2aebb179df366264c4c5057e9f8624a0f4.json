@@ -1,0 +1,43 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:7235ea199f83f4d398ddf90454b61e2aebb179df366264c4c5057e9f8624a0f4",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "subjects diagnosed with sporadic VS",
+        "label": "vestibular schwannoma"
+      },
+      {
+        "evidence": "adult-onset sensorineural hearing loss",
+        "label": "sensorineural hearing loss"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "oncology",
+      "neurology"
+    ],
+    "id": "tcia:ucsd-vs-longitudinal",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "a multimodal MRI dataset",
+        "value": "MRI"
+      },
+      {
+        "evidence": "such as FLAIR, SWI, ASL, DWI, and ADC",
+        "value": "dMRI"
+      },
+      {
+        "evidence": "demographic and treatment information, including patient age, sex, race, ethnicity, and treatment status",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "191 subjects diagnosed with sporadic VS and a total of 570 MRI timepoints",
+    "summary": "Longitudinal multimodal MRI surveillance of sporadic vestibular schwannoma, with T1-pre, T1-post and T2 sequences, voxelwise tumor segmentations, growth classification, and demographic and treatment information at each timepoint."
+  },
+  "prompt_version": "v1"
+}

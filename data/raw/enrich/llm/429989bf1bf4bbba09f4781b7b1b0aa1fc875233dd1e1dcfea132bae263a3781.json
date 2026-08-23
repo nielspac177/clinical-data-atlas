@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:429989bf1bf4bbba09f4781b7b1b0aa1fc875233dd1e1dcfea132bae263a3781",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Metastatic Castration Resistant Prostate Cancer",
+        "label": "Metastatic Castration Resistant Prostate Cancer"
+      },
+      {
+        "evidence": "Adenomas and Adenocarcinomas",
+        "label": "Adenomas and Adenocarcinomas"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "nephrology_urology"
+    ],
+    "id": "gdc:WCDT-MCRPC",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "WGS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "RNA-Seq",
+        "value": "transcriptomics"
+      }
+    ],
+    "population": "101 human cases with metastatic castration resistant prostate cancer",
+    "summary": "Genomic characterization of metastatic castration resistant prostate cancer, providing whole genome and RNA sequencing with simple nucleotide, copy number and structural variation data from prostate gland adenocarcinomas."
+  },
+  "prompt_version": "v1"
+}

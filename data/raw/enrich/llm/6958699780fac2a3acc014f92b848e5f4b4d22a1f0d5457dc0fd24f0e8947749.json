@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:6958699780fac2a3acc014f92b848e5f4b4d22a1f0d5457dc0fd24f0e8947749",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "a mapping of extent of prostate cancer",
+        "label": "prostate cancer"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "nephrology_urology"
+    ],
+    "id": "tcia:prostate-fused-mri-pathology",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "3 Tesla T1-weighted, T2-weighted, Diffusion weighted and Dynamic Contrast Enhanced prostate MRI",
+        "value": "MRI"
+      },
+      {
+        "evidence": "Diffusion weighted",
+        "value": "dMRI"
+      },
+      {
+        "evidence": "digitized histopathology (H&Estained) images of corresponding radical prostatectomy specimens",
+        "value": "pathology"
+      }
+    ],
+    "population": "Patients with a total of 35 prostate MRI studies and accompanying digitized histopathology images of corresponding radical prostatectomy specimens.",
+    "summary": "Multiparametric prostate MRI paired with digitized whole-mount histopathology from radical prostatectomy specimens, co-registered so expert pathologist cancer annotations map disease extent onto the corresponding MRI scans."
+  },
+  "prompt_version": "v1"
+}

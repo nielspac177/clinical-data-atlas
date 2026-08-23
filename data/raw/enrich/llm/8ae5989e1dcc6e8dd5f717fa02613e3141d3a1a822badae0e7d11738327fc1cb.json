@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:8ae5989e1dcc6e8dd5f717fa02613e3141d3a1a822badae0e7d11738327fc1cb",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Cervical Squamous Cell Carcinoma and Endocervical Adenocarcinoma",
+        "label": "Cervical Squamous Cell Carcinoma and Endocervical Adenocarcinoma"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "obstetrics_gynecology"
+    ],
+    "id": "tcia:tcga-cesc",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "MR",
+        "value": "MRI"
+      },
+      {
+        "evidence": "Genomic Data Commons (GDC) Data Portal",
+        "value": "genomics"
+      }
+    ],
+    "population": "Human participants with cervical squamous cell carcinoma and endocervical adenocarcinoma enrolled in The Cancer Genome Atlas (54 participants per source metadata)",
+    "summary": "Cervical MR imaging from patients in The Cancer Genome Atlas, matched by patient identifier to clinical, genetic and pathological data held in the Genomic Data Commons. Acquisition protocols and scanners are heterogeneous."
+  },
+  "prompt_version": "v1"
+}

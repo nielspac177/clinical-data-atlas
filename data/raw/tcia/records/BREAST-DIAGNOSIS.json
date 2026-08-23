@@ -1,0 +1,998 @@
+{
+  "endpoints": [
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getCollectionValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getModalityValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getBodyPartValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getPatient",
+    "https://api.datacite.org/dois?prefix=10.7937"
+  ],
+  "harvest_method": "api:nbia+datacite",
+  "native_id": "BREAST-DIAGNOSIS",
+  "payload": {
+    "datacite": {
+      "citationCount": 13,
+      "container": {},
+      "contentUrl": [],
+      "contributors": [
+        {
+          "affiliation": [],
+          "contributorType": "Other",
+          "name": "TCIA Team",
+          "nameIdentifiers": []
+        }
+      ],
+      "created": "2015-07-15T22:41:37Z",
+      "creators": [
+        {
+          "affiliation": [],
+          "familyName": "Bloch",
+          "givenName": "B. Nicolas",
+          "name": "Bloch, B. Nicolas",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0001-8040-159X",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Jain",
+          "givenName": "Ashali",
+          "name": "Jain, Ashali",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "jaffe",
+          "givenName": "conrade carl",
+          "name": "jaffe, conrade carl",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-5196-9757",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2015",
+          "dateType": "Issued"
+        }
+      ],
+      "descriptions": [
+        {
+          "description": "The Breast-Diagnosis collection contains cases that are high-risk normals, DCIS, fibroids and lobular carcinomas. Each case has 3 or more distinct MR pulse sequences from a Phillips 1.5 T (usual sequences are labeled T2, STIR and BLISS but may occasionally include other pulse sequences and digital mammogram of tumor specimen). Multiple time point studies on the same patient are possible. The following is relevant to analyzing the contrast dynamics of the BLISS pulse sequences. The pulse sequence parameters (repetition, echo time, etc.) can be extracted from the DICOM tags. The contrast aspects are as follows: The volume of Magnevist (Bayer) gadolinium contrast injected into the brachial vein is based on a rule of thumb which in ml's is 10% of the patient wright in POUNDS (NOT Kilograms as is recorded in the DICOM patient weight tag. Hence the injected volume for a 150 lb patient is 15 ml. (the DICOM tag entry on that patient will read \"68\"). The injection itself is 6 or 7 seconds, at a rate of 3cc per second. The first dynamic sequence is started 1 minute after the injection is started. Slice and pulse parameters are accessible in the DICOM tags.",
+          "descriptionType": "Abstract"
+        }
+      ],
+      "doi": "10.7937/k9/tcia.2015.sdnrqxxr",
+      "downloadCount": 0,
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "BREAST-DIAGNOSIS",
+          "identifierType": "TCIA Short Name"
+        }
+      ],
+      "isActive": true,
+      "language": null,
+      "metadataVersion": 15,
+      "partCount": 0,
+      "partOfCount": 0,
+      "publicationYear": 2015,
+      "published": null,
+      "publisher": "The Cancer Imaging Archive",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2015-07-15T22:41:39Z",
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "10.1117/12.2224777",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1007/978-3-319-66179-7_68",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.3389/fonc.2021.637804",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1117/12.2612538",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.3991/ijoe.v18i12.31897",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.acra.2024.01.013",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1007/978-3-030-33720-9_26",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.21123/bsj.2022.6782",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1002/cpe.6951",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1145/3615862",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1109/ichi61247.2024.00107",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        }
+      ],
+      "relatedItems": [],
+      "rightsList": [
+        {
+          "rights": "Creative Commons Attribution 3.0 Unported",
+          "rightsIdentifier": "cc-by-3.0",
+          "rightsIdentifierScheme": "SPDX",
+          "rightsUri": "https://creativecommons.org/licenses/by/3.0/legalcode",
+          "schemeUri": "https://spdx.org/licenses/"
+        }
+      ],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "fabricaForm",
+      "state": "findable",
+      "subjects": [],
+      "titles": [
+        {
+          "title": "Data From BREAST-DIAGNOSIS"
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceType": "DICOM",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2025-06-01T01:01:20Z",
+      "url": "https://www.cancerimagingarchive.net/collection/breast-diagnosis/",
+      "version": "1",
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 5849
+    },
+    "nbia": {
+      "body_parts": [
+        "BREAST"
+      ],
+      "collection": "BREAST-DIAGNOSIS",
+      "modalities": [
+        "CT",
+        "MG",
+        "MR",
+        "PT",
+        "SR"
+      ],
+      "patients": [
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0001",
+          "PatientName": "010001^Breast Diagnosis",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0002",
+          "PatientName": "010002^Breast Diagnosis",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0003",
+          "PatientName": "010003^Breast Diagnosis",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0004",
+          "PatientName": "010004^Breast Diagnosis",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0005",
+          "PatientName": "010005^Breast Diagnosis",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0006",
+          "PatientName": "010006^Breast Diagnosis",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0007",
+          "PatientName": "010007^Breast Diagnosis",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0008",
+          "PatientName": "010008^Breast Diagnosis",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0009",
+          "PatientName": "010009^Breast Diagnosis",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0010",
+          "PatientName": "010010^Breast Diagnosis",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0011",
+          "PatientName": "010011^Breast Diagnosis",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0012",
+          "PatientName": "010012^Breast Diagnosis",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0013",
+          "PatientName": "010013^Breast Diagnosis",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0014",
+          "PatientName": "010014^Breast Diagnosis",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0015",
+          "PatientName": "010015^Breast Diagnosis",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0016",
+          "PatientName": "010016^Breast Diagnosis",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0017",
+          "PatientName": "010017^Breast Diagnosis",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0018",
+          "PatientName": "010018^Breast Diagnosis",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0019",
+          "PatientName": "010019^Breast Diagnosis",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0020",
+          "PatientName": "010020^Breast Diagnosis",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0021",
+          "PatientName": "010021^Breast Diagnosis",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0022",
+          "PatientName": "010022^Breast Diagnosis",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0023",
+          "PatientName": "010023^Breast Diagnosis",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0024",
+          "PatientName": "010024^Breast Diagnosis",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0025",
+          "PatientName": "010025^Breast Diagnosis",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0026",
+          "PatientName": "010026^Breast Diagnosis",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0027",
+          "PatientName": "",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0028",
+          "PatientName": "010028^Breast Diagnosis",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0029",
+          "PatientName": "010029^Breast Diagnosis",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0030",
+          "PatientName": "010030^Breast Diagnosis",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0031",
+          "PatientName": "010031^Breast Diagnosis",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0032",
+          "PatientName": "010032^Breast Diagnosis",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0033",
+          "PatientName": "010033^Breast Diagnosis",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0034",
+          "PatientName": "010034^Breast Diagnosis",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0035",
+          "PatientName": "010035^Breast Diagnosis",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0036",
+          "PatientName": "010036^Breast Diagnosis",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0037",
+          "PatientName": "010037^Breast Diagnosis",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0038",
+          "PatientName": "010038^Breast Diagnosis",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0039",
+          "PatientName": "010039^Breast Diagnosis",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0040",
+          "PatientName": "010040^Breast Diagnosis",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0041",
+          "PatientName": "010041^Breast Diagnosis",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0042",
+          "PatientName": "",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0043",
+          "PatientName": "",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0044",
+          "PatientName": "",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0045",
+          "PatientName": "",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0046",
+          "PatientName": "010046^Breast Diagnosis",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0047",
+          "PatientName": "",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0048",
+          "PatientName": "",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0049",
+          "PatientName": "",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0050",
+          "PatientName": "",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0051",
+          "PatientName": "",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0052",
+          "PatientName": "",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0053",
+          "PatientName": "",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0054",
+          "PatientName": "",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0055",
+          "PatientName": "",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0056",
+          "PatientName": "",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0057",
+          "PatientName": "",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0058",
+          "PatientName": "",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0059",
+          "PatientName": "",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0060",
+          "PatientName": "",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0061",
+          "PatientName": "",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0062",
+          "PatientName": "",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0063",
+          "PatientName": "",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0065",
+          "PatientName": "010065^Breast Diagnosis",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0064",
+          "PatientName": "",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0066",
+          "PatientName": "010066^Breast Diagnosis",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0067",
+          "PatientName": "010067^Breast Diagnosis",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0068",
+          "PatientName": "010068^Breast Diagnosis",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0069",
+          "PatientName": "010069^Breast Diagnosis",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0070",
+          "PatientName": "010070^Breast Diagnosis",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0071",
+          "PatientName": "010071^Breast Diagnosis",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0072",
+          "PatientName": "010072^Breast Diagnosis",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0073",
+          "PatientName": "010073^Breast Diagnosis",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0075",
+          "PatientName": "",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0076",
+          "PatientName": "",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0077",
+          "PatientName": "",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0078",
+          "PatientName": "",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0079",
+          "PatientName": "",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0080",
+          "PatientName": "",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0081",
+          "PatientName": "",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0082",
+          "PatientName": "",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0083",
+          "PatientName": "",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0084",
+          "PatientName": "",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0085",
+          "PatientName": "",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0086",
+          "PatientName": "",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0087",
+          "PatientName": "",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0088",
+          "PatientName": "",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "BREAST-DIAGNOSIS",
+          "PatientId": "BreastDx-01-0089",
+          "PatientName": "",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        }
+      ]
+    }
+  },
+  "source": "tcia"
+}

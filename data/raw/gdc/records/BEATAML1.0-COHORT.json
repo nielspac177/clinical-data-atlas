@@ -1,0 +1,82 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "BEATAML1.0-COHORT",
+  "payload": {
+    "dbgap_accession_number": "phs001657",
+    "disease_type": [
+      "Myeloid Leukemias",
+      "Leukemias, NOS",
+      "Unknown",
+      "Chronic Myeloproliferative Disorders",
+      "Plasma Cell Tumors",
+      "Myelodysplastic Syndromes"
+    ],
+    "id": "BEATAML1.0-COHORT",
+    "name": "Functional Genomic Landscape of Acute Myeloid Leukemia",
+    "primary_site": [
+      "Hematopoietic and reticuloendothelial systems"
+    ],
+    "program": {
+      "dbgap_accession_number": null,
+      "name": "BEATAML1.0",
+      "program_id": "1eaac0a3-91f6-54b3-9a7c-e34468eaf527"
+    },
+    "project_id": "BEATAML1.0-COHORT",
+    "releasable": true,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 826,
+      "data_categories": [
+        {
+          "case_count": 759,
+          "data_category": "Simple Nucleotide Variation",
+          "file_count": 8777
+        },
+        {
+          "case_count": 826,
+          "data_category": "Sequencing Reads",
+          "file_count": 3567
+        },
+        {
+          "case_count": 653,
+          "data_category": "Transcriptome Profiling",
+          "file_count": 1510
+        },
+        {
+          "case_count": 653,
+          "data_category": "Structural Variation",
+          "file_count": 2940
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 534,
+          "experimental_strategy": "WXS",
+          "file_count": 7478
+        },
+        {
+          "case_count": 264,
+          "experimental_strategy": "Targeted Sequencing",
+          "file_count": 2653
+        },
+        {
+          "case_count": 653,
+          "experimental_strategy": "RNA-Seq",
+          "file_count": 6615
+        },
+        {
+          "case_count": 8,
+          "experimental_strategy": "scRNA-Seq",
+          "file_count": 48
+        }
+      ],
+      "file_count": 16794,
+      "file_size": 42355372208215
+    }
+  },
+  "source": "gdc"
+}

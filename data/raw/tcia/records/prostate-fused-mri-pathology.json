@@ -1,0 +1,426 @@
+{
+  "endpoints": [
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getCollectionValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getModalityValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getBodyPartValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getPatient",
+    "https://api.datacite.org/dois?prefix=10.7937"
+  ],
+  "harvest_method": "api:nbia+datacite",
+  "native_id": "Prostate Fused-MRI-Pathology",
+  "payload": {
+    "datacite": {
+      "citationCount": 11,
+      "container": {},
+      "contentUrl": [],
+      "contributors": [
+        {
+          "affiliation": [],
+          "contributorType": "DataCurator",
+          "familyName": null,
+          "givenName": null,
+          "name": "TCIA Team",
+          "nameIdentifiers": [],
+          "nameType": null
+        }
+      ],
+      "created": "2016-12-05T18:47:22Z",
+      "creators": [
+        {
+          "affiliation": [],
+          "familyName": "Madabhushi",
+          "givenName": "Anant",
+          "name": "Madabhushi, Anant",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Feldman",
+          "givenName": "Michael",
+          "name": "Feldman, Michael",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2016",
+          "dateInformation": null,
+          "dateType": "Issued"
+        }
+      ],
+      "descriptions": [
+        {
+          "description": "This collection comprises a total of 35 3 Tesla T1-weighted, T2-weighted, Diffusion weighted and Dynamic Contrast Enhanced prostate MRI along with accompanying digitized histopathology (H&amp;Estained) images of corresponding radical prostatectomy specimens. The MRI scans also have a mapping of extent of prostate cancer on them. Each surgically excised prostate specimen was originally sectioned and quartered resulting in 4 slides for each section. Each of these individual slides was digitized at 20x magnification using an Aperio slide scanner resulting in a set of 4 .svs images. Each of the 4 .svs images were then digitally stitched together to constitute a pseudo-whole mount section (.tiff). Annotations of cancer presence on the pseudo-whole mount sections were made by an expert pathologist. Slice correspondences were established between the individual T2w MRI and stitched pseudo-whole mount sections and checked for accuracy by an expert pathologist and radiologist. Deformable co-registration was employed to spatially co-registered the corresponding radiologic and histopathologic tissue sections to map disease extent onto the corresponding MRI scans.",
+          "descriptionType": "Abstract",
+          "lang": null
+        }
+      ],
+      "doi": "10.7937/k9/tcia.2016.tlpmr1am",
+      "downloadCount": 0,
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "Prostate Fused-MRI-Pathology",
+          "identifierType": "TCIA Short Name"
+        }
+      ],
+      "isActive": true,
+      "language": null,
+      "metadataVersion": 11,
+      "partCount": 0,
+      "partOfCount": 0,
+      "publicationYear": 2016,
+      "published": null,
+      "publisher": "The Cancer Imaging Archive",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2016-12-05T18:47:23Z",
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "10.1016/j.mri.2019.08.030",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1109/ist50367.2021.9651441",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.media.2021.102347",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.heliyon.2024.e29602",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.21037/tau.2019.03.01",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.21037/qims-21-175",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.xcrm.2024.101506",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        }
+      ],
+      "relatedItems": [],
+      "rightsList": [
+        {
+          "rights": "Creative Commons Attribution 3.0 Unported",
+          "rightsIdentifier": "cc-by-3.0",
+          "rightsIdentifierScheme": "SPDX",
+          "rightsUri": "https://creativecommons.org/licenses/by/3.0/legalcode",
+          "schemeUri": "https://spdx.org/licenses/"
+        }
+      ],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "fabricaForm",
+      "state": "findable",
+      "subjects": [],
+      "titles": [
+        {
+          "lang": null,
+          "title": "Fused Radiology-Pathology Prostate Dataset",
+          "titleType": null
+        },
+        {
+          "lang": null,
+          "title": "Prostate Fused-MRI-Pathology",
+          "titleType": "AlternativeTitle"
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceType": "DICOM, Pathology, Matlab",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2025-06-01T01:01:15Z",
+      "url": "https://www.cancerimagingarchive.net/collection/prostate-fused-mri-pathology/",
+      "version": "1",
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 4149
+    },
+    "nbia": {
+      "body_parts": [
+        "PROSTATE"
+      ],
+      "collection": "Prostate Fused-MRI-Pathology",
+      "modalities": [
+        "MR"
+      ],
+      "patients": [
+        {
+          "Collection": "Prostate Fused-MRI-Pathology",
+          "PatientId": "aaa0063",
+          "PatientName": "aaa0063",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Prostate Fused-MRI-Pathology",
+          "PatientId": "aaa0072",
+          "PatientName": "aaa0072",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Prostate Fused-MRI-Pathology",
+          "PatientId": "aaa0060",
+          "PatientName": "aaa0060",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Prostate Fused-MRI-Pathology",
+          "PatientId": "aaa0064",
+          "PatientName": "aaa0064",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Prostate Fused-MRI-Pathology",
+          "PatientId": "aaa0061",
+          "PatientName": "aaa0061",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Prostate Fused-MRI-Pathology",
+          "PatientId": "aaa0069",
+          "PatientName": "aaa0069",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Prostate Fused-MRI-Pathology",
+          "PatientId": "aaa0053",
+          "PatientName": "aaa0053",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Prostate Fused-MRI-Pathology",
+          "PatientId": "aaa0059",
+          "PatientName": "aaa0059",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Prostate Fused-MRI-Pathology",
+          "PatientId": "aaa0071",
+          "PatientName": "aaa0071",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Prostate Fused-MRI-Pathology",
+          "PatientId": "aaa0066",
+          "PatientName": "aaa0066",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Prostate Fused-MRI-Pathology",
+          "PatientId": "aaa0054",
+          "PatientName": "aaa0054",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Prostate Fused-MRI-Pathology",
+          "PatientId": "aab026",
+          "PatientName": "MR_aab026",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Prostate Fused-MRI-Pathology",
+          "PatientId": "aaa0086",
+          "PatientName": "aaa0086",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Prostate Fused-MRI-Pathology",
+          "PatientId": "aab011",
+          "PatientName": "MR_aab011",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Prostate Fused-MRI-Pathology",
+          "PatientId": "aab030",
+          "PatientName": "MR_aab030",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Prostate Fused-MRI-Pathology",
+          "PatientId": "aaa0051",
+          "PatientName": "aaa0051",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Prostate Fused-MRI-Pathology",
+          "PatientId": "aab010",
+          "PatientName": "MR_aab010",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Prostate Fused-MRI-Pathology",
+          "PatientId": "aab016",
+          "PatientName": "MR_aab016",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Prostate Fused-MRI-Pathology",
+          "PatientId": "aab025",
+          "PatientName": "MR_aab025",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Prostate Fused-MRI-Pathology",
+          "PatientId": "aab020",
+          "PatientName": "MR_aab020",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Prostate Fused-MRI-Pathology",
+          "PatientId": "aaa0043",
+          "PatientName": "aaa0043",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Prostate Fused-MRI-Pathology",
+          "PatientId": "aab028",
+          "PatientName": "MR_aab028",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Prostate Fused-MRI-Pathology",
+          "PatientId": "aab019",
+          "PatientName": "MR_aab019",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Prostate Fused-MRI-Pathology",
+          "PatientId": "aab032",
+          "PatientName": "MR_aab032",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Prostate Fused-MRI-Pathology",
+          "PatientId": "aab027",
+          "PatientName": "MR_aab027",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Prostate Fused-MRI-Pathology",
+          "PatientId": "aaa0044",
+          "PatientName": "aaa0044",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Prostate Fused-MRI-Pathology",
+          "PatientId": "aab033",
+          "PatientName": "MR_aab033",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Prostate Fused-MRI-Pathology",
+          "PatientId": "aaa0087",
+          "PatientName": "aaa0087",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        }
+      ]
+    }
+  },
+  "source": "tcia"
+}

@@ -1,0 +1,138 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds008366",
+  "payload": {
+    "created": "2026-07-18T00:49:54.755Z",
+    "id": "ds008366",
+    "latestSnapshot": {
+      "created": "2026-07-27T15:58:27.000Z",
+      "description": {
+        "Authors": [
+          "Serra E. Favila",
+          "Mariam Aly"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds008366.v1.0.0",
+        "Funding": [
+          "National Science Foundation BCS-1844241 (M. Aly)",
+          "National Science Foundation BCS-2435322 (M. Aly)",
+          "National Institutes of Health K00EY031607 (S.E. Favila)"
+        ],
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "Memory Guided Visual Search (MGVS)",
+        "ReferencesAndLinks": []
+      },
+      "readme": "# Memory-guided visual search (MGVS)\n\nSee dataset_description.json for authors, funding, and citation information.\n\n## Overview\n\nThis dataset contains fMRI, eyetracking, and behavioral data from a study of\nmemory-guided visual search. Participants first learned scene-location\nassociations (ses-train), then performed a visual search task in the scanner\nin which memory for these associations could be used to predict the location\nof an upcoming search target (ses-01). A separate population receptive field\n(pRF) retinotopic mapping session is also included under ses-01.\n\nTasks:\n- retinotopy: pRF bar-sweep mapping (ses-01, func)\n- search: memory-guided visual search (ses-01, func)\n- expose: passive scene re-exposure (ses-train, beh)\n- learn: scene-location association study/test (ses-train, beh)\n\nses-train is a behavior-only session (no MRI) and is stored under the \"beh\"\ndatatype rather than \"func\".\n\nParticipant demographics (age, sex, handedness, race, ethnicity, years of\neducation) are in participants.tsv/participants.json.\n\n## Eyetracking\n\nRaw EyeLink eyetracking data (.asc text format) are included under\nsourcedata/eyetracking/, named with BIDS-style session/task/run labels for\ntraceability. These are not BIDS Eye-Tracking (BEP020) formatted and are\nplaced in sourcedata/ (exempt from BIDS validation) accordingly.\n\nEach task's trial-phase (xDAT) and gaze-target (TarX/TarY) message codes,\nembedded as EyeLink MSG lines in the .asc files, are documented in the\naccompanying task-<label>_eyetrack.json files in the same directory.\n\n## Fieldmaps\n\nSubjects sub-01 and sub-03 were acquired with reversed phase-encoding (PEPOLAR)\nspin-echo EPI fieldmaps (dir-AP/dir-PA), while all other subjects were acquired\nwith a gre_field_mapping (phase-difference) fieldmap.\n\n## Stimuli\n\nstimuli/ contains the base (unwarped) scene images (stim/), the\nwarped versions used during the search task (stim_warped/), and the retinotopic\nmapping bar-aperture frames (stim_retinotopy/). Some base images in stim/ are\nonly ever presented in warped form and are therefore not directly referenced\nby any events.tsv; a small number of warp-variant combinations in stim_warped/\nlikewise happen not to have been drawn for any of the 32 released subjects.\n\n## Derivatives\n\nderivatives/fmriprep/ includes only the T1w (native) and fsnative output\nspaces; MNI152NLin2009cAsym and fsaverage outputs are not included to reduce\ndataset size. The per-subject fMRIPrep visual reports (sub-XX.html), however,\nare fMRIPrep's standard, unmodified output and still show QC figures for all\nfour output spaces fMRIPrep computed internally, and for a task-localizer\nscan. This localizer scan was collected opportunistically when scan time\nallowed, was not used in the associated manuscript, and is not included\nanywhere else in this dataset or its derivatives. Aside from appearing in\nthese reports, it can be disregarded.\n\nderivatives/mriqc/ includes per-subject/session image quality metrics and\nreports; group-level summary files are not included.",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri",
+          "beh"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "01",
+          "train"
+        ],
+        "size": 68221262011,
+        "subjects": [
+          "34",
+          "16",
+          "32",
+          "03",
+          "12",
+          "11",
+          "19",
+          "21",
+          "09",
+          "33",
+          "13",
+          "05",
+          "35",
+          "04",
+          "10",
+          "08",
+          "25",
+          "14",
+          "20",
+          "36",
+          "15",
+          "26",
+          "01",
+          "07",
+          "18",
+          "28",
+          "31",
+          "22",
+          "06",
+          "17",
+          "23",
+          "29"
+        ],
+        "tasks": [
+          "search",
+          "retinotopy"
+        ],
+        "totalFiles": 1982
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        19,
+        18,
+        20,
+        21,
+        20,
+        19,
+        22,
+        21,
+        21,
+        23,
+        22,
+        20,
+        19,
+        25,
+        23,
+        31,
+        25,
+        21,
+        24,
+        20,
+        21,
+        27,
+        28,
+        19,
+        20,
+        26,
+        21,
+        31,
+        28,
+        28,
+        18,
+        25
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "National Science Foundation; National Institutes of Health",
+      "modalities": [
+        "mri",
+        "beh"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2026-07-27T18:01:25.374Z"
+  },
+  "source": "openneuro"
+}

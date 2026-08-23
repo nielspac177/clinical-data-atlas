@@ -1,0 +1,102 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds002711",
+  "payload": {
+    "created": "2020-04-15T23:19:14.639Z",
+    "id": "ds002711",
+    "latestSnapshot": {
+      "created": "2020-05-26T23:27:43.000Z",
+      "description": {
+        "Authors": [
+          "Christos Chatzichristos",
+          "Manuel Morante",
+          "Nikos Andreadis",
+          "Eleftherios Kofidis",
+          "Yiannis Kopsinis",
+          "Sergios Theodoridis"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds002711.v1.1.0",
+        "Funding": [
+          "European Union's H2020 Framework Programme (H2020-MSCA-ITN-2014) under grant agreement No.~642685 MacSeNet."
+        ],
+        "HowToAcknowledge": "If you use these data, please cite the appropriate manuscripts.",
+        "License": "CC0",
+        "Name": "Smiley",
+        "ReferencesAndLinks": [
+          "Emojis influence autobiographical memory retrieval from reading words: An fMRI-based study, Plos One, 2020"
+        ]
+      },
+      "readme": "OpenNeuro curator note: This dataset was previously accessible at ds002070. The dataset was reuploaded due to privacy considerations. \n\nThis is the functional and structural MRI data of  the following study:\n\n\"Chatzichristos, C. and Morante, M. and Andreadis, A. and Kofidis, E. and Kopsinis, Y. and Theodoridis, S. Emojis influence autobiographical memory retrieval from reading words: An fMRI-based study, Plos One, 2020\"\n\nFolders are organised in subject number (e.g. sub-01). Within each folder there are subfolders with the following:\n\n1) anat \n\n\t- Bravo T1-weighted structural scan\n          TR 6.8 ms, TE 2.6 ms, flip angle 10o, 1.2 mm3 \n          isotropic voxels, image size 512x512x280\n\n    - Flair T2-weighted structural scan\n\t    TR 10 s, TE 118.608 ms, flip angle 160o, 3 mm3 \n\t    isotropic voxels, 256 image size 512x512x36\n\n2) func \n\n\t- Functional images, 540 volumes\n         TR 2 s, TE 45 ms, \n         image size 64 x 64 x 33, 4mm3 isotropic voxels\n\n\n\nIn the sourcedata folder the RTs (Response Time) of each subject to the stimuli are presented. The files generated from the software Nordic Aktiva are included. \nThe response of each subject is annotated as \"Response\". \"a\" is following if he/she responded with the press of the left hand while \"d\" for the right hand.\n\n\nThe timing for the Events are the same for every subject. The annotations in the event file are the following:\n\nHH\tHappy word- Happy emoji events\nHS\tHappy word- Sad emoji events\nSS\tSad word- Sad emoji events\nSH\tSad word- Happy emoji events\nPS\tPseudowords\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural",
+          "mri_functional"
+        ],
+        "sessions": [],
+        "size": 3823445844,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "13",
+          "14",
+          "15",
+          "16"
+        ],
+        "tasks": [
+          "Smiley"
+        ],
+        "totalFiles": 51
+      },
+      "tag": "1.1.0"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        43,
+        32,
+        43,
+        34,
+        27,
+        29,
+        28,
+        47,
+        32,
+        28,
+        34,
+        32,
+        24,
+        27,
+        57
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "Pseudoblock design",
+      "studyDomain": "Sentimental content of Emojis, Incongruency effect, Autobiographical memory Retrieval,",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2020-04-16T11:40:56.589Z"
+  },
+  "source": "openneuro"
+}

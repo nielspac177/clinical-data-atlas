@@ -1,0 +1,49 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:96c1f68ce065a6fec951eeb5bf647952ef3e67b78b6dbd72f3a6f12e22cc4f03",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Lung Adenocarcinoma",
+        "label": "Lung Adenocarcinoma"
+      },
+      {
+        "evidence": "Adenomas and Adenocarcinomas",
+        "label": "Adenomas and Adenocarcinomas"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "pulmonology"
+    ],
+    "id": "gdc:TCGA-LUAD",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Tissue Slide, Diagnostic Slide",
+        "value": "pathology"
+      },
+      {
+        "evidence": "WGS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "Transcriptome Profiling",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Reverse Phase Protein Array",
+        "value": "proteomics"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "Human cases with lung adenocarcinoma (bronchus and lung)",
+    "summary": "TCGA project on lung adenocarcinoma of the bronchus and lung, combining sequencing, copy number, methylation, transcriptome and proteome profiling with clinical, biospecimen and tissue slide data."
+  },
+  "prompt_version": "v1"
+}

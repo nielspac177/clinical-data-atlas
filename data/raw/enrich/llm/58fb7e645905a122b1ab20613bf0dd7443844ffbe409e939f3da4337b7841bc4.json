@@ -1,0 +1,45 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:58fb7e645905a122b1ab20613bf0dd7443844ffbe409e939f3da4337b7841bc4",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "apnea",
+        "label": "apnea"
+      }
+    ],
+    "countries": [
+      "IT"
+    ],
+    "domains": [
+      "neurology",
+      "psychiatry",
+      "cardiology",
+      "pulmonology"
+    ],
+    "id": "physionet:capslpdb",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "include at least 3 EEG channels",
+        "value": "EEG"
+      },
+      {
+        "evidence": "and EKG",
+        "value": "ECG"
+      },
+      {
+        "evidence": "EMG of the submentalis muscle",
+        "value": "EMG"
+      },
+      {
+        "evidence": "respiration signals (airflow, abdominal and thoracic effort and SaO2)",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": "108 polysomnographic recordings registered at the Sleep Disorders Center of the Ospedale Maggiore of Parma, Italy",
+    "summary": "Collection of 108 polysomnographic recordings in EDF format containing EEG, EOG, submentalis and tibial EMG, respiration signals and EKG, recorded at a sleep disorders center."
+  },
+  "prompt_version": "v1"
+}

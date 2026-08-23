@@ -1,0 +1,37 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "pifir",
+  "payload": {
+    "abstract": "<p>Surveillance of invasive fungal infection (IFI) in clinical settings is a laborious process requiring a detailed review of patient medical history. One of the key sources of clinical information is imaging reports: radiologist-produced free-text reports summarising findings and observations from a scan. Positron emission tomography combined with computed tomography (PET-CT) is a medical imaging modality particularly useful in ruling out IFIs and evaluating the response to anti-fungal therapy. The data was generated to facilitate the development of an automated tool for the detection of IFI. The PET-CT Invasive Fungal Infection Reports (PIFIR) corpus contains 201 de-identified reports annotated by radiologists for terminology suggestive of the presence of IFI. These include IFI-related concepts and certainty cues, as well as relations between them. We release the annotation schema and the original reports along with the corresponding annotation files. We anticipate the PIFIR corpus to be useful in the development and validation of named entity recognition and relation extraction methods with a focus on clinical data. Such methods can be instrumental in processing other types of clinical documentation (clinical notes, nursing notes) with various downstream tasks in mind.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 530755,
+    "core_doi": "10.13026/e0cx-1k53",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 817116,
+    "public_project_uuid": "fd4af2f1-100e-48e7-85fd-be432fed427c",
+    "publish_date": "2025-02-27",
+    "resource_type": "Database",
+    "short_description": "A corpus of PET-CT reports annotated for terminology relevant to fungal infections. Ideal for validation of named entity recognition and relation extraction methods.",
+    "slug": "pifir",
+    "source_url": "https://physionet.org/content/pifir/1.0.0/",
+    "title": "PIFIR: PET-CT Invasive Fungal Infection Reports",
+    "topics": [
+      "clinical documentation",
+      "invasive fungal infections",
+      "nlp",
+      "information extraction"
+    ],
+    "version": "1.0.0",
+    "version_doi": "10.13026/d51v-j343"
+  },
+  "source": "physionet"
+}

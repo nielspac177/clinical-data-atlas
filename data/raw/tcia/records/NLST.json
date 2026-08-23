@@ -1,0 +1,4354 @@
+{
+  "endpoints": [
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getCollectionValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getModalityValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getBodyPartValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getPatient",
+    "https://api.datacite.org/dois?prefix=10.7937"
+  ],
+  "harvest_method": "api:nbia+datacite",
+  "native_id": "NLST",
+  "payload": {
+    "datacite": {
+      "citationCount": 57,
+      "container": {},
+      "contentUrl": [],
+      "contributors": [],
+      "created": "2021-08-18T20:24:56Z",
+      "creators": [
+        {
+          "affiliation": [],
+          "familyName": null,
+          "givenName": null,
+          "name": "National Lung Screening Trial Research Team",
+          "nameIdentifiers": [],
+          "nameType": "Organizational"
+        }
+      ],
+      "dates": [],
+      "descriptions": [
+        {
+          "description": "Background: The aggressive and heterogeneous nature of lung cancer has thwarted efforts to reduce mortality from this cancer through the use of screening. The advent of low-dose helical computed tomography (CT) altered the landscape of lung-cancer screening, with studies indicating that low-dose CT detects many tumors at early stages. The National Lung Screening Trial (NLST) was conducted to determine whether screening with low-dose CT could reduce mortality from lung cancer.\nMethods: From August 2002 through April 2004, we enrolled 53,454 persons at high risk for lung cancer at 33 U.S. medical centers. Participants were randomly assigned to undergo three annual screenings with either low-dose CT (26,722 participants) or single-view posteroanterior chest radiography (26,732). Data were collected on cases of lung cancer and deaths from lung cancer that occurred through December 31, 2009.  This dataset includes the low-dose CT scans from 26,254 of these subjects, as well as digitized histopathology images from 451 subjects.\nResults: The rate of adherence to screening was more than 90%. The rate of positive screening tests was 24.2% with low-dose CT and 6.9% with radiography over all three rounds. A total of 96.4% of the positive screening results in the low-dose CT group and 94.5% in the radiography group were false positive results. The incidence of lung cancer was 645 cases per 100,000 person-years (1060 cancers) in the low-dose CT group, as compared with 572 cases per 100,000 person-years (941 cancers) in the radiography group (rate ratio, 1.13; 95% confidence interval [CI], 1.03 to 1.23). There were 247 deaths from lung cancer per 100,000 person-years in the low-dose CT group and 309 deaths per 100,000 person-years in the radiography group, representing a relative reduction in mortality from lung cancer with low-dose CT screening of 20.0% (95% CI, 6.8 to 26.7; P=0.004). The rate of death from any cause was reduced in the low-dose CT group, as compared with the radiography group, by 6.7% (95% CI, 1.2 to 13.6; P=0.02).\nConclusions: Screening with the use of low-dose CT reduces mortality from lung cancer. (Funded by the National Cancer Institute; National Lung Screening Trial ClinicalTrials.gov number, NCT00047385.).\n",
+          "descriptionType": "Abstract",
+          "lang": null
+        }
+      ],
+      "doi": "10.7937/tcia.hmq8-j677",
+      "downloadCount": 0,
+      "formats": [],
+      "fundingReferences": [
+        {
+          "awardNumber": "NCT00047385",
+          "awardTitle": "National Lung Screening Trial (NLST) Screening (NLST)",
+          "awardUri": "https://clinicaltrials.gov/ct2/show/NCT00047385",
+          "funderIdentifier": "https://doi.org/10.13039/100000054",
+          "funderIdentifierType": "Crossref Funder ID",
+          "funderName": "National Cancer Institute"
+        }
+      ],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "NLST",
+          "identifierType": "TCIA Short Name"
+        }
+      ],
+      "isActive": true,
+      "language": null,
+      "metadataVersion": 13,
+      "partCount": 0,
+      "partOfCount": 0,
+      "publicationYear": 2013,
+      "published": null,
+      "publisher": "The Cancer Imaging Archive",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2021-09-24T17:14:05Z",
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "10.2214/ajr.09.2709",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1118/1.3615624",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1148/radiol.11110542",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1148/radiol.10091808",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1148/radiol.10101254",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1056/nejmoa1102873",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1097/rli.0b013e318250a5aa",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1097/rti.0b013e318256951e",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1056/nejmoa1209120",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1177/0969141313500666",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1148/radiol.13121530",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1093/jnci/dju284",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1158/1940-6207.capr-13-0438",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1053/j.semtcvs.2015.12.015",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1016/s1470-2045(15)00621-x",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.artmed.2016.07.001",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1007/s11548-015-1245-7",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.4172/2155-6180.1000313",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1148/radiol.2016152333",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.2214/ajr.16.16930",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1371/journal.pmed.1002304",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.2214/ajr.17.18718",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1148/radiol.2018172771",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1038/s41591-019-0447-x",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1038/s41598-019-44562-z",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1038/s41598-019-38831-0",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1371/journal.pone.0212756",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1038/s41598-020-67378-8",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1088/1742-6596/2128/1/012011",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1200/cci.21.00096",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1007/978-3-030-87240-3_19",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.3390/s22187031",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1002/mp.15932",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1200/jco.22.01345",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1007/s13246-023-01302-y",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1148/rycan.230100",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1109/access.2024.3385668",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1007/978-3-031-43907-0_58",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.3390/app131910679",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.acra.2024.08.028",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1007/s11604-024-01606-3",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.compbiomed.2024.108643",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1038/s41598-024-84193-7",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1038/s41597-023-02864-y",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.17077/etd.66kk-u2b1",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        }
+      ],
+      "relatedItems": [],
+      "rightsList": [
+        {
+          "rights": "Creative Commons Attribution 4.0 International",
+          "rightsIdentifier": "cc-by-4.0",
+          "rightsIdentifierScheme": "SPDX",
+          "rightsUri": "https://creativecommons.org/licenses/by/4.0/legalcode",
+          "schemeUri": "https://spdx.org/licenses/"
+        }
+      ],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "fabricaForm",
+      "state": "findable",
+      "subjects": [],
+      "titles": [
+        {
+          "lang": null,
+          "title": "Data from the National Lung Screening Trial (NLST)",
+          "titleType": null
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceType": "",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2025-06-01T01:01:08Z",
+      "url": "https://www.cancerimagingarchive.net/collection/nlst/",
+      "version": "3",
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 27982
+    },
+    "nbia": {
+      "body_parts": [
+        "CHEST",
+        "LUNG"
+      ],
+      "collection": "NLST",
+      "modalities": [
+        "CT",
+        "SEG"
+      ],
+      "patients": [
+        {
+          "Collection": "NLST",
+          "PatientId": "204367",
+          "PatientName": "4639^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "123121",
+          "PatientName": "145706^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "206821",
+          "PatientName": "8193^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "121321",
+          "PatientName": "063073^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "121837",
+          "PatientName": "120071^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "131616",
+          "PatientName": "147520^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "118681",
+          "PatientName": "076992^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "116266",
+          "PatientName": "115402^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "200441",
+          "PatientName": "2836^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "209683",
+          "PatientName": "1076^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "100947",
+          "PatientName": "010629^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "132627",
+          "PatientName": "027979^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "216871",
+          "PatientName": "15146^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "113172",
+          "PatientName": "110288^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "101763",
+          "PatientName": "075424^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "113494",
+          "PatientName": "158196^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "127923",
+          "PatientName": "080721^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "211092",
+          "PatientName": "2515^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "214085",
+          "PatientName": "10840^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "105710",
+          "PatientName": "067629^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "102624",
+          "PatientName": "152124^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "104099",
+          "PatientName": "166066^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "115398",
+          "PatientName": "032110^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "207830",
+          "PatientName": "4292^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "209140",
+          "PatientName": "8746^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "126728",
+          "PatientName": "047506^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "105258",
+          "PatientName": "068536^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "214975",
+          "PatientName": "8569^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "128242",
+          "PatientName": "105882^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "123066",
+          "PatientName": "053702^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "127174",
+          "PatientName": "148171^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "200976",
+          "PatientName": "15039^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "133811",
+          "PatientName": "171686^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "204796",
+          "PatientName": "11801^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "102396",
+          "PatientName": "038356^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "127890",
+          "PatientName": "142935^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "205283",
+          "PatientName": "7752^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "114329",
+          "PatientName": "111179^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "130695",
+          "PatientName": "094318^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "110071",
+          "PatientName": "130690^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "127654",
+          "PatientName": "066241^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "116176",
+          "PatientName": "002345^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "110648",
+          "PatientName": "079954^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "130633",
+          "PatientName": "084541^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "130491",
+          "PatientName": "093237^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "116385",
+          "PatientName": "165092^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "133305",
+          "PatientName": "156919^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "114815",
+          "PatientName": "076331^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "111914",
+          "PatientName": "082586^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "125537",
+          "PatientName": "165779^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "127021",
+          "PatientName": "020776^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "107838",
+          "PatientName": "104430^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "120252",
+          "PatientName": "088013^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "215835",
+          "PatientName": "2741^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "132823",
+          "PatientName": "147462^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "116872",
+          "PatientName": "136614^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "217446",
+          "PatientName": "15438^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "117835",
+          "PatientName": "042895^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "115447",
+          "PatientName": "143156^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "107142",
+          "PatientName": "143735^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "201292",
+          "PatientName": "16586^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "127214",
+          "PatientName": "031856^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "204711",
+          "PatientName": "283^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "101905",
+          "PatientName": "075838^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "105987",
+          "PatientName": "158014^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "110961",
+          "PatientName": "040881^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "133831",
+          "PatientName": "125427^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "200964",
+          "PatientName": "5113^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "108420",
+          "PatientName": "053470^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "208990",
+          "PatientName": "10622^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "100518",
+          "PatientName": "063727^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "208282",
+          "PatientName": "10585^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "205714",
+          "PatientName": "15637^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "128255",
+          "PatientName": "033753^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "107682",
+          "PatientName": "086678^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "100206",
+          "PatientName": "137406^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "118664",
+          "PatientName": "153494^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "121538",
+          "PatientName": "086058^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "213753",
+          "PatientName": "16877^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "121004",
+          "PatientName": "036111^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "218788",
+          "PatientName": "6056^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "112901",
+          "PatientName": "027326^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "216666",
+          "PatientName": "422^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "214822",
+          "PatientName": "16978^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "103619",
+          "PatientName": "098442^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "117380",
+          "PatientName": "002287^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "112966",
+          "PatientName": "038000^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "201674",
+          "PatientName": "11769^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "109871",
+          "PatientName": "035923^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "122694",
+          "PatientName": "115881^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "203900",
+          "PatientName": "9033^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "127992",
+          "PatientName": "113753^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "210213",
+          "PatientName": "3293^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "128903",
+          "PatientName": "120964^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "106381",
+          "PatientName": "171421^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "120289",
+          "PatientName": "055897^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "107889",
+          "PatientName": "022897^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "117627",
+          "PatientName": "030221^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "113685",
+          "PatientName": "109116^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "124738",
+          "PatientName": "050211^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "128468",
+          "PatientName": "032268^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "213240",
+          "PatientName": "18299^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "107497",
+          "PatientName": "134635^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "113398",
+          "PatientName": "120022^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "109626",
+          "PatientName": "160945^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "205736",
+          "PatientName": "16603^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "121285",
+          "PatientName": "034116^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "115571",
+          "PatientName": "060624^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "106926",
+          "PatientName": "037986^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "213138",
+          "PatientName": "154^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "218088",
+          "PatientName": "9402^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "125554",
+          "PatientName": "030296^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "209412",
+          "PatientName": "14795^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "210122",
+          "PatientName": "360^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "207762",
+          "PatientName": "2834^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "101943",
+          "PatientName": "080846^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "124440",
+          "PatientName": "155457^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "116142",
+          "PatientName": "085027^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "207756",
+          "PatientName": "4400^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "133934",
+          "PatientName": "029504^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "111493",
+          "PatientName": "137851^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "122255",
+          "PatientName": "113522^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "109099",
+          "PatientName": "032078^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "207347",
+          "PatientName": "12346^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "102658",
+          "PatientName": "143990^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "124014",
+          "PatientName": "162479^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "133700",
+          "PatientName": "094383^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "124298",
+          "PatientName": "051425^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "111774",
+          "PatientName": "023960^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "207278",
+          "PatientName": "16440^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "111627",
+          "PatientName": "034264^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "126792",
+          "PatientName": "011775^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "120570",
+          "PatientName": "089482^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "205781",
+          "PatientName": "16018^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "125252",
+          "PatientName": "015222^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "113828",
+          "PatientName": "153304^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "123670",
+          "PatientName": "047894^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "113103",
+          "PatientName": "117754^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "115392",
+          "PatientName": "085670^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "110817",
+          "PatientName": "002980^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "205591",
+          "PatientName": "14019^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "101811",
+          "PatientName": "073510^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "207584",
+          "PatientName": "5086^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "128857",
+          "PatientName": "059071^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "114311",
+          "PatientName": "012260^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "111164",
+          "PatientName": "125674^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "100829",
+          "PatientName": "136754^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "215094",
+          "PatientName": "18354^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "118946",
+          "PatientName": "019075^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "213005",
+          "PatientName": "12723^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "100681",
+          "PatientName": "152496^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "122866",
+          "PatientName": "010884^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "100846",
+          "PatientName": "152082^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "132876",
+          "PatientName": "118646^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "217482",
+          "PatientName": "979^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "119585",
+          "PatientName": "063164^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "109682",
+          "PatientName": "032672^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "115568",
+          "PatientName": "133736^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "211436",
+          "PatientName": "2791^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "120103",
+          "PatientName": "058370^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "202610",
+          "PatientName": "16699^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "116930",
+          "PatientName": "158915^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "214132",
+          "PatientName": "14740^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "107243",
+          "PatientName": "054197^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "120751",
+          "PatientName": "148031^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "112505",
+          "PatientName": "164756^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "125642",
+          "PatientName": "059899^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "206341",
+          "PatientName": "16142^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "127302",
+          "PatientName": "111542^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "104631",
+          "PatientName": "060285^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "120028",
+          "PatientName": "017194^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "121073",
+          "PatientName": "107722^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "204498",
+          "PatientName": "18849^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "112606",
+          "PatientName": "005397^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "118602",
+          "PatientName": "012880^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "206063",
+          "PatientName": "16326^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "132925",
+          "PatientName": "123075^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "120477",
+          "PatientName": "142273^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "203459",
+          "PatientName": "8353^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "118560",
+          "PatientName": "002097^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "103232",
+          "PatientName": "170761^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "205046",
+          "PatientName": "7268^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "112289",
+          "PatientName": "111278^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "127400",
+          "PatientName": "041939^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "131645",
+          "PatientName": "038752^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "212863",
+          "PatientName": "4813^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "201726",
+          "PatientName": "15023^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "114133",
+          "PatientName": "113597^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "126412",
+          "PatientName": "104000^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "101795",
+          "PatientName": "092692^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "129627",
+          "PatientName": "151316^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "126921",
+          "PatientName": "045484^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "133792",
+          "PatientName": "119198^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "133609",
+          "PatientName": "163576^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "113899",
+          "PatientName": "158402^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "207647",
+          "PatientName": "9194^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "114405",
+          "PatientName": "001974^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "216238",
+          "PatientName": "1437^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "105034",
+          "PatientName": "167130^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "123771",
+          "PatientName": "051177^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "134408",
+          "PatientName": "104091^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "123939",
+          "PatientName": "129528^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "119269",
+          "PatientName": "034991^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "117074",
+          "PatientName": "153072^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "120830",
+          "PatientName": "036277^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "207015",
+          "PatientName": "18794^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "213617",
+          "PatientName": "1839^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "105513",
+          "PatientName": "060376^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "202225",
+          "PatientName": "14029^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "206344",
+          "PatientName": "18517^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "103813",
+          "PatientName": "118877^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "102069",
+          "PatientName": "137125^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "131862",
+          "PatientName": "064832^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "112258",
+          "PatientName": "067876^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "122361",
+          "PatientName": "087981^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "113127",
+          "PatientName": "119636^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "102152",
+          "PatientName": "151209^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "103882",
+          "PatientName": "031195^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "109383",
+          "PatientName": "073395^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "102867",
+          "PatientName": "124610^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "124541",
+          "PatientName": "118927^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "116746",
+          "PatientName": "145847^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "123187",
+          "PatientName": "027771^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "108611",
+          "PatientName": "045948^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "130647",
+          "PatientName": "098780^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "121018",
+          "PatientName": "171074^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "119326",
+          "PatientName": "003202^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "201465",
+          "PatientName": "6359^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "103101",
+          "PatientName": "043828^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "200973",
+          "PatientName": "9963^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "115053",
+          "PatientName": "129841^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "122487",
+          "PatientName": "019588^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "105607",
+          "PatientName": "151357^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "207366",
+          "PatientName": "6854^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "122837",
+          "PatientName": "016014^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "217880",
+          "PatientName": "3607^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "107791",
+          "PatientName": "170142^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "125271",
+          "PatientName": "149807^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "200516",
+          "PatientName": "1119^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "102214",
+          "PatientName": "085001^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "206564",
+          "PatientName": "10072^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "208892",
+          "PatientName": "4221^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "121713",
+          "PatientName": "034926^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "128783",
+          "PatientName": "030957^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "130597",
+          "PatientName": "141473^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "100543",
+          "PatientName": "038612^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "129695",
+          "PatientName": "061416^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "214423",
+          "PatientName": "2012^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "123546",
+          "PatientName": "054247^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "204870",
+          "PatientName": "4330^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "120160",
+          "PatientName": "168153^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "111257",
+          "PatientName": "058206^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "134257",
+          "PatientName": "063495^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "217072",
+          "PatientName": "8759^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "102541",
+          "PatientName": "133777^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "208414",
+          "PatientName": "18861^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "206187",
+          "PatientName": "3022^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "131566",
+          "PatientName": "129304^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "203474",
+          "PatientName": "15650^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "132211",
+          "PatientName": "131136^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "121123",
+          "PatientName": "165316^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "201103",
+          "PatientName": "13093^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "100913",
+          "PatientName": "116087^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "124436",
+          "PatientName": "017897^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "115318",
+          "PatientName": "119065^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "122438",
+          "PatientName": "011635^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "117820",
+          "PatientName": "097857^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "131174",
+          "PatientName": "134510^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "100690",
+          "PatientName": "089920^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "106498",
+          "PatientName": "164822^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "106990",
+          "PatientName": "045534^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "127194",
+          "PatientName": "088054^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "113820",
+          "PatientName": "115980^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "120524",
+          "PatientName": "145912^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "133324",
+          "PatientName": "132894^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "118970",
+          "PatientName": "134726^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "208374",
+          "PatientName": "11888^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "206971",
+          "PatientName": "9065^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "131901",
+          "PatientName": "116541^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "110866",
+          "PatientName": "003905^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "115423",
+          "PatientName": "045195^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "132234",
+          "PatientName": "056747^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "126589",
+          "PatientName": "118968^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "102136",
+          "PatientName": "083865^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "123960",
+          "PatientName": "113845^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "208430",
+          "PatientName": "3963^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "102361",
+          "PatientName": "091306^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "115165",
+          "PatientName": "128249^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "106569",
+          "PatientName": "155895^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "102581",
+          "PatientName": "147603^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "118752",
+          "PatientName": "107086^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "108025",
+          "PatientName": "020958^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "132947",
+          "PatientName": "089615^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "117963",
+          "PatientName": "169003^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "115134",
+          "PatientName": "128165^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "100242",
+          "PatientName": "087577^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "134383",
+          "PatientName": "030965^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "210849",
+          "PatientName": "17712^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "214097",
+          "PatientName": "2592^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "122495",
+          "PatientName": "100511^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "121828",
+          "PatientName": "002022^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "118421",
+          "PatientName": "141044^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "209116",
+          "PatientName": "11113^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "133640",
+          "PatientName": "029199^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "209095",
+          "PatientName": "4616^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "218652",
+          "PatientName": "2767^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "214683",
+          "PatientName": "3535^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "101066",
+          "PatientName": "170522^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "113542",
+          "PatientName": "058255^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "216311",
+          "PatientName": "8252^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "207790",
+          "PatientName": "8960^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "109198",
+          "PatientName": "154906^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "118641",
+          "PatientName": "062364^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "115707",
+          "PatientName": "038091^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "133405",
+          "PatientName": "101816^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "126252",
+          "PatientName": "170985^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "102469",
+          "PatientName": "130641^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "216031",
+          "PatientName": "17535^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "100581",
+          "PatientName": "038521^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "123569",
+          "PatientName": "090845^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "119157",
+          "PatientName": "016535^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "201385",
+          "PatientName": "7547^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "100604",
+          "PatientName": "026146^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "101192",
+          "PatientName": "026831^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "115578",
+          "PatientName": "143222^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "109092",
+          "PatientName": "120469^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "133886",
+          "PatientName": "056036^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "113023",
+          "PatientName": "143453^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "120293",
+          "PatientName": "035899^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "134472",
+          "PatientName": "145490^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "115007",
+          "PatientName": "072108^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "104208",
+          "PatientName": "056283^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "101397",
+          "PatientName": "165720^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "131486",
+          "PatientName": "172650^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "211707",
+          "PatientName": "4159^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "202529",
+          "PatientName": "13108^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "101692",
+          "PatientName": "151977^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "214640",
+          "PatientName": "7397^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "218525",
+          "PatientName": "14980^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "103018",
+          "PatientName": "111500^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "103210",
+          "PatientName": "148965^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "112481",
+          "PatientName": "165480^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "205884",
+          "PatientName": "1491^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "218368",
+          "PatientName": "5963^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "102267",
+          "PatientName": "044529^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "104761",
+          "PatientName": "107888^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "205594",
+          "PatientName": "3230^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "132081",
+          "PatientName": "015974^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "103507",
+          "PatientName": "065441^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "214401",
+          "PatientName": "7847^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "115524",
+          "PatientName": "162396^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "109532",
+          "PatientName": "161984^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "209029",
+          "PatientName": "4174^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "117705",
+          "PatientName": "088682^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "111176",
+          "PatientName": "130682^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "215725",
+          "PatientName": "11817^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "100784",
+          "PatientName": "076497^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "119597",
+          "PatientName": "130468^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "103265",
+          "PatientName": "061820^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "102608",
+          "PatientName": "048595^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "131260",
+          "PatientName": "124842^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "210118",
+          "PatientName": "9993^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "124533",
+          "PatientName": "156992^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "213485",
+          "PatientName": "986^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "129278",
+          "PatientName": "075655^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "200450",
+          "PatientName": "12111^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "213616",
+          "PatientName": "6340^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "213775",
+          "PatientName": "16919^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "107184",
+          "PatientName": "034256^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "126871",
+          "PatientName": "149799^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "112851",
+          "PatientName": "029793^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "130923",
+          "PatientName": "010397^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "107443",
+          "PatientName": "169169^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "103223",
+          "PatientName": "032334^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "104893",
+          "PatientName": "060517^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "120378",
+          "PatientName": "155044^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "121569",
+          "PatientName": "128181^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "124978",
+          "PatientName": "101071^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "214592",
+          "PatientName": "13414^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "134216",
+          "PatientName": "013375^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "106190",
+          "PatientName": "048264^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "125071",
+          "PatientName": "079806^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "126955",
+          "PatientName": "114595^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "126799",
+          "PatientName": "140103^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "104634",
+          "PatientName": "084210^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "122937",
+          "PatientName": "032904^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "118776",
+          "PatientName": "097881^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "212522",
+          "PatientName": "15925^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "123521",
+          "PatientName": "071696^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "100703",
+          "PatientName": "089912^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "129333",
+          "PatientName": "031179^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "210218",
+          "PatientName": "899^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "113623",
+          "PatientName": "074922^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "107585",
+          "PatientName": "019794^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "207544",
+          "PatientName": "13508^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "216841",
+          "PatientName": "12431^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "102161",
+          "PatientName": "098699^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "205023",
+          "PatientName": "17571^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "217756",
+          "PatientName": "14356^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "109496",
+          "PatientName": "061077^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "119656",
+          "PatientName": "020644^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "104527",
+          "PatientName": "143792^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "201938",
+          "PatientName": "5279^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "133072",
+          "PatientName": "129551^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "216704",
+          "PatientName": "4255^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "117682",
+          "PatientName": "011221^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "202433",
+          "PatientName": "5504^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "109757",
+          "PatientName": "165597^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "112160",
+          "PatientName": "085621^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "119648",
+          "PatientName": "140640^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "117950",
+          "PatientName": "076695^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "210517",
+          "PatientName": "6952^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "217438",
+          "PatientName": "12072^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "202822",
+          "PatientName": "6927^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "108806",
+          "PatientName": "015354^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "216978",
+          "PatientName": "6810^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "207614",
+          "PatientName": "1786^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "110196",
+          "PatientName": "113456^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "213972",
+          "PatientName": "4823^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "214008",
+          "PatientName": "13443^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "111951",
+          "PatientName": "079202^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "200289",
+          "PatientName": "9995^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "108429",
+          "PatientName": "155333^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "213605",
+          "PatientName": "447^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "212379",
+          "PatientName": "5989^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "111062",
+          "PatientName": "109033^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "106753",
+          "PatientName": "153742^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "207903",
+          "PatientName": "13895^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "133926",
+          "PatientName": "138107^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "106850",
+          "PatientName": "080713^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "115214",
+          "PatientName": "086454^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "125222",
+          "PatientName": "041194^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "104075",
+          "PatientName": "127472^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "206292",
+          "PatientName": "13100^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "105165",
+          "PatientName": "133140^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "131611",
+          "PatientName": "063388^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "204338",
+          "PatientName": "5342^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "104691",
+          "PatientName": "170480^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "104765",
+          "PatientName": "157701^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "108433",
+          "PatientName": "092783^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "212510",
+          "PatientName": "12217^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "128074",
+          "PatientName": "028274^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "206320",
+          "PatientName": "4815^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "127739",
+          "PatientName": "081273^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "110987",
+          "PatientName": "167387^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "205405",
+          "PatientName": "17134^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "215066",
+          "PatientName": "18414^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "127480",
+          "PatientName": "083725^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "209874",
+          "PatientName": "16171^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "209379",
+          "PatientName": "9334^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "107110",
+          "PatientName": "060079^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "128574",
+          "PatientName": "143024^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "206746",
+          "PatientName": "9041^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "202268",
+          "PatientName": "1655^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "118939",
+          "PatientName": "079525^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "201984",
+          "PatientName": "2980^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "111243",
+          "PatientName": "030437^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "119568",
+          "PatientName": "064147^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "128377",
+          "PatientName": "021899^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "215394",
+          "PatientName": "5708^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "118248",
+          "PatientName": "063958^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "119522",
+          "PatientName": "108167^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "128329",
+          "PatientName": "158360^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "200561",
+          "PatientName": "14069^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "133321",
+          "PatientName": "092734^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "131857",
+          "PatientName": "086918^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "125317",
+          "PatientName": "095463^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "201769",
+          "PatientName": "11663^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "116544",
+          "PatientName": "116368^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "213851",
+          "PatientName": "11683^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "119012",
+          "PatientName": "105684^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "218295",
+          "PatientName": "14632^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "114030",
+          "PatientName": "170621^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "202748",
+          "PatientName": "535^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "110378",
+          "PatientName": "072124^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "204070",
+          "PatientName": "17825^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "101874",
+          "PatientName": "003004^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "132386",
+          "PatientName": "114249^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "207873",
+          "PatientName": "6017^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "207326",
+          "PatientName": "15210^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "208819",
+          "PatientName": "7478^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "117985",
+          "PatientName": "066092^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "111395",
+          "PatientName": "012765^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "123247",
+          "PatientName": "096297^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "127809",
+          "PatientName": "088005^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "119358",
+          "PatientName": "059782^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "110450",
+          "PatientName": "104190^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "213489",
+          "PatientName": "4019^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "200871",
+          "PatientName": "12438^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "122376",
+          "PatientName": "163667^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "123825",
+          "PatientName": "137653^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "216940",
+          "PatientName": "917^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "104248",
+          "PatientName": "068890^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "115345",
+          "PatientName": "126250^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "118828",
+          "PatientName": "142034^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "116486",
+          "PatientName": "045344^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "115873",
+          "PatientName": "167973^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "129124",
+          "PatientName": "009209^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "116207",
+          "PatientName": "060673^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "216622",
+          "PatientName": "13733^ACRIN",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NLST",
+          "PatientId": "132998",
+          "PatientName": "058388^LSS",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        }
+      ]
+    }
+  },
+  "source": "tcia"
+}

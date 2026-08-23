@@ -1,0 +1,35 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:225b7304a26656389b338a33bd3408b9c2471aa3f942f59ef15b18e709c5841c",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Advanced Non-small Cell Lung Cancer",
+        "label": "non-small cell lung cancer"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "oncology",
+      "pulmonology",
+      "musculoskeletal"
+    ],
+    "id": "tcia:s0819",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "RTSTRUCT",
+        "value": "radiotherapy"
+      },
+      {
+        "evidence": "Select patient-level data from this trial is available.",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "patients with stage IV or recurrent non-small cell lung cancer",
+    "summary": "Data from a randomized phase III SWOG trial of carboplatin and paclitaxel with or without bevacizumab and/or cetuximab in advanced non-small cell lung cancer, including radiotherapy structure sets and selected patient-level data."
+  },
+  "prompt_version": "v1"
+}

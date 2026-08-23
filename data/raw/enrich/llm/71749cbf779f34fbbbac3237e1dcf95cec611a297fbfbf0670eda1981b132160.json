@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:71749cbf779f34fbbbac3237e1dcf95cec611a297fbfbf0670eda1981b132160",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "a dataset for phenotyping immunosuppression",
+        "label": "immunosuppression"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "critical_care"
+    ],
+    "id": "physionet:immunosuppressive-annotations",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "200 MIMIC-III admission notes with adjudicated labels",
+        "value": "clinical_notes"
+      },
+      {
+        "evidence": "electronic health record (EHR)",
+        "value": "EHR"
+      }
+    ],
+    "population": "Patients with admission notes extracted from MIMIC-III, who stayed in critical care units at Beth Israel Deaconess Medical Center between 2001 and 2012.",
+    "summary": "200 MIMIC-III admission notes manually annotated for histories of immunosuppressive conditions and use of immunosuppressive medications, supporting phenotyping of a patient's immune status from unstructured notes."
+  },
+  "prompt_version": "v1"
+}

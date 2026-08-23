@@ -1,0 +1,106 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004956",
+  "payload": {
+    "created": "2024-02-07T17:01:33.900Z",
+    "id": "ds004956",
+    "latestSnapshot": {
+      "created": "2024-02-12T14:42:05.000Z",
+      "description": {
+        "Authors": [
+          "Marleen Haupt",
+          "Monika Graumann",
+          "Santani Teng",
+          "Carina Kaltenbach",
+          "Radoslaw M. Cichy"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004956.v1.0.1",
+        "Funding": [
+          "CI241/1-1",
+          "CI241/3-1",
+          "CI241/7-1",
+          "ERC-StG-2018-803370"
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Braille letters - fMRI",
+        "ReferencesAndLinks": null
+      },
+      "readme": "This dataset contains the raw fMRI data accompanying the paper \"The transformation of sensory to perceptual braille letter representations in the visually deprived brain\". Please cite the above paper if you use this data.\n\nThe dataset includes:\n\n1. anat/ anatomical scans (T1-weighted images) for each subject\n2. func/ whole-brain EPI data from all task runs and one functional localizer run per participant. \n\nPlease note, some participants completed an additional session 2 that only includes additional task runs (no anatomical scan or functional localizer).\n\nThe events files contain the onsets, durations, trial types and values for all trials in the corresponding run. Stimuli are Braille letters (B,C,D,L,M,N,V,Z) presented on Braille cells under the left and right index fingers of participants. Stimuli 1-8 are letters presented to the left hand, stimuli 9-16 are letters presented to the right hand. Stimuli 100, 200, 300 and 400 are catch trials. Stimuli presented to the left hand are indicated by a value of 1, stimuli presented to the right hand are indicated by a value of 2, and null trials are indicated by 0.\n\nFor a full description of the paradigm and the employed procedures please see the paper.  ",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "01",
+          "02"
+        ],
+        "size": 9520068161,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "12",
+          "13",
+          "15",
+          "16",
+          "17"
+        ],
+        "tasks": [
+          "letters",
+          "localizer"
+        ],
+        "totalFiles": 919
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        31,
+        55,
+        21,
+        53,
+        30,
+        47,
+        34,
+        33,
+        35,
+        36,
+        55,
+        36,
+        39,
+        41,
+        37
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "Braille letter representations",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2024-02-12T14:40:47.829Z"
+  },
+  "source": "openneuro"
+}

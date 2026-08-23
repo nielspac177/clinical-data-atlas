@@ -1,0 +1,121 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds000120",
+  "payload": {
+    "created": "2018-02-06T19:42:48.033Z",
+    "id": "ds000120",
+    "latestSnapshot": {
+      "created": "2018-07-17T13:08:40.000Z",
+      "description": {
+        "Authors": [
+          "Aarthi Padmanabhana",
+          "Charles F. Geier",
+          "Sarah J. Ordaz",
+          "Theresa Teslovich",
+          "Beatriz Luna"
+        ],
+        "DatasetDOI": null,
+        "Funding": [],
+        "HowToAcknowledge": "",
+        "License": "PDDL",
+        "Name": "Developmental changes in brain function underlying the influence of reward processing on inhibitory control (Slot Reward)",
+        "ReferencesAndLinks": [
+          "http://www.sciencedirect.com/science/article/pii/S1878929311000612"
+        ]
+      },
+      "readme": "# Slot Reward\n\n## Citations\n\nPadmanabhan, Aarthi, Charles F. Geier, Sarah J. Ordaz, Theresa Teslovich, and Beatriz Luna. “Developmental Changes in Brain Function Underlying the Influence of Reward Processing on Inhibitory Control.” Developmental Cognitive Neuroscience 1, no. 4 (October 2011): 517–29. doi:10.1016/j.dcn.2011.06.004.\n\n## Behavioral format\nlike: \n```txt\n  epTrNo onset(s) trialtype dotpos targetXdat score lat(s)\n  5 12 neutral 7 171 -1 -1\n  13 28.5 neutral 633 176 1 667\n  21 45 reward 214 183 1 417\n```\n\n1. epTrNo: EPrime Trial Number\n This count was used to match ilab eye scoring output to eprime task order. The EPrime trial count includes fixations.\n2. onset(s): time the event started in seconds\n3. trialtype: what type of trial\n  * neutral --  antisaccade with no reward\n  * reward  --  rewarded antisaccade \n  * VGS     -- unrewaqrded visual guided saccade\n4. dotpos: the position of the dot the subject was to look toward or away from, left-right 1-800; \n5. targetXdat: code sent from eprime to eyetracker for this trial\n6. score: what saccade type did the subject make\n  * -1 -- drop (blink, bad tracking, presaccade, etc)\n  *  0 -- first saccade incorrect\n  *  1 -- first saccade correct\n  *  2 -- first saccade incorrect, but followed by a correct saccade\n7. lat(s): time from start of trial to the first saccade in seconds\n\n\n## Model\n> AFNI (Analysis and Visualization of Functional Neuroimages) software (Cox, 1996) was used for individual subject deconvolution as well as subsequent group analyses. Deconvolution methods followed steps delineated previously (Ward, 1998). Briefly, our model consisted of two orthogonal regressors of interest for reward and neutral correct AS trials, as well as regressors for incorrect AS trials and all VGS trials. Linear and non-linear trends and six motion parameters were also included as nuisance regressors. A unique estimated impulse response function (i.e., hemodynamic response function) for each regressor of interest (correct reward and neutral AS trials) was determined by a weighted linear sum of eight sine basis functions multiplied by data determined least squares estimated beta weights. The estimated impulse response function reflects the estimated BOLD response to a type of trial (reward AS trial) after controlling for variations in the BOLD signal due to other regressors. We made no assumptions about the shape of the function. We specified the duration of the estimated response from the trial onset (0 seconds) to 24 seconds (17 TRs) post trial onset, a sufficient time window for the hemodynamic response to peak and return to baseline, which was defined as the jittered fixation periods between trials.\n\n## Issues\n\n### Trigger Code (XDAT) Mismatch\n5 runs have eyescoring with triggers that do not match expected. \n^ subj   ^run ^\n| sub002 | 2  |\n| sub002 | 3  |\n| sub011 | 2  |\n| sub023 | 3  |\n| sub024 | 3  |\n\n### Missing data\n^subj ^ run ^ exclude reason ^\n|sub005|1| no behave|\n|sub007|1| no bold  |\n|sub007|2| no bold  |\n|sub007|3| no bold  |\n|sub009|3| no bold  |\n|sub012|3| no bold  |\n|sub013|3| no bold  |\n|sub015|3| no bold  |\n|sub016|1| no behave|\n|sub020|3| no bold  |\n|sub023|1| no behave|\n\n## Derivatives\nThe output of mriqc is included in the derivatives/mriqc directory\n(https://github.com/poldracklab/mriqc)\n\n## De-facing of anatomical scans\nDe-facing of high resolution T1 scans was performed using pydeface\n(https://github.com/poldracklab/pydeface)\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 2597469407,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27"
+        ],
+        "tasks": [
+          "antisaccade task with fixed order"
+        ],
+        "totalFiles": 171
+      },
+      "tag": "00001"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        8,
+        10,
+        11,
+        11,
+        11,
+        12,
+        14,
+        14,
+        15,
+        15,
+        16,
+        16,
+        17,
+        17,
+        17,
+        17,
+        18,
+        18,
+        19,
+        19,
+        20,
+        21,
+        22,
+        22,
+        22,
+        25
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2018-02-06T19:42:48.033Z"
+  },
+  "source": "openneuro"
+}

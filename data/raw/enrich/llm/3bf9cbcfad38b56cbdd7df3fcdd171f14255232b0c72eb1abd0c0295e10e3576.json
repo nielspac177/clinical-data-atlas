@@ -1,0 +1,28 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:3bf9cbcfad38b56cbdd7df3fcdd171f14255232b0c72eb1abd0c0295e10e3576",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "arrhythmia",
+        "label": "arrhythmia"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:pwave",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "ecg",
+        "value": "ECG"
+      }
+    ],
+    "population": null,
+    "summary": "Reference P-wave annotations for twelve signals from the MIT-BIH Arrhythmia Database, supporting ECG waveform delineation."
+  },
+  "prompt_version": "v1"
+}

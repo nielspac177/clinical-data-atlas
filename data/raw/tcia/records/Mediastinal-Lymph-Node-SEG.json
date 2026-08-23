@@ -1,0 +1,4870 @@
+{
+  "endpoints": [
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getCollectionValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getModalityValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getBodyPartValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getPatient",
+    "https://api.datacite.org/dois?prefix=10.7937"
+  ],
+  "harvest_method": "api:nbia+datacite",
+  "native_id": "Mediastinal-Lymph-Node-SEG",
+  "payload": {
+    "datacite": {
+      "citationCount": 0,
+      "container": {},
+      "contentUrl": null,
+      "contributors": [],
+      "created": "2024-05-23T15:34:14Z",
+      "creators": [
+        {
+          "affiliation": [],
+          "familyName": "Idris",
+          "givenName": "Tagwa",
+          "name": "Idris, Tagwa",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0003-4524-7974",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Somarouthu",
+          "givenName": "Supriya",
+          "name": "Somarouthu, Supriya",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0009-0007-7081-5423",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Jacene",
+          "givenName": "Heather",
+          "name": "Jacene, Heather",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0001-7167-078X",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "LaCasce",
+          "givenName": "A",
+          "name": "LaCasce, A",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Ziegler",
+          "givenName": "Erik",
+          "name": "Ziegler, Erik",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0003-1857-8129",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Pieper",
+          "givenName": "Steve",
+          "name": "Pieper, Steve",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0003-4193-9578",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Khajavi",
+          "givenName": "Roya",
+          "name": "Khajavi, Roya",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Dorent",
+          "givenName": "Reuben",
+          "name": "Dorent, Reuben",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-7530-0644",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Pujol",
+          "givenName": "Sonia",
+          "name": "Pujol, Sonia",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0001-9420-3738",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Kikinis",
+          "givenName": "Ron",
+          "name": "Kikinis, Ron",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0001-7227-7058",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Harris",
+          "givenName": "Gordon",
+          "name": "Harris, Gordon",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-8664-7707",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        }
+      ],
+      "dates": [],
+      "descriptions": [
+        {
+          "description": "Accurate lymph node size estimation is critical for staging cancer patients, initial therapeutic management, and in longitudinal scans, assessing response to therapy. Machine learning models for medical image segmentation have shown remarkable progress in recent years, but we know of no tools available to fully quantify lymph nodes. Lymph nodes are often within the intensity profile of normal soft tissue and have ill-defined borders. Additionally, their presentation across subjects can vary significantly, making it difficult to scale from small datasets to a robust tool.\n\n This dataset contains chest CT scans from 540 patients acquired during treatment for various cancer types, curated for the LNQ2023 MICCAI Challenge (https://lnq2023.grand-challenge.org/ ) to help develop new segmentation tools from weakly annotated cases. The dataset contains both partially annotated (i.e., one mediastinal lymph node out of several in the case are segmented) as well as fully annotated (i.e., all mediastinal lymph nodes are segmented) cases and clinical data (gender/cancer type).",
+          "descriptionType": "Abstract",
+          "lang": null
+        }
+      ],
+      "doi": "10.7937/qvaz-ja09",
+      "downloadCount": 0,
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "Mediastinal-Lymph-Node-SEG",
+          "identifierType": "TCIA Short Name"
+        }
+      ],
+      "isActive": true,
+      "language": null,
+      "metadataVersion": 6,
+      "partCount": 0,
+      "partOfCount": 0,
+      "publicationYear": 2024,
+      "published": null,
+      "publisher": "The Cancer Imaging Archive",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2024-07-10T17:56:10Z",
+      "relatedIdentifiers": [],
+      "relatedItems": [],
+      "rightsList": [
+        {
+          "rights": "Creative Commons Attribution 4.0 International",
+          "rightsIdentifier": "cc-by-4.0",
+          "rightsIdentifierScheme": "SPDX",
+          "rightsUri": "https://creativecommons.org/licenses/by/4.0/legalcode",
+          "schemeUri": "https://spdx.org/licenses/"
+        }
+      ],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "fabricaForm",
+      "state": "findable",
+      "subjects": [],
+      "titles": [
+        {
+          "lang": null,
+          "title": "Mediastinal Lymph Node Quantification (LNQ): Segmentation of Heterogeneous CT Data",
+          "titleType": null
+        },
+        {
+          "lang": null,
+          "title": "Mediastinal-Lymph-Node-SEG",
+          "titleType": "AlternativeTitle"
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2025-06-01T01:01:05Z",
+      "url": "https://cancerimagingarchive.net/collection/mediastinal-lymph-node-seg/",
+      "version": "1",
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 7027
+    },
+    "nbia": {
+      "body_parts": [
+        "ABDOMEN",
+        "CHEST",
+        "CHESTABDOMEN",
+        "CHESTABDPELVIS",
+        "NECK",
+        "NECKCHESTABDPELV"
+      ],
+      "collection": "Mediastinal-Lymph-Node-SEG",
+      "modalities": [
+        "CT",
+        "SEG"
+      ],
+      "patients": [
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_1042",
+          "PatientName": "case_1042",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0911",
+          "PatientName": "case_0911",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0887",
+          "PatientName": "case_0887",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0183",
+          "PatientName": "case_0183",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0562",
+          "PatientName": "case_0562",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0119",
+          "PatientName": "case_0119",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_1081",
+          "PatientName": "case_1081",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0577",
+          "PatientName": "case_0577",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0874",
+          "PatientName": "case_0874",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_1060",
+          "PatientName": "case_1060",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_1022",
+          "PatientName": "case_1022",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0140",
+          "PatientName": "case_0140",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0504",
+          "PatientName": "case_0504",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0178",
+          "PatientName": "case_0178",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0419",
+          "PatientName": "case_0419",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0480",
+          "PatientName": "case_0480",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0256",
+          "PatientName": "case_0256",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0849",
+          "PatientName": "case_0849",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0651",
+          "PatientName": "case_0651",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0033",
+          "PatientName": "case_0033",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0727",
+          "PatientName": "case_0727",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0649",
+          "PatientName": "case_0649",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0489",
+          "PatientName": "case_0489",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0622",
+          "PatientName": "case_0622",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0441",
+          "PatientName": "case_0441",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0691",
+          "PatientName": "case_0691",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0935",
+          "PatientName": "case_0935",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0604",
+          "PatientName": "case_0604",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0164",
+          "PatientName": "case_0164",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0009",
+          "PatientName": "case_0009",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0833",
+          "PatientName": "case_0833",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_1091",
+          "PatientName": "case_1091",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0616",
+          "PatientName": "case_0616",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0662",
+          "PatientName": "case_0662",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0247",
+          "PatientName": "case_0247",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0368",
+          "PatientName": "case_0368",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0270",
+          "PatientName": "case_0270",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0799",
+          "PatientName": "case_0799",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_1044",
+          "PatientName": "case_1044",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0720",
+          "PatientName": "case_0720",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_1088",
+          "PatientName": "case_1088",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0482",
+          "PatientName": "case_0482",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_1017",
+          "PatientName": "case_1017",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0818",
+          "PatientName": "case_0818",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0798",
+          "PatientName": "case_0798",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0152",
+          "PatientName": "case_0152",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0491",
+          "PatientName": "case_0491",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0112",
+          "PatientName": "case_0112",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0972",
+          "PatientName": "case_0972",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0333",
+          "PatientName": "case_0333",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0006",
+          "PatientName": "case_0006",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0985",
+          "PatientName": "case_0985",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0093",
+          "PatientName": "case_0093",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_1020",
+          "PatientName": "case_1020",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0396",
+          "PatientName": "case_0396",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0324",
+          "PatientName": "case_0324",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0522",
+          "PatientName": "case_0522",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0992",
+          "PatientName": "case_0992",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0283",
+          "PatientName": "case_0283",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0566",
+          "PatientName": "case_0566",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0795",
+          "PatientName": "case_0795",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0150",
+          "PatientName": "case_0150",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_1045",
+          "PatientName": "case_1045",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_1018",
+          "PatientName": "case_1018",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0437",
+          "PatientName": "case_0437",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_1010",
+          "PatientName": "case_1010",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0281",
+          "PatientName": "case_0281",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0556",
+          "PatientName": "case_0556",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0088",
+          "PatientName": "case_0088",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0328",
+          "PatientName": "case_0328",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0271",
+          "PatientName": "case_0271",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0804",
+          "PatientName": "case_0804",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0484",
+          "PatientName": "case_0484",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0166",
+          "PatientName": "case_0166",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0802",
+          "PatientName": "case_0802",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0400",
+          "PatientName": "case_0400",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0116",
+          "PatientName": "case_0116",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0165",
+          "PatientName": "case_0165",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0506",
+          "PatientName": "case_0506",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0463",
+          "PatientName": "case_0463",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0986",
+          "PatientName": "case_0986",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0973",
+          "PatientName": "case_0973",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0938",
+          "PatientName": "case_0938",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0659",
+          "PatientName": "case_0659",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0048",
+          "PatientName": "case_0048",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0518",
+          "PatientName": "case_0518",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0591",
+          "PatientName": "case_0591",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0626",
+          "PatientName": "case_0626",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0772",
+          "PatientName": "case_0772",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0286",
+          "PatientName": "case_0286",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0671",
+          "PatientName": "case_0671",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0230",
+          "PatientName": "case_0230",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0995",
+          "PatientName": "case_0995",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0677",
+          "PatientName": "case_0677",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0042",
+          "PatientName": "case_0042",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0044",
+          "PatientName": "case_0044",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0018",
+          "PatientName": "case_0018",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0227",
+          "PatientName": "case_0227",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_1047",
+          "PatientName": "case_1047",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0582",
+          "PatientName": "case_0582",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0826",
+          "PatientName": "case_0826",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0955",
+          "PatientName": "case_0955",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0301",
+          "PatientName": "case_0301",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0197",
+          "PatientName": "case_0197",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0611",
+          "PatientName": "case_0611",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0767",
+          "PatientName": "case_0767",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0863",
+          "PatientName": "case_0863",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0725",
+          "PatientName": "case_0725",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0188",
+          "PatientName": "case_0188",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0392",
+          "PatientName": "case_0392",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0450",
+          "PatientName": "case_0450",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0942",
+          "PatientName": "case_0942",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0302",
+          "PatientName": "case_0302",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0656",
+          "PatientName": "case_0656",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0550",
+          "PatientName": "case_0550",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0210",
+          "PatientName": "case_0210",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0941",
+          "PatientName": "case_0941",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0737",
+          "PatientName": "case_0737",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0714",
+          "PatientName": "case_0714",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_1051",
+          "PatientName": "case_1051",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0102",
+          "PatientName": "case_0102",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0668",
+          "PatientName": "case_0668",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0586",
+          "PatientName": "case_0586",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0376",
+          "PatientName": "case_0376",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0242",
+          "PatientName": "case_0242",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0761",
+          "PatientName": "case_0761",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0125",
+          "PatientName": "case_0125",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0628",
+          "PatientName": "case_0628",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0002",
+          "PatientName": "case_0002",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0688",
+          "PatientName": "case_0688",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0931",
+          "PatientName": "case_0931",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0109",
+          "PatientName": "case_0109",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0551",
+          "PatientName": "case_0551",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0766",
+          "PatientName": "case_0766",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0786",
+          "PatientName": "case_0786",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0774",
+          "PatientName": "case_0774",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0909",
+          "PatientName": "case_0909",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0474",
+          "PatientName": "case_0474",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0771",
+          "PatientName": "case_0771",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0478",
+          "PatientName": "case_0478",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0832",
+          "PatientName": "case_0832",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0883",
+          "PatientName": "case_0883",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0686",
+          "PatientName": "case_0686",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0854",
+          "PatientName": "case_0854",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0497",
+          "PatientName": "case_0497",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_1034",
+          "PatientName": "case_1034",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0155",
+          "PatientName": "case_0155",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0322",
+          "PatientName": "case_0322",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0646",
+          "PatientName": "case_0646",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0515",
+          "PatientName": "case_0515",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0775",
+          "PatientName": "case_0775",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0823",
+          "PatientName": "case_0823",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_1065",
+          "PatientName": "case_1065",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0180",
+          "PatientName": "case_0180",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0415",
+          "PatientName": "case_0415",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_1071",
+          "PatientName": "case_1071",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0026",
+          "PatientName": "case_0026",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0228",
+          "PatientName": "case_0228",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0295",
+          "PatientName": "case_0295",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0599",
+          "PatientName": "case_0599",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0621",
+          "PatientName": "case_0621",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_1100",
+          "PatientName": "case_1100",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0017",
+          "PatientName": "case_0017",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0411",
+          "PatientName": "case_0411",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0808",
+          "PatientName": "case_0808",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0158",
+          "PatientName": "case_0158",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0627",
+          "PatientName": "case_0627",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0514",
+          "PatientName": "case_0514",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0240",
+          "PatientName": "case_0240",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0297",
+          "PatientName": "case_0297",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0654",
+          "PatientName": "case_0654",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0658",
+          "PatientName": "case_0658",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0171",
+          "PatientName": "case_0171",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0773",
+          "PatientName": "case_0773",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_1077",
+          "PatientName": "case_1077",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0142",
+          "PatientName": "case_0142",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0110",
+          "PatientName": "case_0110",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0958",
+          "PatientName": "case_0958",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0678",
+          "PatientName": "case_0678",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0132",
+          "PatientName": "case_0132",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0098",
+          "PatientName": "case_0098",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0906",
+          "PatientName": "case_0906",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0752",
+          "PatientName": "case_0752",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0695",
+          "PatientName": "case_0695",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_1007",
+          "PatientName": "case_1007",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0341",
+          "PatientName": "case_0341",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0013",
+          "PatientName": "case_0013",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0740",
+          "PatientName": "case_0740",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0442",
+          "PatientName": "case_0442",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0605",
+          "PatientName": "case_0605",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0948",
+          "PatientName": "case_0948",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0967",
+          "PatientName": "case_0967",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0645",
+          "PatientName": "case_0645",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0206",
+          "PatientName": "case_0206",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0223",
+          "PatientName": "case_0223",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0601",
+          "PatientName": "case_0601",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0030",
+          "PatientName": "case_0030",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0838",
+          "PatientName": "case_0838",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0707",
+          "PatientName": "case_0707",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0524",
+          "PatientName": "case_0524",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0817",
+          "PatientName": "case_0817",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0682",
+          "PatientName": "case_0682",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0864",
+          "PatientName": "case_0864",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0784",
+          "PatientName": "case_0784",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0481",
+          "PatientName": "case_0481",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0314",
+          "PatientName": "case_0314",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0872",
+          "PatientName": "case_0872",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0131",
+          "PatientName": "case_0131",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_1082",
+          "PatientName": "case_1082",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0329",
+          "PatientName": "case_0329",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0386",
+          "PatientName": "case_0386",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0618",
+          "PatientName": "case_0618",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0890",
+          "PatientName": "case_0890",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0700",
+          "PatientName": "case_0700",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0554",
+          "PatientName": "case_0554",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0527",
+          "PatientName": "case_0527",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0015",
+          "PatientName": "case_0015",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0064",
+          "PatientName": "case_0064",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0969",
+          "PatientName": "case_0969",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0466",
+          "PatientName": "case_0466",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0754",
+          "PatientName": "case_0754",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0949",
+          "PatientName": "case_0949",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0229",
+          "PatientName": "case_0229",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0065",
+          "PatientName": "case_0065",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0412",
+          "PatientName": "case_0412",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0933",
+          "PatientName": "case_0933",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0596",
+          "PatientName": "case_0596",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0993",
+          "PatientName": "case_0993",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0793",
+          "PatientName": "case_0793",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0934",
+          "PatientName": "case_0934",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0402",
+          "PatientName": "case_0402",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0708",
+          "PatientName": "case_0708",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0980",
+          "PatientName": "case_0980",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0456",
+          "PatientName": "case_0456",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_1093",
+          "PatientName": "case_1093",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0418",
+          "PatientName": "case_0418",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0685",
+          "PatientName": "case_0685",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0182",
+          "PatientName": "case_0182",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0513",
+          "PatientName": "case_0513",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0499",
+          "PatientName": "case_0499",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0495",
+          "PatientName": "case_0495",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0204",
+          "PatientName": "case_0204",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0378",
+          "PatientName": "case_0378",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0493",
+          "PatientName": "case_0493",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0648",
+          "PatientName": "case_0648",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0597",
+          "PatientName": "case_0597",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0553",
+          "PatientName": "case_0553",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0902",
+          "PatientName": "case_0902",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0470",
+          "PatientName": "case_0470",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_1085",
+          "PatientName": "case_1085",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0655",
+          "PatientName": "case_0655",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0496",
+          "PatientName": "case_0496",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_1021",
+          "PatientName": "case_1021",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0317",
+          "PatientName": "case_0317",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_1067",
+          "PatientName": "case_1067",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0130",
+          "PatientName": "case_0130",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0124",
+          "PatientName": "case_0124",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0338",
+          "PatientName": "case_0338",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0719",
+          "PatientName": "case_0719",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0746",
+          "PatientName": "case_0746",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0440",
+          "PatientName": "case_0440",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0194",
+          "PatientName": "case_0194",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0731",
+          "PatientName": "case_0731",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0359",
+          "PatientName": "case_0359",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0979",
+          "PatientName": "case_0979",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0050",
+          "PatientName": "case_0050",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0989",
+          "PatientName": "case_0989",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0269",
+          "PatientName": "case_0269",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0610",
+          "PatientName": "case_0610",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0459",
+          "PatientName": "case_0459",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0057",
+          "PatientName": "case_0057",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0304",
+          "PatientName": "case_0304",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0191",
+          "PatientName": "case_0191",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_1057",
+          "PatientName": "case_1057",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0922",
+          "PatientName": "case_0922",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0803",
+          "PatientName": "case_0803",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0126",
+          "PatientName": "case_0126",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0012",
+          "PatientName": "case_0012",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0790",
+          "PatientName": "case_0790",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0468",
+          "PatientName": "case_0468",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0343",
+          "PatientName": "case_0343",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0657",
+          "PatientName": "case_0657",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0428",
+          "PatientName": "case_0428",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0683",
+          "PatientName": "case_0683",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0279",
+          "PatientName": "case_0279",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0202",
+          "PatientName": "case_0202",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0380",
+          "PatientName": "case_0380",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_1064",
+          "PatientName": "case_1064",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0609",
+          "PatientName": "case_0609",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0638",
+          "PatientName": "case_0638",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0024",
+          "PatientName": "case_0024",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0267",
+          "PatientName": "case_0267",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0926",
+          "PatientName": "case_0926",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0068",
+          "PatientName": "case_0068",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0962",
+          "PatientName": "case_0962",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0439",
+          "PatientName": "case_0439",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0177",
+          "PatientName": "case_0177",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0945",
+          "PatientName": "case_0945",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0943",
+          "PatientName": "case_0943",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0394",
+          "PatientName": "case_0394",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0679",
+          "PatientName": "case_0679",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0997",
+          "PatientName": "case_0997",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0216",
+          "PatientName": "case_0216",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0501",
+          "PatientName": "case_0501",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0417",
+          "PatientName": "case_0417",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0069",
+          "PatientName": "case_0069",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0590",
+          "PatientName": "case_0590",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0509",
+          "PatientName": "case_0509",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0742",
+          "PatientName": "case_0742",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0954",
+          "PatientName": "case_0954",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0758",
+          "PatientName": "case_0758",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0021",
+          "PatientName": "case_0021",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0895",
+          "PatientName": "case_0895",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_1002",
+          "PatientName": "case_1002",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0860",
+          "PatientName": "case_0860",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0866",
+          "PatientName": "case_0866",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0259",
+          "PatientName": "case_0259",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_1013",
+          "PatientName": "case_1013",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0175",
+          "PatientName": "case_0175",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0738",
+          "PatientName": "case_0738",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0401",
+          "PatientName": "case_0401",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0751",
+          "PatientName": "case_0751",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0032",
+          "PatientName": "case_0032",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0827",
+          "PatientName": "case_0827",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0927",
+          "PatientName": "case_0927",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0159",
+          "PatientName": "case_0159",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0222",
+          "PatientName": "case_0222",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0421",
+          "PatientName": "case_0421",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0667",
+          "PatientName": "case_0667",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0532",
+          "PatientName": "case_0532",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0034",
+          "PatientName": "case_0034",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0903",
+          "PatientName": "case_0903",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0558",
+          "PatientName": "case_0558",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0129",
+          "PatientName": "case_0129",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0951",
+          "PatientName": "case_0951",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0357",
+          "PatientName": "case_0357",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0252",
+          "PatientName": "case_0252",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0292",
+          "PatientName": "case_0292",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0282",
+          "PatientName": "case_0282",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0583",
+          "PatientName": "case_0583",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0820",
+          "PatientName": "case_0820",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0988",
+          "PatientName": "case_0988",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0446",
+          "PatientName": "case_0446",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0508",
+          "PatientName": "case_0508",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0715",
+          "PatientName": "case_0715",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_1072",
+          "PatientName": "case_1072",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0334",
+          "PatientName": "case_0334",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0055",
+          "PatientName": "case_0055",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0117",
+          "PatientName": "case_0117",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0303",
+          "PatientName": "case_0303",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0792",
+          "PatientName": "case_0792",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0385",
+          "PatientName": "case_0385",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0331",
+          "PatientName": "case_0331",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0238",
+          "PatientName": "case_0238",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_1012",
+          "PatientName": "case_1012",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0232",
+          "PatientName": "case_0232",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0052",
+          "PatientName": "case_0052",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0023",
+          "PatientName": "case_0023",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0244",
+          "PatientName": "case_0244",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0005",
+          "PatientName": "case_0005",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0763",
+          "PatientName": "case_0763",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0449",
+          "PatientName": "case_0449",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0365",
+          "PatientName": "case_0365",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0423",
+          "PatientName": "case_0423",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0607",
+          "PatientName": "case_0607",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0788",
+          "PatientName": "case_0788",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0932",
+          "PatientName": "case_0932",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0395",
+          "PatientName": "case_0395",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0831",
+          "PatientName": "case_0831",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0745",
+          "PatientName": "case_0745",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0669",
+          "PatientName": "case_0669",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0040",
+          "PatientName": "case_0040",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0636",
+          "PatientName": "case_0636",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0326",
+          "PatientName": "case_0326",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0250",
+          "PatientName": "case_0250",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0354",
+          "PatientName": "case_0354",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0076",
+          "PatientName": "case_0076",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0531",
+          "PatientName": "case_0531",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0571",
+          "PatientName": "case_0571",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0847",
+          "PatientName": "case_0847",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0384",
+          "PatientName": "case_0384",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0203",
+          "PatientName": "case_0203",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0193",
+          "PatientName": "case_0193",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0977",
+          "PatientName": "case_0977",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0236",
+          "PatientName": "case_0236",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0512",
+          "PatientName": "case_0512",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0615",
+          "PatientName": "case_0615",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0732",
+          "PatientName": "case_0732",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0702",
+          "PatientName": "case_0702",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0243",
+          "PatientName": "case_0243",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0452",
+          "PatientName": "case_0452",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0796",
+          "PatientName": "case_0796",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0676",
+          "PatientName": "case_0676",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0448",
+          "PatientName": "case_0448",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0717",
+          "PatientName": "case_0717",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0296",
+          "PatientName": "case_0296",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0704",
+          "PatientName": "case_0704",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0424",
+          "PatientName": "case_0424",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0765",
+          "PatientName": "case_0765",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0939",
+          "PatientName": "case_0939",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0287",
+          "PatientName": "case_0287",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0709",
+          "PatientName": "case_0709",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0552",
+          "PatientName": "case_0552",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0764",
+          "PatientName": "case_0764",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0475",
+          "PatientName": "case_0475",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0170",
+          "PatientName": "case_0170",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0642",
+          "PatientName": "case_0642",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0964",
+          "PatientName": "case_0964",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0548",
+          "PatientName": "case_0548",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0614",
+          "PatientName": "case_0614",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0327",
+          "PatientName": "case_0327",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0101",
+          "PatientName": "case_0101",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_1019",
+          "PatientName": "case_1019",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0694",
+          "PatientName": "case_0694",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0868",
+          "PatientName": "case_0868",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0880",
+          "PatientName": "case_0880",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0348",
+          "PatientName": "case_0348",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0445",
+          "PatientName": "case_0445",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0865",
+          "PatientName": "case_0865",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0690",
+          "PatientName": "case_0690",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0035",
+          "PatientName": "case_0035",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0885",
+          "PatientName": "case_0885",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0869",
+          "PatientName": "case_0869",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0608",
+          "PatientName": "case_0608",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0058",
+          "PatientName": "case_0058",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0593",
+          "PatientName": "case_0593",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0487",
+          "PatientName": "case_0487",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0444",
+          "PatientName": "case_0444",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0782",
+          "PatientName": "case_0782",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0053",
+          "PatientName": "case_0053",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0319",
+          "PatientName": "case_0319",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0469",
+          "PatientName": "case_0469",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0149",
+          "PatientName": "case_0149",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0769",
+          "PatientName": "case_0769",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0431",
+          "PatientName": "case_0431",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0666",
+          "PatientName": "case_0666",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0219",
+          "PatientName": "case_0219",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0748",
+          "PatientName": "case_0748",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0199",
+          "PatientName": "case_0199",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0311",
+          "PatientName": "case_0311",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0061",
+          "PatientName": "case_0061",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0436",
+          "PatientName": "case_0436",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0078",
+          "PatientName": "case_0078",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0673",
+          "PatientName": "case_0673",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_1090",
+          "PatientName": "case_1090",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0273",
+          "PatientName": "case_0273",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0406",
+          "PatientName": "case_0406",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0278",
+          "PatientName": "case_0278",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0315",
+          "PatientName": "case_0315",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0029",
+          "PatientName": "case_0029",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0313",
+          "PatientName": "case_0313",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0201",
+          "PatientName": "case_0201",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_1097",
+          "PatientName": "case_1097",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0547",
+          "PatientName": "case_0547",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0136",
+          "PatientName": "case_0136",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0225",
+          "PatientName": "case_0225",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0545",
+          "PatientName": "case_0545",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0857",
+          "PatientName": "case_0857",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0837",
+          "PatientName": "case_0837",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_1084",
+          "PatientName": "case_1084",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0519",
+          "PatientName": "case_0519",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0567",
+          "PatientName": "case_0567",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0187",
+          "PatientName": "case_0187",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0356",
+          "PatientName": "case_0356",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0115",
+          "PatientName": "case_0115",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_1062",
+          "PatientName": "case_1062",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0074",
+          "PatientName": "case_0074",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0897",
+          "PatientName": "case_0897",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0697",
+          "PatientName": "case_0697",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0113",
+          "PatientName": "case_0113",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0039",
+          "PatientName": "case_0039",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0288",
+          "PatientName": "case_0288",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0054",
+          "PatientName": "case_0054",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0663",
+          "PatientName": "case_0663",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0089",
+          "PatientName": "case_0089",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0160",
+          "PatientName": "case_0160",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0982",
+          "PatientName": "case_0982",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0856",
+          "PatientName": "case_0856",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0111",
+          "PatientName": "case_0111",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0858",
+          "PatientName": "case_0858",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0092",
+          "PatientName": "case_0092",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_1092",
+          "PatientName": "case_1092",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0768",
+          "PatientName": "case_0768",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0336",
+          "PatientName": "case_0336",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0364",
+          "PatientName": "case_0364",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0800",
+          "PatientName": "case_0800",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0523",
+          "PatientName": "case_0523",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0966",
+          "PatientName": "case_0966",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0573",
+          "PatientName": "case_0573",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0946",
+          "PatientName": "case_0946",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0239",
+          "PatientName": "case_0239",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_1023",
+          "PatientName": "case_1023",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0749",
+          "PatientName": "case_0749",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0546",
+          "PatientName": "case_0546",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_1003",
+          "PatientName": "case_1003",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0825",
+          "PatientName": "case_0825",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0398",
+          "PatientName": "case_0398",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0189",
+          "PatientName": "case_0189",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0246",
+          "PatientName": "case_0246",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0264",
+          "PatientName": "case_0264",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_1096",
+          "PatientName": "case_1096",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0944",
+          "PatientName": "case_0944",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0320",
+          "PatientName": "case_0320",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0974",
+          "PatientName": "case_0974",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_1098",
+          "PatientName": "case_1098",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0716",
+          "PatientName": "case_0716",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0952",
+          "PatientName": "case_0952",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_1076",
+          "PatientName": "case_1076",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0413",
+          "PatientName": "case_0413",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0308",
+          "PatientName": "case_0308",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0434",
+          "PatientName": "case_0434",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0360",
+          "PatientName": "case_0360",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Mediastinal-Lymph-Node-SEG",
+          "PatientId": "case_0318",
+          "PatientName": "case_0318",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        }
+      ]
+    }
+  },
+  "source": "tcia"
+}

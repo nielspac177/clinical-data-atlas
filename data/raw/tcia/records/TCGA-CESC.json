@@ -1,0 +1,660 @@
+{
+  "endpoints": [
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getCollectionValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getModalityValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getBodyPartValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getPatient",
+    "https://api.datacite.org/dois?prefix=10.7937"
+  ],
+  "harvest_method": "api:nbia+datacite",
+  "native_id": "TCGA-CESC",
+  "payload": {
+    "datacite": {
+      "citationCount": 12,
+      "container": {},
+      "contentUrl": [],
+      "contributors": [
+        {
+          "affiliation": [],
+          "contributorType": "DataCurator",
+          "familyName": null,
+          "givenName": null,
+          "name": "TCIA Team",
+          "nameIdentifiers": [],
+          "nameType": null
+        }
+      ],
+      "created": "2016-01-29T13:03:54Z",
+      "creators": [
+        {
+          "affiliation": [],
+          "familyName": "Lucchesi",
+          "givenName": "Fabiano R.",
+          "name": "Lucchesi, Fabiano R.",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Aredes",
+          "givenName": "Natália D.",
+          "name": "Aredes, Natália D.",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2016",
+          "dateInformation": null,
+          "dateType": "Issued"
+        }
+      ],
+      "descriptions": [
+        {
+          "description": "The Cancer Genome Atlas Cervical Squamous Cell Carcinoma and Endocervical Adenocarcinoma (TCGA-CESC) data collection is part of a larger effort to build a research community focused on connecting cancer phenotypes to genotypes by providing clinical images matched to subjects from The Cancer Genome Atlas (TCGA). Clinical, genetic, and pathological data resides in the Genomic Data Commons (GDC) Data Portal while the radiological data is stored on The Cancer Imaging Archive (TCIA). Matched TCGA patient identifiers allow researchers to explore the TCGA/TCIA databases for correlations between tissue genotype, radiological phenotype and patient outcomes. Tissues for TCGA were collected from many sites all over the world in order to reach their accrual targets, usually around 500 specimens per cancer type. For this reason the image data sets are also extremely heterogeneous in terms of scanner modalities, manufacturers and acquisition protocols. In most cases the images were acquired as part of routine care and not as part of a controlled research study or clinical trial.",
+          "descriptionType": "Abstract",
+          "lang": null
+        }
+      ],
+      "doi": "10.7937/k9/tcia.2016.sq4m8yp4",
+      "downloadCount": 0,
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "TCGA-CESC",
+          "identifierType": "TCIA Short Name"
+        }
+      ],
+      "isActive": true,
+      "language": null,
+      "metadataVersion": 16,
+      "partCount": 0,
+      "partOfCount": 0,
+      "publicationYear": 2016,
+      "published": null,
+      "publisher": "The Cancer Imaging Archive",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2016-01-29T13:03:55Z",
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "10.1007/s11045-020-00746-9",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1136/jitc-2023-008355",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1088/1402-4896/ad3b3d",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1007/s13244-018-0639-9",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.compbiomed.2020.103772",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.ejso.2024.108583",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1109/tetci.2024.3502404",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1007/978-3-031-73360-4_8",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        }
+      ],
+      "relatedItems": [],
+      "rightsList": [
+        {
+          "rights": "Creative Commons Attribution 3.0 Unported",
+          "rightsIdentifier": "cc-by-3.0",
+          "rightsIdentifierScheme": "SPDX",
+          "rightsUri": "https://creativecommons.org/licenses/by/3.0/legalcode",
+          "schemeUri": "https://spdx.org/licenses/"
+        }
+      ],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "fabricaForm",
+      "state": "findable",
+      "subjects": [],
+      "titles": [
+        {
+          "lang": null,
+          "title": "The Cancer Genome Atlas Cervical Squamous Cell Carcinoma and Endocervical Adenocarcinoma Collection (TCGA-CESC)",
+          "titleType": null
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceType": "DICOM",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2025-06-01T01:01:13Z",
+      "url": "https://www.cancerimagingarchive.net/collection/tcga-cesc/",
+      "version": "3",
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 5062
+    },
+    "nbia": {
+      "body_parts": [
+        "CERVIX"
+      ],
+      "collection": "TCGA-CESC",
+      "modalities": [
+        "MR"
+      ],
+      "patients": [
+        {
+          "Collection": "TCGA-CESC",
+          "PatientId": "TCGA-VS-A8EC",
+          "PatientName": "TCGA-VS-A8EC",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-CESC",
+          "PatientId": "TCGA-VS-A9U6",
+          "PatientName": "TCGA-VS-A9U6",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-CESC",
+          "PatientId": "TCGA-VS-A9U7",
+          "PatientName": "TCGA-VS-A9U7",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-CESC",
+          "PatientId": "TCGA-VS-A9UO",
+          "PatientName": "TCGA-VS-A9UO",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-CESC",
+          "PatientId": "TCGA-VS-A9V5",
+          "PatientName": "TCGA-VS-A9V5",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-CESC",
+          "PatientId": "TCGA-VS-A8EG",
+          "PatientName": "TCGA-VS-A8EG",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-CESC",
+          "PatientId": "TCGA-VS-A8EH",
+          "PatientName": "TCGA-VS-A8EH",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-CESC",
+          "PatientId": "TCGA-VS-A8QA",
+          "PatientName": "TCGA-VS-A8QA",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-CESC",
+          "PatientId": "TCGA-VS-A94W",
+          "PatientName": "TCGA-VS-A94W",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-CESC",
+          "PatientId": "TCGA-VS-A94Z",
+          "PatientName": "TCGA-VS-A94Z",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-CESC",
+          "PatientId": "TCGA-VS-A9U5",
+          "PatientName": "TCGA-VS-A9U5",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-CESC",
+          "PatientId": "TCGA-VS-A9UA",
+          "PatientName": "TCGA-VS-A9UA",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-CESC",
+          "PatientId": "TCGA-VS-A9UH",
+          "PatientName": "TCGA-VS-A9UH",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-CESC",
+          "PatientId": "TCGA-VS-A9UI",
+          "PatientName": "TCGA-VS-A9UI",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-CESC",
+          "PatientId": "TCGA-VS-A9UJ",
+          "PatientName": "TCGA-VS-A9UJ",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-CESC",
+          "PatientId": "TCGA-VS-A9UL",
+          "PatientName": "TCGA-VS-A9UL",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-CESC",
+          "PatientId": "TCGA-VS-A9UP",
+          "PatientName": "TCGA-VS-A9UP",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-CESC",
+          "PatientId": "TCGA-VS-A9UQ",
+          "PatientName": "TCGA-VS-A9UQ",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-CESC",
+          "PatientId": "TCGA-VS-A9V2",
+          "PatientName": "TCGA-VS-A9V2",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-CESC",
+          "PatientId": "TCGA-VS-A9UR",
+          "PatientName": "TCGA-VS-A9UR",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-CESC",
+          "PatientId": "TCGA-VS-A957",
+          "PatientName": "TCGA-VS-A957",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-CESC",
+          "PatientId": "TCGA-VS-A958",
+          "PatientName": "TCGA-VS-A958",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-CESC",
+          "PatientId": "TCGA-VS-A8EB",
+          "PatientName": "TCGA-VS-A8EB",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-CESC",
+          "PatientId": "TCGA-VS-A8EI",
+          "PatientName": "TCGA-VS-A8EI",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-CESC",
+          "PatientId": "TCGA-VS-A8Q9",
+          "PatientName": "TCGA-VS-A8Q9",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-CESC",
+          "PatientId": "TCGA-VS-A8QH",
+          "PatientName": "TCGA-VS-A8QH",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-CESC",
+          "PatientId": "TCGA-VS-A94X",
+          "PatientName": "TCGA-VS-A94X",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-CESC",
+          "PatientId": "TCGA-VS-A94Y",
+          "PatientName": "TCGA-VS-A94Y",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-CESC",
+          "PatientId": "TCGA-VS-A952",
+          "PatientName": "TCGA-VS-A952",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-CESC",
+          "PatientId": "TCGA-VS-A953",
+          "PatientName": "TCGA-VS-A953",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-CESC",
+          "PatientId": "TCGA-VS-A954",
+          "PatientName": "TCGA-VS-A954",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-CESC",
+          "PatientId": "TCGA-VS-A9UB",
+          "PatientName": "TCGA-VS-A9UB",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-CESC",
+          "PatientId": "TCGA-VS-A9UD",
+          "PatientName": "TCGA-VS-A9UD",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-CESC",
+          "PatientId": "TCGA-VS-A8QF",
+          "PatientName": "TCGA-VS-A8QF",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-CESC",
+          "PatientId": "TCGA-VS-A9UM",
+          "PatientName": "TCGA-VS-A9UM",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-CESC",
+          "PatientId": "TCGA-VS-A9UT",
+          "PatientName": "TCGA-VS-A9UT",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-CESC",
+          "PatientId": "TCGA-VS-A9UU",
+          "PatientName": "TCGA-VS-A9UU",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-CESC",
+          "PatientId": "TCGA-VS-A9UY",
+          "PatientName": "TCGA-VS-A9UY",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-CESC",
+          "PatientId": "TCGA-VS-A9V0",
+          "PatientName": "TCGA-VS-A9V0",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-CESC",
+          "PatientId": "TCGA-VS-A9V1",
+          "PatientName": "TCGA-VS-A9V1",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-CESC",
+          "PatientId": "TCGA-VS-A9V3",
+          "PatientName": "TCGA-VS-A9V3",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-CESC",
+          "PatientId": "TCGA-VS-A9V4",
+          "PatientName": "TCGA-VS-A9V4",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-CESC",
+          "PatientId": "TCGA-VS-A9UC",
+          "PatientName": "TCGA-VS-A9UC",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-CESC",
+          "PatientId": "TCGA-VS-A9UV",
+          "PatientName": "TCGA-VS-A9UV",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-CESC",
+          "PatientId": "TCGA-VS-A950",
+          "PatientName": "TCGA-VS-A950",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-CESC",
+          "PatientId": "TCGA-VS-A959",
+          "PatientName": "TCGA-VS-A959",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-CESC",
+          "PatientId": "TCGA-VS-A8EJ",
+          "PatientName": "TCGA-VS-A8EJ",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-CESC",
+          "PatientId": "TCGA-VS-A8EK",
+          "PatientName": "TCGA-VS-A8EK",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-CESC",
+          "PatientId": "TCGA-VS-A8EL",
+          "PatientName": "TCGA-VS-A8EL",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-CESC",
+          "PatientId": "TCGA-VS-A8Q8",
+          "PatientName": "TCGA-VS-A8Q8",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-CESC",
+          "PatientId": "TCGA-VS-A8QC",
+          "PatientName": "TCGA-VS-A8QC",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-CESC",
+          "PatientId": "TCGA-VS-A8QM",
+          "PatientName": "TCGA-VS-A8QM",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-CESC",
+          "PatientId": "TCGA-VS-AA62",
+          "PatientName": "TCGA-VS-AA62",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-CESC",
+          "PatientId": "TCGA-VS-A9UZ",
+          "PatientName": "TCGA-VS-A9UZ",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        }
+      ]
+    }
+  },
+  "source": "tcia"
+}

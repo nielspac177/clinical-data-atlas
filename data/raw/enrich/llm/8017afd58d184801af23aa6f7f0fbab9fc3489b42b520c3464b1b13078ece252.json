@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:8017afd58d184801af23aa6f7f0fbab9fc3489b42b520c3464b1b13078ece252",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "cardiology",
+      "neuroscience"
+    ],
+    "id": "physionet:simultaneous-measurements",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "electrocardiography (ECG)",
+        "value": "ECG"
+      },
+      {
+        "evidence": "photoplethysmography",
+        "value": "PPG"
+      },
+      {
+        "evidence": "oxygen saturation, respiration",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "Hexoskin Hx1",
+        "value": "wearable"
+      }
+    ],
+    "population": "13 adult and healthy subjects in a standardized experimental setup.",
+    "summary": "Physiological recordings from healthy adults measured simultaneously by five devices during baseline, treadmill walking, a cognitive audio test and uphill walking. Includes raw files plus expert heart-beat annotations and phase markers."
+  },
+  "prompt_version": "v1"
+}

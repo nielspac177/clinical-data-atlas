@@ -1,0 +1,34 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:ed2b2bfdb536e40600c3ea4625609573c1caf8a0bbe89088cb7144a7d8ce31be",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "acoustic signals of pain",
+        "label": "pain"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "other"
+    ],
+    "id": "physionet:tame-pain",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "captures acoustic signals of pain",
+        "value": "other"
+      },
+      {
+        "evidence": "annotating every sentence the participant speaks",
+        "value": "behavioral"
+      }
+    ],
+    "population": "Healthy individuals subjected to pain, under an approved University of Texas at Austin institutional review board protocol",
+    "summary": "Audio recordings of speech from healthy participants undergoing pain, with every sentence annotated for background and foreground noise, speech errors, and non-speech vocal features, for pain-assessment research."
+  },
+  "prompt_version": "v1"
+}

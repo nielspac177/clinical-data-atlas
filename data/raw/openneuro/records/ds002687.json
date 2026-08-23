@@ -1,0 +1,131 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds002687",
+  "payload": {
+    "created": "2020-04-07T18:27:30.697Z",
+    "id": "ds002687",
+    "latestSnapshot": {
+      "created": "2021-08-09T14:36:14.000Z",
+      "description": {
+        "Authors": [
+          "James R. Booth",
+          "Gillian E. Cooke",
+          "Jessica Gayda",
+          "Rubi Hammer",
+          "Marisa N. Lytle",
+          "Mark A. Stein",
+          "Michael Tennekoon"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds002687.v1.2.0",
+        "Funding": [
+          "NIH grant R21-MH080820 awarded to James R. Booth",
+          "NIH grant R03-HD093547 awarded to James R. Booth"
+        ],
+        "HowToAcknowledge": "Please cite this dataset as well as the corresponding data descriptor for use of this dataset:\n\nLytle MN, Hammer R & Booth JR (2020). Working memory and reward in adults. OpenNeuro. 10.18112/openneuro.ds002687\n\nLytle MN, Hammer R & Booth JR (2020). A neuroimaging dataset on working memory and reward processing in children with and without ADHD. Data in Brief, 28,105801.\n",
+        "License": "CC0",
+        "Name": "Working Memory and Reward in Adults",
+        "ReferencesAndLinks": [
+          "Hammer R, Cooke GE, Stein MA & Booth JR (2015). Functional neuroimaging of visuospatial working memory tasks enables accurate detection of attention deficit and hyperactivity disorder. Neuroimage – Clinical, 9, 244-252. (PMCID: PMC4576365)",
+          "Hammer R, Tennekoon M, Cooke GE, Gayda J, Stein MA & Booth JR (2015). Feedback associated with expectation for larger-reward improves visuospatial working memory performances in children with ADHD. Developmental Cognitive Neuroscience, 14, 38-49. (PMCID: PMC4536089)",
+          "Hammer R, Booth JR, Borhani R & Katsaggelos AK (Feb. 25, 2020).  Pattern analysis based on fMRI data collected while subjects perform working memory tasks allowing high-precision diagnosis of ADHD. US10571539B2."
+        ]
+      },
+      "readme": "## Developmental Dataset\n\nThis dataset accompanies the developmental dataset titled \"Reward and Working Memory in Attention Deficit Hyperactivity Disorder (ADHD)\" located at\nhttps://openneuro.org/datasets/ds002424 DOI: 10.18112/openneuro.ds002424.v1.1.0\n\n## Experimental Design\n\nThis experiment was implemented in E-prime following the design described in the\ntask-<task>_bold.json files\n\n## Known Issues\n\n* The following scans contained different timing for fixation cross trials, 1200 ms black cross, 600 ms red or black cross, 200 ms black cross:\n    * sub-1501_task-SLD\n    * sub-1501_task-SLI\n    * sub-1501_task-SSD\n    * sub-1501_task-SSI\n    * sub-1501_task-VLD\n    * sub-1501_task-VLI\n    * sub-1501_task-VSD\n    * sub-1501_task-VSI\n    * sub-1503_task-SLD\n    * sub-1505_task-SLD\n\n* Fixation blocks for sub-1501 contained 24 trials each rather than the typical 12\n\n## Defacing\n\nAnatomical images were defaced according to procedure described in Lytle, McNorgan, & Booth (2019) (https://doi.org/10.1038/s41597-019-0338-5)\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 17834818177,
+        "subjects": [
+          "1501",
+          "1503",
+          "1505",
+          "1506",
+          "1507",
+          "1509",
+          "1510",
+          "1511",
+          "1512",
+          "1513",
+          "1514",
+          "1515",
+          "1516",
+          "1517",
+          "1518",
+          "1519",
+          "1520",
+          "1522",
+          "1524",
+          "1525",
+          "1528",
+          "1529",
+          "1530",
+          "1531"
+        ],
+        "tasks": [
+          "VisuoSpatial Working Memory, Large Reward, Delayed Feedback",
+          "VisuoSpatial Working Memory, Large Reward, Immediate Feedback",
+          "VisuoSpatial Working Memory, Small Reward, Delayed Feedback",
+          "VisuoSpatial Working Memory, Small Reward, Immediate Feedback",
+          "Verbal Working Memory, Large Reward, Delayed Feedback",
+          "Verbal Working Memory, Large Reward, Immediate Feedback",
+          "Verbal Working Memory, Small Reward, Delayed Feedback",
+          "Verbal Working Memory, Small Reward, Immediate Feedback"
+        ],
+        "totalFiles": 425
+      },
+      "tag": "1.2.0"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        26,
+        26,
+        28,
+        28,
+        26,
+        20,
+        25,
+        25,
+        24,
+        24,
+        27,
+        28,
+        28,
+        26,
+        30,
+        26,
+        22,
+        21,
+        24,
+        28,
+        27,
+        21,
+        29,
+        27
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "NIH",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "Block",
+      "studyDomain": "Working Memory, Reward, Feedback",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2020-04-08T16:37:25.836Z"
+  },
+  "source": "openneuro"
+}

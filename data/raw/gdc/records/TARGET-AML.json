@@ -1,0 +1,124 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "TARGET-AML",
+  "payload": {
+    "dbgap_accession_number": "phs000465",
+    "disease_type": [
+      "Myeloid Leukemias",
+      "Not Applicable"
+    ],
+    "id": "TARGET-AML",
+    "name": "Acute Myeloid Leukemia",
+    "primary_site": [
+      "Unknown",
+      "Hematopoietic and reticuloendothelial systems"
+    ],
+    "program": {
+      "dbgap_accession_number": "phs000218",
+      "name": "TARGET",
+      "program_id": "f1c391e9-8488-55a8-b777-302e786ea11d"
+    },
+    "project_id": "TARGET-AML",
+    "releasable": true,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 2492,
+      "data_categories": [
+        {
+          "case_count": 836,
+          "data_category": "Simple Nucleotide Variation",
+          "file_count": 12323
+        },
+        {
+          "case_count": 2463,
+          "data_category": "Sequencing Reads",
+          "file_count": 13325
+        },
+        {
+          "case_count": 197,
+          "data_category": "Combined Nucleotide Variation",
+          "file_count": 297
+        },
+        {
+          "case_count": 988,
+          "data_category": "Biospecimen",
+          "file_count": 2
+        },
+        {
+          "case_count": 2181,
+          "data_category": "Clinical",
+          "file_count": 7
+        },
+        {
+          "case_count": 219,
+          "data_category": "Copy Number Variation",
+          "file_count": 583
+        },
+        {
+          "case_count": 2300,
+          "data_category": "Transcriptome Profiling",
+          "file_count": 10250
+        },
+        {
+          "case_count": 319,
+          "data_category": "DNA Methylation",
+          "file_count": 2400
+        },
+        {
+          "case_count": 30,
+          "data_category": "Somatic Structural Variation",
+          "file_count": 116
+        },
+        {
+          "case_count": 2281,
+          "data_category": "Structural Variation",
+          "file_count": 12910
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 2281,
+          "experimental_strategy": "RNA-Seq",
+          "file_count": 29043
+        },
+        {
+          "case_count": 1836,
+          "experimental_strategy": "miRNA-Seq",
+          "file_count": 5694
+        },
+        {
+          "case_count": 227,
+          "experimental_strategy": "WGS",
+          "file_count": 846
+        },
+        {
+          "case_count": 22,
+          "experimental_strategy": "WXS",
+          "file_count": 607
+        },
+        {
+          "case_count": 803,
+          "experimental_strategy": "Targeted Sequencing",
+          "file_count": 13145
+        },
+        {
+          "case_count": 190,
+          "experimental_strategy": "Genotyping Array",
+          "file_count": 469
+        },
+        {
+          "case_count": 319,
+          "experimental_strategy": "Methylation Array",
+          "file_count": 2400
+        }
+      ],
+      "file_count": 52213,
+      "file_size": 105240992376259
+    }
+  },
+  "source": "gdc"
+}

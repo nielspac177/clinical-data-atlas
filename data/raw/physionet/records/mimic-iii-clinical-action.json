@@ -1,0 +1,32 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "mimic-iii-clinical-action",
+  "payload": {
+    "abstract": "<p>We created a dataset of clinical action items annotated over MIMIC-III. This dataset, which we call CLIP, is annotated by physicians and covers 718 discharge summaries, representing 107,494 sentences. Annotations were collected as character-level spans to discharge summaries after applying surrogate generation to fill in the anonymized templates from MIMIC-III text with faked data. We release these spans, their aggregation into sentence-level labels, and the sentence tokenizer used to aggregate the spans and label sentences. We also release the surrogate data generator, and the document IDs used for training, validation, and test splits, to enable reproduction. The spans are annotated with 0 or more labels of 7 different types, representing the different actions that may need to be taken: Appointment, Lab, Procedure, Medication, Imaging, Patient Instructions, and Other. We encourage the community to use this dataset to develop methods for automatically extracting clinical action items from discharge summaries.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 43110723,
+    "core_doi": "10.13026/6kfs-9v69",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 62212750,
+    "public_project_uuid": "4321203e-0049-49c0-a638-5bf042579eb6",
+    "publish_date": "2021-06-21",
+    "resource_type": "Database",
+    "short_description": "Clinical action items annotated over MIMIC-III. 718 discharge summaries are labeled at a sentence- and character-level with multiple action labels including Appointment, Lab, Procedure, Medication, Imaging, Patient Instructions, and Other.",
+    "slug": "mimic-iii-clinical-action",
+    "source_url": "https://physionet.org/content/mimic-iii-clinical-action/1.0.0/",
+    "title": "CLIP: A Dataset for Extracting Action Items for Physicians from Hospital Discharge Notes",
+    "topics": [],
+    "version": "1.0.0",
+    "version_doi": "10.13026/kw00-z903"
+  },
+  "source": "physionet"
+}

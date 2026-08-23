@@ -1,0 +1,86 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005503",
+  "payload": {
+    "created": "2024-09-19T21:33:46.508Z",
+    "id": "ds005503",
+    "latestSnapshot": {
+      "created": "2025-06-25T10:08:48.000Z",
+      "description": {
+        "Authors": [
+          "Alessandro T. Gifford",
+          "Maya A. Jastrzębowska",
+          "Johannes J.D. Singer",
+          "Radoslaw M. Cichy"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005503.v1.1.7",
+        "Funding": null,
+        "HowToAcknowledge": "Gifford AT, Jastrzębowska MA, Singer JJD, Cichy RM. 2025. In silico discovery of representational relationships across visual cortex. Nature Human Behavior. DOI: https://doi.org/10.1038/s41562-025-02252-z",
+        "License": "CC0",
+        "Name": "In silico discovery of representational relationships across visual cortex",
+        "ReferencesAndLinks": [
+          "Paper: https://doi.org/10.1038/s41562-025-02252-z",
+          "Code: https://github.com/gifale95/RNC"
+        ]
+      },
+      "readme": "# In silico discovery of representational relationships across visual cortex\n\n\n## 🔍 Overview\n\nHere we provide the stimuli and corresponding raw fMRI responses from the paper: *[In silico discovery of representational relationships across visual cortex][paper_link]* (Alessandro T. Gifford, Maya A. Jastrzębowska, Johannes J.D. Singer, Radoslaw M. Cichy).\n\nThe stimuli consist of controlling images that align or disentangle either univariate or multivariate responses of areas V1, V2, V3 and V4 for human fMRI responses. We found these images by applying univariate/multivariate relational neural control (RNC) on *in-silico* (i.e., model generated) fMRI responses. We then validated the V1 vs. V4 controlling images effect on *in vivo* (i.e., experimentally collected) fMRI responses of six new, independent subjects. Here we provide the *in vivo* fMRI responses for this validation.\n\nEach subject underwent two fMRI data collection sessions. The first session consisted of three runs of population receptive field experiment (which we used to delineate areas V1 and V4 in each subject), and 10 runs where we presented the univariate RNC controlling images. The second session consisted of 12 runs where we presented the multivariate RNC controlling images. Anatomical scans and field maps were collected at the beginning of both sessions. \n\nThe *stimuli/*  folder contains the univariate and multivariante RNC controlling images, as well as the catch images, presented during data collection. Note that prior to data collection we normalized images luminance to the luminance of a uniform gray screen with an RGB value of [127 127 127] (i.e., *stimuli/background.png*) using [this code][normalize_luminance].\n\nThe file *used_mri_sequences.pdf* contains technical details regarding the used MRI sequences.\n\n\n\n## 💻 Code\n\nThe code we used for collecting, preprocessing and analyzing the fMRI data is available on [GitHub][github].\n\nIf you wish to familiarize with RNC, you can use our [interactive Colab tutorials][colab].\n\n\n\n## 📧 Contact\n\nFor any question regarding the project data, code, or RNC in general, you can get in touch with Ale (alessandro.gifford@gmail.com).\n\n\n\n## 📜 Citation\n\nIf you use any of our data or code, please cite the paper:\n\n> * Gifford AT, Jastrzębowska M, Singer JJD, Cichy RM. 2025. In-silico discovery of representational relationships across visual cortex. _Nature Human Behavior_. DOI: [https://doi.org/10.1038/s41562-025-02252-z][paper_link]\n\n\n\n[paper_link]: https://doi.org/10.1038/s41562-025-02252-z\n[normalize_luminance]: https://github.com/gifale95/RNC/tree/main/06_in_vivo_validation/01_experimental_paradigm/normalize_images_luminance\n[github]: https://github.com/gifale95/RNC/tree/main/06_in_vivo_validation\n[colab]: https://drive.google.com/drive/folders/1ZTzbeZ1tNtBu2P6fgjbRY8-1KuY-0Kkr?usp=drive_link\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "02",
+          "01"
+        ],
+        "size": 35319943671,
+        "subjects": [
+          "03",
+          "02",
+          "01",
+          "06",
+          "04",
+          "05"
+        ],
+        "tasks": [
+          "Multivariate RNC controlling images experiment",
+          "pRF experiment",
+          "Univariate RNC controlling images experiment"
+        ],
+        "totalFiles": 556
+      },
+      "tag": "1.1.7"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        23,
+        24,
+        25,
+        30,
+        29,
+        24
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "Event related",
+      "studyDomain": "",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2024-09-20T16:13:47.435Z"
+  },
+  "source": "openneuro"
+}

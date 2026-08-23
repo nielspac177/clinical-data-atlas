@@ -1,0 +1,51 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "echonext",
+  "payload": {
+    "abstract": "<p>This dataset contains a de-identified collection of <strong>100,000</strong> 12-lead electrocardiograms (ECGs) with paired structural heart disease (SHD) labels derived from echocardiography, collected at Columbia University Irving Medical Center. Each ECG is provided with raw waveform data sampled at 250 Hz across all 12 leads, along with accompanying demographic and ECG-specific tabular metadata, including age, sex, heart rate, PR interval, QRS duration, and corrected QT interval. Each ECG is annotated with a binary label indicating the presence or absence of structural heart disease based on echocardiographic findings, including reduced left ventricular ejection fraction, increased ventricular wall thickness, significant valvular disease, right ventricular dysfunction, pulmonary hypertension, or pericardial effusion.</p>\n<p>This dataset was developed as part of the creation of the <strong>Columbia Mini-Model</strong>, a lightweight deep learning model for SHD detection from ECGs. The dataset represents a simplified, focused subset of the larger EchoNext training population and was used to evaluate model performance in resource-constrained settings or smaller-scale deployment environments. It is being released to promote transparency and reproducibility, support further research in cardiovascular AI, and enable benchmarking of lightweight ECG-based screening models for structural heart disease.</p>",
+    "access_policy": "Restricted",
+    "compressed_storage_size": 6486764057,
+    "core_doi": "10.13026/2j37-ba56",
+    "dua": {
+      "name": "PhysioNet Restricted Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Restricted Health Data License 1.5.0"
+    },
+    "main_storage_size": 24023103425,
+    "public_project_uuid": "f14d557f-b1ec-423a-96f4-a6df70485c96",
+    "publish_date": "2026-04-30",
+    "resource_type": "Database",
+    "short_description": "EchoNext is a curated dataset of electrocardiograms (ECGs) paired with echocardiogram-confirmed structural heart disease labels, designed to support the development and validation of machine learning models.",
+    "slug": "echonext",
+    "source_url": "https://physionet.org/content/echonext/1.1.1/",
+    "title": "EchoNext: A Dataset for Detecting Echocardiogram-Confirmed Structural Heart Disease from ECGs",
+    "topics": [
+      "digital health",
+      "structural heart disease",
+      "electrocardiogram",
+      "health equity",
+      "artificial intelligence",
+      "clinical decision support",
+      "ecg",
+      "heart failure",
+      "transthoracic echocardiogram",
+      "ai model deployment",
+      "valvular heart disease",
+      "machine learning",
+      "cardiovascular screening",
+      "ai in healthcare",
+      "left ventricular dysfunction",
+      "deep learning",
+      "population health",
+      "aortic stenosis"
+    ],
+    "version": "1.1.1",
+    "version_doi": "10.13026/7cfw-d091"
+  },
+  "source": "physionet"
+}

@@ -1,0 +1,93 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004698",
+  "payload": {
+    "created": "2023-08-15T22:39:25.407Z",
+    "id": "ds004698",
+    "latestSnapshot": {
+      "created": "2026-07-31T18:14:27.000Z",
+      "description": {
+        "Authors": [
+          "Kelly Chang",
+          "Ione Fine",
+          "Geoffrey M. Boynton"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004698.v3.0.1",
+        "Funding": [],
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "CHN Retinotopic Mapping Dataset",
+        "ReferencesAndLinks": []
+      },
+      "readme": "# Center for Human Neuroscience (CHN) Retinotopic Mapping Dataset\n\nThe Center for Human Neuroscience (CHN) Retinotopic Mapping Dataset was collected at the University of Washington as part of \"Improving the reliability and accuracy of population receptive field measures using a 'log-bar' stimulus\" by Kelly Chang, Ione Fine, and Geoffrey M. Boynton.\n\nThe full dataset is comprised of the raw, preprocessed (with fMRIPrep), and pRF estimated data from 12 participants across 2 sessions.\n\n## Citations\n\nChang, K., Fine, I., & Boynton, G. M. (2025). Improving the reliability and accuracy of population receptive field measures using a logarithmically warped stimulus. *Journal of Vision*, *25*(1), 5. [https://doi.org/10.1167/jov.25.1.5](https://doi.org/10.1167/jov.25.1.5)\n\n## Dataset Organization\n\n- `dataset`  \n   This directory contains the raw, unprocessed data for each participant. \n\n- `dataset/code`  \n   This directory contains tutorial scripts in MATLAB and Python to generate log distorted images from a directory of input images.\n\n   - `create_distorted_images.[m,ipynb]`: Tutorial script that generates log-distorted images when given an image input directory.\n   - `fixed-bar`: Sample image input directory.\n   - `log-bar`: Sample image output directory.\n\n- `dataset/derivatives/fmriprep`  \n   This directory contains the fMRIPrep processed data for each participant. \n\n- `dataset/derivatives/freesurfer`  \n   This directory contains the standard FreeSurfer processed data for each participant. \n\n- `dataset/derivatives/prf-estimation`  \n   This directory contains the pRF estimation data and results for each participant.\n\n- `dataset/derivatives/prf-estimation/files`  \n   This directory contains miscellaneous files used for pRF estimation or visualizations.\n\n   - `angle_lut.json`: Custom polar angle lookup table for visualization with FreeSurfer's `freeview`.\n   - `eccen_lut.json`: Custom eccentricity lookup table for visualization with FreeSurfer's `freeview`.\n   - `participants_hrf_parameters.json`: Corresponding metadata for `participants_hrf_parameters.tsv`.\n   - `participants_hrf_parameters.tsv`: Estimated HRF parameters used during pRF estimation by participant and hemisphere. \n\n- `dataset/derivatives/prf-estimation/stimuli`  \n   This directory contains the stimuli used in the experiment and stimulus apertures used in pRF estimation.\n\n   - `task-(fixed|log)bar_run-(1|2|3)`: Name of the stimulus condition and run number.\n   - `*_desc-full_stim.mat`: Stimulus images (uint8) at `full` resolution of 540 by 540 pixels and 6 Hz.\n   - `*_desc-down_aperture.mat`: Stimulus aperture (binary) where 1s indicated stimulus and 0s indicated the background at a downsampled (`down`) resolution of 108 by 108 pixels and 1 Hz.  \n\n- `dataset/derivatives/prf-estimation/sub-(n)/anat`  \n   This directory contains the participant's surface (inflated and sphere) and curvature files for visualization using FreeSurfer's `freeview`.\n\n- `dataset/derivatives/prf-estimation/sub-(n)/func`  \n   This directory contains the preprocessed and denoised functional data, sampled onto the participant's surface, used during pRF estimation. \n\n- `dataset/derivatives/prf-estimation/sub-(n)/prfs`\n   This directory contains the estimated pRF parameter maps separated by which data was used during estimation. \n\n   - `ses-(01|02|all)`: Sessions used during pRF estimation, either Session 1, Session 2, or both. \n   - `task-(fixedbar|logbar|all)`: Stimuli type used during pRF estimation, either fixed-bar, log-bar, or both. \n\n Within the pRF estimate directories are the estimated pRF parameter maps for: \n   - `*_angle.mgz`: Polar angle maps, degrees from (-180, 180). Negative values represent the left hemifield and positive values represent the right hemifield. \n   - `*_eccen.mgz`: Eccentricity maps, visual degrees. \n   - `*_sigma.mgz`: pRF size maps, visual degrees.\n   - `*_vexpl.mgz`: Proportion of variance explained maps.\n   - `*_x0.mgz`: x-coordinate maps, visual degrees, with origin (0,0) at screen center.\n   - `*_y0.mgz`: y-coordinate maps, visual degrees, with origin (0,0) at screen center. \n\n- `dataset/derivatives/prf-estimation/sub-(n)/rois`  \n   This directory contains the roi (.label) files for each \n   participant. \n\n  - `*_VC.label`: Visual cortex (VC). A liberal ROI that covered visual cortex used for pRF estimation.\n  - `*_fovea.label`: Foveal confluence ROI.\n  - `*_V1.label`: V1 ROI files. \n  - `*_V2.label`: V2 ROI files. \n  - `*_V3.label`: V3 ROI files. \n  - `*_V3ab.label`: V3a/b ROI files. \n  - `*_hV4.label`: hV4 ROI files. \n  - `*_LOC.label`: Lateral-Occipital Complex (LOC) ROI files. \n  - `*_TOC.label`: Temporal-Occipital Complex (TOC) ROI files. ",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "01",
+          "02"
+        ],
+        "size": 44398800771,
+        "subjects": [
+          "03",
+          "12",
+          "10",
+          "09",
+          "05",
+          "01",
+          "07",
+          "11",
+          "02",
+          "08",
+          "06",
+          "04"
+        ],
+        "tasks": [
+          "fixedbar",
+          "logbar"
+        ],
+        "totalFiles": 726
+      },
+      "tag": "3.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        33,
+        25,
+        33,
+        38,
+        30,
+        31,
+        29,
+        22,
+        28,
+        20,
+        21,
+        34
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "Visual cortex",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2023-08-16T05:16:24.889Z"
+  },
+  "source": "openneuro"
+}

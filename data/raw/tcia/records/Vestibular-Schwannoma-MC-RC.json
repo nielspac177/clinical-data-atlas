@@ -1,0 +1,1730 @@
+{
+  "endpoints": [
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getCollectionValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getModalityValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getBodyPartValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getPatient",
+    "https://api.datacite.org/dois?prefix=10.7937"
+  ],
+  "harvest_method": "api:nbia+datacite",
+  "native_id": "Vestibular-Schwannoma-MC-RC",
+  "payload": {
+    "datacite": {
+      "citationCount": 0,
+      "container": {},
+      "contentUrl": [],
+      "contributors": [],
+      "created": "2023-08-09T16:38:15Z",
+      "creators": [
+        {
+          "affiliation": [],
+          "familyName": "Kujawa",
+          "givenName": "Aaron",
+          "name": "Kujawa, Aaron",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-1445-6207",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Dorent",
+          "givenName": "Reuben",
+          "name": "Dorent, Reuben",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Wijethilake",
+          "givenName": "Navodini",
+          "name": "Wijethilake, Navodini",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Connor",
+          "givenName": "Stephen",
+          "name": "Connor, Stephen",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0001-5502-4972",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Thomson",
+          "givenName": "Suki",
+          "name": "Thomson, Suki",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Ivory",
+          "givenName": "Marina",
+          "name": "Ivory, Marina",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0001-5583-6700",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Bradford",
+          "givenName": "Robert",
+          "name": "Bradford, Robert",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Kitchen",
+          "givenName": "Neil",
+          "name": "Kitchen, Neil",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-1655-5970",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Bisdas",
+          "givenName": "Sotirios",
+          "name": "Bisdas, Sotirios",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0001-9930-5549",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Ourselin",
+          "givenName": "Sebastien",
+          "name": "Ourselin, Sebastien",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-5694-5340",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Vercauteren",
+          "givenName": "Tom",
+          "name": "Vercauteren, Tom",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Shapey",
+          "givenName": "Jonathan",
+          "name": "Shapey, Jonathan",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0003-0291-348X",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2023",
+          "dateInformation": null,
+          "dateType": "Issued"
+        }
+      ],
+      "descriptions": [
+        {
+          "description": "This multi-center routine clinical (MC-RC) dataset consists of 160 patients with a single sporadic Vestibular Schwannoma (VS) who were referred from 10 medical sites and consecutively seen at a single center. These routine clinical datasets are more diverse in terms of the tumor manifestation as well as the acquisition parameters. Using this dataset, researchers can develop and validate methods for automatic surveillance of Vestibular Schwannoma, which work robustly on images acquired at different hospitals. Patients had multiple time points resulting in a total of 428 timepoints and 487 3D-images. Manual ground truth segmentations were obtained in an iterative process in which segmentations were: 1) produced or amended by a specialized company; and 2) reviewed by one of three trained radiologists; and 3) validated by an expert team. Compared to the existing Vestibular-Schwannoma-SEG dataset on TCIA that was obtained from a single scanner, this dataset was acquired from multiple scanners manufactured by different vendors. This dataset also provides a refined segmentation of intrameatal and extrameatal components of the VS.",
+          "descriptionType": "Abstract",
+          "lang": null
+        }
+      ],
+      "doi": "10.7937/hrzh-2n82",
+      "downloadCount": 0,
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "Vestibular-Schwannoma-MC-RC",
+          "identifierType": "TCIA Short Name"
+        }
+      ],
+      "isActive": true,
+      "language": null,
+      "metadataVersion": 7,
+      "partCount": 0,
+      "partOfCount": 0,
+      "publicationYear": 2023,
+      "published": null,
+      "publisher": "The Cancer Imaging Archive",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2023-08-16T17:45:07Z",
+      "relatedIdentifiers": [],
+      "relatedItems": [],
+      "rightsList": [
+        {
+          "rights": "Creative Commons Attribution 4.0 International",
+          "rightsIdentifier": "cc-by-4.0",
+          "rightsIdentifierScheme": "SPDX",
+          "rightsUri": "https://creativecommons.org/licenses/by/4.0/legalcode",
+          "schemeUri": "https://spdx.org/licenses/"
+        }
+      ],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "fabricaForm",
+      "state": "findable",
+      "subjects": [],
+      "titles": [
+        {
+          "lang": null,
+          "title": "Segmentation of Vestibular Schwannoma from Magnetic Resonance Imaging: An Annotated Multi-Center Routine Clinical Dataset (Vestibular-Schwannoma-MC-RC)",
+          "titleType": null
+        },
+        {
+          "lang": null,
+          "title": "Vestibular-Schwannoma-MC-RC",
+          "titleType": "AlternativeTitle"
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceType": "Dataset",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2026-06-04T19:14:26Z",
+      "url": "https://www.cancerimagingarchive.net/collection/vestibular-schwannoma-mc-rc/",
+      "version": "2",
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 3247
+    },
+    "nbia": {
+      "body_parts": [
+        "BRAIN",
+        "EAR",
+        "HEAD",
+        "HEADNECK",
+        "IAC",
+        "OPTICCANAL"
+      ],
+      "collection": "Vestibular-Schwannoma-MC-RC",
+      "modalities": [
+        "MR"
+      ],
+      "patients": [
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "EthnicGroup": "anonymized",
+          "PatientId": "VS-MC-RC-022",
+          "PatientName": "VS-MC-RC-022",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "EthnicGroup": "anonymized",
+          "PatientId": "VS-MC-RC-041",
+          "PatientName": "VS-MC-RC-041",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "EthnicGroup": "anonymized",
+          "PatientId": "VS-MC-RC-068",
+          "PatientName": "VS-MC-RC-068",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-036",
+          "PatientName": "VS-MC-RC-036",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-040",
+          "PatientName": "VS-MC-RC-040",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-019",
+          "PatientName": "VS-MC-RC-019",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-015",
+          "PatientName": "VS-MC-RC-015",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-007",
+          "PatientName": "VS-MC-RC-007",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-024",
+          "PatientName": "VS-MC-RC-024",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-012",
+          "PatientName": "VS-MC-RC-012",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-008",
+          "PatientName": "VS-MC-RC-008",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "EthnicGroup": "anonymized",
+          "PatientId": "VS-MC-RC-014",
+          "PatientName": "VS-MC-RC-014",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-092",
+          "PatientName": "VS-MC-RC-092",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-031",
+          "PatientName": "VS-MC-RC-031",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-048",
+          "PatientName": "VS-MC-RC-048",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-027",
+          "PatientName": "VS-MC-RC-027",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-078",
+          "PatientName": "VS-MC-RC-078",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-010",
+          "PatientName": "VS-MC-RC-010",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "EthnicGroup": "anonymized",
+          "PatientId": "VS-MC-RC-096",
+          "PatientName": "VS-MC-RC-096",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-094",
+          "PatientName": "VS-MC-RC-094",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "EthnicGroup": "anonymized",
+          "PatientId": "VS-MC-RC-037",
+          "PatientName": "VS-MC-RC-037",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-026",
+          "PatientName": "VS-MC-RC-026",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-059",
+          "PatientName": "VS-MC-RC-059",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-085",
+          "PatientName": "VS-MC-RC-085",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-093",
+          "PatientName": "VS-MC-RC-093",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-016",
+          "PatientName": "VS-MC-RC-016",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-086",
+          "PatientName": "VS-MC-RC-086",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-025",
+          "PatientName": "VS-MC-RC-025",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "EthnicGroup": "anonymized",
+          "PatientId": "VS-MC-RC-073",
+          "PatientName": "VS-MC-RC-073",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-018",
+          "PatientName": "VS-MC-RC-018",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-099",
+          "PatientName": "VS-MC-RC-099",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-084",
+          "PatientName": "VS-MC-RC-084",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-049",
+          "PatientName": "VS-MC-RC-049",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-065",
+          "PatientName": "VS-MC-RC-065",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "EthnicGroup": "anonymized",
+          "PatientId": "VS-MC-RC-028",
+          "PatientName": "VS-MC-RC-028",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-023",
+          "PatientName": "VS-MC-RC-023",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-043",
+          "PatientName": "VS-MC-RC-043",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-009",
+          "PatientName": "VS-MC-RC-009",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-001",
+          "PatientName": "VS-MC-RC-001",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "EthnicGroup": "anonymized",
+          "PatientId": "VS-MC-RC-095",
+          "PatientName": "VS-MC-RC-095",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "EthnicGroup": "anonymized",
+          "PatientId": "VS-MC-RC-101",
+          "PatientName": "VS-MC-RC-101",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-102",
+          "PatientName": "VS-MC-RC-102",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-053",
+          "PatientName": "VS-MC-RC-053",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-055",
+          "PatientName": "VS-MC-RC-055",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-005",
+          "PatientName": "VS-MC-RC-005",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "EthnicGroup": "anonymized",
+          "PatientId": "VS-MC-RC-003",
+          "PatientName": "VS-MC-RC-003",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-006",
+          "PatientName": "VS-MC-RC-006",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-075",
+          "PatientName": "VS-MC-RC-075",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-021",
+          "PatientName": "VS-MC-RC-021",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-047",
+          "PatientName": "VS-MC-RC-047",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-079",
+          "PatientName": "VS-MC-RC-079",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-071",
+          "PatientName": "VS-MC-RC-071",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-098",
+          "PatientName": "VS-MC-RC-098",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-054",
+          "PatientName": "VS-MC-RC-054",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-044",
+          "PatientName": "VS-MC-RC-044",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-035",
+          "PatientName": "VS-MC-RC-035",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-038",
+          "PatientName": "VS-MC-RC-038",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "EthnicGroup": "anonymized",
+          "PatientId": "VS-MC-RC-088",
+          "PatientName": "VS-MC-RC-088",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "EthnicGroup": "anonymized",
+          "PatientId": "VS-MC-RC-060",
+          "PatientName": "VS-MC-RC-060",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-034",
+          "PatientName": "VS-MC-RC-034",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-032",
+          "PatientName": "VS-MC-RC-032",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "EthnicGroup": "anonymized",
+          "PatientId": "VS-MC-RC-091",
+          "PatientName": "VS-MC-RC-091",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-070",
+          "PatientName": "VS-MC-RC-070",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-050",
+          "PatientName": "VS-MC-RC-050",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "EthnicGroup": "anonymized",
+          "PatientId": "VS-MC-RC-058",
+          "PatientName": "VS-MC-RC-058",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-074",
+          "PatientName": "VS-MC-RC-074",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-089",
+          "PatientName": "VS-MC-RC-089",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-046",
+          "PatientName": "VS-MC-RC-046",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-017",
+          "PatientName": "VS-MC-RC-017",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-082",
+          "PatientName": "VS-MC-RC-082",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-002",
+          "PatientName": "VS-MC-RC-002",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-087",
+          "PatientName": "VS-MC-RC-087",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-064",
+          "PatientName": "VS-MC-RC-064",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-004",
+          "PatientName": "VS-MC-RC-004",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-042",
+          "PatientName": "VS-MC-RC-042",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-062",
+          "PatientName": "VS-MC-RC-062",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-067",
+          "PatientName": "VS-MC-RC-067",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "EthnicGroup": "anonymized",
+          "PatientId": "VS-MC-RC-066",
+          "PatientName": "VS-MC-RC-066",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-020",
+          "PatientName": "VS-MC-RC-020",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-072",
+          "PatientName": "VS-MC-RC-072",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-029",
+          "PatientName": "VS-MC-RC-029",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-076",
+          "PatientName": "VS-MC-RC-076",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "EthnicGroup": "anonymized",
+          "PatientId": "VS-MC-RC-097",
+          "PatientName": "VS-MC-RC-097",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-045",
+          "PatientName": "VS-MC-RC-045",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-063",
+          "PatientName": "VS-MC-RC-063",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "EthnicGroup": "anonymized",
+          "PatientId": "VS-MC-RC-080",
+          "PatientName": "VS-MC-RC-080",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-056",
+          "PatientName": "VS-MC-RC-056",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-061",
+          "PatientName": "VS-MC-RC-061",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-051",
+          "PatientName": "VS-MC-RC-051",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-100",
+          "PatientName": "VS-MC-RC-100",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-077",
+          "PatientName": "VS-MC-RC-077",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-013",
+          "PatientName": "VS-MC-RC-013",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-052",
+          "PatientName": "VS-MC-RC-052",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-030",
+          "PatientName": "VS-MC-RC-030",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-090",
+          "PatientName": "VS-MC-RC-090",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-033",
+          "PatientName": "VS-MC-RC-033",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-011",
+          "PatientName": "VS-MC-RC-011",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-039",
+          "PatientName": "VS-MC-RC-039",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-081",
+          "PatientName": "VS-MC-RC-081",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-083",
+          "PatientName": "VS-MC-RC-083",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-057",
+          "PatientName": "VS-MC-RC-057",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-SEG-077",
+          "PatientName": "VS-SEG-077",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-SEG-021",
+          "PatientName": "VS-SEG-021",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "EthnicGroup": "anonymized",
+          "PatientId": "VS-SEG-025",
+          "PatientName": "VS-SEG-025",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "EthnicGroup": "anonymized",
+          "PatientId": "VS-SEG-045",
+          "PatientName": "VS-SEG-045",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-SEG-104",
+          "PatientName": "VS-SEG-104",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-SEG-112",
+          "PatientName": "VS-SEG-112",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-SEG-164",
+          "PatientName": "VS-SEG-164",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-SEG-032",
+          "PatientName": "VS-SEG-032",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "EthnicGroup": "anonymized",
+          "PatientId": "VS-SEG-107",
+          "PatientName": "VS-SEG-107",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-SEG-092",
+          "PatientName": "VS-SEG-092",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-SEG-031",
+          "PatientName": "VS-SEG-031",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-SEG-010",
+          "PatientName": "VS-SEG-010",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-SEG-169",
+          "PatientName": "VS-SEG-169",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-SEG-006",
+          "PatientName": "VS-SEG-006",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-SEG-172",
+          "PatientName": "VS-SEG-172",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-SEG-060",
+          "PatientName": "VS-SEG-060",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-SEG-044",
+          "PatientName": "VS-SEG-044",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-SEG-009",
+          "PatientName": "VS-SEG-009",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-SEG-003",
+          "PatientName": "VS-SEG-003",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "EthnicGroup": "anonymized",
+          "PatientId": "VS-SEG-070",
+          "PatientName": "VS-SEG-070",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-SEG-041",
+          "PatientName": "VS-SEG-041",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-SEG-178",
+          "PatientName": "VS-SEG-178",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "EthnicGroup": "anonymized",
+          "PatientId": "VS-SEG-058",
+          "PatientName": "VS-SEG-058",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-SEG-199",
+          "PatientName": "VS-SEG-199",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-SEG-100",
+          "PatientName": "VS-SEG-100",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-SEG-094",
+          "PatientName": "VS-SEG-094",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "EthnicGroup": "anonymized",
+          "PatientId": "VS-SEG-037",
+          "PatientName": "VS-SEG-037",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-SEG-095",
+          "PatientName": "VS-SEG-095",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-SEG-126",
+          "PatientName": "VS-SEG-126",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "EthnicGroup": "anonymized",
+          "PatientId": "VS-SEG-076",
+          "PatientName": "VS-SEG-076",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-SEG-111",
+          "PatientName": "VS-SEG-111",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "EthnicGroup": "anonymized",
+          "PatientId": "VS-SEG-082",
+          "PatientName": "VS-SEG-082",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-SEG-116",
+          "PatientName": "VS-SEG-116",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-SEG-098",
+          "PatientName": "VS-SEG-098",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-SEG-061",
+          "PatientName": "VS-SEG-061",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "EthnicGroup": "anonymized",
+          "PatientId": "VS-SEG-135",
+          "PatientName": "VS-SEG-135",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-SEG-243",
+          "PatientName": "VS-SEG-243",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-SEG-028",
+          "PatientName": "VS-SEG-028",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-SEG-049",
+          "PatientName": "VS-SEG-049",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "EthnicGroup": "anonymized",
+          "PatientId": "VS-SEG-034",
+          "PatientName": "VS-SEG-034",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-SEG-042",
+          "PatientName": "VS-SEG-042",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-SEG-030",
+          "PatientName": "VS-SEG-030",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-SEG-132",
+          "PatientName": "VS-SEG-132",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "EthnicGroup": "anonymized",
+          "PatientId": "VS-SEG-221",
+          "PatientName": "VS-SEG-221",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-SEG-195",
+          "PatientName": "VS-SEG-195",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-SEG-087",
+          "PatientName": "VS-SEG-087",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-SEG-065",
+          "PatientName": "VS-SEG-065",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-SEG-014",
+          "PatientName": "VS-SEG-014",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-SEG-188",
+          "PatientName": "VS-SEG-188",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "EthnicGroup": "anonymized",
+          "PatientId": "VS-SEG-133",
+          "PatientName": "VS-SEG-133",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "EthnicGroup": "anonymized",
+          "PatientId": "VS-SEG-154",
+          "PatientName": "VS-SEG-154",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-SEG-218",
+          "PatientName": "VS-SEG-218",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "EthnicGroup": "anonymized",
+          "PatientId": "VS-SEG-059",
+          "PatientName": "VS-SEG-059",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "EthnicGroup": "anonymized",
+          "PatientId": "VS-SEG-117",
+          "PatientName": "VS-SEG-117",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "EthnicGroup": "anonymized",
+          "PatientId": "VS-SEG-197",
+          "PatientName": "VS-SEG-197",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-SEG-013",
+          "PatientName": "VS-SEG-013",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "EthnicGroup": "anonymized",
+          "PatientId": "VS-SEG-121",
+          "PatientName": "VS-SEG-121",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-SEG-122",
+          "PatientName": "VS-SEG-122",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Vestibular-Schwannoma-MC-RC",
+          "PatientId": "VS-MC-RC-069",
+          "PatientName": "VS-MC-RC-069",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        }
+      ]
+    }
+  },
+  "source": "tcia"
+}

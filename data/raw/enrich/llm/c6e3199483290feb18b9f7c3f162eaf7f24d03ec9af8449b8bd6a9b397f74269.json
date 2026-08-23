@@ -1,0 +1,40 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:c6e3199483290feb18b9f7c3f162eaf7f24d03ec9af8449b8bd6a9b397f74269",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "neuroscience",
+      "cardiology"
+    ],
+    "id": "physionet:multimodal-nback-music",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "containing fNIRS data",
+        "value": "fNIRS"
+      },
+      {
+        "evidence": "electrocardiogram (ECG)",
+        "value": "ECG"
+      },
+      {
+        "evidence": "photoplethysmography (PPG)",
+        "value": "PPG"
+      },
+      {
+        "evidence": "multimodal physiological signals",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "behavioral data",
+        "value": "behavioral"
+      }
+    ],
+    "population": "11 participants/subjects originally participated, while we removed participants/subjects with small modalities",
+    "summary": "Multimodal physiological and behavioral recordings during n-back working memory tasks performed while calming or exciting background music played, investigating music as an intervention to regulate cognitive arousal and performance states."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:f2830f774eefaa598ce50cbd17876a6e4eddc16989d25cacd9b8dbbd593b0e1c",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Rectum Adenocarcinoma",
+        "label": "Rectum Adenocarcinoma"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "tcia:tcga-read",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "CT MR",
+        "value": "CT"
+      },
+      {
+        "evidence": "CT MR",
+        "value": "MRI"
+      },
+      {
+        "evidence": "Genomic Data Commons (GDC) Data Portal",
+        "value": "genomics"
+      }
+    ],
+    "population": "Rectum adenocarcinoma patients drawn from The Cancer Genome Atlas; imaging mostly acquired during routine care rather than a controlled study (3 participants per source facts).",
+    "summary": "Radiology images of rectum adenocarcinoma patients, matched by patient identifier to TCGA clinical, genetic and pathological data, enabling comparison of genotype with radiological phenotype and outcomes."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,146 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "TCGA-DLBC",
+  "payload": {
+    "dbgap_accession_number": null,
+    "disease_type": [
+      "Not Reported",
+      "Mature B-Cell Lymphomas"
+    ],
+    "id": "TCGA-DLBC",
+    "name": "Lymphoid Neoplasm Diffuse Large B-cell Lymphoma",
+    "primary_site": [
+      "Colon",
+      "Stomach",
+      "Connective, subcutaneous and other soft tissues",
+      "Testis",
+      "Brain",
+      "Heart, mediastinum, and pleura",
+      "Other and unspecified major salivary glands",
+      "Breast",
+      "Small intestine",
+      "Bones, joints and articular cartilage of other and unspecified sites",
+      "Retroperitoneum and peritoneum",
+      "Thyroid gland",
+      "Lymph nodes",
+      "Hematopoietic and reticuloendothelial systems"
+    ],
+    "program": {
+      "dbgap_accession_number": "phs000178",
+      "name": "TCGA",
+      "program_id": "b80aa962-9650-5110-b3eb-bd087da808db"
+    },
+    "project_id": "TCGA-DLBC",
+    "releasable": true,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 58,
+      "data_categories": [
+        {
+          "case_count": 50,
+          "data_category": "Simple Nucleotide Variation",
+          "file_count": 1013
+        },
+        {
+          "case_count": 48,
+          "data_category": "Sequencing Reads",
+          "file_count": 374
+        },
+        {
+          "case_count": 58,
+          "data_category": "Biospecimen",
+          "file_count": 219
+        },
+        {
+          "case_count": 58,
+          "data_category": "Clinical",
+          "file_count": 102
+        },
+        {
+          "case_count": 50,
+          "data_category": "Copy Number Variation",
+          "file_count": 693
+        },
+        {
+          "case_count": 48,
+          "data_category": "Transcriptome Profiling",
+          "file_count": 190
+        },
+        {
+          "case_count": 48,
+          "data_category": "DNA Methylation",
+          "file_count": 144
+        },
+        {
+          "case_count": 33,
+          "data_category": "Proteome Profiling",
+          "file_count": 33
+        },
+        {
+          "case_count": 42,
+          "data_category": "Somatic Structural Variation",
+          "file_count": 189
+        },
+        {
+          "case_count": 48,
+          "data_category": "Structural Variation",
+          "file_count": 217
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 48,
+          "experimental_strategy": "RNA-Seq",
+          "file_count": 432
+        },
+        {
+          "case_count": 48,
+          "experimental_strategy": "WXS",
+          "file_count": 728
+        },
+        {
+          "case_count": 47,
+          "experimental_strategy": "miRNA-Seq",
+          "file_count": 141
+        },
+        {
+          "case_count": 42,
+          "experimental_strategy": "WGS",
+          "file_count": 744
+        },
+        {
+          "case_count": 50,
+          "experimental_strategy": "Genotyping Array",
+          "file_count": 631
+        },
+        {
+          "case_count": 48,
+          "experimental_strategy": "Methylation Array",
+          "file_count": 144
+        },
+        {
+          "case_count": 33,
+          "experimental_strategy": "Reverse Phase Protein Array",
+          "file_count": 33
+        },
+        {
+          "case_count": 46,
+          "experimental_strategy": "Tissue Slide",
+          "file_count": 59
+        },
+        {
+          "case_count": 44,
+          "experimental_strategy": "Diagnostic Slide",
+          "file_count": 44
+        }
+      ],
+      "file_count": 3174,
+      "file_size": 29345148344101
+    }
+  },
+  "source": "gdc"
+}

@@ -1,0 +1,30 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:e368e3fa5890bc2b3d0694fa79916d35e2ad3d8fee7fce27bbde6f79d9f22549",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "early breast cancer detection",
+        "label": "breast cancer"
+      }
+    ],
+    "countries": [
+      "VN"
+    ],
+    "domains": [
+      "oncology"
+    ],
+    "id": "physionet:tn-mammo-breast-density",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "a mammogram dataset of 676 cases with breast density labels",
+        "value": "mammography"
+      }
+    ],
+    "population": "676 subjects with paired left and right breast views, from a Vietnamese mammogram dataset",
+    "summary": "Mammograms with bilateral craniocaudal and mediolateral oblique views, each case labeled for breast density and orientation by two radiologists independently in a double-blind manner, for machine learning research."
+  },
+  "prompt_version": "v1"
+}

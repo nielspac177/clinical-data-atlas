@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:f9b928c91eabf272e03a5880fc4a4c86bef0107fe1daaf4669a0526bcdfb9c9d",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Multiple Myeloma CoMMpass Study",
+        "label": "Multiple Myeloma"
+      },
+      {
+        "evidence": "Plasma Cell Tumors",
+        "label": "Plasma Cell Tumors"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "gdc:MMRF-COMMPASS",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Simple Nucleotide Variation, Sequencing Reads, Copy Number Variation",
+        "value": "genomics"
+      },
+      {
+        "evidence": "Transcriptome Profiling",
+        "value": "transcriptomics"
+      }
+    ],
+    "population": "995 human cases with plasma cell tumors of the hematopoietic and reticuloendothelial systems",
+    "summary": "Multiple myeloma study of hematopoietic and reticuloendothelial system plasma cell tumors. Provides WXS, WGS and RNA-Seq reads with simple nucleotide, copy number, somatic structural and structural variation calls plus transcriptome profiling."
+  },
+  "prompt_version": "v1"
+}

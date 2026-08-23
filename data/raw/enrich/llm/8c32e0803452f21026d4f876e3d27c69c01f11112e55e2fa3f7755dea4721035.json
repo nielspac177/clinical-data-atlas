@@ -1,0 +1,34 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:8c32e0803452f21026d4f876e3d27c69c01f11112e55e2fa3f7755dea4721035",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [
+      "CN"
+    ],
+    "domains": [
+      "critical_care",
+      "pediatrics"
+    ],
+    "id": "physionet:zhejiang-ehr-critical-care",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "electronic healthcare records",
+        "value": "EHR"
+      },
+      {
+        "evidence": "hourly vital signs, ventilator waveforms",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "medical orders, and laboratory results",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "patients suffering from life-threatening complications and injuries",
+    "summary": "Critical care database built from electronic healthcare records at a tertiary care medical center in China, covering routine intensive care data such as vital signs, ventilator waveforms, medical orders and laboratory results."
+  },
+  "prompt_version": "v1"
+}

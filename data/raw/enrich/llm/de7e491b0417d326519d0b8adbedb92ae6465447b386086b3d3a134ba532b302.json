@@ -1,0 +1,51 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:de7e491b0417d326519d0b8adbedb92ae6465447b386086b3d3a134ba532b302",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Skin Cutaneous Melanoma",
+        "label": "Skin Cutaneous Melanoma"
+      },
+      {
+        "evidence": "Nevi and Melanomas",
+        "label": "Nevi and Melanomas"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "neurology",
+      "pulmonology",
+      "gastroenterology_hepatology"
+    ],
+    "id": "gdc:TCGA-SKCM",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Diagnostic Slide",
+        "value": "pathology"
+      },
+      {
+        "evidence": "WGS, WXS, ATAC-Seq",
+        "value": "genomics"
+      },
+      {
+        "evidence": "RNA-Seq",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Reverse Phase Protein Array",
+        "value": "proteomics"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "470 human cases with skin cutaneous melanoma",
+    "summary": "TCGA melanoma project spanning skin and many other involved sites, including slides, sequencing, copy number, methylation, chromatin accessibility, protein array and clinical data."
+  },
+  "prompt_version": "v1"
+}

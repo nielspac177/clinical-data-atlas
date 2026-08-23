@@ -1,0 +1,89 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds008336",
+  "payload": {
+    "created": "2026-07-17T12:38:49.343Z",
+    "id": "ds008336",
+    "latestSnapshot": {
+      "created": "2026-07-22T21:20:04.000Z",
+      "description": {
+        "Authors": [
+          "Haden Ray",
+          "Haiden Berton",
+          "Jessica Barrios Martinez",
+          "Frank Yeh",
+          "Vibhor Krishna"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds008336.v1.0.0",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Structural and Diffusion MRI in Essential Tremor",
+        "ReferencesAndLinks": null
+      },
+      "readme": "# Structural and Diffusion MRI in Essential Tremor\n\n## Overview\n\nThis dataset contains structural MRI and diffusion-weighted MRI acquired from participants with Essential Tremor.\n\nThe dataset has been organized according to the Brain Imaging Data Structure (BIDS).\n\nAnatomical images have been defaced prior to public release.\n\n------------------------------------------------\n\n## MRI Sequences\n\nEach participant contains:\n\n• T1-weighted MPRAGE\n• T2-FLAIR\n• White Matter-Nulled MRI (WMn)\n• Diffusion MRI (DWI)\n\n------------------------------------------------\n\n## Scanner\n\nSiemens MAGNETOM Prisma Fit\n3 Tesla\n\n------------------------------------------------\n\n## Participant IDs\n\nParticipant identifiers have been anonymized.\n\nsub-001\nsub-002\n...\n\n------------------------------------------------\n\n## Defacing\n\nAll anatomical images have been defaced using pydeface.\n\nDiffusion images were not defaced because they do not contain sufficient facial anatomy for reconstruction.\n\n------------------------------------------------\n\n## Notes\n\nWMn images are provided as an additional anatomical contrast and use the acquisition label\n\nacq-wmn\n\nwithin the BIDS specification.\n\n------------------------------------------------\n\n## Contact\n\nName: Haden Ray\n\nInstitution: UNC Chapel Hill\n\nEmail: haden_ray@med.unc.edu",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_diffusion",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 937075834,
+        "subjects": [
+          "061",
+          "053",
+          "032",
+          "065",
+          "042",
+          "043",
+          "008",
+          "044",
+          "035",
+          "002",
+          "067",
+          "001"
+        ],
+        "tasks": [],
+        "totalFiles": 90
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        63,
+        49,
+        75,
+        79,
+        75,
+        80,
+        39,
+        69,
+        71,
+        67,
+        86,
+        78
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2026-07-22T21:20:51.685Z"
+  },
+  "source": "openneuro"
+}

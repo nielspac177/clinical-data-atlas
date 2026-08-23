@@ -1,0 +1,101 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004330",
+  "payload": {
+    "created": "2022-11-07T14:41:49.699Z",
+    "id": "ds004330",
+    "latestSnapshot": {
+      "created": "2022-11-08T10:16:44.000Z",
+      "description": {
+        "Authors": [
+          "Johannes J.D. Singer",
+          "Radoslaw M. Cichy",
+          "Martin N. Hebart"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004330.v1.0.0",
+        "Funding": [
+          "ERC-StG-2021-101039712",
+          "CI241/1-1",
+          "CI241/3-1",
+          "CI241/7-1",
+          "ERC-StG-2018-803370"
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "The spatiotemporal neural dynamics of object recognition for natural images and line drawings (MEG)\n",
+        "ReferencesAndLinks": [
+          "https://biorxiv.org/cgi/content/short/2022.08.12.503484v1"
+        ]
+      },
+      "readme": "This dataset contains the raw MEG data accompanying the paper \"The spatiotemporal neural dynamics of object recognition for natural images and line drawings\" (Link to preprint: https://biorxiv.org/cgi/content/short/2022.08.12.503484v1). Please cite the above paper if you use this data.\n\nThe dataset includes:\n\nMEG data for 9 runs for each subjects. Events files that contain the onsets, durations and trial types for each trial in the experiment (excluding catch trials).\n\nFor a full description of the paradigm and the employed procedures please see the manuscript.  \n\nResults for the first-level analyses for this data can be found on OSF (https://osf.io/vsc6y/). Code for the analysis of the data can be found on Github (https://github.com/Singerjohannes/object_drawing_dynamics/). \n\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "meg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [
+          "01"
+        ],
+        "size": 165027293648,
+        "subjects": [
+          "01",
+          "02",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "tasks": [
+          "main"
+        ],
+        "totalFiles": 1145
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": null,
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "meg"
+      ],
+      "species": "Human",
+      "studyDesign": "MEG study - 9 experimental runs",
+      "studyDomain": "object recognition",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2022-11-08T11:21:52.917Z"
+  },
+  "source": "openneuro"
+}

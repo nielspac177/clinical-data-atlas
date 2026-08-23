@@ -1,0 +1,37 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "ms-cxr",
+  "payload": {
+    "abstract": "<p>We release a new dataset, MS-CXR, with locally-aligned phrase grounding annotations by board-certified radiologists to facilitate the study of complex semantic modelling in biomedical vision&ndash;language processing. The MS-CXR dataset provides 1162 image&ndash;sentence pairs of bounding boxes and corresponding phrases, collected across eight different cardiopulmonary radiological findings, with an approximately equal number of pairs for each finding. This dataset complements the existing MIMIC-CXR v.2 dataset and comprises: 1. Reviewed and edited bounding boxes and phrases (1026 pairs of bounding box/sentence);&nbsp;and 2. Manual bounding box labels from scratch (136 pairs of bounding box/sentence).</p>\n\n<p>This large, well-balanced phrase grounding benchmark dataset contains carefully curated image regions annotated with descriptions of eight radiology findings, as verified by radiologists. Unlike existing chest X-ray benchmarks, this challenging phrase grounding task evaluates joint, local image-text reasoning while requiring real-world language understanding, e.g. to parse domain-specific location references, complex negations, and bias in reporting style. This data accompany work showing that principled textual semantic modelling can improve contrastive learning in self-supervised vision&ndash;language processing.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 411874,
+    "core_doi": "10.13026/ms5s-2a34",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 3650322,
+    "public_project_uuid": "6d5fc5b3-a275-49ff-b876-21d34610c8d3",
+    "publish_date": "2024-11-15",
+    "resource_type": "Database",
+    "short_description": "MS-CXR is a new dataset containing 1162 chest X-ray bounding box labels paired with radiology text descriptions, annotated and verified by two board-certified radiologists.",
+    "slug": "ms-cxr",
+    "source_url": "https://physionet.org/content/ms-cxr/1.1.0/",
+    "title": "MS-CXR: Making the Most of Text Semantics to Improve Biomedical Vision-Language Processing",
+    "topics": [
+      "localization",
+      "phrase grounding",
+      "vision-language processing",
+      "chest x-ray"
+    ],
+    "version": "1.1.0",
+    "version_doi": "10.13026/9g2z-jg61"
+  },
+  "source": "physionet"
+}

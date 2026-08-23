@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:bd66ab4e162ae1a152f2047241b2ea6b0b5605099995a458c1904e1c000ce102",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "invasive fungal infection (IFI)",
+        "label": "invasive fungal infection (IFI)"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "infectious_disease"
+    ],
+    "id": "physionet:pifir",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Positron emission tomography",
+        "value": "PET"
+      },
+      {
+        "evidence": "computed tomography",
+        "value": "CT"
+      },
+      {
+        "evidence": "radiologist-produced free-text reports",
+        "value": "clinical_notes"
+      }
+    ],
+    "population": "Patients whose PET-CT imaging reports were de-identified and annotated; 201 reports",
+    "summary": "A corpus of 201 de-identified PET-CT reports annotated by radiologists for terminology suggestive of invasive fungal infection, including concepts, certainty cues and relations, released with the annotation schema for named entity recognition and relation extraction."
+  },
+  "prompt_version": "v1"
+}

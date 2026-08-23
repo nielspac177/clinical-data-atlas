@@ -1,0 +1,41 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "gossis-1-eicu",
+  "payload": {
+    "abstract": "<p>GOSSIS-1 is a modern, free, open-source in-hospital mortality prediction algorithm for critical care patients, achieving excellent discrimination and calibration across three countries (Australia, New Zealand and the USA). GOSSIS-1 was developed on two large datasets of critical care patients. This project contains the USA subset of patients derived from the eICU Collaborative Research Database (eICU-CRD). The dataset, which we call GOSSIS-1-eICU, consists of 131,051 unique patients from 204 hospitals from ICU admissions discharged in 2014-15. The code to create the dataset from eICU-CRD and generate GOSSIS-1 predictions are also available. This project contains: 1) the derived dataset from eICU-CRD, 2) the dataset with required missing data imputed and 3) the GOSSIS-1 in-hospital predictions (probabilities. The <code>patientunitstayid</code> and <code>hospitalid</code> eICU-CRD identifiers are included to allowing linking back to eICU-CRD. Training and test sets are identified to allow for direct comparisons of performance.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 54782857,
+    "core_doi": "10.13026/drts-zb06",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 54925456,
+    "public_project_uuid": "609c98f1-b406-4abe-b4cc-06c044e6d73a",
+    "publish_date": "2022-07-20",
+    "resource_type": "Database",
+    "short_description": "GOSSIS-1 is an in-hospital mortality prediction algorithm for critical care patients. GOSSIS-1 was trained using data from three countries. This dataset corresponds with the USA subset of the GOSSIS-1 dataset for the 2022 publication below.",
+    "slug": "gossis-1-eicu",
+    "source_url": "https://physionet.org/content/gossis-1-eicu/1.0.0/",
+    "title": "GOSSIS-1-eICU, the eICU-CRD subset of the Global Open Source Severity of Illness Score (GOSSIS-1) dataset",
+    "topics": [
+      "severity of illness",
+      "icu",
+      "critical care",
+      "global",
+      "gossis",
+      "apache",
+      "mortality prediction",
+      "benchmarking"
+    ],
+    "version": "1.0.0",
+    "version_doi": "10.13026/gbmg-a531"
+  },
+  "source": "physionet"
+}

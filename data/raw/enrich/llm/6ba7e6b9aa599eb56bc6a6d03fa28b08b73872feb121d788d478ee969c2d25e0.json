@@ -1,0 +1,45 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:6ba7e6b9aa599eb56bc6a6d03fa28b08b73872feb121d788d478ee969c2d25e0",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "presented with vestibular schwannoma (VS, n=73)",
+        "label": "vestibular schwannoma"
+      },
+      {
+        "evidence": "trigeminal neuralgia (TGN, n=119)",
+        "label": "trigeminal neuralgia"
+      },
+      {
+        "evidence": "metastatic disease (M, n=198",
+        "label": "metastatic disease"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "neurology"
+    ],
+    "id": "tcia:gammaknife-hippocampal",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Gamma Knife MR/CT/RTSTRUCT Sets",
+        "value": "MRI"
+      },
+      {
+        "evidence": "Gamma Knife MR/CT/RTSTRUCT Sets",
+        "value": "CT"
+      },
+      {
+        "evidence": "treated with Gamma Knife (Elekta AB, Stockholm, Sweden) stereotactic radiosurgery",
+        "value": "radiotherapy"
+      }
+    ],
+    "population": "390 patients who presented with vestibular schwannoma, trigeminal neuralgia or metastatic disease and were treated with Gamma Knife stereotactic radiosurgery",
+    "summary": "MR, CT and RTSTRUCT sets with hippocampal contours from patients treated with Gamma Knife stereotactic radiosurgery; each patient ID carries a suffix marking the treatment indication."
+  },
+  "prompt_version": "v1"
+}

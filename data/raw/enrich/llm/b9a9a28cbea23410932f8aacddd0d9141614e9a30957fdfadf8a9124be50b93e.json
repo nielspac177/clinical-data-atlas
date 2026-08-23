@@ -1,0 +1,27 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:b9a9a28cbea23410932f8aacddd0d9141614e9a30957fdfadf8a9124be50b93e",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "tcia:cdd-cesm",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Contrast-enhanced spectral mammography (CESM) images with annotations and medical reports",
+        "value": "mammography"
+      },
+      {
+        "evidence": "Full medical reports are also provided for each case (DOCX)",
+        "value": "clinical_notes"
+      }
+    ],
+    "population": "Patients examined with contrast-enhanced spectral mammography after intravenous iodinated contrast injection",
+    "summary": "Contrast-enhanced spectral mammography images acquired in craniocaudal and mediolateral oblique views at low and high energy, converted to JPEG, with full medical reports and manual segmentation annotations of abnormal findings."
+  },
+  "prompt_version": "v1"
+}

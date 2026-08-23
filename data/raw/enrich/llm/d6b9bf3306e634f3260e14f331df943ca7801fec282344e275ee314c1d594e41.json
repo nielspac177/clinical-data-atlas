@@ -1,0 +1,38 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:d6b9bf3306e634f3260e14f331df943ca7801fec282344e275ee314c1d594e41",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "primary newly diagnosed glioblastoma",
+        "label": "glioblastoma"
+      },
+      {
+        "evidence": "predict tumor progression",
+        "label": "tumor progression"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "oncology",
+      "surgery"
+    ],
+    "id": "tcia:brain-tumor-progression",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Two MRI exams are included for each patient",
+        "value": "MRI"
+      },
+      {
+        "evidence": "determined clinically, and based on a combination of clinical performance",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "20 subjects with primary newly diagnosed glioblastoma treated with surgery, chemo-radiation and adjuvant chemotherapy",
+    "summary": "Two MRI exams per patient with glioblastoma, taken after chemo-radiation and at progression, including T1w, FLAIR, T2w, ADC, perfusion maps and binary tumor masks in DICOM."
+  },
+  "prompt_version": "v1"
+}

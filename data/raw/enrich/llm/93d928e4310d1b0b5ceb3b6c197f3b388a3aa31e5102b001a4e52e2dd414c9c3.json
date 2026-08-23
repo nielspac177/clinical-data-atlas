@@ -1,0 +1,49 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:93d928e4310d1b0b5ceb3b6c197f3b388a3aa31e5102b001a4e52e2dd414c9c3",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Mesothelioma",
+        "label": "Mesothelioma"
+      },
+      {
+        "evidence": "Mesothelial Neoplasms",
+        "label": "Mesothelial Neoplasms"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "pulmonology"
+    ],
+    "id": "gdc:TCGA-MESO",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Tissue Slide, Diagnostic Slide",
+        "value": "pathology"
+      },
+      {
+        "evidence": "WXS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "Transcriptome Profiling",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Proteome Profiling",
+        "value": "proteomics"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "Human cases with mesothelioma of heart, mediastinum, pleura and lung",
+    "summary": "TCGA project on mesothelioma arising in heart, mediastinum, pleura and lung, with sequencing, copy number, methylation, transcriptome and proteome profiling plus clinical, biospecimen and slide data."
+  },
+  "prompt_version": "v1"
+}

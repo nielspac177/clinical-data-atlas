@@ -1,0 +1,91 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004814",
+  "payload": {
+    "created": "2023-10-23T13:45:24.159Z",
+    "id": "ds004814",
+    "latestSnapshot": {
+      "created": "2023-10-26T14:04:22.000Z",
+      "description": {
+        "Authors": [
+          "Michelle Moerel",
+          "Essa Yacoub"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004814.v1.0.0",
+        "Funding": [
+          "NWO Rubicon grant 446-12-010",
+          "NIH grant P41 EB015894",
+          "NIH grant P30 NS076408",
+          "NIH grant S10 RR026783",
+          "the WM KECK Foundation"
+        ],
+        "HowToAcknowledge": "Please cite as Moerel, et al. (2018): https://doi.org/10.1016/j.neuroimage.2017.03.063 ",
+        "License": "CC0",
+        "Name": "High-res gradient echo EPI and 3D GRASE data of auditory cortex",
+        "ReferencesAndLinks": [
+          "",
+          "https://doi.org/10.1016/j.neuroimage.2017.03.063 ",
+          "https://doi.org/10.1523/JNEUROSCI.3576-17.2018 ",
+          "https://doi.org/10.1038/s41598-019-41965-w"
+        ]
+      },
+      "readme": "In vivo 7T MRI dataset probing the auditory cortex collected at the Center for Magnetic Resonance Research (CMRR), University of Minnesota, USA, by Michelle Moerel and Essa Yacoub. \r\n\r\nAll participants have three sessions. In session 1, high-res anatomical MRI (T1w, PDw, and T2starw at 0.6 mm iso) was collected. In session 2 and 3, task functional MRI data (0.8 mm iso) was collected: using gradient echo EPI in session 2 (12 runs), and 3D GRASE in session 3 (16 runs). Note that session 1 is missing for participant 1.\r\n\r\nParticipants listen to natural sounds (144 sounds) and performed a one-back detection task.",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "02",
+          "03",
+          "01"
+        ],
+        "size": 32185998042,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06"
+        ],
+        "tasks": [
+          "auditory"
+        ],
+        "totalFiles": 880
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "Dutch Research Council",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "Human auditory cortex",
+      "studyLongitudinal": "Experimental"
+    },
+    "publishDate": "2023-10-26T14:40:21.220Z"
+  },
+  "source": "openneuro"
+}

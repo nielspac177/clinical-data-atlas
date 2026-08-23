@@ -1,0 +1,106 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds002738",
+  "payload": {
+    "created": "2020-04-24T19:28:57.225Z",
+    "id": "ds002738",
+    "latestSnapshot": {
+      "created": "2021-05-07T11:12:16.000Z",
+      "description": {
+        "Authors": [
+          "G. Elliott Wimmer",
+          "Jamie Li",
+          "Krzysztof Jacek Gorgolewski",
+          "Russell A. Poldrack"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds002738.v1.0.2",
+        "Funding": null,
+        "HowToAcknowledge": "Please cite https://doi.org/10.1101/158964",
+        "License": "CC0",
+        "Name": "rewardBeast",
+        "ReferencesAndLinks": [
+          "https://doi.org/10.1101/158964",
+          "https://github.com/gewimmer-neuro/reward_learning_js"
+        ]
+      },
+      "readme": "OpenNeuro curator note: This dataset was previously accessible at ds001393. The dataset was reuploaded due to privacy considerations. \n\nWhole-brain imaging was conducted on a GE 3T Discovery system equipped with a 32-channel head coil (Stanford Center for Cognitive and Neurobiological Imaging). Functional images were collected using a multiband (simultaneous multi-slice) acquisition sequence (TR = 680 ms, TE = 30 ms, flip angle = 53, multiband factor = 8; 2.2 mm isotropic voxel size; 64 (8 by 8) axial slices with no gap). For participant sub-290, the TR was changed due to error, resulting in runs of 924, 874, and 720 ms TRs. Slices were tilted approximately 30° relative to the AC–PC line to improve signal-to-noise ratio in the orbitofrontal cortex (Deichmann et al., 2003). Head padding was used to minimize head motion. See https://osf.io/vdswa/ for participant details and fMRI exclusion.\n\nDuring learning phase scanning, two participants were excluded for excessive head motion (5 or more >1.5 mm framewise displacement translations from TR to TR; sub-119, sub-338). No other participant’s motion exceeded 1.5 mm in displacement from one volume acquisition to the next. For seven other participants with 1 or more events of >0.5-mm displacement TR-to-TR, any preceding trial within 5 TRs and any current/following trial within 10 subsequent TRs of the motion event were excluded from multivariate analyses; for univariate analyses, these trials were removed from regressors of interest. For participant sub-310, the display screen failed in the middle of the first learning phase scanning run. This run was restarted at the point of failure and functional data were concatenated. For the final no-feedback fMRI block, data was not collected from four participants due to time constraints, then three additional participants were excluded for excessive head motion (total exclusions: sub-119, sub-162, sub-317, sub-329, sub-338, sub-356, sub-393), leaving 26 remaining participants for the no-feedback phase analysis.\n\nFor each functional scanning run, 16 discarded volumes were collected prior to the first trial to both allow for magnetic field equilibration and to collect calibration scans for the multiband reconstruction. During the scanned learning phase, two functional runs of an average of 592 TRs (6 min and 42 s) were collected, each including 50 trials. During the no-feedback phase, one functional runs of an average of 722 TRs (8 min and 11 s) was collected, including 160 trials. Structural images were collected either before or after the task, using a high-resolution T1-weighted magnetization prepared rapid acquisition gradient echo (MPRAGE) pulse sequence (0.9 x 0.898 x 0.898 mm voxel size).\n\nDetails of the behavioral paradigm can be found at: https://doi.org/10.1101/158964",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 84270226312,
+        "subjects": [
+          "119",
+          "162",
+          "269",
+          "273",
+          "275",
+          "276",
+          "278",
+          "290",
+          "300",
+          "301",
+          "303",
+          "306",
+          "309",
+          "310",
+          "311",
+          "313",
+          "314",
+          "317",
+          "319",
+          "328",
+          "329",
+          "330",
+          "336",
+          "337",
+          "338",
+          "349",
+          "356",
+          "358",
+          "359",
+          "384",
+          "386",
+          "387",
+          "388",
+          "390",
+          "391",
+          "393"
+        ],
+        "tasks": [
+          "reward",
+          "rest",
+          "epi"
+        ],
+        "totalFiles": 528
+      },
+      "tag": "1.0.2"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": null,
+      "associatedPaperDOI": "10.1523/JNEUROSCI.0075-18.2018",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2020-04-29T17:29:38.841Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,82 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004787",
+  "payload": {
+    "created": "2023-10-04T19:47:35.355Z",
+    "id": "ds004787",
+    "latestSnapshot": {
+      "created": "2023-10-11T20:20:07.000Z",
+      "description": {
+        "Authors": [
+          "Dylan Nielson",
+          "Andre Zugman",
+          "Marie Zelenina",
+          "Danny Pine"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004787.v1.1.0",
+        "Funding": [
+          "This research was supported by the Intramural Research Program of NIMH/National Institutes of Health (NIH; ZIA-MH002781 to D.P.).  Curation of this dataset used computational resources from the National Institutes of Health High-Performance Computing Biowulf Cluster (http://hpc.nih.gov)."
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "NIMH METeR (Multi-Echo Test-Retest)",
+        "ReferencesAndLinks": null
+      },
+      "readme": "# NIMH METeR (Multi-Echo Test-Retest)\n\nThis dataset has been collected to test reliability of multi-echo processing pipelines for resting-state functional connectivity.  \nThis release includes 32 runs of resting state fMRI collected from 5 participants over 10 sessions. Subjects 24563, 24573, and 24718 (sessions 1 and 2) have two 10 minute scans collected in each of two sessions. Subjects 24740 (and 24718, session 3) have single sessions with 3 10 minute scans, followed by a 15 minute break outside the scanner, followed by 3 more scans, in order to simulate a multi-session data collection in a single session.  \n\n",
+      "summary": {
+        "dataProcessed": true,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "1",
+          "2",
+          "3"
+        ],
+        "size": 23055205640,
+        "subjects": [
+          "24563",
+          "24573",
+          "24704",
+          "24718",
+          "24740"
+        ],
+        "tasks": [
+          "rest"
+        ],
+        "totalFiles": 549
+      },
+      "tag": "1.1.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        25,
+        65,
+        29,
+        26,
+        29
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": true,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "National Institute of Mental Health",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "Multi-session test-retest reliability",
+      "studyDomain": "Resting state fMRI",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2023-10-04T20:19:13.500Z"
+  },
+  "source": "openneuro"
+}

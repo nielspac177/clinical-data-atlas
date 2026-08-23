@@ -1,0 +1,27 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:6a953aa29d7b6ca62a76b885514806bec7205c0d2c2b845c60c683fa02dd03d5",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "other"
+    ],
+    "id": "physionet:mimic-iv-ext-apixaban-trial",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "extracting information from clinical notes",
+        "value": "clinical_notes"
+      },
+      {
+        "evidence": "a random sample of 100 patient notes from MIMIC-IV",
+        "value": "EHR"
+      }
+    ],
+    "population": "A random sample of 100 patient notes from MIMIC-IV, taken from after 2012 to avoid overlap with MIMIC-III notes",
+    "summary": "Question-answer pairs built from MIMIC-IV patient notes, using 23 questions resembling apixaban clinical trial eligibility criteria, released to evaluate large language models at extracting information from clinical notes."
+  },
+  "prompt_version": "v1"
+}

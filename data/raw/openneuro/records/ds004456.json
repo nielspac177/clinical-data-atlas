@@ -1,0 +1,158 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004456",
+  "payload": {
+    "created": "2023-01-31T15:59:52.641Z",
+    "id": "ds004456",
+    "latestSnapshot": {
+      "created": "2025-07-14T08:36:54.000Z",
+      "description": {
+        "Authors": [
+          "Agata Wolna",
+          "Zofia Wodniecka"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004456.v1.0.2",
+        "Funding": [
+          "The collection of this dataset was supported by the grant from National Science Centre Poland awarded to Zofia Wodniecka (OPUS 2017/27/B/HS6/00959)."
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Bilingual speech production with functional localizers",
+        "ReferencesAndLinks": null
+      },
+      "readme": "Dataset title: Bilingual speech production with functional localizers\nThis dataset was created to explore neural mechanisms of bilingual speech production.\n\nIt includes data from forty-two Polish-English bilinguals who completed a series of tasks:\n\n1. Picture naming in L1 and L2 (overt production)\n2. Verbal Fluency in L1 (overt production)\n3. Stroop in L1 (overt production)\n4. Language localizer in L1 (Alice version, see Malik Moraleda, Ayyash et al., 2020)\n5. Multiple Demand localizer (based on visual working memory task, see Fedorenko et al., 2013)\n6. Articulation task, used as a localizer of functional network supporting articulation\n\nEach participant completed two sessions. Picture naming task was included in each session (4 runs per session) and the remaining tasks were distributed between the two sessions (2 runs per task). The first run of the picture naming task was completed in L1 or L2, with the two conditions counterbalanced between sessions. The remaining 3 runs were always completed in L1. The language of naming for the first run can be derived from the event files: trial_type L1L1 corresponds to naming in L1 and trial_type L2L1 corresponds to naming in L2.\n\nDetails of all tasks and the experimental design are described in https://direct.mit.edu/nol/article/5/2/315/118227.\n\nThe dataset includes anatomical (T1 and T2 weighted), functional, and fieldmap scans for each participant. Anatomical and fieldmap scans were acquired for each session separately. Note! PE-polar fieldmaps were acquired at the beginning (acq-start) and in the end (acq-end) of each session. In the cases when the scanning session needed to be interrupted, some of the tasks functional scans should be corrected using the acq-end scans (see IntendedFor specification in the .json files accompanying fieldmaps).\n\nIn case of any questions please contact Agata Wolna (agata.wolna@uj.edu.pl) or Zofia Wodniecka (zofia.wodniecka@uj.edu.pl).\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "02",
+          "01"
+        ],
+        "size": 61352964938,
+        "subjects": [
+          "10",
+          "34",
+          "03",
+          "35",
+          "44",
+          "19",
+          "07",
+          "27",
+          "42",
+          "20",
+          "23",
+          "41",
+          "14",
+          "28",
+          "13",
+          "45",
+          "24",
+          "15",
+          "01",
+          "43",
+          "29",
+          "38",
+          "40",
+          "21",
+          "22",
+          "30",
+          "06",
+          "17",
+          "26",
+          "37",
+          "16",
+          "39",
+          "12",
+          "11",
+          "31",
+          "18",
+          "09",
+          "08",
+          "25",
+          "36",
+          "33",
+          "05"
+        ],
+        "tasks": [
+          "Articualtion",
+          "Stroop",
+          "PictureNaming",
+          "Alice",
+          "visualWorkingMemory",
+          "VerbalFluency"
+        ],
+        "totalFiles": 3357
+      },
+      "tag": "1.0.2"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        21,
+        23,
+        23,
+        22,
+        23,
+        20,
+        23,
+        21,
+        21,
+        21,
+        19,
+        20,
+        25,
+        24,
+        29,
+        20,
+        21,
+        19,
+        20,
+        23,
+        22,
+        22,
+        21,
+        24,
+        20,
+        24,
+        21,
+        32,
+        27,
+        22,
+        21,
+        28,
+        27,
+        27,
+        26,
+        30,
+        21,
+        25,
+        22,
+        30,
+        26,
+        27
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "National Science Centre Poland",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "Bilingual Language Production",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2023-01-31T21:23:27.501Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,86 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006035",
+  "payload": {
+    "created": "2025-03-20T05:08:27.231Z",
+    "id": "ds006035",
+    "latestSnapshot": {
+      "created": "2025-03-21T18:44:26.000Z",
+      "description": {
+        "Authors": [
+          "Fa-Hsuan Lin",
+          "Deirdre Foxe von Pechmann",
+          "Kaisu Lankinen",
+          "Seppo Ahlfors",
+          "Bruce Rosen",
+          "Jyrki Ahveninen",
+          "Matti Hämäläinen",
+          "Tommi Raij"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006035.v1.0.0",
+        "Funding": [
+          "NIH P41RR014075, P41EB030006"
+        ],
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "somatomotor",
+        "ReferencesAndLinks": []
+      },
+      "readme": " \nAccession: #: ds006035\nDescription: Multi-subject, multi-modal (sMRI+MEG+EEG) neuroimaging dataset for median nerve stimulation and motor responses. \nThis dataset contains MRI (T1w), MEG, and EEG data for median nerve electrical stimuli delivered at the right wrist. \nThe task was to respond by lifting the left hand idex finger as quickly as possible after each right median nerve stimulus.  \n\nmeg/\n\n----\n\nThree anatomical fiducials were digitized for aligning the MEG with the MRI: \n1. nasion (lowest depression between the eyes);\n2. left pre-auricular point;\n3. right pre-auricular point.  \n\n\n\nThe following triggers are included in the .fif files and are also used in the “value” column of the meg events .tsv files:\n\nTrigger     Label                                        Simplified Label\n\n32             somatosensory stimulus      somatosensory\n\n16             finger lift response                finger\n\n\nIf you wish to publish any of these data, please acknowledge the authors. \n\n\n\nBIDS ﻿References\n----------\nAppelhoff, S., Sanderson, M., Brooks, T., Vliet, M., Quentin, R., Holdgraf, C., Chaumon, M., Mikulan, E., Tavabi, K., Höchenberger, R., Welke, D., Brunner, C., Rockhill, A., Larson, E., Gramfort, A. and Jas, M. (2019). MNE-BIDS: Organizing electrophysiological data into the BIDS format and facilitating their analysis. Journal of Open Source Software 4: (1896).https://doi.org/10.21105/joss.01896\n\nNiso, G., Gorgolewski, K. J., Bock, E., Brooks, T. L., Flandin, G., Gramfort, A., Henson, R. N., Jas, M., Litvak, V., Moreau, J., Oostenveld, R., Schoffelen, J., Tadel, F., Wexler, J., Baillet, S. (2018). MEG-BIDS, the brain imaging data structure extended to magnetoencephalography. Scientific Data, 5, 180110.https://doi.org/10.1038/sdata.2018.110\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "meg",
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural"
+        ],
+        "sessions": [
+          "meeg",
+          "mri"
+        ],
+        "size": 3295034095,
+        "subjects": [
+          "sm06",
+          "sm07",
+          "sm04",
+          "sm12",
+          "sm09"
+        ],
+        "tasks": [
+          "somatomotor"
+        ],
+        "totalFiles": 98
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        34,
+        25,
+        40,
+        30,
+        27
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "NIH",
+      "modalities": [
+        "meg",
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "Somatosensory and motor evoked MEG/EEG responses",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2025-03-21T19:05:11.290Z"
+  },
+  "source": "openneuro"
+}

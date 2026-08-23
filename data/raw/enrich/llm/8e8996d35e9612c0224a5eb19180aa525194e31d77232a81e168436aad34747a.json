@@ -1,0 +1,31 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:8e8996d35e9612c0224a5eb19180aa525194e31d77232a81e168436aad34747a",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:cardiac-accel-canine-porcine",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "tri-axial acceleration signals",
+        "value": "other"
+      },
+      {
+        "evidence": "left ventricular pressure (LVP)",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "in some cases ECG as well",
+        "value": "ECG"
+      }
+    ],
+    "population": "289 recordings from 19 canines and 27 porcines, average duration 15 seconds",
+    "summary": "Recordings from accelerometers attached directly to the epicardium of the left ventricle in canines and porcines during interventions altering cardiac function, with simultaneous left ventricular pressure and, in some cases, ECG."
+  },
+  "prompt_version": "v1"
+}

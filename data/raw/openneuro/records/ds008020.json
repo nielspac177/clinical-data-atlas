@@ -1,0 +1,109 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds008020",
+  "payload": {
+    "created": "2026-06-24T17:24:52.967Z",
+    "id": "ds008020",
+    "latestSnapshot": {
+      "created": "2026-06-24T21:06:01.000Z",
+      "description": {
+        "Authors": [
+          "Gael Saib",
+          "Alan P. Koretsky",
+          "S. Lalith Talagala"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds008020.v1.0.4",
+        "Funding": [
+          "This research was supported by the Intramural Research Program of the National Institutes of Health (NIH). The contributions of the NIH authors were made as part of their official duties as NIH federal employees, are in compliance with agency policy requirements, and are considered Works of the United States Government. However, the findings and conclusions presented in this paper are those of the authors and do not necessarily reflect the views of the NIH or the U.S. Department of Health and Human Services. All authors were supported by the Intramural Research Program of the National Institute of Neurological Disorders and Stroke at the NIH."
+        ],
+        "HowToAcknowledge": "7T 3D-EPI PCASL with High SNR Efficiency and Robustness to Through-Plane B0 Field Gradients. Gael Saib, Alan P. Koretsky and S. Lalith Talagala. Magnetic Resonance in Medicine (2026)",
+        "License": "CC0",
+        "Name": "7T 3D-EPI PCASL with High SNR Efficiency and Robustness to Through-Plane B0 Field Gradients",
+        "ReferencesAndLinks": [
+          "https://doi.org/10.1002/mrm.70491"
+        ]
+      },
+      "readme": "Description\n\nHere we share the main data reported in the following paper: 7T 3D-EPI PCASL with High SNR Efficiency and Robustness to Through-Plane B0 Field Gradients. Gael Saib, Alan P. Koretsky and S. Lalith Talagala. Magnetic Resonance in Medicine (2026): https://doi.org/10.1002/mrm.70491. Below we provide a brief description of the data. A detailed description of the data can be found in the paper cited above. If you have any questions about the data, please reach out to Gael Saib at saibgh@nih.gov.\n\nThis dataset contains 7 Tesla human brain MRI data from 21 subjects acquired as part of two PCASL optimization studies. Subjects sub-01 to sub-09 correspond to the labeling-duration experiment, whereas subjects sub-10 to sub-21 correspond to the mean-gradient experiment. The dataset includes MP2RAGE anatomical images, 3D-EPI PCASL acquisitions, and associated processed datasets.\n\n------------------------------------------------Labeling Duration experiment--------------------------------------------\n\nDataset Organization\n\nsub-XX/\n\tanat/\n\t\tsub-XX_UNIT1.nii\n\tperf/\n\t\tsub-XX_acq-LD500_asl.nii\n\t\tsub-XX_acq-LD1000_asl.nii\n\t\tsub-XX_acq-LD1500_asl.nii\n\t\tsub-XX_acq-LD2000_asl.nii\n\t\tsub-XX_acq-LD2500_asl.nii\n\t\tsub-XX_acq-LD3000_asl.nii\n\t\tsub-XX_acq-LD3500_asl.nii\n\t\tsub-XX_acq-LD4000_asl.nii\n\tderivatives/\n\t\tperfusion/\n\t\tsegmentation/\n\nEach subject folder is organized as follows:\n\nAnatomical Data\n\nanat/\n\nsub-XX_UNIT1.nii\n\nBrain-extracted MP2RAGE UNI image used as the anatomical reference for registration and tissue segmentation.\n\nPerfusion Data\n\nperf/\n\nContains the PCASL acquisitions acquired with different labeling durations.\nFiles follow the naming convention:\n\nsub-XX_acq-LDXXXX_asl.nii\n\nwhere LDXXXX indicates the labeling duration in milliseconds.\n\nAcquisition label -> Labeling duration (s)\nLD500 -> 0.5\nLD1000 -> 1.0\nLD1500 -> 1.5\nLD2000 -> 2.0\nLD2500 -> 2.5\nLD3000 -> 3.0\nLD3500 -> 3.5\nLD4000 -> 4.0\n\nEach ASL file contains one M0 image followed by alternating control and label images.\n\nDerivatives\n\nderivatives/perfusion/\n\nContains mean control-label difference image normalized by M0 derived from the corresponding ASL acquisition.\nFiles follow the naming convention:\n\nsub-XX_acq-LDXXXX_ndiff.nii\n\nThese images were used for perfusion quantification and analysis.\n\nderivatives/segmentation/\n\nContains tissue segmentation maps registered to perfusion image space.\nFiles follow the naming convention:\n\nsub-XX_acq-LDXXXX_FAST_seg_in_perf.nii.gz\n\nThese segmentation maps were generated using FSL FAST and transformed into the corresponding perfusion image space. They provide gray matter, white matter, and cerebrospinal fluid tissue classifications for quantitative analysis.\n\n\n------------------------------------------------Mean Gradient experiment--------------------------------------------\n\nDataset Organization\n\nsub-XX/\n\tanat/\n\t\tsub-XX_UNIT1.nii\n\tperf/\n\t\tsub-XX_acq-Gm08_asl.nii\n\t\tsub-XX_acq-Gm06_asl.nii\n\t\tsub-XX_acq-Gm04_asl.nii\n\t\tsub-XX_acq-Gm02_asl.nii\n\t\tsub-XX_acq-G0_asl.nii\n\t\tsub-XX_acq-Gp02_asl.nii\n\t\tsub-XX_acq-Gp04_asl.nii\n\t\tsub-XX_acq-Gp06_asl.nii\n\t\tsub-XX_acq-Gp08_asl.nii\n\tderivatives/\n\t\tatlas/\n\t\tfmap/\n\t\tperfusion/\n\t\tsegmentation/\n\nEach subject folder is organized as follows:\n\nAnatomical Data\n\nanat/\n\nsub-XX_UNIT1.nii\n\nBrain-extracted MP2RAGE UNI image used for tissue segmentation, image registration, and anatomical reference.\n\nPerfusion Data\n\nperf/\n\nContains the PCASL perfusion images acquired under nine different mean through-plane gradient conditions.\n\nsub-XX_acq-GYY_asl.nii\n\nwhere GYY denotes the applied mean gradient condition:\n\nAcquisition label -> Mean gradient (mT/m)\nGm08 -> −0.8\nGm06 -> −0.6\nGm04 -> −0.4\nGm02 -> −0.2\nG0 -> 0.0\nGp02 -> +0.2\nGp04 -> +0.4\nGp06 -> +0.6\nGp08 -> +0.8\n\nEach ASL file contains one M0 image followed by alternating control and label images.\n\nDerivatives\n\nderivatives/fmap/\n\nContains whole-brain B0 and flip-angle maps together with vessel masks extracted from TOF angiography.\n\nsub-XX_B0map.mat: Whole-brain B0 field map.\nsub-XX_FAmap.mat: Whole-brain flip-angle map.\nsub-XX_VesselMasks.mat: Feeding artery masks extracted from TOF angiography.\nsub-XX_MaskedB0_Vessels.mat: B0 values sampled within the vessel masks.\nsub-XX_MaskedFA_Vessels.mat: Flip-angle values sampled within the vessel masks.\n\nThese data were used to characterize magnetic field and transmit field conditions along the feeding arteries supplying the labeling plane.\n\nderivatives/atlas/\n\nContains atlas arterial labels registered to the corresponding perfusion image space.\nFiles follow the naming convention:\n\nsub-XX_acq-GYY_atlas_in_perf.nii.gz\n\nderivatives/segmentation/\n\nContains tissue segmentation maps generated using FSL FAST and registered to perfusion space.\nFiles follow the naming convention:\n\nsub-XX_acq-GYY_FAST_seg_in_perf.nii.gz\n\nThese files provide gray matter, white matter, and cerebrospinal fluid tissue classifications aligned with the perfusion images.\n\nderivatives/perfusion/\n\nContains mean control-label difference image normalized by M0 derived from the PCASL acquisitions.\nFiles follow the naming convention:\n\nsub-XX_acq-GYY_ndiff.nii\n\nThese images were used for quantitative perfusion analysis and estimation of perfusion-related metrics.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_perfusion",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 2353875564,
+        "subjects": [
+          "19",
+          "12",
+          "04",
+          "10",
+          "06",
+          "07",
+          "17",
+          "14",
+          "21",
+          "15",
+          "16",
+          "11",
+          "18",
+          "05",
+          "13",
+          "08",
+          "09",
+          "01",
+          "02",
+          "03",
+          "20"
+        ],
+        "tasks": [],
+        "totalFiles": 566
+      },
+      "tag": "1.0.4"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "https://doi.org/10.1002/mrm.70491",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2026-06-24T17:39:51.163Z"
+  },
+  "source": "openneuro"
+}

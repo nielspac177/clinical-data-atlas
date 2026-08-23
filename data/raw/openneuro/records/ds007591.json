@@ -1,0 +1,86 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007591",
+  "payload": {
+    "created": "2026-03-28T11:25:10.663Z",
+    "id": "ds007591",
+    "latestSnapshot": {
+      "created": "2026-03-31T19:35:29.000Z",
+      "description": {
+        "Authors": [
+          "Motoshige Sato",
+          "Yasuo Kabe",
+          "Sensho Nobe",
+          "Akito Yoshida",
+          "Masakazu Inoue",
+          "Mayumi Shimizu",
+          "Kenichi Tomeoka",
+          "Shuntaro Sasai"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007591.v1.0.1",
+        "Funding": [
+          "JST, Moonshot R&D Grant Number JPMJMS2012"
+        ],
+        "HowToAcknowledge": "Please cite the following paper (doi: https://doi.org/10.1101/2024.05.09.591996) and this dataset using its OpenNeuro DOI.",
+        "License": "CC0",
+        "Name": "Delineating neural contributions to EEG-based speech decoding",
+        "ReferencesAndLinks": [
+          "https://doi.org/10.1101/2024.05.09.591996"
+        ]
+      },
+      "readme": "# Delineating neural contributions to EEG-based speech decoding\n\n## Overview\n128-channel EEG recordings during speech production tasks.\nParticipants produced one of 5 color words (green, magenta, orange, violet, yellow)\nunder three speech conditions: overt, minimally overt, and covert.\n\nEach trial consists of 5 repetitions of the same word (1.25 sec per repetition).\n\n## Channel layout (139 channels total)\n- Channels 1-128: EEG\n- Channels 129-130: DISPLAY (bipolar pair, misc)\n- Channels 131-132: MIC (bipolar pair, misc)\n- Channels 133-134: EOG (bipolar pair)\n- Channels 135-136: EMG upper orbicularis oris (bipolar pair)\n- Channels 137-138: EMG lower orbicularis oris (bipolar pair)\n- Channel 139: TRIGGER (marks trial onsets)\n\n## Session types\n- calibration: Offline data collection for decoder training\n- online: Real-time decoding with trained decoder\n\n## Preprocessing note\nThe EEG channels were recorded with a 10x preamp gain.\nRaw values have been converted to Volts (×1e-6).\n\n## Code\nCode for data loading, preprocessing, and decoding models is available at:\nhttps://github.com/arayabrain/uhd-gmail-public\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "eeg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [
+          "20230529",
+          "20230511",
+          "20230523",
+          "20230524",
+          "20230516",
+          "20230512"
+        ],
+        "size": 1737849881,
+        "subjects": [
+          "1",
+          "3",
+          "2"
+        ],
+        "tasks": [
+          "overt",
+          "covert",
+          "minimallyovert"
+        ],
+        "totalFiles": 102
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "eeg"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2026-03-28T17:08:33.713Z"
+  },
+  "source": "openneuro"
+}

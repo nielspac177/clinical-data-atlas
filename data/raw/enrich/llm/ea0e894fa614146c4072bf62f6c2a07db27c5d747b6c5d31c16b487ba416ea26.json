@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:ea0e894fa614146c4072bf62f6c2a07db27c5d747b6c5d31c16b487ba416ea26",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Term-Preterm ElectroHysteroGram DataSet with Tocogram",
+        "label": "Term-Preterm"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "obstetrics_gynecology"
+    ],
+    "id": "physionet:tpehgt",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "uterine EHG records",
+        "value": "EMG"
+      },
+      {
+        "evidence": "external tocogram measuring mechanical uterine activity (TOCO signal)",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": "Pregnant women (26 four-signal records) and non-pregnant women (five records)",
+    "summary": "Thirty-minute uterine electrohysterogram records with a simultaneously recorded external tocogram of mechanical uterine activity, covering both pregnant and non-pregnant women."
+  },
+  "prompt_version": "v1"
+}

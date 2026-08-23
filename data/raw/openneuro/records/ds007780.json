@@ -1,0 +1,95 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007780",
+  "payload": {
+    "created": "2026-05-09T10:38:41.118Z",
+    "id": "ds007780",
+    "latestSnapshot": {
+      "created": "2026-05-09T11:21:25.000Z",
+      "description": {
+        "Authors": [
+          "Letitia M. Schneider",
+          "Isma Zulfiqar",
+          "Yaël Balbastre",
+          "Lori L. Holt",
+          "Martina F. Callaghan",
+          "Frederic Dick"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007780.v1.0.0",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Auditory HRF",
+        "ReferencesAndLinks": null
+      },
+      "readme": "# Dataset overview\n\nThis OpenNeuro release contains two fMRI datasets acquired on a 3 T Siemens Prisma scanner as part of a study characterising the auditory hemodynamic response function (HRF) using fast fMRI.\n\nThe two datasets differ in acquisition parameters but employ the same experimental paradigm, enabling assessment of reproducibility across sessions and acquisition protocols.\n\n---\n\n## MRI acquisition\n\nBoth datasets were acquired with a repetition time (TR) of 1 s and whole-brain coverage (48 slices), but differed in several parameters:\n\n- Bandwidth: 2620 Hz (Original dataset) vs. 1985 Hz (Replication dataset)\n- Voxel resolution: 2 mm vs. 2.5 mm isotropic\n- Echo time (TE): 35.2 ms vs. 28 ms\n\n---\n\n## Experimental task\n\nParticipants passively listened to brief (500 ms) environmental sounds presented with long inter-stimulus intervals (>18.5 s), designed to allow characterisation of the full auditory HRF. Each fMRI session consisted of 6 runs of this passive listening paradigm.\n\n---\n\n## Datasets\n\n### Original dataset\n- Participants completed 2 fMRI sessions.\n- Each session included 6 functional runs.\n- Participants additionally completed one multi-parameter mapping (MPM) session.\n\n### Replication dataset\n- Participants completed 4 fMRI sessions.\n- Each session included 6 functional runs using the same auditory stimuli.\n\nParticipants 1–4 in the Original dataset are the same individuals as Participants 1–4 in the Replication dataset.\n\n---\n\n## Data quality and notes\n\n- Participants were scanned using a head fixation device to minimise motion. Each participant has one MPM available.\n- `sub-rep05` is missing a fieldmap for `ses-01`.\n\n---\n\n## Intended use\n\nThe dataset is intended for methodological work on HRF estimation, fast fMRI, and auditory cortex, as well as for reuse in studies of auditory perception and hemodynamic modelling.",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "02",
+          "04",
+          "03",
+          "01"
+        ],
+        "size": 33514382654,
+        "subjects": [
+          "rep02",
+          "rep01",
+          "orig02",
+          "rep05",
+          "rep03",
+          "orig04",
+          "rep06",
+          "orig05",
+          "orig03",
+          "rep04",
+          "orig01"
+        ],
+        "tasks": [
+          "auditory"
+        ],
+        "totalFiles": 766
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2026-05-09T11:22:05.746Z"
+  },
+  "source": "openneuro"
+}

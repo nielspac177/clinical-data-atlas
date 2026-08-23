@@ -1,0 +1,30 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:702adc80cbb3e9304965ec9b810a5ce74391643abc887c336baf84121763cb53",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "gout flare status",
+        "label": "gout flare"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "musculoskeletal"
+    ],
+    "id": "physionet:emer-complaint-gout",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "free text triage nurse chief complaints",
+        "value": "clinical_notes"
+      }
+    ],
+    "population": "Chief complaints collected from 2019 to 2020 at an academic medical center in the Deep South, from an urban Black majority Emergency Department patient population",
+    "summary": "Two corpora of free-text emergency department triage chief complaints annotated for gout flare status by retrospective manual review, with a subset verified through rheumatologist chart review, intended for natural language processing work."
+  },
+  "prompt_version": "v1"
+}

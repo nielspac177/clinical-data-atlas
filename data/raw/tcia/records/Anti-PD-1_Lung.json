@@ -1,0 +1,599 @@
+{
+  "endpoints": [
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getCollectionValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getModalityValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getBodyPartValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getPatient",
+    "https://api.datacite.org/dois?prefix=10.7937"
+  ],
+  "harvest_method": "api:nbia+datacite",
+  "native_id": "Anti-PD-1_Lung",
+  "payload": {
+    "datacite": {
+      "citationCount": 11,
+      "container": {},
+      "contentUrl": [],
+      "contributors": [
+        {
+          "affiliation": [],
+          "contributorType": "Other",
+          "name": "TCIA Team",
+          "nameIdentifiers": []
+        }
+      ],
+      "created": "2019-04-18T19:28:37Z",
+      "creators": [
+        {
+          "affiliation": [],
+          "familyName": "Patnana",
+          "givenName": "Madhavi",
+          "name": "Patnana, Madhavi",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0001-8135-8001",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Patel",
+          "givenName": "Sapna",
+          "name": "Patel, Sapna",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Tsao",
+          "givenName": "Anne S",
+          "name": "Tsao, Anne S",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2019",
+          "dateType": "Issued"
+        }
+      ],
+      "descriptions": [
+        {
+          "description": "This collection comprises 46 lung cases treated with anti-PD1 immunotherapy in 2016, each with 2 or more imaging timepoints.",
+          "descriptionType": "Abstract"
+        }
+      ],
+      "doi": "10.7937/tcia.2019.zjjwb9ip",
+      "downloadCount": 0,
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "Anti-PD-1_Lung",
+          "identifierType": "TCIA Short Name"
+        }
+      ],
+      "isActive": true,
+      "language": null,
+      "metadataVersion": 9,
+      "partCount": 0,
+      "partOfCount": 0,
+      "publicationYear": 2019,
+      "published": null,
+      "publisher": "The Cancer Imaging Archive",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2019-04-18T19:28:37Z",
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "10.3389/fonc.2021.637804",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.18287/jbpe22.08.030307",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1002/cpe.7251",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.acra.2024.01.013",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1038/s41597-024-03337-6",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.11591/ijeecs.v24.i1.pp126-133",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1038/s41597-024-03977-8",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        }
+      ],
+      "relatedItems": [],
+      "rightsList": [
+        {
+          "rights": "Creative Commons Attribution 3.0 Unported",
+          "rightsIdentifier": "cc-by-3.0",
+          "rightsIdentifierScheme": "SPDX",
+          "rightsUri": "https://creativecommons.org/licenses/by/3.0/legalcode",
+          "schemeUri": "https://spdx.org/licenses/"
+        }
+      ],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "fabricaForm",
+      "state": "findable",
+      "subjects": [],
+      "titles": [
+        {
+          "title": "Data from Anti-PD-1 Immunotherapy Lung"
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceType": "Dataset",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2025-06-01T01:01:10Z",
+      "url": "https://www.cancerimagingarchive.net/collection/anti-pd-1_lung/",
+      "version": "1",
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 2427
+    },
+    "nbia": {
+      "body_parts": [
+        "ABDOMEN",
+        "CHEST",
+        "CHESTABDPELVIS",
+        "HEAD"
+      ],
+      "collection": "Anti-PD-1_Lung",
+      "modalities": [
+        "CT",
+        "OT",
+        "PT"
+      ],
+      "patients": [
+        {
+          "Collection": "Anti-PD-1_Lung",
+          "PatientId": "PD-1-Lung-00039",
+          "PatientName": "PD-1-Lung-00039",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Anti-PD-1_Lung",
+          "PatientId": "PD-1-Lung-00026",
+          "PatientName": "PD-1-Lung-00026",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Anti-PD-1_Lung",
+          "PatientId": "PD-1-Lung-00018",
+          "PatientName": "PD-1-Lung-00018",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Anti-PD-1_Lung",
+          "PatientId": "PD-1-Lung-00017",
+          "PatientName": "PD-1-Lung-00017",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Anti-PD-1_Lung",
+          "PatientId": "PD-1-Lung-00003",
+          "PatientName": "PD-1-Lung-00003",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Anti-PD-1_Lung",
+          "PatientId": "PD-1-Lung-00005",
+          "PatientName": "PD-1-Lung-00005",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Anti-PD-1_Lung",
+          "PatientId": "PD-1-Lung-00008",
+          "PatientName": "PD-1-Lung-00008",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Anti-PD-1_Lung",
+          "PatientId": "PD-1-Lung-00028",
+          "PatientName": "PD-1-Lung-00028",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Anti-PD-1_Lung",
+          "PatientId": "PD-1-Lung-00035",
+          "PatientName": "PD-1-Lung-00035",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Anti-PD-1_Lung",
+          "PatientId": "PD-1-Lung-00044",
+          "PatientName": "PD-1-Lung-00044",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Anti-PD-1_Lung",
+          "PatientId": "PD-1-Lung-00043",
+          "PatientName": "PD-1-Lung-00043",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Anti-PD-1_Lung",
+          "PatientId": "PD-1-Lung-00030",
+          "PatientName": "PD-1-Lung-00030",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Anti-PD-1_Lung",
+          "PatientId": "PD-1-Lung-00019",
+          "PatientName": "PD-1-Lung-00019",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Anti-PD-1_Lung",
+          "PatientId": "PD-1-Lung-00031",
+          "PatientName": "PD-1-Lung-00031",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Anti-PD-1_Lung",
+          "PatientId": "PD-1-Lung-00033",
+          "PatientName": "PD-1-Lung-00033",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Anti-PD-1_Lung",
+          "PatientId": "PD-1-Lung-00024",
+          "PatientName": "PD-1-Lung-00024",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Anti-PD-1_Lung",
+          "PatientId": "PD-1-Lung-00015",
+          "PatientName": "PD-1-Lung-00015",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Anti-PD-1_Lung",
+          "EthnicGroup": "Not Hispanic or",
+          "PatientId": "PD-1-Lung-00022",
+          "PatientName": "PD-1-Lung-00022",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Anti-PD-1_Lung",
+          "PatientId": "PD-1-Lung-00029",
+          "PatientName": "PD-1-Lung-00029",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Anti-PD-1_Lung",
+          "PatientId": "PD-1-Lung-00011",
+          "PatientName": "PD-1-Lung-00011",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Anti-PD-1_Lung",
+          "PatientId": "PD-1-Lung-00009",
+          "PatientName": "PD-1-Lung-00009",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Anti-PD-1_Lung",
+          "PatientId": "PD-1-Lung-00004",
+          "PatientName": "PD-1-Lung-00004",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Anti-PD-1_Lung",
+          "PatientId": "PD-1-Lung-00020",
+          "PatientName": "PD-1-Lung-00020",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Anti-PD-1_Lung",
+          "PatientId": "PD-1-Lung-00012",
+          "PatientName": "PD-1-Lung-00012",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Anti-PD-1_Lung",
+          "PatientId": "PD-1-Lung-00002",
+          "PatientName": "PD-1-Lung-00002",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Anti-PD-1_Lung",
+          "PatientId": "PD-1-Lung-00037",
+          "PatientName": "PD-1-Lung-00037",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Anti-PD-1_Lung",
+          "PatientId": "PD-1-Lung-00025",
+          "PatientName": "PD-1-Lung-00025",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Anti-PD-1_Lung",
+          "PatientId": "PD-1-Lung-00040",
+          "PatientName": "PD-1-Lung-00040",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Anti-PD-1_Lung",
+          "PatientId": "PD-1-Lung-00014",
+          "PatientName": "PD-1-Lung-00014",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Anti-PD-1_Lung",
+          "PatientId": "PD-1-Lung-00036",
+          "PatientName": "PD-1-Lung-00036",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Anti-PD-1_Lung",
+          "PatientId": "PD-1-Lung-00007",
+          "PatientName": "PD-1-Lung-00007",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Anti-PD-1_Lung",
+          "PatientId": "PD-1-Lung-00046",
+          "PatientName": "PD-1-Lung-00046",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Anti-PD-1_Lung",
+          "PatientId": "PD-1-Lung-00016",
+          "PatientName": "PD-1-Lung-00016",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Anti-PD-1_Lung",
+          "PatientId": "PD-1-Lung-00001",
+          "PatientName": "PD-1-Lung-00001",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Anti-PD-1_Lung",
+          "PatientId": "PD-1-Lung-00021",
+          "PatientName": "PD-1-Lung-00021",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Anti-PD-1_Lung",
+          "PatientId": "PD-1-Lung-00045",
+          "PatientName": "PD-1-Lung-00045",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Anti-PD-1_Lung",
+          "PatientId": "PD-1-Lung-00027",
+          "PatientName": "PD-1-Lung-00027",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Anti-PD-1_Lung",
+          "PatientId": "PD-1-Lung-00032",
+          "PatientName": "PD-1-Lung-00032",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Anti-PD-1_Lung",
+          "PatientId": "PD-1-Lung-00041",
+          "PatientName": "PD-1-Lung-00041",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Anti-PD-1_Lung",
+          "EthnicGroup": "Non-Hispanic [1]",
+          "PatientId": "PD-1-Lung-00038",
+          "PatientName": "PD-1-Lung-00038",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Anti-PD-1_Lung",
+          "EthnicGroup": "Not Hispanic or",
+          "PatientId": "PD-1-Lung-00034",
+          "PatientName": "PD-1-Lung-00034",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Anti-PD-1_Lung",
+          "PatientId": "PD-1-Lung-00013",
+          "PatientName": "PD-1-Lung-00013",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Anti-PD-1_Lung",
+          "PatientId": "PD-1-Lung-00006",
+          "PatientName": "PD-1-Lung-00006",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Anti-PD-1_Lung",
+          "EthnicGroup": "Not Hispanic or",
+          "PatientId": "PD-1-Lung-00042",
+          "PatientName": "PD-1-Lung-00042",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Anti-PD-1_Lung",
+          "PatientId": "PD-1-Lung-00010",
+          "PatientName": "PD-1-Lung-00010",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Anti-PD-1_Lung",
+          "PatientId": "PD-1-Lung-00023",
+          "PatientName": "PD-1-Lung-00023",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        }
+      ]
+    }
+  },
+  "source": "tcia"
+}

@@ -1,0 +1,34 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:4d2c7e224820a5f822943e4bdc6def423e7785d815d15382e4208dc0598b241c",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "surgery",
+      "neuroscience"
+    ],
+    "id": "physionet:eeg-eye-gaze-data",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "electroencephalogram (EEG) and eye-gaze data",
+        "value": "EEG"
+      },
+      {
+        "evidence": "eye-gaze data collected from 25 participants",
+        "value": "eye_tracking"
+      },
+      {
+        "evidence": "performance scores (scale: 0 to 100)",
+        "value": "behavioral"
+      }
+    ],
+    "population": "25 participants with varying levels of robot-assisted surgery experience performing simulator tasks.",
+    "summary": "EEG and eye-gaze recordings from participants of varying robot-assisted surgery experience performing tasks on a da Vinci Skills Simulator, paired with simulator-generated performance scores for objective skill evaluation."
+  },
+  "prompt_version": "v1"
+}

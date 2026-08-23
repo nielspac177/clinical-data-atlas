@@ -1,0 +1,34 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:f5e358a5658876fcdde5b5829d762cad4cc1b67697b3d7a2734e69020da270ad",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "intratumor heterogeneity with prognosis in lung adenocarcinoma",
+        "label": "lung adenocarcinoma"
+      },
+      {
+        "evidence": "CT scans with known tumors",
+        "label": "tumors"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "pulmonology",
+      "surgery"
+    ],
+    "id": "tcia:lungct-diagnosis",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "diagnostic contrast enhanced CT scans",
+        "value": "CT"
+      }
+    ],
+    "population": "Patients with known tumors, imaged at diagnosis and prior to surgery, with sufficient follow-up.",
+    "summary": "Small set of diagnostic contrast enhanced CT scans with known tumors, acquired retrospectively with variable slice thickness. Supports work relating tumor shape complexity and intratumor heterogeneity to prognosis in lung adenocarcinoma."
+  },
+  "prompt_version": "v1"
+}

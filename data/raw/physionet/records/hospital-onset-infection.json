@@ -1,0 +1,39 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "hospital-onset-infection",
+  "payload": {
+    "abstract": "<p>This repository contains a de-identified and curated patient-level dataset for modeling the impact of fine-grained environmental and patient-level factors on nosocomial acquisition of a wide range of drug-susceptible and drug-resistant pathogens. The data are derived from the clinical data warehouses of the Mass General Brigham health system and span all adult inpatients admitted between May 2015 and July 2024.</p>\n<p>We use a matched case/control design and provide two datasets reflecting distinctive but complementary strategies to model our outcome. The first, which we call the <strong>environmental analysis</strong>, investigates the impact of the hospital unit microbiome, using colonization pressure as a proxy, and matches on prior antibiotic exposure to equalize its selective impact across cases and controls. The second strategy, which we call the <strong>patient analysis</strong>, investigates the impact of prior fine-grained antibiotic exposures and matches controls spatiotemporally to cases based on their time of entry into the same ward, to equalize the impact of the hospital microbiome.</p>\n<p>Each observation in the dataset corresponds to a hospitalization. We look at nosocomial acquisition of 11 common drug-susceptible and drug-resistant pathogens, with cases having a culture positive for the target pathogen between day 3 and day 30 after admission into their room.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 11082414,
+    "core_doi": "10.13026/pa4z-5293",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 38336601,
+    "public_project_uuid": "7ad717bf-2f7a-4300-b30a-deae855dbe90",
+    "publish_date": "2025-11-04",
+    "resource_type": "Database",
+    "short_description": "NPA-CP is a freely accessible dataset derived from electronic health record (EHR) information at MGB between 2015 and 2024. The dataset includes 11 different pathogens and can be used to predict hospital-onset infections for these pathogens.",
+    "slug": "hospital-onset-infection",
+    "source_url": "https://physionet.org/content/hospital-onset-infection/1.0.0/",
+    "title": "Predictors of Hospital Onset Infection: A Matched Retrospective Cohort Dataset",
+    "topics": [
+      "infection control",
+      "clinical machine learning",
+      "infectious diseases",
+      "electronic health records",
+      "hospital onset infection",
+      "colonization pressure"
+    ],
+    "version": "1.0.0",
+    "version_doi": "10.13026/k70x-0m81"
+  },
+  "source": "physionet"
+}

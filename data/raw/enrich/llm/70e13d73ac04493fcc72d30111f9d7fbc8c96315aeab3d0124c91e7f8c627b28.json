@@ -1,0 +1,35 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:70e13d73ac04493fcc72d30111f9d7fbc8c96315aeab3d0124c91e7f8c627b28",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "new studies on arrhythmia",
+        "label": "arrhythmia"
+      },
+      {
+        "evidence": "such as atrial fibrillation",
+        "label": "atrial fibrillation"
+      }
+    ],
+    "countries": [
+      "CN"
+    ],
+    "domains": [
+      "cardiology",
+      "public_health"
+    ],
+    "id": "physionet:ecg-arrhythmia",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "12-lead electrocardiogram (ECG) signals",
+        "value": "ECG"
+      }
+    ],
+    "population": "45,152 patients with 12-lead ECGs",
+    "summary": "Twelve-lead ECG recordings from 45,152 patients at a 500 Hz sampling rate, labeled by professional experts, covering multiple common rhythms and additional cardiovascular conditions, for arrhythmia research."
+  },
+  "prompt_version": "v1"
+}

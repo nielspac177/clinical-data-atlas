@@ -1,0 +1,39 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:6651fad3a0f4ad74d84cc8dabecde1c4303964a5dfeea8d2ba502d7a37fb2227",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "breast and pancreatic cancer progress notes",
+        "label": "breast cancer"
+      },
+      {
+        "evidence": "de-identified breast and pancreatic cancer progress notes",
+        "label": "pancreatic cancer"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "oncology",
+      "gastroenterology_hepatology"
+    ],
+    "id": "physionet:curated-oncology-reports",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "clinical progress notes",
+        "value": "clinical_notes"
+      },
+      {
+        "evidence": "electronic health records",
+        "value": "EHR"
+      }
+    ],
+    "population": "40 de-identified breast and pancreatic cancer progress notes at University of California, San Francisco",
+    "summary": "Medical oncology progress notes annotated by oncology fellows and medical students with fine-grained oncology entities, modifiers, and relationships, created to evaluate large language models on extracting oncological information from narrative note sections."
+  },
+  "prompt_version": "v1"
+}

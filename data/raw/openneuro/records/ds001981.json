@@ -1,0 +1,120 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds001981",
+  "payload": {
+    "created": "2019-06-11T15:17:41.064Z",
+    "id": "ds001981",
+    "latestSnapshot": {
+      "created": "2019-11-13T13:28:19.000Z",
+      "description": {
+        "Authors": [
+          "Nikoloz Sirmpilatze",
+          "Juergen Baudewig",
+          "Susann Boretius"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds001981.v1.0.3",
+        "Funding": [
+          "DFG Research Center for Nanoscale Microscopy and Molecular Physiology of the Brain (CNMPB)",
+          "German Academic Exchange Service (DAAD)"
+        ],
+        "HowToAcknowledge": "Please cite this article: Sirmpilatze, N., Baudewig, J. & Boretius, S. Temporal stability of fMRI in medetomidine-anesthetized rats. Sci Rep 9, 16673 (2019) doi:10.1038/s41598-019-53144-y",
+        "License": "CC0",
+        "Name": "Temporal stability of fMRI in medetomidine-anesthetized rats",
+        "ReferencesAndLinks": [
+          "Sirmpilatze, N., Baudewig, J. & Boretius, S. Temporal stability of fMRI in medetomidine-anesthetized rats. Sci Rep 9, 16673 (2019) doi:10.1038/s41598-019-53144-y",
+          "https://www.nature.com/articles/s41598-019-53144-y"
+        ]
+      },
+      "readme": "This dataset contains un-processed MRI data from **24 female adult Wistar rats**, acquired at the Functional Imaging Laboratory of the German Primate Center (Göttingen, Germany). The rats were anesthetized with **medetomidine** for up to six hours. The dataset includes anatomical scans acquired with a T2-weighted TurboRARE sequence (1 per rat) and functional scans (**BOLD fMRI**) acquired with a gradient-echo EPI sequence. Multiple functional scans were acquired per rat over the anesthesia duration (see */sub-id/sub-id_scans.tsv*), including scans with **electrical forepaw stimulation** (**task: efs, 283  runs in total**) and **resting state** scans (**task: rs, 295 runs in total**). The stimulus timing was identical for all efs fMRI runs (see */task-efs_events.tsv*), except for one (*/sub-07/func/sub-07_task-efs_run-01_events.tsv*). Details can be found here: https://www.nature.com/articles/s41598-019-53144-y",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 76066517983,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24"
+        ],
+        "tasks": [
+          "efs",
+          "rs"
+        ],
+        "totalFiles": 1259
+      },
+      "tag": "1.0.3"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "https://doi.org/10.1038/s41598-019-53144-y",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": "Rat",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2019-09-19T15:26:15.317Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,41 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:62a4d944bf543f80b55a2de828a8b581d48be4198e0d6e023960f6a097245ab8",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Acute Myeloid Leukemia",
+        "label": "Acute Myeloid Leukemia"
+      },
+      {
+        "evidence": "Myeloid Leukemias",
+        "label": "Myeloid Leukemias"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "pediatrics"
+    ],
+    "id": "gdc:TARGET-AML",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "WGS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "RNA-Seq",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "2492 human cases",
+    "summary": "TARGET acute myeloid leukemia collection of hematopoietic tumors, combining whole-genome, whole-exome, targeted, RNA and miRNA sequencing with genotyping and methylation arrays, variation calls, clinical and biospecimen data."
+  },
+  "prompt_version": "v1"
+}

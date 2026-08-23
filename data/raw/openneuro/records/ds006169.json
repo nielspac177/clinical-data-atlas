@@ -1,0 +1,153 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006169",
+  "payload": {
+    "created": "2025-04-24T03:20:05.357Z",
+    "id": "ds006169",
+    "latestSnapshot": {
+      "created": "2026-07-02T21:32:54.000Z",
+      "description": {
+        "Authors": [
+          "Ted Turesky",
+          "Elizabeth Escalante",
+          "Megan Loh",
+          "Nadine Gaab"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006169.v1.0.9",
+        "Funding": [
+          "NIH–NICHD R01 HD065762 (2016-2021), the William Hearst Fund (Harvard University), and the Harvard Catalyst/NIH (5UL1RR025758) to NG"
+        ],
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "Longitudinal-Trajectories-Early-Brain-Development-Language",
+        "ReferencesAndLinks": [
+          "Turesky TK, Escalante, E, Loh M, Gaab N. Longitudinal trajectories of brain development from infancy to school age and their relationship to literacy development, https://doi.org/10.1101/2024.06.29.601366."
+        ]
+      },
+      "readme": "This repository contains one of two datasets used in the following study:\n\nTuresky TK, Escalante ES, Loh M, Gaab N. Longitudinal trajectories of brain development from infancy to school age and their relationship to literacy development, https://doi.org/10.1101/2024.06.29.601366.\n\nFor the other dataset, please see https://osf.io/axz5r/.\n\nAll participants included in this repository had MR images from at least two timepoints that passed the QC standards for the manuscript referenced above. Any MR images for these participants from additional timepoints were also included regardless of whether they passed the QC standards.\n\nPlease note that session numbers correspond to the following developmental timepoints:  \nses-01 = infant  \nses-02 = toddler  \nses-03 = pre-reading  \nses-04 = beginning reading  \nses-05 = emergent reading  \n\nFreeSurfer's mri_deface was used to deface all T1w images, except for the following partipants, for whom we used mideface:\n\nImages where mri_deface did not sufficiently distort the face:  \nsub-04/ses-03  \nsub-29/ses-04  \nsub-34/ses-02  \nsub-52/ses-04  \nsub-55/ses-01  \nsub-65/ses-04  \nsub-70/ses-05  \nsub-72/ses-03  \n\nImages where mri_deface cut into brain tissue:  \nsub-12/ses-03  \nsub-12/ses-04  \nsub-15/ses-05  \nsub-57/ses-05  \nsub-62/ses-05  \nsub-79/ses-04  \n  \n\nData dictionary for measures:  \nparticipant_id\t\t\t        -\tparticipant IDs  \ntimepoint\t\t                        -\tINF=infant, TOD=toddler, PRE=pre-reading, BEG=beginning reading, REA=emergent reading  \nsession\t\t\t                        -\ttimepoint number  \nage\t\t\t\t                        -\tage in months  \nSex\t\t\t\t                        -\tbiological sex  (0=male, 1=female)  \nMEd\t\t\t                        -\tmaternal education  \nHLE\t\t\t\t       \t                -\thome literacy composite (z-normalized)  \nFHD\t\t\t\t\t        -\tfamily history of dyslexia (0=none, 1=first degree relative)  \npre_word_access_raw\t\t        -\tPRE WJIV word access subtest raw  \npre_word_fluency_raw\t\t-\tPRE WJIV word fluency subtest raw  \npre_substitution_raw\t\t        -\tPRE WJIV substitution subtest raw  \npre_wjiv_oralcomp_raw\t\t-\tPRE WJIV oral comprehension subtest raw  \npre_wjiv_pvocab_raw\t\t        -\tPRE WJIV picture vocabulary subtest raw  \npre_wjiv_phonproc_standard\t-\tPRE timepoint WJIV phonological processing standardized composite  \npre_wjiv_orallang_standard\t-\tPRE timepoint WJIV oral language standardized composite  \nkbit2_raw\t\t\t                -\tKBIT reasing subtest raw score  \nkbit2_standard\t\t\t        -\tKBIT reasing subtest standard score  \nbeg_wrmt3_wrd_id_raw\t\t-\tBEG timepoint WRMT word id raw score  \nbeg_wrmt3_wrdatt_raw\t\t-\tBEG timepoint WRMT word attack raw score  \nbeg_wrmt3_wrd_id_stnd\t\t-\tBEG timepoint WRMT word id standard score  \nbeg_wrmt3_wrdatt_stnd\t\t-\tBEG timepoint WRMT word attack standard score  \npre_beh_age\t\t\t                -\tage at PRE timepoint  \nbeg_beh_age\t\t\t                -\tage at BEG timepoint  \neuler\t\t\t\t                -\tEuler number rating  for T1 images, average of hemispheres (FreeSurfer metric)  \nqc_s\t\t\t\t                -\tvisual ratings of FreeSurfer segmentations (0=poor, 1=regional-localized errors, 2=good)  \nqc_ARC_L\t\t\t                -\tvisual ratings of py(Baby)AFQ tracts (0=poor, 1=sparser than usual, 2=good)  \nqc_ARC_R\t\t\t                -\tvisual ratings of py(Baby)AFQ tracts (0=poor, 1=sparser than usual, 2=good)  \nqc_ILF_L\t\t\t                        -\tvisual ratings of py(Baby)AFQ tracts (0=poor, 1=sparser than usual, 2=good)  \nqc_ILF_R\t\t\t                        -\tvisual ratings of py(Baby)AFQ tracts (0=poor, 1=sparser than usual, 2=good)  \nqc_SLF_L\t\t\t                -\tvisual ratings of py(Baby)AFQ tracts (0=poor, 1=sparser than usual, 2=good)  \nqc_SLF_R\t\t\t                -\tvisual ratings of py(Baby)AFQ tracts (0=poor, 1=sparser than usual, 2=good)  \n\n\nKeys for remaining variables may be found in Table S1 of the following citation: Yu X, et al. (2021) Functional Connectivity in Infancy and Toddlerhood Predicts Long-Term Language and Preliteracy Outcomes. Cerebral Cortex 32, 725–736.\n\nFor corresponding code, please see https://github.com/TeddyTuresky/Longitudinal-Trajectories-Early-Brain-Development-Language/tree/main.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_diffusion",
+          "mri_structural"
+        ],
+        "sessions": [
+          "02",
+          "01",
+          "04",
+          "03",
+          "05"
+        ],
+        "size": 6601023140,
+        "subjects": [
+          "12",
+          "78",
+          "19",
+          "62",
+          "49",
+          "68",
+          "67",
+          "15",
+          "32",
+          "55",
+          "33",
+          "41",
+          "79",
+          "35",
+          "25",
+          "10",
+          "76",
+          "23",
+          "69",
+          "48",
+          "72",
+          "43",
+          "63",
+          "51",
+          "59",
+          "39",
+          "02",
+          "44",
+          "01",
+          "73",
+          "46",
+          "50",
+          "60",
+          "57",
+          "37",
+          "80",
+          "14",
+          "58",
+          "29",
+          "06",
+          "42",
+          "20",
+          "34",
+          "52",
+          "40",
+          "66",
+          "74",
+          "47",
+          "36",
+          "26",
+          "30",
+          "31",
+          "17",
+          "07",
+          "08",
+          "27",
+          "21",
+          "56",
+          "28",
+          "61",
+          "03",
+          "45",
+          "11",
+          "24",
+          "75",
+          "70",
+          "53",
+          "64",
+          "05",
+          "65",
+          "22",
+          "77",
+          "13",
+          "16",
+          "18",
+          "71",
+          "09",
+          "38",
+          "04",
+          "54"
+        ],
+        "tasks": [],
+        "totalFiles": 1723
+      },
+      "tag": "1.0.9"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": "10.1101/2024.06.29.601366",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": "Longitudinal"
+    },
+    "publishDate": "2025-05-17T20:29:09.549Z"
+  },
+  "source": "openneuro"
+}

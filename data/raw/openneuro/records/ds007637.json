@@ -1,0 +1,97 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007637",
+  "payload": {
+    "created": "2026-04-07T17:46:44.006Z",
+    "id": "ds007637",
+    "latestSnapshot": {
+      "created": "2026-04-22T13:51:59.000Z",
+      "description": {
+        "Authors": [
+          "Taylor Salo",
+          "M. Dylan Tisdall",
+          "Lia Brodrick",
+          "Adam Czernuszenko",
+          "David R. Roalf",
+          "Sage Rush-Goebel",
+          "Nicholas Wellman",
+          "Matthew Cieslak",
+          "Theodore D. Satterthwaite"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007637.v1.0.0",
+        "Funding": [
+          "AE Foundation",
+          "Penn-CHOP Lifespan Brain Institute",
+          "NIMH R01MH113550"
+        ],
+        "HowToAcknowledge": "Please reference the OpenNeuro dataset identifier.",
+        "License": "CC0",
+        "Name": "Single-echo/multi-echo comparison pilot",
+        "ReferencesAndLinks": null
+      },
+      "readme": "# Single-echo/multi-echo comparison pilot\n\nThis dataset contains ABCD-protocol single-echo BOLD scans, along with complex-valued, multi-echo BOLD scans for comparison.\nThe multi-echo BOLD protocol uses the CMRR MB-EPI sequence, and comes from collaborators at UMinn.\nThese scans include five echoes with both magnitude and phase reconstruction.\n\nThe primary goal of this dataset was to evaluate the usability of the multi-echo fMRI protocol in a larger study,\nvia direct comparison to the ABCD fMRI protocol, as well as via test-retest reliability analyses.\nHowever, these data may be useful to others\n(e.g., for testing complex-valued models, applying phase regression to multi-echo data, testing multi-echo denoising methods).\n\n\n## Dataset contents\n\nThis dataset includes 8 participants, each with between 1 and 3 sessions.\nMR data were acquired using a 3-Tesla Siemens Prisma MRI scanner.\n\nThe imaging data were converted to NIfTI-1 format with dcm2niix v1.0.20220505, using heudiconv 0.13.1.\n\nIn each session, the following scans were acquired:\n\n\n### Structural data\n\nA T1-weighted anatomical scan\n(256 slices;\nrepetition time, TR=1900 ms;\necho time, TE=2.93 ms;\nflip angle, FA=9 degrees;\nfield of view, FOV=176x262.144 mm,\nmatrix size=176x256;\nvoxel size=1x0.977x0.977 mm).\n\n\n### Functional data\n\nOne run of Penn fractal n-back task five-echo fMRI data\n(72 slices;\nrepetition time, TR=1761 ms;\necho times, TE=14.2, 38.93, 63.66, 88.39, 113.12 ms;\nflip angle, FA=68 degrees;\nfield of view, FOV=220x220 mm,\nmatrix size=110x110;\nvoxel size=2x2x2 mm;\nmultiband acceleration factor=6).\nBoth magnitude and phase data were reconstructed for this run.\nThe run was 7:03 minutes in length, including the three no-radiofrequency-excitation volumes at the end.\nAfter the `_noRF` volumes were split into separate files, each run was 6:58 minutes long.\n\nTwo runs of open-eye resting-state five-echo fMRI data\n(72 slices;\nrepetition time, TR=1761 ms;\necho times, TE=14.2, 38.93, 63.66, 88.39, 113.12 ms;\nflip angle, FA=68 degrees;\nfield of view, FOV=220x220 mm,\nmatrix size=110x110;\nvoxel size=2x2x2 mm;\nmultiband acceleration factor=6).\nBoth magnitude and phase data were reconstructed for these runs.\nEach run was 5:59 minutes in length, including the three no-radiofrequency-excitation volumes at the end.\nAfter the `_noRF` volumes were split into separate files, each run was 5:54 minutes long.\n\nTwo runs of open-eye resting-state single-echo fMRI data acquired according to the ABCD protocol\n(60 slices;\nrepetition time, TR=800 ms;\necho time, TE=30 ms;\nflip angle, FA=52 degrees;\nfield of view, FOV=216x216 mm,\nmatrix size=90x90;\nvoxel size=2.4x2.4x2.4 mm;\nmultiband acceleration factor=6).\nOnly magnitude data were reconstructed for these runs.\nEach run was 6:00 minutes in length.\n\n\n### Field maps\n\nTwo sets of field maps were acquired for the multi-echo fMRI scans.\n\nOne set was a multiband, multi-echo gradient echo PEpolar-type field map (`acq-MEGE`),\nacquired with the same parameters as the multi-echo fMRI scans (except without magnitude+phase reconstruction).\nFor each acquisition, we have created a copy of the single-band reference image from the first echo as the primary field map.\n\nThe other set was a multi-echo spin-echo PEpolar-type field map (`acq-MESE`).\nWe have also created a copy of the first echo for each direction as a standard field map.\n\nThe single-echo copies of both the `acq-MEGE` and the `acq-MESE` field maps have `B0FieldIdentifier` fields and `IntendedFor` fields,\nthough we used the `acq-MESE` field maps for the `B0FieldSource` fields of the multi-echo fMRI scans.\nTherefore, tools which leverage the `B0*` fields, such as fMRIPrep, should use the single-echo `acq-MESE` scans for distortion correction.\n\nSingle-echo PEpolar-type EPI field maps (`acq-SESE`) with parameters matching the single-echo fMRI data\nwere also acquired for distortion correction.\n\n\n## Dataset idiosyncrasies\n\n\n### Multi-echo field maps\n\nThere are two sets of PEpolar-style field maps for the multi-echo BOLD scans: one gradient echo and one spin echo.\nEach field map set contains five echoes, like the BOLD scans.\nHowever, because distortion shouldn't vary across echoes (at least not at 3T),\nthere is no need for multi-echo PEpolar-style field maps,\nand tools like fMRIPrep can't use them.\nAs such, we have made a copy of the spin echo field map's first echo without the echo entity for BIDS compliance,\nas well as a copy of the gradient echo field map's first echo's single-band reference image.\n\n\n### No radio frequency excitation scans\n\nThe multi-echo BOLD scans included three no-radio-frequency noise scans acquired at the end of the scan,\nwhich have been split off into files with the `_noRF` suffix.\nThese noise scans can be used to suppress thermal noise with NORDIC denoising.\nBOLD runs that were stopped early or failed to fully reconstruct may be missing these noise scans.\n\n\n### Penn Fractal N-Back events files\n\nThe events files for the fractal n-back task were added in version 1.1.0 of the dataset.\nIt looks like the task software only logged the last response in each trial's response window,\nso there are some trials with very long response times from responses that occurred\nduring the next block's instruction screen.\n\n\n### sub-08 ses-noHC\n\nSubject 08's ses-noHC was accidentally acquired without the head coil plugged in.\nWe included the session in the dataset in case anyone might find it useful,\nbut do not recommend using the data for analyses.\n\n\n### sub-04 ses-2 and ses-3\n\nSubject 04 had to stop session 2 early, so a separate session was acquired to finish acquiring the remaining scans.\n\n\n### Excluded data\n\nPhysio (PPG + chest belt) data were acquired for a subset of the scans, but, due to equipment issues,\nthe data were unusable and have been excluded from the dataset.\n\nThere was also an MEGRE field map sequence in the protocol, provided by Dr. Andrew Van,\nbut there were reconstruction errors at the scanner, so these field maps were not usable.\nWe've chosen to exclude the remaining files from the dataset.\n\nIn some cases, we noticed reconstruction errors on final volumes in the multi-echo BOLD runs.\nWhen that happened, we dropped any trailing volumes, so that all files from a given run are the same length.\nFor some runs, this involved entirely removing the noRF scans.\n\n\n## Notes about acquisition\n\nThe multi-echo BOLD scans were acquired on a 3T Siemens Prisma scanner running VE11C.\nThe same protocol has exhibited consistent reconstruction errors on XA30.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "1",
+          "2",
+          "3",
+          "noHC"
+        ],
+        "size": 170157730973,
+        "subjects": [
+          "03",
+          "02",
+          "05",
+          "04",
+          "08",
+          "01",
+          "07",
+          "06"
+        ],
+        "tasks": [
+          "Penn fractal n-back",
+          "rest eyes open"
+        ],
+        "totalFiles": 3345
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        30,
+        25,
+        25,
+        23,
+        25,
+        24,
+        21,
+        23
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2026-04-22T13:54:38.859Z"
+  },
+  "source": "openneuro"
+}

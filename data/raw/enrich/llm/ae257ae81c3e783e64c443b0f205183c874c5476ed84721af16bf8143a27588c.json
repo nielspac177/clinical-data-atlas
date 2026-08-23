@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:ae257ae81c3e783e64c443b0f205183c874c5476ed84721af16bf8143a27588c",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "patients diagnosed with breast tumors",
+        "label": "breast tumors / recurrent breast cancer"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "tcia:histologyhsi-bc-recurrence",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "The histopathological slides were stained with hematoxylin and eosin (H&E), digitized",
+        "value": "pathology"
+      },
+      {
+        "evidence": "captured at 20x magnification using a bright-field Olympus microscope equipped with a hyperspectral camera",
+        "value": "other"
+      },
+      {
+        "evidence": "together with their clinical data",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "47 patients diagnosed with breast tumors, of whom 22 had distant recurrence during the 10 years of follow-up after diagnosis",
+    "summary": "Histopathological and hyperspectral images of primary breast tumor biopsies with clinical data, annotated by pathologists, labeled for distant recurrence over ten years of follow-up after diagnosis."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:b4dbb66e6851ccb77b04c7b1261615606c53268ac1e8f475fb3e075926075e04",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "cardiology",
+      "surgery"
+    ],
+    "id": "physionet:vitaldb",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "intraoperative ecg anesthesia",
+        "value": "ECG"
+      },
+      {
+        "evidence": "high-resolution multi-parameter data",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "73 perioperative clinical parameters",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "6,388 cases of surgical patients under anesthesia",
+    "summary": "Open dataset of high-resolution intraoperative waveform and numeric monitoring tracks from surgical cases, plus perioperative clinical and time-series laboratory parameters, accessible via APIs and a Python library."
+  },
+  "prompt_version": "v1"
+}

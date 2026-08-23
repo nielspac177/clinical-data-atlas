@@ -1,0 +1,53 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006556",
+  "payload": {
+    "created": "2025-08-13T06:00:53.461Z",
+    "id": "ds006556",
+    "latestSnapshot": {
+      "created": "2026-04-07T08:25:54.000Z",
+      "description": {
+        "Authors": [
+          "TODO:",
+          "First1 Last1",
+          "First2 Last2",
+          "..."
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006556.v1.0.4",
+        "Funding": [
+          "TODO",
+          "GRANT #1",
+          "GRANT #2"
+        ],
+        "HowToAcknowledge": "TODO: describe how to acknowledge -- either cite a corresponding paper, or just in acknowledgement section",
+        "License": "CC0",
+        "Name": "Tetralogy of Fallot Neurodevelopment Research: An Open-Source Dataset",
+        "ReferencesAndLinks": [
+          "TODO",
+          "List of papers or websites"
+        ]
+      },
+      "readme": "# Tetralogy of Fallot Neurodevelopment Research: An Open-Source Dataset\n## 1. Introduction\nThis dataset presents MRI and neurodevelopmental data from 31 pediatric participants (18 males; age range: 4–33 months) who underwent surgical intervention for Tetralogy of Fallot (TOF) at the Children's Hospital of Nanjing Medical University between 2022 and 2023. The study aims to explore the relationship between neurodevelopmental disorders (NDDs) and perioperative risk factors in congenital heart disease (CHD) patients.\n## 2. Dataset Overview\nThis open-source dataset provides neuroimaging, clinical, and behavioral data for investigating neurodevelopmental outcomes in TOF patients. The dataset is structured as follows:\n- Demographic and Clinical Data\n  - Age at admission, gender, BMI, family income, parental education\n  - Surgery-related metrics: age at surgery, cardiopulmonary bypass (CPB) time, aortic cross-clamp time, mechanical ventilation duration, ICU stay, etc.\n  - Hemodynamic and respiratory parameters: tidal volume, oxygen saturation, heart rate, blood pressure\n- Neurodevelopmental Assessment Data\n  - Wechsler Intelligence Scale (WPPSI-IV) scores for cognitive evaluation\n  - GESELL developmental scale assessment for younger participants (<2.5 years)\n  - Perioperative monitoring of cerebral oxygenation, EEG, and pulse oximetry\n  - Follow-up assessments at 1, 3, 6 months, 1 year, and 2 years post-discharge\n- Neuroimaging Data\n  - Structural MRI (T1, T2, FLAIR, DWI, DTI): Total brain volume, white/gray matter, cortical thickness, hippocampal volume\n  - Functional MRI (if applicable)\n  - Diffusion Tensor Imaging (DTI) metrics: Fractional anisotropy (FA), Mean Diffusivity (MD), Radial Diffusivity (RD), Axial Diffusivity (AD)\n## 3. Data Acquisition\nNeuroimaging data were collected using Siemens Avento 1.5T and Philips Ingenia 3.0T MR scanners. For children under 3 years old, sedation with 5% chloral hydrate (1ml/kg) was used before scanning.\n- MRI Sequence Parameters:\n  - T1-weighted (3D MPRAGE/TFE): High-resolution anatomical imaging\n  - T2-weighted (FSE): Structural integrity assessment\n  - FLAIR (Fluid Attenuated Inversion Recovery): Detection of periventricular abnormalities\n  - Diffusion-Weighted Imaging (DWI): Water molecule diffusion properties\n  - Diffusion Tensor Imaging (DTI): White matter microstructural analysis\n- Post-processing Methods:\n    - Structural MRI: Cortical segmentation, volumetric analysis\n    - DTI Processing: Head motion correction, fiber tracking, FA/MD calculations\n    - DWI Analysis: ADC mapping and feature extraction using Python-based MRIcron processing\n## 4. Data Access\nThis dataset is open-source and can be accessed through our research portal: 🔗 GitHub Repository\nTo apply for dataset access, please complete the online form with the following details:\n- Full Name\n- Email Address\n- Affiliation (Institution/University/Hospital)\n- Research Purpose\n- Contact Information\n- Data access approval is subject to manual review to ensure ethical compliance.\n## 5. Ethical Approval\nThis research has been approved by the Ethics Committee of Nanjing Medical University's Affiliated Children's Hospital. All data collection procedures were conducted in accordance with institutional guidelines. Informed consent was obtained from all participants' guardians before data collection.\n## 6. Limitations & Future Directions\n- Single-Center Data: Currently, the dataset is limited to a single hospital, potentially limiting generalizability.\n- Loss to Follow-Up: Some participants may not complete long-term neurodevelopmental assessments.\n- Multi-Factorial Influences: Genetic, environmental, and socio-economic factors may affect neurodevelopment beyond the scope of this study.\n- Future Expansion: We aim to extend this dataset to a multi-center collaboration and integrate AI-driven predictive analytics.\n## 7. Citation\nIf you use this dataset in your research, please cite our work:\n[Author names], \"Tetralogy of Fallot Neurodevelopment Research: An Open-Source Dataset,\" Children's Hospital of Nanjing Medical University, 2025.\n\nFor any inquiries, please contact: xuyang3141@gmail.com\n",
+      "summary": null,
+      "tag": "1.0.4"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": null,
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [],
+      "species": "",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2025-08-15T08:30:06.799Z"
+  },
+  "source": "openneuro"
+}

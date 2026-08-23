@@ -1,0 +1,27 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:dc50cb60c5fe2f272951251d07b97865b68f11b1dafdd8111f226330d26c7b1c",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "pulmonology"
+    ],
+    "id": "physionet:cad-chest",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "comprehensive annotation of disease (CAD) on CXR images",
+        "value": "xray"
+      },
+      {
+        "evidence": "radiology reports authored by medical professionals",
+        "value": "clinical_notes"
+      }
+    ],
+    "population": null,
+    "summary": "Annotation dataset built from MIMIC-CXR radiology reports, extending chest X-ray labels beyond binary presence with disease name, severity grading, diagnostic uncertainty and location, using report-derived label extraction protocols."
+  },
+  "prompt_version": "v1"
+}

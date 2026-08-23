@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:5c5dab1bf03af1bce84ea41e6fb0875afd856855810ccd231e1e0ae5110f8dc1",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "150 pathological",
+        "label": "pathological voices"
+      },
+      {
+        "evidence": "58 healthy voices",
+        "label": "healthy voices"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "other"
+    ],
+    "id": "physionet:voiced",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "208 voice samples",
+        "value": "other"
+      }
+    ],
+    "population": "208 voice samples, from 150 pathological, and 58 healthy voices",
+    "summary": "Database of voice samples from pathological and healthy voices."
+  },
+  "prompt_version": "v1"
+}

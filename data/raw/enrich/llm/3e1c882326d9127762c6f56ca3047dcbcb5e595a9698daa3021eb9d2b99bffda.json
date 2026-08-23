@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:3e1c882326d9127762c6f56ca3047dcbcb5e595a9698daa3021eb9d2b99bffda",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "precursor lesions of high grade serous cancer (HGSC)",
+        "label": "high grade serous cancer (HGSC)"
+      },
+      {
+        "evidence": "serous tubal intraepithelial lesions (STIL)",
+        "label": "serous tubal intraepithelial lesions (STIL)"
+      },
+      {
+        "evidence": "serous tubal intraepithelial carcinoma (STIC)",
+        "label": "serous tubal intraepithelial carcinoma (STIC)"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "obstetrics_gynecology"
+    ],
+    "id": "tcia:tp53-precursor-lesions",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "precursor lesion digital slide images",
+        "value": "pathology"
+      }
+    ],
+    "population": "242 women over the age of 50 years old who had their fallopian tubes removed during a benign gynecologic procedure; 70 with at least 5 years of oral contraceptive use, 172 without",
+    "summary": "Digital slide images of fallopian tube p53 signatures and precursor lesions of high grade serous cancer, from a retrospective study comparing long-term oral contraceptive users with non-users."
+  },
+  "prompt_version": "v1"
+}

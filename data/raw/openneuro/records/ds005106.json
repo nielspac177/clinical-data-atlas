@@ -1,0 +1,151 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005106",
+  "payload": {
+    "created": "2024-04-24T00:00:26.817Z",
+    "id": "ds005106",
+    "latestSnapshot": {
+      "created": "2025-03-05T22:48:06.000Z",
+      "description": {
+        "Authors": [
+          "Tijl Grootswagers",
+          "Genevieve Quek",
+          "Zhen Zeng",
+          "Manuel Varlet"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005106.v1.5.0",
+        "Funding": null,
+        "HowToAcknowledge": "Tijl Grootswagers, Genevieve Quek, Zhen Zeng, Manuel Varlet. 2025. “Human Infant EEG Recordings for 200 Object Images Presented in Rapid Visual Streams.” Scientific Data",
+        "License": "CC0",
+        "Name": "200 Objects Infants EEG",
+        "ReferencesAndLinks": [
+          "https://osf.io/preprints/psyarxiv/dzrkq",
+          "https://doi.org/10.31234/osf.io/dzrkq",
+          "https://doi.org/10.1038/s41597-025-04744-z"
+        ]
+      },
+      "readme": "Data and code for the paper:\nTijl Grootswagers, Genevieve Quek, Zhen Zeng, & Manuel Varlet. 2025. “Human Infant EEG Recordings for 200 Object Images Presented in Rapid Visual Streams.” Scientific Data. https://doi.org/10.1038/s41597-025-04744-z\n\nSee the linked paper for details.\n\nThe \"code\" directory contains all the code to reproduce the figures in the paper.\nIt requires fieldtrip and cosmomvpa, change the paths to these toolboxes at the top of each script (or remove the lines and add them to the path manually).\n\nThen run the scripts to reproduce each step reported in the paper:\n1. run_preprocessing.m (preprocess and epoch data)\n2. run_rsa.m (makes the individual RDMs)\n3. stats_rsa.m (computes the RSA correlations)\n4. plot_design.m (produces Figure 1 in the paper)\n5. plot_peaks.m (produces Figure 2 in the paper)\n6. plot_rsa.m (produces Figure 3 in the paper)\n\nEach script can also run standalone, as intermediate results are saved in the derivates folder\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "eeg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [],
+        "size": 1331391470,
+        "subjects": [
+          "046",
+          "024",
+          "049",
+          "030",
+          "003",
+          "018",
+          "001",
+          "005",
+          "039",
+          "017",
+          "008",
+          "011",
+          "043",
+          "028",
+          "002",
+          "040",
+          "035",
+          "020",
+          "007",
+          "037",
+          "013",
+          "016",
+          "032",
+          "048",
+          "023",
+          "021",
+          "026",
+          "027",
+          "012",
+          "019",
+          "036",
+          "042",
+          "022",
+          "044",
+          "015",
+          "045",
+          "004",
+          "031",
+          "051",
+          "014",
+          "009",
+          "025"
+        ],
+        "tasks": [
+          "fix"
+        ],
+        "totalFiles": 133
+      },
+      "tag": "1.5.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "eeg"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2024-04-26T05:35:07.384Z"
+  },
+  "source": "openneuro"
+}

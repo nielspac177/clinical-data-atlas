@@ -1,0 +1,126 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds000121",
+  "payload": {
+    "created": "2018-02-06T21:01:10.994Z",
+    "id": "ds000121",
+    "latestSnapshot": {
+      "created": "2018-07-17T02:21:11.000Z",
+      "description": {
+        "Authors": [
+          "C.F. Geier",
+          "R. Terwilliger",
+          "T. Teslovich",
+          "K. Velanova",
+          "B. Luna"
+        ],
+        "DatasetDOI": null,
+        "Funding": [],
+        "HowToAcknowledge": null,
+        "License": "PDDL",
+        "Name": "Immaturities in Reward Processing and Its Influence on Inhibitory Control in Adolescence (Ring Reward)",
+        "ReferencesAndLinks": [
+          "http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2882823/",
+          "https://github.com/LabNeuroCogDevel/openfmri_ring_rew"
+        ]
+      },
+      "readme": "# Ring Rewards\n\n## Citation\n\nGeier, C. F., R. Terwilliger, T. Teslovich, K. Velanova, and B. Luna. “Immaturities in Reward Processing and Its Influence on Inhibitory Control in Adolescence.” Cerebral Cortex 20, no. 7 (July 1, 2010): 1613–29. doi:10.1093/cercor/bhp225.\n\n## Behavdata (located in each subjects \"beh\" directories)\n\nexample:\n\n    1       182     1       400     7.5     reward108       108     5\n    2       185     -1      -1      19.5    reward532       532     11\n    3       181     1       400     25.5    reward007       7       13\n    4       161     1       467     31.5    neutral007      7       15\n\ncolumns: \n\n 1. trial num\n 2. XDAT (catch, cue type and dot position)\n 3. score (-1:drop, 0: incorrect, 1: correct, 2: error corrected)\n 4. latency to first saccade in ms\n 5. onset of cue (seconds)\n 6. EPrime frame name (cue/condition and dot postion)\n 7. dot position\n 8. EPrime presentation number (includes fixations and catches)\n\n\n## Missing Data\n\n| subj   | missing |\n| -----  | ------- |\n| sub007 |  run 2  |\n| sub007 |  run 3  |\n| sub007 |  run 4  |\n| sub023 |  run 4  |\n| sub023 |  run 4  |\n| sub028 |  run 3  |\n| sub028 |  run 4  |\n\n## Task\ncoded in EPrime, recorded (XDATS) with ASL eye tracker\n\n\n    Order:   Cue (1.5s) | Red Centered Cross (1.5s) | Dot (1.5s)  |\n    XDATS:            start                      target          stop\n\n\nTwo condition types are distinguished by cue: \n * Neutral - circle of \"#\"\n * Reward  - circle of \"$\"\n\n\nEach with two catch trial formats:\n * Catch1: cue (1.5) | cross (1.5)\n * Catch2: cue (1.5)\n\n\nDot position is given in from left to right, 0 to 600.\n\nFixations are repeats of 1.5s white centered cross\n\n## Analysis\n> Briefly, our model consisted of 6 orthogonal regressors of interest (reward cue, neutral cue, reward preparation, neutral preparation, reward saccade response, neutral saccade response; “correct AS trials only”). We also included regressors for reward and neutral error trials (consisting of the entire trial), regressors for baseline, linear, and nonlinear trends, as well as 6 motion parameters included as “nuisance” regressors. A unique estimated impulse response function (IRF, i.e., hemodynamic response function) for each regressor of interest (reward and neutral cue, preparation, and saccade; “correct AS trials only”) was determined by a weighted linear sum of 5 sine basis functions multiplied by a data determined least squares–estimated beta weight. The estimated IRF reflects the estimated BOLD response to a type of stimulus (e.g., the reward cue) after controlling for variations in the BOLD signal due to other regressors. We specified the duration of the estimated response from stimulus onset (time = 0) to 18-s poststimulus onset (13 TR), a sufficient duration for the estimated BOLD response to return to baseline, for each separate epoch of the trial. We made no assumptions about its specific shape beyond using zero as the start point. Several goodness-of-fit statistics were calculated including partial F-statistics for each regressor and t-scores comparing each of the 5 estimated beta weights with zero. \n\n\n## Online info\n * [Paper](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2882823/)\n * [Scripts](https://github.com/LabNeuroCogDevel/openfmri_ring_rew)\n * [ScanSheets](https://docs.google.com/spreadsheets/d/1kzNxuRPnyalaG5K66ADFIavJOYfQl5OXQSmudNwc0Ak/edit#gid=896164689)\n\n## event timing\n\n|v1                      ||v2                      || v3                      | v4                    ||\n| -----  | -----          | -----  | -----          | -----  | -----          | -----  | -----         |\n| onset  | event          | onset  | event          | onset  | event          | onset  | event         |\n| 0      | neutral426     | 0      | neutral532     | 7.5    | reward108      | 4.5    | neutral108    |\n| 6      | reward007      | 6      | reward007      | 16.5   | neutralCatch2  | 13.5   | reward532     |\n| 12     | neutralCatch1  | 16.5   | reward214      | 19.5   | reward532      | 31.5   | reward007|\n| 16.5   | neutral633     | 22.5   | rewardCatch2   | 25.5   | reward007      | 37.5   | neutral532|\n| 25.5   | neutralCatch2  | 25.5   | neutral633     | 31.5   | neutral007     | 43.5   | reward532|\n| 28.5   | reward633      | 31.5   | neutral214     | 42     | neutralCatch1  | 49.5   | reward007|\n| 42     | rewardCatch2   | 43.5   | neutral007     | 46.5   | neutral426     | 55.5   | rewardCatch2|\n| 45     | reward426      | 49.5   | neutralCatch1  | 52.5   | reward633      | 63     | neutralCatch1|\n| 51     | neutral108     | 54     | rewardCatch2   | 66     | rewardCatch1   | 67.5   | neutral426|\n| 61.5   | reward633      | 57     | neutralCatch1  | 70.5   | neutral532     | 73.5   | neutral633|\n| 72     | neutral633     | 66     | neutral108     | 76.5   | neutral214     | 79.5   | rewardCatch1|\n| 78     | neutral007     | 72     | reward532      | 88.5   | neutral426     | 84     | neutralCatch2|\n| 84     | reward532      | 78     | rewardCatch1   | 97.5   | reward426      | 90     | neutral532|\n| 90     | reward007      | 90     | reward426      | 103.5  | reward214      | 96     | reward108|\n| 96     | reward532      | 96     | neutral007     | 109.5  | reward214      | 106.5  | reward426|\n| 114    | neutral214     | 105    | reward633      | 118.5  | reward108      | 112.5  | reward007|\n| 123    | reward108      | 114    | neutral108     | 124.5  | neutralCatch2  | 118.5  | neutralCatch1|\n| 129    | neutral007     | 120    | neutral426     | 127.5  | rewardCatch1   | 123    | neutral108|\n| 135    | neutralCatch2  | 126    | neutralCatch2  | 132    | neutral007     | 136.5  | neutral007|\n| 138    | neutral426     | 141    | neutral532     | 138    | neutralCatch2  | 142.5  | neutralCatch2|\n| 151.5  | neutral214     | 147    | reward633      | 141    | neutral532     | 148.5  | reward633|\n| 157.5  | rewardCatch2   | 153    | reward007      | 150    | neutral108     | 154.5  | rewardCatch2|\n| 160.5  | rewardCatch1   | 159    | neutral007     | 156    | rewardCatch1   | 157.5  | neutral633|\n| 169.5  | reward426      | 165    | rewardCatch1   | 174    | neutralCatch1  | 163.5  | reward214|\n| 175.5  | neutral633     | 172.5  | neutral633     | 178.5  | neutral633     | 175.5  | reward426|\n| 181.5  | reward108      | 181.5  | neutral532     | 184.5  | reward532      | 186    | neutral214|\n| 187.5  | neutralCatch2  | 187.5  | reward214      | 190.5  | reward426      | 205.5  | neutralCatch1|\n| 193.5  | neutral532     | 193.5  | neutral426     | 196.5  | reward633      | 210    | rewardCatch2|\n| 199.5  | neutral007     | 199.5  | neutralCatch2  | 202.5  | neutral633     | 213    | neutral007|\n| 205.5  | neutral532     | 202.5  | neutral214     | 211.5  | reward633      | 219    | neutral633|\n| 211.5  | reward007      | 208.5  | reward426      | 220.5  | rewardCatch2   | 225    | neutralCatch2|\n| 222    | reward633      | 214.5  | rewardCatch1   | 223.5  | rewardCatch2   | 228    | reward633|\n| 228    | reward214      | 222    | reward108      | 231    | neutral214     | 234    | rewardCatch1|\n| 234    | rewardCatch1   | 241.5  | neutral633     | 250.5  | reward007      | 241.5  | reward633|\n| 238.5  | neutralCatch1  | 252    | reward108      | 256.5  | neutral007     | 247.5  | neutral214|\n| 249    | reward214      | 258    | neutralCatch1  | 262.5  | reward007      | 256.5  | neutral007|\n| 259.5  | neutral108     | 262.5  | rewardCatch2   | 268.5  | neutralCatch1  | 265.5  | reward214|\n| 276    | rewardCatch2   | 265.5  | reward633      | 273    | neutral108     | 271.5  | reward108|\n| 279    | neutralCatch1  | 271.5  | reward007      | 279    | neutral633     | 277.5  | rewardCatch1|\n| 283.5  | rewardCatch1   | 277.5  | neutralCatch2  | 285    | rewardCatch2   | 282    | neutral426|\n\n## mriqc\nmriqc was run on the dataset during preparation by OpenfMRI, and the outputs are located\nin the derivatives/ directory.\n(https://github.com/poldracklab/mriqc)\n\n## Defacing\nDefacing was performed to preserve subject anonymity. The pydeface software was used to perform\nthe defacing (https://github.com/poldracklab/pydeface)\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 3588408616,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28"
+        ],
+        "tasks": [
+          "AntiSaccade (AS) Rewarded & Neutral with varying dot position"
+        ],
+        "totalFiles": 351
+      },
+      "tag": "00001"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2018-02-06T21:01:10.994Z"
+  },
+  "source": "openneuro"
+}

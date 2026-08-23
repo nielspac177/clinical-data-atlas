@@ -1,0 +1,86 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005079",
+  "payload": {
+    "created": "2024-04-09T20:37:10.318Z",
+    "id": "ds005079",
+    "latestSnapshot": {
+      "created": "2024-07-01T21:21:53.000Z",
+      "description": {
+        "Authors": [
+          "Lorenzo Cohen",
+          "Arnaud Delorme",
+          "Peiying Yang",
+          "Andrew Cusimano",
+          "Sharmistha Chakraborty",
+          "Phuong Nguyen",
+          "Defeng Deng",
+          "Shafaqmuhammad Iqbal",
+          "Monica Nelson",
+          "Chris Fields"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005079.v2.0.0",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "The Effects of Directed Therapeutic Intent on Live and Damaged Cells",
+        "ReferencesAndLinks": [
+          "No bibliographic reference other than the DOI for this dataset"
+        ]
+      },
+      "readme": "**Summary**: In this case study, a self-described practitioner of energy medicine (PEM) participated in a study, engaging in multiple (n=60) treatment and control (non-treatment) sessions under double-blind conditions.\n\n**Protocol:**Data were collected during 40 sessions over 10 days, with ten sessions of about 25 minutes daily. Each session was comprised of one file divided into five segments. First, there was a 2-minute control period where the PEM rested in the absence of cells (BaselinePre) for 2 minutes. Next, the cells (alive or control) were brought in, and the PEM conducted a 5-minute treatment of the cells while remaining still (TreatmentFirst5min). Next, the PEM performed another 5-minute treatment of the cells, but movement was allowed (Treatment 2). During a third treatment period (TreatmentMid5min), the PEM remained still while treating the cells, as in first treatment period (TreatmentLast5min). Finally, the cells were removed from the PEM's vicinity, and physiology data were collected for another 2-minute control period (BaselinePost). The PEM was fully blind to the type of cells presented to him, and cell type presentation to the PEM was randomized. The experimenter presenting the cell to the PEM was also blind to the type of cells. In 40 sessions, live cells were presented to the PEM (CellPresent condition). In 10 sessions, no cells (medium only) were presented to the PEM. In the other ten sessions, dead cells (x-rayed) were presented to the PEM (Control1 and Control2 conditions). In order to have control samples for the cellular outcomes and control for the passage of time and potential effects of the equipment, 40 matching set of cells were treated in a different location by a sham therapist (these are available in the behavioral files (BEH) as control cell measures.\n\nData curators: Data acquired at the MD Anderson Cancer Research Center",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "eeg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12"
+        ],
+        "size": 1809231507,
+        "subjects": [
+          "001"
+        ],
+        "tasks": [
+          "mixed"
+        ],
+        "totalFiles": 210
+      },
+      "tag": "2.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "eeg"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "Healing",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2024-04-09T21:19:25.314Z"
+  },
+  "source": "openneuro"
+}

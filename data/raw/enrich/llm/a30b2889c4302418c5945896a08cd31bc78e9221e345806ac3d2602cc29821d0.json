@@ -1,0 +1,29 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:a30b2889c4302418c5945896a08cd31bc78e9221e345806ac3d2602cc29821d0",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "five different types of pain management",
+        "label": "pain management"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "public_health",
+      "other"
+    ],
+    "id": "physionet:q-pain",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "medical question-answer pairs",
+        "value": "other"
+      }
+    ],
+    "population": "Patient-specific medical scenarios (\"vignettes\") allowing substitution of multiple different racial and gender \"profiles\"",
+    "summary": "Medical question-answer pairs with patient vignettes whose racial and gender profiles can be substituted, used to test whether decisions about prescribing pain medication show bias."
+  },
+  "prompt_version": "v1"
+}

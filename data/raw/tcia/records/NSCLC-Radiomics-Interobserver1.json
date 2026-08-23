@@ -1,0 +1,389 @@
+{
+  "endpoints": [
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getCollectionValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getModalityValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getBodyPartValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getPatient",
+    "https://api.datacite.org/dois?prefix=10.7937"
+  ],
+  "harvest_method": "api:nbia+datacite",
+  "native_id": "NSCLC-Radiomics-Interobserver1",
+  "payload": {
+    "datacite": {
+      "citationCount": 12,
+      "container": {},
+      "contentUrl": [],
+      "contributors": [
+        {
+          "affiliation": [],
+          "contributorType": "Other",
+          "name": "TCIA Team",
+          "nameIdentifiers": []
+        }
+      ],
+      "created": "2019-06-18T22:07:35Z",
+      "creators": [
+        {
+          "affiliation": [],
+          "familyName": "Wee",
+          "givenName": "Leonard",
+          "name": "Wee, Leonard",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0003-1612-9055",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Aerts",
+          "givenName": "Hugo JWL",
+          "name": "Aerts, Hugo JWL",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-2122-2003",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Kalendralis",
+          "givenName": "Petros",
+          "name": "Kalendralis, Petros",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Dekker",
+          "givenName": "Andre",
+          "name": "Dekker, Andre",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-0422-7996",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2019",
+          "dateType": "Issued"
+        }
+      ],
+      "descriptions": [
+        {
+          "description": "This collection contains clinical data and computed tomography (CT) from 22 non-small cell lung cancer (NSCLC) radiotherapy patients. For 21 of these patients with pre-treatment CT scans, repeated blinded manual delineations by five different radiation oncologists of the 3D volume of the gross tumor volume on CT and clinical outcome data are available. The above was repeated with the same set of five radiation oncologists, using an in-house autosegmentation tool for initial delineation followed by manual adjustment of the gross tumor volume outline. For one patient, clinical data and CT was available but the tumor delineations were not extracted. This patient was included in this collection for the sake of completeness.",
+          "descriptionType": "Abstract"
+        }
+      ],
+      "doi": "10.7937/tcia.2019.cwvlpd26",
+      "downloadCount": 0,
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "NSCLC-Radiomics-Interobserver1",
+          "identifierType": "TCIA Short Name"
+        }
+      ],
+      "isActive": true,
+      "language": null,
+      "metadataVersion": 8,
+      "partCount": 0,
+      "partOfCount": 0,
+      "publicationYear": 2019,
+      "published": null,
+      "publisher": "The Cancer Imaging Archive",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2019-06-18T22:07:35Z",
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "10.1002/mp.14322",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.3389/fonc.2021.637804",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.26481/dis.20221010pk",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1038/s41598-022-16520-9",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1038/s41467-022-30841-3",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.3390/diagnostics13061167",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1148/rycan.230100",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1093/bjro/tzad008",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1088/2057-1976/ad34db",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1109/hsi61632.2024.10613540",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        }
+      ],
+      "relatedItems": [],
+      "rightsList": [
+        {
+          "rights": "Creative Commons Attribution 3.0 Unported",
+          "rightsIdentifier": "cc-by-3.0",
+          "rightsIdentifierScheme": "SPDX",
+          "rightsUri": "https://creativecommons.org/licenses/by/3.0/legalcode",
+          "schemeUri": "https://spdx.org/licenses/"
+        }
+      ],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "fabricaForm",
+      "state": "findable",
+      "subjects": [],
+      "titles": [
+        {
+          "title": "Data from NSCLC-Radiomics-Interobserver1"
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceType": "Dataset",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2025-06-01T01:01:13Z",
+      "url": "https://www.cancerimagingarchive.net/collection/nsclc-radiomics-interobserver1/",
+      "version": "3",
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 3220
+    },
+    "nbia": {
+      "body_parts": [
+        "LUNG"
+      ],
+      "collection": "NSCLC-Radiomics-Interobserver1",
+      "modalities": [
+        "CT",
+        "RTSTRUCT",
+        "SEG"
+      ],
+      "patients": [
+        {
+          "Collection": "NSCLC-Radiomics-Interobserver1",
+          "PatientId": "interobs11",
+          "PatientName": "interobs11",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Interobserver1",
+          "PatientId": "interobs21",
+          "PatientName": "interobs21",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Interobserver1",
+          "PatientId": "interobs18",
+          "PatientName": "interobs18",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Interobserver1",
+          "PatientId": "interobs28",
+          "PatientName": "interobs28",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Interobserver1",
+          "PatientId": "interobs13",
+          "PatientName": "interobs13",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Interobserver1",
+          "PatientId": "interobs10",
+          "PatientName": "interobs10",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Interobserver1",
+          "PatientId": "interobs19",
+          "PatientName": "interobs19",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Interobserver1",
+          "PatientId": "interobs32",
+          "PatientName": "interobs32",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Interobserver1",
+          "PatientId": "interobs33",
+          "PatientName": "interobs33",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Interobserver1",
+          "PatientId": "interobs05",
+          "PatientName": "interobs05",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Interobserver1",
+          "PatientId": "interobs22",
+          "PatientName": "interobs22",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Interobserver1",
+          "PatientId": "interobs20",
+          "PatientName": "interobs20",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Interobserver1",
+          "PatientId": "interobs34",
+          "PatientName": "interobs34",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Interobserver1",
+          "PatientId": "interobs12",
+          "PatientName": "interobs12",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Interobserver1",
+          "PatientId": "interobs14",
+          "PatientName": "interobs14",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Interobserver1",
+          "PatientId": "interobs15",
+          "PatientName": "interobs15",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Interobserver1",
+          "PatientId": "interobs31",
+          "PatientName": "interobs31",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Interobserver1",
+          "PatientId": "interobs29",
+          "PatientName": "interobs29",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Interobserver1",
+          "PatientId": "interobs06",
+          "PatientName": "interobs06",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Interobserver1",
+          "PatientId": "interobs27",
+          "PatientName": "interobs27",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Interobserver1",
+          "PatientId": "interobs08",
+          "PatientName": "interobs08",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Interobserver1",
+          "PatientId": "interobs09",
+          "PatientName": "interobs09",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        }
+      ]
+    }
+  },
+  "source": "tcia"
+}

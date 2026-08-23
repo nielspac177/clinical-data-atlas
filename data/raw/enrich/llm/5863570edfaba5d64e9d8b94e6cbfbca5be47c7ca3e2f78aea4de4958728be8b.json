@@ -1,0 +1,30 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:5863570edfaba5d64e9d8b94e6cbfbca5be47c7ca3e2f78aea4de4958728be8b",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "pulmonology",
+      "other"
+    ],
+    "id": "physionet:mimic-cxr",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "chest radiographs in DICOM format",
+        "value": "xray"
+      },
+      {
+        "evidence": "free-text radiology reports",
+        "value": "clinical_notes"
+      }
+    ],
+    "population": "Patients with radiographic studies performed at the Beth Israel Deaconess Medical Center in Boston, MA",
+    "summary": "De-identified chest radiographs in DICOM format paired with free-text radiology reports, covering 377,110 images from 227,835 radiographic studies, intended for imaging, natural language processing and decision support research."
+  },
+  "prompt_version": "v1"
+}

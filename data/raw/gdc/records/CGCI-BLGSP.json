@@ -1,0 +1,102 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "CGCI-BLGSP",
+  "payload": {
+    "dbgap_accession_number": "phs000527",
+    "disease_type": [
+      "Mature B-Cell Lymphomas"
+    ],
+    "id": "CGCI-BLGSP",
+    "name": "Burkitt Lymphoma Genome Sequencing Project",
+    "primary_site": [
+      "Hematopoietic and reticuloendothelial systems"
+    ],
+    "program": {
+      "dbgap_accession_number": "phs000235",
+      "name": "CGCI",
+      "program_id": "d339a424-ad52-5351-a499-493973249414"
+    },
+    "project_id": "CGCI-BLGSP",
+    "releasable": true,
+    "released": true,
+    "state": "submitted",
+    "summary": {
+      "case_count": 324,
+      "data_categories": [
+        {
+          "case_count": 263,
+          "data_category": "Simple Nucleotide Variation",
+          "file_count": 2833
+        },
+        {
+          "case_count": 320,
+          "data_category": "Sequencing Reads",
+          "file_count": 2176
+        },
+        {
+          "case_count": 323,
+          "data_category": "Biospecimen",
+          "file_count": 2948
+        },
+        {
+          "case_count": 291,
+          "data_category": "Clinical",
+          "file_count": 296
+        },
+        {
+          "case_count": 156,
+          "data_category": "Copy Number Variation",
+          "file_count": 815
+        },
+        {
+          "case_count": 293,
+          "data_category": "Transcriptome Profiling",
+          "file_count": 1384
+        },
+        {
+          "case_count": 157,
+          "data_category": "Somatic Structural Variation",
+          "file_count": 842
+        },
+        {
+          "case_count": 285,
+          "data_category": "Structural Variation",
+          "file_count": 1435
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 224,
+          "experimental_strategy": "Targeted Sequencing",
+          "file_count": 1847
+        },
+        {
+          "case_count": 278,
+          "experimental_strategy": "miRNA-Seq",
+          "file_count": 1023
+        },
+        {
+          "case_count": 252,
+          "experimental_strategy": "WGS",
+          "file_count": 3456
+        },
+        {
+          "case_count": 283,
+          "experimental_strategy": "RNA-Seq",
+          "file_count": 3159
+        },
+        {
+          "case_count": 292,
+          "experimental_strategy": "Tissue Slide",
+          "file_count": 2148
+        }
+      ],
+      "file_count": 12729,
+      "file_size": 168229063700909
+    }
+  },
+  "source": "gdc"
+}

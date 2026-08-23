@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:5a8c9a0dba1372de98f6f0fda0be6834fedef0d02d6bdde639fe6f7741db783f",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "RR intervals time series from healthy subjects",
+        "label": "healthy subjects"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:rr-interval-healthy-subjects",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "RR intervals time series",
+        "value": "ECG"
+      },
+      {
+        "evidence": "Heart rate variability (HRV)",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": "Healthy subjects aged between 1month and 55 years",
+    "summary": "Long-term RR interval time series from healthy volunteers aged between 1 month and 55 years, assembled to study heart rate variability across age and development."
+  },
+  "prompt_version": "v1"
+}

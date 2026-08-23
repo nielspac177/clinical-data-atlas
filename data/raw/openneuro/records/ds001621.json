@@ -1,0 +1,88 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds001621",
+  "payload": {
+    "created": "2018-12-14T15:35:44.733Z",
+    "id": "ds001621",
+    "latestSnapshot": {
+      "created": "2019-02-21T16:37:45.000Z",
+      "description": {
+        "Authors": [
+          "Schapiro, A.C.",
+          "Rogers, T.T.",
+          "Cordova, N.I.",
+          "Turk-Browne, N.B.",
+          "Botvinick, M.M."
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds001621.v1.1.0",
+        "Funding": [],
+        "HowToAcknowledge": "",
+        "License": "",
+        "Name": "Neural representations of events arise from temporal community structure",
+        "ReferencesAndLinks": [
+          "https://www.nature.com/articles/nn.3331"
+        ]
+      },
+      "readme": "This dataset corresponds to the fMRI portion of Experiment 3 from Schapiro, A.C., Rogers, T.T., Cordova, N.I., Turk-Browne, N.B., & Botvinick, M.M. (2013). Neural representations of events arise from temporal community structure. *Nature Neuroscience*.\r\n\r\n20 participants viewed sequences of abstract stimuli generated from the graph shown in Figure 1a of the paper. For each participant, 15 stimuli were randomly assigned to the 15 nodes of the graph. Participants were exposed to 1,400 stimuli generated from a random walk on the graph before entering the scanner. In the scanner, participants continued to view sequences of stimuli alternating between blocks of 15 items that were generated from a random walk on the graph and blocks of 15 items that were generated from a Hamiltonian path through the graph (each node visited exactly once). The Hamiltonian paths were not randomly drawn in each block for each subject; one path was drawn for each subject, and the forward and backward versions of this path were chosen randomly for each block. \r\n\r\nA rapid event-related design was used, with items presented for 1 s each with a jittered interstimulus interval (1, 3 or 5 s) such that the response to individual items could be modeled separately. There were five scanning runs lasting 616 s, with 160 items per run. \r\n\r\nAs a cover task, participants were asked to detect when the stimuli appeared rotated from their usual orientation. Participants pressed one key on the keyboard when they thought the stimulus was rotated and a second key otherwise, thus responding on every trial. Key assignment was counterbalanced across participants. Stimuli were rotated 90° from their initial orientation 12.5% of the time.\r\n\r\nStimulus presentation and behavior files with data from inside scanner (func/sub-\\*_task-commstruc_run-\\*_events.tsv):\r\n\r\n*onset*: Onset time in seconds relative to beginning of run\r\n*duration*: Duration of stimulus (always 1 second)\r\n*item*: Identifier for the graph node of the presented stimulus. The three graph communities are labeled A, B, and C, with nodes from the same community labeled A1, A2, etc. Boundary nodes have 1’s and 5’s.\r\n*rotation*: Rotation from usual orientation (usually 0°, occasionally 90°)\r\n*accuracy*: Whether the participant correctly reported the item as rotated from its usual orientation or not (n/a if no response)\r\n*reaction_time*: Time between stimulus onset and response in seconds (n/a if no response)",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 4644917881,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20"
+        ],
+        "tasks": [
+          "commstruc"
+        ],
+        "totalFiles": 524
+      },
+      "tag": "1.1.0"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": null,
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2018-12-14T15:35:44.733Z"
+  },
+  "source": "openneuro"
+}

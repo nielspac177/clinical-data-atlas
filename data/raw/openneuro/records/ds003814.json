@@ -1,0 +1,90 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003814",
+  "payload": {
+    "created": "2021-09-23T02:53:12.448Z",
+    "id": "ds003814",
+    "latestSnapshot": {
+      "created": "2022-07-22T17:05:36.000Z",
+      "description": {
+        "Authors": [
+          "Ben Deen",
+          "Winrich Freiwald"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds003814.v1.0.0",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Parallel systems for social and spatial reasoning",
+        "ReferencesAndLinks": null
+      },
+      "readme": "Title: Parallel systems for social and spatial reasoning\n\nBIDSVersion: v1.4.1\n\nAuthors: Ben Deen, Winrich Freiwald\n\nOSF Link: https://osf.io/5yjgh/\n\nData analysis code: https://github.com/bmdeen/identAnalysis\n\nDescription: This study aimed to characterize brain areas involved in reasoning and memory about stimuli from different content domains - people, places, and objects. We first asked participants to list their 10 most familiar people and places, and to choose six of these to use for the experiment. We then scanned participants, across three visits, on tasks involving visual perception, semantic judgment, and episodic simulation of familiar people and places, or generic objects. (Note: data from the three visits are combined into a single BIDS session.) Participants also performed localizer tasks, to define areas involved in dynamic visual perception, social cognition / theory of mind, and language. Scans were ordered as follows: 1) Visual perception task, theory of mind localizer; 2) Semantic judgment task, dynamic perception localizer; 3) Episodic simulation task, language localizer. After each scan, participants answered a questionnaire about the extent to which they engaged in memory recall during the scan. Additionally, after the third scan, participants provided ratings of various features of imagined events (these data will be included in a subsequent release). For fMRI acquisition, we used a multiband, multi-echo pulse sequence optimized to boost temporal signal to noise ratio in regions of signal dropout, including the anterior medial temporal lobes. For precise anatomical localization, we additionally collected three each of high resolution (.8mm) T1- and T2-weighted anatomical images, as well as three high in-plane resolution coronal images of the medial temporal lobe. We additionally collected spin echo \"field map\" images with opposing phase encode directions (~3 per scan, depending on participant head movement between runs), in order to correct for distortions in functional data. For experimental materials and scripts, please see this project's OSF page.",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 200646916703,
+        "subjects": [
+          "ident01",
+          "ident02",
+          "ident03",
+          "ident04",
+          "ident05",
+          "ident06",
+          "ident07",
+          "ident08",
+          "ident09",
+          "ident10"
+        ],
+        "tasks": [
+          "dyloc",
+          "famepisodic",
+          "famsemantic",
+          "famvisual",
+          "langloc",
+          "rest",
+          "tomloc2"
+        ],
+        "totalFiles": 7846
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        34,
+        29,
+        36,
+        30,
+        30,
+        35,
+        29,
+        40,
+        28,
+        29
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "Social and Spatial Cognition",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2024-06-14T20:40:16.101Z"
+  },
+  "source": "openneuro"
+}

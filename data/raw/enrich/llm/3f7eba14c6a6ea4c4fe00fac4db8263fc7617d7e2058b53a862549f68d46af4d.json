@@ -1,0 +1,28 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:3f7eba14c6a6ea4c4fe00fac4db8263fc7617d7e2058b53a862549f68d46af4d",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "pulmonology"
+    ],
+    "id": "tcia:rider-phantom-pet-ct",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "repeat measurement PET/CT phantom scan collections",
+        "value": "PET"
+      },
+      {
+        "evidence": "PET/CT phantom scan collections",
+        "value": "CT"
+      }
+    ],
+    "population": "Phantom scans at various sites; no human participants",
+    "summary": "Repeat PET/CT phantom scans collected at multiple sites to assess uniformity of clinical imaging instrumentation, machine acquisition, analytic reproducibility and image processing, using a modified NEMA NU-2 image quality phantom."
+  },
+  "prompt_version": "v1"
+}

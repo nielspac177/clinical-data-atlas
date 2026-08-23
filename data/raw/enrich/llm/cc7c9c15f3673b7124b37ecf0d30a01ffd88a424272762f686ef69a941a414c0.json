@@ -1,0 +1,71 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:cc7c9c15f3673b7124b37ecf0d30a01ffd88a424272762f686ef69a941a414c0",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Cystic, Mucinous and Serous Neoplasms",
+        "label": "Cystic, Mucinous and Serous Neoplasms"
+      },
+      {
+        "evidence": "Neoplasms, NOS",
+        "label": "Neoplasms, NOS"
+      },
+      {
+        "evidence": "Adenomas and Adenocarcinomas",
+        "label": "Adenomas and Adenocarcinomas"
+      },
+      {
+        "evidence": "Fibromatous Neoplasms",
+        "label": "Fibromatous Neoplasms"
+      },
+      {
+        "evidence": "Myomatous Neoplasms",
+        "label": "Myomatous Neoplasms"
+      },
+      {
+        "evidence": "Epithelial Neoplasms, NOS",
+        "label": "Epithelial Neoplasms, NOS"
+      },
+      {
+        "evidence": "Ductal and Lobular Neoplasms",
+        "label": "Ductal and Lobular Neoplasms"
+      },
+      {
+        "evidence": "Squamous Cell Neoplasms",
+        "label": "Squamous Cell Neoplasms"
+      },
+      {
+        "evidence": "Transitional Cell Papillomas and Carcinomas",
+        "label": "Transitional Cell Papillomas and Carcinomas"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "pulmonology",
+      "nephrology_urology",
+      "gastroenterology_hepatology"
+    ],
+    "id": "gdc:MATCH-Y",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Simple Nucleotide Variation, Sequencing Reads",
+        "value": "genomics"
+      },
+      {
+        "evidence": "Transcriptome Profiling",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "31 human cases with tumors of the cervix, lung, other female genital organs, breast, uterus, pancreas, skin, peritoneum, soft tissue and renal pelvis",
+    "summary": "Genomic characterization of one MATCH trial arm covering cervical, lung, breast, uterine, pancreatic, skin and soft tissue tumors. Provides WXS and RNA-Seq reads, variation calls, transcriptome profiling, biospecimen and clinical data."
+  },
+  "prompt_version": "v1"
+}

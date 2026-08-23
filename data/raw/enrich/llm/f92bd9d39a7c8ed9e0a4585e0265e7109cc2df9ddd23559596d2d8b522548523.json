@@ -1,0 +1,35 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:f92bd9d39a7c8ed9e0a4585e0265e7109cc2df9ddd23559596d2d8b522548523",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "physionet:wearable-exam-stress",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "accelerometer data recorded during three exam sessions",
+        "value": "wearable"
+      },
+      {
+        "evidence": "electrodermal activity, heart rate, blood volume pulse, skin surface temperature",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "blood volume pulse",
+        "value": "PPG"
+      },
+      {
+        "evidence": "as well as their corresponding grades",
+        "value": "behavioral"
+      }
+    ],
+    "population": "People recorded during three exam sessions (midterm 1, midterm 2 and finals)",
+    "summary": "Wearable recordings of electrodermal activity, heart rate, blood volume pulse, skin temperature, inter beat interval and accelerometer data during three exam sessions, paired with the corresponding exam grades."
+  },
+  "prompt_version": "v1"
+}

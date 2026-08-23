@@ -1,0 +1,171 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004894",
+  "payload": {
+    "created": "2023-12-18T06:44:44.208Z",
+    "id": "ds004894",
+    "latestSnapshot": {
+      "created": "2023-12-21T09:12:32.000Z",
+      "description": {
+        "Authors": [
+          "Toru Maekawa",
+          "Takafumi Sasaoka",
+          "Toshio Inui",
+          "Alan S. R. Fermin",
+          "Shigeto Yamawaki"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004894.v1.0.0",
+        "Funding": [
+          "Moonshot Research and Development Program, Japan Science and Technology Agency (JPMJMS2296) to SY",
+          "Center of Innovation Program, Japan Science and Technology Agency (JPMJCE1311, PMJCA2208) to TS",
+          "Grants-in-Aid for Scientific Research, Japan Society for the Promotion of Science (20K20423) to TI"
+        ],
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "Heart rate and insula activity increase in response to music in individuals with high interoceptive sensitivity",
+        "ReferencesAndLinks": [
+          ""
+        ]
+      },
+      "readme": "# README\n\n## Overview\n\n### Project Name\n\nHeart rate and insula activity increase in response to music in individuals with high interoceptive sensitivity\n\n### Year of Project\n\nThe study was conducted between August and December 2019.\n\n### Experiment Overview\n\nThis research focuses on understanding the relationship between interoceptive sensitivity and emotional responses to music. The study measures changes in pulse rate and insula activity in response to music in individuals with varying levels of interoceptive sensitivity. The experiment involved functional magnetic resonance imaging (fMRI) and heartbeat counting and discrimination tasks.\n\n### Contents of the Dataset\n\nThe dataset includes fMRI data and heart rate measurements of 52 participants (31 females, 21 males) while they listened to various music pieces. It also contains results from heartbeat counting and discrimination tasks.\n\n### Independent Variables\n\nThe primary independent variable is the individual differences in interoceptive sensitivity. This was assessed using heartbeat discrimination and counting tasks.\n\n### Dependent Variables\n\nThe main dependent variables are changes in pulse rate and insula activity in response to music. Emotional valence ratings for the music pieces were also collected.\n\n### Control Variables\n\nParticipants were selected based on specific criteria (non-musicians, right-handed, age range 18–35) to maintain a consistent study population. Environmental conditions and setup in the fMRI scanner were controlled.\n\n### Quality Assessment of the Data\n\nThe data quality was ensured by standard preprocessing methods in fMRI analysis and careful recording of heart rate data. The dataset includes complete data from 49 participants after excluding data due to equipment malfunction.\n\n## Data Structure\n\n### Additional Data on figshare\n\nPPG and heartbeat discrimination task data are stored on figshare.\nhttps://doi.org/10.6084/m9.figshare.24874173\n\n### Trial Data\n\nThe dataset includes TSV files for each participant, providing detailed trial information.\n\n- **onset**: Time of the event onset, relative to the start of the scan, in seconds.\n- **duration**: Duration of the event, in seconds.\n- **trial**: Trial number.\n- **event**: Type of event (either 'Music' for music listening or 'Rating' for emotional response rating).\n- **music_type**: Type of music stimulus (tonal, atonal, discord).\n- **valence_rating**: Emotional response strength to the music.\n\n## Access to the Data\n\n### Contact Person\n\nToru Maekawa (tmaekawa@hiroshima-u.ac.jp)\n\n### Practical Information to Access the Data\n\nThe dataset is anonymized, with participants assigned numeric codes. Access to detailed participant information is restricted to the research team.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 22829260930,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "29",
+          "30",
+          "31",
+          "32",
+          "33",
+          "35",
+          "36",
+          "37",
+          "38",
+          "39",
+          "40",
+          "41",
+          "42",
+          "43",
+          "44",
+          "45",
+          "46",
+          "47",
+          "48",
+          "49",
+          "50",
+          "51",
+          "52"
+        ],
+        "tasks": [
+          "music"
+        ],
+        "totalFiles": 398
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "Emotion, Interoception",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2024-02-08T02:01:48.428Z"
+  },
+  "source": "openneuro"
+}

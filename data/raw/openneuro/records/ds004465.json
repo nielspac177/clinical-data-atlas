@@ -1,0 +1,94 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004465",
+  "payload": {
+    "created": "2023-02-07T00:56:47.800Z",
+    "id": "ds004465",
+    "latestSnapshot": {
+      "created": "2023-02-07T01:20:10.000Z",
+      "description": {
+        "Authors": [
+          "Gianina Ungurean",
+          "Mehdi Behroozi",
+          "Leonard Böger",
+          "Xavier Helluy",
+          "Paul-Antoine Libourel",
+          "Onur Güntürkün",
+          "Niels C. Rattenborg"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004465.v1.0.0",
+        "Funding": [
+          "Max Planck Society",
+          "Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) – Projektnummer 316803389 – SFB 1280",
+          "AVIAN MIND, ERC-2020-ADG, LS5, GA No. 101021354"
+        ],
+        "HowToAcknowledge": "Please cite the paper , Ungurean G., Behroozi M., et al., Wide-spread brain activation and reduced CSF flow during avian REM sleep.",
+        "License": "CC0",
+        "Name": "functional MRI of sleeping pigeons",
+        "ReferencesAndLinks": [
+          "Wide-spread brain activation and reduced CSF flow during avian REM sleep"
+        ]
+      },
+      "readme": "Dataset title: Functional MRI of sleeping pigeons\n\nThe dataset contains data from 15 Budapest pigeons scanned for two days (except for one pigeon whose data are available for only one day):\n\nAll MRI data were collected in a Bruker BioSpec 7 Tesla scanner (horizontal bore, 70/30 USR, Avance III electronic, Germany) using Paravision 6.0 software. A quadrature birdcage resonator (82 mm ID) was used for RF transmission and a single-loop receiver surface coil (20 mm ID) was used to collect resting-state and anatomical data.\nBy positioning the ring surface coil around the head, it was possible to reduce artifacts due to body motion.\nBecause changes in respiration can affect BOLD signals and brain connectivity maps, respiratory waveform was measured during all resting-state measurements using a small pneumatic cushion placed under the pigeon's pectoral muscles (Small Animal Instruments, Inc. model 1025T monitoring and gating system) (sub- XX _ses-0X_task-sleep_physiological_record).\nThe animals' facial behavior was simultaneously recorded using an MRI-compatible video camera (12M-i, MRC Systems, Heidelberg, Germany; B/W) with built-in LED light (IR) (outside the visible spectrum of the pigeon). To facilitate detection of changes in pupil size and eye position, a small mirror was placed next to each eye (Fig. 1A). Videos were recorded at 30 fps. All recordings, including respiratory signals, videos, and resting-state data, were synchronized with a TTL signal.\n\nResting-state fMRI (rs-fMRI) data were acquired using a single-shot multi-slice RARE sequence adapted from Behroozi et al (2020) with the following parameters: TR =4000ms, TEeff=41.58 ms, partial Fourier transform accelerator=1.53, encoding matrix=64×42, acquisition matrix=64×64, FOV=30×30mm2, in-plane spatial resolution =0.47×.047mm2, radio- frequency pulse flip angles for excitation and refocusing=90°/180°, slice thickness=1mm, no slice distance, slice order=interleaved, excitation and refocusing pulse form=scanner vendor gauss512, receiver bandwidth= 50,000Hz.\nTo saturate the signals from the eyes and avoid distortion of the brain image by eye movements, two saturation slices were manually positioned over the eyes.\nEach run of rsfMRI acquisitions included 1000 to 1450 volumes.\nTo check the reproducibility and stability of the results, the rsfMRI data of all animals were recorded twice on different days.\n\nHigh-resolution anatomical T2-weighted images were acquired with a RARE sequence for better spatial normalization. The scan parameters were as follows: TR =2000 ms, TEeff=50.72ms, RARE factor=16, number of averages=1, FOV =25×25×15mm3, matrix size =128×128×64, spatial resolution=0.2×0.2×0.23mm3. The total scan time was 17 minutes.\n\nSleep states were manually scored using the video recordings. To facilitate the scoring process, actimetry signals were calculated for the eyes, irises, and bill region and visualized together with the video recordings.\nNREM sleep was characterized by bilateral eye closure, stable respiration (visible in the videos and bill actimetry signals), immobility of the eyes, and absence of bill movements other than those related to respiration.\nREM sleep was characterized by bilateral eye closure with movements of the eyes, bill, and/or the collapse of the head feathers held erect during preceding NREM sleep. As described previously, rapid constrictions and dilations of the iris are closely associated with REM sleep. Therefore, rapid iris movements have also been used to identify bouts of REM sleep and their absence to confirm NREM sleep.\nBEO: Both eyes open\nLEO: Left eye open\nREO: Right eye open\n\nBecause our birds closed their eyes and fell asleep almost immediately after head fixation, we needed to wake them up. Therefore, we played loud auditory stimuli during fMRI recording. The auditory stimuli included a piece of classical music (the first 8 seconds of the Brandenburg Concerto No. 4 by Johann Sebastian Bach, see Supplementary file S01) and two random chord stimuli centered at 1000 Hz (500-1500 Hz) and 3000 Hz (1500-4500 Hz). The acoustic stimuli were presented through a MR -compatible loudspeaker (SoundCraft) placed at a distance of 8 cm from the tip of the beak. A total of 45 trials were played during the fMRI recordings. Each trial consisted of 8 seconds of auditory stimuli followed by 52 seconds of silence. We digitized all stimuli at 44.1 kHz. The maximum sound pressure level (SPL) was approximately 90 dB (measured at 1 cm distance from the speaker).\nAwake data are available for only 4 pigeons as ses-03 (sub-33, sub-36, sub-38, sub-69).\n\nDetails of all experimental designs are described in the main manuscript (Gianina Ungurean1, *, †, Mehdi Behroozi2, *, †, Leonard Böger1, Xavier Helluy2, Paul-Antoine Libourel3, Onur Güntürkün2, Niels C. Rattenborg1\t. Wide-spread brain activation and reduced CSF flow during avian REM sleep).\n\nIn case of any questions please contact Mehdi Behroozi (mehdi.behroozi@ruhr-uni-bochum.de)) or Gianina Ungurean (Gianina.Ungurean@bi.mpg.de).",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "01",
+          "02",
+          "03"
+        ],
+        "size": 3312162075,
+        "subjects": [
+          "29",
+          "33",
+          "34",
+          "35",
+          "36",
+          "37",
+          "38",
+          "52",
+          "69",
+          "712",
+          "721",
+          "735",
+          "736",
+          "78",
+          "84"
+        ],
+        "tasks": [
+          "sleep",
+          "auditory"
+        ],
+        "totalFiles": 133
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": null,
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Pigeon",
+      "studyDesign": "Resting-State",
+      "studyDomain": "Sleep",
+      "studyLongitudinal": "Longitudinal"
+    },
+    "publishDate": "2023-04-07T00:35:39.911Z"
+  },
+  "source": "openneuro"
+}

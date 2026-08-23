@@ -1,0 +1,44 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:c43c4a1c72e41a1ed9834299cb779f0ab22f6c2de51437e11ac1f21b88f3ab51",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "comatose patients following cardiac arrest",
+        "label": "cardiac arrest"
+      },
+      {
+        "evidence": "comatose patients",
+        "label": "coma"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "cardiology",
+      "critical_care",
+      "neurology"
+    ],
+    "id": "physionet:i-care",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "continuous electroencephalogram (EEG)",
+        "value": "EEG"
+      },
+      {
+        "evidence": "electrocardiogram (ECG) recordings",
+        "value": "ECG"
+      },
+      {
+        "evidence": "baseline clinical information",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "Comatose patients following cardiac arrest admitted to an intensive care unit in one of seven academic hospitals in the U.S. and Europe",
+    "summary": "Multicenter database of baseline clinical information with continuous EEG and ECG recordings from comatose cardiac arrest patients in intensive care, with neurological outcome graded on the Cerebral Performance Category scale."
+  },
+  "prompt_version": "v1"
+}

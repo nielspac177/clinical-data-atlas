@@ -1,0 +1,113 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds002773",
+  "payload": {
+    "created": "2020-05-01T03:41:01.122Z",
+    "id": "ds002773",
+    "latestSnapshot": {
+      "created": "2020-05-03T00:23:58.000Z",
+      "description": {
+        "Authors": [
+          "Zhifang Ye",
+          "Gui Xue"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds002773.v1.0.0",
+        "Funding": [
+          "National Science Foundation of China (31730038)",
+          "973 Program (2014CB846102)",
+          "The NSFC and the German Research Foundation (DFG) joint project NSFC 61621136008 / DFG TRR-169",
+          "Guangdong Pearl River Talents Plan Innovative and Entrepreneurial Team grant #2016ZT06S220"
+        ],
+        "HowToAcknowledge": "If you use these data, please cite the appropriate manuscripts.",
+        "License": "CC0",
+        "Name": "Retrieval practice facilitates memory updating by enhancing and differentiating medial prefrontal cortex representations",
+        "ReferencesAndLinks": null
+      },
+      "readme": "# Retrieval practice facilitates memory updating by enhancing and differentiating medial prefrontal cortex representations\r\n\r\nThis dataset contains raw data used in the \"Retrieval practice facilitates memory updating by enhancing and differentiating medial prefrontal cortex representations\" paper.\r\n\r\n## ABSTRACT\r\n\r\nUpdating old memories with new, more current information is critical for human survival, yet the neural mechanisms for memory updating in general and the effect of retrieval practice in particular are poorly understood. Using a three-day A-B/A-C memory updating paradigm, we found that compared to restudy, retrieval practice could strengthen new A-C memories and reduce old A-B memory intrusion, but did not suppress A-B memories. Neural activation pattern analysis revealed that compared to restudy, retrieval practice led to stronger target representation in the medial prefrontal cortex (MPFC) during the final test. Critically, the MPFC contained strong and comparable competitor evidence for both correct and incorrect trials only under the retrieval practice condition. Furthermore, the MPFC target representation during updating was predictive of subsequent memory during retrieval practice but not restudy. These results suggest that retrieval practice could facilitate memory updating by strongly engaging MPFC mechanisms in memory differentiation and consolidation.\r\n\r\n## EXPERIMENTAL DESIGN\r\n\r\nThe whole experiment lasted for three consecutive days. On Day 1, subjects were trained on the 144 word-picture associations (A-B learning). On Day 2, subjects were asked to update the old memory with the new A-C associations, half under the RetPrac condition and the other half under the Restudy condition. On Day 3, subjects performed a cued recall task to test A-C associations. \r\n\r\nA-B learning. Before learning, subjects were asked to view all 288 pictures and their corresponding labels to make sure each picture was correctly identified. subjects were then instructed to learn 144 word-picture associations. Each A-B association was presented for 4s after a 0.5s fixation, and subjects were asked to memorize the associations for a later test. After the initial learning, subjects went through an overtraining phase. For each trial, the cue word and a black rectangle were presented for 2s. Subjects were instructed to recall the details of the picture associated with the cue word presented on the screen. The rectangle turned to red for 1s and subjects needed to indicate their responses by pressing the button corresponding to the picture's category (Face, Object, Scene, and Don't Know). The correct B picture was presented for 1s as a feedback and subjects were instructed to use this feedback to further strengthen their memory. All A-B associations were tested and those correctly recalled were removed from further testing. The training ended when each of the associations was correctly recalled once. On average, each association was tested 2.3 times (SD = 0.26). On Day 2, subjects were again instructed to recall A-B associations. The procedure was identical to A-B overtraining on Day 1. On average, each association was tested 2.03 times (SD = 0.24). The purpose of the A-B over-training was to ensure that subjects had strong A-B memory.  \r\n\r\nA-C updating. Fifteen minutes after the A-B over-training on Day 2, subjects were then introduced to the new A-C associations outside the scanner and were asked to replace the A-B associations with the new A-C associations. The procedure was identical to A-B learning except that the pictures associated with word cues were changed to pictures from a different category. Subjects were asked to study and remember the new A-C associations and all old A-B associations would be irrelevant to any future tasks. The specific instructions were as follows: ‘Now you will study some new picture-word associates. The words are all from the previously studied associations, but the paired pictures are all new. Your task is to remember these new associations. The old associations are irrelevant to any future task so you do not need to remember them’. Subjects studied the new A-C memory once outside the scanner, and five minutes after initial A-C updating, they were put into the scanner to finish additional A-C updating. During scanning, half of the A-C pairs were assigned to the RetPrac condition and the other half to the Restudy condition. Under the RetPrac condition, a word cue and a black rectangle were presented for 2s and subjects were asked to recall the picture associated with the presented (cue) word as vividly as possible. A red rectangle was then shown for 1s and subjects were asked to judge the category of picture C by pressing a button corresponding to the visual category of the picture within this 1s response window. The button-category correspondence was shuffled across subjects and only presented on the screen during the response stage (i.e., when the red rectangle was shown). This was to prevent subjects from planning motor response during the recall stage. After the response window, the correct picture was presented on the screen for 1s. The next trial started after a jittered fixation (ranging from 0.5s to 6.5s, mean = 2s). Under the Restudy condition, the procedure was similar to that for the RetPrac condition except that the correct picture was presented on the screen during the entire trial. Subjects were still required to judge the category of picture C when the red rectangle was shown. The RetPrac and Restudy trials were pseudo-randomly intermixed within a run. Each trial was repeated three times, with an inter-repetition-interval (IRI) ranging from 10 to 36 (mean = 21.93). The IRI was matched between the two conditions. Each run of A-C updating contained 12 unique RetPrac pairs and 12 unique Restudy pairs and lasted 7.2 minutes. Subjects finished 6 runs of the learning task.\r\n\r\nA-C final test. On Day 3, subjects were instructed to perform the A-C final test while being scanned. A slow event-related design (12 s for each trial) was used to obtain a better estimation of the activation pattern for each item. After a 1s fixation, a cue word and a black rectangle were presented on the screen for 4s, and subjects were instructed to recall the picture C associated with the cue word as vividly as possible. The rectangle then turned red for 1s and subjects were required to press a button to indicate the category of the retrieved picture. Similar to the RetPrac condition on Day 2, we also introduced the response label to prevent motor planning during the recall stage. Subjects were then asked to perform a Gabor orientation judgment task for 6 s. During this task, a Gabor pointing 45 degrees either to the left or the right was presented and subjects were asked to judge the orientation of the Gabor as fast as possible. A self-paced procedure was used to make the task engaging. The A-C final test consisted of 3 runs of 9.6 minutes, each containing 48 associations.\r\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "day1",
+          "day2",
+          "day3"
+        ],
+        "size": 86651808073,
+        "subjects": [
+          "001",
+          "002",
+          "003",
+          "004",
+          "005",
+          "006",
+          "007",
+          "008",
+          "009",
+          "010",
+          "011",
+          "012",
+          "013",
+          "014",
+          "015",
+          "016",
+          "017",
+          "018",
+          "019"
+        ],
+        "tasks": [
+          "updating",
+          "localizer",
+          "retrieval"
+        ],
+        "totalFiles": 805
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        24,
+        25,
+        23,
+        23,
+        22,
+        18,
+        18,
+        22,
+        20,
+        24,
+        22,
+        19,
+        20,
+        19,
+        21,
+        19,
+        23,
+        17,
+        20
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2020-05-06T07:18:16.322Z"
+  },
+  "source": "openneuro"
+}

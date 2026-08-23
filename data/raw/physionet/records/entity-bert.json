@@ -1,0 +1,32 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "entity-bert",
+  "payload": {
+    "abstract": "<p>Transformer-based neural language models have led to breakthroughs for a variety of natural language processing (NLP) tasks. However, most models are pretrained on general domain data. We propose a methodology to produce a model focused on the clinical domain: continued pretraining of a model with a broad representation of biomedical terminology (PubMedBERT) on a clinical corpus (MIMIC-III) along with a novel entity-centric masking strategy to infuse domain knowledge in the learning process.&nbsp;</p>\n\n<p>We curated the MIMIC-III corpus by annotating events (including&nbsp;diseases/disorders, signs/symptoms, medications, anatomical sites, and&nbsp;procedures) and time expressions (e.g. &quot;yesterday&quot;, &quot;this weekend&quot;,&nbsp;&quot;02/31/2028&quot;(an example date)) with special markers. Marked events and time expressions are randomly chosen together with other words in a certain ratio to be&nbsp;masked for training the entity-centric&nbsp;mask language model. Therefore, the models are infused with clinical&nbsp;entity information and good for entity-related clinical NLP tasks.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 1225860653,
+    "core_doi": "10.13026/vagp-v123",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 1322265314,
+    "public_project_uuid": "3b5f981a-dd89-492b-b906-a4c3a0033eff",
+    "publish_date": "2022-03-17",
+    "resource_type": "Model",
+    "short_description": "Pretraining of models with a broad representation of biomedical terminology (PubMedBERT) on MIMIC-III corpus along with or without a novel entity-centric masking strategy.",
+    "slug": "entity-bert",
+    "source_url": "https://physionet.org/content/entity-bert/1.0.1/",
+    "title": "EntityBERT: BERT-based Models Pretrained on MIMIC-III with or without Entity-centric Masking Strategy for the Clinical Domain",
+    "topics": [],
+    "version": "1.0.1",
+    "version_doi": "10.13026/e7kt-q579"
+  },
+  "source": "physionet"
+}

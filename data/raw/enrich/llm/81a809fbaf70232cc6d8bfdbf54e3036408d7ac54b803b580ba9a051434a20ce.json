@@ -1,0 +1,38 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:81a809fbaf70232cc6d8bfdbf54e3036408d7ac54b803b580ba9a051434a20ce",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "patients with sepsis as the primary admission diagnosis",
+        "label": "sepsis"
+      },
+      {
+        "evidence": "ICU patients at risk for cardiac arrest",
+        "label": "cardiac arrest"
+      },
+      {
+        "evidence": "patients with gastrointestinal bleeding",
+        "label": "gastrointestinal bleeding"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "critical_care",
+      "cardiology",
+      "gastroenterology_hepatology"
+    ],
+    "id": "physionet:clinical-trajectory-flow-icu",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "derived from the eICU Collaborative Research Database v2.0",
+        "value": "EHR"
+      }
+    ],
+    "population": "ICU patients: 3362 with sepsis, 64589 at risk for cardiac arrest, and 2602 with gastrointestinal bleeding",
+    "summary": "Three irregularly sampled clinical time series cohorts drawn from eICU and MIMIC-III, split into training, validation and test sets, used to evaluate Trajectory Flow Matching models of critical care trajectories."
+  },
+  "prompt_version": "v1"
+}

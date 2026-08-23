@@ -1,0 +1,48 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:0523c2a8a1e1537ab79f0d8b1428e62448a23c15b923395344270d1c740912a3",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "patients with type 2 Diabetes mellitus",
+        "label": "type 2 Diabetes mellitus"
+      },
+      {
+        "evidence": "healthy controls",
+        "label": "healthy controls"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience",
+      "cardiology",
+      "pulmonology",
+      "endocrinology_metabolism"
+    ],
+    "id": "physionet:cerebral-perfusion-diabetes",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "MRI perfusion",
+        "value": "MRI"
+      },
+      {
+        "evidence": "transcranial Doppler ultrasound",
+        "value": "ultrasound"
+      },
+      {
+        "evidence": "respiratory variables",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "laboratory and gait variables",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "70 patients with type 2 DM and 70 healthy controls (50-85 years old)",
+    "summary": "Study of brain blood flow, vasoreactivity and functional outcomes in type 2 diabetes, combining transcranial Doppler ultrasound, arterial spin labeling MRI perfusion, cardiovascular and respiratory recordings, laboratory values, foot pressure distribution and gait measures."
+  },
+  "prompt_version": "v1"
+}

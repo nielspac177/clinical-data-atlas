@@ -1,0 +1,99 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004632",
+  "payload": {
+    "created": "2023-07-11T12:27:11.090Z",
+    "id": "ds004632",
+    "latestSnapshot": {
+      "created": "2024-01-15T10:37:44.000Z",
+      "description": {
+        "Authors": [
+          "Joshua GOBE",
+          "Chrystelle PO",
+          "Chloé DUMOT",
+          "Radu BOLBOS",
+          "Matthieu CHOURROUT",
+          "Marlène WIART",
+          "Fabien CHAUVEAU"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004632.v1.0.3",
+        "Funding": [
+          "ANR18-CE19-0003",
+          "ANR16-RHUS-0009",
+          "Hospices Civils de Lyon"
+        ],
+        "HowToAcknowledge": "Please mention dataset DOI and associated publication: Dumot C, et al. Neurofunctional and neuroimaging readouts for designing a preclinical stem-cell therapy trial in experimental stroke. Sci Rep. 2022;12(1):4700. doi:10.1038/s41598-022-08713-z",
+        "License": "CC0",
+        "Name": "DTI readouts for designing a preclinical stem-cell therapy trial in experimental stroke",
+        "ReferencesAndLinks": [
+          "https://doi.org/10.1038/s41598-022-08713-z"
+        ]
+      },
+      "readme": "This dataset contains MRI associated with the following publication:\nDumot C, Po C, Capin L, Hubert V, Ong E, Chourrout M, Bolbos R, Amaz C, Auxenfans C, Canet-Soulas E, Rome C, Chauveau F, Wiart M. Neurofunctional and neuroimaging readouts for designing a preclinical stem-cell therapy trial in experimental stroke. Sci Rep. 2022;12(1):4700. doi:[10.1038/s41598-022-08713-z](https://doi.org/10.1038/s41598-022-08713-z)\n\nAn interactive display of this dataset is available: https://fabien-chauveau.quarto.pub/dti-readouts-for-designing-a-preclinical-stem-cell-therapy-trial-in-experimental-stroke/\n\nRaw data:\n\nlongitudinal DTI and T2w imaging for 11 male Sprague Dawley OFA rats (ILAR, Crl:OFA(SD); RRID:RGD_2312474)\n\n\tMagnetic field: 7T\n\tAnesthesia: isoflurane\n\tTime points (in weeks, following surgery): W1 (day 4); W5 ; W9\n\tEthics statement: agreement number APAFIS#4688-2016032514131943 from local committee CELYNE-CNREEA (C2EA-42)\n\nDerivatives:\n\nDTI maps (FA, AD, MD, RD) obtained through the following analysis pipeline\n\n    Motion correction: FLIRT (FSL), rigid (6 DOF)\n    Individual maps: dtifit (FSL)\n    Manual segmentation of brain tissue from smooth_meanDWI-ssA0_A3_D35: 3Dslicer\n    Affine registration of the FA map from rat A3_D35 on each individual FA map at each time point: antsRegistrationSyNQuick.sh (ANTs)\n    Resulting transformation matrices applied to the brain mask from rat A3_D35 : antsApplyTransforms (ANTs)\n    Individual brain extraction from DTI maps: fslmaths -mas (FSL)\n    Affine registration of FA maps onto the one from rat A3_D35: antsRegistrationSyNQuick.sh (ANTs)\n    Resulting transformation matrices applied to the other parametric maps: antsApplyTransforms (ANTs)\n\nFull acquisition and analysis descriptions are avaialable in the Methods section of the publication.\nIndividual measurements extracted from this dataset are available at the [figshare repository](https://figshare.com/s/15af2a099076389d2a5e).\n\nThis dataset has been converted using [BrkRaw v0.3.5](https://doi.org/10.5281/zenodo.6803744) on 2023-03-23.",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_diffusion",
+          "mri_structural"
+        ],
+        "sessions": [
+          "W1",
+          "W5",
+          "W9"
+        ],
+        "size": 935850380,
+        "subjects": [
+          "A1",
+          "A2",
+          "A3",
+          "A5",
+          "A7",
+          "A8",
+          "A9",
+          "B3",
+          "C3",
+          "C4",
+          "C5"
+        ],
+        "tasks": [],
+        "totalFiles": 178
+      },
+      "tag": "1.0.3"
+    },
+    "metadata": {
+      "affirmedDefaced": false,
+      "ages": [
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9
+      ],
+      "associatedPaperDOI": "10.1038/s41598-022-08713-z",
+      "dataProcessed": null,
+      "dxStatus": "stroke",
+      "grantFunderName": "French National Research Agency (ANR) : Breakthru project ",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Rat",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": "Longitudinal"
+    },
+    "publishDate": "2023-07-11T14:55:35.359Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,47 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:e4820b1f5c31a89764203aa71c375f33b7a183f337fee8fc66685a5d58957ff4",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "type 2 diabetes",
+        "label": "type 2 diabetes"
+      },
+      {
+        "evidence": "diabetic autonomic neuropathy",
+        "label": "diabetic autonomic neuropathy"
+      },
+      {
+        "evidence": "orthostatic hypotension",
+        "label": "orthostatic hypotension"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "cardiology",
+      "pulmonology",
+      "endocrinology_metabolism"
+    ],
+    "id": "physionet:cerebral-vasoreg-diabetes",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "perfusion-arterial spin labeling mri",
+        "value": "MRI"
+      },
+      {
+        "evidence": "transcranial Doppler",
+        "value": "ultrasound"
+      },
+      {
+        "evidence": "heart rate, blood pressure, and respiratory parameters",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": "37 diabetic participants and 49 controls (aged 55 to 75 years)",
+    "summary": "Observational study of how type 2 diabetes affects cerebral vasoregulation, with continuous cerebral blood flow measured by transcranial Doppler and MRI, plus heart rate, blood pressure, respiratory, balance, walking, laboratory and retinopathy measures."
+  },
+  "prompt_version": "v1"
+}

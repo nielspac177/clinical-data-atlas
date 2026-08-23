@@ -1,0 +1,96 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003374",
+  "payload": {
+    "created": "2020-11-11T18:36:10.735Z",
+    "id": "ds003374",
+    "latestSnapshot": {
+      "created": "2020-11-26T12:36:45.000Z",
+      "description": {
+        "Authors": [
+          "Tommaso Fedele",
+          "Ece Boran",
+          "Valeri Chirkov",
+          "Peter Hilfiker",
+          "Thomas Grunwald",
+          "Lennart Stieglitz",
+          "Hennric Jokeit",
+          "Johannes Sarnthein"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds003374.v1.1.1",
+        "Funding": [
+          "Swiss National Science Foundation, SNSF 320030_156029",
+          "Mach-Gaensslen Stiftung",
+          "Stiftung für wissenschaftliche Forschung an der Universität Zürich",
+          "Forschungskredit der Universität Zürich",
+          "Russian Federation for Basic Research, RFBR 20-015-00176 A"
+        ],
+        "HowToAcknowledge": "Please cite this paper:  https://doi.org/10.1016/j.neuroimage.2020.116705",
+        "License": "CC0",
+        "Name": "Dataset of neurons and intracranial EEG from human amygdala during aversive dynamic visual stimulation",
+        "ReferencesAndLinks": [
+          "Fedele, T., Tzovara, A., Steiger, B., Hilfiker, P., Grunwald, T., Stieglitz, L., Jokeit, H., Sarnthein, J., 2020. The relation between neuronal firing, local field potentials and hemodynamic activity in the human amygdala in response to aversive dynamic visual stimuli. Neuroimage 213, 116705. https://doi.org/10.1016/j.neuroimage.2020.116705",
+          "Fedele, T., Boran, E., Chirkov, V., Hilfiker, P., Grunwald, T., Stieglitz, L., Jokeit, H., Sarnthein, J., 2020. Dataset of neurons and intracranial EEG from human amygdala during aversive dynamic visual stimulation. G-node. https://gin.g-node.org/USZ_NCH/Human_Amygdala_MUA_sEEG_FearVideo"
+        ]
+      },
+      "readme": "# Dataset of neurons and intracranial EEG from human amygdala during aversive dynamic visual stimulation\n\n## Summary\nWe present an electrophysiological dataset collected from the amygdalae of nine subjects attending a visual dynamic stimulation of emotional aversive content. The subjects were patients affected by epilepsy who underwent preoperative invasive monitoring in the mesial temporal lobe. Subjects were presented with dynamic visual sequences of fearful faces (aversive condition), interleaved with sequences of neutral landscapes (neutral condition).\n\nWe provide the recordings of intracranial EEG (iEEG) and metadata related to the task, subjects, sessions and electrodes in the BIDS standard.\n\nWe also provide a more extended version of the dataset that includes neuronal spike times and waveforms in the NIX standard under the folder \"bidsignore/data_NIX\". This extended dataset is also available in G-Node at https://gin.g-node.org/USZ_NCH/Human_Amygdala_MUA_sEEG_FearVideo/.\n\nThis dataset allows the investigation of amygdalar response to dynamic aversive stimuli at multiple spatial scales, from the macroscopic EEG to the neuronal firing in the human brain.\n\n## Repository structure\n\n### Main directory\nContains metadata in the BIDS standard. \n\n### Directories sub-**\nContains folders for each subject, named sub-<subject number>.\n\n### Directory bidsignore\nContains data in the NIX standard, and metadata files. Subject_Characteristics.pdf describes subjects and NIX_File_Structure.pdf describes the structure of the NIX files.\n\n#### Directory code_MATLAB\nContains MATLAB code for loading the data and generating the publication figures. Main_Load_NIX_Data.m contains code snippets for reading NIX data and task related information. Main_Plot_Figures.m uses the functions Figure_2.m and Figure_3.m to generate figures.\n\nRequired dependencies to run the script Main_Load_NIX_Data.m:\n\n*  [Nix-mx v1.4.1](https://github.com/G-Node/nix-mx/)\n\nRequired dependencies to run the script Main_Plot_Figures.m:\n\n*  [Nix-mx v1.4.1](https://github.com/G-Node/nix-mx/)\n*  [Gramm](https://github.com/piermorel/gramm/)\n*  [FieldTrip](http://www.fieldtriptoolbox.org/download/)\n\n#### Directory data_NIX\nContains nix files for each session of the task. Each file is named with the format:  \nData\\_Subject\\_\\<subject number>\\_Session\\_\\<session number>.h5\n\n## Support\nFor questions on the dataset or the task, contact Johannes Sarnthein at [johannes.sarnthein@usz.ch](johannes.sarnthein@usz.ch).",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "ieeg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [
+          "01"
+        ],
+        "size": 175461388,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09"
+        ],
+        "tasks": [
+          "jokeit"
+        ],
+        "totalFiles": 104
+      },
+      "tag": "1.1.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        31,
+        48,
+        19,
+        22,
+        34,
+        23,
+        39,
+        27,
+        22
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "ieeg"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2020-11-11T18:39:48.830Z"
+  },
+  "source": "openneuro"
+}

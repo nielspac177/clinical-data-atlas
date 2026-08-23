@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:226afae37df0ce094097ea57d65e1b834b6607df88a387c2b8fbd2f48237775c",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "3,910 patients with acute hypotension",
+        "label": "acute hypotension"
+      },
+      {
+        "evidence": "2,164 patients with sepsis",
+        "label": "sepsis"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "critical_care"
+    ],
+    "id": "physionet:synthetic-mimic-iii-health-gym",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "vital signs",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "laboratory test results",
+        "value": "EHR"
+      }
+    ],
+    "population": "3,910 patients with acute hypotension and 2,164 patients with sepsis in the Intensive Care Unit (ICU)",
+    "summary": "Synthetic intensive care records of vital signs, laboratory results, fluid boluses and vasopressors for acute hypotension and sepsis cohorts, generated with adversarial networks from MIMIC-III for machine learning and teaching."
+  },
+  "prompt_version": "v1"
+}

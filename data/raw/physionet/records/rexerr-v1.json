@@ -1,0 +1,30 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "rexerr-v1",
+  "payload": {
+    "abstract": "<p>Interpreting medical images and writing radiology reports is a critical yet challenging task in healthcare. Despite their importance, both human-written and AI-generated reports are liable to errors, leaving a need for robust and representative datasets that capture the diversity of errors present across different mediums of report generation. Thus, we present Chest X-Ray Report Errors (ReXErr-v1), a new dataset based on MIMIC-CXR and constructed using large language models (LLMs) that contains synthetic error reports for the majority of MIMIC-CXR. Developed with input from board-certified radiologists, ReXErr-v1 contains plausible errors that closely mimic those found in real-world scenarios. Furthermore, ReXErr-v1 utilizes a novel sampling methodology that selects three errors to inject among a set of frequent errors made by both human and AI models. We include errors both at report and sentence level, improving the versatility of ReXErr-v1. Our dataset can enhance future AI reporting tools by aiding the development and evaluation of report-generation and error-screening algorithms.</p>",
+    "access_policy": "Open",
+    "compressed_storage_size": 86749857,
+    "core_doi": "10.13026/7ytb-x609",
+    "dua": null,
+    "is_latest_version": true,
+    "license": {
+      "name": "Open Data Commons Attribution License v1.0"
+    },
+    "main_storage_size": 533669659,
+    "public_project_uuid": "8ac99b82-a9a7-4f0c-8922-f3358e90ad2d",
+    "publish_date": "2025-03-19",
+    "resource_type": "Database",
+    "short_description": "Chest X-Ray reports containing synthetic errors based upon the MIMIC-CXR database. Errors were injected using LLMs and sampled across common human and AI model errors.",
+    "slug": "rexerr-v1",
+    "source_url": "https://physionet.org/content/rexerr-v1/1.0.0/",
+    "title": "ReXErr-v1: Clinically Meaningful Chest X-Ray Report Errors Derived from MIMIC-CXR",
+    "topics": [],
+    "version": "1.0.0",
+    "version_doi": "10.13026/9dns-vd94"
+  },
+  "source": "physionet"
+}

@@ -1,0 +1,45 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:e4b5904526c00e557da351e0966219e4f8acf87c9fbc38b3d6fc912b12a5fc24",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "the effects of ischemic stroke on cerebral vasoregulation",
+        "label": "ischemic stroke"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "cardiology"
+    ],
+    "id": "physionet:cves",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "24-h ECG, EMG, and accelerometer recordings",
+        "value": "ECG"
+      },
+      {
+        "evidence": "24-h ECG, EMG, and accelerometer recordings",
+        "value": "EMG"
+      },
+      {
+        "evidence": "high resolution waveforms (ECG, blood pressure, CO2 and respiration)",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "accelerometer recordings",
+        "value": "wearable"
+      },
+      {
+        "evidence": "transcranial doppler of cerebral arteries",
+        "value": "ultrasound"
+      }
+    ],
+    "population": "60 subjects who suffered strokes compared to 60 control subjects, elderly",
+    "summary": "Multimodal recordings from a cross-sectional study of cerebral vasoregulation after ischemic stroke, collected over multiple days: transcranial doppler, 24-hour blood pressure, waveforms during movement tasks, 24-hour ECG, EMG, accelerometer, and gait pressure."
+  },
+  "prompt_version": "v1"
+}

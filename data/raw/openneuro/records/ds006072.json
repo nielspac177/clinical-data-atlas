@@ -1,0 +1,125 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006072",
+  "payload": {
+    "created": "2025-03-28T16:43:05.157Z",
+    "id": "ds006072",
+    "latestSnapshot": {
+      "created": "2026-08-10T15:48:09.000Z",
+      "description": {
+        "Authors": [
+          "Subramanian, S.",
+          "Reneau, T.R.",
+          "Perry, D.",
+          "et al."
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006072.v1.2.0",
+        "Funding": [
+          "Taylor Family Institute Fund for Innovative Psychiatric Research",
+          "McDonnell Center for Systems Neuroscience",
+          "Washington University Institute of Clinical and Translational Sciences"
+        ],
+        "HowToAcknowledge": "Research reported in this publication was supported by the Taylor Family Institute Fund for Innovative Psychiatric Research and the Washington University Institute of Clinical and Translational Sciences grant UL1TR002345 from the National Center for Advancing Translational Sciences (NCATS) of the National Institutes of Health (NIH). The content is solely the responsibility of the authors and does not necessarily represent the official view of the NIH.",
+        "License": "CC0",
+        "Name": "Psilocybin Precision Functional Mapping (data from Psilocybin desynchronizes the human brain)",
+        "ReferencesAndLinks": [
+          "Siegel, J.S., Subramanian, S., Perry, D. et al. Psilocybin desynchronizes the human brain. Nature 632, 131–138 (2024). https://doi.org/10.1038/s41586-024-07624-5"
+        ]
+      },
+      "readme": "GeneratedBy : niix2bids==v2.5.0 \nBIDSVersion : v1.6.0 \n\n# Psilocybin's acute and persistent effects\n\nHere, we present a randomized cross-over study using precision functional mapping to characterize acute and persistent effects of psilocybin (PSIL) or methylphenidate (MTP) on brain networks. Seven healthy volunteers (mean age 34.1 years, SD=9.8; n=3 females, n=6 Caucasians) underwent 1) extensive baseline imaging, 2) imaging beginning 60-90 minutes after drug exposure, and 3) longitudinal imaging for up to two weeks after drug exposure. Four individuals also participated in an open-label PSIL replication protocol over 6 months later. This dataset includes rsfMRI (using advanced high-resolution multi-echo fMRI), task fMRI, structural, and diffusion basis spectral imaging as well as assessments of subjective experience. \n\n## MRI Data Description\n-Siemens Prisma scanner\n-structural MRI (T1- and T2-weighted images), 0.9 mm isotropic resolution\n-resting state fMRI scans (513 frames, 15 minutes each)\n-task fMRI scans (233 frames, 6 minutes and 50 seconds each) \nResting state and task scans used an echoplanar imaging sequence with multi-echo (five TEs: 14.20 ms, 38.93 ms, 63.66 ms, 88.39 ms, 113.12 ms), TR 1761 ms, flip angle = 68 degrees, and in-plane acceleration (IPAT/grappa) = 2 [34, 35]. This sequence acquired 72 axial slices (144 mm coverage). \n-Nordic Denoising compatible: fMRI scans included 3 noise scans at the end of each run, and mag and phase images are included.\n\n#Participant information \n- Total participants, N = 7\n- Total participants who completed replication, N=4 (P1, P3, P4, P5)\n\nREST SCANS\t\t\t\t\t\t\t\t\t\t\t\n\tP1\tP2\tP3\tP4\tP5\tP6\tP7\tP1R\tP3R\tP4R\tP5R\nNonDrug\t33\t36\t26\t27\t28\t21\t26\t11\t6\t7\t7\nPSIL\t2\t2\t1\t1\t4\t2\t5\t4\t3\t2\t3\nMTP\t2\t2\t2\t3\t4\t3\t3\t0\t0\t0\t0\n\t\t\t\t\t\t\t\t\t\t\t\nTASK SCANS\t\t\t\t\t\t\t\t\t\t\t\nNonDrug\t12\t14\t11\t5\t4\t6\t12\t2\t0\t2\t4\nPSIL\t2\t2\t2\t2\t0\t0\t2\t2\t0\t2\t2\nMTP\t2\t2\t2\t2\t0\t2\t2\t0\t0\t0\t0\n\nORDER\nSubID\tDrug1\tDrug2\nP1\tMTP\tPSIL\nP2\tPSIL\tMTP\nP3\tMTP\tPSIL\nP4\tMTP\tPSIL\nP5\tPSIL\tMTP\nP6\tMTP\tPSIL\nP7\tPSIL\tMTP\nP1R\tPSIL\t\nP3R\tPSIL\t\nP4R\tPSIL\t\nP5R\tPSIL\t\n\n##Notes from MRI sessions\nPPFM_session_notes.xlsx\nsession_data.csv\n- Any rest scans that were ended early for any reason (e.g. P6 ses-5 REST3, P4R ses-2 REST3,) will not have the 3 noise images at the end. We copied noise frames from neighboring a rest scan so this did not interfere with NORDIC denoising.\n\n## Phenotypic Data Description\nPPFM_MEQ_DATA.xlsx\n\n## Inclusion/Exclusion Criteria\n\nPlease see https://clinicaltrials.gov/study/NCT00088699 for a detailed list, also included below.\n\n#Inclusion Criteria:\n\n-Healthy men and woman between 18 and 45 years of age;\n-Have used a psychedelic substance within the previous 5 years but not within the last 6 months;\n-No active psychiatric conditions requiring treatment with psychotropic medications (may be included if psychiatric condition is stable and participant is willing to discontinue medication for 1 month prior to participation with permission from their treating provider);\n-Able to provide informed consent.\n\nExclusion Criteria:\n\n-Presence of medical conditions that may confound results of imaging study or that are contraindications to psilocybin exposure (e.g. neurological, renal, hypertension, metabolic or cardiovascular disease or pregnancy);\n-No prior exposure to classic psychedelics (psilocybin, LSD, ayahuasca, mescaline);\n-Presence of psychiatric conditions that may confound interpretation of results or that are contraindications to psilocybin exposure (e.g. major mood disorder, current substance use disorder, personal or immediate family history (parents, siblings) of any schizophrenia spectrum disorders);\n-Use of psychotropic medication during the study;\n-Presence of contraindications to MRI scanning (implantable devices, bone hardware, IUD).\n-Prior adverse reactions to psychedelics, based on the Challenging Experiences -Questionnaire administered during initial screening\n\n## NON_BIDS\nNON_BIDS folder contains processed ciftis",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_diffusion",
+          "mri_structural"
+        ],
+        "sessions": [
+          "anatomical2",
+          "anatomical1",
+          "8",
+          "10",
+          "12",
+          "2",
+          "6",
+          "9",
+          "11",
+          "7",
+          "4",
+          "3",
+          "14",
+          "1",
+          "13",
+          "5",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21"
+        ],
+        "size": 3293810552604,
+        "subjects": [
+          "P7",
+          "P1",
+          "P1R",
+          "P6",
+          "P4",
+          "P3",
+          "P5",
+          "P2",
+          "P4R",
+          "P3R",
+          "P5R"
+        ],
+        "tasks": [
+          "BOLDREST1NORDICME52mm",
+          "BOLDREST2NORDICME52mm",
+          "BOLDTASK1NORDICME52mm",
+          "BOLDTASK2NORDICME52mm",
+          "BOLDNORDICME52mm",
+          "BOLDTASK3NORDICME52mm",
+          "BOLDREST3NORDICME52mm",
+          "BOLDREST6NORDICME52mm",
+          "BOLDREST5NORDICME52mm",
+          "BOLDREST4NORDICME52mm",
+          "BOLDREST1NORDICmb2ME42p6x3mm",
+          "BOLDREST12mmmb6me5ipat2ppf68FOV220lkblckon",
+          "BOLDREST22mmmb6me5ipat2ppf68FOV220lkblckon",
+          "BOLDTASK12mmmb6me5ipat2ppf68FOV220",
+          "BOLDTASK22mmmb6me5ipat2ppf68FOV220",
+          "BOLDREST2p5mmmb4me5ipat2ppf68FOV220",
+          "BOLDTASK12p5mmmb4me5ipat2ppf68FOV220",
+          "BOLDREST32mmmb6me5ipat2ppf68FOV220lkblckon",
+          "BOLDTASK4NORDICME52mm"
+        ],
+        "totalFiles": 10182
+      },
+      "tag": "1.2.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2025-03-31T15:45:39.845Z"
+  },
+  "source": "openneuro"
+}

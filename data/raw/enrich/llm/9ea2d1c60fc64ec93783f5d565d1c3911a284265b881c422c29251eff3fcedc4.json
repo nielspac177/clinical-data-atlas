@@ -1,0 +1,27 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:9ea2d1c60fc64ec93783f5d565d1c3911a284265b881c422c29251eff3fcedc4",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "other"
+    ],
+    "id": "physionet:radqa",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "electronic health record question answering dataset",
+        "value": "EHR"
+      },
+      {
+        "evidence": "radiology reports",
+        "value": "clinical_notes"
+      }
+    ],
+    "population": null,
+    "summary": "Question answering dataset over radiology reports, with physician-created questions based on the clinical referral section and answer spans marked within the Findings and Impressions sections."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,29 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:5eb279bde83fd3c8dfa41cabaf8b2ec53f689168e36f3ffa7a0eee0b037bbce4",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "patients with COVID-19 infections",
+        "label": "COVID-19"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "pulmonology",
+      "infectious_disease"
+    ],
+    "id": "tcia:ct-images-in-covid-19",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "unenhanced chest CTs from 632 patients",
+        "value": "CT"
+      }
+    ],
+    "population": "632 patients with COVID-19 infections, all with a positive RT-PCR for SARS-CoV-2 obtained within 1 day of the initial CT",
+    "summary": "Retrospective chest CT images, converted to NIfTI, from patients with RT-PCR-confirmed SARS-CoV-2 infection imaged at the point of care in an outbreak setting; used for training classification models."
+  },
+  "prompt_version": "v1"
+}

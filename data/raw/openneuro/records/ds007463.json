@@ -1,0 +1,115 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007463",
+  "payload": {
+    "created": "2026-03-02T15:45:24.598Z",
+    "id": "ds007463",
+    "latestSnapshot": {
+      "created": "2026-03-06T16:43:09.000Z",
+      "description": {
+        "Authors": [
+          "Morgan Fogarty",
+          "Sean M. Rafferty",
+          "Zachary E. Markow",
+          "Anthony C. O’Sullivan",
+          "Calamity F. Svoboda",
+          "Tessa George",
+          "Kelsey King",
+          "Dana Wilhelm",
+          "Kalyan Tripathy",
+          "Emily M. Mugler",
+          "Stephanie Naufel",
+          "Allen Yin",
+          "Jason W. Trobaugh",
+          "Adam T. Eggebrecht",
+          "Edward J. Richter",
+          "Joseph P. Culver"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007463.v1.1.1",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Very-High-Density Diffuse Optical Tomography System Validation Dataset",
+        "ReferencesAndLinks": null
+      },
+      "readme": "This dataset consists of 8 participants completing functional localizer and movie-viewing tasks in both Very High Density Diffuse Optical Tomography (VHD-DOT) and fMRI. Sessions 1 and 2 for each subject include the VHD-DOT data in SNIRF format while sessions 3 or more include the fMRI data in NIFTI format. \n\nPreprocessed fMRI data used for comparisons to VHD-DOT are in the /derivatives folder and are in NIFTI format. \n\nMore information on this data can be found here: \nMorgan Fogarty, Sean M. Rafferty, Zachary E. Markow, Anthony C. O’Sullivan, Calamity F. Svoboda, Tessa George, Kelsey King, Dana Wilhelm, Kalyan Tripathy, Emily M. Mugler, Stephanie Naufel, Allen Yin, Jason W. Trobaugh, Adam T. Eggebrecht, Edward J. Richter, Joseph P. Culver; Functional brain mapping using whole-head very high-density diffuse optical tomography. Imaging Neuroscience 2025; 3 IMAG.a.54. doi: https://doi.org/10.1162/IMAG.a.54",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri",
+          "nirs"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "1",
+          "3",
+          "2",
+          "4"
+        ],
+        "size": 74413175764,
+        "subjects": [
+          "S03",
+          "S04",
+          "S02",
+          "S08",
+          "S01",
+          "S05",
+          "S06",
+          "S07"
+        ],
+        "tasks": [
+          "AC001",
+          "GV002",
+          "HW002",
+          "HW001",
+          "MOT002",
+          "MOT001",
+          "HW1",
+          "HW2",
+          "AC1",
+          "MOV002",
+          "MOV001",
+          "AC2",
+          "GV1",
+          "GV2",
+          "MOT1",
+          "MOT2",
+          "MOV1",
+          "MOV2",
+          "GV001",
+          "AC002",
+          "HW003",
+          "MOV003",
+          "MOV004",
+          "GV003"
+        ],
+        "totalFiles": 676
+      },
+      "tag": "1.1.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": "https://doi.org/10.1162/IMAG.a.54",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "mri",
+        "nirs"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2026-03-02T16:51:35.938Z"
+  },
+  "source": "openneuro"
+}

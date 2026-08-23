@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:01ec13470678deda5e459009a273437521538b7a6f2be69c12a368d71ec945a5",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Myocardial Infarction",
+        "label": "myocardial infarction"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:challenge-2007",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "electrocardiographic evidence",
+        "value": "ECG"
+      },
+      {
+        "evidence": "gadolinium-enhanced MRI data",
+        "value": "MRI"
+      }
+    ],
+    "population": null,
+    "summary": "Challenge 2007 asks how well the location and extent of moderate to large infarcts can be characterized from electrocardiographic evidence and torso geometry, compared with expert analysis of gadolinium-enhanced MRI."
+  },
+  "prompt_version": "v1"
+}

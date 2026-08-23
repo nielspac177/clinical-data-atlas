@@ -1,0 +1,120 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003569",
+  "payload": {
+    "created": "2021-03-18T00:57:38.659Z",
+    "id": "ds003569",
+    "latestSnapshot": {
+      "created": "2021-03-18T01:34:53.000Z",
+      "description": {
+        "Authors": [
+          "Jeahong Kim",
+          "Jeyoung Jung",
+          "Kichun Nam"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds003569.v1.0.0",
+        "Funding": [
+          "Ministry of Science and ICT), Korea, Grant 2019-2017-0-01630"
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Transposition confusability during visual word recognition",
+        "ReferencesAndLinks": [
+          "-",
+          "-"
+        ]
+      },
+      "readme": "Participants \r\nTwenty-eight right-handed healthy volunteers participated in the experiment. Three participants�� fMRI data were excluded due to excessive head movements (over 1.2 mm in one or more directions). The reported results reflect data from the remaining 25 participants (16 females) ranging in age from 20 to 26 years (mean = 22.64, SD = 1.89 years), all native Korean speakers. All participants had normal or corrected to normal visual acuity and no psychiatric or neurological records. \r\n\r\nStudy Design \r\nA rapid-event-related fMRI design was employed in the experiment. All stimuli were presented in the center of a black background screen in white 34-point font. In each trial, the target stimulus was presented for 200ms followed by a blank for 1800ms. A fixation cross (��+��) with a jittered interval of at least 2s was used as a null condition inserted randomly between task conditions (see Fig 1). The order of test trials and the length of jittered stimuli were optimized using Optseq software (http://surfer.nmr. mgh.harvard.edu/optseq/). All participants reached accuracies of over 80% during the practice session.\r\n\r\nData collection and analysis \r\nA Simens Magnetom Trio 3T MRI scanner at the Korea University Brain Imaging Center, Seoul, South Korea, was used for this study. A T2*-weighted-gradient Echo Planar Imaging (EPI) sequence was used to acquire Blood Oxygenated Level Dependent (BOLD) fMRI images with the following parameters: TR = 2000ms; TE = 20ms; Flip Angle = 90��; Field of View = 240 mm; slice thickness = 3 mm, no gap 42 slices; matrix size = 80 �� 80; and voxel size = 3 mm �� 3 mm �� 3 mm. High-resolution anatomical images (1 mm �� 1 mm �� 1 mm) were acquired for each participant, with a T1-weighted, 3D MPRAGE (Magnetization-Prepared Rapid Gradient-Echo) sequence (TR = 1900ms;TE = 2.52ms; Flip Angle = 90��; Field of View = 256 mm; matrix size = 256 �� 256).\r\n\r\nPreprocessing \r\nSPM12 (http://www.fil.ion.ucl.ac.uk/spm/software/spm12/) was used for functional image analysis. The first three functional volumes were discarded to reduce the transition effects of hemodynamic responses. The remaining images were first realigned for motion correction, slice timing, co-registration, and segmentation, and then spatially normalized to a standard MNI (Montreal Neurological Institute) template. Before the analysis, the images for every participant were smoothed with an isotropic Gaussian kernel of 6 mm FWHM.",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 2230988351,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25"
+        ],
+        "tasks": [
+          "LDT"
+        ],
+        "totalFiles": 82
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        21,
+        24,
+        23,
+        22,
+        21,
+        20,
+        22,
+        19,
+        22,
+        26,
+        22,
+        24,
+        22,
+        20,
+        22,
+        24,
+        25,
+        25,
+        23,
+        25,
+        24,
+        19,
+        22,
+        22,
+        26
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2021-03-18T10:50:09.180Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,112 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004798",
+  "payload": {
+    "created": "2023-10-16T16:11:16.660Z",
+    "id": "ds004798",
+    "latestSnapshot": {
+      "created": "2024-02-27T20:35:04.000Z",
+      "description": {
+        "Authors": [
+          "Umit Keles",
+          "Julien Dubois",
+          "Kevin J. M. Le",
+          "J. Michael Tyszka",
+          "David A. Kahn",
+          "Chrystal M. Reed",
+          "Jeffrey M. Chung",
+          "Adam N. Mamelak",
+          "Ralph Adolphs",
+          "Ueli Rutishauser"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004798.v1.0.5",
+        "Funding": [
+          "NIMH Caltech Conte Center (P50MH094258 to R.A.)",
+          "BRAIN initiative through the National Institute of Neurological Disorders and Stroke (U01NS117839 to U.R.)",
+          "Simons Collaboration on the Global Brain (542941 to R.A. and U.R.)"
+        ],
+        "HowToAcknowledge": "Please cite: Keles, U., Dubois, J., Le, K.J.M., Tyszka, J.M., Kahn, D.A., Reed, C.M., Chung, J.M., Mamelak, A.N., Adolphs, R. and Rutishauser, U. Multimodal single-neuron, intracranial EEG, and fMRI brain responses during movie watching in human patients. Sci Data 11, 214 (2024). [Link to paper](https://doi.org/10.1038/s41597-024-03029-1)",
+        "License": "CC0",
+        "Name": "fMRI data for: Multimodal single-neuron, intracranial EEG, and fMRI brain responses during movie watching in human patients",
+        "ReferencesAndLinks": [
+          "https://github.com/rutishauserlab/bmovie-release-NWB-BIDS",
+          "https://dandiarchive.org/dandiset/000623",
+          "https://doi.org/10.1038/s41597-024-03029-1"
+        ]
+      },
+      "readme": "# README\nWe present a multimodal dataset of intracranial recordings, fMRI, and eye tracking in 20 participants during movie watching. Recordings consist of single neurons, local field potential, and intracranial EEG activity acquired from depth electrodes targeting the amygdala, hippocampus, and medial frontal cortex implanted for monitoring of epileptic seizures. Participants watched an 8-min long excerpt from the video \"Bang! You're Dead\" and performed a recognition memory test for movie content. 3 T fMRI activity was recorded prior to surgery in 11 of these participants while performing the same task. This NWB- and BIDS-formatted dataset includes spike times, field potential activity, behavior, eye tracking, electrode locations, demographics, and functional and structural MRI scans. For technical validation, we provide signal quality metrics, assess eye tracking quality, behavior, the tuning of cells and high-frequency broadband power field potentials to familiarity and event boundaries, and show brain-wide inter-subject correlations for fMRI. This dataset will facilitate the investigation of brain activity during movie watching, recognition memory, and the neural basis of the fMRI-BOLD signal.\n\nThis dataset accompanies the following data descriptor: Keles, U., Dubois, J., Le, K.J.M., Tyszka, J.M., Kahn, D.A., Reed, C.M., Chung, J.M., Mamelak, A.N., Adolphs, R. and Rutishauser, U. Multimodal single-neuron, intracranial EEG, and fMRI brain responses during movie watching in human patients. Sci Data 11, 214 (2024). [Link to paper](https://doi.org/10.1038/s41597-024-03029-1)\n\nRelated code: https://github.com/rutishauserlab/bmovie-release-NWB-BIDS\n\nIntracranial recording data: https://dandiarchive.org/dandiset/000623\n\n~   ",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "001"
+        ],
+        "size": 7984358150,
+        "subjects": [
+          "p41cs",
+          "p42cs",
+          "p43cs",
+          "p44cs",
+          "p45cs",
+          "p46cs",
+          "p47cs",
+          "p48cs",
+          "p50cs",
+          "p51cs",
+          "p53cs",
+          "p54cs",
+          "p59cs",
+          "p60cs",
+          "p62cs"
+        ],
+        "tasks": [
+          "unknown"
+        ],
+        "totalFiles": 397
+      },
+      "tag": "1.0.5"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        21,
+        67,
+        29,
+        18,
+        33,
+        26,
+        41,
+        42,
+        33,
+        26,
+        60,
+        35,
+        53,
+        59,
+        25
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2023-10-16T18:01:52.771Z"
+  },
+  "source": "openneuro"
+}

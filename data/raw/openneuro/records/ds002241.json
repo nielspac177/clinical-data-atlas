@@ -1,0 +1,101 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds002241",
+  "payload": {
+    "created": "2019-10-14T14:35:07.116Z",
+    "id": "ds002241",
+    "latestSnapshot": {
+      "created": "2022-02-09T22:23:23.000Z",
+      "description": {
+        "Authors": [
+          "Fan, J.",
+          "Wammes, J.D.",
+          "Gunn, J.B.",
+          "Yamins, D.L.",
+          "Norman, K.A.",
+          "Turk-Browne, N.B."
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds002241.v1.1.1",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Relating visual production and recognition of objects in human visual cortex",
+        "ReferencesAndLinks": [
+          ""
+        ]
+      },
+      "readme": "## Participants\n\nBased on initial piloting, we developed a target sample size of 36 participants, across whom all condition and object assignments would be fully counterbalanced. Participants were recruited from the Princeton, NJ community, right-handed, and provided informed consent in accordance with the Princeton IRB. Of the 39 participants who were recruited, 33 participants successfully completed the session. After accounting for data loss due to technical issues during data acquisition, data from 31 participants (11 male, 23.2 years) could be used. \n\n## Stimuli\n\nFour objects were used in this study: bed, bench, chair, table. These objects were represented by 3D mesh models constructed in Autodesk Maya to contain the same number of vertices and the same brown surface texture, and thereby share similar visual properties other than their shape. Each of these objects was rendered from a 10° viewing angle (i.e., slightly above) at a fixed distance on a gray background in 40 viewpoints (i.e., each rotated by an additional 9° about the vertical axis). \n\n## Task and procedure\n\nEach participant was randomly assigned a subset of two of the four objects to practice drawing repeatedly (Trained). The remaining two objects (Control) served as a baseline for changes in the object representation. At the beginning of each session and outside of the scanner, participants were familiarized with each of the four objects while being briefed on the overall experimental procedure. \nThere were four phases in each session, all of which were scanned: initial recognition (two runs), pre-practice recognition (two runs), production practice (four runs), and a post-practice recognition phase (two runs). \n\n## Recognition task\n\nIn each recognition phase, participants viewed all four objects in all 40 viewpoints once each and performed an object identification cover task. Repetitions of each object were divided evenly across the two runs, and in a random order within each run, interleaved with other objects. \n\nOn each recognition trial, participants were first presented with one of the objects (1000ms). The object then disappeared, and two labels appeared below the image frame, one of which corresponded to the correct object label. Participants then made a speeded forced-choice judgment about which of the two objects they saw by pressing one of two buttons corresponding to each label within a 900ms response window. The assignment of labels to buttons was randomized across trials. Participants did not receive accuracy-related feedback, but received visual feedback if their response was successfully recorded within the response window (selected button highlighted). \n\nInter-stimulus intervals (ISI) were jittered from trial to trial by sampling from the following durations, which appeared in a fixed proportion in each run to ensure equal run lengths: 3000ms ISI (40% trials/run), 4500ms (40%), 6000ms (20%). Each run was 6 minutes in length, and no object appeared in the first or final 12s of each run. \n\n## Drawing task\n\nParticipants produced drawings on a pressure-sensitive MR-safe drawing tablet (Hybridmojo) positioned on their lap by using an MR-safe stylus, which they held like a pencil in the right hand. Before the first drawing run, participants were familiarized with the drawing interface by producing several closed curves approximately the size of the drawing canvas, and by drawing two other objects of their choice. When participants did not spontaneously generate their own objects to draw, they were prompted to draw a house and a bicycle. This interface familiarization stage allowed participants to calibrate the extent of drawing movements on the tablet (which they could not directly view) to the appearance of strokes on the canvas.  \n\nIn each of the four runs of the production phase, participants drew both Trained objects 5 times each in an alternating order, producing a total of 20 drawings of each item. Each production practice trial had a fixed length of 45s. First, participants were cued with one of the Trained objects (3000ms). Following cue offset and a 1000ms delay, a blank drawing canvas of the same dimensions appeared in the same location. Participants then used the subsequent 35s to produce a drawing of the object before the drawing was automatically submitted. Following drawing submission, the canvas was cleared and there was a 6000ms delay until the presentation of the next object cue. Going forward, at any given time during the production phase, we will refer to the Trained object that is currently being drawn as the 'Target' object, and to the other Trained object as the 'Foil' object. Participants were instructed to try their best to draw each Target object as they saw it, and did not receive performance-related feedback. Each run was 7.7 min in length and contained rest periods during the first 12 s and final 45 s of each run.\n\n## fMRI data acquisition\n\nMRI data were collected on a 3T Siemens Skyra scanner with a 64-channel  head coil. Functional images were obtained with a multiband echo-planar imaging (EPI) sequence (TR = 1500 ms, TE = 30 ms, flip angle = 60, acceleration factor = 4, voxel size = 2 mm isotropic), yielding 72 transversal slices that provided whole-brain coverage. High resolution T1-weighted anatomical images were acquired with a magnetization-prepared rapid acquisition gradient echo (MPRAGE) sequence (TR = 2530 ms, TE = 3.30 ms, voxel size = 1 mm isotropic, 176 slices, flip angle=60).\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 61602618643,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "tasks": [
+          "drawing",
+          "recognition"
+        ],
+        "totalFiles": 656
+      },
+      "tag": "1.1.1"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": null,
+      "associatedPaperDOI": "https://doi.org/10.1523/JNEUROSCI.1843-19.2019",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2020-12-03T12:15:04.106Z"
+  },
+  "source": "openneuro"
+}

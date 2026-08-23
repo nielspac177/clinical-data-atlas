@@ -1,0 +1,161 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds000258",
+  "payload": {
+    "created": "2018-03-29T17:47:49.376Z",
+    "id": "ds000258",
+    "latestSnapshot": {
+      "created": "2023-08-01T19:03:14.000Z",
+      "description": {
+        "Authors": [
+          "Jonathan Power",
+          "Valerie Voon",
+          "Prantik Kundu",
+          "Suyash Bhogawar",
+          "Peter Bandettini",
+          "Alex Martin"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds000258.v1.0.1",
+        "Funding": [
+          "Supported by grants ZIAMH002920 (A.M.), NCT01031407 (A.M.) and the Sackler Institute for Developmental Psychobiology (J.P.)."
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Multi-echo Cambridge",
+        "ReferencesAndLinks": [
+          "https://www.jonathanpower.net/paper-multiecho.html"
+        ]
+      },
+      "readme": "## Subjects\nThere are 89 subject datasets, collected from consenting neurotypical subjects with standard inclusion/exclusion criteria (English speaking, right handed, no history of neurological or psychiatric illness) and the protocol was approved by the Cambridge IRB (LREC 11/EE/0198). Collection of the data was funded by MRC P008747/1 (V.V.)\n\n## Experimental Tasks\nBOLD data were collected eyes open at rest looking at a white screen. 4 echoes of a single 9.84 min multi-echo BOLD run, the echos are each single volumes.\n\n## Data Acquisition\nData were acquired with a Siemens Trio 3T MRI Scanner and a 32-channel receive-only head coil. Functional images of 139 volumes (9.84 min) were acquired with an ME EPI sequence with online reconstruction [repetition time (TR), 2.47 s; flip angle, 78°; matrix size, 64 × 64; in-plane resolution, 3.75 mm; field of view (FOV), 240 mm; 32 oblique slices, alternating slice acquisition slice thickness 4.4 mm with 10% gap (ascending interleaved order, i.e., \"alt+z2\" in AFNI coding); iPAT factor, 3; bandwidth (BW) = 1,698 Hz/pixel; TE = 12, 28, 44, and 60 ms].\n\nAnatomical images were acquired using a T1-weighted magnetization prepared rapid gradient echo (MPRAGE) sequence [176 × 240 FOV; 1-mm in-plane resolution; inversion time (TI), 1,100 ms].\n\n## Comments added by Openfmri Curators\n\n### Defacing\n\nPydeface was used on all anatomical images to ensure de-identification of subjects. The code\ncan be found at https://github.com/poldracklab/pydeface\n\n### Quality Control\n\nMRIQC was run on the dataset. Results are located in derivatives/mriqc. Learn more about it here: https://mriqc.readthedocs.io/en/stable/\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 12150434881,
+        "subjects": [
+          "04570",
+          "04620",
+          "04710",
+          "04800",
+          "11310",
+          "12599",
+          "16053",
+          "17821",
+          "19284",
+          "19774",
+          "19943",
+          "19979",
+          "20094",
+          "20407",
+          "20408",
+          "20409",
+          "20450",
+          "20462",
+          "20494",
+          "20503",
+          "20758",
+          "20823",
+          "20824",
+          "20835",
+          "20847",
+          "20851",
+          "20859",
+          "20860",
+          "20861",
+          "20862",
+          "20863",
+          "20864",
+          "20866",
+          "20892",
+          "20893",
+          "20907",
+          "20932",
+          "20946",
+          "20950",
+          "20976",
+          "20983",
+          "20984",
+          "21036",
+          "21116",
+          "21124",
+          "21126",
+          "21127",
+          "21187",
+          "21193",
+          "21215",
+          "21252",
+          "21253",
+          "21254",
+          "21256",
+          "21258",
+          "21260",
+          "21261",
+          "21262",
+          "21270",
+          "21273",
+          "21277",
+          "21278",
+          "21279",
+          "21281",
+          "21283",
+          "21300",
+          "21302",
+          "21304",
+          "21305",
+          "21306",
+          "21317",
+          "21318",
+          "21324",
+          "21371",
+          "21384",
+          "21448",
+          "21449",
+          "21452",
+          "21453",
+          "21456",
+          "21611",
+          "21641",
+          "21644",
+          "21645",
+          "21646",
+          "21652",
+          "21656",
+          "21657",
+          "21658"
+        ],
+        "tasks": [
+          "rest",
+          "Resting state"
+        ],
+        "totalFiles": 895
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": null,
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2018-03-29T17:47:49.376Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,29 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:1b70848833e436d2de7fc8ea51aa0fa68ddbdbc57aee56fd6b72b1157d67adec",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "diagnostic classification of malignant and benign lung nodules",
+        "label": "lung nodules"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "pulmonology"
+    ],
+    "id": "tcia:spie-aapm-lung-ct-challenge",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "10 contrast-enhanced CT scans",
+        "value": "CT"
+      }
+    ],
+    "population": "scans with malignant nodules and benign nodules used as calibration and test datasets for the LUNGx Challenge",
+    "summary": "Contrast-enhanced CT scans with nodule locations and truth labels, released for the SPIE-AAPM-NCI LUNGx grand challenge on diagnostic classification of malignant and benign lung nodules, split into calibration and test sets."
+  },
+  "prompt_version": "v1"
+}

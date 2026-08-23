@@ -1,0 +1,97 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006506",
+  "payload": {
+    "created": "2025-07-29T09:03:39.290Z",
+    "id": "ds006506",
+    "latestSnapshot": {
+      "created": "2026-03-24T14:38:21.000Z",
+      "description": {
+        "Authors": [
+          "Marc Sabio-Albert",
+          "David Richter",
+          "Lluís Fuentemilla",
+          "Alexis Pérez-Bellido"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006506.v1.0.0",
+        "Funding": [
+          "Grant XYZ from Institution ABC"
+        ],
+        "HowToAcknowledge": "Please cite: Sabio-Albert et al. (20XX), XXXX",
+        "License": "CC0",
+        "Name": "Multipred project",
+        "ReferencesAndLinks": [
+          "https://doi.org/XXXXXX",
+          "https://neurostars.org/tags/bids"
+        ]
+      },
+      "readme": "# multipred-fmri - BIDS Dataset\n\n## Description\nIn this study we investigated the neural mechanisms of sensory prediction in multisensory settings \n\n## Participants\n- 26 university students (Granada, Spain).\n- Normal or corrected-to-normal vision and hearing.\n\n## Experimental Design\n- **Training Phase:** Explicit learning of probabilistic associations between gabor patches and pure tones (within modality associations), and training of the main task .\n- **Main Test Phase:** Testing in fMRI scanner the effects of the larned predictive associations during an orthogonal perceptual judgement task.\n- **Localizers:** Perceptual judgement task without the predictive cues.\n\n\n## Imaging Parameters\n- **Scanner:** Siemens Magnetom Prisma_fit (3T)\n- **Sequence:** T2*-weighted gradient echo EPI\n- **Repetition Time (TR):** 1.5s\n- **Echo Time (TE):** 40ms\n- **Flip Angle:** 75°\n- **Voxel Size:** 2.0 × 2.0 × 2.0 mm\n- **Slices:** 68 (interleaved)\n- **Phase Encoding Direction:** A>>P\n  \n\n## File Organization\n- `/sub-*/anat/` contains structural MRI data.\n- `/sub-*/func/` contains functional MRI data.\n- `task-localizer_bold.json` and `task-main_bold.json` define the scanning parameters.\n\n\n- `/derivatives/` contains preprocessed and analyzed data (`FEAT 6.0.0`), and files required for other analyses (mostly .nifti, .csv, and feat outputs)\n- Preprocessed data: (`derivatives/fsl_preprocessed`)\n- First-level: individual runs (`derivatives/fsl_firstlevel`)\n- Second-level: within-subject (`derivatives/fsl_secondlevel`)\n- Third-level: group analyses (`derivatives/fsl_thirdlevel`)\n\n- `/code/` contains .py and .sh scripts to obtain the files in `derivates/`\n\n## Citation\nIf using this dataset, please cite:\n\n> Sabio-Albert, M. et al. (20XX). *title.* [DOI link]\n\n## Reproducing results\n\nAll scripts for the analyses and figures can be found in our lab's github: [https://github.com/memory-formation/multipred-fmri]\n\n## Contact\nMarc Sabio-Albert ([marcsabioalbert@gmail.com](mailto:marcsabioalbert@gmail.com))\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 53858544754,
+        "subjects": [
+          "12",
+          "19",
+          "15",
+          "25",
+          "10",
+          "23",
+          "02",
+          "14",
+          "06",
+          "20",
+          "26",
+          "17",
+          "07",
+          "08",
+          "27",
+          "21",
+          "03",
+          "11",
+          "24",
+          "05",
+          "22",
+          "13",
+          "16",
+          "18",
+          "09",
+          "04"
+        ],
+        "tasks": [
+          "localizer",
+          "main"
+        ],
+        "totalFiles": 447
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2026-03-24T14:39:40.090Z"
+  },
+  "source": "openneuro"
+}

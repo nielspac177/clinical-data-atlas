@@ -1,0 +1,28 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:9b2c733ed153f2e2ec4c6bf0731e83f7b5a400ad74bbea09b6c76fcb06a4c59e",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "musculoskeletal",
+      "other"
+    ],
+    "id": "physionet:multi-gait-posture",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "a pair of Depth cameras",
+        "value": "other"
+      },
+      {
+        "evidence": "inertial MoCap system worn by the participant",
+        "value": "wearable"
+      }
+    ],
+    "population": "14 healthy participants walking at 3 different gait speeds, across 3 different walking scenarios/paths at 3 different locations",
+    "summary": "Multimodal recordings of walking with a wheeled robotic walker, combining synchronized depth camera video and inertial motion capture skeleton joint data, for vision-based pose estimation and gait and posture analysis."
+  },
+  "prompt_version": "v1"
+}

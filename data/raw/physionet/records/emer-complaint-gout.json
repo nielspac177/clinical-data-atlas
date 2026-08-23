@@ -1,0 +1,36 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "emer-complaint-gout",
+  "payload": {
+    "abstract": "<p>The Gout Emergency Department Chief Complaint Corpora (GED3C) consists of 2 corpora of free text triage nurse chief complaints (up to 282 characters in length) collected from 2019 to 2020 at an academic medical center in the Deep South. The smaller corpus &quot;GOUT-CC-2019-CORPUS&quot; consists of 300 chief complaints from 2019 selected by the presence of the keyword &quot;gout&quot;. The larger corpus &quot;GOUT-CC-2020-CORPUS&quot; contains 8037 chief complaints collected from a single month in 2020. No other selection criteria (gout or otherwise) was used to generate GOUT-CC-2020-CORPUS, making this corpus representative for medical conditions of interest in the underlying urban Black majority Emergency Department patient population.</p>\n\n<p>We anticipate this corpus being useful in the development of Emergency Department alerting algorithms for gout. Both GOUT-CC-2019-CORPUS and GOUT-CC-2020-CORPUS were annotated with respect to predicted gout flare status as determined retrospectively by manual review of the chief complaint. A subset of patients with these chief complaints underwent chart review by rheumatologists to verify gout flare status guided by the Gaffo criteria. These corpora may be useful to researchers at other institutions who want to develop or validate existing alerting algorithms at a 2nd institution. These corpora are also available for use in masked language model development. Its terse, abbreviation-rich content sets it apart from more lengthy clinical text and to our knowledge this is the only chief complaint corpus publicly available.</p>",
+    "access_policy": "Restricted",
+    "compressed_storage_size": 1356221,
+    "core_doi": "10.13026/8zq3-b355",
+    "dua": {
+      "name": "PhysioNet Restricted Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Restricted Health Data License 1.5.0"
+    },
+    "main_storage_size": 3916291,
+    "public_project_uuid": "753ee4b6-29b6-4d7b-b03b-fc9c795dca56",
+    "publish_date": "2020-10-19",
+    "resource_type": "Database",
+    "short_description": "A corpus of chief complaints tagged with predicted gout flare status and chart reviewed gout flare status. Ideal for input to masked language model training to supplement lengthy clinical text notes.",
+    "slug": "emer-complaint-gout",
+    "source_url": "https://physionet.org/content/emer-complaint-gout/1.0/",
+    "title": "Gout Emergency Department Chief Complaint Corpora",
+    "topics": [
+      "emergency department",
+      "nlp",
+      "gout"
+    ],
+    "version": "1.0",
+    "version_doi": "10.13026/96v3-dw72"
+  },
+  "source": "physionet"
+}

@@ -1,0 +1,29 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:6c9c13824d6d546df9383d6e0dbce4bec2fc52f004b4e09766ca47fc9f72ce8d",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [
+      "BR"
+    ],
+    "domains": [
+      "pulmonology"
+    ],
+    "id": "physionet:brax",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "24,959 chest radiography exams and 40,967 images",
+        "value": "xray"
+      },
+      {
+        "evidence": "free-text radiology reports written in Brazilian Portuguese",
+        "value": "clinical_notes"
+      }
+    ],
+    "population": "Patients presenting to a large general Brazilian hospital",
+    "summary": "Automatically labeled chest radiography dataset from a large general Brazilian hospital. Images were verified by trained radiologists and de-identified, with fourteen labels derived from Portuguese free-text radiology reports using natural language processing."
+  },
+  "prompt_version": "v1"
+}

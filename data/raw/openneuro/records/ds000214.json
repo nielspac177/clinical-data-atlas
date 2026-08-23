@@ -1,0 +1,141 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds000214",
+  "payload": {
+    "created": "2017-09-12T00:51:49.232Z",
+    "id": "ds000214",
+    "latestSnapshot": {
+      "created": "2018-07-17T18:58:20.000Z",
+      "description": {
+        "Authors": [
+          "Stephen Giles",
+          "Jeremy Hall",
+          "Merrick Pope",
+          "Katie Nicol",
+          "Liana Romaniuk"
+        ],
+        "DatasetDOI": null,
+        "Funding": [],
+        "HowToAcknowledge": "This data was obtained from the OpenfMRI database. Its accession number is ds000214",
+        "License": null,
+        "Name": "EUPD Cyberball",
+        "ReferencesAndLinks": [
+          "https://wellcomeopenresearch.org/articles/1-33/v1"
+        ]
+      },
+      "readme": "Participants\nTwenty people with borderline personality disorder were recruited from outpatient and support \nservices from around Edinburgh, Scotland. Diagnoses were confirmed using the Structured Clinical \nInterview for DSM-IV (SCID-II). Current symptoms were assessed using the Zanarini Rating Scale \nfor Borderline Personality Disorder (ZAN-BPD [1]). Adverse childhood events were assessed using \nthe Childhood Trauma Questionnaire (CTQ [2]). Fifteen BPD participants were receiving antidepressant \nmedication and twelve were taking antipsychotic medication. Twenty age- and sex-matched controls \nwere recruited from the community, however four were excluded due to technical issues during \nscanning, leaving sixteen controls. Exclusion criteria for all participants included pregnancy, \nMRI contraindications, diagnosis of a psychotic disorder, previous head injury or current \nillicit substance dependence. Controls met the additional criteria of no personal or familial \nhistory of major mental illness. Ethical approval was obtained from the Lothian National \nHealth Service Research Ethics Committee, and all participants provided written informed \nconsent before taking part. \n\nExperimental task\nParticipants performed the Cyberball social exclusion task [3] during functional magnetic \nresonance imaging (fMRI), adapted from a previous implementation by Kumar et al 2009 [4]. \nThe task involves playing “catch” with two computer-controlled players, during which the \nparticipant can be systematically included or excluded from the game.  We used this task as \nit assesses neural responses to social exclusion, is known to activate a range of social \nbrain regions [5] and is amenable to reinforcement learning modelling [4]. The task was \nmodified such that inclusion was varied parametrically over four levels: 0%, 33%, 66% and \n100%, achieved by arranging the task into blocks of nine throws, respectively involving zero, \none, two or three throws to the participant. Here, 100% inclusion means the degree to which \nthe participant was included was equal to that of the other two players, with each receiving \nthree throws per nine-throw block. Participants were asked to imagine that the other players \nwere real, as exclusion by both human or simulated players has been previously reported to \nbe similarly distressing [6-8]. When the participant received the ball, they indicated which \ncomputer player they wished to throw the ball to with a button press. There were four \nrepetitions of each inclusion level, providing 16 experimental blocks in total, with the \nfirst block being 100% inclusion, and all subsequent blocks being randomised. Each throwing \nevent had a mean duration of 2700ms, with each being preceded by randomised jitter that was \nin part adjusted to accommodate the participant’s reaction time from the previous trial, \nwhen applicable. This was achieved by comparing the total duration of the previous trial, \nincluding reaction time, with the ideal trial time of 2700ms: if this value was exceeded, \na random jitter between 0 and 1000ms was subtracted from the mean jitter time of 1500ms; \notherwise, the random jitter was added to 1500ms. Jitter therefore varied between 500ms and \n2500ms. Mean block duration was 24s, with onsets denoted by the appearance of the cartoon \nfigures following rest, and offsets by the conclusion of the final throw animation. Blocks \nwere randomized, and interleaved with 13s rest blocks. Within blocks, throwing events were \njittered to permit event disambiguation for reinforcement learning analysis. \n\nNeuroimaging\nScanning took place at the Clinical Research Imaging Centre in Edinburgh, using a 3T Siemens \nMagnetom Verio scanner. Echo Planar Blood Oxygen Level Dependent images were acquired axially \nwith a TR 1560ms, TE 26ms, flip angle 66’, field of view 220 x 220mm, in-plane resolution \n64 x 64, 26 interleaved slices, 347 volumes, resolution 3.4 x 3.4 x 5mm. A high resolution \nT1 MPRAGE structural image was acquired with TR 2300ms, TE 2.98ms, flip angle 90’, field of \nview 256 x 256mm, in-plane resolution 256 x 256, 160 interleaved slices, resolution 1 x 1 x 1mm. \n\nReferences\n1 Zanarini MC, Vujanovic AA, Parachini EA, Boulanger JL, Frankenburg FR, Hennen J. Zanarini Rating Scale for Borderline Personality Disorder (ZAN-BPD): a continuous measure of DSM-IV borderline psychopathology. J Pers Disord 2003; 17: 233–242\n2 Bernstein DP, Fink L. Childhood trauma questionnaire: A retrospective self-report: Manual. Psychological Corporation, 1998.\n3 Williams KD, Cheung CK, Choi W. Cyberostracism: effects of being ignored over the Internet. J Pers Soc Psychol 2000; 79: 748–762.\n4 Kumar P, Waiter G, Ahearn TS, Milders M, Reid I, Steele JD. Frontal operculum temporal difference signals and social motor response learning. Hum Brain Mapp 2009; 30: 1421–1430.\n5 Eisenberger NI, Lieberman MD, Williams KD. Does rejection hurt? An FMRI study of social exclusion. Science 2003; 302: 290–292.\n6 Zadro L, Williams KD, Richardson R. How low can you go? Ostracism by a computer is sufficient to lower self-reported levels of belonging, control, self-esteem, and meaningful existence. Journal of Experimental Social Psychology 2004; 40: 560–567.\n7 Sebastian CL, Tan GCY, Roiser JP, Viding E, Dumontheil I, Blakemore S-J. Developmental influences on the neural bases of responses to social rejection: implications of social neuroscience for education. NeuroImage 2011; 57: 686–694.\n8 Gradin VB, Waiter G, Kumar P, Stickle C, Milders M, Matthews K et al. Abnormal neural responses to social exclusion in schizophrenia. PLoS ONE 2012; 7: e42608.\n\n\n### Comments added by Openfmri Curators ###\n===========================================\n\nDefacing\n--------\nDefacing was performed by the submitter.\n\nQuality Control\n---------------\nMriqc output was not run on this dataset due to issues we are having with the software. It \nwill be included in the next revision.\n\nWhere to discuss the dataset\n----------------------------\n1) www.openfmri.org/dataset/ds******/ See the comments section at the bottom of the dataset\npage.\n2) www.neurostars.org Please tag any discussion topics with the tags openfmri and dsXXXXXX\naccession number.\n3) Send an email to submissions@openfmri.org. Please include the dsXXXXXX accession number \nin\nyour email.\n\nBids-validator Output\n---------------------\n\n\t1: This file is not part of the BIDS specification, make sure it isn't included in \nthe dataset by accident. Data derivatives (processed data) should be placed in /derivatives \nfolder. (code: 1 - NOT_INCLUDED)\n\t\t/participants.json\n\t\t\tEvidence: participants.json\n\n        Summary:                 Available Tasks:        Available Modalities:\n        116 Files, 2.01GB        Cyberball               T1w\n        36 - Subjects                                    bold\n        1 - Session\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 2159638549,
+        "subjects": [
+          "EESS001",
+          "EESS002",
+          "EESS003",
+          "EESS004",
+          "EESS005",
+          "EESS006",
+          "EESS007",
+          "EESS008",
+          "EESS009",
+          "EESS010",
+          "EESS011",
+          "EESS012",
+          "EESS013",
+          "EESS014",
+          "EESS015",
+          "EESS017",
+          "EESS018",
+          "EESS019",
+          "EESS021",
+          "EESS022",
+          "EESS023",
+          "EESS024",
+          "EESS025",
+          "EESS026",
+          "EESS027",
+          "EESS029",
+          "EESS030",
+          "EESS031",
+          "EESS033",
+          "EESS034",
+          "EESS035",
+          "EESS036",
+          "EESS037",
+          "EESS038",
+          "EESS039",
+          "EESS040"
+        ],
+        "tasks": [
+          "Cyberball"
+        ],
+        "totalFiles": 116
+      },
+      "tag": "00001"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        25,
+        35,
+        27,
+        20,
+        32,
+        51,
+        43,
+        30,
+        43,
+        24,
+        46,
+        43,
+        41,
+        21,
+        41,
+        46,
+        36,
+        46,
+        41,
+        50,
+        38,
+        29,
+        38,
+        26,
+        35,
+        34,
+        26,
+        31,
+        24,
+        32,
+        35,
+        28,
+        33,
+        26,
+        42,
+        40
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2017-09-12T00:51:49.232Z"
+  },
+  "source": "openneuro"
+}

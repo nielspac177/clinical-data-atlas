@@ -1,0 +1,422 @@
+{
+  "endpoints": [
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getCollectionValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getModalityValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getBodyPartValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getPatient",
+    "https://api.datacite.org/dois?prefix=10.7937"
+  ],
+  "harvest_method": "api:nbia+datacite",
+  "native_id": "CC-Radiomics-Phantom",
+  "payload": {
+    "datacite": {
+      "citationCount": 7,
+      "container": {},
+      "contentUrl": [],
+      "contributors": [
+        {
+          "affiliation": [],
+          "contributorType": "Other",
+          "familyName": null,
+          "givenName": null,
+          "name": "TCIA Team",
+          "nameIdentifiers": [],
+          "nameType": null
+        }
+      ],
+      "created": "2017-07-28T15:36:26Z",
+      "creators": [
+        {
+          "affiliation": [],
+          "familyName": "Mackin",
+          "givenName": "Dennis",
+          "name": "Mackin, Dennis",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-2557-5340",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Ray",
+          "givenName": "Xenia",
+          "name": "Ray, Xenia",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0003-0150-0843",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Zhang",
+          "givenName": "Lifei",
+          "name": "Zhang, Lifei",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Fried",
+          "givenName": "David",
+          "name": "Fried, David",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Yang",
+          "givenName": "Jinzhong",
+          "name": "Yang, Jinzhong",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-9254-4501",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Taylor",
+          "givenName": "Brian",
+          "name": "Taylor, Brian",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0001-9745-1075",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Rodriguez-Rivera",
+          "givenName": "Edgardo",
+          "name": "Rodriguez-Rivera, Edgardo",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Dodge",
+          "givenName": "Cristina",
+          "name": "Dodge, Cristina",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Jones",
+          "givenName": "Aaron",
+          "name": "Jones, Aaron",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Court",
+          "givenName": "Laurence",
+          "name": "Court, Laurence",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-3241-6145",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2017",
+          "dateInformation": null,
+          "dateType": "Issued"
+        }
+      ],
+      "descriptions": [
+        {
+          "description": "This collection consists of 17 CT scans of the Credence Cartridge Radiomics (CCR) phantom, which was designed for use in studies of texture feature robustness. The scans were acquired at four medical centers using each center’s chest protocol and were taken using GE (7 scans), Philips (5 scans), Siemens (2 scans), and Toshiba (3 scans) scanners. The CCR phantom has 10 cartridges, each with a unique texture. The first four cartridges are 3D printed ABS plastic with 20, 30, 40, and 50 honeycomb fill, and they provide regular, periodic textures. The next three cartridges provide natural textures: sycamore wood, cork, and extra dense cork. A cartridges of shredded rubber particles provides textures similar to those of non-small cell lung cancer. The ninth cartridge is solid, homogenous acrylic and provides a minimal texture control. Finally, the 10th cartridge is 3D printed plaster has the highest electron density (400 – 600 HU) and is intended to more similar to bone.In addition to the DICOM images for the 17 scans, this collection also contains two sets of contours as DICOM RT structure files. The first set provides 8x8x2 cm3 contours for each cartridge in each scan. The second set provides 16 adjacent 2x2x2 cm3 contours for each cartridge in each scan.Researchers studying radiomics will be able to evaluate features for robustness across a variety of scanners. Features can be calculated using the researchers own software or third party software such as IBEX (imaging biomarker explorer).",
+          "descriptionType": "Abstract",
+          "lang": null
+        }
+      ],
+      "doi": "10.7937/k9/tcia.2017.zuzrml5b",
+      "downloadCount": 0,
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "CC-Radiomics-Phantom",
+          "identifierType": "TCIA Short Name"
+        }
+      ],
+      "isActive": true,
+      "language": null,
+      "metadataVersion": 12,
+      "partCount": 0,
+      "partOfCount": 0,
+      "publicationYear": 2017,
+      "published": null,
+      "publisher": "The Cancer Imaging Archive",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2017-07-28T15:36:27Z",
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "10.1371/journal.pone.0251147",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1002/mp.15904",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.3390/cancers14071599",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.26481/dis.20221010pk",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.3390/jpm12040553",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.18383/j.tom.2019.00030",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.3390/cancers13081848",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        }
+      ],
+      "relatedItems": [],
+      "rightsList": [
+        {
+          "rights": "Creative Commons Attribution 3.0 Unported",
+          "rightsIdentifier": "cc-by-3.0",
+          "rightsIdentifierScheme": "SPDX",
+          "rightsUri": "https://creativecommons.org/licenses/by/3.0/legalcode",
+          "schemeUri": "https://spdx.org/licenses/"
+        }
+      ],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "fabricaForm",
+      "state": "findable",
+      "subjects": [],
+      "titles": [
+        {
+          "lang": null,
+          "title": "Data From Credence Cartridge Radiomics Phantom CT Scans",
+          "titleType": null
+        },
+        {
+          "lang": null,
+          "title": "CC-Radiomics-Phantom",
+          "titleType": "AlternativeTitle"
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceType": "CT Images",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2025-06-01T01:01:10Z",
+      "url": "https://www.cancerimagingarchive.net/collection/cc-radiomics-phantom/",
+      "version": "1",
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 1093
+    },
+    "nbia": {
+      "body_parts": [
+        "PHANTOM"
+      ],
+      "collection": "CC-Radiomics-Phantom",
+      "modalities": [
+        "CT",
+        "RTSTRUCT"
+      ],
+      "patients": [
+        {
+          "Collection": "CC-Radiomics-Phantom",
+          "PatientId": "CCR1_GE3",
+          "PatientName": "CCR1_GE3",
+          "PatientSex": "M",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CC-Radiomics-Phantom",
+          "PatientId": "CCR1_GE1",
+          "PatientName": "CCR1_GE1",
+          "PatientSex": "M",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CC-Radiomics-Phantom",
+          "PatientId": "CCR1_P2",
+          "PatientName": "CCR1_P2",
+          "PatientSex": "M",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CC-Radiomics-Phantom",
+          "PatientId": "CCR1_GE7",
+          "PatientName": "CCR1_GE7",
+          "PatientSex": "M",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CC-Radiomics-Phantom",
+          "PatientId": "CCR1_P4",
+          "PatientName": "CCR1_P4",
+          "PatientSex": "M",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CC-Radiomics-Phantom",
+          "PatientId": "CCR1_GE5",
+          "PatientName": "CCR1_GE5",
+          "PatientSex": "M",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CC-Radiomics-Phantom",
+          "PatientId": "CCR1_P3",
+          "PatientName": "CCR1_P3",
+          "PatientSex": "M",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CC-Radiomics-Phantom",
+          "PatientId": "CCR1_GE6",
+          "PatientName": "CCR1_GE6",
+          "PatientSex": "M",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CC-Radiomics-Phantom",
+          "PatientId": "CCR1_GE2",
+          "PatientName": "CCR1_GE2",
+          "PatientSex": "M",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CC-Radiomics-Phantom",
+          "PatientId": "CCR1_P1",
+          "PatientName": "CCR1_P1",
+          "PatientSex": "M",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CC-Radiomics-Phantom",
+          "PatientId": "CCR1_P5",
+          "PatientName": "CCR1_P5",
+          "PatientSex": "M",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CC-Radiomics-Phantom",
+          "PatientId": "CCR1_GE4",
+          "PatientName": "CCR1_GE4",
+          "PatientSex": "M",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CC-Radiomics-Phantom",
+          "PatientId": "CCR1_T3",
+          "PatientName": "CCR1_T3",
+          "PatientSex": "M",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CC-Radiomics-Phantom",
+          "PatientId": "CCR1_S2",
+          "PatientName": "CCR1_S2",
+          "PatientSex": "M",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CC-Radiomics-Phantom",
+          "PatientId": "CCR1_T1",
+          "PatientName": "CCR1_T1",
+          "PatientSex": "M",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CC-Radiomics-Phantom",
+          "PatientId": "CCR1_S1",
+          "PatientName": "CCR1_S1",
+          "PatientSex": "M",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CC-Radiomics-Phantom",
+          "PatientId": "CCR1_T2",
+          "PatientName": "CCR1_T2",
+          "PatientSex": "M",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        }
+      ]
+    }
+  },
+  "source": "tcia"
+}

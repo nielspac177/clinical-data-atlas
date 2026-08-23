@@ -1,0 +1,101 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds001525",
+  "payload": {
+    "created": "2018-09-26T20:11:08.638Z",
+    "id": "ds001525",
+    "latestSnapshot": {
+      "created": "2020-01-27T22:54:59.000Z",
+      "description": {
+        "Authors": [
+          "Feng Rong",
+          "A. Lisette Isenberg",
+          "Erica Sun",
+          "Gregory S. Hickok"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds001525.v1.1.1",
+        "Funding": [],
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "Syllable level speech sequencing",
+        "ReferencesAndLinks": []
+      },
+      "readme": "The Neuroanatomy of Speech Sequencing at the Syllable Level\n\n\tThis dataset contains materials from the syllable level speech sequencing project by Rong et al, 2018. The present study sought to map the network involved in speech sequence planning without the potential confounds of overt sensory responses, while taking a different approach to avoiding confounds associated with differing numbers of syllable types or phonemes in the contrasting conditions. Our approach involved the auditory presentation of four different syllables for both the sequence and the non-sequence conditions. In the sequence conditions, the four syllables were presented immediately one after the other, after which the participant covertly repeated the entire sequence. In the non-sequence (“unit”) condition, a short silent interval occurred after each syllable was presented, during which the participant silently repeated that one syllable. Thus, on each 4s trial in each condition the same set of syllables was planned and covertly repeated but differed in terms of whether each syllable was repeated individually or as a sequence.  Activations under these conditions were examined in the context of a set of ROIs defined by an independent localizer designed to elicit activations associated with listening to and covertly repeating syllables generally.  This method allowed us to identify distinct sub-networks involved in generating individual syllables versus syllable sequences.\n\n\tPlease cite Rong F, Isenberg AL, Sun E, Hickok GS (2018) The Neuroanatomy of Speech Sequencing at the Syllable Level. PLoS ONE.\n\n\tThis dataset includes the following:\n\n\t1. Participants.tsv includes age, sex and handedness information for all subjects\n\t2. anat/ contains the defaced T1 MPRAGE, processed from PAR/REC using dcm2niix\n\t3. func/ contains scans and events for the two functional tasks detailed below.\n\t\tRepetition Task: 4 runs, 190 volumes, 5 volumes removed at beginning by user\n\t\t\t\tConditions: 1) Repeat Sequence \n\t\t\t\t\t\t\t2) Repeat Unit\n\n\t\t\tThe Syllable Repetition task included two different covert repetition conditions: one condition involved the covert (imagined) repetition of individual syllables and the other involved the covert repetition of syllable sequences.  Covert speech was used to avoid auditory activation due to perception of self-produced vocalization. To control for simple duration effects, trials of equal duration (4s) and an equivalent number of syllables (4) for each repetition condition were used; the trials differed only in whether the subject repeated each heard syllable one-at-a-time or as a sequence of four syllables.  Specifically, in a Repeat Unit (RU) condition trial, 4 different auditory syllable stimuli were presented at a rate of 1Hz and participants repeated each syllable immediately after hearing it during the 500 millisecond inter-stimulus interval.  In the Repeat Sequence (RS) condition, 4 different auditory syllable stimuli were presented at a rate of 2Hz in the first half of the trial and participants repeated the entire sequence in the second half of the trial.  Thus, for both conditions within each 4s trial participants heard and generated 4 syllables.  The conditions were grouped into 10s activation blocks that contained two 4s trials of the same condition and were preceded by a 1s visual instruction indicating the type of task (RU or RS) and a 1sec silent period. Activation blocks alternated with 10s silent “resting” blocks, during which the participant maintained fixation on a “+” symbol.\n\n\t\tLocalizer Task: 3 runs, 150 Volumes, 5 scans removed at beginning by user\n\t\t\t\tConditions: 1) Continuous Listen\n\t\t\t\t\t\t\t2) Listen + Repeat\n\t\t\t\t\t\t\t3) Listen + Rest\n\t\t\t\t\t\t\t \n\t\t\tThe localizer task was included to identify networks in each participant that are involved in the perception and production of speech. A localizer was used is to precisely define the relevant network, thus (i) minimizing the possibility of spurious activation, (ii) increasing statistical sensitivity and our ability to evaluate null results, and (iii) minimizing possible condition differences due to executive control and related mechanisms.  This speech processing localizer was modeled on a previous study (Hickok et al. 2009). It consisted of four task conditions using syllable stimuli: (1) listen + rehearsal; (2) listen + rest; (3) continuous listen; and (4) rest. Tasks were presented in pseudorandom order, such that the same condition never occurred twice in a row.  For this set of tasks, each block was 14 seconds in duration.  For each of the listen + rehearsal and listen + rest blocks, a four-CV-syllable stimulus was presented during the first two seconds, the same as the stimulus presentation in the RS condition, and the participants either rehearsed the set repeatedly or rested for the next 12 seconds until the onset of the next trial. For each of the continuous listen blocks, the same syllable sequence was presented to the participant auditorily seven times throughout the 14 second duration without any response being required from the participant.  Each resting block had a 14 second silent period.  A visual cue was presented during the full length of each block to inform the participant of the experimental condition.  \n\n\t\t\tDefacing:\n\t\t\t\tDefacing was performed using freesurfer mri_deface. (https://surfer.nmr.mgh.harvard.edu/fswiki/mri_deface)\n\n\t\t\tFunding: National Institutes of Health (NIDCD R01 DC009659)\n\n\t\t\tLicense: PDDL\n\t\t\t\n\t\t\tInitial Commit: 09/22/2018 \n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 32115601114,
+        "subjects": [
+          "301",
+          "302",
+          "303",
+          "304",
+          "305",
+          "306",
+          "307",
+          "309",
+          "310",
+          "311",
+          "312",
+          "313",
+          "314",
+          "315",
+          "316",
+          "317",
+          "318"
+        ],
+        "tasks": [
+          "Repetition",
+          "Localizer"
+        ],
+        "totalFiles": 273
+      },
+      "tag": "1.1.1"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        31,
+        25,
+        19,
+        21,
+        18,
+        35,
+        22,
+        22,
+        18,
+        23,
+        25,
+        21,
+        20,
+        19,
+        18,
+        26,
+        23
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2018-09-26T20:11:08.638Z"
+  },
+  "source": "openneuro"
+}

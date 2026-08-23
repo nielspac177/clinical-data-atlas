@@ -1,0 +1,29 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:5c4670ea98b521de9182341368086a123e80fc194b9d9d0212313322fcf5a47f",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "oncology"
+    ],
+    "id": "tcia:rpa-head-and-neck-lymph-nodes",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Simulation CTs (non-contrast)",
+        "value": "CT"
+      },
+      {
+        "evidence": "generates a complete radiotherapy treatment plan",
+        "value": "radiotherapy"
+      }
+    ],
+    "population": "47 (46 unique) patients who retrospectively received head and neck radiotherapy at MD Anderson Cancer Center, all receiving definitive therapy",
+    "summary": "Non-contrast simulation CT scans with clinical segmentations of head and neck lymph node levels, curated to train and benchmark auto-contouring models for radiotherapy treatment planning in the Radiation Planning Assistant."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,38 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:82b17b88cc88be5937b9c4a456899f884ed04e4c8dd502aaa003b14f88c3434b",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "the effect of COVID-19 in people with Multiple Sclerosis",
+        "label": "COVID-19"
+      },
+      {
+        "evidence": "people with Multiple Sclerosis",
+        "label": "Multiple Sclerosis"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "infectious_disease",
+      "pulmonology"
+    ],
+    "id": "physionet:patient-level-data-covid-ms",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "using a fast data entry tool",
+        "value": "survey"
+      },
+      {
+        "evidence": "demographics, comorbidities, hospital stay",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "People with multiple sclerosis (PwMS), with data entered by patients and clinicians",
+    "summary": "An anonymised patient-level dataset from the COVID-19 in MS Global Data Sharing Initiative, entered by patients and clinicians, covering demographics, comorbidities, hospital stay, and COVID-19 symptoms."
+  },
+  "prompt_version": "v1"
+}

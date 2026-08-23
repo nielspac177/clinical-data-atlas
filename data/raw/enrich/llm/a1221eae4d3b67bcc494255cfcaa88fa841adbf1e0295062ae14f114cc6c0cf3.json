@@ -1,0 +1,27 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:a1221eae4d3b67bcc494255cfcaa88fa841adbf1e0295062ae14f114cc6c0cf3",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "other"
+    ],
+    "id": "physionet:mimic-iii-question-answer",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "36 sampled discharge summaries from MIMIC-III Clinical Notes",
+        "value": "clinical_notes"
+      },
+      {
+        "evidence": "Clinical Notes in the MIMIC-III Database",
+        "value": "EHR"
+      }
+    ],
+    "population": null,
+    "summary": "Annotated question-answer pairs over discharge summaries from MIMIC-III clinical notes, with questions verified or written by clinical experts, intended for testing the generalizability of clinical question answering models."
+  },
+  "prompt_version": "v1"
+}

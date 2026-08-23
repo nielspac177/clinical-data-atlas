@@ -1,0 +1,45 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:bb1d717be0bea02b3419af666b5ebd1fdce8cfb31a8613d73a7e82337b292377",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "pulmonology",
+      "nephrology_urology"
+    ],
+    "id": "tcia:midi-b-curated-validation",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "CT",
+        "value": "CT"
+      },
+      {
+        "evidence": "MR",
+        "value": "MRI"
+      },
+      {
+        "evidence": "PT",
+        "value": "PET"
+      },
+      {
+        "evidence": "DX",
+        "value": "xray"
+      },
+      {
+        "evidence": "MG",
+        "value": "mammography"
+      },
+      {
+        "evidence": "US",
+        "value": "ultrasound"
+      }
+    ],
+    "population": null,
+    "summary": "Curated validation split of a multi-modality imaging collection spanning body regions including abdomen, bladder, breast, cervix, chest, colon, kidney, lung, ovary, pancreas, pelvis and prostate."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,138 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007407",
+  "payload": {
+    "created": "2026-02-13T00:52:09.254Z",
+    "id": "ds007407",
+    "latestSnapshot": {
+      "created": "2026-02-15T21:29:47.000Z",
+      "description": {
+        "Authors": [
+          "Clara Sava-Segal",
+          "Clare Grall",
+          "Emily S. Finn"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007407.v1.0.0",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Darkend Auditory Narrative Repeated Listening fMRI",
+        "ReferencesAndLinks": null
+      },
+      "readme": "Darkend Auditory Narrative Repeated Listening fMRI Dataset\n\nThis dataset contains multi-echo fMRI data collected while participants listened\nto an auditory narrative (\"Darkend of the Mall\" from The Truth podcast) twice (darkend1 and darkend2). \n\nOnly the narrative listening portion of the scan is included in the events files.\nPost-narrative is  not modeled.\n\nData were acquired with TR = 1.0 s. The length of the stimulus is 18:25 min:sec (1105 TRs or seconds). Each task contains three echoes.\n\nMulti-echo data are provided using BIDS echo indexing:\n  echo-1, echo-2, echo-3\n\nContact: Clara Sava-Segal or Emily S. Finn for questions\n\nPlease cite this dataset and publication \"Narrative ‘twist’ shifts within-individual neural representations of dissociable story features\" Sava-Segal, Grall & Finn, 2026 (PNAS)\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 121477280515,
+        "subjects": [
+          "34",
+          "16",
+          "32",
+          "03",
+          "12",
+          "30",
+          "11",
+          "19",
+          "02",
+          "21",
+          "09",
+          "33",
+          "13",
+          "05",
+          "27",
+          "35",
+          "04",
+          "10",
+          "08",
+          "25",
+          "14",
+          "20",
+          "36",
+          "15",
+          "26",
+          "01",
+          "24",
+          "07",
+          "28",
+          "31",
+          "22",
+          "06",
+          "37",
+          "17",
+          "23",
+          "29"
+        ],
+        "tasks": [
+          "darkend1",
+          "darkend2"
+        ],
+        "totalFiles": 580
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "https://doi.org/10.1101/2025.01.13.632631",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "NIMH, NSF",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "Narrative listening",
+      "studyDomain": "",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2026-02-15T21:38:09.055Z"
+  },
+  "source": "openneuro"
+}

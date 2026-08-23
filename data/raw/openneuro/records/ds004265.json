@@ -1,0 +1,66 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004265",
+  "payload": {
+    "created": "2022-09-14T10:29:01.451Z",
+    "id": "ds004265",
+    "latestSnapshot": {
+      "created": "2026-06-29T02:05:12.000Z",
+      "description": {
+        "Authors": [
+          "Charles Caskey",
+          "Arabinda Mishra"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004265.v1.1.6",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Longitudinal FLAIR and SWI data with Anatomic T1w Images",
+        "ReferencesAndLinks": null
+      },
+      "readme": "Safety Data (FLAIR/SWI structural Images):\nFUS is being explored as a neuromodulation tool, it is crucial to establish the safety range for repeated sonication exposure during ARFI and FUS procedures. Here, we report no evidence of tissue damage at the three targeted brain regions, as assessed by susceptibility-weighted imaging (SWI) and fluid-attenuated inversion recovery (FLAIR) MRI images, which are sensitive to detecting microbleeds, edema, lesions, and other abnormalities. Six macaque monkeys underwent repeated neuromodulation studies targeting the thalamic ventroposterior lateral (VPL) nucleus, anterior cingulate cortex (ACC), and periaqueductal gray (PAG). SWI and FLAIR images were acquired during each session. MRI signals extracted from each of the targets were quantified and compared to a control region of interest (ROI) with similar tissue properties. Signal variability within two standard deviations was considered a negative observation, indicating no detectable damage. The data acquisition interval and monitoring frequency ranged from two weeks to over a year. In summary, we did not detect damage from repeated sonication of cortical, deep brain, and brainstem regions exposed to repeated FUS neuromodulation and ARFI pulses using SWI and FLAIR MRI. This establishes a potential safety profile for future clinical applications using the same MR-guided FUS protocols.\n\nPhipps, M. A., A. Mishra, C. L. Donovan, A. T. Newton, C. D. McKnight, A. Q. Dockum, M. K. Sigona, P. F. Yang, C. F. Caskey and L. M. Chen (2026). \"Magnetic Resonance Imaging Monitoring of the Safety of Repeated Low-Intensity Focused Ultrasound Exposure at Three Brain Locations.\" Neuromodulation 29(2): 243–254.\nMishra A, Yang PF, Manuel TJ, et al. Disrupting nociceptive information processing flow through transcranial focused ultrasound neuromodulation of thalamic nuclei. Brain Stimul. 2023;16(5):1430-1444. doi:10.1016/J.BRS.2023.09.013\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 613211696,
+        "subjects": [
+          "03",
+          "02",
+          "05",
+          "04",
+          "01",
+          "06"
+        ],
+        "tasks": [],
+        "totalFiles": 99
+      },
+      "tag": "1.1.6"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "NIH-1U18EB029351",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Macaque",
+      "studyDesign": "Heat, Heat+FUS & FUS",
+      "studyDomain": "",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2022-09-14T13:29:46.644Z"
+  },
+  "source": "openneuro"
+}

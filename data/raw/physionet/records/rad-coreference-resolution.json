@@ -1,0 +1,36 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "rad-coreference-resolution",
+  "payload": {
+    "abstract": "<p>RadCoref is a small subset of MIMIC-CXR with manually annotated coreference mentions and clusters. The dataset is annotated by a panel of three cross-disciplinary experts with experience in clinical data processing following the i2b2 annotation scheme with minimum modification. The dataset consists of Findings and Impression sections extracted from full radiology reports. The dataset has 950, 25 and 200 section documents for training, validation, and testing, respectively. The training and validation sets are annotated by one annotator. The test set is annotated by two human annotators independently, of which the results are merged manually by the third annotator. The dataset aims to support the task of coreference resolution on radiology reports. Given that the MIMIC-CXR has been de-identified already, no protected health information (PHI) is included.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 256086653,
+    "core_doi": "10.13026/x1e4-5r04",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 358789869,
+    "public_project_uuid": "ed02ca90-aea8-4d72-bb3f-85e9f72840dc",
+    "publish_date": "2024-01-30",
+    "resource_type": "Database",
+    "short_description": "RadCoref is a small subset of MIMIC-CXR with manually annotated coreference mentions and clusters. Based on the annotated data, we fine-tuned a deep neural model and used it to annotate the whole MIMIC-CXR dataset. Both data are available.",
+    "slug": "rad-coreference-resolution",
+    "source_url": "https://physionet.org/content/rad-coreference-resolution/1.0.0/",
+    "title": "RadCoref: Fine-tuning coreference resolution for different styles of clinical narratives",
+    "topics": [
+      "natural language processing",
+      "radiology",
+      "coreference resolution"
+    ],
+    "version": "1.0.0",
+    "version_doi": "10.13026/z67q-xy65"
+  },
+  "source": "physionet"
+}

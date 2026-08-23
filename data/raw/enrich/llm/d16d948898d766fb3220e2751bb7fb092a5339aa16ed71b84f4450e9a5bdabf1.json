@@ -1,0 +1,28 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:d16d948898d766fb3220e2751bb7fb092a5339aa16ed71b84f4450e9a5bdabf1",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "pulmonology",
+      "other"
+    ],
+    "id": "physionet:med-palm2-mimic-cxr",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "the chest X-ray studies",
+        "value": "xray"
+      },
+      {
+        "evidence": "the MIMIC-CXR radiology report text",
+        "value": "clinical_notes"
+      }
+    ],
+    "population": "Cases from MIMIC-CXR radiology reports where Med-PaLM 2 labels differed from published CheXpert labels, reviewed by three US board certified radiologists",
+    "summary": "Radiologist-verified ground truth labels refining CheXpert labels in MIMIC-CXR-JPG, produced by filtering radiology reports with the Med-PaLM 2 language model and reviewing disagreements by three board-certified radiologists."
+  },
+  "prompt_version": "v1"
+}

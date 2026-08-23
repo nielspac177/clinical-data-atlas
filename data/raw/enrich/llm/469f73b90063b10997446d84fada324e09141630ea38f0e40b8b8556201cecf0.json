@@ -1,0 +1,28 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:469f73b90063b10997446d84fada324e09141630ea38f0e40b8b8556201cecf0",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "pulmonology",
+      "other"
+    ],
+    "id": "physionet:cxrgraph",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "full-text radiology reports",
+        "value": "clinical_notes"
+      },
+      {
+        "evidence": "structured radiology report dataset built upon RadGraph",
+        "value": "other"
+      }
+    ],
+    "population": "550 manually annotated MIMIC-CXR reports, 50 CheXpert reports, and 227,835 automatically annotated MIMIC-CXR reports",
+    "summary": "Structured radiology reports in RadGraph format with five entity types, four relation types and three entity attributes; manually annotated MIMIC-CXR and CheXpert reports plus model-inferred annotations for automatic report generation."
+  },
+  "prompt_version": "v1"
+}

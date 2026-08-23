@@ -1,0 +1,51 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:8980b00eea0d57c4f7f6b2073df153b4551bf18bb7c151a68f0f51aa0d6d9c22",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Epithelial Neoplasms, NOS",
+        "label": "Epithelial Neoplasms, NOS"
+      },
+      {
+        "evidence": "Adenomas and Adenocarcinomas",
+        "label": "Adenomas and Adenocarcinomas"
+      },
+      {
+        "evidence": "Gliomas",
+        "label": "Gliomas"
+      },
+      {
+        "evidence": "Neoplasms, NOS",
+        "label": "Neoplasms, NOS"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "neurology",
+      "pulmonology",
+      "gastroenterology_hepatology"
+    ],
+    "id": "gdc:MATCH-H",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "WXS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "RNA-Seq",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "21 human cancer cases in Arm H of the CS-MATCH-0007 study",
+    "summary": "Genomic characterization of Arm H of CS-MATCH-0007, with exome and RNA sequencing plus clinical and biospecimen data from brain, lung, colon, liver, pancreas, ovary and other tumors."
+  },
+  "prompt_version": "v1"
+}

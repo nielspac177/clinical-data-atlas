@@ -1,0 +1,101 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007768",
+  "payload": {
+    "created": "2026-05-08T18:09:36.469Z",
+    "id": "ds007768",
+    "latestSnapshot": {
+      "created": "2026-05-26T14:05:25.000Z",
+      "description": {
+        "Authors": [
+          "Klemens Egger",
+          "Milan Scheidegger",
+          "Paul Cumming"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007768.v1.0.0",
+        "Funding": [
+          "Swiss National Science Foundation grant number 320030-204978"
+        ],
+        "HowToAcknowledge": "When using these data, please cite both the dataset and the corresponding publication:\n\nEgger, K., et al. (2026). Global Increases in Brain Glucose Metabolism Following Acute N,N-Dimethyltryptamine and Harmine Administration in Healthy Volunteers: A randomised [18F]FDG-PET Study. Journal of Cerebral Blood Flow & Metabolism. https://doi.org/10.1177/0271678X261454172",
+        "License": "CC0",
+        "Name": "HaD-PET: Effects of DMT and harmine on cerebral glucose metabolism: FDG-PET dataset",
+        "ReferencesAndLinks": [
+          "ClinicalTrials.gov: https://clinicaltrials.gov/study/NCT06252506",
+          "Publication: Egger et al. Global Increases in Brain Glucose Metabolism Following Acute N,N-Dimethyltryptamine and Harmine Administration in Healthy Volunteers: A randomised [18F]FDG-PET Study. JCBFM (2026). DOI: https://doi.org/10.1177/0271678X261454172",
+          "Github (Zenodo) repository: Egger, K. (2026). HDP FDG PET STUDY (v1.0). Zenodo. DOI: https://doi.org/10.5281/zenodo.20396101"
+        ]
+      },
+      "readme": "# HaD-PET: FDG-PET dataset of acute DMT plus harmine effects on brain glucose metabolism\n\n## Overview\nThis dataset contains raw and selected derivative neuroimaging data from a single-blind, placebo-controlled, randomized crossover study investigating the acute effects of an oromucosal formulation of N,N-dimethyltryptamine (DMT) combined with harmine on cerebral glucose metabolism in healthy volunteers.\n\nThe dataset is organized according to BIDS and includes:\n- T1-weighted structural MRI scans\n- Dynamic brain [18F]FDG-PET scans from two study sessions per participant\n- Participant-level metadata in `participants.tsv`\n- Selected preprocessing and modeling derivatives under `derivatives/`\n- Processing scripts and command records under `code/`\n\n## Study design\nFourteen healthy male participants completed both imaging sessions in a within-subject crossover design. Each participant underwent:\n- one placebo session\n- one active drug session with buccal DMT plus harmine\n\nDrug administration consisted of three equal dose increments given 20 minutes apart, for a total dose of:\n- DMT: 90 mg\n- harmine: 120 mg\n\nApproximately 100 minutes after the first administration, participants underwent a resting-state [18F]FDG-PET scan during the peak drug-effect window. PET data were acquired for approximately 67 minutes on a Siemens Biograph Vision Quadra long-axial-field-of-view PET/CT scanner. Structural T1-weighted MRI scans were acquired separately and used for anatomical processing and surface-based normalization.\n\n## Primary aim\nThe primary aim of the study was to test whether acute DMT plus harmine increases the cerebral metabolic rate of glucose consumption (CMRglc) relative to placebo. Secondary analyses examined the spatial distribution of these effects across the cortical surface and canonical resting-state networks.\n\n## Participants\n- N = 14 completers\n- healthy adult male volunteers\n- age range: 25-43 years\n- all participants had prior psychedelic experience\n\n## Ethics and registration\n- Approved by the Cantonal Ethics Committees of Bern and Zurich (BASEC-ID: 2022-01515)\n- Exemption for DMT administration granted by the Swiss Federal Office of Public Health\n- Registered at ClinicalTrials.gov: NCT06252506\n- All participants provided written informed consent\n\n## Associated publication\nEgger K, Bozsak R, Aicher HD, Sari H, Poetzsch SN, Rominger A, Martin-Soelch C, Smallridge JW, Dornbierer D, Quednow BB, Scheidegger M, Cumming P.  \n*Global Increases in Brain Glucose Metabolism Following Acute N,N-Dimethyltryptamine and Harmine Administration in Healthy Volunteers: A randomised [18F]FDG-PET Study.*  \nJournal of Cerebral Blood Flow & Metabolism (2026). \nhttps://doi.org/10.1177/0271678X261454172\n\n## Funding\nSwiss National Science Foundation, grant 320030-204978.\n\n## Contact\nFor questions regarding the dataset, please contact:\n\n**Klemens Egger**  \nPsychedelic Research & Therapy Development Lab  \nUniversity Hospital of Psychiatry Zurich  \n✉️ klemens.egger@bli.uzh.ch",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "pet",
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural"
+        ],
+        "sessions": [
+          "02",
+          "01"
+        ],
+        "size": 14118367214,
+        "subjects": [
+          "HDP10",
+          "HDP01",
+          "HDP02",
+          "HDP09",
+          "HDP08",
+          "HDP19",
+          "HDP18",
+          "HDP13",
+          "HDP12",
+          "HDP04",
+          "HDP15",
+          "HDP17",
+          "HDP03",
+          "HDP06"
+        ],
+        "tasks": [],
+        "totalFiles": 89
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        25,
+        33,
+        33,
+        26,
+        38,
+        30,
+        25,
+        34,
+        39,
+        43,
+        38,
+        27,
+        25,
+        27
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "Swiss National Science Foundation",
+      "modalities": [
+        "pet",
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "single-blind, placebo-controlled, randomized crossover design",
+      "studyDomain": "Brain glucose metabolism after psychedelics (DMT+harmine) administration",
+      "studyLongitudinal": "cross-over"
+    },
+    "publishDate": "2026-05-30T11:12:21.911Z"
+  },
+  "source": "openneuro"
+}

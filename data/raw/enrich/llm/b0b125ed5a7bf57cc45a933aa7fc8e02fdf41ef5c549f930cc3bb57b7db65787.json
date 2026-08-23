@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:b0b125ed5a7bf57cc45a933aa7fc8e02fdf41ef5c549f930cc3bb57b7db65787",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Colon Adenocarcinoma",
+        "label": "Colon Adenocarcinoma"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "gastroenterology_hepatology"
+    ],
+    "id": "tcia:tcga-coad",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "CT OT",
+        "value": "CT"
+      },
+      {
+        "evidence": "Genomic Data Commons (GDC) Data Portal",
+        "value": "genomics"
+      }
+    ],
+    "population": "Human participants with colon adenocarcinoma enrolled in The Cancer Genome Atlas (25 participants per source metadata)",
+    "summary": "Colon imaging from patients in The Cancer Genome Atlas, matched by patient identifier to clinical, genetic and pathological data in the Genomic Data Commons. Most images were acquired as part of routine care."
+  },
+  "prompt_version": "v1"
+}

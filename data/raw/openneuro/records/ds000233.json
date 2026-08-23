@@ -1,0 +1,100 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds000233",
+  "payload": {
+    "created": "2017-09-23T22:03:42.103Z",
+    "id": "ds000233",
+    "latestSnapshot": {
+      "created": "2019-12-14T02:42:22.000Z",
+      "description": {
+        "Authors": [
+          "Samuel A. Nastase",
+          "Yaroslav O. Halchenko",
+          "Andrew C. Connolly",
+          "M. Ida Gobbini",
+          "James V. Haxby"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds000233.v1.0.1",
+        "Funding": [
+          "5R01MH075706",
+          "F32MH085433-01A1",
+          "NSF1129764",
+          "NSF1607845"
+        ],
+        "HowToAcknowledge": "If you find this data set useful, please cite the following papers:\n\nNastase, S. A., Connolly, A. C., Oosterhof, N. N., Halchenko, Y. O., Guntupalli, J. S., Visconti di Oleggio Castello, M., Gors, J., Gobbini, M. I., & Haxby, J. V. (2017). Attention selectively reshapes the geometry of distributed semantic representation. Cerebral Cortex, 27(8), 4277-4291. https://doi.org/10.1093/cercor/bhx138\n\nNastase, S. A., Halchenko, Y. O., Connolly, A. C., Gobbini, M. I., & Haxby, J. V. (2018). Neural responses to naturalistic clips of behaving animals in two different task contexts. Frontiers in Neuroscience, 12, 316. https://doi.org/10.3389/fnins.2018.00316",
+        "License": "CC0",
+        "Name": "Neural responses to naturalistic clips of behaving animals in two different task contexts",
+        "ReferencesAndLinks": [
+          "http://datasets.datalad.org/?dir=/labs/haxby/attention",
+          "https://snastase.github.io/datasets/ds000233"
+        ]
+      },
+      "readme": "Source data (sourcedata/) may contain sensitive information and therefore not distributed publicly. The 40 video clip stimuli (MPEG-4 files) are distributed alongside the data in keeping with fair use provisions for non-commercial scholarly research (see stimuli/README.md for more information).\n\nNote that in constructing the trial order for one run (sub-rid0000*_task-beh_run-1_bold.nii.gz) an unintended collision occurred where a behavior repetition event interrupted a taxonomic repetition event. This means that one less taxonomic category repetition occurred in this run (3 in stead of 4), and the stimulus bird_eating_1.mp4 occurred 3 times instead of the intended 2 times in this run.\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 4343915020,
+        "subjects": [
+          "rid000001",
+          "rid000012",
+          "rid000017",
+          "rid000024",
+          "rid000027",
+          "rid000031",
+          "rid000032",
+          "rid000033",
+          "rid000034",
+          "rid000036",
+          "rid000037",
+          "rid000041"
+        ],
+        "tasks": [
+          "beh",
+          "tax"
+        ],
+        "totalFiles": 455
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        24,
+        24,
+        24,
+        24,
+        25,
+        28,
+        24,
+        26,
+        28,
+        26,
+        31,
+        21
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2017-09-23T22:03:42.103Z"
+  },
+  "source": "openneuro"
+}

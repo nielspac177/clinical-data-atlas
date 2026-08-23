@@ -1,0 +1,1196 @@
+{
+  "endpoints": [
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getCollectionValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getModalityValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getBodyPartValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getPatient",
+    "https://api.datacite.org/dois?prefix=10.7937"
+  ],
+  "harvest_method": "api:nbia+datacite",
+  "native_id": "B-mode-and-CEUS-Liver",
+  "payload": {
+    "datacite": {
+      "citationCount": 3,
+      "container": {},
+      "contentUrl": [],
+      "contributors": [],
+      "created": "2021-07-28T16:19:37Z",
+      "creators": [
+        {
+          "affiliation": [],
+          "familyName": "Eisenbrey",
+          "givenName": "John",
+          "name": "Eisenbrey, John",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0001-6411-3424",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Lyshchik",
+          "givenName": "Andrej",
+          "name": "Lyshchik, Andrej",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0001-8930-2213",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Wessner",
+          "givenName": "Corinne",
+          "name": "Wessner, Corinne",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        }
+      ],
+      "dates": [],
+      "descriptions": [
+        {
+          "description": "Data was generated as part of two ongoing clinical trials investigating the use of contrast-enhanced ultrasound to a) characterize indeterminate liver lesions and b) monitor treatment response to loco regional therapy. Ultrasound data was obtained on a variety of state of the art ultrasound scanners with curvilinear probes. Gain, dynamic range, focus position and depth were optimized for image quality by the performing sonographer. Images of the mass in both sagittal and transverse planes were obtained and saved in DICOM format. Full cine-loops of the contrast enhanced ultrasound are also saved in DICOM format. The reference standard used for lesion characterization included tissue pathology and contrast-enhanced cross-sectional imaging within 1 month of the ultrasound exam. The initial treatment response to transarterial chemoembolization is also available for many HCC cases and uses pathology, retreatment angiography, or longer-term tumor response on cross-sectional imaging as a reference standard.\n\nWe expect these images can be used in a wide variety of image processing application. We are currently exploring a variety of automated intelligence algorithms for AI-based lesion characterization. Algorithms for object detection and segmentation may also be of interest. As the studies that have generated this data are also ongoing, it is expected that we can add volumetric data, contrast-enhanced ultrasound cine loops, and longer-term treatment response data to this data set in the future.",
+          "descriptionType": "Abstract",
+          "lang": "en"
+        }
+      ],
+      "doi": "10.7937/tcia.2021.v4z7-tc39",
+      "downloadCount": 0,
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "B-mode-and-CEUS-Liver",
+          "identifierType": "TCIA Short Name"
+        }
+      ],
+      "isActive": true,
+      "language": null,
+      "metadataVersion": 7,
+      "partCount": 0,
+      "partOfCount": 0,
+      "publicationYear": 2021,
+      "published": null,
+      "publisher": "The Cancer Imaging Archive",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2021-07-28T21:09:26Z",
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "10.18287/jbpe22.08.030307",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1002/ima.22782",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        }
+      ],
+      "relatedItems": [],
+      "rightsList": [
+        {
+          "rights": "Creative Commons Attribution 4.0 International",
+          "rightsIdentifier": "cc-by-4.0",
+          "rightsIdentifierScheme": "SPDX",
+          "rightsUri": "https://creativecommons.org/licenses/by/4.0/legalcode",
+          "schemeUri": "https://spdx.org/licenses/"
+        }
+      ],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "fabricaForm",
+      "state": "findable",
+      "subjects": [],
+      "titles": [
+        {
+          "lang": null,
+          "title": "Ultrasound data of a variety of liver masses",
+          "titleType": null
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2025-06-01T01:01:14Z",
+      "url": "https://www.cancerimagingarchive.net/collection/b-mode-and-ceus-liver/",
+      "version": "1",
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 4905
+    },
+    "nbia": {
+      "body_parts": [
+        "LIVER"
+      ],
+      "collection": "B-mode-and-CEUS-Liver",
+      "modalities": [
+        "US"
+      ],
+      "patients": [
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-01",
+          "PatientName": "LiverUS-01",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-51",
+          "PatientName": "LiverUS-51",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-37",
+          "PatientName": "LiverUS-37",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-04",
+          "PatientName": "LiverUS-04",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-22",
+          "PatientName": "LiverUS-22",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-10",
+          "PatientName": "LiverUS-10",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-11",
+          "PatientName": "LiverUS-11",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-30",
+          "PatientName": "LiverUS-30",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-14",
+          "PatientName": "LiverUS-14",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-25",
+          "PatientName": "LiverUS-25",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-05",
+          "PatientName": "LiverUS-05",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-36",
+          "PatientName": "LiverUS-36",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-17",
+          "PatientName": "LiverUS-17",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-08",
+          "PatientName": "LiverUS-08",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-42",
+          "PatientName": "LiverUS-42",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-28",
+          "PatientName": "LiverUS-28",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-21",
+          "PatientName": "LiverUS-21",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-19",
+          "PatientName": "LiverUS-19",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-24",
+          "PatientName": "LiverUS-24",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-33",
+          "PatientName": "LiverUS-33",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-52",
+          "PatientName": "LiverUS-52",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-71",
+          "PatientName": "LiverUS-71",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-32",
+          "PatientName": "LiverUS-32",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-12",
+          "PatientName": "LiverUS-12",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-45",
+          "PatientName": "LiverUS-45",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-02",
+          "PatientName": "LiverUS-02",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-20",
+          "PatientName": "LiverUS-20",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-15",
+          "PatientName": "LiverUS-15",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-56",
+          "PatientName": "LiverUS-56",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-27",
+          "PatientName": "LiverUS-27",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-43",
+          "PatientName": "LiverUS-43",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-23",
+          "PatientName": "LiverUS-23",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-18",
+          "PatientName": "LiverUS-18",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-35",
+          "PatientName": "LiverUS-35",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-39",
+          "PatientName": "LiverUS-39",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-34",
+          "PatientName": "LiverUS-34",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-06",
+          "PatientName": "LiverUS-06",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-29",
+          "PatientName": "LiverUS-29",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-55",
+          "PatientName": "LiverUS-55",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-72",
+          "PatientName": "LiverUS-72",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-62",
+          "PatientName": "LiverUS-62",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-31",
+          "PatientName": "LiverUS-31",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-16",
+          "PatientName": "LiverUS-16",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-03",
+          "PatientName": "LiverUS-03",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-68",
+          "PatientName": "LiverUS-68",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-46",
+          "PatientName": "LiverUS-46",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-66",
+          "PatientName": "LiverUS-66",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-50",
+          "PatientName": "LiverUS-50",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-13",
+          "PatientName": "LiverUS-13",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-40",
+          "PatientName": "LiverUS-40",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-26",
+          "PatientName": "LiverUS-26",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-75",
+          "PatientName": "LiverUS-75",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-47",
+          "PatientName": "LiverUS-47",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-61",
+          "PatientName": "LiverUS-61",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-07",
+          "PatientName": "LiverUS-07",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-38",
+          "PatientName": "LiverUS-38",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-69",
+          "PatientName": "LiverUS-69",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-64",
+          "PatientName": "LiverUS-64",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-59",
+          "PatientName": "LiverUS-59",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-65",
+          "PatientName": "LiverUS-65",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-60",
+          "PatientName": "LiverUS-60",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-49",
+          "PatientName": "LiverUS-49",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-09",
+          "PatientName": "LiverUS-09",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-53",
+          "PatientName": "LiverUS-53",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-54",
+          "PatientName": "LiverUS-54",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-73",
+          "PatientName": "LiverUS-73",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-48",
+          "PatientName": "LiverUS-48",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-41",
+          "PatientName": "LiverUS-41",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-70",
+          "PatientName": "LiverUS-70",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-57",
+          "PatientName": "LiverUS-57",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-44",
+          "PatientName": "LiverUS-44",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-58",
+          "PatientName": "LiverUS-58",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-67",
+          "PatientName": "LiverUS-67",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-74",
+          "PatientName": "LiverUS-74",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-63",
+          "PatientName": "LiverUS-63",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-86",
+          "PatientName": "LiverUS-86",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-89",
+          "PatientName": "LiverUS-89",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-87",
+          "PatientName": "LiverUS-87",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-85",
+          "PatientName": "LiverUS-85",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-108",
+          "PatientName": "LiverUS-108",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-84",
+          "PatientName": "LiverUS-84",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-123",
+          "PatientName": "LiverUS-123",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-101",
+          "PatientName": "LiverUS-101",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-88",
+          "PatientName": "LiverUS-88",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-102",
+          "PatientName": "LiverUS-102",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-104",
+          "PatientName": "LiverUS-104",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-92",
+          "PatientName": "LiverUS-92",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-80",
+          "PatientName": "LiverUS-80",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-116",
+          "PatientName": "LiverUS-116",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-99",
+          "PatientName": "LiverUS-99",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-118",
+          "PatientName": "LiverUS-118",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-96",
+          "PatientName": "LiverUS-96",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-103",
+          "PatientName": "LiverUS-103",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-97",
+          "PatientName": "LiverUS-97",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "EthnicGroup": "Hispanic/Latino",
+          "PatientId": "LiverUS-126",
+          "PatientName": "LiverUS-126",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-83",
+          "PatientName": "LiverUS-83",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-77",
+          "PatientName": "LiverUS-77",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-115",
+          "PatientName": "LiverUS-115",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-76",
+          "PatientName": "LiverUS-76",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-114",
+          "PatientName": "LiverUS-114",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-120",
+          "PatientName": "LiverUS-120",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "EthnicGroup": "Non-Hispanic/Non",
+          "PatientId": "LiverUS-125",
+          "PatientName": "LiverUS-125",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-81",
+          "PatientName": "LiverUS-81",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-98",
+          "PatientName": "LiverUS-98",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-100",
+          "PatientName": "LiverUS-100",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-122",
+          "PatientName": "LiverUS-122",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-90",
+          "PatientName": "LiverUS-90",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-117",
+          "PatientName": "LiverUS-117",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-106",
+          "PatientName": "LiverUS-106",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-110",
+          "PatientName": "LiverUS-110",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-95",
+          "PatientName": "LiverUS-95",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-94",
+          "PatientName": "LiverUS-94",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-119",
+          "PatientName": "LiverUS-119",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-78",
+          "PatientName": "LiverUS-78",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-105",
+          "PatientName": "LiverUS-105",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-109",
+          "PatientName": "LiverUS-109",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-121",
+          "PatientName": "LiverUS-121",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-107",
+          "PatientName": "LiverUS-107",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-91",
+          "PatientName": "LiverUS-91",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "B-mode-and-CEUS-Liver",
+          "PatientId": "LiverUS-82",
+          "PatientName": "LiverUS-82",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        }
+      ]
+    }
+  },
+  "source": "tcia"
+}

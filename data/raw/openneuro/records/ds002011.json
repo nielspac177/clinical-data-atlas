@@ -1,0 +1,114 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds002011",
+  "payload": {
+    "created": "2019-07-03T23:54:53.836Z",
+    "id": "ds002011",
+    "latestSnapshot": {
+      "created": "2019-07-04T00:55:54.000Z",
+      "description": {
+        "Authors": [
+          "David Clewett",
+          "Ringo Huang",
+          "Rico Velasco",
+          "Tae-Ho Lee",
+          "Mara Mather"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds002011.v1.0.0",
+        "Funding": [
+          "University of Southern California Endowed Fellowship and Federal NIH grant R01AG025340"
+        ],
+        "HowToAcknowledge": null,
+        "License": "PD",
+        "Name": "Locus coeruleus activity strengthens prioritized memories under arousal",
+        "ReferencesAndLinks": null
+      },
+      "readme": "These pupil, behavioral, functional and structural MRI data have been published in:\n\nClewett, D. V., Huang, R., Velasco, R., Lee, T. H., & Mather, M. (2018). Locus coeruleus activity strengthens prioritized memories under arousal. Journal of Neuroscience.\n\n\nA ‘participants’ text file indicates each participant’s age group and sex.\n\nThere are folders for each participant with their subject number (e.g., “sub-22”). Within each folder are two folders:\n\n1) anat - T1-weighted structural scan\n\n2) func - contains five total functional scans. Four of these scans are different runs of the Overlap task. One of these scans is the PPA localizer task. Included in this folder are the trial-by-trial timing, behavioral, and summary pupil data in the tabular .tsv event files associated with each functional scan. The columns headers of the .tsv tabular files for the Overlap and PPA localizer scans are described in the json files, /task-Overlap_events.json and /task-ppalocalizer_events.json respectively. Note that for parametric analyses, the pupil values should be mean-centered prior to analysis in FSL.\n\nMissing slice timing info and some other fields in sub-05 ppalocalizer bids sidecar.\n\nsub-02 overlap scans have more volumes than normal because of piloting; scans were stopped manually, but additional time was fixation cross.\n\nBehavioral data and stimulation code associated with the project can be found at the project OSF page osf.io/x3kqv/\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 3639327449,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22"
+        ],
+        "tasks": [
+          "Overlap (Monetary Encoding Incentive) Task",
+          "PPA/LOC functional Localizer"
+        ],
+        "totalFiles": 362
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2019-07-04T01:08:41.276Z"
+  },
+  "source": "openneuro"
+}

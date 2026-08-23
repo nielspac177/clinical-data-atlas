@@ -1,0 +1,34 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:e651c3e5895bd9824d3c20886d5e3a2cfeea193262f1b492e134635c4164592d",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "surgery",
+      "neuroscience"
+    ],
+    "id": "physionet:eeg-eye-gaze-for-fls-tasks",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "315 EEG recordings",
+        "value": "EEG"
+      },
+      {
+        "evidence": "eye-gaze data collected from 25 participants",
+        "value": "eye_tracking"
+      },
+      {
+        "evidence": "performance scores assessed by a rater",
+        "value": "behavioral"
+      }
+    ],
+    "population": "25 participants with varying levels of robotic surgery experience performing FLS tasks on a trainer box.",
+    "summary": "EEG and eye-gaze recordings from participants performing Fundamentals of Laparoscopic Surgery tasks on a trainer box, with expert-rater performance scores, supporting objective assessment of laparoscopic skill."
+  },
+  "prompt_version": "v1"
+}

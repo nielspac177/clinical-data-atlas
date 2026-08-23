@@ -1,0 +1,48 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:77381e2c53a8f44f835eee05cf6cfc3dadd030bb15e9bdc802de8ed5b3c62be3",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Thymoma",
+        "label": "Thymoma"
+      },
+      {
+        "evidence": "Thymic Epithelial Neoplasms",
+        "label": "Thymic Epithelial Neoplasms"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "gdc:TCGA-THYM",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Diagnostic Slide, Tissue Slide",
+        "value": "pathology"
+      },
+      {
+        "evidence": "WXS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "RNA-Seq",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Reverse Phase Protein Array",
+        "value": "proteomics"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "124 human cases with thymoma",
+    "summary": "TCGA thymoma project covering thymus and mediastinal sites, with slide images, sequencing, copy number, methylation, protein array and clinical data."
+  },
+  "prompt_version": "v1"
+}

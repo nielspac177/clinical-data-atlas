@@ -1,0 +1,130 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds002080",
+  "payload": {
+    "created": "2019-07-30T10:39:32.797Z",
+    "id": "ds002080",
+    "latestSnapshot": {
+      "created": "2026-03-25T16:58:22.000Z",
+      "description": {
+        "Authors": [
+          "Hannelore Aerts",
+          "Daniele Marinazzo"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds002080.v4.0.1",
+        "Funding": [
+          "This project was supported by the Special Research Funds (BOF) of the University of Ghent (01MR0210 and 01J10715), Grant P7/11 from the Interuniversity Attraction Poles Program of the Belgian Federal Government, and the European Union's Horizon 2020 Framework Programme for Research and Innovation under the Specific Grant Agreement No. 785907 (Human Brain Project SGA2)."
+        ],
+        "HowToAcknowledge": "This dataset was obtained from the OpenNeuro database.",
+        "License": "CC0",
+        "Name": "BTC_postop",
+        "ReferencesAndLinks": [
+          "https://www.eneuro.org/content/5/3/ENEURO.0083-18.2018",
+          "https://pubmed.ncbi.nlm.nih.gov/32194282/"
+        ]
+      },
+      "readme": "Brain Tumor Connectomics Data\n\nPost-operative data of 7 glioma patients, 12 meningioma patients (1 [sub-PAT11] with bad data quality) and 10 control subjects.\nOut of the 11 glioma patients, 14 meningioma patients, and 11 healthy controls that were included pre-surgically (\"BTC_preop, ds001226\" on OpenNeuro), 7 glioma patients (1 drop-out, 1 no resection, 2 end of study), 12 meningioma patients (1 drop-out, 1 MRI not possible because of cochlear implant), and 10 healthy controls (1 drop-out) agreed to participate post-operatively. \n\nData used in the papers\n\nAerts H, Schirner M, Jeurissen B, Van Roost D, Achten E, Ritter P, Marinazzo D. Modeling Brain Dynamics in Brain Tumor Patients Using the Virtual Brain. eNeuro. 2018 Jun 4;5(3):ENEURO.0083-18.2018. doi: 10.1523/ENEURO.0083-18.2018. PMID: 29911173; PMCID: PMC6001263.\n\nand\n\nAerts H, Schirner M, Dhollander T, Jeurissen B, Achten E, Van Roost D, Ritter P, Marinazzo D. Modeling brain dynamics after tumor resection using The Virtual Brain. Neuroimage. 2020 Jun;213:116738. doi: 10.1016/j.neuroimage.2020.116738. Epub 2020 Mar 16. PMID: 32194282.\n\nContact information:\nName: Hannelore Aerts & Daniele Marinazzo\nEmail: daniele.marinazzo@ugent.be\n\nCompared to the initial database, 6 patients were excluded: 2 because of glioma grade 4, 3 because of subtentorial tumor, 1 because of absence of MRI data (subdural grid).\n\nOf all subjects the following data were acquired:\n- T1w MPRAGE anatomical scan (anat)\n- resting-state fMRI (func)\n- multi-shell HARDI diffusion-weighted MRI (dwi, acq=AP)\n- short DWI with reverse phase encoding directions (dwi, acq=PA)\n- cognitive assessment using the Cambridge Neuropsychological Test Automated Battery (CANTAB): MOT, RVP, RTI, SSP & SOC\n- questionnaires assessing demographic information, lifestyle habits & emotional functioning\n\nThe \"derivatives\" folder contains\n\n- tumor masks, obtained with a combination of manual delineation and disconnectome\n- time series, structural and functional connectivity matrices, and resting state HRF for each ROI.\n- rsHRF parameters obtained with the rsHRF toolbox described here Wu GR, Colenbier N, Van Den Bossche S, Clauw K, Johri A, Tandon M, Marinazzo D. rsHRF: A toolbox for resting-state HRF estimation and deconvolution. Neuroimage. 2021 Dec 1;244:118591. doi: 10.1016/j.neuroimage.2021.118591. Epub 2021 Sep 21. PMID: 34560269.\n- fMRI quality control: Esteban O, Birman D, Schaer M, Koyejo OO, Poldrack RA, Gorgolewski KJ; MRIQC: Advancing the Automatic Prediction of Image Quality in MRI from Unseen Sites; PLOS ONE 12(9):e0184661; doi:10.1371/journal.pone.0184661.\n- diffusion quality control using\nBastiani M, Cottaar M, Fitzgibbon SP, Suri S, Alfaro-Almagro F, Sotiropoulos SN, Jbabdi S, Andersson JLR. Automated quality control for within and between studies diffusion MRI data using a non-parametric framework for movement and distortion correction. Neuroimage. 2019 Jan 1;184:801-812. doi: 10.1016/j.neuroimage.2018.09.073. Epub 2018 Sep 26. PMID: 30267859; PMCID: PMC6264528.\nG. Theaud and M. Descoteaux, dMRIQCpy: a python-based toolbox for diffusion MRI quality control and beyond, International Symposium in Magnetic Resonance in Medicine (ISMRM 2022).\nThe structural connectivity (SC) is derived with the TVB pipeline (https://github.com/BrainModes/TVB-empirical-data-pipeline) with manual segmentation when necessary.\nThe regions are according to the Desikan-Killiany atlas.\n\nA companion dataset, containing the preoperatory data, is accessible at https://openneuro.org/datasets/ds001226",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_diffusion",
+          "mri_structural",
+          "mri_functional"
+        ],
+        "sessions": [
+          "postop"
+        ],
+        "size": 2729916314,
+        "subjects": [
+          "CON02",
+          "CON10",
+          "CON04",
+          "CON05",
+          "PAT13",
+          "PAT16",
+          "PAT15",
+          "CON07",
+          "PAT01",
+          "CON11",
+          "PAT17",
+          "PAT05",
+          "PAT20",
+          "PAT24",
+          "PAT08",
+          "PAT11",
+          "PAT06",
+          "PAT03",
+          "PAT10",
+          "CON08",
+          "PAT26",
+          "PAT28",
+          "PAT25",
+          "PAT23",
+          "PAT07",
+          "CON06",
+          "CON03",
+          "CON09",
+          "PAT02"
+        ],
+        "tasks": [
+          "rest"
+        ],
+        "totalFiles": 352
+      },
+      "tag": "4.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        64,
+        53,
+        53,
+        49,
+        72,
+        48,
+        75,
+        58,
+        52,
+        72,
+        67,
+        49,
+        60,
+        40,
+        67,
+        55,
+        51,
+        77,
+        74,
+        40,
+        57,
+        39,
+        49,
+        70,
+        74,
+        62,
+        46,
+        61,
+        44
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2019-07-31T07:47:09.041Z"
+  },
+  "source": "openneuro"
+}

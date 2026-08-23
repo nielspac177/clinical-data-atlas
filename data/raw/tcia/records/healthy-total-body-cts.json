@@ -1,0 +1,191 @@
+{
+  "endpoints": [
+    "https://api.datacite.org/dois?prefix=10.7937"
+  ],
+  "harvest_method": "api:nbia+datacite",
+  "native_id": "healthy-total-body-cts",
+  "payload": {
+    "datacite": {
+      "citationCount": 5,
+      "container": {},
+      "contentUrl": [],
+      "contributors": [],
+      "created": "2023-01-26T18:56:05Z",
+      "creators": [
+        {
+          "affiliation": [],
+          "familyName": "Selfridge",
+          "givenName": "Aaron R.",
+          "name": "Selfridge, Aaron R.",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-1597-6482/",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Spencer",
+          "givenName": "Benjamin",
+          "name": "Spencer, Benjamin",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Shiyam Sundar",
+          "givenName": "Lalith Kumar",
+          "name": "Shiyam Sundar, Lalith Kumar",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0003-3004-7937/",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Abdelhafez",
+          "givenName": "Yasser",
+          "name": "Abdelhafez, Yasser",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Nardo",
+          "givenName": "Lorenzo",
+          "name": "Nardo, Lorenzo",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-0266-2708/",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Cherry",
+          "givenName": "Simon R.",
+          "name": "Cherry, Simon R.",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-0155-5644/",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Badawi",
+          "givenName": "Ramsey D.",
+          "name": "Badawi, Ramsey D.",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-9769-0292/",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        }
+      ],
+      "dates": [],
+      "descriptions": [
+        {
+          "description": "This data set includes low-dose whole body CT images and tissue segmentations of thirty healthy adult research participants who underwent PET/CT imaging on the uEXPLORER total-body PET/CT system at UC Davis. Participants included in this study were healthy adults, 18 years of age or older, who were able to provide informed written consent. The participants' age, gender, weight, height, and body mass index are also provided.\nFifteen participants underwent PET/CT imaging at three timepoints during a 3-hour period (0 minutes, 90 minutes, and 180 minutes) after PET radiotracer injection, while the remaining 15 participants were imaged at six timepoints during a 12-hour period (additionally at 360 minutes, 540 minutes, and 720 minutes). The imaging timepoint is indicated in the Series Description DICOM tag, with a value of either 'dyn', '90min', '3hr', '6hr', '9hr', or '12hr', corresponding to the delay after PET tracer injection. CT images were acquired immediately before PET image acquisition. Currently, only CT images are included in the data set from either three or six timepoints. The tissue segmentations include 37 tissues consisting of 13 abdominal organs, 20 different bones, subcutaneous and visceral fat, skeletal and psoas muscle. Segmentations were automatically generated using MOOSE, an AI segmentation tool for whole body data. The segmentations are provided in NIFTI format and may need to be re-oriented to correctly match the CT image data in DICOM format.",
+          "descriptionType": "Abstract",
+          "lang": null
+        }
+      ],
+      "doi": "10.7937/nc7z-4f76",
+      "downloadCount": 0,
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "Healthy-Total-Body-CTs",
+          "identifierType": "TCIA Short Name"
+        }
+      ],
+      "isActive": true,
+      "language": null,
+      "metadataVersion": 14,
+      "partCount": 0,
+      "partOfCount": 0,
+      "publicationYear": 2023,
+      "published": null,
+      "publisher": "The Cancer Imaging Archive",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2023-06-27T12:18:13Z",
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "10.1007/s40846-024-00910-7",
+          "relatedIdentifierType": "DOI",
+          "relatedMetadataScheme": null,
+          "relationType": "IsCitedBy",
+          "resourceTypeGeneral": null,
+          "schemeType": null,
+          "schemeUri": null
+        }
+      ],
+      "relatedItems": [],
+      "rightsList": [
+        {
+          "rights": "NIH Controlled Data Access Policy",
+          "rightsUri": "https://www.cancerimagingarchive.net/nih-controlled-data-access-policy/"
+        },
+        {
+          "rights": "Creative Commons Attribution 4.0 International",
+          "rightsIdentifier": "cc-by-4.0",
+          "rightsIdentifierScheme": "SPDX",
+          "rightsUri": "https://creativecommons.org/licenses/by/4.0/legalcode",
+          "schemeUri": "https://spdx.org/licenses/"
+        }
+      ],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "fabricaForm",
+      "state": "findable",
+      "subjects": [],
+      "titles": [
+        {
+          "lang": null,
+          "title": "Low-Dose CT Images of Healthy Cohort (Healthy-Total-Body-CTs)",
+          "titleType": null
+        },
+        {
+          "lang": null,
+          "title": "Healthy-Total-Body-CTs",
+          "titleType": "AlternativeTitle"
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2025-12-17T18:59:31Z",
+      "url": "https://www.cancerimagingarchive.net/collection/healthy-total-body-cts/",
+      "version": "2",
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 12137
+    },
+    "nbia": null
+  },
+  "source": "tcia"
+}

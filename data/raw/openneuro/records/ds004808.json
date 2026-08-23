@@ -1,0 +1,116 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004808",
+  "payload": {
+    "created": "2023-10-18T09:06:04.274Z",
+    "id": "ds004808",
+    "latestSnapshot": {
+      "created": "2023-10-18T10:51:46.000Z",
+      "description": {
+        "Authors": [
+          "Audrey Mazancieux",
+          "Franck Mauconduit",
+          "Alexis Amadon",
+          "Jan Willem de Gee",
+          "Tobias Donner",
+          "Florent Meyniel"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004808.v1.0.0",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Brainstem fMRI signaling of surprise across different types of deviant stimuli",
+        "ReferencesAndLinks": null
+      },
+      "readme": "This dataset includes anatomical and functional images of 24 participants that have performed the local-global task.\n\n Functional images  are: <br>\n- 4 runs partial-brain functional echo planar images (EPI) images centered on the brainstem <br>\n- 2 volumes with opposite phase encoding directions: anterior to posterior direction (AP) and the other direction (PA)\n\nAnatomical images are: <br>\n- 2 partial-brain Turbo Spin Echo (TSE) <br> \n- 1 whole-brain structural T1 image with an MPRAGE sequence \n\nBehavioural, physiological, and pupil data can be found on OSF at <a href=\"https://osf.io/td5kp/\">https://osf.io/td5kp/</a> . \n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 24650238018,
+        "subjects": [
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31",
+          "32",
+          "33",
+          "34",
+          "35",
+          "36",
+          "37",
+          "38",
+          "39",
+          "40",
+          "41",
+          "42",
+          "43",
+          "44",
+          "45",
+          "46"
+        ],
+        "tasks": [
+          "NAconf"
+        ],
+        "totalFiles": 244
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        28,
+        33,
+        27,
+        36,
+        24,
+        28,
+        30,
+        27,
+        28,
+        22,
+        28,
+        31,
+        33,
+        20,
+        21,
+        33,
+        28,
+        21,
+        22,
+        21,
+        23,
+        29,
+        34,
+        22
+      ],
+      "associatedPaperDOI": "https://osf.io/td5kp/",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "deviance detection, neuromodulatory systems",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2023-10-18T11:01:40.504Z"
+  },
+  "source": "openneuro"
+}

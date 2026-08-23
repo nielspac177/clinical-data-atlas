@@ -1,0 +1,136 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006012",
+  "payload": {
+    "created": "2025-03-13T19:13:44.963Z",
+    "id": "ds006012",
+    "latestSnapshot": {
+      "created": "2025-03-14T17:05:14.000Z",
+      "description": {
+        "Authors": [
+          "Mathias Sablé-Meyer",
+          "Lucas Benjamin",
+          "Cassandra Potier Watkins",
+          "Chenxi He",
+          "Maxence Pajot",
+          "Théo Morfoisse",
+          "Fosca Al Roumi",
+          "Stanislas Dehaene"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006012.v1.0.1",
+        "Funding": [
+          "ERC-ADG-2015 NeuroSyntax to Stanislas Dehaene",
+          "CEA to Stanislas Dehaene",
+          "INSERM to Stanislas Dehaene",
+          "Collège de France to Stanislas Dehaene",
+          "FYSSEN to Mathias Sablé-Meyer"
+        ],
+        "HowToAcknowledge": "Please cite our preprint at https://doi.org/10.1101/2024.03.13.584141 or the published version of this paper",
+        "License": "CC0",
+        "Name": "A geometric shape regularity effect in the human brain: MEG dataset",
+        "ReferencesAndLinks": null
+      },
+      "readme": "# A geometric shape regularity effect in the human brain: MEG dataset\n\nAuthors:\n\n* Mathias Sablé-Meyer*\n* Lucas Benjamin\n* Cassandra Potier Watkins\n* Chenxi He\n* Maxence Pajot\n* Théo Morfoisse\n* Fosca Al Roumi\n* Stanislas Dehaene\n\n*Corresponding author: [mathias.sable-meyer@ucl.ac.uk](mailto:mathias.sable-meyer@ucl.ac.uk)\n\n## Abstract\n\nThe perception and production of regular geometric shapes is a characteristic trait of human cultures since prehistory, whose neural mechanisms are unknown. Behavioral studies suggest that humans are attuned to discrete regularities such as symmetries and parallelism, and rely on their combinations to encode regular geometric shapes in a compressed form. To identify the relevant brain systems and their dynamics, we collected functional MRI and magnetoencephalography data in both adults and six-year-olds during the perception of simple shapes such as hexagons, triangles and quadrilaterals. The results revealed that geometric shapes, relative to other visual categories, induce a hypoactivation of ventral visual areas and an overactivation of the intraparietal and inferior temporal regions also involved in mathematical processing, whose activation is modulated by geometric regularity. While convolutional neural networks captured the early visual activity evoked by geometric shapes, they failed to account for subsequent dorsal parietal and prefrontal signals, which could only be captured by discrete geometric features or by more advanced transformer models of vision. We propose that the perception of abstract geometric regularities engages an additional symbolic mode of visual perception.\n\n## Notes about this dataset\n\nWe separately share the fMRI dataset at [https://openneuro.org/datasets/ds006010](https://openneuro.org/datasets/ds006010). Below are some notes about the\nMEG dataset of N=20 participants:\n\n* The code for the analyses associated to\n  [https://doi.org/10.1101/2024.03.13.584141](https://doi.org/10.1101/2024.03.13.584141)\n  are provided at\n  [https://github.com/mathias-sm/AGeometricShapeRegularityEffectHumanBrain](https://github.com/mathias-sm/AGeometricShapeRegularityEffectHumanBrain).  \n  However, these analyses have been performed on pre-processed data _without_\n  this defacing steps. I am not publishing this raw data, but should there be\n  discrepancies or problems coming from the defacing, I have a copy of the following\n  information, which I may ask for permission to share in specific cases:\n    1. The original data\n    2. The seed used for the anonymization procedure\n    3. The shuffling information.  \n* Anonymization (including defacing of the `anat` folder) has been performed\n  using the following command:  \n  `python -c 'import mne_bids; mne_bids.anonymize_dataset(\"<input>\", \"<output>\", random_state=<number>, daysback=<number>)'`  \n  This has shuffled the participant order, changed the dates, defaced the\n  anatomy, and stripped gender information from the dataset.\n* The data was pre-processed with the configuration file provided at\n  [https://github.com/mathias-sm/AGeometricShapeRegularityEffectHumanBrain/blob/main/MEG/POGS_MEG_config.py](https://github.com/mathias-sm/AGeometricShapeRegularityEffectHumanBrain/blob/main/MEG/POGS_MEG_config.py)\n  for `mne-bids-pipeline` with the development version at the time,\n  `bce60a79241731bdd03fccffa6cf315a35b33ab2` on\n  [https://github.com/mne-tools/mne-bids-pipeline/](https://github.com/mne-tools/mne-bids-pipeline/)\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "meg",
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural"
+        ],
+        "sessions": [
+          "20220121",
+          "20220221",
+          "20211206",
+          "20220304",
+          "20220104",
+          "20211231",
+          "20220207",
+          "20220211",
+          "20220218",
+          "20220214",
+          "20220108",
+          "20211212",
+          "20220227",
+          "20211213",
+          "20220220"
+        ],
+        "size": 76309397809,
+        "subjects": [
+          "15",
+          "16",
+          "05",
+          "18",
+          "10",
+          "emptyroom",
+          "06",
+          "14",
+          "01",
+          "17",
+          "19",
+          "02",
+          "11",
+          "20",
+          "13",
+          "12",
+          "03",
+          "04",
+          "07",
+          "09",
+          "08"
+        ],
+        "tasks": [
+          "POGS",
+          "noise"
+        ],
+        "totalFiles": 973
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        28,
+        21,
+        20,
+        42,
+        22,
+        21,
+        20,
+        34,
+        25,
+        21,
+        30,
+        23,
+        30,
+        25,
+        27,
+        32,
+        29,
+        25,
+        23,
+        23,
+        null
+      ],
+      "associatedPaperDOI": "https://doi.org/10.1073/pnas.2023123118; https://doi.org/10.1016/j.tics.2022.06.010; https://doi.org/10.7554/eLife.84376.sa0 ",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "European Research Council",
+      "modalities": [
+        "meg",
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "Oddball Paradigm; Passive Viewing",
+      "studyDomain": "Geometric Shape; Geometry; Language of Thought",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2025-03-14T15:06:53.964Z"
+  },
+  "source": "openneuro"
+}

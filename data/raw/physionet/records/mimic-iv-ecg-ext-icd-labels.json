@@ -1,0 +1,36 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "mimic-iv-ecg-ext-icd-labels",
+  "payload": {
+    "abstract": "<p>The number of publicly available ECG datasets has increased tremendously in the past few years and several of these datasets have developed into widely used benchmarking datasets. However, most of them exhibit a common limitation, namely the reliance on retrospective annotation and a lack of clinical ground truth. This represents a serious limitation compared to closed in-hospital datasets. To circumvent this issue, we propose the MIMIC-IV-ECG-Ext-ICD dataset by linking the samples from the MIMIC-IV-ECG dataset to clinical ground truth from the MIMIC-IV dataset, in the form of ED and hospital discharge diagnoses. We release this derived dataset to foster further research on ECG-based prediction models with clinical ground truth and build a resource for benchmarking clinical ECG prediction models.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 37384702,
+    "core_doi": "10.13026/bd2x-mf68",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 338915072,
+    "public_project_uuid": "65569c6c-2bca-4e8e-9502-5bd7f66577f8",
+    "publish_date": "2024-08-30",
+    "resource_type": "Database",
+    "short_description": "Dataset that links ECG records from MIMIC-IV-ECG to ED discharge and hospital discharge diagnoses, which enables to train general ECG prediction models based on clinical labels and facilitates the retrieval of further clinical metadata from MIMIC-IV.",
+    "slug": "mimic-iv-ecg-ext-icd-labels",
+    "source_url": "https://physionet.org/content/mimic-iv-ecg-ext-icd-labels/1.0.1/",
+    "title": "MIMIC-IV-ECG-Ext-ICD: Diagnostic labels for MIMIC-IV-ECG",
+    "topics": [
+      "mimic",
+      "machine learning",
+      "electrocardiography"
+    ],
+    "version": "1.0.1",
+    "version_doi": "10.13026/ypt5-9d58"
+  },
+  "source": "physionet"
+}

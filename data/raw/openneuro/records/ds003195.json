@@ -1,0 +1,89 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003195",
+  "payload": {
+    "created": "2020-09-28T10:18:38.803Z",
+    "id": "ds003195",
+    "latestSnapshot": {
+      "created": "2022-09-20T04:55:52.000Z",
+      "description": {
+        "Authors": [
+          "Maria Luisa Bringas Vega",
+          "Lilia Morales Chacon ",
+          "Ivonne Pedroso Ibanez"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds003195.v1.0.4",
+        "Funding": [
+          "National Nature and Science Foundation of China (NSFC) No. 61871105, 61673090, 81330032",
+          "CNS Program of UESTC (No. Y0301902610100201)"
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Placebo Neuroepo multisession",
+        "ReferencesAndLinks": null
+      },
+      "readme": "The quest for neuroprotection in Parkinson’s disease (PD) has been for new compounds to slow disease progression and stable and non-invasive biomarkers to document their benefits. Neuroepo, a new formulation of EPO with low content of sialic acid reported good results in animal model and tolerance in healthy participants and PD patients. \nIn a double-blind randomized placebo (https://clinicaltrials.gov/ number NCT04110678) twenty-five PD patients were assigned randomly to Neuroepo (n=15) or placebo (n=10) groups we reported the tolerance of the drug. We recorded resting-state EEG before and six months after the administration of the drug. The qualitative analysis of the abnormalities of the EEG was evaluated by two experts using a Likert-type scale and a multivariate item response theory (MIRT) approach was employed to stablish the differences between groups in the two times. The quantitative EEG (qEEG) analysis was performed at the sources looking for generators of the neural activity using software VARETA and co-registering the results using the Montreal Neurological Institute Atlas. The statistical analysis between the sources was conducted using a permutation test and later a contrast method using the surfstat software between groups and before vs after condition, with Bonferroni correction for multiple comparisons.\nHere in this repository we placed the raw EEG in BIDS format  (Pernet, C. R. et al. EEG-BIDS, an extension to the brain imaging data structure for electroencephalography. Sci. data 6, 103 (2019). For the use of VARETA the qEEG program you can use (Bosch-Bayard, J. et al. A Quantitative EEG Toolbox for the MNI Neuroinformatics Ecosystem: Normative SPM of EEG Source Spectra. Front. Neuroinform. 14, (2020).)\nThe EEG dataset from the different stages of processing can be requested to the authors. \n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "eeg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [
+          "placebo6m",
+          "placebopre"
+        ],
+        "size": 126957087,
+        "subjects": [
+          "PLAC02",
+          "PLAC05",
+          "PLAC08",
+          "PLAC10",
+          "PLAC13",
+          "PLAC14",
+          "PLAC17",
+          "PLAC19",
+          "PLAC23",
+          "PLAC24"
+        ],
+        "tasks": [
+          "task placebo 6m ",
+          "task placebo pre"
+        ],
+        "totalFiles": 104
+      },
+      "tag": "1.0.4"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "eeg"
+      ],
+      "species": "",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2020-10-13T00:43:48.208Z"
+  },
+  "source": "openneuro"
+}

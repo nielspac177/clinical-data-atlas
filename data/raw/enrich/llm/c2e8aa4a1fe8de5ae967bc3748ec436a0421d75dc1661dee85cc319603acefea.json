@@ -1,0 +1,42 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:c2e8aa4a1fe8de5ae967bc3748ec436a0421d75dc1661dee85cc319603acefea",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "naturally-occurring canine glioma",
+        "label": "canine glioma"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "oncology",
+      "neuroscience"
+    ],
+    "id": "tcia:icdc-glioma",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Clinical MRI are available prior to any treatment",
+        "value": "MRI"
+      },
+      {
+        "evidence": "whole exome, whole genome",
+        "value": "genomics"
+      },
+      {
+        "evidence": "RNAseq",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "tissues collected at necropsy are provided as H stained sections",
+        "value": "pathology"
+      }
+    ],
+    "population": "85 treatment-naive naturally-occurring canine glioma collected from 5 different veterinary institutions' patient populations",
+    "summary": "Baseline pathologic, MRI and genomic features of treatment-naive naturally-occurring canine gliomas from several veterinary institutions, with harmonized neuropathology classification and exome, genome, RNAseq and methylation profiling."
+  },
+  "prompt_version": "v1"
+}

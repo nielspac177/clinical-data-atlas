@@ -1,0 +1,146 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007441",
+  "payload": {
+    "created": "2026-02-20T10:20:24.620Z",
+    "id": "ds007441",
+    "latestSnapshot": {
+      "created": "2026-03-11T09:25:52.000Z",
+      "description": {
+        "Authors": [
+          "Author1",
+          "Author2"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007441.v1.0.1",
+        "Funding": [
+          "Grant Reference"
+        ],
+        "HowToAcknowledge": "Please cite the associated manuscript when available.",
+        "License": "CC0",
+        "Name": "Human Dignity",
+        "ReferencesAndLinks": []
+      },
+      "readme": "# Human Dignity fMRI\n\n## Study Aim\nThis study investigates neural responses to dignity-related and non-dignity-related stimuli using functional MRI.\n\n## Task\nBIDS task label (filenames): dignity  \nTaskName (JSON): Human Dignity  \n\nParticipants viewed stimuli related to dignity and non-dignity contexts.  \nEach trial included the following phases:\n- fixation\n- image presentation\n- intention evaluation\n- distraction/choice\n- recognition\n\n## Acquisition\nData were acquired on a 3T Siemens Prisma_fit MRI scanner with a 64-channel head coil.\n\nStructural imaging:\n- T1-weighted MPRAGE\n- 1 mm isotropic resolution\n\nFunctional imaging:\n- T2*-weighted EPI\n- TR = 2.0 s\n- TE = 25 ms\n- Flip angle = 90°\n- Slice thickness = 3.5 mm\n- 35 slices\n- Descending acquisition\n- FOV = 238 mm\n\n## Anonymization\nData were converted using dcm2niix with anonymization enabled.\nStructural images are shared without defacing based on explicit participant consent and ethics approval.\n\n## Ethics\nAll participants provided written informed consent in accordance with institutional ethics approval and the Declaration of Helsinki.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 2885741927,
+        "subjects": [
+          "12",
+          "19",
+          "15",
+          "32",
+          "33",
+          "41",
+          "35",
+          "25",
+          "10",
+          "23",
+          "39",
+          "02",
+          "01",
+          "37",
+          "29",
+          "06",
+          "42",
+          "20",
+          "34",
+          "40",
+          "36",
+          "26",
+          "30",
+          "31",
+          "17",
+          "07",
+          "08",
+          "27",
+          "21",
+          "28",
+          "03",
+          "11",
+          "24",
+          "05",
+          "22",
+          "13",
+          "16",
+          "18",
+          "09",
+          "04"
+        ],
+        "tasks": [
+          "Human Dignity"
+        ],
+        "totalFiles": 202
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": false,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "#",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "#",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "#",
+      "studyDomain": "#",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2026-02-20T10:25:24.235Z"
+  },
+  "source": "openneuro"
+}

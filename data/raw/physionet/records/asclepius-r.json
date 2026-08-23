@@ -1,0 +1,41 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "asclepius-r",
+  "payload": {
+    "abstract": "<p>The development of large language models tailored for handling patients&rsquo; clinical notes is often hindered by the limited accessibility and usability of these notes due to strict privacy regulations. To address these challenges, we first create synthetic large-scale clinical notes using publicly available case reports extracted from biomedical literature. We then use these synthetic notes to train our specialized clinical large language model, Asclepius.&nbsp;While Asclepius is trained on synthetic data, we assess its potential performance in real-world applications by evaluating it using real clinical notes. We benchmark Asclepius against several other large language models, including GPT-3.5-turbo and other open-source alternatives.&nbsp;To further validate our approach using synthetic notes, we also compare Asclepius with its variants trained on real clinical notes.&nbsp;Our findings convincingly demonstrate that synthetic clinical notes can serve as viable substitutes for real ones when constructing high-performing clinical language models.&nbsp;This conclusion is supported by detailed evaluations conducted by both GPT-4 and medical professionals.&nbsp;All resources&mdash;including weights, codes, and data&mdash;used in the development of Asclepius are made publicly accessible for future research. Specifically, this repository contains Asclepius-R, a variant of Asclepius that was trained on MIMIC-III discharge summaries. All other resource are also publicly accessible.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 146315016508,
+    "core_doi": "10.13026/1wf7-pm14",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 158076664927,
+    "public_project_uuid": "f6c0eb9b-ae8c-4dd9-90e2-fd40b9e96850",
+    "publish_date": "2024-03-26",
+    "resource_type": "Model",
+    "short_description": "Asclepius: Publicly Available Clinical Large Language Models with Synthetic Clinical Notes Asclepius-R: A instruction-finetuned large language model with MIMIC-III clinical notes",
+    "slug": "asclepius-r",
+    "source_url": "https://physionet.org/content/asclepius-r/1.1.0/",
+    "title": "Asclepius-R : Clinical Large Language Model Built On MIMIC-III Discharge Summaries",
+    "topics": [
+      "large language model",
+      "synthetic clinical notes",
+      "synthetic notes",
+      "asclepius",
+      "open-source",
+      "llm",
+      "clinical llm",
+      "clinical notes"
+    ],
+    "version": "1.1.0",
+    "version_doi": "10.13026/ckbf-pt70"
+  },
+  "source": "physionet"
+}

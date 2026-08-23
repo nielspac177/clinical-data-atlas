@@ -1,0 +1,35 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:c84a2665e4eea7fcf178c36a1283930dd2284f15314b9030fe30b8562d303c06",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:pulse-transit-time-ppg",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Photoplethysmogram (PPG)",
+        "value": "PPG"
+      },
+      {
+        "evidence": "annotated ECG data",
+        "value": "ECG"
+      },
+      {
+        "evidence": "blood oxygenation saturation levels (SpO2)",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "multiple sensors worn at different body locations",
+        "value": "wearable"
+      }
+    ],
+    "population": "22 healthy subjects performing 3 physical activities",
+    "summary": "Time-synchronised multi-site photoplethysmography with inertial, pressure and temperature sensor data, annotated ECG, blood pressure and SpO2 values, recorded from healthy subjects during physical activities."
+  },
+  "prompt_version": "v1"
+}

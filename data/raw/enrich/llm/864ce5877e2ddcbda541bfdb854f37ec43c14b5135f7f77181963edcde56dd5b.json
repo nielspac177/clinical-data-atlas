@@ -1,0 +1,27 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:864ce5877e2ddcbda541bfdb854f37ec43c14b5135f7f77181963edcde56dd5b",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "other"
+    ],
+    "id": "physionet:discharge-summary-templates",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "100 clinical templates manually curated from MIMIC-IV discharge summaries",
+        "value": "clinical_notes"
+      },
+      {
+        "evidence": "\"modalities\":[\"EHR\",\"clinical_notes\"]",
+        "value": "EHR"
+      }
+    ],
+    "population": null,
+    "summary": "Name sets varying by gender, race, name popularity and decade of popularity, plus clinical note templates curated from MIMIC-IV discharge summaries, used to study demographic bias in de-identification methods."
+  },
+  "prompt_version": "v1"
+}

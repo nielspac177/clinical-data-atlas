@@ -1,0 +1,83 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007396",
+  "payload": {
+    "created": "2026-02-10T21:44:59.292Z",
+    "id": "ds007396",
+    "latestSnapshot": {
+      "created": "2026-02-10T21:56:44.000Z",
+      "description": {
+        "Authors": [
+          "Beynel Lysianne; Roopchansingh Vinai; Taylor Paul; Reynolds Richard; Li Linqing; Baker Neil; Bandy Daryl,; Cameron Katherine; Deng Zhi; Ekpo Ekaete; Menon Sahit; Wiener Eva; Gura Hannah; Rezaee Zeynab; Rajendra Justin K; Luber Bruce; Lisanby Sarah H."
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007396.v1.0.0",
+        "Funding": [
+          "This research was supported by the Intramural Research Program of the National Institutes of Health (NIH, ZIAMH002955; ZIAMH002884; ZICMH002888). The contributions of the NIH authors are considered Works of the United States Government. The findings and conclusions presented in this paper are those of the authors and do not necessarily reflect the views of the NIH or the U.S. Department of Health and Human Services."
+        ],
+        "HowToAcknowledge": "We thank Dr. Shrey Patel and Dr. William Regenold, as well as the nurses in the intramural program of the NIMH who helped us ensure participants’ safety. We also want to thank all our participants, as well as the NIMH cores facilities: Scientific and Statistical Computing (AFNI) core; Instrumentation core; fMRI core.",
+        "License": "CC0",
+        "Name": "Feasibility of integrating Real-Time fMRI Neurofeedback with rTMS: study design, preliminary results, and technical challenges.",
+        "ReferencesAndLinks": [
+          ""
+        ]
+      },
+      "readme": "You should replace the content of this file and describe your dataset.\n\n---\n\nBIDS Specification: https://bids-specification.readthedocs.io/en/stable/\n\n---\n\nBIDS directory overview\nhttps://bids-specification.readthedocs.io/en/stable/02-common-principles.html#single-session-example\n\n---\n\nparticipants.tsv and participants.json\nhttps://bids-specification.readthedocs.io/en/stable/02-common-principles.html#tabular-files\nhttps://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#participants-file\n\n---\n\ndataset_description.json\nhttps://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#dataset_description\n\n---\n\nREADME\nhttps://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#readme\n\n---\n\nCHANGES\nhttps://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#changes\n\n---\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "2",
+          "1",
+          "3",
+          "5",
+          "4"
+        ],
+        "size": 14814267576,
+        "subjects": [
+          "NF003",
+          "NF002",
+          "NF004",
+          "NF001"
+        ],
+        "tasks": [
+          "NF",
+          "Hammer",
+          "rest"
+        ],
+        "totalFiles": 383
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "one group, 5 visits per participants",
+      "studyDomain": "emotion",
+      "studyLongitudinal": "Longitudinal"
+    },
+    "publishDate": "2026-06-26T15:29:10.837Z"
+  },
+  "source": "openneuro"
+}

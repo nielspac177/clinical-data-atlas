@@ -1,0 +1,43 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "reflacx-xray-localization",
+  "payload": {
+    "abstract": "<p>Labels localizing anomalies are rare in current chest x-rays datasets. We collected a dataset, using a method that can potentially be scaled up, to be a proof-of-concept for collecting implicit localization data through an eye-tracker. This dataset, named REFLACX, provides eye-tracking data collected while radiologists dictated reports for frontal chest x-rays from the MIMIC-CXR dataset, paired with the timestamped transcription of the dictation. The dataset contains 3,032 cases of synchronized eye-tracking and transcription pairs labeled by five radiologists. For each case, we also provide other labels for validating algorithms derived from this dataset. These labels include image-level labels of anomalies found during the reading, ellipses localizing these anomalies, and bounding boxes around lungs and heart. A subset of 109 chest x-rays has readings from all radiologists to estimate the variability of the provided labels.</p>",
+    "access_policy": "Restricted",
+    "compressed_storage_size": 631037124,
+    "core_doi": "10.13026/qhft-e228",
+    "dua": {
+      "name": "PhysioNet Restricted Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Restricted Health Data License 1.5.0"
+    },
+    "main_storage_size": 8831431386,
+    "public_project_uuid": "5af2c68d-3647-4c8a-a05d-10dc82d27b7b",
+    "publish_date": "2021-09-27",
+    "resource_type": "Database",
+    "short_description": "This dataset contains 3032 cases of eye-tracking data collected while five radiologists dictated reports for frontal chest x-rays, synchronized timestamped dictation transcription, and manual labels for validation of localization of abnormalities.",
+    "slug": "reflacx-xray-localization",
+    "source_url": "https://physionet.org/content/reflacx-xray-localization/1.0.0/",
+    "title": "REFLACX: Reports and eye-tracking data for localization of abnormalities in chest x-rays",
+    "topics": [
+      "radiology report",
+      "computer vision",
+      "reflacx",
+      "fixations",
+      "chest x-rays",
+      "radiology",
+      "gaze",
+      "machine learning",
+      "eye tracking",
+      "deep learning"
+    ],
+    "version": "1.0.0",
+    "version_doi": "10.13026/e0dj-8498"
+  },
+  "source": "physionet"
+}
