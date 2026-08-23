@@ -1,0 +1,208 @@
+name: Propose a dataset
+description: Suggest a dataset or resource for the Clinical Data Atlas catalog.
+title: "[Dataset] "
+labels: [dataset-proposal, triage]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to propose a dataset. Fill in as much
+        as you know -- anything left blank is filled in during triage. See
+        [`docs/schema.md`](https://github.com/nielspac177/clinical-data-atlas/blob/main/docs/schema.md)
+        for what each field means.
+
+        Remember: this catalogs and links out to datasets. Do not
+        paste any of the dataset's actual data, PHI, or restricted content
+        into this issue -- metadata and public links only.
+  - type: input
+    id: name
+    attributes:
+      label: "Dataset name"
+      description: "The dataset or resource's title."
+      placeholder: "e.g. UK Biobank Brain Imaging"
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: "URL"
+      description: "Canonical link to the dataset's own page."
+      placeholder: "https://..."
+    validations:
+      required: true
+  - type: input
+    id: host
+    attributes:
+      label: "Host / repository"
+      description: "Where the dataset is hosted (e.g. OpenNeuro, PhysioNet, an institutional site, a data broker)."
+      placeholder: "e.g. PhysioNet"
+    validations:
+      required: false
+  - type: dropdown
+    id: access_tier
+    attributes:
+      label: "Access tier"
+      description: "Least-restrictive tier at which substantive data is usable (see docs/schema.md)."
+      options:
+        - open
+        - registration
+        - credentialed
+        - application
+        - purchase
+    validations:
+      required: true
+  - type: input
+    id: license
+    attributes:
+      label: "License"
+      description: "SPDX identifier if known, else the source's verbatim license string."
+      placeholder: "e.g. CC-BY-4.0"
+    validations:
+      required: false
+  - type: checkboxes
+    id: domains
+    attributes:
+      label: "Clinical domain(s)"
+      description: "Select every domain this dataset serves."
+      options:
+        - label: neurology
+        - label: psychiatry
+        - label: neuroscience
+        - label: cardiology
+        - label: oncology
+        - label: pulmonology
+        - label: critical_care
+        - label: surgery
+        - label: pediatrics
+        - label: obstetrics_gynecology
+        - label: infectious_disease
+        - label: endocrinology_metabolism
+        - label: gastroenterology_hepatology
+        - label: nephrology_urology
+        - label: musculoskeletal
+        - label: public_health
+        - label: other
+  - type: checkboxes
+    id: modalities
+    attributes:
+      label: "Modalities"
+      description: "Select every data modality captured."
+      options:
+        - label: MRI
+        - label: fMRI
+        - label: dMRI
+        - label: MRS
+        - label: PET
+        - label: SPECT
+        - label: CT
+        - label: xray
+        - label: mammography
+        - label: ultrasound
+        - label: radiotherapy
+        - label: pathology
+        - label: EEG
+        - label: MEG
+        - label: iEEG
+        - label: fNIRS
+        - label: ECG
+        - label: EMG
+        - label: PPG
+        - label: physiological_signals
+        - label: wearable
+        - label: eye_tracking
+        - label: behavioral
+        - label: genomics
+        - label: transcriptomics
+        - label: proteomics
+        - label: EHR
+        - label: clinical_notes
+        - label: claims
+        - label: registry
+        - label: survey
+        - label: clinical_tabular
+        - label: other
+  - type: textarea
+    id: conditions
+    attributes:
+      label: "Conditions studied"
+      description: "One condition per line, as reported by the source."
+    validations:
+      required: false
+  - type: input
+    id: population
+    attributes:
+      label: "Population"
+      description: "Free-text description of the study population."
+      placeholder: "e.g. adults with first-episode psychosis"
+    validations:
+      required: false
+  - type: input
+    id: sample_size
+    attributes:
+      label: "Sample size"
+      description: "Approximate size of the dataset, in the unit selected below."
+      placeholder: "e.g. 1200"
+    validations:
+      required: false
+  - type: dropdown
+    id: sample_unit
+    attributes:
+      label: "Sample unit"
+      description: "Unit that sample_size counts."
+      options:
+        - participants
+        - cases
+        - admissions
+        - records
+        - images
+        - studies
+        - series
+        - households
+        - surveys
+        - other
+    validations:
+      required: false
+  - type: input
+    id: countries
+    attributes:
+      label: "Countries"
+      description: "ISO-3166-1 alpha-2 country codes where the data was collected, comma-separated."
+      placeholder: "e.g. US, GB"
+    validations:
+      required: false
+  - type: input
+    id: years
+    attributes:
+      label: "Years"
+      description: "Start and end year of data collection."
+      placeholder: "e.g. 2015-2018"
+    validations:
+      required: false
+  - type: textarea
+    id: institutions
+    attributes:
+      label: "Institutions"
+      description: "Institution(s) associated with the dataset, one per line."
+    validations:
+      required: false
+  - type: textarea
+    id: papers
+    attributes:
+      label: "Related papers"
+      description: "DOIs of papers describing or citing the dataset, one per line."
+    validations:
+      required: false
+  - type: textarea
+    id: notes
+    attributes:
+      label: "Notes"
+      description: "Anything else worth knowing (mixed access tiers, known caveats, related atlas records, ...)."
+    validations:
+      required: false
+  - type: checkboxes
+    id: attestation
+    attributes:
+      label: Attestation
+      options:
+        - label: This proposal links to publicly documented metadata only -- I am not attaching dataset contents, PHI, or any restricted data to this issue.
+          required: true

@@ -1,0 +1,76 @@
+name: Edit or flag a dataset record
+description: Report a problem with an existing catalog record, or suggest a correction.
+title: "[edit] "
+labels: [dataset-edit, triage]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this to flag something wrong or out of date on an existing
+        catalog record -- a stale link, a wrong access tier, a missing
+        paper, a field that no longer matches the source, etc. To propose
+        a brand-new dataset instead, use the "Propose a dataset" form.
+  - type: input
+    id: id
+    attributes:
+      label: Record id
+      description: The atlas record's id, exactly as shown on its catalog page (`<source>:<native id>`).
+      placeholder: "tcia:…"
+    validations:
+      required: true
+  - type: dropdown
+    id: fields
+    attributes:
+      label: Field(s) affected
+      description: Which schema field(s) does this correction touch? Select every field that applies.
+      multiple: true
+      options:
+        - id
+        - source
+        - source_native_id
+        - name
+        - summary
+        - url
+        - dataset_doi
+        - version
+        - published
+        - domains
+        - modalities
+        - conditions
+        - keywords
+        - population
+        - species
+        - sample_size
+        - sample_unit
+        - size_bytes
+        - countries
+        - years
+        - access
+        - access_tiers
+        - access_notes
+        - access_howto
+        - license
+        - institutions
+        - authors
+        - papers
+        - related
+        - record_status
+        - provenance
+    validations:
+      required: false
+  - type: textarea
+    id: problem
+    attributes:
+      label: What's wrong?
+      description: Describe the problem and, if you know it, what the correct value should be.
+      placeholder: "e.g. `access` says open but the dataset now requires registration as of..."
+    validations:
+      required: true
+  - type: input
+    id: evidence_url
+    attributes:
+      label: Evidence URL
+      description: A link to the source page, paper, or announcement that supports this correction.
+      placeholder: https://...
+    validations:
+      required: false
