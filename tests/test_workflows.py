@@ -262,11 +262,36 @@ def test_deploy_pages_smoke_test_can_actually_fail():
     assert "::warning" not in run_text
     assert "record_count" in run_text
     assert "--retry" in run_text
+    # Plain --retry only retries "transient" statuses (connection errors,
+    # 5xx); a freshly-deployed Pages site can 404 for a bit while it
+    # propagates, so both curl calls need --retry-all-errors too.
+    assert run_text.count("--retry-all-errors") == 2
 
 
 def test_deploy_job_has_a_timeout():
     data = _load_yaml(WORKFLOWS_DIR / "deploy-pages.yml")
     assert data["jobs"]["deploy"]["timeout-minutes"] == 10
+
+
+def test_deploy_pages_build_job_freezes_sync_after_installing_no_dev():
+    data = _load_yaml(WORKFLOWS_DIR / "deploy-pages.yml")
+    build_job = data["jobs"]["build"]
+    install_step = next(
+        step
+        for step in build_job["steps"]
+        if step.get("name") == "Install dependencies"
+    )
+    # Either an inline `echo ... >> "$GITHUB_ENV"` in the same step, or a
+    # job-level env: UV_NO_SYNC, freezes the environment so `make site`'s
+    # `uv run python -m atlas.sitebuild` doesn't implicitly re-sync with
+    # default flags afterwards (which would drop --no-dev and could pull
+    # the dev group into what's supposed to be a prod-only deploy build).
+    run_text = install_step.get("run") or ""
+    job_env = build_job.get("env") or {}
+    assert "UV_NO_SYNC=1" in run_text or str(job_env.get("UV_NO_SYNC")) == "1", (
+        "deploy-pages.yml's build job must freeze uv sync after "
+        "`uv sync --locked --no-dev`"
+    )
 
 
 def test_ci_runs_ruff_check_and_format():

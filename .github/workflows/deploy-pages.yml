@@ -27,7 +27,13 @@ jobs:
           cache-dependency-glob: "uv.lock"
 
       - name: Install dependencies
-        run: uv sync --locked --no-dev
+        run: |
+          uv sync --locked --no-dev
+          # Freeze the environment: `make site`'s `uv run python -m
+          # atlas.sitebuild` would otherwise implicitly re-sync with
+          # default flags (no --no-dev), which could pull the dev group
+          # into what's supposed to be a prod-only deploy build.
+          echo "UV_NO_SYNC=1" >> "$GITHUB_ENV"
 
       - id: pages
         uses: actions/configure-pages@v6
@@ -61,5 +67,5 @@ jobs:
         env:
           PAGE_URL: ${{ steps.deployment.outputs.page_url }}
         run: |
-          curl --retry 10 --retry-delay 6 --retry-connrefused -fsSIL "$PAGE_URL" >/dev/null
-          curl --retry 10 --retry-delay 6 --retry-connrefused -fsS "${PAGE_URL}data/stats.json" | python3 -c 'import sys, json; d = json.load(sys.stdin); assert d["record_count"] > 0, d'
+          curl --retry 10 --retry-delay 6 --retry-connrefused --retry-all-errors -fsSIL "$PAGE_URL" >/dev/null
+          curl --retry 10 --retry-delay 6 --retry-connrefused --retry-all-errors -fsS "${PAGE_URL}data/stats.json" | python3 -c 'import sys, json; d = json.load(sys.stdin); assert d["record_count"] > 0, d'
