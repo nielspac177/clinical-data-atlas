@@ -1,0 +1,32 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "medval-bench",
+  "payload": {
+    "abstract": "<p>MedVAL-Bench is a dataset containing physician evaluations of errors in language model (LM)-generated medical text. The dataset spans 6 diverse medical text generation tasks and includes annotations from 12 physicians on clinically significant errors for 840 LM-generated outputs. These text-to-text generation tasks involve transforming an input medical text into an output relevant to a specific use case. Each task includes inputs and corresponding LM-generated outputs, which are evaluated for factual consistency by physicians. Importantly, the MedVAL framework and dataset are designed to rely only on inputs for the evaluation process to allow working with datasets that may not have reference outputs, ensuring broad applicability. The evaluation process aims to determine whether the output is factually consistent with the input and is safe for use. MedVAL-Bench constitutes the first large-scale physician-validated benchmark with triage-style risk grading aligned to real-world clinical decision-making, supporting the development of automated, expert-aligned evaluation methods and facilitating research toward trustworthy medical text generation.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 584121,
+    "core_doi": "10.13026/geme-rz43",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 1951318,
+    "public_project_uuid": "e3b0e865-33b0-402e-a21b-7130bdfa3637",
+    "publish_date": "2025-11-14",
+    "resource_type": "Database",
+    "short_description": "MedVAL-Bench is the first large-scale physician-validated benchmark for medical text validation, spanning 6 diverse medical tasks and containing 840 language model-generated outputs annotated by 12 physicians with error assessments and risk grades.",
+    "slug": "medval-bench",
+    "source_url": "https://physionet.org/content/medval-bench/1.0.1/",
+    "title": "MedVAL-Bench: Expert-Annotated Medical Text Validation Benchmark",
+    "topics": [],
+    "version": "1.0.1",
+    "version_doi": "10.13026/653w-3038"
+  },
+  "source": "physionet"
+}

@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:3cfeb38269bc9c5c1d0beeb2f985fdde6d5cfa87e41cfe9192345491ee488abc",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "67 patients diagnosed with multiple myeloma",
+        "label": "multiple myeloma"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "musculoskeletal"
+    ],
+    "id": "tcia:spinal-multiple-myeloma-seg",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "dual-energy low-dose CT scans",
+        "value": "CT"
+      },
+      {
+        "evidence": "basic demographic details of patients",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "67 patients diagnosed with multiple myeloma (mean age 66 years, range 48–85; 36% female)",
+    "summary": "Dual-energy low-dose CT of patients with multiple myeloma, including conventional, virtual monoenergetic and calcium-suppressed images, segmentation masks of vertebrae and spinal myeloma lesions, plus demographic and disease-progression clinical data."
+  },
+  "prompt_version": "v1"
+}

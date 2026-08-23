@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:3157b4f3249e65d2da4805d6ab2a15af6de2cd8b09392a62453301a5c71cbc1a",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "lung cancer patient data",
+        "label": "lung cancer"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "pulmonology"
+    ],
+    "id": "tcia:rider-lung-pet-ct",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "serial PET/CT phantom and lung cancer patient data",
+        "value": "PET"
+      },
+      {
+        "evidence": "quantifying sources of variance in PET/CT imaging",
+        "value": "CT"
+      }
+    ],
+    "population": "Lung cancer patients plus phantom studies",
+    "summary": "De-identified serial PET/CT phantom and lung cancer patient imaging shared to support testing of response-assessment algorithms and to quantify sources of variance in serial PET/CT measurements unrelated to treatment response."
+  },
+  "prompt_version": "v1"
+}

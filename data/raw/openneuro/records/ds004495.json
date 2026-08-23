@@ -1,0 +1,155 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004495",
+  "payload": {
+    "created": "2023-02-10T22:15:10.441Z",
+    "id": "ds004495",
+    "latestSnapshot": {
+      "created": "2025-04-09T12:22:53.000Z",
+      "description": {
+        "Authors": [
+          "Roni Tibon",
+          "Andrea Greve",
+          "Gina Humphreys",
+          "Alexander J. Quent",
+          "Rik Henson"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004495.v1.0.0",
+        "Funding": [
+          ""
+        ],
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "Episodic and Semantic Memory fMRI Dataset",
+        "ReferencesAndLinks": [
+          ""
+        ]
+      },
+      "readme": "This dataset was obtained from the OpenNeuro project (https://www.openneuro.org). Accession #: ds004495\n\nDescription: Episodic and Semantic Memory fMRI Dataset\n\nAuthors: Roni Tibon, Andrea Greve, Gina Humphreys, Alexander J. Quent, Rik Henson \n\nPlease cite the following reference if you use these data:\n\n     XXX\n\nAdditional information related to the project, including accepted version of Stage 1 protocol, is available on https://osf.io/dm47y/ \n\n==================================================================================\n\nfunc/ \n\n----- \n\nTwo session for each participants: \n\n\tses-EP:  Episodic task\n\n\tses-SEM: Semantic task + Control task \n\n\nFor each task: \n\n\tMultiple runs (3 for EP and 2 for SEM/VIS)\n\n\t4 echos  \n\n\nanat/\n\n-----\n\nAnatomical preprocessed data are located under /derivatives. These are defaced and normalised T1 images (for GDPR compliance).   \n\n\n\nbehavdata/\n\n----------\n\nBehavioural data from the study phase (EP+SEM), test phase (all tasks), and debriefing phase (EP) \n\n \nKnown Issues\n\n------------\n\nMissing behavioural data (all from non-scanned parts of the study), due to computer upgrade prior to their extraction:\n\n\n\tSubject           Missing file(s)\n\n\t-------               ---------------\n\n\t402                 SemStudy\n\n\t405                 EpStudy; DebStudy\n\n\t410                 SemStudy\n\n\t420                 EpStudy\n\n\t422                 EpStudy; SemStudy\n\n\t424                 SemStudy\n\n\t439                 EpStudy\t\t\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional"
+        ],
+        "sessions": [
+          "EP",
+          "SEM"
+        ],
+        "size": 257471773970,
+        "subjects": [
+          "440",
+          "424",
+          "427",
+          "409",
+          "406",
+          "438",
+          "430",
+          "419",
+          "414",
+          "418",
+          "415",
+          "436",
+          "413",
+          "412",
+          "417",
+          "435",
+          "434",
+          "404",
+          "411",
+          "407",
+          "422",
+          "408",
+          "425",
+          "431",
+          "432",
+          "403",
+          "405",
+          "423",
+          "439",
+          "429",
+          "426",
+          "420",
+          "433",
+          "416",
+          "421",
+          "410",
+          "402",
+          "401",
+          "428",
+          "437"
+        ],
+        "tasks": [
+          "ep",
+          "vis",
+          "sem"
+        ],
+        "totalFiles": 2947
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        20,
+        27,
+        26,
+        34,
+        20,
+        28,
+        18,
+        34,
+        19,
+        28,
+        23,
+        35,
+        23,
+        21,
+        30,
+        21,
+        18,
+        25,
+        21,
+        19,
+        34,
+        21,
+        21,
+        25,
+        34,
+        21,
+        31,
+        26,
+        19,
+        22,
+        20,
+        26,
+        22,
+        19,
+        19,
+        19,
+        29,
+        20,
+        27,
+        27
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": "Other"
+    },
+    "publishDate": "2023-12-14T10:41:51.502Z"
+  },
+  "source": "openneuro"
+}

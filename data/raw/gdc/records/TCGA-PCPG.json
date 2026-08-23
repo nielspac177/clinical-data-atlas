@@ -1,0 +1,143 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "TCGA-PCPG",
+  "payload": {
+    "dbgap_accession_number": null,
+    "disease_type": [
+      "Paragangliomas and Glomus Tumors"
+    ],
+    "id": "TCGA-PCPG",
+    "name": "Pheochromocytoma and Paraganglioma",
+    "primary_site": [
+      "Other endocrine glands and related structures",
+      "Adrenal gland",
+      "Heart, mediastinum, and pleura",
+      "Other and ill-defined sites",
+      "Spinal cord, cranial nerves, and other parts of central nervous system",
+      "Retroperitoneum and peritoneum",
+      "Connective, subcutaneous and other soft tissues"
+    ],
+    "program": {
+      "dbgap_accession_number": "phs000178",
+      "name": "TCGA",
+      "program_id": "b80aa962-9650-5110-b3eb-bd087da808db"
+    },
+    "project_id": "TCGA-PCPG",
+    "releasable": true,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 179,
+      "data_categories": [
+        {
+          "case_count": 179,
+          "data_category": "Simple Nucleotide Variation",
+          "file_count": 3886
+        },
+        {
+          "case_count": 179,
+          "data_category": "Sequencing Reads",
+          "file_count": 1453
+        },
+        {
+          "case_count": 179,
+          "data_category": "Biospecimen",
+          "file_count": 753
+        },
+        {
+          "case_count": 179,
+          "data_category": "Clinical",
+          "file_count": 401
+        },
+        {
+          "case_count": 179,
+          "data_category": "Copy Number Variation",
+          "file_count": 2542
+        },
+        {
+          "case_count": 179,
+          "data_category": "Transcriptome Profiling",
+          "file_count": 748
+        },
+        {
+          "case_count": 179,
+          "data_category": "DNA Methylation",
+          "file_count": 561
+        },
+        {
+          "case_count": 80,
+          "data_category": "Proteome Profiling",
+          "file_count": 82
+        },
+        {
+          "case_count": 165,
+          "data_category": "Somatic Structural Variation",
+          "file_count": 681
+        },
+        {
+          "case_count": 179,
+          "data_category": "Structural Variation",
+          "file_count": 821
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 179,
+          "experimental_strategy": "RNA-Seq",
+          "file_count": 1683
+        },
+        {
+          "case_count": 179,
+          "experimental_strategy": "WXS",
+          "file_count": 2942
+        },
+        {
+          "case_count": 179,
+          "experimental_strategy": "miRNA-Seq",
+          "file_count": 561
+        },
+        {
+          "case_count": 165,
+          "experimental_strategy": "WGS",
+          "file_count": 2635
+        },
+        {
+          "case_count": 9,
+          "experimental_strategy": "ATAC-Seq",
+          "file_count": 9
+        },
+        {
+          "case_count": 179,
+          "experimental_strategy": "Genotyping Array",
+          "file_count": 2301
+        },
+        {
+          "case_count": 179,
+          "experimental_strategy": "Methylation Array",
+          "file_count": 561
+        },
+        {
+          "case_count": 80,
+          "experimental_strategy": "Reverse Phase Protein Array",
+          "file_count": 82
+        },
+        {
+          "case_count": 179,
+          "experimental_strategy": "Tissue Slide",
+          "file_count": 189
+        },
+        {
+          "case_count": 176,
+          "experimental_strategy": "Diagnostic Slide",
+          "file_count": 196
+        }
+      ],
+      "file_count": 11928,
+      "file_size": 89920357481085
+    }
+  },
+  "source": "gdc"
+}

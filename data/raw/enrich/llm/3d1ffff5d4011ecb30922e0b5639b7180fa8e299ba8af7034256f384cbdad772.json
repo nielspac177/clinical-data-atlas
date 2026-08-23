@@ -1,0 +1,44 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:3d1ffff5d4011ecb30922e0b5639b7180fa8e299ba8af7034256f384cbdad772",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "patients with Parkinson's disease (n = 15)",
+        "label": "Parkinson's disease"
+      },
+      {
+        "evidence": "Huntington's disease (n = 20)",
+        "label": "Huntington's disease"
+      },
+      {
+        "evidence": "amyotrophic lateral sclerosis (n = 13)",
+        "label": "amyotrophic lateral sclerosis"
+      },
+      {
+        "evidence": "Records from 16 healthy control subjects are also included here.",
+        "label": "healthy control subjects"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology"
+    ],
+    "id": "physionet:gaitndd",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "force-sensitive resistors (with the output roughly proportional to the force under the foot)",
+        "value": "wearable"
+      },
+      {
+        "evidence": "quantify gait dynamics accurately",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": "Patients with Parkinson's disease (n = 15), Huntington's disease (n = 20), or amyotrophic lateral sclerosis (n = 13), and 16 healthy control subjects.",
+    "summary": "Foot force-sensor recordings of gait from patients with Parkinson's disease, Huntington's disease, or amyotrophic lateral sclerosis, plus healthy control subjects, intended for quantifying gait dynamics in neurodegenerative disease."
+  },
+  "prompt_version": "v1"
+}

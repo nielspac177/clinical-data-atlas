@@ -1,0 +1,40 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:dd26b7a15cd269ce9a40b50d77d2f9fa33d7d91f4a9a0aea368591fbc8d73588",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Acute Myeloid Leukemia",
+        "label": "Acute Myeloid Leukemia"
+      },
+      {
+        "evidence": "Myeloid Leukemias",
+        "label": "Myeloid Leukemias"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "gdc:TCGA-LAML",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "WXS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "RNA-Seq",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "200 human cases",
+    "summary": "TCGA molecular profiling of acute myeloid leukemia in hematopoietic and reticuloendothelial tissue, with genome and exome sequencing, RNA and miRNA sequencing, methylation, genotyping and expression arrays, plus clinical and biospecimen data."
+  },
+  "prompt_version": "v1"
+}

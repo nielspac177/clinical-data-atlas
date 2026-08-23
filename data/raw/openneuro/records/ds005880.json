@@ -1,0 +1,87 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005880",
+  "payload": {
+    "created": "2025-01-25T13:08:21.721Z",
+    "id": "ds005880",
+    "latestSnapshot": {
+      "created": "2025-10-31T12:21:07.000Z",
+      "description": {
+        "Authors": [
+          "Chen-Gia Tsai",
+          "Ling-Yao Chien",
+          "Joshua Oon Soo Goh"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005880.v1.0.3",
+        "Funding": [
+          "MOST 110-2410-H-002-210 from Ministry of Science and Technology, Taiwan",
+          "NSC 112-2410-H-002 -071 from Ministry of Science and Technology, Taiwan"
+        ],
+        "HowToAcknowledge": "Please cite this dataset as: Tsai, C.G., Chien, L.Y., & Goh, JOS. (2025). BIDS Dataset for the Diminished Seventh Chord. DOI: 10.18112/openneuro.ds005880.v1.0.0",
+        "License": "CC0",
+        "Name": "BIDS Dataset for the Diminished Seventh Chord",
+        "ReferencesAndLinks": null
+      },
+      "readme": "## Dataset Overview\nThis dataset contains functional and structural MRI data collected to investigate neural activity\nelicited by the dim7 chord in listeners with refined music listening skills. Data were acquired at Imaging Center for Integrated Body, Mind, and Culture Research at National Taiwan University using a 3T MR system (MAGNETOM Prisma, Siemens, Erlangen, Germany).\n\n## Data Structure\nThe dataset follows the BIDS standard and includes the following:\n- Anatomical T1-weighted MRI scans.\n- Functional MRI scans.\n- Event files describing the task conditions for functional MRI.\n\n## Acquisition Details\n- Participants: 20 healthy adults aged between 20-30 years. All participants reported no\nhistory of neurological or psychiatric disorders, and 10 reported formal musical training of six\nyears or more.\n- Imaging Modality: Structural MRI, fMRI.\n- Scan Parameters:\n  - Repetition Time (TR): 2.5 seconds\n  - Voxel Size: 2.46 x 2.46 x 2.5 mm³\n  - Slice Thickness: 2.5 mm",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 2250398304,
+        "subjects": [
+          "18",
+          "17",
+          "11",
+          "08",
+          "20",
+          "06",
+          "05",
+          "15",
+          "19",
+          "16",
+          "10",
+          "09",
+          "13",
+          "12",
+          "01",
+          "04",
+          "02",
+          "03",
+          "14",
+          "07"
+        ],
+        "tasks": [
+          "listen"
+        ],
+        "totalFiles": 164
+      },
+      "tag": "1.0.3"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "Ministry of Science and Technology, Taiwan",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "This study investigates the neural correlates of tonal uncertainty in music using functional magnetic resonance imaging (fMRI). Participants listened to musical sequences with varying levels of tonal uncertainty while undergoing fMRI scans. The study used a within-subject design with all participants exposed to the same set of experimental conditions. Tonal uncertainty was manipulated across three levels, and brain activity was measured in response to these conditions.",
+      "studyDomain": "Cognitive neuroscience, Music cognition, Neuroimaging",
+      "studyLongitudinal": "Other"
+    },
+    "publishDate": "2025-01-25T13:32:57.092Z"
+  },
+  "source": "openneuro"
+}

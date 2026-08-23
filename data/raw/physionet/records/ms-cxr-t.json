@@ -1,0 +1,39 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "ms-cxr-t",
+  "payload": {
+    "abstract": "<p>MS-CXR-T is a multi-modal benchmark dataset for evaluating biomedical vision-language processing (VLP) models on two distinct temporal tasks in radiology: image classification and sentence similarity. The former comprises multi-image frontal chest X-rays with ground-truth labels (N=1326) across 5 findings, with classes corresponding to 3 states of disease progression for each finding: {&#39;Improving&#39;, &#39;Stable&#39;, &#39;Worsening&#39;}, expanding on the Chest ImaGenome progression dataset. The latter quantifies the temporal-semantic similarity of text embeddings extracted from pairs of sentences (N=361). The pairs can be either paraphrases or contradictions in terms of disease progression. The data for both tasks was manually annotated and reviewed by a board-certified radiologist. The dataset provides researchers an opportunity to evaluate both image and text models on these biomedical temporal tasks and reproduce experiments reported in the corresponding literature.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 95954,
+    "core_doi": "10.13026/ga7g-1614",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 263165,
+    "public_project_uuid": "230901c7-26f6-40e6-ba8d-a04e8e318874",
+    "publish_date": "2023-03-18",
+    "resource_type": "Database",
+    "short_description": "The MS-CXR-T is a multimodal benchmark that enhances the MIMIC-CXR v2 dataset by including expert-verified annotations. Its goal is to evaluate biomedical visual-language processing models in terms of temporal semantics extracted from image and text.",
+    "slug": "ms-cxr-t",
+    "source_url": "https://physionet.org/content/ms-cxr-t/1.0.0/",
+    "title": "MS-CXR-T: Learning to Exploit Temporal Structure for Biomedical Vision-Language Processing",
+    "topics": [
+      "multimodal",
+      "cxr",
+      "vision-language processing",
+      "radiology",
+      "chest x-ray",
+      "disease progression"
+    ],
+    "version": "1.0.0",
+    "version_doi": "10.13026/pg10-j984"
+  },
+  "source": "physionet"
+}

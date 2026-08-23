@@ -1,0 +1,135 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds000256",
+  "payload": {
+    "created": "2018-03-29T20:30:59.616Z",
+    "id": "ds000256",
+    "latestSnapshot": {
+      "created": "2018-07-16T19:05:45.000Z",
+      "description": {
+        "Authors": [
+          "Deanna J. Greene",
+          "Jonathan M. Koller",
+          "Jacqueline M. Hampton",
+          "Victoria Wesevich",
+          "Andrew N. Van",
+          "Annie L. Nguyen",
+          "Catherine R. Hoyt",
+          "Lindsey McIntyre",
+          "Eric A. Earl",
+          "Rachel L. Klein",
+          "Joshua S. Shimony",
+          "Steven E. Petersen",
+          "Bradley L. Schlaggar",
+          "Damien A. Fair",
+          "Nico U.F. Dosenbach"
+        ],
+        "DatasetDOI": null,
+        "Funding": [
+          "Collection of these data was supported by National Institutes of Health Grants K01MH104592 (DJG), K23NS088590, UL1TR000448 (NUFD), R01MH096773, R00MH091238, UL1TR000128, MH110766, U01DA041148 (DAF), P30NS098577 (to the Neuroimaging Informatics and Analysis Center), and U54HD087011 (to the Eunice Kennedy Shriver National Institute Of Child Health & Human Development of the National Institutes of Health to the Intellectual and Developmental Disabilities Research Center at Washington University; BLS), the Tourette Association of America (DJG), the McDonnell Center for Systems Neuroscience, the Mallinckrodt Institute of Radiology (DJG, NUFD), the DeStefano Family Foundation (DAF), the Jacobs Foundation, and the Child Neurology Foundation (NUFD)."
+        ],
+        "HowToAcknowledge": null,
+        "License": "PDDL (http://opendatacommons.org/licenses/pddl/)",
+        "Name": "Behavioral interventions for reducing head motion during MRI scans in children",
+        "ReferencesAndLinks": [
+          "https://www.sciencedirect.com/science/article/pii/S1053811918300235"
+        ]
+      },
+      "readme": "A major limitation to structural and functional MRI (fMRI) scans is their susceptibility to head motion artifacts. Even sub-millimeter movements can systematically distort functional connectivity, morphometric, and diffusion imaging results.\nIn patient care, sedation is often used to minimize head motion, but it incurs increased costs and risks. In research settings, sedation is typically not an ethical option. Therefore, safe methods that reduce head motion are critical for\nimproving MRI quality, especially in high movement individuals such as children and neuropsychiatric patients. We investigated the effects of (1) viewing movies and (2) receiving real-time visual feedback about head\nmovement in 24 children (5-15 years old). Children completed fMRI scans during which they viewed a fixation cross (i.e., rest) or a cartoon movie clip, and during some of the scans they also received real-time visual feedback\nabout head motion. Head motion was significantly reduced during movie watching compared to rest and when receiving feedback compared to receiving no feedback. However, these results depended largely on age, such that the effects\nwere driven by the younger children. Children older than 10 years showed no significant benefit. We also found that viewing movies significantly altered the functional connectivity of fMRI data, suggesting that fMRI scans during\nmovies cannot be equated to standard resting-state fMRI scans. The implications of these results are twofold: (1) given the reduction in head motion with behavioral interventions, these methods should be tried first for all\nclinical and structural MRIs in lieu of sedation; and (2) for fMRI research scans, these methods can reduce head motion in certain groups, but investigators must keep in mind the effects on functional MRI data.\n\n### Comments added by Open-fmri Curators ###\n===========================================\nGeneral Comments\n----------------\nDefacing\n--------\nPydeface was used on all anatomical images to ensure de-identification of subjects. The code\ncan be found at https://github.com/poldracklab/pydeface\nQuality Control\n---------------\nMRIQC was run on the dataset. Results are located in derivatives/mriqc. Learn more about it here: https://mriqc.readthedocs.io/en/stable/\nWhere to discuss the dataset\n----------------------------\n1) www.openfmri.org/dataset/ds000256/ See the comments section at the bottom of the dataset\npage.\n2) www.neurostars.org Please tag any discussion topics with the tags openfmri and ds000256.\n3) Send an email to submissions@openfmri.org. Please include the accession number in\nyour email.\nKnown Issues\n------------\n\n- Head motion\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 3863732083,
+        "subjects": [
+          "CTS200",
+          "CTS201",
+          "CTS202",
+          "CTS203",
+          "CTS204",
+          "CTS207",
+          "CTS208",
+          "CTS209",
+          "CTS210",
+          "CTS211",
+          "CTS213",
+          "CTS215",
+          "CTS218",
+          "CTS219",
+          "CTS223",
+          "CTS225",
+          "CTS226",
+          "CTS230",
+          "CTS231",
+          "CTS235",
+          "CTS237",
+          "CTS238",
+          "CTS239",
+          "CTS241"
+        ],
+        "tasks": [
+          "restbaseline",
+          "restfixationadaptive",
+          "restfixationfixed",
+          "restmovieadaptive",
+          "restmoviefixed",
+          "restfixationnofeedback",
+          "restmovienofeedback"
+        ],
+        "totalFiles": 763
+      },
+      "tag": "00002"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        13,
+        8,
+        11,
+        7,
+        12,
+        11,
+        6,
+        5,
+        7,
+        9,
+        15,
+        15,
+        11,
+        14,
+        15,
+        13,
+        8,
+        10,
+        7,
+        7,
+        15,
+        10,
+        14,
+        12
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2018-03-29T20:30:59.616Z"
+  },
+  "source": "openneuro"
+}

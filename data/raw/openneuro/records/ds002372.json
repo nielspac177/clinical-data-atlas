@@ -1,0 +1,110 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds002372",
+  "payload": {
+    "created": "2019-12-18T22:07:01.568Z",
+    "id": "ds002372",
+    "latestSnapshot": {
+      "created": "2019-12-19T08:21:22.000Z",
+      "description": {
+        "Authors": [
+          "Mehraveh Salehi",
+          "Abigail Greene",
+          "Xilin Shen",
+          "An Qu",
+          "David O'Connor",
+          "Dustin Scheinost",
+          "R. Todd Constable"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds002372.v1.0.0",
+        "Funding": [
+          ""
+        ],
+        "HowToAcknowledge": "When using the dataset, please cite the paper in the ReferencesAndLinks.",
+        "License": "CC0",
+        "Name": "Yale_Single_Subject_Task_Rest30x",
+        "ReferencesAndLinks": [
+          "Salehi, M., Greene, A.S., Karbasi, A., Shen, X., Scheinost, D. and Constable, R.T., 2019. There is no single functional atlas even for a single individual: Functional parcel definitions change with task. NeuroImage, p.116366."
+        ]
+      },
+      "readme": "Subject: healthy left-handed male, aged 56 years old scanned 30 times of approximately 10 months.\n\nData consists of 30 sessions of fMRI data from a single subject; each session was approximately 60 min long and included 6 task conditions (n-back (Rosenberg et al., 2015), gradual-onset continuous performance task [gradCPT] (Esterman et al., 2012; Rosenberg et al., 2013, 2016), stop-signal [SST] (Verbruggen et al., 2008), card guessing (Delgado et al., 2000), Reading the Mind in the Eyes (Baron-Cohen et al., 1997), and movie watching) and 2 rest conditions.\n\nEach session consisted of two resting-state runs (each 6 min 49 s) and six task runs (slightly varied in length, but each approximately 6 min). The first and last functional runs (runs 1 and 8) were resting-state runs, during which the participant was instructed to stay still with his eyes open. Runs 2–7 were task runs, with the order counterbalanced across sessions. Functional MRI data were acquired on 2 identically configured Siemens 3T Prisma scanners equipped with a 64-channel head coil at the Yale Magnetic Resonance Research Center. \n\nThe first session was used to acquire structural MRI data. High-resolution T1-weighted 3D anatomical scans were performed using a magnetization prepared rapid gradient echo (MPRAGE) sequence with the following parameters: 208 contiguous slices acquired in the sagittal plane, repetition time (TR) = 2400 ms, echo time (TE) = 1.22 ms, flip angle = 8°, slice thickness = 1 mm, in-plane resolution = 1 mm × 1 mm, matrix size = 256 × 256. A T1-weighted 2D anatomical scan was acquired using a fast low angle shot (FLASH) sequence with the following parameters: 75 contiguous slices acquired in the axial-oblique plane parallel to AC-PC line, TR = 440 ms, TE = 2.61 ms, flip angle = 70°, slice thickness = 2 mm, in-plane resolution = 0.9 mm × 0.9 mm, matrix size = 256 × 256.\n\nFunctional scans were performed using a multiband gradient echo-planar imaging (EPI) pulse sequence with the following parameters: 75 contiguous slices acquired in the axial-oblique plane parallel to AC-PC line, TR = 1000 ms, TE = 30 ms, flip angle = 55°, slice thickness = 2 mm, multiband acceleration factor = 5, in-plane resolution = 2 mm × 2 mm, matrix size = 110 × 110.\n\n\nFunctional scans were 6 min 49 s each, including initial shim and 8s discarded acquisitions before the start of each task. Tasks varied slightly in length (see below), but were all approximately 6 min in duration. A fixation cross was displayed after the end of each task and lasted until the beginning of the next task. Each task, with the exception of movie watching, was preceded by instructions and practice, after which the subject had the opportunity to ask questions before the scan began. All responses were recorded using a 2 × 2 button box.\n\n2.1.3. N-back task\nThe n-back task was adapted from that used in Rosenberg et al. (2015). In this task, the participant was presented with a sequence of images and was instructed to respond via button press if the image was different than the image presented two before, and to withhold response if it was the same. Images were presented for 1 s, followed by a 1-s inter-trial interval (ITI; fixation cross). The target (i.e., matching image) probability was 10%. There were two blocks, each with 90 trials. One block used images of emotional faces and the other block used images of scenes (Cohen et al., 2016; Conley et al., 2018). Block and stimulus order were randomized for each session. Task performance was assessed by sensitivity (d'), defined as hit rate relative to false alarm rate (Rosenberg et al., 2016).\n\n2.1.4. Gradual-onset continuous performance task (gradCPT)\nThe gradCPT task was adapted from that described in Esterman et al. (2012) and Rosenberg et al., 2013, 2016. In this task, the participant viewed a sequence of 450 scenes (city or mountain) that gradually transitioned via linear pixel-by-pixel interpolation from one to the next over 800 ms. The participant was instructed to respond via button press to cities and to withhold response to mountains. Stimulus order was randomized, and 10% of images were mountains. Task performance was assessed by sensitivity (d').\n\n2.1.5. Stop-signal task (SST)\nThe stop-signal task was adapted from that implemented in Verbruggen et al. (2008). In this task, the participant was required to determine via button press whether a presented arrow was pointing left (right index finger) or right (right middle finger). On 25% of trials, the arrow turned blue after some delay, indicating that the participant should withhold response. This stop-signal delay (SSD) was initially set to 250 ms, and was continuously adjusted via the staircase tracking procedure (50 ms increase after correct inhibition trials; 50 ms decrease after each failure to inhibit). The arrow was presented for 1.5 s, followed by 0.5 s of fixation; there were 176 trials in total, with stimulus order randomized within block. Task performance was assessed by missing probability, defined as the percentage of missed responses on no-signal trials (Verbruggen et al., 2008).\n\n2.1.6. Card guessing task\nThe card guessing task was adapted from that originally developed by Delgado et al. (2000) and subsequently extended (Barch et al., 2013; Speer et al., 2014). In this task, the participant was presented with a card and asked to guess if the number on the back was lower than 5, or greater than 5 but less than 10. The question mark card was displayed for 1.5 s, or until the participant responded (right index finger for “lower,” right middle finger for “higher”). The card then “flipped over” to reveal the number. The number was displayed for 0.5 s, followed by an arrow for 0.5 s to indicate accuracy (green and up for correct, red and down for incorrect), which was in turn followed by a 1-s inter-trial interval (fixation cross). There were 10 blocks, each with 10 trials, and guess accuracy was deterministic, such that in half of the blocks (“high win”), the participant was correct 70% of the time, while in the other half of the blocks (“high loss”) he was correct 30% of the time; block (high win/loss) and trial (correct/incorrect) orders were randomized. Task performance was assessed by RT variability, defined as standard deviation of reaction time (May et al., 2004).\n\n2.1.7. Reading the Mind in the eyes task (“eyes task”)\nThe Eyes Task was adapted from that originally described in Baron-Cohen et al. (1997). In this task, the participant viewed a series of photographs of an individual's eyes with four “mental state terms” (Baron-Cohen et al., 1997), one in each corner of the image, and was instructed to select via button press (with each button corresponding to one corner, and thus one term) the term that best described what the individual was thinking or feeling. There were 36 images in total. Each was presented once, in random order, for 9.25 s or until the participant responded; the remainder of each 10-s trial consisted of a fixation cross. Task performance was assessed by RT variability, defined as standard deviation of reaction time for correct trials.\n\n2.1.8. Movies task\nIn this task, three movie clips were presented in continuous series; each was approximately 2 min long. The first clip was a trailer for “Inside Out,” the second clip was the wedding scene from “Princess Bride,” and the third clip was a trailer for “Up; ” order was fixed across sessions. The participant was instructed to relax and enjoy the movies; no responses were required. No task performance was recorded.\n\nFor further details See:\n\nThere is no single functional atlas even for a single individual: Functional parcel definitions change with task, M Salehi, AS Greene, A Karbasi, X Shen, D Scheinost, RT Constable, NeuroImage, 116366\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "func01",
+          "func02",
+          "func03",
+          "func04",
+          "func05",
+          "func06",
+          "func07",
+          "func08",
+          "func09",
+          "func10",
+          "func11",
+          "func12",
+          "func13",
+          "func14",
+          "func15",
+          "func16",
+          "func17",
+          "func18",
+          "func19",
+          "func20",
+          "func21",
+          "func22",
+          "func23",
+          "func24",
+          "func25",
+          "func26",
+          "func27",
+          "func28",
+          "func29",
+          "func30"
+        ],
+        "size": 168487665300,
+        "subjects": [
+          "RTC01"
+        ],
+        "tasks": [
+          "Gradual-onset continuous performance task",
+          "Card Guessing Task",
+          "Reading the Mind in the eyes task",
+          "Rest task",
+          "N-back task",
+          "Movies task",
+          "Stop-signal task"
+        ],
+        "totalFiles": 490
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": null,
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": "",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2019-12-19T13:42:58.353Z"
+  },
+  "source": "openneuro"
+}

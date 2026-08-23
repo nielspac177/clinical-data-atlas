@@ -1,0 +1,28 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:64407c2a4f16b43c666abf14789522ad4c0a17989cfb0ad41a41487f00ad59e7",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Breast cancer is among the most common cancers",
+        "label": "breast cancer"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "tcia:breast-cancer-screening-dbt",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "a curated dataset of digital breast tomosynthesis images",
+        "value": "mammography"
+      }
+    ],
+    "population": "Breast cancer screening exam cases, grouped as normal, actionable, biopsy-proven benign, and biopsy-proven cancer.",
+    "summary": "Curated digital breast tomosynthesis screening dataset covering normal, actionable, biopsy-proven benign, and biopsy-proven cancer cases, shared as DICOM images with a spreadsheet of case groups and annotation boxes for machine learning development."
+  },
+  "prompt_version": "v1"
+}

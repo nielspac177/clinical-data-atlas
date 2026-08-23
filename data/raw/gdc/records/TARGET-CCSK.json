@@ -1,0 +1,97 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "TARGET-CCSK",
+  "payload": {
+    "dbgap_accession_number": "phs000466",
+    "disease_type": [
+      "Complex Mixed and Stromal Neoplasms"
+    ],
+    "id": "TARGET-CCSK",
+    "name": "Clear Cell Sarcoma of the Kidney",
+    "primary_site": [
+      "Kidney"
+    ],
+    "program": {
+      "dbgap_accession_number": "phs000218",
+      "name": "TARGET",
+      "program_id": "f1c391e9-8488-55a8-b777-302e786ea11d"
+    },
+    "project_id": "TARGET-CCSK",
+    "releasable": true,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 13,
+      "data_categories": [
+        {
+          "case_count": 13,
+          "data_category": "Sequencing Reads",
+          "file_count": 39
+        },
+        {
+          "case_count": 13,
+          "data_category": "Combined Nucleotide Variation",
+          "file_count": 13
+        },
+        {
+          "case_count": 13,
+          "data_category": "Biospecimen",
+          "file_count": 1
+        },
+        {
+          "case_count": 13,
+          "data_category": "Clinical",
+          "file_count": 3
+        },
+        {
+          "case_count": 11,
+          "data_category": "Copy Number Variation",
+          "file_count": 44
+        },
+        {
+          "case_count": 13,
+          "data_category": "Transcriptome Profiling",
+          "file_count": 26
+        },
+        {
+          "case_count": 11,
+          "data_category": "DNA Methylation",
+          "file_count": 33
+        },
+        {
+          "case_count": 13,
+          "data_category": "Structural Variation",
+          "file_count": 26
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 13,
+          "experimental_strategy": "WGS",
+          "file_count": 13
+        },
+        {
+          "case_count": 13,
+          "experimental_strategy": "RNA-Seq",
+          "file_count": 91
+        },
+        {
+          "case_count": 11,
+          "experimental_strategy": "Genotyping Array",
+          "file_count": 44
+        },
+        {
+          "case_count": 11,
+          "experimental_strategy": "Methylation Array",
+          "file_count": 33
+        }
+      ],
+      "file_count": 185,
+      "file_size": 500169661087
+    }
+  },
+  "source": "gdc"
+}

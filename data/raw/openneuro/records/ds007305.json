@@ -1,0 +1,117 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007305",
+  "payload": {
+    "created": "2026-01-21T20:20:47.360Z",
+    "id": "ds007305",
+    "latestSnapshot": {
+      "created": "2026-01-22T01:12:39.000Z",
+      "description": {
+        "Authors": [
+          "Blair Shevlin",
+          "Rachael Gwinn",
+          "Aidan Makwana",
+          "Ian Krajbich"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007305.v1.0.0",
+        "Funding": [
+          "Cattell Sabbatical Fund"
+        ],
+        "HowToAcknowledge": "Please cite: Shevlin, B.R.K, Gwinn, R., Makwana, A., & Krajbich, I. (2026). Overt visual attention modulates decision-related signals in ventral and dorsal medial prefrontal cortex. eLife",
+        "License": "CC0",
+        "Name": "Neural Computation and Comparison of Value in Simple Choice",
+        "ReferencesAndLinks": [
+          "https://osf.io/eyxvb/"
+        ]
+      },
+      "readme": "# The Neural Computation and Comparison of Value in Simple Choice\n\n## Overview\nThis dataset contains fMRI and behavioral data from a study examining how visual attention\nmodulates decision-related signals in the brain during value-based choices.\n\n## Experimental Design\nParticipants chose between pairs of food lotteries while undergoing fMRI scanning with\nsimultaneous eye-tracking. Participants sampled random draws from both lotteries every\n4-8 seconds until they were ready to make a choice.\n\n## Data Acquisition\n- Scanner: Siemens Magnetom Prisma 3T\n- Head coil: 32-channel\n- Functional: T2*-weighted gradient-echo, 48 slices, 3mm isotropic, TR=2.6s, TE=28ms\n- Anatomical: MPRAGE T1-weighted\n- Eye-tracking: EyeLink 1000 Plus at 500 Hz\n- 3 functional runs per subject (~15 minutes each)\n\n## Preprocessing Note\nThe functional and anatomical images in this dataset have undergone minimal preprocessing:\n- Slice timing correction (reference: bottom slice)\n- Motion correction (realignment to mean EPI)\n- B0 unwarping (susceptibility distortion correction)\n- Spatial normalization to MNI152 space (SPM12)\n- Smoothing with 8mm FWHM Gaussian kernel\n\nRaw unprocessed data were not available at the time of BIDS conversion.\n\n## Participants\n- N = 23 right-handed participants\n- Age range: Adults\n- All had normal or corrected-to-normal vision\n- No history of neurological disorders\n\n## Ethics\nThis study was approved by The Ohio State University Biomedical Sciences IRB.\n\n## Contact\nDr. Ian Krajbich\nUniversity of California Los Angeles\nkrajbich@ucla.edu\n\n## References\nShevlin, B., Gwinn, R., Makwana, A., & Krajbich, I. (2026). Overt visual attention\nmodulates decision-related signals in ventral and dorsal medial prefrontal cortex.\n\nData and code: https://osf.io/eyxvb/\n\n## Notes\n- Timing Parameters for Preprocessed Data: This dataset uses VolumeTiming instead of RepetitionTime in the functional JSON files. This is because the preprocessed NIfTI files have TR=0 in their headers due to:\n- Slice timing correction\n- Motion correction\n- B0 unwarping\n- Spatial normalization to MNI152\n- Smoothing (8mm FWHM)\n- The actual acquisition used TR = 2.6 seconds. VolumeTiming specifies the acquisition\\ntime of each volume (0, 2.6, 5.2, 7.8, ... seconds). This approach complies with BIDS specification for cases where RepetitionTime is unavailable or unreliable due to preprocessing",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 14980111714,
+        "subjects": [
+          "015",
+          "030",
+          "020",
+          "028",
+          "027",
+          "006",
+          "016",
+          "017",
+          "011",
+          "021",
+          "029",
+          "013",
+          "014",
+          "031",
+          "024",
+          "010",
+          "022",
+          "004",
+          "019",
+          "008",
+          "023",
+          "026",
+          "005"
+        ],
+        "tasks": [
+          "Food Lottery",
+          "Food Lottery Choice Task"
+        ],
+        "totalFiles": 169
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2026-01-22T01:13:15.819Z"
+  },
+  "source": "openneuro"
+}

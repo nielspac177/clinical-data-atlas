@@ -1,0 +1,161 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005374",
+  "payload": {
+    "created": "2024-07-25T18:32:43.877Z",
+    "id": "ds005374",
+    "latestSnapshot": {
+      "created": "2024-07-27T11:20:25.000Z",
+      "description": {
+        "Authors": [
+          "Marleen Haupt",
+          "Douglas D. Garrett",
+          "Radoslaw M. Cichy"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005374.v1.0.1",
+        "Funding": [
+          "CI241/1-1",
+          "CI241/3-1",
+          "CI241/7-1",
+          "ERC-StG-2018-803370",
+          "INST 272/297-1"
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Object recognition in healthy aging (ORHA) - fMRI",
+        "ReferencesAndLinks": null
+      },
+      "readme": "This dataset contains the raw EEG data accompanying the paper \"Healthy aging delays and dedifferentiates high-level visual representations\". Please cite the above paper if you use this data.\n\nThe dataset includes:\n\n1. anat/ anatomical scans (T1-weighted images) for each subject\n2. func/ whole-brain EPI data from 20 task runs and 2 functional localizer runs per participant. \n\nThe events files contain the onsets, durations and trial types for all trials in the corresponding run. \n\nFor the main task, stimuli are natural images presented on a grey background with a central fixation. Stimuli 1-16 are images of faces, stimuli 17-32 are images of animals, stimuli 33-48 are images of places, stimuli 49-64 are images of faces. In catch trials, the color of the fixation crossed changed to red and participants were instructed to press a button. In memory trials, additional images were presented once for an independent task and analyses.\nThe analyses in the current paper exclude all catch and memory trials. \n\nFor the localizer task, stimuli are cropped images on a grey background with a central fixation. The functional localizer consists of 5 different block types: fixation, objects, scrambled objects, houses and faces.\n\nFor a full description of the paradigm and the employed procedures please see the paper.  ",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "01",
+          "02"
+        ],
+        "size": 77196853067,
+        "subjects": [
+          "0n9ge8",
+          "0zax6m",
+          "1n6qlc",
+          "1r4he7",
+          "1u6mnk",
+          "34zz5w",
+          "45yajw",
+          "87akcw",
+          "8pakuj",
+          "9hcfk5",
+          "9raer0",
+          "a77lc6",
+          "ad4phe",
+          "d0zcpd",
+          "dfdryk",
+          "dwp973",
+          "dzxv3w",
+          "f2t7hh",
+          "fgph3h",
+          "fj0pnz",
+          "hgagr4",
+          "k5m5h6",
+          "k624yv",
+          "l7z4xx",
+          "llmkdl",
+          "m4nkz5",
+          "nxe874",
+          "pj82j2",
+          "q3w2rh",
+          "q7mf0v",
+          "qf0y3t",
+          "r3cv10",
+          "r9zppd",
+          "rkdvjv",
+          "rnyu5g",
+          "vdkqh0",
+          "w1kt8h",
+          "xl2dyu",
+          "y24cge",
+          "yqldm7",
+          "yuzpe8",
+          "zng36c",
+          "zvc7dv"
+        ],
+        "tasks": [
+          "1",
+          "loc"
+        ],
+        "totalFiles": 3460
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        71,
+        23,
+        33,
+        66,
+        33,
+        20,
+        24,
+        24,
+        70,
+        31,
+        20,
+        20,
+        22,
+        23,
+        62,
+        28,
+        26,
+        68,
+        71,
+        70,
+        24,
+        33,
+        73,
+        29,
+        74,
+        69,
+        64,
+        70,
+        24,
+        68,
+        68,
+        70,
+        22,
+        34,
+        74,
+        22,
+        60,
+        62,
+        20,
+        62,
+        68,
+        63,
+        60
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "Object recognition",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2024-07-27T11:22:08.179Z"
+  },
+  "source": "openneuro"
+}

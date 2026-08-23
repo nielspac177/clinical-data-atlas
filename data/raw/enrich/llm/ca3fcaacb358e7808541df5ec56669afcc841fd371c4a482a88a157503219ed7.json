@@ -1,0 +1,34 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:ca3fcaacb358e7808541df5ec56669afcc841fd371c4a482a88a157503219ed7",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "neuroscience",
+      "neurology"
+    ],
+    "id": "physionet:calcium-imaging-sleep-state",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "wide-field calcium imaging (WFCI)",
+        "value": "other"
+      },
+      {
+        "evidence": "adjunct EEG/EMG",
+        "value": "EEG"
+      },
+      {
+        "evidence": "adjunct EEG/EMG",
+        "value": "EMG"
+      }
+    ],
+    "population": "Twelve transgenic mice expressing GCaMP6f in excitatory neurons, recorded at Washington University of St Louis School of Medicine",
+    "summary": "Wide-field calcium imaging recordings from transgenic mice during three-hour undisturbed sessions, manually scored in 10-second epochs as wake, NREM or REM using adjunct EEG/EMG, with brain mask and atlas included."
+  },
+  "prompt_version": "v1"
+}

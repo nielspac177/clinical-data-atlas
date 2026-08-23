@@ -1,0 +1,131 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005464",
+  "payload": {
+    "created": "2024-09-06T15:57:58.627Z",
+    "id": "ds005464",
+    "latestSnapshot": {
+      "created": "2024-09-24T15:43:18.000Z",
+      "description": {
+        "Authors": [
+          "Wangjing Yu",
+          "Asieh Zadbood",
+          "Avi J. H. Chanales",
+          "Lila Davachi"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005464.v1.0.1",
+        "Funding": [
+          "National Institutes of Health grant R01-MH0746492"
+        ],
+        "HowToAcknowledge": "Please cite this dataset and our article. Thank you!",
+        "License": "CC0",
+        "Name": "Priority",
+        "ReferencesAndLinks": [
+          "Yu, W., Zadbood, A., Chanales, A. J. H., & Davachi, L. (2024). Repetition dynamically and rapidly increases cortical, but not hippocampal, offline reactivation. Proceedings of the National Academy of Sciences, 121(40), e2405929121. https://doi.org/10.1073/pnas.2405929121"
+        ]
+      },
+      "readme": "This dataset includes raw fMRI scans of 29 participants (all data were de-identified). Data from each participant include 2 anatomical scans (T1, T2; skull-stripped), 2 pairs of fieldmaps, and 5 functional scans (2 encoding runs and 3 rest runs). The details of the functional scans are described below:\n\n- task-rest_run-01: This is a pre-encoding resting state scan, during which participants were asked to keep their eyes closed while remaining awake\n\n- task-learning_run-01: Participants studied 36 different word-image pairs. Half the pairs were presented 3 times (strong memory condition), while the other half only once (weak memory condition). This learning block includes a total of 72 trials, with trials from strong and weak memory conditions presented in an interleaved manner. \n\n- task-rest_run-02: This is a post-encoding (following learning run 1) resting state scan.\n\n- task-learning_run-02: Participants studied another 36 different word-image pairs. The structure of this learning block is the same as the first run. \n\n- task-rest_run-03: This is a post-encoding (following learning run 2) resting state scan.\n\n\nFor more information about the dataset and about the tasks or the experimental design, please see our paper (https://doi.org/10.1073/pnas.2405929121). We have also shared processed/cleaned data files and an analysis script that can be used to recreate all plots and analyses reported in the paper, available at: https://osf.io/vwdu3.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "01"
+        ],
+        "size": 34741523419,
+        "subjects": [
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30"
+        ],
+        "tasks": [
+          "learning",
+          "rest"
+        ],
+        "totalFiles": 991
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        30,
+        21,
+        21,
+        23,
+        30,
+        22,
+        23,
+        30,
+        25,
+        25,
+        22,
+        19,
+        24,
+        27,
+        30,
+        20,
+        20,
+        20,
+        29,
+        20,
+        20,
+        22,
+        21,
+        22,
+        18,
+        22,
+        22,
+        19,
+        18
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "National Institutes of Health ",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "Cognitive Neuroscience",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2024-09-06T18:27:49.830Z"
+  },
+  "source": "openneuro"
+}

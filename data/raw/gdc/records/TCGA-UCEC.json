@@ -1,0 +1,141 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "TCGA-UCEC",
+  "payload": {
+    "dbgap_accession_number": null,
+    "disease_type": [
+      "Not Reported",
+      "Epithelial Neoplasms, NOS",
+      "Adenomas and Adenocarcinomas",
+      "Cystic, Mucinous and Serous Neoplasms"
+    ],
+    "id": "TCGA-UCEC",
+    "name": "Uterine Corpus Endometrial Carcinoma",
+    "primary_site": [
+      "Corpus uteri",
+      "Uterus, NOS"
+    ],
+    "program": {
+      "dbgap_accession_number": "phs000178",
+      "name": "TCGA",
+      "program_id": "b80aa962-9650-5110-b3eb-bd087da808db"
+    },
+    "project_id": "TCGA-UCEC",
+    "releasable": true,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 560,
+      "data_categories": [
+        {
+          "case_count": 559,
+          "data_category": "Simple Nucleotide Variation",
+          "file_count": 11224
+        },
+        {
+          "case_count": 559,
+          "data_category": "Sequencing Reads",
+          "file_count": 3949
+        },
+        {
+          "case_count": 560,
+          "data_category": "Biospecimen",
+          "file_count": 3050
+        },
+        {
+          "case_count": 560,
+          "data_category": "Clinical",
+          "file_count": 1166
+        },
+        {
+          "case_count": 559,
+          "data_category": "Copy Number Variation",
+          "file_count": 7174
+        },
+        {
+          "case_count": 559,
+          "data_category": "Transcriptome Profiling",
+          "file_count": 2336
+        },
+        {
+          "case_count": 559,
+          "data_category": "DNA Methylation",
+          "file_count": 1809
+        },
+        {
+          "case_count": 440,
+          "data_category": "Proteome Profiling",
+          "file_count": 440
+        },
+        {
+          "case_count": 447,
+          "data_category": "Somatic Structural Variation",
+          "file_count": 1423
+        },
+        {
+          "case_count": 343,
+          "data_category": "Structural Variation",
+          "file_count": 1093
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 554,
+          "experimental_strategy": "WXS",
+          "file_count": 8775
+        },
+        {
+          "case_count": 557,
+          "experimental_strategy": "RNA-Seq",
+          "file_count": 3021
+        },
+        {
+          "case_count": 550,
+          "experimental_strategy": "miRNA-Seq",
+          "file_count": 1737
+        },
+        {
+          "case_count": 482,
+          "experimental_strategy": "WGS",
+          "file_count": 6514
+        },
+        {
+          "case_count": 13,
+          "experimental_strategy": "ATAC-Seq",
+          "file_count": 13
+        },
+        {
+          "case_count": 559,
+          "experimental_strategy": "Genotyping Array",
+          "file_count": 7139
+        },
+        {
+          "case_count": 559,
+          "experimental_strategy": "Methylation Array",
+          "file_count": 1809
+        },
+        {
+          "case_count": 440,
+          "experimental_strategy": "Reverse Phase Protein Array",
+          "file_count": 440
+        },
+        {
+          "case_count": 505,
+          "experimental_strategy": "Diagnostic Slide",
+          "file_count": 566
+        },
+        {
+          "case_count": 560,
+          "experimental_strategy": "Tissue Slide",
+          "file_count": 805
+        }
+      ],
+      "file_count": 33664,
+      "file_size": 302783243033618
+    }
+  },
+  "source": "gdc"
+}

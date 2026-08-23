@@ -1,0 +1,125 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007179",
+  "payload": {
+    "created": "2026-01-07T16:45:17.602Z",
+    "id": "ds007179",
+    "latestSnapshot": {
+      "created": "2026-01-07T17:02:07.000Z",
+      "description": {
+        "Authors": [
+          "Parmis Khosravi",
+          "Anjali Poe",
+          "Eleanor P Malone",
+          "Jessica L Bezek",
+          "Marisa L Meyer",
+          "Olivia Siegal",
+          "Elise M Cardinale",
+          "Katharina Kircanski",
+          "Melissa A Brotman",
+          "Simone P Haller",
+          "Daniel S Pine"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007179.v1.0.0",
+        "Funding": [
+          "ZIA-MH002781",
+          "ZIA-MH002782"
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Neural Responses to Error in Youth",
+        "ReferencesAndLinks": null
+      },
+      "readme": "# Neural Responses to Error in Youth: The Impact of Social Context, Anxiety, and Worry\n\nA comprehensive dataset characterizing a sample of youth aged 8 to 18 years using structural magnetic resonance imaging (sMRI), task-based functional magnetic resonance imaging (fMRI), and clinical assessment.\n\nData was collected at the National Institute of Mental Health (NIMH), Bethesda, MD by the Section on Development and Affective Neuroscience (SDAN). Preprocessing and analyses code to accompany this study are shared on [the GitHub repository](https://github.com/NIMH-SDAN).\n\nThis dataset is licensed under the Creative Commons Zero (CC0) v1.0 License.\n\n## Participant Eligibility and Characteristics\n\n### Inclusion Criteria\n\nConsent Institutional Review Board approval, parent or guardian consent, and child assent were obtained. To characterize the sample, we collected data on participants' race/ethnicity and family income.\n\n## Clinical Measures\n\n- Screen for Child Related Anxiety Disorders (SCARED) child report & parent report\n- Ecological Momentary Assessment (EMA) child report\n- Completed by clinicians for inclusion/exclusion criteria: Kiddie Schedule for Affective Disorders (KSADS)\n\n## task-based fMRI\n\nImaging data on brain structure and task-based function were acquired on two identical 3T GE MR750  with a 32-channel head coil.\n\n## sMRI\n\nA sagittal structural scan was acquired as a T1-weighted, magnetization-prepared, rapid-acquisition gradient echo (MPRAGE) sequence with the following parameters:\n\n- echo time (TE) = min full\n- inversion time (TI) = 425 ms\n- flip angle = 7 degrees\n- the field of view (FOV)= 25.6 mm<sup>2</sup>\n- matrix = 256 x 256 x 256\n- slice thickness = 1 mm\n\n## Description of Data Formats and Preparation\n\nEach clinical measures has a tabular data file in TSV format and a corresponding data dictionary in JSON format. The `n/a` values are indicating that the question may have been skipped by the participant.\n\nImaging data in this study is shared in NIfTI format. Visual inspection was performed to exclude any imaging with significant artifacts or distortion followed by exclusion using specific criteria including:\n\n- average censored motion ≥ 0.15\n- censor fraction ≥ 0.2\n- fraction TS censored from any stimulus ≥ 0.2\n- max censored displacement ≥ 8\n\nThe anatomical scans have been de-identified by defacing the scans using the [DSST defacing pipeline](https://github.com/nimh-dsst/dsst-defacing-pipeline) and visually inspecting the results using [VisualQC](https://github.com/raamana/visualqc).\n\nOf the 98 participants in the study, 48 participant consented to share their data publicly and are therefore included in the dataset.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "1"
+        ],
+        "size": 17732933038,
+        "subjects": [
+          "24270",
+          "24386",
+          "24275",
+          "23771",
+          "23865",
+          "24024",
+          "23501",
+          "24067",
+          "23749",
+          "24633",
+          "24556",
+          "23878",
+          "24529",
+          "24316",
+          "23872",
+          "23986",
+          "23765",
+          "24487",
+          "24583",
+          "23600",
+          "22686",
+          "23822",
+          "24512",
+          "24300",
+          "24151",
+          "21163",
+          "24366",
+          "23778",
+          "24157",
+          "23072",
+          "23584",
+          "23979",
+          "24029",
+          "24118",
+          "23735",
+          "24276",
+          "24070",
+          "24558",
+          "23896",
+          "24040",
+          "24272",
+          "23558",
+          "23524",
+          "23993",
+          "23910",
+          "23559",
+          "24423",
+          "24312"
+        ],
+        "tasks": [
+          "socialflanker"
+        ],
+        "totalFiles": 483
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2026-05-26T17:34:44.941Z"
+  },
+  "source": "openneuro"
+}

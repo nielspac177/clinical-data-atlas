@@ -1,0 +1,103 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds001306",
+  "payload": {
+    "created": "2018-07-15T21:54:56.213Z",
+    "id": "ds001306",
+    "latestSnapshot": {
+      "created": "2022-10-21T13:02:49.000Z",
+      "description": {
+        "Authors": [
+          "Reshanne R. Reeder",
+          "Christian N. L. Olivers",
+          "Stefan Pollmann"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds001306.v1.0.0",
+        "Funding": [
+          "This project was supported by Open Research Area grants DFG PO 548/16-1 to SP and NWO 464-13-003, NL, and European Research Council Consolidator grant ERC-CoG-2013-615423 to CO."
+        ],
+        "HowToAcknowledge": "R. R. Reeder, C. N. L. Olivers, S. Pollmann. Cortical evidence for negative search templates. Visual Cognition, 2017. doi:10.1080/13506285.2017.1339755",
+        "License": "CC0",
+        "Name": "negative_template",
+        "ReferencesAndLinks": [
+          "Reeder, R. R., Olivers, C. N. L., & Pollmann, S. (2017). Cortical evidence for negative search templates. Visual Cognition. doi:10.1080/13506285.2017.1339755"
+        ]
+      },
+      "readme": "A \"target template\", specifying target features, is thought to benefit visual search performance. Setting up a \"negative template\", specifying distractor features, should improve distractor inhibition and also benefit target detection. In the current fMRI study, subjects were required to search for a target among distractors enclosed in coloured circles. Before search, one of three colour cues appeared: a positive cue indicating the target will appear in the cued colour, a negative cue indicating only distractors will appear in the cued colour, or a neutral cue indicating that the cued colour will not appear in the search display. Cues appeared in one of five colors, balanced across each cue type and randomized within a run. Onsets and durations of the cue period and the search period were modeled for every trial.\n\n\nPlease cite the following reference if you use these data:\nReeder, R. R., Olivers, C. N. L., & Pollmann, S. (2017). Cortical evidence for negative search templates. Visual Cognition. doi:10.1080/13506285.2017.1339755\n\n\nSubject 1 was a pilot subject who did not perform the full experiment and is not included in the main dataset. A total of 17 subjects (sub-02 - sub-18) are included in the final dataset.\n\nThe data from run 1 of subject 3 was not saved due to a technical error. Subject 3 has data only for runs 2-6.\n\n\nThe event_type column is coded in the following way:\n\"typeX_colorX_Xp\"\n\n-\"type\" is the cue type for that trial. Cue type is coded as \"type1\", \"type2\", or \"type3\". type1 = search followed a positive cue, type2 = search followed a negative cue, and type3 = search followed a neutral cue.\n\n-\"color\" is the cue color for that trial. Cue color is coded as \"color1\", \"color2\", \"color3\", \"color4\", or \"color5\". color1 = hex code '#FFB6C1', color2 = hex code '#FFA500', color3 = hex code '#7FFF00', color4 = hex code '#00EEEE', and color5 = hex code '#E066FF'.\n\n-\"p\" refers to the time period that was analyzed. Time period is coded as \"cuep\" or \"searchp\". cuep = cue period, and searchp = search period.\n\nThe final event_type might look like:\n\"type1_color1_cuep\", meaning an event starting from the onset of the cue and ending at the offset of the cue, where the subject saw a positive cue in the color '#FFB6C1'.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 22835660784,
+        "subjects": [
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18"
+        ],
+        "tasks": [
+          "vissearch"
+        ],
+        "totalFiles": 224
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        30,
+        27,
+        33,
+        25,
+        20,
+        31,
+        29,
+        24,
+        24,
+        26,
+        26,
+        21,
+        32,
+        26,
+        29,
+        21,
+        24
+      ],
+      "associatedPaperDOI": "https://doi.org/10.1080/13506285.2017.1339755",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "Cognitive Neuroscience",
+      "studyLongitudinal": "Experiment"
+    },
+    "publishDate": "2022-10-21T12:51:38.875Z"
+  },
+  "source": "openneuro"
+}

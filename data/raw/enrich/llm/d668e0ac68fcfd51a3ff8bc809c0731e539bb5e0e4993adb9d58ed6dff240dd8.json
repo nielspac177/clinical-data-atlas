@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:d668e0ac68fcfd51a3ff8bc809c0731e539bb5e0e4993adb9d58ed6dff240dd8",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "tumors from young women with breast cancer",
+        "label": "breast cancer"
+      },
+      {
+        "evidence": "Breast Ductal and Lobular Neoplasms",
+        "label": "Ductal and Lobular Neoplasms"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "gdc:APOLLO-BRCA-1",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Sequencing Reads",
+        "value": "genomics"
+      },
+      {
+        "evidence": "Transcriptome Profiling",
+        "value": "transcriptomics"
+      }
+    ],
+    "population": "Young women with breast cancer",
+    "summary": "APOLLO study of tumors from young women with breast cancer, providing sequencing reads, transcriptome profiling and structural variation data from RNA-Seq on ductal and lobular breast neoplasms."
+  },
+  "prompt_version": "v1"
+}

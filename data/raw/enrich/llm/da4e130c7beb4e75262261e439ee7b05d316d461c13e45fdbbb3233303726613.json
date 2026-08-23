@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:da4e130c7beb4e75262261e439ee7b05d316d461c13e45fdbbb3233303726613",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "a computational reader detecting the presence of lesions",
+        "label": "lesions"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "tcia:victre",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "MG",
+        "value": "mammography"
+      },
+      {
+        "evidence": "imaged on in-silico versions of DM and DBT systems using fast Monte Carlo x-ray transport",
+        "value": "xray"
+      }
+    ],
+    "population": "Simulated subjects with breast sizes and radiographic densities representative of a screening population and compressed thicknesses from 3.5 to 6 cm",
+    "summary": "In-silico clinical trial data: simulated breast phantoms imaged on virtual digital mammography and tomosynthesis systems, read by a computational reader, comparing lesion-detection performance between the two modalities."
+  },
+  "prompt_version": "v1"
+}

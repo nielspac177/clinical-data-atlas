@@ -1,0 +1,31 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:28af7e8ee0fb0658362be93cde4b333bc8fb98a1f695dd69a40b405a1b262fcc",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:wrist",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Photoplethysmogram recorded from 8 volunteers",
+        "value": "PPG"
+      },
+      {
+        "evidence": "A reference chest ECG is included",
+        "value": "ECG"
+      },
+      {
+        "evidence": "wrist PPGs recorded during walking, running and bike riding",
+        "value": "wearable"
+      }
+    ],
+    "population": "8 volunteers during walking, running and bike riding",
+    "summary": "Wrist photoplethysmogram recordings during walking, running and bike riding, with simultaneous accelerometer and gyroscope motion estimates for motion-artifact removal and a reference chest ECG for heart rate comparison."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,28 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:85c48c08c12622d9c6347ab99142e3c567fa2bfa286c745a9ab04604ff40ffc6",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "patients with stage 2 or 3 breast cancer receiving neoadjuvant chemotherapy",
+        "label": "stage 2 or 3 breast cancer"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "tcia:ispy1",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Multi-center breast DCE-MRI data and segmentations",
+        "value": "MRI"
+      }
+    ],
+    "population": "Patients with stage 2 or 3 breast cancer receiving neoadjuvant chemotherapy, enrolled on CALGB 150007 with T3 tumors measuring at least 3 cm; pregnant patients and those with ferromagnetic prostheses excluded",
+    "summary": "Multi-center breast dynamic contrast-enhanced MRI with segmentations from a prospective trial testing whether MRI predicts response to neoadjuvant chemotherapy and risk of recurrence in breast cancer."
+  },
+  "prompt_version": "v1"
+}

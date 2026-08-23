@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:c5eaea380579cc6bf42915a6b88ce51a7b162b04575802bd5e42c2110fe75d2a",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Head-and-Neck cancer (CPTAC-HNSCC) cohort",
+        "label": "Head and Neck Squamous Cell Carcinoma"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "tcia:cptac-hnscc",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Radiology and pathology images from CPTAC patients",
+        "value": "pathology"
+      },
+      {
+        "evidence": "large-scale proteome and genome analysis",
+        "value": "genomics"
+      },
+      {
+        "evidence": "large-scale proteome and genome analysis",
+        "value": "proteomics"
+      }
+    ],
+    "population": "subjects from the National Cancer Institute's Clinical Proteomic Tumor Analysis Consortium Head-and-Neck cancer (CPTAC-HNSCC) cohort",
+    "summary": "Radiology and pathology images from the CPTAC head and neck squamous cell carcinoma cohort, released so researchers can relate cancer phenotypes to matching proteomic, genomic and clinical data."
+  },
+  "prompt_version": "v1"
+}

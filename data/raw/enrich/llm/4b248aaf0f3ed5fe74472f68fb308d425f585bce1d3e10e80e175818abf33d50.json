@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:4b248aaf0f3ed5fe74472f68fb308d425f585bce1d3e10e80e175818abf33d50",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "a variety of hematological diseases",
+        "label": "hematological diseases"
+      },
+      {
+        "evidence": "a large laboratory specialized in leukemia diagnostics",
+        "label": "leukemia"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "tcia:bone-marrow-cytomorphology_mll_helmholtz_fraunhofer",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "bone marrow smears of 945 patients stained using the May-Grünwald-Giemsa/Pappenheim stain",
+        "value": "pathology"
+      }
+    ],
+    "population": "945 patients whose bone marrow smears reflect a variety of hematological diseases",
+    "summary": "De-identified, expert-annotated cells from bone marrow smears stained with May-Grünwald-Giemsa/Pappenheim and imaged by brightfield microscopy, covering a range of hematological diseases seen at a laboratory specialized in leukemia diagnostics."
+  },
+  "prompt_version": "v1"
+}

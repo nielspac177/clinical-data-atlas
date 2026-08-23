@@ -1,0 +1,36 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "apnea-ecg",
+  "payload": {
+    "abstract": "<p>The data consist of 70 records, divided into a <em>learning set</em> of 35 records (a01 through a20, b01 through b05, and c01 through c10), and a <em>test set</em> of 35 records (x01 through x35), all of which may be downloaded from this page. Recordings vary in length from slightly less than 7 hours to nearly 10 hours each. Each recording includes a continuous digitized ECG signal, a set of apnea annotations (derived by human experts on the basis of simultaneously recorded respiration and related signals), and a set of machine-generated QRS annotations (in which all beats regardless of type have been labeled normal). In addition, eight recordings (a01 through a04, b01, and c01 through c03) are accompanied by four additional signals (Resp C and Resp A, chest and abdominal respiratory effort signals obtained using inductance plethysmography; Resp N, oronasal airflow measured using nasal thermistors; and SpO2, oxygen saturation).</p>",
+    "access_policy": "Open",
+    "compressed_storage_size": 608841016,
+    "core_doi": null,
+    "dua": null,
+    "is_latest_version": true,
+    "license": {
+      "name": "Open Data Commons Attribution License v1.0"
+    },
+    "main_storage_size": 608786550,
+    "public_project_uuid": "e616e6e5-b398-408c-b08f-d39eebd36dde",
+    "publish_date": "2000-02-10",
+    "resource_type": "Database",
+    "short_description": "Seventy ECG signals with expert-labelled apnea annotations and machine-generated QRS annotations.",
+    "slug": "apnea-ecg",
+    "source_url": "https://physionet.org/content/apnea-ecg/1.0.0/",
+    "title": "Apnea-ECG Database",
+    "topics": [
+      "multiparameter",
+      "challenge",
+      "ecg",
+      "sleep",
+      "apnea"
+    ],
+    "version": "1.0.0",
+    "version_doi": "10.13026/C23W2R"
+  },
+  "source": "physionet"
+}

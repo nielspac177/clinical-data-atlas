@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:ca78580508c3feaeb5b8ebbb2b31c845f830a592c11117f36689e24546b5c67e",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Kidney Chromophobe",
+        "label": "Kidney Chromophobe"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "nephrology_urology"
+    ],
+    "id": "tcia:tcga-kich",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "CT MR",
+        "value": "CT"
+      },
+      {
+        "evidence": "CT MR",
+        "value": "MRI"
+      },
+      {
+        "evidence": "Genomic Data Commons (GDC) Data Portal",
+        "value": "genomics"
+      }
+    ],
+    "population": "Human participants with kidney chromophobe carcinoma enrolled in The Cancer Genome Atlas (15 participants per source metadata)",
+    "summary": "Kidney imaging from chromophobe renal cell carcinoma patients in The Cancer Genome Atlas, matched by patient identifier to clinical, genetic and pathological data in the Genomic Data Commons. Images mostly from routine care."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,93 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds001634",
+  "payload": {
+    "created": "2018-12-31T16:51:11.184Z",
+    "id": "ds001634",
+    "latestSnapshot": {
+      "created": "2019-01-03T11:17:48.000Z",
+      "description": {
+        "Authors": [
+          "Adam Hampshire",
+          "Eyal Soreq"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds001634.v1.0.1",
+        "Funding": [],
+        "HowToAcknowledge": "Eyal Soreq, Robert Leech & Adam Hampshire. Dynamic network coding of working-memory domains and working-memory processes. Accepted for publication in Nature Communications",
+        "License": "Creative Commons Attribution 4.0 International (CC-BY 4.0)",
+        "Name": "Visual working memory: Study one Task fMRI and Behavioural response",
+        "ReferencesAndLinks": []
+      },
+      "readme": "Subjects and MRI protocol\n-------------------------------------\n\nNineteen right-handed healthy adults (6 female, mean age 22.368, range 18-28 years of age) participated in this study on\nthe same 3 T MRI scanner (TrioTim, software version syngo MR B17, Siemens, London,Ontario,Canada) \nby acquiring: \n-\taxial 3D T1-weighted images usign an MPRAGE sequence [echo time (TE) = 2.9 ms, inversion time = 900 ms, flip angle =\n9°, slice thickness=1 mm, matrix size=256 x 240 x 384;\n-\tthree runs of bold task fMRI images using a T2*-weighted echo-planar imaging (EPI) sequence (TR=2000 ms, TE=30 ms,\nflip angle=45°, slice thickness=3 mm; FOV=240 mm×240 mm, matrix size 80×80; number of slices=36; interleaved slice\nacquisition). \t\n\nTask protocol\n------------------------------------\n\nParticipants were required to encode and maintain a set of features from an array of compound stimuli, composed of a\npseudo-randomly selected numbers and fractals placed at random spatial positions within a 4 * 4 grid. Each trials began\nwith a pre-encoding cue directing participants to focus on features from one of these three stimulus domains (number,\nfractal or spatial). Then, three, five or seven compound stimuli were presented within the 4 * 4 grid. After 10 seconds\nof encoding, stimuli were removed, and participants were required to maintain the features from the cued domain for 10\nseconds. Subsequently, participants were presented with a probe array where one each of the numbers, fractals and\nlocations had been shuffled. They were required to indicate within a 10s timeframe the location of the shuffled item\nthat was within the currently maintained domain. The trial terminated at the point in time when the participant\nresponded and the next trial began after a 10-second inter-trial-interval (ITI), during which a fixation cross was\ndisplayed and they were instructed to rest. In the imaging analysis, this (ITI) provided the baseline for comparing all\nother events, i.e., where no overt processing of the WM task was required.\n\n\nDefacing\n------------------------------------\n\nspm_deface was used on all anatomical images to ensure de-identification of subjects.\n\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 6369355630,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19"
+        ],
+        "tasks": [
+          "ep2d_bold_WorkingMemory_Run1",
+          "ep2d_bold_WorkingMemory_Run3",
+          "ep2d_bold_WorkingMemory_Order1",
+          "ep2d_bold_WorkingMemory_Run2",
+          "ep2d_bold_WorkingMemory_Order2",
+          "ep2d_bold_WorkingMemory_Order3",
+          "ep2d_bold_WorkingMemory_order1",
+          "ep2d_bold_WorkingMemory_order2",
+          "ep2d_bold_WorkingMemory_order1_run2 ",
+          "ep2d_bold_WorkingMemory_order1_run1 ",
+          "ep2d_bold_WorkingMemory_order1_run3 ",
+          "ep2d_bold_WorkingMemory_order3"
+        ],
+        "totalFiles": 212
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": null,
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2018-12-31T16:51:11.184Z"
+  },
+  "source": "openneuro"
+}

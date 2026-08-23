@@ -1,0 +1,32 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "mimic-iv-ext-pe",
+  "payload": {
+    "abstract": "<p><span>Pulmonary embolism (PE) is a leading cause of preventable in-hospital mortality. Advances in diagnosis, risk stratification, and prevention can improve outcomes. Large, publicly available datasets are needed to move research forward but are lacking in the field of hemostasis and thrombosis. In this study, we added PE labels to computed tomography pulmonary angiography (CTPA) radiology reports in MIMIC-IV. We used Regular Expression (RegEx) to identify CTPA radiology reports (n=19,942) and extracted sentences containing PE-related words (&ldquo;snippets&rdquo;). Two physicians manually reviewed these snippets, referring to the full report as needed, and labeled each report as PE positive or negative. Positive labels included any acute PE (n=1,591). Acute PE that only involved subsegmental arteries were labeled as subsegmental. Negative labels included chronic PE, equivocal findings, and no PE (n=18,351). </span><span>Using this as a gold standard, we then compared the performance of a finetuned transformer model to diagnosis codes in their ability to classify the reports as PE positive or negative.</span><span></span></p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 12775659,
+    "core_doi": "10.13026/f77d-vr35",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 57268890,
+    "public_project_uuid": "e7eb7ea3-bbb6-477f-ad61-d6026adbc115",
+    "publish_date": "2026-03-24",
+    "resource_type": "Database",
+    "short_description": "CTPA (computed tomography pulmonary angiogram) radiology reports from MIMIC-IV with pulmonary embolism (PE) adjudication",
+    "slug": "mimic-iv-ext-pe",
+    "source_url": "https://physionet.org/content/mimic-iv-ext-pe/1.0.0/",
+    "title": "MIMIC-IV-Ext-PE: Pulmonary Embolism Labels for CT Pulmonary Angiography Radiology Reports",
+    "topics": [],
+    "version": "1.0.0",
+    "version_doi": "10.13026/5qq1-zv65"
+  },
+  "source": "physionet"
+}

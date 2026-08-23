@@ -1,0 +1,698 @@
+{
+  "endpoints": [
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getCollectionValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getModalityValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getBodyPartValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getPatient",
+    "https://api.datacite.org/dois?prefix=10.7937"
+  ],
+  "harvest_method": "api:nbia+datacite",
+  "native_id": "CMB-CRC",
+  "payload": {
+    "datacite": {
+      "citationCount": 3,
+      "container": {},
+      "contentUrl": [],
+      "contributors": [],
+      "created": "2022-07-29T13:45:39Z",
+      "creators": [
+        {
+          "affiliation": [],
+          "familyName": null,
+          "givenName": null,
+          "name": "Cancer Moonshot Biobank",
+          "nameIdentifiers": [],
+          "nameType": "Organizational"
+        }
+      ],
+      "dates": [],
+      "descriptions": [
+        {
+          "description": "The Cancer Moonshot Biobank is a National Cancer Institute initiative to support current and future investigations into drug resistance and sensitivity and other NCI-sponsored cancer research initiatives, with an aim of improving researchers' understanding of cancer and how to intervene in cancer initiation and progression. During the course of this study, biospecimens (blood and tissue removed during medical procedures) and associated data will be collected longitudinally from at least 1000 patients across at least 10 cancer types, who represent the demographic diversity of the U.S. and receiving standard of care cancer treatment at multiple NCI Community Oncology Research Program (NCORP) sites.\n\nThis collection contains de-identified radiology and histopathology imaging procured from subjects in NCI’s Cancer Moonshot Biobank-Colorectal Cancer (CMB-CRC) cohort. Associated genomic, phenotypic and clinical data will be hosted by The Database of Genotypes and Phenotypes (dbGaP) and other NCI databases.",
+          "descriptionType": "Abstract",
+          "lang": null
+        }
+      ],
+      "doi": "10.7937/djg7-gz87",
+      "downloadCount": 0,
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "CMB-CRC",
+          "identifierType": "TCIA Short Name"
+        }
+      ],
+      "isActive": true,
+      "language": null,
+      "metadataVersion": 15,
+      "partCount": 0,
+      "partOfCount": 0,
+      "publicationYear": 2022,
+      "published": null,
+      "publisher": "The Cancer Imaging Archive",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2022-08-01T20:44:32Z",
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "10.1016/j.softx.2024.101743",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        }
+      ],
+      "relatedItems": [],
+      "rightsList": [
+        {
+          "rights": "Creative Commons Attribution 4.0 International",
+          "rightsIdentifier": "cc-by-4.0",
+          "rightsIdentifierScheme": "SPDX",
+          "rightsUri": "https://creativecommons.org/licenses/by/4.0/legalcode",
+          "schemeUri": "https://spdx.org/licenses/"
+        }
+      ],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "fabricaForm",
+      "state": "findable",
+      "subjects": [],
+      "titles": [
+        {
+          "lang": null,
+          "title": "Cancer Moonshot Biobank - Colorectal Cancer Collection (CMB-CRC)",
+          "titleType": null
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2026-06-30T13:31:10Z",
+      "url": "https://www.cancerimagingarchive.net/collection/cmb-crc/",
+      "version": "11",
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 9132
+    },
+    "nbia": {
+      "body_parts": [
+        "ABDOMEN",
+        "ABDOMENPELVIS",
+        "CHEST",
+        "CHESTABDPELVIS",
+        "CSPINE",
+        "HEAD",
+        "LIVER",
+        "LSPINE",
+        "PELVIS",
+        "SHOULDER",
+        "SPINE",
+        "TSPINE",
+        "WHOLEBODY"
+      ],
+      "collection": "CMB-CRC",
+      "modalities": [
+        "CT",
+        "DX",
+        "MR",
+        "NM",
+        "PT",
+        "US",
+        "XA"
+      ],
+      "patients": [
+        {
+          "Collection": "CMB-CRC",
+          "PatientId": "MSB-08588",
+          "PatientName": "MSB-08588",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "EthnicGroup": "Non-Hispanic [9]",
+          "PatientId": "MSB-07225",
+          "PatientName": "MSB-07225",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "PatientId": "MSB-09601",
+          "PatientName": "MSB-09601",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "PatientId": "MSB-09737",
+          "PatientName": "MSB-09737",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "PatientId": "MSB-03808",
+          "PatientName": "MSB-03808",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "PatientId": "MSB-09019",
+          "PatientName": "MSB-09019",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "PatientId": "MSB-08170",
+          "PatientName": "MSB-08170",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "PatientId": "MSB-00952",
+          "PatientName": "MSB-00952",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "PatientId": "MSB-04153",
+          "PatientName": "MSB-04153",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "PatientId": "MSB-06236",
+          "PatientName": "MSB-06236",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "PatientId": "MSB-03725",
+          "PatientName": "MSB-03725",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "PatientId": "MSB-06489",
+          "PatientName": "MSB-06489",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "PatientId": "MSB-00352",
+          "PatientName": "MSB-00352",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "PatientId": "MSB-01771",
+          "PatientName": "MSB-01771",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "PatientId": "MSB-08631",
+          "PatientName": "MSB-08631",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "PatientId": "MSB-01262",
+          "PatientName": "MSB-01262",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "PatientId": "MSB-03258",
+          "PatientName": "MSB-03258",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "PatientId": "MSB-09619",
+          "PatientName": "MSB-09619",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "EthnicGroup": "Non-Hispanic",
+          "PatientId": "MSB-02381",
+          "PatientName": "MSB-02381",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "PatientId": "MSB-09991",
+          "PatientName": "MSB-09991",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "PatientId": "MSB-01068",
+          "PatientName": "MSB-01068",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "PatientId": "MSB-07059",
+          "PatientName": "MSB-07059",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "PatientId": "MSB-02169",
+          "PatientName": "MSB-02169",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "PatientId": "MSB-07099",
+          "PatientName": "MSB-07099",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "PatientId": "MSB-09151",
+          "PatientName": "MSB-09151",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "EthnicGroup": "Non-Hispanic [9]",
+          "PatientId": "MSB-03400",
+          "PatientName": "MSB-03400",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "EthnicGroup": "1",
+          "PatientId": "MSB-03032",
+          "PatientName": "MSB-03032",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "PatientId": "MSB-06029",
+          "PatientName": "MSB-06029",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "PatientId": "MSB-08045",
+          "PatientName": "MSB-08045",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "EthnicGroup": "Not Hispanic, La",
+          "PatientId": "MSB-07784",
+          "PatientName": "MSB-07784",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "EthnicGroup": "Not Hispanic, La",
+          "PatientId": "MSB-07414",
+          "PatientName": "MSB-07414",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "EthnicGroup": "2106-3",
+          "PatientId": "MSB-09886",
+          "PatientName": "MSB-09886",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "PatientId": "MSB-03554",
+          "PatientName": "MSB-03554",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "PatientId": "MSB-07991",
+          "PatientName": "MSB-07991",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "PatientId": "MSB-04141",
+          "PatientName": "MSB-04141",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "PatientId": "MSB-04064",
+          "PatientName": "MSB-04064",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "PatientId": "MSB-09202",
+          "PatientName": "MSB-09202",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "PatientId": "MSB-00643",
+          "PatientName": "MSB-00643",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "PatientId": "MSB-05074",
+          "PatientName": "MSB-05074",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "PatientId": "MSB-01960",
+          "PatientName": "MSB-01960",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "PatientId": "MSB-01031",
+          "PatientName": "MSB-01031",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "PatientId": "MSB-02585",
+          "PatientName": "MSB-02585",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "PatientId": "MSB-08327",
+          "PatientName": "MSB-08327",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "PatientId": "MSB-09498",
+          "PatientName": "MSB-09498",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "PatientId": "MSB-09587",
+          "PatientName": "MSB-09587",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "PatientId": "MSB-08642",
+          "PatientName": "MSB-08642",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "PatientId": "MSB-06634",
+          "PatientName": "MSB-06634",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "PatientId": "MSB-01409",
+          "PatientName": "MSB-01409",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "EthnicGroup": "White",
+          "PatientId": "MSB-00567",
+          "PatientName": "MSB-00567",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "PatientId": "MSB-03429",
+          "PatientName": "MSB-03429",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "PatientId": "MSB-03339",
+          "PatientName": "MSB-03339",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "PatientId": "MSB-03127",
+          "PatientName": "MSB-03127",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "PatientId": "MSB-04390",
+          "PatientName": "MSB-04390",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "PatientId": "MSB-07998",
+          "PatientName": "MSB-07998",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "PatientId": "MSB-09249",
+          "PatientName": "MSB-09249",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "PatientId": "MSB-06581",
+          "PatientName": "MSB-06581",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "PatientId": "MSB-03567",
+          "PatientName": "MSB-03567",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "PatientId": "MSB-01154",
+          "PatientName": "MSB-01154",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "PatientId": "MSB-00803",
+          "PatientName": "MSB-00803",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "PatientId": "MSB-03203",
+          "PatientName": "MSB-03203",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "PatientId": "MSB-03080",
+          "PatientName": "MSB-03080",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CMB-CRC",
+          "PatientId": "MSB-05299",
+          "PatientName": "MSB-05299",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        }
+      ]
+    }
+  },
+  "source": "tcia"
+}

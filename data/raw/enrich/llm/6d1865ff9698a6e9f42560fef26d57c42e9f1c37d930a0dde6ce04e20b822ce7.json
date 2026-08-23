@@ -1,0 +1,40 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:6d1865ff9698a6e9f42560fef26d57c42e9f1c37d930a0dde6ce04e20b822ce7",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "recent diagnosis of unilateral breast cancer",
+        "label": "unilateral breast cancer"
+      },
+      {
+        "evidence": "detecting contralateral breast cancer",
+        "label": "contralateral breast cancer"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "tcia:acrin-contralateral-breast-mr",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "magnetic resonance imaging (MRI)",
+        "value": "MRI"
+      },
+      {
+        "evidence": "clinical breast examination and mammography",
+        "value": "mammography"
+      },
+      {
+        "evidence": "CR MR",
+        "value": "xray"
+      }
+    ],
+    "population": "Women with a recent diagnosis of unilateral breast cancer and no abnormalities on mammographic and clinical examination of the contralateral breast, who underwent breast MRI.",
+    "summary": "Breast imaging collection from ACRIN trial 6667, testing whether MRI improves on clinical breast examination and mammography for detecting contralateral breast cancer soon after a diagnosis of unilateral breast cancer."
+  },
+  "prompt_version": "v1"
+}

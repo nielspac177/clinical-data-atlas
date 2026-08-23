@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:b898980cd01a86184e51c07ae3de6cfba442b09de799bf738e3a4315e3ecbb92",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "cardiology",
+      "critical_care"
+    ],
+    "id": "physionet:mimic3wdb",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "continuous ECG",
+        "value": "ECG"
+      },
+      {
+        "evidence": "PPG",
+        "value": "PPG"
+      },
+      {
+        "evidence": "numerous physiological signals",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "matched and time-aligned with MIMIC-III Clinical Database records",
+        "value": "EHR"
+      }
+    ],
+    "population": "About 30,000 patients in intensive care units",
+    "summary": "Bedside monitor recordings from intensive care patients, including continuous ECG, PPG, arterial blood pressure and respiration waveforms plus numerics records of periodic vital sign measurements spanning each ICU stay."
+  },
+  "prompt_version": "v1"
+}

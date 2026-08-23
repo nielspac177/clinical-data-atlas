@@ -1,0 +1,30 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:bae8bb9ffb54a78af01d50379d9c4ed6c57c04276cf36f4c2abe9ebe531a115a",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "urinary tract infections (UTI)",
+        "label": "urinary tract infections"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "infectious_disease"
+    ],
+    "id": "physionet:antimicrobial-resistance-uti",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "electronic health record (EHR) information",
+        "value": "EHR"
+      }
+    ],
+    "population": "Over 80,000 patients with urinary tract infections (UTI) treated at Massachusetts General Hospital and Brigham & Women's Hospital between 2007 and 2016.",
+    "summary": "Electronic health record dataset of urine specimens sent for antimicrobial susceptibility testing, each with the susceptibility profile, the empiric antibiotic treatment decision, and patient and specimen features for predicting resistance."
+  },
+  "prompt_version": "v1"
+}

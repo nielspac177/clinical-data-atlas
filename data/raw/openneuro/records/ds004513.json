@@ -1,0 +1,124 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004513",
+  "payload": {
+    "created": "2023-02-25T15:39:04.700Z",
+    "id": "ds004513",
+    "latestSnapshot": {
+      "created": "2026-01-30T08:11:37.000Z",
+      "description": {
+        "Authors": [
+          "Gabriel Castrillon",
+          "Samira Epp",
+          "Antonia Bose",
+          "Laura Fraticelli",
+          "André Hechler",
+          "Roman Belenya",
+          "Andreas Ranft",
+          "Igor Yakushev",
+          "Lukas Utz",
+          "Lalith Sundar",
+          "Josef P Rauschecker",
+          "Christine Preibisch",
+          "Katarzyna Kurcyus",
+          "Valentin Riedl"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004513.v1.0.6",
+        "Funding": [
+          "European Research Council (ERC) under the European Union’s Horizon 2020 research and innovation programme. Grant agreement ID 759659"
+        ],
+        "HowToAcknowledge": "Castrillon, Gabriel, et al. \"An energy costly architecture of neuromodulators for human brain evolution and cognition.\" Science Advances 9.50 (2023): eadi7632.",
+        "License": "CC0",
+        "Name": "The energetic costs of the human connectome",
+        "ReferencesAndLinks": null
+      },
+      "readme": "The energetic costs of the human connectome\n===============\n\n[Link to the paper](https://www.science.org/doi/10.1126/sciadv.adi7632)\n\nThis dataset consists of quantitative FDG-PET, BOLD-fMRI, and DWI data from 30 right-handed, healthy individuals, acquired during rest on a Siemens Biograph mMR 3T PET-MR scanner from three independent cohorts:\n\n1. The raw data and derivatives of a within-subject exploration cohort (TUM.exp) with nine participants acquired across two sessions, one with their eyes open and the other with their eyes closed (participants s003 to s026; mean age = 43 years, std = 7 years; 4 females).\n2. The raw data and derivatives of a prospective replication cohort (TUM.rep) with eleven participants acquired with their eyes open (participants s028 to s038; mean age = 27 years, std = 5 years; 6 females).\n3. The derivatives of an external within-subject replication sample (VIE.rep) ([Sundar et al., 2018](https://journals.sagepub.com/doi/full/10.1177/0271678X18776820)) of ten participants acquired with their eyes open (participants HC002 to HC014; mean age = 27 years, std= 7 years; 5 females). Two participants from the VIE.rep cohort had only one session.\n\n⚠️NOTE: the file **derivatives/sessions.tsv** add the information for the eyes-closed session, which is not available in the file participants.tsv.\n\n**TUM.exp cohort session acquisition dates**\n\n| participant_id \t| ses-open        \t| ses-closed             \t|\n|----------------\t|-----------------\t|------------------------\t|\n| sub-s003       \t|        01.03.16 \t|        02.02.16        \t|\n| sub-s007       \t|        15.03.16 \t|        16.02.16        \t|\n| sub-s012       \t|        04.05.16 \t|        31.05.16        \t|\n| sub-s014       \t|        11.05.16     \t|        07.06.16        \t|\n| sub-s017       \t|        01.03.17 \t|        29.03.17 \t        |\n| sub-s020       \t|        18.05.17 \t|        05.04.17        \t|\n| sub-s023       \t|        24.05.17 \t|        29.06.17        \t|\n| sub-s025       \t|        03.08.17 \t|        07.06.17        \t|\n| sub-s026       \t|        17.08.17 \t|        11.09.17        \t|",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri",
+          "pet"
+        ],
+        "secondaryModalities": [
+          "mri_diffusion",
+          "mri_structural",
+          "mri_functional"
+        ],
+        "sessions": [
+          "open",
+          "closed"
+        ],
+        "size": 44056171041,
+        "subjects": [
+          "s031",
+          "s014",
+          "s038",
+          "s028",
+          "s037",
+          "s025",
+          "s036",
+          "s029",
+          "s012",
+          "s034",
+          "s032",
+          "s023",
+          "s026",
+          "s033",
+          "s020",
+          "s017",
+          "s003",
+          "s035",
+          "s030",
+          "s007"
+        ],
+        "tasks": [
+          "rest"
+        ],
+        "totalFiles": 353
+      },
+      "tag": "1.0.6"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        35,
+        46,
+        38,
+        35,
+        52,
+        41,
+        38,
+        50,
+        52,
+        24,
+        42,
+        27,
+        25,
+        26,
+        22,
+        27,
+        24,
+        31,
+        27,
+        27
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "European Research Council (ERC) under the European Union’s Horizon 2020 research and innovation programme",
+      "modalities": [
+        "mri",
+        "pet"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2023-03-14T09:21:24.663Z"
+  },
+  "source": "openneuro"
+}

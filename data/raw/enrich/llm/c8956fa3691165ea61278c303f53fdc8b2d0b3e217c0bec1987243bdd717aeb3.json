@@ -1,0 +1,31 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:c8956fa3691165ea61278c303f53fdc8b2d0b3e217c0bec1987243bdd717aeb3",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "other"
+    ],
+    "id": "physionet:mimic-eye-multimodal-datasets",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "eye tracking data containing gaze information and pupil dilations",
+        "value": "eye_tracking"
+      },
+      {
+        "evidence": "medical images and reports (MIMIC CXR and MIMIC JPG)",
+        "value": "xray"
+      },
+      {
+        "evidence": "clinical data (MIMIC IV ED)",
+        "value": "EHR"
+      }
+    ],
+    "population": "Patients represented in the MIMIC datasets, with gaze recorded from radiologists reading the images.",
+    "summary": "Integration of several MIMIC datasets: medical images and reports, emergency and hospital clinical data, and eye tracking with gaze and pupil dilation plus image annotations from REFLACX and Eye Gaze, for multimodal deep learning."
+  },
+  "prompt_version": "v1"
+}

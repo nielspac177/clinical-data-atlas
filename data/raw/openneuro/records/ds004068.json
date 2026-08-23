@@ -1,0 +1,166 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004068",
+  "payload": {
+    "created": "2022-03-14T12:55:21.960Z",
+    "id": "ds004068",
+    "latestSnapshot": {
+      "created": "2022-08-14T15:35:01.000Z",
+      "description": {
+        "Authors": [
+          "Merve Kaptan",
+          "Falk Eippert"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004068.v1.0.3",
+        "Funding": [
+          "This project has received funding from the Max Planck Society as well as the European Research Council under the European Union’s Horizon 2020 research and innovation programme (grant agreement No 758974)."
+        ],
+        "HowToAcknowledge": "Cite this paper: Kaptan, M., Vannesjo, S. J., Mildner, T., Horn, U., Hartley-Davies, R., Oliva, V., Brooks, J., Weiskopf, N., Finsterbusch, J., & Eippert, F. (2022). Automated slice-specific z-shimming for functional magnetic resonance imaging of the human spinal cord. Human brain mapping, 10.1002/hbm.26018. https://doi.org/10.1002/hbm.26018. Consider including the following message: 'This data was obtained from the OpenNeuro database. Its accession number is ds004068.'",
+        "License": "CC0",
+        "Name": "AutomatedZShimSpinalCord",
+        "ReferencesAndLinks": [
+          "Kaptan, M., Vannesjo, S. J., Mildner, T., Horn, U., Hartley-Davies, R., Oliva, V., Brooks, J., Weiskopf, N., Finsterbusch, J., & Eippert, F. (2022). Automated slice-specific z-shimming for functional magnetic resonance imaging of the human spinal cord. Human brain mapping, 10.1002/hbm.26018. https://doi.org/10.1002/hbm.26018",
+          "https://doi.org/10.1002/hbm.26018"
+        ]
+      },
+      "readme": "Description\n--------\nThis is a data set consisting of spinal cord MRI data from 48 participants. For each participant, there is i) a T2-weighted anatomical image, ii) two different kinds of field-maps (vendor-based and in-house), iii) z-shim reference EPI scans, and iv) EPI images obtained under different z-shim sequence variants (no z-shim, manual z-shim, automated z-shim) and with different echo times. For a detailed description please see the following article: Kaptan, M., Vannesjo, S. J., Mildner, T., Horn, U., Hartley-Davies, R., Oliva, V., Brooks, J., Weiskopf, N., Finsterbusch, J., & Eippert, F. (2022). Automated slice-specific z-shimming for functional magnetic resonance imaging of the human spinal cord. Human brain mapping, 10.1002/hbm.26018. https://doi.org/10.1002/hbm.26018.\n\n\nCiting this dataset\n--------\nShould you make use of this data set in any publication, please cite the following article: Kaptan, M., Vannesjo, S. J., Mildner, T., Horn, U., Hartley-Davies, R., Oliva, V., Brooks, J., Weiskopf, N., Finsterbusch, J., & Eippert, F. (2022). Automated slice-specific z-shimming for functional magnetic resonance imaging of the human spinal cord. Human brain mapping, 10.1002/hbm.26018. https://doi.org/10.1002/hbm.26018.\n\n\nLicense\n-------\nThis data set is made available under the Creative Commons CC0 license. For more information, see https://creativecommons.org/share-your-work/public-domain/cc0/\n\n\nData set \n-------\nThis data set is organized according to the Brain Imaging Data Structure specification. For more information on this data specification, see https://bids-specification.readthedocs.io/en/stable/\n\nEach participant’s data are in one subdirectory (e.g., `sub-ZS001`), which contains the raw NIfTI data (after DICOM to NIfTI conversion) for this particular participant, as well as the associated metadata.\n\nThe z-shim indices that were selected during scanning for both the automated and the manual sequence variants can be found in the following files (in the “derivatives” parent directory), which contain the data for all participants: autozshimPicks_duringScan.csv and manualzshimPicks_duringScan.csv.\n\nPlease note that the EPI time-series data (250 volumes acquired under different z-shimming sequence variants) are not shared. Derivatives based on these volumes that were used to produce the results reported in the article by Kaptan et al. (such as tSNR maps) are shared for each participant and can be found in each participant’s subdirectory of the “derivatives” parent directory. For more details about the preprocessing pipeline and the description of each derivative, please see the following GitHub link: https://github.com/eippertlab/zshim-spinalcord\n\nAlso note that due to technical problems, in the first 3 participants (sub-ZS001, sub-ZS002, sub-ZS003) we did not acquire the second in-house field map (...run-02_fieldmap.nii.gz).\n\nShould you have any questions about this data set, please contact mkaptan@cbs.mpg.de or eippert@cbs.mpg.de. \n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 4845437015,
+        "subjects": [
+          "ZS001",
+          "ZS002",
+          "ZS003",
+          "ZS004",
+          "ZS005",
+          "ZS006",
+          "ZS007",
+          "ZS008",
+          "ZS009",
+          "ZS010",
+          "ZS011",
+          "ZS012",
+          "ZS013",
+          "ZS014",
+          "ZS015",
+          "ZS016",
+          "ZS017",
+          "ZS018",
+          "ZS019",
+          "ZS020",
+          "ZS021",
+          "ZS022",
+          "ZS023",
+          "ZS024",
+          "ZS025",
+          "ZS026",
+          "ZS027",
+          "ZS028",
+          "ZS029",
+          "ZS030",
+          "ZS031",
+          "ZS032",
+          "ZS033",
+          "ZS034",
+          "ZS035",
+          "ZS036",
+          "ZS037",
+          "ZS038",
+          "ZS039",
+          "ZS040",
+          "ZS041",
+          "ZS042",
+          "ZS043",
+          "ZS044",
+          "ZS045",
+          "ZS046",
+          "ZS047",
+          "ZS048"
+        ],
+        "tasks": [
+          "rest",
+          "onevol"
+        ],
+        "totalFiles": 1821
+      },
+      "tag": "1.0.3"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        21,
+        22,
+        37,
+        30,
+        28,
+        32,
+        21,
+        33,
+        31,
+        22,
+        29,
+        26,
+        27,
+        30,
+        24,
+        27,
+        30,
+        27,
+        30,
+        25,
+        20,
+        28,
+        30,
+        33,
+        23,
+        24,
+        29,
+        33,
+        28,
+        31,
+        26,
+        24,
+        26,
+        24,
+        28,
+        27,
+        23,
+        32,
+        27,
+        31,
+        24,
+        26,
+        25,
+        31,
+        26,
+        23,
+        28,
+        22
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2022-06-24T12:05:14.503Z"
+  },
+  "source": "openneuro"
+}

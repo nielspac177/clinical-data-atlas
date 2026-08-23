@@ -1,0 +1,31 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:85b03f684822fe42db64d8f961cce133acc6ef99c3ae078c0d51fca4634a91e5",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "COVID-rich ICU database",
+        "label": "COVID"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "critical_care",
+      "infectious_disease"
+    ],
+    "id": "physionet:nwicu-northwestern-icu",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "de-identified health-related data",
+        "value": "EHR"
+      }
+    ],
+    "population": "Intensive care patients from a network of hospitals located in Chicago",
+    "summary": "De-identified critical care records from a hospital network, described as COVID-rich and harmonized with the MIMIC data structure to support retrospective research."
+  },
+  "prompt_version": "v1"
+}

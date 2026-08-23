@@ -1,0 +1,117 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005520",
+  "payload": {
+    "created": "2024-09-22T09:53:00.145Z",
+    "id": "ds005520",
+    "latestSnapshot": {
+      "created": "2025-05-16T14:00:14.000Z",
+      "description": {
+        "Authors": [
+          "Hong-Zhi Li",
+          "Jia-Jia Yang",
+          "Zhen Lv",
+          "Li-Yang Wan",
+          "Wo Wang",
+          "Da-Qi Li",
+          "Dong-Dong Zhou",
+          "Li Kuang"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005520.v1.0.1",
+        "Funding": [
+          "This work was supported by a grant from the Chongqing Medical Youth Top Talent Project in Chongqing Municipal Health Commission (DDZ)."
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Research data supporting 'EEG recording during playing MOBA game'",
+        "ReferencesAndLinks": null
+      },
+      "readme": "#  General information\n\nThis dataset contains resting(eyes closed, eyes open) and EEG recordings during playing real MOBA game with 23 participants.\n\n#    Dataset \n\n##   Presentation\n\n     The data collection was initiated in April 2023 and was terminated in July 2023. The detailed description of the dataset is currently under working by Hong-Zhi Li and Dong-Dong Zhou, and will submit to Scientific Data for publication.\n     \n    \n\n#### EEG acquisition\n\n     * EEG system (Neuroscan, 64 electrodes) \n     * Sampling frequency: 1000Hz\n\n#### event type\n\n      * 13 indicates a kill during playing game\n      * 14 indicates a death during playing game\n      * 66 indicates game start\n      * 444 indicates game failure\n      * 666 indicates game victory\n\n\n## Contact\n     * If you have any questions or comments, please contact: \n     * Dong-Dong Zhou: zhoudongdong@cqmu.edu.cn",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "eeg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [],
+        "size": 47150724861,
+        "subjects": [
+          "18",
+          "17",
+          "11",
+          "08",
+          "20",
+          "06",
+          "05",
+          "15",
+          "19",
+          "22",
+          "21",
+          "23",
+          "16",
+          "10",
+          "09",
+          "13",
+          "12",
+          "01",
+          "04",
+          "02",
+          "03",
+          "14",
+          "07"
+        ],
+        "tasks": [
+          "resting_eye_open",
+          "resting_eye_closed",
+          "MOBA_game"
+        ],
+        "totalFiles": 396
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        22,
+        19,
+        22,
+        19,
+        19,
+        23,
+        19,
+        20,
+        18,
+        20,
+        18,
+        21,
+        19,
+        20,
+        19,
+        20,
+        19,
+        19,
+        20,
+        21,
+        20,
+        21,
+        15
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "eeg"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "MOBA game",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2024-09-24T05:54:43.588Z"
+  },
+  "source": "openneuro"
+}

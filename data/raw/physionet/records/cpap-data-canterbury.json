@@ -1,0 +1,37 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "cpap-data-canterbury",
+  "payload": {
+    "abstract": "<p><span><span><span><span><span>A pressure and flow dataset for CPAP (continuous positive airway pressure) breathing obtained from 30 subjects for model-based identification of patient-specific lung mechanics using a specially designed sensor system comprising an array of differential pressure sensors (Sensirion AG SDP816-125PA) and gauge pressure sensors (NXP MPVZ4006GW7U). Relevant medical information was collected using a questionnaire, including: sex; age; weight; height; smoking history; and history of asthma. Subjects were tasked with breathing at five different rates (including passive) from very slow to very fast breathing, matched to an online pacing sound and video, at two different levels of CPAP (4 and 7 cmH2O) for between 50 and 180 seconds depending on rate. Each data set for a breathing rate comprises ~17 breaths, including rest periods between breathing rates and CPAP levels. Data with significant observed sensor error was removed during processing. A better-fitted mask would be expected to reduce error in fully capturing expiration by reducing leaks around the masks seal with the face. The sensors measure inspiration and expiration using separate unidirectional differential flow sensors, which are combined in post-processing to for complete breathing data.</span></span></span></span></span></p>",
+    "access_policy": "Open",
+    "compressed_storage_size": 93709091,
+    "core_doi": "10.13026/33rx-gh20",
+    "dua": null,
+    "is_latest_version": true,
+    "license": {
+      "name": "Creative Commons Attribution-ShareAlike 4.0 International Public License"
+    },
+    "main_storage_size": 244918977,
+    "public_project_uuid": "b7624ce3-6e4a-4cc7-94f4-b809b241822c",
+    "publish_date": "2022-03-24",
+    "resource_type": "Database",
+    "short_description": "A pressure and flow dataset was collected from a trial of 30 adults at the University of Canterbury undergoing CPAP therapy for a variety of instructed breath rates at PEEP levels of 4cmH2O and 7cmH2O.",
+    "slug": "cpap-data-canterbury",
+    "source_url": "https://physionet.org/content/cpap-data-canterbury/1.0.1/",
+    "title": "CPAP Pressure and Flow Data from a Local Trial of 30 Adults at the University of Canterbury",
+    "topics": [
+      "peep",
+      "biomedical engineering",
+      "cpap",
+      "respiratory mechanics",
+      "pulmonary mechanics",
+      "respiratory modelling"
+    ],
+    "version": "1.0.1",
+    "version_doi": "10.13026/xfae-vv63"
+  },
+  "source": "physionet"
+}

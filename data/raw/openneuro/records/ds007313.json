@@ -1,0 +1,80 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007313",
+  "payload": {
+    "created": "2026-01-23T14:56:59.106Z",
+    "id": "ds007313",
+    "latestSnapshot": {
+      "created": "2026-01-23T15:19:56.000Z",
+      "description": {
+        "Authors": [
+          "Caroline Landelle",
+          "Nawal Kinany",
+          "Samuelle St-Onge",
+          "Ovidiu Lungu",
+          "Dimitri Van De Ville",
+          "Bratislav Misic",
+          "Véronique Marchand-Pauvert",
+          "Benjamin De Leener",
+          "Julien Doyon"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007313.v1.0.0",
+        "Funding": [
+          "",
+          "",
+          ""
+        ],
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "Brain and spinal cord fMRI and qMRI - Single participant",
+        "ReferencesAndLinks": [
+          "",
+          "",
+          ""
+        ]
+      },
+      "readme": "Single participant rawdata and derivatives link to the code: https://github.com/CarolineLndl/Landelle_spinebrain_aging\n\nData contains:\n- rawdata: sub-A006/\n- preprocessed data: derivatives/preprocessing\n- denoised fmri data: derivatives/denoising",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural",
+          "mri_diffusion",
+          "mri_functional"
+        ],
+        "sessions": [],
+        "size": 328755643,
+        "subjects": [
+          "A006"
+        ],
+        "tasks": [
+          "rest"
+        ],
+        "totalFiles": 19
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2026-01-23T15:23:55.405Z"
+  },
+  "source": "openneuro"
+}

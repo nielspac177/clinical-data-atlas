@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:3456f63f4eec5a1d8f8e5d8fb659c6008db9baa356bb7aa6b853880a3858bf55",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "20 lung cancer patients",
+        "label": "lung cancer"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "pulmonology"
+    ],
+    "id": "tcia:ct-vs-pet-ventilation-imaging",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "free-breathing four-dimensional CT (4DCT)",
+        "value": "CT"
+      },
+      {
+        "evidence": "Galligas PET ventilation scans",
+        "value": "PET"
+      },
+      {
+        "evidence": "CT Ventilation as a functional imaging modality for lung cancer radiotherapy",
+        "value": "radiotherapy"
+      }
+    ],
+    "population": "20 lung cancer patients who underwent exhale/inhale breath hold CT, free-breathing 4DCT and Galligas PET ventilation scans in a single session.",
+    "summary": "Breath-hold CT, four-dimensional CT and Galligas PET ventilation scans acquired in one session on a combined PET/CT scanner, enabling comparison of CT-derived and PET ventilation imaging."
+  },
+  "prompt_version": "v1"
+}

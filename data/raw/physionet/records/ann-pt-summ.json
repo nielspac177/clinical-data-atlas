@@ -1,0 +1,32 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "ann-pt-summ",
+  "payload": {
+    "abstract": "<p>Large language models in healthcare can generate informative patient summaries while reducing the documentation workload of healthcare professionals. However, these models are prone to producing hallucinations, that is, generating unsupported information, which is problematic in the sensitive healthcare domain. To better characterize unsupported facts in medical texts, we developed a rigorous labeling protocol. Following this protocol, two medical experts annotated unsupported facts in 100 doctor-written summaries from the MIMIC-IV-Note Discharge Instructions and hallucinations 100 LLM-generated patient summaries. Here, we are releasing two datasets based on these annotations: <em>Hallucinations-MIMIC-DI</em> and <em>Hallucinations-Generated-DI</em>. We find that using these datasets to train on hallucination-free examples effectively reduces hallucinations for both Llama 2 (2.60 to 1.55 hallucinations per summary) and GPT-4 (0.70 to 0.40). Furthermore, we created a preprocessed version of the MIMIC-IV-Notes Discharge Instructions, releasing both a full-context version (<em>MIMIC-IV-Note-Ext-DI</em>) and a version that only uses the Brief Hospital Course for context (<em>MIMIC-IV-Note-Ext-DI-BHC</em>).</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 1131370378,
+    "core_doi": "10.13026/m6hf-dq94",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 3292403761,
+    "public_project_uuid": "9d4dbb4b-2416-4834-a488-0cfb79b1c565",
+    "publish_date": "2025-04-30",
+    "resource_type": "Database",
+    "short_description": "Annotations for unsupported facts in 100 original MIMIC patient summaries (discharge instructions) and hallucinations in 100 Large Language Model (LLM) generated patient summaries labeled by two medical experts.",
+    "slug": "ann-pt-summ",
+    "source_url": "https://physionet.org/content/ann-pt-summ/1.0.1/",
+    "title": "Medical Expert Annotations of Unsupported Facts in Doctor-Written and LLM-Generated Patient Summaries",
+    "topics": [],
+    "version": "1.0.1",
+    "version_doi": "10.13026/gedc-j464"
+  },
+  "source": "physionet"
+}

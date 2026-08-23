@@ -1,0 +1,140 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "TCGA-BLCA",
+  "payload": {
+    "dbgap_accession_number": null,
+    "disease_type": [
+      "Epithelial Neoplasms, NOS",
+      "Adenomas and Adenocarcinomas",
+      "Squamous Cell Neoplasms",
+      "Transitional Cell Papillomas and Carcinomas"
+    ],
+    "id": "TCGA-BLCA",
+    "name": "Bladder Urothelial Carcinoma",
+    "primary_site": [
+      "Bladder"
+    ],
+    "program": {
+      "dbgap_accession_number": "phs000178",
+      "name": "TCGA",
+      "program_id": "b80aa962-9650-5110-b3eb-bd087da808db"
+    },
+    "project_id": "TCGA-BLCA",
+    "releasable": true,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 412,
+      "data_categories": [
+        {
+          "case_count": 412,
+          "data_category": "Simple Nucleotide Variation",
+          "file_count": 10310
+        },
+        {
+          "case_count": 412,
+          "data_category": "Sequencing Reads",
+          "file_count": 4294
+        },
+        {
+          "case_count": 412,
+          "data_category": "Biospecimen",
+          "file_count": 1760
+        },
+        {
+          "case_count": 412,
+          "data_category": "Clinical",
+          "file_count": 994
+        },
+        {
+          "case_count": 412,
+          "data_category": "Copy Number Variation",
+          "file_count": 6144
+        },
+        {
+          "case_count": 412,
+          "data_category": "Transcriptome Profiling",
+          "file_count": 1736
+        },
+        {
+          "case_count": 412,
+          "data_category": "DNA Methylation",
+          "file_count": 1320
+        },
+        {
+          "case_count": 343,
+          "data_category": "Proteome Profiling",
+          "file_count": 343
+        },
+        {
+          "case_count": 402,
+          "data_category": "Somatic Structural Variation",
+          "file_count": 2286
+        },
+        {
+          "case_count": 411,
+          "data_category": "Structural Variation",
+          "file_count": 2315
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 406,
+          "experimental_strategy": "RNA-Seq",
+          "file_count": 3878
+        },
+        {
+          "case_count": 409,
+          "experimental_strategy": "miRNA-Seq",
+          "file_count": 1311
+        },
+        {
+          "case_count": 411,
+          "experimental_strategy": "WGS",
+          "file_count": 9881
+        },
+        {
+          "case_count": 412,
+          "experimental_strategy": "WXS",
+          "file_count": 6708
+        },
+        {
+          "case_count": 10,
+          "experimental_strategy": "ATAC-Seq",
+          "file_count": 10
+        },
+        {
+          "case_count": 412,
+          "experimental_strategy": "Genotyping Array",
+          "file_count": 5297
+        },
+        {
+          "case_count": 412,
+          "experimental_strategy": "Methylation Array",
+          "file_count": 1320
+        },
+        {
+          "case_count": 343,
+          "experimental_strategy": "Reverse Phase Protein Array",
+          "file_count": 343
+        },
+        {
+          "case_count": 412,
+          "experimental_strategy": "Tissue Slide",
+          "file_count": 469
+        },
+        {
+          "case_count": 386,
+          "experimental_strategy": "Diagnostic Slide",
+          "file_count": 457
+        }
+      ],
+      "file_count": 31502,
+      "file_size": 411323757738156
+    }
+  },
+  "source": "gdc"
+}

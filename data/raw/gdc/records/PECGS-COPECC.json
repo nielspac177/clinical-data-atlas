@@ -1,0 +1,64 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "PECGS-COPECC",
+  "payload": {
+    "dbgap_accession_number": "phs003985",
+    "disease_type": [
+      "Adenomas and Adenocarcinomas"
+    ],
+    "id": "PECGS-COPECC",
+    "name": "USC PE-CGS: Optimizing Engagement of Hispanic Colorectal Cancer Patients in Cancer Genomic Characterization Studies",
+    "primary_site": [
+      "Rectosigmoid junction",
+      "Colon",
+      "Rectum"
+    ],
+    "program": {
+      "dbgap_accession_number": null,
+      "name": "PECGS",
+      "program_id": "beb3b400-a814-5de6-bfae-d54f2fb515be"
+    },
+    "project_id": "PECGS-COPECC",
+    "releasable": false,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 67,
+      "data_categories": [
+        {
+          "case_count": 67,
+          "data_category": "Sequencing Reads",
+          "file_count": 201
+        },
+        {
+          "case_count": 67,
+          "data_category": "Clinical",
+          "file_count": 1
+        },
+        {
+          "case_count": 67,
+          "data_category": "Transcriptome Profiling",
+          "file_count": 134
+        },
+        {
+          "case_count": 67,
+          "data_category": "Structural Variation",
+          "file_count": 268
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 67,
+          "experimental_strategy": "RNA-Seq",
+          "file_count": 603
+        }
+      ],
+      "file_count": 604,
+      "file_size": 904030326108
+    }
+  },
+  "source": "gdc"
+}

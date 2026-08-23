@@ -1,0 +1,131 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005169",
+  "payload": {
+    "created": "2024-05-22T09:00:55.253Z",
+    "id": "ds005169",
+    "latestSnapshot": {
+      "created": "2024-05-22T10:58:35.000Z",
+      "description": {
+        "Authors": [
+          "Andrei Barborica",
+          "Felicia Mihai",
+          "Laurentiu Tofan",
+          "Irina Oane",
+          "Ioana Mindruta"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005169.v1.0.0",
+        "Funding": [
+          "Romanian UEFISCDI PN-III-P4-ID-PCE-2020-0935"
+        ],
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "Dataset of intracranial EEG during cortical stimulation evoking visual effects",
+        "ReferencesAndLinks": [
+          "Barborica A, Oane I, Donos C, Daneasa A, Mihai F, Pistol C, Dabu A, Roceanu A, Mindruta I. Imaging the effective networks associated with cortical function through intracranial high-frequency stimulation. Hum Brain Mapp. 2022 Apr 1;43(5):1657-1675. doi: 10.1002/hbm.25749."
+        ]
+      },
+      "readme": "In this dataset we included iEEG recordings of responses to 115 intracranial high frequency stimulations evoking \nvisual hallucinations, in 22 patients undergoing stereo-EEG presurgical evaluation for drug-resistant epilepsy.\n\nThe dataset contains 21 seconds of iEEG data around each stimulation, 8 seconds before the start of the stimulation, \nup to 5 seconds of intracranial stimulation and 8 seconds after the end of the stimulation.\n\nWe have used high-frequency bipolar stimulations of different areas of the brain, using alternating polarity \nbiphasic pulses having a duration of 1 ms, at 43.2 Hz or 50 Hz, current intensity between 0.25 to 3 mA, for up to 5 s. \nAlternating polarity protocol allows disambiguating neuronal responses time-locked to the stimulation pulses \nfrom the artefactual components, according to Barborica et al., 2022 (doi: 10.1002/hbm.25749). It is therefore \npossible to identify the brain networks underlying the clinical effects, and to create symptom-related \nactivation/connectivity maps.\n\nThe contact pair on which stimulation is applied, the current intensity level and evoked effect are specified \nin the events tsv. The responses are classified in 14 clinical categories: elementary (unstructured \nflashes of light), plus hallucination (presence of light in different forms or colors overlaying the background vision), \nminus hallucination (negative elementary phenomena described as scotoma, quadrantanopia, hemianopia or amaurosis), \nstatic, dynamic, continuous hallucination, intermittent hallucination, peripheric, central, \nwhole visual field, color, non-color, combined visual symptoms, multimodal hallucinations.\n\nNot all patients in which stimulations evoked visual hallucinations met the inclusion criteria for network analysis \nthat requires running the freesurfer pipeline, for instance patients having prior resections, therefore there are subjects\nthat do not contain ieeg data. However, they were kept in order to match the number of patients in the companion manuscript.\n\nContact: andrei.barborica@fizica.unibuc.ro",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "ieeg",
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural"
+        ],
+        "sessions": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16"
+        ],
+        "size": 4322721427,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22"
+        ],
+        "tasks": [
+          "dcs"
+        ],
+        "totalFiles": 1165
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        39,
+        39,
+        28,
+        19,
+        25,
+        19,
+        26,
+        32,
+        22,
+        47,
+        27,
+        33,
+        39,
+        31,
+        21,
+        35,
+        23,
+        18,
+        30,
+        32,
+        25,
+        38
+      ],
+      "associatedPaperDOI": "https://doi.org/10.1016/j.brs.2025.05.138",
+      "dataProcessed": null,
+      "dxStatus": "Drug-resistant epilepsy",
+      "grantFunderName": "Romanian UEFISCDI",
+      "modalities": [
+        "ieeg",
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "Cortical mapping of brain function",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2024-05-22T11:05:49.697Z"
+  },
+  "source": "openneuro"
+}

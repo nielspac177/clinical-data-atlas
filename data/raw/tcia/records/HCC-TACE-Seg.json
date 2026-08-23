@@ -1,0 +1,1105 @@
+{
+  "endpoints": [
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getCollectionValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getModalityValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getBodyPartValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getPatient",
+    "https://api.datacite.org/dois?prefix=10.7937"
+  ],
+  "harvest_method": "api:nbia+datacite",
+  "native_id": "HCC-TACE-Seg",
+  "payload": {
+    "datacite": {
+      "citationCount": 12,
+      "container": {},
+      "contentUrl": [],
+      "contributors": [],
+      "created": "2021-05-25T16:44:28Z",
+      "creators": [
+        {
+          "affiliation": [],
+          "familyName": "Moawad",
+          "givenName": "Ahmed W.",
+          "name": "Moawad, Ahmed W.",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0001-6860-1513",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Fuentes",
+          "givenName": "David",
+          "name": "Fuentes, David",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-2572-6962",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Morshid",
+          "givenName": "Ali",
+          "name": "Morshid, Ali",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Khalaf",
+          "givenName": "Ahmed M.",
+          "name": "Khalaf, Ahmed M.",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Elmohr",
+          "givenName": "Mohab M.",
+          "name": "Elmohr, Mohab M.",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Abusaif",
+          "givenName": "Abdelrahman",
+          "name": "Abusaif, Abdelrahman",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Hazle",
+          "givenName": "John D.",
+          "name": "Hazle, John D.",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Kaseb",
+          "givenName": "Ahmed O.",
+          "name": "Kaseb, Ahmed O.",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Hassan",
+          "givenName": "Manal",
+          "name": "Hassan, Manal",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Mahvash",
+          "givenName": "Armeen",
+          "name": "Mahvash, Armeen",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Szklaruk",
+          "givenName": "Janio",
+          "name": "Szklaruk, Janio",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Qayyom",
+          "givenName": "Aliyya",
+          "name": "Qayyom, Aliyya",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Elsayes",
+          "givenName": "Khaled",
+          "name": "Elsayes, Khaled",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0003-0184-0717",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        }
+      ],
+      "dates": [],
+      "descriptions": [
+        {
+          "description": "Hepatocellular carcinoma (HCC) is the most common primary liver with incidences doubled over the past two decades due to increasing risk factors. Despite surveillance, the majority of HCC cases are diagnosed at advanced stages that can be treated only using (Transarterial chemoembolization) TACE, or systemic therapy. TACE failure can occur to 60% of patients receiving the procedure, with subsequent financial and emotional burden. Radiomics have emerged as a new tool capable of predicting tumor response to TACE from pre-procedural CT study.\n\nThis retrospectively acquired data collection includes pre- and post-procedure CT imaging studies of 105 confirmed HCC patients who underwent TACE between 2002 and 2012 with an available treatment outcome, in the form of time-to-progression and overall survival. Baseline imaging includes multiphasic contrast-enhanced CT with no image artifacts (e.g. surgical clip) and was obtained 1-12 weeks (average 3 weeks) prior to the first TACE session. Semiautomatic segmentation of liver, tumor, and blood vessels created using AMIRA was manually clinically curated. These segmentations of each pre-procedural CT study were done for the purpose of algorithm training for prediction and automatic liver tumor segmentation, and are provided here (NIfTI converted to DICOM-SEG format).",
+          "descriptionType": "Abstract",
+          "lang": null
+        }
+      ],
+      "doi": "10.7937/tcia.5fna-0924",
+      "downloadCount": 0,
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "HCC-TACE-Seg",
+          "identifierType": "TCIA Short Name"
+        }
+      ],
+      "isActive": true,
+      "language": null,
+      "metadataVersion": 10,
+      "partCount": 0,
+      "partOfCount": 0,
+      "publicationYear": 2021,
+      "published": null,
+      "publisher": "The Cancer Imaging Archive",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2021-05-25T18:38:07Z",
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "10.1145/3599957.3606225",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.compbiomed.2022.106378",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1038/s41597-023-01928-3",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1038/s41467-024-44824-z",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.apradiso.2024.111181",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.compbiomed.2024.109140",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1007/978-3-031-63929-6_9",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        }
+      ],
+      "relatedItems": [],
+      "rightsList": [
+        {
+          "rights": "Creative Commons Attribution 4.0 International",
+          "rightsIdentifier": "cc-by-4.0",
+          "rightsIdentifierScheme": "SPDX",
+          "rightsUri": "https://creativecommons.org/licenses/by/4.0/legalcode",
+          "schemeUri": "https://spdx.org/licenses/"
+        }
+      ],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "fabricaForm",
+      "state": "findable",
+      "subjects": [],
+      "titles": [
+        {
+          "lang": null,
+          "title": "Multimodality annotated HCC cases with and without advanced imaging segmentation",
+          "titleType": null
+        },
+        {
+          "lang": null,
+          "title": "HCC-TACE-Seg",
+          "titleType": "AlternativeTitle"
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2025-06-01T01:01:05Z",
+      "url": "https://www.cancerimagingarchive.net/collection/hcc-tace-seg/",
+      "version": "1",
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 12767
+    },
+    "nbia": {
+      "body_parts": [
+        "LIVER"
+      ],
+      "collection": "HCC-TACE-Seg",
+      "modalities": [
+        "CT",
+        "SEG"
+      ],
+      "patients": [
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_048",
+          "PatientName": "HCC_048",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_003",
+          "PatientName": "HCC_003",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_012",
+          "PatientName": "HCC_012",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_017",
+          "PatientName": "HCC_017",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_089",
+          "PatientName": "HCC_089",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_075",
+          "PatientName": "HCC_075",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_006",
+          "PatientName": "HCC_006",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_085",
+          "PatientName": "HCC_085",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_054",
+          "PatientName": "HCC_054",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_070",
+          "PatientName": "HCC_070",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_018",
+          "PatientName": "HCC_018",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_027",
+          "PatientName": "HCC_027",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_009",
+          "PatientName": "HCC_009",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_102",
+          "PatientName": "HCC_102",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_082",
+          "PatientName": "HCC_082",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_044",
+          "PatientName": "HCC_044",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_061",
+          "PatientName": "HCC_061",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_025",
+          "PatientName": "HCC_025",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_093",
+          "PatientName": "HCC_093",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_069",
+          "PatientName": "HCC_069",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_023",
+          "PatientName": "HCC_023",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_057",
+          "PatientName": "HCC_057",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_034",
+          "PatientName": "HCC_034",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_101",
+          "PatientName": "HCC_101",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_038",
+          "PatientName": "HCC_038",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_090",
+          "PatientName": "HCC_090",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_047",
+          "PatientName": "HCC_047",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_096",
+          "PatientName": "HCC_096",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_032",
+          "PatientName": "HCC_032",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_040",
+          "PatientName": "HCC_040",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_091",
+          "PatientName": "HCC_091",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_016",
+          "PatientName": "HCC_016",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_021",
+          "PatientName": "HCC_021",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_051",
+          "PatientName": "HCC_051",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_031",
+          "PatientName": "HCC_031",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_076",
+          "PatientName": "HCC_076",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_002",
+          "PatientName": "HCC_002",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_011",
+          "PatientName": "HCC_011",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_020",
+          "PatientName": "HCC_020",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_081",
+          "PatientName": "HCC_081",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_039",
+          "PatientName": "HCC_039",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_053",
+          "PatientName": "HCC_053",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_013",
+          "PatientName": "HCC_013",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_026",
+          "PatientName": "HCC_026",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_067",
+          "PatientName": "HCC_067",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_029",
+          "PatientName": "HCC_029",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_095",
+          "PatientName": "HCC_095",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_086",
+          "PatientName": "HCC_086",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_098",
+          "PatientName": "HCC_098",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_083",
+          "PatientName": "HCC_083",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_072",
+          "PatientName": "HCC_072",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_068",
+          "PatientName": "HCC_068",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_037",
+          "PatientName": "HCC_037",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_073",
+          "PatientName": "HCC_073",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_065",
+          "PatientName": "HCC_065",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_010",
+          "PatientName": "HCC_010",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_074",
+          "PatientName": "HCC_074",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_104",
+          "PatientName": "HCC_104",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_049",
+          "PatientName": "HCC_049",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_105",
+          "PatientName": "HCC_105",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_042",
+          "PatientName": "HCC_042",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_024",
+          "PatientName": "HCC_024",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_058",
+          "PatientName": "HCC_058",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_087",
+          "PatientName": "HCC_087",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_050",
+          "PatientName": "HCC_050",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_035",
+          "PatientName": "HCC_035",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_103",
+          "PatientName": "HCC_103",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_052",
+          "PatientName": "HCC_052",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_100",
+          "PatientName": "HCC_100",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_036",
+          "PatientName": "HCC_036",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_080",
+          "PatientName": "HCC_080",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_094",
+          "PatientName": "HCC_094",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_088",
+          "PatientName": "HCC_088",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_097",
+          "PatientName": "HCC_097",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_028",
+          "PatientName": "HCC_028",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_077",
+          "PatientName": "HCC_077",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_033",
+          "PatientName": "HCC_033",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_060",
+          "PatientName": "HCC_060",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_071",
+          "PatientName": "HCC_071",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_019",
+          "PatientName": "HCC_019",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_092",
+          "PatientName": "HCC_092",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_062",
+          "PatientName": "HCC_062",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_001",
+          "PatientName": "HCC_001",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_041",
+          "PatientName": "HCC_041",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_066",
+          "PatientName": "HCC_066",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_043",
+          "PatientName": "HCC_043",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_078",
+          "PatientName": "HCC_078",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_063",
+          "PatientName": "HCC_063",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_064",
+          "PatientName": "HCC_064",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_005",
+          "PatientName": "HCC_005",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_099",
+          "PatientName": "HCC_099",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_056",
+          "PatientName": "HCC_056",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_030",
+          "PatientName": "HCC_030",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_045",
+          "PatientName": "HCC_045",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_046",
+          "PatientName": "HCC_046",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_059",
+          "PatientName": "HCC_059",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_055",
+          "PatientName": "HCC_055",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_014",
+          "PatientName": "HCC_014",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_022",
+          "PatientName": "HCC_022",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_007",
+          "PatientName": "HCC_007",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_084",
+          "PatientName": "HCC_084",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_004",
+          "PatientName": "HCC_004",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_008",
+          "PatientName": "HCC_008",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_015",
+          "PatientName": "HCC_015",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "HCC-TACE-Seg",
+          "PatientId": "HCC_079",
+          "PatientName": "HCC_079",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        }
+      ]
+    }
+  },
+  "source": "tcia"
+}

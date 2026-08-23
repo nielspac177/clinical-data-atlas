@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:3fc3433f1a743509d5f7db52a2117c4c576657ce2040d142c2fb452095dfe73b",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "hyperspectral histological images of glioblastoma brain tumors",
+        "label": "glioblastoma"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "oncology"
+    ],
+    "id": "tcia:histologyhsi-gb",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "hyperspectral histological images of glioblastoma brain tumors",
+        "value": "pathology"
+      },
+      {
+        "evidence": "annotated hyperspectral images corresponding to 13 histological slides",
+        "value": "other"
+      }
+    ],
+    "population": "Patients with glioblastoma brain tumors, one histological slide per patient",
+    "summary": "Annotated hyperspectral histological images of glioblastoma brain tumors captured at 20x magnification, labeled by histopathologists as glioblastoma or no tumor following the World Health Organization classification of nervous system tumors."
+  },
+  "prompt_version": "v1"
+}

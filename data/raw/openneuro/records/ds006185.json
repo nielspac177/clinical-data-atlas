@@ -1,0 +1,165 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006185",
+  "payload": {
+    "created": "2025-04-28T19:23:27.981Z",
+    "id": "ds006185",
+    "latestSnapshot": {
+      "created": "2026-03-05T21:32:05.000Z",
+      "description": {
+        "Authors": [
+          "Juliette B. H. Brook",
+          "Taylor Salo",
+          "Audrey C. Luo",
+          "JoC+lle Bagautdinova",
+          "Sage Rush",
+          "Aaron F. Alexander-Bloch",
+          "Erica B. Baller",
+          "Monica E. Calkins",
+          "Matt Cieslak",
+          "Elena C. Cooper",
+          "John A. Detre",
+          "Mark A. Elliot",
+          "Damien A. Fair",
+          "Phoebe Freedman",
+          "Philip R. Gehrman",
+          "Ruben C. Gur",
+          "Raquel E. Gur",
+          "Arno Klein",
+          "Nina Laney",
+          "Timothy O. Laumann",
+          "Kahini Mehta",
+          "Kathleen Merikangas",
+          "Michael Milham",
+          "Jonathan A. Mitchell",
+          "Tyler M. Moore",
+          "Steven M. Nelson",
+          "Kosha Ruparel",
+          "Brooke L. Sevchik",
+          "Sheila Shanmugan",
+          "Haochang Shou",
+          "Manuel Taso",
+          "Lauren K. White",
+          "Daniel H. Wolf",
+          "M. Dylan Tisdall",
+          "David R. Roalf",
+          "Theodore D. Satterthwaite"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006185.v2.0.0",
+        "Funding": [
+          "R01MH113550",
+          "R01MH112847",
+          "R01EB022573",
+          "R37MH125829",
+          "K23MH133118",
+          "BBRF #31319",
+          "R01EB031080",
+          "BBRF #30837",
+          "BWF 1022955",
+          "DP5OD036142"
+        ],
+        "HowToAcknowledge": "Please cite the PAFIN paper (doi:10.52294/001c.151820), the fMRIPrep paper (doi:10.1038/s41592-018-0235-4), and include the generated citation boilerplate within the Methods section of the text.",
+        "License": "CC0",
+        "Name": "PAFIN: PennLINC AFfective INstability- fMRIPrep Derivatives",
+        "ReferencesAndLinks": [
+          "https://doi.org/10.52294/001c.151820"
+        ]
+      },
+      "readme": "# PAFIN: PennLINC AFfective INstability- fMRIPrep Derivatives\n\nThis dataset contains fMRIPrep derivatives for the PAFIN dataset (https://openneuro.org/datasets/ds006131).\n\nThese derivatives were produced by first running a Python translation of NORDIC (https://github.com/nipreps/NORDIC_Raw/tree/executable), followed by fMRIPrep 25.2.4, using BABS (https://pennlinc-babs.readthedocs.io/).\n\nThe processing code is available at https://github.com/PennLINC/affective-instability/tree/main/processing/nordic-fmriprep.",
+      "summary": {
+        "dataProcessed": true,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "1"
+        ],
+        "size": 521571303972,
+        "subjects": [
+          "PILOT01",
+          "60474",
+          "60530",
+          "20828",
+          "24702",
+          "24777",
+          "23931",
+          "20968",
+          "24717",
+          "60499",
+          "60471",
+          "24773",
+          "PILOT02",
+          "24749",
+          "24663",
+          "60466",
+          "60463",
+          "24797",
+          "20463",
+          "24699",
+          "60528",
+          "24800",
+          "24759",
+          "24762",
+          "22169",
+          "60197",
+          "24793",
+          "22510",
+          "60114",
+          "24053",
+          "60107",
+          "24744",
+          "24696",
+          "20966",
+          "23698",
+          "60590",
+          "24756",
+          "24784",
+          "24683",
+          "60476",
+          "24743",
+          "24697",
+          "60638",
+          "24775",
+          "21623",
+          "60529",
+          "24796",
+          "60295",
+          "24684",
+          "20188",
+          "24630"
+        ],
+        "tasks": [
+          "Your Friend the Rat",
+          "rest eyes open",
+          "Bao"
+        ],
+        "totalFiles": 1719
+      },
+      "tag": "2.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": null,
+      "dataProcessed": true,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2025-05-14T16:03:51.247Z"
+  },
+  "source": "openneuro"
+}

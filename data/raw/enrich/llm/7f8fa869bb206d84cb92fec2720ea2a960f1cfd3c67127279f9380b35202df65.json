@@ -1,0 +1,49 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:7f8fa869bb206d84cb92fec2720ea2a960f1cfd3c67127279f9380b35202df65",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Stomach Adenocarcinoma",
+        "label": "Stomach Adenocarcinoma"
+      },
+      {
+        "evidence": "Adenomas and Adenocarcinomas",
+        "label": "Adenomas and Adenocarcinomas"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "gastroenterology_hepatology"
+    ],
+    "id": "gdc:TCGA-STAD",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Diagnostic Slide, Tissue Slide",
+        "value": "pathology"
+      },
+      {
+        "evidence": "WXS, RNA-Seq, miRNA-Seq, WGS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "Transcriptome Profiling",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Proteome Profiling",
+        "value": "proteomics"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "443 human cases with stomach adenocarcinoma",
+    "summary": "TCGA stomach adenocarcinoma project with slide images, whole exome and genome sequencing, RNA and miRNA sequencing, methylation, chromatin accessibility, protein array and clinical data."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,147 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007859",
+  "payload": {
+    "created": "2026-05-27T15:38:27.205Z",
+    "id": "ds007859",
+    "latestSnapshot": {
+      "created": "2026-06-11T10:11:08.000Z",
+      "description": {
+        "Authors": [
+          "Daniel McLoone",
+          "Andrew Breen",
+          "Claire McParland",
+          "Andrew Harkin",
+          "Clare Kelly"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007859.v1.0.4",
+        "Funding": [
+          "This project was funded by Frontiers for the Future Grant 20/FFP-P/8799 to CK and AH from Taighde Eireann (Research Ireland)."
+        ],
+        "HowToAcknowledge": "McLoone DP, Breen A, McParland C, Harkin A, Kelly C. A sex-balanced longitudinal developmental task-free fMRI rat dataset. bioRxiv. Preprint posted online June 9, 2026:2026.06.04.730202. doi:10.64898/2026.06.04.730202",
+        "License": "CC0",
+        "Name": "A sex-balanced longitudinal developmental resting-state fMRI rat dataset",
+        "ReferencesAndLinks": null
+      },
+      "readme": "# A Sex-Balanced Longitudinal Developmental Task-Free fMRI Rat Dataset\n\n## 1. MRI Data Overview\nThis dataset contains longitudinal task-free functional and anatomical data from 36 Wistar rats (18 male and 18 female). Each subject was scanned across 5 developmental timepoints (sessions) at approximately postnatal day 28, 35, 49, 70 and 91\nData was acquired on a 7T Bruker scanner using an 8 channel rat head surface array coil. The scan parameters and sedation followed the standardrat protocol (Grandjean et al., 2023; https://doi.org/10.1038/s41593-023-01286-8)\n\n## 2. Other Data Overview\nThis dataset also includes a range of other data for these subjects such as puberty onset, oestrous smears, daily bodyweights.\nIt also contains a range of derivative generated during preprocessing including, an unbiased population template, preprocessed timeseries, seed files and seed timeseries.\n\n## 3. Directory Guide\nThe dataset is in BIDS format\n\n* **'participants.tsv'** Contains the participant_id, wave_number, litter_id, puberty_onset_age_days, date_of_birth and date_of_puberty.\n* **'sub-<ID>/sub-<ID>_sessions.tsv** Contains the session_id, target_age_group, age_days, weight_g (weight on day of scan), respiration_bpm (average respiration during scan) and scan_date.\n* **'sub-<ID>/ses-<ID>/** Contains contains the func and anat folders with the respective scans.\n\nBeyond the raw BIDS data, this dataset includes source data and several derivatives generated during preprocessing. (Please see the individual `README.md` files within each derivative folder for exact methodology and parameters).\n\n* **'sourcedata/oestrous_smears'**: Contains raw `.jpg` microscopy images of oestrous smears.\n* **'sourcedata/growth_metrics'**: Daily body weights and weekly body/tail length measurements.\n* **'sourcedata/subject_summary'**: Contains the date of each scan session to allow identification of the oestrous smear from the same day.\n* **'derivatives/population_template/'**: Contains the unbiased, study-specific optimized_antsMultivariateTemplateConstruction population templates (0.2mm and 0.3mm resolutions) and transformed ROIs used in technical validation (`tpl-normative`).\n* **'derivatives/RABIES/'**: Contains the fully preprocessed, confound-corrected timeseries registered to the normative template (`space-normative`). This folder also contains the 'fd', 'motion' parameters and 'tsnr' files from RABIES\n* **'derivatives/AFNI_masks/'**: Contains strict, intensity-thresholded binary brain masks used to replace the default RABIES masks during confound correction as default masks were found to include region without any signal.\n* **'derivatives/AFNI_seed_connectivity'**: Contains the seed timeseries and correlation maps (and z maps) for all the seeds used for validation.\n* **'derivatives/BEN_weight'**: Contains the brain extraction net (BEN) weight used to create masks for template construction. \n\n## 4. Notes and Missing Data\n* sub-2023080406 does not have ses-1 (P28) scan due to technical issues with the scanner\n* A small number of physiological recordings (e.g., respiration rates for specific sessions) were lost or unrecorded due to hardware issues. These are  denoted as `n/a` in the `sessions.tsv` files.\n\n\n## 5. Citation and Contact\nIf you use this dataset or its derivatives in your research, please cite the accompanying manuscript:\n* A sex-balanced longitudinal developmental task-free fMRI rat dataset\n* https://doi.org/10.64898/2026.06.04.730202 \n\nFor questions regarding the dataset, pipelines, or templates, please contact:\n* Daniel P. McLoone - mclooned@tcd.ie - Trinity College Institute of Neuroscience, Trinity College Dublin\n",
+      "summary": {
+        "dataProcessed": true,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural",
+          "mri_functional"
+        ],
+        "sessions": [
+          "5",
+          "2",
+          "1",
+          "4",
+          "3"
+        ],
+        "size": 20633414507,
+        "subjects": [
+          "2024011404",
+          "2024011503",
+          "2023090108",
+          "2023080405",
+          "2023080705",
+          "2024011504",
+          "2023090106",
+          "2023080701",
+          "2023080702",
+          "2023080704",
+          "2024011402",
+          "2023080401",
+          "2023090105",
+          "2023080703",
+          "2023080406",
+          "2024011405",
+          "2024011506",
+          "2023090101",
+          "2023090107",
+          "2024011505",
+          "2024021403",
+          "2023090103",
+          "2023080402",
+          "2024011401",
+          "2023080404",
+          "2024021402",
+          "2023090102",
+          "2024011406",
+          "2023080403",
+          "2024021404",
+          "2024011501",
+          "2024011403",
+          "2024011502",
+          "2024021401",
+          "2023090104",
+          "2023080706"
+        ],
+        "tasks": [
+          "rest"
+        ],
+        "totalFiles": 760
+      },
+      "tag": "1.0.4"
+    },
+    "metadata": {
+      "affirmedDefaced": false,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": true,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "Taighde Éireann (Research Ireland)",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Rat",
+      "studyDesign": "Longitudinal sex-balanced",
+      "studyDomain": "Development",
+      "studyLongitudinal": "Longitudinal"
+    },
+    "publishDate": "2026-05-29T10:55:31.971Z"
+  },
+  "source": "openneuro"
+}

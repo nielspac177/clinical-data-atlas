@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:79ce819c91562db114d166af6b6f9cd218cf69f832ff8c861c8c7c8fb0b1a02b",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "pathologically confirmed breast cancer",
+        "label": "breast cancer"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "surgery"
+    ],
+    "id": "tcia:acrin-flt-breast",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "positron emission tomography (PET)",
+        "value": "PET"
+      },
+      {
+        "evidence": "CT OT PT",
+        "value": "CT"
+      }
+    ],
+    "population": "Patients with pathologically confirmed breast cancer, candidates for primary systemic (neoadjuvant) therapy, with planned surgical resection of residual primary tumor after neoadjuvant therapy.",
+    "summary": "PET imaging collection from ACRIN 6688 using [18F]-fluorothymidine to evaluate the relationship between FLT uptake parameters and pathologic complete response to neoadjuvant therapy in locally advanced breast cancer."
+  },
+  "prompt_version": "v1"
+}

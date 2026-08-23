@@ -1,0 +1,42 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:78e5531d6c31808c7b3d07b0e7e69d9ea817296d62ea5c1a7b1ec03ae750cae1",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "non-small cell lung cancer (NSCLC) patients that were treated with surgery",
+        "label": "non-small cell lung cancer (NSCLC)"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "pulmonology",
+      "surgery"
+    ],
+    "id": "tcia:nsclc-radiomics-genomics",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "pretreatment CT scans",
+        "value": "CT"
+      },
+      {
+        "evidence": "gene expression",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Radiogenomics analysis revealed",
+        "value": "genomics"
+      },
+      {
+        "evidence": "clinical data are available",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "Non-small cell lung cancer (NSCLC) patients that were treated with surgery",
+    "summary": "Pretreatment CT scans, gene expression, and clinical data from non-small cell lung cancer patients treated with surgery; the Lung3 set used to investigate associations between radiomic imaging features and gene-expression profiles."
+  },
+  "prompt_version": "v1"
+}

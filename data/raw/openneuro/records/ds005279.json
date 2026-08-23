@@ -1,0 +1,99 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005279",
+  "payload": {
+    "created": "2024-06-24T16:17:02.918Z",
+    "id": "ds005279",
+    "latestSnapshot": {
+      "created": "2024-07-03T20:27:47.000Z",
+      "description": {
+        "Authors": [
+          "Hsi T. Wei",
+          "Farhan B. Faisal",
+          "Tamara Beck",
+          "Claire Shao",
+          "Jed A. Meltzer"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005279.v1.0.3",
+        "Funding": [
+          "This research was supported by NSERC Discovery Grant RGPIN-2019-06515"
+        ],
+        "HowToAcknowledge": "please acknowledge its authors (Hsi T. Wei, Farhan B. Faisal, Tamara Beck, Claire Shao and Jed A. Meltzer)",
+        "License": "CC0",
+        "Name": "Picture-Word Interference Dataset",
+        "ReferencesAndLinks": null
+      },
+      "readme": "This study was conducted at the Rotman Research Institute at Baycrest Hospital in Toronto, Canada.\n\nThis dataset contains 30 healthy young adults' MEG (CTF), sMRI, and behavioural data on a picture-word interference (PWI) task. Subjects were shown images of objects one by one and were instructed to retrieve the name of the pictures covertly and judge whether the name ends in a target sound given at the beginning of each task block, by pressing the yes or no buttons with their right hand. Whenever they see an image, they will often also hear a distractor word played through their earphone. The picture and word could be phonologically related, semantically related, or unrelated.\n\nThere were 3 runs of the PWI task for each participant. Each run contained 120 trials, containing an equal number of trials for each picture-word condition. Behaviourally, the reaction time and accuracy of their button-pressing response were recorded. Meanwhile, the MEG data was epoched to the picture onset and response onset for event-related analyses. Each subject obtained their own structural MRI for MEG source localization.\n\nCorresponding analysis code can be found under the code folder, with the \"analysis walkthrough\" documenting more detailed explanation of the analysis.",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "meg",
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural"
+        ],
+        "sessions": [
+          "001"
+        ],
+        "size": 63222442220,
+        "subjects": [
+          "15434",
+          "15529",
+          "16661",
+          "19820",
+          "20028",
+          "20070",
+          "20071",
+          "20073",
+          "20077",
+          "20078",
+          "20083",
+          "20084",
+          "20094",
+          "20095",
+          "20097",
+          "20098",
+          "20099",
+          "20102",
+          "20105",
+          "20111",
+          "20112",
+          "20113",
+          "20114",
+          "20115",
+          "20120",
+          "20123",
+          "20124",
+          "20157",
+          "20192",
+          "20284"
+        ],
+        "tasks": [],
+        "totalFiles": 1590
+      },
+      "tag": "1.0.3"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": null,
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "meg",
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "Neurolingusitics",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2024-06-25T16:13:19.541Z"
+  },
+  "source": "openneuro"
+}

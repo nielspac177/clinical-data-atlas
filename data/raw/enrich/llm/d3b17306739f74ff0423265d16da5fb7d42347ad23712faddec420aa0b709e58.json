@@ -1,0 +1,41 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:d3b17306739f74ff0423265d16da5fb7d42347ad23712faddec420aa0b709e58",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Lung Adenocarcinoma",
+        "label": "Lung Adenocarcinoma"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "pulmonology"
+    ],
+    "id": "tcia:tcga-luad",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "CT NM PT",
+        "value": "CT"
+      },
+      {
+        "evidence": "CT NM PT",
+        "value": "PET"
+      },
+      {
+        "evidence": "CT NM PT",
+        "value": "SPECT"
+      },
+      {
+        "evidence": "Genomic Data Commons (GDC) Data Portal",
+        "value": "genomics"
+      }
+    ],
+    "population": "Lung adenocarcinoma patients drawn from The Cancer Genome Atlas; imaging mostly acquired during routine care rather than a controlled study (69 participants per source facts).",
+    "summary": "Radiology images of lung adenocarcinoma patients, matched by patient identifier to TCGA clinical, genetic and pathological data, supporting study of links between genotype, radiological phenotype and outcomes."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,89 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005422",
+  "payload": {
+    "created": "2024-08-22T20:41:14.212Z",
+    "id": "ds005422",
+    "latestSnapshot": {
+      "created": "2024-08-23T06:42:39.000Z",
+      "description": {
+        "Authors": [
+          "Juan Eugenio Iglesias",
+          "Adrià Casamitjana",
+          "Brain L Edlow",
+          "Martina Bocchetta",
+          "Dorit Kliemann",
+          "Matteo Mancini",
+          "Loïc Peter",
+          "Eleanor Robinson",
+          "Roberto Annunziata",
+          "Juri Althonayan",
+          "Shauna Crampsie",
+          "Emily Blackburn",
+          "Benjamin Billot",
+          "Alessia Atzeni",
+          "Oula Puonti",
+          "Yaël Balbastre",
+          "Peter Schmidt",
+          "James Hughes",
+          "Jean C Augustinack",
+          "Lilla Zöllei",
+          "David L Thomas",
+          "Catherine Strand",
+          "Janice L Holton",
+          "Zane Jaunmuktane"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005422.v1.0.1",
+        "Funding": [
+          "This work was primarily funded by the European Research Council (Starting Grant 677697, project \\BUNGEE-TOOLS\")."
+        ],
+        "HowToAcknowledge": "Casamitjana, Adrià, et al. \"A next-generation, histological atlas of the human brain and its application to automated brain MRI segmentation\" Submitted (2024).",
+        "License": "CC0",
+        "Name": "NextBrain Data Extension",
+        "ReferencesAndLinks": [
+          "Webpage: https://github-pages.ucl.ac.uk/NextBrain/"
+        ]
+      },
+      "readme": "# NextBrain: a next-generation, histological atlas of the human brain for high-resolution neuroimaging studies\n\nWe present a next-generation probabilistic atlas of the human brain using histological sections of five full human hemispheres with manual.\n\nThis data extension release includes a 200um isotropic labeling of the right hemisphere of the ex vivo scan publicly released by Edlow et al. in “7 Tesla MRI of the ex vivo human brain at 100 micron resolution”, Scientific data 6, 244 (2019). We include the original scan as well as the look-up-table for visualization (freeview format). From the root directory, you can open these files in Freeview with the command: \n```\nfreeview -v sub-001/ses-01/anat/sub-001_ses-01_T2w.nii.gz derivatives/manual_segmentation/sub-001/ses-01/sub-001_ses-01_desc-manual_dseg.nii.gz:colormap=lut:lut=derivatives/manual_segmentation/sub-001/sub-001_lut.txt\n\n```\n\n## References\nYou can see two videos flying over the coronal and axial slices of the dataset in the following links: \nhttps://youtu.be/bH09BVNjLek\nhttps://youtu.be/SkX0GRm3p4c\n\nFor more information about the NextBrain project, please check [the project's webpage](https://github-pages.ucl.ac.uk/NextBrain)\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural"
+        ],
+        "sessions": [
+          "01"
+        ],
+        "size": 195419876,
+        "subjects": [
+          "001"
+        ],
+        "tasks": [],
+        "totalFiles": 4
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": null,
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2024-08-23T06:43:14.622Z"
+  },
+  "source": "openneuro"
+}

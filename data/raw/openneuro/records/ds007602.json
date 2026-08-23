@@ -1,0 +1,97 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007602",
+  "payload": {
+    "created": "2026-03-30T05:29:04.859Z",
+    "id": "ds007602",
+    "latestSnapshot": {
+      "created": "2026-03-31T06:40:12.000Z",
+      "description": {
+        "Authors": [
+          "Motoshige Sato",
+          "Masakazu Inoue",
+          "Kenichi Tomeoka",
+          "Ilya Horiguchi",
+          "Eri Hatakeyama",
+          "Yuya Kita",
+          "Atsushi Yamamoto",
+          "Ippei Fujisawa",
+          "Shuntaro Sasai"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007602.v1.0.1",
+        "Funding": [
+          "JST, Moonshot R&D Grant Number JPMJMS2012"
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "EEG-Speech Brain Decoding Dataset",
+        "ReferencesAndLinks": [
+          "https://arxiv.org/abs/2407.07595",
+          "https://www.isca-archive.org/interspeech_2025/inoue25b_interspeech.pdf",
+          "https://iopscience.iop.org/article/10.1088/1741-2552/ae54d0/meta"
+        ]
+      },
+      "readme": "# EEG-Speech Brain Decoding Dataset\n\n## Overview\nThis dataset contains EEG recordings and audio data.\n\n## Sessions\nSessions are labeled by recording date in YYYYMMDD format.\n- Example: `ses-20240401` = recorded on April 1, 2024\n\nMultiple recordings on the same day are distinguished by run numbers:\n- `run-N`: Nth recording of the day\n\n## Tasks\n- **speechopen**: Overt speech production task\n  - Participants vocalize visually presented text\n\n## File Format Notes\n\n### EEG Data\nRaw EEG data is stored:\n- **Path**: `sub-*/ses-*/eeg/*_eeg.edf`\n- **Note**: EDF format is not officially part of BIDS-EEG specification\n- Files are excluded in `.bidsignore` but documented here for reference\n- Future releases may include EDF conversions for full BIDS compliance\n\n### Behavioral Data (Audio)\nVocal recordings are stored in `beh/` directories:\n- **Path**: `sub-*/ses-*/beh/*_recording-vocal_beh.wav`\n- **Note**: Not officially part of BIDS-EEG spec, but included for analysis convenience\n- Excluded in `.bidsignore`\n\n## Directory Structure\n```\ndataset_root/\n├── README                          (this file)\n├── CHANGES                         (version history)\n├── dataset_description.json        (dataset metadata)\n├── participants.tsv                (participant information)\n├── participants.json               (participant column descriptions)\n├── task-speechopen_eeg.json        (task-level EEG metadata)\n├── task-speechopen_events.json     (events column descriptions)\n├── .bidsignore                     (files to ignore in validation)\n│\n├── code/                           (analysis and preprocessing code)\n│   ├── preprocessing/              (EEG and audio preprocessing)\n│   ├── training/                   (model training scripts)\n│   ├── evaluation/                 (evaluation metrics)\n│   └── bids/                       (BIDS conversion scripts)\n│\n├── sub-01/                         (participant data)\n│   └── ses-YYYYMMDD/              (session by date)\n│       ├── eeg/                    (EEG recordings)\n│       └── beh/                    (behavioral/audio data)\n│\n└── derivatives/                    (processed data)\n    └── pipeline-standard/          (standard preprocessing)\n```",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "eeg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [
+          "20240822",
+          "20240821",
+          "20240902",
+          "20240829",
+          "20240906",
+          "20250522",
+          "20250528",
+          "20250526",
+          "20250523",
+          "20250527",
+          "20230830",
+          "20230904",
+          "20230831",
+          "20230901",
+          "20230829"
+        ],
+        "size": 53309491557,
+        "subjects": [
+          "03",
+          "02",
+          "01"
+        ],
+        "tasks": [
+          "Open Speech Production"
+        ],
+        "totalFiles": 472
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "eeg"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2026-03-30T06:56:51.239Z"
+  },
+  "source": "openneuro"
+}

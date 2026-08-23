@@ -1,0 +1,127 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005698",
+  "payload": {
+    "created": "2024-12-05T20:07:16.079Z",
+    "id": "ds005698",
+    "latestSnapshot": {
+      "created": "2026-03-06T19:12:05.000Z",
+      "description": {
+        "Authors": [
+          "Anthony Galassi",
+          "Julia Totis",
+          "Shawn Wu",
+          "Martin Nørgaard",
+          "Xuefeng Yan"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005698.v1.0.0",
+        "Funding": [
+          "ZIAMH002852",
+          "ZIAMH002793"
+        ],
+        "HowToAcknowledge": "Please reference the corresponding publication with the same title and the dataset with DOI",
+        "License": "CC0",
+        "Name": "Scan Duration Optimization and Test-Retest Reproducibility of [¹⁸F]PF-06445974, a PDE4B-Preferential PET Radioligand, in the Healthy Human Brain",
+        "ReferencesAndLinks": [
+          "see paper"
+        ]
+      },
+      "readme": "ABSTRACT\n\nPhosphodiesterase-4 (PDE4) is the primary enzyme responsible for hydrolysis of cyclic adenosine monophosphate (cAMP) in the brain. The PDE4B subtype has been implicated in inflammatory processes. The PDE4B-preferential PET radioligand [¹⁸F]PF-06445974 has shown promise for imaging PDE4B in humans but appears susceptible to time-dependent increases in total distribution volume (VT), raising concerns about potential radiometabolite effects. This study sought to determine a robust and practical imaging protocol for quantifying [¹⁸F]PF-06445974 in the human brain.\n\nMethods: Twenty-seven healthy volunteers were studied across three cohorts with dynamic PET imaging: a 240-minute scan group (n=11) to assess VT time stability, a 120-minute test-retest group (n=11) to evaluate reproducibility, and a 90-minute baseline scan group (n=5). VT was estimated using both a two-tissue compartment model (2TCM) and Logan graphical analysis with arterial input function. Scan-duration effects on VT stability were evaluated using progressively truncated datasets. Test-retest reliability was assessed using intraclass correlation coefficients (ICC) and absolute test-retest variability (aTRV) for both region of interest (ROI) and voxel-wise analyses.\n\nResults: During 240-minute acquisitions, regional VT values increased markedly after 120 minutes, with mean VT at 240 minutes 30% higher than at 120 minutes, suggesting late-time signal contamination most consistent with radiometabolite accumulation. In contrast, VT estimates derived from 60-, 90-, and 120-minute datasets exhibited substantially reduced drift and preserved regional distribution patterns. In the test-retest cohort, Logan-derived VT demonstrated good reproducibility for 120-minute scans (mean aTRV≈10%; ICC≈0.78), with similar ROI-level reproducibility observed for 60- and 90-minute acquisitions. Logan analysis demonstrated lower parameter uncertainty of VT estimation and greater ICC than 2TCM, particularly for 60-minute datasets. Voxel-wise reliability improved with increasing scan duration, reflecting reduced measurement noise, but longer acquisitions may also increase susceptibility to radiometabolite contamination.\n\nConclusion: When analyzed with Logan graphical methods, regional VT of [¹⁸F]PF-06445974 was reliably quantified using scan durations of  60-90 minutes. Although voxel-wise reliability improved with 120-minute acquisitions, longer scans may increase susceptibility to radiometabolite-related VT inflation. For most applications that rely on predefined regional outcome measures, shortened protocols (60-90 minutes) provide a practical and robust balance between quantitative stability and minimization of late-time bias.",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "pet",
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural"
+        ],
+        "sessions": [
+          "retest",
+          "test",
+          "baseline",
+          "blocked"
+        ],
+        "size": 6723225112,
+        "subjects": [
+          "pde4bmddhv13",
+          "pde4bmddhv63",
+          "pde4bmddhv18",
+          "pde4bmddhv09",
+          "pde4bmddhv17",
+          "pde4bmddhv25",
+          "pde4bmddhv62",
+          "pde4bmddhv14",
+          "pde4bmddhv27",
+          "pde4bmddhv23",
+          "pde4bmddhv64",
+          "pde4bmddhv28",
+          "pde4bmddhv66",
+          "pde4bmddhv12",
+          "pde4bmddhv24",
+          "pde4bmddhv01",
+          "pde4bmddhv04",
+          "pde4bmddhv08",
+          "pde4bmddhv05",
+          "pde4bmddhv26",
+          "pde4bmddhv19",
+          "pde4bmddhv22",
+          "pde4bmddhv61",
+          "pde4bmddhv03",
+          "pde4bmddhv21"
+        ],
+        "tasks": [],
+        "totalFiles": 228
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        55,
+        33,
+        23,
+        63,
+        60,
+        48,
+        52,
+        24,
+        26,
+        42,
+        35,
+        39,
+        55,
+        37,
+        44,
+        56,
+        55,
+        49,
+        54,
+        61,
+        65,
+        63,
+        67,
+        25,
+        33,
+        44
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "pet",
+        "mri"
+      ],
+      "species": "",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2026-03-06T19:12:33.675Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,27 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:ebd5482c66d6018dfc13ce954cf7c0c5e8e66f01b18017aa5c72e3d74e82083c",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "other"
+    ],
+    "id": "physionet:mimic-iv-ext-22mcts",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "discharge summaries",
+        "value": "clinical_notes"
+      },
+      {
+        "evidence": "clinical time series events",
+        "value": "EHR"
+      }
+    ],
+    "population": "267,284 discharge summaries selected from MIMIC-IV-Note",
+    "summary": "Derived time-series resource of 22,588,586 clinical events with relative timestamps, extracted as short text spans from MIMIC-IV-Note discharge summaries by contextual retrieval and Llama-3.1-8B, for clinical risk prediction."
+  },
+  "prompt_version": "v1"
+}

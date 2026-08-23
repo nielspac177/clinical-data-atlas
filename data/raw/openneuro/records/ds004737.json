@@ -1,0 +1,137 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004737",
+  "payload": {
+    "created": "2023-09-01T17:07:57.155Z",
+    "id": "ds004737",
+    "latestSnapshot": {
+      "created": "2024-06-26T19:24:14.000Z",
+      "description": {
+        "Authors": [
+          "Hamsanandini Radhakrishnan",
+          "Chenying Zhao",
+          "Valerie J. Sydnor",
+          "Erica B. Baller",
+          "Philip A. Cook",
+          "Damien Fair",
+          "Barry Giesbrecht",
+          "Bart Larsen",
+          "Kristin Murtha",
+          "David R. Roalf",
+          "Sage Rush-Goebel",
+          "Russell Shinohara",
+          "M. Dylan Tisdall",
+          "Jean Vettel",
+          "Scott Grafton",
+          "Matthew Cieslak",
+          "Theodore Satterthwaite",
+          "Haochang Shou"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004737.v2.0.0",
+        "Funding": [
+          "R01MH112847",
+          "R01MH120482",
+          "R37MH125829",
+          "R01EB022573",
+          "R01MH113550",
+          "R01MH123550",
+          "RF1MH116920",
+          "K99MH127293",
+          "R01MH119185",
+          "R01MH120174",
+          "W911NF-19-2-0026",
+          "W911NF-09-D-0001",
+          "DGE-1845298"
+        ],
+        "HowToAcknowledge": "Please cite both Radhakrishnan et al. (2024) [doi: 10.1002/hbm.26580] and the OpenNeuro dataset [doi: 10.18112/openneuro.ds004737.v1.1.0] in any publications that use this dataset.",
+        "License": "CC0",
+        "Name": "CS-DSI",
+        "ReferencesAndLinks": null
+      },
+      "readme": "# Compressed-sensing diffusion spectrum imaging (CS-DSI)\n\nThis dataset contains diffusion, anatomical, functional, and field mapping neuroimaging data\nfrom a diffusion protocol comparison study used in\n[Radhakrishnan et al. (2024)](https://doi.org/10.1002/hbm.26580).\nSpecifically, this dataset is the \"prospective\" dataset used in that paper.\n\n## Diffusion spectrum imaging data\n\nFour runs of segmented k-space and steady state echo planar (EP) diffusion-weighted (dMRI) data were collected (repetition time, TR=4300ms; echo time, TE=90ms; flip angle, FA=90°; field of view, FOV=230x230mm; voxel size=1.69x1.69x1.7mm; matrix size=136x136; MB factor=4). \nEach run was acquired with a different set of diffusion directions, described briefly below:\n\nacq-HASC92: This corresponds to the HA-SC92 CS-DSI scheme from the paper.\nThere are 92 unique directions.\n\nacq-HASC55 run-01: This corresponds to the HA-SC55–1 CS-DSI scheme from the paper.\nThere are 55 unique directions.\n\nacq-HASC55 run-02: This corresponds to the HA-SC55–2 CS-DSI scheme from the paper.\nThere are 55 unique directions.\n\nacq-RAND57: This corresponds to the RAND57 CS-DSI scheme from the paper.\nThere are 57 unique directions.\n\nThe HA-SC92+55–1 and HA-SC92+55–2 CS-DSI schemes can be reconstructed by\npreprocessing the HA-SC92 and HA-SC55 files and then concatenating them\nbefore doing any reconstruction.\nHA-SC92+55–1 uses HA-SC92 and HA-SC55-1, while HA-SC92+55–2 uses HA-SC92 and HA-SC55-2.\n\n## Anatomical MRI data\n\nOne run of T1-weighted segmented k-space, spoiled, and MAG prepared gradient recalled and inversion recovery (GR/IR) single-echo structural MRI data were collected (256 slices; repetition time, TR=2500ms; echo time, TE=2.9ms; flip angle, FA=8°; field of view, FOV=176x256mm; matrix size=176x256; voxel size=1x1x1mm).\n\n## Functional MRI data\n\nOne run of rest eyes open segmented k-space echo planar (EP) single-echo fMRI data was acquired according to the ABCD protocol (60 slices in interleaved ascending order; repetition time, TR=800ms; echo time, TE=30ms; flip angle, FA=52°; field of view, FOV=216x216mm; matrix size=90x90; voxel size=2.4x2.4x2.4mm; MB factor=6). Run duration was 5:01 minutes, during which 376 volumes were acquired.\n\n## Field map data\n\ndir-PA_epi: EPI maps with the opposite phase encoding direction to the DWI scans,\nmeant to be used for distortion correction of the DWI data.\n\ndir-AP_epi: EPI maps with the opposite phase encoding direction to the fMRI scans,\nwhich can be used for distortion correction of the fMRI data.\nHowever, fMRIPrep does not support TOPUP-style distortion correction,\nso we recommend using the phase-difference field maps we also acquired for the fMRI data.\n\nphasediff, magnitude1, magnitude2: Phase-difference field maps for the fMRI scans.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_diffusion",
+          "mri_structural",
+          "mri_functional"
+        ],
+        "sessions": [
+          "1"
+        ],
+        "size": 15275411222,
+        "subjects": [
+          "001",
+          "15852",
+          "19708",
+          "19779",
+          "19902",
+          "20543",
+          "20594",
+          "20597",
+          "20642",
+          "20645",
+          "20676",
+          "20687",
+          "20698",
+          "20706",
+          "20708",
+          "20792",
+          "20804",
+          "20840",
+          "20872",
+          "20909"
+        ],
+        "tasks": [
+          "rest eyes open"
+        ],
+        "totalFiles": 605
+      },
+      "tag": "2.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        23,
+        null,
+        null,
+        27,
+        31,
+        22,
+        24,
+        24,
+        26,
+        20,
+        20,
+        30,
+        25,
+        26,
+        24,
+        22,
+        27,
+        29,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "https://doi.org/10.1101/2023.02.22.529546",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2023-09-11T14:40:52.414Z"
+  },
+  "source": "openneuro"
+}

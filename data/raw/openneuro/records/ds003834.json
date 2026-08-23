@@ -1,0 +1,104 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003834",
+  "payload": {
+    "created": "2021-10-11T16:47:21.978Z",
+    "id": "ds003834",
+    "latestSnapshot": {
+      "created": "2021-11-04T00:21:04.000Z",
+      "description": {
+        "Authors": [
+          "Matteo Visconti di Oleggio Castello",
+          "James V. Haxby",
+          "M. Ida Gobbini"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds003834.v1.0.2",
+        "Funding": [
+          "NSF grant #1835200"
+        ],
+        "HowToAcknowledge": "If you use this dataset or the code, please cite the paper: Visconti di Oleggio Castello, M., Haxby, J.V., & Gobbini, M.I. (2021). Shared neural codes for visual and semantic information about familiar faces in a common representational space. Proceedings of the National Academy of Sciences. https://doi.org/10.1073/pnas.2110474118\n\nIf you use the Grand Budapest Hotel data, please cite the paper: Visconti di Oleggio Castello, M., Chauhan, V., Jiahui, G., & Gobbini, M. I. (2020). An fMRI dataset in response to \"The Grand Budapest Hotel\", a socially-rich, naturalistic movie. Scientific Data, 7(1), 1-9 https://doi.org/10.1038/s41597-020-00735-4\n",
+        "License": "CC0",
+        "Name": "Shared neural codes for visual and semantic information about familiar faces in a common representational space",
+        "ReferencesAndLinks": [
+          "https://github.com/mvdoc/identity-decoding/",
+          "https://osf.io/ehygz/",
+          "https://doi.org/10.1073/pnas.2110474118"
+        ]
+      },
+      "readme": "This dataset contains the raw data associated with the paper *Shared neural codes for visual and semantic information about familiar faces in a common representational space* by Matteo Visconti di Oleggio Castello,\nJames V. Haxby, and M. Ida Gobbini published in the Proceedings of the National Academy of Sciences.\n\nFourteen subjects performed a 1-back repetition detection task on faces of personally familiar identities and visually familiar identities over two scanning sessions. Hyperalignment was used to functionally align their data based on a movie dataset, \"The Grand Budapest Hotel\".\n\nSample code for the analyses is available at https://github.com/mvdoc/identity-decoding. Additional behavioral data is available at https://osf.io/ehygz/.\n\nFor more information, see the corresponding paper at https://doi.org/10.1073/pnas.2110474118. \n\nThe Grand Budapest Hotel data is available at https://openneuro.org/datasets/ds003017/. See also the associated paper: Visconti di Oleggio Castello, M., Chauhan, V., Jiahui, G., & Gobbini, M. I. (2020). *An fMRI dataset in response to \"The Grand Budapest Hotel\", a socially-rich, naturalistic movie*. Scientific Data, 7(1), 1-9 https://doi.org/10.1038/s41597-020-00735-4\n\nIf you use this dataset or the code, please cite the corresponding paper: \n\n> Visconti di Oleggio Castello, M., Haxby, J.V., & Gobbini, M.I. Shared neural codes for visual and semantic information about familiar faces in a common representational space. Proceedings of the National Academy of Sciences (2021). https://doi.org/10.1073/pnas.2110474118\n\n### Notes\n\nT1 anatomicals were refaced using AFNI's `@afni_refacer_run` https://afni.nimh.nih.gov/pub/dist/doc/program_help/@afni_refacer_run.html\n\n\n### Contact information\n\nFor questions on this dataset, please contact Matteo Visconti di Oleggio Castello (matteo.visconti@berkeley.edu).",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "famfirst",
+          "strfirst"
+        ],
+        "size": 37349871306,
+        "subjects": [
+          "sid000005",
+          "sid000007",
+          "sid000009",
+          "sid000010",
+          "sid000013",
+          "sid000024",
+          "sid000025",
+          "sid000030",
+          "sid000034",
+          "sid000050",
+          "sid000055",
+          "sid000114",
+          "sid000134",
+          "sid000278"
+        ],
+        "tasks": [
+          "fam1back",
+          "str1back",
+          "localizer"
+        ],
+        "totalFiles": 1131
+      },
+      "tag": "1.0.2"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        28,
+        25,
+        27,
+        28,
+        25,
+        31,
+        28,
+        28,
+        25,
+        26,
+        29,
+        27,
+        28,
+        29
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2021-10-27T17:02:43.598Z"
+  },
+  "source": "openneuro"
+}

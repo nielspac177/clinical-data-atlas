@@ -1,0 +1,122 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005056",
+  "payload": {
+    "created": "2024-03-29T15:46:05.733Z",
+    "id": "ds005056",
+    "latestSnapshot": {
+      "created": "2024-03-29T15:51:42.000Z",
+      "description": {
+        "Authors": [
+          "Guangyu Zhou",
+          "Gregory Lane",
+          "Thorsten Kahnt",
+          "Christina Zelano"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005056.v1.0.0",
+        "Funding": [
+          "National Institutes of Health (NIDCD, https://www.nidcd.nih.gov/) grants R01-DC-016364 and R01-DC-018539 to C.Z.",
+          "Intramural Research Program at the National Institute on Drug Abuse (ZIA DA000642 to T.K.)."
+        ],
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "Dataset2",
+        "ReferencesAndLinks": [
+          "",
+          "",
+          ""
+        ]
+      },
+      "readme": "\nDICOM files were converted using a newer version of dcm2nii, dcm2niix, from MRIcron (v1.0.210190902)\n\n\nHowever, in the relevant paper (https://github.com/zelanolab/human_olfactory_tubercle_and_periaqueductal_gray_structural_connectivity): \nDICOM files were converted using old version of dcm2nii from MRIcron (dcm2nii).\nThe images have been field-bias corrected using FSL and skull-stripped (derivatives folder).\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 385988947,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26"
+        ],
+        "tasks": [],
+        "totalFiles": 55
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2024-05-29T18:08:00.690Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,27 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:1af3ef6b4775b20f2dbbf9e0c831c385322a39f93e27947a4dd699e1d5796978",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "other"
+    ],
+    "id": "physionet:ehrxqa",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "chest X-ray images",
+        "value": "xray"
+      },
+      {
+        "evidence": "Electronic Health Records",
+        "value": "EHR"
+      }
+    ],
+    "population": null,
+    "summary": "Multi-modal question answering dataset pairing structured electronic health records with aligned chest X-ray images, containing question-answer pairs that are image-related, table-related, or require reasoning across both modalities."
+  },
+  "prompt_version": "v1"
+}

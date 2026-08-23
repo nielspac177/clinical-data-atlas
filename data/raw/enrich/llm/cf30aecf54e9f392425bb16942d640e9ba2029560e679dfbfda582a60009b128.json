@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:cf30aecf54e9f392425bb16942d640e9ba2029560e679dfbfda582a60009b128",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "assessing breast cancer response to neoadjuvant chemotherapy",
+        "label": "breast cancer"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "tcia:acrin-6698",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "serial MRI studies with DWI, DCE and T2w acquisitions",
+        "value": "MRI"
+      },
+      {
+        "evidence": "quantitative diffusion weighted imaging (DWI)",
+        "value": "dMRI"
+      }
+    ],
+    "population": "women undergoing NAC for invasive breast cancer",
+    "summary": "Multi-center trial imaging evaluating quantitative diffusion weighted imaging for breast cancer response to neoadjuvant chemotherapy, with serial DWI, DCE and T2-weighted MRI and test/retest DWI in a subset."
+  },
+  "prompt_version": "v1"
+}

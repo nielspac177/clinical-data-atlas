@@ -1,0 +1,43 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:09c2f407967c13c376071f23f6a8f1b6502b653d8060ef74a14960ad6f9c3a2d",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "oncology",
+      "nephrology_urology",
+      "other"
+    ],
+    "id": "tcia:pseudo-phi-dicom-data",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "CR CT DX MG MR PT",
+        "value": "MRI"
+      },
+      {
+        "evidence": "CR CT DX MG MR PT",
+        "value": "PET"
+      },
+      {
+        "evidence": "CR CT DX MG MR PT",
+        "value": "CT"
+      },
+      {
+        "evidence": "CR CT DX MG MR PT",
+        "value": "xray"
+      },
+      {
+        "evidence": "CR CT DX MG MR PT",
+        "value": "mammography"
+      }
+    ],
+    "population": null,
+    "summary": "DICOM images spanning several body regions and imaging types, assembled as a reference dataset for evaluating automated medical image de-identification algorithms against patient privacy requirements."
+  },
+  "prompt_version": "v1"
+}

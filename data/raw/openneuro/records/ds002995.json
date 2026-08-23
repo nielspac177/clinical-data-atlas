@@ -1,0 +1,110 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds002995",
+  "payload": {
+    "created": "2020-07-03T16:32:42.806Z",
+    "id": "ds002995",
+    "latestSnapshot": {
+      "created": "2020-07-08T16:43:23.000Z",
+      "description": {
+        "Authors": [
+          "Jason A Avery",
+          "Alexander G Liu",
+          "Cameron Riddell",
+          "John E Ingeholm",
+          "Stephen J Gotts",
+          "Alex Martin"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds002995.v1.0.1",
+        "Funding": null,
+        "HowToAcknowledge": "Please cite this paper: https://pubmed.ncbi.nlm.nih.gov/31836661/",
+        "License": "CC0",
+        "Name": "Taste Quality Representation in the Human Brain",
+        "ReferencesAndLinks": null
+      },
+      "readme": "Dataset description\n===================\n\nTaste Quality Representation in the Human Brain\nThe Journal of Neuroscience, January 29, 2020 40(5):1042–1052\nhttps://doi.org/10.1523/JNEUROSCI.1751-19.2019\n\nIn the mammalian brain, the insula is the primary cortical substrate involved in the perception of taste. Recent imaging studies in rodents have identified a ‘gustotopic’ organization in the insula, whereby distinct insula regions are selectively responsive to one of the five basic tastes. However, numerous studies in monkeys have reported that gustatory cortical neurons are broadly-tuned to multiple tastes, and tastes are not represented in discrete spatial locations. Neuroimaging studies in humans have thus far been unable to discern between these two models, though this may be due to the relatively low spatial resolution employed in taste studies to date. In the present study, we examined the spatial representation of taste within the human brain of 18 healthy subjects using ultra-high resolution functional magnetic resonance imaging (MRI) at high magnetic field strength (7-Tesla). During scanning, male and female participants tasted sweet, salty, sour and tasteless liquids, delivered via a custom-built MRI-compatible tastant-delivery system. During the fMRI task, received 0.5mL of sweet, sour, salty, and neutral tastant, in a block design (4 identical taste events / 20s block), followed by a (5s) wash period. Functional MRI data was acquired at ultra-high voxel resolution (1.2mm x 1.2mm x 1.2mm) at high magnetic field strength (7-Tesla). Echo-planar images (EPI) were acquired in 68 axial slices, in a scan window that ranged from the top of the cingulate gyrus (superiorly) to the tip of the temporal pole (inferiorly). \n\nMRI Files included are: \nA) Skull-stripped T1w anatomical scans from MP2RAGE acquisition (uni_den volume) resolution 0.7mm X 0.7mm X 0.7mm. \nB) 8 task epi files - 130vol, acquired Anterior-to-Posterior\nC) 1 epi file (fmap) - 20vol, acquired Posterior-to-Anterior, for topup spatial distortion correction \n\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "01",
+          "02"
+        ],
+        "size": 56673201286,
+        "subjects": [
+          "007",
+          "008",
+          "009",
+          "010",
+          "012",
+          "014",
+          "015",
+          "016",
+          "018",
+          "019",
+          "020",
+          "021",
+          "022",
+          "023",
+          "024",
+          "027",
+          "028",
+          "030"
+        ],
+        "tasks": [
+          "Taste Mapping"
+        ],
+        "totalFiles": 441
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        24,
+        22,
+        27,
+        29,
+        22,
+        24,
+        23,
+        22,
+        23,
+        48,
+        41,
+        31,
+        23,
+        23,
+        24,
+        23,
+        32,
+        24,
+        24,
+        23,
+        27
+      ],
+      "associatedPaperDOI": "https://doi.org/10.1523/JNEUROSCI.1751-19.2019",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "Block",
+      "studyDomain": "Taste",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2020-07-07T16:33:41.680Z"
+  },
+  "source": "openneuro"
+}

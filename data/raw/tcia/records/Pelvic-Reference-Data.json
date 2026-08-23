@@ -1,0 +1,734 @@
+{
+  "endpoints": [
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getCollectionValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getModalityValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getBodyPartValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getPatient",
+    "https://api.datacite.org/dois?prefix=10.7937"
+  ],
+  "harvest_method": "api:nbia+datacite",
+  "native_id": "Pelvic-Reference-Data",
+  "payload": {
+    "datacite": {
+      "citationCount": 14,
+      "container": {},
+      "contentUrl": [],
+      "contributors": [
+        {
+          "affiliation": [],
+          "contributorType": "DataCurator",
+          "familyName": null,
+          "givenName": null,
+          "name": "TCIA Team",
+          "nameIdentifiers": [],
+          "nameType": null
+        }
+      ],
+      "created": "2019-09-13T16:33:54Z",
+      "creators": [
+        {
+          "affiliation": [],
+          "familyName": "Yorke",
+          "givenName": "Afua A.",
+          "name": "Yorke, Afua A.",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "McDonald",
+          "givenName": "Gary C.",
+          "name": "McDonald, Gary C.",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Solis",
+          "givenName": "David",
+          "name": "Solis, David",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Guerrero",
+          "givenName": "Thomas",
+          "name": "Guerrero, Thomas",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2019",
+          "dateInformation": null,
+          "dateType": "Issued"
+        }
+      ],
+      "descriptions": [
+        {
+          "description": "Purpose: Expert selected landmark points on clinical image pairs provide a basis for rigid registration validation. Using combinatorial rigid registration optimization (CORRO) we provide a statistically characterized reference data set for image registration of the pelvis by estimating the underlying ground truth.Methods: Landmark points for each CT/CBCT image pair for 58 pelvic cases were identified. From the identified landmark pairs, combination subsets of k-number of landmark pairs were generated without repeat, to form a k-set for k=4, 8, &amp;12. An affine registration between the image pairs was calculated for each k-combination set (1,900-8,000,000). The mean and the standard deviation of the registration were used as the final registration for each image pair. Joint entropy was employed to measure and compare the quality of CORRO to commercially available software.Results: An average of 154 (range: 91-212) landmark pairs were selected for each CT/CBCT image pair. The mean standard deviation of the registration output decreased as the k-size increased for all cases. In general the joint entropy evaluated was found to be lower than results from commercially available software. Of all 58 cases 58.3 of the k=4, 15 of k=8 and 18.3 of k=12 resulted in the better registration using CORRO as compared to 8.3 from a commercial registration software. The minimum joint entropy was determined for one case and found to exist at the estimated registration mean in agreement with the CORRO approach.Conclusion: The results demonstrate that CORRO works even in the extreme case of the pelvic anatomy where the CBCT suffers from reduced quality due to increased noise levels. The estimated ground truth using CORRO was found to be better than commercially available software for all k-sets tested. Additionally, the k-set of 4 resulted in overall best outcomes when compared to k=8 and 12, which is anticipated because k=8 and 12 are more likely to have combinations that affected the accuracy of the registration.",
+          "descriptionType": "Abstract",
+          "lang": null
+        }
+      ],
+      "doi": "10.7937/tcia.2019.woskq5oo",
+      "downloadCount": 0,
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "Pelvic-Reference-Data",
+          "identifierType": "TCIA Short Name"
+        }
+      ],
+      "isActive": true,
+      "language": null,
+      "metadataVersion": 12,
+      "partCount": 0,
+      "partOfCount": 0,
+      "publicationYear": 2019,
+      "published": null,
+      "publisher": "The Cancer Imaging Archive",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2019-09-13T16:33:54Z",
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "10.1002/acm2.12965",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.3390/sym13050747",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.3390/diagnostics11081435",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.3389/fonc.2021.637804",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.31579/2640-1053/076",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.3390/ma15020442",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1007/978-981-99-0942-1_28",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1002/mp.15282",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1038/s41598-024-81167-7",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1088/1361-6560/ad6373",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.matdes.2024.112868",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1007/s10278-024-01249-w",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        }
+      ],
+      "relatedItems": [],
+      "rightsList": [
+        {
+          "rights": "Creative Commons Attribution 3.0 Unported",
+          "rightsIdentifier": "cc-by-3.0",
+          "rightsIdentifierScheme": "SPDX",
+          "rightsUri": "https://creativecommons.org/licenses/by/3.0/legalcode",
+          "schemeUri": "https://spdx.org/licenses/"
+        }
+      ],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "fabricaForm",
+      "state": "findable",
+      "subjects": [],
+      "titles": [
+        {
+          "lang": null,
+          "title": "Pelvic Reference Data",
+          "titleType": null
+        },
+        {
+          "lang": null,
+          "title": "Pelvic-Reference-Data",
+          "titleType": "AlternativeTitle"
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2025-06-01T01:01:21Z",
+      "url": "https://www.cancerimagingarchive.net/collection/pelvic-reference-data/",
+      "version": "1",
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 4015
+    },
+    "nbia": {
+      "body_parts": [],
+      "collection": "Pelvic-Reference-Data",
+      "modalities": [
+        "CT"
+      ],
+      "patients": [
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-001",
+          "PatientName": "Pelvic-Ref-001",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-002",
+          "PatientName": "Pelvic-Ref-002",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-003",
+          "PatientName": "Pelvic-Ref-003",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-004",
+          "PatientName": "Pelvic-Ref-004",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-005",
+          "PatientName": "Pelvic-Ref-005",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-006",
+          "PatientName": "Pelvic-Ref-006",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-007",
+          "PatientName": "Pelvic-Ref-007",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-008",
+          "PatientName": "Pelvic-Ref-008",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-009",
+          "PatientName": "Pelvic-Ref-009",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-010",
+          "PatientName": "Pelvic-Ref-010",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-011",
+          "PatientName": "Pelvic-Ref-011",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-012",
+          "PatientName": "Pelvic-Ref-012",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-013",
+          "PatientName": "Pelvic-Ref-013",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-014",
+          "PatientName": "Pelvic-Ref-014",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-015",
+          "PatientName": "Pelvic-Ref-015",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-016",
+          "PatientName": "Pelvic-Ref-016",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-017",
+          "PatientName": "Pelvic-Ref-017",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-018",
+          "PatientName": "Pelvic-Ref-018",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-019",
+          "PatientName": "Pelvic-Ref-019",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-020",
+          "PatientName": "Pelvic-Ref-020",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-021",
+          "PatientName": "Pelvic-Ref-021",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-022",
+          "PatientName": "Pelvic-Ref-022",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-023",
+          "PatientName": "Pelvic-Ref-023",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-024",
+          "PatientName": "Pelvic-Ref-024",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-025",
+          "PatientName": "Pelvic-Ref-025",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-026",
+          "PatientName": "Pelvic-Ref-026",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-027",
+          "PatientName": "Pelvic-Ref-027",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-028",
+          "PatientName": "Pelvic-Ref-028",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-029",
+          "PatientName": "Pelvic-Ref-029",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-030",
+          "PatientName": "Pelvic-Ref-030",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-031",
+          "PatientName": "Pelvic-Ref-031",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-032",
+          "PatientName": "Pelvic-Ref-032",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-033",
+          "PatientName": "Pelvic-Ref-033",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-034",
+          "PatientName": "Pelvic-Ref-034",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-035",
+          "PatientName": "Pelvic-Ref-035",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-036",
+          "PatientName": "Pelvic-Ref-036",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-037",
+          "PatientName": "Pelvic-Ref-037",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-038",
+          "PatientName": "Pelvic-Ref-038",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-039",
+          "PatientName": "Pelvic-Ref-039",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-040",
+          "PatientName": "Pelvic-Ref-040",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-041",
+          "PatientName": "Pelvic-Ref-041",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-042",
+          "PatientName": "Pelvic-Ref-042",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-043",
+          "PatientName": "Pelvic-Ref-043",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-044",
+          "PatientName": "Pelvic-Ref-044",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-045",
+          "PatientName": "Pelvic-Ref-045",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-046",
+          "PatientName": "Pelvic-Ref-046",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-047",
+          "PatientName": "Pelvic-Ref-047",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-048",
+          "PatientName": "Pelvic-Ref-048",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-049",
+          "PatientName": "Pelvic-Ref-049",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-050",
+          "PatientName": "Pelvic-Ref-050",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-051",
+          "PatientName": "Pelvic-Ref-051",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-052",
+          "PatientName": "Pelvic-Ref-052",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-053",
+          "PatientName": "Pelvic-Ref-053",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-054",
+          "PatientName": "Pelvic-Ref-054",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-055",
+          "PatientName": "Pelvic-Ref-055",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-056",
+          "PatientName": "Pelvic-Ref-056",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-057",
+          "PatientName": "Pelvic-Ref-057",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Pelvic-Reference-Data",
+          "PatientId": "Pelvic-Ref-058",
+          "PatientName": "Pelvic-Ref-058",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        }
+      ]
+    }
+  },
+  "source": "tcia"
+}

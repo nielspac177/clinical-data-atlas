@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:c3207fecc6f973faf8a87c2e47523b92741683f86d399cd5a0bc4a10131a63a5",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "history of asthma",
+        "label": "asthma"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "pulmonology"
+    ],
+    "id": "physionet:cpap-data-canterbury",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "A pressure and flow dataset",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "collected using a questionnaire",
+        "value": "survey"
+      }
+    ],
+    "population": "30 adults at the University of Canterbury undergoing CPAP therapy",
+    "summary": "Pressure and flow recordings from adults on CPAP therapy breathing at five instructed rates at two PEEP levels, captured with differential and gauge pressure sensors, plus questionnaire data on demographics, smoking, and asthma history."
+  },
+  "prompt_version": "v1"
+}

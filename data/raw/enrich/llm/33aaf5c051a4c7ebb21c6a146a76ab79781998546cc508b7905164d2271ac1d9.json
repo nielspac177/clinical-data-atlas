@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:33aaf5c051a4c7ebb21c6a146a76ab79781998546cc508b7905164d2271ac1d9",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "episodes of bradycardia",
+        "label": "bradycardia"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "pediatrics",
+      "critical_care",
+      "cardiology",
+      "pulmonology"
+    ],
+    "id": "physionet:picsdb",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "simultaneous ECG and respiration recordings",
+        "value": "ECG"
+      },
+      {
+        "evidence": "ECG and respiration recordings",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": "Ten preterm infants from the Neonatal Intensive Care Unit of the University of Massachusetts Memorial Healthcare",
+    "summary": "Simultaneous ECG and respiration recordings from preterm infants in a neonatal intensive care unit, used with linear heart rate features to predict bradycardia episodes."
+  },
+  "prompt_version": "v1"
+}

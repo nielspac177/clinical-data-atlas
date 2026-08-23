@@ -1,0 +1,114 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005267",
+  "payload": {
+    "created": "2024-06-20T13:20:28.421Z",
+    "id": "ds005267",
+    "latestSnapshot": {
+      "created": "2024-06-21T07:24:25.000Z",
+      "description": {
+        "Authors": [
+          "Anja Ischebeck",
+          "Hannah Kreilinger",
+          "Joe Miller",
+          "Margit Hoefler",
+          "Iain D. Gilchrist",
+          "Christof Koerner"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005267.v1.0.1",
+        "Funding": [
+          "This work was supported by the Austrian Science Fund (FWF) under grant P-27824."
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Fixating Targets in Visual Search: The Role of Dorsal and Ventral Attention Networks in the Processing of Relevance and Rarity",
+        "ReferencesAndLinks": null
+      },
+      "readme": "# README\n\n## Dataset Overview\n\nThis BIDS dataset includes anatomical, fieldmap, and functional MRI data, along with all relevant information and scripts for preprocessing, MVPA (Multivoxel Pattern Analysis), and GLM (General Linear Model) analyses.\n\n### Data Contents\n\n- **Anatomical Data**: High-resolution T1-weighted images.\n- **Fieldmap Data**: Fieldmap, magnitude, and phase difference images for correcting distortions.\n- **Functional Data**: BOLD images acquired during task performance, with accompanying event files.\n\n### Analyses and Scripts\n\n- **Preprocessing**: Motion correction, slice timing correction, spatial normalization, and smoothing. Scripts are provided in Matlab/SPM.\n- **MVPA**: Scripts and methodological details for decoding patterns of brain activity.\n- **GLM**: Scripts and details for modeling brain activity in relation to experimental design.\n\n## Usage Instructions\n\n1. **Preprocessing**: Use scripts in `derivatives/preprocessing`.\n2. **MVPA Analysis**: Use scripts in `derivatives/MVPA`.\n3. **GLM Analysis**: Use scripts in `derivatives/GLM`.\n\nEnsure Matlab and SPM are installed to run the provided scripts.\n\n## Contact\n\nFor questions or issues, please contact:\n\n- **Name**:  Anja Ischebeck\n- **Email**:  anja.ischebeck@uni-graz.at\n- **Institution**:  Institute of Psychology, University of Graz, Universitaetsplatz 2/DG, A-8010 Graz\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "1"
+        ],
+        "size": 38635327048,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21"
+        ],
+        "tasks": [
+          "eye"
+        ],
+        "totalFiles": 591
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        23,
+        20,
+        24,
+        23,
+        24,
+        23,
+        26,
+        23,
+        25,
+        22,
+        27,
+        23,
+        28,
+        25,
+        23,
+        27,
+        21,
+        22,
+        25,
+        24,
+        23
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2024-06-20T15:19:33.120Z"
+  },
+  "source": "openneuro"
+}

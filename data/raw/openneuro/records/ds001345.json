@@ -1,0 +1,91 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds001345",
+  "payload": {
+    "created": "2018-04-28T08:31:53.690Z",
+    "id": "ds001345",
+    "latestSnapshot": {
+      "created": "2019-11-29T10:17:27.000Z",
+      "description": {
+        "Authors": [
+          "Michael P Notter",
+          "Sandra Da Costa",
+          "Micah M Murray"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds001345.v1.0.0",
+        "Funding": [
+          "Swiss National Science Foundation (grant numbers 169206, 149982, 133136, 118419, and 105680 to M.M.M.)"
+        ],
+        "HowToAcknowledge": "Please cite our paper available on: TBD",
+        "License": "CC0",
+        "Name": "Decoding of multisensory semantics and memories in low-level visual cortex",
+        "ReferencesAndLinks": null
+      },
+      "readme": "# Decoding of multisensory semantics and memories in low-level visual cortex\n\n## Abstract\n\nAmple evidence indicates that recognition memory performance can be facilitated by multisensory stimuli at the time of encoding. While it is not necessary that multisensory information is present during the decoding of a memory, a beneficial effect of the multisensory stimulation only takes place if the initial encoding happened in a semantically congruent audio-visual context. The goal of this study was to investigate the brain mechanisms involved during the encoding and subsequent retrieval of semantically congruent multisensory objects. In a functional MRI paradigm, participants performed a continuous recognition task in which they discriminated between initially and previously seen objects. The task was independent of the semantic congruence of the sound with the initially shown image. We performed a univariate analysis to identify regions involved in the information processing of semantic context dependent multisensory memory traces. Next, a multivariate pattern analysis (MVPA) located where the representational content of these traces is encoded and later again retrieved. We show that low-level visual cortex can reliably decode whether incoming visual stimuli had been previously encountered on a single-trial with either a semantically congruent or incongruent sound. Aside from further reinforcing the notion that low-level visual cortex is fundamentally multisensory in its architecture, our findings suggest that these functions extend to include both semantically-related and memory-related functions.\n\n## Participants\n\nThe dataset contains data of twelve healthy adults (8 female; aged 22-35 years mean ± SD = 28.06 ± 3.29). All reported normal hearing and normal (or corrected-to-normal) vision, and provided written informed consent in accordance with procedures approved by the cantonal ethics committee of Vaud, Switzerland and according to the World Medical Association Helsinki Decla-ration (WMA General Assembly, 2008). The participants.tsv file contains the subject IDs, together with gender and age information.\n\n## Behavioral Paradigm\n\nSubjects performed a continuous recognition task on equal numbers of initial and repeated presentations of line drawings of common objects, which were pseudo-randomized within a session of trials. The stimuli used in this experiment were the same as in Lehmann & Murray (2005). On each trial, subjects indicated whether the visual stimulus was appearing for the first time or had appeared previously. They were instructed to ignore the sounds and to focus on the visual information. The experimental paradigm is schematized in the corresponding paper, Figure 1.\n\nVisual stimuli were comprised of 108 line drawings selected from either a standardized set (Snodgrass & Vanderwart, 1980) or obtained from an online library (dgl.microsoft.com) and modified to stylistically resemble those from the standardized set. Images were equally likely coming from a multitude of semantic categories (e.g., animals, miscellaneous household items, musical instruments, tools, vehicles, etc.) and their occurrence was balanced across experimental conditions. Images were centrally presented for 500ms and appeared black on a white background. On initial presentations, visual stimuli were subdivided into 3 groups: visual presentation only (V), which were appearing 50% of the initial presentations; visual with semantically congruent sound (AVc), which were presented 25% of the initial presentations; and visual with semantically incongruent sound (AVi), which were shown on the remaining 25% of initial presentations. In this way, the amount of unisensory and multisensory initial presentations were equal.\n\nAuditory stimuli were complex, meaningful sounds (16 bit stereo; 44100 Hz digitization; 500 ms duration) and were either semantically congruent (e.g. a “dong” sound with the image of a bell) or semantically incongruent (e.g. a “woof” sound with the image of a gun) to one of the visual stimuli. Sounds were obtained from an online library (dgl.microsoft.com) and modified using audio editing software (Adobe Audition version 1.0) to be 500ms in duration. The volume was adjusted to a comfortable and comprehensible level for each subject, such that sounds were clearly, but not uncomfortably, audible in the scanner environment.\n\nOn repeated presentations, only the visual stimuli from initial presentations were displayed. Subjects’ task was to indicate as quickly and as accurately as possible, via a right-hand button press, whether the image had been seen before. Thus, there were three classes of repeated presentations: (1) initially presented as visual alone; (2) initially presented with a semantically congruent sound; and (3) initially presented with a semantically incongruent sound. These conditions differ in (1) whether there was a visual unisensory or an auditory-visual multisensory experience associated with the image, and (2) whether this multisensory experience had semantically congruent or incongruent stimuli. To simplify, we refer to repetitions of the images from the V condition as V-, to repetitions of images from the AVc condition as V+c, and to repetitions of images from the AVi condition as V+i. Subjects were not asked to judge if the semantic stimuli were incongruent or not, so the context (i.e., whether the initial encounter with the image during the experiments was unisensory or multisensory) was completely orthogonal to the task.\n\nStimuli were presented for 500ms. The inter-trial interval (ITI) ranged from 5000ms to 12000ms in steps of 1000ms, varying randomly from one trial to the next though evenly distributed within each experimental condition to provide adequate temporal sampling of the blood oxygen level dependent (BOLD) response. Stimulus delivery and the recording of behavioral data (reaction time and accuracy) were controlled by E-prime in conjunction with their serial response box (www.pstnet.com; Psychology Software Tools). Subjects were instructed to respond as fast as possible, whilst still being accurate. Button presses longer than 1300ms after stimuli presentation were not recorded and the trial was labeled as a miss. Misses were considered as incorrect responses in the behavioral analysis.\n\nStimuli were presented in sessions of 64 trials, with equal likelihood of initial and repeated presentations as well as balanced trials between initial unisensory and multisensory conditions (i.e., 16 trials of V-, 8 trials of V+c and 8 trials of V+i per session). Within each session, the conditions were pseudo-randomized, and each image was repeated once, independently of how the image was initially presented. The average number of trials between the initial and repeated presentation of any given stimulus was 8.58 images (range = 3-20 images). Each subject completed 4 sessions. No object was repeated more than once for any subject - that is, each experiment was comprised of distinct stimuli. Likewise, sounds/images used for the incongruent condition were neither previously nor later used for other conditions. There were four new multisensory events during each quarter of trials in each of the four sessions, with an average of 10.25 new images during the first quarter and 7.0 new images during the final quarter. Thus, neither experiment had a clear bias in the distribution of multisensory vs. unisensory events nor in terms of old/new images that would readily explain performance differences between images with multisensory vs. unisensory pasts.\n\nEach subject folder contains a TSV file per functional run, containing the stimuli onset, its duration, which condition it is {1: 'AVc', 2: 'AVi',  3: 'V', 4: 'V+c', 5: 'V+i', 6: 'V-'}, what the target response should be {1: 'new', 2: 'already seen'}, what the response from the subject was {1: 'new', 2: 'already seen', -1: 'no response'}, if the response was correct, what the reaction time was, and which stimuli image was used.\n\n## Data Acquisition\n\nStructural and functional images were collected on a 3 Tesla Siemens TrioTim scanner equipped with an 8-channel head coil at the Center for Biomedical Imaging (CIBM) at the Univer-sity Hospital Lausanne (CHUV). A 3-dimensional high-resolution isotropic T1-weighted se-quence provided 160 contiguous, anatomical slices (MPRAGE; TR/TE/flip angle = 1480ms/3.42ms/15°; 256 x 256mm in-plane resolution; a slice thickness of 1 mm; voxel size = 1x1x1 mm). Functional MRI images were continuously acquired using a standard gradient echo sequence (TR/TE/flip angle = 2007.5ms/30ms/90°) with 36 axial functional images (224x224mm in-plane resolution; 3 mm slice thickness; 0.30 mm inter-slice gap; voxel size = 3.50 × 3.50 × 3.30mm) acquired in descending order covering the whole brain. For each subject four separate sessions were recorded, each having 275 volumes.\n\n## Defacing\n\nPydeface was used on all anatomical images to ensure deindentification of subjects. The code can be found at https://github.com/poldracklab/pydeface\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 2334422099,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12"
+        ],
+        "tasks": [
+          "Audio-Visual Memory"
+        ],
+        "totalFiles": 113
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        22,
+        24,
+        30,
+        28,
+        34,
+        29,
+        29,
+        24,
+        27,
+        28,
+        30,
+        26
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "Multisensory Integration",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2019-11-29T10:15:00.481Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:293aea93ee0baa70458d49645fd9fa8ed56f12872724c382d126132741282ccb",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "The Cancer Genome Atlas Thyroid Cancer (TCGA-THCA) data collection",
+        "label": "Thyroid Cancer"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "endocrinology_metabolism"
+    ],
+    "id": "tcia:tcga-thca",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "CT PT",
+        "value": "CT"
+      },
+      {
+        "evidence": "CT PT",
+        "value": "PET"
+      },
+      {
+        "evidence": "Clinical, genetic, and pathological data resides in the Genomic Data Commons (GDC) Data Portal",
+        "value": "genomics"
+      }
+    ],
+    "population": "Subjects from The Cancer Genome Atlas whose tissues were collected from many sites all over the world; images mostly acquired as part of routine care.",
+    "summary": "Radiological images of thyroid cancer patients, matched by patient identifier to clinical, genetic and pathological data held in the Genomic Data Commons, enabling genotype-phenotype-outcome studies."
+  },
+  "prompt_version": "v1"
+}

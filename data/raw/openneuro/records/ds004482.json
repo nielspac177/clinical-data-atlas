@@ -1,0 +1,117 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004482",
+  "payload": {
+    "created": "2023-02-08T16:35:49.434Z",
+    "id": "ds004482",
+    "latestSnapshot": {
+      "created": "2023-02-13T15:04:31.000Z",
+      "description": {
+        "Authors": [
+          "Samuel Planton*",
+          "Fosca Al Roumi*",
+          "Liping Wang",
+          "Stanislas Dehaene"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004482.v1.0.0",
+        "Funding": [
+          "European Research Council (ERC, https://erc.europa.eu/) grant to S.D. (NeuroSyntax, ID: 695403)."
+        ],
+        "HowToAcknowledge": "Please cite our preprint at https://www.biorxiv.org/content/10.1101/2022.10.15.512361v1 or the published version of this paper",
+        "License": "CC0",
+        "Name": "ABSeqfMRI",
+        "ReferencesAndLinks": [
+          ""
+        ]
+      },
+      "readme": "This dataset contains the fMRI data from the article entitled Compression of binary sound sequences in human working memory https://www.biorxiv.org/content/10.1101/2022.10.15.512361v1\n\nAccording to the language of thought hypothesis, regular sequences are compressed in human working memory using recursive loops akin to a mental program that predicts future items. We tested this theory by probing working memory for 16-item sequences made of two sounds. We recorded brain activity with functional MRI and magneto-encephalography (MEG) while participants listened to a hierarchy of sequences of variable complexity, whose minimal description required transition probabilities, chunking, or nested structures. Occasional deviant sounds probed the participants’ knowledge of the sequence. We predicted that task difficulty and brain activity would be proportional to minimal description length (MDL) in our formal language. Furthermore, activity should increase with MDL for learned sequences, and decrease with MDL for deviants. These predictions were upheld in both fMRI and MEG, indicating that sequence predictions are highly dependent on sequence structure and become weaker and delayed as complexity increases. The proposed language recruited bilateral superior temporal, precentral, anterior intraparietal and cerebellar cortices. These regions overlapped extensively with a localizer for mathematical calculation, and much less with spoken or written language processing. We propose that these areas collectively encode regular sequences as repetitions with variations and their recursive composition into nested structures.",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 60429245507,
+        "subjects": [
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26"
+        ],
+        "tasks": [
+          "abseq",
+          "loca"
+        ],
+        "totalFiles": 693
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        23,
+        22,
+        27,
+        20,
+        28,
+        34,
+        35,
+        22,
+        21,
+        24,
+        29,
+        33,
+        27,
+        22,
+        24,
+        23,
+        24,
+        27,
+        31,
+        31,
+        32,
+        21,
+        20
+      ],
+      "associatedPaperDOI": " https://doi.org/10.1101/2022.10.15.512361",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "H2020 European Research Council",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "Cognitive science",
+      "studyLongitudinal": "Other"
+    },
+    "publishDate": "2023-07-07T16:31:39.292Z"
+  },
+  "source": "openneuro"
+}

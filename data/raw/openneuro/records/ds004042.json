@@ -1,0 +1,110 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004042",
+  "payload": {
+    "created": "2022-02-23T19:59:12.064Z",
+    "id": "ds004042",
+    "latestSnapshot": {
+      "created": "2023-01-06T17:44:24.000Z",
+      "description": {
+        "Authors": [
+          "Hongmi Lee",
+          "Janice Chen",
+          "Uri Hasson"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004042.v1.0.1",
+        "Funding": null,
+        "HowToAcknowledge": "Please cite these articles:\n\"Lee, H. & Chen, J. (2022a). Predicting memory from the network structure of naturalistic events. Nature Communications, 13, 4235\"\n\"Lee, H. & Chen, J. (2022b). A generalized cortical activity pattern at internally-generated mental context boundaries during unguided narrative recall. eLife, 11, e73693\"\n\"Lee, H., Chen, J., & Hasson, U. (2022). A functional neuroimaging dataset acquired during naturalistic movie watching and narrated recall of a series of short cinematic films. Data in Brief, 108788\"",
+        "License": "CC0",
+        "Name": "FilmFestival",
+        "ReferencesAndLinks": [
+          "Lee, H. & Chen, J. (2022a). Predicting memory from the network structure of naturalistic events. Nature Communications, 13, 4235",
+          "Lee, H. & Chen, J. (2022b). A generalized cortical activity pattern at internally-generated mental context boundaries during unguided narrative recall. eLife, 11, e73693",
+          "Lee, H., Chen, J., & Hasson, U. (2022). A functional neuroimaging dataset acquired during naturalistic movie watching and narrated recall of a series of short cinematic films. Data in Brief, 108788"
+        ]
+      },
+      "readme": "This dataset is described in the following articles:\n\"Lee, H. & Chen, J. (2022a). Predicting memory from the network structure of naturalistic events. Nature Communications, 13, 4235\"\n\"Lee, H. & Chen, J. (2022b). A generalized cortical activity pattern at internally-generated mental context boundaries during unguided narrative recall. eLife, 11, e73693\"\n\"Lee, H., Chen, J., & Hasson, U. (2022). A functional neuroimaging dataset acquired during naturalistic movie watching and narrated recall of a series of short cinematic films. Data in Brief, 108788\"\n\nTwenty 8-35 year old subjects with normal or corrected-to-normal vision participated. \nThey lay in a Skyra 3T scanner with a mirror on the head coil reflecting projected stimuli. \n\nIn Lee & Chen (2022a, 2022b), subjects 3, 4, 5, 6, and 15 were not analyzed due to excessive motion.\nOne additional subject's data was collected but not uploaded as the subject had difficulty hearing during movie watching.\n\nTask 1: Movie watching\nSubjects watch 10 short films, ~50 minutes total. The movie watching task was split into two parts (5 movies each). \nEach part started with a short (~40 s) cartoon introduction clip.\n\nTask 2: Free spoken recall\nWith no prompts, subjects describe aloud everything they can remember from the films.\n\nThere was no intervening task between the two tasks.\nSubjects 8, 10, 15, 16, and 18 had two scanning runs for the recall task, \neither because they had to take a break or the duration of the scanning run exceeded the scanner limit (35 minutes).\n\nDue to copyright issues, we are not uploading the movie video files. \nDetailed information about the movie stimuli can be found in Lee & Chen (2022a).\n\nThe movie onset timestamps in the annotation .xlsx files (provided as additional files) are dependent on the human annotator's subjective perception; some movie transitions are not punctate (e.g., there may be a few seconds of black screen at the beginning or end, which is indistinguishable from the title scenes).",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 41720874631,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20"
+        ],
+        "tasks": [
+          "movie",
+          "recall"
+        ],
+        "totalFiles": 179
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        30,
+        22,
+        21,
+        25,
+        20,
+        22,
+        28,
+        33,
+        21,
+        25,
+        23,
+        33,
+        31,
+        28,
+        25,
+        27,
+        29,
+        27,
+        28,
+        27
+      ],
+      "associatedPaperDOI": "https://doi.org/10.1101/2021.04.24.441287",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "Google; Sloan Research Foundation",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "Naturalistic movie watching and free spoken recall",
+      "studyDomain": "",
+      "studyLongitudinal": "Other"
+    },
+    "publishDate": "2022-04-07T21:13:20.298Z"
+  },
+  "source": "openneuro"
+}

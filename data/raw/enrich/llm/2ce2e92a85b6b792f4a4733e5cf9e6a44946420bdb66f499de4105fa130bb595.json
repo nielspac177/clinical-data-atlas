@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:2ce2e92a85b6b792f4a4733e5cf9e6a44946420bdb66f499de4105fa130bb595",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "congestive heart failure",
+        "label": "congestive heart failure"
+      },
+      {
+        "evidence": "atrial fibrillation",
+        "label": "atrial fibrillation"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:chaos-heart-rate",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "derived from continuous ambulatory (Holter) electrocardiograms",
+        "value": "ECG"
+      },
+      {
+        "evidence": "heart beat (RR-interval) time series",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": "15 heart beat (RR-interval) time series in health and disease (congestive heart failure and atrial fibrillation), each about 24 hours long",
+    "summary": "Fifteen RR-interval time series in health and disease, each about 24 hours long and derived from continuous ambulatory Holter electrocardiograms, provided as a common focus for nonlinear dynamics analysis."
+  },
+  "prompt_version": "v1"
+}

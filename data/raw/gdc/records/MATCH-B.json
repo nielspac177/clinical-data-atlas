@@ -1,0 +1,98 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "MATCH-B",
+  "payload": {
+    "dbgap_accession_number": "phs002028",
+    "disease_type": [
+      "Neoplasms, NOS",
+      "Adenomas and Adenocarcinomas",
+      "Transitional Cell Papillomas and Carcinomas",
+      "Epithelial Neoplasms, NOS",
+      "Ductal and Lobular Neoplasms",
+      "Nerve Sheath Tumors"
+    ],
+    "id": "MATCH-B",
+    "name": "Genomic Characterization CS-MATCH-0007 Arm B",
+    "primary_site": [
+      "Cervix uteri",
+      "Other and unspecified female genital organs",
+      "Colon",
+      "Other and unspecified parts of biliary tract",
+      "Breast",
+      "Prostate gland",
+      "Liver and intrahepatic bile ducts",
+      "Small intestine",
+      "Unknown",
+      "Skin",
+      "Gallbladder",
+      "Rectum",
+      "Bladder",
+      "Rectosigmoid junction",
+      "Ovary",
+      "Renal pelvis",
+      "Parotid gland"
+    ],
+    "program": {
+      "dbgap_accession_number": null,
+      "name": "MATCH",
+      "program_id": "893b0820-b50b-5c75-85f5-3b028e251811"
+    },
+    "project_id": "MATCH-B",
+    "releasable": false,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 33,
+      "data_categories": [
+        {
+          "case_count": 32,
+          "data_category": "Simple Nucleotide Variation",
+          "file_count": 430
+        },
+        {
+          "case_count": 33,
+          "data_category": "Sequencing Reads",
+          "file_count": 146
+        },
+        {
+          "case_count": 33,
+          "data_category": "Biospecimen",
+          "file_count": 33
+        },
+        {
+          "case_count": 33,
+          "data_category": "Clinical",
+          "file_count": 33
+        },
+        {
+          "case_count": 28,
+          "data_category": "Transcriptome Profiling",
+          "file_count": 56
+        },
+        {
+          "case_count": 28,
+          "data_category": "Structural Variation",
+          "file_count": 112
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 32,
+          "experimental_strategy": "WXS",
+          "file_count": 492
+        },
+        {
+          "case_count": 28,
+          "experimental_strategy": "RNA-Seq",
+          "file_count": 252
+        }
+      ],
+      "file_count": 810,
+      "file_size": 3094587345854
+    }
+  },
+  "source": "gdc"
+}

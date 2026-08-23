@@ -1,0 +1,31 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:c78cc4ff781bb3c645342c318b0323fc1512a0a4af469fa992523e390b7de437",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:butqdb",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "18 long-term recordings of single-lead ECGs",
+        "value": "ECG"
+      },
+      {
+        "evidence": "associated 3-axis accelerometer data",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "using a mobile ECG and accelerometer (Bittium Faros 180)",
+        "value": "wearable"
+      }
+    ],
+    "population": "15 subjects (9 female, 6 male) aged between 21 to 83 years",
+    "summary": "Long-term single-lead ECG and accelerometer recordings collected during free-living conditions, annotated for signal quality in classes, intended for development and objective comparison of ECG quality assessment algorithms."
+  },
+  "prompt_version": "v1"
+}

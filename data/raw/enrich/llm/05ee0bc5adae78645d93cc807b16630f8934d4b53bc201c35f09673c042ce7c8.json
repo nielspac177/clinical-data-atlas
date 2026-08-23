@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:05ee0bc5adae78645d93cc807b16630f8934d4b53bc201c35f09673c042ce7c8",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "detect pulmonary pathology in chest X-rays",
+        "label": "pulmonary pathology"
+      },
+      {
+        "evidence": "specific lung abnormalities",
+        "label": "lung abnormalities"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "pulmonology"
+    ],
+    "id": "physionet:cxr-phone",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "frontal-view CXR images from two publicly available databases",
+        "value": "xray"
+      },
+      {
+        "evidence": "6,453 smartphone photographs were taken",
+        "value": "other"
+      }
+    ],
+    "population": "6,453 smartphone photographs of frontal-view CXR images from MIMIC-CXR and CheXpert",
+    "summary": "Smartphone photographs of frontal-view chest X-ray images taken from MIMIC-CXR and CheXpert, including photographs taken by resident doctors and with different devices, forming four derivative photograph datasets."
+  },
+  "prompt_version": "v1"
+}

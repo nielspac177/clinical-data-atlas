@@ -1,0 +1,82 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds001875",
+  "payload": {
+    "created": "2019-04-26T15:19:40.106Z",
+    "id": "ds001875",
+    "latestSnapshot": {
+      "created": "2019-06-05T14:42:01.000Z",
+      "description": {
+        "Authors": [
+          "Kelly Shen",
+          "Joseph S. Gati",
+          "Ravi S. Menon",
+          "Stefan Everling",
+          "Anthony R. McIntosh"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds001875.v1.0.3",
+        "Funding": [
+          "Canadian Institutes of Health Research (FRN 148365)",
+          "Canada First Research Excellence Fund (to BrainsCAN)",
+          "J.S. McDonnell Foundation (Collaborative Research Grant 220020255)"
+        ],
+        "HowToAcknowledge": "The following publication should be cited when using this dataset: Shen K, Bezgin G, Schirner M, Ritter P, Everling S, McIntosh AR (2018) A macaque connective for large-scale network simulations in TheVirtualBrain. bioRxiv 480905, doi: https://doi.org/10.1101/48905.",
+        "License": "CC0",
+        "Name": "TheVirtualBrain Macaque MRI",
+        "ReferencesAndLinks": [
+          "Additional information on this dataset can be found in the following papers: 1) Ghahremani M, Hutchison RM, Menon RS, Everling S (2017) Frontoparietal functional connectivity in the common marmoset. Cerebral Cortex 27 (8): 3890-3905, and 2) Shen K, Goulas A, Grayson DS, Eusebio J, Gati JS, Menon RS, McIntosh AR, Everling S (2019) Exploring the limits of network topology estimation using diffusion-based tractography and tracer studies in the macaque cortex. Neuroimage 191: 81-92."
+        ]
+      },
+      "readme": "This dataset contains the raw MRI data used to build and validate the macaque connectome in TheVirtualBrain (thevirtualbrain.org), a software platform for large-scale network modelling. It includes T1, DWI and resting-state fMRI scans from 9 macaques. In addition to the raw data, we also provide preprocessed derivatives.\n\nOther derivatives such as the macaque connectome, associated ROI parcellation and other data useful for large-scale modelling in TheVirtualBrain can be found at Zenodo.org (https://doi.org/10.5281/zenodo.1471588).\n\nDetails of this dataset can be found in Shen K, Bezgin G, Schirner M, Ritter P, Everling S, McIntosh AR (2018) A macaque connectome for large-scale network simulations in TheVirtualBrain. bioRxiv 480905, doi: https://doi.org/10.1101/480905, which should be cited when publishing work using this dataset. Additional details on fMRI acquisition and preprocessing can be found in Ghahremani M, Hutchison RM, Menon RS, Everling S (2017) Frontoparietal functional connectivity in the common marmoset. Cerebral Cortex 27 (8): 3890-3905. Additional details on DWI acquisition, preprocessing and tractography can be found in Shen K, Goulas A, Grayson DS, Eusebio J, Gati JS, Menon RS, McIntosh AR, Everling S (2019) Exploring the limits of network topology estimation using diffusion-based tractography and tracer studies in the macaque cortex. Neuroimage 191: 81-92.",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_diffusion",
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 11543481100,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09"
+        ],
+        "tasks": [
+          "rest"
+        ],
+        "totalFiles": 130
+      },
+      "tag": "1.0.3"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": null,
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2019-04-26T18:24:51.404Z"
+  },
+  "source": "openneuro"
+}

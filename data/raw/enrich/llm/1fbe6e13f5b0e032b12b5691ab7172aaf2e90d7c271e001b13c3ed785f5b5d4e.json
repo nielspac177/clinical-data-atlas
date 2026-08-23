@@ -1,0 +1,45 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:1fbe6e13f5b0e032b12b5691ab7172aaf2e90d7c271e001b13c3ed785f5b5d4e",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Urothelial Bladder Carcinoma",
+        "label": "Urothelial Bladder Carcinoma"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "nephrology_urology"
+    ],
+    "id": "tcia:tcga-blca",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "CR CT DX MR PT",
+        "value": "MRI"
+      },
+      {
+        "evidence": "CR CT DX MR PT",
+        "value": "CT"
+      },
+      {
+        "evidence": "CR CT DX MR PT",
+        "value": "PET"
+      },
+      {
+        "evidence": "CR CT DX MR PT",
+        "value": "xray"
+      },
+      {
+        "evidence": "Genomic Data Commons (GDC) Data Portal",
+        "value": "genomics"
+      }
+    ],
+    "population": "Human participants with urothelial bladder carcinoma enrolled in The Cancer Genome Atlas (120 participants per source metadata)",
+    "summary": "Radiology images of bladder cancer patients from The Cancer Genome Atlas, matched by patient identifier to clinical, genetic and pathological data in the Genomic Data Commons. Images mostly acquired during routine care, with heterogeneous scanners and protocols."
+  },
+  "prompt_version": "v1"
+}

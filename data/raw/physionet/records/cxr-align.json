@@ -1,0 +1,32 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "cxr-align",
+  "payload": {
+    "abstract": "<p>CXR-Align is a benchmark dataset designed to evaluate vision-language processing (VLP) models' ability to accurately interpret negations in chest X-ray (CXR) reports. Negations are prevalent in medical documentation and pose significant challenges for automated analysis, as misinterpretation can lead to critical diagnostic errors. Existing medical VLP systems often inadequately handle negated findings, motivating the creation of CXR-Align to specifically target and mitigate this limitation.</p>\n<p>The dataset comprises systematically modified and anonymized clinical reports derived from the MIMIC-III database. Each report in CXR-Align includes controlled alterations, particularly negations introduced to clinically relevant positive findings. Reports are standardized to exclude normal CXR cases, ensuring that each entry maintains direct diagnostic significance and maximizes the datase's utility for assessing nuanced language comprehension.</p>\n<p>CXR-Align enables researchers to rigorously test the accuracy and robustness of VLP models, advancing the development of systems capable of reliably interpreting complex clinical language. The dataset's structured format and clear diagnostic focus make it an essential resource for researchers aiming to enhance model comprehension of medical negations, ultimately contributing to safer and more effective clinical decision-support tools.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 336163,
+    "core_doi": "10.13026/vvdj-2j30",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 2739462,
+    "public_project_uuid": "6dddd3a5-07b4-403e-a7fc-7419c3c2b462",
+    "publish_date": "2025-08-21",
+    "resource_type": "Database",
+    "short_description": "CXR-Align is a benchmark dataset created to evaluate vision-language models' capability to interpret negations in chest X-ray (CXR) reports, featuring systematically modified reports from MIMIC-CXR.",
+    "slug": "cxr-align",
+    "source_url": "https://physionet.org/content/cxr-align/1.0.0/",
+    "title": "CXR-Align: A Benchmark for CXR-Report Alignment with Negations",
+    "topics": [],
+    "version": "1.0.0",
+    "version_doi": "10.13026/7ebc-s018"
+  },
+  "source": "physionet"
+}

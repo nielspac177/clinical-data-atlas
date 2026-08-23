@@ -1,0 +1,127 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds000220",
+  "payload": {
+    "created": "2017-09-18T18:04:29.525Z",
+    "id": "ds000220",
+    "latestSnapshot": {
+      "created": "2019-02-15T01:13:39.000Z",
+      "description": {
+        "Authors": [
+          "Roy, A.",
+          "Bernier, R. A.",
+          "Wang, J.",
+          "Benson, M.",
+          "French, J.",
+          "Good, D.",
+          "Hillary, F.G."
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds000220.v1.0.0",
+        "Funding": [],
+        "HowToAcknowledge": "Please cite the following references if you use these data: 'Roy, A., Bernier, R. A., Wang, J., Benson, M., French, J., Good, D., & Hillary, F.G. The evolution of cost-efficiency in neural networks during recovery from traumatic brain injury. PLOS ONE (2017).' Also, pleases include the following: 'This data was obtained from the OpenfMRI database. Its accession number is ds000220' ",
+        "License": "CC0",
+        "Name": "Cost Analysis TBI",
+        "ReferencesAndLinks": [
+          "http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0170541"
+        ]
+      },
+      "readme": "This dataset was obtained from the OpenfMRI project (http:www.openfmri.org).\nAccession #: ds00220\nDescription: The evolution of cost-efficiency in neural networks furing recovery from \ntraumatic brain injury\n\nPlease cite the following references if you use these data:\nRoy, A., Bernier, R. A., Wang, J., Benson, M., French, J., Good, D., & Hillary, F.G. The \nevolution of cost-efficiency in neural networks furing recovery from traumatic brain injury. \nPLOS ONE (2017).\n\n\n### Comments added by Openfmri Curators ###\n===========================================\n\nGeneral Comments\n----------------\nFor each subject, sessions occured approximately three months apart.\n\nDefacing\n--------\nDefacing for the anatomical images for subjects control01-control06 was \nperformed by the submitter.\nPydeface was used on the anatomical images for the rest of the subjects. The code\ncan be found at https://github.com/poldracklab/pydeface\n\nQuality Control\n---------------\nMriqc was run on the dataset. Results are located in derivatives/mriqc. Learn more about it here: \nhttps://mriqc.readthedocs.io/en/stable/\n\nWhere to discuss the dataset\n----------------------------\n1) www.openfmri.org/dataset/ds000220/ See the comments section at the bottom of the dataset\npage.\n2) www.neurostars.org Please tag any discussion topics with the tags openfmri and ds000220.\n3) Send an email to submissions@openfmri.org. Please include the accession number in\nyour email.\n\nKnown Issues\n------------\nn/a\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "1",
+          "2",
+          "3"
+        ],
+        "size": 3361761974,
+        "subjects": [
+          "control01",
+          "control02",
+          "control03",
+          "control04",
+          "control05",
+          "control06",
+          "control07",
+          "control08",
+          "control09",
+          "control10",
+          "control11",
+          "control12",
+          "tbi01",
+          "tbi02",
+          "tbi03",
+          "tbi04",
+          "tbi05",
+          "tbi06",
+          "tbi07",
+          "tbi08",
+          "tbi09",
+          "tbi10",
+          "tbi11",
+          "tbi12",
+          "tbi13",
+          "tbi14"
+        ],
+        "tasks": [
+          "rest"
+        ],
+        "totalFiles": 202
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        23,
+        32,
+        31,
+        31,
+        21,
+        18,
+        21,
+        34,
+        25,
+        20,
+        20,
+        34,
+        19,
+        36,
+        41,
+        19,
+        50,
+        19,
+        20,
+        20,
+        28,
+        52,
+        23,
+        39,
+        28,
+        35
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2017-09-18T18:04:29.525Z"
+  },
+  "source": "openneuro"
+}

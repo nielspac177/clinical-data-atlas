@@ -1,0 +1,94 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007975",
+  "payload": {
+    "created": "2026-06-17T20:42:15.996Z",
+    "id": "ds007975",
+    "latestSnapshot": {
+      "created": "2026-07-07T15:37:27.000Z",
+      "description": {
+        "Authors": [
+          "Crespo Aguirre, Marina",
+          "Williams Ramirez, Jonathan",
+          "Zemlyanker, Dina",
+          "Hu, Xiaoling",
+          "Deden-Binder, Lucas J.",
+          "Herisse, Rogeny",
+          "Montine, Mark",
+          "Connors, Theresa R.",
+          "Mount, Christopher",
+          "MacDonald, Christine L.",
+          "Keene, C. Dirk",
+          "Latimer, Caitlin S.",
+          "Oakley, Derek H.",
+          "Hyman, Bradley T.",
+          "Lawry Aguila, Ana",
+          "Eugenio Iglesias, Juan"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007975.v1.0.0",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "3d photo reconstruciton of dissection photographs",
+        "ReferencesAndLinks": null
+      },
+      "readme": "# 3D dissection photograph dataset\nThis dataset consists of dissection photographs of coronal slabs acquired at\nMassachusetts General Hospital's Alzheimer's Disease Research Center, registered\nin 3D to an *in-vivo* MRI image. \n\n## Processing\n### Photo Imputation\nA 3D U-net was trained to impute between slices of the 3D tissue slab \nreconstruction. This was done to improve subsequent automatic segmentation \nand surface reconstructions. Now available as an output with \nFreeSurfer's v8.0.0+ **mri_3d_photo_recon** pipeline. \n\n## Recon-any\nUsed a deep-learning \"recon-all\"-like processing pipeline for surface \nreconstruction of the imputed 3D-photo volumes. Used the version of run_recon-any in FreeSurfer v8.0.1 for all surface reconstructions. ",
+      "summary": {
+        "dataProcessed": true,
+        "modalities": [],
+        "secondaryModalities": [],
+        "sessions": [],
+        "size": 2062,
+        "subjects": [],
+        "tasks": [],
+        "totalFiles": 4
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": true,
+      "dxStatus": "Other",
+      "grantFunderName": "",
+      "modalities": [],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2026-07-14T14:16:44.150Z"
+  },
+  "source": "openneuro"
+}

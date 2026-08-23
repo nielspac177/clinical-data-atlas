@@ -1,0 +1,29 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:6c0f227e834f1c2d82d20fa3be2300f8081a01c67c57f3e162aabf56e42cefcc",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "COVID-19 chest imaging",
+        "label": "COVID-19"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "pulmonology",
+      "infectious_disease"
+    ],
+    "id": "tcia:midrc-ricord-1b",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Chest CT Covid-",
+        "value": "CT"
+      }
+    ],
+    "population": null,
+    "summary": "Chest CT imaging from COVID-19 negative cases in the RSNA International COVID Open Research Database, published through MIDRC as an expert-annotated, freely available resource for machine learning research and education."
+  },
+  "prompt_version": "v1"
+}

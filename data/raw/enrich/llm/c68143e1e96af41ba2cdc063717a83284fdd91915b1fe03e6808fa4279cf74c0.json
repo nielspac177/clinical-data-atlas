@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:c68143e1e96af41ba2cdc063717a83284fdd91915b1fe03e6808fa4279cf74c0",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "5 types of acute hemorrhage",
+        "label": "acute hemorrhage"
+      },
+      {
+        "evidence": "diagnose intracranial hemorrhage",
+        "label": "intracranial hemorrhage"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology"
+    ],
+    "id": "physionet:bhx-brain-bounding-box",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "thin slice CT images",
+        "value": "CT"
+      }
+    ],
+    "population": null,
+    "summary": "Bounding box annotations for five types of acute hemorrhage on brain CT images, extending the qure.ai CQ500 dataset, containing up to 39,668 boxes in 23,409 images, aimed at machine learning localization tasks."
+  },
+  "prompt_version": "v1"
+}

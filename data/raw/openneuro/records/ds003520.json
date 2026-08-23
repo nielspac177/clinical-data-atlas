@@ -1,0 +1,86 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003520",
+  "payload": {
+    "created": "2021-02-18T09:58:32.160Z",
+    "id": "ds003520",
+    "latestSnapshot": {
+      "created": "2021-04-08T13:59:37.000Z",
+      "description": {
+        "Authors": [
+          "Yujian Diao",
+          "Ileana O Jelescu"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds003520.v1.0.2",
+        "Funding": null,
+        "HowToAcknowledge": "Please cite the following articles: \n\nCatarina Tristao Pereira, Yujian Diao, Ting Yin, Analina R da Silva, Bernard Lanz, Katarzyna Pierzchala Carole Poitry-Yamate and Ileana O Jelescu, Synchronous nonmonotonic changes in functional connectivity and white matter integrity in a rat model of sporadic Alzheimers disease. NeuroImage 225 (2021) 117498. https://doi.org/10.1016/j.neuroimage.2020.117498; \n\nYujian Diao, Ting Yin, Rolf Gruetter and Ileana O Jelescu, PIRACY: An Optimized Pipeline for Functional Connectivity Analysis in the Rat Brain. Front. Neurosci. 15, (2021). https://doi.org/10.3389/fnins.2021.602170",
+        "License": "CC0",
+        "Name": "Rat_rest_STZ",
+        "ReferencesAndLinks": [
+          "https://doi.org/10.1016/j.neuroimage.2020.117498, https://arxiv.org/abs/2001.09857"
+        ]
+      },
+      "readme": "Resting state fMRI data acquired on a cohort of rats with intracerebroventricular injection of streptozotocin (STZ) for Alzheimer's disease-like pathology, and a cohort of controls (sham injection). \n\nAim: to investigate the changes in resting-state network organization within the brain during pathology progression, in a preclinical setting. Animals underwent scanning session at four time-points: 2, 6, 13 and 21 weeks (ses-1,2,3 and 4) after injection. \n\nSome rats are missing data from the last timepoint.\n\nSlice timing in the functional data is in a interleaved ascending order.",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional"
+        ],
+        "sessions": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "size": 4961926000,
+        "subjects": [
+          "CTL3692",
+          "CTL3693",
+          "CTL4351",
+          "CTL4352",
+          "CTL4589",
+          "CTL4590",
+          "CTL4680",
+          "CTL4681",
+          "STZ3694",
+          "STZ3695",
+          "STZ4354",
+          "STZ4397",
+          "STZ4398",
+          "STZ4587",
+          "STZ4588",
+          "STZ4682",
+          "STZ4683"
+        ],
+        "tasks": [
+          "rest"
+        ],
+        "totalFiles": 217
+      },
+      "tag": "1.0.2"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": null,
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2021-02-24T08:05:33.091Z"
+  },
+  "source": "openneuro"
+}

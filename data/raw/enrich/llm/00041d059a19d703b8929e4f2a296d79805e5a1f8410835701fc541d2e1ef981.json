@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:00041d059a19d703b8929e4f2a296d79805e5a1f8410835701fc541d2e1ef981",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Predicting paroxysmal atrial fibrillation",
+        "label": "atrial fibrillation"
+      },
+      {
+        "evidence": "Detecting sleep apnea from the ECG",
+        "label": "sleep apnea"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:challenge-2005",
+    "in_scope": false,
+    "modalities": [
+      {
+        "evidence": "Detecting sleep apnea from the ECG",
+        "value": "ECG"
+      }
+    ],
+    "population": null,
+    "summary": "A call for follow-up studies revisiting the five earlier PhysioNet/Computers in Cardiology challenges rather than a dataset of its own; participants build on previously published challenge work and papers."
+  },
+  "prompt_version": "v1"
+}

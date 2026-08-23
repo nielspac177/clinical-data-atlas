@@ -1,0 +1,27 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:dfe1a22389828a3042e0c5db985cd055d2c46bc5050004fbfbf30c571025f961",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "critical_care"
+    ],
+    "id": "physionet:script-x2b8-dataset",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "electronic health record (EHR) data from ICU patients",
+        "value": "EHR"
+      },
+      {
+        "evidence": "we aggregated data from 37 clinical features from midnight to 8 AM",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "an internal cohort of 696 patients and 9,828 ICU days, and an external test cohort of 333 patients and 2,835 ICU days",
+    "summary": "Daily aggregated electronic health record features for ICU patients on mechanical ventilation, with annotations of intubation, extubation, tracheostomy days and failed extubation, plus next-day extubation labels for internal and external cohorts."
+  },
+  "prompt_version": "v1"
+}

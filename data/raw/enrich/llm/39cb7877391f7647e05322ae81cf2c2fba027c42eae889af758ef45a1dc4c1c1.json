@@ -1,0 +1,29 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:39cb7877391f7647e05322ae81cf2c2fba027c42eae889af758ef45a1dc4c1c1",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "COVID-19 imaging dataset",
+        "label": "COVID-19"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "pulmonology",
+      "infectious_disease"
+    ],
+    "id": "tcia:midrc-ricord-1a",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Chest CT Covid+",
+        "value": "CT"
+      }
+    ],
+    "population": null,
+    "summary": "Expert-annotated chest CT imaging from COVID-19 positive cases, created by the RSNA with the Society of Thoracic Radiology and published through MIDRC as an open research and educational resource for machine learning."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:46406bac077aa39f1d2fe93028bf8853c01604a29696523fe4995598d69f061e",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Breast Invasive Carcinoma (CPTAC-BRCA) cohort",
+        "label": "Breast Invasive Carcinoma"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "tcia:cptac-brca",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Pathology images from CPTAC patients",
+        "value": "pathology"
+      },
+      {
+        "evidence": "large-scale proteome and genome analysis",
+        "value": "genomics"
+      },
+      {
+        "evidence": "large-scale proteome and genome analysis",
+        "value": "proteomics"
+      }
+    ],
+    "population": "subjects from the National Cancer Institute's Clinical Proteomic Tumor Analysis Consortium Breast Invasive Carcinoma (CPTAC-BRCA) cohort",
+    "summary": "Pathology images from the CPTAC breast invasive carcinoma cohort, released so researchers can relate cancer phenotypes to matching proteomic, genomic and clinical data."
+  },
+  "prompt_version": "v1"
+}

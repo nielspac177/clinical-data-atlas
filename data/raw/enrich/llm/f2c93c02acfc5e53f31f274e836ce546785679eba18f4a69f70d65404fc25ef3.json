@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:f2c93c02acfc5e53f31f274e836ce546785679eba18f4a69f70d65404fc25ef3",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "intracranial hemorrhage (ICH) segmentation",
+        "label": "intracranial hemorrhage"
+      },
+      {
+        "evidence": "patients with traumatic brain injury",
+        "label": "traumatic brain injury"
+      },
+      {
+        "evidence": "skull fracture",
+        "label": "skull fracture"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "musculoskeletal"
+    ],
+    "id": "physionet:ct-ich",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Head computed tomography (CT) scans",
+        "value": "CT"
+      }
+    ],
+    "population": "82 CT scans of patients with traumatic brain injury were collected; scans of 75 subjects are made public",
+    "summary": "Head CT scans from patients with traumatic brain injury, with intracranial hemorrhage regions delineated slice by slice by two radiologists, plus slice-level annotations of hemorrhage subtype and fracture. Released in NIfTI format."
+  },
+  "prompt_version": "v1"
+}

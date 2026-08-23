@@ -1,0 +1,119 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003420",
+  "payload": {
+    "created": "2020-12-04T13:06:19.829Z",
+    "id": "ds003420",
+    "latestSnapshot": {
+      "created": "2020-12-13T17:40:52.000Z",
+      "description": {
+        "Authors": [
+          "Ahmad Mheich",
+          "Olivier Dufor",
+          "Sahar Yassine",
+          "Aya Kabbara",
+          "Arnaud Biraben",
+          "Fabrice Wendling",
+          "Mahmoud Hassan"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds003420.v1.0.2",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "HD-EEGtask(Dataset 1)",
+        "ReferencesAndLinks": [
+          "Kabbara, A., Falou, W. E., Khalil, M., Wendling, F. & Hassan, M. The dynamic functional core network of the human brain at rest. Sci. Rep. 7, 2936 (2017)",
+          "Hassan, M. et al. Dynamic reorganization of functional brain networks during picture naming. Cortex 73, 276?288 (2015).",
+          "Mheich, A. et al. Spatiotemporal analysis of brain functional connectivity. in 6th European Conference of the International Federation for Medical and Biological Engineering 934?937 (Springer, 2015).",
+          "Mheich, A. et al. SimiNet A Novel Method for Quantifying Brain Network Similarity. IEEE Trans. Pattern Anal. Mach. Intell. 40, 2238?2249 (2018).",
+          "Rizkallah, J. et al. Dynamic reshaping of functional brain networks during visual object recognition. J. Neural Eng. 15, 056022 (2018)."
+        ]
+      },
+      "readme": "#    Dataset 1\r\n\r\n##   Presentation\r\n\r\n     This dataset was collected between 2012 and 2013 in Rennes (France) during two conditions (visual naming and spelling tasks).\r\n     The dataset consists of naming and spelling the names of visually presented objects. The data was collected in the Rennes University Hospital. This experiment was approved by an independent ethics committee and authorized by the French institutional review board (IRB): \"Comite de Protection des Personnes dans la Recherche Biomedicale Ouest V\" (CCPPRB-Ouest V).\r\n     This study was registered under the name \"conneXion\" and the agreement number: 2012- A01227-36.\r\n     \r\n\r\n###  Participants\r\n\r\n     Twenty-three right-handed healthy volunteers of whom 12 females, with an age range between\r\n     19 and 40 years (mean age 28 year),and 11 males with an age range between 19 and 33 years (mean age 23 years) participated in this study. (See participants.json and participants.tsv for more details)\r\n\r\n\r\n#### Experiment\r\n     * The experiment begins with the verification of inclusion/exclusion criteria.\r\n     * The participants read the information notice and the consent form. \r\n     * Then they sign two questionnaires. \r\n     * One subject -->Two conditions (naming and spelling)--> two runs for each condition.\r\n     * Each run contains 74 stimuli.\r\n     * The spelling task always follow the naming task and its instruction was not given before the naming task was completed to avoid any reminiscence of words orthographic structures\r\n     * Each run contains balanced numbers of animals and objects as well as long and short words.\r\n     * Pictures are presented on a screen using a computer and the experimental paradigm is presented using E-prime Psychology Software Tools. \r\n     * The responses produced by the participants were collected via a Logitech microphone and analyzed to detect onsets of speech using Praat v5.3.13(University of Amsterdam, 1012VT Amsterdam, The Netherlands).\r\n\r\n#### EEG acquisition\r\n\r\n     * HD-EEG system (EGI, Electrical Geodesic Inc., 256 electrodes) \r\n     * Sampling frequency: 1000Hz\r\n     * Impedances were kept below 5k\r\n\r\n\r\n## Contact\r\n     * If you have any questions or comments, please contact: \r\n     * Ahmad Mheich: mheich.ahmad@gmail.com",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "eeg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [
+          "naming",
+          "spelling"
+        ],
+        "size": 50565140405,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23"
+        ],
+        "tasks": [],
+        "totalFiles": 875
+      },
+      "tag": "1.0.2"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        23,
+        31,
+        19,
+        23,
+        24,
+        30,
+        19,
+        22,
+        34,
+        19,
+        26,
+        21,
+        20,
+        33,
+        20,
+        30,
+        40,
+        27,
+        24,
+        39,
+        33,
+        25,
+        23
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "eeg"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2020-12-08T22:53:32.262Z"
+  },
+  "source": "openneuro"
+}

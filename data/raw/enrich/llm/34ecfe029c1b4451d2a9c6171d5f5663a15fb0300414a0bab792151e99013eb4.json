@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:34ecfe029c1b4451d2a9c6171d5f5663a15fb0300414a0bab792151e99013eb4",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "patient derived xenograft cancer models",
+        "label": "cancer"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "tcia:pdmr-texture-analysis",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "serial non-contrast non-gated T2w MRI",
+        "value": "MRI"
+      },
+      {
+        "evidence": "companion genomic and pathologic characterization available",
+        "value": "genomics"
+      }
+    ],
+    "population": "Mice carrying patient derived xenograft cancer models, imaged at multiple time points",
+    "summary": "Serial non-contrast, non-gated T2-weighted MRI of patient-derived xenograft cancer models in mice imaged at multiple time points, released for developing tissue characterization algorithms such as neural networks and classifiers."
+  },
+  "prompt_version": "v1"
+}

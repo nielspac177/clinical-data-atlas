@@ -1,0 +1,27 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:311652511de42ada5f407c12a3447919739b538efcf3ee058553685eca552a9e",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "critical_care"
+    ],
+    "id": "physionet:mimicdb",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "signals and periodic measurements obtained from a bedside monitor",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "clinical data obtained from the patient's medical record",
+        "value": "EHR"
+      }
+    ],
+    "population": "Over 90 ICU patients",
+    "summary": "Bedside monitor signals and periodic measurements paired with medical record data for ICU patients; recordings vary in length, most lasting at least twenty hours and many considerably longer."
+  },
+  "prompt_version": "v1"
+}

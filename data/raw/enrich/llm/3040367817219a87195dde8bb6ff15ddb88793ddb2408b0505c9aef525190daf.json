@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:3040367817219a87195dde8bb6ff15ddb88793ddb2408b0505c9aef525190daf",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "dangerous arrhythmias",
+        "label": "dangerous arrhythmias"
+      },
+      {
+        "evidence": "ECG signals with rhythm disturbances",
+        "label": "rhythm disturbances"
+      },
+      {
+        "evidence": "MIT-BIH Malignant Ventricular Ectopy Database",
+        "label": "Malignant Ventricular Ectopy"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:ecg-fragment-high-risk-label",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "2 second fragments of ECG signals",
+        "value": "ECG"
+      }
+    ],
+    "population": null,
+    "summary": "Two-second ECG fragments derived from the MIT-BIH Malignant Ventricular Ectopy Database, grouped into classes by degree of threat to life, for developing and testing arrhythmia detection algorithms in continuous monitoring systems."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,41 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:7df9cb05d7cbc424ab7e759bbdde2f9da41b2e435e57d342b29d839a068b816d",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "32 healthy volunteers",
+        "label": "healthy volunteers"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "cardiology",
+      "pulmonology"
+    ],
+    "id": "physionet:senssmarttech",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "electrocardiogram",
+        "value": "ECG"
+      },
+      {
+        "evidence": "photoplethysmograph",
+        "value": "PPG"
+      },
+      {
+        "evidence": "phonocardiogram, arterial plethysmograms and seismocardiogram",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "accelerometer (ACC)",
+        "value": "wearable"
+      }
+    ],
+    "population": "32 healthy volunteers, 338 30-s recordings at rest and during relaxation after activity",
+    "summary": "Multiparametric cardiovascular recordings taken at rest and after activity, with simultaneous ECG, phonocardiogram, photoplethysmogram and accelerometer channels, supporting study of cardio-respiratory and electro-mechanical coupling across a wide heart-rate range."
+  },
+  "prompt_version": "v1"
+}

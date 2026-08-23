@@ -1,0 +1,41 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:152082ec36a8a662638368b66c28a466f090c1697e3402406b1290e9c936a493",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Kidney Renal Clear Cell Carcinoma",
+        "label": "Kidney Renal Clear Cell Carcinoma"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "nephrology_urology"
+    ],
+    "id": "tcia:tcga-kirc",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "CR CT MR",
+        "value": "CT"
+      },
+      {
+        "evidence": "CR CT MR",
+        "value": "MRI"
+      },
+      {
+        "evidence": "CR CT MR",
+        "value": "xray"
+      },
+      {
+        "evidence": "Genomic Data Commons (GDC) Data Portal",
+        "value": "genomics"
+      }
+    ],
+    "population": "Human participants with kidney renal clear cell carcinoma enrolled in The Cancer Genome Atlas (267 participants per source metadata)",
+    "summary": "Kidney imaging from clear cell renal carcinoma patients in The Cancer Genome Atlas, matched by patient identifier to clinical, genetic and pathological data in the Genomic Data Commons, enabling genotype-phenotype and outcome studies."
+  },
+  "prompt_version": "v1"
+}

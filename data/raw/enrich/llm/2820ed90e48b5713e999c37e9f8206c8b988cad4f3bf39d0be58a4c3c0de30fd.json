@@ -1,0 +1,49 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:2820ed90e48b5713e999c37e9f8206c8b988cad4f3bf39d0be58a4c3c0de30fd",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "17 healthy volunteers participated",
+        "label": "healthy volunteers"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "cardiology",
+      "other"
+    ],
+    "id": "physionet:scientisst-move-biosignals",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Electrocardiography (ECG)",
+        "value": "ECG"
+      },
+      {
+        "evidence": "bicep Electromyography (EMG)",
+        "value": "EMG"
+      },
+      {
+        "evidence": "Photoplethysmography (PPG)",
+        "value": "PPG"
+      },
+      {
+        "evidence": "Data was collected using three wearable devices",
+        "value": "wearable"
+      },
+      {
+        "evidence": "multi-channel Electrodermal Activity (EDA)",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "including lifting a chair, greeting, gesticulating, walking and running",
+        "value": "behavioral"
+      }
+    ],
+    "population": "A total of 17 healthy volunteers participated in the experimental data acquisition sessions",
+    "summary": "Annotated multimodal biosignals (ECG, EMG, EDA, PPG, temperature, actigraphy) recorded with a chestband, armband and wristband while volunteers performed everyday activities in uncontrolled environments."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,31 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:5be8036bf61be66916aeca2c82245e7b2eb2d75265cc146e807ec1fb58f2cd61",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:mimic-iv-ext-echoqa",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "the transthoracic echocardiography (TTE) and ECHO sections",
+        "value": "ultrasound"
+      },
+      {
+        "evidence": "paired with the closest discharge summary within a 7-day window",
+        "value": "clinical_notes"
+      },
+      {
+        "evidence": "built from the publicly available MIMIC-IV-ECHO database",
+        "value": "EHR"
+      }
+    ],
+    "population": "Echocardiographic studies from the MIMIC-IV-ECHO database paired with discharge summaries within a 7-day window",
+    "summary": "A benchmark of closed-ended question-answer pairs grounded in echocardiogram reports and paired videos from MIMIC-IV-ECHO, view-labelled and reviewed by cardiologists, for echocardiographic visual question answering."
+  },
+  "prompt_version": "v1"
+}

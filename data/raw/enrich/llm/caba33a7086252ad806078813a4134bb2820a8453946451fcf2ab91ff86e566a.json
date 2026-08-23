@@ -1,0 +1,27 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:caba33a7086252ad806078813a4134bb2820a8453946451fcf2ab91ff86e566a",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "physionet:swiss-mammo",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "German mammography reports",
+        "value": "mammography"
+      },
+      {
+        "evidence": "free-text radiological narratives",
+        "value": "clinical_notes"
+      }
+    ],
+    "population": null,
+    "summary": "Synthetic German mammography reports manually written by a radiology resident and reviewed by a senior breast radiologist, each paired with an English translation and stratified across BI-RADS categories, as a benchmark for report information extraction."
+  },
+  "prompt_version": "v1"
+}

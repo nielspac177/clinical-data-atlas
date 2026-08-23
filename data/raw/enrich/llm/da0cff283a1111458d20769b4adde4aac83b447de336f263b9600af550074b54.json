@@ -1,0 +1,31 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:da0cff283a1111458d20769b4adde4aac83b447de336f263b9600af550074b54",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "neurology"
+    ],
+    "id": "physionet:sleep-accel",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "wrist-worn wearable",
+        "value": "wearable"
+      },
+      {
+        "evidence": "photoplethysmography",
+        "value": "PPG"
+      },
+      {
+        "evidence": "labeled sleep scored from gold-standard polysomnography",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": "31 subjects who wore an Apple Watch while undergoing polysomnography, recorded from June 2017 to March 2019.",
+    "summary": "Acceleration and heart rate recorded from Apple Watches worn by people undergoing polysomnography, paired with sleep stages scored from the polysomnography. Collected at the University of Michigan."
+  },
+  "prompt_version": "v1"
+}

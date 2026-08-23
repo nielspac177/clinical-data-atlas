@@ -1,0 +1,83 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004977",
+  "payload": {
+    "created": "2024-02-19T19:52:02.163Z",
+    "id": "ds004977",
+    "latestSnapshot": {
+      "created": "2024-05-13T17:47:41.000Z",
+      "description": {
+        "Authors": [
+          "Harvey Huang",
+          "Gabriela Ojeda Valencia",
+          "Nicholas M Gregg",
+          "Gamaleldin M Osman",
+          "Morgan N Montoya",
+          "Gregory A Worrell",
+          "Kai J Miller",
+          "Dora Hermes"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004977.v1.2.0",
+        "Funding": [
+          "R01 MH122258 CRCNS: Processing speed in the human connectome across the lifespan",
+          "T32 GM145408: Medical Scientist Training Program at Mayo Clinic",
+          "937450: AES Predoctoral Research Fellowship"
+        ],
+        "HowToAcknowledge": "This dataset is part of the paper on 'CARLA: Adjusted common average referencing for cortico-cortical evoked potential data' by H Huang, G Ojeda Valencia, NM Gregg, GM Osman, MN Montoya, GA Worrell, KJ Miller, and D Hermes. This project is funded by the National Institute Of Mental Health of the National Institutes of Health under Award Number R01MH122258 to Dora Hermes (Mayo Clinic), by the National Institute of General Medical Sciences of the National Institutes of Health under Award Number T32GM145408 to the Medical Scientist Training Program at Mayo Clinic, and by the American Epilepsy Society under award number 937450 to Harvey Huang (Mayo Clinic). The project was also supported by the Mayo Clinic DERIVE Office and the Mayo Clinic Center for Biomedical Discovery. The data were collected by Harvey Huang (Mayo Clinic), Dora Hermes (Mayo Clinic), Nicholas M. Gregg (Mayo Clinic), Gamaleldin M. Osman (UTHealth Houston), and Cindy Nelson (Mayo Clinic). The BIDS formatting was performed by Harvey Huang (Mayo Clinic), Dora Hermes (Mayo Clinic), Gabriela Ojeda Valencia (Mayo Clinic), and Morgan Montoya (Mayo Clinic). The iEEG data collection was facilitated by Gregory A. Worrell (Mayo Clinic) and Kai J. Miller (Mayo Clinic)",
+        "License": "CC0",
+        "Name": "CARLA: Adjusted common average referencing for cortico-cortical evoked potential data",
+        "ReferencesAndLinks": [
+          "https://doi.org/10.48550/arXiv.2310.00185"
+        ]
+      },
+      "readme": "# CARLA: Adjusted common average referencing for cortico-cortical evoked potential data\n\nThis dataset contains intracranial EEG recordings from four patients during single pulse electrical stimulation as described in:\n \n* H Huang, G Ojeda Valencia, NM Gregg, GM Osman, MN Montoya, GA Worrell, KJ Miller, and D Hermes. (2024). CARLA: Adjusted common average referencing for cortico-cortical evoked potential data. Journal of Neuroscience Methods, 110153. DOI: https://doi.org/10.1016/j.jneumeth.2024.110153.\n\nCurrently, this dataset contains the raw data needed to generate all results EXCEPT for those pertaining to figures 7 and 8 (unavailable data samples are censored with 0). The complete data are currently being used to answer other scientific questions, and will be released in time with other manuscripts.\n\nPlease cite this work when using the data. These data were recorded at the Mayo Clinic in Rochester, MN, as part of the NIH Brain Initiative supported project R01 MH122258 \"CRCNS: Processing speed in the human connectome across the lifespan\". Research reported in this publication was supported by the National Institute Of Mental Health of the National Institutes of Health under Award Number R01MH122258, by the National Institute of General Medical Sciences of the National Institutes of Health under Award Number T32GM145408, and by the American Epilepsy Society under award number 937450. The project was also supported by the Mayo Clinic DERIVE Office and the Mayo Clinic Center for Biomedical Discovery. The content is solely the responsibility of the authors and does not necessarily represent the official views of the National Institutes of Health. The data were collected by Harvey Huang, Dora Hermes, Nicholas M. Gregg, Gamaleldin M. Osman, and Cindy Nelson. The BIDS formatting was performed by Harvey Huang, Dora Hermes, Gabriela Ojeda Valencia, and Morgan Montoya. The iEEG data collection was facilitated by Gregory A. Worrell and Kai J. Miller.\n\nData can be analyzed using the Matlab code at: \n* https://github.com/hharveygit/CARLA_JNM\n\n## Format\nData are formatted according to BIDS version 1.14.0\n\n## Single pulse stimulation\nThe patient were resting in the hospital bed, while single pulse stimulation was performed with a frequency of ~0.2 Hz. The stimulation had a duration of 200 microseconds, was biphasic and had an amplitude of 6mA.\n\n## Contact\nPlease contact Harvey Huang (huang.harvey@mayo.edu) or Dora Hermes (hermes.dora@mayo.edu) for questions. \n",
+      "summary": {
+        "dataProcessed": true,
+        "modalities": [
+          "ieeg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [
+          "ieeg01"
+        ],
+        "size": 1604950022,
+        "subjects": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "tasks": [
+          "Cortico Cortical Evoked Potentials"
+        ],
+        "totalFiles": 4459
+      },
+      "tag": "1.2.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        18,
+        19,
+        19,
+        16
+      ],
+      "associatedPaperDOI": " https://doi.org/10.48550/arXiv.2310.00185",
+      "dataProcessed": true,
+      "dxStatus": "Epilepsy",
+      "grantFunderName": "National Institute of Mental Health, National Institute of General Medical Sciences, American Epilepsy Society",
+      "modalities": [
+        "ieeg"
+      ],
+      "species": "Human",
+      "studyDesign": "Single Pulse Electrical Stimulation",
+      "studyDomain": "",
+      "studyLongitudinal": "iEEG"
+    },
+    "publishDate": "2024-05-13T17:39:02.249Z"
+  },
+  "source": "openneuro"
+}

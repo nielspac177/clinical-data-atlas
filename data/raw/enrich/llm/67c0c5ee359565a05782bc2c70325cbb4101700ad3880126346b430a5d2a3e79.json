@@ -1,0 +1,49 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:67c0c5ee359565a05782bc2c70325cbb4101700ad3880126346b430a5d2a3e79",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Kidney Renal Clear Cell Carcinoma",
+        "label": "Kidney Renal Clear Cell Carcinoma"
+      },
+      {
+        "evidence": "Adenomas and Adenocarcinomas",
+        "label": "Adenomas and Adenocarcinomas"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "nephrology_urology"
+    ],
+    "id": "gdc:TCGA-KIRC",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Diagnostic Slide, Tissue Slide",
+        "value": "pathology"
+      },
+      {
+        "evidence": "WXS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "RNA-Seq",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Reverse Phase Protein Array",
+        "value": "proteomics"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "537 human cases",
+    "summary": "TCGA molecular profiling of clear cell renal carcinoma, including exome, genome, RNA and miRNA sequencing, ATAC-Seq, methylation and genotyping arrays, protein arrays, tissue slides, plus clinical and biospecimen data."
+  },
+  "prompt_version": "v1"
+}

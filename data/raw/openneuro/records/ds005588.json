@@ -1,0 +1,148 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005588",
+  "payload": {
+    "created": "2024-10-23T11:11:16.166Z",
+    "id": "ds005588",
+    "latestSnapshot": {
+      "created": "2025-10-27T15:37:52.000Z",
+      "description": {
+        "Authors": [
+          "Schultz, Johannes",
+          "Gädeke, Maria",
+          "Willems, Tom",
+          "Ahmed, Omar Salah",
+          "Hurlemann, René",
+          "Weber, Bernd"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005588.v1.0.1",
+        "Funding": null,
+        "HowToAcknowledge": "This will be replaced by publication details once published",
+        "License": "CC0",
+        "Name": "SoDec - Responsibility fMRI experiment dataset",
+        "ReferencesAndLinks": null
+      },
+      "readme": "Overview\nThis is the dataset of a functional Magnetic Resonance Imaging (fMRI) study of social decision-making. Structural scans are defaced and participant IDs cannot be linked to participant names.\n\nAbstract\nThis study investigated the neural mechanisms involved in feelings of interpersonal guilt and responsibility evoked by social decisions. In two studies (one during fMRI), participants repeatedly chose between safe and risky monetary outcomes in social contexts. Across conditions, each participant chose for both themselves and a partner (Social condition), or the partner chose for both themselves and the participant (Partner condition), or the participant chose just for themselves (Solo condition, control). If the risky option was chosen in the Social or Partner condition, participant and partner could each receive either the high or the low outcome of a lottery with 50% probability, independently of each other. Participants were shown the outcomes for themselves and for their partner on each trial, and reported their momentary happiness every few trials. As expected, participant happiness decreased following both low lottery outcomes for themselves and for the partner. Crucially, happiness decreases following low outcomes for the partner were larger when the participant rather than their partner had made the choice, which fits an operational definition of guilt. This guilt effect was associated with BOLD signal increase in the left anterior insula. Connectivity between this region and the right inferior frontal gyrus varied depending on choice and experimental condition, suggesting that this part of prefrontal cortex is sensitive to guilt-related information during social choices. Variations in happiness were well explained by computational models based on participant’s and partner’s rewards and reward prediction errors. A model-based analysis revealed a left superior temporal sulcus cluster that tracked partner reward prediction errors that followed participant choices. Our findings identify neural mechanisms of guilt and social responsibility during social decisions under risk.\n\nThe data are organized as follows:\n\nparticipants.tsv: Description of the participants\n\n./sub-XXX: subject directories\n\nNote that there is one session per subject, with 2 runs of the task called \"respo\" and one T1-weighted anatomical scan.\n\nSubject directories comprise the following subdirectories:\n\nanat/ for T1w image func/ for functional data\n\nRegarding functional data, the file naming conventions is sub-XXX_task-respo_run-X_bold.nii.gz, where XXX is the subject ID and X is the run number.\n\nThe events.tsv files, named sub-XXX_task-respo_run-X_events.tsv, contain onsets, durations, trial_types and reward columns for the events of interest in the experiment. Please see the preprint and code on GitHub for details.\n\nMore information and material:\n\nThe code used to analyse the data and reproduce the results and figures can be dowloaded at: https://github.com/BonnSocialNeuroscienceUnit/ResponsibilityExperiment\n\nContact: \n\nJohannes Schultz, Johannes.Schultz@ukbonn.de",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 17456871213,
+        "subjects": [
+          "332",
+          "322",
+          "340",
+          "308",
+          "320",
+          "312",
+          "317",
+          "314",
+          "304",
+          "306",
+          "315",
+          "327",
+          "339",
+          "307",
+          "321",
+          "333",
+          "338",
+          "302",
+          "309",
+          "303",
+          "337",
+          "305",
+          "311",
+          "331",
+          "326",
+          "330",
+          "336",
+          "319",
+          "313",
+          "310",
+          "334",
+          "325",
+          "335",
+          "318",
+          "323",
+          "301",
+          "329",
+          "316",
+          "324",
+          "328"
+        ],
+        "tasks": [
+          "respo"
+        ],
+        "totalFiles": 285
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        25,
+        35,
+        23,
+        null,
+        30,
+        29,
+        31,
+        25,
+        33,
+        28,
+        31,
+        30,
+        32,
+        34,
+        29,
+        50,
+        41,
+        31,
+        30,
+        30,
+        31,
+        31,
+        25,
+        30,
+        30,
+        25,
+        29,
+        38,
+        22,
+        28,
+        27,
+        26,
+        33,
+        31,
+        29,
+        30,
+        31,
+        null,
+        36,
+        38
+      ],
+      "associatedPaperDOI": "https://doi.org/10.1101/2020.05.25.107300",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "Within-subject",
+      "studyDomain": "Social decisions",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2024-10-23T16:44:14.727Z"
+  },
+  "source": "openneuro"
+}

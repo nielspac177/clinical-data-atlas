@@ -1,0 +1,108 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005065",
+  "payload": {
+    "created": "2024-04-07T02:26:32.589Z",
+    "id": "ds005065",
+    "latestSnapshot": {
+      "created": "2024-04-09T01:21:46.000Z",
+      "description": {
+        "Authors": [
+          "Evan M. Russek",
+          "Rani Moran",
+          "Yunzhe Liu",
+          "Ray Dolan",
+          "Quentin Huys"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005065.v1.0.0",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Heuristics in risky decision-making relate to preferential representation of information MEG data",
+        "ReferencesAndLinks": [
+          "https://osf.io/preprints/psyarxiv/kb6ew"
+        ]
+      },
+      "readme": "The task consisted of 13 scanner runs (except for subject 1 who completed 5 rather than 3 localizer runs). Runs 1-3 (1-5 for subject 1) are the localizer task. Runs 4-5 are non-analyzed data from the 'probability learning' task. Runs 6-13 (8-15 for subject 1) are the risky decision-making task.\n\nEvent times were recorded with a photodiode, which is accessible as a MEG channel. This has been processed so that event times are listed in derivatives/Event_Info_Tables. Raw times of events in the scan are in column \"onset_time\". The corresponding index into the unprocessed MEG data is in column \"scanner_onset_idx\". The onset into the downsampled data is in \"onset_idx_ds\". In the table, each row corresponds to an event. Block number denotes which scanner run that event belongs to. For the localizer task (denoted in phase column), events are image onsets. \"image_type\" specifies the role of that image in the task (\"CHOICE\" or \"OUTCOME\") and \"image_number\" denotes which choice or outcome it is (see paper Fig. 1). Finally, \"image_name\" denotes which image category was shown (e.g. \"Hand\"). For the task, events correspond to gamble information onset (Info), Probability stimulus presentation (\"Choice\"), response (\"Gamble Response\") and outcome onset (\"Outcome\"). Columns denote which image was shown and what the response was (accept).\n\nderivatives/Epoched_Data contains epoched preprocessed data for each subject for the localizer task and then around each choice in the main choice task. Both are epoched from from 0-500 ms following the event.\n\nCode to analyze the data along with additional behavioral data is available at https://github.com/evanrussek/MEG_Heuristics_Risk_Preferential_Information\n",
+      "summary": {
+        "dataProcessed": true,
+        "modalities": [
+          "meg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [],
+        "size": 457153490815,
+        "subjects": [
+          "S001",
+          "S002",
+          "S003",
+          "S004",
+          "S005",
+          "S006",
+          "S007",
+          "S008",
+          "S009",
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014",
+          "S015",
+          "S016",
+          "S017",
+          "S018",
+          "S019",
+          "S020",
+          "S021"
+        ],
+        "tasks": [
+          "RiskyDecision"
+        ],
+        "totalFiles": 3332
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": true,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "meg"
+      ],
+      "species": "",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2024-04-09T14:11:08.992Z"
+  },
+  "source": "openneuro"
+}

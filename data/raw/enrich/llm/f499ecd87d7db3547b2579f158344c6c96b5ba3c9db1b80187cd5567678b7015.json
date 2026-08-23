@@ -1,0 +1,40 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:f499ecd87d7db3547b2579f158344c6c96b5ba3c9db1b80187cd5567678b7015",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "36 healthy volunteers",
+        "label": "healthy volunteers"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "other"
+    ],
+    "id": "physionet:wearable-device-dataset",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "the Empatica E4, a research-grade wearable",
+        "value": "wearable"
+      },
+      {
+        "evidence": "skin temperature, and electrodermal activity were recorded",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "Blood volume pulse",
+        "value": "PPG"
+      },
+      {
+        "evidence": "Self-reported stress levels were also recorded",
+        "value": "survey"
+      }
+    ],
+    "population": "36 healthy volunteers for stress sessions, 30 for aerobic exercise, and 31 for anaerobic exercise",
+    "summary": "Wearable physiological recordings collected during a structured acute stress induction protocol with math and emotional tasks, and during aerobic and anaerobic stationary bike sessions, with self-reported stress levels."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,52 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:93e96c82009d298385b376f58d8a9368ac409680f18f7756a8db8fa0618d18aa",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Uveal Melanoma",
+        "label": "Uveal Melanoma"
+      },
+      {
+        "evidence": "Nevi and Melanomas",
+        "label": "Nevi and Melanomas"
+      },
+      {
+        "evidence": "Paragangliomas and Glomus Tumors",
+        "label": "Paragangliomas and Glomus Tumors"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "gdc:TCGA-UVM",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Diagnostic Slide, Tissue Slide",
+        "value": "pathology"
+      },
+      {
+        "evidence": "WGS, WXS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "RNA-Seq",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Reverse Phase Protein Array",
+        "value": "proteomics"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "80 human cases with uveal melanoma",
+    "summary": "TCGA project on uveal melanoma of the eye and adnexa, with sequencing, copy number, methylation, transcriptome and proteome profiling plus clinical and biospecimen data and diagnostic and tissue slides."
+  },
+  "prompt_version": "v1"
+}

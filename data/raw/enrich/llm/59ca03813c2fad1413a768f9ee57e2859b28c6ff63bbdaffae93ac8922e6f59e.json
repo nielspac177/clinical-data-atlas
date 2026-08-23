@@ -1,0 +1,28 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:59ca03813c2fad1413a768f9ee57e2859b28c6ff63bbdaffae93ac8922e6f59e",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "pulmonology",
+      "other"
+    ],
+    "id": "physionet:radialog-instruct-dataset",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Chest X-Ray understanding and analysis",
+        "value": "xray"
+      },
+      {
+        "evidence": "radiology report generation",
+        "value": "clinical_notes"
+      }
+    ],
+    "population": null,
+    "summary": "Image-grounded instruction data for chest X-ray tasks such as report generation, report correction, summarization and finding prediction, built to train a radiology vision-language dialog model."
+  },
+  "prompt_version": "v1"
+}

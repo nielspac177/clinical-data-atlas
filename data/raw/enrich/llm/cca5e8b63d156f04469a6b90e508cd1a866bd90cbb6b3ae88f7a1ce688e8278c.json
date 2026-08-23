@@ -1,0 +1,47 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:cca5e8b63d156f04469a6b90e508cd1a866bd90cbb6b3ae88f7a1ce688e8278c",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "radiation-related papillary thyroid cancer",
+        "label": "radiation-related papillary thyroid cancer"
+      },
+      {
+        "evidence": "Epithelial Neoplasms, NOS",
+        "label": "Epithelial Neoplasms, NOS"
+      },
+      {
+        "evidence": "Adenomas and Adenocarcinomas",
+        "label": "Adenomas and Adenocarcinomas"
+      }
+    ],
+    "countries": [
+      "UA"
+    ],
+    "domains": [
+      "oncology",
+      "endocrinology_metabolism"
+    ],
+    "id": "gdc:REBC-THYR",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "WGS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "RNA-Seq, miRNA-Seq",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Biospecimen",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": null,
+    "summary": "Genomic characterization of radiation-related papillary thyroid cancer in Ukraine, with thyroid gland samples yielding sequencing reads, simple nucleotide and copy number variation, biospecimen data, transcriptome profiling and structural variation from WGS, RNA-Seq and miRNA-Seq."
+  },
+  "prompt_version": "v1"
+}

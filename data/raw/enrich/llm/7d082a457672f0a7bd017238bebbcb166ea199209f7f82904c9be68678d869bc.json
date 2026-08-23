@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:7d082a457672f0a7bd017238bebbcb166ea199209f7f82904c9be68678d869bc",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "bone metastatic lesions obtained for patients with metastatic spine disease",
+        "label": "bone metastatic lesions"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "musculoskeletal"
+    ],
+    "id": "tcia:spine-mets-ct-seg",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "55 CT scans",
+        "value": "CT"
+      },
+      {
+        "evidence": "planned for and treated with radiotherapy",
+        "value": "radiotherapy"
+      },
+      {
+        "evidence": "we provide demographic data",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "patients with a large range of primary cancers and corresponding bone metastatic lesions obtained for patients with metastatic spine disease",
+    "summary": "Longitudinal CT scans before and after radiotherapy in patients with metastatic spine disease from varied primary cancers, with demographic data, lesion and fracture annotations, and manual and semi-automated vertebral segmentation labels."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,90 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds002634",
+  "payload": {
+    "created": "2020-03-12T20:10:31.551Z",
+    "id": "ds002634",
+    "latestSnapshot": {
+      "created": "2020-12-18T15:48:57.000Z",
+      "description": {
+        "Authors": [
+          "Eichert, N",
+          "Watkins, KE",
+          "project-specific co-authors"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds002634.v3.0.0",
+        "Funding": null,
+        "HowToAcknowledge": "Data in this repository has been used in multiple projects.\nWhen using this dataset, please include the following message: 'This data was obtained from the OpenNeuro database under the accession number ds002634'.\n,Please also reference the relevant data papers, as indicated in the README file, depending on which data you use.",
+        "License": "CC0",
+        "Name": "Project_larynx",
+        "ReferencesAndLinks": [
+          "Eichert et al. 2020, eLife: https://elifesciences.org/articles/53232",
+          "Eichert et al. 2020, Cerebral Cortex: https://doi.org/10.1093/cercor/bhaa182",
+          "Eichert et al. 2020, Brain Struct Funct: https://doi.org/10.1007/s00429-020-02180-w"
+        ]
+      },
+      "readme": "# General information:\n- Data in this repository has been acquired as part of Nicole Eichert's PhD project at the University of Oxford, which was supervised by Rogier B. Mars and Kate E. Watkins.\n\n- Funding for this project was provided by the Wellcome Trust [203730/Z/16/Z]\n\n- Data in this repository has been used in multiple projects that involved different collaborators. For project-specific authorship and acknowledgements, please refer to the relevant references.\n\n- Main data papers:\n    - Eichert N, Robinson EC, Bryant KL, Jbabdi S, Jenkinson M, Li L, Krug K, Watkins KE, Mars RB. 2020. Cross-species cortical alignment identifies different types of anatomical reorganization in the primate temporal lobe. eLife 9. doi:10.7554/eLife.53232\n    - Eichert N, Papp D, Mars RB, Watkins KE. 2020. Mapping Human Laryngeal Motor Cortex during Vocalization. Cerebral Cortex 30:6254–6269. doi:10.1093/cercor/bhaa182\n    - Eichert N, Watkins KE, Mars RB, Petrides M. 2020. Morphological and functional variability in central and subcentral motor cortex of the human brain. Brain Structure and Function (accepted). doi:10.1007/s00429-020-02180-w\n\n- not all scripts in the related code repositories run directly on the OpenNeuro dataset because it does not contain all intermediate data\n\n- all missing intermediate data can, in principle, be reconstructed using the provided code, but file paths might have to be adapted\n\n# Data related to Eichert et al. 2020 eLife:\n- related processing code and result scene files can be found at [https://git.fmrib.ox.ac.uk/neichert/project_msm](https://git.fmrib.ox.ac.uk/neichert/project_msm/-/tree/master/)\n- relevant data are subfolder /dwi, surface reconstructions and T1w/T2w myelin maps\n\n# Data related to Eichert et al. 2020 Cerebral Cortex:\n- related processing code can be found at [https://git.fmrib.ox.ac.uk/neichert/project_larynx](https://git.fmrib.ox.ac.uk/neichert/project_larynx/-/tree/master/)\n- the first 25 volumes of all individual bold task scans need to be discarded prior to analysis. These volumes were acquired during the time, where noise-cancelling headphones 'learned' the scanner noise\n- the fieldmap for subject 11 can only be applied to the 'ArtVoc' bold task scan and not to the 'Factorial' bold task scan\n- average inflated surfaces are stored in `/derivatives/group/anat/group.{hemi}.inflated.32k_fs_LR.surf.gii` (and 164k)\n- individual native midthickness surfaces are stored in `/derivatives/sub-{sub}/anat/sub-{sub}.{hemi}.midthickness.native.surf.gii`\n\n- Figure 1C - breathing traces:\n    - cropped individual breathing traces are stored in `/derivatives/sub-{sub}/beh/sub-{sub}_breathing-traces.pkl`. The file can be loaded using Python's pandas package.\n    - raw data containing subject's breathing traces during the functional scan is stored in `/sub-{sub}/beh/sub-{sub}/sub-{sub}_biopac.mat`\n\n- Figure 2 and Figure 3 - group level fMRI results:\n    - task: 'ArtVoc' for the basic localizer task and 'Factorial' for the syllable production task\n    - contrast: lip, tongue, vowel for 'ArtVoc' (Figure 3); vocalization, articulation for 'Factorial' (Figure 2)\n    - volumetric results in MNI space are stored in `/derivatives/group/func/task/group_task-{task}_{contrast}_zstat1.nii.gz`\n    - surface count maps are stored in `/derivatives/group/func/task/group_task-{task}_{contrast}_{hemi}_32k_fs_LR.func.gii`\n\n- Figure 4 - surface metrics\n    - average T1w/T2w and thickness maps are stored in `/derivatives/group/anat`\n    - averate mpm maps are stored in `/derivatives/group/mpm`\n    - individual surface maps are stored in `derivatives/sub-{sub}/anat` and `derivatives/sub-{sub}/mpm`\n\n- Figure 5 - quantitative analysis\n    - numerical values underlying the figures are stored as csv-files in `/derivatives/group/mpm/*csv`\n\n# Data related to Eichert et al. 2020 Brain Structure and Function:\n- related processing code can be found at [https://git.fmrib.ox.ac.uk/neichert/project_variability](https://git.fmrib.ox.ac.uk/neichert/project_variability/-/tree/master/)\n- Subject-IDs 01 - 20 refer to the subjects that contributed both structural and functional data (also used for the other two papers)\n- Subject-IDs 21 - 50 refer to the HCP subjects that only contributed structural data (to be shared)\n\n- Fig. 1B - individual example\n    - data of sub-20 is shown\n\n- Fig. 3 - probability maps\n    - volumetric and surface probability maps are stored in `/derivatives/group/sulci/`\n    \n- Fig. 4 - Anatomical measures:\n    - numerical values are provided in the file `/derivatives/group/sulci/anatomical_quantifications.csv`\n\n- Fig. 5 - All individual sulci and peaks\n    - all individual sulcal labels and functional activation peaks in native space are provided in the files `/derivatives/sub-{sub}/anat/sulci_{hemi}.label.gii` and `derivatives/sub-{sub}/func/peaks_{hemi}.func.gii`\n    - the manually drawn ventral ROI to extract the ventral peak is provided in `/derivatives/sub-{sub}/anat/ventral_ROI_{hemi}.func.gii`\n    - they can be displayed together with the native surface in `/derivatives/sub-{sub}/anat/sub-{sub}.{hemi}.midthickness.native.surf.gii`\n\n- Fig. 6 - Effect of registrations\n    - numerical values are provided in the file `/derivatives/group/anat/sulci/peak_distances.csv`\n\n- Fig. 7 (Supplementary Material) - Anatomical measures per morphological type\n    - numerical values are provided in the file `/derivatives/group/sulci/anatomical_quantifications.csv`\n\n- Table 1 - Morphological types\n    - numbers can be inferred from the provided csv file `/derivatives/group/sulci/structure_function_links.csv`\n    \n- Table 2 - Coordinates\n    - can be derived from volumetric probability maps\n    \n- Table 3 - Structure-function-relationships\n    - numbers can be inferred from the provided csv file `/derivatives/group/sulci/structure_function_links.csv`\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_diffusion",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 29494506457,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20"
+        ],
+        "tasks": [
+          "ArtVoc",
+          "Factorial"
+        ],
+        "totalFiles": 525
+      },
+      "tag": "3.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": null,
+      "associatedPaperDOI": "10.1101/645234, 10.1101/2020.02.20.958314",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "Wellcome Trust, NIHR Oxford Health Biomedical Research Centre",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2020-03-13T12:06:47.079Z"
+  },
+  "source": "openneuro"
+}

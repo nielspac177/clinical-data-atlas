@@ -1,0 +1,28 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:d2a98b18a0ada04f6f4bb2c17f870402cdccdd1ed4cc62ae88946dc9e51179b4",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "research in antimicrobial resistance (AMR)",
+        "label": "antimicrobial resistance"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "infectious_disease"
+    ],
+    "id": "physionet:armd-mgb",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "derived from electronic health records (EHR)",
+        "value": "EHR"
+      }
+    ],
+    "population": "Over 225,000 adult patients over 10 years from hospitals in the Mass General Brigham healthcare system, covering over 970,000 microbiological cultures.",
+    "summary": "De-identified electronic health record resource of microbiological cultures with organism identity, antibiotic susceptibility results and susceptibility phenotypes, plus clinical and demographic metadata, designed to complement the ARMD-Stanford dataset."
+  },
+  "prompt_version": "v1"
+}

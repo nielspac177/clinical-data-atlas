@@ -1,0 +1,93 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "MATCH-Z1I",
+  "payload": {
+    "dbgap_accession_number": "phs002058",
+    "disease_type": [
+      "Neoplasms, NOS",
+      "Adenomas and Adenocarcinomas",
+      "Nevi and Melanomas",
+      "Epithelial Neoplasms, NOS",
+      "Ductal and Lobular Neoplasms",
+      "Squamous Cell Neoplasms"
+    ],
+    "id": "MATCH-Z1I",
+    "name": "Genomic Characterization CS-MATCH-0007 Arm Z1I",
+    "primary_site": [
+      "Other and unspecified female genital organs",
+      "Bronchus and lung",
+      "Breast",
+      "Pancreas",
+      "Anus and anal canal",
+      "Other and ill-defined sites in lip, oral cavity and pharynx",
+      "Unknown",
+      "Gallbladder",
+      "Rectum",
+      "Rectosigmoid junction",
+      "Ovary",
+      "Parotid gland"
+    ],
+    "program": {
+      "dbgap_accession_number": null,
+      "name": "MATCH",
+      "program_id": "893b0820-b50b-5c75-85f5-3b028e251811"
+    },
+    "project_id": "MATCH-Z1I",
+    "releasable": false,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 26,
+      "data_categories": [
+        {
+          "case_count": 24,
+          "data_category": "Simple Nucleotide Variation",
+          "file_count": 327
+        },
+        {
+          "case_count": 26,
+          "data_category": "Sequencing Reads",
+          "file_count": 125
+        },
+        {
+          "case_count": 26,
+          "data_category": "Biospecimen",
+          "file_count": 26
+        },
+        {
+          "case_count": 26,
+          "data_category": "Clinical",
+          "file_count": 26
+        },
+        {
+          "case_count": 26,
+          "data_category": "Transcriptome Profiling",
+          "file_count": 52
+        },
+        {
+          "case_count": 26,
+          "data_category": "Structural Variation",
+          "file_count": 104
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 24,
+          "experimental_strategy": "WXS",
+          "file_count": 374
+        },
+        {
+          "case_count": 26,
+          "experimental_strategy": "RNA-Seq",
+          "file_count": 234
+        }
+      ],
+      "file_count": 660,
+      "file_size": 2396549656405
+    }
+  },
+  "source": "gdc"
+}

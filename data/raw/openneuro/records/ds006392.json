@@ -1,0 +1,74 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006392",
+  "payload": {
+    "created": "2025-06-25T20:49:36.890Z",
+    "id": "ds006392",
+    "latestSnapshot": {
+      "created": "2025-06-25T20:57:50.000Z",
+      "description": {
+        "Authors": [
+          "Tal Pal Attia",
+          "Kay Robbins",
+          "Dora Hermes"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006392.v1.0.1",
+        "Funding": [
+          "National Institute of Health Grant R01MH126700 (SM)",
+          "National Institute of Health Grant R01MH122258 (DH)"
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "HED schema library for SCORE annotations example",
+        "ReferencesAndLinks": [
+          "https://github.com/hed-standard/hed-schema-library",
+          "https://www.hedtags.org/",
+          "Robbins, Kay, Dung Truong, Stefan Appelhoff, Arnaud Delorme, and Scott Makeig. 'Capturing the nature of events and event context using Hierarchical Event Descriptors (HED).' NeuroImage 245 (2021): 118766.",
+          "Robbins, Kay, Dung Truong, Alexander Jones, Ian Callanan, and Scott Makeig. 'Building FAIR functionality: Annotating events in time series data using Hierarchical Event Descriptors (HED).' Neuroinformatics (2021): 1-19."
+        ]
+      },
+      "readme": "# BIDS example with HED-SCORE schema library annotations\r\n\r\nThe HED schema library for the Standardized Computer-based Organized Reporting of EEG (SCORE) can be used to add annotations for BIDS datasets. The annotations are machine readable and validated with the BIDS and HED validators. \n\nThis example is related to the following preprint:\r\nDora Hermes, Tal Pal Attia, Sándor Beniczky, Jorge Bosch-Bayard, Arnaud Delorme, Brian Nils Lundstrom, Christine Rogers, Stefan Rampp, Seyed Yahya Shirazi, Dung Truong, Pedro Valdes-Sosa, Greg Worrell, Scott Makeig, Kay Robbins. Hierarchical Event Descriptor library schema for EEG data annotation. arXiv preprint arXiv:2310.15173. 2024 Oct 27.\r\n\r\n# General information\r\nThis BIDS example dataset includes iEEG data from one subject that were measured during clinical photic stimulation. Intracranial EEG data were collected at Mayo Clinic Rochester, MN under IRB#: 15-006530.  \n\n# Events\nThe events are annotated according to the HED-SCORE schema library. Data are annotated by adding a column for annotations in the _events.tsv. The levels and annotations in this column are defined in the _events.json sidecar as HED tags. \r\n\r\n# More information\r\nHED: https://www.hedtags.org/\r\nHED schema library for SCORE: https://github.com/hed-standard/hed-schema-library \r\n\r\n# Contact\r\nDora Hermes: hermes.dora@mayo.edu\r\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "ieeg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [
+          "ieeg01"
+        ],
+        "size": 33603727,
+        "subjects": [
+          "ieegModulator"
+        ],
+        "tasks": [
+          "photicstim"
+        ],
+        "totalFiles": 12
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "NIH",
+      "modalities": [
+        "ieeg"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "vision",
+      "studyLongitudinal": "iEEG"
+    },
+    "publishDate": "2025-06-25T20:58:38.955Z"
+  },
+  "source": "openneuro"
+}

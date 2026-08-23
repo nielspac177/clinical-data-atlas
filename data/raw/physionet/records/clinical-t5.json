@@ -1,0 +1,32 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "clinical-t5",
+  "payload": {
+    "abstract": "<p>Recent advances in scaling large language models (LLMs) has resulted in significant improvements over a number of natural language processing benchmarks. There has been some work to pretrain these language models over clinical text. These works demonstrate that training a language model using masked language modeling (MLM) on clinical notes is an effective technique for boosting performance on downstream tasks. All of these previous works use decoder-only architectures. We train 4 different clinical T5 models on the union of MIMIC-III and IV notes. Two of the models are initialized from previous T5-models (T5-base and SciFive). We additionally train a T5-Base and T5-Large model from scratch. These models should not be distributed to non-credentialed users. Research has shown that these language models have the potential to leak sensitive information. Due to this potential risk, we release the model weights under PhysioNet credentialed access.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 5223086548,
+    "core_doi": "10.13026/aw2e-he88",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 5636389253,
+    "public_project_uuid": "63493001-ff9b-44eb-a405-d4a4d6eab82f",
+    "publish_date": "2023-01-25",
+    "resource_type": "Model",
+    "short_description": "We train a T5-Base and T5-Large from scratch on MIMIC-III and MIMIC-IV. Additionally, we further pretrain T5-Base and SciFive on notes from MIMIC. We release these model weights on PhysioNet.",
+    "slug": "clinical-t5",
+    "source_url": "https://physionet.org/content/clinical-t5/1.0.0/",
+    "title": "Clinical-T5: Large Language Models Built Using MIMIC Clinical Text",
+    "topics": [],
+    "version": "1.0.0",
+    "version_doi": "10.13026/rj8x-v335"
+  },
+  "source": "physionet"
+}

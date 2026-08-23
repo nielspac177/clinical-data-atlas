@@ -1,0 +1,71 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds002578",
+  "payload": {
+    "created": "2020-02-19T15:14:13.565Z",
+    "id": "ds002578",
+    "latestSnapshot": {
+      "created": "2021-10-26T01:07:53.000Z",
+      "description": {
+        "Authors": [
+          "Arnaud Delorme",
+          "Scott Makeig"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds002578.v1.1.0",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Visual Oddball Task (256 channels)",
+        "ReferencesAndLinks": [
+          "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6673364/"
+        ]
+      },
+      "readme": "Data for this selective attention task was collected in 2004\nat the Swartz Center for Computational Neuroscience at UCSD.\nThese datasets are part of a larger corpus of 32-channel data\ncollected a few years prior. The experiment is identical\nalthough the number of channel is larger (256), the electrode\npositions are scanned and the anatomical MRI is provided\n(allowing for precise source localization). See publication\nfor more details.\n\nRaw data manipulation before export:\n- Fuse all BDF BIOSEMI files and reference to electrode 135 (see loadallbdf_2020.m)\n- Fuse with presentation file information (see loadallbdf_2020.m)\n- Remove spurious events of type 'condition' and '201' (see clean_events.m)\n- Add HED tags (see addHEDTags.m)\n- Convert MRI to NIFTI format (MRIcron) and reorient (MRIcrogl) (see convert_nifti.m)\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "eeg",
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 1429242343,
+        "subjects": [
+          "001",
+          "002"
+        ],
+        "tasks": [
+          "attention"
+        ],
+        "totalFiles": 22
+      },
+      "tag": "1.1.0"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        30,
+        30
+      ],
+      "associatedPaperDOI": "10.1523/JNEUROSCI.3477-07.2007",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "NIH",
+      "modalities": [
+        "eeg",
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "Cognition",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2020-02-21T19:41:52.817Z"
+  },
+  "source": "openneuro"
+}

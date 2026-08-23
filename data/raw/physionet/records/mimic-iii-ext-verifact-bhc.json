@@ -1,0 +1,53 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "mimic-iii-ext-verifact-bhc",
+  "payload": {
+    "abstract": "<p>The <em>VeriFact-BHC</em> dataset is designed to verify the factuality of long-form text written about a patient against their own electronic health record. There is increasing interest in using large language models (LLMs) to generate clinical text in patient care applications, yet this text needs to be evaluated for factual errors and hallucinations prior to committing text to a patient&rsquo;s permanent medical record. Text written about a patient should be internally consistent with information already known about the patient, such as that stored in their medical records.</p>\n<p><em>VeriFact-BHC</em> contains long-form Brief Hospital Course (BHC) clinical narratives typically found in a discharge summary that have been decomposed into text proposition statements. From 100 patients in the MIMIC-III Clinical Database v1.4, we consider two types of BHC text: a human-written BHC and a LLM-generated BHC. The original human clinician-written BHC is extracted from the discharge summary note. The LLM-generated BHC is composed by a LLM using the patient&rsquo;s longitudinal clinical notes from the hospital admission. Each BHC is decomposed in two ways: sentence propositions and atomic claim propositions. The remaining electronic health record (EHR) notes for each patient serves as a patient-specific reference of facts that is used by clinicians and <em>VeriFact</em> to assign labels. A total of 13,070 propositions are annotated by multiple clinicians with a ground truth established via majority voting and manual adjudication. Also provided are labels assigned by the <em>VeriFact</em> artificial intelligence system and labels assessing whether propositions are valid from a first-order logic standpoint. The reference EHR for each patient is provided in both machine-readable and PDF formats.</p>\n<p>By offering this dataset, we hope to spur further investigation and creation of computational systems for automatic chart review and patient-specific fact verification. We invite the research community to utilize this dataset to develop better methods to guardrail patient-specific LLM-generated clinical text.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 419099137,
+    "core_doi": "10.13026/5cn9-ga59",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 419346071,
+    "public_project_uuid": "0f2619ef-4395-4d0b-b102-538d2a3f5992",
+    "publish_date": "2025-04-09",
+    "resource_type": "Database",
+    "short_description": "A clinician-labeled dataset for fact-checking long-form clinical text against patient EHRs. The dataset contains LLM-written and human-written Brief Hospital Course summaries decomposed to atomic claim and sentence propositions with annotations.",
+    "slug": "mimic-iii-ext-verifact-bhc",
+    "source_url": "https://physionet.org/content/mimic-iii-ext-verifact-bhc/1.0.0/",
+    "title": "MIMIC-III-Ext-VeriFact-BHC: Labeled Propositions From Brief Hospital Course Summaries for Long-form Clinical Text Evaluation",
+    "topics": [
+      "long-form text",
+      "chart review",
+      "artificial intelligence",
+      "clinical notes",
+      "text reranking",
+      "brief hospital course",
+      "natural language processing",
+      "atomic claim",
+      "hybrid retrieval",
+      "clinical informatics",
+      "clinical medicine",
+      "fact verification",
+      "retrieval-augmented generation",
+      "logical atomism",
+      "text embedding",
+      "formal logic",
+      "large language models",
+      "llm-as-a-judge",
+      "electronic health records",
+      "llm evaluation"
+    ],
+    "version": "1.0.0",
+    "version_doi": "10.13026/abat-g475"
+  },
+  "source": "physionet"
+}

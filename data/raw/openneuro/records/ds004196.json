@@ -1,0 +1,92 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004196",
+  "payload": {
+    "created": "2022-07-07T13:02:56.293Z",
+    "id": "ds004196",
+    "latestSnapshot": {
+      "created": "2023-06-16T08:25:46.000Z",
+      "description": {
+        "Authors": [
+          "Foteini Liwicki",
+          "Vibha Gupta",
+          "Rajkumar Saini",
+          "Kanjar De",
+          "Nosheen Abid",
+          "Sumit Rakesh",
+          "Scott Wellington",
+          "Holly Wilson",
+          "Marcus Liwicki",
+          "Johan Eriksson"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004196.v2.0.2",
+        "Funding": [
+          "This research was funded by the Grants for excellent research projects proposals of SRT.ai 2022."
+        ],
+        "HowToAcknowledge": "Foteini Simistira Liwicki, Vibha Gupta, Rajkumar Saini, Kanjar De, Nosheen Abid, Sumit Rakesh, Scott Wellington, Holly Wilson, Marcus Liwicki, Johan Eriksson (2022). Bimodal dataset on inner speech. OpenNeuro. [Dataset] doi:10.18112/openneuro.ds004196.v1.0.29",
+        "License": "CC0",
+        "Name": "Bimodal dataset on Inner speech",
+        "ReferencesAndLinks": [
+          "https://github.com/LTU-Machine-Learning/Inner_Speech_EEG_FMRI",
+          "https://www.biorxiv.org/content/10.1101/2022.05.24.492109v3"
+        ]
+      },
+      "readme": "Bimodal dataset on Inner Speech\n\nCode available: https://github.com/LTU-Machine-Learning/Inner_Speech_EEG_FMRI \n\nPublication available: https://www.nature.com/articles/s41597-023-02286-w\n\nAbstract:\nThe recognition of inner speech, which could give a `voice' to patients that have no ability to speak or move, is a challenge for brain-computer interfaces (BCIs). A shortcoming of the available datasets is that they do not combine modalities to increase the performance of inner speech recognition. Multimodal datasets of brain data enable the fusion of neuroimaging modalities with complimentary properties, such as the high spatial resolution of functional magnetic resonance imaging (fMRI) and the temporal resolution of electroencephalography (EEG), and therefore are promising for decoding inner speech. This paper presents the first publicly available bimodal dataset containing EEG and fMRI data acquired nonsimultaneously during inner-speech production.  Data were obtained from four healthy, right-handed participants during an inner-speech task with words in either a social or numerical category. Each of the 8-word stimuli were assessed with 40 trials, resulting in 320 trials in each modality for each participant.   \nThe aim of this work is to provide a publicly available bimodal dataset on inner speech, contributing towards speech prostheses.\n\nShort Dataset description:\nThe dataset consists of 1280 trials in each modality (EEG, FMRI). \nThe stimuli contain 8 words,  selected from 2 different categories (social, numeric):\nSocial: child, daughter, father, wife\nNumeric: four, three, ten, six\n\nThere are 4 subjects in total: sub-01, sub-02, sub-03, sub-05. Initially, there were 5 participants, however, sub-04 data was rejected due to high fluctuations. Details of valid data are available in the file participants.tsv. \n\nFor questions please contact: foteini.liwicki@ltu.se ",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri",
+          "eeg"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "01",
+          "02",
+          "EEG"
+        ],
+        "size": 10022897658,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "05"
+        ],
+        "tasks": [
+          "InnerSpeech",
+          "Inner Speech"
+        ],
+        "totalFiles": 109
+      },
+      "tag": "2.0.2"
+    },
+    "metadata": {
+      "affirmedDefaced": false,
+      "ages": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "10.1101/2022.05.24.492109",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "mri",
+        "eeg"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "Inner Speech",
+      "studyLongitudinal": "Other"
+    },
+    "publishDate": "2023-04-26T11:21:50.220Z"
+  },
+  "source": "openneuro"
+}

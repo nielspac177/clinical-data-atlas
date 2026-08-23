@@ -1,0 +1,28 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:633e080e3fb9b78234603fd327d3a4ba7c6953953b933d14421f0eb565045066",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "low-grade arrhythmias",
+        "label": "low-grade arrhythmias"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:excluded",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "ecg",
+        "value": "ECG"
+      }
+    ],
+    "population": null,
+    "summary": "Recordings originally selected for the MIT-BIH Normal Sinus Rhythm Database but excluded after study revealed low-grade arrhythmias."
+  },
+  "prompt_version": "v1"
+}

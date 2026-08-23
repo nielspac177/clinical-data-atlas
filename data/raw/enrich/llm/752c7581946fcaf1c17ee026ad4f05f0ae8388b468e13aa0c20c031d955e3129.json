@@ -1,0 +1,56 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:752c7581946fcaf1c17ee026ad4f05f0ae8388b468e13aa0c20c031d955e3129",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Clear Cell Renal Cell Carcinoma (CPTAC-CCRCC)",
+        "label": "Clear Cell Renal Cell Carcinoma"
+      },
+      {
+        "evidence": "(non-CCRCC / Rare Kidney Tumor) cohorts",
+        "label": "non-CCRCC / Rare Kidney Tumor"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "oncology",
+      "nephrology_urology",
+      "gastroenterology_hepatology"
+    ],
+    "id": "tcia:cptac-ccrcc",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "CT MR RTSTRUCT",
+        "value": "CT"
+      },
+      {
+        "evidence": "CT MR RTSTRUCT",
+        "value": "MRI"
+      },
+      {
+        "evidence": "CT MR RTSTRUCT",
+        "value": "radiotherapy"
+      },
+      {
+        "evidence": "Radiology and pathology images from CPTAC patients",
+        "value": "pathology"
+      },
+      {
+        "evidence": "large-scale proteome and genome analysis",
+        "value": "genomics"
+      },
+      {
+        "evidence": "large-scale proteome and genome analysis",
+        "value": "proteomics"
+      }
+    ],
+    "population": "Subjects from the CPTAC Clear Cell Renal Cell Carcinoma and non-CCRCC / Rare Kidney Tumor cohorts",
+    "summary": "Radiology and pathology images from CPTAC clear cell renal cell carcinoma and rare kidney tumor cohorts, made public by The Cancer Imaging Archive alongside matching proteomic, genomic and clinical data."
+  },
+  "prompt_version": "v1"
+}

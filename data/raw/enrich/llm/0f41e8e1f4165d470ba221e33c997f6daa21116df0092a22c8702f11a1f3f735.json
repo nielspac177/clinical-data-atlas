@@ -1,0 +1,27 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:0f41e8e1f4165d470ba221e33c997f6daa21116df0092a22c8702f11a1f3f735",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "pulmonology"
+    ],
+    "id": "physionet:lunguage",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "1,473 chest X-ray reports",
+        "value": "xray"
+      },
+      {
+        "evidence": "a benchmark dataset of structured radiology reports",
+        "value": "clinical_notes"
+      }
+    ],
+    "population": "1,473 chest X-ray reports from 230 patients, with 80 sequential reports from 10 patients",
+    "summary": "Radiologist-annotated benchmark of structured chest X-ray reports built from a MIMIC-CXR subset, with entity, relation and attribute annotations plus a sequential subset capturing disease progression across repeated studies."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,31 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:bb57b16030c64461d2ba96b5dbee56cef70c2b260626ec9051e1e8c9f957d6e9",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "neurotrauma",
+        "label": "neurotrauma"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "critical_care",
+      "pediatrics",
+      "neurology",
+      "cardiology"
+    ],
+    "id": "physionet:neurocritical-pediatric",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "waveform recordings, including arterial blood pressure, intracranial pressure, and cerebral blood flow velocity",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": "12 pediatric neurocritical care patients with a variety of pathologies necessitating invasive intracranial pressure monitoring",
+    "summary": "De-identified time-locked bedside waveform recordings from pediatric neurocritical care, including arterial blood pressure, intracranial pressure and cerebral blood flow velocity, plus hematocrit and transducer height information."
+  },
+  "prompt_version": "v1"
+}

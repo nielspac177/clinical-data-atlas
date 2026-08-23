@@ -1,0 +1,30 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:a92e84fe180c77d1f130bbc2ab07168e2ec9e127ddea58d3e2d1798c7397812c",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [
+      "KR"
+    ],
+    "domains": [
+      "critical_care",
+      "surgery"
+    ],
+    "id": "physionet:inspire",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "laboratory results, medications, diagnosis, and outcomes",
+        "value": "EHR"
+      },
+      {
+        "evidence": "vital signs in the operating theatre, general wards, and intensive care units (ICUs)",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": "Approximately 130,000 cases (50% of all surgical cases) who underwent anesthesia for surgery at Seoul National University Hospital between 2011 and 2020",
+    "summary": "Perioperative dataset from a South Korean academic hospital covering surgery, anesthesia, laboratory results, medications, diagnoses and outcomes, plus operating-theatre, ward and ICU vital signs, for about 130,000 surgical cases between 2011 and 2020."
+  },
+  "prompt_version": "v1"
+}

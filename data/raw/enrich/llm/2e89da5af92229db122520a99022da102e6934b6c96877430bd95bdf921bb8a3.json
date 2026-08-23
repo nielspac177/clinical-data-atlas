@@ -1,0 +1,58 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:2e89da5af92229db122520a99022da102e6934b6c96877430bd95bdf921bb8a3",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Neoplasms, NOS",
+        "label": "Neoplasms, NOS"
+      },
+      {
+        "evidence": "Adenomas and Adenocarcinomas",
+        "label": "Adenomas and Adenocarcinomas"
+      },
+      {
+        "evidence": "Transitional Cell Papillomas and Carcinomas",
+        "label": "Transitional Cell Papillomas and Carcinomas"
+      },
+      {
+        "evidence": "Epithelial Neoplasms, NOS",
+        "label": "Epithelial Neoplasms, NOS"
+      },
+      {
+        "evidence": "Ductal and Lobular Neoplasms",
+        "label": "Ductal and Lobular Neoplasms"
+      },
+      {
+        "evidence": "Nerve Sheath Tumors",
+        "label": "Nerve Sheath Tumors"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "gastroenterology_hepatology",
+      "nephrology_urology"
+    ],
+    "id": "gdc:MATCH-B",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "WXS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "RNA-Seq",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "33 human cancer cases in Arm B of the CS-MATCH-0007 study",
+    "summary": "Genomic characterization of Arm B of CS-MATCH-0007, with exome and RNA sequencing plus clinical and biospecimen data from tumors of the colon, biliary tract, breast, prostate, bladder and other sites."
+  },
+  "prompt_version": "v1"
+}

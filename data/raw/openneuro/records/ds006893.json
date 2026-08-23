@@ -1,0 +1,114 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006893",
+  "payload": {
+    "created": "2025-11-03T15:00:28.984Z",
+    "id": "ds006893",
+    "latestSnapshot": {
+      "created": "2025-12-15T12:15:41.000Z",
+      "description": {
+        "Authors": [
+          "Julia Hummel",
+          "Sixiu Zhao",
+          "Sarah Sobotta",
+          "Ralf Veit",
+          "Leontine Sandforth",
+          "Andreas L. Birkenfeld",
+          "Andreas Fritsche",
+          "Robert Wagner",
+          "Andreas Peter",
+          "Hubert Preissl",
+          "Martin Heni",
+          "Stephanie Kullmann"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006893.v1.0.3",
+        "Funding": [
+          ""
+        ],
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "The interplay of central insulin and menstrual cycle on functional brain networks and neural food cue reactivity in women",
+        "ReferencesAndLinks": [
+          ""
+        ]
+      },
+      "readme": "# The interplay of central insulin and menstrual cycle on functional brain networks and neural food cue reactivity in women\n\n\n## Aims:\n\nIn this functional magnetic resonance imaging (fMRI) study, we examined the interaction of menstrual phases and central insulin on functional brain networks and neural food cue reactivity. Using a within-subject design, 15 females with natural menstrual cycles underwent fMRI measurements in the follicular and luteal phase of the menstrual cycle, before and after intranasal insulin administration.\n\n\n## Methods\n\n*fMRI:* \n\nMRI measurements were conducted in a randomized, cross-over design on two separate days: one during the follicular phase and one during the luteal phase of the menstrual cycle. Resting-state fMRI scans were conducted at baseline and 30 min after intranasal insulin on each fMRI measurement day. The visual food cue task was performed in the scanner 40 min after intranasal insulin.\n\nFunctional connectivity (FC) of brain networks was assessed using resting-state fMRI with group independent component analysis (ICA). BOLD signal was measured in response to visual food cues to evaluate neural food cue reactivity. \n\n## General findings and importance:\n\nIntranasal insulin administration increased resting-state functional connectivity within networks that support decision-making processes (namely the default mode and salience network) in the follicular compared to the luteal phase of the menstrual cycle. In contrast, intranasal insulin decreased functional connectivity within the somatosensory network during the follicular phase relative to the luteal phase. In response to visual food cues, hippocampus and dorsal striatum activity was higher in the luteal compared to the follicular phase, particularly to sweet food. Estradiol and progesterone levels predicted these changes. \n\n## Sample Size\n\n15 women completed the experiments in the MRI scanner in the follicular and luteal phase.  (In the uploaded sample, only thirteen out of the 15 have completed visual food task scans). \n\n\n### Comments added by Openfmri Curators ###\n\n===========================================\n\n\nGeneral Comments\n\n----------------\n\n\nWhere to discuss the dataset\n\n----------------------------\n\n1) www.openfmri.org/dataset/ds006893/ See the comments section at the bottom of the dataset page.\n\n\nKnown Issues\n\n------------\n\nMRI scans were assessed in the follicular and luteal phase in randomized order. This corresponds to either session V5, V6 or V7. There is no food cue task data for sub-4780, sub-4791, sub-4814.  \n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "V5",
+          "V6",
+          "V7"
+        ],
+        "size": 11483723355,
+        "subjects": [
+          "4781",
+          "4780",
+          "4814",
+          "4496",
+          "4823",
+          "4791",
+          "4790",
+          "4815",
+          "4817",
+          "4816",
+          "4533",
+          "4784",
+          "4844",
+          "4580",
+          "4787"
+        ],
+        "tasks": [
+          "rest",
+          "food_run-2",
+          "food_run-1"
+        ],
+        "totalFiles": 328
+      },
+      "tag": "1.0.3"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "10.1038/s42003-025-09341-9",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "DZD",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "Within-Subject",
+      "studyDomain": "",
+      "studyLongitudinal": "Longitudinal"
+    },
+    "publishDate": "2025-12-15T10:07:22.464Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,57 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:f750e498642cae46ee19bc8449b767fca1d45144294ca3e14f0c356ac69cb1f1",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "annotated for eight substance use categories",
+        "label": "substance use"
+      },
+      {
+        "evidence": "heroin",
+        "label": "heroin"
+      },
+      {
+        "evidence": "cocaine",
+        "label": "cocaine"
+      },
+      {
+        "evidence": "methamphetamine",
+        "label": "methamphetamine"
+      },
+      {
+        "evidence": "cannabis",
+        "label": "cannabis"
+      },
+      {
+        "evidence": "illicit use of prescription opioids and benzodiazepines",
+        "label": "illicit use of prescription opioids and benzodiazepines"
+      },
+      {
+        "evidence": "Injection Drug Use (IDU)",
+        "label": "Injection Drug Use (IDU)"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "psychiatry",
+      "public_health"
+    ],
+    "id": "physionet:mimic-ext-drug-detection",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "multilabel annotated dataset of clinical note sentences",
+        "value": "clinical_notes"
+      },
+      {
+        "evidence": "Electronic Health Records (EHRs)",
+        "value": "EHR"
+      }
+    ],
+    "population": "Patients with discharge summaries in MIMIC-III/IV.",
+    "summary": "Sentences from MIMIC-III/IV discharge summaries annotated for eight substance use categories, supporting NLP methods that detect co-occurring drug use mentions in clinical notes for surveillance and clinical decision support."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,151 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005883",
+  "payload": {
+    "created": "2025-01-27T03:02:17.831Z",
+    "id": "ds005883",
+    "latestSnapshot": {
+      "created": "2026-05-12T01:13:29.000Z",
+      "description": {
+        "Authors": [
+          "Zhaoxing Wei",
+          "Xiaomin Lin",
+          "Lingfei Guo",
+          "Jixin Liu",
+          "Li Hu",
+          "Yaou Liu",
+          "Yazhuo Kong"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005883.v1.1.1",
+        "Funding": [
+          "National Key R&D Program of China (2022YFC3500603)",
+          "National Natural Science Foundation of China (82072010)",
+          "Beijing Natural Science Foundation (IS23108)"
+        ],
+        "HowToAcknowledge": "Please cite our paper: Wei, Zhaoxing, et al. \"CoSpine open access simultaneous cortico-spinal fMRI database of thermal pain and motor tasks.\" Scientific Data 12.1 (2025): 1696.",
+        "License": "CC0",
+        "Name": "CoSpine Database_pain_dataset",
+        "ReferencesAndLinks": []
+      },
+      "readme": "# Simultaneous cortico-spinal fMRI (CoSpine) Pain-dataset\n\n**Version:** v1.1.0  \n**Date:** 2025-06-19  \n**BIDS-compliant**\n\n---\n\n## 1. Dataset overview\n\nThis is the first open-access, BIDS-compliant cortico-spinal task-based fMRI dataset. It enables exploration of cortical and spinal responses to thermal pain in healthy adults by providing simultaneous brain-and-spinal fMRI, physiological recordings, and behavioural ratings.\n\n- **Task:** 4 s thermal pain stimuli followed by self-report ratings  \n- **Modalities:** fMRI (task-pain BOLD), T1-weighted structural MRI, field maps (GRE magnitude/phase, reversed phase-encoding B0), physiological signals (pulse & respiration), events/behavioural logs\n- **Subjects:** 39  \n\n---\n\n## 2. Experimental design\n\n- **Pain stimulus:** contact thermode, temperatures 42–47 °C (subject-specific)  \n- **Ratings:**  \n  - PR – pain intensity (0–10 VAS)  \n  - UpR – unpleasantness (0–10 VAS)\n\n> Full stimulus & rating onset/duration are recorded in each `*_events.tsv`.\n\n---\n\n## 3. Data acquisition\n\n- **Scanner:** 3 T Siemens Prisma (Erlangen, Germany)  \n- **Coil:** Standard 64-channel head-neck coil\n\n---\n\n## 4. Dataset structure\n\n```text\ndataset/\n├── dataset_description.json\n├── README\n├── task-pain_events.json\n├── participants.tsv + .json\n├── sub-01\n│   ├── anat\n│   │   ├── sub-01_T1w.json\n│   │   └── sub-01_T1w.nii.gz\n│   ├── fmap\n│   │   ├── sub-01_acq-GRE_magnitude1.json\n│   │   ├── sub-01_acq-GRE_magnitude1.nii.gz\n│   │   ├── sub-01_acq-GRE_magnitude2.json\n│   │   ├── sub-01_acq-GRE_magnitude2.nii.gz\n│   │   ├── sub-01_acq-GRE_phase1.json\n│   │   ├── sub-01_acq-GRE_phase1.nii.gz\n│   │   ├── sub-01_dir-AP_epi.json\n│   │   ├── sub-01_dir-AP_epi.nii.gz\n│   │   ├── sub-01_dir-PA_epi.json\n│   │   └── sub-01_dir-PA_epi.nii.gz\n│   └── func\n│       ├── sub-01_task-pain_bold.json\n│       ├── sub-01_task-pain_bold.nii.gz\n│       ├── sub-01_task-pain_dicom001_anonymized.IMA\n│       ├── sub-01_task-pain_events.tsv\n│       ├── sub-01_task-pain_recording-pulse_physio.json\n│       ├── sub-01_task-pain_recording-pulse_physio.tsv.gz\n│       ├── sub-01_task-pain_recording-respiratory_physio.json\n│       └── sub-01_task-pain_recording-respiratory_physio.tsv.gz\n├── derivatives/\n│   └── preprocessed/\n│       ├── dataset_description.json\n│       └── sub-01/\n```\n---\n\n## 5. Column & label definitions\n\n**`*_events.tsv`**\n\n| Column       | Description                          |\n|--------------|--------------------------------------|\n| `trial_type` | `pain` = heat stimulus, `rating` = VAS response period |\n| `PR`         | Pain intensity (0–10)                |\n| `UpR`        | Unpleasantness (0–10)                |\n\n**`participants.tsv`**\n\n| Column            | Units         |\n|-------------------|---------------|\n| `age`             | years         |\n| `sex`             | m / f         |\n| `education`       | years         |\n| `heat_temperature` | °C           |\n\n---\n\n## 6. Quality control / preprocessing\n\n- Structural images have been **defaced** to protect participant identity.  \n- Optimized preprocessing pipeline applied using:\n  - **FSL 6.0.7**\n  - **Spinal Cord Toolbox 5.9**\n\n> Includes distortion correction (TOPUP) and physiological noise correction.  \n> Preprocessed data available in `derivatives/preprocessed/`.\n\n---\n\n## Contact\n\n- **Zhaoxing Wei** – zhaoxing.wei@dartmouth.edu  \n- **Yazhuo Kong** – kongyz@psych.ac.cn",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 12695614249,
+        "subjects": [
+          "15",
+          "28",
+          "30",
+          "19",
+          "16",
+          "32",
+          "22",
+          "24",
+          "12",
+          "06",
+          "11",
+          "35",
+          "23",
+          "17",
+          "02",
+          "03",
+          "39",
+          "07",
+          "34",
+          "25",
+          "38",
+          "14",
+          "26",
+          "31",
+          "36",
+          "21",
+          "27",
+          "29",
+          "20",
+          "37",
+          "05",
+          "10",
+          "04",
+          "13",
+          "18",
+          "01",
+          "08",
+          "33",
+          "09"
+        ],
+        "tasks": [
+          "pain"
+        ],
+        "totalFiles": 744
+      },
+      "tag": "1.1.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        21,
+        20,
+        24,
+        18,
+        24,
+        19,
+        21,
+        28,
+        18,
+        21,
+        21,
+        22,
+        20,
+        22,
+        20,
+        26,
+        21,
+        22,
+        27,
+        24,
+        20,
+        20,
+        19,
+        24,
+        20,
+        19,
+        21,
+        24,
+        20,
+        20,
+        26,
+        18,
+        18,
+        19,
+        18,
+        18,
+        18,
+        18,
+        18
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "Each participant received 15 noxious thermal stimuli delivered to the skin, designed to evoke pain responses. Cortico-spinal fMRI data were acquired during the stimulation to investigate the neural correlates of pain processing, including cortical and spinal cord activity. Additionally, structural images, field maps, and physiological signal data were collected.",
+      "studyDomain": "Pain",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2025-02-04T21:12:09.156Z"
+  },
+  "source": "openneuro"
+}

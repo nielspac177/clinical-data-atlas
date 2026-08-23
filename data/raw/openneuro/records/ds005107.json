@@ -1,0 +1,108 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005107",
+  "payload": {
+    "created": "2024-04-24T06:49:36.871Z",
+    "id": "ds005107",
+    "latestSnapshot": {
+      "created": "2025-06-30T23:44:09.000Z",
+      "description": {
+        "Authors": [
+          "Wei Xu",
+          "et al."
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005107.v2.0.0",
+        "Funding": [],
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "FACE-DEC",
+        "ReferencesAndLinks": []
+      },
+      "readme": "Main entrance: face_0_main\r\n\r\nPreprocessing: face_1_prep\r\n\r\nDecoding: face_2_dec\r\n\r\nRSA: face_3_rsa\r\n\r\nStatistical: face_4_stat\r\n\r\nBMS: face_6_bayes.m\r\n\r\nDuring original OPM-MEG data acquisition, individual facial point clouds and structural MRIs were not collected due to the unavailability of optical scanning equipment. Hence, all analyses were conducted at the whole-brain & sensor level. The raw data were originally stored using in-house LabVIEW format and were converted into the FIF format later. It should be noted that the sensor coordinates used were approximated by selecting corresponding locations from the Elekta layout and do not reflect the actual sensor positions (only for visualizing topographic maps). We are currently checking all the data to ensure that everything has been uploaded correctly. :)\r\n\r\nCorrespondence: weixu@mail.bnu.edu.cn\r\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "meg",
+          "beh"
+        ],
+        "secondaryModalities": [],
+        "sessions": [
+          "01",
+          "02"
+        ],
+        "size": 29613455000,
+        "subjects": [
+          "18",
+          "17",
+          "11",
+          "08",
+          "20",
+          "06",
+          "15",
+          "19",
+          "22",
+          "21",
+          "23",
+          "16",
+          "10",
+          "09",
+          "13",
+          "01",
+          "04",
+          "02",
+          "03",
+          "14",
+          "07"
+        ],
+        "tasks": [
+          "face"
+        ],
+        "totalFiles": 2491
+      },
+      "tag": "2.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        23,
+        24,
+        22,
+        22,
+        21,
+        20,
+        21,
+        20,
+        20,
+        23,
+        24,
+        23,
+        22,
+        22,
+        28,
+        20,
+        27,
+        20,
+        23,
+        22,
+        21
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "meg",
+        "beh"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2026-04-01T18:23:23.915Z"
+  },
+  "source": "openneuro"
+}

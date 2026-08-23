@@ -1,0 +1,116 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003987",
+  "payload": {
+    "created": "2022-01-10T19:15:07.112Z",
+    "id": "ds003987",
+    "latestSnapshot": {
+      "created": "2022-01-09T22:15:44.000Z",
+      "description": {
+        "Authors": [
+          "James F Cavanagh",
+          "Greg Light",
+          "Neal Swerdlow",
+          "Jonathan Brigman",
+          "Jared Young"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds003987.v1.0.0",
+        "Funding": [],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "EEG: Amphetamine trials 5CCPT and Probabilistic Learning",
+        "ReferencesAndLinks": [
+          "pending"
+        ]
+      },
+      "readme": "Two different tasks.   From: \"Electrophysiological biomarkers of behavioral dimensions from cross-species paradigms\"   Second phase (UH3 phase): Amphetamine trials.    Data for both Bhakta et al. 5CCPT paper (humans only) and Cavanagh et al. PLT paper (humans and mice).      N=23 humans.  3 drug conditions: placebo, 10mg, 20mg.  N=28 mice in code folder.  4 drug condis:  placebo, 0.1, 0.3, 1.0 mg/kg.    EEG Triggers were odd binary recombinations that were re-translated into 0-255 in Matlab.   See .m scripts and Trigger Translator.xls *********** OK!  LISTEN!   The .bdf files were to big to import using this function.  So I imported them in EEGLab, downsampled to 500 Hz, then saved them as .set files.  THEN I ran the import script on these .set files.  So you do not need to re-downsample in STEP1 if you run anything from the code folder.   *********** Data collected circa 2016-2019 in San Diego.  Data analyzed circa 2017-2021 in New Mexico.   - James F Cavanagh 06/16/2021",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "eeg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [
+          "01",
+          "02",
+          "03"
+        ],
+        "size": 27451677701,
+        "subjects": [
+          "001",
+          "002",
+          "003",
+          "004",
+          "005",
+          "006",
+          "007",
+          "008",
+          "009",
+          "010",
+          "011",
+          "012",
+          "013",
+          "014",
+          "015",
+          "016",
+          "017",
+          "018",
+          "019",
+          "020",
+          "021",
+          "022",
+          "023"
+        ],
+        "tasks": [
+          "5CCPTxPSTxAmphetamine"
+        ],
+        "totalFiles": 557
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": false,
+      "ages": [
+        18,
+        20,
+        20,
+        18,
+        21,
+        24,
+        35,
+        22,
+        22,
+        20,
+        23,
+        31,
+        21,
+        19,
+        19,
+        22,
+        20,
+        18,
+        32,
+        18,
+        19,
+        29,
+        22
+      ],
+      "associatedPaperDOI": "https://doi.org/10.1038/s41398-021-01562-w",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "NIMH",
+      "modalities": [
+        "eeg"
+      ],
+      "species": "Human",
+      "studyDesign": "3 drug sessions",
+      "studyDomain": "Cognitive Control and Reinforcement Learning",
+      "studyLongitudinal": "Longitudinal"
+    },
+    "publishDate": "2022-02-01T20:21:02.053Z"
+  },
+  "source": "openneuro"
+}

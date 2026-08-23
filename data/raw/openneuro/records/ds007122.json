@@ -1,0 +1,90 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007122",
+  "payload": {
+    "created": "2025-12-23T00:24:22.039Z",
+    "id": "ds007122",
+    "latestSnapshot": {
+      "created": "2026-07-06T19:51:34.000Z",
+      "description": {
+        "Authors": [
+          "Haekkinen, Suvi",
+          "Beckett, Alexander",
+          "Walker, Erica",
+          "Huber, Renzo",
+          "Feinberg, David"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007122.v1.1.0",
+        "Funding": [
+          "NIH (U01-EB025162, U24-NS129949, R44-MH129278), Weill NeuroHub"
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "7T fMRI VASO of the human hippocampus",
+        "ReferencesAndLinks": null
+      },
+      "readme": "This dataset contains high-resolution layer-fMRI data (VASO and BOLD) acquired on the NexGen 7T scanner during an autobiographical memory retrieval task.\n\nExperimental Design: In autobiographical memory (AM) blocks, participants pressed a button after deciding on a memory. In mental arithmetic (MA) blocks, participants pressed a button after solving a simple mathematical problem and then iteratively added 3 to the result. \n\nSequence Details: VASO fMRI. The functional runs are interleaved nulled and not-nulled volumes. These have been split into separate files (cbv, bold).\n\nScanner: NexGen 7T at UC Berkeley\n\nPreprocessing Notes: MP2RAGE have been had their noisy backgrounds and bias fields removed (https://github.com/srikash/MPRAGEise) and anonymized (https://github.com/poldracklab/pydeface). Functional files have two noise volumes at the end, suited for NORDIC denoising.\n\nFor full details, please see: Häkkinen, S., Beckett, A., Walker, E., Huber, R., & Feinberg, D. A. (2025). Functional imaging of hippocampal layers using VASO and BOLD on the Next Generation (NexGen) 7T Scanner. bioRxiv. doi: 10.1101/2025.08.29.673151",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "01",
+          "02"
+        ],
+        "size": 23037458149,
+        "subjects": [
+          "04",
+          "06",
+          "07",
+          "05",
+          "08",
+          "09",
+          "01",
+          "02",
+          "03"
+        ],
+        "tasks": [
+          "am"
+        ],
+        "totalFiles": 175
+      },
+      "tag": "1.1.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        26,
+        44,
+        33,
+        23,
+        32,
+        36,
+        41,
+        37,
+        38
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "NIH (U01-EB025162, U24-NS129949, R44-MH129278; Weill NeuroHub",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2025-12-23T01:04:01.816Z"
+  },
+  "source": "openneuro"
+}

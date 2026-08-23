@@ -1,0 +1,717 @@
+{
+  "endpoints": [
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getCollectionValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getModalityValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getBodyPartValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getPatient",
+    "https://api.datacite.org/dois?prefix=10.7937"
+  ],
+  "harvest_method": "api:nbia+datacite",
+  "native_id": "CPTAC-LUAD",
+  "payload": {
+    "datacite": {
+      "citationCount": 31,
+      "container": {},
+      "contentUrl": [],
+      "contributors": [
+        {
+          "affiliation": [],
+          "contributorType": "DataCurator",
+          "familyName": null,
+          "givenName": null,
+          "name": "TCIA Team",
+          "nameIdentifiers": [],
+          "nameType": null
+        }
+      ],
+      "created": "2018-02-14T15:02:12Z",
+      "creators": [
+        {
+          "affiliation": [],
+          "familyName": null,
+          "givenName": null,
+          "name": "National Cancer Institute Clinical Proteomic Tumor Analysis Consortium (CPTAC)",
+          "nameIdentifiers": [],
+          "nameType": null
+        }
+      ],
+      "dates": [
+        {
+          "date": "2018",
+          "dateInformation": null,
+          "dateType": "Issued"
+        },
+        {
+          "date": "2023-02-24",
+          "dateInformation": "v12",
+          "dateType": "Updated"
+        }
+      ],
+      "descriptions": [
+        {
+          "description": "This collection contains subjects from the National Cancer Institute’s Clinical Proteomic Tumor Analysis Consortium (https://proteomics.cancer.gov/programs/cptac) Lung Adenocarcinoma (CPTAC-LUAD) cohort. CPTAC is a national effort to accelerate the understanding of the molecular basis of cancer through the application of large-scale proteome and genome analysis, or proteogenomics. Radiology and pathology images from CPTAC patients are being collected and made publicly available by The Cancer Imaging Archive to enable researchers to investigate cancer phenotypes which may correlate to corresponding proteomic, genomic and clinical data.",
+          "descriptionType": "Abstract",
+          "lang": null
+        }
+      ],
+      "doi": "10.7937/k9/tcia.2018.pat12tbs",
+      "downloadCount": 0,
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "CPTAC-LUAD",
+          "identifierType": "TCIA Short Name"
+        }
+      ],
+      "isActive": true,
+      "language": null,
+      "metadataVersion": 25,
+      "partCount": 0,
+      "partOfCount": 0,
+      "publicationYear": 2018,
+      "published": null,
+      "publisher": "The Cancer Imaging Archive",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2018-02-14T15:02:13Z",
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "10.1117/12.2581943",
+          "relatedIdentifierType": "DOI",
+          "relatedMetadataScheme": null,
+          "relationType": "IsCitedBy",
+          "relationTypeInformation": null,
+          "resourceTypeGeneral": null,
+          "schemeType": null,
+          "schemeUri": null
+        },
+        {
+          "relatedIdentifier": "10.1145/3431920.3439291",
+          "relatedIdentifierType": "DOI",
+          "relatedMetadataScheme": null,
+          "relationType": "IsCitedBy",
+          "relationTypeInformation": null,
+          "resourceTypeGeneral": null,
+          "schemeType": null,
+          "schemeUri": null
+        },
+        {
+          "relatedIdentifier": "10.1016/j.acra.2024.01.013",
+          "relatedIdentifierType": "DOI",
+          "relatedMetadataScheme": null,
+          "relationType": "IsCitedBy",
+          "relationTypeInformation": null,
+          "resourceTypeGeneral": null,
+          "schemeType": null,
+          "schemeUri": null
+        },
+        {
+          "relatedIdentifier": "10.1016/j.jpdc.2023.104832",
+          "relatedIdentifierType": "DOI",
+          "relatedMetadataScheme": null,
+          "relationType": "IsCitedBy",
+          "relationTypeInformation": null,
+          "resourceTypeGeneral": null,
+          "schemeType": null,
+          "schemeUri": null
+        },
+        {
+          "relatedIdentifier": "10.3390/diagnostics11061047",
+          "relatedIdentifierType": "DOI",
+          "relatedMetadataScheme": null,
+          "relationType": "IsCitedBy",
+          "relationTypeInformation": null,
+          "resourceTypeGeneral": null,
+          "schemeType": null,
+          "schemeUri": null
+        },
+        {
+          "relatedIdentifier": "10.1109/icbcb52223.2021.9459218",
+          "relatedIdentifierType": "DOI",
+          "relatedMetadataScheme": null,
+          "relationType": "IsCitedBy",
+          "relationTypeInformation": null,
+          "resourceTypeGeneral": null,
+          "schemeType": null,
+          "schemeUri": null
+        },
+        {
+          "relatedIdentifier": "10.1007/978-3-030-87237-3_20",
+          "relatedIdentifierType": "DOI",
+          "relatedMetadataScheme": null,
+          "relationType": "IsCitedBy",
+          "relationTypeInformation": null,
+          "resourceTypeGeneral": null,
+          "schemeType": null,
+          "schemeUri": null
+        },
+        {
+          "relatedIdentifier": "10.3389/fonc.2021.626499",
+          "relatedIdentifierType": "DOI",
+          "relatedMetadataScheme": null,
+          "relationType": "IsCitedBy",
+          "relationTypeInformation": null,
+          "resourceTypeGeneral": null,
+          "schemeType": null,
+          "schemeUri": null
+        },
+        {
+          "relatedIdentifier": "10.1016/j.patter.2022.100464",
+          "relatedIdentifierType": "DOI",
+          "relatedMetadataScheme": null,
+          "relationType": "IsCitedBy",
+          "relationTypeInformation": null,
+          "resourceTypeGeneral": null,
+          "schemeType": null,
+          "schemeUri": null
+        },
+        {
+          "relatedIdentifier": "10.1038/s41416-023-02262-6",
+          "relatedIdentifierType": "DOI",
+          "relatedMetadataScheme": null,
+          "relationType": "IsCitedBy",
+          "relationTypeInformation": null,
+          "resourceTypeGeneral": null,
+          "schemeType": null,
+          "schemeUri": null
+        },
+        {
+          "relatedIdentifier": "10.1109/tpds.2022.3218898",
+          "relatedIdentifierType": "DOI",
+          "relatedMetadataScheme": null,
+          "relationType": "IsCitedBy",
+          "relationTypeInformation": null,
+          "resourceTypeGeneral": null,
+          "schemeType": null,
+          "schemeUri": null
+        },
+        {
+          "relatedIdentifier": "10.1038/s41598-023-46405-4",
+          "relatedIdentifierType": "DOI",
+          "relatedMetadataScheme": null,
+          "relationType": "IsCitedBy",
+          "relationTypeInformation": null,
+          "resourceTypeGeneral": null,
+          "schemeType": null,
+          "schemeUri": null
+        },
+        {
+          "relatedIdentifier": "10.1148/rycan.230100",
+          "relatedIdentifierType": "DOI",
+          "relatedMetadataScheme": null,
+          "relationType": "IsCitedBy",
+          "relationTypeInformation": null,
+          "resourceTypeGeneral": null,
+          "schemeType": null,
+          "schemeUri": null
+        },
+        {
+          "relatedIdentifier": "10.1038/s41591-024-02857-3",
+          "relatedIdentifierType": "DOI",
+          "relatedMetadataScheme": null,
+          "relationType": "IsCitedBy",
+          "relationTypeInformation": null,
+          "resourceTypeGeneral": null,
+          "schemeType": null,
+          "schemeUri": null
+        },
+        {
+          "relatedIdentifier": "10.1016/j.ajpath.2024.03.009",
+          "relatedIdentifierType": "DOI",
+          "relatedMetadataScheme": null,
+          "relationType": "IsCitedBy",
+          "relationTypeInformation": null,
+          "resourceTypeGeneral": null,
+          "schemeType": null,
+          "schemeUri": null
+        },
+        {
+          "relatedIdentifier": "10.1038/s41597-024-03337-6",
+          "relatedIdentifierType": "DOI",
+          "relatedMetadataScheme": null,
+          "relationType": "IsCitedBy",
+          "relationTypeInformation": null,
+          "resourceTypeGeneral": null,
+          "schemeType": null,
+          "schemeUri": null
+        },
+        {
+          "relatedIdentifier": "10.1145/3607928",
+          "relatedIdentifierType": "DOI",
+          "relatedMetadataScheme": null,
+          "relationType": "IsCitedBy",
+          "relationTypeInformation": null,
+          "resourceTypeGeneral": null,
+          "schemeType": null,
+          "schemeUri": null
+        },
+        {
+          "relatedIdentifier": "10.2967/jnumed.123.266749",
+          "relatedIdentifierType": "DOI",
+          "relatedMetadataScheme": null,
+          "relationType": "IsCitedBy",
+          "relationTypeInformation": null,
+          "resourceTypeGeneral": null,
+          "schemeType": null,
+          "schemeUri": null
+        },
+        {
+          "relatedIdentifier": "10.1016/j.media.2024.103335",
+          "relatedIdentifierType": "DOI",
+          "relatedMetadataScheme": null,
+          "relationType": "IsCitedBy",
+          "relationTypeInformation": null,
+          "resourceTypeGeneral": null,
+          "schemeType": null,
+          "schemeUri": null
+        },
+        {
+          "relatedIdentifier": "10.1016/j.ijmedinf.2024.105694",
+          "relatedIdentifierType": "DOI",
+          "relatedMetadataScheme": null,
+          "relationType": "IsCitedBy",
+          "relationTypeInformation": null,
+          "resourceTypeGeneral": null,
+          "schemeType": null,
+          "schemeUri": null
+        },
+        {
+          "relatedIdentifier": "10.2147/cmar.s462951",
+          "relatedIdentifierType": "DOI",
+          "relatedMetadataScheme": null,
+          "relationType": "IsCitedBy",
+          "relationTypeInformation": null,
+          "resourceTypeGeneral": null,
+          "schemeType": null,
+          "schemeUri": null
+        },
+        {
+          "relatedIdentifier": "10.1109/iccd63220.2024.00041",
+          "relatedIdentifierType": "DOI",
+          "relatedMetadataScheme": null,
+          "relationType": "IsCitedBy",
+          "relationTypeInformation": null,
+          "resourceTypeGeneral": null,
+          "schemeType": null,
+          "schemeUri": null
+        },
+        {
+          "relatedIdentifier": "10.1002/ijc.34901",
+          "relatedIdentifierType": "DOI",
+          "relatedMetadataScheme": null,
+          "relationType": "IsCitedBy",
+          "relationTypeInformation": null,
+          "resourceTypeGeneral": null,
+          "schemeType": null,
+          "schemeUri": null
+        }
+      ],
+      "relatedItems": [],
+      "rightsList": [
+        {
+          "rights": "Creative Commons Attribution 4.0 International",
+          "rightsIdentifier": "cc-by-4.0",
+          "rightsIdentifierScheme": "SPDX",
+          "rightsUri": "https://creativecommons.org/licenses/by/4.0/legalcode",
+          "schemeUri": "https://spdx.org/licenses/"
+        }
+      ],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "fabricaForm",
+      "state": "findable",
+      "subjects": [],
+      "titles": [
+        {
+          "lang": null,
+          "title": "The Clinical Proteomic Tumor Analysis Consortium Lung Adenocarcinoma Collection (CPTAC-LUAD)",
+          "titleType": null
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceType": "Radiology Images",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2026-03-12T15:21:01Z",
+      "url": "https://www.cancerimagingarchive.net/collection/cptac-luad/",
+      "version": "13",
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 12136
+    },
+    "nbia": {
+      "body_parts": [
+        "ABDOMEN",
+        "CHEST",
+        "CHESTABDOMEN",
+        "LSSPINE",
+        "NECK",
+        "NECKCHESTABDPELV",
+        "WHOLEBODY"
+      ],
+      "collection": "CPTAC-LUAD",
+      "modalities": [
+        "CT",
+        "MR",
+        "PT"
+      ],
+      "patients": [
+        {
+          "Collection": "CPTAC-LUAD",
+          "EthnicGroup": "8",
+          "PatientId": "C3N-00199",
+          "PatientName": "C3N-00199",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-LUAD",
+          "PatientId": "C3L-00263",
+          "PatientName": "C3L-00263",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-LUAD",
+          "PatientId": "C3L-00893",
+          "PatientName": "C3L-00893",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-LUAD",
+          "PatientId": "C3L-00422",
+          "PatientName": "C3L-00422",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-LUAD",
+          "PatientId": "C3L-01330",
+          "PatientName": "C3L-01330",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-LUAD",
+          "PatientId": "C3N-00704",
+          "PatientName": "C3N-00704",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-LUAD",
+          "EthnicGroup": "10",
+          "PatientId": "C3N-00959",
+          "PatientName": "C3N-00959",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-LUAD",
+          "EthnicGroup": "8",
+          "PatientId": "C3N-00737",
+          "PatientName": "C3N-00737",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-LUAD",
+          "EthnicGroup": "8",
+          "PatientId": "C3N-01799",
+          "PatientName": "C3N-01799",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-LUAD",
+          "PatientId": "C3L-02508",
+          "PatientName": "C3L-02508",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-LUAD",
+          "PatientId": "C3N-03420",
+          "PatientName": "C3N-03420",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-LUAD",
+          "PatientId": "C3N-02672",
+          "PatientName": "C3N-02672",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-LUAD",
+          "PatientId": "C3N-02721",
+          "PatientName": "C3N-02721",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-LUAD",
+          "PatientId": "C3N-02282",
+          "PatientName": "C3N-02282",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-LUAD",
+          "PatientId": "C3N-00294",
+          "PatientName": "C3N-00294",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-LUAD",
+          "PatientId": "C3N-02281",
+          "PatientName": "C3N-02281",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-LUAD",
+          "PatientId": "C3N-00293",
+          "PatientName": "C3N-00293",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-LUAD",
+          "PatientId": "C3N-03764",
+          "PatientName": "C3N-03764",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-LUAD",
+          "PatientId": "C3N-04173",
+          "PatientName": "C3N-04173",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-LUAD",
+          "PatientId": "C3N-03038",
+          "PatientName": "C3N-03038",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-LUAD",
+          "EthnicGroup": "Non Hispanic/Lat",
+          "PatientId": "C3N-02451",
+          "PatientName": "C3N-02451",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-LUAD",
+          "PatientId": "C3N-02950",
+          "PatientName": "C3N-02950",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-LUAD",
+          "EthnicGroup": "Non Hispanic/Lat",
+          "PatientId": "C3N-02973",
+          "PatientName": "C3N-02973",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-LUAD",
+          "PatientId": "C3N-02715",
+          "PatientName": "C3N-02715",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-LUAD",
+          "PatientId": "C3N-03222",
+          "PatientName": "C3N-03222",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-LUAD",
+          "PatientId": "C3N-03911",
+          "PatientName": "C3N-03911",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-LUAD",
+          "PatientId": "C3N-00738",
+          "PatientName": "C3N-00738",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-LUAD",
+          "PatientId": "C3N-02290",
+          "PatientName": "C3N-02290",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-LUAD",
+          "PatientId": "C3N-03233",
+          "PatientName": "C3N-03233",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-LUAD",
+          "PatientId": "C3L-01924",
+          "PatientName": "C3L-01924",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-LUAD",
+          "PatientId": "C3L-02515",
+          "PatientName": "C3L-02515",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-LUAD",
+          "EthnicGroup": "C",
+          "PatientId": "C3L-02513",
+          "PatientName": "C3L-02513",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-LUAD",
+          "PatientId": "C3L-03642",
+          "PatientName": "C3L-03642",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-LUAD",
+          "PatientId": "C3L-03717",
+          "PatientName": "C3L-03717",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-LUAD",
+          "PatientId": "C3L-03721",
+          "PatientName": "C3L-03721",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-LUAD",
+          "PatientId": "C3N-04382",
+          "PatientName": "C3N-04382",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-LUAD",
+          "PatientId": "C3N-02948",
+          "PatientName": "C3N-02948",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-LUAD",
+          "PatientId": "C3N-03765",
+          "PatientName": "C3N-03765",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        }
+      ]
+    }
+  },
+  "source": "tcia"
+}

@@ -1,0 +1,77 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "WCDT-MCRPC",
+  "payload": {
+    "dbgap_accession_number": "phs001648",
+    "disease_type": [
+      "Adenomas and Adenocarcinomas"
+    ],
+    "id": "WCDT-MCRPC",
+    "name": "Genomic Characterization of Metastatic Castration Resistant Prostate Cancer",
+    "primary_site": [
+      "Prostate gland"
+    ],
+    "program": {
+      "dbgap_accession_number": null,
+      "name": "WCDT",
+      "program_id": "cf64dbf4-2fc8-56b8-8c6c-ce401e294434"
+    },
+    "project_id": "WCDT-MCRPC",
+    "releasable": true,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 101,
+      "data_categories": [
+        {
+          "case_count": 101,
+          "data_category": "Sequencing Reads",
+          "file_count": 499
+        },
+        {
+          "case_count": 101,
+          "data_category": "Simple Nucleotide Variation",
+          "file_count": 397
+        },
+        {
+          "case_count": 101,
+          "data_category": "Copy Number Variation",
+          "file_count": 202
+        },
+        {
+          "case_count": 99,
+          "data_category": "Transcriptome Profiling",
+          "file_count": 198
+        },
+        {
+          "case_count": 101,
+          "data_category": "Somatic Structural Variation",
+          "file_count": 205
+        },
+        {
+          "case_count": 99,
+          "data_category": "Structural Variation",
+          "file_count": 399
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 99,
+          "experimental_strategy": "RNA-Seq",
+          "file_count": 891
+        },
+        {
+          "case_count": 101,
+          "experimental_strategy": "WGS",
+          "file_count": 1009
+        }
+      ],
+      "file_count": 1900,
+      "file_size": 83164700768943
+    }
+  },
+  "source": "gdc"
+}

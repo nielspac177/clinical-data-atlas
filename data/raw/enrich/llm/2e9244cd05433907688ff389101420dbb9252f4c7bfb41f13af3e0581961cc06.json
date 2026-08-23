@@ -1,0 +1,23 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:2e9244cd05433907688ff389101420dbb9252f4c7bfb41f13af3e0581961cc06",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "other"
+    ],
+    "id": "physionet:chexstruct-cxreasonbench",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "chest X-rays",
+        "value": "xray"
+      }
+    ],
+    "population": "18,988 QA pairs across 12 diagnostic tasks and 1,200 cases",
+    "summary": "A benchmark of question-answer pairs and intermediate reasoning steps built from MIMIC-CXR-JPG, evaluating whether vision-language models perform clinically grounded, multi-step diagnostic reasoning rather than only final answers."
+  },
+  "prompt_version": "v1"
+}

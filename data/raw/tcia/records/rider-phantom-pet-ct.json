@@ -1,0 +1,319 @@
+{
+  "endpoints": [
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getCollectionValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getModalityValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getBodyPartValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getPatient",
+    "https://api.datacite.org/dois?prefix=10.7937"
+  ],
+  "harvest_method": "api:nbia+datacite",
+  "native_id": "RIDER PHANTOM PET-CT",
+  "payload": {
+    "datacite": {
+      "citationCount": 3,
+      "container": {},
+      "contentUrl": [],
+      "contributors": [
+        {
+          "affiliation": [],
+          "contributorType": "Other",
+          "familyName": null,
+          "givenName": null,
+          "name": "TCIA Team",
+          "nameIdentifiers": [],
+          "nameType": null
+        }
+      ],
+      "created": "2015-07-16T03:23:56Z",
+      "creators": [
+        {
+          "affiliation": [],
+          "familyName": "Muzi",
+          "givenName": "Peter",
+          "name": "Muzi, Peter",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Wanner",
+          "givenName": "Michelle",
+          "name": "Wanner, Michelle",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Kinahan",
+          "givenName": "Paul",
+          "name": "Kinahan, Paul",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0003-4803-6507",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2015",
+          "dateInformation": null,
+          "dateType": "Issued"
+        }
+      ],
+      "descriptions": [
+        {
+          "description": "The RIDER Phantom PET-CT collection consists of repeat measurement PET/CT phantom scan collections carried out under the aegis of the Society of Nuclear Medicine (SNM) to discern the uniformity of clinical imaging instrumentation at various sites. They were obtained in cooperation with SNM as a resource for increased quantitative understanding of machine acquisition, analytic reproducibility and image processing. The phantom was manufactured by Sanders Medical(www.sandersmedical.com) in December of 2006. The phantom was based on a NEMA NU-2 IQ phantom (manufactured by Data Spectrum, Durham NC), but with the central 5 cm diameter 'lung' cylinder of the IQ phantom removed. In addition the two larger fillable spheres were changed to hot spheres, as opposed to cold spheres as in the NEMA NU-2 specifications. Nominal target/background ratio was 4:1 with the initial background activity level set to be equivalent to 15 mCi in a 70 Kg patient, With the 271 day half-life of Ge-68 after 6 months the activity will be about 9.5 mCi. After a year it was 6 mCi.",
+          "descriptionType": "Abstract",
+          "lang": null
+        }
+      ],
+      "doi": "10.7937/k9/tcia.2015.8wg2kn4w",
+      "downloadCount": 0,
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "RIDER PHANTOM PET-CT",
+          "identifierType": "TCIA Short Name"
+        }
+      ],
+      "isActive": true,
+      "language": null,
+      "metadataVersion": 14,
+      "partCount": 0,
+      "partOfCount": 0,
+      "publicationYear": 2015,
+      "published": null,
+      "publisher": "The Cancer Imaging Archive",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2015-07-16T03:23:58Z",
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "10.1007/s11548-015-1231-0",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1007/s11042-022-13178-3",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        }
+      ],
+      "relatedItems": [],
+      "rightsList": [
+        {
+          "rights": "Creative Commons Attribution 3.0 Unported",
+          "rightsIdentifier": "cc-by-3.0",
+          "rightsIdentifierScheme": "SPDX",
+          "rightsUri": "https://creativecommons.org/licenses/by/3.0/legalcode",
+          "schemeUri": "https://spdx.org/licenses/"
+        }
+      ],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "fabricaForm",
+      "state": "findable",
+      "subjects": [],
+      "titles": [
+        {
+          "lang": null,
+          "title": "Data From RIDER PHANTOM PET-CT",
+          "titleType": null
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceType": "DICOM",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2025-06-01T01:01:11Z",
+      "url": "https://www.cancerimagingarchive.net/collection/rider-phantom-pet-ct/",
+      "version": "2",
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 903
+    },
+    "nbia": {
+      "body_parts": [
+        "PHANTOM"
+      ],
+      "collection": "RIDER PHANTOM PET-CT",
+      "modalities": [
+        "CT",
+        "PT"
+      ],
+      "patients": [
+        {
+          "Collection": "RIDER PHANTOM PET-CT",
+          "PatientId": "SNMcb01",
+          "PatientName": "SNMcb01",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "RIDER PHANTOM PET-CT",
+          "PatientId": "SNMcb02",
+          "PatientName": "SNMcb02",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "RIDER PHANTOM PET-CT",
+          "PatientId": "SNMcb03",
+          "PatientName": "SNMcb03",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "RIDER PHANTOM PET-CT",
+          "PatientId": "SNMCB04",
+          "PatientName": "SNMCB04",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "RIDER PHANTOM PET-CT",
+          "PatientId": "SNMCB05",
+          "PatientName": "SNMCB05",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "RIDER PHANTOM PET-CT",
+          "PatientId": "SNMCB06",
+          "PatientName": "SNMCB06",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "RIDER PHANTOM PET-CT",
+          "PatientId": "SNMCB07",
+          "PatientName": "SNMCB07",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "RIDER PHANTOM PET-CT",
+          "PatientId": "SNMCB08",
+          "PatientName": "SNMCB08",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "RIDER PHANTOM PET-CT",
+          "PatientId": "SNMCB09",
+          "PatientName": "SNMCB09",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "RIDER PHANTOM PET-CT",
+          "PatientId": "SNMCB10",
+          "PatientName": "SNMCB10",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "RIDER PHANTOM PET-CT",
+          "PatientId": "SNMCB11",
+          "PatientName": "SNMCB11",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "RIDER PHANTOM PET-CT",
+          "PatientId": "SNMCB12",
+          "PatientName": "SNMCB12",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "RIDER PHANTOM PET-CT",
+          "PatientId": "SNMCB13",
+          "PatientName": "SNMCB13",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "RIDER PHANTOM PET-CT",
+          "PatientId": "SNMCB14",
+          "PatientName": "SNMCB14",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "RIDER PHANTOM PET-CT",
+          "PatientId": "SNMCB15",
+          "PatientName": "SNMCB15",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "RIDER PHANTOM PET-CT",
+          "PatientId": "SNMCB16",
+          "PatientName": "SNMCB16",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "RIDER PHANTOM PET-CT",
+          "PatientId": "SNMCB17",
+          "PatientName": "SNMCB17",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "RIDER PHANTOM PET-CT",
+          "PatientId": "SNMCB18",
+          "PatientName": "SNMCB18",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "RIDER PHANTOM PET-CT",
+          "PatientId": "SNMCB19",
+          "PatientName": "SNMCB19",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "RIDER PHANTOM PET-CT",
+          "PatientId": "SNMCB20",
+          "PatientName": "SNMCB20",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        }
+      ]
+    }
+  },
+  "source": "tcia"
+}

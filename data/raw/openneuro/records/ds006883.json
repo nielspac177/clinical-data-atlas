@@ -1,0 +1,63 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006883",
+  "payload": {
+    "created": "2025-11-02T20:17:02.358Z",
+    "id": "ds006883",
+    "latestSnapshot": {
+      "created": "2026-03-11T16:29:27.000Z",
+      "description": {
+        "Authors": [
+          "Cliona O'Doherty",
+          "Áine T. Dineen",
+          "Anna Truzzi",
+          "Graham King",
+          "Enna-Louise D'Arcy",
+          "Jessica White",
+          "Tamrin Holloway",
+          "Chiara Caldinelli",
+          "Lorijn Zaadnoordijk",
+          "Anna Kravchenko",
+          "Ailbhe Tarrant",
+          "Angela T. Byrne",
+          "Adrienne Foran",
+          "Sojo Joseph",
+          "Eleanor J. Molloy",
+          "Rhodri Cusack"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006883.v1.0.1",
+        "Funding": [
+          "ERC Advanced Grant ERC-2017-ADG, FOUNDCOG, 787981 (RC)",
+          "Irish Research Council grants GOIPG/2021/223 (COD)",
+          "GOIPG/2023/2479 (ÁD)",
+          "Science Foundation Ireland SFI RC-17/RCPhD/3482-RCPhD (AK,RC)"
+        ],
+        "HowToAcknowledge": "Please cite this paper: https://www.nature.com/articles/s41593-025-02187-8",
+        "License": "CC0",
+        "Name": "FOUNDCOG",
+        "ReferencesAndLinks": null
+      },
+      "readme": "# FOUNDCOG Data Release v1\nThis release includes the shareable data collected from 2-month and 9-month old infants who completed the FOUNDCOG pictures task at Trinity College Institute of Neuroscience.\n\n- 172 5-min awake fMRI sessions from 84 2-month-olds and 65 runs from 42 9-month-olds.\n- Single band reference scans, in opposite phase encoding directions, used for susceptibility distortion correction using FSL Topup are included per session.\n- We share only the raw data from infants whose caregivers gave explicit consent and \"permission for pseudo-anonymized data, including the brain imaging data, to be shared with the scientific community and the general public via a fully open database on the internet.\"\n- Participants recruited from the NICU have also been excluded from this fully open database, as per the ethical approval for the study.\n- Participants also completed a videos awake fMRI task, resting state, and anatomicals. These are being prepared and will be shared with upcoming publications.\n\n\n### Guide to Participant IDs\nsub-(timepoint in months)(identifier)\n- Months is either 2 or 9, depending on the scan session.\n- Each subject has a unique 3 digit identifier.\n- E.g. participant 033 was scanned at approx. 2-months (sub-2033) and 9-months (sub-9033).\n- The corrected gestational age at time of scanning for each subject can be found in participants.tsv.\n\n### Experimental code\n- The paradigm was run using Psychopy, the protocol can be found at [https://github.com/ClionaOD/foundcog_paradigm](https://github.com/ClionaOD/foundcog_paradigm)\n- Preprocessing used a custom in-house pipeline. This is currently being prepared for sharing and will be made available at [https://github.com/ClionaOD/foundcog_analysis](https://github.com/ClionaOD/foundcog_analysis). \n- The GLM used to generate betas is being prepared for sharing and will be made available at [https://github.com/ClionaOD/foundcog_analysis](https://github.com/ClionaOD/foundcog_analysis).   \n\n## O'Doherty et al. (2025), Nature Neuroscience MVPA Analysis\n- Betas available in derivatives/foundcog_glm/betas. Beta values and vcov measurements are shared from the whole brain, aligned to age-appropriate template space. Betas with vcov > 10 were masked from downstream RDM analyses, as described in the paper.\n- Fully anonymised RDMs, including n=101 2-month-olds and n=44 9-month-olds are available in derivatives/foundcog_rdms/.\n- - Some raw data that was included in the publication has not been shared here. This is the case for infants recruited from the NICU and those whose caregivers did not consent to open sharing. \n- The code used for analysis is being prepared and can be found [https://github.com/ClionaOD/foundcog_analysis](https://github.com/ClionaOD/foundcog_analysis).\n\n### The following runs were excluded from the analysis presented in this publication\n- reason: why the run was excluded.\n    - motion_1.5mm: >50% of frames had FWD >1.5 mm.\n    - manual: scan operator deemed the run of poor quality on day of scanning.\n    - terminated: the run was ended too early due to fussiness.\n- allruns: whether the subject was excluded entirely from analysis as a result.\n\n\n| sub        | ses | run | reason        | allruns |\n|------------|-----|-----|---------------|---------|\n| sub-2000   | 1   | 2   | motion_1.5mm  | False   |\n| sub-2000   | 1   | 1   | motion_1.5mm  | False   |\n| sub-2008   | 1   | 2   | motion_1.5mm  | False   |\n| sub-2008   | 1   | 1   | motion_1.5mm  | False   |\n| sub-2010   | 1   | 1   | manual        | False   |\n| sub-2010   | 1   | 2   | manual        | False   |\n| sub-2013   | 2   | 1   | manual        | False   |\n| sub-2014   | 1   | 1   | terminated    | True    |\n| sub-2015   | 1   | 2   | motion_1.5mm  | False   |\n| sub-2021   | 1   | 2   | manual        | True    |\n| sub-2021   | 1   | 1   | manual        | True    |\n| sub-2022   | 2   | 1   | motion_1.5mm  | False   |\n| sub-2028   | 2   | 1   | motion_1.5mm  | False   |\n| sub-2029   | 1   | 1   | motion_1.5mm  | False   |\n| sub-2033   | 1   | 2   | motion_1.5mm  | False   |\n| sub-2035   | 2   | 2   | motion_1.5mm  | True    |\n| sub-2035   | 2   | 1   | motion_1.5mm  | True    |\n| sub-2039   | 1   | 1   | motion_1.5mm  | True    |\n| sub-2042   | 1   | 1   | motion_1.5mm  | False   |\n| sub-2043   | 1   | 3   | motion_1.5mm  | False   |\n| sub-2043   | 1   | 1   | motion_1.5mm  | False   |\n| sub-2044   | 2   | 1   | manual        | False   |\n| sub-2053   | 1   | 1   | motion_1.5mm  | True    |\n| sub-2055   | 2   | 1   | manual        | False   |\n| sub-2056   | 1   | 1   | manual        | False   |\n| sub-2057   | 1   | 2   | motion_1.5mm  | False   |\n| sub-2058   | 1   | 1   | motion_1.5mm  | False   |\n| sub-2058   | 2   | 2   | terminated    | False   |\n| sub-2061   | 1   | 1   | motion_1.5mm  | False   |\n| sub-2077   | 2   | 1   | motion_1.5mm  | False   |\n| sub-2084   | 1   | 2   | motion_1.5mm  | False   |\n| sub-2086   | 1   | 2   | manual        | False   |\n| sub-2090   | 2   | 1   | manual        | False   |\n| sub-2095   | 2   | 3   | manual        | False   |\n| sub-2095   | 2   | 2   | motion_1.5mm  | False   |\n| sub-2095   | 2   | 1   | manual        | False   |\n| sub-2100   | 1   | 2   | terminated    | False   |\n| sub-2101   | 2   | 1   | motion_1.5mm  | True    |\n| sub-9002   | 1   | 1   | motion_1.5mm  | True    |\n| sub-9005   | 1   | 2   | manual        | False   |\n| sub-9007   | 1   | 1   | motion_1.5mm  | True    |\n| sub-9014   | 1   | 2   | manual        | False   |\n| sub-9014   | 2   | 1   | manual        | False   |\n| sub-9017   | 1   | 1   | motion_1.5mm  | True    |\n| sub-9019   | 1   | 1   | motion_1.5mm  | False   |\n| sub-9022   | 1   | 1   | manual        | True    |\n| sub-9022   | 1   | 2   | manual        | True    |\n| sub-9038   | 1   | 1   | manual        | True    |\n| sub-9040   | 1   | 1   | manual        | True    |\n| sub-9070   | 1   | 1   | terminated    | False   |\n| sub-9074   | 1   | 1   | motion_1.5mm  | True    |\n| sub-9078   | 1   | 1   | terminated    | True    |\n\n",
+      "summary": null,
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": null,
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2026-02-02T03:40:08.103Z"
+  },
+  "source": "openneuro"
+}

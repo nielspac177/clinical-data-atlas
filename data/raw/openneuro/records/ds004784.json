@@ -1,0 +1,65 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004784",
+  "payload": {
+    "created": "2023-09-29T18:42:55.889Z",
+    "id": "ds004784",
+    "latestSnapshot": {
+      "created": "2023-12-21T18:58:48.000Z",
+      "description": {
+        "Authors": [
+          "Ryan J. Downey",
+          "Daniel P. Ferris"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004784.v1.0.4",
+        "Funding": null,
+        "HowToAcknowledge": "Downey, R.J.; Ferris, D.P. iCanClean Removes Motion, Muscle, Eye, and Line-Noise Artifacts from Phantom EEG. Sensors 2023, 23, 8214. https://doi.org/10.3390/s23198214",
+        "License": "CC0",
+        "Name": "Phantom EEG Dataset with Motion, Muscle, and Eye Artifacts and Example Scripts",
+        "ReferencesAndLinks": [
+          "https://doi.org/10.3390/s23198214"
+        ]
+      },
+      "readme": "This phantom experiment contains data collected from a an \nelectrically conductive head phantom. Six conditions were \ntested: brain-only [no artifacts], or  brain with eye, \njaw muscle, neck muscle, or motion artifacts present, \nor brain with all artifacts simultaneously present. \nAlso contained is a copy of the iCanClean plugin for EEGLAB \nand a set of other helpful scripts that enable parameter sweep \ntesting and validation with ground truth knowledge of the brain \nsignals of interest. Please see derivatives folder and \nread the How To document within. \nA copy of iCanClean plugin is in derivatives->Scripts->plugins \nPlease see reference for methodological details \nhttps://doi.org/10.3390/s23198214 \n\n- Ryan Downey (December 20, 2023)",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "eeg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [],
+        "size": 1084178641,
+        "subjects": [
+          "001"
+        ],
+        "tasks": [
+          "mixed"
+        ],
+        "totalFiles": 51
+      },
+      "tag": "1.0.4"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null
+      ],
+      "associatedPaperDOI": "https://doi.org/10.3390/s23198214",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "eeg"
+      ],
+      "species": "Phantom Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": "Phantom"
+    },
+    "publishDate": "2023-12-20T15:06:58.504Z"
+  },
+  "source": "openneuro"
+}

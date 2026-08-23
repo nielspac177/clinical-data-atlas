@@ -1,0 +1,83 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004022",
+  "payload": {
+    "created": "2022-02-11T05:01:21.503Z",
+    "id": "ds004022",
+    "latestSnapshot": {
+      "created": "2022-02-09T22:23:15.000Z",
+      "description": {
+        "Authors": [
+          "Seho Lee",
+          "Hee Ra Jung",
+          "In-Nea Wang",
+          "Min-Kyung Jung",
+          "Hakseung Kim",
+          "Dong-Joo Kim"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004022.v1.0.0",
+        "Funding": [
+          "",
+          "",
+          ""
+        ],
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "Multimodal EEG and fNIRS Biosignal Acquisition during Motor Imagery Tasks in Patients with Orthopedic Impairment",
+        "ReferencesAndLinks": null
+      },
+      "readme": "This dataset consists of raw 18-channel EEG and functional near infrareds(fNIRS) from 7 human paticipants with orthopedic Impairment during motor imagery(MI).  The participants performed a series of MI-related trials across three sessions. These sessions comprised 40 trials, of which four different MI tasks were presented in random order (e.g., Reach → Twist → Lift → Reach → Grasp → Grasp → Twist → Reach → Lift → Reach). Each trial began with 3 s of fixation cross. The monitor then displayed a 4 s visual cue, followed by 3 s of letters indicating the ready state with a gray screen to eliminate the afterimage. The participants were then instructed to perform the imaginary movement for 5 s in the given order.",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "eeg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [],
+        "size": 646522651,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07"
+        ],
+        "tasks": [
+          "Motor Imagery"
+        ],
+        "totalFiles": 89
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        75,
+        48,
+        78,
+        83,
+        77,
+        79,
+        55
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Orthopedic Impairment",
+      "grantFunderName": "",
+      "modalities": [
+        "eeg"
+      ],
+      "species": "Human",
+      "studyDesign": "Motor imagery",
+      "studyDomain": "EEG",
+      "studyLongitudinal": "Longitudinal"
+    },
+    "publishDate": "2022-02-15T04:52:06.228Z"
+  },
+  "source": "openneuro"
+}

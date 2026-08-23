@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:59fbd94130141f079b126fde33bf6ce6acf1c9094cfaaf5387580dea706e5e91",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "history of smoking or asthma",
+        "label": "asthma"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "pulmonology"
+    ],
+    "id": "physionet:pressure-flow-circum-cpap",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Pressure and flow data was collected using a bi-directional Venturi",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "A questionnaire was used to collect relevant demographic data",
+        "value": "survey"
+      }
+    ],
+    "population": "30 healthy adults at the University of Canterbury",
+    "summary": "Airway pressure, flow, and chest and abdominal circumference recordings from healthy adults breathing under CPAP at several PEEP settings and three breath patterns, plus a demographic questionnaire."
+  },
+  "prompt_version": "v1"
+}

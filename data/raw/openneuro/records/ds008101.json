@@ -1,0 +1,76 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds008101",
+  "payload": {
+    "created": "2026-07-05T16:51:00.314Z",
+    "id": "ds008101",
+    "latestSnapshot": {
+      "created": "2026-07-05T18:28:01.000Z",
+      "description": {
+        "Authors": [
+          "Miran Özdogan",
+          "Gilad Landau",
+          "Gereon Elvers",
+          "Dulhan Jayalath",
+          "Pratik Somaiya",
+          "Francesco Mantegna",
+          "Mark Woolrich",
+          "Oiwi Parker Jones"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds008101.v1.0.1",
+        "Funding": null,
+        "HowToAcknowledge": "This is a representative CC0 sample of LibriBrain. If using the full dataset, please cite the associated LibriBrain paper and the full Hugging Face dataset. If using this OpenNeuro sample directly, please also cite this OpenNeuro dataset.",
+        "License": "CC0",
+        "Name": "LibriBrain: Sherlock 1 sample",
+        "ReferencesAndLinks": [
+          "https://huggingface.co/datasets/pnpl/LibriBrain",
+          "https://arxiv.org/abs/2506.02098",
+          "https://github.com/neural-processing-lab/pnpl",
+          "https://libribrain.com/"
+        ]
+      },
+      "readme": "Relationship to the full dataset\n--------------------------------\n\nThis OpenNeuro release is a small excerpt of LibriBrain, containing a single MEG session from one subject (sherlock1/ses-1). It is provided to support dataset discoverability, BIDS validation, inspection of the file structure, and lightweight testing of data-loading pipelines.\n\nThe full LibriBrain dataset is considerably larger (>50 hours), comprising multiple sessions recorded while the participant listened to Sherlock Holmes books 1–7. (MEG data for additional subjects and for the final two Sherlock books, 8 and 9, are included in LibriBrain2 totalling >100 hours combined, also on Hugging Face.) The full dataset is not released on OpenNeuro because OpenNeuro datasets are distributed under a CC0 licence, which grants unrestricted commercial reuse. To promote open research and to protect the public good, we have instead chosen to distribute the full dataset separately under open, non-commercial research terms (CC BY-NC 4.0).\n\nThis is a deliberate data-governance and ethical decision, as LibriBrain is a publicly funded, participant-contributed neural dataset. Releasing the full dataset under non-commercial terms is intended to preserve its value for the research community while avoiding unrestricted commercial extraction without appropriate accountability and permission.\n\nThe full dataset is available via Hugging Face under its own licence (CC BY-NC 4.0):\n\nhttps://huggingface.co/datasets/pnpl/LibriBrain\n\nLibriBrain2 (additional subjects and Sherlock books 8–9) is also available under the same licence (CC BY-NC 4.0):\n\nhttps://huggingface.co/datasets/pnpl/LibriBrain2\n\nCitation\n--------\n\nIf you use this OpenNeuro sample directly, please cite this OpenNeuro dataset.\n\nIf you use the full dataset, please cite the associated paper and the full Hugging Face dataset.\n\n@article{ozdogan2025libribrain,\n  author    = {Özdogan, Miran and Landau, Gilad and Elvers, Gereon and Jayalath, Dulhan and Somaiya, Pratik and Mantegna, Francesco and Woolrich, Mark and Parker Jones, Oiwi},\n  title     = {{LibriBrain}: Over 50 Hours of Within-Subject {MEG} to Improve Speech Decoding Methods at Scale},\n  year      = {2025},\n  journal   = {NeurIPS, Datasets \\& Benchmarks Track},\n  url = {https://arxiv.org/abs/2506.02098}\n}\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "meg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [
+          "1"
+        ],
+        "size": 1444362023,
+        "subjects": [
+          "0"
+        ],
+        "tasks": [
+          "Sherlock 1 listening"
+        ],
+        "totalFiles": 12
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null
+      ],
+      "associatedPaperDOI": "https://neurips.cc/virtual/2025/loc/san-diego/poster/121418",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "meg"
+      ],
+      "species": "Human",
+      "studyDesign": "Naturalistic listening (>50 hours in official repo)",
+      "studyDomain": "Speech comprehension",
+      "studyLongitudinal": "Within-subject"
+    },
+    "publishDate": "2026-07-12T21:57:37.419Z"
+  },
+  "source": "openneuro"
+}

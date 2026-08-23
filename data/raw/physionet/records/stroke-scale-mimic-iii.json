@@ -1,0 +1,32 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "stroke-scale-mimic-iii",
+  "payload": {
+    "abstract": "<p>The National Institutes of Health Stroke Scale (NIHSS) is a 15-item neurologic examination stroke scale. It quantifies the physical manifestations of&nbsp;neurological deficits and provides crucial support for clinical decision making and&nbsp;early-stage emergency triage. NIHSS scores stored in the free-text of Electronic Health Records (EHRs) often lack standardization and the expression patterns are highly dependent on the habit of the clinicians. This can&nbsp;limit&nbsp;the potential for reusability of the data.</p>\n\n<p>There is benefit in&nbsp;developing robust algorithms to extract NIHSS scores from the free-text of EHRs. We developed a dataset for NIHSS score&nbsp;identification, a task&nbsp;defined as the extraction of scale items and corresponding scores from discharge summaries. Discharge summaries of stroke cases in the Medical Information Mart for Intensive Care III (MIMIC-III) database were used to create an annotated NIHSS corpus.</p>\n\n<p>Each discharge summary was manually annotated for the presence of NIHSS scores by two annotators with backgrounds in medical informatics. Annotations include all scale items (e.g. &ldquo;4. Facial Palsy&rdquo;), the corresponding score &ldquo;measurement&rdquo;, and their relation &ldquo;has value&rdquo;. The&nbsp;dataset is intended to support&nbsp;academic and industrial research in the field of medical natural language processing (NLP).</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 221417,
+    "core_doi": "10.13026/jb5v-w976",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 1708168,
+    "public_project_uuid": "b0a620eb-9e55-4762-afd5-3a2c98b3f488",
+    "publish_date": "2021-01-25",
+    "resource_type": "Database",
+    "short_description": "A dataset of annotated NIHSS scale items and corresponding scores from stroke patients discharge summaries in MIMIC-III.",
+    "slug": "stroke-scale-mimic-iii",
+    "source_url": "https://physionet.org/content/stroke-scale-mimic-iii/1.0.0/",
+    "title": "National Institutes of Health Stroke Scale (NIHSS) Annotations for the MIMIC-III Database",
+    "topics": [],
+    "version": "1.0.0",
+    "version_doi": "10.13026/gyjg-0t90"
+  },
+  "source": "physionet"
+}

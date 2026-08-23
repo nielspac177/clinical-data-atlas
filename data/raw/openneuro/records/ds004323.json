@@ -1,0 +1,101 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004323",
+  "payload": {
+    "created": "2022-10-31T00:48:32.364Z",
+    "id": "ds004323",
+    "latestSnapshot": {
+      "created": "2026-03-29T20:22:03.000Z",
+      "description": {
+        "Authors": [
+          "Momchil S. Tomov",
+          "Pedro A. Tsividis",
+          "Thomas Pouncy",
+          "Joshua B. Tenenbaum",
+          "Samuel J. Gershman"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004323.v1.0.1",
+        "Funding": null,
+        "HowToAcknowledge": "Please cite this paper: \n\nThe Neural Architecture of Theory-based Reinforcement Learning\nhttp://dx.doi.org/10.1016/j.neuron.2023.01.023",
+        "License": "CC0",
+        "Name": "Atari-style video game learning fMRI",
+        "ReferencesAndLinks": [
+          "Tomov, M.S., Tsividis, P.A., Pouncy, T., Tenenbaum, J.B., & Gershman, S.J. (2023). The neural architecture of theory-based reinforcement learning.",
+          "http://dx.doi.org/10.1016/j.neuron.2023.01.023"
+        ]
+      },
+      "readme": "Atari-style video game learning fMRI\n==========\n\nThis dataset contains behavioral and functional MRI (BOLD) data from 32 human subjects learning to play different Atari-style games. Additionally, it includes code for analyzing the data using two different models: \n\n* Explore, Model, Plan Agent (EMPA): a theory-based reinforcement learning agent (see [Tsividis et al. (2021)](https://arxiv.org/abs/2107.12544v1)),\n* Double Deep Reinforcement Learning network (DDQN): a deep reinforcement learning agent (see [van Hasselt et al. (2015)](https://arxiv.org/abs/1509.06461))\n\nThis dataset was collected for the following paper:\n\n* [Tomov, M.S., Tsividis, P.A., Pouncy, T., Tenenbaum, J.B., & Gershman, S.J. (2022). The neural architecture of theory-based reinforcement learning.](https://www.biorxiv.org/content/10.1101/2022.06.14.496001v1)\n\nFor more information, see the Methods section of the paper.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 121078255880,
+        "subjects": [
+          "27",
+          "19",
+          "12",
+          "04",
+          "10",
+          "28",
+          "26",
+          "06",
+          "07",
+          "30",
+          "17",
+          "24",
+          "14",
+          "32",
+          "21",
+          "15",
+          "31",
+          "16",
+          "11",
+          "18",
+          "29",
+          "05",
+          "13",
+          "08",
+          "09",
+          "22",
+          "01",
+          "02",
+          "25",
+          "03",
+          "23",
+          "20"
+        ],
+        "tasks": [
+          "Gameplay"
+        ],
+        "totalFiles": 227
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": "https://doi.org/10.1101/2022.06.14.496001",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "blocked",
+      "studyDomain": "model-based reinforcement learning",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2024-09-20T23:09:31.036Z"
+  },
+  "source": "openneuro"
+}

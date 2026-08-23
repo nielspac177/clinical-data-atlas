@@ -1,0 +1,34 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:5ae1acfdddb8fc60917d65ae5cb4486b4b9c6ea53f54b41b6bc40cc287e60c01",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "197 patients with Colorectal Liver Metastases (CRLM)",
+        "label": "Colorectal Liver Metastases"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "gastroenterology_hepatology",
+      "surgery"
+    ],
+    "id": "tcia:colorectal-liver-metastases",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "matched preoperative computed tomography (CT) scans",
+        "value": "CT"
+      },
+      {
+        "evidence": "Preoperative CT and Survival Data",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "197 patients with pathologically confirmed resected colorectal liver metastases and preoperative portal venous contrast-enhanced MDCT within 6 weeks of hepatic resection; those with 90-day mortality or under 24 months follow-up excluded.",
+    "summary": "Preoperative contrast-enhanced CT images with DICOM segmentation objects and survival data from a single-institution consecutive series of patients who underwent resection of colorectal liver metastases, for quantitative image analysis."
+  },
+  "prompt_version": "v1"
+}

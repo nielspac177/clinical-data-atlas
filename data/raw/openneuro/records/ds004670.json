@@ -1,0 +1,135 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004670",
+  "payload": {
+    "created": "2023-08-11T05:09:37.391Z",
+    "id": "ds004670",
+    "latestSnapshot": {
+      "created": "2025-06-19T10:15:28.000Z",
+      "description": {
+        "Authors": [
+          "Fan Cheng",
+          "Tomoyasu Horikawa",
+          "Kei Majima",
+          "Misato Tanaka",
+          "Mohamed Abdelhack",
+          "Shuntaro C. Aoki",
+          "Jin Hirano",
+          "Yukiyasu Kamitani"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004670.v1.1.3",
+        "Funding": [
+          "Japan Society for the Promotion of Science (KAKENHI grant JP20H05705 and JP20H05954)",
+          "Japan Science and Technology Agency (CREST grant JPMJCR18A5 and JPMJCR22P3, and SPRING grant JPMJSP2110)",
+          "New Energy and In-dustrial Technology Development Organization (Project JPNP20006)"
+        ],
+        "HowToAcknowledge": "Please cite this paper: https://doi.org/10.1101/2023.06.15.545037",
+        "License": "CC0",
+        "Name": "Visual Illusion Reconstruction",
+        "ReferencesAndLinks": [
+          "Cheng, F. L., Horikawa, T., Majima, K., Tanaka, M., Abdelhack, M., Aoki, S. C., Hirano, J., & Kamitani, Y. (2023). Reconstructing visual illusory experiences from human brain activity. Science Advances, 9(46), eadj3906. https://doi.org/10.1126/sciadv.adj3906",
+          "Cheng, F., Horikawa, T., Majima, K., Tanaka, M., Abdelhack, M., Aoki, S. C., Hirano, J., & Kamitani, Y. (2023). Reconstructing visual illusory experiences from human brain activity. bioRxiv. https://doi.org/10.1101/2023.06.15.545037"
+        ]
+      },
+      "readme": "# Visual Illusion Reconstruction\n\n## Original paper\n\n- Cheng, F. L., Horikawa, T., Majima, K., Tanaka, M., Abdelhack, M., Aoki, S. C., Hirano, J., & Kamitani, Y. (2023). Reconstructing visual illusory experiences from human brain activity. Science Advances, 9(46), eadj3906. https://doi.org/10.1126/sciadv.adj3906\n\n- Cheng, F., Horikawa, T., Majima, K., Tanaka, M., Abdelhack, M., Aoki, S. C., Hirano, J., & Kamitani, Y. (2023). Reconstructing visual illusory experiences from human brain activity. bioRxiv. <https://doi.org/10.1101/2023.06.15.545037>\n\n## Dataset\n\nThis dataset includes fMRI data collected from human subjects while they viewed natural images (object, material, scene) and illusory images.  \n\nDeatails for 7 participants: all data for subjects S5, S6, S7, and partial data from subjects S1, S2, S3, S4 (fMRI brain activity in FMD, MSCOCO, and illusion sessions). ImageNetTraining data for S1, S2, S3, and S4 are available in the following OpenNeuro repository.\n\n- S1, S2, S3: sub-06, sub-07, and sub-04 in [Attentionally modulated subjective images reconstructed from brain activity](https://openneuro.org/datasets/ds003430/versions/1.2.0), respectively\n- S4: sub-01 in [Deep Image Reconstruction](https://openneuro.org/datasets/ds001506)\n\n## Code\n\nSee <https://github.com/KamitaniLab/IllusionReconstruction>.\n\n## Contact\n\n- Email: <mailto:kamitanilab@gmail.com>\n- We also accept inqueries at [issues on GitHub/KamitaniLab/OpenData](https://github.com/KamitaniLab/OpenData/issues).\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "MSCOCO05",
+          "FMD02",
+          "ImageNetTraining03",
+          "ImageNetTraining06",
+          "MSCOCO02",
+          "Illusion01",
+          "ImageNetTraining01",
+          "MSCOCO01",
+          "ImageNetTraining04",
+          "Illusion04",
+          "MSCOCO04",
+          "Illusion02",
+          "FMD04",
+          "FMD01",
+          "ImageNetTraining05",
+          "anatomy",
+          "MSCOCO03",
+          "ImageNetTraining02",
+          "FMD03",
+          "FMD06",
+          "FMD05",
+          "Illusion03",
+          "MSCOCO07",
+          "Illusion06",
+          "MSCOCO06",
+          "ImageNetTraining07",
+          "Illusion05",
+          "ImageNetTraining08",
+          "MSCOCO08",
+          "FMD11",
+          "MSCOCO12",
+          "FMD07",
+          "FMD08",
+          "MSCOCO13",
+          "MSCOCO14",
+          "MSCOCO09",
+          "FMD10",
+          "MSCOCO15",
+          "FMD14",
+          "FMD12",
+          "MSCOCO16",
+          "MSCOCO17",
+          "FMD13",
+          "MSCOCO11",
+          "FMD15",
+          "FMD09",
+          "MSCOCO10"
+        ],
+        "size": 262329609110,
+        "subjects": [
+          "S7",
+          "S6",
+          "S5",
+          "S2",
+          "S3",
+          "S1",
+          "S4"
+        ],
+        "tasks": [
+          "MSCOCO",
+          "FMD",
+          "ImageNetTraining",
+          "Illusion",
+          "ImageNetTrainingV2"
+        ],
+        "totalFiles": 4607
+      },
+      "tag": "1.1.3"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": "openneuro.ds004670.v1.1.0",
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": null,
+      "studyDomain": "visual, illusion",
+      "studyLongitudinal": "Longitudinal"
+    },
+    "publishDate": "2023-09-22T10:52:06.831Z"
+  },
+  "source": "openneuro"
+}

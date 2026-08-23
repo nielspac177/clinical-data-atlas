@@ -1,0 +1,43 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:3693a3adcd1870180720088e0e917a952e035d5608521a342129bd26062970f0",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "referred for PSG examination on the context of different sleep disorders",
+        "label": "sleep disorders"
+      }
+    ],
+    "countries": [
+      "NL"
+    ],
+    "domains": [
+      "neurology",
+      "cardiology"
+    ],
+    "id": "physionet:hmc-sleep-staging",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "electroencephalographic (EEG)",
+        "value": "EEG"
+      },
+      {
+        "evidence": "chin electromyographic (EMG)",
+        "value": "EMG"
+      },
+      {
+        "evidence": "electrocardiographic (ECG) activity",
+        "value": "ECG"
+      },
+      {
+        "evidence": "whole-night polysomnographic (PSG) sleep recordings",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": "151 whole-night PSG recordings (85 Male, 66 Female, mean Age of 53.9 ± 15.4), a heterogeneous patient population referred for PSG examination for different sleep disorders, collected during 2018",
+    "summary": "Whole-night polysomnographic sleep recordings from a Dutch sleep center, containing EEG, EOG, chin EMG and ECG traces with hypnogram sleep-stage annotations scored by sleep technicians."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,27 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:ba86722396e01df8fd457a013048013a855724f194c3084bf3281d2f62b6347c",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "other"
+    ],
+    "id": "physionet:ehr-notes-qa-llms",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "discharge summaries",
+        "value": "clinical_notes"
+      },
+      {
+        "evidence": "Discharge summaries in Electronic Health Records (EHRs)",
+        "value": "EHR"
+      }
+    ],
+    "population": "962 different QA pairs each linked to distinct patients' discharge summaries from the MIMIC-IV EHR",
+    "summary": "Benchmark of question-answer pairs built on the MIMIC-IV EHR, each linked to a distinct patient's discharge summaries, generated with GPT-4 and refined by clinicians, covering eight topics including multi-summary questions."
+  },
+  "prompt_version": "v1"
+}

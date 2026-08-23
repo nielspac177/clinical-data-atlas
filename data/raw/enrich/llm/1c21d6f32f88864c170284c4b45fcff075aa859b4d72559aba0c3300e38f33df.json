@@ -1,0 +1,48 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:1c21d6f32f88864c170284c4b45fcff075aa859b4d72559aba0c3300e38f33df",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Head and Neck Squamous Cell Carcinoma",
+        "label": "Head and Neck Squamous Cell Carcinoma"
+      },
+      {
+        "evidence": "Squamous Cell Neoplasms",
+        "label": "Squamous Cell Neoplasms"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "gdc:TCGA-HNSC",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Tissue Slide, Diagnostic Slide",
+        "value": "pathology"
+      },
+      {
+        "evidence": "WXS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "RNA-Seq",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Reverse Phase Protein Array",
+        "value": "proteomics"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "528 human cases",
+    "summary": "TCGA molecular profiling of head and neck squamous cell carcinoma across oral cavity, pharynx and larynx sites, with sequencing, methylation and genotyping arrays, protein arrays, tissue slides and clinical data."
+  },
+  "prompt_version": "v1"
+}

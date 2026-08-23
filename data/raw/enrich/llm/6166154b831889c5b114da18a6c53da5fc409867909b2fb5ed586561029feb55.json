@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:6166154b831889c5b114da18a6c53da5fc409867909b2fb5ed586561029feb55",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "sleep apnea",
+        "label": "sleep apnea"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "cardiology",
+      "pulmonology"
+    ],
+    "id": "physionet:apnea-ecg",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "continuous digitized ECG signal",
+        "value": "ECG"
+      },
+      {
+        "evidence": "chest and abdominal respiratory effort signals",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": null,
+    "summary": "Seventy overnight ECG recordings with expert apnea annotations and machine-generated QRS annotations, split into learning and test sets; eight recordings also include respiratory effort, oronasal airflow and oxygen saturation signals."
+  },
+  "prompt_version": "v1"
+}

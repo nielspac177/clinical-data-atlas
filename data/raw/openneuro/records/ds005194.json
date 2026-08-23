@@ -1,0 +1,90 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005194",
+  "payload": {
+    "created": "2024-05-29T16:17:34.159Z",
+    "id": "ds005194",
+    "latestSnapshot": {
+      "created": "2024-05-29T18:14:58.000Z",
+      "description": {
+        "Authors": [
+          "Nicholas G. Cicero",
+          "Michaela Klimova",
+          "Laura D. Lewis",
+          "Sam Ling"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005194.v1.1.0",
+        "Funding": [
+          "NIH R01-EY028163",
+          "NIH U19-NS128613",
+          "Pew Biomedical Scholars Program",
+          "Sloan Fellowship",
+          "McKnight Scholar Award"
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Differential cortical and subcortical visual processing with eyes shut",
+        "ReferencesAndLinks": null
+      },
+      "readme": "This dataset contains raw 3T fMRI data from 8 subjects who completed a visual task with their eyes open or closed. Visual stimulus was a full-field flickering stimulus with no spatial contrast with a 16 second on-off block design. On blocks were either a high temporal contrast trial, with 100% contrast modulation flickering from a completely white to black screen at 7Hz, or  a low temporal trial, with a 10% contrast modulation flickering between midling grey intensities at 7Hz. Off blocks were non-flickering median luminance screens.",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 36212988892,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08"
+        ],
+        "tasks": [
+          "checker",
+          "closed",
+          "open"
+        ],
+        "totalFiles": 281
+      },
+      "tag": "1.1.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        27,
+        28,
+        26,
+        35,
+        23,
+        24,
+        25,
+        33
+      ],
+      "associatedPaperDOI": "10.1152/jn.00073.2024",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2024-05-29T18:14:20.643Z"
+  },
+  "source": "openneuro"
+}

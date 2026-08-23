@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:03391bed4764edbdc7cb2df1c865121d4332ecc9aa5110c6b1391e1914e6eaf2",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Chronic Obstructive Pulmonary Disease (COPD)",
+        "label": "Chronic Obstructive Pulmonary Disease (COPD)"
+      },
+      {
+        "evidence": "history of smoking, vaping, or asthma",
+        "label": "asthma"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "pulmonology"
+    ],
+    "id": "physionet:simulated-obstructive-disease",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Pressure and flow data were recorded",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "de-identified demographic questionnaire",
+        "value": "survey"
+      }
+    ],
+    "population": "20 healthy adults at the University of Canterbury, each completing a demographic questionnaire covering age, height, sex, and history of smoking, vaping, or asthma.",
+    "summary": "Pressure, flow and volume recordings from healthy adults wearing a modular device that simulates obstructive pulmonary disease. Tests were run with CPAP at two PEEP settings and without CPAP, intended for validating respiratory computational models."
+  },
+  "prompt_version": "v1"
+}

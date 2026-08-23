@@ -1,0 +1,151 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004496",
+  "payload": {
+    "created": "2023-02-14T07:21:33.377Z",
+    "id": "ds004496",
+    "latestSnapshot": {
+      "created": "2023-07-09T01:36:36.000Z",
+      "description": {
+        "Authors": [
+          "Zhengxin Gong",
+          "Ming Zhou",
+          "Yuxuan Dai",
+          "Yushan Wen",
+          "Youyi Liu",
+          "Zonglei Zhen"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004496.v2.1.2",
+        "Funding": [
+          "Key Program of National Natural Science Foundation of China (#62236001)",
+          "General Program of National Natural Science Foundation of China (#31771251)"
+        ],
+        "HowToAcknowledge": "TODO: describe how to acknowledge -- either cite a corresponding paper, or just in acknowledgement section",
+        "License": "CC0",
+        "Name": "A large-scale fMRI dataset for the visual processing of naturalistic scenes",
+        "ReferencesAndLinks": [
+          "TODO",
+          "List of papers or websites"
+        ]
+      },
+      "readme": "**Summary**\n\nOne ultimate goal of visual neuroscience is to understand how the brain processes visual stimuli encountered in the natural environment. Achieving this goal requires records of brain responses under massive amounts of naturalistic stimuli. Although the scientific community has put in a lot of effort to collect large-scale functional magnetic resonance imaging (fMRI) data under naturalistic stimuli, more naturalistic fMRI datasets are still urgently needed. We present here the Natural Object Dataset (NOD), a large-scale fMRI dataset containing responses to 57,120 naturalistic images from 30 participants. NOD strives for a balance between sampling variation between individuals and sampling variation between stimuli. This enables NOD to be utilized not only for determining whether an observation is generalizable across many individuals, but also for testing whether a response pattern is generalized to a variety of naturalistic stimuli. We anticipate that the NOD together with existing naturalistic neuroimaging datasets will serve as a new impetus for our understanding of the visual processing of naturalistic stimuli. \n\n**Data record**\n\nThe data were organized according to the Brain-Imaging-Data-Structure (BIDS) Specification version 1.7.0 and can be accessed from the OpenNeuro public repository (accession number: ds004496). In short, raw data of each subject were stored in “sub-<ID>” directories; The preprocessed volume data and the derived surface-based data can be found in “derivatives/fmriprep” and “derivatives/ciftify” directories, respectively.\n\n*Stimulus images*\nThe stimulus images for different fMRI experiments are deposited in separate folders: “stimuli/imagenet”, “stimuli/coco”, “stimuli/prf”, and “stimuli/floc”. Each experiment folder contains corresponding stimulus images, and the auxiliary files can be found within the “info” subfolder. \n\n*Raw MRI data*\nEach participant folder consists of several session folders:  anat, coco, imagenet, prf, floc. Each session folder in turn includes “anat”, “func”, or “fmap” folders for corresponding modality data. The scan information for each session is provided in a TSV file. \n\n*Preprocessed volume data from fMRIprep*\nThe preprocessed volume-based fMRI data are in subject's native space, saved as “sub-<subID>_ses-<sesID>_task-<taskID>_run-<index>_space-T1w_desc-preproc_bold.nii.gz” for each functional run. A “sub-<subID>_ses-<sesID>_task-<taskID>_run-<index>_desc-confounds_timeseries.tsv” file stores the confounds variable extracted by fMRIprep. The details of other auxiliary files can be found under each session folder.\n\n*Preprocessed surface-based data from ciftify*\nThe preprocessed surface-based data are in standard fsLR space, saved as “sub-<subID>/results/ses-<sesID>_task-<taskID>_run-<index>/ses-<sesID>_task-<taskID>_run-<index>_Atlas.dtseries.nii” for each functional run under each run folder. The standard and native fsLR surface can be found in the standard_fsLR_surface and T1w_fsLR_surface folders, respectively.\n\n*Brain activation data from surface-based GLM analyses*\nThe brain activation data are derived from GLM analyses on the standard fsLR space, saved as “sub-<subID>/results/ses-<sesID>_task-<taskID>_run-<index>/ses-<sesID>_task-<taskID>_run-<index>_beta.dscalar.nii” for each functional run from both ImageNet and COCO experiments. Within each run folder, the auxiliary information about labels or conditions can be found in “ses-<sesID>_task-<taskID>_run-<index>_label.txt”. Additionally, individual-specific character-, faces-, body- and place--selective activation maps and ROIs are stored in “sub-<subID>/results/ses-floc_task-floc” folder; And pRF parameters maps are stored in “sub-<subID>/results/ses-prf_task-prf” folder.",
+      "summary": {
+        "dataProcessed": true,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "anat",
+          "coco",
+          "floc",
+          "imagenet01",
+          "imagenet02",
+          "imagenet03",
+          "imagenet04",
+          "imagenet05",
+          "prf"
+        ],
+        "size": 176610540780,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30"
+        ],
+        "tasks": [
+          "coco",
+          "floc",
+          "imagenet",
+          "prf",
+          "coco experiment fixation color change detection",
+          "functional category-selective localizer",
+          "TODO: full task name for naturalvision",
+          "population receptive field model mapping"
+        ],
+        "totalFiles": 60238
+      },
+      "tag": "2.1.2"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        22,
+        21,
+        25,
+        21,
+        22,
+        24,
+        21,
+        26,
+        19,
+        21,
+        18,
+        20,
+        20,
+        20,
+        20,
+        24,
+        23,
+        19,
+        20,
+        22,
+        21,
+        22,
+        21,
+        18,
+        21,
+        21,
+        21,
+        22,
+        24,
+        18
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": true,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2023-02-22T03:50:13.628Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,51 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:8b7144876d76af0d8c8c101f54c651bcef0cdebedd6305e048eef9c814ee1252",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Cutaneous Melanoma (CPTAC-CM) cohort",
+        "label": "Cutaneous Melanoma"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "oncology",
+      "neurology"
+    ],
+    "id": "tcia:cptac-cm",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "CT MR PT",
+        "value": "CT"
+      },
+      {
+        "evidence": "CT MR PT",
+        "value": "MRI"
+      },
+      {
+        "evidence": "CT MR PT",
+        "value": "PET"
+      },
+      {
+        "evidence": "Radiology and pathology images from CPTAC patients",
+        "value": "pathology"
+      },
+      {
+        "evidence": "large-scale proteome and genome analysis",
+        "value": "genomics"
+      },
+      {
+        "evidence": "large-scale proteome and genome analysis",
+        "value": "proteomics"
+      }
+    ],
+    "population": "Subjects from the CPTAC Cutaneous Melanoma cohort",
+    "summary": "Radiology and pathology images from the CPTAC cutaneous melanoma cohort, released by The Cancer Imaging Archive so researchers can relate imaging phenotypes to proteomic, genomic and clinical data."
+  },
+  "prompt_version": "v1"
+}

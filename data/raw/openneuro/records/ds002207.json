@@ -1,0 +1,69 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds002207",
+  "payload": {
+    "created": "2019-09-26T17:55:29.325Z",
+    "id": "ds002207",
+    "latestSnapshot": {
+      "created": "2019-09-26T18:24:18.000Z",
+      "description": {
+        "Authors": [
+          "Michele Svanera",
+          "Lars Muckli"
+        ],
+        "DatasetDOI": "mockDOI",
+        "Funding": [
+          "This project has received funding from the European Union’s Horizon 2020 Programme for Research and Innovation under the Specific Grant Agreement No. 785907 (Human Brain Project SGA2) awarded to Lars Muckli."
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "CEREBRuM: a 3T MRI segmentation tool",
+        "ReferencesAndLinks": null
+      },
+      "readme": "The dataset is composed by 7 subjects, scanned at the Centre for Cognitive Neuroimaging (CCNi) at the Institute of Neuroscience and Psychology, University of Glasgow.\nThese data serve as testing dataset for the paper:\n\n\tBontempi, D., Benini, S., Signoroni, A., Svanera, M., & Muckli, L. (2019). \n\tCEREBRuM: a Convolutional Encoder-decodeR for Fully Volumetric Fast sEgmentation of BRain MRI. \n\tarXiv preprint arXiv:1909.05085.\n\nFor every subject, two folders are provided, containing:\n\nanat/\n* the anatomical (defaced)\n\nderivatives/\n* two segmentations A and B (segmentations/), with FreeSurfer and Cerebrum segmentations respectively\n* with the slices used for the behavioural (slices/)\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 56729647,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07"
+        ],
+        "tasks": [],
+        "totalFiles": 10
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": null,
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "Method development",
+      "studyDomain": "Method development",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2019-09-26T19:10:49.053Z"
+  },
+  "source": "openneuro"
+}

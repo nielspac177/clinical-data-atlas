@@ -1,0 +1,37 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "heart-vector-origin-matlab",
+  "payload": {
+    "abstract": "<p>An appropriate selection of the heart vector origin point defines the ECG&rsquo;s baseline, which then affects all subsequent ECG measurements. We introduce software capable of automatically identifying the heart vector origin point and constructing&nbsp;a time-coherent median beat. We define the heart vector electrocardiographic (VCG) origin point based on its electrophysiological and biophysical meaning: the electrically quiet, or isoelectric state of the heart when the heart vector does not move in 3D space. The electrically silent period is defined as the segment between the end of repolarization and the onset of P-wave (if present), or the beginning of the QRS complex.</p>\n\n<p><span><span><span>The definition of the VCG origin point determines the definition of the vector magnitude ECG baseline. Vector-Magnitude that is zeroed at the origin of the heart vector provides the most physiologically accurate cardiac beat. This is a fundamental step for any further global ECG and VCG measurements. Time-coherent median beat preserves the physiological sequence of cardiac activation and recovery. The time-coherent approach takes an easily detectable fiducial point (maximum |dV/dt|)&nbsp; as detected only on one ECG lead (e.g., X). Corresponding time-points on two other leads (e.g., Y and Z) are taken regardless of their morphological features. Such an approach significantly reduces the chance of error and preserves the physiological sequence of cardiac activation and recovery. The algorithm requires an input of a 10-second raw digital orthogonal ECG signal (XYZ leads).</span></span></span></p>",
+    "access_policy": "Open",
+    "compressed_storage_size": 3135451,
+    "core_doi": "10.13026/jsdm-1k72",
+    "dua": null,
+    "is_latest_version": true,
+    "license": {
+      "name": "MIT License"
+    },
+    "main_storage_size": 4375277,
+    "public_project_uuid": "31e05fb8-8474-486e-80a9-31ec91e461b3",
+    "publish_date": "2021-05-25",
+    "resource_type": "Software",
+    "short_description": "The algorithm finds the heart vector origin point and constructs the time-coherent median beat. VCG origin point is defined as the electrically quiet or isoelectric state of the heart when the heart vector does not move in 3D space.",
+    "slug": "heart-vector-origin-matlab",
+    "source_url": "https://physionet.org/content/heart-vector-origin-matlab/1.0.0/",
+    "title": "Heart Vector Origin Point Detection and Time-Coherent Median Beat Construction",
+    "topics": [
+      "signal processing",
+      "baseline",
+      "vectorcardiogram",
+      "origin point",
+      "electrocardiogram",
+      "heart vector"
+    ],
+    "version": "1.0.0",
+    "version_doi": "10.13026/jfeg-4820"
+  },
+  "source": "physionet"
+}

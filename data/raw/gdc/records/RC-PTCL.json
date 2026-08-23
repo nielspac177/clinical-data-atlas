@@ -1,0 +1,106 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "RC-PTCL",
+  "payload": {
+    "dbgap_accession_number": "phs002247",
+    "disease_type": [
+      "Mature T- and NK-Cell Lymphomas"
+    ],
+    "id": "RC-PTCL",
+    "name": "Refractory Cancers (RC) - Peripheral T-Cell Lymphoma (PTCL)",
+    "primary_site": [
+      "Connective, subcutaneous and other soft tissues",
+      "Liver and intrahepatic bile ducts",
+      "Unknown",
+      "Lymph nodes",
+      "Hematopoietic and reticuloendothelial systems"
+    ],
+    "program": {
+      "dbgap_accession_number": "phs002097",
+      "name": "RC",
+      "program_id": "760e1cbc-5d30-5406-98f8-e13d2b92aaf7"
+    },
+    "project_id": "RC-PTCL",
+    "releasable": false,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 58,
+      "data_categories": [
+        {
+          "case_count": 58,
+          "data_category": "Simple Nucleotide Variation",
+          "file_count": 1085
+        },
+        {
+          "case_count": 58,
+          "data_category": "Sequencing Reads",
+          "file_count": 453
+        },
+        {
+          "case_count": 58,
+          "data_category": "Clinical",
+          "file_count": 58
+        },
+        {
+          "case_count": 57,
+          "data_category": "Copy Number Variation",
+          "file_count": 229
+        },
+        {
+          "case_count": 56,
+          "data_category": "Transcriptome Profiling",
+          "file_count": 224
+        },
+        {
+          "case_count": 58,
+          "data_category": "DNA Methylation",
+          "file_count": 177
+        },
+        {
+          "case_count": 57,
+          "data_category": "Somatic Structural Variation",
+          "file_count": 120
+        },
+        {
+          "case_count": 54,
+          "data_category": "Structural Variation",
+          "file_count": 220
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 58,
+          "experimental_strategy": "WXS",
+          "file_count": 913
+        },
+        {
+          "case_count": 58,
+          "experimental_strategy": "WGS",
+          "file_count": 752
+        },
+        {
+          "case_count": 54,
+          "experimental_strategy": "RNA-Seq",
+          "file_count": 495
+        },
+        {
+          "case_count": 56,
+          "experimental_strategy": "miRNA-Seq",
+          "file_count": 171
+        },
+        {
+          "case_count": 58,
+          "experimental_strategy": "Methylation Array",
+          "file_count": 177
+        }
+      ],
+      "file_count": 2566,
+      "file_size": 39294657275333
+    }
+  },
+  "source": "gdc"
+}

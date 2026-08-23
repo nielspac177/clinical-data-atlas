@@ -1,0 +1,160 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004712",
+  "payload": {
+    "created": "2023-08-23T10:34:56.557Z",
+    "id": "ds004712",
+    "latestSnapshot": {
+      "created": "2025-03-10T11:16:41.000Z",
+      "description": {
+        "Authors": [
+          "S. Warrington",
+          "A. Torchi",
+          "O. Mougin",
+          "A. Ntata",
+          "J. Campbell",
+          "M. Craig",
+          "F. Alfaro-Almagro",
+          "K.L. Miller",
+          "P.S. Morgan",
+          "M. Jenkinson",
+          "S.N. Sotiropoulos"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004712.v2.0.1",
+        "Funding": [
+          "ERC Consolidator grant (101000969 to S.N.S.)"
+        ],
+        "HowToAcknowledge": "Please cite this paper: Warrington, et al. (2025), A multi-site, multi-modal travelling-heads resource for brain MRI harmonisation, Scientific Data",
+        "License": "CC0",
+        "Name": "ON-Harmony: A resource for development and comparison of multi-modal brain 3T MRI harmonisation approaches",
+        "ReferencesAndLinks": null
+      },
+      "readme": "# README\n\nThis repository contains the ON-Harmony data resource associated with the manuscript: \n\nWarrington et al. (2025), \"A multi-site, multi-modal travelling-heads resource for brain MRI harmonisation\", under-review, Scientific Data\n\n## Overview\n\n- Project name: ON-Harmony: A resource for development and comparison of multi-modal brain 3T MRI harmonisation approaches\n- Years that the project ran: 2018-2021 (Phase A), 2023-2024 (Phase B)\n- Phase A was originally published in Warrington et al. (2023)\n- Description of the contents of the dataset: 20 participants, each scanned in 6 3T scanners across 5 sites and 3 major vendors, 5 modalities. 9 participants with 6 within-scanner repeats as well. Data collected in 2 phases, with 10 participants in each phase.\n\n## Methods\n\n### Subjects\n\nPhase A\n\nN = 10 healthy participants (mean age at recruitment 34 ± 9.4 years; 8 male, 2 female)\n\nSubject:       Sessions\n\n- 03286:       NOT1ACH001 NOT2ING001 NOT3GEM001 OXF1PRI001 OXF2PRI001 OXF3TRI001\n- 03997:       NOT1ACH001 NOT2ING001 NOT3GEM001 OXF1PRI001 OXF2PRI001 OXF3TRI001\n- 10975:       NOT1ACH001 NOT2ING001 NOT3GEM001 OXF1PRI001 OXF2PRI001 OXF3TRI001\n- 12813:       NOT1ACH001 NOT2ING001 NOT3GEM001 OXF1PRI001 OXF2PRI001 OXF3TRI001\n- 13192:       NOT1ACH001 NOT2ING001 NOT3GEM001 OXF1PRI001 OXF1PRI002 OXF1PRI003 OXF1PRI004 OXF1PRI005 OXF1PRI006 OXF2PRI001 OXF3TRI001\n- 13305:       NOT1ACH001 NOT2ING001 NOT3GEM001 OXF1PRI001 OXF2PRI001 OXF3TRI001\n- 14221:       NOT1ACH001 NOT2ING001 NOT3GEM001 OXF1PRI001 OXF2PRI001 OXF3TRI001\n- 14229:       NOT1ACH001 NOT2ING001 NOT3GEM001 OXF1PRI001 OXF2PRI001 OXF2PRI002 OXF2PRI003 OXF2PRI004 OXF2PRI005 OXF2PRI006 OXF3TRI001\n- 14230:       NOT1ACH001 NOT2ING001 NOT3GEM001 OXF1PRI001 OXF2PRI001 OXF3TRI001 OXF3TRI002 OXF3TRI003 OXF3TRI004 OXF3TRI005 OXF3TRI006\n- 14482:       NOT1ACH001 NOT1ACH002 NOT1ACH003 NOT1ACH004 NOT1ACH005 NOT1ACH006 NOT2ING001 NOT3GEM001 OXF1PRI001 OXF2PRI001 OXF3TRI001\n\n\nPhase B\n\nN = 10 healthy participants (mean age at recruitment 29.8 ± 11.4 years; 5 male, 5 female)\n\nSubject:       Sessions\n\n- 16981:       NOT1ACH001 NOT2ING001 NOT4GEP001 OXF1PRI001 OXF2PRI001 OXF4GEP001\n- 16841:       NOT1ACH001 NOT2ING001 NOT4GEP001 OXF1PRI001 OXF2PRI001 OXF4GEP001\n- 16842:       NOT1ACH001 NOT2ING001 NOT4GEP001 OXF1PRI001 OXF2PRI001 OXF4GEP001\n- 16974:       NOT1ACH001 NOT2ING001 NOT4GEP001 OXF1PRI001 OXF1PRI002 OXF1PRI003 OXF1PRI004 OXF1PRI005 OXF1PRI006 OXF2PRI001 OXF4GEP001\n- 15320:       NOT1ACH001 NOT2ING001 NOT2ING002 NOT2ING003 NOT2ING004 NOT2ING005 NOT2ING006 NOT4GEP001 OXF1PRI001 OXF2PRI001 OXF4GEP001\n- 16745:       NOT1ACH001 NOT2ING001 NOT4GEP001 NOT4GEP002 NOT4GEP003 NOT4GEP004 NOT4GEP005 NOT4GEP006 OXF1PRI001 OXF2PRI001 OXF4GEP001\n- 16975:       NOT1ACH001 NOT2ING001 NOT4GEP001 OXF1PRI001 OXF2PRI001 OXF4GEP001 OXF4GEP002 OXF4GEP003 OXF4GEP004 OXF4GEP005 OXF4GEP006\n- 16793:       NOT1ACH001 NOT2ING001 NOT4GEP001 OXF1PRI001 OXF2PRI001 OXF4GEP001\n- 16794:       NOT1ACH001 NOT2ING001 NOT4GEP001 OXF1PRI001 OXF2PRI001 OXF4GEP001\n- 16766:       NOT1ACH001 NOT2ING001 NOT4GEP001 OXF1PRI001 OXF2PRI001 OXF2PRI002 OXF2PRI003 OXF2PRI004 OXF2PRI005 OXF2PRI006  OXF4GEP001\n\n\n\n### Apparatus\n\nScanners:\n\n1. Philips Achieva (NOT1ACH),\n2. Philips Ingenia (NOT2ING),\n3. GE MR750 (NOT3GEM),\n4. Siemens Prisma (32ch) (OXF1PRI),\n5. Siemens Prisma (64ch) (OXF2PRI),\n6. Siemens Trio (OXF3TRI),\n7. GE Premier (48ch) (NOT4GEP),\n8. GE Premier (21ch) (OXF4GEP)\n\nPhase A data were acquired using Scanners 1-6.\nPhase B data were acquired using used Scanner 1,2,4,5,7,8.\nScanners 1,2,4,5 are overlapping between the two phases.\n\n\nModalities:\n\n1. T1w,\n2. T2w FLAIR,\n3. diffusion MRI (dMRI),\n4. resting-state functional MRI (rsfMRI),\n5. susceptibility-weighted imaging (SWI)\n\n\n### Experimental location\n\nScanners are located across five sites in the United Kingdom.\n\n\n1. 3T Philips Achieva: SPMIC-UP, Nottingham\n2. 3T Philips Ingenia: SPMIC-UP, Nottingham\n3. 3T GE MR750 (phase A only): SPMIC-QMC, Nottingham\n4. 3T Siemens Prisma (32ch): WIN-FMRIB, John Radcliffe Hospital, Oxford\n5. 3T Siemens Prisma (64ch): WIN-OHBA, Warneford Hospital, Oxford\n6. 3T Siemens Trio (phase A only): OCMR, John Radcliffe Hospital, Oxford\n7. 3T GE Premier (48ch) (phase B only): SPMIC-QMC, Nottingham\n8. 3T GE Premier (21ch) (phase B only): OCMR, John Radcliffe Hospital, Oxford\n\n- SPMIC-UP - Sir Peter Mansfield Imaging Centre, University Park, University of Nottingham\n- SPMIC-QMC - Sir Peter Mansfield Imaging Centre, Queen's Medical Centre Medical School, University of Nottingham\n- FMRIB - Oxford Centre for Functional MRI of the Brain, University of Oxford\n- OHBA - Oxford Centre for Human Brain Activity, University of Oxford\n- OCMR - Oxford Centre for Clinical Magnetic Resonance Research, University of Oxford\n\n### Notes\nAnatomical data have been defaced following the UKBiobank defacing procedure. Defacing masks are available in each session directory as sub-<subID>_ses-<sesID>_mod-T1w_defacemask.nii.gz.\n\nAt time of release, SWI data were not yet incorporated in to the BIDS standard. The SWI extension proposal (https://bids-specification.readthedocs.io/en/v1.2.1/06-extensions.html: accessed Autumn 2022) was used to define SWI data structure.\n\n\nMinor deviations of protocols for individual scans\nThe majority of subjects were acquired using the same protocols. However, for some subjects there were minor deviations in some protocol parameters that we describe here for completeness.\n\nPhase A\n- GE MR 750 rfMRI: For one subject (03286), we acquired two versions of the rfMRI data with 1) an isotropic spatial resolution of 2.4mm and 2) a spatial resolution of 2.2x2.2x3.4mm. Neither matched the 3.3mm isotropic data acquired for other subjects.  For 6 subjects (03286, 03997, 10975, 12813, 14482, 14221) there was a mismatch in PE direction between dMRI and fMRI that we accounted for in the processing pipeline.\n- Philips Achieva dMRI: In most cases, the dMRI protocol included 6 b=0 s/mm2 volumes. Four subjects (13305, 13192, 14229, 14230) were acquired with 2 b=0 s/mm2 volumes.\n- Philips Ingenia dMRI: In most cases, dMRI data were acquired using an in-plane acceleration factor of 1.5 (TE=98ms, TR=4.4s). For 4 subjects (13305, 13192, 14229, 14230), the dMRI data were acquired using an in-plane acceleration factor of 2 (TE=92ms, TR=3.9s).\n\n\nPhase B\n- Philips Achieva fMRI: 16975 (16975_NOT1ACH001) has a single volume missing, due to data corruption during reconstruction.\n- Philips Ingenia fMRI: 15320 (15320_NOT2ING006) has a single volume missing, due to data corruption during reconstruction.\n- GE Premier 21 (Oxford) dMRI: For session 16793_OXF4GEP001, the dMRI reversed-phase-encode b=0 was incorrectly acquired with a left-right (LR) phase-encode direction instead of posterior-anterior (PA). We accounted for this by running a bespoke fieldmap estimation with FSL's topup (Andersson et al. NeuroImage 2003), which was fed into the UKBB pipeline for further processing. For session 16745_OXF4GEP001, dMRI were acquired with a slice thickness of 2.4 mm, instead of 2.0 mm.\n- GE Premier 21 (Oxford) anatomical: For subjects 15320, 16793, 16794, 16974, 16766, 16745, the T2w FLAIR was acquired with a 1.3x1x1 mm resolution instead of 1x1x1 mm. For sessions 16793 and 16794, the T1w MPRAGE was acquired with a 212x256x256 matrix size, instead with 256x256x212.\n- GE Premier 42 (Nottingham) dMRI: For session 16794_NOT4GEP001, no dMRI reversed-phase-encode b=0 image was acquired. In this case, we generated a synthetic distortion-free b=0 image using Synb0-DisCo (v3.0) (Schilling et al. Magn Reson Imaging. 2019, Schilling et al. PLoS ONE 2020) with the same phase-encoding (anterior-posterior, AP) direction as the main data. A fieldmap was then estimated from the synthetic distortion-free b=0 and acquired b=0 data using FSL's topup, which was then used for further processing.\n\n\n\nIncidental Findings\n- A cortical hypointensity visible on the right hemisphere (for fMRI, dMRI and SWI) was observed for Subject 16766, phase B. The subject is healthy and Incidental finding inspection deemed this as a non-pathological feature. Overall, the z-scored IDPs and QC measures for that subject scans were not considerably different from the mean of all subjects, so we kept these scans.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_diffusion",
+          "mri_structural",
+          "mri_functional"
+        ],
+        "sessions": [
+          "NOT2ING001",
+          "NOT1ACH001",
+          "NOT4GEP001",
+          "OXF4GEP001",
+          "OXF1PRI001",
+          "OXF2PRI001",
+          "NOT3GEM001",
+          "OXF3TRI001",
+          "OXF3TRI006",
+          "OXF3TRI003",
+          "OXF3TRI005",
+          "OXF3TRI004",
+          "OXF3TRI002",
+          "NOT2ING002",
+          "NOT2ING003",
+          "NOT2ING005",
+          "NOT2ING006",
+          "NOT2ING004",
+          "NOT1ACH003",
+          "NOT1ACH002",
+          "NOT1ACH005",
+          "NOT1ACH006",
+          "NOT1ACH004",
+          "OXF2PRI003",
+          "OXF2PRI006",
+          "OXF2PRI004",
+          "OXF2PRI005",
+          "OXF2PRI002",
+          "OXF1PRI005",
+          "OXF1PRI004",
+          "OXF1PRI002",
+          "OXF1PRI003",
+          "OXF1PRI006",
+          "NOT4GEP004",
+          "NOT4GEP003",
+          "NOT4GEP005",
+          "NOT4GEP006",
+          "NOT4GEP002",
+          "OXF4GEP002",
+          "OXF4GEP003",
+          "OXF4GEP004",
+          "OXF4GEP005",
+          "OXF4GEP006"
+        ],
+        "size": 62569744207,
+        "subjects": [
+          "16981",
+          "03997",
+          "03286",
+          "14230",
+          "15320",
+          "14482",
+          "14229",
+          "16974",
+          "13305",
+          "16841",
+          "10975",
+          "12813",
+          "16745",
+          "16766",
+          "14221",
+          "16793",
+          "16975",
+          "16794",
+          "16842",
+          "13192"
+        ],
+        "tasks": [
+          "rest"
+        ],
+        "totalFiles": 2756
+      },
+      "tag": "2.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        48,
+        37,
+        25,
+        24,
+        47,
+        42,
+        25,
+        35,
+        25,
+        24,
+        39,
+        21,
+        20,
+        26,
+        50,
+        22,
+        47,
+        19,
+        25,
+        29
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "Travelling-heads: within-scanner and between-scanner repeats",
+      "studyDomain": "Harmonisation",
+      "studyLongitudinal": "Travelling-heads"
+    },
+    "publishDate": "2023-11-10T13:31:24.692Z"
+  },
+  "source": "openneuro"
+}

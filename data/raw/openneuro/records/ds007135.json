@@ -1,0 +1,92 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007135",
+  "payload": {
+    "created": "2025-12-27T01:09:49.683Z",
+    "id": "ds007135",
+    "latestSnapshot": {
+      "created": "2026-01-30T15:29:50.000Z",
+      "description": {
+        "Authors": [
+          "Chi-Hyeon Yoo",
+          "Hsiao-Ying (Monica) Wey"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007135.v1.1.0",
+        "Funding": [
+          "This work was supported by the National Institute of Arthritis and Musculoskeletal and Skin Diseases (NIAMS) of the National Institutes of Health under Cooperative Agreement UH3AR076741."
+        ],
+        "HowToAcknowledge": "Please cite the manuscript 'Investigating neuroepigenetic alterations in chronic low back pain with positron emission tomography' and acknowledge the Athinoula A. Martinos Center for Biomedical Imaging.",
+        "License": "CC0",
+        "Name": "Investigating Neuroepigenetic Alterations in Chronic Low Back Pain with PET/MR",
+        "ReferencesAndLinks": null
+      },
+      "readme": "README\n======\n\nDataset title\n-------------\nInvestigating neuroepigenetic alterations in chronic low back pain with positron emission tomography\n\n\nDescription\n-----------\nThis dataset contains multimodal neuroimaging data acquired from patients with chronic low back pain.\nData include positron emission tomography (PET) with the radiotracer [11C]Martinostat, structural MRI\n(T1-weighted, T2-weighted, and FLAIR), and resting-state functional MRI.\n\n\nParticipants\n------------\nAll participants were patients diagnosed with chronic low back pain.\nNo healthy control subjects are included in this dataset.\n\n\nImaging modalities\n------------------\n- PET: [11C]Martinostat\n- Structural MRI: T1w, T2w, FLAIR\n- Functional MRI: resting-state BOLD\n\n\nDe-identification\n-----------------\nAll structural MRI images (T1w, T2w, and FLAIR) were defaced prior to public release to remove facial\nfeatures and protect participant privacy. Functional MRI and PET images are provided as brain images\nand do not contain identifiable facial features.\n\n\nStudy design\n------------\nThis is an observational, cross-sectional study. No experimental intervention or task was performed\nduring image acquisition.\n\n\nFunding\n-------\nThis work was supported by the National Institute of Arthritis and Musculoskeletal and Skin Diseases\n(NIAMS), National Institutes of Health, under Cooperative Agreement UH3AR076741.\n\n\nNotes\n-----\nThe dataset is organized according to the Brain Imaging Data Structure (BIDS) specification.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri",
+          "pet"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 5329937922,
+        "subjects": [
+          "16",
+          "03",
+          "12",
+          "11",
+          "19",
+          "02",
+          "21",
+          "09",
+          "13",
+          "05",
+          "04",
+          "10",
+          "08",
+          "25",
+          "14",
+          "20",
+          "15",
+          "01",
+          "24",
+          "07",
+          "18",
+          "22",
+          "06",
+          "17",
+          "23"
+        ],
+        "tasks": [
+          "rest"
+        ],
+        "totalFiles": 383
+      },
+      "tag": "1.1.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": "10.1097/j.pain.0000000000003272",
+      "dataProcessed": null,
+      "dxStatus": "Chronic low back pain (patient only)",
+      "grantFunderName": "National Institute of Arthritis and Musculoskeletal and Skin Diseases (NIAMS)",
+      "modalities": [
+        "mri",
+        "pet"
+      ],
+      "species": "Human",
+      "studyDesign": "Observational (Cross-sectional)",
+      "studyDomain": "Chronic low back pain, Epigenetics, PET",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2026-01-06T15:11:52.983Z"
+  },
+  "source": "openneuro"
+}

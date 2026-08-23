@@ -1,0 +1,28 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:f4119c60f7a15d300be8659a1596bc97b31c363e3503429df1f0f70cf6e0a225",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "pulmonology",
+      "other"
+    ],
+    "id": "physionet:cxr-pro",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "chest radiographs and their associated free-text radiology reports",
+        "value": "xray"
+      },
+      {
+        "evidence": "374,139 free-text radiology reports",
+        "value": "clinical_notes"
+      }
+    ],
+    "population": "374,139 free-text radiology reports and associated chest radiographs",
+    "summary": "Adaptation of MIMIC-CXR pairing chest radiographs with free-text radiology reports in which references to non-existent priors are removed, intended to reduce hallucinated prior references in report generation models."
+  },
+  "prompt_version": "v1"
+}

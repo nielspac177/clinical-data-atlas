@@ -1,0 +1,40 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:cd48aee34488b0aef80035c92085059aded37e48575b7f3aba1b9428ae90842a",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "17 healthy volunteers",
+        "label": "healthy volunteers"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:heartcycle",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "echocardiography (ECHO) signals",
+        "value": "ultrasound"
+      },
+      {
+        "evidence": "electrocardiography (ECG) data",
+        "value": "ECG"
+      },
+      {
+        "evidence": "finger photoplethysmography (PPG)",
+        "value": "PPG"
+      },
+      {
+        "evidence": "impedance cardiography (ICG) and echocardiography",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": "17 healthy volunteers",
+    "summary": "Synchronized impedance cardiography and echocardiography signals from 17 healthy volunteers, with finger photoplethysmography, heart sounds and electrocardiography, stored in HDF5, for studying bias in ICG characteristic points and hemodynamic parameter computation."
+  },
+  "prompt_version": "v1"
+}

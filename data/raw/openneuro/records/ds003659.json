@@ -1,0 +1,109 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003659",
+  "payload": {
+    "created": "2021-05-23T18:01:50.257Z",
+    "id": "ds003659",
+    "latestSnapshot": {
+      "created": "2023-03-21T04:05:07.000Z",
+      "description": {
+        "Authors": [
+          "Arielle Tambini",
+          "Jacob Miller",
+          "Anastasia Kiyonaga",
+          "Mark D'Esposito"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds003659.v2.0.4",
+        "Funding": [
+          "This work was supported by the National Institute of Mental Health (RO1MH63901, F32MH111204, F32MH106280)."
+        ],
+        "HowToAcknowledge": "Miller, J.M, Tambini, A., Kiyonaga, A, D'Esposito, M. Long-term learning transforms prefrontal cortex representations during working memory. Neuron (2022). https://www.cell.com/neuron/fulltext/S0896-6273(22)00858-3",
+        "License": "CC0",
+        "Name": "ScanTrain",
+        "ReferencesAndLinks": null
+      },
+      "readme": "Dataset used in the paper: \"Long-term learning transforms prefrontal cortex representations during working memory.\" https://www.cell.com/neuron/fulltext/S0896-6273(22)00858-3\n\nThe Miller et al., Neuron paper analyzes the first 17 sessions of the dataset, during which a fixed stimulus set was used. Beginning with session 18 (sub-001) or session 19 (sub-002, sub-003), new images were introduced into each participant's stimulus set. These data files corresponding to sessions in which new stimuli were introduced are denoted by \"SR\" (= second round of learning). \n\nDuring the first session, participants were trained to criterion to learn stimulus-response mappings for never before seen stimuli in their stimulus sets (during \"learningcriterion\" scans). Thereafter, beginning in the second session, participants performed a serial reaction time task during the \"learningblock\" scans, during which sequence exposure occurred. \n\nNote: for sub-002, ses-016 and sub-003, ses-013, only 3 runs of the WM task are present (run-001 - run-003), as run-004 were not used in analysiss because of compromised imaging data for these runs ",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "001",
+          "002",
+          "003",
+          "004",
+          "005",
+          "006",
+          "007",
+          "008",
+          "009",
+          "010",
+          "011",
+          "012",
+          "013",
+          "014",
+          "015",
+          "016",
+          "017",
+          "018",
+          "019",
+          "020",
+          "021",
+          "022",
+          "023",
+          "024",
+          "025",
+          "pilot",
+          "026"
+        ],
+        "size": 78697797445,
+        "subjects": [
+          "001",
+          "002",
+          "003"
+        ],
+        "tasks": [
+          "fractalWM",
+          "learningcriterion",
+          "localizer",
+          "rest",
+          "learningblock",
+          "fractalWMSR",
+          "learningblockSR",
+          "localizerSR"
+        ],
+        "totalFiles": 4030
+      },
+      "tag": "2.0.4"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        34,
+        25,
+        37
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "longitudinal study",
+      "studyDomain": "learning, working memory, long-term memory, resting state",
+      "studyLongitudinal": "Longitudinal"
+    },
+    "publishDate": "2022-10-13T13:49:39.445Z"
+  },
+  "source": "openneuro"
+}

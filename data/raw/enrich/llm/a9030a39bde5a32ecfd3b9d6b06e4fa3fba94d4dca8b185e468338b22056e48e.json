@@ -1,0 +1,39 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:a9030a39bde5a32ecfd3b9d6b06e4fa3fba94d4dca8b185e468338b22056e48e",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "studying treatment assessment in breast cancer",
+        "label": "breast cancer"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "oncology",
+      "surgery"
+    ],
+    "id": "tcia:qin-breast",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "quantitative MR images",
+        "value": "MRI"
+      },
+      {
+        "evidence": "longitudinal PET/CT",
+        "value": "PET"
+      },
+      {
+        "evidence": "PET/CT data were acquired with a GE Discovery STE scanner",
+        "value": "CT"
+      }
+    ],
+    "population": "Breast cancer patients treated in the neoadjuvant setting, imaged at three time points before, during and after treatment.",
+    "summary": "Longitudinal PET/CT, acquired prone to aid registration, together with quantitative MR images of breast cancer patients in the neoadjuvant setting, supporting development of quantitative imaging methods for early treatment assessment."
+  },
+  "prompt_version": "v1"
+}

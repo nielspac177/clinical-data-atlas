@@ -1,0 +1,90 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005906",
+  "payload": {
+    "created": "2025-02-05T21:33:20.166Z",
+    "id": "ds005906",
+    "latestSnapshot": {
+      "created": "2026-08-05T23:49:25.000Z",
+      "description": {
+        "Authors": [
+          "Skyler Deutsch MS*",
+          "Juhi Mehta BS*",
+          "Andrea Fuentes MD",
+          "Sarah Wang PhD",
+          "Lee Reid PhD",
+          "John Kornak PhD",
+          "Philip A. Starr MD PhD",
+          "Jill Ostrem MD",
+          "Doris D. Wang MD PhD",
+          "Ian O. Bledsoe MD",
+          "Melanie A. Morrison PhD"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005906.v1.0.8",
+        "Funding": [
+          "University of California, San Francisco Clinical and Translational Science Institute (CTSI)(CTSI NIH Grant No. 5UL1TR001872)."
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Test-retest reliability of resting-state functional MRI during DBS for Parkinson’s disease",
+        "ReferencesAndLinks": [
+          "Deutsch, S., Mehta, J., Reid, L. B., Fuentes, A., Wang, S., Kornak, J., Starr, P. A., Ostrem, J. L., Wang, D. D., Bledsoe, I. O., & Morrison, M. A. (2026). Test-retest reliability of resting-state functional magnetic resonance imaging during deep brain stimulation for Parkinson's disease. NeuroImage. Clinical, 49, 103973. https://doi.org/10.1016/j.nicl.2026.103973"
+        ]
+      },
+      "readme": "**Last Updated: August 5th 2026**\n\n### Summary \nThis dataset repository contains de-identified fMRI and T1-weighted imaging data acquired from 10  Parkinson's disease patients (aged 50-76 years) receiving deep brain stimulation therapy. All patients were implanted in either the Subthalamic Nucleus or the Globus Pallidus Internus.\n\n### Data Acquisition\nFor details on data acquisition, please refer to the accompanying BOLD JSON sidecar files.\n\n### BOLD Metadata\n\nSeparate BOLD JSON sidecar files are provided for the 36- and 38-slice acquisitions.\n\n| Subject(s) | Slices |\n|------------|----------------:|\n| `sub-01` (`ses-01`), `sub-01` (`ses-02`), `sub-09` (`ses-02`), `sub-16` (`ses-01`) | 36 |\n| All remaining BOLD acquisitions | 38 |\n\n### Study Details\nFor information on our test-retest study and subsequent findings, please refer to our manuscript: \nhttps://doi.org/10.1016/j.nicl.2026.103973\n\n### Contact Information\nFor any inquiries, please contact:  \n**Dr. Melanie Morrison** (melanie.morrison@ucsf.edu) or **Skyler Deutsch** (skyler.deutsch@ucsf.edu).\n\n### Data Access and Licensing\nThis dataset was acquired at the **University of California, San Francisco** and is licensed under the **CC0** license. It is publicly available for research and educational purposes. Please ensure appropriate citation.\n\nThank you for your interest!",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "01",
+          "02"
+        ],
+        "size": 1516217848,
+        "subjects": [
+          "05",
+          "01",
+          "14",
+          "12",
+          "16",
+          "02",
+          "03",
+          "04",
+          "06",
+          "13"
+        ],
+        "tasks": [
+          "restOFF",
+          "restON"
+        ],
+        "totalFiles": 73
+      },
+      "tag": "1.0.8"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Parkinson's disease",
+      "grantFunderName": "University of California, San Francisco Clinical and Translational Science Institute (CTSI)",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "Test-retest",
+      "studyDomain": "Brain",
+      "studyLongitudinal": "Longitudinal"
+    },
+    "publishDate": "2026-02-24T21:10:51.396Z"
+  },
+  "source": "openneuro"
+}

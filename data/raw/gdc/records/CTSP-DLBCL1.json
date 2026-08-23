@@ -1,0 +1,78 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "CTSP-DLBCL1",
+  "payload": {
+    "dbgap_accession_number": "phs001184",
+    "disease_type": [
+      "Mature B-Cell Lymphomas"
+    ],
+    "id": "CTSP-DLBCL1",
+    "name": "CTSP Diffuse Large B-Cell Lymphoma (DLBCL) CALGB 50303",
+    "primary_site": [
+      "Unknown",
+      "Lymph nodes"
+    ],
+    "program": {
+      "dbgap_accession_number": "phs001175",
+      "name": "CTSP",
+      "program_id": "c82e603f-22a6-583b-b236-8b07da794d9f"
+    },
+    "project_id": "CTSP-DLBCL1",
+    "releasable": true,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 45,
+      "data_categories": [
+        {
+          "case_count": 45,
+          "data_category": "Sequencing Reads",
+          "file_count": 221
+        },
+        {
+          "case_count": 31,
+          "data_category": "Biospecimen",
+          "file_count": 31
+        },
+        {
+          "case_count": 37,
+          "data_category": "Clinical",
+          "file_count": 37
+        },
+        {
+          "case_count": 44,
+          "data_category": "Transcriptome Profiling",
+          "file_count": 88
+        },
+        {
+          "case_count": 44,
+          "data_category": "Structural Variation",
+          "file_count": 176
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 44,
+          "experimental_strategy": "RNA-Seq",
+          "file_count": 396
+        },
+        {
+          "case_count": 44,
+          "experimental_strategy": "WXS",
+          "file_count": 44
+        },
+        {
+          "case_count": 45,
+          "experimental_strategy": "Targeted Sequencing",
+          "file_count": 45
+        }
+      ],
+      "file_count": 553,
+      "file_size": 1975606241721
+    }
+  },
+  "source": "gdc"
+}

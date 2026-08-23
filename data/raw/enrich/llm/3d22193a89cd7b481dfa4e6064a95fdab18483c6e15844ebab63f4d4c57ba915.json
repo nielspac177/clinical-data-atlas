@@ -1,0 +1,41 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:3d22193a89cd7b481dfa4e6064a95fdab18483c6e15844ebab63f4d4c57ba915",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "acute kidney injury",
+        "label": "acute kidney injury"
+      },
+      {
+        "evidence": "pressure injury",
+        "label": "pressure injury"
+      },
+      {
+        "evidence": "anemia",
+        "label": "anemia"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "critical_care",
+      "nephrology_urology"
+    ],
+    "id": "physionet:nosocomialriskdata",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "leveraging clinical notes",
+        "value": "clinical_notes"
+      },
+      {
+        "evidence": "MIMIC-III critical care database",
+        "value": "EHR"
+      }
+    ],
+    "population": "Hospitalized critical care patients, with distinct positive and negative cohorts extracted per disease",
+    "summary": "Longitudinal text-based cohorts derived from MIMIC-III for predicting hospital-acquired acute kidney injury, pressure injury and anemia in advance from clinical notes, with retrospectively determined dates of event."
+  },
+  "prompt_version": "v1"
+}

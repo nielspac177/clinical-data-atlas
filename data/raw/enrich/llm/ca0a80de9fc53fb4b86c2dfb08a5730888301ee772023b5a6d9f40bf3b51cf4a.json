@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:ca0a80de9fc53fb4b86c2dfb08a5730888301ee772023b5a6d9f40bf3b51cf4a",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "spinal lesion detection and classification",
+        "label": "spinal lesions"
+      },
+      {
+        "evidence": "spine anomalies",
+        "label": "spine anomalies"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "musculoskeletal"
+    ],
+    "id": "physionet:vindr-spinexr",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "spine X-ray images",
+        "value": "xray"
+      }
+    ],
+    "population": "10,466 spine X-ray images from 5,000 studies",
+    "summary": "Spine X-ray images from radiographic studies, each manually annotated by an experienced radiologist with types of abnormalities marked by bounding boxes, for lesion detection and classification."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,49 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:4387b54b93dfd5c427d3deacce0324e97b1cb40c0add1bfb2758d53184f27cfc",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Rectum Adenocarcinoma",
+        "label": "Rectum Adenocarcinoma"
+      },
+      {
+        "evidence": "Adenomas and Adenocarcinomas",
+        "label": "Adenomas and Adenocarcinomas"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "gastroenterology_hepatology"
+    ],
+    "id": "gdc:TCGA-READ",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Tissue Slide, Diagnostic Slide",
+        "value": "pathology"
+      },
+      {
+        "evidence": "WXS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "Transcriptome Profiling",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Proteome Profiling",
+        "value": "proteomics"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "Human cases with rectum adenocarcinoma (rectum, rectosigmoid junction, colon)",
+    "summary": "TCGA project on rectum adenocarcinoma involving rectum, rectosigmoid junction and colon, with sequencing, copy number, methylation, transcriptome and proteome profiling plus clinical, biospecimen and slide data."
+  },
+  "prompt_version": "v1"
+}

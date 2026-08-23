@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:5c4258a5cfa8d0e1168b58ebe3810184ac15555c7ebb890dcd69f7a0397fad88",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Glioblastoma Multiforme (CPTAC-GBM) cohort",
+        "label": "Glioblastoma Multiforme"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "tcia:cptac-gbm",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Radiology and pathology images from CPTAC patients",
+        "value": "pathology"
+      },
+      {
+        "evidence": "large-scale proteome and genome analysis",
+        "value": "genomics"
+      },
+      {
+        "evidence": "large-scale proteome and genome analysis",
+        "value": "proteomics"
+      }
+    ],
+    "population": "subjects from the National Cancer Institute's Clinical Proteomic Tumor Analysis Consortium Glioblastoma Multiforme (CPTAC-GBM) cohort",
+    "summary": "Radiology and pathology images from the CPTAC glioblastoma multiforme cohort, released so researchers can relate cancer phenotypes to matching proteomic, genomic and clinical data."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,431 @@
+{
+  "endpoints": [
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getCollectionValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getModalityValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getBodyPartValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getPatient",
+    "https://api.datacite.org/dois?prefix=10.7937"
+  ],
+  "harvest_method": "api:nbia+datacite",
+  "native_id": "CC-Tumor-Heterogeneity",
+  "payload": {
+    "datacite": {
+      "citationCount": 3,
+      "container": {},
+      "contentUrl": [],
+      "contributors": [],
+      "created": "2022-06-20T14:21:00Z",
+      "creators": [
+        {
+          "affiliation": [],
+          "familyName": "Mayr",
+          "givenName": "Nina",
+          "name": "Mayr, Nina",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0003-2182-7739",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Yuh",
+          "givenName": "William T.C.",
+          "name": "Yuh, William T.C.",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0003-3068-3087",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Bowen",
+          "givenName": "Stephen",
+          "name": "Bowen, Stephen",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0001-7581-770X",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Harkenrider",
+          "givenName": "Matthew",
+          "name": "Harkenrider, Matthew",
+          "nameIdentifiers": [],
+          "nameType": null
+        },
+        {
+          "affiliation": [],
+          "familyName": "Knopp",
+          "givenName": "Michael V.",
+          "name": "Knopp, Michael V.",
+          "nameIdentifiers": [],
+          "nameType": null
+        },
+        {
+          "affiliation": [],
+          "familyName": "Lee",
+          "givenName": "Elaine Yuen-Phin",
+          "name": "Lee, Elaine Yuen-Phin",
+          "nameIdentifiers": [],
+          "nameType": null
+        },
+        {
+          "affiliation": [],
+          "familyName": "Leung",
+          "givenName": "Eric",
+          "name": "Leung, Eric",
+          "nameIdentifiers": [],
+          "nameType": null
+        },
+        {
+          "affiliation": [],
+          "familyName": "Lo",
+          "givenName": "Simon S.",
+          "name": "Lo, Simon S.",
+          "nameIdentifiers": [],
+          "nameType": null
+        },
+        {
+          "affiliation": [],
+          "familyName": "Small Jr.",
+          "givenName": "William",
+          "name": "Small Jr., William",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-1623-9863",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Wolfson",
+          "givenName": "Aaron H.",
+          "name": "Wolfson, Aaron H.",
+          "nameIdentifiers": [],
+          "nameType": null
+        }
+      ],
+      "dates": [],
+      "descriptions": [
+        {
+          "description": "Background: The functional and biological properties of the tumor microenvironment are fundamentally important determinants of tumor response and therapy outcome in cancer.  Oxygenation status and vascularity are known to influence radiation response, and molecular energy metabolism and proliferation, modulate risk of disease recurrence and metastatic progression.  However, with the current standard clinical diagnostic approaches, such as biopsy or anatomic/morphologic tumor imaging, assessment of the known intra-tumoral heterogeneity of functional and biological tumor properties is limited.  Specifically, the functional characteristics within the microenvironment throughout the entire tumor have been challenging to assess spatially for tumor heterogeneity and temporally for clinical correlation before and during treatment.  While histologic tissue sampling is widely used clinically, sampling of the entire tumor with extensive biopsies, and biopsies at various time points during therapy for intra-treatment assessment are impractical and generally pose unacceptable clinical risk. \n\nFunctional/molecular imaging offers the opportunity to assess biological heterogeneity across the entire tumor volume (spatially) and longitudinally across the treatment course (temporally).  In advanced cervical cancer, the tumor gradually undergoes radiation/chemotherapy induced functional and biological changes within its heterogeneous volume that can be assessed by sequential imaging before and during treatment.  \n\nAdvanced cervical cancer is an ideal disease to study – in clinical patients – the vascular, cellular and molecular tumor properties that can provide essential information to monitor therapeutic responsiveness, facilitate treatment planning and may provide early prediction of ultimate success or failure of an ongoing treatment.\n\nAdvanced cervical cancer is treated with cytotoxic therapy: radiation and concurrent chemotherapy.  It is a highly prevalent disease globally, and treatment failure is common.  The propensity of cervical cancer for hypoxia and poor vasculature within the often bulky heterogenous tumor volume is well-recognized.  Because advanced cervical cancer is not surgically resected, functional/molecular imaging provides unique opportunities for non-invasive assessment throughout the treatment course.\n\nPurpose:  The understanding of biological processes occurring within the tumor environment during the ongoing radiation therapy course remains a major knowledge gap in radiation oncology for cervical cancer and other malignancies.  The CCTH collection seeks to help fill this gap by providing functional/molecular tumor imaging data sets – spatially to assess tumor heterogeneity and temporally across the radiation therapy course in advanced cervical cancer patients.\n\nCCTH Collection:  The CCTH collection shares functional/molecular imaging data sets (performed on an NCI funded R01 award) that were prospectively acquired in clinical patients with advanced stage IB2 – IVA cervical cancer, who were treated with standard combined radiation therapy with concurrent Cisplatin-based chemotherapy.  Both functional MRI, consisting of T1- and T2-weighted, dynamic contrast enhanced (DCE), diffusion-weighted (DWI) and post-contrast MRI, and 18FDG PET/CT were obtained in parallel and prospectively timed with the radiation therapy course.  Imaging was performed, according to a standardized multi-institutional protocol, at three time points/radiation dose levels: before treatment start (dose 0), early during the treatment course (2-2.5 weeks after treatment start/dose 20-25 Gy) and at mid-treatment (4-5 weeks after treatment start/dose 45-50 Gy).  Contours (regions of interest) of the tumor volumes, as defined by the gold standard of T2-weighetd MRI and coregistration with PET/CT, are included in the CCTH for each case and each imaging time point. \nThe resulting prospective multi-parametric imaging data sets, obtained from the various imaging modalities at different treatment time points, allow detailed study of the evolution of functional/molecular tumor properties before and during radiation/chemotherapy course.  These include voxel-wise heterogeneity assessment of the structural properties (tumor volume on T2-weighted MRI) and, in parallel, the functional characteristics on DCE, DWI MRI and [18F]FDG PET. \n\nThese intra-treatment functional phenomena from various functional imaging modalities may have the potential for clinical translation into important actionable early imaging prognosticators and predictors for long-term treatment outcome.  For example, vascular tumor properties (as reflected by DCE MRI) are highly significant for tumor oxygenation, which in turn profoundly influences radiation response. For example, our early investigations suggest that dynamic contrast enhancement (indicative of tumor microvasculature) improves early in the treatment course and heterogeneity decreases, particularly in responders, while FDG PET heterogeneity tends to show reduced metabolic activity, which commonly becomes evident later in the radiation treatment course1.  Our prior data and results from a prior NCI/NIH award that laid the foundation for this work 2-10, have also suggested that functional tumor properties early during treatment (2-4 weeks into treatment) have significant predictive value for ultimate tumor control and survival in cervical cancer 2- 4, 6.  If unfavorable tumor properties, which correlate with poor treatment outcome, can be identified in patients early during treatment 4, 6, the therapy regimen may be individually adapted accordingly to improve the outcome. \n\nTranslation to clinical practice: The complex data sets, from multi-modality and multi-parametric imaging studies at various treatment time points, were designed to be shared with the scientific community with interest and related specialties to advance the functional imaging-based tumor heterogeneity assessment in cervical cancer patients.  The current data set allows further extraction of radiomics data that may help optimize potential and efficacy of functional imaging that may serve to improve the management of the patients with advanced cervical cancer.  \n\nThe ultimate goal is to facilitate the clinical translation that is readily available to community settings in the U.S. and abroad.  Therefore, the imaging sequences used in this research are widely available and applicable in community settings.  This is important because advanced cervical cancer is largely treated in the community settings and is highly prevalent cancer worldwide, particularly among women in underserved and economically disadvantaged regions. \n\nFuture outlook:  We thank the National Cancer Institute and National Institute of Health for their support of this imaging research; and the members of CIP and TCIA for their deep expertise and their help in establishing the CCTH collection.  While our initial studies have established important principles on the use of functional and molecular imaging in cervical cancer, it has been our intent and hope when donating this data, that the data sets of this collection may serve as a resource to investigators into the future as image analysis and radiomics techniques will continue to advance, well beyond the time course of our own studies. Because cervical cancer remains a common cancer in the women, particularly in low- and middle-income countries worldwide, future studies will need to address the feasibility and accessibility of imaging to these patients, such as affordable cost, availability of imaging modalities involved, technical processing requirements (radiomic feature extraction, data reduction and statistical analysis/learning models) and education to investigators and clinicians.\n\nReferences: Please see the Detailed Description tab.",
+          "descriptionType": "Abstract",
+          "lang": null
+        }
+      ],
+      "doi": "10.7937/erz5-qz59",
+      "downloadCount": 0,
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "CC-Tumor-Heterogeneity",
+          "identifierType": "TCIA Short Name"
+        }
+      ],
+      "isActive": true,
+      "language": null,
+      "metadataVersion": 11,
+      "partCount": 0,
+      "partOfCount": 0,
+      "publicationYear": 2023,
+      "published": null,
+      "publisher": "The Cancer Imaging Archive",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2022-06-29T19:48:13Z",
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "10.1016/j.acra.2024.01.013",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1038/s41467-024-44824-z",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        }
+      ],
+      "relatedItems": [],
+      "rightsList": [
+        {
+          "rights": "Creative Commons Attribution 4.0 International",
+          "rightsIdentifier": "cc-by-4.0",
+          "rightsIdentifierScheme": "SPDX",
+          "rightsUri": "https://creativecommons.org/licenses/by/4.0/legalcode",
+          "schemeUri": "https://spdx.org/licenses/"
+        }
+      ],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "fabricaForm",
+      "state": "findable",
+      "subjects": [],
+      "titles": [
+        {
+          "lang": null,
+          "title": "Cervical Cancer - Tumor Heterogeneity: Serial Functional and Molecular Imaging Across the Radiation Therapy Course in Advanced Cervical Cancer (CC-Tumor-Heterogeneity)",
+          "titleType": null
+        },
+        {
+          "lang": null,
+          "title": "CC-Tumor-Heterogeneity",
+          "titleType": "AlternativeTitle"
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2025-06-01T01:01:09Z",
+      "url": "https://www.cancerimagingarchive.net/collection/cc-tumor-heterogeneity/",
+      "version": "1",
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 4122
+    },
+    "nbia": {
+      "body_parts": [
+        "PELVIS"
+      ],
+      "collection": "CC-Tumor-Heterogeneity",
+      "modalities": [
+        "CT",
+        "MR",
+        "PT",
+        "REG",
+        "RTSTRUCT"
+      ],
+      "patients": [
+        {
+          "Collection": "CC-Tumor-Heterogeneity",
+          "PatientId": "CCTH-A02",
+          "PatientName": "CCTH-A02",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CC-Tumor-Heterogeneity",
+          "PatientId": "CCTH-B09",
+          "PatientName": "CCTH-B09",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CC-Tumor-Heterogeneity",
+          "PatientId": "CCTH-A04",
+          "PatientName": "CCTH-A04",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CC-Tumor-Heterogeneity",
+          "PatientId": "CCTH-A12",
+          "PatientName": "CCTH-A12",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CC-Tumor-Heterogeneity",
+          "PatientId": "CCTH-A08",
+          "PatientName": "CCTH-A08",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CC-Tumor-Heterogeneity",
+          "PatientId": "CCTH-B07",
+          "PatientName": "CCTH-B07",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CC-Tumor-Heterogeneity",
+          "PatientId": "CCTH-A10",
+          "PatientName": "CCTH-A10",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CC-Tumor-Heterogeneity",
+          "PatientId": "CCTH-B02",
+          "PatientName": "CCTH-B02",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CC-Tumor-Heterogeneity",
+          "PatientId": "CCTH-A05",
+          "PatientName": "CCTH-A05",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CC-Tumor-Heterogeneity",
+          "PatientId": "CCTH-A06",
+          "PatientName": "CCTH-A06",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CC-Tumor-Heterogeneity",
+          "PatientId": "CCTH-B03",
+          "PatientName": "CCTH-B03",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CC-Tumor-Heterogeneity",
+          "PatientId": "CCTH-A09",
+          "PatientName": "CCTH-A09",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CC-Tumor-Heterogeneity",
+          "PatientId": "CCTH-B10",
+          "PatientName": "CCTH-B10",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CC-Tumor-Heterogeneity",
+          "PatientId": "CCTH-B05",
+          "PatientName": "CCTH-B05",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CC-Tumor-Heterogeneity",
+          "PatientId": "CCTH-B11",
+          "PatientName": "CCTH-B11",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CC-Tumor-Heterogeneity",
+          "PatientId": "CCTH-A07",
+          "PatientName": "CCTH-A07",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CC-Tumor-Heterogeneity",
+          "PatientId": "CCTH-B06",
+          "PatientName": "CCTH-B06",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CC-Tumor-Heterogeneity",
+          "PatientId": "CCTH-A01",
+          "PatientName": "CCTH-A01",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CC-Tumor-Heterogeneity",
+          "PatientId": "CCTH-B04",
+          "PatientName": "CCTH-B04",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CC-Tumor-Heterogeneity",
+          "PatientId": "CCTH-A03",
+          "PatientName": "CCTH-A03",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CC-Tumor-Heterogeneity",
+          "PatientId": "CCTH-B01",
+          "PatientName": "CCTH-B01",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CC-Tumor-Heterogeneity",
+          "PatientId": "CCTH-B08",
+          "PatientName": "CCTH-B08",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CC-Tumor-Heterogeneity",
+          "PatientId": "CCTH-A11",
+          "PatientName": "CCTH-A11",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        }
+      ]
+    }
+  },
+  "source": "tcia"
+}

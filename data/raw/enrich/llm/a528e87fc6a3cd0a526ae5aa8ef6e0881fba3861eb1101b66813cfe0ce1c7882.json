@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:a528e87fc6a3cd0a526ae5aa8ef6e0881fba3861eb1101b66813cfe0ce1c7882",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "including ischemic ST episodes",
+        "label": "ischemic ST episodes"
+      },
+      {
+        "evidence": "mechanisms and dynamics of myocardial ischemia",
+        "label": "myocardial ischemia"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:ltstdb",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "86 lengthy ECG recordings",
+        "value": "ECG"
+      }
+    ],
+    "population": "80 human subjects with 86 lengthy ECG recordings exhibiting ST segment change events",
+    "summary": "Long-term ECG recordings selected to show a variety of ST segment changes, including ischemic and non-ischemic episodes and slow ST level drift, for developing and evaluating ST event detection algorithms."
+  },
+  "prompt_version": "v1"
+}

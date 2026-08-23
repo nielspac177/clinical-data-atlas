@@ -1,0 +1,38 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "cxr-pro",
+  "payload": {
+    "abstract": "<p><span><span><span><span><span><span>CXR-PRO is an adaptation of the MIMIC-CXR dataset that omits references to prior radiology reports. Consisting of </span></span></span></span></span></span>374,139<span><span><span><span><span><span> free-text radiology reports and associated chest radiographs, CXR-PRO addresses the issue of hallucinated references to priors produced by radiology report generation models. By removing nearly all prior references in MIMIC-CXR, CXR-PRO, when used as training data for report generation models, is capable of broadly improving the factual consistency and accuracy of generated reports. More generally, this dataset aims to support a wide body of research in medical image analysis and natural language processing. MIMIC-CXR is a de-identified dataset, so no protected health information (PHI) is included.</span></span></span></span></span></span></p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 303595070,
+    "core_doi": "10.13026/n5sr-av47",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 1575798327,
+    "public_project_uuid": "21b37a3d-5d60-4a2c-bdab-a34fcb51a095",
+    "publish_date": "2022-11-23",
+    "resource_type": "Database",
+    "short_description": "CXR-PRO is an adaptation of the MIMIC-CXR dataset (consisting of chest radiographs and their associated free-text radiology reports) with references to non-existent priors removed.",
+    "slug": "cxr-pro",
+    "source_url": "https://physionet.org/content/cxr-pro/1.0.0/",
+    "title": "CXR-PRO: MIMIC-CXR with Prior References Omitted",
+    "topics": [
+      "generation",
+      "large language models",
+      "free-text radiology reports",
+      "references to priors",
+      "retrieval"
+    ],
+    "version": "1.0.0",
+    "version_doi": "10.13026/frag-yn96"
+  },
+  "source": "physionet"
+}

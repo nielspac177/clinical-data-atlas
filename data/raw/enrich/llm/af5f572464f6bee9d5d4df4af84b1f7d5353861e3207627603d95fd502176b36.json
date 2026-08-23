@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:af5f572464f6bee9d5d4df4af84b1f7d5353861e3207627603d95fd502176b36",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "deep learning models for accurate glaucoma detection",
+        "label": "glaucoma"
+      },
+      {
+        "evidence": "Glaucomatous optic neuropathy (GON)",
+        "label": "Glaucomatous optic neuropathy (GON)"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "other",
+      "neurology"
+    ],
+    "id": "physionet:hillel-yaffe-glaucoma-dataset",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "annotated fundus image dataset",
+        "value": "other"
+      }
+    ],
+    "population": "Patients whose fundus images were labeled by comprehensive ophthalmic examination with at least one year of follow-up monitoring",
+    "summary": "Fundus image dataset whose glaucoma labels come from full ophthalmic examinations including intraocular pressure, optical coherence tomography, visual field tests and at least one year of follow-up, with image quality scores for benchmarking detection models."
+  },
+  "prompt_version": "v1"
+}

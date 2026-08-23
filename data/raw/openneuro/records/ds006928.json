@@ -1,0 +1,99 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006928",
+  "payload": {
+    "created": "2025-11-12T16:06:43.147Z",
+    "id": "ds006928",
+    "latestSnapshot": {
+      "created": "2025-11-25T09:14:37.000Z",
+      "description": {
+        "Authors": [
+          "Jorie van Haren",
+          "Floris P. de Lange",
+          "Sonja A. Kotz",
+          "Federico De Martino"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006928.v1.0.0",
+        "Funding": [
+          "European Research Council (ERC) under the European Union’s Horizon 2020 research and innovation programme, grant agreement No. 101001270"
+        ],
+        "HowToAcknowledge": "Please cite the associated manuscript: van Haren, J., de Lange, F. P., Kotz, S. A., & De Martino, F. (2025). Distinct Roles of Deep and Superficial Cortical Layers in Tone Prediction, Comparison, and Adaptation in Human Auditory Cortex. bioRxiv. https://doi.org/10.1101/2025.11.XX.XXXXXX",
+        "License": "CC0",
+        "Name": "Distinct Roles of Deep and Superficial Cortical Layers in Tone Prediction, Comparison, and Adaptation in Human Auditory Cortex",
+        "ReferencesAndLinks": [
+          "https://github.com/mesoScopic-Computational-AuditioN-lab/ResearchProjects/tree/main/finalized/PredAdapt_fMRI"
+        ]
+      },
+      "readme": "# Distinct Roles of Deep and Superficial Cortical Layers in Tone Prediction, Comparison, and Adaptation in Human Auditory Cortex\n\nThis dataset contains 7 Tesla fMRI and anatomical MRI data from human participants listening to stochastic tone sequences with varying predictability and repetition structure. The study investigates laminar-specific contributions of auditory cortex to predictive and adaptive processes using model-based analyses of voxel-wise, frequency-tuned responses.\n\nData include:\n- MP2RAGE anatomical scans (UNI, INV1, INV2)\n- High-resolution functional runs (population receptive-field mapping, stochastic tone sequences, localizers)\n\nAll data were collected at Scannexus (Maastricht, Netherlands) using a 7 T Siemens MAGNETOM system with a 32-channel head coil.  \nFor analysis scripts and code: [https://github.com/mesoScopic-Computational-AuditioN-lab/PredAdapt_fMRI](https://github.com/mesoScopic-Computational-AuditioN-lab/PredAdapt_fMRI)\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "02",
+          "01"
+        ],
+        "size": 188793031166,
+        "subjects": [
+          "05",
+          "10",
+          "06",
+          "01",
+          "02",
+          "03",
+          "04",
+          "07",
+          "09",
+          "08"
+        ],
+        "tasks": [
+          "r6-onoff",
+          "r9-onoff",
+          "r4-onoff",
+          "r8-onoff",
+          "r7-onoff",
+          "r1-onoff",
+          "r5-onoff",
+          "r10-onoff",
+          "r2-onoff",
+          "r3-onoff",
+          "r3-tonotopy",
+          "r2-tonotopy",
+          "r5-tonotopy",
+          "r1-tonotopy",
+          "r6-tonotopy",
+          "r4-tonotopy",
+          "r12-onoff",
+          "r11-onoff"
+        ],
+        "totalFiles": 578
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "European Research Council (ERC)",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "Event-related ultra-high-field (7 T) fMRI study using stochastic tone sequences with varying predictability and repetition structure to investigate laminar-specific prediction and adaptation mechanisms in auditory cortex.",
+      "studyDomain": "Auditory perception, Predictive processing, Cognitive neuroscience",
+      "studyLongitudinal": "event-related design"
+    },
+    "publishDate": "2026-06-16T09:02:27.084Z"
+  },
+  "source": "openneuro"
+}

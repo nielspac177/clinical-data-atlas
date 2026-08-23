@@ -1,0 +1,109 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds001597",
+  "payload": {
+    "created": "2018-11-19T02:10:48.193Z",
+    "id": "ds001597",
+    "latestSnapshot": {
+      "created": "2018-11-19T16:14:36.000Z",
+      "description": {
+        "Authors": [
+          "Patrick Beukema",
+          "Timothy Verstynen"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds001597.v1.0.0",
+        "Funding": [
+          "NSF Career Award 1351748, Pennsylvania Department of Health Formula Award SAP4100062201, Multimodal Neuroimaging Training Program NIH T90 DA022761"
+        ],
+        "HowToAcknowledge": "",
+        "License": "Creative Commons CC0 1.0",
+        "Name": "multiFingerRSA",
+        "ReferencesAndLinks": []
+      },
+      "readme": "## Subjects\nParticipants (n=20) underwent two separate scanning sessions before training (ses-pre) and after training (ses-post) on the experimental task described below. Data was collected from consenting neurotypical subjects with standard inclusion/exclusion criteria (English speaking, right handed, no history of neurological or psychiatric illness) and the protocol was approved by the Carnegie Mellon University Institutional Review Board.\n\n## Experimental Task\nBOLD data were collected eyes open at rest looking at a black screen. Participants were taught to perform multi-finger (index, middle, ring, little) movement sets that were recorded on a button glove in response to visual stimuli (stimuli/*.png) that were projected onto the screen in groups of 4 element sets. Participants learned a unique mapping of cue to finger press prior to each imaging session. Each stimulus corresponded to one of 4 unique key presses. Participants had 6 seconds to initiate the 4 finger response to the 4 cues that appeared on the screen. The two fMRI sessions, ses-pre and ses-post, were collected before and after a 10 day training regimen, where participants either practiced a 16 element movement sequence (n= 10) or a 16 element cue sequence (n=10) for approximately 30 minutes each day. The movement sequence maintained effector consistency across days while the cue sequence maintained visual consistency across days. Group identity and handedness for each subject is available in /participants.tsv. Trial types in each of the events.tsv file correspond to sets of 4 key presses MS: Movement set, CS: Cue set, as described in /task-cuedMFM_events.json.\n\n## Data Acquisition\nData were acquired with a Siemens Verio 3T MRI Scanner and a 32-channel head coil. 8 separate runs for both the ses-pre and ses-post session were acquired. Each individual session was collected over a two day period. Each run consisted of acquiring 241 functional volumes (~8.03 min) of the same sets but in different orderings and following novel mappings between each run. Scanning acquisition details for both the functional and anatomical images can be found in /sequence_protocols. Pydeface was used on all anatomical images to ensure de-identification of subjects. The code can be found at https://github.com/poldracklab/pydeface. \n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "post",
+          "pre"
+        ],
+        "size": 59770969011,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20"
+        ],
+        "tasks": [
+          "cuedMFM"
+        ],
+        "totalFiles": 969
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2018-11-19T02:10:48.193Z"
+  },
+  "source": "openneuro"
+}

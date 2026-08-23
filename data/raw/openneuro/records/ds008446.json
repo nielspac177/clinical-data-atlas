@@ -1,0 +1,105 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds008446",
+  "payload": {
+    "created": "2026-07-21T16:52:24.199Z",
+    "id": "ds008446",
+    "latestSnapshot": {
+      "created": "2026-07-23T14:35:55.000Z",
+      "description": {
+        "Authors": [
+          "Damm, Laura Marie",
+          "Jiang, Dai",
+          "Demosthenous, Andreas"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds008446.v1.0.1",
+        "Funding": [
+          "Engineering and Physical Sciences Research Council (EPSRC) grant EP/S022139/1"
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Random and Sequential Order Finger Motor Imagery ",
+        "ReferencesAndLinks": null
+      },
+      "readme": "# Random and Sequential Order Finger Motor Imagery\n\n## Description\nThis dataset contains EEG recordings from 20 participants performing a novel paradigm with finger cues for motor imagery execution cued in random and sequential blocks. Starting order was counterbalanced.\n\n## Acquisition\n- **EEG system:** g.tec GmbH\n- **Sampling frequency:** 512 Hz\n- **65 Channels:** \n    - 62 EEG Channels\n    - 2 Reference Channels\n    - 1 Marker Channel\n\n## Format\nData is stored in BIDS-compliant format with:\n- EEG recordings in EDF format\n- Channel information in `_channels.tsv` files\n- Metadata in `_eeg.json` sidecars\n\n## Participants\n- 20 participants\n- Counterbalanced block order conditions\n- Age range: 19-57 years\n\n## Marker Identification\n- 1 = White Screen\n- 2 = Focus Cross\n- 3 = Thumb\n- 4 = Index Finger\n- 5 = Middle Finger\n- 6 = Ring Finger\n- 7 = Pinky Finger \n\n\n## Tasks\n| Condition | Code | \n|-----------|------|\n| Random Cue Order | OR | \n| Sequential Cue Order | OS |\n\n## Block Assignment\nEach participant completed both conditions in either first or second block position, counterbalanced across subjects.\n\n## References\n- BIDS Version: 1.6.0\n- Dataset processed from original ERDS Study CSV exports\n\n## License\nSee LICENSE file for usage terms.\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "eeg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [],
+        "size": 5756328014,
+        "subjects": [
+          "19",
+          "12",
+          "04",
+          "10",
+          "06",
+          "07",
+          "17",
+          "14",
+          "15",
+          "16",
+          "11",
+          "18",
+          "05",
+          "13",
+          "08",
+          "09",
+          "01",
+          "02",
+          "03",
+          "20"
+        ],
+        "tasks": [
+          "SequentialCueOrder",
+          "RandomCueOrder"
+        ],
+        "totalFiles": 345
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        21,
+        24,
+        31,
+        27,
+        28,
+        57,
+        25,
+        19,
+        35,
+        28,
+        30,
+        23,
+        25,
+        31,
+        27,
+        33,
+        26,
+        28,
+        24,
+        24
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "Engineering and Physical Sciences Research Council (EPSRC)",
+      "modalities": [
+        "eeg"
+      ],
+      "species": "Human",
+      "studyDesign": "Finger Motor Imagery paradigm with finger cues being presented in random and sequential order. Starting condition is counterbalanced.",
+      "studyDomain": "Finger Motor Imagery",
+      "studyLongitudinal": "Single Session"
+    },
+    "publishDate": "2026-07-23T11:47:44.423Z"
+  },
+  "source": "openneuro"
+}

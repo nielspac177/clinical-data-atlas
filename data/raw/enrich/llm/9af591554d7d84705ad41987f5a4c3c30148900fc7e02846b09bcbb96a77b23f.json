@@ -1,0 +1,41 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:9af591554d7d84705ad41987f5a4c3c30148900fc7e02846b09bcbb96a77b23f",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "newly diagnosed glioblastoma multiforme (GBM)",
+        "label": "glioblastoma multiforme (GBM)"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "oncology"
+    ],
+    "id": "tcia:acrin-fmiso-brain",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "baseline FMISO PET uptake",
+        "value": "PET"
+      },
+      {
+        "evidence": "MRI parameters (Ktrans, CBV)",
+        "value": "MRI"
+      },
+      {
+        "evidence": "pathological biomarkers that included MGMT status",
+        "value": "pathology"
+      },
+      {
+        "evidence": "Karnofsky performance status",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "Participants with newly diagnosed glioblastoma multiforme in the ACRIN 6684 multi-center clinical trial",
+    "summary": "Multi-center trial data relating baseline FMISO PET uptake and MRI parameters to overall survival and progression in newly diagnosed glioblastoma, alongside performance status and pathological biomarker expression assays."
+  },
+  "prompt_version": "v1"
+}

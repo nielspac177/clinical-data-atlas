@@ -1,0 +1,144 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005418",
+  "payload": {
+    "created": "2024-08-19T10:55:29.817Z",
+    "id": "ds005418",
+    "latestSnapshot": {
+      "created": "2024-08-21T11:02:40.000Z",
+      "description": {
+        "Authors": [
+          "Rovai, Antonin",
+          "Lolli, Valentina",
+          "De Tiège, Xavier",
+          "Trotta, Nicola",
+          "Goldman, Serge"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005418.v3.2.0",
+        "Funding": [
+          "Fond Erasme (Brussels, Belgium)",
+          "Association Vinçotte Nuclear (AVN research convention)",
+          "FRS-FNRS (Brussels, Belgium)"
+        ],
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "Cerebrovascular Reactivity: CO2 inhalation and resting state comparisons",
+        "ReferencesAndLinks": [
+          ""
+        ]
+      },
+      "readme": "# Cerebrovascular Reactivity: CO2 inhalation and resting state comparisons\n\n## Description\n\nThirty-five healthy adult subjects with no prior history of neurological or psychiatric disorder were included in this dataset.\n\nThe goal is to compare CVR computed using breathing challenges (CO2-inhalation) to relative-CVR obtained from resting-state data only.\n\nA subset of this dataset is also a subset of https://openneuro.org/datasets/ds004604\n\n## Rawdata\n\n- Anatomical data: a standard T1w image was acquired for each subject.\n- Functional data: each subject underwent an fMRI scan with blocs of CO2 inhalation challenges as well as a six-minutes resting state session.\n- Physiological data: breath CO2 was recorded using a capnograph during the fMRI acquisition for the CO2 inhalation task.\n\n## Derivatives\n\n- Directory fmriprep_v21.0.4, fMRIPrep version 21.0.4, using the --use-aroma option.\n- Directory cvrmap_2.0.25: CVRmap v2.0.25 with default parameters.  Uses only the CO2 inhalation challenge data (fMRI and physiological monitoring).\n- Directory cvrmap_2.0.25_rs_gs: CVRmap v2.0.25 with the options '--task restingstate' and '--globalsignal'. Uses only the resting-state data. Compute relative CVR by using global signal as a surrogate for end-tidal CO2.\n- Directory cvrmap_2.0.25_rs_vs: CVRmap v2.0.25 with the options '--task restingstate' and '--vesselsignal'. Uses only the resting-state data. Compute relative CVR by using vessel signal as a surrogate for end-tidal CO2.",
+      "summary": {
+        "dataProcessed": true,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 6084346562,
+        "subjects": [
+          "001",
+          "004",
+          "012",
+          "017",
+          "018",
+          "019",
+          "020",
+          "021",
+          "022",
+          "023",
+          "026",
+          "027",
+          "028",
+          "029",
+          "030",
+          "031",
+          "032",
+          "033",
+          "034",
+          "035",
+          "036",
+          "037",
+          "038",
+          "039",
+          "040",
+          "041",
+          "042",
+          "043",
+          "044",
+          "045",
+          "046",
+          "047",
+          "048",
+          "049",
+          "050"
+        ],
+        "tasks": [
+          "gas",
+          "restingstate"
+        ],
+        "totalFiles": 286
+      },
+      "tag": "3.2.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        29,
+        39,
+        24,
+        29,
+        28,
+        29,
+        30,
+        33,
+        59,
+        29,
+        26,
+        33,
+        24,
+        23,
+        30,
+        23,
+        25,
+        34,
+        48,
+        23,
+        48,
+        50,
+        53,
+        31,
+        29,
+        49,
+        47,
+        36,
+        67,
+        29,
+        51,
+        33,
+        30,
+        23,
+        38
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": true,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "Block design and resting state",
+      "studyDomain": "Cerebrovascular Reactivity and resting state",
+      "studyLongitudinal": "Other"
+    },
+    "publishDate": "2024-08-19T12:32:22.465Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,90 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003548",
+  "payload": {
+    "created": "2021-02-25T05:45:33.290Z",
+    "id": "ds003548",
+    "latestSnapshot": {
+      "created": "2021-04-08T05:43:51.000Z",
+      "description": {
+        "Authors": [
+          "Isaac David",
+          "Victor Olalde-Mathieu",
+          "Ana Y. Martínez",
+          "Lluviana Rodríguez-Vidal",
+          "Fernando A. Barrios"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds003548.v1.0.1",
+        "Funding": [
+          "Institute of Neurobiology, UNAM",
+          "CONACyT (CVU 891935)"
+        ],
+        "HowToAcknowledge": "Please cite this paper:\nhttps://doi.org/10.1101/2021.04.04.438425",
+        "License": "CC0",
+        "Name": "Emotion Category and Face Perception Task Optimized for Multivariate Pattern Analysis",
+        "ReferencesAndLinks": [
+          "https://doi.org/10.1101/2021.04.04.438425"
+        ]
+      },
+      "readme": "## Sample\n\nWe used a cross-sectional group of 16 volunteers from both sexes (8\nfemale, 8 male) with an average age of 25 years, recruited at UNAM\ncampus Juriquilla from October 2019 to June 2020. Participants were\nbriefly interviewed to exclude those previously diagnosed with\nneurological or psychiatric conditions. With the exception of one male\nsubject, all of them reported having right-handed phenotype. Prior to\nthe study, subjects formally consented to participating after being\ninformed of its aims, risks and procedures — in accordance with the\n1964 Declaration of Helsinki.\n\n## Image acquisition\n\nImages were obtained from a 3-Tesla General Electric Discovery MR750\nscanner at the MR Unit at UNAM's Institute of Neurobiology, during a\nsingle session per participant. The protocol included 5 echo-planar\nimaging (EPI) blood-oxygen level-dependent (BOLD) sequences for fMRI,\n185 volumes each. A T1-weighted scan of head anatomy was also\nacquired, in addition to a 10-minutes long _resting state_ fMRI before\nthe task. Sequence parameters are described in the table.\nEchos were registered using a head-mounted 32-channel coil.\n\n| Parameter | EPI BOLD | T1w FSPGR | T2w FSE |\n|----------------|--------------:|-----------------:|------------:|\n| Slice orientation  | Axial | Axial or sagital | Axial |\n| Slices             | 35 | 176 | 35 |\n| Field of view      | 64×64     | 256×256 | 512x512 |\n| Voxel size         | (4 mm)^3 | (1 mm)^3 | (.5x.5x.4 mm^3) |\n| Flip angle         | pi / 2      | 3*pi / 45 | 7*pi / 9 |\n| TR (ms)            | 2000  | 8.18 | 6255 |\n| TE (ms)            | 30    | 3.19 | 101.4 |\n| TInv (ms)          |         | 450 | |\n\n## Stimuli and task\n\nEach of the 5 fMRI sequences was temporally coupled to a psychological\nblock-based task implemented in PsychoPy 3.0.1. All 5\ntasks were identical, save for the pseudo-random order in which their\n30 s blocks were administered. A total of 6 block classes were used:\nhappy faces, sad faces, angry faces, neutral faces, pseudo (scrambled)\nfaces and low-stimulation (dim).\n\nPseudo-faces and dim blocks were introduced so as to buttress and\ndiagnose the analysis pipeline, by way of more trivial contrasts (like\npseudo-faces vs low-stimulation and faces vs pseudo-faces).\n\nEach block in turn comprises 10 randomly-presented images belonging to\nthat class, each one shown for about 3 seconds and without possibility\nof reinstantiation during the same block. Each block occurs twice per\nsequence, yielding a total of 12 of them (360 s = 6 min). After their\npresentation, participants had to wait for 10 seconds before\nconcluding the sequence, in order to capture the hemodynamic response\n(HR) elicited by the last stimuli. A selection of 10 grayscale\nphotographs per category of frontal human faces (male and female)\nserved as stimuli. These were chosen from the classical \"Pictures of\nFacial Affect\" database (Ekman, 1976). As for the low-stimulation\n(a.k.a. \"dim\") blocks, a small but visible fixation cross was made\nfluctuate from quadrant to quadrant at random every 3 seconds.\n\nAdditionally, behavioral responses were recorded throughout the task\nin order to measure performance and thus evaluate the suitability of\nphysiological data for further analysis. Participants were instructed\nat the beginning of every sequence to indicate whether faces belonged\nto a man or a woman as soon as they were perceived. The response was\nsubmitted with the press of a button — one at each hand. Analogously,\nfor scrambled and dim blocks (when no faces should have been\nperceived), the instruction was to simply report image change,\nalternating between buttons.\n\nTask files and responses available [here](https://github.com/isacdaavid/emotional-faces-psychopy-task).\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 3771504458,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16"
+        ],
+        "tasks": [
+          "Emotional face perception",
+          "Resting state, awake, closed eyes"
+        ],
+        "totalFiles": 268
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null
+      ],
+      "associatedPaperDOI": "https://doi.org/10.1101/2021.04.04.438425",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2021-02-25T05:56:46.332Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,47 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:cc01e6082595979f1f9c213beaeb7eb81eff2b3a156d332a31f4b50dad58f706",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Lung Squamous Cell Carcinoma (CPTAC-LSCC) cohort",
+        "label": "Lung Squamous Cell Carcinoma"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "oncology",
+      "pulmonology"
+    ],
+    "id": "tcia:cptac-lscc",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "CT PT",
+        "value": "CT"
+      },
+      {
+        "evidence": "CT PT",
+        "value": "PET"
+      },
+      {
+        "evidence": "Radiology and pathology images from CPTAC patients",
+        "value": "pathology"
+      },
+      {
+        "evidence": "large-scale proteome and genome analysis",
+        "value": "genomics"
+      },
+      {
+        "evidence": "large-scale proteome and genome analysis",
+        "value": "proteomics"
+      }
+    ],
+    "population": "Subjects from the CPTAC Lung Squamous Cell Carcinoma cohort",
+    "summary": "Radiology and pathology images from the CPTAC lung squamous cell carcinoma cohort, released by The Cancer Imaging Archive for study alongside corresponding proteomic, genomic and clinical data."
+  },
+  "prompt_version": "v1"
+}

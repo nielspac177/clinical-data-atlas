@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:36e8727d9db83b9a872bdab476fcbd0a759e95c06602f438ab3899b3b447cde6",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "95 patients diagnosed with glioma",
+        "label": "glioma"
+      },
+      {
+        "evidence": "51 patients diagnosed with other neoplasms of the brain",
+        "label": "other neoplasms of the brain"
+      }
+    ],
+    "countries": [
+      "NG"
+    ],
+    "domains": [
+      "neurology",
+      "oncology",
+      "surgery"
+    ],
+    "id": "tcia:brats-africa",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "multiparametric MR images (mpMRI), specifically T1, T1 CE, T2, and T2 FLAIR",
+        "value": "MRI"
+      }
+    ],
+    "population": "95 patients diagnosed with glioma and 51 patients diagnosed with other neoplasms of the brain, scanned pre-operatively at six diagnostic centers in Nigeria between January 2010 and December 2022.",
+    "summary": "Curated African brain tumor MRI collection: retrospective pre-operative multiparametric scans from six Nigerian diagnostic centers, pre-processed with the BraTS protocol, with expert-annotated tumor subregion labels and a metadata file of study location and scanner type."
+  },
+  "prompt_version": "v1"
+}

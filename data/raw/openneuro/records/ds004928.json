@@ -1,0 +1,95 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004928",
+  "payload": {
+    "created": "2024-01-12T14:55:59.690Z",
+    "id": "ds004928",
+    "latestSnapshot": {
+      "created": "2024-01-24T12:59:16.000Z",
+      "description": {
+        "Authors": [
+          "Lonike K Faes",
+          "Agustin Lage-Castellanos",
+          "Giancarlo Valente",
+          "Zidan Yu",
+          "Martijn A. Cloos",
+          "Luca Vizioli",
+          "Steen Moeller",
+          "Essa Yacoub",
+          "Federico De Martino"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004928.v1.0.0",
+        "Funding": [
+          "National Institute of Health grant (RF1MH116978-01)",
+          "National Institute of Health grant (P41EB027061)",
+          "European Research Council (ERC) under the European Union’s Horizon 2020 research and innovation programme (grant agreement No. 101001270)"
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Predictive Processing in the Auditory Cortex measured at 7T",
+        "ReferencesAndLinks": null
+      },
+      "readme": "In vivo 7T MRI submillimeter dataset investigating the auditory system (cortical areas) collected at Center for Magnetic Resonance Research (CMRR) and \r\nNew York University (NYU) by Luca Vizioli and Zidan Yu respectively.\r\n\r\nThe dataset consists of 10 subjects that underwent one session in which anatomical MP2RAGE data and 6 to 8 functional runs were acquired at a resolution\r\nof 0.8 mm isotropic. \r\n\r\nParticipants passively listened to auditory tone sequences that could be either predictable, mispredicted or unpredictable. \r\nThe initial purpose of this study was to investigate predictive processing in the human auditory cortex. However, the same dataset has first been used to \r\ninvestigate the effect of NORDIC denoising on our SNR limited high-resolution data.\r\n\r\n## Known issues/comments\r\n- For subject 1 the opposite phase encoding images are missing. Therefore, the folder fmap is empty.\r\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 115403434763,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10"
+        ],
+        "tasks": [
+          "Tones Task"
+        ],
+        "totalFiles": 803
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        35,
+        34,
+        33,
+        null,
+        null,
+        28,
+        69,
+        50,
+        48,
+        32
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "National Institute of Health",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "Auditory",
+      "studyLongitudinal": "Experimental"
+    },
+    "publishDate": "2024-06-03T09:43:24.009Z"
+  },
+  "source": "openneuro"
+}

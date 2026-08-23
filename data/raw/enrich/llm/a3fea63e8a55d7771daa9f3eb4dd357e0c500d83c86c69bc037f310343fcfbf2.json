@@ -1,0 +1,27 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:a3fea63e8a55d7771daa9f3eb4dd357e0c500d83c86c69bc037f310343fcfbf2",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "tcia:cc-radiomics-phantom-3",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "CT RTSTRUCT",
+        "value": "CT"
+      },
+      {
+        "evidence": "RTSTRUCT",
+        "value": "radiotherapy"
+      }
+    ],
+    "population": "Phantom scans across 100 scanners using three protocols (head, chest, controlled); no human participants.",
+    "summary": "Phantom CT scans collected on 100 scanners using three protocols, providing population data to quantify inter-scanner variability and test robustness of radiomics or other quantitative imaging signatures."
+  },
+  "prompt_version": "v1"
+}

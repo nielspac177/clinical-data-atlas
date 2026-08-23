@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:1c44538e9e63eace40ef337907b7ec94bf886383408f5f2b66aed257883a94b3",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "20 presumed healthy volunteers",
+        "label": "healthy volunteers"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:cebsdb",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "ECG",
+        "value": "ECG"
+      },
+      {
+        "evidence": "seismocardiogram",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "breathing",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": "20 presumed healthy volunteers",
+    "summary": "Simultaneous ECG, breathing and seismocardiogram recordings from presumed healthy volunteers, collected to study whether breathing affects RR interval detection across leads and to compare RR series from ECG with seismocardiogram-derived surrogates."
+  },
+  "prompt_version": "v1"
+}

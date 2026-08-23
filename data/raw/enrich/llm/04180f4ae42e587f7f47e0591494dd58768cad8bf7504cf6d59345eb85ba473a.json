@@ -1,0 +1,40 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:04180f4ae42e587f7f47e0591494dd58768cad8bf7504cf6d59345eb85ba473a",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "pathologically confirmed diagnosis of WHO grade 4 astrocytoma",
+        "label": "WHO grade 4 astrocytoma"
+      },
+      {
+        "evidence": "University Hospital Glioblastoma dataset",
+        "label": "Glioblastoma"
+      }
+    ],
+    "countries": [
+      "ES"
+    ],
+    "domains": [
+      "neurology",
+      "oncology",
+      "surgery"
+    ],
+    "id": "tcia:rhuh-gbm",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "preoperative, early postoperative and recurrence MRI scans",
+        "value": "MRI"
+      },
+      {
+        "evidence": "The dataset includes clinical and pathological information.",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "40 patients who underwent surgery with a pathologically confirmed diagnosis of WHO grade 4 astrocytoma at the Río Hortega University Hospital",
+    "summary": "Preoperative, early postoperative and recurrence MRI studies from surgically treated grade 4 astrocytoma patients, preprocessed with CaPTk following the BraTS pipeline, with expert-corrected segmentations of enhancing tumor, necrosis and peritumoral region, plus clinical and pathological information."
+  },
+  "prompt_version": "v1"
+}

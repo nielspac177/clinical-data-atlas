@@ -1,0 +1,133 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007386",
+  "payload": {
+    "created": "2026-02-07T16:51:00.414Z",
+    "id": "ds007386",
+    "latestSnapshot": {
+      "created": "2026-02-07T19:33:22.000Z",
+      "description": {
+        "Authors": [
+          "Frederic R. Hopp",
+          "Sungbin Youk",
+          "Ori Amir",
+          "Musa Malik",
+          "Kylie Woodman",
+          "Brittany Wheeler",
+          "Ari Khoudary",
+          "Kevin O’Neill",
+          "Felipe De Brigard",
+          "Walter Sinnott-Armstrong",
+          "René Weber"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007386.v1.0.1",
+        "Funding": [],
+        "HowToAcknowledge": "Hopp, F. R., Youk, S., Amir, O., Malik, M., Woodman, K., Wheeler, B., ... & Weber, R. (2026). The Moral Foundations MRI Collection: A Multi-Center, Multi-Country Functional MRI Collection for Evaluating Moral Judgment.",
+        "License": "CC0",
+        "Name": "MOFOMIC-NIMF3",
+        "ReferencesAndLinks": [
+          "https://github.com/Moral-Computing-Lab/mofomic_code",
+          "https://www.medianeuroscience.org/mofomic/"
+        ]
+      },
+      "readme": "The NIMF3 dataset is part of the Moral Foundations MRI Collection (MOFOMIC), a collection of multimodal (3T) MRI datasets including structural (T1-weighted), and (task-based) functional BOLD MRI data, as well as detailed demographics and psychometric variables from healthy participants.\n\nThis dataset contains both raw and preprocessed data (and other \"derivatives\"), which is available on [Openneuro](https://openneuro.org/datasets/ds007386).\n\nThe contents of this dataset are described in detail in [this preprint](https://www.psycharchives.org/en/item/c727daa5-d237-4162-8a93-f2e19ef75f98). More general information about the MOFOMIC datasets, including instructions on how to download (parts of) it, check out the [MOFOMIC website](https://www.medianeuroscience.org/mofomic/).\n\nFor this dataset, please consider the following known caveats: \n- The \"trialstart_zeroed\" onset times in the _event.tsv files are adjusted for the dummy scans at the beginning and should be used for modelling. \n- Dummy scans from functional BOLD files (both raw and preprocessed) were already dropped and can be modelled together with the \"trialstart_zeroed\" onset timings.\n- Subject-21: Misses the resting-state scan.\n- Subject-37: Misses the resting-state scan.\n- Subject-38: Misses the resting-state scan.\n- Subject-39: Misses the resting-state scan.\n- Subject-41: Misses the resting-state scan.",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri",
+          "beh"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 8463158900,
+        "subjects": [
+          "34",
+          "39",
+          "32",
+          "12",
+          "30",
+          "19",
+          "21",
+          "09",
+          "33",
+          "27",
+          "10",
+          "08",
+          "25",
+          "14",
+          "20",
+          "26",
+          "24",
+          "07",
+          "41",
+          "18",
+          "28",
+          "31",
+          "22",
+          "37",
+          "38",
+          "23",
+          "29"
+        ],
+        "tasks": [
+          "rest",
+          "mfv"
+        ],
+        "totalFiles": 633
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        30,
+        22,
+        22,
+        27,
+        20,
+        26,
+        23,
+        19,
+        34,
+        22,
+        22,
+        32,
+        29,
+        26,
+        23,
+        31,
+        27,
+        28,
+        23,
+        26,
+        22,
+        19,
+        19,
+        20,
+        29,
+        23,
+        26
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri",
+        "beh"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2026-02-07T19:32:37.308Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,24 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:5bee3a749d4730f336319b4485b568dc87c3c76f96c4e8f0d67b72632e4dbc07",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "pulmonology",
+      "other"
+    ],
+    "id": "physionet:refisco",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "60 MIMIC-CXR radiology reports",
+        "value": "clinical_notes"
+      }
+    ],
+    "population": null,
+    "summary": "Radiologist ratings of error severity for chest radiology reports drawn from MIMIC-CXR, comparing reports from two generation models with a human benchmark, with raters blinded to the report source."
+  },
+  "prompt_version": "v1"
+}

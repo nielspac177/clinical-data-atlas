@@ -1,0 +1,27 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:7177ac5f31d05adc0fa4beb484554bd563f42c45858a6d089e080a596826f30e",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "other"
+    ],
+    "id": "physionet:mednli",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "we worked with clinical notes corresponding to the deceased patients",
+        "value": "clinical_notes"
+      },
+      {
+        "evidence": "grounded in the medical history of patients",
+        "value": "EHR"
+      }
+    ],
+    "population": "clinical notes corresponding to the deceased patients in MIMIC-III",
+    "summary": "Natural language inference dataset annotated by doctors, with premise sentences drawn from Past Medical History sections of clinical notes in MIMIC-III, for training medical language models."
+  },
+  "prompt_version": "v1"
+}

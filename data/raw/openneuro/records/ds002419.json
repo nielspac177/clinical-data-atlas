@@ -1,0 +1,174 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds002419",
+  "payload": {
+    "created": "2020-01-18T17:12:42.661Z",
+    "id": "ds002419",
+    "latestSnapshot": {
+      "created": "2020-01-27T10:08:44.000Z",
+      "description": {
+        "Authors": [
+          "Jelle R. Dalenberg",
+          "Barkha P. Patel",
+          "Raphael Denis",
+          "Maria G. Veldhuizen",
+          "Yuko Nakamura",
+          "Petra C. Vinke",
+          "Serge Luquet",
+          "Dana M. Small"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds002419.v1.0.3",
+        "Funding": [
+          "NIH NIDCDR01 DC006706-06A1"
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Short-term consumption of sucralose with, but not without, carbohydrate impairs neural and metabolic sensitivity to sugar",
+        "ReferencesAndLinks": [
+          "Jelle R. Dalenberg, Barkha P. Patel, Raphael Denis, Maria G. Veldhuizen, Yuko Nakamura, Petra C. Vinke, Serge Luquet, Dana M. Small. Short-term consumption of sucralose with, but not without, carbohydrate impairs neural and metabolic sensitivity to sugar. Cell Metabolism. 2020."
+        ]
+      },
+      "readme": "Data acquisition methods have been described in detail in Jelle R. Dalenberg, Barkha P. Patel, Raphael Denis, Maria G. Veldhuizen, Yuko Nakamura, Petra C. Vinke, Serge Luquet, Dana M. Small. Short-term consumption of sucralose with, but not without, carbohydrate impairs neural and metabolic sensitivity to sugar. Cell Biology. 2020.\n\n_______________________________\n##  Study Summary  ##\n_______________________________\n\nThere is a general consensus that overconsumption of sugar sweetened beverages contributes to the prevalence of obesity and related comorbidities such as type 2 diabetes (T2D). Whether a similar relationship exists for no, or low-calorie “diet” drinks is a subject of intensive debate and controversy. Here, we demonstrate that consuming seven sucralose sweetened beverages with, but not without a carbohydrate over 10 days, decreases insulin sensitivity in healthy human participants; an effect that correlates with reductions in midbrain, insular and cingulate responses to sweet, but not sour, salty or savory taste as assessed with fMRI. Taste perception was unaltered and consuming the carbohydrate alone had no effect. These findings indicate that consumption of sucralose in the presence of a carbohydrate rapidly impairs glucose metabolism and results in longer-term decreases in brain, but not perceptual sensitivity to sweet taste, suggesting dysregulation of gut-brain control of glucose metabolism.\n\n_______________________________\n##  Important notes  ##\n_______________________________\n\nMissing data:\nsub-1780, ses-scan1: task-taste1 failed in scanner and removed from data\nsub-1813, ses-scan2: task-taste1 failed in scanner and removed from data\nsub-1473: No Oral Glucose Tolerance Test data from session 2.\nsub-1514: ses-scan2: task-taste2 bold scan stopped early due to gustometer issue. \nsub-1734: No Oral Glucose Tolerance Test data.\nsub-1752: No Oral Glucose Tolerance Test data.\nsub-1754: No Oral Glucose Tolerance Test data.\n\nNot analysed:\nsub-1506: Removed before analysis based on TLFB score - Artificial sweetener consumer\nsub-1678: Removed before analysis based on TLFB score - Artificial sweetener consumer\nsub-1766: Removed before analysis based on TLFB score - Artificial sweetener consumer\nsub-1815: Removed before analysis based on TLFB score - Artificial sweetener consumer\nsub-1843: Removed before analysis based on TLFB score - Artificial sweetener consumer\n\nOther notes:\nsub-1700, ses-scan1: 2 fieldmaps recorded. See: JSON field \"IntendedFor\"\nsub-1781, ses-scan2: 2 fieldmaps recorded. See: JSON field \"IntendedFor\"\n\n_______________________________\n##  Stimulus info  ##\n_______________________________\nTaste stimuli included a sweet sucrose solution (0.32 M), a sour citric acid solution (0.0056 M), a salty sodium chloride solution (0.14 M), an umami monopotassium glutamate solution (68 mM), and a tasteless and odorless solution.\n\nThe sweet, sour, salty, umami, and tasteless stimuli were presented in a block design across two functional imaging runs. During each block, 4 to 8 uncued taste stimulus presentations were presented with a volume of 0.75ml delivered over 2s followed by a 7s swallowing period. Each taste block was presented four times and block length varied between 36 to 54 seconds. The order of blocks was counterbalanced across subjects. Each taste block was followed by a rinsing period (0.75 ml deionized water over 2 seconds). Blocks were separated with a 10 second rest-period. \n\n_______________________________\n##  Additional Data  ##\n_______________________________\n\nIn addition to the (f)MRI data, the current dataset also includes (see participants.tsv and participants.json files): \n- age\n- gender\n- height in inches\n- weight in pounds\n- BMI\n- Bodyfat percentage\n- Ethnicity \n- Education in years\n- Calculated relative insulin change score used in the manuscript\n- Timeline follow back low calorie sweetener intake in ml over the last 2 weeks for session 1\n- Timeline follow back low calorie sweetener intake in total drinking days over the last 2 weeks for session 1\n- Timeline follow back sugar sweetened beverage intake in ml over the last 2 weeks for session 1\n- Timeline follow back sugar sweetened beverage intake in total drinking days over the last 2 weeks for session 1\n- Timeline follow back low calorie sweetener intake in ml over the last 2 weeks for session 2\n- Timeline follow back low calorie sweetener intake in total drinking days over the last 2 weeks for session 2\n- Timeline follow back sugar sweetened beverage intake in ml over the last 2 weeks for session 2\n- Timeline follow back sugar sweetened beverage intake in total drinking days over the last 2 weeks for session 2\n- Sucrose preference test score for session 1\n- Sucrose preference test score for session 2\n- Oral Glucose Tolerance Test blood plasma glucose on timepoint 0 minutes for session 1\n- Oral Glucose Tolerance Test blood plasma glucose on timepoint 15 minutes for session 1\n- Oral Glucose Tolerance Test blood plasma glucose on timepoint 30 minutes for session 1\n- Oral Glucose Tolerance Test blood plasma glucose on timepoint 60 minutes for session 1\n- Oral Glucose Tolerance Test blood plasma glucose on timepoint 90 minutes for session 1\n- Oral Glucose Tolerance Test blood plasma glucose on timepoint 120 minutes for session 1\n- Oral Glucose Tolerance Test blood plasma glucose on timepoint 0 minutes for session 2\n- Oral Glucose Tolerance Test blood plasma glucose on timepoint 15 minutes for session 2\n- Oral Glucose Tolerance Test blood plasma glucose on timepoint 30 minutes for session 2\n- Oral Glucose Tolerance Test blood plasma glucose on timepoint 60 minutes for session 2\n- Oral Glucose Tolerance Test blood plasma glucose on timepoint 90 minutes for session 2\n- Oral Glucose Tolerance Test blood plasma glucose on timepoint 120 minutes for session 2\n- Oral Glucose Tolerance Test blood plasma insulin on timepoint 0 minutes for session 1\n- Oral Glucose Tolerance Test blood plasma insulin on timepoint 15 minutes for session 1\n- Oral Glucose Tolerance Test blood plasma insulin on timepoint 30 minutes for session 1\n- Oral Glucose Tolerance Test blood plasma insulin on timepoint 60 minutes for session 1\n- Oral Glucose Tolerance Test blood plasma insulin on timepoint 90 minutes for session 1\n- Oral Glucose Tolerance Test blood plasma insulin on timepoint 120 minutes for session 1\n- Oral Glucose Tolerance Test blood plasma insulin on timepoint 0 minutes for session 2\n- Oral Glucose Tolerance Test blood plasma insulin on timepoint 15 minutes for session 2\n- Oral Glucose Tolerance Test blood plasma insulin on timepoint 30 minutes for session 2\n- Oral Glucose Tolerance Test blood plasma insulin on timepoint 60 minutes for session 2\n- Oral Glucose Tolerance Test blood plasma insulin on timepoint 90 minutes for session 2\n- Oral Glucose Tolerance Test blood plasma insulin on timepoint 120 minutes for session 2\n\nUnavailable data points in participants.tsv are reported as n/a. ",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "scan1",
+          "scan2"
+        ],
+        "size": 97979630256,
+        "subjects": [
+          "1358",
+          "1473",
+          "1480",
+          "1482",
+          "1493",
+          "1502",
+          "1506",
+          "1511",
+          "1514",
+          "1519",
+          "1571",
+          "1596",
+          "1598",
+          "1610",
+          "1611",
+          "1615",
+          "1638",
+          "1643",
+          "1645",
+          "1665",
+          "1671",
+          "1678",
+          "1697",
+          "1700",
+          "1705",
+          "1710",
+          "1734",
+          "1752",
+          "1754",
+          "1756",
+          "1757",
+          "1766",
+          "1770",
+          "1780",
+          "1781",
+          "1797",
+          "1798",
+          "1803",
+          "1810",
+          "1813",
+          "1814",
+          "1815",
+          "1822",
+          "1824",
+          "1842",
+          "1843",
+          "1855",
+          "1856"
+        ],
+        "tasks": [
+          "task-taste1",
+          "task-taste2"
+        ],
+        "totalFiles": 830
+      },
+      "tag": "1.0.3"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        24,
+        36,
+        23,
+        29,
+        25,
+        38,
+        30,
+        23,
+        25,
+        26,
+        39,
+        25,
+        24,
+        26,
+        30,
+        25,
+        31,
+        31,
+        26,
+        36,
+        28,
+        29,
+        27,
+        27,
+        24,
+        28,
+        27,
+        27,
+        26,
+        24,
+        24,
+        25,
+        29,
+        27,
+        28,
+        33,
+        27,
+        23,
+        30,
+        28,
+        31,
+        23,
+        33,
+        27,
+        29,
+        23,
+        27,
+        24
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "Taste",
+      "studyLongitudinal": "Longitudinal"
+    },
+    "publishDate": "2020-01-23T11:47:34.028Z"
+  },
+  "source": "openneuro"
+}

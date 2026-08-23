@@ -1,0 +1,130 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005895",
+  "payload": {
+    "created": "2025-01-31T10:41:13.237Z",
+    "id": "ds005895",
+    "latestSnapshot": {
+      "created": "2025-02-04T16:02:23.000Z",
+      "description": {
+        "Authors": [
+          "María Sanchiz-Calvo",
+          "Elena Coccia",
+          "Christopher Cawthorne",
+          "Gustavo Morrone Parfitt",
+          "Koen Van Laere",
+          "Teresa Torre-Muruzabal",
+          "Diego Cabezudo",
+          "George Tsafaras",
+          "Ana Cascalho",
+          "Chris Van den Haute",
+          "Peter Vangheluwe",
+          "Joel Blanchard",
+          "Eduard Bentea",
+          "Veerle Baekelandt"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005895.v1.0.0",
+        "Funding": [
+          "This research was funded by the Aligning Science Across Parkinson’s [ASAP-000458] through the Michael J. Fox Foundation for Parkinson’s Research (MJFF) allocated to PV and VB, the Vlaio O&O project LeAD-UP, and the KU Leuven Parkinson fund. EB is a postdoctoral research fellow supported by Aligning Science Across Parkinson’s [ASAP-000458]. TT-M, DC and GT were supported by doctoral fellowships from the Research Foundation-Flanders (FWO). CC was funded by FWO I000321N and FWO I000123N, and the PET-CT equipment was funded via an FWO medium infrastructure grant (AKUL15-30/G0H1216N) allocated to KVL. KVL was funded by a senior clinical researcher mandate of FWO."
+        ],
+        "HowToAcknowledge": "Please cite this paper : https://doi.org/10.1101/2024.07.09.602700",
+        "License": "CC0",
+        "Name": "Loss of the lysosomal lipid flippase ATP10B leads to progressive dopaminergic neurodegeneration and parkinsonian motor deficits.",
+        "ReferencesAndLinks": [
+          "https://www.biorxiv.org/content/10.1101/2024.07.09.602700v1.full"
+        ]
+      },
+      "readme": "# README\r\n\r\nLoss-of-function mutations in the ATP10B gene have been identified in Parkinson’s disease patients, pointing to ATP10B as a candidate genetic risk factor. We induced ATP10B knockdown specifically in substantia nigra pars compacta neurons of rats using viral vector technology. Two different microRNA-based shRNA constructs targeting distinct regions of the ATP10B mRNA were used to cross-validate the findings : miRNA5 and miRNA7, and for controls scrambled miRNA was used. A CT and a PE2I PET scan were acquired at different times after the intervention. \r\nRats were injected at the age of 11-12 weeks old.\r\n\r\nThis study consists of 3 cohorts:\r\n- Cohort SCRControl (10 subjects): Scrambled miRNA SCR\r\n- Cohort miR5ATP10BKD (10 subjects): miRNA miR5 against (KD) ATP10B\r\n- Cohort miR7ATP10BKD (5 subjects): miRNA miR7 against (KD) ATP10B\r\n\r\nSessions:\r\nAll cohorts consist of 4 session(s):\r\n- Session 01PE2ICT : 2-4 months post intervention, scans = 1 pet, 1 ct, tracer is [18F]PE2I, no blood data\r\n- Session 02PE2ICT : 4-6 months post intervention, scans = 1 pet, 1 ct, tracer is [18F]PE2I, no blood data\r\n- Session 03PE2ICT : 7-9 months post intervention, scans = 1 pet, 1 ct, tracer is [18F]PE2I, no blood data\r\n- Session 04PE2ICT : 12 months post intervention, scans = 1 pet, 1 ct, tracer is [18F]PE2I, no blood data\r\n\r\nMissing data:\r\nSome rats died during the study, some others joined the study later than at first session, so most rats were actually not scanned at all 4 sessions.\r\n\r\nSessions undergone by each subject:\r\n- sub-001: 01PE2ICT, 02PE2ICT\r\n- sub-002: 01PE2ICT, 02PE2ICT\r\n- sub-003: 01PE2ICT, 02PE2ICT, 03PE2ICT\r\n- sub-004: 01PE2ICT, 02PE2ICT\r\n- sub-005: 01PE2ICT, 02PE2ICT, 03PE2ICT\r\n- sub-006: 01PE2ICT, 02PE2ICT\r\n- sub-007: 01PE2ICT, 02PE2ICT, 03PE2ICT, 04PE2ICT\r\n- sub-008: 01PE2ICT, 02PE2ICT\r\n- sub-009: 04PE2ICT\r\n- sub-010: 04PE2ICT\r\n- sub-011: 01PE2ICT, 02PE2ICT\r\n- sub-012: 01PE2ICT, 02PE2ICT, 03PE2ICT, 04PE2ICT\r\n- sub-013: 01PE2ICT, 02PE2ICT, 03PE2ICT, 04PE2ICT\r\n- sub-014: 01PE2ICT, 02PE2ICT\r\n- sub-015: 01PE2ICT, 02PE2ICT, 03PE2ICT\r\n- sub-016: 01PE2ICT, 02PE2ICT, 03PE2ICT, 04PE2ICT\r\n- sub-017: 01PE2ICT, 02PE2ICT, 03PE2ICT\r\n- sub-018: 01PE2ICT, 02PE2ICT\r\n- sub-019: 04PE2ICT\r\n- sub-020: 04PE2ICT\r\n- sub-021: 03PE2ICT, 04PE2ICT\r\n- sub-022: 03PE2ICT\r\n- sub-023: 03PE2ICT\r\n- sub-024: 04PE2ICT\r\n- sub-025: 04PE2ICT\r\n\r\nContact person:\r\nProf. Veerle Baekelandt (veerle.baekelandt@kuleuven.be)\r\n\r\nStudy year:\r\n2022\r\n\r\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "pet"
+        ],
+        "secondaryModalities": [],
+        "sessions": [
+          "03PE2ICT",
+          "04PE2ICT",
+          "01PE2ICT",
+          "02PE2ICT"
+        ],
+        "size": 7559984126,
+        "subjects": [
+          "021",
+          "025",
+          "001",
+          "005",
+          "004",
+          "017",
+          "002",
+          "022",
+          "012",
+          "019",
+          "016",
+          "007",
+          "011",
+          "010",
+          "013",
+          "014",
+          "023",
+          "009",
+          "024",
+          "018",
+          "015",
+          "006",
+          "003",
+          "008",
+          "020"
+        ],
+        "tasks": [],
+        "totalFiles": 161
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "https://doi.org/10.1101/2024.07.09.602700 ",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "ASAP, FWO",
+      "modalities": [
+        "pet"
+      ],
+      "species": "Rat",
+      "studyDesign": "Longitudinal imaging with 18F-FE-PE2I was done on miR5 (n=5) and SCR (n=5) rats at four distinct time points: 2-4 months, 4-6 months, 7-9 months, and 12 months post-injection. . Similar directions of change were observed in a smaller sample of ATP10B KD miR7 rats imaged at 7-9 months (n = 2) (~66%) and 12 months (n = 3) ",
+      "studyDomain": "Neurobiology, Parkinson's Disease",
+      "studyLongitudinal": "Longitudinal"
+    },
+    "publishDate": "2025-02-05T08:37:00.145Z"
+  },
+  "source": "openneuro"
+}

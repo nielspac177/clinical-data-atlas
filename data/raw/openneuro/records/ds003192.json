@@ -1,0 +1,106 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003192",
+  "payload": {
+    "created": "2020-09-27T17:24:04.279Z",
+    "id": "ds003192",
+    "latestSnapshot": {
+      "created": "2020-12-14T22:16:39.000Z",
+      "description": {
+        "Authors": [
+          "Stefano Moia",
+          "Eneko Uruñuela",
+          "Vicente Ferrer",
+          "César Caballero-Gaudes"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds003192.v1.0.1",
+        "Funding": [
+          "European Union’s Horizon 2020 research and innovation program (Marie Skłodowska-Curie grant agreement No. 713673)",
+          "La Caixa Foundation (ID 100010434, fellowship code LCF/BQ/IN17/11620063)",
+          "Spanish Ministry of Economy and Competitiveness (Ramon y Cajal Fellowship, RYC-2017- 21845)",
+          "Spanish State Research Agency (BCBL “Severo Ochoa” excellence accreditation, SEV- 2015-490)",
+          "Basque Government (BERC 2018-2021 and PIBA_2019_104)",
+          "Spanish Ministry of Science, Innovation and Universities (MICINN; PID2019-105520GB-100)"
+        ],
+        "HowToAcknowledge": "Please cite the paper:  Stefano Moia, Maite Termenon, Eneko Uruñuela, Rachael C. Stickland, Molly G. Bright, César Caballero-Gaudes (2020) ICA-based Denoising Strategies in Breath-Hold Induced Cerebrovascular Reactivity Mapping with Multi Echo BOLD fMRI; bioRxiv 2020.08.18.256479; doi: https://doi.org/10.1101/2020.08.18.256479 ",
+        "License": "CC0",
+        "Name": "EuskalIBUR",
+        "ReferencesAndLinks": [
+          "BIDSification of bold files: heudiconv (https://github.com/nipy/heudiconv)",
+          "BIDSification of physiological files: phys2bids (DOI:10.5281/zenodo.3470091) (https://github.com/physiopy/phys2bids)",
+          "Container for data analysis: https://git.bcbl.eu/smoia/euskalibur_container",
+          "Preprocessing and Data analysis scripts: https://github.com/smoia/EuskalIBUR_dataproc"
+        ]
+      },
+      "readme": null,
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10"
+        ],
+        "size": 80163053146,
+        "subjects": [
+          "001",
+          "002",
+          "003",
+          "004",
+          "007",
+          "008",
+          "009"
+        ],
+        "tasks": [
+          "Breath-holds"
+        ],
+        "totalFiles": 1880
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        25,
+        28,
+        37,
+        40,
+        31,
+        29,
+        40,
+        32,
+        27,
+        27
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "BreathHold",
+      "studyDomain": "Physiology",
+      "studyLongitudinal": "Precision Mapping"
+    },
+    "publishDate": "2020-12-09T19:49:12.977Z"
+  },
+  "source": "openneuro"
+}

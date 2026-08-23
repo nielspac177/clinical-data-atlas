@@ -1,0 +1,27 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:fc58c8c84412bf15ac3f13ca2d4898bfef7aea3b20a6e4da1383870866dd2e33",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "other"
+    ],
+    "id": "physionet:mimic-iii-ext-verifact-bhc",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "the patient’s longitudinal clinical notes from the hospital admission",
+        "value": "clinical_notes"
+      },
+      {
+        "evidence": "against their own electronic health record",
+        "value": "EHR"
+      }
+    ],
+    "population": "100 patients in the MIMIC-III Clinical Database v1.4",
+    "summary": "Clinician-labeled propositions decomposed from human-written and LLM-generated Brief Hospital Course summaries for MIMIC-III patients, built to fact-check long-form clinical text against the patient's own record."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,35 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:94fed66f4d8aea702822ccb753626aba31fafcb52c82c25a28d33145bd3c4efe",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "locally advanced pancreatic cancer",
+        "label": "locally advanced pancreatic cancer"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "oncology",
+      "gastroenterology_hepatology"
+    ],
+    "id": "tcia:pancreatic-ct-cbct-seg",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "one treatment planning CT and two CBCT scans from each patient",
+        "value": "CT"
+      },
+      {
+        "evidence": "received ablative radiation therapy (>= 100Gy biologically effective dose)",
+        "value": "radiotherapy"
+      }
+    ],
+    "population": "40 patients who received ablative radiation therapy for locally advanced pancreatic cancer at Memorial Sloan Kettering Cancer Center, data obtained retrospectively with IRB approval.",
+    "summary": "Breath-hold planning CT and cone-beam CT scans with expert manual organ-at-risk segmentations, collected to evaluate CT-to-CBCT deformable registration and auto-segmentation algorithms in pancreatic cancer radiation therapy."
+  },
+  "prompt_version": "v1"
+}

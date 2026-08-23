@@ -1,0 +1,94 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003928",
+  "payload": {
+    "created": "2021-11-29T15:03:14.882Z",
+    "id": "ds003928",
+    "latestSnapshot": {
+      "created": "2021-11-17T20:54:33.000Z",
+      "description": {
+        "Authors": [
+          "Eveline Gelderman",
+          "Daphne Naessens",
+          "Roel Vrooman",
+          "Andor Veltien",
+          "Bram Coolen",
+          "Joanes Grandjean"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds003928.v1.0.0",
+        "Funding": [
+          "RV was supported by the Dutch Research Council grant OCENW.KLEIN.334 (awarded to JGr)",
+          "DN was supported by Eurostars project E!114985"
+        ],
+        "HowToAcknowledge": "Cite this dataset and refer to our github page https://github.com/grandjeanlab/StandardRat",
+        "License": "CC0",
+        "Name": "Rat_rest_standardRAT",
+        "ReferencesAndLinks": [
+          "This acquision follows the StandardRat protocol, https://github.com/grandjeanlab/StandardRat",
+          "https://github.com/Donders-Institute/bidscoin"
+        ]
+      },
+      "readme": "The raw BIDS data was created using BIDScoin 3.6.3\nAll provenance information and settings can be found in ./code/bidscoin\nFor more information see: https://github.com/Donders-Institute/bidscoin\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural",
+          "mri_functional"
+        ],
+        "sessions": [],
+        "size": 585169219,
+        "subjects": [
+          "4145000",
+          "4145001",
+          "4145002",
+          "414993",
+          "414994",
+          "414995",
+          "414996",
+          "414997",
+          "414998",
+          "414999"
+        ],
+        "tasks": [
+          "ep2d_fid_1000scans"
+        ],
+        "totalFiles": 43
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": false,
+      "ages": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "Dutch Research Council grant, Eurostars",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Rat",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2021-12-06T09:10:24.244Z"
+  },
+  "source": "openneuro"
+}

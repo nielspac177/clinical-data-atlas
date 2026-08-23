@@ -1,0 +1,109 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003437",
+  "payload": {
+    "created": "2020-12-17T16:23:37.349Z",
+    "id": "ds003437",
+    "latestSnapshot": {
+      "created": "2025-10-24T21:59:17.000Z",
+      "description": {
+        "Authors": [
+          "Lilianne R. Mujica-Parodi",
+          "Anar Amgalan",
+          "Syed Fahad Sultan",
+          "Botond Antal",
+          "Steven Skiena",
+          "Andrew Lithen",
+          "Noor Adra",
+          "Eva-Maria Ratai",
+          "Corey Weistuch",
+          "Sindhuja Tirumalai Govindarajan",
+          "Helmut H. Strey",
+          "Ken A. Dill",
+          "Steven M. Stufflebeam",
+          "Richard L. Veech",
+          "Kieran Clarke"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds003437.v1.0.3",
+        "Funding": null,
+        "HowToAcknowledge": "Please cite this paper:  https://https://doi.org/10.1073/pnas.1913042117",
+        "License": "CC0",
+        "Name": "Protecting the Aging Brain - Diet-Study",
+        "ReferencesAndLinks": [
+          "Mujica-Parodi, Lilianne R., et al. Diet modulates brain network stability, a biomarker for brain aging, in young adults., Proceedings of the National Academy of Sciences 117.11 (2020): 6170-6177. https://www.pnas.org/content/117/11/6170"
+        ]
+      },
+      "readme": "## Description\nWe scanned participants with the aim of determining the effects of ketogenic diet on brain function. We performed scans under three conditions:  (1) Standard diet: following their standard diet, without fasting; (2) Fasting:  following their standard diet, with an overnight (12 hour) fast; and (3) Ketogenic Diet:  following a ketogenic (high-fat, moderate-protein, low-carbohydrate (<50g/day)) diet for one week, by which point all participants were in ketosis (>0.6 mmol/L ketone blood concentration). Subjects performed various tasks, including resting state (task-rest), motor task (task-uni) and spatial navigation (task-ab), each lasting 10 minutes. Spatial navigation was repeated by all subjects for another 30 minutes. For more details, see our article referenced below.\n\n## Support\nFor questions with this dataset, contact Botond Antal at [botond.antal@stonybrook.edu](botond.antal@stonybrook.edu) or Lilianne Mujica-Parodi at [lilianne.strey@stonybrook.edu](lilianne.strey@stonybrook.edu)\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "std",
+          "ket",
+          "fast"
+        ],
+        "size": 162226150972,
+        "subjects": [
+          "001",
+          "005",
+          "038",
+          "028",
+          "002",
+          "032",
+          "027",
+          "019",
+          "036",
+          "022",
+          "034",
+          "031"
+        ],
+        "tasks": [
+          "spanav",
+          "motor",
+          "rest"
+        ],
+        "totalFiles": 472
+      },
+      "tag": "1.0.3"
+    },
+    "metadata": {
+      "affirmedDefaced": false,
+      "ages": [
+        27,
+        24,
+        29,
+        27,
+        24,
+        39,
+        23,
+        21,
+        32,
+        26,
+        26,
+        43
+      ],
+      "associatedPaperDOI": "10.1073/pnas.1913042117",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "Within subject",
+      "studyDomain": "brain metabolism, brain aging, diabetes",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2021-01-02T06:59:33.515Z"
+  },
+  "source": "openneuro"
+}

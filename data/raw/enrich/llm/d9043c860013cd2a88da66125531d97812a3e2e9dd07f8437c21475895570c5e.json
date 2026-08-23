@@ -1,0 +1,23 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:d9043c860013cd2a88da66125531d97812a3e2e9dd07f8437c21475895570c5e",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "other"
+    ],
+    "id": "physionet:llava-rad-mimic-cxr-annotation",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "MIMIC-CXR free-text radiology reports",
+        "value": "clinical_notes"
+      }
+    ],
+    "population": null,
+    "summary": "GPT-4 extracted sections of MIMIC-CXR radiology reports, complementing rule-based extraction of reason for exam, findings and impression, and removing references to priors, released to support LLaVA-Rad reproducibility."
+  },
+  "prompt_version": "v1"
+}

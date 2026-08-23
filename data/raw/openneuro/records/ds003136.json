@@ -1,0 +1,121 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003136",
+  "payload": {
+    "created": "2020-09-12T17:02:35.009Z",
+    "id": "ds003136",
+    "latestSnapshot": {
+      "created": "2020-09-12T17:04:12.000Z",
+      "description": {
+        "Authors": [
+          "Heidemarie Laurent, PhD",
+          "Megan K. Finnegan",
+          "Katherine Haigler"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds003136.v1.0.0",
+        "Funding": [
+          "This work was supported by the Society for Research in Child Development Victoria Levin Award 'Early Calibration of Stress Systems: Defining Family Influences and Health Outcomes' to Heidemarie Laurent and by the University of Oregon College of Arts and Sciences"
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Postnatal Affective MRI Dataset",
+        "ReferencesAndLinks": null
+      },
+      "readme": "**Postnatal Affective MRI Dataset**\r\n\r\n\r\n**Authors**\r\nHeidemarie Laurent, Megan K. Finnegan, and Katherine Haigler \r\n \r\n\r\n*The Postnatal Affective MRI Dataset (PAMD) includes MRI and psych data from 25 mothers at three months postnatal, with additional psych data collected at three additional timepoints (six, twelve, and eighteen months postnatal). Mother-infant dyad psychosocial tasks and cortisol samples were also collected at all four timepoints, but this data is not included in this dataset. In-scanner tasks involved viewing own- and other-infant affective videos and viewing and labeling adult affective faces. This repository includes de-identified MRI, in-scanner task, demographic, and psych data from this study.*\r\n\r\n\r\n**Citation**\r\nLaurent, H., Finnegan, M. K., & Haigler, K. (2020). Postnatal Affective MRI Dataset. OpenNeuro. Retrieved from OpenNeuro.org. \r\n\r\n\r\n**Acknowledgments**\r\nSaumya Agrawal was instrumental in getting the PAMD dataset into a BIDS-compliant structure.\r\n\r\n\r\n**Funding**\r\nThis work was supported by the Society for Research in Child Development Victoria Levin Award \"Early Calibration of Stress Systems: Defining Family Influences and Health Outcomes\" to Heidemarie Laurent and by the University of Oregon College of Arts and Sciences\r\n \r\n\r\n**Contact**\r\nFor questions about this dataset or to request access to alcohol- and tobacco-related psych data, please contact Dr. Heidemarie Laurent, hlaurent@illinois.edu.\r\n\r\n\r\n**References**\r\nLaurent, H. K., Wright, D., & Finnegan, M. K. (2018). Mindfulness-related differences in neural response to own-infant negative versus positive emotion contexts. Developmental Cognitive Neuroscience 30: 70-76. https://doi.org/10.1016/j.dcn.2018.01.002.\r\n\r\nFinnegan, M. K., Kane, S., Heller, W., & Laurent, H. (2020). Mothers' neural response to valenced infant interactions predicts postnatal depression and anxiety. PLoS One (under review).\r\n\r\n\r\n**MRI Acquisition**\r\nThe PAMD dataset was acquired in 2015 at the University of Oregon Robert and Beverly Lewis Center for Neuroimaging with a 3T Siemens Allegra 3 magnet. A standard 32-channel phase array birdcage coil was used to acquire data from the whole brain. Sessions began with a shimming routine to optimize signal-to-noise ratio, followed by a fast localizer scan (FISP) and Siemens Autoalign routine, a field map, then the 4 functional runs and anatomical scan. \r\n\r\n*Anatomical:* T1*-weighted 3D MPRAGE sequence, TI=1100 ms, TR=2500 ms, TE=3.41 ms, flip angle=7°, 176 sagittal slices, 1.0mm thick, 256×176 matrix, FOV=256mm.\r\n\r\n*Fieldmap:* gradient echo sequence TR=.4ms, TE=.00738 ms, deltaTE=2.46 ms, 4mm thick, 64x64x32x2 matrix.\r\n\r\n*Task:* T2-weighted gradient echo sequence, TR=2000 ms, TE=30 ms, flip angle=90°, 32 contiguous slices acquired ascending and interleaved, 4 mm thick, 64×64 voxel matrix, 226 vols per run.\r\n\r\n\r\n**Participants**\r\nMothers (n=25) of 3-month-old infants were recruited from the Women, Infants, and Children program and other community agencies serving low-income women in a midsize Pacific Northwest city. Mothers' ages ranged from 19 to 33 (M=26.4, SD=3.8). Most mothers were Caucasian (72%, 12% Latina, 8% Asian American, 8% other) and married or living with a romantic partner (88%). Although most reported some education past high school (84%), only 24% had completed college or received a graduate degree, and their median household income was between $20,000 and $29,999. For more than half of the mothers (56%), this was their first child (36% second child, 8% third child). Most infants were born on time (4% before 37 weeks and 8% after 41 weeks of pregnancy), and none had serious health problems. A vaginal delivery was reported by 56% of mothers, with 88% breastfeeding and 67% bed-sharing with their infant at the time of assessment. Over half of the mothers (52%) reported having engaged in some form of contemplative practice (mostly yoga and only 8% indicated some form of meditation), and 31% reported currently engaging in that practice. All women gave informed consent prior to participation, and all study procedures were approved by the University of Oregon Institutional Review Board.\r\n    Due to a task malfunction, participant 178's scanning session was split over two days, with the anatomical acquired in ses-01, and the field maps and tasks acquired in ses-02. \r\n\r\n\r\n**Study overview**\r\nMothers visited the lab to complete assessments at four timepoints postnatal: the first session occurred when mothers were approximately three months postnatal (T1), the second session at approximately six months postnatal (T2), the third session at approximately twelve months postnatal (T3), and the fourth and last session at approximately eighteen months postnatal (T4). MRI scans were acquired shortly after their first session (T1).  \r\n   \r\n\r\n**Asssessment data**\r\nAssessments collected during sessions include demographic, relationship, attachment, mental health, and infant-related questionnaires. For a full list of included measures and timepoints at which they were acquired, please refer to PAMD_codebook.tsv in the phenotype folder. Data has been made available and included in the phenotype folder as 'PAMD_T1_psychdata', 'PAMD_T2_psychdata', 'PAMD_T3_psychdata', 'PAMD_T4_psychdata'. To protect participants' privacy, all identifiers and questions relating to drugs or alcohol have been removed. If you would like access to drug- and alcohol-related questions, please contact the principle investigator, Dr. Heidemarie Laurent, to request access.\r\n    Assessment data will be uploaded shortly.\r\n\r\n\r\n**Post-scan ratings**\r\nAfter the scan session, mothers watched all of the infant videos and rated the infant's and their own emotional valence and intensity for each video. For valence, mothers were asked \"In this video clip, how positive or negative is your baby's emotion?\" and \"While watching this video clip, how positive or negative is your emotion?  from -100 (negative) to +100 (positive). For emotional intensity, mothers were asked \"In this video clip, how intense is your baby's emotion?\" and \"While watching this video clip, how intense is your emotion?\"\" on a scale of  0 (no intensity) to 100 (maximum intensity). Post-scan ratings are available in the phenotype folder as \"PAMD_Post-ScanRatings.\"\r\n \r\n\r\n**MRI Tasks**\r\n\r\n*Neural Reactivity to Own- and Other-Infant Affect*\r\n\r\n    File Name: task-infant \r\n\r\nApproximately three months postnatal, a graduate research assistant visited mothers’ homes to conduct a structured clinical interview and video-record the mother interacting with her infant during a peekaboo and arm-restraint task, designed to elicit positive and negative emotions, respectively. The mother and infant were face-to-face for both tasks. For the peekaboo task, the mother covered her face with her hands and said \"baby,\" then opened her hands and said \"peekaboo\" (Montague and Walker-Andrews, 2001). This continued for three minutes, or until the infant showed expressions of joy. For the arm-restraint task, the mother changed their baby's diaper and then held the infant's arms to their side for up to two minutes (Moscardino and Axia, 2006). The mother was told to keep her face neutral and not talk to her infant during this task. This procedure was repeated with a mother-infant dyad that were not included in the rest of the study to generate other-infant videos. Videos were edited to 15-second clips that showed maximum positive and negative affect. Presentation® software (Version 14.7, Neurobehavioral Systems, Inc. Berkeley, CA, www.neurobs.com) was used to present positive and negative own- and other-infant clips and rest blocks in counterbalanced order during two 7.5-minute runs. Participants were instructed to watch the videos and respond as they normally would without additional task demands. \r\n    To protect participants' and their infants' privacy, infant videos will not be made publicly available. However, the mothers' post-scan rating of their infant's, the other infant's, and their own emotional valence and intensity can be found in the phenotype folder as \"PAMD_Post-ScanRatings.\"\r\n\r\n   \r\n\r\n*Observing and Labeling Affective Faces*\r\n\r\n    File Name: task-affect \r\n \r\nFace stimuli were selected from a standardized set of images (Tottenham, Borscheid, Ellersten, Markus, & Nelson, 2002). Presentation Software (version 14.7, Neurobehavioral Systems, Inc., Berkeley, CA, www.neurobs.com) was used to show participants race-matched adult target faces displaying emotional expressions (positive: three happy faces; negative: one fear, one sad, one anger; two from each category were open-mouthed; one close-mouthed) and were instructed to \"observe\" or choose the correct affect label for the target image. In the observe task, subjects viewed an emotionally evocative face without making a response. During the affect-labeling task, subjects chose the correct affect label (e.g., \"scared,\" \"angry,\" \"happy,\" \"surprised\") from a pair of words shown at the bottom of the screen (Lieberman et al., 2007). Each block was preceded by a 3-second instruction screen cueing participants for the current task (\"observe\" and \"affect labeling\") and  consisted of five affective faces presented for 5 seconds each, with a 1- to 3-second jittered fixation cross between stimuli. Each run consisted of twelve blocks (six observe; six label) counterbalanced within the run and in a semi-random order of trials within blocks (no more than four in a row of positive or negative and, in the affect-labeling task, of the correct label on the right or left side). \r\n\r\n \r\n\r\n**.Nii to BIDs**\r\n\r\nThe raw DICOMs were anonymized and converted to BIDS format using the following procedure (for more details, seehttps://github.com/Haigler/PAMD_BIDS/). \r\n\r\n1. Deidentifying DICOMS: Batch Anonymization of the DICOMS using DicomBrowser (https://nrg.wustl.edu/software/dicom-browser/) \r\n\r\n2. Conversion to .nii and BIDS structure: Anonymized DICOMs were converted to .nii and put into BIDS structure using dicm2nii (https://github.com/xiangruili/dicm2nii). \r\n\r\n3. Converting task .m to .tsv: We converted the mat structs to .tsv for each in-scanner task. \r\n\r\n4. Metadata assembled manually: \r\n\r\n        dataset_description.json \r\n\r\n        participants.tsv \r\n\r\n        task-affect_bold.json \r\n\r\n        task-infant_bold.json \r\n\r\n        PAMD_codebook.tsv \r\n\r\n        PAMD_T1_psychdata.tsv  \r\n\r\n        PAMD_T2_psychdata.tsv \r\n\r\n        PAMD_T3_psychdata.tsv \r\n\r\n        PAMD_T4_psychdata.tsv\r\n\r\n\tPAMD_Post-ScanRatings.tsv \r\n\r\n5. Defacing .nii: PAMD anatomical .nii were defaced with pydeface (https://github.com/poldracklab/pydeface). \r\n\r\n6. BIDS Validation: The full PAMD dataset was validated using bids-validator (https://github.com/bids-standard/bids-validator). \r\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "01",
+          "02"
+        ],
+        "size": 3102786049,
+        "subjects": [
+          "0148",
+          "0178",
+          "0179",
+          "0182",
+          "0184",
+          "0185",
+          "0186",
+          "0187",
+          "0190",
+          "0192",
+          "0193",
+          "0194",
+          "0196",
+          "3080",
+          "3081",
+          "3091",
+          "3120",
+          "3128",
+          "3130",
+          "3142",
+          "3146",
+          "3148",
+          "3217",
+          "3227",
+          "3329"
+        ],
+        "tasks": [
+          "Neural Reactivity to Own- and Other-Infant Affect",
+          "Observing and Labeling Affective Faces"
+        ],
+        "totalFiles": 486
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        21,
+        32,
+        20,
+        25,
+        22,
+        25,
+        27,
+        23,
+        28,
+        29,
+        25,
+        22,
+        22,
+        31,
+        30,
+        31,
+        26,
+        26,
+        30,
+        33,
+        30,
+        31,
+        19,
+        29,
+        27
+      ],
+      "associatedPaperDOI": "10.1016/j.dcn.2018.01.002",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "Society for Research in Child Development Victoria Levin Award",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "postnatal, affect",
+      "studyLongitudinal": "Longitudinal"
+    },
+    "publishDate": "2020-09-15T14:58:23.121Z"
+  },
+  "source": "openneuro"
+}

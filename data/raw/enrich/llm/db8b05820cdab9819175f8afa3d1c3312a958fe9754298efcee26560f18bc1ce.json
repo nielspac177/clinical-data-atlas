@@ -1,0 +1,50 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:db8b05820cdab9819175f8afa3d1c3312a958fe9754298efcee26560f18bc1ce",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "anxiety disorders",
+        "label": "anxiety disorders"
+      },
+      {
+        "evidence": "exposure therapy for specific phobias",
+        "label": "specific phobias"
+      },
+      {
+        "evidence": "posttraumatic stress disorder",
+        "label": "posttraumatic stress disorder"
+      },
+      {
+        "evidence": "fear of flying, social phobia",
+        "label": "social phobia"
+      }
+    ],
+    "countries": [
+      "DE"
+    ],
+    "domains": [
+      "psychiatry"
+    ],
+    "id": "physionet:ecg-spider-clip",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Electrocardiogram, skin conductance and respiration",
+        "value": "ECG"
+      },
+      {
+        "evidence": "using the wearable BITalino biosignal measurement device",
+        "value": "wearable"
+      },
+      {
+        "evidence": "skin conductance and respiration as raw data (unfiltered, unprocessed)",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": "Consented spider-fearful individuals; 57 subjects in total, collected at Saarland University from July 2017 to July 2018",
+    "summary": "Raw electrocardiogram, skin conductance and respiration recorded with a wearable device from consented spider-fearful individuals watching spider video clips during an exposure procedure, for developing online anxiety level detection algorithms."
+  },
+  "prompt_version": "v1"
+}

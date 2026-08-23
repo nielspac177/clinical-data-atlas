@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:21230b4d596991226a31b3b60e653186505c846ded61535a0245e3b0e77d2d89",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Head and neck cancer is common and often associated with poor prognosis",
+        "label": "head and neck cancer"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "surgery"
+    ],
+    "id": "tcia:hancock",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "HE-stained whole slide images are available for primary tumor sites and adjacent lymph nodes",
+        "value": "pathology"
+      },
+      {
+        "evidence": "surgery reports and histologic images",
+        "value": "clinical_notes"
+      },
+      {
+        "evidence": "It contains demographic, pathological, and blood data",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "763 patients with head and neck cancer, monocentric real-world data",
+    "summary": "Monocentric multimodal head and neck cancer resource from 763 patients: demographic, pathological and blood data, surgery reports in German and English, HE-stained whole slide images, and stained tissue microarrays."
+  },
+  "prompt_version": "v1"
+}

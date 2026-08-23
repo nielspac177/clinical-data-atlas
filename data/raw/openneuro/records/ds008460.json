@@ -1,0 +1,116 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds008460",
+  "payload": {
+    "created": "2026-07-23T09:20:42.955Z",
+    "id": "ds008460",
+    "latestSnapshot": {
+      "created": "2026-08-10T22:17:44.000Z",
+      "description": {
+        "Authors": [
+          "Benjamin Gurer",
+          "Rosa-Maria Sanchez-Panchuelo",
+          "Susan Francis",
+          "Denis Schluppeck",
+          "Katrin Krumbholz",
+          "Julien Besle"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds008460.v1.1.0",
+        "Funding": [
+          "Medical Research Council, UK",
+          "American University of Beirut Research Board"
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Frequency Cortical Magnification Auditory Cortex 7T",
+        "ReferencesAndLinks": [
+          "Gurer, B.J., Sanchez-Panchuelo, R.-M., Francis, S.T., Schluppeck, D., Krumbholz, K., Besle, J., 2026. Frequency magnification in human primary auditory cortex nearly predicts behavioural frequency hyperacuity. BioRXiv. https://doi.org/10.64898/2026.06.17.732895 ",
+          "Besle, J., Sánchez-Panchuelo, R.-M., Francis, S., Krumbholz, K., 2022. Can single-neuron frequency tuning in human auditory cortex be quantified through fMRI adaptation? BioRXiv. https://doi.org/10.1101/2022.01.06.475208",
+          "Besle, J., Mougin, O., Sánchez-Panchuelo, R.-M., Lanting, C., Gowland, P., Bowtell, R., Francis, S., Krumbholz, K., 2019. Is Human Auditory Cortex Organization Compatible With the Monkey Model? Contrary Evidence From Ultra-High-Field Functional and Structural MRI. Cerebral Cortex 29, 410–428. https://doi.org/10.1093/cercor/bhy267"
+        ]
+      },
+      "readme": "# Frequency Cortical Magnification in Human Auditory Cortex at 7 Tesla\n\n## Overview\n\nThis dataset contains ultra-high-field (7 Tesla) functional MRI data acquired to investigate the cortical representation of sound frequency in the human primary auditory cortex (Gurer et al. 2026). The study includes two functional paradigms:\n\n- **Frequency-specific adaptation** (participants 1-12): an auditory adaptation paradigm originally designed to investigate frequency-selective adaptation. This paradigm included both varying-frequency and constant-frequency stimuli (at 7 centre frequencies). The seven constant-frequency stimuli were used for tonotopic mapping and to estimate the cortical frequency magnification function.\n- **Tonotopic mapping** (participants 13-20): a tonotopic mapping paradigm with stimuli at 32 centre frequencies, used to estimate the cortical frequency magnification function.\n\nFor each participant, the dataset includes:\n\n- Functional reduced-FOV BOLD fMRI data over the supra-temporal plane (1.5 mm isotropic resolution)\n- High-resolution MP2RAGE anatomical images (magnitude and phase) (0.6 to 0.8 mm isotropic resolution)\n- High-resolution reduced-FOV T2*-weighted anatomical images (in-plane with the BOLD fMRI data)\n\nThe code to replicate the analyses and figures in Gurer et al. (2026) is:\n- hosted at https://github.com/julienbesle/frequencyCorticalMagnification7T\n- archived at https://doi.org/10.5281/zenodo.21879249\n\n---\n\n## Participants\n\nThe dataset contains MRI data from **20 healthy, normal-hearing participants**.\nParticipants 1–12 completed the **adaptation** paradigm, while participants 13–20 completed the **tonotopy** paradigm.\n\n---\n\n## MRI Acquisition\n\nData were acquired on a Philips Achieva 7 Tesla with a Nova Medical 1Tx/32Rx head coil at the Sir Peter Mansfield Imaging Centre, University of Nottingham\n\nDetailed acquisition parameters are provided in the accompanying BIDS JSON sidecars.\n\n---\n\n## Functional Tasks\n\nBoth paradigms used trains of narrow-band-filtered noises at different frequencies (7 frequencies in the Adaptation paradigm and 32 frequencies in the Tonotopy paradigm), presented between fMRI volume acquisitions (sparse). The bandwidth of the noises was constant when expressed in cochlear ERBs (and therefore increased approximately linearly with centre frequency). In both paradigms, participants watched a self-selected subtitled silent movie and were instructed to ignore the sounds.\n\n### Frequency-specific adaptation\nThe paradigm was originally designed to measure frequency-selective adaptation in human auditory cortex using sparse fMRI acquisition. Adaptor-only trials (A) were trains of narrow-band noises at constant centre frequency at one of 7 different centre frequencies. Adaptation (adaptor + probe, AP) trials were trains of two alternating centre frequencies, with the adaptor frequency at one of 5 centre frequencies and the probe frequency always the same frequency. Probe trials (P) were trains of the probe frequency without adaptor.\nThe 7 Adaptor-only trial types were used to map tonotopic representations in auditory cortex and measure its cortical magnification function (Gurer et al., 2026)\nFrequency-specific adaptation was computed as A + P - AP, with the frequency of A varying in frequency across 5 values (Besle et al., 2022)\n\n\n### Tonotopic mapping\nTrains of narrow-band noises were presented at one of 32 centre frequencies to map tonotopic representations in auditory cortex and measure its cortical magnification function (Gurer et al., 2026)\n\n---\n\n## Events Files\n\nEach functional run includes an `events.tsv` file describing the presented stimuli.\n\nThe columns are:\n\n| Column | Description |\n|---------|-------------|\n| `onset` | Stimulus onset (seconds) relative to the beginning of the functional run |\n| `trial_type` | Name of the presented train of narrow-band noise stimuli |\n| `duration` | Stimulus duration (seconds) |\n| `scan` | Sparse acquisition number |\n| `frequency_kHz` | Centre frequency of the stimulus (kHz) |\n| `level_dB_SPL` | Stimulus presentation level (dB SPL) |\n| `bandwidth_kHz` | Stimulus bandwidth (kHz) |\n\nRows corresponding to silent periods or scanner-only acquisitions have been omitted.\n\n---\n\n## Functional Images\n\n2 to 8 reduced-FOV functional runs, depending on the task and the participant. Functional timeseries have been corrected for dynamic B0-related distortions, motion-corrected using linear registration to a reference frame, distortion-corrected using non-linear registration to the reduced-FOV high-resolution T2*w volume and linearly registered to the whole-head PSIR data using the high-res reduced-FOV T2*w volumes as an intermediate (see Besle et al., 2019 for details).\n\nIn addition, the following surface-based functional ROIs are delimiting are provided (in ./derivatives/mrTools) because they were partly hand-drawn during the original analysis:\n- tonotopically-organised auditory cortex\n- the two mirror-reversed tonotopic gradients in primary auditory cortex\n\n---\n\n## Anatomical Images\n\nEach participant includes:\n\n- Whole-head PSIR (MP2RAGE) volumes (`part-mag` and `part-phase`), used to reconstruct the cortical surface for surface-based analysis\n- Reduced-FOV high-resolution T2*-weighted anatomical image, used to estimate and correct the fMRI distortions using non-linear alignment. They have also been linearly registered to the whole-head PSIR volumes.\n\nThe MP2RAGE **magnitude** images have been **defaced** to protect participant anonymity. Phase images were not modified.\n\nIn addition, the following processed data are provided for convenience in ./derivatives/surfRelax (to shorten the analysis time and because they involved some manual steps):\n- freesurfer-reconstructed surfaces, converted to surfRelax format for use in mrTools (required manual segmentation correct in some participants)\n- Freesurfer-preprocessed PSIR images, converted to .nii.gz format\n- mrTools-created flat maps of the supra-temporal plane\n\n---\n\n## Associated Publication\n\nIf you use this dataset, please cite:\n\n### Cortical frequency magnification:\n\nGurer, B.J., Sanchez-Panchuelo, R.-M., Francis, S.T., Schluppeck, D., Krumbholz, K., Besle, J., 2026. Frequency magnification in human primary auditory cortex nearly predicts behavioural frequency hyperacuity. BioRXiv. https://doi.org/10.64898/2026.06.17.732895\n\n### Frequency-specific adaptation:\n\nBesle, J., Sánchez-Panchuelo, R.-M., Francis, S., Krumbholz, K., 2022. Can single-neuron frequency tuning in human auditory cortex be quantified through fMRI adaptation? BioRXiv. https://doi.org/10.1101/2022.01.06.475208\n\n### Parcellation of primary auditory cortex:\n\nBesle, J., Mougin, O., Sánchez-Panchuelo, R.-M., Lanting, C., Gowland, P., Bowtell, R., Francis, S., Krumbholz, K., 2019. Is Human Auditory Cortex Organization Compatible With the Monkey Model? Contrary Evidence From Ultra-High-Field Functional and Structural MRI. Cerebral Cortex 29, 410–428. https://doi.org/10.1093/cercor/bhy267\n\n\n---\n\n## Contact\n\n**Corresponding author**\n\nJulien Besle\n\nSchool of Psychology\n\nUniversity of Plymouth\n\nEmail: julien.besle@plymouth.ac.uk\n\n---\n\n## License\n\nThis dataset is distributed under the **CC0 1.0 Universal** license.",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 8173186947,
+        "subjects": [
+          "11",
+          "02",
+          "13",
+          "19",
+          "06",
+          "03",
+          "04",
+          "05",
+          "09",
+          "10",
+          "08",
+          "01",
+          "07",
+          "20",
+          "18",
+          "17",
+          "16",
+          "15",
+          "14",
+          "12"
+        ],
+        "tasks": [
+          "tonotopy",
+          "adaptation"
+        ],
+        "totalFiles": 331
+      },
+      "tag": "1.1.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "DOI of papers from the source data lab:  10.64898/2026.06.17.732895;  10.1101/2022.01.06.475208;  10.1093/cercor/bhy267",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "Medical Research Council, UK;  American University of Beirut Reserach Board",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "Within-subject",
+      "studyDomain": "Functional mapping of primary auditory cortex",
+      "studyLongitudinal": "Experimental"
+    },
+    "publishDate": "2026-07-23T11:35:07.659Z"
+  },
+  "source": "openneuro"
+}

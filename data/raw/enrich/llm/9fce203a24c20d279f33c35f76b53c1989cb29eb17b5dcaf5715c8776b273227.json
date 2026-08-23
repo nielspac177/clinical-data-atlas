@@ -1,0 +1,45 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:9fce203a24c20d279f33c35f76b53c1989cb29eb17b5dcaf5715c8776b273227",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "histologically proven soft-tissue sarcomas (STSs) of the extremities",
+        "label": "soft-tissue sarcomas of the extremities"
+      },
+      {
+        "evidence": "patients developed lung metastases",
+        "label": "lung metastases"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "pulmonology"
+    ],
+    "id": "tcia:soft-tissue-sarcoma",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "pre-treatment FDG-PET/CT and MRI scans",
+        "value": "MRI"
+      },
+      {
+        "evidence": "FDG-PET",
+        "value": "PET"
+      },
+      {
+        "evidence": "FDG-PET/CT",
+        "value": "CT"
+      },
+      {
+        "evidence": "RTSTRUCT",
+        "value": "radiotherapy"
+      }
+    ],
+    "population": "a cohort of 51 patients with histologically proven soft-tissue sarcomas (STSs) of the extremities; patients with metastatic and/or recurrent STSs at presentation were excluded",
+    "summary": "Pre-treatment FDG-PET/CT and MRI scans from a retrospectively evaluated cohort of patients with histologically proven soft-tissue sarcomas of the extremities, used to build a radiomics model predicting lung metastases."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,2245 @@
+{
+  "endpoints": [
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getCollectionValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getModalityValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getBodyPartValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getPatient",
+    "https://api.datacite.org/dois?prefix=10.7937"
+  ],
+  "harvest_method": "api:nbia+datacite",
+  "native_id": "C4KC-KiTS",
+  "payload": {
+    "datacite": {
+      "citationCount": 16,
+      "container": {},
+      "contentUrl": [],
+      "contributors": [
+        {
+          "affiliation": [],
+          "contributorType": "DataCurator",
+          "name": "TCIA Team",
+          "nameIdentifiers": []
+        }
+      ],
+      "created": "2019-10-25T19:08:26Z",
+      "creators": [
+        {
+          "affiliation": [],
+          "familyName": "Heller",
+          "givenName": "Nicholas",
+          "name": "Heller, Nicholas",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Sathianathen",
+          "givenName": "Niranjan",
+          "name": "Sathianathen, Niranjan",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Kalapara",
+          "givenName": "Arveen",
+          "name": "Kalapara, Arveen",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Walczak",
+          "givenName": "Edward",
+          "name": "Walczak, Edward",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Moore",
+          "givenName": "Keenan",
+          "name": "Moore, Keenan",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Kaluzniak",
+          "givenName": "Heather",
+          "name": "Kaluzniak, Heather",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Rosenberg",
+          "givenName": "Joel",
+          "name": "Rosenberg, Joel",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Blake",
+          "givenName": "Paul",
+          "name": "Blake, Paul",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Rengel",
+          "givenName": "Zachary",
+          "name": "Rengel, Zachary",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Oestreich",
+          "givenName": "Makinna",
+          "name": "Oestreich, Makinna",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Dean",
+          "givenName": "Joshua",
+          "name": "Dean, Joshua",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Tradewell",
+          "givenName": "Michael",
+          "name": "Tradewell, Michael",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Shah",
+          "givenName": "Aneri",
+          "name": "Shah, Aneri",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Tejpaul",
+          "givenName": "Resha",
+          "name": "Tejpaul, Resha",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Edgerton",
+          "givenName": "Zachary",
+          "name": "Edgerton, Zachary",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Peterson",
+          "givenName": "Matthew",
+          "name": "Peterson, Matthew",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Raza",
+          "givenName": "Shaneabbas",
+          "name": "Raza, Shaneabbas",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Regmi",
+          "givenName": "Subodh",
+          "name": "Regmi, Subodh",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Papanikolopoulos",
+          "givenName": "Nikolaos",
+          "name": "Papanikolopoulos, Nikolaos",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Weight",
+          "givenName": "Christopher",
+          "name": "Weight, Christopher",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2019",
+          "dateType": "Issued"
+        }
+      ],
+      "descriptions": [
+        {
+          "description": "The morphometry of a kidney tumor revealed by contrast-enhanced Computed Tomography (CT) imaging is an important factor in clinical decision making surrounding the lesion's diagnosis and treatment. Quantitative study of the association between kidney tumor morphometry and clinical outcomes is difficult due to data scarcity and the laborious nature of manually quantifying imaging predictors. Reliable semantic segmentation of kidneys and kidney tumors is a powerful tool towards automatically quantifying a wide array of morphometric features, but no sizeable annotated dataset is currently available to train models for this task. We present the KiTS19 challenge dataset: A collection of multi-phase CT imaging, segmentation masks, and comprehensive clinical outcomes for 300 patients who underwent nephrectomy for kidney tumors at our center between 2010 and 2018. 210 (70%) of these patients were selected at random as the training set for the 2019 MICCAI KiTS Kidney Tumor Segmentation Challenge. With the presence of comorbidities and clinical outcomes, this data can serve not only for benchmarking semantic segmentation models, but also for developing and studying biomarkers which make use of the imaging in conjunction with semantic segmentation masks.",
+          "descriptionType": "Abstract",
+          "lang": null
+        }
+      ],
+      "doi": "10.7937/tcia.2019.ix49e8nx",
+      "downloadCount": 0,
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "C4KC-KiTS",
+          "identifierType": "TCIA Short Name"
+        }
+      ],
+      "isActive": true,
+      "language": null,
+      "metadataVersion": 16,
+      "partCount": 0,
+      "partOfCount": 0,
+      "publicationYear": 2019,
+      "published": null,
+      "publisher": "The Cancer Imaging Archive",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2019-10-25T19:08:26Z",
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "10.1109/usbereit51232.2021.9455032",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.3389/fonc.2021.637804",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1002/mp.15932",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.dib.2023.109672",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1007/978-3-031-43990-2_2",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1038/s41597-024-03337-6",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1007/978-3-030-87196-3_7",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.3389/fmed.2022.974485",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.ejmp.2022.10.027",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.redii.2022.100019",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1177/08465371231180844",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.compbiomed.2024.109140",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        }
+      ],
+      "relatedItems": [],
+      "rightsList": [
+        {
+          "rights": "Creative Commons Attribution 3.0 Unported",
+          "rightsIdentifier": "cc-by-3.0",
+          "rightsIdentifierScheme": "SPDX",
+          "rightsUri": "https://creativecommons.org/licenses/by/3.0/legalcode",
+          "schemeUri": "https://spdx.org/licenses/"
+        }
+      ],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "fabricaForm",
+      "state": "findable",
+      "subjects": [],
+      "titles": [
+        {
+          "lang": null,
+          "title": "C4KC KiTS Challenge Kidney Tumor Segmentation Dataset",
+          "titleType": null
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2025-06-01T01:01:13Z",
+      "url": "https://www.cancerimagingarchive.net/collection/c4kc-kits/",
+      "version": "3",
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 7518
+    },
+    "nbia": {
+      "body_parts": [
+        "ABDOMEN",
+        "ABDOMENPELVIS",
+        "CHEST",
+        "CHESTABDPELVIS",
+        "KIDNEY",
+        "WO INTER"
+      ],
+      "collection": "C4KC-KiTS",
+      "modalities": [
+        "CT",
+        "SEG"
+      ],
+      "patients": [
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00000",
+          "PatientName": "KiTS-00000",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00001",
+          "PatientName": "KiTS-00001",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00002",
+          "PatientName": "KiTS-00002",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00003",
+          "PatientName": "KiTS-00003",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00004",
+          "PatientName": "KiTS-00004",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00005",
+          "PatientName": "KiTS-00005",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "EthnicGroup": "1",
+          "PatientId": "KiTS-00006",
+          "PatientName": "KiTS-00006",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00007",
+          "PatientName": "KiTS-00007",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00008",
+          "PatientName": "KiTS-00008",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00009",
+          "PatientName": "KiTS-00009",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00010",
+          "PatientName": "KiTS-00010",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00011",
+          "PatientName": "KiTS-00011",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00012",
+          "PatientName": "KiTS-00012",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00013",
+          "PatientName": "KiTS-00013",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00014",
+          "PatientName": "KiTS-00014",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "EthnicGroup": "C",
+          "PatientId": "KiTS-00015",
+          "PatientName": "KiTS-00015",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00016",
+          "PatientName": "KiTS-00016",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00017",
+          "PatientName": "KiTS-00017",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00018",
+          "PatientName": "KiTS-00018",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00019",
+          "PatientName": "KiTS-00019",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00020",
+          "PatientName": "KiTS-00020",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00021",
+          "PatientName": "KiTS-00021",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00022",
+          "PatientName": "KiTS-00022",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "EthnicGroup": "H",
+          "PatientId": "KiTS-00023",
+          "PatientName": "KiTS-00023",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00024",
+          "PatientName": "KiTS-00024",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00025",
+          "PatientName": "KiTS-00025",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00026",
+          "PatientName": "KiTS-00026",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00027",
+          "PatientName": "KiTS-00027",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00028",
+          "PatientName": "KiTS-00028",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00029",
+          "PatientName": "KiTS-00029",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00030",
+          "PatientName": "KiTS-00030",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00031",
+          "PatientName": "KiTS-00031",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00032",
+          "PatientName": "KiTS-00032",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00033",
+          "PatientName": "KiTS-00033",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00034",
+          "PatientName": "KiTS-00034",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00035",
+          "PatientName": "KiTS-00035",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00036",
+          "PatientName": "KiTS-00036",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00037",
+          "PatientName": "KiTS-00037",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00038",
+          "PatientName": "KiTS-00038",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00039",
+          "PatientName": "KiTS-00039",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00040",
+          "PatientName": "KiTS-00040",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "EthnicGroup": "1",
+          "PatientId": "KiTS-00041",
+          "PatientName": "KiTS-00041",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00042",
+          "PatientName": "KiTS-00042",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "EthnicGroup": "W",
+          "PatientId": "KiTS-00043",
+          "PatientName": "KiTS-00043",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00044",
+          "PatientName": "KiTS-00044",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00045",
+          "PatientName": "KiTS-00045",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00046",
+          "PatientName": "KiTS-00046",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00047",
+          "PatientName": "KiTS-00047",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00048",
+          "PatientName": "KiTS-00048",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00049",
+          "PatientName": "KiTS-00049",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00050",
+          "PatientName": "KiTS-00050",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00051",
+          "PatientName": "KiTS-00051",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00052",
+          "PatientName": "KiTS-00052",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00053",
+          "PatientName": "KiTS-00053",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00054",
+          "PatientName": "KiTS-00054",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00055",
+          "PatientName": "KiTS-00055",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00056",
+          "PatientName": "KiTS-00056",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00057",
+          "PatientName": "KiTS-00057",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00058",
+          "PatientName": "KiTS-00058",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00059",
+          "PatientName": "KiTS-00059",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00060",
+          "PatientName": "KiTS-00060",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00061",
+          "PatientName": "KiTS-00061",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00062",
+          "PatientName": "KiTS-00062",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00063",
+          "PatientName": "KiTS-00063",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "EthnicGroup": "UNK",
+          "PatientId": "KiTS-00064",
+          "PatientName": "KiTS-00064",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00065",
+          "PatientName": "KiTS-00065",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00066",
+          "PatientName": "KiTS-00066",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00067",
+          "PatientName": "KiTS-00067",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00068",
+          "PatientName": "KiTS-00068",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00069",
+          "PatientName": "KiTS-00069",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00070",
+          "PatientName": "KiTS-00070",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00071",
+          "PatientName": "KiTS-00071",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00072",
+          "PatientName": "KiTS-00072",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00073",
+          "PatientName": "KiTS-00073",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00074",
+          "PatientName": "KiTS-00074",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00075",
+          "PatientName": "KiTS-00075",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00076",
+          "PatientName": "KiTS-00076",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00077",
+          "PatientName": "KiTS-00077",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00078",
+          "PatientName": "KiTS-00078",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00079",
+          "PatientName": "KiTS-00079",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00080",
+          "PatientName": "KiTS-00080",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "EthnicGroup": "W",
+          "PatientId": "KiTS-00081",
+          "PatientName": "KiTS-00081",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00082",
+          "PatientName": "KiTS-00082",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00083",
+          "PatientName": "KiTS-00083",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00084",
+          "PatientName": "KiTS-00084",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00085",
+          "PatientName": "KiTS-00085",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00086",
+          "PatientName": "KiTS-00086",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00087",
+          "PatientName": "KiTS-00087",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00088",
+          "PatientName": "KiTS-00088",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00089",
+          "PatientName": "KiTS-00089",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00090",
+          "PatientName": "KiTS-00090",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00091",
+          "PatientName": "KiTS-00091",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "EthnicGroup": "C",
+          "PatientId": "KiTS-00092",
+          "PatientName": "KiTS-00092",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00093",
+          "PatientName": "KiTS-00093",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00094",
+          "PatientName": "KiTS-00094",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00095",
+          "PatientName": "KiTS-00095",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00096",
+          "PatientName": "KiTS-00096",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00097",
+          "PatientName": "KiTS-00097",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00098",
+          "PatientName": "KiTS-00098",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00099",
+          "PatientName": "KiTS-00099",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00100",
+          "PatientName": "KiTS-00100",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00101",
+          "PatientName": "KiTS-00101",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00102",
+          "PatientName": "KiTS-00102",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00103",
+          "PatientName": "KiTS-00103",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00104",
+          "PatientName": "KiTS-00104",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00105",
+          "PatientName": "KiTS-00105",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00106",
+          "PatientName": "KiTS-00106",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00107",
+          "PatientName": "KiTS-00107",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00108",
+          "PatientName": "KiTS-00108",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00109",
+          "PatientName": "KiTS-00109",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00110",
+          "PatientName": "KiTS-00110",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00111",
+          "PatientName": "KiTS-00111",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00112",
+          "PatientName": "KiTS-00112",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00113",
+          "PatientName": "KiTS-00113",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00114",
+          "PatientName": "KiTS-00114",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00115",
+          "PatientName": "KiTS-00115",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00116",
+          "PatientName": "KiTS-00116",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00117",
+          "PatientName": "KiTS-00117",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00118",
+          "PatientName": "KiTS-00118",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00119",
+          "PatientName": "KiTS-00119",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00120",
+          "PatientName": "KiTS-00120",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00122",
+          "PatientName": "KiTS-00122",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00121",
+          "PatientName": "KiTS-00121",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00123",
+          "PatientName": "KiTS-00123",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00124",
+          "PatientName": "KiTS-00124",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00125",
+          "PatientName": "KiTS-00125",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00126",
+          "PatientName": "KiTS-00126",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00127",
+          "PatientName": "KiTS-00127",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00128",
+          "PatientName": "KiTS-00128",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00129",
+          "PatientName": "KiTS-00129",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00130",
+          "PatientName": "KiTS-00130",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "EthnicGroup": "C",
+          "PatientId": "KiTS-00131",
+          "PatientName": "KiTS-00131",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00132",
+          "PatientName": "KiTS-00132",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00133",
+          "PatientName": "KiTS-00133",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00134",
+          "PatientName": "KiTS-00134",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00135",
+          "PatientName": "KiTS-00135",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00136",
+          "PatientName": "KiTS-00136",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00137",
+          "PatientName": "KiTS-00137",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00138",
+          "PatientName": "KiTS-00138",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00139",
+          "PatientName": "KiTS-00139",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00140",
+          "PatientName": "KiTS-00140",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00141",
+          "PatientName": "KiTS-00141",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00142",
+          "PatientName": "KiTS-00142",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "EthnicGroup": "1",
+          "PatientId": "KiTS-00143",
+          "PatientName": "KiTS-00143",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00144",
+          "PatientName": "KiTS-00144",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00145",
+          "PatientName": "KiTS-00145",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00146",
+          "PatientName": "KiTS-00146",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00147",
+          "PatientName": "KiTS-00147",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00148",
+          "PatientName": "KiTS-00148",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00149",
+          "PatientName": "KiTS-00149",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00150",
+          "PatientName": "KiTS-00150",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00151",
+          "PatientName": "KiTS-00151",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00152",
+          "PatientName": "KiTS-00152",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00153",
+          "PatientName": "KiTS-00153",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00154",
+          "PatientName": "KiTS-00154",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00155",
+          "PatientName": "KiTS-00155",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00156",
+          "PatientName": "KiTS-00156",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00157",
+          "PatientName": "KiTS-00157",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00158",
+          "PatientName": "KiTS-00158",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00159",
+          "PatientName": "KiTS-00159",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00160",
+          "PatientName": "KiTS-00160",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00161",
+          "PatientName": "KiTS-00161",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00162",
+          "PatientName": "KiTS-00162",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00163",
+          "PatientName": "KiTS-00163",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00164",
+          "PatientName": "KiTS-00164",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00165",
+          "PatientName": "KiTS-00165",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00166",
+          "PatientName": "KiTS-00166",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00167",
+          "PatientName": "KiTS-00167",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "EthnicGroup": "UNK",
+          "PatientId": "KiTS-00168",
+          "PatientName": "KiTS-00168",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "EthnicGroup": "C",
+          "PatientId": "KiTS-00169",
+          "PatientName": "KiTS-00169",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00170",
+          "PatientName": "KiTS-00170",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00171",
+          "PatientName": "KiTS-00171",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00172",
+          "PatientName": "KiTS-00172",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00173",
+          "PatientName": "KiTS-00173",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00174",
+          "PatientName": "KiTS-00174",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00175",
+          "PatientName": "KiTS-00175",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00176",
+          "PatientName": "KiTS-00176",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00177",
+          "PatientName": "KiTS-00177",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "EthnicGroup": "C",
+          "PatientId": "KiTS-00178",
+          "PatientName": "KiTS-00178",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00179",
+          "PatientName": "KiTS-00179",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00180",
+          "PatientName": "KiTS-00180",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00181",
+          "PatientName": "KiTS-00181",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "EthnicGroup": "1",
+          "PatientId": "KiTS-00182",
+          "PatientName": "KiTS-00182",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00183",
+          "PatientName": "KiTS-00183",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00184",
+          "PatientName": "KiTS-00184",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00185",
+          "PatientName": "KiTS-00185",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00186",
+          "PatientName": "KiTS-00186",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00187",
+          "PatientName": "KiTS-00187",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00188",
+          "PatientName": "KiTS-00188",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00189",
+          "PatientName": "KiTS-00189",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00190",
+          "PatientName": "KiTS-00190",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00191",
+          "PatientName": "KiTS-00191",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00192",
+          "PatientName": "KiTS-00192",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00193",
+          "PatientName": "KiTS-00193",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "EthnicGroup": "C",
+          "PatientId": "KiTS-00194",
+          "PatientName": "KiTS-00194",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00195",
+          "PatientName": "KiTS-00195",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00196",
+          "PatientName": "KiTS-00196",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00197",
+          "PatientName": "KiTS-00197",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00198",
+          "PatientName": "KiTS-00198",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00199",
+          "PatientName": "KiTS-00199",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00200",
+          "PatientName": "KiTS-00200",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00201",
+          "PatientName": "KiTS-00201",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00202",
+          "PatientName": "KiTS-00202",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00203",
+          "PatientName": "KiTS-00203",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00204",
+          "PatientName": "KiTS-00204",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "EthnicGroup": "W",
+          "PatientId": "KiTS-00205",
+          "PatientName": "KiTS-00205",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00206",
+          "PatientName": "KiTS-00206",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00207",
+          "PatientName": "KiTS-00207",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00208",
+          "PatientName": "KiTS-00208",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "C4KC-KiTS",
+          "PatientId": "KiTS-00209",
+          "PatientName": "KiTS-00209",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        }
+      ]
+    }
+  },
+  "source": "tcia"
+}

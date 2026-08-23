@@ -1,0 +1,35 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "drugehrqa",
+  "payload": {
+    "abstract": "<p>Electronic Health Records (EHR) contain patient records, stored in structured tables as well as unstructured clinical notes. The information in structured and unstructured EHR records is not strictly disjoint: information may be duplicated, contradictory, or provide additional context between these sources. This presents a rich opportunity to study question answering (QA) models that combine reasoning over both structured and unstructured data. This work presents the first question answering (QA) dataset (DrugEHRQA) containing question-answer pairs from both structured tables and unstructured notes from MIMIC-III, a publicly available Electronic Health Record (EHR). We are releasing a QA dataset over MIMIC-III tables through PhysioNet, containing 41,417 triplets of natural language questions, its corresponding SQL query and the answer retrieved from MIMIC-III tables. We also generated a QA dataset on the unstructured clinical notes of MIMIC-III which can be found in the n2c2 repository. Both these datasets are combined to generate a multimodal QA dataset (DrugEHRQA), which contains question-answers from both structured and unstructured data of MIMIC-III. The DrugEHRQA dataset has medication-related queries, containing over 70,000 question-answer pairs.&nbsp; Our goal is to provide a benchmark dataset for multi-modal QA systems, and to open up new avenues of research in improving question answering over EHR structured data by using context from unstructured clinical data.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 2122430,
+    "core_doi": "10.13026/chym-n302",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 20569544,
+    "public_project_uuid": "d77222f5-e0d2-4005-b152-0ddaa068f597",
+    "publish_date": "2022-04-12",
+    "resource_type": "Database",
+    "short_description": "DrugEHRQA is a QA dataset containing question-answers from MIMIC-III tables and discharge summaries.",
+    "slug": "drugehrqa",
+    "source_url": "https://physionet.org/content/drugehrqa/1.0.0/",
+    "title": "DrugEHRQA: A Question Answering Dataset on Structured and Unstructured Electronic Health Records For Medicine Related Queries",
+    "topics": [
+      "question-answer",
+      "qa"
+    ],
+    "version": "1.0.0",
+    "version_doi": "10.13026/a849-cd06"
+  },
+  "source": "physionet"
+}

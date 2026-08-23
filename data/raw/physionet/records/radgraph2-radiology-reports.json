@@ -1,0 +1,39 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "radgraph2-radiology-reports",
+  "payload": {
+    "abstract": "<p><span><span><span><span><span><span>RadGraph2 is a dataset of 800 chest radiology reports annotated using a fine-grained entity-relationship schema, which is an expanded version of the previously introduced RadGraph dataset. In contrast with the previous approaches and the original RadGraph, the new version of the used information extraction schema is designed to capture not only the key findings and their context but also the mentions of changes that occurred between the prior radiology examinations and the more recent study. These changes may include the appearance of new conditions affecting the patient, their progression, or the differences in the setup of the observed supporting devices. The information extracted from each report is represented in the form of a knowledge graph composed of clinically relevant entities and relations, which makes it easily amenable to automated processing. In addition to the dataset of manually labeled reports, we release more than 220,000 reports automatically annotated by our benchmark model. This model achieved an F1 micro performance of 0.88 and 0.74 on two differently sourced withheld test sets (from MIMIC-CXR-JPG and CheXpert, respectively). We believe that RadGraph2 could facilitate the development of clinically useful systems for the automated processing of radiology reports, particularly those reasoning about the evolution of a patient&rsquo;s state over time.</span></span></span></span></span></span></p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 111158751,
+    "core_doi": "10.13026/qptf-zh55",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 893588285,
+    "public_project_uuid": "fc17ab3b-1afd-41b6-8d15-c10211c55511",
+    "publish_date": "2024-08-08",
+    "resource_type": "Database",
+    "short_description": "RadGraph2 is a dataset of 800 chest radiology reports annotated using a fine-grained entity-relationship schema, which captures key findings as well as mentions of changes that occurred in comparison with the previous radiology studies.",
+    "slug": "radgraph2-radiology-reports",
+    "source_url": "https://physionet.org/content/radgraph2-radiology-reports/1.0.0/",
+    "title": "RadGraph2: Tracking Findings Over Time in Radiology Reports",
+    "topics": [
+      "chest x-rays",
+      "radiology reports",
+      "disease progression",
+      "relation extraction",
+      "named entity recognition",
+      "information extraction"
+    ],
+    "version": "1.0.0",
+    "version_doi": "10.13026/q65y-9688"
+  },
+  "source": "physionet"
+}

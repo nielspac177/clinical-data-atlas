@@ -1,0 +1,32 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "radgraph-xl",
+  "payload": {
+    "abstract": "<p>Radiology reports are essential for clinical care but pose challenges for automated processing due to their unstructured nature. Existing datasets like RadGraph-1.0 focus narrowly on chest X-rays (CXR), limiting their applicability. We introduce RadGraph-XL, a large-scale, expert-annotated dataset of 2,300 radiology reports with over 410,000 labeled entities and relations, spanning four anatomy-modality pairs: chest computed tomography (CT), abdomen/pelvis CT, brain magnetic resonance imaging (MR), and CXR.</p>\n<p>Each report is annotated by board-certified radiologists using a detailed schema that captures observations, anatomical references, and their relationships. A novel post-processing step identifies measurement-related entities, a clinically valuable category. Trained models using RadGraph-XL outperform prior methods and GPT-4, and generalize well to out-of-domain data such as deep vein thrombosis (DVT) ultrasound reports.</p>\n<p>RadGraph-XL is released publicly with models and annotations to support applications in clinical natural language processing (NLP), medical imaging artificial intelligence, and foundation model evaluation, setting a new benchmark for structured information extraction in radiology.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 526091,
+    "core_doi": "10.13026/6tw7-rq96",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 3089420,
+    "public_project_uuid": "1a2542b8-095e-4dbf-8fe2-658d2bb2f4e3",
+    "publish_date": "2025-09-12",
+    "resource_type": "Database",
+    "short_description": "RadGraph-XL is a large, expert-annotated dataset of 2,300 radiology reports covering multiple modalities and anatomies. It enables accurate extraction of clinical entities and relations for downstream medical AI tasks.",
+    "slug": "radgraph-xl",
+    "source_url": "https://physionet.org/content/radgraph-xl/1.0.0/",
+    "title": "RadGraph-XL: A Large-Scale Expert-Annotated Dataset for Entity and Relation Extraction from Radiology Reports",
+    "topics": [],
+    "version": "1.0.0",
+    "version_doi": "10.13026/j8e7-pr22"
+  },
+  "source": "physionet"
+}

@@ -1,0 +1,31 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:5451be73f8aa94d481142687e25c431aa41959d62ab764e12b3fd2265e90559e",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:butppg",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "3,888 10-second recordings of PPGs",
+        "value": "PPG"
+      },
+      {
+        "evidence": "associated ECG signals used for determination of reference HR",
+        "value": "ECG"
+      },
+      {
+        "evidence": "single-value annotations of blood pressure, blood oxygen saturation and glycaemia",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": "50 subjects (25 female, 25 male) aged between 19 to 76 years at rest and during various types of movement",
+    "summary": "Smartphone-recorded photoplethysmography signals with simultaneous reference ECG and accelerometer data, collected at rest and during movement, annotated for signal quality and reference heart rate to support quality assessment and heart rate estimation."
+  },
+  "prompt_version": "v1"
+}

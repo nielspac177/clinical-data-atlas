@@ -1,0 +1,64 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:1ebe3b0f370d671289d762e3bcfecfee68aab223230e750305b388a45ed0e6ca",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Neoplasms, NOS",
+        "label": "Neoplasms, NOS"
+      },
+      {
+        "evidence": "Adenomas and Adenocarcinomas",
+        "label": "Adenomas and Adenocarcinomas"
+      },
+      {
+        "evidence": "Mesothelial Neoplasms",
+        "label": "Mesothelial Neoplasms"
+      },
+      {
+        "evidence": "Fibromatous Neoplasms",
+        "label": "Fibromatous Neoplasms"
+      },
+      {
+        "evidence": "Epithelial Neoplasms, NOS",
+        "label": "Epithelial Neoplasms, NOS"
+      },
+      {
+        "evidence": "Squamous Cell Neoplasms",
+        "label": "Squamous Cell Neoplasms"
+      },
+      {
+        "evidence": "Nerve Sheath Tumors",
+        "label": "Nerve Sheath Tumors"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "neurology",
+      "pulmonology",
+      "gastroenterology_hepatology",
+      "nephrology_urology"
+    ],
+    "id": "gdc:MATCH-U",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "WXS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "RNA-Seq",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "23 human cases with tumors of female genital organs, lung, cervix, meninges, biliary tract, liver, brain, heart/mediastinum/pleura, soft tissue, kidney and ovary",
+    "summary": "Genomic characterization of MATCH trial Arm U: whole-exome and RNA sequencing with variant, biospecimen and clinical data, from tumors of the lung, cervix, meninges, liver, brain, pleura, kidney and ovary."
+  },
+  "prompt_version": "v1"
+}

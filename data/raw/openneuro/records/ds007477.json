@@ -1,0 +1,101 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007477",
+  "payload": {
+    "created": "2026-03-06T03:08:35.425Z",
+    "id": "ds007477",
+    "latestSnapshot": {
+      "created": "2026-03-18T13:20:02.000Z",
+      "description": {
+        "Authors": [
+          "Niu，Haijing",
+          "Zheng, Sha",
+          "Yuan, Haodong"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007477.v1.0.1",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "TimeSeries BIDS converted",
+        "ReferencesAndLinks": null
+      },
+      "readme": "This dataset was converted from TimeSeriesHbORT_18sub_twoSessionICAdenoise(1).mat using `convert_mat_to_bids.py`.\n\nNotes:\n- Review and confirm `*_nirs.json` (SamplingFrequency, NIRSChannelCount, source/detector mapping) before public release.\n- This README is a placeholder to satisfy BIDS recommendations; replace with dataset-specific information as needed.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "nirs"
+        ],
+        "secondaryModalities": [],
+        "sessions": [
+          "02",
+          "01"
+        ],
+        "size": 9384,
+        "subjects": [
+          "12",
+          "15",
+          "10",
+          "02",
+          "01",
+          "14",
+          "06",
+          "17",
+          "07",
+          "08",
+          "03",
+          "11",
+          "05",
+          "13",
+          "16",
+          "18",
+          "09",
+          "04"
+        ],
+        "tasks": [
+          "ort"
+        ],
+        "totalFiles": 112
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "10.1371/journal.pone.0072425",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "国家自然科学基金（National Natural Science Foundation of China）、北京师范大学认知神经科学与学习国家重点实验室",
+      "modalities": [
+        "nirs"
+      ],
+      "species": "Human",
+      "studyDesign": "重测信度研究（Test-retest reliability study）：对 18 名健康被试在约 20 分钟间隔内进行两次静息态 fNIRS 扫描，评估脑网络图指标的可靠性",
+      "studyDomain": "认知神经科学 / 神经影像学 / 脑网络分析",
+      "studyLongitudinal": "Longitudinal"
+    },
+    "publishDate": "2026-03-06T08:27:05.388Z"
+  },
+  "source": "openneuro"
+}

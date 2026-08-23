@@ -1,0 +1,36 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "mimic-ext-synth-trial-question",
+  "payload": {
+    "abstract": "<p>Large-language models (LLMs) show promise for extracting information from clinical notes. Deploying these models at scale can be challenging due to high computational costs, regulatory constraints, and privacy concerns. To address these challenges, synthetic data distillation can be used to fine-tune smaller, open-source LLMs that achieve performance similar to the teacher model. These smaller models can be run on less expensive local hardware or at a vastly reduced cost in cloud deployments.</p>\n<p>In our recent study [1], we used Llama-3.1-70B-Instruct to generate synthetic training examples in the form of question-answer pairs along with supporting information. We manually reviewed 1000 of these examples and release them here. These examples can then be used to fine-tune smaller versions of Llama to improve their ability to extract clinical information from notes.</p>",
+    "access_policy": "Restricted",
+    "compressed_storage_size": 4580777,
+    "core_doi": "10.13026/rqxd-sz93",
+    "dua": {
+      "name": "PhysioNet Restricted Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Restricted Health Data License 1.5.0"
+    },
+    "main_storage_size": 12987862,
+    "public_project_uuid": "6ce6eb07-cbcd-4b99-978b-ccb15283315f",
+    "publish_date": "2025-04-22",
+    "resource_type": "Database",
+    "short_description": "In our recent study, we used Llama-3.1-70B-Instruct to generate synthetic training examples resembling clinical trial eligibility criteria. We manually reviewed 1000 of these examples and release them here.",
+    "slug": "mimic-ext-synth-trial-question",
+    "source_url": "https://physionet.org/content/mimic-ext-synth-trial-question/1.0.0/",
+    "title": "MIMIC-III-Ext-Synthetic-Clinical-Trial-Questions",
+    "topics": [
+      "large language models",
+      "synthetic data distillation",
+      "clinical trial eligibility"
+    ],
+    "version": "1.0.0",
+    "version_doi": "10.13026/30k0-av04"
+  },
+  "source": "physionet"
+}

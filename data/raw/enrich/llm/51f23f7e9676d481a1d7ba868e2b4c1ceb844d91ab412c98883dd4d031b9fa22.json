@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:51f23f7e9676d481a1d7ba868e2b4c1ceb844d91ab412c98883dd4d031b9fa22",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "which exhibit transient ST depression",
+        "label": "transient ST depression"
+      },
+      {
+        "evidence": "are excerpts of long-term ECG recordings and exhibit ST elevation",
+        "label": "ST elevation"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:stdb",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "This database includes 28 ECG recordings of varying lengths",
+        "value": "ECG"
+      }
+    ],
+    "population": null,
+    "summary": "28 ECG recordings of varying lengths, mostly from exercise stress tests showing transient ST depression; the last five are excerpts of long-term recordings showing ST elevation."
+  },
+  "prompt_version": "v1"
+}

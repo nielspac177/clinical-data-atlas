@@ -1,0 +1,37 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "mimic-iv-ext-clif",
+  "payload": {
+    "abstract": "<p>MIMIC-IV-Ext-CLIF is a derived dataset of MIMIC-IV v3.1, transformed into the Common Longitudinal ICU data Format (CLIF). CLIF is an open-source critical care data model developed by a consortium of more than 10 US academic medical centers to standardize intensive care unit (ICU) data for multi-center research. While CLIF has demonstrated value in federated research settings, access has been limited to consortium members with institutional electronic health record (EHR) data. This dataset addresses that gap by providing CLIF-formatted data derived from the freely accessible de-identified MIMIC-IV dataset, enabling researchers worldwide to utilize the CLIF format without requiring institutional EHR access.</p>\n<p>MIMIC-IV-Ext-CLIF contains 14 CLIF tables as of the latest CLIF 2.1.0 version, covering core demographics (patient, hospitalization), clinical monitoring (vitals, labs), respiratory support, medication administration, and specialized ICU interventions (e.g., continuous renal replacement therapy). The transformation employs a reproducible ETL pipeline with transparent mapping decisions documented in user-friendly spreadsheets.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 982736410,
+    "core_doi": "10.13026/86jk-m086",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 1215130648,
+    "public_project_uuid": "b2b7ad46-c5cb-4d84-aa15-bff9f8a17645",
+    "publish_date": "2026-03-24",
+    "resource_type": "Database",
+    "short_description": "Transforming the MIMIC-IV 3.1 database into the Common Longitudinal ICU data Format (CLIF)",
+    "slug": "mimic-iv-ext-clif",
+    "source_url": "https://physionet.org/content/mimic-iv-ext-clif/1.1.0/",
+    "title": "MIMIC-IV-Ext-CLIF: MIMIC-IV in the Common Longitudinal ICU data Format (CLIF)",
+    "topics": [
+      "mimic",
+      "clif",
+      "the common longitudinal icu data format",
+      "critical care"
+    ],
+    "version": "1.1.0",
+    "version_doi": "10.13026/j481-g420"
+  },
+  "source": "physionet"
+}

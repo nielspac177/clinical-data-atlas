@@ -1,0 +1,27 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:1814c7d81a379af6082128bce89f6f3766ac0b2a29f2b0755dc9914f36d5d280",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "other"
+    ],
+    "id": "physionet:ehr-ds-qa",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "medical discharge summaries extracted from the MIMIC-IV-Note dataset",
+        "value": "clinical_notes"
+      },
+      {
+        "evidence": "EHR-DS-QA: A Synthetic QA Dataset Derived from Medical Discharge Summaries",
+        "value": "EHR"
+      }
+    ],
+    "population": "21466 medical discharge summaries extracted from the MIMIC-IV-Note dataset",
+    "summary": "Synthetic question-and-answer pairs generated with a Llama 2 model from medical discharge summaries in MIMIC-IV-Note, a subset verified by a physician, for training clinical retrieval-augmented question-answering models. Generation code accompanies the data."
+  },
+  "prompt_version": "v1"
+}

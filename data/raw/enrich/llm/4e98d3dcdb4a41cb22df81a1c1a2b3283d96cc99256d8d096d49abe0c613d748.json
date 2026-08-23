@@ -1,0 +1,29 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:4e98d3dcdb4a41cb22df81a1c1a2b3283d96cc99256d8d096d49abe0c613d748",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "older adults (60 - 77 years old) with Parkinson's disease",
+        "label": "Parkinson's disease"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "musculoskeletal"
+    ],
+    "id": "physionet:gaitdb",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Walking stride interval time series",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": "15 subjects: 5 healthy young adults (23 - 29 years old), 5 healthy old adults (71 - 77 years old), and 5 older adults (60 - 77 years old) with Parkinson's disease",
+    "summary": "Walking stride interval time series from healthy young adults, healthy older adults, and older adults with Parkinson's disease, with group and age encoded in the file names."
+  },
+  "prompt_version": "v1"
+}

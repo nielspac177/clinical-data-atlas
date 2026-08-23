@@ -1,0 +1,35 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "mimic-iv-ext-apixaban-trial",
+  "payload": {
+    "abstract": "<p>Large-language models (LLMs) show promise for extracting information from clinical notes. Deploying these models at scale can be challenging due to high computational costs, regulatory constraints, and privacy concerns. To address these challenges, synthetic data distillation can be used to fine-tune smaller, open-source LLMs that achieve performance similar to the teacher model. These smaller models can be run on less expensive local hardware or at a vastly reduced cost in cloud deployments. In our recent study, we used Llama-3.1-70B-Instruct to generate synthetic training examples in the form of question-answer pairs along with supporting information. We then used these questions to fine-tune smaller versions of Llama to improve their ability to extract clinical information from notes.</p>\n<p>To evaluate the resulting models, we created 23 questions resembling eligibility criteria from the apixaban clinical trial and evaluated them on a random sample of 100 patient notes from MIMIC-IV. Notes from MIMIC-IV were taken from after 2012 to ensure no overlap with any of the notes from MIMIC-III which were used to generate the data used to finetune the models. We release the 2300 total question-answer pairs as a dataset here.</p>",
+    "access_policy": "Restricted",
+    "compressed_storage_size": 914981,
+    "core_doi": "10.13026/k40z-bm16",
+    "dua": {
+      "name": "PhysioNet Restricted Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Restricted Health Data License 1.5.0"
+    },
+    "main_storage_size": 33192103,
+    "public_project_uuid": "e620ff95-639a-404b-bc9d-857b5cf509be",
+    "publish_date": "2025-04-30",
+    "resource_type": "Database",
+    "short_description": "We created 23 questions resembling eligibility criteria from the apixaban clinical trial and evaluated them on a random sample of 100 patient notes from MIMIC-IV. We release the 2300 total question-answer pairs as a dataset here.",
+    "slug": "mimic-iv-ext-apixaban-trial",
+    "source_url": "https://physionet.org/content/mimic-iv-ext-apixaban-trial/1.0.0/",
+    "title": "MIMIC-IV-Ext-Apixaban-Trial-Criteria-Questions",
+    "topics": [
+      "clinical q and a evaluation set",
+      "clinical trial eligibility"
+    ],
+    "version": "1.0.0",
+    "version_doi": "10.13026/4p6q-vb04"
+  },
+  "source": "physionet"
+}

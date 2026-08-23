@@ -1,0 +1,112 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005700",
+  "payload": {
+    "created": "2024-12-07T19:45:05.087Z",
+    "id": "ds005700",
+    "latestSnapshot": {
+      "created": "2025-06-27T14:13:20.000Z",
+      "description": {
+        "Authors": [
+          "Abgeena Abgeena",
+          "Shruti Garg",
+          "Nishant Goyal",
+          "Justin Raj PC"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005700.v1.2.0",
+        "Funding": [
+          "NA"
+        ],
+        "HowToAcknowledge": "TODO: Cite a corresponding paper\nAbgeena, A., Garg, S., Goyal, N. and PC, J.R., 2025. NeuroEmo: A neuroimaging-based fMRI dataset to extract temporal affective brain dynamics for Indian movie video clips stimuli using dynamic functional connectivity approach with graph convolution neural network (DFC-GCNN). Computers in Biology and Medicine, 194, p.110439. https://doi.org/10.1016/j.compbiomed.2025.110439",
+        "License": "CC0",
+        "Name": "NeuroEmo: An fMRI Dataset for Emotion Recognition",
+        "ReferencesAndLinks": [
+          "TODO",
+          "List of papers or websites",
+          "Abgeena, A., Garg, S., Goyal, N. and PC, J.R., 2025. NeuroEmo: A neuroimaging-based fMRI dataset to extract temporal affective brain dynamics for Indian movie video clips stimuli using dynamic functional connectivity approach with graph convolution neural network (DFC-GCNN). Computers in Biology and Medicine, 194, p.110439."
+        ]
+      },
+      "readme": "## NeuroEmo: An fMRI Dataset for Emotion Recognition\n\n  \n Description: The purpose of the study is to enable emotion recognition analysis using culturally relevant stimuli, such as Indian Bollywood movie clips, in fMRI data collected from Indian participants. This dataset explores the neural basis of emotions in a contextually meaningful way, focusing on functional and dynamic connectivity.\n\n\n## Summary\n\nThis dataset contains raw fMRI data collected from 40 healthy participants who watched emotional Indian movie videos clips.\nTasks included resting-state and emotion-elicitation tasks. Data was organized following the BIDS standard. \nDataset size: 7.21 GB (raw BIDS-compliant format), 20 GB (raw DICOM files).\n\nThe data was collected at fMRI center of Central Institute of Psychiatry (CIP), Kanke, Ranchi.The research proposal and experimental protocol received ethical clearance from the Institute Ethics Committee, CIP (No. IEC/CIP/2022-23/1709).\n\n## Data Collection details: \n\n## Acquisition details:\nScanner: Philips Ingenia 3T MRI scanner with following parameter-\n-T1w data was collected for matrix size 192x192x256, voxel size 1x1x1 mm, slice thickness 1, space between slices 1, echo time 0.002943, repetition time 0.0065, flip angle 9^°. \n-Task-rest_bold was collected for matrix size 96x96x38, voxel size -2.29x2.29x4 mm, slice thickness 4, space between slices 4, echo time 0.035001, repetition time 2.02697, flip angle 90^°, slice 38.\n-Task-fe_bold was collected for matrix size 128x128x36, voxel size =-1.8x1.8x4 mm, slice thickness 4, space between slices 4, echo time 0.035, repetition time 3, flip angle  90^°, slice 36.\n\n## Stimulus videos\n\nVideos used as stimuli were selected from [Mishra, S., Srinivasan, N., Asif, M., and Tiwary, U.S., 2023. Affective film dataset from India (AFDI): Creation and validation with an Indian sample. Journal of Cultural Cognitive Science, 7(3), pp. 255–267] based on their potential to evoke emotions. The videos were downloaded in high quality and cropped to 30-second clips to elicit specific emotions corresponding to five emotion classes: Calm (Movie scene-calm, relax), Afraid (Movie scene-horror), Delighted (Movie scene-joyKolaveri), Depressed (Movie scene-Madari movie) and Excited (Movie scene-funTamma).\n\n## Tasks\nParticipants viewed movie clips designed to evoke different emotions task details:\n\nOnset (s) | Duration (s) | Emotion\n0 | 30 | Calm\n30 | 30 | White noise\n60 | 30 | Afraid\n90 | 30 | White noise\n120 | 30 | Delighted\n150 | 30 | White noise\n180 | 30 | Depressed\n210 | 30 | White noise\n240 | 30 | Excited\n270 | 30 | White noise\n300 | 30 | Delighted\n330 | 30 | White noise\n360 | 30 | Depressed\n390 | 30 | White noise\n420 | 30 | Calm\n450 | 30 | White noise\n480 | 30 | Excited\n510 | 30 | White noise\n540 | 30 | Afraid\n570 | 30 | White noise\n\n## File Structure\n\t-/sub-01/\n\t-/anat/\n\t-sub-01_T1w.nii: Anatomical data of sub-01\n\t-sub-01_T1w.json\n  \t-/func/\n        -sub-01_task-fe_bold.nii: Functional data for the emotion task.\n\t-sub-01_task-fe_bold.json\n        -sub-01_task-rest_bold.nii: Resting-state functional data.\n\t-sub-01_task-rest_bold.json\n\n## Codes used in this work can be found on https://github.com/abgeena/NeuroEmo\n\n## How to Use\nDownload the raw dataset from OpenNeuro.\n\n## Contact\nFor questions, email: [abgeenakhan786@gmail.com]\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 7746749319,
+        "subjects": [
+          "22",
+          "15",
+          "16",
+          "38",
+          "05",
+          "18",
+          "21",
+          "10",
+          "29",
+          "28",
+          "25",
+          "06",
+          "14",
+          "01",
+          "37",
+          "17",
+          "27",
+          "39",
+          "30",
+          "23",
+          "19",
+          "02",
+          "11",
+          "31",
+          "20",
+          "13",
+          "12",
+          "03",
+          "34",
+          "40",
+          "26",
+          "04",
+          "35",
+          "24",
+          "07",
+          "09",
+          "36",
+          "08",
+          "33",
+          "32"
+        ],
+        "tasks": [
+          "fe",
+          "rest"
+        ],
+        "totalFiles": 243
+      },
+      "tag": "1.2.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": "https://doi.org/10.1016/j.compbiomed.2025.110439",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "block-based experimental design",
+      "studyDomain": "Cognitive Neuroscience",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2024-12-07T22:08:09.030Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,34 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:8e83dbfe5d6fff4f4612edada22141315f105a2b49713daf861e8c5aaea8ed78",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "cardiology",
+      "pulmonology",
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "physionet:cardioresp-response-orthostat",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "arterial blood pressure (ABP)",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "transcranial Doppler sonography",
+        "value": "ultrasound"
+      },
+      {
+        "evidence": "near-infrared spectroscopy",
+        "value": "fNIRS"
+      }
+    ],
+    "population": "Ten young healthy adults, studied between December 2009 and February 2010 at Semmelweis University, Faculty of Medicine",
+    "summary": "Simultaneous blood pressure, breath-to-breath interval, cerebral blood flow velocity and near-infrared spectroscopy hemoglobin signals recorded during resting state followed by stand-up and sit-down periods, to study responses to postural change."
+  },
+  "prompt_version": "v1"
+}

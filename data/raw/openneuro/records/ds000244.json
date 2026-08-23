@@ -1,0 +1,135 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds000244",
+  "payload": {
+    "created": "2018-03-30T00:46:19.402Z",
+    "id": "ds000244",
+    "latestSnapshot": {
+      "created": "2018-09-14T20:33:10.000Z",
+      "description": {
+        "Authors": [
+          "Ana Luisa Grilo Pinho",
+          "Lucie Hertz-Pannier",
+          "Bertrand Thirion"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds000244.v1.0.0",
+        "Funding": [
+          "European Union Horizon 2020 Framework Programme for Research and Innovation (Grant Agreement No 720270 (Human Brain Project SGA1))"
+        ],
+        "HowToAcknowledge": "Please cite the relevant paper (currently in submission) and include the following message: 'This data was obtained from the OpenfMRI database. Its accession number is ds000244",
+        "License": "CC0",
+        "Name": "Individual Brain Charting",
+        "ReferencesAndLinks": [
+          "https://openfmri.org/dataset/ds000244/"
+        ]
+      },
+      "readme": "Overview\n========\nFunctional Magnetic Resonance Imaging (fMRI) has opened the door\nto brain mapping of perceptual, motor, or cognitive functions. As such, it\nprovides an instrumental basis for the whole field of cognitive neuroimag-\ning. However, there exists to date no data collection that systematically\nmaps representations for a wide-variety of mental functions at a fine spa-\ntial scale. The Individual Brain Charting (IBC) project is collecting a\nhigh-resolution multi-task-fMRI dataset, to provide an objective basis for\na comprehensive atlas of brain responses. The data refer to a cohort of\ntwelve participants performing many different tasks. Acquiring a large\namount of tasks on the same subjects yields a precise mapping of the\nunderlying functions, free from both inter-subject and inter-site variabil-\nity. Additionally, the dataset comes with high-resolution anatomical and\ndiffusion images, to achieve a fine anatomical characterization of these\nbrains. \n\n\n\nDataset content overview\n========================\n\nThis is an overview of the dataset content. \n\nMore information and updates are available at http://project.inria.fr/IBC/\n\nThe data in release 1 are organized as follows:\n\n./task*.json: Descritpion of the  tasks used in this release\n./participants.tsv Description of the participants\n./sub-XX subject directories\n./sub-XX/ses-YY session directories\n\nNote that there are many sessions per subject and that the session are\nnumbered according to acquisition date, which yields different actual\nacquisitions depending on the subjects. The data are thus much better\nby the MRI file names, than by session id.\n\nSession directories comprise the following subdirectories:\n* anat/ for T1w-, T2w- and flair image\n* dwi/ for diffusion-weighted data\n* fmap/ for field maps\n* func/ for functional data\n\nNote that diffusion-weighted, T2-weighted and FLAIR images are not\nmeant to be used for advanced neuroimaging investigations. They were\nacquired to check the absence of conspicuos abnormalities at screening\nstage.  High-resolution anatomical and diffusion-weighted images will\nbe procided in the future.\n\nRegarding functional data, the file naming conventions is\nsub-XX_ses-YY_task-ZZZ_acq-AA_bold.nii.gz,\nwhere\n* XX is the subject id\n* YY is the session id\n* ZZZ is one of the twelve tasks used\n* 'AA' is either ap pa, corresponding to the phase encoding direction\n\nThese fMRI files are provided together with \nsub-XX_ses-YY_task-ZZZ_acq-AA_events.tsv files,\nthat describe the corresponding events.\n\nIn the same folder, the 'ap' and 'pa' variant of a given acquisition\nare always found.  the corresponding fiel maps are available in the\nfmap folder to correct distortions. test-retest or fixed effectsmodels\ncan be computed across the corresponding data after suitable\npreprocessing.\n\n\nMore information and material\n=============================\n\nThe functional protocols used can be dowloaded at:\nhttps://github.com/hbp-brain-charting/public_protocols\n\nAnalysis scripts can be found at:\nhttps://github.com/hbp-brain-charting/public_analysis_code\n\n\nContact\n=======\nBertrand Thirion, bertrand.thirion@inria.fr\n\n### Comments added by Openfmri Curators ###\n===========================================\n\nGeneral Comments\n----------------\n\n\nDefacing\n--------\nThe submitter defaced all the T1w anatomical images. We used pydeface to deface the rest of \nthe anatomical images, excluding acq-tse_T2w.nii.gz which did not need to be defaced. The \ncode can be found at https://github.com/poldracklab/pydeface\n\nQuality Control\n---------------\nMRIQC output could not be included at this time. It will be added to the \nnext revision.\n\nWhere to discuss the dataset\n----------------------------\n1) www.openfmri.org/dataset/ds000244/ See the comments section at the bottom of the dataset\npage.\n2) www.neurostars.org Please tag any discussion topics with the tags openfmri and ds000244.\n3) Send an email to submissions@openfmri.org. Please include the accession number in\nyour email.\n\nKnown Issues\n------------\npixdim7 for all bold images is very large (ranging from 32406.267578 to 67769.250000)\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_diffusion",
+          "mri_structural"
+        ],
+        "sessions": [
+          "00",
+          "03",
+          "04",
+          "05",
+          "07",
+          "14",
+          "15",
+          "19",
+          "20",
+          "24",
+          "01",
+          "06",
+          "02",
+          "11",
+          "12",
+          "17",
+          "21",
+          "23",
+          "13",
+          "16",
+          "18",
+          "22"
+        ],
+        "size": 847670476812,
+        "subjects": [
+          "01",
+          "02",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "11",
+          "12",
+          "13",
+          "14"
+        ],
+        "tasks": [
+          "archi emotional",
+          "archi social",
+          "archi spatial",
+          "archi standard",
+          "self",
+          "RSVP language",
+          "clips watching",
+          "retinotopy",
+          "HCP emotion",
+          "HCP gambling",
+          "HCP langage",
+          "HCP motor",
+          "HCP relational",
+          "HCP social",
+          "HCP WM",
+          "Fictitious event ordering",
+          "film viewing",
+          "rest eyes open"
+        ],
+        "totalFiles": 3965
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        39,
+        32,
+        26,
+        27,
+        33,
+        38,
+        36,
+        38,
+        35,
+        40,
+        28,
+        28,
+        30
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2018-03-30T00:46:19.402Z"
+  },
+  "source": "openneuro"
+}

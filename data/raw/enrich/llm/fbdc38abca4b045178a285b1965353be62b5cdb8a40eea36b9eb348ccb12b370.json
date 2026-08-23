@@ -1,0 +1,28 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:fbdc38abca4b045178a285b1965353be62b5cdb8a40eea36b9eb348ccb12b370",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "pulmonology",
+      "other"
+    ],
+    "id": "physionet:mimic-ext-cxr-qba",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "chest X-rays (CXRs)",
+        "value": "xray"
+      },
+      {
+        "evidence": "LLM-based extraction from radiology reports",
+        "value": "clinical_notes"
+      }
+    ],
+    "population": "Chest X-ray studies derived from MIMIC-CXR; human subjects.",
+    "summary": "Visual question answering dataset built from MIMIC-CXR chest X-ray studies, providing question-box-answer triplets with hierarchical sentence answers, bounding boxes, structured tags, and per-study scene graphs extracted from radiology reports using LLMs and localization models."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,43 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:37be7b7a7a7f9c9962146c7ba44e34d16032a7386039b076a395ad72bad594a2",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "seven different canine cutaneous tumors",
+        "label": "canine cutaneous tumors"
+      },
+      {
+        "evidence": "melanoma, mast cell tumor, squamous cell carcinoma",
+        "label": "melanoma"
+      },
+      {
+        "evidence": "squamous cell carcinoma, peripheral nerve sheath tumor",
+        "label": "squamous cell carcinoma"
+      },
+      {
+        "evidence": "mast cell tumor",
+        "label": "mast cell tumor"
+      }
+    ],
+    "countries": [
+      "DE"
+    ],
+    "domains": [
+      "oncology",
+      "surgery"
+    ],
+    "id": "tcia:catch",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "350 histologic samples of seven different canine cutaneous tumors",
+        "value": "pathology"
+      }
+    ],
+    "population": "350 histologic samples of canine cutaneous tumors selected retrospectively from a veterinary pathology biopsy archive",
+    "summary": "Whole slide images of hematoxylin and eosin stained canine skin tumor samples from surgical resections, with polygon annotations for non-neoplastic tissue classes and seven tumor classes."
+  },
+  "prompt_version": "v1"
+}

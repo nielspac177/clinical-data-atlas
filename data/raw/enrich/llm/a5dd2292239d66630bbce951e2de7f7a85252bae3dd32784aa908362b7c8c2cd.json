@@ -1,0 +1,56 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:a5dd2292239d66630bbce951e2de7f7a85252bae3dd32784aa908362b7c8c2cd",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Bladder Urothelial Carcinoma",
+        "label": "Bladder Urothelial Carcinoma"
+      },
+      {
+        "evidence": "Transitional Cell Papillomas and Carcinomas",
+        "label": "Transitional Cell Papillomas and Carcinomas"
+      },
+      {
+        "evidence": "Epithelial Neoplasms, NOS",
+        "label": "Epithelial Neoplasms, NOS"
+      },
+      {
+        "evidence": "Squamous Cell Neoplasms",
+        "label": "Squamous Cell Neoplasms"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "gdc:TCGA-BLCA",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Tissue Slide, Diagnostic Slide",
+        "value": "pathology"
+      },
+      {
+        "evidence": "WGS, WXS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "RNA-Seq, miRNA-Seq",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Reverse Phase Protein Array",
+        "value": "proteomics"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "412 human cases of bladder urothelial carcinoma",
+    "summary": "TCGA project on bladder urothelial carcinoma. Covers sequencing reads, nucleotide and copy number variation, transcriptome profiling, DNA methylation, proteome profiling, biospecimen and clinical data, plus tissue and diagnostic slides."
+  },
+  "prompt_version": "v1"
+}

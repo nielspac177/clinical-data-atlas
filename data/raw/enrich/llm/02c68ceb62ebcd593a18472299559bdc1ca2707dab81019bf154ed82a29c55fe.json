@@ -1,0 +1,49 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:02c68ceb62ebcd593a18472299559bdc1ca2707dab81019bf154ed82a29c55fe",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Uterine Corpus Endometrial Carcinoma",
+        "label": "Uterine Corpus Endometrial Carcinoma"
+      },
+      {
+        "evidence": "Adenomas and Adenocarcinomas",
+        "label": "Adenomas and Adenocarcinomas"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "obstetrics_gynecology"
+    ],
+    "id": "gdc:TCGA-UCEC",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Diagnostic Slide, Tissue Slide",
+        "value": "pathology"
+      },
+      {
+        "evidence": "WXS, RNA-Seq, miRNA-Seq, WGS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "Transcriptome Profiling",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Proteome Profiling",
+        "value": "proteomics"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "560 human cases with uterine corpus endometrial carcinoma",
+    "summary": "TCGA endometrial carcinoma project of the uterine corpus, with slide images, sequencing, copy number, methylation, chromatin accessibility, protein array and clinical data."
+  },
+  "prompt_version": "v1"
+}

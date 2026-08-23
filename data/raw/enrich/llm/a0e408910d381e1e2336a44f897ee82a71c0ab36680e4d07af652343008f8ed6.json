@@ -1,0 +1,57 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:a0e408910d381e1e2336a44f897ee82a71c0ab36680e4d07af652343008f8ed6",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Esophageal Carcinoma",
+        "label": "Esophageal Carcinoma"
+      },
+      {
+        "evidence": "Adenomas and Adenocarcinomas",
+        "label": "Adenomas and Adenocarcinomas"
+      },
+      {
+        "evidence": "Cystic, Mucinous and Serous Neoplasms",
+        "label": "Cystic, Mucinous and Serous Neoplasms"
+      },
+      {
+        "evidence": "Squamous Cell Neoplasms",
+        "label": "Squamous Cell Neoplasms"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "gastroenterology_hepatology"
+    ],
+    "id": "gdc:TCGA-ESCA",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Tissue Slide, Diagnostic Slide",
+        "value": "pathology"
+      },
+      {
+        "evidence": "WXS, miRNA-Seq",
+        "value": "genomics"
+      },
+      {
+        "evidence": "RNA-Seq",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Proteome Profiling",
+        "value": "proteomics"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "185 human cases of esophageal carcinoma",
+    "summary": "TCGA project on esophageal carcinoma, sampling esophagus and stomach. Covers sequencing reads, nucleotide and copy number variation, transcriptome profiling, DNA methylation, proteome profiling, biospecimen and clinical data, plus tissue and diagnostic slides."
+  },
+  "prompt_version": "v1"
+}

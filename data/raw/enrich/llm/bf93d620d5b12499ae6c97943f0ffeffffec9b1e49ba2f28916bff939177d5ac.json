@@ -1,0 +1,51 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:bf93d620d5b12499ae6c97943f0ffeffffec9b1e49ba2f28916bff939177d5ac",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "such as heart disease",
+        "label": "heart disease"
+      },
+      {
+        "evidence": "lung disease",
+        "label": "lung disease"
+      },
+      {
+        "evidence": "cancer",
+        "label": "cancer"
+      },
+      {
+        "evidence": "psychiatric disorders",
+        "label": "psychiatric disorders"
+      },
+      {
+        "evidence": "chronic pain",
+        "label": "chronic pain"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "psychiatry",
+      "oncology",
+      "pulmonology",
+      "cardiology"
+    ],
+    "id": "physionet:meddec",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Extracting decision spans from clinical notes",
+        "value": "clinical_notes"
+      },
+      {
+        "evidence": "discharge summaries in the MIMIC-III database",
+        "value": "EHR"
+      }
+    ],
+    "population": "451 expert-annotated discharge summaries in the MIMIC-III database, spanning eleven diverse patient phenotypes",
+    "summary": "Expert annotations of ten types of medical decisions marked as character spans in MIMIC-III discharge summaries, spanning diverse patient phenotypes, supporting extraction and classification of decisions in clinical notes."
+  },
+  "prompt_version": "v1"
+}

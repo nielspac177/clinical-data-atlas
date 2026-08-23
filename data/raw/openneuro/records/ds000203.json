@@ -1,0 +1,123 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds000203",
+  "payload": {
+    "created": "2017-09-04T19:48:11.441Z",
+    "id": "ds000203",
+    "latestSnapshot": {
+      "created": "2018-07-16T19:15:51.000Z",
+      "description": {
+        "Authors": [
+          "Christian Stephan-Otto",
+          "Sara Siddi",
+          "Carl Senior",
+          "Daniel Muñoz-Samons",
+          "Susana Ochoa",
+          "Ana María Sánchez Laforga",
+          "Gildas Brébion"
+        ],
+        "DatasetDOI": null,
+        "Funding": null,
+        "HowToAcknowledge": "This data was obtained from the OpenfMRI database. Its accession number is ds000203",
+        "License": "PDDL",
+        "Name": "Visual imagery and false memory for pictures",
+        "ReferencesAndLinks": [
+          "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5207728/"
+        ]
+      },
+      "readme": "This dataset was obtained from the OpenfMRI project (http://www.openfmri.org).\r\nAccession #: ds000203\r\nDescription: Visual Imagery and False Memory task\r\n\r\nPlease cite the following references if you use these data:\r\n\r\nStephan-Otto C, Siddi S, Senior C, Mu�oz-Samons D, Ochoa S, S�nchez Laforga AM, Br�bion G (Visual imagery and false memory for pictures: a Functional Magnetic Resonance Imaging study in healthy participants. doi: 10.1371/journal.pone.0169551\r\n\r\n\r\nRelease history:\r\n6/2/2016: initial release\r\n\r\nThis dataset is made available under the Public Domain Dedication and License \r\nv1.0, whose full text can be found at http://www.opendatacommons.org/licenses/pddl/1.0/. \r\nWe hope that all users will follow the ODC Attribution/Share-Alike \r\nCommunity Norms (http://www.opendatacommons.org/norms/odc-by-sa/); \r\nin particular, while not legally required, we hope that all users \r\nof the data will acknowledge the OpenfMRI project and NSF Grant \r\nOCI-1131441 (R. Poldrack, PI) in any publications.\r\n\r\n\r\n### Comments added by Openfmri Curators ###\r\n===========================================\r\n\r\nGeneral Comments\r\n----------------\r\n\r\n\r\nDefacing\r\n--------\r\nPydeface was used on all anatomical images to ensure deindentification of subjects. The code\r\ncan be found at https://github.com/poldracklab/pydeface\r\n\r\nQuality Control\r\n---------------\r\nMriqc was run on the dataset. Results are located in derivatives/mriqc. Learn more about it here: https://mriqc.readthedocs.io/en/latest/\r\n\r\nWhere to discuss the dataset\r\n----------------------------\r\n1) www.openfmri.org/dataset/ds000203/ See the comments section at the bottom of the dataset\r\npage.\r\n2) www.neurostars.org Please tag any discussion topics with the tags openfmri and ds000203.\r\n3) Send an email to submissions@openfmri.org. Please include the accession number in\r\nyour email.\r\n\r\nKnown Issues\r\n------------\r\nN/A\r\n\r\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 2126902149,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26"
+        ],
+        "tasks": [
+          "Visual imagery false memory"
+        ],
+        "totalFiles": 138
+      },
+      "tag": "00001"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2017-09-04T19:48:11.441Z"
+  },
+  "source": "openneuro"
+}

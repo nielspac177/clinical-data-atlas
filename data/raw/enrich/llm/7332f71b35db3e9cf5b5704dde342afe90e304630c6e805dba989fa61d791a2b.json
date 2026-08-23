@@ -1,0 +1,28 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:7332f71b35db3e9cf5b5704dde342afe90e304630c6e805dba989fa61d791a2b",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "critical_care",
+      "endocrinology_metabolism"
+    ],
+    "id": "physionet:glucose-management-mimic",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "recorded in electronic health records",
+        "value": "EHR"
+      },
+      {
+        "evidence": "time series files that includes all the curated entries of glucose readings and insulin inputs",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "Nearly 9,600 patients distributed in more than 11,000 ICU stays in the MIMIC-III database.",
+    "summary": "Curated time-series subsets pairing glucose readings with insulin inputs per patient during intensive care unit admissions in MIMIC-III, built using expert-defined pairing rules for studying glycemic control and insulin therapy."
+  },
+  "prompt_version": "v1"
+}

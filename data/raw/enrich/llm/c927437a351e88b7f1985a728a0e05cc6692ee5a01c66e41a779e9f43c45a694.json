@@ -1,0 +1,28 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:c927437a351e88b7f1985a728a0e05cc6692ee5a01c66e41a779e9f43c45a694",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "pulmonology",
+      "cardiology"
+    ],
+    "id": "physionet:ms-cxr",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "chest X-ray bounding box labels",
+        "value": "xray"
+      },
+      {
+        "evidence": "radiology text descriptions",
+        "value": "clinical_notes"
+      }
+    ],
+    "population": null,
+    "summary": "Phrase grounding benchmark pairing chest X-ray bounding boxes with radiology sentence descriptions, annotated and verified by board-certified radiologists, covering eight cardiopulmonary radiological findings. Complements the MIMIC-CXR v.2 dataset."
+  },
+  "prompt_version": "v1"
+}

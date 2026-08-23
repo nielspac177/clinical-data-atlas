@@ -1,0 +1,132 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007162",
+  "payload": {
+    "created": "2026-01-04T08:52:41.695Z",
+    "id": "ds007162",
+    "latestSnapshot": {
+      "created": "2026-01-05T12:41:00.000Z",
+      "description": {
+        "Authors": [
+          "[Unspecified1]",
+          "[Unspecified2]"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007162.v1.0.0",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Adaptive recruitment of cortex-wide recurrence for visual object recognition (EEG)",
+        "ReferencesAndLinks": null
+      },
+      "readme": "# Dataset Description\n\nThis dataset contains the EEG data accompanying the study \n**\"Adaptive recruitment of cortex-wide recurrence for visual object recognition\"** (Link to preprint: https://www.biorxiv.org/content/10.1101/2025.10.17.682937v2).\nPlease cite the above paper if you use this data.\n\n---\n\n## Dataset Overview\n- 34 participants, each with 1 session  \n\n---\n\n## Experimental Design\nThe EEG experiment used a stimulus set of 242 images (121 “challenge” and 121 “control” images) derived from comparisons between human behavioural performance and AlexNet.  \n\n- **Main task:** Each trial consisted of a single image presented for 200 ms followed by a 100 ms blank. Trials were grouped into sequences of 14 images. At the end of each sequence, participants reported whether a paper clip appeared anywhere in that sequence.\n\n---\n\n## Derivatives\nThe derivatives/ folder contains outputs from the decoding analyses, including time-resolved decoding accuracy matrices for object identity.",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "eeg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [
+          "01"
+        ],
+        "size": 65339062772,
+        "subjects": [
+          "15",
+          "28",
+          "30",
+          "19",
+          "16",
+          "32",
+          "22",
+          "24",
+          "12",
+          "06",
+          "11",
+          "23",
+          "17",
+          "02",
+          "03",
+          "07",
+          "34",
+          "25",
+          "14",
+          "26",
+          "31",
+          "21",
+          "27",
+          "29",
+          "20",
+          "05",
+          "10",
+          "04",
+          "13",
+          "18",
+          "01",
+          "08",
+          "33",
+          "09"
+        ],
+        "tasks": [
+          "rcor"
+        ],
+        "totalFiles": 590
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "eeg"
+      ],
+      "species": "",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2026-01-05T12:43:23.503Z"
+  },
+  "source": "openneuro"
+}

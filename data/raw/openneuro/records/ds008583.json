@@ -1,0 +1,156 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds008583",
+  "payload": {
+    "created": "2026-08-04T08:06:28.944Z",
+    "id": "ds008583",
+    "latestSnapshot": {
+      "created": "2026-08-06T20:37:32.000Z",
+      "description": {
+        "Authors": [
+          "Yoko Mano",
+          "Koki Nakaya",
+          "Hidetsugu Komeda",
+          "Asako Toyama",
+          "Haruaki Fukuda",
+          "Yuri Miyamoto",
+          "Shinobu Kitayama",
+          "Shinsuke Suzuki"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds008583.v1.0.0",
+        "Funding": [
+          "JSPS KAKENHI Grant No. 22K21357",
+          "Hitotsubashi University HIAS-BRC Operating Grant",
+          "AIST-Hitotsubashi University Collaborative Program for Integrating Humanities and Sciences"
+        ],
+        "HowToAcknowledge": "Please cite the associated publication and this OpenNeuro dataset when using these data.",
+        "License": "CC0",
+        "Name": "Neural mechanisms underlying decisions to express or suppress emotions",
+        "ReferencesAndLinks": null
+      },
+      "readme": "# Neural mechanisms underlying decisions to express or suppress emotions\n\n## Overview\n\nThis dataset contains the raw magnetic resonance imaging (MRI) data associated with the study:\n\n**Neural mechanisms underlying decisions to express or suppress emotions**\n\nThe aim of this study was to investigate the neural mechanisms underlying decisions to express or suppress emotions during socially relevant situations using functional magnetic resonance imaging (fMRI).\n\nDuring the experiment, participants completed two intermixed trial types.\n\nIn emotion trials, participants read emotionally evocative social scenarios describing everyday interpersonal situations and decided whether they would express the emotion elicited by each scenario.\n\nIn control trials, participants judged whether the presented sentence was displayed in italic font.\n\nBehavioral responses and reaction times were recorded during MRI acquisition.\n\nThe dataset is organized according to the Brain Imaging Data Structure (BIDS) specification (version 1.8.0).\n\n---\n\n## MRI Acquisition\n\nMRI data were acquired using a Siemens Prisma 3 Tesla MRI scanner equipped with a 32-channel head coil at Hitotsubashi University.\n\nThe dataset contains raw MRI data only. No preprocessing has been applied.\n\nThe dataset includes:\n\n- T1-weighted structural MRI\n- BOLD functional MRI\n- Spin-echo field map images\n- Event files (.tsv) for all functional runs\n- A stimulus list (`stimuli/scenario_OpenNeuro.tsv`) referenced by the `stimulus_id` column in each `events.tsv` file\n\n---\n\n## Data Organization\n\nThe dataset follows the Brain Imaging Data Structure (BIDS) specification (version 1.8.0).\n\nThe dataset contains one imaging session (ses-01) for each participant.\n\nParticipant identifiers correspond to the BIDS identifiers used throughout the released dataset.\n\nSome participant identifiers are intentionally absent because those participants were excluded from the final analyses or are not included in this public release. The remaining participant identifiers are preserved to maintain consistency between the MRI data, behavioral data, and the associated publication.\n\n---\n\n## Anonymization\n\nAll MRI data have been de-identified prior to public release.\n\nStructural MRI images have been **defaced** to remove personally identifiable facial features prior to public release.\n\nNo personally identifiable information is included in this dataset.\n\n---\n\n## Funding\n\nThis work was supported by:\n\n- JSPS KAKENHI Grant Number 22K21357\n- Hitotsubashi University HIAS-BRC Operating Grant\n- AIST–Hitotsubashi University Collaborative Program for Integrating Humanities and Sciences\n\n---\n\n## Contact\n\nCorrespondence concerning this dataset should be addressed to:\n\n**Yoko Mano, Ph.D.**\n\nInstitute for Advanced Study (HIAS),  \nCenter for Brain Science (BRC),  \nHitotsubashi University,  \nTokyo, Japan\n\nE-mail: yoko.mano@r.hit-u.ac.jp\n\n---\n\n## Analysis Code\n\nAnalysis scripts associated with this study are available in the following GitHub repository:\n\nhttps://github.com/yokomano/Emotion-Expression-fMRI\n\nThe repository contains preprocessing, first-level, second-level, ROI, and figure-generation scripts used in the reported analyses.\n\n---\n\n## Citation\n\nIf you use this dataset, please cite:\n\nMano, Y., Nakaya, K., Komeda, H., Toyama, A., Fukuda, H., Miyamoto, Y., Kitayama, S., & Suzuki, S. (2026). *Neural mechanisms underlying decisions to express or suppress emotions*. *Social Cognitive and Affective Neuroscience*. https://doi.org/10.1093/scan/nsag068\n\nPlease also cite this OpenNeuro dataset using its dataset DOI.\n\n---\n\n## License\n\nThis dataset is distributed under the Creative Commons CC0 1.0 Universal Public Domain Dedication.\n\n---\n\n## Version\n\nVersion 1.0.0\n\nInitial public release accompanying:\n\nMano et al. (2026)\nSocial Cognitive and Affective Neuroscience\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "01"
+        ],
+        "size": 73089345558,
+        "subjects": [
+          "032",
+          "008",
+          "010",
+          "037",
+          "005",
+          "026",
+          "001",
+          "006",
+          "007",
+          "012",
+          "011",
+          "013",
+          "039",
+          "040",
+          "034",
+          "042",
+          "046",
+          "043",
+          "036",
+          "031",
+          "030",
+          "028",
+          "045",
+          "044",
+          "029",
+          "041",
+          "019",
+          "027",
+          "038",
+          "035",
+          "018",
+          "022",
+          "017",
+          "023",
+          "015",
+          "024",
+          "020",
+          "016",
+          "002",
+          "025"
+        ],
+        "tasks": [
+          "Emotion expression decision task"
+        ],
+        "totalFiles": 734
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        24,
+        20,
+        20,
+        22,
+        23,
+        21,
+        19,
+        22,
+        20,
+        26,
+        20,
+        20,
+        19,
+        24,
+        19,
+        20,
+        18,
+        18,
+        18,
+        23,
+        22,
+        22,
+        22,
+        19,
+        23,
+        23,
+        20,
+        25,
+        20,
+        25,
+        18,
+        22,
+        22,
+        22,
+        20,
+        22,
+        24,
+        18,
+        19,
+        20
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "Japan Society for the Promotion of Science (JSPS),  Hitotsubashi University HIAS-BRC,  AIST–Hitotsubashi University Collaborative Program for Integrating Humanities and Sciences",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "Within-subject event-related fMRI experiment",
+      "studyDomain": "Social neuroscience; Affective neuroscience; Emotion regulation; Decision making",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2026-08-06T20:49:51.796Z"
+  },
+  "source": "openneuro"
+}

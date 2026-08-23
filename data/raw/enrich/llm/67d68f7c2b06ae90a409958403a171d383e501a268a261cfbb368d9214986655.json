@@ -1,0 +1,39 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:67d68f7c2b06ae90a409958403a171d383e501a268a261cfbb368d9214986655",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Treatment effectiveness to ovarian cancer",
+        "label": "ovarian cancer"
+      },
+      {
+        "evidence": "clinical information of HGSOC patients",
+        "label": "HGSOC"
+      }
+    ],
+    "countries": [
+      "TW"
+    ],
+    "domains": [
+      "oncology",
+      "obstetrics_gynecology"
+    ],
+    "id": "tcia:ovarian-bevacizumab-response",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "hematoxylin and eosin (H&E) stained whole slides",
+        "value": "pathology"
+      },
+      {
+        "evidence": "clinicopathologic characteristics of patients were recorded",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "288 HGSOC patients whose slides came from the tissue bank of the Tri-Service General Hospital and the National Defense Medical Center, Taipei, Taiwan",
+    "summary": "De-identified 288 H&E stained whole slide images from 288 HGSOC patients with clinical information, scanned at 20x, for classifying whether bevacizumab treatment was effective or invalid."
+  },
+  "prompt_version": "v1"
+}

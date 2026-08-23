@@ -1,0 +1,40 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "mimic-iii-ext-ppg",
+  "payload": {
+    "abstract": "<p>MIMIC-III-Ext-PPG is a large-scale, annotated, and quality-assessed dataset of photoplethysmogram (PPG) segments extracted from the MIMIC-III Waveform Database Matched Subset. It contains around 6.3 million non-overlapping 30-second segments from 6,189 critically-ill patients and serves as the largest public resource for heart rhythm classification. The dataset contains signals recorded during several heart rhythms: sinus rhythm, atrial fibrillation, atrial flutter, heart block, pacing, and several less common rhythms. PPG segments were extracted within the 15-minute period prior to a patient's heart rhythm being recorded in the medical record, providing reference rhythm annotations in line with best practice from the literature. In addition, simultaneous electrocardiogram (ECG, lead II), arterial blood pressure (ABP), and respiratory (RESP) signals are provided where available. Additional annotations were derived from these signals, including blood pressure, heart rate, and respiratory rate. Signal quality metrics are provided for all signals. The MIMIC-III-Ext-PPG dataset is a valuable resource for a variety of downstream prediction tasks, enabled by its size, range of reference annotations, and signal quality metrics.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 0,
+    "core_doi": "10.13026/fcvm-qs78",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 160525455472,
+    "public_project_uuid": "6bd02e5d-7c31-4ce9-bce7-b79acfc8134d",
+    "publish_date": "2026-03-17",
+    "resource_type": "Database",
+    "short_description": "Large-Scale, Quality-Assessed PPG-based Benchmark Dataset for Cardiovascular and Respiratory Signal Analysis based on MIMIC-III",
+    "slug": "mimic-iii-ext-ppg",
+    "source_url": "https://physionet.org/content/mimic-iii-ext-ppg/1.1.0/",
+    "title": "MIMIC-III-Ext-PPG: A  PPG Benchmark Dataset for Cardiorespiratory Analysis",
+    "topics": [
+      "critical care",
+      "blood pressure",
+      "electrocardiogram",
+      "signal quality",
+      "heart rhythm",
+      "photoplethysmography",
+      "respiratory rate"
+    ],
+    "version": "1.1.0",
+    "version_doi": "10.13026/r6k1-xt76"
+  },
+  "source": "physionet"
+}

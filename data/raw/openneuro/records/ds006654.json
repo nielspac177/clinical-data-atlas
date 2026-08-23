@@ -1,0 +1,49 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006654",
+  "payload": {
+    "created": "2025-09-11T17:56:41.212Z",
+    "id": "ds006654",
+    "latestSnapshot": {
+      "created": "2026-02-19T17:08:36.000Z",
+      "description": {
+        "Authors": [
+          "Mandelkow, Hendrik",
+          "Duyn, Jeff H",
+          "de Zwart, Jacco A"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006654.v1.0.4",
+        "Funding": [
+          "NINDS/NIH intramural"
+        ],
+        "HowToAcknowledge": "H. Mandelkow, J.A. de Zwart, J.H. Duyn, 2017, \"Effects of spatial fMRI resolution on the classification of naturalistic movies\", NeuroImage, https://doi.org/10.1016/j.neuroimage.2017.08.053",
+        "License": "CC0",
+        "Name": "AMRI 00-N-0082 natural stimuli",
+        "ReferencesAndLinks": [
+          "https://doi.org/10.1016/j.neuroimage.2017.08.053"
+        ]
+      },
+      "readme": "![](Banner_Mandelkow2017_fMRI.jpg)\n#### *How does the accuracy of machine-learning classifiers depend on fMRI resolution?*  \nHigh-field (7T) high-resolution (1.2mm) fMRI and eye tracking data from human subjects repeatedly watching 5-minute clips of naturalistic (cinematic) movie content without sound. A high number of repeated stimulus presentations and fMRI acquisitions at two different resolutions (1.2mm and 2mm isotropic) were chosen to investigate the accuracy of machine-learning classifiers and to test its dependence on fMRI resolution. Please find details in below publication [Mandelkow et al. 2017](https://doi.org/10.1016/j.neuroimage.2017.08.053), which should be quoted as a reference. All data were acquired at the National Institutes of Health under NINDS protocol 00-N-0082 in 2012-2015.\n\n**Effects of spatial fMRI resolution on the classification of naturalistic movies**,  \nH. Mandelkow, J.A. de Zwart, J.H. Duyn, 2017, NeuroImage  \nhttps://doi.org/10.1016/j.neuroimage.2017.08.053  \n\n**Keywords**: fMRI; High-resolution; High-field; 7T; Multivariate pattern analysis; MVPA; Naturalistic stimuli; Movies; Eye tracking\n\n**********************************************************************\n\n### Data Files\n*NOTE: This dataset comprises 7 subjects, 4 with >16 movie stimulus repetitions. Of the original 10 subjects three were discarded without analysis due to subsequent changes in the experimental protocol (MRI sequences).*\n\n#### fMRI data\n##### `sub-02_ses-05_task-Mx1_acq-Hr_run-2_bold.nii.gz`\nOne run of BOLD fMRI data in [Nifti](https://nifti.nimh.nih.gov) format (.nii.gz).\n- `sub-##` : human subject number ##\n- `ses-##` : experimental session number ## (1-5 separate sessions per subject)\n- `task-*` : stimulus presented (5' movie clip)\n\t- `task-Mx1` : The Matrix I opening scene\n\t- `task-Mx2` : The Matrix II\n\t- `task-Gbu1` : The Good, the Bad, and the Ugly\n\t- `tast-ffMRI` : single-slice (fast) fMRI with high temporal resolution without stimulus e.g. for characterizing cardiac artifacts\n- `acq-Hr` / `acq-Lr` : Higher- / Lower-resolution fMRI at 1.2mm / 2mm isotropic\n- `run-#` : experimental run number within each fMRI session in temporal order\n\n#### MRI anatomy\n##### `sub-02_ses-05_acq-AnaGE_T2w.nii.gz` : gradient-echo anatomy (magnitude)\n##### `sub-02_ses-05_acq-AnaGEp_T2w.nii.gz` : gradient-echo anatomy (phase)\n\n#### Eye-tracking data\n##### `sub-02_ses-05_task-Mx1_acq-Hr_run-2_vpdat.txt`\n- `*_vpset0.txt` : calibration before movie start\n- `*_vpset1.txt` : calibration at movie start\n- **`*_vpdat.txt`** : eye-tracking data\n- `*_vpset2.txt` : calibration at movie end\n- `*_vpset3.txt` : calibration after movie end\n",
+      "summary": null,
+      "tag": "1.0.4"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": null,
+      "associatedPaperDOI": "https://doi.org/10.1016/j.neuroimage.2017.08.053",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "NINDS/NIH intramural",
+      "modalities": [],
+      "species": "Human",
+      "studyDesign": "Natural stimuli",
+      "studyDomain": "Human vision",
+      "studyLongitudinal": "Longitudinal"
+    },
+    "publishDate": "2026-02-10T16:23:04.403Z"
+  },
+  "source": "openneuro"
+}

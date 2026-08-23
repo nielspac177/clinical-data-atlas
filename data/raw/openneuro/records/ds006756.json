@@ -1,0 +1,157 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006756",
+  "payload": {
+    "created": "2025-10-06T12:16:13.342Z",
+    "id": "ds006756",
+    "latestSnapshot": {
+      "created": "2025-10-10T07:35:10.000Z",
+      "description": {
+        "Authors": [
+          "Lam, J.",
+          "Rodriguez-Cruces, R.",
+          "Arafat, T.",
+          "Royer, J.",
+          "Chen, J.",
+          "Dascal, A.",
+          "Sahlas, E.",
+          "Pana, R.",
+          "Hopewell, R.",
+          "Hsiao, C. H.-H.",
+          "Massarweh, G.",
+          "Soucy, J.-P.",
+          "Villeneuve, S.",
+          "Caciagli, L.",
+          "Koepp, M.",
+          "Bernasconi, A.",
+          "Bernasconi, N.",
+          "Bernhardt, B."
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006756.v1.0.0",
+        "Funding": [
+          "JL: Fonds de recherche du Québec - Santé/Ministère de la Santé et des Services sociaux",
+          "RRC: Ministère de l’Economie, de l’Innovation et de l’Énergie du Québec, Canada First Research Excellence Fund, awarded to the Healthy Brains, Healthy Lives initiative at McGill University",
+          "RRC: Programme de bourse de formation postdoctorale, Fonds de recherche du Québec - Santé 291486",
+          "JR: Canadian Open Neuroscience Platform (CONP) and Canadian Institutes of Health Research (CIHR)",
+          "BCB: CIHR (FDN-154298, PJT-174995, PJT-191853), SickKids Foundation (NI17-039), Natural Sciences and Engineering Research Council (NSERC; Discovery-1304413), Azrieli Center for Autism Research of the Montreal Neurological Institute (ACAR), BrainCanada, FRQ-S, the Helmholtz International BigBrain Analytics and Learning Laboratory (Hiball), the Canada Research Chairs Program (CRC), and the Centre of Excellence in Epilepsy at the Neuro (CEEN)."
+        ],
+        "HowToAcknowledge": "Please cite the dataset: bioRxiv: Lam, J., Rodriguez-Cruces, R., Arafat, T., Royer, J., Chen, J., Dascal, A., Sahlas, E., Pana, R., Hopewell, R., Hsiao, C. H.-H., Massarweh, G., Soucy, J.-P., Villeneuve, S., Caciagli, L., Koepp, M., Bernasconi, A., Bernasconi, N., & Bernhardt, B. (2025). An open dataset of cerebral tau deposition in young healthy adults based on [18F]MK6240 positron emission tomography [Dataset]. OSF. https://doi.org/10.17605/OSF.IO/ZNT9D",
+        "License": "CC0",
+        "Name": "Cerebral tau deposition in young healthy adults using [18F]MK6240 positron emission tomography (PET)",
+        "ReferencesAndLinks": [
+          "OSF: osf.io/znt9d",
+          "bioRxiv: Lam, J., Rodriguez-Cruces, R., Arafat, T., Royer, J., Chen, J., Dascal, A., Sahlas, E., Pana, R., Hopewell, R., Hsiao, C. H.-H., Massarweh, G., Soucy, J.-P., Villeneuve, S., Caciagli, L., Koepp, M., Bernasconi, A., Bernasconi, N., & Bernhardt, B. (2025). An open dataset of cerebral tau deposition in young healthy adults based on [18F]MK6240 positron emission tomography. bioRxiv, 2025-06. https://doi.org/10.1101/2025.06.13.655622"
+        ]
+      },
+      "readme": "# README\n\nThis dataset consists of PET data using [18F]MK6240 and T1w MRI for a cohort of young to middle-aged healthy individuals. A subset of individuals have a follow up PET scan. \nAt osf.io/znt9d, we also include standard uptake value ratio maps normalized to cerebellar grey matter or a composite region of interest (whole cerebellum, brainstem, eroded subcortical white matter) in volume and surface space (fsLR32K). A T1-weighted MNI152 template image in 0.8 x 0.8 x 0.8mm resolution is included for those who wish to transform PET images into MNI152 space (MNI152_T1_0.8mm.nii.gz). Details on how to apply the transformation can be found in the OSF wiki (osf.io/znt9d).\n\n## Details related to access to the data\nThe dataset can be accessed at: osf.io/znt9d \nPlease cite this dataset: Lam, J., Rodriguez-Cruces, R., Arafat, T., Royer, J., Chen, J., Dascal, A., Sahlas, E., Pana, R., Hopewell, R., Hsiao, C. H.-H., Massarweh, G., Soucy, J.-P., Villeneuve, S., Caciagli, L., Koepp, M., Bernasconi, A., Bernasconi, N., & Bernhardt, B. (2025). An open dataset of cerebral tau deposition in young healthy adults based on [18F]MK6240 positron emission tomography. bioRxiv, 2025-06. https://doi.org/10.1101/2025.06.13.655622\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "pet",
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural"
+        ],
+        "sessions": [
+          "01",
+          "02"
+        ],
+        "size": 3287830390,
+        "subjects": [
+          "s032",
+          "s030",
+          "s019",
+          "s021",
+          "s028",
+          "s016",
+          "s004",
+          "s006",
+          "s013",
+          "s010",
+          "s008",
+          "s009",
+          "s018",
+          "s002",
+          "s033",
+          "s014",
+          "s012",
+          "s029",
+          "s020",
+          "s026",
+          "s001",
+          "s015",
+          "s003",
+          "s022",
+          "s007",
+          "s005",
+          "s017",
+          "s011",
+          "s027",
+          "s023",
+          "s024",
+          "s025",
+          "s031"
+        ],
+        "tasks": [],
+        "totalFiles": 155
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        36,
+        29,
+        34,
+        58,
+        34,
+        34,
+        30,
+        30,
+        27,
+        36,
+        40,
+        33,
+        40,
+        34,
+        36,
+        23,
+        34,
+        53,
+        60,
+        31,
+        24,
+        30,
+        24,
+        24,
+        25,
+        25,
+        33,
+        24,
+        24,
+        59,
+        21,
+        20,
+        44
+      ],
+      "associatedPaperDOI": " https://doi.org/10.1101/2025.06.13.655622",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "Fonds de Recherche du Québec - Santé; Montreal Neurological Institute and Hospital; Canadian Open Neuroscience Platform; Canadian Institutes of Health Research (FDN-154298, PJT-174995, PJT-191853); Sickkids Research Institute (NI17-039); Brain Research UK (14181); Natural Sciences and Engineering Research Council of Canada (Discovery-1304413); Centre Azrieli de recherche sur l'autisme, Institut et Hôpital Neurologiques de Montréal; Fondation Brain Canada; Helmholtz-Fonds; Canada Research Chairs.",
+      "modalities": [
+        "pet",
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2025-10-10T07:35:41.359Z"
+  },
+  "source": "openneuro"
+}

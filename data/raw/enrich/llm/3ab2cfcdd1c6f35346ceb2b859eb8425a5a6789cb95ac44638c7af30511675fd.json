@@ -1,0 +1,65 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:3ab2cfcdd1c6f35346ceb2b859eb8425a5a6789cb95ac44638c7af30511675fd",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Advanced Refractory Solid Tumors, Lymphomas, or Multiple Myeloma",
+        "label": "solid tumors"
+      },
+      {
+        "evidence": "patients with solid tumors, lymphomas, or multiple myelomas",
+        "label": "lymphomas"
+      },
+      {
+        "evidence": "Multiple Myeloma (EAY131)",
+        "label": "multiple myeloma"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "oncology",
+      "neurology",
+      "gastroenterology_hepatology",
+      "musculoskeletal"
+    ],
+    "id": "tcia:eay131",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "CT MR NM PT RTSTRUCT SEG XA",
+        "value": "CT"
+      },
+      {
+        "evidence": "CT MR NM PT RTSTRUCT SEG XA",
+        "value": "MRI"
+      },
+      {
+        "evidence": "CT MR NM PT RTSTRUCT SEG XA",
+        "value": "PET"
+      },
+      {
+        "evidence": "CT MR NM PT RTSTRUCT SEG XA",
+        "value": "SPECT"
+      },
+      {
+        "evidence": "CT MR NM PT RTSTRUCT SEG XA",
+        "value": "xray"
+      },
+      {
+        "evidence": "CT MR NM PT RTSTRUCT SEG XA",
+        "value": "radiotherapy"
+      },
+      {
+        "evidence": "This collection contains imaging and clinical data",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "\"Unmatched\" patients from the MATCH screening trial who did not meet criteria for the genetic sub-studies, with advanced refractory solid tumors, lymphomas, or multiple myeloma",
+    "summary": "Imaging and clinical data from patients screened but unmatched for the genetic sub-studies of a phase II trial of genetic-testing-directed targeted therapy in advanced refractory solid tumors, lymphomas and multiple myeloma."
+  },
+  "prompt_version": "v1"
+}

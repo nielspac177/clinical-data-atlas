@@ -1,0 +1,87 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004866",
+  "payload": {
+    "created": "2023-11-29T23:48:31.518Z",
+    "id": "ds004866",
+    "latestSnapshot": {
+      "created": "2023-11-30T01:41:09.000Z",
+      "description": {
+        "Authors": [
+          "Sean Paulsen",
+          "Michael A. Casey"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004866.v1.0.0",
+        "Funding": [],
+        "HowToAcknowledge": "Cite Sean Paulsen's PhD Thesis: https://digitalcommons.dartmouth.edu/dissertations/173/",
+        "License": "CC0",
+        "Name": "Shanxi Enculturation",
+        "ReferencesAndLinks": [
+          "https://digitalcommons.dartmouth.edu/dissertations/173/"
+        ]
+      },
+      "readme": "Shanxi Musical-Enculturation Dataset\nReferences:\nPaulsen, Sean (2023). Self-Supervised Pretraining and Transfer Learning on fMRI Data with Transformers (PhD Thesis). https://digitalcommons.dartmouth.edu/dissertations/173/ \n\nMarion, Pelofi, Paulsen, Shamma, and Casey (TBP).\n \nOverview:\nWe measured brain activity using functional MRI while five participants (“sub-sid001401/2548/2564/2566/2589”) listened to music clips of Bach chorals and Chinese folk music from the region of Shanxi. All participants reported familiarity with western classical music and no familiarity with Chinese folk music (see participants.tsv). \n\nParticipants were scanned in two sessions, one week apart. Stimuli presentation varied among participants, but for each participant the first and second sessions had identical protocols. To examine enculturation of the Shanxi musical grammars, participants were instructed to listen to at least 30 minutes of Shanxi music clips at home each day between sessions. These clips were similar to but distinct from the clips heard during scanning. Actual daily listening amounts are given in participants.tsv. \n\nThe top-level folder of this dataset consists of participant-wise subfolders (“sub-sid001401”,…). Each participant’s folder contains two subfolders, corresponding to the two sessions (\"ses-A005515\",\"ses-A005552\",...). The greater of the two numbers indicates the second session. Each session folder contains two subfolders:\n1) anat: T1-weighted structural images\n2) func: functional signals (multi-band echo-planar images) and events files\n\nEach session consisted of 8 functional runs, each of which had 4 blocks, with 3 trials in each block. Each block was either all Bach or all Shanxi trials. Each trial lasted 45s with no time in between trials, and presented one music clip. Half of all blocks for each participant were Bach and the other half Shanxi. The arrangement of blocks was randomized for each participant. After each block the participant was asked to rate the pleasure they felt during the preceding block. The functional data for each run are named as follows:\nsub-sid*_ses-A00*_task-enculture_acq-mb8_run-*_bold.nii.gz\n\nEach *_event.tsv file contains following information:\n1) Onset: stimulus onset\n2) Duration: Each clip was constructed to be approximately 30 seconds\n3) Trial_type: Either Bach or Chinese\n4) Value: The track number of this trial's music clip, e.g value 49 with trial_type Bach indicates Bach_49.mp3 was played.\n\nFurther details of the protocol design can be found in Section 3.2.2 of Paulsen (2023). All music clips used in the collection of this dataset were created by Marion and Barbarot (TBP).\n\nCaution: This dataset can be used for research purposes only. The data were anonymized and de-faced with pydeface, and users shall not perform analyses to re-identify individual participants.\n\nContributors: \nSean Paulsen\nDepartment of Computer Science, Dartmouth College, USA\n\nGuilhem Marion\nLaboratoire des Systèmes Perceptifs, Département d’Étude Cognitive, École Normale Supérieure, PSL, Paris, France\n\nClaire Pelofi\nCenter for Language, Music and Emotion, New York University, Max Planck Institute for Empirical Aesthetics\n\nMichael A. Casey\nDepartment of Computer Science & Department of Music, Dartmouth College, USA\n\nShihab Shamma\nDepartment of Electrical and Computer Engineering\nInstitute for Systems Research\nUniversity of Maryland College Park, USA\n&\nLaboratoire des Systèmes Perceptifs, Département d’Étude Cognitive, École Normale Supérieure, PSL, Paris, France\n\nCamille Barbarot\nCentre PsyCLÉ, Université Aix-Marseille, Aix-en-Provence, Provence-Alpes-Côte d’Azur, France\n\n\n\n## ezbids\n\nThis dataset was converted to BIDS using ezBIDS (https://brainlife.io/ezbids)\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "a005515",
+          "a005552",
+          "a005505",
+          "a005540",
+          "a005538",
+          "a005567",
+          "a005542",
+          "a005572",
+          "a005590",
+          "a005615"
+        ],
+        "size": 29771755048,
+        "subjects": [
+          "sid001401",
+          "sid002548",
+          "sid002564",
+          "sid002566",
+          "sid002589"
+        ],
+        "tasks": [
+          "enculture"
+        ],
+        "totalFiles": 505
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        55,
+        21,
+        19,
+        19,
+        36
+      ],
+      "associatedPaperDOI": "10.1162/jocn_a_01858,10.48550/arXiv.2305.09057,10.48550/arXiv.2305.13226",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "block",
+      "studyDomain": "Musical Enculturation",
+      "studyLongitudinal": "Longitudinal"
+    },
+    "publishDate": "2023-11-30T01:44:41.271Z"
+  },
+  "source": "openneuro"
+}

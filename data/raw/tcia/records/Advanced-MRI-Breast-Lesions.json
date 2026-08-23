@@ -1,0 +1,5865 @@
+{
+  "endpoints": [
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getCollectionValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getModalityValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getBodyPartValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getPatient",
+    "https://api.datacite.org/dois?prefix=10.7937"
+  ],
+  "harvest_method": "api:nbia+datacite",
+  "native_id": "Advanced-MRI-Breast-Lesions",
+  "payload": {
+    "datacite": {
+      "citationCount": 7,
+      "container": {},
+      "contentUrl": [],
+      "contributors": [],
+      "created": "2023-11-28T17:19:16Z",
+      "creators": [
+        {
+          "affiliation": [],
+          "familyName": "Daniels",
+          "givenName": "Dianne",
+          "name": "Daniels, Dianne",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-0912-8719",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Last",
+          "givenName": "David",
+          "name": "Last, David",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0003-1605-273X",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Cohen",
+          "givenName": "Kfir",
+          "name": "Cohen, Kfir",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0009-0001-6261-6447",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Mardor",
+          "givenName": "Yael",
+          "name": "Mardor, Yael",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-8561-8875",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Sklair-Levy",
+          "givenName": "Miri",
+          "name": "Sklair-Levy, Miri",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0003-3460-258X",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        }
+      ],
+      "dates": [],
+      "descriptions": [
+        {
+          "description": "The application of deep-learning methods to breast MRI has a potential to improve diagnosis as well as predict pathological features of the tumors and their response to therapy, and is currently widely investigated. Standard contrast-enhanced MRI of the breast provides high sensitivity but variable specificity in detecting breast cancer, and may lead to excessive benign biopsies. Large, well annotated datasets are needed to improve the current results in this field.\nThis dataset is a single-institutional, retrospective collection of 632 breast-MRI imaging sessions acquired on a 1.5T MR system between 2018-2021. Supporting data, collected for 200 patients from clinical notes, radiology report and pathology reports, is included: patient age, lesion location, malignant/benign outcome, pathology and grade (if applicable), receptor status and KI67 (if applicable). The main uniqueness of this data is that it contains the standard protocol series (T1-weighted DCE sequence with 5 time points- before and 4 time points after contrast injection, and T2-weighted MRI with/without fat suppression) as well as the delayed contrast T1-images acquired 20-28 minutes after contrast administration and the calculated treatment response assessment maps (TRAMs).",
+          "descriptionType": "Abstract",
+          "lang": null
+        }
+      ],
+      "doi": "10.7937/c7x1-yn57",
+      "downloadCount": 0,
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "Advanced-MRI-Breast-Lesions",
+          "identifierType": "TCIA Short Name"
+        }
+      ],
+      "isActive": true,
+      "language": null,
+      "metadataVersion": 11,
+      "partCount": 0,
+      "partOfCount": 0,
+      "publicationYear": 2024,
+      "published": null,
+      "publisher": "The Cancer Imaging Archive",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2024-01-31T20:49:25Z",
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "10.1109/jbhi.2024.3443705",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        }
+      ],
+      "relatedItems": [],
+      "rightsList": [
+        {
+          "rights": "Creative Commons Attribution 4.0 International",
+          "rightsIdentifier": "cc-by-4.0",
+          "rightsIdentifierScheme": "SPDX",
+          "rightsUri": "https://creativecommons.org/licenses/by/4.0/legalcode",
+          "schemeUri": "https://spdx.org/licenses/"
+        }
+      ],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "fabricaForm",
+      "state": "findable",
+      "subjects": [],
+      "titles": [
+        {
+          "lang": null,
+          "title": "Standard and Delayed Contrast-Enhanced MRI of Malignant and Benign Breast Lesions with Histological and Clinical Supporting Data (Advanced-MRI-Breast-Lesions)",
+          "titleType": null
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2025-06-01T01:01:05Z",
+      "url": "https://www.cancerimagingarchive.net/collection/advanced-mri-breast-lesions/",
+      "version": "2",
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 7619
+    },
+    "nbia": {
+      "body_parts": [
+        "BREAST"
+      ],
+      "collection": "Advanced-MRI-Breast-Lesions",
+      "modalities": [
+        "MR",
+        "SEG"
+      ],
+      "patients": [
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-065",
+          "PatientName": "AMBL-065",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-118",
+          "PatientName": "AMBL-118",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-119",
+          "PatientName": "AMBL-119",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-029",
+          "PatientName": "AMBL-029",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-046",
+          "PatientName": "AMBL-046",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-154",
+          "PatientName": "AMBL-154",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-129",
+          "PatientName": "AMBL-129",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-197",
+          "PatientName": "AMBL-197",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-109",
+          "PatientName": "AMBL-109",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-064",
+          "PatientName": "AMBL-064",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-052",
+          "PatientName": "AMBL-052",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-122",
+          "PatientName": "AMBL-122",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-037",
+          "PatientName": "AMBL-037",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-200",
+          "PatientName": "AMBL-200",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-135",
+          "PatientName": "AMBL-135",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-112",
+          "PatientName": "AMBL-112",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-021",
+          "PatientName": "AMBL-021",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-043",
+          "PatientName": "AMBL-043",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-050",
+          "PatientName": "AMBL-050",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-060",
+          "PatientName": "AMBL-060",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-016",
+          "PatientName": "AMBL-016",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-022",
+          "PatientName": "AMBL-022",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-150",
+          "PatientName": "AMBL-150",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-130",
+          "PatientName": "AMBL-130",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-023",
+          "PatientName": "AMBL-023",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-113",
+          "PatientName": "AMBL-113",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-024",
+          "PatientName": "AMBL-024",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-125",
+          "PatientName": "AMBL-125",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-146",
+          "PatientName": "AMBL-146",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-174",
+          "PatientName": "AMBL-174",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-020",
+          "PatientName": "AMBL-020",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-149",
+          "PatientName": "AMBL-149",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-071",
+          "PatientName": "AMBL-071",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-067",
+          "PatientName": "AMBL-067",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-049",
+          "PatientName": "AMBL-049",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-098",
+          "PatientName": "AMBL-098",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-032",
+          "PatientName": "AMBL-032",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-132",
+          "PatientName": "AMBL-132",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-087",
+          "PatientName": "AMBL-087",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-027",
+          "PatientName": "AMBL-027",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-143",
+          "PatientName": "AMBL-143",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-070",
+          "PatientName": "AMBL-070",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-161",
+          "PatientName": "AMBL-161",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-041",
+          "PatientName": "AMBL-041",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-136",
+          "PatientName": "AMBL-136",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-196",
+          "PatientName": "AMBL-196",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-018",
+          "PatientName": "AMBL-018",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-140",
+          "PatientName": "AMBL-140",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-144",
+          "PatientName": "AMBL-144",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-139",
+          "PatientName": "AMBL-139",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-058",
+          "PatientName": "AMBL-058",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-066",
+          "PatientName": "AMBL-066",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-107",
+          "PatientName": "AMBL-107",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-080",
+          "PatientName": "AMBL-080",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-056",
+          "PatientName": "AMBL-056",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-044",
+          "PatientName": "AMBL-044",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-014",
+          "PatientName": "AMBL-014",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-036",
+          "PatientName": "AMBL-036",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-105",
+          "PatientName": "AMBL-105",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-062",
+          "PatientName": "AMBL-062",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-156",
+          "PatientName": "AMBL-156",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-115",
+          "PatientName": "AMBL-115",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-111",
+          "PatientName": "AMBL-111",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-015",
+          "PatientName": "AMBL-015",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-182",
+          "PatientName": "AMBL-182",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-153",
+          "PatientName": "AMBL-153",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-160",
+          "PatientName": "AMBL-160",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-001",
+          "PatientName": "AMBL-001",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-179",
+          "PatientName": "AMBL-179",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-159",
+          "PatientName": "AMBL-159",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-141",
+          "PatientName": "AMBL-141",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-010",
+          "PatientName": "AMBL-010",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-081",
+          "PatientName": "AMBL-081",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-187",
+          "PatientName": "AMBL-187",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-128",
+          "PatientName": "AMBL-128",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-004",
+          "PatientName": "AMBL-004",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-199",
+          "PatientName": "AMBL-199",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-117",
+          "PatientName": "AMBL-117",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-079",
+          "PatientName": "AMBL-079",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-077",
+          "PatientName": "AMBL-077",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-078",
+          "PatientName": "AMBL-078",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-108",
+          "PatientName": "AMBL-108",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-031",
+          "PatientName": "AMBL-031",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-025",
+          "PatientName": "AMBL-025",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-166",
+          "PatientName": "AMBL-166",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-147",
+          "PatientName": "AMBL-147",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-042",
+          "PatientName": "AMBL-042",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-188",
+          "PatientName": "AMBL-188",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-008",
+          "PatientName": "AMBL-008",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-074",
+          "PatientName": "AMBL-074",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-165",
+          "PatientName": "AMBL-165",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-186",
+          "PatientName": "AMBL-186",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-116",
+          "PatientName": "AMBL-116",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-090",
+          "PatientName": "AMBL-090",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-152",
+          "PatientName": "AMBL-152",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-007",
+          "PatientName": "AMBL-007",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-172",
+          "PatientName": "AMBL-172",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-104",
+          "PatientName": "AMBL-104",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-006",
+          "PatientName": "AMBL-006",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-086",
+          "PatientName": "AMBL-086",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-158",
+          "PatientName": "AMBL-158",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-053",
+          "PatientName": "AMBL-053",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-009",
+          "PatientName": "AMBL-009",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-063",
+          "PatientName": "AMBL-063",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-034",
+          "PatientName": "AMBL-034",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-157",
+          "PatientName": "AMBL-157",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-191",
+          "PatientName": "AMBL-191",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-054",
+          "PatientName": "AMBL-054",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-193",
+          "PatientName": "AMBL-193",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-084",
+          "PatientName": "AMBL-084",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-012",
+          "PatientName": "AMBL-012",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-178",
+          "PatientName": "AMBL-178",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-047",
+          "PatientName": "AMBL-047",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-181",
+          "PatientName": "AMBL-181",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-155",
+          "PatientName": "AMBL-155",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-057",
+          "PatientName": "AMBL-057",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-082",
+          "PatientName": "AMBL-082",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-073",
+          "PatientName": "AMBL-073",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-126",
+          "PatientName": "AMBL-126",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-089",
+          "PatientName": "AMBL-089",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-102",
+          "PatientName": "AMBL-102",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-168",
+          "PatientName": "AMBL-168",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-083",
+          "PatientName": "AMBL-083",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-013",
+          "PatientName": "AMBL-013",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-138",
+          "PatientName": "AMBL-138",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-169",
+          "PatientName": "AMBL-169",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-045",
+          "PatientName": "AMBL-045",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-106",
+          "PatientName": "AMBL-106",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-072",
+          "PatientName": "AMBL-072",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-095",
+          "PatientName": "AMBL-095",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-040",
+          "PatientName": "AMBL-040",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-189",
+          "PatientName": "AMBL-189",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-019",
+          "PatientName": "AMBL-019",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-162",
+          "PatientName": "AMBL-162",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-127",
+          "PatientName": "AMBL-127",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-110",
+          "PatientName": "AMBL-110",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-194",
+          "PatientName": "AMBL-194",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-124",
+          "PatientName": "AMBL-124",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-051",
+          "PatientName": "AMBL-051",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-192",
+          "PatientName": "AMBL-192",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-033",
+          "PatientName": "AMBL-033",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-131",
+          "PatientName": "AMBL-131",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-185",
+          "PatientName": "AMBL-185",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-076",
+          "PatientName": "AMBL-076",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-088",
+          "PatientName": "AMBL-088",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-175",
+          "PatientName": "AMBL-175",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-198",
+          "PatientName": "AMBL-198",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-039",
+          "PatientName": "AMBL-039",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-183",
+          "PatientName": "AMBL-183",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-002",
+          "PatientName": "AMBL-002",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-134",
+          "PatientName": "AMBL-134",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-085",
+          "PatientName": "AMBL-085",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-142",
+          "PatientName": "AMBL-142",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-180",
+          "PatientName": "AMBL-180",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-151",
+          "PatientName": "AMBL-151",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-092",
+          "PatientName": "AMBL-092",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-093",
+          "PatientName": "AMBL-093",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-035",
+          "PatientName": "AMBL-035",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-170",
+          "PatientName": "AMBL-170",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-145",
+          "PatientName": "AMBL-145",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-114",
+          "PatientName": "AMBL-114",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-164",
+          "PatientName": "AMBL-164",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-030",
+          "PatientName": "AMBL-030",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-055",
+          "PatientName": "AMBL-055",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-123",
+          "PatientName": "AMBL-123",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-038",
+          "PatientName": "AMBL-038",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-059",
+          "PatientName": "AMBL-059",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-061",
+          "PatientName": "AMBL-061",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-068",
+          "PatientName": "AMBL-068",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-190",
+          "PatientName": "AMBL-190",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-005",
+          "PatientName": "AMBL-005",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-120",
+          "PatientName": "AMBL-120",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-176",
+          "PatientName": "AMBL-176",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-100",
+          "PatientName": "AMBL-100",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-101",
+          "PatientName": "AMBL-101",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-099",
+          "PatientName": "AMBL-099",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-097",
+          "PatientName": "AMBL-097",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-069",
+          "PatientName": "AMBL-069",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-137",
+          "PatientName": "AMBL-137",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-026",
+          "PatientName": "AMBL-026",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-096",
+          "PatientName": "AMBL-096",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-094",
+          "PatientName": "AMBL-094",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-195",
+          "PatientName": "AMBL-195",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-148",
+          "PatientName": "AMBL-148",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-177",
+          "PatientName": "AMBL-177",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-003",
+          "PatientName": "AMBL-003",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-017",
+          "PatientName": "AMBL-017",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-133",
+          "PatientName": "AMBL-133",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-103",
+          "PatientName": "AMBL-103",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-028",
+          "PatientName": "AMBL-028",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-163",
+          "PatientName": "AMBL-163",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-121",
+          "PatientName": "AMBL-121",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-075",
+          "PatientName": "AMBL-075",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-048",
+          "PatientName": "AMBL-048",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-167",
+          "PatientName": "AMBL-167",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-091",
+          "PatientName": "AMBL-091",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-184",
+          "PatientName": "AMBL-184",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-171",
+          "PatientName": "AMBL-171",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-011",
+          "PatientName": "AMBL-011",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-173",
+          "PatientName": "AMBL-173",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-376",
+          "PatientName": "AMBL-376",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-327",
+          "PatientName": "AMBL-327",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-306",
+          "PatientName": "AMBL-306",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-466",
+          "PatientName": "AMBL-466",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-540",
+          "PatientName": "AMBL-540",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-201",
+          "PatientName": "AMBL-201",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-629",
+          "PatientName": "AMBL-629",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-432",
+          "PatientName": "AMBL-432",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-355",
+          "PatientName": "AMBL-355",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-553",
+          "PatientName": "AMBL-553",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-607",
+          "PatientName": "AMBL-607",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-212",
+          "PatientName": "AMBL-212",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-433",
+          "PatientName": "AMBL-433",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-609",
+          "PatientName": "AMBL-609",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-429",
+          "PatientName": "AMBL-429",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-595",
+          "PatientName": "AMBL-595",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-229",
+          "PatientName": "AMBL-229",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-557",
+          "PatientName": "AMBL-557",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-471",
+          "PatientName": "AMBL-471",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-243",
+          "PatientName": "AMBL-243",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-253",
+          "PatientName": "AMBL-253",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-622",
+          "PatientName": "AMBL-622",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-579",
+          "PatientName": "AMBL-579",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-335",
+          "PatientName": "AMBL-335",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-388",
+          "PatientName": "AMBL-388",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-618",
+          "PatientName": "AMBL-618",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-527",
+          "PatientName": "AMBL-527",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-566",
+          "PatientName": "AMBL-566",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-397",
+          "PatientName": "AMBL-397",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-575",
+          "PatientName": "AMBL-575",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-605",
+          "PatientName": "AMBL-605",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-246",
+          "PatientName": "AMBL-246",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-516",
+          "PatientName": "AMBL-516",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-267",
+          "PatientName": "AMBL-267",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-269",
+          "PatientName": "AMBL-269",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-512",
+          "PatientName": "AMBL-512",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-465",
+          "PatientName": "AMBL-465",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-285",
+          "PatientName": "AMBL-285",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-510",
+          "PatientName": "AMBL-510",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-630",
+          "PatientName": "AMBL-630",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-297",
+          "PatientName": "AMBL-297",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-311",
+          "PatientName": "AMBL-311",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-308",
+          "PatientName": "AMBL-308",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-304",
+          "PatientName": "AMBL-304",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-342",
+          "PatientName": "AMBL-342",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-363",
+          "PatientName": "AMBL-363",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-581",
+          "PatientName": "AMBL-581",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-261",
+          "PatientName": "AMBL-261",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-391",
+          "PatientName": "AMBL-391",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-536",
+          "PatientName": "AMBL-536",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-603",
+          "PatientName": "AMBL-603",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-436",
+          "PatientName": "AMBL-436",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-480",
+          "PatientName": "AMBL-480",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-299",
+          "PatientName": "AMBL-299",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-439",
+          "PatientName": "AMBL-439",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-372",
+          "PatientName": "AMBL-372",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-448",
+          "PatientName": "AMBL-448",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-593",
+          "PatientName": "AMBL-593",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-276",
+          "PatientName": "AMBL-276",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-483",
+          "PatientName": "AMBL-483",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-289",
+          "PatientName": "AMBL-289",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-419",
+          "PatientName": "AMBL-419",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-625",
+          "PatientName": "AMBL-625",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-470",
+          "PatientName": "AMBL-470",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-265",
+          "PatientName": "AMBL-265",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-257",
+          "PatientName": "AMBL-257",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-268",
+          "PatientName": "AMBL-268",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-428",
+          "PatientName": "AMBL-428",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-418",
+          "PatientName": "AMBL-418",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-599",
+          "PatientName": "AMBL-599",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-325",
+          "PatientName": "AMBL-325",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-387",
+          "PatientName": "AMBL-387",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-443",
+          "PatientName": "AMBL-443",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-331",
+          "PatientName": "AMBL-331",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-501",
+          "PatientName": "AMBL-501",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-530",
+          "PatientName": "AMBL-530",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-474",
+          "PatientName": "AMBL-474",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-528",
+          "PatientName": "AMBL-528",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-592",
+          "PatientName": "AMBL-592",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-291",
+          "PatientName": "AMBL-291",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-271",
+          "PatientName": "AMBL-271",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-606",
+          "PatientName": "AMBL-606",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-447",
+          "PatientName": "AMBL-447",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-468",
+          "PatientName": "AMBL-468",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-588",
+          "PatientName": "AMBL-588",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-552",
+          "PatientName": "AMBL-552",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-496",
+          "PatientName": "AMBL-496",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-211",
+          "PatientName": "AMBL-211",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-312",
+          "PatientName": "AMBL-312",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-568",
+          "PatientName": "AMBL-568",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-266",
+          "PatientName": "AMBL-266",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-281",
+          "PatientName": "AMBL-281",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-543",
+          "PatientName": "AMBL-543",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-554",
+          "PatientName": "AMBL-554",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-354",
+          "PatientName": "AMBL-354",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-317",
+          "PatientName": "AMBL-317",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-631",
+          "PatientName": "AMBL-631",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-461",
+          "PatientName": "AMBL-461",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-423",
+          "PatientName": "AMBL-423",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-585",
+          "PatientName": "AMBL-585",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-570",
+          "PatientName": "AMBL-570",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-408",
+          "PatientName": "AMBL-408",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-374",
+          "PatientName": "AMBL-374",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-228",
+          "PatientName": "AMBL-228",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-450",
+          "PatientName": "AMBL-450",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-409",
+          "PatientName": "AMBL-409",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-628",
+          "PatientName": "AMBL-628",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-525",
+          "PatientName": "AMBL-525",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-564",
+          "PatientName": "AMBL-564",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-420",
+          "PatientName": "AMBL-420",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-594",
+          "PatientName": "AMBL-594",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-314",
+          "PatientName": "AMBL-314",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-430",
+          "PatientName": "AMBL-430",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-453",
+          "PatientName": "AMBL-453",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-395",
+          "PatientName": "AMBL-395",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-441",
+          "PatientName": "AMBL-441",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-280",
+          "PatientName": "AMBL-280",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-495",
+          "PatientName": "AMBL-495",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-313",
+          "PatientName": "AMBL-313",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-560",
+          "PatientName": "AMBL-560",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-235",
+          "PatientName": "AMBL-235",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-590",
+          "PatientName": "AMBL-590",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-371",
+          "PatientName": "AMBL-371",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-346",
+          "PatientName": "AMBL-346",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-412",
+          "PatientName": "AMBL-412",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-580",
+          "PatientName": "AMBL-580",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-326",
+          "PatientName": "AMBL-326",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-384",
+          "PatientName": "AMBL-384",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-234",
+          "PatientName": "AMBL-234",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-394",
+          "PatientName": "AMBL-394",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-571",
+          "PatientName": "AMBL-571",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-576",
+          "PatientName": "AMBL-576",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-329",
+          "PatientName": "AMBL-329",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-273",
+          "PatientName": "AMBL-273",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-318",
+          "PatientName": "AMBL-318",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-589",
+          "PatientName": "AMBL-589",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-322",
+          "PatientName": "AMBL-322",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-583",
+          "PatientName": "AMBL-583",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-344",
+          "PatientName": "AMBL-344",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-303",
+          "PatientName": "AMBL-303",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-573",
+          "PatientName": "AMBL-573",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-301",
+          "PatientName": "AMBL-301",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-535",
+          "PatientName": "AMBL-535",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-343",
+          "PatientName": "AMBL-343",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-264",
+          "PatientName": "AMBL-264",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-333",
+          "PatientName": "AMBL-333",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-442",
+          "PatientName": "AMBL-442",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-541",
+          "PatientName": "AMBL-541",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-274",
+          "PatientName": "AMBL-274",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-454",
+          "PatientName": "AMBL-454",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-435",
+          "PatientName": "AMBL-435",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-608",
+          "PatientName": "AMBL-608",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-207",
+          "PatientName": "AMBL-207",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-561",
+          "PatientName": "AMBL-561",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-455",
+          "PatientName": "AMBL-455",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-414",
+          "PatientName": "AMBL-414",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-221",
+          "PatientName": "AMBL-221",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-400",
+          "PatientName": "AMBL-400",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-514",
+          "PatientName": "AMBL-514",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-345",
+          "PatientName": "AMBL-345",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-399",
+          "PatientName": "AMBL-399",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-431",
+          "PatientName": "AMBL-431",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-437",
+          "PatientName": "AMBL-437",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-241",
+          "PatientName": "AMBL-241",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-611",
+          "PatientName": "AMBL-611",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-601",
+          "PatientName": "AMBL-601",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-225",
+          "PatientName": "AMBL-225",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-349",
+          "PatientName": "AMBL-349",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-398",
+          "PatientName": "AMBL-398",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-479",
+          "PatientName": "AMBL-479",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-421",
+          "PatientName": "AMBL-421",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-422",
+          "PatientName": "AMBL-422",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-505",
+          "PatientName": "AMBL-505",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-237",
+          "PatientName": "AMBL-237",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-256",
+          "PatientName": "AMBL-256",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-584",
+          "PatientName": "AMBL-584",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-316",
+          "PatientName": "AMBL-316",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-290",
+          "PatientName": "AMBL-290",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-348",
+          "PatientName": "AMBL-348",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-209",
+          "PatientName": "AMBL-209",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-381",
+          "PatientName": "AMBL-381",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-324",
+          "PatientName": "AMBL-324",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-365",
+          "PatientName": "AMBL-365",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-416",
+          "PatientName": "AMBL-416",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-533",
+          "PatientName": "AMBL-533",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-283",
+          "PatientName": "AMBL-283",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-338",
+          "PatientName": "AMBL-338",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-507",
+          "PatientName": "AMBL-507",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-278",
+          "PatientName": "AMBL-278",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-258",
+          "PatientName": "AMBL-258",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-469",
+          "PatientName": "AMBL-469",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-574",
+          "PatientName": "AMBL-574",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-488",
+          "PatientName": "AMBL-488",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-293",
+          "PatientName": "AMBL-293",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-286",
+          "PatientName": "AMBL-286",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-288",
+          "PatientName": "AMBL-288",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-532",
+          "PatientName": "AMBL-532",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-362",
+          "PatientName": "AMBL-362",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-353",
+          "PatientName": "AMBL-353",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-390",
+          "PatientName": "AMBL-390",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-509",
+          "PatientName": "AMBL-509",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-386",
+          "PatientName": "AMBL-386",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-287",
+          "PatientName": "AMBL-287",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-336",
+          "PatientName": "AMBL-336",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-413",
+          "PatientName": "AMBL-413",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-244",
+          "PatientName": "AMBL-244",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-521",
+          "PatientName": "AMBL-521",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-247",
+          "PatientName": "AMBL-247",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-242",
+          "PatientName": "AMBL-242",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-356",
+          "PatientName": "AMBL-356",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-215",
+          "PatientName": "AMBL-215",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-309",
+          "PatientName": "AMBL-309",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-334",
+          "PatientName": "AMBL-334",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-254",
+          "PatientName": "AMBL-254",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-478",
+          "PatientName": "AMBL-478",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-518",
+          "PatientName": "AMBL-518",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-537",
+          "PatientName": "AMBL-537",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-208",
+          "PatientName": "AMBL-208",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-405",
+          "PatientName": "AMBL-405",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-438",
+          "PatientName": "AMBL-438",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-569",
+          "PatientName": "AMBL-569",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-460",
+          "PatientName": "AMBL-460",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-233",
+          "PatientName": "AMBL-233",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-203",
+          "PatientName": "AMBL-203",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-224",
+          "PatientName": "AMBL-224",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-240",
+          "PatientName": "AMBL-240",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-255",
+          "PatientName": "AMBL-255",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-452",
+          "PatientName": "AMBL-452",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-360",
+          "PatientName": "AMBL-360",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-616",
+          "PatientName": "AMBL-616",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-396",
+          "PatientName": "AMBL-396",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-382",
+          "PatientName": "AMBL-382",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-251",
+          "PatientName": "AMBL-251",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-596",
+          "PatientName": "AMBL-596",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-292",
+          "PatientName": "AMBL-292",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-337",
+          "PatientName": "AMBL-337",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-275",
+          "PatientName": "AMBL-275",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-401",
+          "PatientName": "AMBL-401",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-563",
+          "PatientName": "AMBL-563",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-364",
+          "PatientName": "AMBL-364",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-467",
+          "PatientName": "AMBL-467",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-597",
+          "PatientName": "AMBL-597",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-214",
+          "PatientName": "AMBL-214",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-385",
+          "PatientName": "AMBL-385",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-227",
+          "PatientName": "AMBL-227",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-602",
+          "PatientName": "AMBL-602",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-262",
+          "PatientName": "AMBL-262",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-249",
+          "PatientName": "AMBL-249",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-380",
+          "PatientName": "AMBL-380",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-551",
+          "PatientName": "AMBL-551",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-539",
+          "PatientName": "AMBL-539",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-502",
+          "PatientName": "AMBL-502",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-377",
+          "PatientName": "AMBL-377",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-617",
+          "PatientName": "AMBL-617",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-558",
+          "PatientName": "AMBL-558",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-519",
+          "PatientName": "AMBL-519",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-319",
+          "PatientName": "AMBL-319",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-504",
+          "PatientName": "AMBL-504",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-487",
+          "PatientName": "AMBL-487",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-462",
+          "PatientName": "AMBL-462",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-477",
+          "PatientName": "AMBL-477",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-389",
+          "PatientName": "AMBL-389",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-464",
+          "PatientName": "AMBL-464",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-492",
+          "PatientName": "AMBL-492",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-373",
+          "PatientName": "AMBL-373",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-302",
+          "PatientName": "AMBL-302",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-294",
+          "PatientName": "AMBL-294",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-587",
+          "PatientName": "AMBL-587",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-506",
+          "PatientName": "AMBL-506",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-315",
+          "PatientName": "AMBL-315",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-383",
+          "PatientName": "AMBL-383",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-476",
+          "PatientName": "AMBL-476",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-559",
+          "PatientName": "AMBL-559",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-458",
+          "PatientName": "AMBL-458",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-222",
+          "PatientName": "AMBL-222",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-339",
+          "PatientName": "AMBL-339",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-562",
+          "PatientName": "AMBL-562",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-415",
+          "PatientName": "AMBL-415",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-205",
+          "PatientName": "AMBL-205",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-368",
+          "PatientName": "AMBL-368",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-613",
+          "PatientName": "AMBL-613",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-531",
+          "PatientName": "AMBL-531",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-498",
+          "PatientName": "AMBL-498",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-393",
+          "PatientName": "AMBL-393",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-459",
+          "PatientName": "AMBL-459",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-250",
+          "PatientName": "AMBL-250",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-230",
+          "PatientName": "AMBL-230",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-612",
+          "PatientName": "AMBL-612",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-542",
+          "PatientName": "AMBL-542",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-370",
+          "PatientName": "AMBL-370",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-610",
+          "PatientName": "AMBL-610",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-238",
+          "PatientName": "AMBL-238",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-446",
+          "PatientName": "AMBL-446",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-259",
+          "PatientName": "AMBL-259",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-565",
+          "PatientName": "AMBL-565",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-627",
+          "PatientName": "AMBL-627",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-379",
+          "PatientName": "AMBL-379",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-219",
+          "PatientName": "AMBL-219",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-434",
+          "PatientName": "AMBL-434",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-577",
+          "PatientName": "AMBL-577",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-359",
+          "PatientName": "AMBL-359",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-444",
+          "PatientName": "AMBL-444",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-351",
+          "PatientName": "AMBL-351",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-427",
+          "PatientName": "AMBL-427",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-352",
+          "PatientName": "AMBL-352",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-366",
+          "PatientName": "AMBL-366",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-440",
+          "PatientName": "AMBL-440",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-232",
+          "PatientName": "AMBL-232",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-582",
+          "PatientName": "AMBL-582",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-231",
+          "PatientName": "AMBL-231",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-298",
+          "PatientName": "AMBL-298",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-520",
+          "PatientName": "AMBL-520",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-295",
+          "PatientName": "AMBL-295",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-472",
+          "PatientName": "AMBL-472",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-236",
+          "PatientName": "AMBL-236",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-282",
+          "PatientName": "AMBL-282",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-277",
+          "PatientName": "AMBL-277",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-572",
+          "PatientName": "AMBL-572",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-220",
+          "PatientName": "AMBL-220",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-248",
+          "PatientName": "AMBL-248",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-252",
+          "PatientName": "AMBL-252",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-340",
+          "PatientName": "AMBL-340",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-270",
+          "PatientName": "AMBL-270",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-556",
+          "PatientName": "AMBL-556",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-508",
+          "PatientName": "AMBL-508",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-218",
+          "PatientName": "AMBL-218",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-310",
+          "PatientName": "AMBL-310",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-424",
+          "PatientName": "AMBL-424",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-463",
+          "PatientName": "AMBL-463",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-350",
+          "PatientName": "AMBL-350",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-486",
+          "PatientName": "AMBL-486",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-279",
+          "PatientName": "AMBL-279",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-358",
+          "PatientName": "AMBL-358",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-332",
+          "PatientName": "AMBL-332",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-456",
+          "PatientName": "AMBL-456",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-632",
+          "PatientName": "AMBL-632",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-547",
+          "PatientName": "AMBL-547",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-529",
+          "PatientName": "AMBL-529",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-328",
+          "PatientName": "AMBL-328",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-598",
+          "PatientName": "AMBL-598",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-260",
+          "PatientName": "AMBL-260",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-457",
+          "PatientName": "AMBL-457",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-375",
+          "PatientName": "AMBL-375",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-341",
+          "PatientName": "AMBL-341",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-550",
+          "PatientName": "AMBL-550",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-206",
+          "PatientName": "AMBL-206",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-223",
+          "PatientName": "AMBL-223",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-489",
+          "PatientName": "AMBL-489",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-621",
+          "PatientName": "AMBL-621",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-491",
+          "PatientName": "AMBL-491",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-555",
+          "PatientName": "AMBL-555",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-567",
+          "PatientName": "AMBL-567",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-320",
+          "PatientName": "AMBL-320",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-451",
+          "PatientName": "AMBL-451",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-417",
+          "PatientName": "AMBL-417",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-614",
+          "PatientName": "AMBL-614",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-378",
+          "PatientName": "AMBL-378",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-499",
+          "PatientName": "AMBL-499",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-475",
+          "PatientName": "AMBL-475",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-591",
+          "PatientName": "AMBL-591",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-407",
+          "PatientName": "AMBL-407",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-330",
+          "PatientName": "AMBL-330",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-404",
+          "PatientName": "AMBL-404",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-548",
+          "PatientName": "AMBL-548",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-307",
+          "PatientName": "AMBL-307",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-213",
+          "PatientName": "AMBL-213",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-619",
+          "PatientName": "AMBL-619",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-545",
+          "PatientName": "AMBL-545",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-549",
+          "PatientName": "AMBL-549",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-526",
+          "PatientName": "AMBL-526",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-272",
+          "PatientName": "AMBL-272",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-615",
+          "PatientName": "AMBL-615",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-323",
+          "PatientName": "AMBL-323",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-544",
+          "PatientName": "AMBL-544",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-210",
+          "PatientName": "AMBL-210",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-624",
+          "PatientName": "AMBL-624",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-369",
+          "PatientName": "AMBL-369",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-534",
+          "PatientName": "AMBL-534",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-411",
+          "PatientName": "AMBL-411",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-426",
+          "PatientName": "AMBL-426",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-522",
+          "PatientName": "AMBL-522",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-204",
+          "PatientName": "AMBL-204",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-626",
+          "PatientName": "AMBL-626",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-623",
+          "PatientName": "AMBL-623",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-497",
+          "PatientName": "AMBL-497",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-406",
+          "PatientName": "AMBL-406",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-578",
+          "PatientName": "AMBL-578",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-503",
+          "PatientName": "AMBL-503",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-481",
+          "PatientName": "AMBL-481",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-202",
+          "PatientName": "AMBL-202",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-445",
+          "PatientName": "AMBL-445",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-604",
+          "PatientName": "AMBL-604",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-586",
+          "PatientName": "AMBL-586",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-515",
+          "PatientName": "AMBL-515",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-216",
+          "PatientName": "AMBL-216",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-226",
+          "PatientName": "AMBL-226",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-361",
+          "PatientName": "AMBL-361",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-493",
+          "PatientName": "AMBL-493",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-239",
+          "PatientName": "AMBL-239",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-367",
+          "PatientName": "AMBL-367",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-524",
+          "PatientName": "AMBL-524",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-410",
+          "PatientName": "AMBL-410",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-538",
+          "PatientName": "AMBL-538",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-513",
+          "PatientName": "AMBL-513",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-473",
+          "PatientName": "AMBL-473",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-482",
+          "PatientName": "AMBL-482",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-403",
+          "PatientName": "AMBL-403",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-305",
+          "PatientName": "AMBL-305",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-296",
+          "PatientName": "AMBL-296",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-284",
+          "PatientName": "AMBL-284",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-263",
+          "PatientName": "AMBL-263",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-484",
+          "PatientName": "AMBL-484",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-490",
+          "PatientName": "AMBL-490",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-402",
+          "PatientName": "AMBL-402",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-485",
+          "PatientName": "AMBL-485",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-494",
+          "PatientName": "AMBL-494",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-217",
+          "PatientName": "AMBL-217",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-511",
+          "PatientName": "AMBL-511",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-357",
+          "PatientName": "AMBL-357",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-600",
+          "PatientName": "AMBL-600",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-449",
+          "PatientName": "AMBL-449",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-620",
+          "PatientName": "AMBL-620",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-546",
+          "PatientName": "AMBL-546",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-425",
+          "PatientName": "AMBL-425",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-347",
+          "PatientName": "AMBL-347",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-523",
+          "PatientName": "AMBL-523",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-300",
+          "PatientName": "AMBL-300",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-517",
+          "PatientName": "AMBL-517",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-500",
+          "PatientName": "AMBL-500",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-245",
+          "PatientName": "AMBL-245",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-392",
+          "PatientName": "AMBL-392",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Advanced-MRI-Breast-Lesions",
+          "PatientId": "AMBL-321",
+          "PatientName": "AMBL-321",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        }
+      ]
+    }
+  },
+  "source": "tcia"
+}

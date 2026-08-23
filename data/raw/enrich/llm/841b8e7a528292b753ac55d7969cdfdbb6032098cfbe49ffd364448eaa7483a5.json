@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:841b8e7a528292b753ac55d7969cdfdbb6032098cfbe49ffd364448eaa7483a5",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "including two cysts, a metastasis, and a hemangioma",
+        "label": "cysts"
+      },
+      {
+        "evidence": "two cysts, a metastasis, and a hemangioma",
+        "label": "metastasis"
+      },
+      {
+        "evidence": "a metastasis, and a hemangioma, with ground truth segmentation masks",
+        "label": "hemangioma"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "gastroenterology_hepatology"
+    ],
+    "id": "tcia:ct4harmonization-multicentric",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "phantom-based dataset of CT scans",
+        "value": "CT"
+      }
+    ],
+    "population": "An anthropomorphic 3D-printed phantom scanned on 13 scanners from 4 manufacturers at 8 institutions; no human participants.",
+    "summary": "Repeated CT scans of an anthropomorphic phantom acquired across multiple scanners, manufacturers and institutions with a harmonized protocol, plus a 3D-printed liver with annotated abnormal regions and segmentation masks."
+  },
+  "prompt_version": "v1"
+}

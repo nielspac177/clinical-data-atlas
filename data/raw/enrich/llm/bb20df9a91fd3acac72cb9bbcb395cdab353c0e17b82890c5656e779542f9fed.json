@@ -1,0 +1,57 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:bb20df9a91fd3acac72cb9bbcb395cdab353c0e17b82890c5656e779542f9fed",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Colon Adenocarcinoma",
+        "label": "Colon Adenocarcinoma"
+      },
+      {
+        "evidence": "Epithelial Neoplasms, NOS",
+        "label": "Epithelial Neoplasms, NOS"
+      },
+      {
+        "evidence": "Cystic, Mucinous and Serous Neoplasms",
+        "label": "Cystic, Mucinous and Serous Neoplasms"
+      },
+      {
+        "evidence": "Complex Epithelial Neoplasms",
+        "label": "Complex Epithelial Neoplasms"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "gastroenterology_hepatology"
+    ],
+    "id": "gdc:TCGA-COAD",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Tissue Slide, Diagnostic Slide",
+        "value": "pathology"
+      },
+      {
+        "evidence": "WXS, WGS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "miRNA-Seq, RNA-Seq",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Proteome Profiling",
+        "value": "proteomics"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "461 human cases of colon adenocarcinoma",
+    "summary": "TCGA project on colon adenocarcinoma, sampling colon and rectosigmoid junction. Covers sequencing reads, nucleotide and copy number variation, transcriptome profiling, DNA methylation, proteome profiling, biospecimen and clinical data, plus tissue and diagnostic slides."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,34 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:bc59bec26e052159907b9079b98755a8e15ada36efd913583936cf0fc6b56d78",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "benign or malignant breast disease",
+        "label": "benign or malignant breast disease"
+      },
+      {
+        "evidence": "Breast carcinoma is the second largest cancer",
+        "label": "Breast carcinoma"
+      }
+    ],
+    "countries": [
+      "CN"
+    ],
+    "domains": [
+      "oncology"
+    ],
+    "id": "tcia:cmmd",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "underwent mammography examination",
+        "value": "mammography"
+      }
+    ],
+    "population": "1,775 patients from China with benign or malignant breast disease who underwent mammography examination",
+    "summary": "Mammography database built on 1,775 patients from China with benign or malignant breast disease, with biopsy confirmation and molecular subtype information, intended for computer-aided detection, diagnosis and image-based biomarker research."
+  },
+  "prompt_version": "v1"
+}

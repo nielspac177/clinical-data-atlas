@@ -1,0 +1,77 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "APOLLO-LUAD",
+  "payload": {
+    "dbgap_accession_number": "phs003011",
+    "disease_type": [
+      "Adenomas and Adenocarcinomas"
+    ],
+    "id": "APOLLO-LUAD",
+    "name": "APOLLO1: Proteogenomic characterization of lung adenocarcinoma",
+    "primary_site": [
+      "Bronchus and lung"
+    ],
+    "program": {
+      "dbgap_accession_number": null,
+      "name": "APOLLO",
+      "program_id": "bd5bea9d-29ff-52e4-92f5-463837c6f6cf"
+    },
+    "project_id": "APOLLO-LUAD",
+    "releasable": true,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 87,
+      "data_categories": [
+        {
+          "case_count": 87,
+          "data_category": "Sequencing Reads",
+          "file_count": 435
+        },
+        {
+          "case_count": 87,
+          "data_category": "Simple Nucleotide Variation",
+          "file_count": 506
+        },
+        {
+          "case_count": 87,
+          "data_category": "Copy Number Variation",
+          "file_count": 340
+        },
+        {
+          "case_count": 87,
+          "data_category": "Transcriptome Profiling",
+          "file_count": 174
+        },
+        {
+          "case_count": 87,
+          "data_category": "Somatic Structural Variation",
+          "file_count": 340
+        },
+        {
+          "case_count": 87,
+          "data_category": "Structural Variation",
+          "file_count": 350
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 87,
+          "experimental_strategy": "RNA-Seq",
+          "file_count": 783
+        },
+        {
+          "case_count": 87,
+          "experimental_strategy": "WGS",
+          "file_count": 1362
+        }
+      ],
+      "file_count": 2145,
+      "file_size": 67391697349805
+    }
+  },
+  "source": "gdc"
+}

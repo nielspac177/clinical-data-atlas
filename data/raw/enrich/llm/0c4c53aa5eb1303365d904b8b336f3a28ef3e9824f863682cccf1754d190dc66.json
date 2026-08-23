@@ -1,0 +1,75 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:0c4c53aa5eb1303365d904b8b336f3a28ef3e9824f863682cccf1754d190dc66",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Neoplasms, NOS",
+        "label": "Neoplasms, NOS"
+      },
+      {
+        "evidence": "Complex Mixed and Stromal Neoplasms",
+        "label": "Complex Mixed and Stromal Neoplasms"
+      },
+      {
+        "evidence": "Epithelial Neoplasms, NOS",
+        "label": "Epithelial Neoplasms, NOS"
+      },
+      {
+        "evidence": "Adenomas and Adenocarcinomas",
+        "label": "Adenomas and Adenocarcinomas"
+      },
+      {
+        "evidence": "Gliomas",
+        "label": "Gliomas"
+      },
+      {
+        "evidence": "Myomatous Neoplasms",
+        "label": "Myomatous Neoplasms"
+      },
+      {
+        "evidence": "Ductal and Lobular Neoplasms",
+        "label": "Ductal and Lobular Neoplasms"
+      },
+      {
+        "evidence": "Squamous Cell Neoplasms",
+        "label": "Squamous Cell Neoplasms"
+      },
+      {
+        "evidence": "Nerve Sheath Tumors",
+        "label": "Nerve Sheath Tumors"
+      },
+      {
+        "evidence": "Soft Tissue Tumors and Sarcomas, NOS",
+        "label": "Soft Tissue Tumors and Sarcomas, NOS"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "neurology",
+      "pulmonology",
+      "gastroenterology_hepatology"
+    ],
+    "id": "gdc:MATCH-S1",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "WXS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "RNA-Seq",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "41 human cases with tumors at many primary sites, including lung, colon, stomach, breast, liver, brain, ovary, gallbladder and peripheral nerves",
+    "summary": "Genomic characterization of MATCH trial Arm S1: whole-exome and RNA sequencing with variant, biospecimen and clinical data, from tumors of the lung, colon, stomach, liver, brain, peripheral nerves and other sites."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,29 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:fa3a44d93db899d6c7569c159a6b588f7696cdb51733695c48d293cd3fa888c8",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "public_health"
+    ],
+    "id": "physionet:minute-level-step-count-nhanes",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "participants wore an ActiGraph GT3X+ on the non-dominant wrist for seven consecutive days",
+        "value": "wearable"
+      },
+      {
+        "evidence": "National Health and Nutrition Examination Survey (NHANES) is a nationally representative study that collects demographic, socioeconomic, dietary, and health-related information",
+        "value": "survey"
+      }
+    ],
+    "population": "All participants who wore accelerometers in NHANES 2011-2014",
+    "summary": "Minute-level step counts derived from five algorithms applied to raw wrist accelerometry, plus activity counts, MIMS, and wear predictions, for NHANES participants who wore accelerometers."
+  },
+  "prompt_version": "v1"
+}

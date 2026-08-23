@@ -1,0 +1,32 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "refisco",
+  "payload": {
+    "abstract": "<p>Automated generation of clinically accurate radiology reports can improve patient care. In order to improve automatic report generation, it is helpful to understand what types of errors are common in generated reports. Thus, we introduce the Report Fix and Score Dataset for Radiology Reports (ReFiSco-v0), which was collected through an institutional review board-approved study. In our study, we recruit radiologists to provide expert evaluations on a subset of 60 studies from MIMIC-CXR. For each radiology image, we compile three reports: one generated from the model X-REM, one from the model CXR-RePaiR trained on the same MIMIC-CXR training set, and one taken from a human benchmark (MIMIC-CXR). To each radiologist, we present one image and one report for each of the 60 studies. Each report is randomly and independently chosen from one of the three sources. The radiologist is blinded to the source. We ask each radiologist to assess the error severity of their assigned reports.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 79993,
+    "core_doi": "10.13026/0neq-hp96",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 274037,
+    "public_project_uuid": "9015186f-0786-4eed-93ed-a4c238623c05",
+    "publish_date": "2023-08-23",
+    "resource_type": "Database",
+    "short_description": "Preliminary human expert evaluation study on 60 MIMIC-CXR radiology reports",
+    "slug": "refisco",
+    "source_url": "https://physionet.org/content/refisco/1.0/",
+    "title": "ReFiSco: Report Fix and Score Dataset for Radiology Report Generation",
+    "topics": [],
+    "version": "1.0",
+    "version_doi": "10.13026/cneg-zk64"
+  },
+  "source": "physionet"
+}

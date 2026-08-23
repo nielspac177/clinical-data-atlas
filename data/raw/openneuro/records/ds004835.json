@@ -1,0 +1,83 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004835",
+  "payload": {
+    "created": "2023-10-30T08:27:21.152Z",
+    "id": "ds004835",
+    "latestSnapshot": {
+      "created": "2023-10-30T09:20:01.000Z",
+      "description": {
+        "Authors": [
+          "Michelle Moerel",
+          "Federico De Martino",
+          "Kamil Ugurbil",
+          "Essa Yacoub",
+          "Elia Formisano"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004835.v1.0.0",
+        "Funding": [
+          "NWO Rubicon 446-12-010"
+        ],
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "Processing of frequency and location in human subcortical auditory structures",
+        "ReferencesAndLinks": [
+          ""
+        ]
+      },
+      "readme": "In vivo 7T MRI dataset probing the auditory subcortical pathway (inferior colliculus and medial geniculate body). Collected by Michelle Moerel and Federico De Martino. \r\n\r\nAll participants have one MRI sessions where high-res anatomical MRI (T1w and PDw at 0.6 mm iso) was collected. In addition, short inversion time T1w (at 0.6 mm iso) is available for sub-04 and sub-06 (indicated by 'run-02_T1w'). Task functional MRI data (1.1 mm iso) was collected in 8 runs: 56 training sounds were presented once in the first 6 runs, while 28 testing sounds were presented three times in each of the two testing runs (run 7-8). \r\n\r\nEach of the 84 natural sounds (56 training, 28 testing) was presented in one of 7 azimuthal locations (ranging from the left [-90 degrees; Loc1] to the right [+90 degrees; Loc7] of the subject in 30 degree steps). Sounds were the same across subjects, yet the location at which each sound was presented was randomized across subjects. Subjects were instructed to perform a one-back task, and were required to respond with a button press when two consecutive sounds were presented in the same azimuthal location. ",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 6915994988,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06"
+        ],
+        "tasks": [
+          "auditory"
+        ],
+        "totalFiles": 691
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        27,
+        25,
+        27,
+        24,
+        23,
+        24
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "Dutch Research Council",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "Auditory subcortical structures",
+      "studyLongitudinal": "Experimental"
+    },
+    "publishDate": "2023-10-30T09:21:40.042Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,87 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003047",
+  "payload": {
+    "created": "2020-08-03T07:28:43.053Z",
+    "id": "ds003047",
+    "latestSnapshot": {
+      "created": "2020-08-03T08:41:30.000Z",
+      "description": {
+        "Authors": [
+          "Krueger O",
+          "Klose U"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds003047.v1.0.0",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "DTI data from 'Fiber architecture in the ventromedial striatum and its relation with the bed nucleus of the stria terminalis'",
+        "ReferencesAndLinks": null
+      },
+      "readme": "Each participants first session contains \r\n- a 3D MP2RAGE T1w data set of the whole brain.\r\n- a DTI dataset of a partial volume of the brain focused on the basal ganglia and basal forebrain.\r\n\r\nDTI data in session 1 is read out with phase encoding direction anterior to posterior.\r\n\r\nAs far as provided, session 2 contains DTI data of the same brain volume with phase incoding direction posterior to anterior.\r\n\r\nSequence protocol for DTI data:\r\nb = 1000 s/mm�, TR = 3000 ms, TE = 67 ms, 25 axial slices, voxel size 1.4 x 1.4 x 1.4 mm�, 64 directions spanning the whole sphere, 2 averages, intermingled volumes with a b-value of 0 sec/mm�.",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_diffusion",
+          "mri_structural"
+        ],
+        "sessions": [
+          "1",
+          "2"
+        ],
+        "size": 1614662350,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11"
+        ],
+        "tasks": [],
+        "totalFiles": 69
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        27,
+        25,
+        36,
+        27,
+        25,
+        19,
+        28,
+        25,
+        26,
+        25,
+        32
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "Medical faculty of the University of Tuebingen",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "DTI of ventral striatum",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2020-08-07T18:05:25.823Z"
+  },
+  "source": "openneuro"
+}

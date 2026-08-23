@@ -1,0 +1,78 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003959",
+  "payload": {
+    "created": "2021-12-16T17:00:11.403Z",
+    "id": "ds003959",
+    "latestSnapshot": {
+      "created": "2021-12-10T18:20:34.000Z",
+      "description": {
+        "Authors": [
+          "Andrada Ianus",
+          "Joana Carvalho",
+          "Francisca F Fernandes",
+          "Renata Cruz",
+          "Cristina Chavarrias",
+          "Marco Palombo",
+          "Noam Shemesh"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds003959.v1.0.1",
+        "Funding": [
+          "This study was funded by the European Research Council (ERC) under the European Union’s Horizon 2020 research and innovation programme (Starting Grant, agreement No. 679058). The authors acknowledge the vivarium of the Champalimaud Centre for the Unknown, a facility of CONGENTO financed by Lisboa Regional Operational Programme (Lisboa 2020), project LISBOA01-0145-FEDER-022170. AI and RC are supported by ”la Caixa” Foundation (ID 100010434) and from the European Union’s Horizon 2020 research and innovation programme under the Marie Skłodowska-Curie grant agreement No 847648, fellowship code CF/BQ/PI20/11760029. JC is supported by ERC (Starting Grant, agreement No. 679058) and by European Union’s Horizon 2020 research and innovation programme under the Marie Sklodowska-Curie grant agreement No 101032056. MP is supported by UKRI Future Leaders Fellowship grant no. MR/T020296/1."
+        ],
+        "HowToAcknowledge": "Please cite this preprint: Andrada Ianuş, Joana Carvalho, Francisca F. Fernandes, Renata Cruz, Cristina Chavarrias, Marco Palombo, Noam Shemesh, 2021. Soma and Neurite Density MRI (SANDI) of the in-vivo mouse brain. bioRxiv doi:https://doi.org/10.1101/2021.08.11.455923",
+        "License": "CC0",
+        "Name": "Soma and Neurite Density MRI (SANDI) of the in-vivo mouse brain",
+        "ReferencesAndLinks": [
+          "https://www.biorxiv.org/content/10.1101/2021.08.11.455923v1.full"
+        ]
+      },
+      "readme": "This project investigates the application of a recently developed diffusion MRI technique, namely Soma and Neurite Density Imaging (SANDI), to characterize mouse brain tissue microstructure, both in white and gray matter, in-vivo. SANDI employs a multi-shell diffusion acquisition up to high b-values and a three-compartment model to disentangle the signal contribution from water diffusing in spherical objects (assumed to be associated with cell bodies) and in impermeable cylinders (representing neurites). \n\nThe dataset consists of multi-shell diffusion MRI data from 6 wild type mice with 8 b-values: 1, 2.5, 4, 5.5, 7, 8.5, 10 and 12.5 ms/um2 with 40 directions per shell. \n\nSes-1 provides the nifti files for the pre-processed magnitude data and ses-2 provides the nifti files for the pre-processed real data.\n\nComplex data is available from the corresponding author.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_diffusion"
+        ],
+        "sessions": [
+          "1",
+          "2"
+        ],
+        "size": 5722476552,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06"
+        ],
+        "tasks": [],
+        "totalFiles": 39
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": null,
+      "associatedPaperDOI": "https://doi.org/10.1101/2021.08.11.455923",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "La Caixa Foundation, European Research Council (ERC),UKRI Future Leaders Fellowship",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Mouse",
+      "studyDesign": "",
+      "studyDomain": "Diffusion MRI, microstructure characterization",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2021-12-16T18:02:48.731Z"
+  },
+  "source": "openneuro"
+}

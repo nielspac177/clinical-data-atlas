@@ -1,0 +1,120 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds001229",
+  "payload": {
+    "created": "2018-02-12T20:36:58.045Z",
+    "id": "ds001229",
+    "latestSnapshot": {
+      "created": "2019-03-14T20:56:07.000Z",
+      "description": {
+        "Authors": [
+          "Lewis-Peacock, J.A., Cohen, J.D., & Norman, K.A."
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds001229.v1.0.1",
+        "Funding": [],
+        "HowToAcknowledge": "",
+        "License": "",
+        "Name": "Neural Evidence of the Strategic Choice Between Working Memory and Episodic Memory in Prospective Remembering.",
+        "ReferencesAndLinks": [
+          "https://www.sciencedirect.com/science/article/pii/S0028393216304055"
+        ]
+      },
+      "readme": "Citation:\nLewis-Peacock, J. A., Cohen, J. D., & Norman, K. A. (2016). Neural Evidence of the Strategic Choice Between Working Memory and Episodic Memory in Prospective Remembering. Neuropsychologia. https://doi.org/10.1016/j.neuropsychologia.2016.11.006\n\nTask:\nThis dataset contains 25 subjects performing a dual-task propspective memory experiment. Participants were shown a series of words while pictures of faces and scenes were presented in the background. Participants performed an ongoing task while monitoring for a picture target (a particular face or a particular scene) to reappear. Each subject performed two versions of the task (WM-bias, EM-bias) in alternating runs of 15 trials. Each subject had 6 functional runs of 301 TRs. Between runs, participants were given a break during which the experimenter checked that the participant was comfortable and alert. \n\nImage acquisition:\nAll imaging data were acquired using a 3T Siemens Skyra MRI scanner with a 16-channel head coil. A brief scout localizer scan (15 s) was run to verify that head position was within the designated field of view and to derive automatic anterior commissure–posterior commissure alignment parameters for subsequent scans. For functional scans, we used a gradient-echo, echo-planar sequence (repetition time = 2,000 ms, echo time = 34 ms), with automatic shimming enabled, to acquire T2*-weighted data sensitive to the blood-oxygen-level dependent signal within a 64 􏰀x 64 matrix (196 mm FoV, 34 axial slices, 3 mm isotropic voxels) using integrated parallel acquisition techniques with both retrospective and prospective acquisition motion correction enabled. Each functional scan began with 20 seconds (10 TRs) of dummy pulses to achieve a steady state of tissue magnetization. Finally, we used a magnetization-prepared rapid gradient-echo (MPRAGE) sequence to acquire high-resolution T1-weighted images (repetition time = 2,300 ms, echo time = 3.08 ms, 0.9 mm isotropic voxels, 9 min 0 s acquisition time).\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 9026413067,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27"
+        ],
+        "tasks": [
+          "Episodic Memory",
+          "Working Memory"
+        ],
+        "totalFiles": 540
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        33,
+        23,
+        23,
+        28,
+        19,
+        19,
+        18,
+        23,
+        24,
+        20,
+        20,
+        22,
+        19,
+        19,
+        20,
+        29,
+        22,
+        18,
+        21,
+        21,
+        28,
+        34,
+        21,
+        22,
+        20,
+        33,
+        21
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2018-02-12T20:36:58.045Z"
+  },
+  "source": "openneuro"
+}

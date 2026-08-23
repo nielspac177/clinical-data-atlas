@@ -1,0 +1,78 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003626",
+  "payload": {
+    "created": "2021-04-17T14:09:21.077Z",
+    "id": "ds003626",
+    "latestSnapshot": {
+      "created": "2022-03-14T21:15:32.000Z",
+      "description": {
+        "Authors": [
+          "Nicolas Nieto",
+          "Victoria Peterson",
+          "Hugo Rufiner",
+          "Juan Kamienkowski",
+          "Ruben Spies"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds003626.v2.1.2",
+        "Funding": null,
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "Inner Speech",
+        "ReferencesAndLinks": [
+          "https://www.nature.com/articles/s41597-022-01147-2",
+          "https://github.com/N-Nieto/Inner_Speech_Dataset"
+        ]
+      },
+      "readme": "Inner Speech Dataset.\n\nAuthor: Nicolás Nieto \n\nCode available at: https://github.com/N-Nieto/Inner_Speech_Dataset\n\nPublication available at: https://www.nature.com/articles/s41597-022-01147-2\n\nAbstract:\nSurface electroencephalography is a standard and noninvasive way to measure electrical brain activity. Recent advances in artificial intelligence led to significant improvements in the automatic detection of brain patterns, allowing increasingly faster, more reliable and accessible Brain-Computer Interfaces.\nDifferent paradigms have been used to enable the human-machine interaction and the last few years have broad a mark increase in the interest for interpreting and characterizing the \"inner voice\" phenomenon. This paradigm, called inner speech, raises the possibility of executing an order just by thinking about it, allowing a “natural” way of controlling external devices. Unfortunately, the lack of publicly available electroencephalography datasets, restricts the development of new techniques for inner speech recognition. A ten-subjects dataset acquired under this and two others related paradigms, obtain with an acquisition systems of 136 channels, is presented. The main purpose of this work is to provide the scientific community with an open-access multiclass electroencephalography database of inner speech commands that could be used for better understanding of the related brain mechanisms.  \n\nConditions = Inner Speech, Pronounced Speech, Visualized Condition\n\nClasses = \"Arriba/Up\", \"Abajo/Down\", \"Derecha/Right\", \"Izquierda/Left\"\n\nTotal Trials = 5640\n\n\nPlease contact us at this e-mail address if you have any doubts: nnieto@sinc.unl.edu.ar\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "eeg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [
+          "01",
+          "02",
+          "03"
+        ],
+        "size": 19624686464,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10"
+        ],
+        "tasks": [],
+        "totalFiles": 33
+      },
+      "tag": "2.1.2"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": null,
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "CONICET",
+      "modalities": [
+        "eeg"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "Inner Speech",
+      "studyLongitudinal": "EEG"
+    },
+    "publishDate": "2021-04-17T19:51:37.839Z"
+  },
+  "source": "openneuro"
+}

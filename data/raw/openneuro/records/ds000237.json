@@ -1,0 +1,80 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds000237",
+  "payload": {
+    "created": "2017-09-24T00:11:51.536Z",
+    "id": "ds000237",
+    "latestSnapshot": {
+      "created": "2019-05-15T03:27:27.000Z",
+      "description": {
+        "Authors": [
+          "Yuji Kanazawa",
+          "Kimihiro Nakamura",
+          "Toru Ishii",
+          "Toshihiko Aso",
+          "Hiroshi Yamazaki",
+          "Koichi Omori"
+        ],
+        "DatasetDOI": null,
+        "Funding": [],
+        "HowToAcknowledge": "This data was obtained from the OpenfMRI database. Its accession number is ds000237.",
+        "License": null,
+        "Name": "Phonological memory in sign language relies on the visuomotor neural system outside the left hemisphere language network",
+        "ReferencesAndLinks": null
+      },
+      "readme": "1.event\nOnset is the starting timing of the maintenance phase(please refer to our paper).\nThese unit is second\nThe duration of the maintenance phase is always 12 sec.\ntrial_type is letter or fingerspelling(please refer to our paper)\nRepetition time is 1 sec.\n\nThe duration of the encoding and decision phase depends on the sequence length (4-7 sequences) and stimulus type (fingerspelling or letter).\n('Number' is sequence length (4,5,6 or 7) and 'letterfinger' is task condition (1:letter or 2:fingerspelling))\n\n'letterfinger'= 1 and 'Number' = 4 : the duration of the encoding or decision phase is 2 sec\n'letterfinger'= 1 and 'Number' = 5 : the duration of the encoding or decision phase is 2.5 sec\n'letterfinger'= 1 and 'Number' = 6 : the duration of the encoding or decision phase is 3 sec\n'letterfinger'= 1 and 'Number' = 6 : the duration of the encoding or decision phase is 3.5 sec\n'letterfinger'= 2 and 'Number' = 4 : the duration of the encoding or decision phase is 3 sec\n'letterfinger'= 2 and 'Number' = 5 : the duration of the encoding or decision phase is 3.5 sec\n'letterfinger'= 2 and 'Number' = 6 : the duration of the encoding or decision phase is 4 sec\n'letterfinger'= 2 and 'Number' = 6 : the duration of the encoding or decision phase is 4.5 sec\n\n2. session('ses')\nYou will find some missing session. Because scanning sessions whose behavioral accuracy was less than 70 % were excluded from further analysis(page 4, line 39-40).\n\n3. Our neuroimaging analysis\nI am afraid that the first level analysis is complicated for you. Please refer to Page 4, line 31-40\n\n\n### Comments added by Openfmri Curators ###\n===========================================\n\nGeneral Comments\n----------------\n\n\nDefacing\n--------\nPydeface was used on all anatomical images to ensure deindentification of subjects. The code\ncan be found at https://github.com/poldracklab/pydeface\n\nQuality Control\n---------------\nMriqc was run on the dataset. Results are located in derivatives/mriqc. Learn more about it here: https://mriqc.readthedocs.io/en/latest/\n\nWhere to discuss the dataset\n----------------------------\n1) www.openfmri.org/dataset/ds******/ See the comments section at the bottom of the dataset\npage.\n2) www.neurostars.org Please tag any discussion topics with the tags openfmri and dsXXXXXX.\n3) Send an email to submissions@openfmri.org. Please include the accession number in\nyour email.\n\nKnown Issues\n------------\nFollowing files as reported by vids-validator warnings are not included with the dataset. AS per submitter\"These missing data were excluded because the behavioral accuracy rate was less than 70%for these scanning sessions.\"\n\n1: Not all subjects contain the same files. Each subject should contain the same number of files with the same naming unless some files are known to be missing. (code: 38 - INCONSISTENT_SUBJECTS)\n         /sub-01/func/sub-01_task-MemorySpan_acq-multiband_run-05_bold.nii.gz\n          This file is missing for subject sub-01, but is present for most other subjects.\n         /sub-01/func/sub-01_task-MemorySpan_acq-multiband_run-05_events.tsv\n          This file is missing for subject sub-01, but is present for most other subjects.\n         /sub-01/func/sub-01_task-MemorySpan_acq-multiband_run-06_bold.nii.gz\n          This file is missing for subject sub-01, but is present for most other subjects.\n         /sub-01/func/sub-01_task-MemorySpan_acq-multiband_run-06_events.tsv\n          This file is missing for subject sub-01, but is present for most other subjects.\n         /sub-02/func/sub-02_task-MemorySpan_acq-multiband_run-05_bold.nii.gz\n          This file is missing for subject sub-02, but is present for most other subjects.\n         /sub-02/func/sub-02_task-MemorySpan_acq-multiband_run-05_events.tsv\n          This file is missing for subject sub-02, but is present for most other subjects.\n         /sub-03/func/sub-03_task-MemorySpan_acq-multiband_run-04_bold.nii.gz\n          This file is missing for subject sub-03, but is present for most other subjects.\n         /sub-03/func/sub-03_task-MemorySpan_acq-multiband_run-04_events.tsv\n          This file is missing for subject sub-03, but is present for most other subjects.\n         /sub-03/func/sub-03_task-MemorySpan_acq-multiband_run-05_bold.nii.gz\n          This file is missing for subject sub-03, but is present for most other subjects.\n         /sub-03/func/sub-03_task-MemorySpan_acq-multiband_run-05_events.tsv\n          This file is missing for subject sub-03, but is present for most other subjects.\n         /sub-03/func/sub-03_task-MemorySpan_acq-multiband_run-07_bold.nii.gz\n          This file is missing for subject sub-03, but is present for most other subjects.\n         /sub-03/func/sub-03_task-MemorySpan_acq-multiband_run-07_events.tsv\n          This file is missing for subject sub-03, but is present for most other subjects.\n         /sub-05/func/sub-05_task-MemorySpan_acq-multiband_run-05_bold.nii.gz\n          This file is missing for subject sub-05, but is present for most other subjects.\n         /sub-05/func/sub-05_task-MemorySpan_acq-multiband_run-05_events.tsv\n          This file is missing for subject sub-05, but is present for most other subjects.\n         /sub-07/func/sub-07_task-MemorySpan_acq-multiband_run-05_bold.nii.gz\n          This file is missing for subject sub-07, but is present for most other subjects.\n         /sub-07/func/sub-07_task-MemorySpan_acq-multiband_run-05_events.tsv\n          This file is missing for subject sub-07, but is present for most other subjects.\n         /sub-08/func/sub-08_task-MemorySpan_acq-multiband_run-02_bold.nii.gz\n          This file is missing for subject sub-08, but is present for most other subjects.\n         /sub-09/func/sub-09_task-MemorySpan_acq-multiband_run-06_bold.nii.gz\n          This file is missing for subject sub-09, but is present for most other subjects.\n         /sub-09/func/sub-09_task-MemorySpan_acq-multiband_run-06_events.tsv\n          This file is missing for subject sub-09, but is present for most other subjects.\n         /sub-10/func/sub-10_task-MemorySpan_acq-multiband_run-01_bold.nii.gz\n          This file is missing for subject sub-10, but is present for most other subjects.\n         /sub-10/func/sub-10_task-MemorySpan_acq-multiband_run-01_events.tsv\n          This file is missing for subject sub-10, but is present for most other subjects.\n         /sub-10/func/sub-10_task-MemorySpan_acq-multiband_run-06_bold.nii.gz\n          This file is missing for subject sub-10, but is present for most other subjects.\n         /sub-10/func/sub-10_task-MemorySpan_acq-multiband_run-06_events.tsv\n          This file is missing for subject sub-10, but is present for most other subjects.\n         /sub-10/func/sub-10_task-MemorySpan_acq-multiband_run-07_bold.nii.gz\n          This file is missing for subject sub-10, but is present for most other subjects.\n         /sub-10/func/sub-10_task-MemorySpan_acq-multiband_run-07_events.tsv\n          This file is missing for subject sub-10, but is present for most other subjects.\n         /sub-12/func/sub-12_task-MemorySpan_acq-multiband_run-01_bold.nii.gz\n          This file is missing for subject sub-12, but is present for most other subjects.\n         /sub-12/func/sub-12_task-MemorySpan_acq-multiband_run-01_events.tsv\n          This file is missing for subject sub-12, but is present for most other subjects.\n         /sub-12/func/sub-12_task-MemorySpan_acq-multiband_run-04_bold.nii.gz\n          This file is missing for subject sub-12, but is present for most other subjects.\n         /sub-12/func/sub-12_task-MemorySpan_acq-multiband_run-04_events.tsv\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 9764363185,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13"
+        ],
+        "tasks": [
+          "MemorySpan"
+        ],
+        "totalFiles": 170
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": null,
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2017-09-24T00:11:51.536Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,113 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006871",
+  "payload": {
+    "created": "2025-10-31T19:43:25.550Z",
+    "id": "ds006871",
+    "latestSnapshot": {
+      "created": "2025-12-02T19:48:53.000Z",
+      "description": {
+        "Authors": [
+          "Fanhua Guo",
+          "Chenyang Zhao",
+          "Ravi R. Bhatt",
+          "Zixuan Liu",
+          "Andy Jeesu Kim",
+          "Zidong Yang",
+          "Siyi Xu",
+          "Kay Jann",
+          "Mara Mather",
+          "Neda Jahanshad",
+          "Danny JJ Wang"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006871.v1.0.0",
+        "Funding": [
+          "US National Institute of Health grant UF1-NS100614",
+          "US National Institute of Health grant S10-OD025312",
+          "US National Institute of Health grant R01-NS114382",
+          "US National Institute of Health grant R01-EB032169",
+          "US National Institute of Health grant RF1AG084072",
+          "US National Institute of Health grant R01-EB028297",
+          "US National Institute of Health grant R01-NS134712",
+          "US National Institute of Health grant R01-NS121040"
+        ],
+        "HowToAcknowledge": "Please cite the corresponding paper or contact the authors for details.",
+        "License": "CC0",
+        "Name": "Assessing molecular, cellular and transcriptomic bases of laminar perfusion and cytoarchitecture coupling in the human cortex",
+        "ReferencesAndLinks": [
+          "https://doi.org/...",
+          "..."
+        ]
+      },
+      "readme": "raw data for analyzing CBF-CSI similarity index (CCSI) study using 7T MRI and Bigbrain\n\ncite this paper: \nAssessing molecular, cellular and transcriptomic bases of laminar perfusion and cytoarchitecture coupling in the human cortex\nFanhua Guo, Chenyang Zhao, Ravi R. Bhatt, Zixuan Liu, Andy Jeesu Kim, Zidong Yang, Siyi Xu, Kay Jann, Mara Mather, Neda Jahanshad, Danny JJ Wang\nbioRxiv 2025.11.03.686411; doi: https://doi.org/10.1101/2025.11.03.686411\n\ncode access: https://github.com/FanhuaGuo/ASL-Bigbrain-CCSI.git\n\ndescribe:\n1. sub-XX_ses-XX_T1w.nii.gz is the anatomical image collected by MP2RAGE\n2. sub-XX_ses-XX_T1value.nii.gz is the T1-value image collected by MP2RAGE\n3. sub-XX_ses-XX_task-rest_acq-asl_run-01_desc-cbf/control.nii.gz in derivatives folder is the custom reconstructed CBF/control images collected by ASL\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural"
+        ],
+        "sessions": [
+          "test"
+        ],
+        "size": 91199397,
+        "subjects": [
+          "27",
+          "19",
+          "12",
+          "04",
+          "10",
+          "28",
+          "26",
+          "06",
+          "07",
+          "30",
+          "17",
+          "24",
+          "14",
+          "21",
+          "15",
+          "16",
+          "11",
+          "18",
+          "29",
+          "05",
+          "13",
+          "08",
+          "09",
+          "22",
+          "01",
+          "02",
+          "25",
+          "03",
+          "23",
+          "20"
+        ],
+        "tasks": [],
+        "totalFiles": 64
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "resting-states",
+      "studyDomain": "",
+      "studyLongitudinal": "Longitudinal"
+    },
+    "publishDate": "2025-12-02T19:49:27.723Z"
+  },
+  "source": "openneuro"
+}

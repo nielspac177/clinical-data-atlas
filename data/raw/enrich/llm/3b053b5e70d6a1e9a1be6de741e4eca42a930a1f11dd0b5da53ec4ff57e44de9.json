@@ -1,0 +1,84 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:3b053b5e70d6a1e9a1be6de741e4eca42a930a1f11dd0b5da53ec4ff57e44de9",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Ductal and Lobular Neoplasms",
+        "label": "Ductal and Lobular Neoplasms"
+      },
+      {
+        "evidence": "Transitional Cell Papillomas and Carcinomas",
+        "label": "Transitional Cell Papillomas and Carcinomas"
+      },
+      {
+        "evidence": "Germ Cell Neoplasms",
+        "label": "Germ Cell Neoplasms"
+      },
+      {
+        "evidence": "Neoplasms, NOS",
+        "label": "Neoplasms, NOS"
+      },
+      {
+        "evidence": "Myomatous Neoplasms",
+        "label": "Myomatous Neoplasms"
+      },
+      {
+        "evidence": "Adnexal and Skin Appendage Neoplasms",
+        "label": "Adnexal and Skin Appendage Neoplasms"
+      },
+      {
+        "evidence": "Complex Epithelial Neoplasms",
+        "label": "Complex Epithelial Neoplasms"
+      },
+      {
+        "evidence": "Squamous Cell Neoplasms",
+        "label": "Squamous Cell Neoplasms"
+      },
+      {
+        "evidence": "Soft Tissue Tumors and Sarcomas, NOS",
+        "label": "Soft Tissue Tumors and Sarcomas, NOS"
+      },
+      {
+        "evidence": "Adenomas and Adenocarcinomas",
+        "label": "Adenomas and Adenocarcinomas"
+      },
+      {
+        "evidence": "Cystic, Mucinous and Serous Neoplasms",
+        "label": "Cystic, Mucinous and Serous Neoplasms"
+      },
+      {
+        "evidence": "Epithelial Neoplasms, NOS",
+        "label": "Epithelial Neoplasms, NOS"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "gdc:CCG-CUPP",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "WXS, WGS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "Transcriptome Profiling",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Tissue Slide",
+        "value": "pathology"
+      },
+      {
+        "evidence": "Clinical, Copy Number Variation",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "Cases with cancers of unknown primary",
+    "summary": "Center for Cancer Genomics project on cancers of unknown primary, with WXS, WGS, RNA-Seq, miRNA-Seq and methylation arrays plus tissue slides, biospecimen and clinical data across many tumor histologies."
+  },
+  "prompt_version": "v1"
+}

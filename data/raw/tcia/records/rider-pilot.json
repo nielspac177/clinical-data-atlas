@@ -1,0 +1,198 @@
+{
+  "endpoints": [
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getCollectionValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getModalityValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getBodyPartValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getPatient",
+    "https://api.datacite.org/dois?prefix=10.7937"
+  ],
+  "harvest_method": "api:nbia+datacite",
+  "native_id": "RIDER Pilot",
+  "payload": {
+    "datacite": {
+      "citationCount": 1,
+      "container": {},
+      "contentUrl": [],
+      "contributors": [],
+      "created": "2023-05-10T18:34:55Z",
+      "creators": [
+        {
+          "affiliation": [],
+          "familyName": null,
+          "givenName": null,
+          "name": "Lung Image Database Consortium (LIDC)",
+          "nameIdentifiers": [],
+          "nameType": "Organizational"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2023",
+          "dateInformation": null,
+          "dateType": "Issued"
+        }
+      ],
+      "descriptions": [
+        {
+          "description": "This data collection was originally supported under supplemental funding for the Lung Image Database Consortium (LIDC) U01 project and focused on the collection of longitudinal studies using X-ray CT for monitoring the response to therapy. The data came primarily from the M.D. Anderson Cancer Center and several of the LIDC academic sites. Much of this data is not annotated and is not hosted in The Cancer Imaging Archive but was from the NBIA. The portion of these data which were analyzed in QIBA-VolCT-NoChange-1B  are available here.\n\nThe Reference Image Database to Evaluate Therapy Response (RIDER) is a targeted data collection used to generate an initial consensus on how to harmonize data collection and analysis for quantitative imaging methods applied to measure the response to drug or radiation therapy. See RIDER Collections for more information.",
+          "descriptionType": "Abstract",
+          "lang": null
+        }
+      ],
+      "doi": "10.7937/m87f-mz83",
+      "downloadCount": 0,
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "RIDER Pilot",
+          "identifierType": "TCIA Short Name"
+        }
+      ],
+      "isActive": true,
+      "language": null,
+      "metadataVersion": 3,
+      "partCount": 0,
+      "partOfCount": 0,
+      "publicationYear": 2023,
+      "published": null,
+      "publisher": "The Cancer Imaging Archive",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2023-05-24T20:33:04Z",
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "10.7937/tcia.2020.1c3h-vp70",
+          "relatedIdentifierType": "DOI",
+          "relatedMetadataScheme": null,
+          "relationType": "IsReferencedBy",
+          "resourceTypeGeneral": "Dataset",
+          "schemeType": null,
+          "schemeUri": null
+        }
+      ],
+      "relatedItems": [],
+      "rightsList": [
+        {
+          "rights": "Creative Commons Attribution 4.0 International",
+          "rightsIdentifier": "cc-by-4.0",
+          "rightsIdentifierScheme": "SPDX",
+          "rightsUri": "https://creativecommons.org/licenses/by/4.0/legalcode",
+          "schemeUri": "https://spdx.org/licenses/"
+        }
+      ],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "fabricaForm",
+      "state": "findable",
+      "subjects": [],
+      "titles": [
+        {
+          "lang": null,
+          "title": "RIDER Pilot",
+          "titleType": null
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2025-06-01T01:01:07Z",
+      "url": "https://www.cancerimagingarchive.net/collection/rider-pilot/",
+      "version": "1",
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 1977
+    },
+    "nbia": {
+      "body_parts": [
+        "CHEST"
+      ],
+      "collection": "RIDER Pilot",
+      "modalities": [
+        "CR",
+        "CT",
+        "DX",
+        "PR",
+        "SEG",
+        "SR"
+      ],
+      "patients": [
+        {
+          "Collection": "RIDER Pilot",
+          "PatientId": "1.3.6.1.4.1.9328.50.2.0081",
+          "PatientName": "1.3.6.1.4.1.9328.50.2.0081",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "RIDER Pilot",
+          "PatientId": "1.3.6.1.4.1.9328.50.2.0072",
+          "PatientName": "1.3.6.1.4.1.9328.50.2.0072",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "RIDER Pilot",
+          "PatientId": "1.3.6.1.4.1.9328.50.1.0109",
+          "PatientName": "1.3.6.1.4.1.9328.50.1.0109",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "RIDER Pilot",
+          "PatientId": "1.3.6.1.4.1.9328.50.1.0121",
+          "PatientName": "1.3.6.1.4.1.9328.50.1.0121",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "RIDER Pilot",
+          "PatientId": "1.3.6.1.4.1.9328.50.2.0073",
+          "PatientName": "1.3.6.1.4.1.9328.50.2.0073",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "RIDER Pilot",
+          "PatientId": "1.3.6.1.4.1.9328.50.2.0079",
+          "PatientName": "1.3.6.1.4.1.9328.50.2.0079",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "RIDER Pilot",
+          "PatientId": "1.3.6.1.4.1.9328.50.1.0117",
+          "PatientName": "1.3.6.1.4.1.9328.50.1.0117",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "RIDER Pilot",
+          "PatientId": "1.3.6.1.4.1.9328.50.2.0030",
+          "PatientName": "1.3.6.1.4.1.9328.50.2.0030",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        }
+      ]
+    }
+  },
+  "source": "tcia"
+}

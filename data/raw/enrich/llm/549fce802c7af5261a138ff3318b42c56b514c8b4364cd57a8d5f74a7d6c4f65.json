@@ -1,0 +1,31 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:549fce802c7af5261a138ff3318b42c56b514c8b4364cd57a8d5f74a7d6c4f65",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Each patient had biopsy confirmation of cancer",
+        "label": "prostate cancer"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "oncology",
+      "nephrology_urology"
+    ],
+    "id": "tcia:prostate-mri",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "prostate Magnetic Resonance Images (MRIs)",
+        "value": "MRI"
+      }
+    ],
+    "population": "Patients with biopsy confirmation of cancer who underwent a robotic-assisted radical prostatectomy",
+    "summary": "Prostate MRI acquired at 3T with endorectal and phased array surface coils in patients with biopsy-confirmed cancer who underwent robotic-assisted radical prostatectomy, with specimens sectioned in the MRI plane."
+  },
+  "prompt_version": "v1"
+}

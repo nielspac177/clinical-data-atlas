@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:a3468daed10982b71e21f035a88fc1d0b5ef1fd4cafda89c8d46107c07683070",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "hemodynamically stable patients with respiratory failure",
+        "label": "respiratory failure"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "critical_care",
+      "pulmonology"
+    ],
+    "id": "physionet:mimic2-iaccd",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Secondary Analysis of Electronic Health Records",
+        "value": "EHR"
+      },
+      {
+        "evidence": "summary clinical data and outcomes",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "1,776 hemodynamically stable patients with respiratory failure, derived from the MIMIC-II critical care database",
+    "summary": "Summary clinical data and outcomes for 1,776 patients extracted from MIMIC-II for a textbook case study on the effectiveness of indwelling arterial catheters in hemodynamically stable patients with respiratory failure for mortality outcomes."
+  },
+  "prompt_version": "v1"
+}

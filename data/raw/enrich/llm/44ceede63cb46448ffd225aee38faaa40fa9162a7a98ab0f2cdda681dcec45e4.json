@@ -1,0 +1,23 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:44ceede63cb46448ffd225aee38faaa40fa9162a7a98ab0f2cdda681dcec45e4",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "critical_care"
+    ],
+    "id": "physionet:mimic-iv-fhir",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "electronic health record",
+        "value": "EHR"
+      }
+    ],
+    "population": "Patients in the MIMIC-IV and MIMIC-IV Emergency Department (MIMIC-IV-ED) databases",
+    "summary": "MIMIC-IV and MIMIC-IV-ED data converted into FHIR resources, aligned to US Core v4.0.0 where possible, with 24 profiles for MIMIC-IV and 6 for MIMIC-IV-ED plus code systems and value sets."
+  },
+  "prompt_version": "v1"
+}

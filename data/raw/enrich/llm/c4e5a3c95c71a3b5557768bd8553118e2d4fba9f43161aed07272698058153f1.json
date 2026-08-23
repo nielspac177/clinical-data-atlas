@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:c4e5a3c95c71a3b5557768bd8553118e2d4fba9f43161aed07272698058153f1",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "soft-tissue sarcoma response to preoperative chemoradiation treatment",
+        "label": "soft-tissue sarcoma"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "oncology",
+      "musculoskeletal",
+      "surgery"
+    ],
+    "id": "tcia:qin-sarcoma",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "dynamic contrast-enhanced (DCE) MRI data",
+        "value": "MRI"
+      }
+    ],
+    "population": "Soft-tissue sarcoma patients receiving preoperative chemoradiation treatment; not every patient completed all three MRI studies",
+    "summary": "Longitudinal dynamic contrast-enhanced MRI of soft-tissue sarcoma patients imaged before treatment, after the first chemotherapy cycle, and after further chemoradiation before surgery, for developing quantitative imaging response methods."
+  },
+  "prompt_version": "v1"
+}

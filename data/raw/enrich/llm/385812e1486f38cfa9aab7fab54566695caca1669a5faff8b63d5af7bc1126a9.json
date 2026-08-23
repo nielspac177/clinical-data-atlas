@@ -1,0 +1,53 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:385812e1486f38cfa9aab7fab54566695caca1669a5faff8b63d5af7bc1126a9",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Cancer Moonshot Biobank-Melanoma (CMB-MEL) cohort",
+        "label": "Melanoma"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "oncology",
+      "neurology",
+      "gastroenterology_hepatology",
+      "musculoskeletal"
+    ],
+    "id": "tcia:cmb-mel",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "CT MR PT US",
+        "value": "CT"
+      },
+      {
+        "evidence": "CT MR PT US",
+        "value": "MRI"
+      },
+      {
+        "evidence": "CT MR PT US",
+        "value": "PET"
+      },
+      {
+        "evidence": "CT MR PT US",
+        "value": "ultrasound"
+      },
+      {
+        "evidence": "de-identified radiology and histopathology imaging",
+        "value": "pathology"
+      },
+      {
+        "evidence": "Associated genomic, phenotypic and clinical data",
+        "value": "genomics"
+      }
+    ],
+    "population": "Subjects in NCI's Cancer Moonshot Biobank-Melanoma (CMB-MEL) cohort: patients receiving standard of care cancer treatment at multiple NCI Community Oncology Research Program (NCORP) sites, drawn from a biobank of at least 1000 patients across at least 10 cancer types.",
+    "summary": "De-identified radiology and histopathology imaging from the Cancer Moonshot Biobank melanoma cohort, covering CT, MR, PET and ultrasound. Associated genomic, phenotypic and clinical data are hosted by dbGaP and other NCI databases."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,38 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:dee77f41049ca097a9168ad21ee7c21a3a7f2c4c4bcb8211a6b0dee4b24c9c81",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "histologically proven head-and-neck cancer (H&N)",
+        "label": "head-and-neck cancer"
+      }
+    ],
+    "countries": [
+      "CA"
+    ],
+    "domains": [
+      "oncology"
+    ],
+    "id": "tcia:head-neck-pet-ct",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "FDG-PET/CT",
+        "value": "PET"
+      },
+      {
+        "evidence": "radiotherapy planning CT imaging data",
+        "value": "CT"
+      },
+      {
+        "evidence": "the radiotherapy contours were directly drawn on the CT",
+        "value": "radiotherapy"
+      }
+    ],
+    "population": "300 patients from four institutions in Québec with histologically proven head-and-neck cancer, all with pre-treatment FDG-PET/CT scans; patients with recurrent disease, metastases at presentation, or palliative treatment were excluded",
+    "summary": "FDG-PET/CT and radiotherapy planning CT imaging with radiotherapy contours from head-and-neck cancer patients treated at four institutions in Quebec, with follow-up for locoregional recurrence and distant metastases."
+  },
+  "prompt_version": "v1"
+}

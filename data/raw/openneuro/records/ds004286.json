@@ -1,0 +1,95 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004286",
+  "payload": {
+    "created": "2022-10-07T20:31:34.754Z",
+    "id": "ds004286",
+    "latestSnapshot": {
+      "created": "2022-11-04T19:28:37.000Z",
+      "description": {
+        "Authors": [
+          "Wilma A. Bainbridge",
+          "Chris I. Baker"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004286.v1.0.0",
+        "Funding": [
+          "Intramural Research Program of the National Institutes of Health (ZIA-MH-002909)"
+        ],
+        "HowToAcknowledge": "Please cite: Bainbridge, W. A., & Baker, C. I. (2022). Multidimensional memory topography in the medial parietal cortex identified from neuroimaging of thousands of daily memory videos. Nature Communications, 13, 6508.",
+        "License": "CC0",
+        "Name": "Multidimensional memory topography in the medial parietal cortex identified from neuroimaging of thousands of daily memory videos",
+        "ReferencesAndLinks": [
+          "Open Science Framework link: https://osf.io/exb7m/",
+          "Paper link: http://rdcu.be/cYD8Z"
+        ]
+      },
+      "readme": "OpenNeuro dataset for:\n\nBainbridge, W. A., & Baker, C. I. (2022). Multidimensional memory topography in the medial parietal cortex identified from neuroimaging of thousands of daily memory videos. *Nature Communications, 13*, 6508.\n\nPlease cite the above paper if you use these data.\n\n---\n\nLast updated: November 4, 2022\n\n\nThis dataset includes neuroimaging and behavioral data for all 23 participants (with some engaging in 1 session, some in 2 sessions). Participants who came back for a 2nd session were scanned at least 6 months later and shown an entirely new set of videos.\n\n---\n\nRaw data contents\n\n---\n\nThe dataset includes:\n\n1. **anat/** --> skull-stripped **T1 MPRAGE** anatomical scans for each participant.\n\t\n2. **func/** \n\t\na. Whole-brain EPI Data from a **standard block-design face/object/scene/scrambled localizer** (\"FOSS\"). This was not analyzed in the paper.\n\t\t\nb. Whole-brain EPI Data from 10 runs of the **memory video task**. Across the 10 runs, participants saw ~300 of their own memory videos and ~300 memory videos from a pseudorandomly matched participant, and performed an imagery task (no button responses). More details in the paper.\n\t\t\n3. **beh/** --> data from a **post-scan behavioral task** (\"videofeatures\"), where participants labeled all ~300 of their videos for a range of features.\n\t\n---\n\nPreprocessed data contents\n\n---\n\nThere is also a derivatives folder with data that is likely easier to work with. \n\nIn terms of fMRI data, we have data pre-processed using AFNI (BRIK & HEAD files). We have also provided .nii.gz versions of the files too. The files include:\n\n1. The functional data after preprocessing and after the GLM getting a beta estimate for each video that the participant saw (see paper for pre-processing steps-- includes slice-time correction and motion correction, but no template alignment or smoothing). So essentially, this is a **single brain map for each video** for each participant. You can then analyze this with the behavioral data in beh/ for each video.\n\t\n2. **Skull-stripped anatomical data aligned to the functional data**. It was done in this way (rather than aligning the functional data to the anatomy) to avoid adding noise to the functional data from alignment as much as possible.\n\nIn terms of behavioral data, we also include:\n\n1. A vector of **late-layer DNN features** for each of the videos. Specifically, these are the layer 20 outputs (4096-length vectors) from VGG-16 for the middle frame of each 1-second video (i.e., the frame at 0.5 seconds).\n\t\n2. A measure of **optical flow** for each of the videos. These were calculated by taking the average magnitude of optical flow between the last and middle video frame, and the middle and first video frame. Optical flow was automatically estimated using the Lucas-Kanade Method.\n\t\n3. A symmetrical matrix of **pairwise geodesic distances** (km) between each video for a participant. Note that there are many NaNs, for videos where we did not get location data.\n\t\n---\n\nData not included\n\n---\n\t\nSome data currently excluded from the database:\n\n1. The raw memory videos and early-layer DNN-extracted features from these videos. These are excluded to maintain participant privacy.\n\t\n2. Precise memory location information (longitude, latitude). These are also excluded to maintain participant privacy.\n\t\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "01",
+          "02"
+        ],
+        "size": 22437601231,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23"
+        ],
+        "tasks": [
+          "FOSS",
+          "OneSecondMemory"
+        ],
+        "totalFiles": 1533
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": null,
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "National Institutes of Health Intramural Research Program",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "fMRI and behavior for 23 samples",
+      "studyDomain": "autobiographic memory",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2022-11-04T19:29:34.683Z"
+  },
+  "source": "openneuro"
+}

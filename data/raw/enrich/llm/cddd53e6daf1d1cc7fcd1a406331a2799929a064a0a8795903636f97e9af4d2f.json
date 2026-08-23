@@ -1,0 +1,34 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:cddd53e6daf1d1cc7fcd1a406331a2799929a064a0a8795903636f97e9af4d2f",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "focused on surgical nociception",
+        "label": "nociception"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "surgery",
+      "neuroscience",
+      "cardiology"
+    ],
+    "id": "physionet:multimodal-surgery-anesthesia",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "multi-sensor prospective observational dataset",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "annotations of all nociceptive stimuli occurring during surgery and medications administered",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "patients under anesthesia during surgery (101 surgeries)",
+    "summary": "Prospective multi-sensor physiological recordings from surgeries under anesthesia, with annotated nociceptive stimuli and administered medications, used to derive indices of autonomic nervous system activity from cardiac and sweat gland signals."
+  },
+  "prompt_version": "v1"
+}

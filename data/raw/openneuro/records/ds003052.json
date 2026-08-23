@@ -1,0 +1,85 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003052",
+  "payload": {
+    "created": "2020-08-03T18:43:34.704Z",
+    "id": "ds003052",
+    "latestSnapshot": {
+      "created": "2023-09-18T01:07:31.000Z",
+      "description": {
+        "Authors": [
+          "Sadhana Ravikumar",
+          "Paul Yushkevich"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds003052.v2.0.1",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Ex vivo MRI atlas of the human medial temporal lobe: characterizing neurodegeneration due to tau pathology",
+        "ReferencesAndLinks": []
+      },
+      "readme": "# Penn Medial Temporal Lobe Atlas 2021 Data Manifest\nThis dataset contains imaging data from paper \"Ex vivo MRI atlas of the human medial temporal lobe: characterizing neurodegeneration due to tau pathology\" by Ravikumar et al. published in\n\nRavikumar, Sadhana, et al. \"Ex vivo MRI atlas of the human medial temporal lobe: characterizing neurodegeneration due to tau pathology.\" Acta neuropathologica communications 9.1 (2021): 1-14.\n\n## Contents of each `subject` directory\nEach specimen directory contains images corresponding to a single specimen. The final template is included as an additional specimen. \n\n* `sub-CNDR/NDRI/HNL`\n        * `XXX_T2w.nii`: raw MRI image, as reconstructed from the scanner\n        * `XXX_clip.nii.gz`: MRI image with intensity clipped to [0.1,99.9] percentile range (Sec. S1.1)\n* `sub-exvivoMTLatlas`: Data associated with the final template (corresponds to `ncc` below)\n    * `sub-exvivoMTLatlas_T2w.nii.gz`: Average intensity image (identical to `template_build/ncc`)\n    * `sub-exvivoMTLatlas_phg.nii.gz`: Average MTL segmentation (identical to `template_build/sub-exvivoMTLatlas/ncc`)\n    * `sub-exvivoMTLatlas_phgfinal`: Final binary MTL segmentation used for morphometric analysis\n\n## Contents of the 'derivatives' directory\nThis directory contains five subdirectories: \n\n* `distortion_corrected`: MRI scans corrected for scanner gradient miscalibration (Sec S1.1). These scans have been resliced using an affine transform that was derived by analyzing a scan of a 3D printed phantom.\n        * `XXX_distcorr_YYY.nii.gz`: corrected versions of the image and MTL segmentation (for `YYY` in `{phg,img}`)\n        * `XXX_raw_to_distcorr_affine.mat`: affine transform that maps from raw space to the distortion-corrected space.\n* `manual_segmentation`: Image space in which semi-manual segmentation of the MTL was performed. For some specimens, this differs from the raw image space by a crop, or axis flip\n\t* `XXX_manseg_phg.nii.gz`: Segmentation of the MTL\n        * `XXX_manseg_img.nii.gz`: MRI in the space of the segmentation\n        * `XXX_manseg_to_raw_affine.mat`: Affine transform between image space in which manual segmentation was performed and raw image space.\n* `template_build`: Stores templates constructed during different stages of template-building. For each subject, including the atlas, this directory contains five subdirectories:\n        * `mst`: Specimen mapped to the root of the minimum spanning tree, based on registration of the MTL segmentations\n        * `gshoot`: Specimen mapped to the template created using geodesic shooting, based on registration of MTL segmentations \n        * `ncc`: Specimen mapped to the template created using group-wise intensity registration, with initialization provided by geodesic shooting \n        * `foil_affine_only`: Specimen aligned to other specimens using affine registration only.\n        * `foil_affine_ncc`: Specimen mapped to the template created using group-wise intensity registration initialized by affine registration.\n    * Each `sub-CNDR/HNL/NDRI` subject directory contains:\n        * `sub-XXX_distor_to_ZZZ_template_warp.nii.gz`: Diffeomorphic warp between the distortion corrected image space and template space.\n        * `sub-XXX_reslice_to_ZZZ_img.nii.gz`: Specimen's intensity image mapped into the template space\n\t* `sub-XXX_reslice_to_ZZZ_phg.nii.gz`: Specimen's MTL segmentation mapped into the template space\n    * `sub-exvivoMTLatlas` contains:\n\t* `sub-exvivoMTLatlas_ZZZ_img.nii.gz`: Average intensity image\n        * `sub-exvivoMTLatlas_ZZZ_phg.nii.gz`: Average MTL segmentation\n* `surface_thickness`: Data used to generate thickness analysis. Thickness maps are computed in Sec. S1.4.6 and presented in Fig. 2. \n    * `sub-exvivoMTLatlas`: smoothed MTL surface in template space. This mapped to subject space for the thickness computation\n    \t* `sub-exvivoMTLatlas_phg_surface_smooted.vtk`\n    * `subj-CNDR/HNL/NDRI/`: Subject-specific thickness maps (in distcorr space)\n        * `XXX_YYY_skeleton.vtk`: MTL Skeleton mesh \n        * `XXX_YYY_thickness.vtk`: MTL Thickness. The variable Thickness_md takes into account surface vertices with missing data.\n",
+      "summary": {
+        "dataProcessed": true,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 1803173193,
+        "subjects": [
+          "CNDR01",
+          "CNDR02",
+          "CNDR03",
+          "CNDR04",
+          "CNDR05",
+          "CNDR06",
+          "CNDR07",
+          "CNDR08",
+          "CNDR09",
+          "CNDR10",
+          "CNDR11",
+          "CNDR12",
+          "CNDR13",
+          "CNDR14",
+          "HNL01",
+          "HNL02",
+          "HNL03",
+          "HNL04",
+          "HNL05",
+          "HNL06",
+          "HNL07",
+          "NDRI01",
+          "NDRI02",
+          "NDRI03",
+          "exvivoMTLatlas"
+        ],
+        "tasks": [],
+        "totalFiles": 28
+      },
+      "tag": "2.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": null,
+      "associatedPaperDOI": "",
+      "dataProcessed": true,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "Medial Temporal Lobe",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2020-11-30T21:16:53.498Z"
+  },
+  "source": "openneuro"
+}

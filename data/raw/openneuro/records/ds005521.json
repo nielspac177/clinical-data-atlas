@@ -1,0 +1,87 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005521",
+  "payload": {
+    "created": "2024-09-23T19:38:07.098Z",
+    "id": "ds005521",
+    "latestSnapshot": {
+      "created": "2025-02-10T14:13:06.000Z",
+      "description": {
+        "Authors": [
+          "Spencer Loggia",
+          "Stuart Duffield",
+          "Kurt Braunlich",
+          "Bevil Conway"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005521.v1.0.0",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Macaque Color, Contrast, and Spatial Frequency Dataset",
+        "ReferencesAndLinks": [
+          "https://doi.org/10.1523/JNEUROSCI.1673-23.2024"
+        ]
+      },
+      "readme": "## Macaque Color, Contrast, and Spatial Frequency Dataset\n\nIncludes data from two healthy adult Rhesus Macaques viewing carefully controlled low level visual stimuli varying in color, saturation, luminance contrast, eccentricity, and spatial frequency. This dataset was used in the manuscript \"Color and Spatial Frequency Provide Functional Signatures of Retinotopic Visual Areas\". Analysis scripts used in the paper are shared on GitHub. \n\n### Imaging\n\nTwo alert rhesus macaques (7-8 kg, M1 and M2), were scanned at the Martinos Imaging Center at Massachusetts General Hospital (MGH) in a 3 Tesla Allegra (Siemens, New York, New York) scanner using a custom-made four-channel send-receive surface coil (Martinos Center, MGH, Charlestown, Massachusetts). Images were acquired using standard Echo-Planar Imaging (EPI) methods, with 2 second repetition time (TR), each repetition acquiring a 98 x 63 x 98 voxel matrix with 1mm isotropic voxels. Animals were trained using juice rewards to sit in a sphinx position in a custom-built plastic chair placed inside the bore of a horizontal scanner while fixating a central target on a display screen. Animals were required to fixate throughout the experiment to receive reward. Head position was maintained with custom plastic head posts that were surgically implanted (see surgical methods, (Lafer-Sousa et al., 2012)). Eye movements were tracked with an infrared eye tracker (ISCAN, Burlington, Massachusetts). Animals were rewarded for maintaining fixation within a degree of the central fixation target. Monocrystalline Iron Oxide Nanoparticle (MION) (AMAG Pharmaceuticals, Cambridge, Massachusetts; 8-10 mg/kg, diluted in approximately equal volume of saline), was injected intravenously in the saphenous vein immediately prior to scanning to improve the magnetic resonance signal (Vanduffel et al., 2001). High-resolution anatomical scans (0.35 mm x 0.35 mm x 0.35 mm in M1 and 0.35 mm x 0.4 mm x 0.35 mm in M2) were obtained while the animals were lightly sedated during a separate scanning session. All imaging and surgical procedures follow local and National Institute of Health guidelines. All imaging and surgical procedures were approved by the Harvard Medical School Institutional Animal Care and Use Committee.\n\n### Experimental Paradigms\n\nFour fMRI experiments were conducted over the course of 7 sessions in M1 and 6 sessions in M2. \n\n**Functional Localizers**\n\nExperiments one and two are standard localizer that we use to divide visual cortex by visual field representation.\n\n**Experiment 1 (Merridian Mapping)**  \n- Subjects were scanned while they viewed vertical and horizontal flickering checkerboard wedges to define retinotopic areas.\n\n**Experiment 2 (Eccentricity Mapping)** \n- Subjects were scanned while they viewed checkerboard patterns restricted to rings of different eccentricity.\n\n**Colored Grating Experiments**\n\nExperiments 3 and 4 consist of colored gratings defined in DKL color space (MacLeod and Boynton, 1979; Derrington et al., 1984). The color space is defined by two equiluminant cone-opponent axes, one of which consists of colors that modulate responses of the L and M cones without changing the activity of the S cones (the L-M axis, demarcated by color angles 0 and 180), the other consists of colors that modulate responses of S cones without changing the activity of the L or M cones (demarcated by color angles 90 and 270). The space has an orthogonal luminance axis that is modulated by the change in L, M, and S cones. Colors in each experiment are either modulated along the L-M axis, the S axis, the luminance axis, or two intermediate axes of the equiluminant plane that modulate all three cone types. The colors of the two intermediate axes correspond roughly to the daylight locus (orange/blue; 45 and 225 degrees) and the anti-daylight locus (green/magenta; 135 and 315 degrees). We refer to these five chromatic dimensions as LM, S, LMS, Daylight, and Antidaylight. The gamut of the color space was bounded by the monitor gamut.\n\n**Experiment 3 (Monochromatic Gratings Varying in Color and Saturation)**\n- Subjects were scanned while they viewed 12 different monochromatic color-gray gratings in which the colors were defined in the DKL cone-opponent color space.\n- The stimuli varied in hue (along the LM, S, Daylight, Antidaylight and LMS axes) and Saturation (at 5, 30, 50, and 95 percent of the maximum monitor gamut). \n\n**Experiment 4 (Dichromatic Gratings Varying in Color and Spatial Frequency)**\n- Subjects were scanned while they viewed dichromatic gratings also defined in the DKL cone-opponent color space but varying in spatial frequency.\n- The stimuli varied in hue (along the LM, S, and LMS axes) and Spatial Frequency (at .2, 4, and 8 cycles per degree (CpD)).\n\nAll stimuli were presented on a screen 48.2 cm away from the animal, with a JVC DKLA projector (1024x768 pixel resolution). For experiments 1, 3, and 4, the projected image subtended 22.5 cm by 16.9 cm (27 x 20 degrees of visual angle, DvA), and for experiment 2, the projected image subtended 35 cm by 26.8 cm (41 x 31 DvA). The projector’s luminance output was linearized, and colors were measured and calibrated using spectral readings taken from a spectroradiometer (PR-655, Photo Research, Inc, Chatsworth, California). Spectra were multiplied by the Judd-revised CIE 1931 color matching functions to derive CIE xyY coordinates. All stimuli were presented in a blocked paradigm. Stimulus blocks were interleaved with adapting-gray blocks.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "20100918",
+          "20100911",
+          "20100207",
+          "20100221",
+          "20101113",
+          "20101205",
+          "20100926",
+          "20100919",
+          "20100131",
+          "20101204"
+        ],
+        "size": 38788802159,
+        "subjects": [
+          "M2",
+          "M1"
+        ],
+        "tasks": [
+          "dkl",
+          "meridianmapper",
+          "FreqGratings",
+          "ecc",
+          "rest"
+        ],
+        "totalFiles": 879
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": "Macaque ",
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2025-02-14T19:17:46.523Z"
+  },
+  "source": "openneuro"
+}

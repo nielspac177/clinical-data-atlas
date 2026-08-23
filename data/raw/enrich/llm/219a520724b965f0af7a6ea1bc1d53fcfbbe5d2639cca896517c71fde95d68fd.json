@@ -1,0 +1,31 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:219a520724b965f0af7a6ea1bc1d53fcfbbe5d2639cca896517c71fde95d68fd",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "patients diagnosed with CAP",
+        "label": "Community-Acquired Pneumonia"
+      }
+    ],
+    "countries": [
+      "CO"
+    ],
+    "domains": [
+      "pulmonology",
+      "infectious_disease"
+    ],
+    "id": "physionet:nacef",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Clinical data encompasses Baseline Clinical Data, In-hospital follow-up and data after hospital discharge",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "768 patients diagnosed with CAP at Clinica Universidad de La Sabana, Colombia",
+    "summary": "Prospective observational cohort of hospitalized community-acquired pneumonia patients, with baseline clinical data, in-hospital follow-up and post-discharge data, supporting study of phenotypes, endotypes and biomarkers of adverse outcomes."
+  },
+  "prompt_version": "v1"
+}

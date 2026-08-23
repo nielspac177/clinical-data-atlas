@@ -1,0 +1,92 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds000232",
+  "payload": {
+    "created": "2017-09-23T02:41:09.402Z",
+    "id": "ds000232",
+    "latestSnapshot": {
+      "created": "2018-07-16T18:55:39.000Z",
+      "description": {
+        "Authors": [
+          "Johan D Carlin",
+          "Nikolaus Kriegeskorte"
+        ],
+        "DatasetDOI": null,
+        "Funding": [],
+        "HowToAcknowledge": "Please cite associated manuscript (in press, PLOS Computational Biology); This data was obtained from the OpenfMRI database. Its accession number is ds000232.",
+        "License": "CC0",
+        "Name": "Adjudicating between face-coding models with individual-face fMRI responses",
+        "ReferencesAndLinks": [
+          "https://doi.org/10.1101/029603"
+        ]
+      },
+      "readme": "This is a human fMRI dataset that investigates coding of individual faces in the\nvisual cortex of healthy human volunteers. We also include behavioral data from\na similarity judgment task, and computational models that can be used to fit\nboth data modalities.\n\nSee the associated reference (Carlin & Kriegeskorte, in press, PLOS CB) for\ndetails about the experimental protocol. In this README we focus on technical\ndetails that may be useful for re-analysing the data. \n\nThe behavioral and fMRI distance matrices as well as the computational modeling\nefforts have been shared previously at OSF (https://osf.io/5g9rv) and zenodo\n(https://doi.org/10.5281/zenodo.242666), so this may be an easier way to go if\nyou don't want to re-run the entire fMRI preprocessing pipeline. \n\nDICOM TO BIDS CONVERSION\nDCM files were converted to nifti using dcm2niix v1.0.20170130\n(https://github.com/rordenlab/dcm2niix), and dcm2bids\n(https://github.com/jooh/Dcm2Bids).  Anatomical images were de-faced using\npydeface (https://github.com/poldracklab/pydeface).\n\nDATA ANALYSIS SETUP\nWe analysed data using Matlab R2013A, SPM, FSL, and various custom software\ndeveloped in Matlab. The following packages (and their associated\ndependencies) are necessary to get the included analysis code to run:\n\n* Automatic Analysis 5 (AA, https://github.com/rhodricusack/automaticanalysis)\n* pilab (https://github.com/jooh/pilab)\n* pilab_aa (https://github.com/jooh/pilab_aa)\n* facedistid_analysis (https://github.com/jooh/facedistid_analysis - an up to\n    date copy is available in the code folder)\n\nIn general, the AA pipeline generates all fMRI results and figures (Figs 1-2,\nS3-S4 Figs in the manuscript). We then extracted fMRI distance matrices from\ncortical regions of interests for further computational modeling (remaining\nfigures in the manuscript).\n\nKEY FILES\nfacedist_aa_frombids.m                  The master function for running the AA\n                                            fMRI analysis pipeline\nfacedist_aa_frombids_tasklist.xml       Specifies which AA modules to run - note\n                                            that the roiroot flag specifies an\n                                            absolute path that will need\n                                            updating for your file system \nfacedist_doit_facepairs                 The master function for running the\n                                            behavioral similarity judgment\n                                            analysis\nfacedist_doit_modeling                  The master function for running the\n                                            computational model fits (you will\n                                            need to run through\n                                            facedist_aa_frombids and\n                                            facedist_doit_facepairs first to\n                                            generate intermediate results)\nderivatives/aa/aap_prov.png             Nice visualisation of fMRI result\n                                            provenance\nderivatives/rois                        ROI masks for fROI analysis (if you want\n                                            to re-define ROIs from the localiser\n                                            data you can do so using\n                                            https://github.com/jooh/roitools/blob/master/spm2roi.m)\nmisc/data_perceptual_judgment_task.mat  data from behavioral similarity judgment\n                                            task\nmisc/stimuli_mri.mat                    video stimuli used during MRI scanning\nmisc/stimuli_perceptual_judgments.mat   video stimuli used during behavioral\n                                            task\n\nA NOTE ON REPRODUCIBILITY\nIf you run the above pipeline you will obtain results that are very similar to\nthose in the manuscript (which, again, are publicly available on OSF/Zenodo),\nbut not identical. This is because of the following differences with regard to\nthe analysis in the paper:\n\n* The paper analysis used SPM8, not 12\n* The paper analysis used SPM dicom conversion, not dcm2niix\n* The paper analysis included a super-extraneous conversion of the floating\n    point precision on the niftis during preprocessing, which did nothing but\n    blow up file size it turns out.\n* The paper analysis used a bastardised version of AA4, not 5, which probably\n    introduces lots of subtle differences in the preprocessing parameters (for\n    this AA version, see\n    https://github.com/jooh/automaticanalysis/tree/v4-master)\n* Lots of other dependencies (including pilab) continued to be developed and\n    improved.\n\nNote that in particular, the ROI masks were generated using the old analysis, so\nthe results could definitely be improved by re-running ROI definition, if\nsomeone has a few days to spare... But again, discrepancies are very small and\ndo not qualitatively change any conclusions made in the paper. Exact\nreproducibility in neuroimaging is hard.  If you want to inspect the AA analysis\nthat is reported in the paper, please get in touch and we will see if there is a\nway to convince the MRC to let you have access to non-anonymous data.\n\nREFERENCE\n\nCarlin, J.D & Kriegeskorte, N. (in press). Adjudicating between face-coding models\nwith individual-face fMRI responses. PLOS Computational Biology. See \nBioRXiv for a preprint (2017, original version 2015): https://doi.org/10.1101/029603\n\nCONTACT\n\nJohan Carlin, MRC CBU, Cambridge, UK. johan.carlin@gmail.com\n\n\n### Comments added by Openfmri Curators ###\n===========================================\n\nGeneral Comments\n----------------\n\n\nDefacing\n--------\nPydeface was used on all anatomical images to ensure deindentification of subjects. The code\ncan be found at https://github.com/poldracklab/pydeface\n\nQuality Control\n---------------\nMriqc was run on the dataset. Results are located in derivatives/mriqc. Learn more about it here: https://mriqc.readthedocs.io/en/latest/\n\nWhere to discuss the dataset\n----------------------------\n1) www.openfmri.org/dataset/ds000232/ See the comments section at the bottom of the dataset\npage.\n2) www.neurostars.org Please tag any discussion topics with the tags openfmri and ds000232.\n3) Send an email to submissions@openfmri.org. Please include the accession number in\nyour email.\n\nKnown Issues\n------------\nN/A\n\nBids-validator Output\n---------------------\n       \t1: Not all subjects/sessions/runs have the same scanning parameters. (code: 39 - INCONSISTENT_PARAMETERS)\n       \t\t/sub-02/ses-01/anat/sub-02_ses-01_T1w.nii.gz\n       \t\t/sub-02/ses-01/func/sub-02_ses-01_task-localizer_run-01_bold.nii.gz\n       \t\t/sub-02/ses-01/func/sub-02_ses-01_task-localizer_run-02_bold.nii.gz\n       \t\t/sub-02/ses-01/func/sub-02_ses-01_task-main_run-01_bold.nii.gz\n       \t\t/sub-02/ses-01/func/sub-02_ses-01_task-main_run-02_bold.nii.gz\n       \t\t/sub-10/ses-01/anat/sub-10_ses-01_T1w.nii.gz\n\n        Summary:                   Available Tasks:        Available Modalities:\n        1120 Files, 34.38GB        localizer               T1w\n        10 - Subjects              main                    bold\n        4 - Sessions\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "01",
+          "02",
+          "03",
+          "04"
+        ],
+        "size": 29461746381,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10"
+        ],
+        "tasks": [
+          "localizer",
+          "main"
+        ],
+        "totalFiles": 564
+      },
+      "tag": "00001"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        27,
+        29,
+        25,
+        30,
+        38,
+        22,
+        31,
+        36,
+        37,
+        24
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2017-09-23T02:41:09.402Z"
+  },
+  "source": "openneuro"
+}

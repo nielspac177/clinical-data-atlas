@@ -1,0 +1,35 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:29640647564d66b8e04eb0fdc10af69777132a3a8d86d37a69ac7a6e0af88202",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Sleep deprivation (SD) is associated with decreased cognitive performance",
+        "label": "sleep deprivation"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "neuroscience",
+      "neurology"
+    ],
+    "id": "physionet:sleep-dep-hemo-cog",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "functional near-infrared spectroscopy (fNIRS) measurements were carried out",
+        "value": "fNIRS"
+      },
+      {
+        "evidence": "assessment of cognitive performance with the aid of Cambridge Neuropsychological Test Automated Battery (CANTAB)",
+        "value": "behavioral"
+      }
+    ],
+    "population": "Ten young healthy adults (males, age of 27.6±3.7 years, one left-handed participant) recruited in 2018 at University of Oklahoma, Translational Geroscience Laboratory",
+    "summary": "fNIRS recordings of frontal-lobe hemodynamics at rest and during a finger-tapping task, plus CANTAB cognitive testing, in young healthy adults before and after 24-hour sleep deprivation."
+  },
+  "prompt_version": "v1"
+}

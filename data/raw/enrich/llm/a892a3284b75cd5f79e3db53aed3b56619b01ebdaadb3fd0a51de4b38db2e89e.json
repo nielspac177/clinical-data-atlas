@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:a892a3284b75cd5f79e3db53aed3b56619b01ebdaadb3fd0a51de4b38db2e89e",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "therapy of advanced head and neck cancer",
+        "label": "head and neck cancer"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "tcia:head-neck-cetuximab",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "pre- and post-treatment FDG PET/CT scans",
+        "value": "PET"
+      },
+      {
+        "evidence": "pre- and post-treatment FDG PET/CT scans",
+        "value": "CT"
+      },
+      {
+        "evidence": "CT, Structures, RT Doses, RT Plans",
+        "value": "radiotherapy"
+      }
+    ],
+    "population": "A subset of patients from the RTOG 0522/ACRIN 4500 randomized phase III trial in stage III and IV head and neck carcinomas who joined the imaging study",
+    "summary": "Pre- and post-treatment FDG PET/CT scans with radiotherapy structures, doses and plans, from a subset of a randomized phase III trial of radiation and chemotherapy for stage III and IV head and neck carcinomas."
+  },
+  "prompt_version": "v1"
+}

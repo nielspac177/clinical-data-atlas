@@ -1,0 +1,40 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:d709c874ea42ee9d02203065924ac2b8fbf43ed97d8a565f339d768d4dbcfa41",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "benign and malignant segmented lesions",
+        "label": "breast lesions"
+      },
+      {
+        "evidence": "presence of breast diseases",
+        "label": "breast diseases"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "tcia:breast-lesions-usg",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "256 breast ultrasound scans",
+        "value": "ultrasound"
+      },
+      {
+        "evidence": "tumor histopathological classification is stated for patients who underwent a biopsy",
+        "value": "pathology"
+      },
+      {
+        "evidence": "Patient-level labels include clinical data such as age, breast tissue composition, signs and symptoms",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "256 patients with breast ultrasound scans; 266 benign and malignant lesions",
+    "summary": "Breast ultrasound scans with radiologist freehand lesion annotations, BIRADS categories and descriptors, patient-level clinical data, and histopathological diagnosis where biopsy was performed, for lesion analysis benchmarking."
+  },
+  "prompt_version": "v1"
+}

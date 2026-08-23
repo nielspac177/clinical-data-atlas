@@ -1,0 +1,37 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "mimic-seqex",
+  "payload": {
+    "abstract": "<p>This dataset contains TensorFlow SequenceExamples derived from patient records in MIMIC-III,&nbsp;a freely available set of deidentified medical records from critical care patients at Beth Israel Deaconess Medical Center. Each SequenceExample converts data from an individual patient encounter and any previous encounters into a set of timestamped &ldquo;feature lists&rdquo; describing the patient history up to a certain time, beyond which predictions can be made. These data are suitable for direct input into TensorFlow modeling pipelines, and include labels for inpatient mortality and discharge diagnosis codes for each encounter. The intent of this release is to provide a preprocessed, ready-to-use version of MIMIC-III to support and enable reproducible machine learning research for electronic health records.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 34460593223,
+    "core_doi": "10.13026/6jx9-cy34",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 35725904523,
+    "public_project_uuid": "76d79284-9c1e-48a2-a54b-ce4754bb3c3f",
+    "publish_date": "2020-09-29",
+    "resource_type": "Database",
+    "short_description": "MIMIC-III data converted into TensorFlow SequenceExample format, for use in modeling pipelines.",
+    "slug": "mimic-seqex",
+    "source_url": "https://physionet.org/content/mimic-seqex/1.0.0/",
+    "title": "MIMIC-III - SequenceExamples for TensorFlow modeling",
+    "topics": [
+      "deep learning",
+      "tensorflow",
+      "machine learning",
+      "sequence modeling"
+    ],
+    "version": "1.0.0",
+    "version_doi": "10.13026/n2v5-5b32"
+  },
+  "source": "physionet"
+}

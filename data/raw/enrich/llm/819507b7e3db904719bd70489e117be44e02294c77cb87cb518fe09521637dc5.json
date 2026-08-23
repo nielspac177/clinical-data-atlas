@@ -1,0 +1,43 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:819507b7e3db904719bd70489e117be44e02294c77cb87cb518fe09521637dc5",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "screen high-risk patients for pulmonary nodules",
+        "label": "pulmonary nodules"
+      },
+      {
+        "evidence": "look for metastatic liver lesions",
+        "label": "metastatic liver lesions"
+      },
+      {
+        "evidence": "acquired for acute cognitive or motor deficit",
+        "label": "acute cognitive or motor deficit"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "pulmonology",
+      "oncology",
+      "gastroenterology_hepatology"
+    ],
+    "id": "tcia:ldct-and-projection-data",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "a library of CT patient projection data",
+        "value": "CT"
+      },
+      {
+        "evidence": "pathology annotation are also provided",
+        "value": "pathology"
+      }
+    ],
+    "population": "De-identified patients undergoing non-contrast head CT, low-dose non-contrast chest screening, and contrast-enhanced abdominal CT exams",
+    "summary": "Library of de-identified CT projection data in an open vendor-neutral DICOM-CT-PD format with reconstructed images, patient age and gender, and pathology annotation, covering head, chest and abdomen exams."
+  },
+  "prompt_version": "v1"
+}

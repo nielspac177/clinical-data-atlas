@@ -1,0 +1,28 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:7579689212cf38c678972bfaf036b0208d99a6ac807d8be5cfee3b7d0d59d816",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "critical_care",
+      "other"
+    ],
+    "id": "physionet:er-reason",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "de-identified clinical notes",
+        "value": "clinical_notes"
+      },
+      {
+        "evidence": "echocardiography reports",
+        "value": "ultrasound"
+      }
+    ],
+    "population": "3,437 patients admitted to the emergency room (ER) at a large academic medical center between March 1, 2022, and March 31, 2024",
+    "summary": "Longitudinal de-identified emergency room clinical notes with physician-authored rationales, structured as a benchmark for evaluating LLM clinical reasoning across triage, assessment, treatment selection, disposition and final diagnosis."
+  },
+  "prompt_version": "v1"
+}

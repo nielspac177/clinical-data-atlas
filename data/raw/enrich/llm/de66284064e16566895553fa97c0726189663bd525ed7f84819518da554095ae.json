@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:de66284064e16566895553fa97c0726189663bd525ed7f84819518da554095ae",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "a set of head and neck cancer patients",
+        "label": "head and neck cancer"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "tcia:qin-headneck",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "multiple PET/CT FDG scans",
+        "value": "PET"
+      },
+      {
+        "evidence": "multiple PET/CT FDG scans",
+        "value": "CT"
+      }
+    ],
+    "population": "head and neck cancer patients, each with multiple PET/CT FDG scans before and after therapy",
+    "summary": "Head and neck cancer patients with repeated FDG PET/CT scans acquired before and after therapy, plus follow-up scans where clinically indicated, provided to support Quantitative Imaging Network research."
+  },
+  "prompt_version": "v1"
+}

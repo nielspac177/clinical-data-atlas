@@ -1,0 +1,44 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:18ff3909d4c29023a2783c9884731afcb3ab8d452046c66747daff6234cc54b2",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "annotations of 31 PPG-captured cardiac arrest episodes",
+        "label": "cardiac arrest"
+      },
+      {
+        "evidence": "out-of-hospital cardiac arrest (OHCA)",
+        "label": "out-of-hospital cardiac arrest (OHCA)"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:mimic-iii-ext-ca",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Photoplethysmography (PPG)",
+        "value": "PPG"
+      },
+      {
+        "evidence": "manual annotation of waveforms",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "validating wearable OHCA detection technologies",
+        "value": "wearable"
+      },
+      {
+        "evidence": "the MIMIC-III clinical and waveform databases",
+        "value": "EHR"
+      }
+    ],
+    "population": "36 annotated cardiac arrest episodes from 31 patients in MIMIC-III.",
+    "summary": "Annotations of cardiac arrest episodes captured by photoplethysmography in the MIMIC-III clinical and waveform databases: 36 episodes from 31 patients, found by automated screening with manual waveform and clinical annotation, for wearable detection research."
+  },
+  "prompt_version": "v1"
+}

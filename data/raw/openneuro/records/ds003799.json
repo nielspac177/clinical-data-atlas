@@ -1,0 +1,171 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003799",
+  "payload": {
+    "created": "2021-09-08T08:52:17.786Z",
+    "id": "ds003799",
+    "latestSnapshot": {
+      "created": "2021-11-16T09:18:40.000Z",
+      "description": {
+        "Authors": [
+          "Andreas Fink",
+          "Karl Koschutnig",
+          "Thomas Zussner",
+          "Corinna M. Perchtold-Stefan",
+          "Christian Rominger",
+          "Mathias Benedek",
+          "Ilona Papousek"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds003799.v2.0.0",
+        "Funding": [
+          "Expense allowance for participating in the MRI sessions was provided by the Faculty of Natural Sciences of the University of Graz.)"
+        ],
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "A Two-Week Running Intervention Reduces Symptoms Related to Depression and Increases Hippocampal Volume in Young Adults",
+        "ReferencesAndLinks": [
+          "The bidscoin was used for bringing the mridata into the bids-format.",
+          "https://github.com/Donders-Institute/bidscoin"
+        ]
+      },
+      "readme": "Description of the Study Design\nThe running intervention of this study was organized into seven units of about 50-60 minutes each, conducted over a time period of two weeks. The standardized running route lead through a mostly forest area at a local recreation area and was about five kilometers long. The design of this study included two groups of participants who were tested at three time points of assessment. A sample of 68 participants was recruited for this study. Out of this sample, 48 participants completed all required MRI scans and psychometric assessments and participated in the running intervention. We primarily recruited rather unathletic people showing no or only low regular engagement in sports activities. Participants indicated to exercise about half an hour per week (M = 0.53; SD = 1.2). Participants were randomly assigned to two intervention groups, which received the running intervention time-delayed. The first group (\"intervention group\") performed the running intervention between the first (t1) and the second test session (t2), while the second group (\"wait group\") received the training between t2 and the third test session (t3).At each time point of assessment (t1, t2, and t3), the German version of the Center for Epidemiological Studies Depression Scale (CES-D; Hautzinger et al., 2012) was administrated to test intervention related changes in depressive symptoms. \nAvailable Data / Folder Structure / Data Dictionary\nThe dataset include the MRI data of n=48 participants who completed all three MRI scans (at t1, t2, t3). Specifically, for each single participant (e.g., “sub-season101”) 3 subfolders of MRI data (“ses-1”, “ses-2”, and “ses-3”, for each time point of assessment) are available. \nThe CES-D scores for each participant and time point of assessment (CES-D_1, CES-D_2, CES-D_3) can be found in the “phenotype” folder (“CES-D.tsv”) \nIn addition, the file “participants.tsv” contains the grouping variable (either “1” for training group 1 or “2” for training group 2), along with age (in years), sex (“F” female, “M” male), size (in meter) and weight (in kg) of the participants. \nFor quality assurance we performed the mriqc-pipline (https://mriqc.readthedocs.io/en/latest/) for all subjects, which can be found under der folder “derivatives”/subfolder “mriqc”. \nThe raw BIDS data was created using BIDScoin 3.0.8 All provenance information and settings can be found in ./code/bidscoin For more information see: https://github.com/Donders-Institute/bidscoin\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural"
+        ],
+        "sessions": [
+          "1",
+          "2",
+          "3"
+        ],
+        "size": 2188684952,
+        "subjects": [
+          "season101",
+          "season102",
+          "season103",
+          "season104",
+          "season105",
+          "season106",
+          "season107",
+          "season108",
+          "season109",
+          "season110",
+          "season111",
+          "season112",
+          "season114",
+          "season116",
+          "season117",
+          "season119",
+          "season120",
+          "season121",
+          "season122",
+          "season123",
+          "season124",
+          "season125",
+          "season126",
+          "season127",
+          "season128",
+          "season129",
+          "season130",
+          "season131",
+          "season132",
+          "season133",
+          "season134",
+          "season135",
+          "season136",
+          "season137",
+          "season138",
+          "season139",
+          "season202",
+          "season204",
+          "season206",
+          "season207",
+          "season208",
+          "season211",
+          "season212",
+          "season213",
+          "season214",
+          "season215",
+          "season216",
+          "season217"
+        ],
+        "tasks": [],
+        "totalFiles": 295
+      },
+      "tag": "2.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        22,
+        20,
+        20,
+        23,
+        24,
+        20,
+        22,
+        20,
+        23,
+        24,
+        23,
+        24,
+        25,
+        26,
+        23,
+        27,
+        21,
+        26,
+        23,
+        22,
+        21,
+        23,
+        21,
+        21,
+        24,
+        19,
+        23,
+        25,
+        25,
+        21,
+        23,
+        20,
+        22,
+        23,
+        19,
+        30,
+        21,
+        20,
+        19,
+        22,
+        21,
+        27,
+        33,
+        27,
+        22,
+        26,
+        23,
+        24
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": "Longitudinal"
+    },
+    "publishDate": "2021-09-08T09:04:44.441Z"
+  },
+  "source": "openneuro"
+}

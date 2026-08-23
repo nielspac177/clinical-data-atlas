@@ -1,0 +1,280 @@
+{
+  "endpoints": [
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getCollectionValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getModalityValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getBodyPartValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getPatient",
+    "https://api.datacite.org/dois?prefix=10.7937"
+  ],
+  "harvest_method": "api:nbia+datacite",
+  "native_id": "CT-Phantom4Radiomics",
+  "payload": {
+    "datacite": {
+      "citationCount": 0,
+      "container": {},
+      "contentUrl": [],
+      "contributors": [],
+      "created": "2023-04-18T18:51:10Z",
+      "creators": [
+        {
+          "affiliation": [],
+          "familyName": "Schaer",
+          "givenName": "Roger",
+          "name": "Schaer, Roger",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0001-7984-2099",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Bach",
+          "givenName": "Michael",
+          "name": "Bach, Michael",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0003-4275-7936",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Obmann",
+          "givenName": "Markus",
+          "name": "Obmann, Markus",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0001-6586-0034",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Flouris",
+          "givenName": "Kyriakos",
+          "name": "Flouris, Kyriakos",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0001-7952-1922",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Konukoglu",
+          "givenName": "Ender",
+          "name": "Konukoglu, Ender",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-2542-3611",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Stieltjes",
+          "givenName": "Bram",
+          "name": "Stieltjes, Bram",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-5961-802X",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Müller",
+          "givenName": "Henning",
+          "name": "Müller, Henning",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0001-6800-9878",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Aberle",
+          "givenName": "Christoph",
+          "name": "Aberle, Christoph",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-8763-4801",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Jimenez del Toro",
+          "givenName": "Oscar Alfonso",
+          "name": "Jimenez del Toro, Oscar Alfonso",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-0628-3764",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Depeursinge",
+          "givenName": "Adrien",
+          "name": "Depeursinge, Adrien",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-2362-0304",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2023-08-23",
+          "dateInformation": "version 1 released",
+          "dateType": "Available"
+        }
+      ],
+      "descriptions": [
+        {
+          "description": "The aims of this dataset are to determine the stability of radiomics features against computed tomography (CT) parameter variations and to study their discriminative power concerning tissue classification using a 3D-printed CT phantom based on real patient data.\nA radiopaque 3D phantom was developed using real patient data and a potassium iodide solution paper-printing technique. Normal liver tissue and 3 lesion types (benign cyst, hemangioma, and metastasis) were manually annotated in the phantom [2]. 240 CT series with 8 parameter variations of reconstruction algorithms, reconstruction kernels, slice thickness, and slice spacing are available.\nThe conclusions of our preliminary study [1] showed that the differences in radiomics feature values obtained from different types of liver tissue are generally greater than the intraclass differences resulting from CT parameter variations.\n[1] Jimenez del-Toro, O. et al. (2021) DOI: 10.1097/rli.0000000000000795\n[2] Bach, M. et al (2023) DOI: 10.1002/mp.16373",
+          "descriptionType": "Abstract",
+          "lang": null
+        }
+      ],
+      "doi": "10.7937/a1v1-rc66",
+      "downloadCount": 0,
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "CT-Phantom4Radiomics",
+          "identifierType": "TCIA Short Name"
+        }
+      ],
+      "isActive": true,
+      "language": null,
+      "metadataVersion": 4,
+      "partCount": 0,
+      "partOfCount": 0,
+      "publicationYear": 2023,
+      "published": null,
+      "publisher": "The Cancer Imaging Archive",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2023-04-27T13:52:20Z",
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "10.1002/mp.16373",
+          "relatedIdentifierType": "DOI",
+          "relatedMetadataScheme": null,
+          "relationType": "IsDescribedBy",
+          "resourceTypeGeneral": "JournalArticle",
+          "schemeType": null,
+          "schemeUri": null
+        },
+        {
+          "relatedIdentifier": "10.1097/rli.0000000000000795",
+          "relatedIdentifierType": "DOI",
+          "relatedMetadataScheme": null,
+          "relationType": "IsDescribedBy",
+          "resourceTypeGeneral": "JournalArticle",
+          "schemeType": null,
+          "schemeUri": null
+        }
+      ],
+      "relatedItems": [],
+      "rightsList": [
+        {
+          "rights": "Creative Commons Attribution 4.0 International",
+          "rightsIdentifier": "cc-by-4.0",
+          "rightsIdentifierScheme": "SPDX",
+          "rightsUri": "https://creativecommons.org/licenses/by/4.0/legalcode",
+          "schemeUri": "https://spdx.org/licenses/"
+        }
+      ],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "fabricaForm",
+      "state": "findable",
+      "subjects": [],
+      "titles": [
+        {
+          "lang": null,
+          "title": "Task-Based Anthropomorphic CT Phantom for Radiomics Stability and Discriminatory Power Analyses (CT-Phantom4Radiomics)",
+          "titleType": null
+        },
+        {
+          "lang": null,
+          "title": "CT-Phantom4Radiomics",
+          "titleType": "AlternativeTitle"
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2025-06-01T01:01:13Z",
+      "url": "https://www.cancerimagingarchive.net/collection/ct-phantom4radiomics/",
+      "version": "1",
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 1600
+    },
+    "nbia": {
+      "body_parts": [
+        "CHEST"
+      ],
+      "collection": "CT-Phantom4Radiomics",
+      "modalities": [
+        "CT",
+        "SEG"
+      ],
+      "patients": [
+        {
+          "Collection": "CT-Phantom4Radiomics",
+          "PatientId": "SPHNQA4IQI",
+          "PatientName": "SPHNQA4IQI",
+          "PatientSex": "O",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        }
+      ]
+    }
+  },
+  "source": "tcia"
+}

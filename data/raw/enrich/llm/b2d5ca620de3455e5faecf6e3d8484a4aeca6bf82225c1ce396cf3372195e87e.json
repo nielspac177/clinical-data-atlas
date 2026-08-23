@@ -1,0 +1,41 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:b2d5ca620de3455e5faecf6e3d8484a4aeca6bf82225c1ce396cf3372195e87e",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Cognitive Impairment in Parkinson Disease",
+        "label": "Parkinson Disease"
+      },
+      {
+        "evidence": "Parkinson Disease and Multiple System Atrophy",
+        "label": "Multiple System Atrophy"
+      },
+      {
+        "evidence": "Intranasal Insulin for Cognitive Impairment",
+        "label": "cognitive impairment"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "physionet:inipdmsa",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "verbal fluency (FAS)",
+        "value": "behavioral"
+      },
+      {
+        "evidence": "modified Hoehn and Yahr scale (HY, PD severity)",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "16 subjects enrolled; eight in the intranasal insulin group and six in the placebo group completed baseline and post-treatment assessments and were analysed.",
+    "summary": "Data from a randomized, double-blinded, placebo-controlled trial of intranasal insulin versus saline over four weeks, assessing cognitive and motor performance with verbal fluency, UPDRS and Hoehn and Yahr measures."
+  },
+  "prompt_version": "v1"
+}

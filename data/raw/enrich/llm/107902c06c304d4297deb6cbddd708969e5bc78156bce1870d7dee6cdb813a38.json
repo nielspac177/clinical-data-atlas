@@ -1,0 +1,49 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:107902c06c304d4297deb6cbddd708969e5bc78156bce1870d7dee6cdb813a38",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Testicular Germ Cell Tumors",
+        "label": "Testicular Germ Cell Tumors"
+      },
+      {
+        "evidence": "Germ Cell Neoplasms",
+        "label": "Germ Cell Neoplasms"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "nephrology_urology"
+    ],
+    "id": "gdc:TCGA-TGCT",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Tissue Slide, Diagnostic Slide",
+        "value": "pathology"
+      },
+      {
+        "evidence": "WXS, WGS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "RNA-Seq",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Reverse Phase Protein Array",
+        "value": "proteomics"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "263 human cases with testicular germ cell tumors",
+    "summary": "TCGA testicular germ cell tumor project with tissue and diagnostic slides, sequencing, copy number, methylation, chromatin accessibility, protein profiling and clinical data."
+  },
+  "prompt_version": "v1"
+}

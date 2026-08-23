@@ -1,0 +1,43 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "mimic-ext-mimic-cxr-vqa",
+  "payload": {
+    "abstract": "<p>We introduce MIMIC-Ext-<em>MIMIC-CXR-VQA</em> (i.e., Extended from MIMIC database), a complex, diverse, and large-scale dataset designed for Visual Question Answering (VQA) tasks within the medical domain, focusing primarily on chest radiographs. This dataset includes approximately 377K entries derived from the MIMIC-CXR-JPG, MIMIC-IV, and Chest ImaGenome datasets, all sourced from Physionet. It features questions generated from 48 unique templates across seven content types: presence, anatomy, attribute, abnormality, size, plane, and gender. Each template, developed under the guidance of a board-certified medical expert&nbsp;to ensure clinical relevance, addresses both standard content from previous medical VQA tasks and more complex scenarios involving set and logical operations. To further enhance linguistic diversity while maintaining a medical context, we implemented a paraphrasing strategy with an average of 16.5 paraphrases per template, developed through carefully designed prompts based on GPT-4.</p>\n\n<p>The primary aim of MIMIC-Ext-<em>MIMIC-CXR-VQA</em> is to serve as a comprehensive benchmark for evaluating medical VQA methodologies. However, the significance of this dataset extends far beyond just medical VQA benchmarking. It not only provides a foundational tool for developing and testing VQA methods but also acts as a valuable resource for instruction tuning of medical Vision-and-Language Models (VLMs), addressing the scarcity of medical instruction datasets. Furthermore, the integration of structured EHRs (i.e., MIMIC-IV) with our dataset, MIMIC-Ext-<em>MIMIC-CXR-VQA</em>, opens new avenues for the development of multi-modal AI frameworks that leverage both imaging and tabular modalities of patient records. By making this dataset publicly accessible, we aim to improve the understanding of medical images and stimulate further innovation within the realm of medical AI.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 28362291,
+    "core_doi": "10.13026/my7r-v463",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 350964129,
+    "public_project_uuid": "cbeaab84-5a31-49c9-a601-4c3b2361d527",
+    "publish_date": "2024-07-19",
+    "resource_type": "Database",
+    "short_description": "We introduce MIMIC-Ext-MIMIC-CXR-VQA, a complex, diverse, and large-scale dataset designed for Visual Question Answering (VQA) tasks within the medical domain, focusing primarily on chest radiographs.",
+    "slug": "mimic-ext-mimic-cxr-vqa",
+    "source_url": "https://physionet.org/content/mimic-ext-mimic-cxr-vqa/1.0.0/",
+    "title": "MIMIC-Ext-MIMIC-CXR-VQA: A Complex, Diverse, And Large-Scale Visual Question Answering Dataset for Chest X-ray Images",
+    "topics": [
+      "multimodal",
+      "question answering",
+      "radiology",
+      "machine learning",
+      "deep learning",
+      "electronic health records",
+      "evaluation",
+      "benchmark",
+      "chest x-ray",
+      "visual question answering"
+    ],
+    "version": "1.0.0",
+    "version_doi": "10.13026/deqx-d943"
+  },
+  "source": "physionet"
+}

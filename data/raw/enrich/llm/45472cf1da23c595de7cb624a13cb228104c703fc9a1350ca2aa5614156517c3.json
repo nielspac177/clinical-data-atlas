@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:45472cf1da23c595de7cb624a13cb228104c703fc9a1350ca2aa5614156517c3",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "critical_care",
+      "public_health"
+    ],
+    "id": "physionet:encode-skin-color",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "EHR-linked skin tone measurements",
+        "value": "EHR"
+      },
+      {
+        "evidence": "167 skin tone variables and two temperature variables",
+        "value": "clinical_tabular"
+      },
+      {
+        "evidence": "image data are available for non-biometric body locations",
+        "value": "other"
+      }
+    ],
+    "population": "Patients admitted to Duke University Hospital with pulse oximetry recorded up to 5 minutes prior to arterial blood gas (ABG) measurements; one hundred twenty-eight patients enrolled",
+    "summary": "Prospectively collected skin tone measurements linked to electronic health records in OMOP format, gathered to study pulse oximetry discrepancies across skin tones using visual scales, reflectance colorimetry, spectrophotometry, and smartphone images."
+  },
+  "prompt_version": "v1"
+}

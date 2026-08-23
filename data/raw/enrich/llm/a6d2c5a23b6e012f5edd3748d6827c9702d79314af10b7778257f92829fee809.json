@@ -1,0 +1,38 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:a6d2c5a23b6e012f5edd3748d6827c9702d79314af10b7778257f92829fee809",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "including gestational diabetes mellitus (GDM)",
+        "label": "gestational diabetes mellitus (GDM)"
+      },
+      {
+        "evidence": "maternal age, previous DM",
+        "label": "previous DM"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "obstetrics_gynecology",
+      "endocrinology_metabolism",
+      "cardiology"
+    ],
+    "id": "physionet:maternal-visceral-adipose",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "performed during routine obstetric ultrasound",
+        "value": "ultrasound"
+      },
+      {
+        "evidence": "Variables included in this dataset are maternal age",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "154 pregnant women followed from up to 20 weeks of pregnancy until delivery",
+    "summary": "Cohort data on maternal visceral adipose tissue measured at routine obstetric ultrasound, with maternal age, blood pressure, fasting glucose, pre-gestational BMI and delivery outcomes including gestational diabetes diagnosis."
+  },
+  "prompt_version": "v1"
+}

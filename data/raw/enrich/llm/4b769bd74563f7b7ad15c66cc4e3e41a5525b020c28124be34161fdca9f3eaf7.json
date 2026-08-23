@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:4b769bd74563f7b7ad15c66cc4e3e41a5525b020c28124be34161fdca9f3eaf7",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "critical_care",
+      "cardiology"
+    ],
+    "id": "physionet:multimodal-emergency-benchmark",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "including ECG waveforms",
+        "value": "ECG"
+      },
+      {
+        "evidence": "vital signs (including trends)",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "lab results (including trends)",
+        "value": "EHR"
+      }
+    ],
+    "population": "Emergency department patients derived from MIMIC-IV, using data from the first 1.5 hours after the patient's arrival",
+    "summary": "Benchmark derived from MIMIC-IV for multimodal decision support in emergency departments, covering demographics, biometrics, vital signs, lab results and ECG waveforms from early after arrival, with diagnosis and deterioration prediction targets."
+  },
+  "prompt_version": "v1"
+}

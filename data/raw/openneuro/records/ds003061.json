@@ -1,0 +1,88 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003061",
+  "payload": {
+    "created": "2020-08-08T07:05:52.572Z",
+    "id": "ds003061",
+    "latestSnapshot": {
+      "created": "2022-08-26T00:28:24.000Z",
+      "description": {
+        "Authors": [
+          "Arnaud Delorme"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds003061.v1.1.2",
+        "Funding": null,
+        "HowToAcknowledge": "Delorme, A. (2020) EEG data from an auditory oddball task. Data archive openneuro.org. 10.18112/openneuro.ds003061.v1.0.0.",
+        "License": "CC0",
+        "Name": "EEG data from an auditory oddball task",
+        "ReferencesAndLinks": [
+          "No bibliographic reference other than the DOI for this dataset"
+        ]
+      },
+      "readme": "Data collection took place at the Meditation Research Institute (MRI) in Rishikesh, India under the supervision of Arnaud Delorme, PhD. The project was approved by the local MRI Indian ethical committee and the ethical committee of the University of California San Diego (IRB project # 090731).\n\nParticipants sat either on a blanket on the floor or on a chair for both experimental periods depending on their personal preference. They were asked to keep their eyes closed and all lighting in the room was turned off during data collection. An intercom allowed communication between the experimental and the recording room.\n\nParticipants performed three identical sessions of 13 minutes each. 750 stimuli were presented with 70% of them being standard (500 Hz pure tone lasting 60 milliseconds), 15% being oddball (1000 Hz pure tone lasting 60 ms) and 15% being distractors (1000 Hz white noise lasting 60 ms). All sounds took 5 milliseconds to ramp up and 5 milliseconds to ramp down. Sounds were presented at a rate of 1 per second with a random gaussian jitter of standard deviation 25 ms. Participants were instructed to respond to oddball by pressing a key on a keypad that was resting on their lap.\n\nData collection was performed with an Active Two Biosemi system (Biosemi, Inc.) at 1024Hz and 10-20 standard caps from the same company tailored to the subject’s head size. Stimuli were presented with the psychophysics MATLAB toolbox. The code for presenting stimuli and all the data is made available (see code and stimuli folder). Before making the data public, the raw data were resampled at 256 Hz using the standalone tool provided by Biosemi, then converted to the EEGLAB data format. No further data manipulation was performed. ",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "eeg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [],
+        "size": 2421802195,
+        "subjects": [
+          "001",
+          "002",
+          "003",
+          "004",
+          "005",
+          "006",
+          "007",
+          "008",
+          "009",
+          "010",
+          "011",
+          "012",
+          "013"
+        ],
+        "tasks": [
+          "P300"
+        ],
+        "totalFiles": 282
+      },
+      "tag": "1.1.2"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        44,
+        32,
+        28,
+        35,
+        49,
+        27,
+        33,
+        35,
+        31,
+        24,
+        58,
+        27,
+        28
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "eeg"
+      ],
+      "species": "",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2020-08-19T00:37:07.771Z"
+  },
+  "source": "openneuro"
+}

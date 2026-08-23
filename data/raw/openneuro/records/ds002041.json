@@ -1,0 +1,122 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds002041",
+  "payload": {
+    "created": "2019-07-15T22:25:06.891Z",
+    "id": "ds002041",
+    "latestSnapshot": {
+      "created": "2024-06-20T14:27:02.000Z",
+      "description": {
+        "Authors": [
+          "Jaime J. Castrellon",
+          "Jacob S. Young",
+          "Linh C. Dang",
+          "Ronald L. Cowan",
+          "David H. Zald",
+          "Gregory R. Samanez-Larkin"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds002041.v2.0.0",
+        "Funding": [
+          "NIH R21-DA033611"
+        ],
+        "HowToAcknowledge": "Castrellon, J.J., Young, J.S., Dang, L.C., Cowan, R.L., Zald, D.H., Samanez-Larkin, G.R. Mesolimbic dopamine D2 receptors and neural representations of subjective value. DOI: https://www.nature.com/articles/s41598-019-56858-1",
+        "License": "CC0",
+        "Name": "Mesolimbic dopamine D2 receptors and neural representations of subjective value",
+        "ReferencesAndLinks": null
+      },
+      "readme": "This dataset contains the data of 25 healthy young adults who completed a delay discounting task during fMRI scanning and on a separate vist, completed a PET scan with the high-affinity dopamine D2/3 receptor tracer [18F]fallypride.\nPET data for each participant were acquired in 3 sessions separated with short breaks for participant comfort. Dynamic tomograph images from the 3 sessions provided have been merged and realigned. PET images were reconstructed with decay correction, attenuation correction, scatter correction, and calibration. PET data for each participant are provided in three ways: (1.) raw unprocessed timeseries with timing information, (2.) binding potential (BPND) parametric image calculated using the simplified reference tissue method (SRTM) in the participant's original PET space (smoothed with a 5 mm FWHM Gaussian kernel), and (3.) BPND parametric image calculated using SRTM (from PET space map) transformed to MNI152 2mm standard space using the participant's structural T1. Calculation of BPND using the SRTM was carried out using Pmod software with the putamen as the receptor-rich region and the cerebellum as the reference region.",
+      "summary": {
+        "dataProcessed": true,
+        "modalities": [
+          "mri",
+          "pet"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 3245873284,
+        "subjects": [
+          "2001",
+          "2003",
+          "2004",
+          "2005",
+          "2006",
+          "2008",
+          "2009",
+          "2010",
+          "2011",
+          "2013",
+          "2015",
+          "2016",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2023",
+          "2024",
+          "2025",
+          "2026",
+          "2027",
+          "2029",
+          "2030",
+          "2031",
+          "2032"
+        ],
+        "tasks": [
+          "TD"
+        ],
+        "totalFiles": 249
+      },
+      "tag": "2.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        21,
+        19,
+        21,
+        20,
+        19,
+        23,
+        21,
+        20,
+        22,
+        20,
+        22,
+        24,
+        24,
+        23,
+        23,
+        20,
+        20,
+        19,
+        21,
+        21,
+        22,
+        18,
+        23,
+        18,
+        18
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": true,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri",
+        "pet"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2019-08-01T18:41:23.683Z"
+  },
+  "source": "openneuro"
+}

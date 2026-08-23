@@ -1,0 +1,59 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:afadaf356bae8a4bb944fba5051bdcbbcecd60fce9c533e5aa078ed324510dfb",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Colorectal Cancer",
+        "label": "Colorectal Cancer"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "oncology",
+      "gastroenterology_hepatology"
+    ],
+    "id": "tcia:cmb-crc",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "CT DX MR NM PT US XA",
+        "value": "CT"
+      },
+      {
+        "evidence": "CT DX MR NM PT US XA",
+        "value": "xray"
+      },
+      {
+        "evidence": "CT DX MR NM PT US XA",
+        "value": "MRI"
+      },
+      {
+        "evidence": "CT DX MR NM PT US XA",
+        "value": "SPECT"
+      },
+      {
+        "evidence": "CT DX MR NM PT US XA",
+        "value": "PET"
+      },
+      {
+        "evidence": "CT DX MR NM PT US XA",
+        "value": "ultrasound"
+      },
+      {
+        "evidence": "histopathology imaging",
+        "value": "pathology"
+      },
+      {
+        "evidence": "Associated genomic, phenotypic and clinical data",
+        "value": "genomics"
+      }
+    ],
+    "population": "Patients in the Cancer Moonshot Biobank colorectal cancer cohort, receiving standard of care cancer treatment at NCI Community Oncology Research Program sites; 62 participants per source facts.",
+    "summary": "De-identified radiology and histopathology imaging from the Cancer Moonshot Biobank colorectal cancer cohort. Associated genomic, phenotypic and clinical data are hosted by dbGaP and other NCI databases."
+  },
+  "prompt_version": "v1"
+}

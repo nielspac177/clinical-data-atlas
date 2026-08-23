@@ -1,0 +1,52 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:49ddfb2a2dd80cf6a9694b740964e15a35d24a56db364e5270d834ac55d6e135",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "advanced/metastatic cancer",
+        "label": "advanced/metastatic cancer"
+      },
+      {
+        "evidence": "substance abuse",
+        "label": "substance abuse"
+      },
+      {
+        "evidence": "treatment non-adherence",
+        "label": "treatment non-adherence"
+      },
+      {
+        "evidence": "chronic pain",
+        "label": "chronic pain"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "critical_care",
+      "oncology",
+      "psychiatry"
+    ],
+    "id": "physionet:phenotype-annotations-mimic",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Clinical notes, annotated by at least two expert annotators",
+        "value": "clinical_notes"
+      },
+      {
+        "evidence": "electronic health records (EHRs)",
+        "value": "EHR"
+      },
+      {
+        "evidence": "medical billing codes",
+        "value": "claims"
+      }
+    ],
+    "population": "Patients of Intensive Care Units of a large tertiary care hospital in Boston, from MIMIC-III",
+    "summary": "MIMIC-III patient notes manually annotated by two expert annotators for high-context phenotypes such as treatment non-adherence, chronic pain and advanced cancer, supporting patient phenotyping and clinical natural language processing research."
+  },
+  "prompt_version": "v1"
+}

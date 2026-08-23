@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:d781c2a4c49dde36448558105a660d6a9b09bb0b713b53357269d6763636e448",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Ductal and Lobular Neoplasms",
+        "label": "Ductal and Lobular Neoplasms"
+      },
+      {
+        "evidence": "breast neoplasms",
+        "label": "breast neoplasms"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "gdc:CMI-MBC",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "WXS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "Transcriptome Profiling",
+        "value": "transcriptomics"
+      }
+    ],
+    "population": "200 human cases of metastatic breast cancer",
+    "summary": "Patient-partnered Count Me In metastatic breast cancer project, providing whole-exome sequencing, RNA-Seq, simple nucleotide variation and structural variation data for breast ductal and lobular neoplasms."
+  },
+  "prompt_version": "v1"
+}

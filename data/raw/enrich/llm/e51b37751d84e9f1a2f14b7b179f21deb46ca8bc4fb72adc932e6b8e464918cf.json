@@ -1,0 +1,27 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:e51b37751d84e9f1a2f14b7b179f21deb46ca8bc4fb72adc932e6b8e464918cf",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "other"
+    ],
+    "id": "physionet:ffa-ir-medical-report",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "fundus fluorescein angiography images and reports",
+        "value": "other"
+      },
+      {
+        "evidence": "FFA-IR provides both English and Chinese reports for each case",
+        "value": "clinical_notes"
+      }
+    ],
+    "population": null,
+    "summary": "Benchmark of fundus fluorescein angiography images paired with bilingual clinical reports and annotated lesion regions, built to evaluate explainable medical report generation methods."
+  },
+  "prompt_version": "v1"
+}

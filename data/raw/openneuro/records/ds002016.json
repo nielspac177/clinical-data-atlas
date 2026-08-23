@@ -1,0 +1,73 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds002016",
+  "payload": {
+    "created": "2019-07-09T19:53:03.763Z",
+    "id": "ds002016",
+    "latestSnapshot": {
+      "created": "2019-07-09T20:19:39.000Z",
+      "description": {
+        "Authors": [
+          "Yiming Xiao",
+          "Jonathan C. Lau",
+          "Taylor Anderson",
+          "Jordan DeKraker",
+          "D. Louis Collins",
+          "Terry M. Peters",
+          "Ali R. Khan"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds002016.v1.0.0",
+        "Funding": [
+          "BrainsCAN",
+          "Canadian Institutes of Health Research"
+        ],
+        "HowToAcknowledge": "Please refer to README",
+        "License": "Pleaes refer to README",
+        "Name": "BigBrainMRICoreg",
+        "ReferencesAndLinks": [
+          "BigBrainMRICoreg",
+          "Pleaes refer to README for the relevant publications"
+        ]
+      },
+      "readme": "This dataset includes co-registration of the BigBrain dataset to the MNI PD25 atlas and the ICBM152 2009b atlases.\nThe data include deformed BigBrain atlases and manual subcortical segmentations in MINC2 and NIFTI-1 formats, as well as relevant spatial transformation in MINC transformation format.\nThe segmented subcortical structures include: red nucleus, subthalamic nucleus, substantia nigra, caudate, putamen, globus pallidus externa, globus pallidus interna, thalamus, hippocampus, nucleus\naccumbens, and amygdala\n\nNote that the described improved co-registration was performed upon the BigBrain data in ICBM space from the BigBrain 2015release.\n\nWithin this dataset, the down-sampled versions of BigBrain atlases are distributed under the CC BY4.0 License upon the consent from the original data owners, the Montreal Neurological Institute\n(Montreal, Canada) and the Forschungszentrum Jülich (Jülich, Germany). However, this exception to the existing BigBrain dataset does not alter the general term of that license for use of the\nBigBrain itself, which is still under the CC BY-NC-SA 4.0 License.\n\nThe included files are as follows:\n\n1. Deformed BigBrain atlases & MRI templates:\nBigBrain in PD25 space: sub-BigBrain_rez-{300um, 500um, 1mm}_space-PD25_histology.nii.gz\nBigBrain in ICBM152 symmetric atlas: sub-BigBrain_rez-{300um, 500um, 1mm}_space-ICBM2009sym_histology.nii.gz\nBigBrain in ICBM152 asymmetric atlas: sub-BigBrain_rez-{300um, 500um, 1mm}_space-ICBM2009asym_histology.nii.gz\n\nSynthetic T2w PD25 atlas: sub-PD25_rez-{300um,500um,1mm}_SynT2w.nii.gz\nT1-T2* fusion PD25 atlas: sub-PD25_rez-{300um,500um,1mm}_T1T2starfusion.nii.gz\nT1w PD25 atlas: sub-PD25_rez-{300um,500um,1mm}_T1w.nii.gz\nPD25 atlas brain mask: sub-PD25_rez-500um_brainmask.nii.gz\nT1w ICBM152 2009b symmetric atlas: sub-ICBM2009asym_rez-500um_T1w.nii.gz\nT2w ICBM152 2009b symmetric atlas: sub-ICBM2009asym_rez-500um_T2w.nii.gz\nT1w ICBM152 2009b asymmetric atlas: sub-ICBM2009asym_rez-500um_T1w.nii.gz\nT2w ICBM152 2009b asymmetric atlas: sub-ICBM2009asym_rez-500um_T2w.nii.gz\n\n\n2. Manual subcortical segmentations:\nBigBrain coregistered to ICBM in the BigBrain2015 release: sub-BigBrain_rez-{300um,500um}_space-ICBMoriginal_atlas.nii.gz\nMNI PD25: sub-PD25_rez-500um_atlas.nii.gz\nICBM152 2009b symmetric: sub-ICBM2009asym_rez-500um_atlas.nii.gz\nICMB152 2009b asymmetric: sub-ICBM2009asym_rez-500um_atlas.nii.gz\n\n3. Related transformations:\nAs the spatial transformations that deform BigBrain to PD25 and ICBM atlases were in MINC format, please download them via\nhttps://osf.io/xkqb3/\nhttp://nist.mni.mcgill.ca/?p=1209\n\n4. Manual segmentation labels:\nLabel,Nuclei\n1,left red nucleus\n2,right red nucleus\n3,left substantia nigra\n4,right substantia nigra\n5,left subthalamic nucleus\n6,right subthalamic nucleus\n7,left caudate\n8,right caudate\n9,left putamen\n10,right putamen\n11,left globus pallidus externa\n12,right globus pallidus externa\n13,left globus pallidus interna\n14,right globus pallidus Interna\n15,left thalamus\n16,right thalamus\n17,left hippocampus\n18,right hippocampus\n19,left nucleus accumbens\n20,right nucleus accumbens\n21,left amygdala\n22,right amygdala\n\nReferences:\n\nFor the methods used, please cite the following articles:\n1. Y. Xiao, J.C. Lau, T. Anderson,J. DeKraker, D. Louis Collins, T.M. Peters, and A.R. Khan, “Bridging micro and macro:\naccurate registration of the BigBrain dataset with the MNI PD25 and ICBM152 atlases,” bioRxiv, 561118, Cold Spring Harbor Laboratory,\ndoi: https://doi.org/10.1101/561118.\n\n2. Y. Xiao, V. Fonov, S. Beriault, F.A. Subaie, M.M. Chakravarty, A.F. Sadikot,\nG. Bruce Pike, and D. Louis Collins, “Multi-contrast unbiased MRI atlas of a\nParkinson's disease population,” International Journal of Computer-Assisted\nRadiology and Surgery, vol. 10(3), pp. 329-341, 2015.\n\n3.Y. Xiao, V. Fonov, S. Beriault, F.A. Subaie, M.M. Chakravarty, A.F. Sadikot, G. Bruce Pike, and D. Louis Collins,\n“A dataset of multi-contrast population-averaged brain MRI atlases of a Parkinson’s disease cohort,”Data in Brief, 2017.\n\nWhen using the downsamled BigBrain atlases, please cite the following article:\n1. Amunts, K. et al.: “BigBrain: An Ultrahigh-Resolution 3D Human Brain Model”, Science (2013) 340 no. 6139 1472-1475, June 2013\n",
+      "summary": {
+        "dataProcessed": null,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [],
+        "sessions": [],
+        "size": 7365,
+        "subjects": [
+          "BigBrain",
+          "ICBM2009asym",
+          "ICBM2009sym",
+          "PD25"
+        ],
+        "tasks": [],
+        "totalFiles": 8
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": null,
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2019-07-09T20:20:50.076Z"
+  },
+  "source": "openneuro"
+}

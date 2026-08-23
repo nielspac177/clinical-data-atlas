@@ -1,0 +1,38 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "radqa",
+  "payload": {
+    "abstract": "<p>We present a radiology question answering dataset, RadQA, with 3074 questions posed against radiology reports and annotated with their corresponding answer spans (resulting in a total of 6148 question-answer evidence pairs) by physicians. The questions are manually created using the clinical referral section of the reports that take into account the actual information needs of ordering physicians and eliminate bias from seeing the answer context (and, further, organically create unanswerable questions). The answer spans are marked within the Findings and Impressions sections of a report. The dataset aims to satisfy the complex clinical requirements by including complete (yet concise) answer phrases (which are not just entities) that can span multiple lines. In published work, we conducted a thorough analysis of the proposed dataset by examining the broad categories of disagreement in annotation (providing insights on the errors made by humans) and the reasoning requirements to answer a question (uncovering the huge dependence on medical knowledge for answering the questions). In that work, the best-performing transformer language model achieved an F1 of 63.55 on the test set. However, the top human-level performance on this dataset is 90.31 (with an average human performance of 84.52), which demonstrates the challenging nature of RadQA that leaves ample scope for future method research.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 534058,
+    "core_doi": "10.13026/nz91-gb70",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 3914236,
+    "public_project_uuid": "3ca3f256-fad6-4b86-a446-dd3c053d7842",
+    "publish_date": "2022-12-09",
+    "resource_type": "Database",
+    "short_description": "RadQA is an electronic health record question answering dataset containing clinical questions that can be answered using the Findings and Impressions sections of radiology reports",
+    "slug": "radqa",
+    "source_url": "https://physionet.org/content/radqa/1.0.0/",
+    "title": "RadQA: A Question Answering Dataset to Improve Comprehension of Radiology Reports",
+    "topics": [
+      "question answering",
+      "clinical notes",
+      "radiology reports",
+      "machine reading comprehension",
+      "electronic health records"
+    ],
+    "version": "1.0.0",
+    "version_doi": "10.13026/ckkp-6y19"
+  },
+  "source": "physionet"
+}

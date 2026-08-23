@@ -1,0 +1,137 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "TCGA-KIRP",
+  "payload": {
+    "dbgap_accession_number": null,
+    "disease_type": [
+      "Adenomas and Adenocarcinomas"
+    ],
+    "id": "TCGA-KIRP",
+    "name": "Kidney Renal Papillary Cell Carcinoma",
+    "primary_site": [
+      "Kidney"
+    ],
+    "program": {
+      "dbgap_accession_number": "phs000178",
+      "name": "TCGA",
+      "program_id": "b80aa962-9650-5110-b3eb-bd087da808db"
+    },
+    "project_id": "TCGA-KIRP",
+    "releasable": true,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 291,
+      "data_categories": [
+        {
+          "case_count": 291,
+          "data_category": "Simple Nucleotide Variation",
+          "file_count": 5790
+        },
+        {
+          "case_count": 291,
+          "data_category": "Sequencing Reads",
+          "file_count": 2439
+        },
+        {
+          "case_count": 291,
+          "data_category": "Biospecimen",
+          "file_count": 1365
+        },
+        {
+          "case_count": 291,
+          "data_category": "Clinical",
+          "file_count": 647
+        },
+        {
+          "case_count": 291,
+          "data_category": "Copy Number Variation",
+          "file_count": 3812
+        },
+        {
+          "case_count": 291,
+          "data_category": "Transcriptome Profiling",
+          "file_count": 1298
+        },
+        {
+          "case_count": 291,
+          "data_category": "DNA Methylation",
+          "file_count": 1026
+        },
+        {
+          "case_count": 215,
+          "data_category": "Proteome Profiling",
+          "file_count": 216
+        },
+        {
+          "case_count": 209,
+          "data_category": "Somatic Structural Variation",
+          "file_count": 698
+        },
+        {
+          "case_count": 290,
+          "data_category": "Structural Variation",
+          "file_count": 1458
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 291,
+          "experimental_strategy": "miRNA-Seq",
+          "file_count": 978
+        },
+        {
+          "case_count": 290,
+          "experimental_strategy": "WXS",
+          "file_count": 4709
+        },
+        {
+          "case_count": 290,
+          "experimental_strategy": "RNA-Seq",
+          "file_count": 2907
+        },
+        {
+          "case_count": 216,
+          "experimental_strategy": "WGS",
+          "file_count": 2963
+        },
+        {
+          "case_count": 34,
+          "experimental_strategy": "ATAC-Seq",
+          "file_count": 34
+        },
+        {
+          "case_count": 290,
+          "experimental_strategy": "Genotyping Array",
+          "file_count": 3904
+        },
+        {
+          "case_count": 291,
+          "experimental_strategy": "Methylation Array",
+          "file_count": 1026
+        },
+        {
+          "case_count": 215,
+          "experimental_strategy": "Reverse Phase Protein Array",
+          "file_count": 216
+        },
+        {
+          "case_count": 287,
+          "experimental_strategy": "Tissue Slide",
+          "file_count": 474
+        },
+        {
+          "case_count": 275,
+          "experimental_strategy": "Diagnostic Slide",
+          "file_count": 299
+        }
+      ],
+      "file_count": 18749,
+      "file_size": 157439205335222
+    }
+  },
+  "source": "gdc"
+}

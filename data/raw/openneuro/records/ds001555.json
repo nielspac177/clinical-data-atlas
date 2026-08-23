@@ -1,0 +1,99 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds001555",
+  "payload": {
+    "created": "2018-10-16T14:02:26.881Z",
+    "id": "ds001555",
+    "latestSnapshot": {
+      "created": "2023-12-04T18:00:16.000Z",
+      "description": {
+        "Authors": [
+          "Javier Gonzalez-Castilloa",
+          "Colin W. Hoy",
+          "Daniel A. Handwerker",
+          "Vinai Roopchansingh",
+          "Souheil J. Inati",
+          "Ziad S. Saad",
+          "Robert W. Cox",
+          "Peter A. Bandettini"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds001555.v1.0.1",
+        "Funding": [
+          "ZIAMH002783",
+          "ZICMH002884"
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Large Single-Subject Functional MRI Datasets at 7T",
+        "ReferencesAndLinks": [
+          "Gonzalez-Castillo, Javier, Colin W. Hoy, Daniel A. Handwerker, Vinai Roopchansingh, Souheil J. Inati, Ziad S. Saad, Robert W. Cox, and Peter A. Bandettini. “Task Dependence, Tissue Specificity, and Spatial Distribution of Widespread Activations in Large Single-Subject Functional MRI Datasets at 7T.” Cerebral Cortex 25, no. 12 (December 2015): 4667–77. https://doi.org/10.1093/cercor/bhu148."
+        ]
+      },
+      "readme": "# Overview\n\n## Subjects\nThree subjects with no known history of neurological disorders (2 females; age=25±2.5 years) completed this study. All participants gave informed consent in compliance with a protocol approved by the Institutional Review Board of the National Institute of Mental Health in Bethesda, MD, USA.\n\n## Experimental Tasks\nAll functional runs had the same organization of blocks. An initial 10-s rest period was followed by 5 repetitions of a 20-s task block and a 40-s rest block. An additional 10 s of rest were added at the end of each func- tional run, resulting in 320 s runs. During the rest periods, subjects were instructed to remain still and focus their attention on a black fixation crosshair over a gray background. Note that the paradigm from our prior study at 3T had an additional 20 s of rest at the beginning of each run and used a white fixation cross on a black background. During the task epochs, each subject did 1 of 3 different tasks described below. Each subject always performed the same task across all 100 runs.\n1. Full Field-of-View Visual Stimulation + Attention Control Task ( fFOV + Task): The subject was instructed to focus his/her attention on a crosshair at the center of a full FOV flickering checkerboard (frequency = 8 Hz) and to perform a letter/number discrimination task. Four random alphanumeric characters appeared for 400 ms at random intervals in the center of the flickering checkerboard during each block. The subject was provided with a four-button re- sponse box in his/her right hand and was instructed to press one button if the character on the screen was a letter and another button if it was a number (same as in Gonzalez-Castillo et al. (2012)).\n2. Full Field-of-View Visual Stimulation Only (fFOV Only): The subject was instructed to focus his/her attention on a crosshair in the center of a full FOV flickering checkerboard (frequency = 8 Hz). No letter/number discrimination task was present.\n3. Hemifield Visual Stimulation (hFOV Only): The subject was in- structed to focus his/her attention on a crosshair in the center of a left hemifield flickering checkerboard (frequency = 8 Hz; degrees left of center = 3). No letter/number discrimination task was present.\n\n## Data Acquisition\nImaging was performed on a Siemens 7T MRI scanner equipped with a 32-element receive coil (Nova Medical, Wilmington, MA, USA). Function- al runs were obtained using a gradient-recalled, single-shot, echo-planar imaging (EPI) sequence (TR = 2.0 s, TE = 25 ms, FA = 50°, 54 oblique slices, slice thickness = 2 mm, spacing = 0 mm, in-plane resolution = 2 × 2 mm, FOV = 192 mm, acceleration factor (GRAPPA) = 2). T1-weighted magnetization-prepared rapid gradient-echo data were also acquired for presentation and alignment purposes (sagittal prescription, number of slices per slab = 192, slice thickness = 1 mm, square FOV = 256 mm)\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12"
+        ],
+        "size": 34349204400,
+        "subjects": [
+          "001",
+          "002",
+          "003"
+        ],
+        "tasks": [
+          "HalfFovNoTask",
+          "FullFovNoAttentionTask",
+          "FullFovAttentionTask",
+          "Full Field-of-View Visual Stimulation + Attention Control Task",
+          "Hemifield Visual Stimulation",
+          "Full Field-of-View Visual Stimulation Only"
+        ],
+        "totalFiles": 753
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        23,
+        24,
+        28
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "National Institute of Mental Health Intramural Research Program",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2018-10-16T14:02:26.881Z"
+  },
+  "source": "openneuro"
+}

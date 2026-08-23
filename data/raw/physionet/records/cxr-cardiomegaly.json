@@ -1,0 +1,36 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "cxr-cardiomegaly",
+  "payload": {
+    "abstract": "<p><span><span><span>Cardiomegaly is a condition characterized by an abnormal enlargement of the heart, its identification is of paramount importance as it associate with a wide range of cardiac conditions. It is primary identified via the cardiothoracic ratio (CTR), however this metric can be inaccurate as it is affect by external factors such as breathing and body position.&nbsp;</span></span></span><span><span><span>Multimodal approaches could mitigate these limitations by integrating non-imaging data, however reliable and explainable integration of imaging and non-imaging data remains a significant challenge. While this database does not directly use multimodal data, it hopes to tackle this challenge&nbsp;by extracting cardiomegaly biomarkers (CTR and cardiopulmonary area ratio) from chest X-rays. Thus encapsulating the relevant imaging information into individual datapoints, allowing easy integration of &lsquo;imaging&rsquo; data with non-imaging data for more reliable diagnostic tools. The values were extracted from over 93,000 posterior-anterior MIMIC-CXR scans using detection and segmentation neural networks, tuned for cardiac and pulmonary identification. </span></span></span></p>",
+    "access_policy": "Open",
+    "compressed_storage_size": 6974865,
+    "core_doi": "10.13026/4evw-jd69",
+    "dua": null,
+    "is_latest_version": true,
+    "license": {
+      "name": "Open Data Commons Attribution License v1.0"
+    },
+    "main_storage_size": 12450834,
+    "public_project_uuid": "28630e69-c9c5-4f79-96de-ec2bd712c87d",
+    "publish_date": "2024-08-23",
+    "resource_type": "Database",
+    "short_description": "Automatically extracted cardiomegaly biomarkers - cardiothoracic ratio (CTR) and cardiopulmonary area ratio (CPAR) - for all posterior-anterior chest x-ray scans in MIMIC-CXR/MIMIC-CXR-JPG.",
+    "slug": "cxr-cardiomegaly",
+    "source_url": "https://physionet.org/content/cxr-cardiomegaly/1.0.0/",
+    "title": "Image-derived cardiomegaly biomarker values for 96K chest X-rays in MIMIC-CXR/MIMIC-CXR-JPG",
+    "topics": [
+      "cpar",
+      "biomarkers",
+      "ctr",
+      "mimic-cxr",
+      "cardiomegaly"
+    ],
+    "version": "1.0.0",
+    "version_doi": "10.13026/kfpv-zm25"
+  },
+  "source": "physionet"
+}

@@ -1,0 +1,38 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "labelled-notes-hospital-course",
+  "payload": {
+    "abstract": "<p>This dataset presents a curated collection of preprocessed and labeled clinical notes derived from the MIMIC-IV-Note database. The primary aim of this resource is to facilitate the development and training of machine learning models focused on summarizing brief hospital courses (BHC) from clinical discharge notes.</p>\n\n<p>The dataset contains 270,033 meticulously cleaned and standardized clinical notes containing an average token length of 2,267, ensuring usability for machine learning (ML) applications. Each clinical note is paired with a corresponding BHC summary, providing a robust foundation for supervised learning tasks. The preprocessing pipeline employed uses regular expressions to address common issues in the raw clinical text, such as special characters, extraneous whitespace, inconsistent formatting, and irrelevant text, to produce a high-quality, structured dataset with separated clinical note sections through appropriate headings.</p>\n\n<p>By offering this resource, we aim to support healthcare professionals and researchers in their efforts to enhance patient care through the automation of BHC summarization. This dataset is ideal for exploring various NLP techniques, developing predictive models, and improving the efficiency and accuracy of clinical documentation practices. We invite the research community to utilize this dataset to advance the field of medical informatics and contribute to better health outcomes.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 863062775,
+    "core_doi": "10.13026/fh2q-4148",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 2726467690,
+    "public_project_uuid": "d8b61099-aece-4b38-b36e-f547179b89fc",
+    "publish_date": "2025-02-03",
+    "resource_type": "Database",
+    "short_description": "This dataset presents a collection of preprocessed and labeled clinical notes derived from \"MIMIC-IV-Note\", and aims to facilitate the development of ML models focused on summarizing brief hospital courses (BHC) from clinical notes.",
+    "slug": "labelled-notes-hospital-course",
+    "source_url": "https://physionet.org/content/labelled-notes-hospital-course/1.2.0/",
+    "title": "MIMIC-IV-Ext-BHC: Labeled Clinical Notes Dataset for Hospital Course Summarization",
+    "topics": [
+      "natural language processing",
+      "brief hospital course",
+      "text summarization",
+      "machine learning",
+      "clinical notes"
+    ],
+    "version": "1.2.0",
+    "version_doi": "10.13026/5gte-bv70"
+  },
+  "source": "physionet"
+}

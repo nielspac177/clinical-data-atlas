@@ -1,0 +1,27 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:6e83f0d87a4153b4279e0b0c40878764330fa31dfc92c36f2d54c895084b5b29",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "other"
+    ],
+    "id": "physionet:discharge-me",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "crafting detailed discharge notes in the EHR",
+        "value": "clinical_notes"
+      },
+      {
+        "evidence": "a subset of MIMIC-IV-Note and MIMIC-IV-ED",
+        "value": "EHR"
+      }
+    ],
+    "population": "109,168 emergency department admissions",
+    "summary": "Shared-task dataset compiled from MIMIC-IV-Note and MIMIC-IV-ED for generating the Brief Hospital Course and Discharge Instructions sections of discharge summaries, with defined training, validation and two testing sets."
+  },
+  "prompt_version": "v1"
+}

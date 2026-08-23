@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:a3b2269fe586af985ebff658f55f2689a8563849d33a9ecb7ce31e7d73ed7297",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "a metastatic patient derived model of bladder cancer",
+        "label": "bladder cancer"
+      },
+      {
+        "evidence": "develops spontaneous liver and bone metastases",
+        "label": "liver and bone metastases"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "oncology",
+      "nephrology_urology",
+      "gastroenterology_hepatology"
+    ],
+    "id": "tcia:pdmr-bl0293-f563",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Using non-contrast T2 weighted MRI",
+        "value": "MRI"
+      }
+    ],
+    "population": "Mice carrying bladder xenograft BL0293, with and without resection of the xenograft, some receiving chemotherapy",
+    "summary": "Imaging characterization of a bladder cancer patient-derived xenograft model in mice that develops spontaneous liver and bone metastases, imaged with non-contrast T2-weighted sequences, including animals given chemotherapy."
+  },
+  "prompt_version": "v1"
+}

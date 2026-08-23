@@ -1,0 +1,129 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007329",
+  "payload": {
+    "created": "2026-01-26T19:34:47.621Z",
+    "id": "ds007329",
+    "latestSnapshot": {
+      "created": "2026-06-30T18:41:01.000Z",
+      "description": {
+        "Authors": [
+          "Matteo Visconti di Oleggio Castello",
+          "Guo Jiahui",
+          "Ma Feilong",
+          "Manon de Villemejane",
+          "James V. Haxby",
+          "M. Ida Gobbini"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007329.v1.0.2",
+        "Funding": [
+          "NSF grant #1835200"
+        ],
+        "HowToAcknowledge": "Please cite the corresponding paper describing the dataset: Visconti di Oleggio Castello, M., Jiahui, G., Feilong, M., de Villemejane, M., Haxby, J. V., & Gobbini, M. I. (2026). Hyperface: a naturalistic fMRI dataset for investigating human face processing. In bioRxiv (p. 2026.03.11.711073). bioRxiv. https://doi.org/10.64898/2026.03.11.711073",
+        "License": "CC0",
+        "Name": "hyperface: a naturalistic fMRI dataset to characterize human face processing",
+        "ReferencesAndLinks": [
+          "https://doi.org/10.64898/2026.03.11.711073",
+          "https://github.com/mvdoc/hyperface-data-paper",
+          "https://openneuro.org/datasets/ds007329",
+          "https://openneuro.org/datasets/ds003017",
+          "https://openneuro.org/datasets/ds003834",
+          "https://openneuro.org/datasets/ds007384",
+          "https://openneuro.org/datasets/ds007378",
+          "https://doi.org/10.1038/s41597-020-00735-4",
+          "https://doi.org/10.1073/pnas.2110474118",
+          "https://doi.org/10.1073/pnas.2304085120"
+        ]
+      },
+      "readme": "# hyperface dataset\n\nThis dataset contains the raw data for\n*hyperface: a naturalistic fMRI dataset to characterize human face processing*, by\nMatteo Visconti di Oleggio Castello, Guo Jiahui, Ma Feilong, Manon de\nVillemejane, James V. Haxby, and M. Ida Gobbini.\n\nIf you use this dataset or the code, please cite the corresponding\npaper:\n\n> Visconti di Oleggio Castello, M., Jiahui, G., Feilong, M., de\n> Villemejane, M., Haxby, J. V., & Gobbini, M. I. (2026). *Hyperface: a\n> naturalistic fMRI dataset for investigating human face processing*. In\n> bioRxiv (p. 2026.03.11.711073). bioRxiv.\n> https://doi.org/10.64898/2026.03.11.711073\n\nSee also this paper:\n\n> Jiahui, G., Feilong, M., Visconti di Oleggio Castello, M., Nastase, S.A.,\n> Haxby, J.V., & Gobbini, M.I. (2023). *Modeling naturalistic face processing\n> in humans with deep convolutional neural networks*. Proceedings of the National\n> Academy of Sciences. https://doi.org/10.1073/pnas.2304085120\n\n\nSample code for the QA analyses is available at\nhttps://github.com/mvdoc/hyperface-data-paper.\n\nThe hyperface fMRIPrep derivatives are available at\nhttps://openneuro.org/datasets/ds007384.\n\nThe hyperface FreeSurfer derivatives are available at\nhttps://openneuro.org/datasets/ds007378.\n\n## Associated papers and datasets\n\nThe Grand Budapest Hotel raw data is available at\nhttps://openneuro.org/datasets/ds003017. See this paper for\nmore information:\n\n> Visconti di Oleggio Castello, M., Chauhan, V., Jiahui, G., & Gobbini, M.\n> I. (2020). *An fMRI dataset in response to \"The Grand Budapest Hotel\", a\n> socially-rich, naturalistic movie*. Scientific Data, 7(1), 1-9.\n> https://doi.org/10.1038/s41597-020-00735-4\n\nThe identity decoding raw data is available at\nhttps://openneuro.org/datasets/ds003834. See this paper for more\ninformation:\n\n> Visconti di Oleggio Castello, M., Haxby, J.V., & Gobbini, M.I. (2021).\n> *Shared neural codes for visual and semantic information about familiar\n> faces in a common representational space*. Proceedings of the National\n> Academy of Sciences. https://doi.org/10.1073/pnas.2110474118\n\n\n## Notes\n\nThe dataset includes three sessions per participant:\n- ses-1: Contains functional, fieldmap, DWI, and T2w anatomical data\n- ses-2: Contains functional, fieldmap, and DWI data\n- ses-budapest: Contains only T1w anatomical scans\n\nThe original budapest functional and fieldmap data have been removed from this\ndataset. Users who need the complete dataset including budapest functional data can\nuse the merge script located under the code/ directory to combine this dataset with\nthe original budapest data from https://openneuro.org/datasets/ds003017\nif needed.\n\nAll anatomicals (T1w, T2w) were defaced with `pydeface`.\n\n## Contact information\n\nFor questions on this dataset, please contact Matteo Visconti di Oleggio\nCastello (matteo.visconti@berkeley.edu).\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_diffusion",
+          "mri_structural"
+        ],
+        "sessions": [
+          "1",
+          "2",
+          "budapest"
+        ],
+        "size": 37120207092,
+        "subjects": [
+          "sid000416",
+          "sid000522",
+          "sid000134",
+          "sid000021",
+          "sid000007",
+          "sid000278",
+          "sid000120",
+          "sid000029",
+          "sid000142",
+          "sid000009",
+          "sid000535",
+          "sid000052",
+          "sid000020",
+          "sid000013",
+          "sid000499",
+          "sid000005",
+          "sid000560",
+          "sid000010",
+          "sid000034",
+          "sid000114",
+          "sid000024"
+        ],
+        "tasks": [
+          "Dynamic face localizer",
+          "Face visual memory task"
+        ],
+        "totalFiles": 1689
+      },
+      "tag": "1.0.2"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        29,
+        25,
+        28,
+        29,
+        26,
+        28,
+        31,
+        31,
+        25,
+        25,
+        24,
+        28,
+        25,
+        29,
+        26,
+        29,
+        28,
+        29,
+        27,
+        22,
+        29
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2026-03-11T15:28:49.066Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:42617cdb016eb1b5e6bb6f055d26fb208aca62ba66be2ea9cffcaa0138744ecc",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "breast cancer in mammography",
+        "label": "breast cancer"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "tcia:cbis-ddsm",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "scanned film mammography studies",
+        "value": "mammography"
+      },
+      {
+        "evidence": "verified pathology information",
+        "value": "pathology"
+      }
+    ],
+    "population": "Normal, benign, and malignant screening mammography cases with verified pathology information, drawn from the DDSM database of 2,620 scanned film mammography studies and curated by a trained mammographer.",
+    "summary": "Standardized, curated subset of the Digital Database for Screening Mammography, decompressed and converted to DICOM, with updated ROI segmentations, bounding boxes, and pathologic diagnosis for developing and testing mammography decision support systems."
+  },
+  "prompt_version": "v1"
+}

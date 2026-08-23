@@ -1,0 +1,37 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "blood-gas-oximetry",
+  "payload": {
+    "abstract": "<p>Pulse oximeters measure peripheral arterial oxygen saturation (SpO2) noninvasively, while the gold standard involves arterial blood gas measurement (SaO2). There are known racial and ethnic disparities in their performance. BOLD is a new comprehensive dataset that aims to underscore the importance of addressing biases in pulse oximetry accuracy, particularly affecting people with darker skin tones. The dataset was created by harmonizing three Electronic Health Record databases (MIMIC-III, MIMIC-IV, eICU-CRD) comprising Intensive Care Unit stays. Paired SpO2 and SaO2 measurements were time-aligned and combined with various other clinical parameters to provide a detailed picture of each patient. It includes 49,099 such paired measurements within a 5-minute window, with oxygen saturation levels between 70-100%. Significantly, about 25% of the data represents minority racial and ethnic groups, a proportion seldom achieved in previous studies. The code scripts have been made publicly available to facilitate replication.We hope that BOLD is poised to be a valuable resource for health equity studies, that can be used to develop pulse oximetry debiasing algorithms.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 9305971,
+    "core_doi": "10.13026/vfba-0n65",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 32687913,
+    "public_project_uuid": "986da9ee-75f7-4de2-8b62-68d8ff81bf76",
+    "publish_date": "2023-11-09",
+    "resource_type": "Database",
+    "short_description": "An open-source pulse oximetry and arterial blood gas dataset, derived from MIMIC-III, MIMIC-IV, and eICU-CRD",
+    "slug": "blood-gas-oximetry",
+    "source_url": "https://physionet.org/content/blood-gas-oximetry/1.0/",
+    "title": "BOLD, a blood-gas and oximetry linked dataset",
+    "topics": [
+      "health equity",
+      "electronic health records",
+      "pulse oximetry",
+      "intensive care unit"
+    ],
+    "version": "1.0",
+    "version_doi": "10.13026/phvt-3277"
+  },
+  "source": "physionet"
+}

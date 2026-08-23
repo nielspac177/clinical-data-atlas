@@ -1,0 +1,67 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005134",
+  "payload": {
+    "created": "2024-05-10T18:52:49.089Z",
+    "id": "ds005134",
+    "latestSnapshot": {
+      "created": "2024-05-14T17:35:32.000Z",
+      "description": {
+        "Authors": [
+          "Adam Raikes"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005134.v1.0.0",
+        "Funding": [],
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "Sequence test for multiband DWI and magnetization transfer sequence",
+        "ReferencesAndLinks": []
+      },
+      "readme": "This is a sequence development acquisition where we were testing  a multiband DWI acquisition as well as a magnetization transfer sequence for use in a neuromelanin-sensitive acquisition protocol. \n\nT1w and T2w images were used in Freesurfer 7.4.1 and diffusion data were pre-processed with QSIprep v. 0.21.4",
+      "summary": {
+        "dataProcessed": true,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural",
+          "mri_diffusion",
+          "mri_functional"
+        ],
+        "sessions": [],
+        "size": 469395009,
+        "subjects": [
+          "01"
+        ],
+        "tasks": [
+          "rest",
+          "TODO: full task name for rest"
+        ],
+        "totalFiles": 31
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        40
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": true,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2024-07-15T20:27:12.191Z"
+  },
+  "source": "openneuro"
+}

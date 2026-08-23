@@ -1,0 +1,43 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:d54b2fa3d27d132fbd65fe8d4f1a6855265ca964a5c60d80f8759e7d1d049cbc",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "children and adults with congenital heart defects (CHD)",
+        "label": "congenital heart defects"
+      },
+      {
+        "evidence": "such as supraventricular tachycardia",
+        "label": "supraventricular tachycardia"
+      },
+      {
+        "evidence": "and ventricular tachycardia",
+        "label": "ventricular tachycardia"
+      }
+    ],
+    "countries": [
+      "DE"
+    ],
+    "domains": [
+      "cardiology",
+      "pediatrics"
+    ],
+    "id": "physionet:leipzig-heart-center-ecg",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "intracardiac electrograms alongside traditional 12-lead ECGs",
+        "value": "ECG"
+      },
+      {
+        "evidence": "intracardiac recordings",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": "Children and adults with congenital heart defects undergoing electrophysiological studies",
+    "summary": "Annotated ECG database from children and adults with congenital heart defects, combining 12-lead surface ECGs with intracardiac electrograms and expert beat annotations of various cardiac rhythms and arrhythmias."
+  },
+  "prompt_version": "v1"
+}

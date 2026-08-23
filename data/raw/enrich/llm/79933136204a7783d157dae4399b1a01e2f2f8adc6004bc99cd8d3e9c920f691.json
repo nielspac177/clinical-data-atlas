@@ -1,0 +1,28 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:79933136204a7783d157dae4399b1a01e2f2f8adc6004bc99cd8d3e9c920f691",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "pulmonology"
+    ],
+    "id": "tcia:lctsc",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "delineate organs at risk (OARs) from CT images",
+        "value": "CT"
+      },
+      {
+        "evidence": "thoracic patients in radiation treatment planning",
+        "value": "radiotherapy"
+      }
+    ],
+    "population": "thoracic patients in radiation treatment planning",
+    "summary": "Thoracic CT scans with organ-at-risk delineations released for a segmentation challenge, providing a platform to compare auto-segmentation algorithms used in radiation treatment planning."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,127 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007693",
+  "payload": {
+    "created": "2026-04-23T00:23:12.453Z",
+    "id": "ds007693",
+    "latestSnapshot": {
+      "created": "2026-06-16T22:00:13.000Z",
+      "description": {
+        "Authors": [
+          "Hutelin, Zach",
+          "Ahrens, Monica",
+          "Baugh, Mary Elizabeth",
+          "Nartey, Emmanuel",
+          "Herald, Delbert L. III",
+          "Hanlon, Alexandra L.",
+          "DiFeliceantonio, Alexandra G."
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007693.v1.0.0",
+        "Funding": [
+          "This study was supported R01 DK132389 to AGD, and National Science Foundation Graduate Research Fellowship 2235205 to ZH."
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Ultraprocessed foods elicit distinct metabolic and neural responses when compared to non-ultraprocessed foods",
+        "ReferencesAndLinks": null
+      },
+      "readme": "# Ultraprocessed foods elicit distinct metabolic and neural responses when compared to non-ultraprocessed foods\n\n## Contact\nAlexandra G. DiFeliceantonio — Dife@vt.edu\nZach Hutelin - Hutelin@vt.edu\n\n## Study Design\n- **Task**: Food auction task (4 runs: auction1–auction4)\n- **Scanner**: Siemens Prisma 3T, Virginia Tech Carilion Research Institute\n- **Field map**: AP/PA EPI fieldmaps acquired for each session\n- **Participants**: N = 57\n\n## Description\nBrief description of the study: Participants completed 4 runs of a Becker-deGroot-Marschak auction task to assess food value while undergoing fMRI scanning. During each run, participants bid their willingness to pay between 0 and 5 USD on 28 different foods (14 UPF and 14 non-UPF) presented in a randomized order. Bids were placed on a visual analog scale with labels for $0, $2.50, and $5 USD, the cursor started in the middle at $2.50 on each trial. A modified version of the participant instructions used by Plassmann were implemented to inform participants of the task. Participants were instructed that they will see a series of food items and place a bid between $0 and $5 dollars for each item. At the end of the session, a food from one trial will be chosen at random and if they have bid higher than a randomly computer-generated price, they obtain and can consume the selected food, but the computer-generated price will be deducted from their session compensation. However, if they lose to the computer, they will be expected to wait in a testing room with no food for 30 minutes. \n\n\n## Data Acquisition\n- MRI system: Siemens Prisma 3T\n- Functional: multiband EPI, TR = 1.5 s, TE = 34 ms\n- Slice thickness: 2 mm\n- Field maps: AP and PA EPI (for susceptibility distortion correction)\n\n## Funding\nThis study was supported R01 DK132389, and National Science Foundation Graduate Research Fellowship 2235205.\n\n## Ethics\nAll study protocols were approved by the Virginia Tech IRB (#21-1052).\n\n## Data Not Analyzed\n- sub-05: Excluded due to head movement\n- sub-08: Excluded due to head movement \n- sub-21: Excluded due to equipment failure \n- sub-01: Excluded from analysis with WTP due to >25% of bids below $.25 or missing \n- sub-23: Excluded from analysis with WTP due to >25% of bids below $.25 or missing\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 84319468578,
+        "subjects": [
+          "52",
+          "34",
+          "39",
+          "16",
+          "32",
+          "03",
+          "12",
+          "30",
+          "11",
+          "19",
+          "40",
+          "45",
+          "44",
+          "02",
+          "21",
+          "09",
+          "33",
+          "55",
+          "13",
+          "42",
+          "05",
+          "57",
+          "27",
+          "35",
+          "04",
+          "10",
+          "56",
+          "08",
+          "25",
+          "14",
+          "20",
+          "36",
+          "51",
+          "15",
+          "26",
+          "01",
+          "24",
+          "43",
+          "47",
+          "07",
+          "41",
+          "46",
+          "18",
+          "49",
+          "28",
+          "31",
+          "22",
+          "53",
+          "06",
+          "50",
+          "37",
+          "17",
+          "38",
+          "48",
+          "23",
+          "29",
+          "54"
+        ],
+        "tasks": [
+          "auction"
+        ],
+        "totalFiles": 1289
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": "https://doi.org/10.64898/2026.04.10.26350599",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "4 BOLD runs (28 trials per run, 14 UPF and 14 non-UPF)",
+      "studyDomain": "Ultraprocessed foods",
+      "studyLongitudinal": "within-subject crossover"
+    },
+    "publishDate": "2026-08-17T15:23:30.668Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,27 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:340d4e612fb8b631770c4bcd31c868cd0795df76dabcb5325df5a17ce1fb8db1",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "other"
+    ],
+    "id": "physionet:mimic-iii-ext-notes",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "150 clinical notes randomly sampled from the MIMIC-III Clinical Database",
+        "value": "clinical_notes"
+      },
+      {
+        "evidence": "the MIMIC-III Clinical Database",
+        "value": "EHR"
+      }
+    ],
+    "population": null,
+    "summary": "Clinical notes sampled from the MIMIC-III Clinical Database with clinician-annotated concepts labeled for detection accuracy, encounter relevance, and negation status, used to evaluate language models on clinical information extraction."
+  },
+  "prompt_version": "v1"
+}

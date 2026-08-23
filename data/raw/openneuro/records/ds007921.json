@@ -1,0 +1,80 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007921",
+  "payload": {
+    "created": "2026-06-07T13:18:09.595Z",
+    "id": "ds007921",
+    "latestSnapshot": {
+      "created": "2026-06-07T20:55:21.000Z",
+      "description": {
+        "Authors": [
+          "Aidan Lyon",
+          "PRSM Lab, Leiden University"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007921.v1.0.0",
+        "Funding": [],
+        "HowToAcknowledge": "Please cite the accompanying publication (see ReferencesAndLinks).",
+        "License": "CC0",
+        "Name": "Chakra Meditation fMRI Dataset",
+        "ReferencesAndLinks": [
+          "TODO: insert manuscript DOI when available"
+        ]
+      },
+      "readme": "# Chakra Meditation fMRI Dataset\n\nBlock-design task-fMRI of expert kundalini-yoga chakra meditation, acquired at\nthe PRSM lab, Leiden University. This is a small-N (N = 2 practitioners)\nproof-of-concept / calibration dataset; it is released raw for reuse.\n\n## Participants and sessions\n\n- **sub-01** (Yogi 1) — three sessions (ses-01, ses-02, ses-03), acquired as\n  pilots 1, 2 and 3 respectively. Acquisition differs across sessions:\n  - ses-01: single-echo BOLD, B0 fieldmap.\n  - ses-02: mixed single-/multi-echo BOLD, **no fieldmap** (synthetic\n    distortion correction was used downstream).\n  - ses-03: three-echo BOLD, B0 fieldmap.\n- **sub-02** (Yogi 2) — one session (ses-01), acquired as pilot 4; three-echo\n  BOLD with per-run B0 fieldmaps.\n\nThe two subjects are two different people. Within-subject acquisition\ndifferences across sub-01's sessions are real and intentional (pilot\niterations), not errors.\n\n## Tasks\n\nEach functional run is a block design. Most runs contain a Yogic Resting State\n(YRS) baseline block followed by one chakra-meditation block; the run is named\nfor that chakra. Block onsets and durations are in each run's `events.tsv`.\n\n- `task-yrs` — baseline run (Yogic Resting State, sometimes preceded by a\n  Spontaneous Resting State (SRS) block; see `events.tsv`).\n- `task-manipura`, `task-anahata`, `task-ajna`, `task-sahasrara` — the four\n  chakra meditations (YRS baseline block + chakra block).\n- `task-ycs` — a single exploratory run sweeping all seven chakras then\n  oscillating between Anāhata and Ājñā.\n- `task-movie` — two Pilot-2 movie-watching control runs. The BOLD is shared;\n  the film stimulus itself is not included.\n\n`sub-01/ses-03` contains two Sahasrara runs (`run-01`, `run-02`). The second\n(originally \"S7\", informally the \"secret\" meditation) is also a Sahasrara\npractice.\n\n## Multi-echo\n\nsub-01/ses-02, sub-01/ses-03 and sub-02 are multi-echo (`echo-1/2/3`). The\nmulti-echo-combined / TEDANA-denoised (“MEICA”) images are a *derivative* and\nare **not** part of this raw release.\n\n## Trial-type labels (events.tsv)\n\n- `YRS` — Yogic Resting State (trained baseline)\n- `SRS` — Spontaneous Resting State (untrained baseline)\n- `YCS` — Yoga Chakra Sequence (seven-chakra sweep)\n- `Manipura` / `Anahata` / `Ajna` / `Sahasrara` — chakra meditation blocks\n- `moviesx` / `moviesy` — movie-watching blocks\n\n## De-identification\n\nAnatomical images (T1w/T2w) have been defaced. Identifying fields have been\nremoved from JSON sidecars. Raw scanner physiological logs (SCANPHYSLOG) are\nnot included.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "01",
+          "02",
+          "03"
+        ],
+        "size": 6281053113,
+        "subjects": [
+          "02",
+          "01"
+        ],
+        "tasks": [
+          "Manipura chakra meditation",
+          "Yogic resting state",
+          "Sahasrara chakra meditation",
+          "Ajna chakra meditation",
+          "Anahata chakra meditation",
+          "Movie watching",
+          "Yoga chakra sequence (seven-chakra sweep)"
+        ],
+        "totalFiles": 164
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "John Templeton Foundation",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "Meditation",
+      "studyLongitudinal": "Other"
+    },
+    "publishDate": "2026-06-07T20:55:43.481Z"
+  },
+  "source": "openneuro"
+}

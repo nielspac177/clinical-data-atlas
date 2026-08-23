@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:6d5819bdd679485c800139e2ac70e21a866c5fa363dc1d943c1612eec230cdba",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "patients with metastatic or locally advanced pancreatic neuroendocrine tumors (panNET)",
+        "label": "pancreatic neuroendocrine tumors"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "gastroenterology_hepatology"
+    ],
+    "id": "tcia:ctpred-sunitinib-pannet",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Pretreatment CT images of 171 lesions from 38 patients",
+        "value": "CT"
+      },
+      {
+        "evidence": "Clinical information including sex, age at diagnosis",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "38 patients with metastatic or locally advanced pancreatic neuroendocrine tumors, contributing 171 lesions with pretreatment CT images.",
+    "summary": "Pretreatment CT images and clinical variables from patients with pancreatic neuroendocrine tumors, used to develop and validate CT value ratio and radiomics models predicting sunitinib treatment efficacy."
+  },
+  "prompt_version": "v1"
+}

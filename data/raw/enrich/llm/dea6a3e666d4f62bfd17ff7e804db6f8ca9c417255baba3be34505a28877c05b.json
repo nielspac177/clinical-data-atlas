@@ -1,0 +1,30 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:dea6a3e666d4f62bfd17ff7e804db6f8ca9c417255baba3be34505a28877c05b",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "pulmonology",
+      "other"
+    ],
+    "id": "physionet:radgraph",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "full-text chest X-ray radiology reports",
+        "value": "xray"
+      },
+      {
+        "evidence": "full-text radiology reports",
+        "value": "clinical_notes"
+      }
+    ],
+    "population": null,
+    "summary": "Entity and relation annotations on full-text chest X-ray radiology reports, with expert-labeled train and test sets plus model-generated annotations that map to the associated chest radiographs."
+  },
+  "prompt_version": "v1"
+}

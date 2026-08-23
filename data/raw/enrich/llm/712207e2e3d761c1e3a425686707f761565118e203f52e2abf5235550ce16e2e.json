@@ -1,0 +1,29 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:712207e2e3d761c1e3a425686707f761565118e203f52e2abf5235550ce16e2e",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Heart murmurs have been annotated",
+        "label": "heart murmurs"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "cardiology",
+      "pediatrics"
+    ],
+    "id": "physionet:circor-heart-sound",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "heart sound signals",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": "5272 heart sound recordings were collected from the main four auscultation locations of 1568 subjects, aged between 0 and 21 years",
+    "summary": "Multi-location heart sound recordings from the four main auscultation locations, with expert annotations of murmur timing, shape, pitch, grading, quality and location, plus S1/S2 segmentation annotations."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,111 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds008255",
+  "payload": {
+    "created": "2026-07-14T12:07:23.593Z",
+    "id": "ds008255",
+    "latestSnapshot": {
+      "created": "2026-08-12T13:04:06.000Z",
+      "description": {
+        "Authors": [
+          "Michal Andelman Gur",
+          "Noam Sobel"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds008255.v1.0.1",
+        "Funding": null,
+        "HowToAcknowledge": "Please cite the associated manuscript or dataset DOI when using this dataset.",
+        "License": "CC0",
+        "Name": "Odor and Visual Similarity MRI Experiment",
+        "ReferencesAndLinks": null
+      },
+      "readme": "This dataset contains multi-echo fMRI data from an odor and visual similarity experiment.\n\nEach participant underwent anatomical T1-weighted imaging and three functional runs:\n1. odor run 1\n2. visual run 1\n3. odor run 2\n\nFunctional images were acquired as multi-echo BOLD scans with four echoes per run. Therefore, each complete subject has 12 BOLD files: 3 runs × 4 echoes.\n\nValidator note:\nThe BIDS validator reports an INCONSISTENT_PARAMETERS warning because the functional data were acquired using a multi-echo BOLD sequence. Each functional run contains four echoes, represented with the echo-1, echo-2, echo-3, and echo-4 entities in the filenames. The expected EchoTime values differ across echoes, while RepetitionTime and task structure are consistent across runs.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 233396158939,
+        "subjects": [
+          "W1015",
+          "OZ494",
+          "M0860",
+          "W1036",
+          "M0861",
+          "M0857",
+          "M724",
+          "M774",
+          "W1052",
+          "W964",
+          "W1053",
+          "W1047",
+          "W1049",
+          "W1045",
+          "W333",
+          "W1055",
+          "W1050",
+          "W1051",
+          "M843",
+          "M859",
+          "M819",
+          "M842",
+          "W01049",
+          "M0826",
+          "W909",
+          "W921",
+          "M0817",
+          "W1035",
+          "M860",
+          "M832",
+          "M831",
+          "M827",
+          "M803",
+          "M864",
+          "W01053",
+          "M839",
+          "M870",
+          "W1033",
+          "M849",
+          "W1009",
+          "M0856",
+          "W1039",
+          "M792",
+          "W986",
+          "M0847",
+          "M809",
+          "M851"
+        ],
+        "tasks": [
+          "odor",
+          "visual"
+        ],
+        "totalFiles": 1367
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2026-07-27T16:22:58.433Z"
+  },
+  "source": "openneuro"
+}

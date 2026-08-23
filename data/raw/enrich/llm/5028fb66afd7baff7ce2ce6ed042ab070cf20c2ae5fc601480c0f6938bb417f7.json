@@ -1,0 +1,49 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:5028fb66afd7baff7ce2ce6ed042ab070cf20c2ae5fc601480c0f6938bb417f7",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Prostate Adenocarcinoma",
+        "label": "Prostate Adenocarcinoma"
+      },
+      {
+        "evidence": "Adenomas and Adenocarcinomas",
+        "label": "Adenomas and Adenocarcinomas"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "nephrology_urology"
+    ],
+    "id": "gdc:TCGA-PRAD",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Diagnostic Slide, Tissue Slide",
+        "value": "pathology"
+      },
+      {
+        "evidence": "WGS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "Transcriptome Profiling",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Proteome Profiling",
+        "value": "proteomics"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "Human cases with prostate adenocarcinoma (prostate gland)",
+    "summary": "TCGA project on prostate adenocarcinoma of the prostate gland, with sequencing, copy number, methylation, transcriptome and proteome profiling alongside clinical, biospecimen and slide data."
+  },
+  "prompt_version": "v1"
+}

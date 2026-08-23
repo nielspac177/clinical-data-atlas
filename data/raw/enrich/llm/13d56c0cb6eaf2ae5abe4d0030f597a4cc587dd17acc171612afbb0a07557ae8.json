@@ -1,0 +1,28 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:13d56c0cb6eaf2ae5abe4d0030f597a4cc587dd17acc171612afbb0a07557ae8",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "critical_care",
+      "public_health"
+    ],
+    "id": "physionet:mimic-ii",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Electronic health record data",
+        "value": "EHR"
+      },
+      {
+        "evidence": "physiological waveforms and minute-by-minute trends",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": ">30,000 patients admitted to ICUs at a single tertiary care hospital",
+    "summary": "Electronic health record data from more than 30,000 patients admitted to intensive care units at a single tertiary care hospital, including physiological waveforms and minute-by-minute trends for a subset of records."
+  },
+  "prompt_version": "v1"
+}

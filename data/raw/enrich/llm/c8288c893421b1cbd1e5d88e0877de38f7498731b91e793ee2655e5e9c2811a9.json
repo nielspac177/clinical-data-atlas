@@ -1,0 +1,49 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:c8288c893421b1cbd1e5d88e0877de38f7498731b91e793ee2655e5e9c2811a9",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Liver Hepatocellular Carcinoma",
+        "label": "Liver Hepatocellular Carcinoma"
+      },
+      {
+        "evidence": "Adenomas and Adenocarcinomas",
+        "label": "Adenomas and Adenocarcinomas"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "gastroenterology_hepatology"
+    ],
+    "id": "gdc:TCGA-LIHC",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Tissue Slide, Diagnostic Slide",
+        "value": "pathology"
+      },
+      {
+        "evidence": "WXS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "RNA-Seq",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Reverse Phase Protein Array",
+        "value": "proteomics"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "377 human cases",
+    "summary": "TCGA molecular profiling of hepatocellular carcinoma of the liver and intrahepatic bile ducts, with sequencing, methylation and genotyping arrays, protein arrays, tissue and diagnostic slides, plus clinical and biospecimen data."
+  },
+  "prompt_version": "v1"
+}

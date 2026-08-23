@@ -1,0 +1,39 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:c263122b85a7dd6b4dba425b586be6a3b9e6d294992300c80b8b3735ec4cd9fe",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "biopsy-proven MASLD",
+        "label": "MASLD"
+      },
+      {
+        "evidence": "metabolic dysfunction-associated steatohepatitis (MASH)",
+        "label": "MASH"
+      }
+    ],
+    "countries": [
+      "AU"
+    ],
+    "domains": [
+      "gastroenterology_hepatology",
+      "endocrinology_metabolism"
+    ],
+    "id": "physionet:bidmc-metabolomic-masld",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "De-identified serum metabolomics",
+        "value": "other"
+      },
+      {
+        "evidence": "targeted metabolomic features per participant",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "110 adult subjects presenting with abnormal liver function tests at a Gastroenterology–Hepatology clinic in the Sydney West Local Health District",
+    "summary": "De-identified serum metabolomics from adults with and without biopsy-proven MASLD, with 1,618 targeted metabolomic features per participant quantified by UPLC-MS/MS, supporting validation of other studies and hypothesis generation."
+  },
+  "prompt_version": "v1"
+}

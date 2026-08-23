@@ -1,0 +1,23 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:f3c7d8ea8ead03fbf3f17b0816464b0f71ce0460e0b45cde2a3a56047d814ef7",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "critical_care"
+    ],
+    "id": "physionet:archehr-qa-bionlp-task-2025",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "electronic health records (EHRs)",
+        "value": "EHR"
+      }
+    ],
+    "population": "134 cases from intensive care unit and emergency department settings, with patient-initiated questions drawn from real-world health forum messages aligned to publicly accessible real EHRs.",
+    "summary": "Expert-annotated question answering dataset pairing patient-initiated questions with clinician-interpreted questions, sentence-level relevance annotations over EHR excerpts, and clinician-written free-text answers grounded in those sentences, plus an evaluation framework."
+  },
+  "prompt_version": "v1"
+}

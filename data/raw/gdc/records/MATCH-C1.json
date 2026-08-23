@@ -1,0 +1,84 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "MATCH-C1",
+  "payload": {
+    "dbgap_accession_number": "phs002177",
+    "disease_type": [
+      "Nevi and Melanomas",
+      "Adenomas and Adenocarcinomas",
+      "Neoplasms, NOS"
+    ],
+    "id": "MATCH-C1",
+    "name": "Genomic Characterization CS-MATCH-0007 Arm C1",
+    "primary_site": [
+      "Esophagus",
+      "Bronchus and lung",
+      "Stomach",
+      "Liver and intrahepatic bile ducts",
+      "Palate",
+      "Rectum"
+    ],
+    "program": {
+      "dbgap_accession_number": null,
+      "name": "MATCH",
+      "program_id": "893b0820-b50b-5c75-85f5-3b028e251811"
+    },
+    "project_id": "MATCH-C1",
+    "releasable": false,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 11,
+      "data_categories": [
+        {
+          "case_count": 10,
+          "data_category": "Simple Nucleotide Variation",
+          "file_count": 140
+        },
+        {
+          "case_count": 11,
+          "data_category": "Sequencing Reads",
+          "file_count": 47
+        },
+        {
+          "case_count": 11,
+          "data_category": "Biospecimen",
+          "file_count": 11
+        },
+        {
+          "case_count": 11,
+          "data_category": "Clinical",
+          "file_count": 11
+        },
+        {
+          "case_count": 9,
+          "data_category": "Transcriptome Profiling",
+          "file_count": 18
+        },
+        {
+          "case_count": 9,
+          "data_category": "Structural Variation",
+          "file_count": 36
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 10,
+          "experimental_strategy": "WXS",
+          "file_count": 160
+        },
+        {
+          "case_count": 9,
+          "experimental_strategy": "RNA-Seq",
+          "file_count": 81
+        }
+      ],
+      "file_count": 263,
+      "file_size": 1155562589808
+    }
+  },
+  "source": "gdc"
+}

@@ -1,0 +1,111 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds002603",
+  "payload": {
+    "created": "2020-03-01T12:37:34.818Z",
+    "id": "ds002603",
+    "latestSnapshot": {
+      "created": "2020-03-01T13:09:56.000Z",
+      "description": {
+        "Authors": [
+          "Lukas Snoek",
+          "Tinka Beemstermboer",
+          "H. Steven Scholte"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds002603.v1.0.0",
+        "Funding": null,
+        "HowToAcknowledge": "Please cite this dataset using the corresponding DOI",
+        "License": "CC0",
+        "Name": "MB-EPI-comparison",
+        "ReferencesAndLinks": null
+      },
+      "readme": "This 3T fMRI dataset was collected in order to evaluate different multiband sequences at the Spinoza Centre for Neuroimaging (location REC, Amsterdam, The Netherlands).\n\n## Contents\nEach subject contains data from one session, in which a single working memory task was performed with different EPI sequences, indicated by the `acq` identifier:\n* SeqMm3Tr2000: sequential (non-multiband) EPI, spatial resolution 3 mm. isotropic, TR of 2000 ms.;\n* Mb4Mm2Tr1600: ultiband factor 4 EPI, spatial resolution 2 mm. isotropic, TR of 1600 ms.;\n* Mb4Mm27Tr700: multiband factor 4 EPI, spatial resolution 2.7 mm. isotropic, TR of 700 ms.;\n* Mb4Mm3Tr550: multiband factor 4 EPI, spatia resolution 3 mm. isotropic, TR of 550 ms.\n\nEach subject contains two T1-weighted anatomical scans (one with axial slices, one saggital), one T2-weighted anatomical scans, a phase-difference fieldmap, four BOLD fMRI runs (corresponding to the four acquisition types listed above), and corresponding reverse-polarity (\"topup\") scans (to potentially compare B0-fieldmap based and topup-based unwarping). Additionally, physiology (*_physio.tsv.gz) is included for each corresponding BOLD fMRI run (converted from the Philips \"SCANPHYSLOG\" file using the \"scanphyslog2bids\" package; https://github.com/lukassnoek/scanphyslog2bids).\n\n## Anonymity\nIn accordance with regulations from the University of Amsterdam, several precautions for participant anonymity were taken.\n1. The informed consents signed by all participants contained a statement that their data could be shared with third parties;\n2. No mapping from personal data (name, address, etc.) and subject identifier (e.g., sub-01) exists (and, in fact, never existed in the first place);\n2. All structural data (T1-weighted scans) were defaced (using `pydeface`; https://github.com/poldracklab/pydeface);\n3. Subject identifiers (sub-xx) were randomly shuffled\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 12780830559,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23"
+        ],
+        "tasks": [
+          "wm"
+        ],
+        "totalFiles": 851
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        23,
+        20,
+        21,
+        23,
+        23,
+        24,
+        20,
+        25,
+        23,
+        24,
+        23,
+        19,
+        22,
+        25,
+        23,
+        21,
+        24,
+        21,
+        20,
+        23,
+        20,
+        21,
+        24
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "event-related",
+      "studyDomain": "working memory",
+      "studyLongitudinal": "within-subject task-based fMRI"
+    },
+    "publishDate": "2020-03-03T11:17:21.725Z"
+  },
+  "source": "openneuro"
+}

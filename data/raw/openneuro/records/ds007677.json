@@ -1,0 +1,93 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007677",
+  "payload": {
+    "created": "2026-04-21T10:18:26.518Z",
+    "id": "ds007677",
+    "latestSnapshot": {
+      "created": "2026-04-22T09:06:43.000Z",
+      "description": {
+        "Authors": [
+          "Adrià Casamitjana",
+          "Juan Eugenio Iglesias",
+          "Brain L Edlow",
+          "Martina Bocchetta",
+          "Dorit Kliemann",
+          "Matteo Mancini",
+          "Loïc Peter",
+          "Eleanor Robinson",
+          "Roberto Annunziata",
+          "Juri Althonayan",
+          "Shauna Crampsie",
+          "Emily Blackburn",
+          "Benjamin Billot",
+          "Alessia Atzeni",
+          "Oula Puonti",
+          "Yaël Balbastre",
+          "Peter Schmidt",
+          "James Hughes",
+          "Jean C Augustinack",
+          "Lilla Zöllei",
+          "David L Thomas",
+          "Catherine Strand",
+          "Janice L Holton",
+          "Zane Jaunmuktane"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007677.v1.0.0",
+        "Funding": [
+          "This work was primarily funded by the European Research Council (Starting Grant 677697, project \\BUNGEE-TOOLS\")."
+        ],
+        "HowToAcknowledge": "Casamitjana, Adrià, et al. \"A probabilistic histological atlas of the human brain for MRI segmentation\" Nature (2025).",
+        "License": "CC0",
+        "Name": "The mother of all experiments",
+        "ReferencesAndLinks": [
+          "Webpage: https://github-pages.ucl.ac.uk/NextBrain/"
+        ]
+      },
+      "readme": "# NextBrain: A probabilistic histological atlas of the human brain for MRI segmentation\n\nNextBrain is a probabilistic atlas of the human brain using histological sections of five full human hemispheres with manual segmentations.\n\nIn this repository, we present the 3D histology reconstructions of the 5 human brain hemispheres using two different stains (LFB and H&E) and the corresponding labelmaps at 0.2mm isotropic resolution. Each stain contains RGB colormaps.\n\nWe include the original ex vivo MRI and a look-up-table for visualization (freeview format). From the root directory, you can open a single case in Freeview with the command:\n\nfreeview -v sub-001/ses-01/anat/sub-001_ses-01_T2w.nii.gz derivatives/manual_segmentation/sub-001/ses-01/sub-001_ses-01_desc-manual_dseg.nii.gz:colormap=lut:lut=derivatives/manual_segmentation/sub-001/sub-001_lut.txt\n\nFor more information about the NextBrain project, please check the project's webpage: https://github-pages.ucl.ac.uk/NextBrain/home",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural"
+        ],
+        "sessions": [
+          "01"
+        ],
+        "size": 191970136,
+        "subjects": [
+          "02",
+          "03",
+          "05",
+          "04",
+          "01"
+        ],
+        "tasks": [],
+        "totalFiles": 8
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2026-05-07T04:35:19.700Z"
+  },
+  "source": "openneuro"
+}

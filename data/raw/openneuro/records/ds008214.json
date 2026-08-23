@@ -1,0 +1,96 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds008214",
+  "payload": {
+    "created": "2026-07-11T04:58:00.068Z",
+    "id": "ds008214",
+    "latestSnapshot": {
+      "created": "2026-07-13T17:37:05.000Z",
+      "description": {
+        "Authors": [
+          "Jason F. Hou",
+          "Sarah B. Ornellas",
+          "Michal O. Nowicki",
+          "Jerry Li",
+          "Heloise Leblanc",
+          "Betul Serra Tulu",
+          "David Sadat",
+          "Steve Ramirez",
+          "Marco Mineo",
+          "E. Antonio Chiocca",
+          "Canan Dagdeviren"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds008214.v1.0.0",
+        "Funding": [
+          "MIT Media Lab Consortium",
+          "NIH R01 NS134723",
+          "NIH P01 CA163205"
+        ],
+        "HowToAcknowledge": "TODO: add citation / DOI once minted",
+        "License": "CC0",
+        "Name": "MITexp10: T1w MRI of Gadavist contrast distribution after intracerebral infusion in mice (needle vs LUCID device)",
+        "ReferencesAndLinks": [
+          "TODO: add manuscript link"
+        ]
+      },
+      "readme": "# MITexp10\n\nT1-weighted MRI (Bruker BioSpec 3T, RARE) of Gadavist contrast distribution following intracerebral infusion in mice. Two infusion modes: standard needle (control) and the LUCID device.\n\n## Subjects\n- sub-01 to sub-05: needle (control)\n- sub-06 to sub-10: device (LUCID)\n\nTen animals, all included in the analysis. Two additional animals from the original cohort were excluded prior to analysis (device malfunction) and are not in this release.\n\n## Imaging\nEach `sub-*/anat/sub-*_T1w.nii.gz` is the axial T1w RARE volume used for the analysis (Bruker scan 2), converted from the ParaVision `2dseq` reconstruction. Matrix 192x192, 15 slices, in-plane 0.1042 x 0.0894 mm, slice thickness 1.0 mm.\n\nThe affine is a nominal diagonal (correct voxel sizes, origin at volume center); absolute scanner orientation from the Bruker geometry was not reconstructed.\n\n## sourcedata/\nFull raw Bruker ParaVision study folders per subject (all scans: localizer, scan 2 T1w RARE used for analysis, scan 3 T1w RARE). See `sourcedata/README` for de-identification notes.\n\n## derivatives/contrast-segmentation/\nContrast-enhanced region masks (`sub-*_desc-contrastEnhanced_mask.nii.gz`) placed on the T1w grid, with per-slice and total-volume metrics. Region grown from a manually placed seed; per-slice threshold is a percentile of brain signal.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 9718912,
+        "subjects": [
+          "10",
+          "02",
+          "01",
+          "06",
+          "07",
+          "08",
+          "03",
+          "05",
+          "09",
+          "04"
+        ],
+        "tasks": [],
+        "totalFiles": 25
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "NIH ",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Mouse",
+      "studyDesign": "In-vivo Gadavist infusion using LUCID vs. Hamilton syringe",
+      "studyDomain": "",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2026-07-13T17:46:58.758Z"
+  },
+  "source": "openneuro"
+}

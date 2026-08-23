@@ -1,0 +1,122 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003684",
+  "payload": {
+    "created": "2021-06-05T18:52:28.894Z",
+    "id": "ds003684",
+    "latestSnapshot": {
+      "created": "2021-06-08T12:56:08.000Z",
+      "description": {
+        "Authors": [
+          "Giacomo Ariani",
+          "J Andrew Pruszynski",
+          "Jörn Diedrichsen"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds003684.v1.0.0",
+        "Funding": [
+          "NSERC Discovery Grant (RGPIN-2016-04890)",
+          "Canada First Research Excellence Fund (BrainsCAN)"
+        ],
+        "HowToAcknowledge": "If you use these data, please cite the appropriate manuscripts.",
+        "License": "CC0",
+        "Name": "Finger sequence planning",
+        "ReferencesAndLinks": [
+          "https://www.biorxiv.org/content/10.1101/2020.12.17.423254v3\\"
+        ]
+      },
+      "readme": "### Motor planning of finger movements\n\nThis contains the raw 7 Tesla fMRI data and structural images, used in the the Ariani, Pruszynski, Diedrichsen (2021) biorxiv paper \"Motor planning brings human primary somatosensory cortex into action-specific preparatory states\" (https://www.biorxiv.org/content/10.1101/2020.12.17.423254v3).\n\nParticipants (N=22) underwent one session of fMRI scanning (10 blocks, ~5-6 min each) in which they planned and executed 3 single-finger and 3 multi-finger sequences of finger movements inside the scanner (presentation order was randomized). Sequence identity (1-6) and sequence type (single = 1 / multi = 2) for each trial can be found in the accompanying events.tsv files. Additionally, we included a proportion (~40%) of no-go trials in which planning is not followed by execution.",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "t1map",
+          "t1w",
+          "bold",
+          "events",
+          "sbref",
+          "fieldmap"
+        ],
+        "secondaryModalities": [],
+        "sessions": [],
+        "size": 38142259338,
+        "subjects": [
+          "s01",
+          "s02",
+          "s03",
+          "s04",
+          "s05",
+          "s06",
+          "s07",
+          "s08",
+          "s09",
+          "s10",
+          "s12",
+          "s13",
+          "s14",
+          "s15",
+          "s16",
+          "s17",
+          "s18",
+          "s19",
+          "s20",
+          "s21",
+          "s22",
+          "s23"
+        ],
+        "tasks": [
+          "dsp",
+          "TODO: full task name for dsp"
+        ],
+        "totalFiles": 1361
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        27,
+        22,
+        22,
+        29,
+        20,
+        23,
+        21,
+        20,
+        20,
+        26,
+        29,
+        21,
+        20,
+        30,
+        30,
+        20,
+        20,
+        27,
+        20,
+        20,
+        31,
+        21
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "t1map",
+        "t1w",
+        "bold",
+        "events",
+        "sbref",
+        "fieldmap"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2021-11-04T14:47:18.527Z"
+  },
+  "source": "openneuro"
+}

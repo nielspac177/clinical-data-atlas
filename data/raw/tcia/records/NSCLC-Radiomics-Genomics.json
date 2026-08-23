@@ -1,0 +1,1178 @@
+{
+  "endpoints": [
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getCollectionValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getModalityValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getBodyPartValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getPatient",
+    "https://api.datacite.org/dois?prefix=10.7937"
+  ],
+  "harvest_method": "api:nbia+datacite",
+  "native_id": "NSCLC-Radiomics-Genomics",
+  "payload": {
+    "datacite": {
+      "citationCount": 29,
+      "container": {},
+      "contentUrl": [],
+      "contributors": [
+        {
+          "affiliation": [],
+          "contributorType": "DataCurator",
+          "name": "TCIA Team",
+          "nameIdentifiers": []
+        }
+      ],
+      "created": "2015-07-16T03:09:13Z",
+      "creators": [
+        {
+          "affiliation": [],
+          "familyName": "Aerts",
+          "givenName": "Hugo J. W. L.",
+          "name": "Aerts, Hugo J. W. L.",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Rios Velazquez",
+          "givenName": "Emmanuel",
+          "name": "Rios Velazquez, Emmanuel",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Leijenaar",
+          "givenName": "Ralph T. H.",
+          "name": "Leijenaar, Ralph T. H.",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Parmar",
+          "givenName": "Chintan",
+          "name": "Parmar, Chintan",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Grossmann",
+          "givenName": "Patrick",
+          "name": "Grossmann, Patrick",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Carvalho",
+          "givenName": "Sara",
+          "name": "Carvalho, Sara",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Bussink",
+          "givenName": "Johan",
+          "name": "Bussink, Johan",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Monshouwer",
+          "givenName": "René",
+          "name": "Monshouwer, René",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Haibe-Kains",
+          "givenName": "Benjamin",
+          "name": "Haibe-Kains, Benjamin",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Rietveld",
+          "givenName": "Derek",
+          "name": "Rietveld, Derek",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Hoebers",
+          "givenName": "Frank",
+          "name": "Hoebers, Frank",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Rietbergen",
+          "givenName": "Michelle M.",
+          "name": "Rietbergen, Michelle M.",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Leemans",
+          "givenName": "C. René",
+          "name": "Leemans, C. René",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Dekker",
+          "givenName": "Andre",
+          "name": "Dekker, Andre",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Quackenbush",
+          "givenName": "John",
+          "name": "Quackenbush, John",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Gillies",
+          "givenName": "Robert J.",
+          "name": "Gillies, Robert J.",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Lambin",
+          "givenName": "Philippe",
+          "name": "Lambin, Philippe",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2015",
+          "dateType": "Issued"
+        }
+      ],
+      "descriptions": [
+        {
+          "description": "This collection contains images from 89 non-small cell lung cancer (NSCLC) patients that were treated with surgery. For these patients pretreatment CT scans, gene expression, and clinical data are available. This dataset refers to the Lung3 dataset of the study published in Nature Communications. In short, this publication applies a radiomic approach to computed tomography data of 1,019 patients with lung or head-and-neck cancer. Radiomics refers to the comprehensive quantification of tumour phenotypes by applying a large number of quantitative image features. In present analysis 440 features quantifying tumour image intensity, shape and texture, were extracted. We found that a large number of radiomic features have prognostic power in independent data sets, many of which were not identified as significant before. Radiogenomics analysis revealed that a prognostic radiomic signature, capturing intra-tumour heterogeneity, was associated with underlying gene-expression patterns. These data suggest that radiomics identifies a general prognostic phenotype existing in both lung and head-and-neck cancer. This may have a clinical impact as imaging is routinely used in clinical practice, providing an unprecedented opportunity to improve decision-support in cancer treatment at low cost. The dataset described here (Lung3) was used to investigate the association of radiomic imaging features with gene-expression profiles. The Lung2 dataset used for training the radiomic biomarker and consisting of 422 NSCLC CT scans with outcome data can be found here: NSCLC-Radiomics. For scientific inquiries about this dataset, please contact Dr. Hugo Aerts of the Dana-Farber Cancer Institute / Harvard Medical School (hugo_aerts@dfci.harvard.edu).",
+          "descriptionType": "Abstract"
+        }
+      ],
+      "doi": "10.7937/k9/tcia.2015.l4fret6z",
+      "downloadCount": 0,
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "NSCLC-Radiomics-Genomics",
+          "identifierType": "TCIA Short Name"
+        }
+      ],
+      "isActive": true,
+      "language": null,
+      "metadataVersion": 26,
+      "partCount": 0,
+      "partOfCount": 0,
+      "publicationYear": 2015,
+      "published": null,
+      "publisher": "The Cancer Imaging Archive",
+      "reason": null,
+      "referenceCount": 1,
+      "registered": "2015-07-16T03:10:12Z",
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "10.1038/ncomms5006",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1186/s12885-019-5646-9",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.3390/diagnostics11061047",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.compbiomed.2021.104752",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1109/isbi48211.2021.9433969",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.3389/fonc.2021.637804",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.patter.2022.100464",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1109/tiptekno56568.2022.9960233",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1038/s41598-022-23328-0",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1088/1361-6560/ac692e",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1038/s41467-022-30841-3",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.jik.2023.100313",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1007/s00330-023-09503-5",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.compmedimag.2023.102310",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.measurement.2023.113247",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.3390/diagnostics13061167",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1148/rycan.230100",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1038/s41597-024-03337-6",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1007/s10278-017-0033-z",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.3390/cancers12123663",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.ejmp.2020.02.010",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1097/cco.0000000000000796",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.3390/app12136318",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1117/12.2610831",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.3389/fonc.2022.870457",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.ijmedinf.2024.105694",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        }
+      ],
+      "relatedItems": [],
+      "rightsList": [
+        {
+          "rights": "Creative Commons Attribution Non Commercial 3.0 Unported",
+          "rightsIdentifier": "cc-by-nc-3.0",
+          "rightsIdentifierScheme": "SPDX",
+          "rightsUri": "https://creativecommons.org/licenses/by-nc/3.0/legalcode",
+          "schemeUri": "https://spdx.org/licenses/"
+        }
+      ],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "api",
+      "state": "findable",
+      "subjects": [],
+      "titles": [
+        {
+          "title": "Data From NSCLC-Radiomics-Genomics"
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceType": "DICOM",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2025-06-01T01:01:21Z",
+      "url": "https://www.cancerimagingarchive.net/collection/nsclc-radiomics-genomics/",
+      "version": "1",
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 6628
+    },
+    "nbia": {
+      "body_parts": [
+        "LUNG"
+      ],
+      "collection": "NSCLC-Radiomics-Genomics",
+      "modalities": [
+        "CT"
+      ],
+      "patients": [
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-64",
+          "PatientName": "1849140879",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-01",
+          "PatientName": "2747074775",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-02",
+          "PatientName": "1971734996",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-03",
+          "PatientName": "1449445999",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-04",
+          "PatientName": "2414765774",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-06",
+          "PatientName": "9664304187",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-18",
+          "PatientName": "1809700088",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-19",
+          "PatientName": "2341551093",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-21",
+          "PatientName": "2962673036",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-23",
+          "PatientName": "2101234917",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-25",
+          "PatientName": "2113650415",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-30",
+          "PatientName": "2935136859",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-32",
+          "PatientName": "3092787968",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-43",
+          "PatientName": "2440270857",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-45",
+          "PatientName": "4952860793",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-52",
+          "PatientName": "1912447147",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-55",
+          "PatientName": "5850740742",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-56",
+          "PatientName": "1703971304",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-57",
+          "PatientName": "2674628126",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-58",
+          "PatientName": "1247231333",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-59",
+          "PatientName": "2817877962",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-62",
+          "PatientName": "2491495211",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-63",
+          "PatientName": "1567784531",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-68",
+          "PatientName": "2614503932",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-74",
+          "PatientName": "2989566358",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-76",
+          "PatientName": "2459712570",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-83",
+          "PatientName": "2985210558",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-84",
+          "PatientName": "2486484264",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-87",
+          "PatientName": "1938715001",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-80",
+          "PatientName": "4742844363",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-05",
+          "PatientName": "3287069919",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-07",
+          "PatientName": "2881057193",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-11",
+          "PatientName": "1838672946",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-12",
+          "PatientName": "1210154403",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-17",
+          "PatientName": "2062424377",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-22",
+          "PatientName": "9903283228",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-31",
+          "PatientName": "5910463914",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-35",
+          "PatientName": "1207614559",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-37",
+          "PatientName": "2335108065",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-39",
+          "PatientName": "2953653475",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-40",
+          "PatientName": "3389133388",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-44",
+          "PatientName": "1007066277",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-46",
+          "PatientName": "1971474975",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-49",
+          "PatientName": "2361506887",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-60",
+          "PatientName": "2954975921",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-61",
+          "PatientName": "3155354040",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-67",
+          "PatientName": "1521084722",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-70",
+          "PatientName": "6511339588",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-72",
+          "PatientName": "2766852498",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-73",
+          "PatientName": "9016455825",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-86",
+          "PatientName": "2472988361",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-79",
+          "PatientName": "1238942292",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-08",
+          "PatientName": "7643079633",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-09",
+          "PatientName": "2509298718",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-24",
+          "PatientName": "3233416559",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-27",
+          "PatientName": "1089416945",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-41",
+          "PatientName": "1909291485",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-10",
+          "PatientName": "4393256388",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-13",
+          "PatientName": "7376374078",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-15",
+          "PatientName": "2468870410",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-26",
+          "PatientName": "3009989567",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-28",
+          "PatientName": "4700673343",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-33",
+          "PatientName": "1817560004",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-34",
+          "PatientName": "2535165775",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-42",
+          "PatientName": "1916454058",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-47",
+          "PatientName": "3092167533",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-50",
+          "PatientName": "1484310696",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-53",
+          "PatientName": "1452629334",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-75",
+          "PatientName": "1052469103",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-82",
+          "PatientName": "1064146202",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-85",
+          "PatientName": "3321978213",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-77",
+          "PatientName": "5736183462",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-78",
+          "PatientName": "2022850141",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-14",
+          "PatientName": "1414187352",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-66",
+          "PatientName": "5055745778",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-71",
+          "PatientName": "8349395360",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-16",
+          "PatientName": "1357332225",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-20",
+          "PatientName": "3179269613",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-29",
+          "PatientName": "1767081112",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-48",
+          "PatientName": "2923263370",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-54",
+          "PatientName": "1288945851",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-65",
+          "PatientName": "1985969620",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-69",
+          "PatientName": "6628162739",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-89",
+          "PatientName": "2293363887",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-36",
+          "PatientName": "6685057436",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-81",
+          "PatientName": "2224188727",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-38",
+          "PatientName": "1462149222",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-51",
+          "PatientName": "2222464505",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "NSCLC-Radiomics-Genomics",
+          "PatientId": "LUNG3-88",
+          "PatientName": "9739138154",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        }
+      ]
+    }
+  },
+  "source": "tcia"
+}

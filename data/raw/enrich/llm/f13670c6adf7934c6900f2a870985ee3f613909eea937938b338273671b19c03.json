@@ -1,0 +1,23 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:f13670c6adf7934c6900f2a870985ee3f613909eea937938b338273671b19c03",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "other"
+    ],
+    "id": "physionet:persona-patientsim",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "clinical profiles, including symptoms and medical history, derived from real-world data in the MIMIC-ED and MIMIC-IV datasets",
+        "value": "EHR"
+      }
+    ],
+    "population": "Simulated patient personas grounded in clinical profiles derived from the MIMIC-ED and MIMIC-IV datasets",
+    "summary": "A patient simulator generating diverse patient personas for multi-turn doctor-patient dialogue, built on clinical profiles drawn from MIMIC-ED and MIMIC-IV, with personas defined along personality, language proficiency, history recall and cognitive confusion axes."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,56 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:b8456629fb22f37bd7cc373b242757368279780efe5f31d2d600559605c649e2",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Breast Invasive Carcinoma",
+        "label": "Breast Invasive Carcinoma"
+      },
+      {
+        "evidence": "Ductal and Lobular Neoplasms",
+        "label": "Ductal and Lobular Neoplasms"
+      },
+      {
+        "evidence": "Adenomas and Adenocarcinomas",
+        "label": "Adenomas and Adenocarcinomas"
+      },
+      {
+        "evidence": "Fibroepithelial Neoplasms",
+        "label": "Fibroepithelial Neoplasms"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "gdc:TCGA-BRCA",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Diagnostic Slide, Tissue Slide",
+        "value": "pathology"
+      },
+      {
+        "evidence": "WXS, miRNA-Seq, WGS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "Transcriptome Profiling",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Proteome Profiling",
+        "value": "proteomics"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "1098 human cases of breast invasive carcinoma",
+    "summary": "TCGA project on breast invasive carcinoma. Covers sequencing reads, nucleotide and copy number variation, transcriptome profiling, DNA methylation, proteome profiling, biospecimen and clinical data, plus diagnostic and tissue slides."
+  },
+  "prompt_version": "v1"
+}

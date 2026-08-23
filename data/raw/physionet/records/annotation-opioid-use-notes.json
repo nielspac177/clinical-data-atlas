@@ -1,0 +1,37 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "annotation-opioid-use-notes",
+  "payload": {
+    "abstract": "<p><span><span><span><span><span><span><span>Opioid use disorder (OUD) is underdiagnosed in health system settings, limiting research on OUD using electronic health records (EHRs). Medical encounter notes can enrich structured EHR data with documented signs and symptoms of OUD and social risks and behaviors. To capture this information at scale, natural language processing tools must be developed and evaluated. We conducted a pilot study that aimed to 1) develop and apply an annotation schema to deeply characterize OUD and related clinical, behavioral, and environmental factors; and 2) automate the annotation schema using machine learning and deep learning-based approaches. De-identified patient data for this study included hospital discharge summaries of patients with <em>International Classification of Diseases</em> (ICD-9) OUD diagnostic codes, obtained from the MIMIC-III Critical Care Database. We developed an annotation schema to characterize problematic opioid use, identify individuals with potential OUD, and provide psychosocial context. The final annotation schema contained 33 classes. Two annotators reviewed discharge summaries from a random sample of 100 of these patients. The first corpus of 40 patients was reviewed by both annotators. We achieved moderate inter-annotator agreement, with F1-scores across all classes increasing from 48% to 66%. The second corpus of 60 patients was reviewed by a single annotator. The shared database contains the resulting 3,270 annotations with the note identifier, span offset with accompanying text snippet, and class assignments and may be useful to future development of natural language processing systems related to OUD.</span></span></span></span></span></span></span></p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 92922,
+    "core_doi": "10.13026/kdap-sg35",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 605002,
+    "public_project_uuid": "18602ed5-f7a2-4dab-919d-f91ead920b03",
+    "publish_date": "2023-02-08",
+    "resource_type": "Database",
+    "short_description": "The database contains a corpus of annotated data from the MIMIC-III Critical Care Database from a study that aimed to develop and apply an annotation schema to characterize opioid use disorder and related contextual factors.",
+    "slug": "annotation-opioid-use-notes",
+    "source_url": "https://physionet.org/content/annotation-opioid-use-notes/1.0.0/",
+    "title": "Annotation dataset of problematic opioid use and related contexts from MIMIC-III Critical Care Database discharge summaries",
+    "topics": [
+      "clinical notes",
+      "substance use",
+      "natural language processing",
+      "opioid use disorder"
+    ],
+    "version": "1.0.0",
+    "version_doi": "10.13026/tbb4-t319"
+  },
+  "source": "physionet"
+}

@@ -1,0 +1,122 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006040",
+  "payload": {
+    "created": "2025-03-24T00:18:30.864Z",
+    "id": "ds006040",
+    "latestSnapshot": {
+      "created": "2026-03-16T02:32:01.000Z",
+      "description": {
+        "Authors": [
+          "Younghwa Cha",
+          "Yeji Lee",
+          "Eunhee Ji",
+          "SoHyun Han",
+          "Sunhyun Min",
+          "Hyoungkyu Kim",
+          "Minseo Cho",
+          "Hae Seong Lee",
+          "Youngjai Park",
+          "Joon-Young Moon"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006040.v1.0.2",
+        "Funding": [
+          "The Institute for Basic Science of Korea (IBS, IBS-R015-Y3)",
+          "The National Research Foundation of Korea (NRF, RS-2023-00272652)"
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Sustained Attention Task (gradCPT) Dataset using simultaneous EEG-fMRI and DTI",
+        "ReferencesAndLinks": null
+      },
+      "readme": "This dataset includes simultaneous recordings of electroencephalography (EEG), functional magnetic resonance imaging (fMRI), and diffusion-weighted imaging (DWI) from 28 participants aged 19 to 42 years. The fMRI and DWI data were acquired using a 3T MRI scanner (Siemens Magnetom Prisma), and the EEG was recorded using 64 channels (Brain Product BrainCap MR with Multirodes).\n\nThe following tasks were performed: resting state (eyes open and closed), checkerboard (15Hz), gradCPT, and imagery task. Raw files can be found in the subfolders, while preprocessed files are available in the derivatives folder. For more detailed information about the file structure, please refer to the readme files.",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "eeg",
+          "mri",
+          "beh"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_diffusion",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 185217929633,
+        "subjects": [
+          "023",
+          "020",
+          "022",
+          "012",
+          "007",
+          "005",
+          "017",
+          "013",
+          "006",
+          "009",
+          "027",
+          "011",
+          "021",
+          "008",
+          "029",
+          "018",
+          "014",
+          "024",
+          "026",
+          "015",
+          "016",
+          "025",
+          "028",
+          "002",
+          "004",
+          "010",
+          "019",
+          "001"
+        ],
+        "tasks": [
+          "ECOFF",
+          "GRADON",
+          "IMAGON",
+          "EOOFF",
+          "EOON",
+          "IMGRADON",
+          "CBOFF",
+          "CBON",
+          "GRADOFF",
+          "ECON",
+          "IM",
+          "GRADCPT",
+          "GRADCPT_IM",
+          "CB",
+          "EC",
+          "EO"
+        ],
+        "totalFiles": 2146
+      },
+      "tag": "1.0.2"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "Institute for Basic Science of Korea (IBS)",
+      "modalities": [
+        "eeg",
+        "mri",
+        "beh"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "Sustained Attention Task, Simultaneous EEG-fMRI",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2025-03-27T14:24:51.791Z"
+  },
+  "source": "openneuro"
+}

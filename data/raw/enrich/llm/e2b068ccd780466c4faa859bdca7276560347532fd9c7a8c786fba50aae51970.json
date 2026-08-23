@@ -1,0 +1,29 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:e2b068ccd780466c4faa859bdca7276560347532fd9c7a8c786fba50aae51970",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Prostate cancer T1- and T2-weighted magnetic resonance images",
+        "label": "Prostate cancer"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "nephrology_urology"
+    ],
+    "id": "tcia:prostate-diagnosis",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "T1- and T2-weighted magnetic resonance images (MRIs)",
+        "value": "MRI"
+      }
+    ],
+    "population": "Prostate cancer patients imaged with combined surface and endorectal coil MRI",
+    "summary": "Prostate cancer T1- and T2-weighted MRI acquired on a 1.5 T scanner with combined surface and endorectal coil, including dynamic contrast-enhanced images before, during and after gadolinium administration."
+  },
+  "prompt_version": "v1"
+}

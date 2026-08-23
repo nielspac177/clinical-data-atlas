@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:9c49ae034e19f3c6520bc5eafa87c69b6de00b02d029bcad695540c2642dde14",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "non-small cell lung cancer (NSCLC) patients",
+        "label": "non-small cell lung cancer (NSCLC)"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "pulmonology"
+    ],
+    "id": "tcia:nsclc-radiomics",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "pretreatment CT scans",
+        "value": "CT"
+      },
+      {
+        "evidence": "manual delineation by a radiation oncologist",
+        "value": "radiotherapy"
+      },
+      {
+        "evidence": "clinical outcome data",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "Non-small cell lung cancer (NSCLC) patients with pretreatment CT scans",
+    "summary": "Pretreatment CT scans from non-small cell lung cancer patients with manual gross tumor volume delineation by a radiation oncologist and clinical outcome data; the Lung1 set used to build a prognostic radiomic signature."
+  },
+  "prompt_version": "v1"
+}

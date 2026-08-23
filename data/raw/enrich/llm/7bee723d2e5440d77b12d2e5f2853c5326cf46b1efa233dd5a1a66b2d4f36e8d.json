@@ -1,0 +1,40 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:7bee723d2e5440d77b12d2e5f2853c5326cf46b1efa233dd5a1a66b2d4f36e8d",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Early detection of heart failure",
+        "label": "heart failure"
+      },
+      {
+        "evidence": "structural heart disease labels",
+        "label": "structural heart disease"
+      },
+      {
+        "evidence": "cardiomegaly",
+        "label": "cardiomegaly"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:chexchonet",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "chest X-rays",
+        "value": "xray"
+      },
+      {
+        "evidence": "echocardiograms conducted on the same patients",
+        "value": "ultrasound"
+      }
+    ],
+    "population": "71,589 unique chest X-rays from 24,689 different patients",
+    "summary": "Chest radiographs paired with structural heart disease labels derived from echocardiograms performed on the same patients, intended for training models to detect early-stage heart failure pathologies."
+  },
+  "prompt_version": "v1"
+}

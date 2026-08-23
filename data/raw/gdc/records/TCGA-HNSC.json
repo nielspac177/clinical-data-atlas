@@ -1,0 +1,149 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "TCGA-HNSC",
+  "payload": {
+    "dbgap_accession_number": null,
+    "disease_type": [
+      "Squamous Cell Neoplasms"
+    ],
+    "id": "TCGA-HNSC",
+    "name": "Head and Neck Squamous Cell Carcinoma",
+    "primary_site": [
+      "Base of tongue",
+      "Lip",
+      "Gum",
+      "Hypopharynx",
+      "Palate",
+      "Other and ill-defined sites in lip, oral cavity and pharynx",
+      "Bones, joints and articular cartilage of other and unspecified sites",
+      "Other and unspecified parts of tongue",
+      "Floor of mouth",
+      "Tonsil",
+      "Other and unspecified parts of mouth",
+      "Oropharynx",
+      "Larynx"
+    ],
+    "program": {
+      "dbgap_accession_number": "phs000178",
+      "name": "TCGA",
+      "program_id": "b80aa962-9650-5110-b3eb-bd087da808db"
+    },
+    "project_id": "TCGA-HNSC",
+    "releasable": true,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 528,
+      "data_categories": [
+        {
+          "case_count": 528,
+          "data_category": "Simple Nucleotide Variation",
+          "file_count": 10955
+        },
+        {
+          "case_count": 528,
+          "data_category": "Sequencing Reads",
+          "file_count": 4599
+        },
+        {
+          "case_count": 528,
+          "data_category": "Biospecimen",
+          "file_count": 2858
+        },
+        {
+          "case_count": 528,
+          "data_category": "Clinical",
+          "file_count": 1103
+        },
+        {
+          "case_count": 528,
+          "data_category": "Copy Number Variation",
+          "file_count": 7049
+        },
+        {
+          "case_count": 528,
+          "data_category": "Transcriptome Profiling",
+          "file_count": 2270
+        },
+        {
+          "case_count": 528,
+          "data_category": "DNA Methylation",
+          "file_count": 1740
+        },
+        {
+          "case_count": 354,
+          "data_category": "Proteome Profiling",
+          "file_count": 354
+        },
+        {
+          "case_count": 433,
+          "data_category": "Somatic Structural Variation",
+          "file_count": 1555
+        },
+        {
+          "case_count": 525,
+          "data_category": "Structural Variation",
+          "file_count": 2645
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 524,
+          "experimental_strategy": "miRNA-Seq",
+          "file_count": 1707
+        },
+        {
+          "case_count": 527,
+          "experimental_strategy": "WXS",
+          "file_count": 8264
+        },
+        {
+          "case_count": 521,
+          "experimental_strategy": "RNA-Seq",
+          "file_count": 5094
+        },
+        {
+          "case_count": 482,
+          "experimental_strategy": "WGS",
+          "file_count": 7010
+        },
+        {
+          "case_count": 9,
+          "experimental_strategy": "ATAC-Seq",
+          "file_count": 9
+        },
+        {
+          "case_count": 526,
+          "experimental_strategy": "Genotyping Array",
+          "file_count": 6989
+        },
+        {
+          "case_count": 528,
+          "experimental_strategy": "Methylation Array",
+          "file_count": 1740
+        },
+        {
+          "case_count": 354,
+          "experimental_strategy": "Reverse Phase Protein Array",
+          "file_count": 354
+        },
+        {
+          "case_count": 520,
+          "experimental_strategy": "Tissue Slide",
+          "file_count": 791
+        },
+        {
+          "case_count": 450,
+          "experimental_strategy": "Diagnostic Slide",
+          "file_count": 472
+        }
+      ],
+      "file_count": 35128,
+      "file_size": 303060265874096
+    }
+  },
+  "source": "gdc"
+}

@@ -1,0 +1,35 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "phenotype-annotations-mimic",
+  "payload": {
+    "abstract": "<p>A crucial step within secondary analysis of electronic health records (EHRs) is to identify the patient cohort under investigation. While EHRs contain medical billing codes that aim to represent the conditions and treatments patients may have, much of the information is only present in the patient notes. Therefore, it is critical to develop robust algorithms to infer patients&#39; conditions and treatments from their written notes.</p>\n\n<p>We introduce a dataset for patient phenotyping, a task that is defined as the identification whether a patient has a given phenotype (also referred to as indication) based on their patient note. Patient notes of MIMIC-III, a dataset collected from Intensive Care Units of a large tertiary care hospital in Boston, were manually annotated for the presence of several high-context phenotypes relevant to treatment and risk of re-hospitalization.</p>\n\n<p>Each note has been annotated by two expert human annotators (one clinical researcher and one resident physician). Annotated phenotypes include treatment non-adherence, chronic pain, advanced/metastatic cancer, as well as 10 other phenotypes. This dataset can be utilized for academic and industrial research in medicine and computer science, particularly within the field of medical natural language processing.&nbsp;</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 18940,
+    "core_doi": "10.13026/q0wp-m823",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 147646,
+    "public_project_uuid": "b78ea6c9-4ae3-49e0-bc6c-e831ffe1f251",
+    "publish_date": "2020-03-05",
+    "resource_type": "Database",
+    "short_description": "Clinical notes, annotated by at least two expert annotators for over ten patient phenotypes, including advanced cancer, substance abuse, and treatment non-adherence.",
+    "slug": "phenotype-annotations-mimic",
+    "source_url": "https://physionet.org/content/phenotype-annotations-mimic/1.20.3/",
+    "title": "Phenotype Annotations for Patient Notes in the MIMIC-III Database",
+    "topics": [
+      "natural language processing",
+      "patient classification"
+    ],
+    "version": "1.20.3",
+    "version_doi": "10.13026/txmt-8m40"
+  },
+  "source": "physionet"
+}

@@ -1,0 +1,127 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds002547",
+  "payload": {
+    "created": "2020-02-07T12:25:44.168Z",
+    "id": "ds002547",
+    "latestSnapshot": {
+      "created": "2020-03-04T08:30:17.000Z",
+      "description": {
+        "Authors": [
+          "Suzanne Oosterwijk",
+          "Lukas Snoek",
+          "Mark Rotteveel",
+          "Lisa Feldman Barrett",
+          "H. Steven Scholte"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds002547.v1.1.0",
+        "Funding": [
+          "The research leading to these results has received funding from the People Programme (Marie Curie Actions) of the European Union Seventh Framework Programme (grant agreement no 275214) awarded to S.O. The writing of this paper was supported by a Netherlands Organization for Scientific Research VENI grant (451-13-008) awarded to S.O."
+        ],
+        "HowToAcknowledge": "Oosterwijk, S., Snoek, L., Rotteveel, M., Barrett, L. F., & Scholte, H. S. (2017). Shared states: using MVPA to test neural overlap between self-focused emotion imagery and other-focused emotion understanding. Social cognitive and affective neuroscience, 12(7), 1025-1035.",
+        "License": "CC0",
+        "Name": "SharedStates",
+        "ReferencesAndLinks": [
+          "Oosterwijk, S., Snoek, L., Rotteveel, M., Barrett, L. F., & Scholte, H. S. (2017). Shared states: using MVPA to test neural overlap between self-focused emotion imagery and other-focused emotion understanding. Social cognitive and affective neuroscience, 12(7), 1025-1035."
+        ]
+      },
+      "readme": "This 3T fMRI dataset belongs to the article \"Shared states: using MVPA to test neural overlap between self-focused emotion imagery and other-focused emotion understanding\" (https://academic.oup.com/scan/article/12/7/1025/3798709).\n\n## Contents\nEach subject contains one or two sessions. In case a subject contains two sessions, one session was used to explore preprocessing and analysis hyperparameters (optimization session), and the other session was used to apply these hyperparameters (validation session). Only the results from the validation set were reported in the corresponding article. The `participants.tsv` file contains a column (\"validation_session\") indicating which session was used for validation.\n\nEach subject contains a single T1-weighted anatomical scan, which was usually obtained in the first session, and several BOLD-fMRI scans. Each session contained two runs of the \"self\" task and one run of the \"other\" task. Both the self- and other-task contained trials of one of three conditions: \"action\", \"interoception\", and \"situation\". The onset, duration, and trial-type of these trials are logged in the corresponding `*_events.tsv` files. Note that the other-task additionally contains an event, \"cue\", which represents the 4-second cue (\"HOW\", \"WHAT\", or \"WHY\") which was meant to instruct the participant to focus on the action-/interoception-/situation-related expression of emotion (we included a single regressor modelling these cue-events in our original analyses).\n\nIn addition, most fMRI runs in addition contain an associated physiology file (`*physio.tsv.gz`) with respiratory and cardiac traces as well as volume onset markers (converted using the \"scanphyslog2bids\" package; https://github.com/lukassnoek/scanphyslog2bids). This data was not used in the original analyses, but are included for completeness.\n\n## Anonymity\nIn accordance with regulations from the University of Amsterdam, several precautions for participant anonymity were taken.\n1. The informed consents signed by all participants contained a statement that their data could be shared with third parties;\n2. No mapping from personal data (name, address, etc.) and subject identifier (e.g., sub-01) exists;\n2. All structural data (T1-weighted scans) were defaced (using `pydeface`; https://github.com/poldracklab/pydeface);\n3. Subject identifiers (sub-xx) were randomly shuffled\n\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "1",
+          "2"
+        ],
+        "size": 10505776821,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26"
+        ],
+        "tasks": [
+          "other",
+          "self"
+        ],
+        "totalFiles": 622
+      },
+      "tag": "1.1.0"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        24,
+        21,
+        18,
+        20,
+        20,
+        22,
+        21,
+        22,
+        20,
+        null,
+        null,
+        22,
+        23,
+        null,
+        21,
+        22,
+        24,
+        null,
+        22,
+        23,
+        22,
+        25,
+        19,
+        20,
+        null,
+        20
+      ],
+      "associatedPaperDOI": "10.1093/scan/nsx037",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "Affective neuroscience",
+      "studyLongitudinal": "Other"
+    },
+    "publishDate": "2020-02-08T08:54:55.956Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,46 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:10f6b67090009426b8e2fe9b829cf38fd58f45451d41f793c6cb8a0c103ca47f",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "ambulatory patients with chronic heart failure",
+        "label": "chronic heart failure"
+      },
+      {
+        "evidence": "risk predictors of cardiac mortality and sudden cardiac death",
+        "label": "sudden cardiac death"
+      }
+    ],
+    "countries": [
+      "ES"
+    ],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:music-sudden-cardiac-death",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "3-lead resting electrocardiogram (ECG)",
+        "value": "ECG"
+      },
+      {
+        "evidence": "chest X-ray",
+        "value": "xray"
+      },
+      {
+        "evidence": "echocardiography",
+        "value": "ultrasound"
+      },
+      {
+        "evidence": "blood laboratory parameters performed at enrolment",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "992 patients with CHF consecutively enrolled from specialized HF clinics of eight University Spanish Hospitals, enrolled April 2003 to December 2004",
+    "summary": "Prospective multicentre longitudinal study of ambulatory chronic heart failure patients, with resting and Holter ECG, chest X-ray, echocardiography and blood laboratory data at enrolment, following cardiac death and sudden cardiac death outcomes."
+  },
+  "prompt_version": "v1"
+}

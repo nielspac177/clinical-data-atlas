@@ -1,0 +1,47 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:2e96b794469bc198d813f1123dca456b29cdf2dac32fd8646a20ad1fa7d4bbd0",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "grade 2-4 diffuse gliomas",
+        "label": "diffuse glioma"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "neurology",
+      "oncology"
+    ],
+    "id": "tcia:ucsf-pdgm",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "standardized 3T preoperative brain tumor MRI protocol",
+        "value": "MRI"
+      },
+      {
+        "evidence": "high angular resolution diffusion imaging",
+        "value": "dMRI"
+      },
+      {
+        "evidence": "histopathologically-proven World Health Organization (WHO) grade 2-4 diffuse gliomas",
+        "value": "pathology"
+      },
+      {
+        "evidence": "isocitrate dehydrogenase (IDH) mutation status",
+        "value": "genomics"
+      },
+      {
+        "evidence": "including extent of resection and overall survival",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "501 patients with histopathologically-proven World Health Organization (WHO) grade 2-4 diffuse gliomas",
+    "summary": "Preoperative brain MRI from patients with diffuse glioma, acquired with a standardized 3T protocol including diffusion and arterial spin labeling perfusion, with IDH and MGMT status and basic clinical details."
+  },
+  "prompt_version": "v1"
+}

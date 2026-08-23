@@ -1,0 +1,27 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:0fb8e4148fa9d5e54ca9437a1d3be5f79e28f66b6d7b8a08127af0707085114c",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "pulmonology"
+    ],
+    "id": "physionet:ms-cxr-t",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "frontal chest X-rays",
+        "value": "xray"
+      },
+      {
+        "evidence": "pairs of sentences",
+        "value": "clinical_notes"
+      }
+    ],
+    "population": null,
+    "summary": "Multimodal benchmark extending MIMIC-CXR v2 with radiologist-verified annotations for two temporal tasks: classifying disease progression from multi-image frontal chest X-rays, and judging temporal-semantic similarity of radiology sentence pairs."
+  },
+  "prompt_version": "v1"
+}

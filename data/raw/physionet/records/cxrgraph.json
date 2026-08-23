@@ -1,0 +1,38 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "cxrgraph",
+  "payload": {
+    "abstract": "<p>CXRGraph is a dataset of structured radiology reports dataset following the RadGraph format, which has been tailored for the Automatic Radiology Report Generation (ARRG) task. CXRGraph assorts clinical information from full-text radiology reports into five entity types and four relation types similar to RadGraph. CXRGraph introduces three entity attributes, which are optionally associated with an entity to provide additional information (e.g. abnormality) and handle hallucinated prior references for the ARRG task. We manually annotated the reports originally formatted in RadGraph, including 550 MIMIC-CXR reports for model training and evaluation and 50 CheXpert reports for evaluating the model generalization ability. By using the ground-truth data, we developed a joint entity and relation model, achieving a micro-F1 of 96.6% and 96.1% on named entity recognition, 94.0% and 89.8% on entity attribute recognition, and 89.5% and 86.6% on relation extraction, on the MIMIC-CXR and CheXpert test sets, respectively. Using the trained model, we automatically annotated 227,835 MIMIC-CXR reports. Both the ground-truth and inference data are available in CXRGraph. Given that the MIMIC-CXR and RadGraph have been de-identified already, no protected health information (PHI) is included.</p>",
+    "access_policy": "Restricted",
+    "compressed_storage_size": 100574950,
+    "core_doi": "10.13026/f2sv-v647",
+    "dua": {
+      "name": "PhysioNet Restricted Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Restricted Health Data License 1.5.0"
+    },
+    "main_storage_size": 630760439,
+    "public_project_uuid": "8ac70b45-4572-4ea3-bc1c-b06fef60f55f",
+    "publish_date": "2025-02-03",
+    "resource_type": "Database",
+    "short_description": "CXRGraph is a structured radiology report dataset built upon RadGraph and tailored for the Automatic Radiology Report Generation task. It can identify more task-relevant information such as abnormalities and hallucinated prior references.",
+    "slug": "cxrgraph",
+    "source_url": "https://physionet.org/content/cxrgraph/1.0.0/",
+    "title": "CXRGraph: Using Information Extraction to Normalize the Training Data for Automatic Radiology Report Generation",
+    "topics": [
+      "natural language processing",
+      "relation extraction",
+      "named entity recognition",
+      "information extraction",
+      "structured radiology report"
+    ],
+    "version": "1.0.0",
+    "version_doi": "10.13026/p7kf-t860"
+  },
+  "source": "physionet"
+}

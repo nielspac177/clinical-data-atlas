@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:043ea7865dc6b42eada10b985431b0b142e40dfaf1626d140a63020759178ed4",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Treating Patients With Desmoid Tumors",
+        "label": "desmoid tumors"
+      },
+      {
+        "evidence": "or Aggressive Fibromatosis",
+        "label": "aggressive fibromatosis"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "tcia:a091105",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "RTSTRUCT",
+        "value": "radiotherapy"
+      }
+    ],
+    "population": "patients with desmoid tumors or aggressive fibromatosis",
+    "summary": "Imaging and structure-set data from an Alliance for Clinical Trials in Oncology randomized phase III trial of sorafenib tosylate for desmoid tumors or aggressive fibromatosis, with patient-level data available separately."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,28 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:e7c2bb4ecd6cffc71d502e7b37726ea7c44c3db8634adb3524388585edc128b7",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "patients with multimorbidity",
+        "label": "multimorbidity"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "other"
+    ],
+    "id": "physionet:mimic-iv-ext-cekg",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "an extracted dataset from MIMIC-IV",
+        "value": "EHR"
+      }
+    ],
+    "population": "Patients with multimorbidity, that is multiple chronic conditions, in MIMIC-IV",
+    "summary": "A process-oriented dataset extracted from MIMIC-IV for object-centric process mining, building clinical event knowledge graphs of care pathways linked to ICD-10 and SNOMED-CT, also usable for machine learning."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:0643f71444da2ab1a9f372231d610d8588e74908d4a7abc07f8c26b42ccdba83",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "balance falls-risk assessment and balance impairment analysis",
+        "label": "balance impairment"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "musculoskeletal",
+      "other"
+    ],
+    "id": "physionet:kinecal",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "recordings of 90 individuals carrying out 11 movements",
+        "value": "behavioral"
+      },
+      {
+        "evidence": "clinical labelling, falls history and postural sway metrics",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "90 individuals carrying out 11 movements commonly used in the clinical assessment of balance",
+    "summary": "Kinect recordings of 90 individuals performing 11 movements used in clinical balance assessment, made in both lab and informal settings, with metadata including clinical labelling, falls history and postural sway metrics."
+  },
+  "prompt_version": "v1"
+}

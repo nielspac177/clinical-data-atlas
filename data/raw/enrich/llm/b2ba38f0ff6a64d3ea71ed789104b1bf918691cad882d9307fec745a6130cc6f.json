@@ -1,0 +1,49 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:b2ba38f0ff6a64d3ea71ed789104b1bf918691cad882d9307fec745a6130cc6f",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Acute Lymphoblastic Leukemia - Phase III",
+        "label": "Acute Lymphoblastic Leukemia"
+      },
+      {
+        "evidence": "Leukemias, NOS",
+        "label": "Leukemias, NOS"
+      },
+      {
+        "evidence": "Myeloid Leukemias",
+        "label": "Myeloid Leukemias"
+      },
+      {
+        "evidence": "Lymphoid Leukemias",
+        "label": "Lymphoid Leukemias"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "pediatrics"
+    ],
+    "id": "gdc:TARGET-ALL-P3",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "WGS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "RNA-Seq",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "191 human cases",
+    "summary": "TARGET phase III acute lymphoblastic leukemia collection covering hematopoietic tumors, with whole-exome, whole-genome, RNA and miRNA sequencing, methylation arrays, variation calls, and clinical and biospecimen records."
+  },
+  "prompt_version": "v1"
+}

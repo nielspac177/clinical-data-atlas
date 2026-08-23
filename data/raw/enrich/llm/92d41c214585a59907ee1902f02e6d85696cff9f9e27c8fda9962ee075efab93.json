@@ -1,0 +1,39 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:92d41c214585a59907ee1902f02e6d85696cff9f9e27c8fda9962ee075efab93",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "patients diagnosed with diabetes",
+        "label": "diabetes"
+      },
+      {
+        "evidence": "computer vision models for diabetic retinopathy",
+        "label": "diabetic retinopathy"
+      }
+    ],
+    "countries": [
+      "BR"
+    ],
+    "domains": [
+      "endocrinology_metabolism",
+      "other"
+    ],
+    "id": "physionet:mbrset",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "retinal fundus photos captured via portable cameras",
+        "value": "other"
+      },
+      {
+        "evidence": "augmented with clinical and demographic metadata",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "5164 images from 1291 patients diagnosed with diabetes, of diverse ethnic backgrounds, in Itabuna, Bahia",
+    "summary": "Retinal images captured with portable handheld cameras alongside clinical and demographic metadata, intended for developing and validating algorithms for portable retinal cameras and diabetic retinopathy detection."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,34 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:2e7df5504bf51dcf2de96656565f8cc44f713db9542c0953a4dc10a707642871",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Low Grade Gliomas (WHO grade II & III)",
+        "label": "Low Grade Gliomas"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "oncology",
+      "surgery"
+    ],
+    "id": "tcia:lgg-1p19qdeletion",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "These MRIs are pre-operative examinations",
+        "value": "MRI"
+      },
+      {
+        "evidence": "biopsy proven 1p19q results, performed using FISH",
+        "value": "genomics"
+      }
+    ],
+    "population": "Subjects with Low Grade Gliomas (WHO grade II & III) who have biopsy proven 1p19q results",
+    "summary": "Pre-operative MRI examinations of subjects with low grade gliomas, all with biopsy-proven 1p19q status determined by FISH, plus tumor segmentations on three axial slices in NIfTI format."
+  },
+  "prompt_version": "v1"
+}

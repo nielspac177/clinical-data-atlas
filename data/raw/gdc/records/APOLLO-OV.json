@@ -1,0 +1,73 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "APOLLO-OV",
+  "payload": {
+    "dbgap_accession_number": "phs003488",
+    "disease_type": [
+      "Epithelial Neoplasms, NOS"
+    ],
+    "id": "APOLLO-OV",
+    "name": "APOLLO2: Proteogenomic characterization of ovarian serous cystadenocarcinoma",
+    "primary_site": [
+      "Ovary",
+      "Retroperitoneum and peritoneum"
+    ],
+    "program": {
+      "dbgap_accession_number": null,
+      "name": "APOLLO",
+      "program_id": "bd5bea9d-29ff-52e4-92f5-463837c6f6cf"
+    },
+    "project_id": "APOLLO-OV",
+    "releasable": false,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 70,
+      "data_categories": [
+        {
+          "case_count": 70,
+          "data_category": "Sequencing Reads",
+          "file_count": 601
+        },
+        {
+          "case_count": 68,
+          "data_category": "Simple Nucleotide Variation",
+          "file_count": 462
+        },
+        {
+          "case_count": 67,
+          "data_category": "Copy Number Variation",
+          "file_count": 252
+        },
+        {
+          "case_count": 70,
+          "data_category": "Transcriptome Profiling",
+          "file_count": 268
+        },
+        {
+          "case_count": 70,
+          "data_category": "Structural Variation",
+          "file_count": 536
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 69,
+          "experimental_strategy": "WGS",
+          "file_count": 913
+        },
+        {
+          "case_count": 70,
+          "experimental_strategy": "RNA-Seq",
+          "file_count": 1206
+        }
+      ],
+      "file_count": 2119,
+      "file_size": 98316921348592
+    }
+  },
+  "source": "gdc"
+}

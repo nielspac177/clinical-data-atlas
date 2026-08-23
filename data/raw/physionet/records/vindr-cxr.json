@@ -1,0 +1,38 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "vindr-cxr",
+  "payload": {
+    "abstract": "<p>We describe here a dataset of more than 100,000 chest X-ray scans that were retrospectively collected from two major hospitals in Vietnam. Out of this raw data, we release 18,000 images that were manually annotated by a total of 17 experienced radiologists with 22 local labels of rectangles surrounding abnormalities and 6 global labels of suspected diseases. The released dataset is divided into a training set of 15,000 and a test set of 3,000. Each scan in the training set was independently labeled by 3 radiologists, while each scan in the test set was labeled by the consensus of 5 radiologists.&nbsp;All images are in DICOM&nbsp;format and the labels from training and test sets are made publicly available.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 151581123766,
+    "core_doi": "10.13026/46y6-6x96",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 205970857003,
+    "public_project_uuid": "964e7710-d609-4f26-9a34-a67db5dcff4e",
+    "publish_date": "2021-06-22",
+    "resource_type": "Database",
+    "short_description": "VinDr-CXR: An open dataset of chest X-rays with radiologist's annotations",
+    "slug": "vindr-cxr",
+    "source_url": "https://physionet.org/content/vindr-cxr/1.0.0/",
+    "title": "VinDr-CXR: An open dataset of chest X-rays with radiologist annotations",
+    "topics": [
+      "lesion detection",
+      "disease classification",
+      "computer vision",
+      "chest x-ray interpretation",
+      "deep learning"
+    ],
+    "version": "1.0.0",
+    "version_doi": "10.13026/3akn-b287"
+  },
+  "source": "physionet"
+}

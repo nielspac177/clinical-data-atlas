@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:62388f7608da44945d6a41ea7f00485889f4299f65a787a04599bc70d5a1fa5f",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "beyond AF detection",
+        "label": "AF"
+      },
+      {
+        "evidence": "ischemia",
+        "label": "ischemia"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:ecg-capable-smartwatches",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "advanced health monitoring functions such as electrocardiogram (ECG)",
+        "value": "ECG"
+      },
+      {
+        "evidence": "Wearable technology has progressed significantly so that today's smartwatches",
+        "value": "wearable"
+      }
+    ],
+    "population": null,
+    "summary": "Recordings comparing four smartwatch models against a reference electrocardiograph using simulator-generated ECG signals, assessing heart rate, R-wave amplitude and ST-segment measurement accuracy for clinical and remote cardiovascular monitoring."
+  },
+  "prompt_version": "v1"
+}

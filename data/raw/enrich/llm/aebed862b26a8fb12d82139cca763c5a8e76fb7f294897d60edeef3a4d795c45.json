@@ -1,0 +1,69 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:aebed862b26a8fb12d82139cca763c5a8e76fb7f294897d60edeef3a4d795c45",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Neoplasms, NOS",
+        "label": "Neoplasms, NOS"
+      },
+      {
+        "evidence": "Cystic, Mucinous and Serous Neoplasms",
+        "label": "Cystic, Mucinous and Serous Neoplasms"
+      },
+      {
+        "evidence": "Complex Mixed and Stromal Neoplasms",
+        "label": "Complex Mixed and Stromal Neoplasms"
+      },
+      {
+        "evidence": "Adenomas and Adenocarcinomas",
+        "label": "Adenomas and Adenocarcinomas"
+      },
+      {
+        "evidence": "Gliomas",
+        "label": "Gliomas"
+      },
+      {
+        "evidence": "Myomatous Neoplasms",
+        "label": "Myomatous Neoplasms"
+      },
+      {
+        "evidence": "Ductal and Lobular Neoplasms",
+        "label": "Ductal and Lobular Neoplasms"
+      },
+      {
+        "evidence": "Squamous Cell Neoplasms",
+        "label": "Squamous Cell Neoplasms"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "neurology",
+      "endocrinology_metabolism",
+      "gastroenterology_hepatology",
+      "nephrology_urology",
+      "musculoskeletal"
+    ],
+    "id": "gdc:MATCH-Z1D",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Simple Nucleotide Variation, Sequencing Reads",
+        "value": "genomics"
+      },
+      {
+        "evidence": "Transcriptome Profiling",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "36 human cases with tumors of the esophagus, female genital organs, endocrine glands, stomach, biliary tract, breast, liver, uterus, prostate, brain, salivary glands, small intestine, bone and thyroid",
+    "summary": "Genomic characterization of one MATCH trial arm covering esophageal, endocrine, gastric, biliary, breast, liver, uterine, prostate, brain and bone tumors. Provides WXS and RNA-Seq reads, variation calls, transcriptome profiling, biospecimen and clinical data."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,24 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:4e7fc93784e4b47825c9099cfd86d03d0853ae87912d2c8d78f03fca13118d1e",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "pulmonology",
+      "other"
+    ],
+    "id": "physionet:mimic-ext-mimic-cxr-vqa",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "focusing primarily on chest radiographs",
+        "value": "xray"
+      }
+    ],
+    "population": "Chest radiograph studies derived from MIMIC-CXR-JPG, MIMIC-IV and Chest ImaGenome.",
+    "summary": "Visual question answering benchmark for chest radiographs derived from MIMIC-CXR-JPG, MIMIC-IV and Chest ImaGenome, with questions from 48 templates across seven content types and paraphrases added for linguistic diversity."
+  },
+  "prompt_version": "v1"
+}

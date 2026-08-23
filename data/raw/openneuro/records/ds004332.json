@@ -1,0 +1,113 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004332",
+  "payload": {
+    "created": "2022-11-09T15:51:08.849Z",
+    "id": "ds004332",
+    "latestSnapshot": {
+      "created": "2024-12-05T10:18:13.000Z",
+      "description": {
+        "Authors": [
+          "Melanie Ganz",
+          "Hannah Eichhorn"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004332.v1.3.0",
+        "Funding": [
+          "Elsass Fonden (18-3-0147)",
+          "Novo Nordisk and Novozymes Talent Program",
+          "National Institute of Biomedical Engineering (R21EB029641)",
+          "Shared Instrumentation Grants (S10OD025253 and MGH ECOR)"
+        ],
+        "HowToAcknowledge": "Please cite the paper preprint https://psyarxiv.com/vzh4g when using this data.",
+        "License": "CC0",
+        "Name": "Datasets with and without deliberate head movements for evaluating the performance of markerless prospective motion correction and selective reacquisition in a general clinical protocol for brain MRI",
+        "ReferencesAndLinks": [
+          "https://psyarxiv.com/vzh4g",
+          "https://github.com/melanieganz/MoCoProject"
+        ]
+      },
+      "readme": "Head motion is one of the most common sources of artefacts in brain MRI. In this study, we evaluate the performance of markerless prospective motion correction (PMC) and selective reacquisition in a complete clinical protocol for brain MRI, comparing acquisitions with and without instructed intentional head motion.\n\nMRI and head motion data were acquired between January and March 2021 from 22 healthy adults (16 females, 6 males) aged 19-36 (mean ± standard deviation: 23.5 ± 4.3) years, recruited for the Cimbi database (www.cimbi.dk). The recruitment was performed by advertisement for different research projects, with approval by the Ethics Committee of Copenhagen and Frederiksberg, Denmark (protocol number H-KF-2006-20). Written informed consent was obtained from each participant. \n\nThe MRI scan protocol consisted of six different 2D- and 3D-encoded sequences, which were completed by a different number of participants: 3D T1 MPR (n=22), 3D T2 dark fluid (FLAIR) (n=10), 2D T1 STIR (n=22), 2D T2 TSE (n=22), 2D T2* GRE (n=19) and 2D DWI (n=10). Note, the DWI data (ADC, TRACEW) is located under derivatives.\nFour scans were acquired for each sequence: \ntwo without intentional head motion (referred to as ‘still’) and two with a predefined nodding motion (‘nod’). For the T1 MPR sequence, two additional scans with shaking motion were acquired (‘shake’). The participants were instructed to perform two periods of nodding or shaking motion for 40 seconds during the middle of the acquisition, corresponding to the acquisition of the k-space center for the 3D-encoded sequences. \n\nThe scans with and without PMC were acquired in the following order:\n- Still, no correction\n- Still, PMC\n- Nod motion, no correction (+ selective reacquisition)\n- Nod motion, PMC (+ selective reacquisition)\n- Shake motion, no correction (+ selective reacquisition) - ONLY MPRAGE\n- Shake motion, PMC (+ selective reacquisition) - ONLY MPRAGE\n\nNote that _run-01 indicates the still scans, _run-02 indicates the nodding scans and _run-03 indicates the shaking scans. _rec-wore indicates a scan without reacquisition, _rec-wre indicates a scan with reacquisition.\n\nNodding motion was chosen as the primary motion pattern based on results of a previous study (https://www.frontiersin.org/articles/10.3389/fradi.2021.789632/full) , where nodding rotation was found to be significantly larger than the rotational components around the other axes for awake children. Rigid-body head motion was measured with the optical tracking system Tracoline (TracInnovations, Ballerup, Denmark).\n\nMore details regarding the acquisition protocol can be seen in our preprint https://psyarxiv.com/vzh4g.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 9678656905,
+        "subjects": [
+          "10",
+          "03",
+          "19",
+          "07",
+          "20",
+          "14",
+          "13",
+          "02",
+          "15",
+          "01",
+          "21",
+          "22",
+          "06",
+          "17",
+          "16",
+          "12",
+          "11",
+          "18",
+          "09",
+          "08",
+          "04",
+          "05"
+        ],
+        "tasks": [],
+        "totalFiles": 1245
+      },
+      "tag": "1.3.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        21,
+        19,
+        22,
+        21,
+        20,
+        26,
+        23,
+        25,
+        27,
+        19,
+        22,
+        21,
+        21,
+        36,
+        22,
+        21,
+        22,
+        20,
+        33,
+        26,
+        22,
+        27
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "Elsass Foundation",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "MRI",
+      "studyLongitudinal": "Longitudinal"
+    },
+    "publishDate": "2022-11-09T17:21:03.675Z"
+  },
+  "source": "openneuro"
+}

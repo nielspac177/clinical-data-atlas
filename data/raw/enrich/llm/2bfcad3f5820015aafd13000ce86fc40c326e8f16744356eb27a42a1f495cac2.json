@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:2bfcad3f5820015aafd13000ce86fc40c326e8f16744356eb27a42a1f495cac2",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "textures similar to those of non-small cell lung cancer",
+        "label": "non-small cell lung cancer"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "pulmonology"
+    ],
+    "id": "tcia:cc-radiomics-phantom",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "17 CT scans of the Credence Cartridge Radiomics (CCR) phantom",
+        "value": "CT"
+      },
+      {
+        "evidence": "two sets of contours as DICOM RT structure files",
+        "value": "radiotherapy"
+      }
+    ],
+    "population": "No patients; the Credence Cartridge Radiomics phantom, with 10 cartridges of differing textures, scanned 17 times at four medical centers using each center's chest protocol.",
+    "summary": "CT scans of a texture phantom acquired at four medical centers on scanners from four manufacturers, with cartridge contours as RT structure files, letting researchers evaluate radiomic texture feature robustness across scanners."
+  },
+  "prompt_version": "v1"
+}

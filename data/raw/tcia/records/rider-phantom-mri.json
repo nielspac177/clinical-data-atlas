@@ -1,0 +1,244 @@
+{
+  "endpoints": [
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getCollectionValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getModalityValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getBodyPartValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getPatient",
+    "https://api.datacite.org/dois?prefix=10.7937"
+  ],
+  "harvest_method": "api:nbia+datacite",
+  "native_id": "RIDER PHANTOM MRI",
+  "payload": {
+    "datacite": {
+      "citationCount": 1,
+      "container": {},
+      "contentUrl": [],
+      "contributors": [
+        {
+          "affiliation": [],
+          "contributorType": "Other",
+          "familyName": null,
+          "givenName": null,
+          "name": "TCIA Team",
+          "nameIdentifiers": [],
+          "nameType": null
+        }
+      ],
+      "created": "2015-07-16T03:23:23Z",
+      "creators": [
+        {
+          "affiliation": [],
+          "familyName": "Jackson",
+          "givenName": "Edward",
+          "name": "Jackson, Edward",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-5958-0076",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2015",
+          "dateInformation": null,
+          "dateType": "Issued"
+        }
+      ],
+      "descriptions": [
+        {
+          "description": "The RIDER Phantom MRI data set contains repeat phantom studies. The phantom used for all data acquisitions was a version of the EuroSpin II Test Object 5 as distributed by Diagnostic Sonar, Ltd (Livingston, West Lothian, Scotland). The phantom was comprised of 18 25-mm doped gel filled tubes and 1 20-mm tube containing 0.25 mM GdDTPA. Scanners evaluated: Scanner A – 1.5T GE 8-channel HD with BRM gradient subsystem (33 mT/m amplitude; 120 T/m-s) Scanner B – 1.5T GE 8-channel HD with CRM gradient subsystem (50 mT/m amplitude; 150 T/m-s) Scanner C – 1.5T Siemens Espree (VB13) with 33 mT/m amplitude, 100 T/m-s gradient subsystem Scanner D – 3.0T GE 8-channel HD with TwinSpeed gradients (40 mT/m; 150 T/m-s in zoom mode) For all measurements, an 8-channel phased array head coil was used.",
+          "descriptionType": "Abstract",
+          "lang": null
+        }
+      ],
+      "doi": "10.7937/k9/tcia.2015.mi4qddhu",
+      "downloadCount": 0,
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "RIDER PHANTOM MRI",
+          "identifierType": "TCIA Short Name"
+        }
+      ],
+      "isActive": true,
+      "language": null,
+      "metadataVersion": 11,
+      "partCount": 0,
+      "partOfCount": 0,
+      "publicationYear": 2015,
+      "published": null,
+      "publisher": "The Cancer Imaging Archive",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2015-07-16T03:23:24Z",
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "19956380",
+          "relatedIdentifierType": "PMID",
+          "relatedMetadataScheme": null,
+          "relationType": "IsSupplementTo",
+          "resourceTypeGeneral": null,
+          "schemeType": null,
+          "schemeUri": null
+        },
+        {
+          "relatedIdentifier": "10.1007/s11517-024-03071-6",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        }
+      ],
+      "relatedItems": [],
+      "rightsList": [
+        {
+          "rights": "Creative Commons Attribution 3.0 Unported",
+          "rightsIdentifier": "cc-by-3.0",
+          "rightsIdentifierScheme": "SPDX",
+          "rightsUri": "https://creativecommons.org/licenses/by/3.0/legalcode",
+          "schemeUri": "https://spdx.org/licenses/"
+        }
+      ],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "fabricaForm",
+      "state": "findable",
+      "subjects": [],
+      "titles": [
+        {
+          "lang": null,
+          "title": "RIDER PHANTOM MRI",
+          "titleType": null
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceType": "DICOM",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2025-06-01T01:01:19Z",
+      "url": "https://www.cancerimagingarchive.net/collection/rider-phantom-mri/",
+      "version": "1",
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 604
+    },
+    "nbia": {
+      "body_parts": [
+        "PHANTOM"
+      ],
+      "collection": "RIDER PHANTOM MRI",
+      "modalities": [
+        "MR"
+      ],
+      "patients": [
+        {
+          "Collection": "RIDER PHANTOM MRI",
+          "PatientBirthDate": "1990-01-01 00:00:00.0",
+          "PatientId": "ZZ RIDER MR8 1",
+          "PatientName": "ZZ083108A",
+          "PatientSex": "M",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "RIDER PHANTOM MRI",
+          "PatientId": "ZZ072308F",
+          "PatientName": "ZZNCI RIDER Tests",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "RIDER PHANTOM MRI",
+          "PatientBirthDate": "1990-01-01 00:00:00.0",
+          "PatientId": "ZZ083108A",
+          "PatientName": "ZZ RIDER MR7 2",
+          "PatientSex": "M",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "RIDER PHANTOM MRI",
+          "PatientBirthDate": "1990-01-01 00:00:00.0",
+          "PatientId": "ZZ083108B",
+          "PatientName": "ZZ RIDER MR8 2",
+          "PatientSex": "M",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "RIDER PHANTOM MRI",
+          "PatientBirthDate": "1990-01-01 00:00:00.0",
+          "PatientId": "ZZ083108C",
+          "PatientName": "ZZ RIDER 3",
+          "PatientSex": "M",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "RIDER PHANTOM MRI",
+          "PatientBirthDate": "1990-01-01 00:00:00.0",
+          "PatientId": "ZZ08312008B",
+          "PatientName": "ZZ RIDER 2",
+          "PatientSex": "M",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "RIDER PHANTOM MRI",
+          "PatientBirthDate": "1990-01-01 00:00:00.0",
+          "PatientId": "ZZ090708A",
+          "PatientName": "ZZ F3 NCI Wk0 Rep1",
+          "PatientSex": "M",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "RIDER PHANTOM MRI",
+          "PatientBirthDate": "1990-01-01 00:00:00.0",
+          "PatientId": "ZZ090708B",
+          "PatientName": "ZZ F3 NCI Wk0 Rpt2",
+          "PatientSex": "M",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "RIDER PHANTOM MRI",
+          "PatientBirthDate": "1990-01-01 00:00:00.0",
+          "PatientId": "ZZ090808A",
+          "PatientName": "ZZ NCI TESTS WK1",
+          "PatientSex": "M",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "RIDER PHANTOM MRI",
+          "PatientBirthDate": "1990-01-01 00:00:00.0",
+          "PatientId": "ZZ092108A",
+          "PatientName": "ZZ F3 NCI Wk2",
+          "PatientSex": "M",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        }
+      ]
+    }
+  },
+  "source": "tcia"
+}

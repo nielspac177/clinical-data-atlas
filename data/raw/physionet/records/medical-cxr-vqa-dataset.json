@@ -1,0 +1,32 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "medical-cxr-vqa-dataset",
+  "payload": {
+    "abstract": "<p>Medical Visual Question Answering (VQA) is an important task in medical multi-modal Large Language Models (LLMs), aiming to answer clinically relevant questions regarding input medical images. This technique has the potential to improve the efficiency of medical professionals while relieving the burden on the public health system, particularly in resource-poor countries. However, existing medical VQA datasets are small and only contain simple questions (equivalent to classification tasks), which lack semantic reasoning and clinical knowledge. Our previous work proposed a clinical knowledge-driven image difference VQA benchmark using a rule-based approach. However, given the same large-scale breadth of information coverage, the rule-based approach shows an 85% error rate on extracted labels. We trained an LLM method to extract labels with 62% increased accuracy. We also comprehensively evaluated our labels with 2 clinical experts on 100 samples to help us fine-tune the LLM. Based on the trained LLM model, we proposed a large-scale medical VQA dataset, Medical-CXR-VQA, derived from the MIMIC-CXR dataset and comprises 780,014 question-answer pairs, categorized into six types: abnormality (190,525 pairs), location (104,680 pairs), type (69,486 pairs), level (111,715 pairs), view (92,048 pairs), and presence (211,560 pairs).</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 40732373,
+    "core_doi": "10.13026/y7r6-4j38",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 297818508,
+    "public_project_uuid": "db2893d2-c343-46ea-a276-54b05e345c25",
+    "publish_date": "2025-01-21",
+    "resource_type": "Database",
+    "short_description": "Medical-CXR-VQA provides a large-scale LLM-enhanced dataset for visual question answering in medical chest x-ray images.",
+    "slug": "medical-cxr-vqa-dataset",
+    "source_url": "https://physionet.org/content/medical-cxr-vqa-dataset/1.0.0/",
+    "title": "Medical-CXR-VQA dataset: A Large-Scale LLM-Enhanced Medical Dataset for Visual Question Answering on Chest X-Ray Images",
+    "topics": [],
+    "version": "1.0.0",
+    "version_doi": "10.13026/1pm5-hy02"
+  },
+  "source": "physionet"
+}

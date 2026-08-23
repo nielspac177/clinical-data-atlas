@@ -1,0 +1,133 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005121",
+  "payload": {
+    "created": "2024-05-02T04:08:54.502Z",
+    "id": "ds005121",
+    "latestSnapshot": {
+      "created": "2024-05-03T01:43:00.000Z",
+      "description": {
+        "Authors": [
+          "Elizabeth M. Siefert",
+          "Sindhuja Uppuluri",
+          "Jianing Mu",
+          "Marlie C. Tandoc",
+          "James W. Antony",
+          "Anna C. Schapiro"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005121.v1.0.2",
+        "Funding": null,
+        "HowToAcknowledge": "Please cite: \nE.M. Siefert, S. Uppuluri, J. Mu., M.C. Tandoc, J.W. Antony, A.C. Schapiro (2024). Memory reactivation during sleep does not act holistically on object memory. Journal of Neuroscience, 10.1523/JNEUROSCI.0022-24.2024",
+        "License": "CC0",
+        "Name": "Siefert2024",
+        "ReferencesAndLinks": null
+      },
+      "readme": "Overview:\nThis is the \"Siefert2024\" dataset. It is the sleep EEG data from Siefert et al., 2024 (https://doi.org/10.1523/JNEUROSCI.0022-24.2024). In brief, it contains sleep EEG data from 34 participants while Targeted Memory Reactivation was administered. \n\nPlease cite the following paper:\nE.M. Siefert, S. Uppuluri, J. Mu., M.C. Tandoc, J.W. Antony, A.C. Schapiro (2024). Memory reactivation during sleep does not act holistically on object memory. Journal of Neuroscience, 10.1523/JNEUROSCI.0022-24.2024\n\nThe dataset is formatted according to the Brain Imaging Data Structure (BIDS). Data organization was performed using FieldTrip data2bids function.\n\nAdditional details:\nEvents.tsv files contain information about the different cueing events.\n- item_value is the sound index number used by the TMR system. This number corresponds to the literal code name of the satellite (i.e., \"nivex\" or \"sorex\"). Here, 33 indicates no sound was played but a SO was tagged.\n- SatNum is the corresponding satellite number. This number is the same satellite number that is used in the behavioral data. \n    - 0 indicates no sound was played. \n    - Satellites 1-5 are the studied satellites from the blocked category.\n    - Satellites 6-10 are the studied satellites from the interleaved category.\n    - Satellites 11-15 are the studied satellites from the uncued category.\n\nSystem crashed and had to be restarted for participants 6, 7, 15, 17, 21, resulting in two EEG files for these participants.\n\nPlease contact Liz Siefert (sieferte@pennmedicine.upenn.edu) with any additional questions.",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "eeg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [],
+        "size": 9711091695,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31",
+          "32",
+          "33",
+          "34"
+        ],
+        "tasks": [
+          "Siefert2024"
+        ],
+        "totalFiles": 272
+      },
+      "tag": "1.0.2"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "https://doi.org/10.1523/JNEUROSCI.0022-24.2024",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "NSF, NIH, Charles E. Kaufman Foundation",
+      "modalities": [
+        "eeg"
+      ],
+      "species": "Human",
+      "studyDesign": "EEG nap study using Targeted Memory Reactivation",
+      "studyDomain": "Memory consolidation and sleep",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2024-05-02T19:42:50.346Z"
+  },
+  "source": "openneuro"
+}

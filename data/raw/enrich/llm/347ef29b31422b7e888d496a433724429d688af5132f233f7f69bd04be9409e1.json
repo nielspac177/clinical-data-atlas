@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:347ef29b31422b7e888d496a433724429d688af5132f233f7f69bd04be9409e1",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "critical_care",
+      "pulmonology",
+      "nephrology_urology"
+    ],
+    "id": "physionet:temporal-respiratory-support",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "derived from the MIMIC-IV v2.2 dataset",
+        "value": "EHR"
+      },
+      {
+        "evidence": "ventilation data, laboratory results, vital signs",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "static variables such as ICU length of stay, discharge outcome",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "50,920 adult ICU patients derived from MIMIC-IV v2.2",
+    "summary": "Hourly ICU records over 90 days covering ventilation, labs, vital signs, vasopressors, and renal replacement therapy, plus static outcomes, built for time-series, survival, and sequential decision-making tasks."
+  },
+  "prompt_version": "v1"
+}

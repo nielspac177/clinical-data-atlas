@@ -1,0 +1,90 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004815",
+  "payload": {
+    "created": "2023-10-23T14:59:12.441Z",
+    "id": "ds004815",
+    "latestSnapshot": {
+      "created": "2023-10-30T14:49:27.000Z",
+      "description": {
+        "Authors": [
+          "Agustin Lage-Castellanos",
+          "Federico De Martino",
+          "Geoff M. Ghose",
+          "Omer Faruk Gulban",
+          "Michelle Moerel"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004815.v1.0.1",
+        "Funding": [
+          "Data collected under NWO Veni grant 451-15-012 and NWO Vidi grant 864-13-012"
+        ],
+        "HowToAcknowledge": "Please cite as Lage-Castellanos, et al. (2023): https://academic.oup.com/cercor/article/33/9/5395/6806166",
+        "License": "CC0",
+        "Name": "Selective attention sharpens population receptive fields in human auditory cortex",
+        "ReferencesAndLinks": [
+          ""
+        ]
+      },
+      "readme": "In vivo 7T MRI dataset probing the auditory system (cortical and subcortical) collected at Maastricht University (Scannexus) by Michelle Moerel, Faruk Gulban, and Federico De Martino. \r\n\r\nAll participants have two sessions, in which anatomical MRI (T1w and PDw) and task functional MRI data (8 runs per session) was collected. \r\n\r\nParticipants listen to natural sounds (96 sounds) and ripple sounds (4 different sounds, low [300 Hz] or high frequency [4000 Hz]), and perform a noise burst detection task. Noise burst can only occur in the ripple sounds. Per run, noise burst are either more likely to occur in the low (trial_type = ALow) or high frequency ripple sounds (trial_type = AHigh).",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "01",
+          "02"
+        ],
+        "size": 61755440105,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08"
+        ],
+        "tasks": [
+          "auditory"
+        ],
+        "totalFiles": 585
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        31,
+        28,
+        31,
+        26,
+        25,
+        29,
+        32,
+        23
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "Dutch Research Council",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "Auditory processing pathway",
+      "studyLongitudinal": "Experimental"
+    },
+    "publishDate": "2023-10-26T13:59:37.063Z"
+  },
+  "source": "openneuro"
+}

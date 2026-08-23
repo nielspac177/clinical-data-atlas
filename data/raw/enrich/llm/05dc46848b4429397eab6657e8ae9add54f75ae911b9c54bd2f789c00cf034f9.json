@@ -1,0 +1,27 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:05dc46848b4429397eab6657e8ae9add54f75ae911b9c54bd2f789c00cf034f9",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "other"
+    ],
+    "id": "physionet:mimic-iv-ext-medicalbench",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "electronic health records",
+        "value": "EHR"
+      },
+      {
+        "evidence": "discharge summaries",
+        "value": "clinical_notes"
+      }
+    ],
+    "population": null,
+    "summary": "A benchmark built from MIMIC-IV discharge summaries and human-verified ICD-10 codes, asking language models to verify medical concepts, including implicitly documented diagnoses, and to identify supporting sentence-level evidence."
+  },
+  "prompt_version": "v1"
+}

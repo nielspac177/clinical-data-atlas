@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:65055636f432b5794b467da23f7ffbd2cf312fb106bc40be22a61f925e5e4c1c",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "patients with sepsis in the Emergency Department",
+        "label": "sepsis"
+      },
+      {
+        "evidence": "study structural changes of sepsis-induced lung injury",
+        "label": "sepsis-induced lung injury"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "pulmonology",
+      "critical_care"
+    ],
+    "id": "physionet:chest-ct-sepsis-er",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Chest CT for a total of 728 admissions with sepsis",
+        "value": "CT"
+      },
+      {
+        "evidence": "high-resolution clinical tabular data",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "728 admissions with sepsis",
+    "summary": "Chest CT scans paired with clinical tabular data for 728 sepsis admissions from the emergency department, intended to support radiomics research on sepsis-induced lung injury."
+  },
+  "prompt_version": "v1"
+}

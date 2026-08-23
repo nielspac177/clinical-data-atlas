@@ -1,0 +1,37 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "mimic-iv-ext-22mcts",
+  "payload": {
+    "abstract": "<p>Clinical risk prediction based on machine learning algorithms plays a vital role in modern healthcare. A crucial component in developing a reliable prediction model is a high-quality dataset with time series clinical events. In this work, we release such a dataset that consists of 22,588,586 clinical time series events, which we term MIMIC-IV-Ext-22MCTS. Our source data are discharge summaries selected from the well-known yet unstructured MIMIC-IV-Note. We then extract clinical events as short text spans from the discharge summaries, along with the timestamps of these events as temporal information by contextual retrieval and Llama-3.1-8B.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 139291331,
+    "core_doi": "10.13026/dmdq-4w10",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 875824224,
+    "public_project_uuid": "34683243-8fc2-4428-9b8d-4e676dedcc39",
+    "publish_date": "2025-09-29",
+    "resource_type": "Database",
+    "short_description": "It is a time series clinical events dataset with concrete temporal information. The dataset consists of 22,588,586 clinical events and related timestamps from 267,284 discharge summaries of the MIMIC-IV-Note.",
+    "slug": "mimic-iv-ext-22mcts",
+    "source_url": "https://physionet.org/content/mimic-iv-ext-22mcts/1.0.0/",
+    "title": "MIMIC-IV-Ext-22MCTS: A 22 Millions-Event Temporal Clinical Time-Series Dataset with Relative Timestamp",
+    "topics": [
+      "clinical event annotation",
+      "mimic",
+      "time series",
+      "temporal annotation"
+    ],
+    "version": "1.0.0",
+    "version_doi": "10.13026/dkj6-r828"
+  },
+  "source": "physionet"
+}

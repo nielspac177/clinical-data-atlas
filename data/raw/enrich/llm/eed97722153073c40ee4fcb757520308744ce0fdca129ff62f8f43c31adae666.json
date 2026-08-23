@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:eed97722153073c40ee4fcb757520308744ce0fdca129ff62f8f43c31adae666",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "32 healthy participants",
+        "label": "healthy participants"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "musculoskeletal",
+      "other"
+    ],
+    "id": "physionet:olst-mocap-forceplate-radar",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "synchronized motion capture, force plate, and 24 GHz radar data",
+        "value": "other"
+      },
+      {
+        "evidence": "performing the One-Legged Stand Test (OLST)",
+        "value": "behavioral"
+      }
+    ],
+    "population": "32 healthy participants: 15 \"young\" aged 32 or younger and 17 \"old\" aged 64 or older",
+    "summary": "Synchronized motion capture, force plate, and FMCW radar recordings of healthy younger and older participants performing the One-Legged Stand Test, with labeled foot-lift, stability, and foot-touchdown events."
+  },
+  "prompt_version": "v1"
+}

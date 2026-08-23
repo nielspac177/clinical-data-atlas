@@ -1,0 +1,45 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:6946f16ac628630ffadd97fd8c405a49e1378d1d04b359b88be6e8be316b10e2",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Peripheral T-Cell Lymphoma (PTCL)",
+        "label": "Peripheral T-Cell Lymphoma (PTCL)"
+      },
+      {
+        "evidence": "Mature T- and NK-Cell Lymphomas",
+        "label": "Mature T- and NK-Cell Lymphomas"
+      },
+      {
+        "evidence": "Refractory Cancers (RC)",
+        "label": "Refractory Cancers (RC)"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "gastroenterology_hepatology"
+    ],
+    "id": "gdc:RC-PTCL",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "WXS, WGS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "RNA-Seq, miRNA-Seq",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": null,
+    "summary": "Refractory peripheral T-cell lymphoma study sampling soft tissue, liver, lymph nodes and hematopoietic tissue, with nucleotide and copy number variation, clinical data, transcriptome profiling and DNA methylation from WXS, WGS, RNA-Seq, miRNA-Seq and methylation array."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,36 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "embedding-brset-mbrset",
+  "payload": {
+    "abstract": "<p>BRSET and mBRSET are publicly available Brazilian ophthalmological datasets composed of curated retinal fundus photographs with associated clinical and demographic information. While these resources enable diverse research applications, training deep learning models directly on high-resolution images is computationally intensive and often restricted by privacy regulations limiting the circulation of identifiable medical images. To address these challenges and facilitate equitable reuse, this project provides a comprehensive release of precomputed image embeddings for both datasets. These representations were generated using state-of-the-art vision backbones: DINOv3 ViT-S/16 (384-d) and ViT-B/16 (768-d) for transformer-based features, alongside ConvNeXt-Tiny (768-d) and ConvNeXt-Base (1024-d) for convolutional features. All models were applied in inference-only mode with a standardized preprocessing pipeline. Each fundus photograph was converted into a fixed-length numerical vector and exported as a CSV file, where each row corresponds to a single image and its respective embedding. These representations preserve critical semantic and structural information, enabling downstream tasks such as clustering, similarity search, multimodal modeling, disease classification, and fairness assessment without requiring raw pixel access. By providing scalable, privacy-preserving embeddings derived from Brazilian ophthalmic data, this resource reduces computational barriers, accelerates AI model development, and supports global research participation, particularly in low-resource environments, ensuring that advanced ophthalmic AI tools are accessible to a broader scientific community.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 205218007,
+    "core_doi": "10.13026/evz5-0948",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 460495759,
+    "public_project_uuid": "a38cf150-2e23-4d26-a4c9-30f027413da4",
+    "publish_date": "2026-03-30",
+    "resource_type": "Database",
+    "short_description": "Precomputed image embeddings for the BRSET and mBRSET Brazilian retinal datasets to support efficient, secure, and equitable ophthalmic AI research, enabling tasks such as classification, clustering, multimodal modeling, and fairness analysis.",
+    "slug": "embedding-brset-mbrset",
+    "source_url": "https://physionet.org/content/embedding-brset-mbrset/1.0.0/",
+    "title": "Embedding-Based Representations for BRSET and mBRSET",
+    "topics": [
+      "computer vision",
+      "ophthalmology",
+      "vector embeddings"
+    ],
+    "version": "1.0.0",
+    "version_doi": "10.13026/1h4p-vz70"
+  },
+  "source": "physionet"
+}

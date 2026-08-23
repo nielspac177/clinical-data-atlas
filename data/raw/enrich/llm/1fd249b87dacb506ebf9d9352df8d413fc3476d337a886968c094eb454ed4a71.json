@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:1fd249b87dacb506ebf9d9352df8d413fc3476d337a886968c094eb454ed4a71",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "mapping the extent of Invasive Adenocarcinoma onto in vivo lung CT",
+        "label": "Invasive Adenocarcinoma"
+      },
+      {
+        "evidence": "imaging signatures of Invasive Adenocarcinoma in ground glass pulmonary nodules",
+        "label": "ground glass pulmonary nodules"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "pulmonology"
+    ],
+    "id": "tcia:lung-fused-ct-pathology",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "in vivo lung CT",
+        "value": "CT"
+      },
+      {
+        "evidence": "histology slices",
+        "value": "pathology"
+      }
+    ],
+    "population": "Patients with small ground glass nodules with more than two histology slices per nodule; solid large nodules, too few histology slices, or slices with substantial artifacts were excluded.",
+    "summary": "Lung CT with mapped histopathology for invasive adenocarcinoma in ground glass nodules. The mappings serve as ground truth of disease for studying imaging signatures. Collected and analyzed at Case Western Reserve University."
+  },
+  "prompt_version": "v1"
+}

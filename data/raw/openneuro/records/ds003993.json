@@ -1,0 +1,82 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003993",
+  "payload": {
+    "created": "2022-01-14T05:49:11.876Z",
+    "id": "ds003993",
+    "latestSnapshot": {
+      "created": "2025-06-19T10:12:37.000Z",
+      "description": {
+        "Authors": [
+          "Jun Kai Ho",
+          "Tomoyasu Horikawa",
+          "Kei Majima",
+          "Yukiyasu Kamitani"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds003993.v1.1.1",
+        "Funding": [
+          "Japan Society for the Promotion of Science (JSPS KAKENHI), Grant Number JP20H05705 and 20H05954",
+          "New Energy and Industrial Technology Development Organization (NEDO), Grant Number JPNP20006",
+          "Japan Science and Technology Agency (JST CREST), Grant Number JPMJCR18A5 and JPMJCR22P3"
+        ],
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "Inter-individual deep image reconstruction",
+        "ReferencesAndLinks": [
+          "Ho, Horikawa, Majima, and Kamitani (2022) Inter-individual deep image reconstruction, bioRxiv. https://www.biorxiv.org/content/10.1101/2021.12.31.474501v1",
+          "Ho, J. K., Horikawa, T., Majima, K., Cheng, F., & Kamitani, Y. (2023). Inter-individual deep image reconstruction via hierarchical neural code conversion. NeuroImage, 271, 120007. https://doi.org/10.1016/j.neuroimage.2023.120007"
+        ]
+      },
+      "readme": "# Inter-individual deep image reconstruction  \n\n## Original paper  \n\n- Ho, J. K., Horikawa, T., Majima, K., Cheng, F., & Kamitani, Y. (2023). Inter-individual deep image reconstruction via hierarchical neural code conversion. NeuroImage, 271, 120007. https://doi.org/10.1016/j.neuroimage.2023.120007\n\n- Ho, Horikawa, Majima, and Kamitani (2022) Inter-individual deep image reconstruction, bioRxiv. https://www.biorxiv.org/content/10.1101/2021.12.31.474501v1  \n\n## Dataset  \n\n### MRI data   \n\nThis dataset contains fMRI data from two subjects ('sub-04', 'sub-05'). Each subject data contains two types of MRI data collected over multiple scanning sessions.  \n\n-  'ses-perceptionNaturalImageTest': fMRI data from the test natural image sessions in the image presentation experiment (24 runs; 3 sessions)  \n-  'ses-perceptionArtificialImage': fMRI data from the geometric shape sessions in the image presentation experiment (20 runs; 2-3 sessions)  \n\nEach scanning session consisted of functional (EPI) and anatomical (inplane T2) images. The functional EPI images covered the entire brain (TR, 2000 ms; TE, 43 ms; flip angle, 80°; voxel size, 2 × 2 × 2 mm; FOV, 192 × 192 mm; number of slices, 76; slice gap, 0 mm; multiband factor, 4) and inplane T2-weighted anatomical images were acquired with the same slices used for the EPI (TR, 11,000 ms; TE, 59 ms; flip angle, 160°; voxel size, 0.75 × 0.75 × 2.0 mm; FOV, 192 × 192 mm). All DICOM files are converted to Nifti-1 files by mri_convert in FreeSurfer.\n\nThe T1-weighted anatomical reference images and the training data used in the paper for 'sub-04' and 'sub-05' are available from the [Attentionally modulated subjective images reconstructed from brain activity](https://openneuro.org/datasets/ds003430/versions/1.2.0) dataset.\nThe dataset for 'sub-01', 'sub-02', and 'sub-03' are available from the [Deep Image Reconstruction](https://openneuro.org/datasets/ds001506/versions/1.3.1) dataset.\n\n\n### Task event files\n\nTask event files ('sub-\\*_ses-\\*_task-\\*_run-\\*_events.tsv') contains recorded event during fMRI runs.\nIn task event files for single-image presentation experiments ('task-perception'), each column represents:\n\n- 'onset': onset time of an event (sec)\n- 'duration': duration of the event (sec)\n- 'trial_type': type of the event (1: Stimulus presentation block, 2: Repetition block, -1 and -2: Initial and post rest blocks without visual stimulus)\n- 'stimulus_name': stimulus file name of the image presented in a stimulus block ('n/a' in rest blocks)\n- 'response_time': time of button press in the block, elapsed time from the beginning of each run (sec, 'n/a' when the subject did not press the button in the block)\n- Additional column 'image_index' is for internal use.\n\n\n#### Image/category labels\n\nIn the natural image presentation experiments, the stimulus images are named as 'n03626115_19498', where 'n03626115' is ImageNet/WorNet ID for a synset (category) and '19498' is image ID. In the artificial image presentation experiment, the stimuli consisted of a total of 40 combinations of 5 shapes (filled square, small opened square, large opened square, +, and X) and 8 colors (red, green, blue, cyan, magenta, yellow, white, and black). The stimuli were named as 'colorExpStim\\<ID\\>\\_\\<color\\>\\_\\<shape\\>' (e.g, 'colorExpStim01_red_square'). \n\nThe mapping between stimulus names and IDs (the first and second column from the left in each file is 'stimulus_name' and 'stimulus_id', respectively):\n\n- [stimulus_NaturalImageTest.tsv](https://ndownloader.figshare.com/files/14876738)\n- [stimulus_ArtificialImage.tsv](https://ndownloader.figshare.com/files/14876798)\n\n\n### Stimulus images\n\nDue to license issues, our dataset do not include the stimulus images used in the natural image presentation experiments. A script downloading the stimulus images from ImageNet are available at <https://github.com/KamitaniLab/GenericObjectDecoding>.\n\nThe stimulus images used in the geometric shape experiment are available at [figshare](https://doi.org/10.6084/m9.figshare.7033577).\n\n- [Artificial images](https://ndownloader.figshare.com/files/14876801) (ses-perceptionArtificialImage)\n\n\n## Contact\n\n- Email: <brainliner-admin@atr.jp>\n- We also accept inqueries at [issues on GitHub/KamitaniLab/OpenData](https://github.com/KamitaniLab/OpenData/issues).",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "perceptionArtificialImage03",
+          "perceptionNaturalImageTest02",
+          "perceptionNaturalImageTest03",
+          "perceptionArtificialImage02",
+          "perceptionArtificialImage01",
+          "perceptionNaturalImageTest01"
+        ],
+        "size": 15675368450,
+        "subjects": [
+          "05",
+          "04"
+        ],
+        "tasks": [
+          "perceptionArtificialImage",
+          "perceptionNaturalImageTest"
+        ],
+        "totalFiles": 278
+      },
+      "tag": "1.1.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": "10.1016/j.neuroimage.2023.120007",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "visual",
+      "studyLongitudinal": "Longitudinal"
+    },
+    "publishDate": "2022-03-10T06:05:05.376Z"
+  },
+  "source": "openneuro"
+}

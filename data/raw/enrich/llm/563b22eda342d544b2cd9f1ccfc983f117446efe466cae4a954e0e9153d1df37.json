@@ -1,0 +1,53 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:563b22eda342d544b2cd9f1ccfc983f117446efe466cae4a954e0e9153d1df37",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Sarcoma",
+        "label": "Sarcoma"
+      },
+      {
+        "evidence": "Soft Tissue Tumors and Sarcomas, NOS",
+        "label": "Soft Tissue Tumors and Sarcomas, NOS"
+      },
+      {
+        "evidence": "Nerve Sheath Tumors",
+        "label": "Nerve Sheath Tumors"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "nephrology_urology"
+    ],
+    "id": "gdc:TCGA-SARC",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Tissue Slide",
+        "value": "pathology"
+      },
+      {
+        "evidence": "WXS, WGS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "Transcriptome Profiling",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Proteome Profiling",
+        "value": "proteomics"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "261 human cases with sarcoma",
+    "summary": "TCGA sarcoma project covering soft tissue, bone, nerve and visceral sites, with tissue and diagnostic slides, sequencing, copy number, methylation, protein array and clinical data."
+  },
+  "prompt_version": "v1"
+}

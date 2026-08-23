@@ -1,0 +1,78 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "MATCH-S2",
+  "payload": {
+    "dbgap_accession_number": "phs002178",
+    "disease_type": [
+      "Nevi and Melanomas"
+    ],
+    "id": "MATCH-S2",
+    "name": "Genomic Characterization CS-MATCH-0007 Arm S2",
+    "primary_site": [
+      "Skin",
+      "Unknown"
+    ],
+    "program": {
+      "dbgap_accession_number": null,
+      "name": "MATCH",
+      "program_id": "893b0820-b50b-5c75-85f5-3b028e251811"
+    },
+    "project_id": "MATCH-S2",
+    "releasable": false,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 3,
+      "data_categories": [
+        {
+          "case_count": 3,
+          "data_category": "Simple Nucleotide Variation",
+          "file_count": 24
+        },
+        {
+          "case_count": 3,
+          "data_category": "Sequencing Reads",
+          "file_count": 13
+        },
+        {
+          "case_count": 3,
+          "data_category": "Biospecimen",
+          "file_count": 3
+        },
+        {
+          "case_count": 3,
+          "data_category": "Clinical",
+          "file_count": 3
+        },
+        {
+          "case_count": 3,
+          "data_category": "Transcriptome Profiling",
+          "file_count": 6
+        },
+        {
+          "case_count": 3,
+          "data_category": "Structural Variation",
+          "file_count": 12
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 3,
+          "experimental_strategy": "WXS",
+          "file_count": 28
+        },
+        {
+          "case_count": 3,
+          "experimental_strategy": "RNA-Seq",
+          "file_count": 27
+        }
+      ],
+      "file_count": 61,
+      "file_size": 233242978079
+    }
+  },
+  "source": "gdc"
+}

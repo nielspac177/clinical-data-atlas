@@ -1,0 +1,44 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "TRIO-CRU",
+  "payload": {
+    "disease_type": [
+      "Not Applicable"
+    ],
+    "id": "TRIO-CRU",
+    "name": "Ukrainian National Research Center for Radiation Medicine Trio Study",
+    "primary_site": [],
+    "program": {
+      "dbgap_accession_number": "phs001163",
+      "name": "TRIO",
+      "program_id": "f1071e34-0bfa-587b-9fbd-e3c70f3ee2d3"
+    },
+    "project_id": "TRIO-CRU",
+    "releasable": true,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 339,
+      "data_categories": [
+        {
+          "case_count": 339,
+          "data_category": "Sequencing Reads",
+          "file_count": 339
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 339,
+          "experimental_strategy": "WGS",
+          "file_count": 339
+        }
+      ],
+      "file_count": 339,
+      "file_size": 118134157511188
+    }
+  },
+  "source": "gdc"
+}

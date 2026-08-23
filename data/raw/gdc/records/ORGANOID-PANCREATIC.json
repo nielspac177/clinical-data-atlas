@@ -1,0 +1,73 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "ORGANOID-PANCREATIC",
+  "payload": {
+    "dbgap_accession_number": "phs001611",
+    "disease_type": [
+      "Unknown",
+      "Adenomas and Adenocarcinomas"
+    ],
+    "id": "ORGANOID-PANCREATIC",
+    "name": "Pancreas Cancer Organoid Profiling",
+    "primary_site": [
+      "Pancreas"
+    ],
+    "program": {
+      "dbgap_accession_number": null,
+      "name": "ORGANOID",
+      "program_id": "0654bdd0-13dc-53d3-9306-a0afaa5295ac"
+    },
+    "project_id": "ORGANOID-PANCREATIC",
+    "releasable": true,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 70,
+      "data_categories": [
+        {
+          "case_count": 58,
+          "data_category": "Simple Nucleotide Variation",
+          "file_count": 338
+        },
+        {
+          "case_count": 70,
+          "data_category": "Sequencing Reads",
+          "file_count": 298
+        },
+        {
+          "case_count": 49,
+          "data_category": "Transcriptome Profiling",
+          "file_count": 110
+        },
+        {
+          "case_count": 49,
+          "data_category": "Structural Variation",
+          "file_count": 220
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 69,
+          "experimental_strategy": "WXS",
+          "file_count": 344
+        },
+        {
+          "case_count": 49,
+          "experimental_strategy": "RNA-Seq",
+          "file_count": 495
+        },
+        {
+          "case_count": 22,
+          "experimental_strategy": "WGS",
+          "file_count": 127
+        }
+      ],
+      "file_count": 966,
+      "file_size": 21946232044406
+    }
+  },
+  "source": "gdc"
+}

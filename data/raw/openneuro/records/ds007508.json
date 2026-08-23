@@ -1,0 +1,100 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007508",
+  "payload": {
+    "created": "2026-03-11T10:22:09.541Z",
+    "id": "ds007508",
+    "latestSnapshot": {
+      "created": "2026-03-11T15:27:01.000Z",
+      "description": {
+        "Authors": [
+          "Gilles de Hollander",
+          "Marcus Grueschow",
+          "Franciszek Hennel",
+          "Christian C. Ruff"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007508.v1.0.0",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Numerosity and risk dataset",
+        "ReferencesAndLinks": null
+      },
+      "readme": "# Numerosity and Risk Dataset\n\n## Overview\n\nThis dataset contains functional MRI data from a behavioral economics experiment investigating how risky choices are made and how risk preferences change rapidly during decision-making. The data are organized according to the Brain Imaging Data Structure (BIDS) standard.\n\n## Publication\n\n**Rapid Changes in Risk Preferences Originate from Bayesian Inference on Parietal Magnitude Representations**\n\nAuthors: Gilles de Hollander, Marcus Grueschow, Franciszek Hennel, Christian C. Ruff\n\nPreprint: https://www.biorxiv.org/content/10.1101/2024.08.23.609296v2.full\n\n## Experiment Description\n\nParticipants completed a gambling task while undergoing fMRI scanning. The experiment examined the neural mechanisms underlying risk preference and how participants integrate information about potential outcomes and probabilities during decision-making. The study focuses on parietal cortex representations of magnitude and their role in Bayesian inference during risky choices.\n\n## Dataset Contents\n\n- **Bold fMRI data**: Functional brain imaging during the gambling task\n- **Anatomical data**: High-resolution structural MRI for each participant\n- **Behavioral data**: Choice, reaction times, and monetary outcomes logged in BIDS events files\n\n## Data Organization\n\nData are organized according to BIDS standard with the following structure:\n```\nds-risk_bids2/\n├── sub-XX/\n│   ├── ses-01/\n│   │   ├── anat/\n│   │   │   └── anatomical images\n│   │   ├── func/\n│   │   │   ├── BOLD images\n│   │   │   └── task events\n│   │   └── physio/\n│   │       └── physiological recordings\n│   └── ...other sessions...\n└── dataset_description.json\n```\n\n## Usage\n\nFor complete analysis code and scripts, see: https://github.com/Gilles86/risk_experiment\n\n## License\n\nThis dataset is made available under the Public Domain Dedication and License v1.0. Full text: http://www.opendatacommons.org/licenses/pddl/1.0/\n\nWe request that researchers using this dataset acknowledge the authors and cite the associated publication.\n\n## Contact\n\nFor questions regarding this dataset, please contact the corresponding authors or visit the project repository.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "7t2",
+          "3t2",
+          "7t1",
+          "3t1"
+        ],
+        "size": 67868430357,
+        "subjects": [
+          "27",
+          "19",
+          "12",
+          "04",
+          "10",
+          "28",
+          "26",
+          "06",
+          "07",
+          "30",
+          "17",
+          "14",
+          "32",
+          "21",
+          "15",
+          "31",
+          "16",
+          "11",
+          "18",
+          "29",
+          "05",
+          "13",
+          "08",
+          "09",
+          "22",
+          "02",
+          "25",
+          "03",
+          "23",
+          "20"
+        ],
+        "tasks": [
+          "Numerosity mapper"
+        ],
+        "totalFiles": 2583
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2026-03-12T14:20:08.764Z"
+  },
+  "source": "openneuro"
+}

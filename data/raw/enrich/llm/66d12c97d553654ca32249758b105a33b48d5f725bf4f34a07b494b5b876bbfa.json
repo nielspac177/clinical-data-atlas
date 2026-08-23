@@ -1,0 +1,31 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:66d12c97d553654ca32249758b105a33b48d5f725bf4f34a07b494b5b876bbfa",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "other"
+    ],
+    "id": "tcia:healthy-total-body-cts",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "low-dose whole body CT images and tissue segmentations",
+        "value": "CT"
+      },
+      {
+        "evidence": "underwent PET/CT imaging on the uEXPLORER total-body PET/CT system",
+        "value": "PET"
+      },
+      {
+        "evidence": "age, gender, weight, height, and body mass index are also provided",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "Thirty healthy adult research participants, 18 years of age or older, able to provide informed written consent",
+    "summary": "Low-dose whole-body CT images with automatically generated tissue segmentations from healthy adults imaged on a total-body PET/CT system at multiple timepoints after tracer injection, plus basic demographic and body measurements."
+  },
+  "prompt_version": "v1"
+}

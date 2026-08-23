@@ -1,0 +1,110 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds002702",
+  "payload": {
+    "created": "2020-04-13T18:22:26.359Z",
+    "id": "ds002702",
+    "latestSnapshot": {
+      "created": "2020-04-13T23:10:10.000Z",
+      "description": {
+        "Authors": [
+          "Kendrick Kay",
+          "Keith W. Jamison",
+          "Luca Vizioli",
+          "Ruyuan Zhang",
+          "Eshed Margalit",
+          "Kamil Ugurbil"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds002702.v1.0.1",
+        "Funding": [
+          "National Institute of Health Grant P41 EB015894",
+          "National Institute of Health Grant P41 EB027061",
+          "National Institute of Health Grant P30 NS076408",
+          "National Institute of Health Grant S10 RR026783",
+          "National Institute of Health Grant S10 OD017974-01",
+          "National Institute of Health Grant U01 EB02514",
+          "W. M. Keck Foundation"
+        ],
+        "HowToAcknowledge": "If you use these data, please cite the appropriate manuscripts.",
+        "License": "CC0",
+        "Name": "High-field 7T Visual fMRI Datasets",
+        "ReferencesAndLinks": [
+          "https://doi.org/10.1016/j.neuroimage.2019.02.006",
+          "https://osf.io/qcpgh/",
+          "https://doi.org/10.1523/JNEUROSCI.2106-19.2020",
+          "https://www.biorxiv.org/content/10.1101/868455v1",
+          "https://osf.io/j2wsc/"
+        ]
+      },
+      "readme": "# High-field 7T Visual fMRI Datasets\n\nThis contains the raw fMRI data and structural images (T1, T2) used in the \"Temporal Decomposition Method\" paper (https://www.biorxiv.org/content/10.1101/868455v1). The data provided here also subsumes most of the datasets used in the \"Critical Assessment of Sub-millimeter fMRI\" paper (https://doi.org/10.1016/j.neuroimage.2019.02.006) and the \"Ultra-high-res VTC\" paper (https://doi.org/10.1523/JNEUROSCI.2106-19.2020).\n\nNote that whereas we provide here the raw data, a fully pre-processed version of the data is provided at https://osf.io/j2wsc.\n\n## Experimental Design\n\nThere are two primary experiments: An \"Eccentricity\" experiment that involved rings presented at different stimulus eccentricities (\"task-ring\") and a \"Category\" experiment that involved images of different semantically meaningful categories such as faces (\"task-floc\").\n\nThe two experiments were conducted with various acquisition parameters and at different field strengths.\n\nThere are 16 scan sessions conducted in 11 different subjects. Different subjects pariticpated in different experiments, and some scan sessions of an experiment have different numbers of runs than others.\n\nThe Eccentricity experiment involved six stimulus conditions. Each lasted 3.5 s. They are named \"eccA\" where A ranges from 1-6. (The most foveal ring is 1; the most peripheral ring is 6.)\n\nThe Category experiment involved ten stimulus conditions. Each lasted 4 s. They are given various names such as \"body\", \"face\", etc. (This experiment was lightly modified from the fLoc experiment available at http://vpnl.stanford.edu/fLoc/.)\n\nSession names:\n * floc7T - category experiment at 7T 0.8mm\n * anatomicals - structurals at 3T 0.8mm\n * ring7T - eccentricity experiment at 7T 0.8mm\n * ringSE - eccentricity experiment at 7T 1.05mm using spin-echo\n * ring3T - eccentricity experiment at 3T 2.4mm\n\nScan sessions generally involved multiple fieldmaps. The fieldmaps occurred before and after the fMRI runs as well as periodically in between the fMRI runs. The precise order in which the fieldmaps and fMRI runs were acquired can be derived from the scan timing records.\n\nStructural sessions involved multiple T1w and T2w scans acquired in succession (in order to allow averaging and improving signal-to-noise ratio). The Siemens scanner provided two versions of each structural acquisition; we provide here the version that is \"Pre-Scan Normalized\".\n\n## Defacing\n\n[pydeface](https://github.com/poldracklab/pydeface) version 2.0.0 was used to deface all anatomical images. The defacing mask was derived from the first T1w image and applied to all other T1w and T2w images. \n\n## Known Issues\n\n * sub-04_ses-ring7T - there is a small amount of missed brain in the occipital pole of the right hemisphere\n * sub-06_ses-floc7T - The fieldmap slices were 42 instead of 28 slices. Note that in the analyses for the TDM paper, we excluded runs 4 and 6 due to poor subject performance.\n * sub-07_ses-floc7T - The fieldmap slices were 42 instead of 28 slices.\n * sub-08_ses-floc7T - Note that in the analyses for the TDM paper, we excluded run 4 due to poor subject performance.\n\n## Dicom Conversion\n\nDicom files were converted to NIfTI format using dcm2niix, as packaged in with AFNI version 19.2.10 (dcm2niix_afni).\n\n## FreeSurfer\n\nThe FreeSurfer cortical surface reconstructions that were created and used in the papers are available for download at the OSF site: https://osf.io/j2wsc/. These reconstructions include modifications for our analysis pipelines, including manual segmentation edits, dense surfaces, special ROIs, etc.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "anatomicals",
+          "floc7T",
+          "ring3T",
+          "ring7T",
+          "ringSE"
+        ],
+        "size": 78661911137,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11"
+        ],
+        "tasks": [
+          "floc",
+          "Ring"
+        ],
+        "totalFiles": 1395
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "https://doi.org/10.1016/j.neuroimage.2019.02.006,https://doi.org/10.1523/JNEUROSCI.2106-19.2020,https://doi.org/10.1101/868455",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "vision, high-resolution fMRI",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2020-04-14T00:40:13.706Z"
+  },
+  "source": "openneuro"
+}

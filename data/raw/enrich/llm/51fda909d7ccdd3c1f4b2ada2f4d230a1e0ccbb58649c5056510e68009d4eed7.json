@@ -1,0 +1,27 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:51fda909d7ccdd3c1f4b2ada2f4d230a1e0ccbb58649c5056510e68009d4eed7",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:mhd-effect-ecg-mri",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "The 12-lead and 3-lead ECG signals were acquired",
+        "value": "ECG"
+      },
+      {
+        "evidence": "acquired in different magnetic resonance imaging (MRI) scanners",
+        "value": "MRI"
+      }
+    ],
+    "population": "acquired from different subjects in various MRI scanners",
+    "summary": "Manually annotated 12-lead and 3-lead ECG signals recorded from subjects inside MRI scanners at field strengths from 1T to 7T, for studying the magnetohydrodynamic effect on the ECG."
+  },
+  "prompt_version": "v1"
+}

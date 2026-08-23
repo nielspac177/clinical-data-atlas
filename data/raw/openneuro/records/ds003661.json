@@ -1,0 +1,81 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003661",
+  "payload": {
+    "created": "2021-05-26T12:33:16.073Z",
+    "id": "ds003661",
+    "latestSnapshot": {
+      "created": "2021-08-02T10:48:20.000Z",
+      "description": {
+        "Authors": [
+          "Mohamed Abdelhack",
+          "Yukiyasu Kamitani"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds003661.v1.0.0",
+        "Funding": [
+          "This research was supported by grants from JSPS KAKENHI grant numbers JP15H05920 and JP15H05710; ImPACT Program of Council for Science, Technology and Innovation (Cabinet Office, Government of Japan); the New Energy and Industrial Technology Development Organization (NEDO); and Japanese Government Scholarship (MEXT)."
+        ],
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "Sharpening of Hierarchical Visual Feature Representations of Blurred Images",
+        "ReferencesAndLinks": [
+          "Abdelhack, M., & Kamitani, Y. (2018). Sharpening of Hierarchical Visual Feature Representations of Blurred Images. ENeuro, 5(3), ENEURO.0443-17.2018. https://doi.org/10.1523/ENEURO.0443-17.2018"
+        ]
+      },
+      "readme": "# Sharpening of Hierarchical Visual Feature Representations of Blurred Images\n\n## Original paper\n\nAbdelhack, M., & Kamitani, Y. (2018). Sharpening of Hierarchical Visual Feature Representations of Blurred Images. ENeuro, 5(3), ENEURO.0443-17.2018. https://doi.org/10.1523/ENEURO.0443-17.2018\n\n## Dataset\n\n\n### MRI data\n\nThis dataset contains fMRI data from five subjects ('sub-01', 'sub-02', 'sub-03', 'sub-04', and 'sub-05'). Each subject data contains three types of MRI data.\n\n- 'ses-training': fMRI data from the natural image presentation experiment for the decoder training (20 runs; 3 sessions)\n- 'ses-testNoCategory': fMRI data from the test image presentation experiment in no-prior condition (2 runs; 1 sessions)\n- 'ses-testCategory': fMRI data from the test image presentation experiment in category-prior condition (2 runs; 1 sessions)\n\n\n\n\nEach scanning session consisted of functional EPI images covered the entire brain (TR, 2000 ms; TE, 43 ms; flip angle, 80°; voxel size, 2 × 2 × 2 mm; FOV, 192 × 192 mm; number of slices, 76; slice gap, 0 mm; multiband factor, 4) .\nThe dataset also includes a T1-weighted anatomical reference image for each subject (TR, 2250 ms; TE, 3.06 ms; TI, 900 ms; flip angle, 9°; voxel size, 1.0 × 1.0 × 1.0 mm; FOV, 256 × 256 mm).\nThe T1-weighted images were scanned only once for each subject in a separate scanning session and are stored in 'ses-anatomy' directories.\nThe T1-weighted images were defaced by pydeface (<https://pypi.python.org/pypi/pydeface>).\nAll DICOM files are converted to Nifti-1 files by mri_convert in FreeSurfer.\n\n#### Preprocessed fMRI data\n\nPreprocessed fMRI data are available in `derivatives/preproc-spm`. See the original paper (Abdelhack & Kamitani, 2018) for the details of preprocessing.\n\n\n### Task event files\n\nTask event files ('sub-\\*_ses-\\*_task-\\*_run-\\*_events.tsv') contains recorded event during fMRI runs. Each column of the task event files represents:\n\n- 'onset': onset time of an event (sec)\n- 'duration': duration of the event (sec)\n- 'trial_type': type of the event (1: Stimulus presentation block, 2: Repetition block, -1 and -2: Initial and post rest blocks without visual stimulus)\n- 'stimulus_name': stimulus file name of the image presented in a stimulus block ('n/a' in rest blocks)\n- 'category_index': category ID of the images presented in a stimulus block of the category-prior condition (1 in the other conditions) \n- 'image_index': stimulus ID of the image presented in a stimulus block ('n/a' in rest blocks)\n- 'button_response': pressed button by the subject at the block, 1: uncertainty and 2: certainty for testNoCagegory and testCategory experiment, and 1: one-back repetition for training experiment ('n/a' or 0.0 when the subject did not press the button in the block)\n- 'response_time': time of button press at the block, elapsed time (sec) from the beginning of each run ('n/a' or 0.0 when the subject did not press the button in the block)\n\n\n### Stimulus images\n\nDue to license issues, our dataset do not include the stimulus images used in the experiments. \n\n\n## Contact\n\n- Email: <kamitanilab@gmail.com>\n- We also accept inqueries at [issues on GitHub/KamitaniLab/OpenData](https://github.com/KamitaniLab/OpenData/issues).\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "anatomy",
+          "testCategory01",
+          "testNoCategory01",
+          "training01",
+          "training02",
+          "training03"
+        ],
+        "size": 22064224994,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05"
+        ],
+        "tasks": [
+          "testCategory",
+          "testNoCategory",
+          "training"
+        ],
+        "totalFiles": 393
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": null,
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2021-08-02T10:55:50.058Z"
+  },
+  "source": "openneuro"
+}

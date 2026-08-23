@@ -1,0 +1,30 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:fb6d1639c2a011ca5c32efe29ec56ce7c8fb7d071b0cfde4869884bd0a3e50af",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "four prevalent AML subtypes with defining genetic abnormalities",
+        "label": "AML"
+      }
+    ],
+    "countries": [
+      "DE"
+    ],
+    "domains": [
+      "oncology"
+    ],
+    "id": "tcia:aml-cytomorphology_mll_helmholtz",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "automatically selected individual white blood cell images",
+        "value": "pathology"
+      }
+    ],
+    "population": "242 peripheral blood smears from the Munich Leukemia Laboratory database from the years 2009 to 2020, covering four AML subtypes plus healthy stem cell donors",
+    "summary": "Digitized peripheral blood smears providing individual white blood cell images from patients in four genetically defined AML subtypes and from a control group of healthy stem cell donors, drawn from a leukemia laboratory database."
+  },
+  "prompt_version": "v1"
+}

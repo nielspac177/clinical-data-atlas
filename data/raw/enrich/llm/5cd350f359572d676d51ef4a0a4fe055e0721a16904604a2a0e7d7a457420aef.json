@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:5cd350f359572d676d51ef4a0a4fe055e0721a16904604a2a0e7d7a457420aef",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "cardiology",
+      "pulmonology"
+    ],
+    "id": "physionet:bidmc",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "ECG signals extracted from the MIMIC-II Matched Waveform Database",
+        "value": "ECG"
+      },
+      {
+        "evidence": "photoplethysmogram",
+        "value": "PPG"
+      },
+      {
+        "evidence": "using the impedance respiratory signal",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": null,
+    "summary": "Signals and numerics extracted from the MIMIC-II matched waveform database, including ECG and photoplethysmogram, with manual breath annotations made by two annotators from the impedance respiratory signal."
+  },
+  "prompt_version": "v1"
+}

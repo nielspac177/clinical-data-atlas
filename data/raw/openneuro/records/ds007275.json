@@ -1,0 +1,146 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007275",
+  "payload": {
+    "created": "2026-01-19T11:56:51.364Z",
+    "id": "ds007275",
+    "latestSnapshot": {
+      "created": "2026-05-08T23:26:02.000Z",
+      "description": {
+        "Authors": [
+          "Alex Ilyés",
+          "Borbála Brosig",
+          "György Mező",
+          "Attila Keresztes"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007275.v1.0.1",
+        "Funding": [
+          "Doctoral Projects 2022, 2023 (Eötvös Loránd University) to A. I.",
+          "Development and Innovation Office - NKFIH FK128648 to A. K.",
+          "Bolyi János Scholarship of the Hungarian Academy of Sciences to A. K."
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Semantic Mnemonic Similarity Task (sMST) - fMRI dataset",
+        "ReferencesAndLinks": null
+      },
+      "readme": "**Study overview**\n\nThis dataset accompanies a high-resolution fMRI study on hippocampal pattern separation (i.e., a process by which overlapping input is transformed into orthogonal representations in the hippocampus) based on semantic similarity. In humans, it is often studied with the Mnemonic Similarity Task (MST, https://faculty.sites.uci.edu/starklab/mnemonic-similarity-task-mst/), where neural repetition suppression for exact repeats is compared to that for similar lure items.\n\nIn session 1 thirty young adults (Mage = 21 years, 15 females) viewed adjective--noun phrases (e.g. *'exotic zoo'*). At later repetitions, phrases were either:\n\n* Exact repeats (same adjective--noun combination, e.g. *'exotic zoo'*), or\n* Semantically modified repeats in which the noun was repeated but the adjective was replaced with a semantically similar word (e.g. *'strange zoo'*).\n\nExact and modified repeats were presented both during an incidental encoding phase (smst\\_enc) and a two-alternative forced-choice recognition phase (smst\\_rec).\n\nIn repetition-sensitive clusters of hippocampus, we observed attenuated repetition suppression for semantically modified phrases compared to exact repeats, consistent with pattern separation. Across participants, the magnitude of this repetition suppression difference predicted mnemonic discrimination performance at recognition. Moreover, repetition-sensitive clusters identified during encoding were sensitive to discrimination success for lure items at recognition.\n\nIn session 2, thirty-one young adults (Mage = 21.19 years, 16 females) produced data for analysis, whereby they observed a subset of phrases (N=56) from session 1, containing multiple phrases that were incorrectly recognized at recognition. All three versions (baseline, close modified version, distant modified version) were repeated three times  across eight functional runs (smst\\_map).\n\nIn an on-going analysis, we compare word2vec-based semantic similarity between phrases to voxel pattern similarity derived from the hippocampus, anterior temporal lobe and specifically the temporal pole. We predict semantic similarity representation in the anterior temporal lobe and the anterior hippocampus. We also predict that pattern similarity will be associated with mnemonic discrimination performance in the anterior hippocampus and the temporal pole.\n\n**Data organization**\n\nThe dataset is organized according to the BIDS standard, and includes both **raw data** and several levels of **derivative data** and code used for preprocessing and analysis.\n\n**Raw data**\n\nAll raw MRI and behavioral data necessary to reproduce the main analyses are included in standard BIDS folders (e.g. sub-*/ses-*).\n\n**Derivatives and code**\n\nThe preprocessing and analysis pipeline is provided in code, together with intermediate derivatives (reduced in amount of files for compactness). Key derivative directories are:\n\n* **anat-preprocess/** - N4-bias-corrected anatomical images (T1-weighted \\[brain-extracted] and proton density \\[PD]).\n* **feat/** - Outputs of the fMRI preprocessing pipeline (FSL FEAT-based): specifically filtered for motion-correction outputs and the preprocessed functional data.\n* **fieldmaps/** - Fieldmap images prepared for direct use in fMRI preprocessing (e.g. distortion correction).\n* **masks/** - Hippocampal subfield masks in template space (e.g. dentate gyrus, subiculum, etc.); and group-level statistical clusters for contrasts of interest.\n* **onsets/** - FEAT-formatted onset files for all experimental conditions (e.g. exact repeats, semantic lures, encoding vs. recognition) for use with FSL design files.\n* **registrations/** - Transform matrices and warps for affine and SyN registrations (using ANTs) between various modalities.\n* **templates/** - Group-specific templates derived from PD and T1 images (only including initial averages and the final templates)\n\n\n**Related works (regularly updated)**\n\nExperimental softwares and raw data is available at: https://doi.org/10.5281/zenodo.18395407\n\nData analysis pipelines: https://doi.org/10.5281/zenodo.20090797",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "02",
+          "01"
+        ],
+        "size": 220850740066,
+        "subjects": [
+          "412503",
+          "995905",
+          "012421",
+          "434971",
+          "632012",
+          "656658",
+          "222070",
+          "044413",
+          "499854",
+          "198656",
+          "737080",
+          "468051",
+          "184188",
+          "124846",
+          "939616",
+          "193800",
+          "506297",
+          "982347",
+          "718911",
+          "930688",
+          "030989",
+          "173888",
+          "526930",
+          "105662",
+          "864020",
+          "369463",
+          "800472",
+          "380590",
+          "688643",
+          "425578",
+          "830922",
+          "268070",
+          "757242",
+          "802187",
+          "680997"
+        ],
+        "tasks": [
+          "smst_map",
+          "smst_enc",
+          "smst_rec"
+        ],
+        "totalFiles": 3118
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        18,
+        22,
+        21,
+        19,
+        24,
+        20,
+        19,
+        20,
+        21,
+        21,
+        22,
+        20,
+        25,
+        21,
+        20,
+        23,
+        23,
+        22,
+        20,
+        22,
+        22,
+        23,
+        20,
+        20,
+        20,
+        19,
+        22,
+        21,
+        23,
+        19,
+        22,
+        22,
+        21,
+        21,
+        24,
+        21
+      ],
+      "associatedPaperDOI": "0.1038/s41598-024-68380-0, 10.1162/IMAG.a.1088",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "Eötvös Loránd University (for Doctoral Projects 2022, 2023); Development and Innovation Office - NKFIH (for FK128648), Hungarian Academy of Sciences (for Bolyai János Scholarship)",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "Session 1: Incidental encoding of adjective + noun phrases (3 runs) + Two forced-choice (\"old\"/\"new\") retrieval (2 runs); Session 2: Semantic decision for three versions of adjective-noun phrases (8 runs)",
+      "studyDomain": "Memory",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2026-02-06T23:20:42.059Z"
+  },
+  "source": "openneuro"
+}

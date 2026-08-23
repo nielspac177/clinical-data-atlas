@@ -1,0 +1,132 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004962",
+  "payload": {
+    "created": "2024-02-12T20:53:49.369Z",
+    "id": "ds004962",
+    "latestSnapshot": {
+      "created": "2024-02-12T21:12:59.000Z",
+      "description": {
+        "Authors": [
+          "Fabien CHAUVEAU",
+          "Joshua GOBE",
+          "Radu BOLBOS",
+          "Tae-Hee CHO",
+          "Jacopo MARIANI",
+          "Martina VIGANO",
+          "Susanna DIAMANTI",
+          "Marlène WIART",
+          "Davide CARONE",
+          "Simone BERETTA"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004962.v1.0.0",
+        "Funding": [
+          "French Research National Agency, grant ANR-21-CE17-0028",
+          "Italian Ministry of University and Research (MIUR) grant PRIN 2017CY3J3W"
+        ],
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "MRI dataset evaluating the effect of head down tilt 15° on cerebral perfusion in acute ischemic experimental stroke",
+        "ReferencesAndLinks": null
+      },
+      "readme": "This dataset contains MRI associated with the following publication, currently submitted to Stroke.\n\nTitle: Head down tilt 15° increases cerebral perfusion before recanalization in acute ischemic stroke due to large vessel occlusion. A pre-clinical MRI study\nAuthors: Simone Beretta, Davide Carone, Tae-Hee Cho, Martina Viganò, Susanna Diamanti, Jacopo Mariani, Francesco Pedrazzini, Elisa Bianchi, Cristiano Pini, Radu Bolbos, Marlene Wiart, Carlo Ferrarese, Fabien Chauveau\nPreregistration: preclinicaltrials.eu, identifier PCTE0000198\n\nRaw data:\n\n\tMRI for 28 adult male Wistar rats (ILAR code Crl:WI(Han); RRID:RGD_2308816)\n\tMagnetic field: 7T\n\tAnesthesia: isoflurane\n\tTime points (in hours, following occlusion): H0 (during MCA occlusion); H24 (after reperfusion)\n\tEthics statement: agreement numbers APAFIS#15529-2018061512184831v2 and 32924-2021091015062327v4 from local committee CELYNE-CNREEA (C2EA-42, Lyon, France)\n\nDerivatives:\n\n\tTime-to-Peak (TTP) maps calculated from DSC-PWI \n\tMatlab code used for TTP calculation\n\tExcel files describing the experimental series and the main results\n\nNotes:\n\n\tNo specification is available for Dynamic-Susceptibility-Contrast Perfusion-Weighted-Imaging (DSC-PWI), so the corresponding files are labelled in .bidsignore \n\tR10 had no anatomical T2w on H0\n\tH24 session could not be performed for 8 animals  (R03-R10-R26-R28-R29-R31-R33-R34)\n\tR28 was not positioned properly during the first run of DSC-PWI, positioning was corrected for the second run\n\nThis dataset has been converted using BrkRaw (v0.3.7) on 2024-01-23.\n## How to cite?\n - https://doi.org/10.5281/zenodo.3818615\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural",
+          "mri_diffusion"
+        ],
+        "sessions": [
+          "H0",
+          "H24"
+        ],
+        "size": 465387229,
+        "subjects": [
+          "R01",
+          "R02",
+          "R03",
+          "R07",
+          "R08",
+          "R10",
+          "R11",
+          "R12",
+          "R13",
+          "R14",
+          "R15",
+          "R16",
+          "R17",
+          "R18",
+          "R19",
+          "R26",
+          "R27",
+          "R28",
+          "R29",
+          "R30",
+          "R31",
+          "R32",
+          "R33",
+          "R34",
+          "R36",
+          "R38",
+          "R39",
+          "R40"
+        ],
+        "tasks": [],
+        "totalFiles": 295
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Rat",
+      "studyDesign": "",
+      "studyDomain": "stroke",
+      "studyLongitudinal": "Longitudinal"
+    },
+    "publishDate": "2024-02-12T21:19:18.146Z"
+  },
+  "source": "openneuro"
+}

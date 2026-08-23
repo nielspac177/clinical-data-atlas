@@ -1,0 +1,82 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "MMRF-COMMPASS",
+  "payload": {
+    "dbgap_accession_number": "phs000748",
+    "disease_type": [
+      "Plasma Cell Tumors"
+    ],
+    "id": "MMRF-COMMPASS",
+    "name": "Multiple Myeloma CoMMpass Study",
+    "primary_site": [
+      "Hematopoietic and reticuloendothelial systems"
+    ],
+    "program": {
+      "dbgap_accession_number": null,
+      "name": "MMRF",
+      "program_id": "47886a48-87b8-5437-800e-af74f41e6c84"
+    },
+    "project_id": "MMRF-COMMPASS",
+    "releasable": true,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 995,
+      "data_categories": [
+        {
+          "case_count": 961,
+          "data_category": "Simple Nucleotide Variation",
+          "file_count": 19301
+        },
+        {
+          "case_count": 995,
+          "data_category": "Sequencing Reads",
+          "file_count": 6577
+        },
+        {
+          "case_count": 908,
+          "data_category": "Copy Number Variation",
+          "file_count": 2020
+        },
+        {
+          "case_count": 787,
+          "data_category": "Transcriptome Profiling",
+          "file_count": 1718
+        },
+        {
+          "case_count": 904,
+          "data_category": "Somatic Structural Variation",
+          "file_count": 2032
+        },
+        {
+          "case_count": 791,
+          "data_category": "Structural Variation",
+          "file_count": 3458
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 975,
+          "experimental_strategy": "WXS",
+          "file_count": 17350
+        },
+        {
+          "case_count": 787,
+          "experimental_strategy": "RNA-Seq",
+          "file_count": 7731
+        },
+        {
+          "case_count": 923,
+          "experimental_strategy": "WGS",
+          "file_count": 10025
+        }
+      ],
+      "file_count": 35106,
+      "file_size": 206572306435709
+    }
+  },
+  "source": "gdc"
+}

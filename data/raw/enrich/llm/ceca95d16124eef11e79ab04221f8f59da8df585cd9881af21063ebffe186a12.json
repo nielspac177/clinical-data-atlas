@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:ceca95d16124eef11e79ab04221f8f59da8df585cd9881af21063ebffe186a12",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Adenomas and Adenocarcinomas",
+        "label": "Adenomas and Adenocarcinomas"
+      },
+      {
+        "evidence": "prostatic neoplasms",
+        "label": "prostatic neoplasms"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "nephrology_urology"
+    ],
+    "id": "gdc:CMI-MPC",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "WXS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "Transcriptome Profiling",
+        "value": "transcriptomics"
+      }
+    ],
+    "population": "63 human cases of metastatic prostate cancer",
+    "summary": "Patient-partnered Count Me In metastatic prostate cancer project, sampling prostate gland and lymph nodes, with whole-exome sequencing, RNA-Seq, simple nucleotide variation and structural variation data."
+  },
+  "prompt_version": "v1"
+}

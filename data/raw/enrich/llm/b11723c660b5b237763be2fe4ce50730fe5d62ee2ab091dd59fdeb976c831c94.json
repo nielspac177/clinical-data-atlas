@@ -1,0 +1,31 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:b11723c660b5b237763be2fe4ce50730fe5d62ee2ab091dd59fdeb976c831c94",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "other"
+    ],
+    "id": "physionet:latte-cxr",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "bounding box-statement pairs for chest X-ray images",
+        "value": "xray"
+      },
+      {
+        "evidence": "radiologists’ eye-tracking data",
+        "value": "eye_tracking"
+      },
+      {
+        "evidence": "extracting statements from radiology reports",
+        "value": "clinical_notes"
+      }
+    ],
+    "population": null,
+    "summary": "Chest X-ray dataset of locally aligned image-text pairs derived from REFLACX, pairing bounding boxes with radiology report statements and radiologist eye-tracking data for phrase grounding and explainability tasks."
+  },
+  "prompt_version": "v1"
+}

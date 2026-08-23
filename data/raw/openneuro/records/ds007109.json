@@ -1,0 +1,102 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007109",
+  "payload": {
+    "created": "2025-12-17T16:15:24.175Z",
+    "id": "ds007109",
+    "latestSnapshot": {
+      "created": "2025-12-29T09:48:37.000Z",
+      "description": {
+        "Authors": [
+          "Mahdi Enan",
+          "Ryszard Auksztulewicz",
+          "Agustin Lage-Castellanos",
+          "Joost Haarsma",
+          "Essa Yacoub",
+          "Caspar M. Schwiedrzik",
+          "Lucia Melloni",
+          "Federico De Martino"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007109.v1.0.1",
+        "Funding": [
+          "GRANT European Research Council (ERC) under the European Union’s Horizon 2020 research and innovation programme (grant agreement No. 101001270)",
+          "GRANT  National Institute of Health (grants RF1MH116978)"
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Associative Learning fMRI 7T Dataset",
+        "ReferencesAndLinks": [
+          "TODO",
+          "List of papers or websites"
+        ]
+      },
+      "readme": "In vivo 7T MRI submillimeter dataset investigating the human cortex and hippocampus collected at the Scannexus facility (Maastricht University, The Netherlands) by Mahdi Enan.\n\nThe dataset consists of 11 subjects that underwent two sessions in which anatomical MP2RAGE data and 8 + 6 functional runs were acquired at a resolution of 0.8 mm isotropic.\n\nParticipants were presented with trials, each composed of a sequence of visual and auditory stimuli. Each sequence consisted of a noise image (1 s) of horizontal and vertical gray-scale, followed by a scene (1 s), a face (1 s), and an auditory syllable ($PA$ or $GA$, 300 ms). Stimuli always followed the same order, though exemplars varied. We presented two types of sequences: predictable (WhatOn) and unpredictable (WhatOff). In predictable trials, the auditory syllable was fully determined by the preceding visual face, which itself was probabilistically predicted by the scene.",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "2",
+          "1"
+        ],
+        "size": 278428934050,
+        "subjects": [
+          "S10",
+          "S09",
+          "S07",
+          "S12",
+          "S17",
+          "S15",
+          "S05",
+          "S08",
+          "S06",
+          "S04",
+          "S11"
+        ],
+        "tasks": [
+          "WhatOff",
+          "WhatOn"
+        ],
+        "totalFiles": 876
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        25,
+        22,
+        29,
+        27,
+        24,
+        28,
+        22,
+        22,
+        22,
+        22,
+        35
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2025-12-29T09:49:09.174Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,98 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006394",
+  "payload": {
+    "created": "2025-06-26T10:42:24.675Z",
+    "id": "ds006394",
+    "latestSnapshot": {
+      "created": "2025-06-27T04:44:21.000Z",
+      "description": {
+        "Authors": [
+          "En-Lin Leong",
+          "Yun Da Chua",
+          "Takashi Obana",
+          "Christopher L. Asplund"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006394.v1.0.3",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Electrophysiological markers of surprise-induced failures of visual and auditory awareness",
+        "ReferencesAndLinks": null
+      },
+      "readme": "This is the dataset for Leong et al. (in prep). 33 participants completed both a visual and auditory surprise task in counterbalanced order. Methodological details are contained in the manuscript. \n\nCertain participants were excluded at various stages of the analyses. Their data and event lists are included up to the stage of processing that their data reached. \n\nDue to incorrect settings specific to OpenBCI GUI v5.0.1, indicated EEG values are 24 times larger than what they should be. The units (also specified in the channels.tsv files) are thus in microvolts / 24. ",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "eeg",
+          "beh"
+        ],
+        "secondaryModalities": [],
+        "sessions": [],
+        "size": 560818153,
+        "subjects": [
+          "18",
+          "27",
+          "28",
+          "17",
+          "24",
+          "11",
+          "08",
+          "33",
+          "20",
+          "31",
+          "06",
+          "32",
+          "05",
+          "15",
+          "19",
+          "22",
+          "21",
+          "23",
+          "16",
+          "10",
+          "09",
+          "13",
+          "12",
+          "30",
+          "25",
+          "29",
+          "01",
+          "04",
+          "02",
+          "03",
+          "14",
+          "07",
+          "26"
+        ],
+        "tasks": [
+          "SiB",
+          "SiD"
+        ],
+        "totalFiles": 368
+      },
+      "tag": "1.0.3"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "Singapore Ministory of Education and Yale-NUS College",
+      "modalities": [
+        "eeg",
+        "beh"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "EEG",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2025-06-26T10:46:37.010Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:bfb73c4a723e59ef81f886e80ffe0e919a7df04ebd312674b19c19a29e1c7c3c",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Osteosarcoma is the most common type of bone cancer",
+        "label": "Osteosarcoma"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "oncology",
+      "pediatrics",
+      "musculoskeletal"
+    ],
+    "id": "tcia:osteosarcoma-tumor-assessment",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Hematoxylin and eosin (H&E) stained osteosarcoma histology images",
+        "value": "pathology"
+      }
+    ],
+    "population": "Archival samples for 50 patients treated at Children's Medical Center, Dallas, between 1995 and 2015",
+    "summary": "H&E stained osteosarcoma histology images labelled by pathologists as Non-Tumor, Viable Tumor or Necrosis. Consists of 1144 images of size 1024 X 1024 at 10X resolution, from archival patient samples."
+  },
+  "prompt_version": "v1"
+}

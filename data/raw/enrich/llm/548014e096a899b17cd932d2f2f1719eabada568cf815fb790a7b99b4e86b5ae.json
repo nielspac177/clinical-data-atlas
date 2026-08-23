@@ -1,0 +1,44 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:548014e096a899b17cd932d2f2f1719eabada568cf815fb790a7b99b4e86b5ae",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Parkinsons disease patients",
+        "label": "Parkinsons disease"
+      },
+      {
+        "evidence": "healthy controls",
+        "label": "healthy controls"
+      },
+      {
+        "evidence": "other similar movement disorders",
+        "label": "other movement disorders"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology"
+    ],
+    "id": "physionet:parkinsons-disease-smartwatch",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "two smartwatches and one smartphone",
+        "value": "wearable"
+      },
+      {
+        "evidence": "11 interactive movement tasks",
+        "value": "behavioral"
+      },
+      {
+        "evidence": "demographics, medical history",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "469 individuals: Parkinsons disease patients, differential diagnoses, and healthy controls",
+    "summary": "Smartwatch and smartphone acceleration and rotation recordings from interactive neurological movement tasks in Parkinson's patients, people with similar movement disorders, and healthy controls, plus demographics, medical history, and non-motor symptoms."
+  },
+  "prompt_version": "v1"
+}

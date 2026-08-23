@@ -1,0 +1,32 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "medisumqa",
+  "payload": {
+    "abstract": "<p>While increasing patients' access to medical documents improves medical care, this benefit is limited by varying health literacy levels and complex medical terminology. Large language models (LLMs) offer solutions by simplifying medical information. However, evaluating LLMs for safe and patient-friendly text generation is difficult due to the lack of standardized evaluation resources. To fill this gap, we developed MeDiSumQA. MeDiSumQA is a dataset created from MIMIC-IV discharge summaries through an automated pipeline combining LLM-based question-answer generation with manual quality checks. We use this dataset to evaluate various LLMs on patient-oriented question-answering. Our findings reveal that general-purpose LLMs frequently surpass biomedical-adapted models, while automated metrics correlate with human judgment. By releasing MeDiSumQA on PhysioNet, we aim to advance the development of LLMs to enhance patient understanding and ultimately improve care outcomes.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 1650692,
+    "core_doi": "10.13026/tvmt-8d97",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 4770256,
+    "public_project_uuid": "877b5c47-92fc-4ec4-b439-197e5cb3d2b6",
+    "publish_date": "2025-05-05",
+    "resource_type": "Database",
+    "short_description": "MeDiSumQA is a dataset of patient-oriented QA pairs from MIMIC-IV discharge summaries, designed to evaluate LLMs in generating safe, patient-friendly medical responses for clinical QA and healthcare communication.",
+    "slug": "medisumqa",
+    "source_url": "https://physionet.org/content/medisumqa/1.0.0/",
+    "title": "MeDiSumQA: Patient-Oriented Question-Answer Generation from Discharge Letters",
+    "topics": [],
+    "version": "1.0.0",
+    "version_doi": "10.13026/f566-h049"
+  },
+  "source": "physionet"
+}

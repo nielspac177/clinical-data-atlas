@@ -1,0 +1,98 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds000008",
+  "payload": {
+    "created": "2016-10-13T01:11:41.085Z",
+    "id": "ds000008",
+    "latestSnapshot": {
+      "created": "2018-07-14T01:41:18.000Z",
+      "description": {
+        "Authors": [
+          "Aron, A.R.",
+          "Behrens, T.E.",
+          "Frank, M.",
+          "Smith, S.",
+          "Poldrack, R.A."
+        ],
+        "DatasetDOI": null,
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "This dataset is made available under the Public Domain Dedication and License \nv1.0, whose full text can be found at \nhttp://www.opendatacommons.org/licenses/pddl/1.0/. \nWe hope that all users will follow the ODC Attribution/Share-Alike \nCommunity Norms (http://www.opendatacommons.org/norms/odc-by-sa/); \nin particular, while not legally required, we hope that all users \nof the data will acknowledge the OpenfMRI project and NSF Grant \nOCI-1131441 (R. Poldrack, PI) in any publications.",
+        "Name": "Stop-signal task with unconditional and conditional stopping",
+        "ReferencesAndLinks": [
+          "Aron, A.R., Behrens, T.E., Smith, S., Frank, M.J., Poldrack, R.A. (2007). Triangulating a cognitive control network using diffusion-weighted magnetic resonance imaging (MRI) and functional MRI. J Neurosci, 27(14):3743-52"
+        ]
+      },
+      "readme": "This dataset was obtained from the OpenfMRI project (http://www.openfmri.org).\nAccession #: ds008\nDescription: Stop-signal task with unselective and selective stopping\n\nPlease cite the following references if you use these data:\n\nAron, A.R., Behrens, T.E., Smith, S., Frank, M.J., Poldrack, R.A. (2007). Triangulating a cognitive control network using diffusion-weighted magnetic resonance imaging (MRI) and functional MRI. J Neurosci, 27(14):3743-52\n\n\nRelease history:\n10/06/2011: initial release\n12/20/2012: The originally posted version of this dataset was missing some\nonsets for task002. The newly posted version contains the full set of onsets\nfor all conditions.  If only the onsets and model info are needed, they can be\nobtained by downloading the updated onsets file and untarring it in the main\nds008 directory.\n3/21/2013: Updated release with QA information\n2/19/2016: Updated orientation information in NIFTI header for better left-right determination\n3/7/2016: Remove sub008 due to ambiguously defined task onsets and missing run data\n\nThis dataset is made available under the Public Domain Dedication and License \nv1.0, whose full text can be found at \nhttp://www.opendatacommons.org/licenses/pddl/1.0/. \nWe hope that all users will follow the ODC Attribution/Share-Alike \nCommunity Norms (http://www.opendatacommons.org/norms/odc-by-sa/); \nin particular, while not legally required, we hope that all users \nof the data will acknowledge the OpenfMRI project and NSF Grant \nOCI-1131441 (R. Poldrack, PI) in any publications.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 2160574004,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15"
+        ],
+        "tasks": [
+          "stop signal",
+          "conditional stop signal"
+        ],
+        "totalFiles": 192
+      },
+      "tag": "00001"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        37,
+        25,
+        31,
+        31,
+        22,
+        21,
+        24,
+        20,
+        23,
+        29,
+        21,
+        24,
+        22,
+        24
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2016-10-13T01:11:41.085Z"
+  },
+  "source": "openneuro"
+}

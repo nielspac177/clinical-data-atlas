@@ -1,0 +1,65 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007196",
+  "payload": {
+    "created": "2026-01-12T19:21:37.888Z",
+    "id": "ds007196",
+    "latestSnapshot": {
+      "created": "2026-04-02T22:28:02.000Z",
+      "description": {
+        "Authors": [
+          "Damion V. Demeter",
+          "Matthew Feigelis",
+          "Carolina Badke D’Andrea",
+          "Sana A. Ali",
+          "Abigail R. Baim",
+          "Emily Koithan",
+          "Jared Stearns",
+          "Salma Zreik",
+          "Jonathan Ahern",
+          "Sujin Park",
+          "Sarah E. Chang",
+          "Ryland L. Miller",
+          "Jacquline M. Hampton",
+          "Bradley L. Schlaggar",
+          "Scott Marek",
+          "Evan M. Gordon",
+          "Nico UF Dosenbach",
+          "Caterina Gratton",
+          "Deanna J. Greene"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007196.v1.0.2",
+        "Funding": [
+          "This work was supported by a Kavli Institute for Brain and Mind postdoctoral award at UCSD (DVD), the Intellectual and Developmental Disabilities Research Center at Washington University (DJG), the Mallinckrodt Institute of Radiology at Washington University (DJG), the U.S. National Science Foundation Graduate Research Fellowship Program award (EK), and the National Institutes of Health grants R01MH118217 (DJG) and R01MH118370 (CG). "
+        ],
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "The child Precision Functional Mapping (cPFM) dataset",
+        "ReferencesAndLinks": [
+          ""
+        ]
+      },
+      "readme": "# The child Precision Functional Mapping (cPFM) dataset\n\nThis dataset contains the child Precision functional Mapping (cPFM) data. This dataset is focused on characterizing resting state functional network organization in children, and includes anatomical and functional MRI data from 12 children, ages 8-12 years old (6 female, 6 male). At least one T1-weighted structural MPRAGE and one T2-weighted structural image with turbo spin echo sequence were collected across visits. Up to five 10-minute echo-planar sequence functional resting state scans were collected during each visit. During resting state scans, participants were instructed to lie as still as possible, stay awake, and view a white fixation cross on a black background. \n\n## Raw Data\nBIDS sorted and labeled raw data is provided to allow for preprocessing steps that differ from those performed for the original publication. This dataset includes the following unprocessed NIfTI files and sidecar .json files:\n\n- Anatomical: At least one T1w and one T2w anatomical scan (both defaced) is provided for each session.\n- Functional: Up to 5, 10-minute resting state EPIs are provided for each session. \n- Distortion Maps: 2 spin echo EPIs with opposite phase encoding are provided, per session, for distortion correction.\n\n## Derivatives\nThe following derivatives are provided for replication of the originally published findings:\n\nGreene_Lab_Processed:\n  - Fully processed, smoothed, and motion scrubbed resting state data are provided for each participant within the Greene_Lab_Processed derivatives folder. For each participant, one dconn and dtseries CIFTI file is provided. As per suggested practices at the time of publication, these CIFTIs are smoothed to 6mm FWHM for the surface data and are motion scrubbed with a .2mm Framewise Displacement (FD) threshold including a 5 contiguous frames rules (see Power, et al. 2014 Neuroimage).  \n  - Subcortical data are retained in the dtseries, but are left minimally smoothed (2mm) here, as suggested practices for subcortical connectivity analyses are currently unresolved.\n\nNetworkMaps:\n  - One vertex-wise individual-specific network map is provided for each participant. These network maps were created using a combination of Infomap community clustering across a list of density thresholds, template matching for initial putative network assignment, and density consensus-informed final network assignment per vertex.\n\nThe details of data collection, processing, and network map creation for this dataset are more fully described in the Methods of the associated publication. The original publication should be cited when publishing work using any files within the cPFM dataset.",
+      "summary": null,
+      "tag": "1.0.2"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": null,
+      "associatedPaperDOI": "https://doi.org/10.1101/2025.07.21.665760",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": "Other"
+    },
+    "publishDate": "2026-07-24T00:09:52.441Z"
+  },
+  "source": "openneuro"
+}

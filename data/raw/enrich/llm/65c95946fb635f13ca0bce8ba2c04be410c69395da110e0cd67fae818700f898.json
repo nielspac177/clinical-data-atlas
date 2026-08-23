@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:65c95946fb635f13ca0bce8ba2c04be410c69395da110e0cd67fae818700f898",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "elevated body temperature (EBT)",
+        "label": "elevated body temperature"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "public_health",
+      "infectious_disease"
+    ],
+    "id": "physionet:face-oral-temp-data",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "facial thermal images",
+        "value": "other"
+      },
+      {
+        "evidence": "listed in six CSV file as the open database",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "more than one thousand subjects",
+    "summary": "De-identified facial temperatures extracted from infrared thermograph images at many facial locations over repeated rounds, with oral thermometer temperatures, subject demographics and environmental conditions, for fever screening evaluation."
+  },
+  "prompt_version": "v1"
+}

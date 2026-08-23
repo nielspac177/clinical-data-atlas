@@ -1,0 +1,75 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006944",
+  "payload": {
+    "created": "2025-11-19T07:01:52.809Z",
+    "id": "ds006944",
+    "latestSnapshot": {
+      "created": "2025-11-19T07:04:25.000Z",
+      "description": {
+        "Authors": [
+          "V. Oliva",
+          "S. Bédard",
+          "M. Kaptan",
+          "K.A. Weber II"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006944.v1.0.0",
+        "Funding": [
+          "National Institute of  Neurological Disorders and Stroke (grant numbers K23NS104211, L30NS108301, R01NS128478, and K24NS126781)"
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "One-person corticospinal fMRI dataset for Stanford Spinal Cord workshop 2025",
+        "ReferencesAndLinks": [
+          "https://doi.org/10.1162/IMAG.a.159"
+        ]
+      },
+      "readme": "Oliva Mapping Hand Function Imaging Neuroscience 2025\n\n\nData includes:\n\n- Anatomical brain-extracted T1w image\n- Functional brain data for Force Matching task\n- Anatomical defaced T2w spinal cord image\n- Functional spinal cord data for Force Matching task\n\n\nNote: \n- Task regressors are shared in GitHub at the following link: https://github.com/NeuromuscularInsightLab/Oliva_Mapping_Hand_Functon_Imaging_Neuroscience_2025/tree/main/trialwise_analysis\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural",
+          "mri_functional"
+        ],
+        "sessions": [
+          "spinalcord",
+          "brain"
+        ],
+        "size": 106721341,
+        "subjects": [
+          "NSPilot043"
+        ],
+        "tasks": [
+          "force_abs"
+        ],
+        "totalFiles": 13
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2025-11-20T20:57:22.393Z"
+  },
+  "source": "openneuro"
+}

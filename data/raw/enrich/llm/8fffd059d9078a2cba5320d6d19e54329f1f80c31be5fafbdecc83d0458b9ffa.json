@@ -1,0 +1,35 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:8fffd059d9078a2cba5320d6d19e54329f1f80c31be5fafbdecc83d0458b9ffa",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "other"
+    ],
+    "id": "physionet:egd-cxr",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "1,083 public CXR images",
+        "value": "xray"
+      },
+      {
+        "evidence": "eye gaze data",
+        "value": "eye_tracking"
+      },
+      {
+        "evidence": "transcribed report text",
+        "value": "clinical_notes"
+      },
+      {
+        "evidence": "dictation audio",
+        "value": "other"
+      }
+    ],
+    "population": "Images from 1,038 subjects (female: 495, male: 543) who had age range 20 - 80 years old, selected from the MIMIC-CXR Database",
+    "summary": "Eye gaze data recorded while a radiologist interpreted public chest X-ray images, aligned with the images, transcribed report text, and dictation audio for multimodal machine learning research."
+  },
+  "prompt_version": "v1"
+}

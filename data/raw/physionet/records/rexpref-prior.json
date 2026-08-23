@@ -1,0 +1,36 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "rexpref-prior",
+  "payload": {
+    "abstract": "<p><span><span><span><span><span><span>Generative vision-language models have exciting potential implications for radiology report generation, but unfortunately such models are also known to produce hallucinations and other nonsensical statements. For example, radiology report generation models regularly hallucinate prior exams, making statements such as &ldquo;The lungs are hyperinflated with emphysematous changes as seen on prior CT&rdquo; despite not having access to any prior exam. To address this shortcoming, we propose </span></span></span></span></span></span>ReXPref<span><span><span><span><span><span>-Prior, an adapted version of MIMIC-CXR where GPT-4 has removed references to prior exams from both findings and impression sections of chest X-ray reports. We expect </span></span></span></span></span></span>ReXPref<span><span><span><span><span><span>-Prior will be useful for training models that hallucinate prior exams less frequently, through techniques such as direct preference optimization. Additionally, </span></span></span></span></span></span>ReXPref<span><span><span><span><span><span>-Prior&rsquo;s validation and test sets can be used as a new benchmark for evaluating report generation models.</span></span></span></span></span></span></p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 3634974,
+    "core_doi": "10.13026/hwzp-zq96",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 21038899,
+    "public_project_uuid": "b23a51bd-c1d3-4b9a-b094-89450395c3b0",
+    "publish_date": "2024-08-14",
+    "resource_type": "Database",
+    "short_description": "We propose ReXPref-Prior, an adapted version of MIMIC-CXR where GPT-4 has removed references to prior exams from both findings and impression sections of chest X-ray reports.",
+    "slug": "rexpref-prior",
+    "source_url": "https://physionet.org/content/rexpref-prior/1.0.0/",
+    "title": "ReXPref-Prior: A MIMIC-CXR Preference Dataset for Reducing Hallucinated Prior Exams in Radiology Report Generation",
+    "topics": [
+      "hallucination",
+      "reinforcement learning",
+      "chest x-rays"
+    ],
+    "version": "1.0.0",
+    "version_doi": "10.13026/t13x-4r94"
+  },
+  "source": "physionet"
+}

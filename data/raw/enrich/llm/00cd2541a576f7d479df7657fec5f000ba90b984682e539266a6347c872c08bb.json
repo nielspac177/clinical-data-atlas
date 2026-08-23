@@ -1,0 +1,39 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:00cd2541a576f7d479df7657fec5f000ba90b984682e539266a6347c872c08bb",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Gliomas are the most common primary brain tumors",
+        "label": "glioma"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "neurology",
+      "oncology"
+    ],
+    "id": "tcia:utsw-glioma",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "This dataset includes multi-contrast-MRI",
+        "value": "MRI"
+      },
+      {
+        "evidence": "IDH mutation-status, 1p/19q co-deletion, MGMT promoter-methylation",
+        "value": "genomics"
+      },
+      {
+        "evidence": "demographics, molecular-markers, and multi-label tumor segmentations",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "625 patients treated at UTSW between 2006 and 2023",
+    "summary": "Curated brain tumor dataset with four MRI contrasts per patient, demographics, molecular markers and multi-label tumor segmentations, intended for studying MRI-genetic relationships and benchmarking deep learning models."
+  },
+  "prompt_version": "v1"
+}

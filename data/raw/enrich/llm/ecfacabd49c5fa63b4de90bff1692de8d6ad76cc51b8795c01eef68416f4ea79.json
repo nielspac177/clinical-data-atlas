@@ -1,0 +1,29 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:ecfacabd49c5fa63b4de90bff1692de8d6ad76cc51b8795c01eef68416f4ea79",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [
+      "BR"
+    ],
+    "domains": [
+      "public_health"
+    ],
+    "id": "physionet:brateca",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "over 2.5 million free-text clinical notes",
+        "value": "clinical_notes"
+      },
+      {
+        "evidence": "prescription information, and exam results",
+        "value": "EHR"
+      }
+    ],
+    "population": "Over 70,000 admissions from 10 hospitals in two Brazilian states",
+    "summary": "Brazilian clinical dataset of tertiary care admissions from ten hospitals in two states, combining free-text Portuguese clinical notes with patient descriptors, prescriptions and exam results, deidentified and distributed through credentialed access."
+  },
+  "prompt_version": "v1"
+}

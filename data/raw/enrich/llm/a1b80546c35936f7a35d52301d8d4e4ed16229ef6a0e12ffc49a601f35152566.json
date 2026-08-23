@@ -1,0 +1,40 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:a1b80546c35936f7a35d52301d8d4e4ed16229ef6a0e12ffc49a601f35152566",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Malignant and Benign Breast Lesions",
+        "label": "Malignant and Benign Breast Lesions"
+      },
+      {
+        "evidence": "detecting breast cancer",
+        "label": "breast cancer"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "tcia:advanced-mri-breast-lesions",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "632 breast-MRI imaging sessions acquired on a 1.5T MR system",
+        "value": "MRI"
+      },
+      {
+        "evidence": "radiology report and pathology reports",
+        "value": "pathology"
+      },
+      {
+        "evidence": "collected for 200 patients from clinical notes",
+        "value": "clinical_notes"
+      }
+    ],
+    "population": "Patients undergoing breast MRI at a single institution between 2018-2021; supporting data collected for 200 patients",
+    "summary": "Single-institution retrospective collection of 632 breast MRI sessions from 2018-2021, including standard dynamic contrast-enhanced and delayed contrast series plus treatment response assessment maps, with supporting clinical and pathology data for 200 patients."
+  },
+  "prompt_version": "v1"
+}

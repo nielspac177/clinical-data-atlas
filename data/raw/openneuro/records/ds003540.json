@@ -1,0 +1,105 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003540",
+  "payload": {
+    "created": "2021-02-23T19:34:34.948Z",
+    "id": "ds003540",
+    "latestSnapshot": {
+      "created": "2021-03-20T19:22:39.000Z",
+      "description": {
+        "Authors": [
+          "Benjamin Risk",
+          "Raphiel Murden",
+          "Junjie Wu",
+          "Mary Beth Nebel",
+          "Arun Venkataraman",
+          "Zhengwu Zhang",
+          "Deqiang Qiu"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds003540.v1.0.1",
+        "Funding": [
+          "Image acquisition supported by the Dean's Pilot Grant from the Rollins School of Public Health, Emory University and a Pilot Grant from the Center for Systems Imaging at Emory University",
+          "The research was partially supported by NIH R21AG066970."
+        ],
+        "HowToAcknowledge": "Please reference B. Risk, R. Murden, J. Wu, M. Nebel, A. Venkataraman, Z. Zhang, and D. Qiu. \"Which multiband factor should you choose for your resting-state fMRI study?\" NeuroImage, in press.\n\nhttps://www.sciencedirect.com/science/article/pii/S1053811921002421 ",
+        "License": "CC0",
+        "Name": "Which multiband factor should you choose for your resting-state fMRI study? The Emory Multiband Dataset",
+        "ReferencesAndLinks": [
+          "https://github.com/thebrisklab"
+        ]
+      },
+      "readme": "Introduction\n------------\nThe Emory Multiband Dataset was collected to examine the impacts of multiband acceleration on resting-state fMRI. We collected factors of 2, 3, 4, 6, 8, 9, and 12  with 2-mm isotropic resolution, and additionally 2 mm and 3.3 mm single-band acquisitions, from thirty-two subjects.\n\n\nAcquisition Protocols\n---------------------\nThe acquisition protocols included 6-min scans with AP phase encoding:\n* single-band with 3.3 mm voxel size (TR 3.0 s)\n* single-band with 2 mm voxel size (TR 5.67)\n* multiband with factors 2 (TR 2.85), 3 (TR 1.91), 4 (TR 1.44), 6 (TR 0.962), 8 (TR 0.736), 9 (TR 0.675), 12 (TR 0.512). \n\nIn addition:\n* MB 3 with PA phase encoding; we used this PA SBRef in topup and did not use the bold series (which contained 8 volumes). \n\nsub-28 and sub-31 do not have MB9 acquisitions. \n\nFlip angles were set to achieve the Ernst angle. \n\nEach participant's data is from a single session in the same scanner, and two scanners with identical hardware specifications and software version were used throughout the study (MAGNETOM PrismaFit, software version E11C, Siemens Healthcare, Erlangen, Germany). A thirty-two channel head coil was used.\n\nExample processing scripts are available from the Brain Research in Imaging Statistics Kit at https://github.com/thebrisklab \n  \n\nTask Description: \"rest\" \n--------------------------\nParticipants were asked to lay motionless and look at a cross-hair during resting-state scans. \n\n\nDefacing \n-------- \nPydeface was used on all anatomical images to ensure de-identification of subjects. The code can be found at https://github.com/poldracklab/pydeface\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 98823176646,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31",
+          "32"
+        ],
+        "tasks": [
+          "rest"
+        ],
+        "totalFiles": 627
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": null,
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2021-02-24T02:42:47.184Z"
+  },
+  "source": "openneuro"
+}

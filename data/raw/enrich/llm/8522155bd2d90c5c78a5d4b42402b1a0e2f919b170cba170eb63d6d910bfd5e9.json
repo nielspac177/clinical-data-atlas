@@ -1,0 +1,49 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:8522155bd2d90c5c78a5d4b42402b1a0e2f919b170cba170eb63d6d910bfd5e9",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Thyroid Carcinoma",
+        "label": "Thyroid Carcinoma"
+      },
+      {
+        "evidence": "Epithelial Neoplasms, NOS",
+        "label": "Epithelial Neoplasms, NOS"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "endocrinology_metabolism"
+    ],
+    "id": "gdc:TCGA-THCA",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Tissue Slide, Diagnostic Slide",
+        "value": "pathology"
+      },
+      {
+        "evidence": "WGS, WXS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "Transcriptome Profiling",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Proteome Profiling",
+        "value": "proteomics"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "507 human cases with thyroid carcinoma",
+    "summary": "TCGA thyroid carcinoma project covering thyroid gland tumors, with slide images, whole genome and exome sequencing, RNA and miRNA sequencing, methylation, protein array and clinical data."
+  },
+  "prompt_version": "v1"
+}

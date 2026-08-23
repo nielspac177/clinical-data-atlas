@@ -1,0 +1,87 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007645",
+  "payload": {
+    "created": "2026-04-10T13:12:56.839Z",
+    "id": "ds007645",
+    "latestSnapshot": {
+      "created": "2026-04-11T08:28:26.000Z",
+      "description": {
+        "Authors": [
+          "Ling-Yao Chien",
+          "Chen-Gia Tsai"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007645.v1.0.0",
+        "Funding": [
+          "NSC 112-2410-H-002 -071"
+        ],
+        "HowToAcknowledge": "Please cite the associated publication when using this dataset.",
+        "License": "CC0",
+        "Name": "Cross-linguistic song listening fMRI dataset",
+        "ReferencesAndLinks": []
+      },
+      "readme": "## Dataset Overview\nThis dataset contains task-based functional MRI data collected from 22 Mandarin-speaking participants (mean age = 22.09 years, SD = 2.83; 9 females) with no comprehension of Korean. Participants listened to 30 Korean popular ballads across three conditions manipulating acoustic input type and linguistic semantic access: Music-only (musical soundtrack, no lyrical access), Music-Subtitles (musical soundtrack with Chinese subtitle translations), and Recitation-Subtitles (gender-matched Korean recitation with Chinese subtitle translations). The study examined route-dependent neural reorganization during cross-linguistic song listening. Stimuli comprised 60-second excerpts from Korean ballads published between 1999–2012. The dataset is associated with the publication: Chien, L.-Y., & Tsai, C.-G. (in preparation). Lyrical and Musical Meaning in Songs: fMRI Evidence for Route-Dependent Neural Reorganization across Varying Semantic Access Conditions.\n\n## Data Structure\nData are organized in BIDS format. Each participant folder contains anatomical (anat/) and functional (func/) subdirectories. The anat/ directory contains a T1-weighted MPRAGE image. The func/ directory contains BOLD EPI images for each of the three experimental runs, with corresponding task event files (.tsv) specifying trial onsets, durations, and condition labels (Music-only, Music-Subtitles, Recitation-Subtitles). Each run comprised 10 trials pseudo-randomized across the three conditions, for a total of 30 trials per participant.\n\n## Acquisition Details\nNeuroimaging data were acquired on a 3T Siemens MAGNETOM Prisma scanner with a 20-channel head coil at the Imaging Center for Integrated Body, Mind, and Culture Research, National Taiwan University.\nFunctional imaging: Gradient echo EPI; TR = 2500 ms; TE = 30 ms; flip angle = 90°; FOV = 192 × 192 mm²; matrix = 78 × 78; 45 axial slices; voxel size = 2.46 × 2.46 × 2.5 mm³; interleaved acquisition; no gap; GRAPPA acceleration factor = 2 with 24 reference lines; fat saturation.\nStructural imaging: T1-weighted MPRAGE; TR/TE/TI = 2000/2.3/900 ms; flip angle = 8°; FOV = 240 × 240 mm²; 192 slices; voxel size = 0.94 mm isotropic; GRAPPA factor = 2.",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 7376957322,
+        "subjects": [
+          "12",
+          "19",
+          "15",
+          "10",
+          "02",
+          "01",
+          "14",
+          "06",
+          "20",
+          "17",
+          "07",
+          "08",
+          "21",
+          "03",
+          "11",
+          "05",
+          "22",
+          "13",
+          "16",
+          "18",
+          "09",
+          "04"
+        ],
+        "tasks": [
+          "listen"
+        ],
+        "totalFiles": 246
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "Ministry of Science and Technology, Taiwan",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "This dataset contains task-based fMRI data from 22 Mandarin-speaking adults who listened to Korean popular ballads under three conditions: Music-only (no lyrical access), Music-Subtitles (music with Chinese subtitle translations), and Recitation-Subtitles (gender-matched Korean recitation with Chinese subtitles). The study examined route-dependent neural reorganization during cross-linguistic song listening using eigenvector centrality mapping and seed-based functional connectivity analyses.",
+      "studyDomain": "Cognitive neuroscience, Music cognition, Neuroimaging",
+      "studyLongitudinal": "Other"
+    },
+    "publishDate": "2026-04-11T08:29:55.221Z"
+  },
+  "source": "openneuro"
+}

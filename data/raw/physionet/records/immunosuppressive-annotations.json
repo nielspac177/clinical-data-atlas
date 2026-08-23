@@ -1,0 +1,32 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "immunosuppressive-annotations",
+  "payload": {
+    "abstract": "<p>Immunosuppression due to underlying conditions or immunosuppressive medication use increases the risk of morbidity and mortality in the context of infectious disease. Identifying patients with immunosuppression is important for better studying and understanding the impact of immunosuppression on critical care outcomes. While structured data (e.g., diagnosis codes, medication orders) from the electronic health record (EHR) can help identify patients with immunosuppression, the reliability of structured data is limited as it can miss more nuanced information that is only present in unstructured data, such as patient notes.</p>\n<p>We introduce a dataset for phenotyping immunosuppression, defined as identification of a patient&rsquo;s immune status, based on admission notes. Patient admission notes were extracted from the Medical Information Mart for Intensive Care III (MIMIC-III) dataset, which contains health-related data and clinical notes associated with patients who stayed in critical care units at Beth Israel Deaconess Medical Center between 2001 and 2012. These notes were manually annotated for the presence of several immunosuppressive conditions and immunosuppressive medications.</p>\n<p>Each admission note was independently annotated by two human annotators, and discrepancies were reviewed by an attending critical care physician. Annotated conditions include solid organ transplant, stem cell transplant, HIV, acute leukemia, lymphoma, multiple myeloma, and immunoglobulin deficiency. Annotated medications include azathioprine, cyclosporine, cyclophosphamide, mycophenolate, rituximab, and tacrolimus. This dataset can be leveraged for medical and computer science research, especially as related to the application of natural language processing and large language models (LLMs) in medicine. It can also be used as a starting point for research related to immunosuppression in critically ill patients.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 11318,
+    "core_doi": "10.13026/tfay-qs74",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 32764,
+    "public_project_uuid": "7614c2c1-289a-4dac-946e-679ff364c434",
+    "publish_date": "2025-08-05",
+    "resource_type": "Database",
+    "short_description": "This database contains 200 MIMIC-III admission notes with adjudicated labels for histories of various immunosuppressive conditions and usage of various immunosuppressive medications.",
+    "slug": "immunosuppressive-annotations",
+    "source_url": "https://physionet.org/content/immunosuppressive-annotations/1.0.0/",
+    "title": "Immunosuppressive Condition and Medication Annotations for Admission Notes in the MIMIC-III Database",
+    "topics": [],
+    "version": "1.0.0",
+    "version_doi": "10.13026/etd0-dq69"
+  },
+  "source": "physionet"
+}

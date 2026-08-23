@@ -1,0 +1,49 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:42cc1a73afc4f7871690d279a6d8946a9d71e04acddf42e6f5136815d145572d",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Mature B-Cell Lymphomas",
+        "label": "Mature B-Cell Lymphomas"
+      },
+      {
+        "evidence": "lymphoma",
+        "label": "lymphoma"
+      },
+      {
+        "evidence": "HIV+",
+        "label": "HIV+"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "infectious_disease"
+    ],
+    "id": "gdc:CGCI-HTMCP-DLBCL",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "WGS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "RNA-Seq, miRNA-Seq",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Tissue Slide",
+        "value": "pathology"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "70 human cases of diffuse large B-cell lymphoma in HIV-positive patients",
+    "summary": "Molecular characterization of diffuse large B-cell lymphoma in HIV-positive patients, using whole-genome sequencing, RNA-Seq, miRNA-Seq, copy number and structural variation, tissue slides, biospecimen and clinical data."
+  },
+  "prompt_version": "v1"
+}

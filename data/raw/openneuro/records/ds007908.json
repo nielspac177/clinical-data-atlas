@@ -1,0 +1,133 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007908",
+  "payload": {
+    "created": "2026-06-05T19:49:30.359Z",
+    "id": "ds007908",
+    "latestSnapshot": {
+      "created": "2026-08-17T21:00:02.000Z",
+      "description": {
+        "Authors": [
+          "Amy Kuceyeski",
+          "Keith W. Jamison",
+          "Ke Huang",
+          "Yeona Kang",
+          "Sandra Hurtado Rua",
+          "Noel George",
+          "Susan A. Gauthier"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007908.v1.1.0",
+        "Funding": [
+          "NIH/NINDS 1R01NS134646-01A1 (SG and AK)"
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Multi-scale, multi-modal imaging assessment of trajectories of cognitive impairment in Multiple Sclerosis",
+        "ReferencesAndLinks": [
+          ""
+        ]
+      },
+      "readme": "# Multi-scale, multi-modal imaging assessment of trajectories of cognitive impairment in Multiple Sclerosis\n\n## Dataset Overview\n\nThis dataset contains longitudinal, multi-modal MRI data collected as part of a study examining the neural mechanisms underlying cognitive impairment in people with multiple sclerosis (MS). The study employs a multi-scale, multi-modal imaging approach to characterize macroscopic brain network changes, assessed via functional and structural connectivity, alongside microscopic neuronal integrity markers. The goal is to identify patients at risk for cognitive decline and informing the development of personalized, neurobiologically-based therapies.\n\n## Study Description\n\nThe full study will include longitudinal scanning over approximately 4 years in 66 participants with MS and 30 healthy controls. This dataset represents the first release, containing baseline (`ses-1`) data for 20 MS patients and 8 healthy controls. Additional sessions and participants will be added as data collection proceeds.\n\n## Authors\n\nSusan A. Gauthier, Amy Kuceyeski, Keith W. Jamison, Ke Huang, Yeona Kang, Sandra Hurtado Rua, Noel George\n\nFor questions, contact: **Susan A. Gauthier** (sag2015@med.cornell.edu), Department of Neurology, Weill Cornell Medicine  \n\n## Funding\n\nThis study was supported by the National Institutes of Health / National Institute of Neurological Disorders and Stroke (NIH/NINDS) under grant number 1R01NS134646-01A1.\n\n## MRI Scanner\n\nAll data were acquired on a **3 Tesla Siemens Prisma** scanner (Prisma_fit, syngo MR E11) at Citigroup Biomedical Imaging Center, Weill Cornell Medicine, using a 64-channel head/neck coil.\n\n## Dataset Contents\n\nThis BIDS dataset includes the following modalities for each participant and session:\n\n### Anatomical (anat/)\n\n**T1-weighted MPRAGE** - 3D sagittal acquisition for cortical parcellation, gray matter volumetry, and image registration.\n\n- Resolution: 0.8 mm isotropic\n- Matrix: 320 x 320\n- TR / TE / TI: 2400 / 3.14 / 900 ms\n- Flip angle: 9°\n- GRAPPA acceleration: 2x\n- De-faced using FreeSurfer MiDeFace\n\n**T2-weighted FLAIR** - 3D sagittal fluid-attenuated inversion recovery acquisition for white matter lesion identification and segmentation.\n\n- Resolution: 0.8 mm isotropic\n- Matrix: 320 x 320\n- TR / TE / TI: 6600 / 390 / 2100 ms\n- Flip angle: 120°\n- GRAPPA acceleration: 3x\n- Echo train length: 240\n- De-faced using FreeSurfer MiDeFace\n\n*Protocol variations:* 2 of 28 subjects deviate from the standard FLAIR protocol above:\n\n- **sub-1985**: same protocol (`3D FLAIR SPACE FS`), but reconstructed at a different resolution: 0.98 mm slice thickness with in-plane matrix interpolated to 512 x 512 (0.49 mm), vs. the native 256 acquisition matrix. Echo train length 251, bandwidth 750 Hz/px.\n- **sub-9005**: different protocol (`SAG T2FLAIR 1x1x1`): 1.0 mm isotropic, matrix 256 x 256, TR / TE / TI 7600 / 448 / 2450 ms, GRAPPA 2x, echo train length 273, bandwidth 780 Hz/px.\n\n### Functional MRI (func/)\n\n**Multi-echo resting-state fMRI (BOLD)** - acquired using the CMRR multiband EPI sequence (`cmrr_mbep2d_bold`) with 5 echoes. Each subject has up to 2 runs (`run-1` and `run-2`); 2 subjects (sub-1567, sub-9001) have only `run-1`. Single-band reference (sbref) images are included for each echo and run.\n\n- Echo times (TE): 13.4, 31.1, 48.8, 66.5, 84.2 ms\n- TR: 1.355 s\n- Multiband acceleration factor: 6\n- In-plane GRAPPA: 2x\n- Flip angle: 68°\n- Voxel size: 2.4 mm isotropic\n- Slices: 72\n- Matrix: 90 x 90\n- Run duration: ~867 s (640 volumes per run)\n- Task: resting-state (eyes open)\n\nMulti-echo data should be preprocessed with a ME-ICA-compatible pipeline (e.g., [tedana](https://tedana.readthedocs.io)) prior to functional connectivity analysis.\n\n### Field Maps (fmap/)\n\n**Spin-echo EPI fieldmap pairs (AP/PA)** - blip-up/blip-down acquisitions for \nsusceptibility distortion correction of the multi-echo fMRI data. Two pairs are \npresent per session (run-1 and run-2), with `IntendedFor` fields in the JSON \nsidecars linking each pair to its corresponding fMRI run.\n\n- Sequence: `SpinEchoFieldMap_AP` / `SpinEchoFieldMap_PA`\n- Voxel size: 2.4 mm isotropic\n- Slices: 72\n- TE: 75 ms; TR: 7.08 s\n\n### Diffusion-Weighted Imaging (dwi/)\n\n**Multi-shell DWI** - based on the HCP-Lifespan protocol, acquired in both AP and PA phase-encoding directions (2 runs per direction). 3 subjects (sub-0858, sub-1985, and sub-9005) have only `run-1`. Refer to the `.bval` and `.bvec` files for the complete gradient scheme.\n\n- Sequence: `DWI_Harm_98Dir_InvPE-Off` (`cmrr_mbep2d_diff`)\n- b-values: 0, 1500, 3000 s/mm²\n- Directions: ~92 per shell (98 total directions per run including b=0)\n- Phase-encoding: AP and PA (with `run-1` and `run-2` for each)\n- Voxel size: 1.5 mm isotropic\n- Multiband acceleration: 4x\n- TE / TR: 89.2 / 3230 ms\n\n### Perfusion (perf/)\n\n**Pseudo-continuous ASL (PCASL)** - 3D Turbo Gradient Spin Echo (tgse) PCASL sequence (`tgse_pcasl_ve11e`) for quantification of cerebral blood flow (CBF). Each session consists of 11 control/label pairs (22 volumes total), stored in acquisition order and described by an accompanying `_aslcontext.tsv`. No separate M0 scan was acquired; CBF quantification should use the control images as an M0 approximation (`M0Type: Absent`).\n\n- Labeling type: PCASL\n- Labeling duration: 700 ms\n- Post-labeling delay (PLD): 2000 ms (single-PLD)\n- Background suppression: on\n- Total acquired pairs: 11 (22 volumes)\n- Acquired voxel size: 3.75 mm isotropic (reconstructed to 1.875 x 1.875 x 2.5 mm via scanner interpolation)\n- Matrix: 64 x 64 acquired, reconstructed to 128 x 128\n- Slices: 48\n- FOV: 240 mm\n- TR / TE: 4000 / 35.3 ms\n- Flip angle: 120°\n- 3D EPI readout (EPI factor 57, turbo factor 14)\n\n## Participants\n\n| Group | Current N (ses-1) |\n|---|---|\n| MS patients | 20 |\n| Healthy controls | 8 |\n| **Total** | **28** |\n\nGroup assignments (`patient` / `control`) are provided in `participants.tsv`. This table will be updated as additional participants and sessions are released.\n\n## Sessions\n\nThis release contains only baseline data (`ses-1`) for each participant. Longitudinal follow-up sessions will be added as data collection proceeds over the course of the approximately 4-year study.\n\n## Notes on Missing Data\n\n- sub-1567 and sub-9001 have only one fMRI run (`run-1`). All other participants have two runs.\n- sub-0858, sub-1985, and sub-9005 have only half the diffusion data (`run-1`). These contain both AP and PA and all shells, but only half the diffusion directions.\n- PCASL data are absent for sub-1567 and sub-9005\n- sub-1985 and sub-9005 have FLAIR images acquired with a different resolution/protocol than the rest of the cohort.\n\n## License\n\nThis dataset is made available under the [Creative Commons CC0 1.0 Universal (CC0 1.0) Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/).",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_diffusion",
+          "mri_structural",
+          "mri_perfusion"
+        ],
+        "sessions": [
+          "1"
+        ],
+        "size": 176583189254,
+        "subjects": [
+          "0620",
+          "0241",
+          "0571",
+          "3188",
+          "2063",
+          "9006",
+          "0040",
+          "0048",
+          "0106",
+          "0422",
+          "0623",
+          "0655",
+          "0708",
+          "0858",
+          "0896",
+          "1231",
+          "1567",
+          "1985",
+          "2449",
+          "3801",
+          "5000",
+          "9001",
+          "9003",
+          "9004",
+          "9005",
+          "9008",
+          "9000",
+          "9002"
+        ],
+        "tasks": [
+          "rest"
+        ],
+        "totalFiles": 1918
+      },
+      "tag": "1.1.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        58,
+        56,
+        45,
+        52,
+        52,
+        52,
+        48,
+        57,
+        55,
+        39,
+        50,
+        42,
+        49,
+        39,
+        47,
+        38,
+        38,
+        31,
+        49,
+        33,
+        57,
+        50,
+        43,
+        33,
+        33,
+        31,
+        23,
+        40
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2026-06-10T13:24:38.230Z"
+  },
+  "source": "openneuro"
+}

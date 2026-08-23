@@ -1,0 +1,43 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:b48d5dfce9883eaa2efa604e71bee9dab2e1adaf1dbec0d69815d598ec3ec4f0",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "patients with malignant lymphoma, melanoma and non small cell lung cancer (NSCLC)",
+        "label": "malignant lymphoma"
+      },
+      {
+        "evidence": "malignant lymphoma, melanoma and non small cell lung cancer",
+        "label": "melanoma"
+      },
+      {
+        "evidence": "non small cell lung cancer (NSCLC)",
+        "label": "non small cell lung cancer (NSCLC)"
+      }
+    ],
+    "countries": [
+      "DE"
+    ],
+    "domains": [
+      "oncology",
+      "pulmonology"
+    ],
+    "id": "tcia:fdg-pet-ct-lesions",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "a whole-body FDG-PET scan was acquired 60 minutes after I.V. injection",
+        "value": "PET"
+      },
+      {
+        "evidence": "a diagnostic CT scan (mainly from skull base to mid-thigh level)",
+        "value": "CT"
+      }
+    ],
+    "population": "501 consecutive whole body FDG-PET/CT data sets of patients with malignant lymphoma, melanoma and NSCLC, plus 513 data sets without PET-positive malignant lesions, examined between 2014 and 2018 at the University Hospital Tübingen",
+    "summary": "Whole-body FDG-PET/CT studies with manually annotated tumor lesions, acquired on a single scanner, covering patients with lymphoma, melanoma or non small cell lung cancer plus PET-negative controls, for machine learning development."
+  },
+  "prompt_version": "v1"
+}

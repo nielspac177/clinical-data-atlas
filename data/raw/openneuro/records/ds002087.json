@@ -1,0 +1,65 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds002087",
+  "payload": {
+    "created": "2019-08-01T16:21:42.275Z",
+    "id": "ds002087",
+    "latestSnapshot": {
+      "created": "2019-08-01T16:25:34.000Z",
+      "description": {
+        "Authors": [
+          "Alexandra Koch",
+          "Rüdiger Stirnberg",
+          "Tony Stöcker",
+          "Thomas Schultz"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds002087.v1.0.0",
+        "Funding": null,
+        "HowToAcknowledge": "Please cite the paper in References and Links when using this data.",
+        "License": "CC0",
+        "Name": "Datasets with and without deliberate head movements for detection and imputation of dropout in diffusion MRI",
+        "ReferencesAndLinks": [
+          "Koch A, Zhukov A, Stöcker T, Groeschel S, Schultz T. SHORE‐based detection and imputation of dropout in diffusion MRI. Magn Reson Med. 2019;00:1–13. https ://doi.org/10.1002/mrm.27893"
+        ]
+      },
+      "readme": "This is the diffusion MRI data acquired with and without deliberate head movements and used to investigate the correction of signal dropout as described in the following publication:\n\nKoch A, Zhukov A, Stöcker T, Groeschel S, Schultz T. SHORE‐based detection and imputation of dropout in diffusion MRI. Magn Reson Med. 2019;00:1–13. https ://doi.org/10.1002/mrm.27893\n\nThe folder /sub-01/dwi contains diffusion-weighted MRI data with (run-2) and without (run-1) deliberate head movements, the corresponding bvec and bval files.\nAdditional b=0 scans acquired with reverse phase encoding (revpe) polarity are located in the folder /bidsignore/sub-01.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_diffusion"
+        ],
+        "sessions": [],
+        "size": 114327744,
+        "subjects": [
+          "01"
+        ],
+        "tasks": [],
+        "totalFiles": 10
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": null,
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2019-08-01T22:00:13.589Z"
+  },
+  "source": "openneuro"
+}

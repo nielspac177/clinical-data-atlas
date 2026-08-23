@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:0c867f554fd3cf343cdc47ebc80c65f65ca5949873f2bc7b74de035b9dab0553",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Cardiac Arrhythmia Suppression Trial",
+        "label": "arrhythmia, cardiac"
+      },
+      {
+        "evidence": "survivors of myocardial infarction (MI)",
+        "label": "myocardial infarction"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:crisdb",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "long-term ECG (Holter) recording",
+        "value": "ECG"
+      }
+    ],
+    "population": "3,549 patients who were survivors of myocardial infarction within the preceding 2 years with 6 or more PVCs per hour on a qualifying Holter recording; ejection fraction limits applied by enrollment window",
+    "summary": "RR interval data from the Cardiac Arrhythmia Suppression Trial, testing whether suppressing ventricular premature complexes after myocardial infarction improves survival. Enrollment required a recent MI and frequent PVCs on Holter recording."
+  },
+  "prompt_version": "v1"
+}

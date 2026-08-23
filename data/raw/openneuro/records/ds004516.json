@@ -1,0 +1,115 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004516",
+  "payload": {
+    "created": "2023-03-02T13:40:55.409Z",
+    "id": "ds004516",
+    "latestSnapshot": {
+      "created": "2025-04-14T16:30:21.000Z",
+      "description": {
+        "Authors": [
+          "Clara Sava-Segal",
+          "Chandler Richards",
+          "Megan Leung",
+          "Daniel A. Handwerker",
+          "Javier Gonzalez-Castillo",
+          "Peter J. Molfese",
+          "Peter A Bandettini",
+          "Emily S. Finn"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004516.v2.0.3",
+        "Funding": null,
+        "HowToAcknowledge": "Please cite this dataset and our corresponding paper -- \nClara Sava-Segal, Chandler Richards, Megan Leung, Emily S Finn, Individual differences in neural event segmentation of continuous experiences, Cerebral Cortex, Volume 33, Issue 13, 1 July 2023, Pages 8164–8178, https://doi.org/10.1093/cercor/bhad106",
+        "License": "CC0",
+        "Name": "AVID: Audio-Visual Individual Differences dataset",
+        "ReferencesAndLinks": null
+      },
+      "readme": "Paper: https://doi.org/10.1093/cercor/bhad106\n\nFour stimuli were used:\n\n(Note that the versions presented to subjects were edited to remove credits and title pages; these edited versions are available upon request out of courtesy to the filmmakers, which is why they are not in the stimuli folder).\n\n<b> Stimuli Description </b>\n- Iteration (https://youtu.be/c53fGdK84rc; 12:27 min:s) is a sci-fi movie that follows a female character as she goes through multiple iterations of waking up and trying to escape a facility. A male character appears toward the end to help her. \n- Defeat (https://youtu.be/6yN9VH_4GSQ; 7:57 min:s) follows a family of three (mother, two children) as the brother bullies his sister and she builds a time machine to go back and get revenge. \n- Growth (https://youtu.be/JyvFXBA3O8o; 8:27 min:s) follows a family of four (mother, father, two brothers) as the children grow up and eventually move out amid some family conflict. \n- Lemonade (https://youtu.be/Av07QiqmsoA; 7:27 min:s) is a Rube-Goldberg machine consisting of a series of objects that move throughout a house and ends in the pouring of a cup of lemonade. This movie was lightly edited to remove fleeting shots of human characters. \n\n<b> Additional information </b>\nIteration and Defeat both contained screen cuts (continuity editing), whereas Growth and Lemonade were shot in a continuous fashion with the camera panning smoothly from one scene to the next.\n\nRuns are a bit longer than the movie stimuli themselves. We recommend dropping the first 2 TRs and the last 11 TRs for each functional run of Growth, Lemonade and Iteration and 12 TRs for Defeat (start and stop padding). Please reach out if you have any questions.\n\n<i>Growth:</i>\n- Total TRs: 517\n- Dropped: First 2 TRs and last 11 TRs\n- Remaining TRs: 504\n\n<i>Lemonade</i>\n- Total TRs: 461\n- Dropped: First 2 TRs and last 11 TRs\n- Remaining TRs: 448\n\n<i>Defeat</i>\n- Total TRs: 492\n- Dropped: First 2 TRs and last 12 TRs\n- Remaining TRs: 478\n\n<i> Iteration</i>\n- Total TRs: 760\n- Dropped:  First 2 TRs and last 11 TRs \n- Remaining TRs: 747\n\nDerivatives\n\nThis folder has preprocessed data - one with a shared response model applied ('nocensor_srm-recon') and one without ('_nocensor')\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 230587435984,
+        "subjects": [
+          "NSD107",
+          "NSD106",
+          "NSD134",
+          "NSD120",
+          "NSD115",
+          "NSD124",
+          "NSD148",
+          "NSD112",
+          "NSD127",
+          "NSD126",
+          "NSD147",
+          "NSD135",
+          "NSD146",
+          "NSD151",
+          "NSD129",
+          "NSD149",
+          "NSD103",
+          "NSD105",
+          "NSD132",
+          "NSD109",
+          "NSD122",
+          "NSD140",
+          "NSD138",
+          "NSD136",
+          "NSD150",
+          "NSD104",
+          "NSD114",
+          "NSD133",
+          "NSD111",
+          "NSD116",
+          "NSD142",
+          "NSD125",
+          "NSD119",
+          "NSD110",
+          "NSD113",
+          "NSD145",
+          "NSD128",
+          "NSD108",
+          "NSD155",
+          "NSD123",
+          "NSD130",
+          "NSD117",
+          "NSD153"
+        ],
+        "tasks": [
+          "defeat",
+          "lemonade",
+          "growth",
+          "iteration"
+        ],
+        "totalFiles": 1078
+      },
+      "tag": "2.0.3"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": "https://doi.org/10.1101/2022.09.09.507003",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2023-03-07T03:28:46.609Z"
+  },
+  "source": "openneuro"
+}

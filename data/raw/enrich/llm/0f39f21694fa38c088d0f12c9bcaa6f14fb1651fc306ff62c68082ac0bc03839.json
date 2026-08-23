@@ -1,0 +1,58 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:0f39f21694fa38c088d0f12c9bcaa6f14fb1651fc306ff62c68082ac0bc03839",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Neoplasms, NOS",
+        "label": "Neoplasms, NOS"
+      },
+      {
+        "evidence": "Adenomas and Adenocarcinomas",
+        "label": "Adenomas and Adenocarcinomas"
+      },
+      {
+        "evidence": "Nevi and Melanomas",
+        "label": "Nevi and Melanomas"
+      },
+      {
+        "evidence": "Epithelial Neoplasms, NOS",
+        "label": "Epithelial Neoplasms, NOS"
+      },
+      {
+        "evidence": "Ductal and Lobular Neoplasms",
+        "label": "Ductal and Lobular Neoplasms"
+      },
+      {
+        "evidence": "Squamous Cell Neoplasms",
+        "label": "Squamous Cell Neoplasms"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "pulmonology",
+      "gastroenterology_hepatology"
+    ],
+    "id": "gdc:MATCH-Z1I",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Simple Nucleotide Variation, Sequencing Reads",
+        "value": "genomics"
+      },
+      {
+        "evidence": "Transcriptome Profiling",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "26 human cases with tumors of the female genital organs, lung, breast, pancreas, anus, lip/oral cavity/pharynx, gallbladder, rectum, ovary and parotid gland",
+    "summary": "Genomic characterization of one MATCH trial arm covering lung, breast, pancreatic, anal, rectal, ovarian and oral tumors. Provides WXS and RNA-Seq reads, variation calls, transcriptome profiling, biospecimen and clinical data."
+  },
+  "prompt_version": "v1"
+}

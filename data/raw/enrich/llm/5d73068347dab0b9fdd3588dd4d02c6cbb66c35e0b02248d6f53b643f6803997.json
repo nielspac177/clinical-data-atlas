@@ -1,0 +1,28 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:5d73068347dab0b9fdd3588dd4d02c6cbb66c35e0b02248d6f53b643f6803997",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "pulmonology",
+      "other"
+    ],
+    "id": "physionet:radvlm-instruction-dataset",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "chest X-ray interpretation",
+        "value": "xray"
+      },
+      {
+        "evidence": "report generation from frontal CXRs",
+        "value": "clinical_notes"
+      }
+    ],
+    "population": null,
+    "summary": "Instruction dataset of chest X-ray image-instruction pairs covering report generation, abnormality classification, anatomy grounding, abnormality detection and phrase grounding, plus multi-turn conversations, for training chest X-ray assistants."
+  },
+  "prompt_version": "v1"
+}

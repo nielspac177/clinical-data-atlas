@@ -1,0 +1,67 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005625",
+  "payload": {
+    "created": "2024-11-07T19:43:11.594Z",
+    "id": "ds005625",
+    "latestSnapshot": {
+      "created": "2024-12-08T09:00:33.000Z",
+      "description": {
+        "Authors": [
+          "Rovai, Antonin"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005625.v2.0.0",
+        "Funding": [],
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "Connectomix test dataset 1",
+        "ReferencesAndLinks": [
+          ""
+        ]
+      },
+      "readme": "# Connectomix test dataset 1\nThis dataset is designed to test features of connectomix. For more information, please visit the GitHub repository:\n\n[https://github.com/ln2t/connectomix](https://github.com/ln2t/connectomix)\n\nOnly one participant is included in this dataset.\n\n## Rawdata\n- Anatomical: T1w image (defaced)\n- Functional: A standard 6 minutes resting-state scan\n\n## Derivatives\n- fmriprep: preprocessed data using fMRIPrep\n- fmripost-aroma: outputs of fmripost-aroma, necessary if using AROMA denoising in connectomix\n- connectomix: results of the connectomix software (see below for details)\n\n## Commands\nThe exact commands to run the analyzes depends on your installation of fMRIPrep and fmripost-aroma.\nIn what follows, we simply assume that `fmriprep` and `fmripost-aroma` are the commands for these tools.\nWe show here the simplest version of the commands, assuming you adapt those depending on your setup (e.g. if you use Docker).\n\nWe also assume that the data are at the following locations:\n```bash\nbids_dir='/data/ds005625'\nderivatives_dir='/data/ds005625/derivatives'\n```\n\n### Preprocessing (fMRIPrep)\n```bash\nfmriprep $bids_dir ${derivatives_dir}/fmriprep participant --fs-license-file /path/to/fs/license\n```\n\n**Note:** if you plan to use AROMA-denoising in connectomix, we recommend running fMRIPrep with the `--output-spaces MNI152NLin6Asym:res-02` option enabled (see below):\n```bash\nfmriprep $bids_dir ${derivatives_dir}/fmriprep participant --fs-license-file /path/to/fs/license --output-spaces MNI152NLin6Asym:res-02\n```\n\n### Preprocessing (fmripost-aroma - optional)\nThis step is required only for the AROMA-denoising strategy in connectomix. If data have been preprocessed using the `--output-spaces MNI152NLin6Asym:res-02` option, then we can use fmripost-aroma as follows:\n```bash\nfmripost-aroma $bids_dir ${derivatives_dir}/fmripost-aroma participant `--denoising-method nonaggr`.\n```\n\n### Analysis: connectomix\n*Note:* The following has been tested for connectomix version 1.0.1.\n\nFirst set-up path to connectomix script:\n```bash\nconnectomix_cmd='/path/to/connectomix/connectomix/connectomix.py'\n```\n\nSecond, set-up paths to config directory:\n```bash\nconfig_dir='/data/ds005625/code/connectomix/config'\n```\n\nThen run the analyzes as follows:\n```bash\n$connectomix_cmd ${bids_dir} ${derivatives_dir}/connectomix participant --derivatives fmriprep=\"${derivatives_dir}/fmriprep\" --config \"${config_dir}/method-schaeffer100_participant_level_config.yaml\" && \\\n$connectomix_cmd ${bids_dir} ${derivatives_dir}/connectomix participant --derivatives fmriprep=\"${derivatives_dir}/fmriprep\" --config \"${config_dir}/method-aal_participant_level_config.yaml\" && \\\n$connectomix_cmd ${bids_dir} ${derivatives_dir}/connectomix participant --derivatives fmriprep=\"${derivatives_dir}/fmriprep\" --config \"${config_dir}/method-harvardoxford_participant_level_config.yaml\" && \\\n$connectomix_cmd ${bids_dir} ${derivatives_dir}/connectomix participant --derivatives fmriprep=\"${derivatives_dir}/fmriprep\" --config \"${config_dir}/method-ICA_participant_level_config.yaml\" && \\\n$connectomix_cmd ${bids_dir} ${derivatives_dir}/connectomix participant --derivatives fmriprep=\"${derivatives_dir}/fmriprep\" --config \"${config_dir}/method-seeds_participant_level_config.yaml\" && \\\n$connectomix_cmd ${bids_dir} ${derivatives_dir}/connectomix participant --derivatives fmriprep=\"${derivatives_dir}/fmriprep\" fmripost-aroma=\"${derivatives_dir}/fmripost-aroma\" --config \"${config_dir}/method-aroma_participant_level_config.yaml\"  # Requires fmripost-aroma outputs\n```\n\n**Notes**:\n- the ICA-based analysis does not make much sense in this case as there is only only participant. The software runs without crashing and without warning in that case, so make sure you understand what you're doing.\n- the seed-based analysis uses seeds specified in `/code/ds005625/connectomix/seeds/brain_and_cerebellum_seeds.tsv`. The exact path to use is specified in the corresponding config file, namely `${config_dir}/method-seeds_participant_level_config.yaml`, and must be adapted to match your paths.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural",
+          "mri_functional"
+        ],
+        "sessions": [],
+        "size": 138981023,
+        "subjects": [
+          "042"
+        ],
+        "tasks": [
+          "restingstate"
+        ],
+        "totalFiles": 9
+      },
+      "tag": "2.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        47
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "resting-state",
+      "studyDomain": "resting-state",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2024-12-08T09:01:14.823Z"
+  },
+  "source": "openneuro"
+}

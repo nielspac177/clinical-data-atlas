@@ -1,0 +1,84 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006917",
+  "payload": {
+    "created": "2025-11-09T19:40:42.090Z",
+    "id": "ds006917",
+    "latestSnapshot": {
+      "created": "2025-11-11T09:08:35.000Z",
+      "description": {
+        "Authors": [
+          "Tommaso Volpi",
+          "Richard E. Carson"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006917.v1.0.2",
+        "Funding": [
+          "U01EB029811"
+        ],
+        "HowToAcknowledge": "Volpi T, Toyonaga T, Khattar N, Gallezot JD, Naganawa M, Vanderlinden G, Honhar P, Zeng T, Fontaine K, Mulnix T, Hu L, Sun X, Henry S, Matuskey D, Radhakrishnan R, Guo L, Hu Y, Zhang J, Zheng X, Nabulsi N, Huang Y, Badawi RD, Cherry SR, Hillmer AT, Jones T, Liu C, Morris E, Qi J, Li H, Carson RE. Exceptional brain PET images from the NeuroEXPLORER: scans with targeted radiopharmaceuticals and comparison to HRRT. Eur J Nucl Med Mol Imaging. 2025 Nov 3. https://doi.org/10.1007/s00259-025-07605-4. Epub ahead of print. PMID: 41177836.",
+        "License": "CC0",
+        "Name": "Exceptional brain PET images from the NeuroEXPLORER: scans with targeted radiopharmaceuticals and comparison to HRRT",
+        "ReferencesAndLinks": [
+          "Volpi T, Toyonaga T, Khattar N, Gallezot JD, Naganawa M, Vanderlinden G, Honhar P, Zeng T, Fontaine K, Mulnix T, Hu L, Sun X, Henry S, Matuskey D, Radhakrishnan R, Guo L, Hu Y, Zhang J, Zheng X, Nabulsi N, Huang Y, Badawi RD, Cherry SR, Hillmer AT, Jones T, Liu C, Morris E, Qi J, Li H, Carson RE. Exceptional brain PET images from the NeuroEXPLORER: scans with targeted radiopharmaceuticals and comparison to HRRT. Eur J Nucl Med Mol Imaging. 2025 Nov 3. https://doi.org/10.1007/s00259-025-07605-4. Epub ahead of print. PMID: 41177836."
+        ]
+      },
+      "readme": "Exceptional brain PET images from the NeuroEXPLORER: scans with targeted radiopharmaceuticals and comparison to HRRT\n\n\nSeven healthy individuals with paired scans on the High Resolution Research Tomograph (HRRT) and NeuroEXPLORER (NX) with targeted radiopharmaceuticals (18F-FDG; 18F-SynVesT-1; 18F-FPEB; 18F-Flubatine; 11C-PHNO; 18F-FE-PE2I; 11C-DASB). \n\nMagnetic resonance imaging (MRI) T1-weighted (T1w) images with 1.0-mm isotropic voxels are provided.\n \nAs to PET images, on both NX and HRRT, images were reconstructed using a 3-D ordered-subset expectation–maximization (OSEM) algorithm (NX: 7 iterations, 10 subsets, 0.5-mm isotropic voxels, with the exception of 11C-PHNO: 4 iterations, 10 subsets; HRRT: 2 iterations, 30 subsets, 1.2-mm isotropic voxels) with corrections for point spread function, attenuation, scatter, randoms, and deadtime. The NX reconstruction also included TOF, depth of interaction, and inter-crystal scatter correction. No post-reconstruction filtering was applied for either scanner.\nThe HRRT motion-corrected dynamic data were mapped to NX space, by combining the HRRT-to-T1w and NX-to-T1w linear transformations.\n\nEarly (0-10 min) and late images are provided. For the late images, different time windows were used: 60–90 min for 18F-FDG, 18F-SynVesT-1 and 18F-FPEB, 40–60 min for 11C-PHNO and 11C-DASB, 40–90 min for 18F-FE-PE2I, and 60–120 min for 18F-Flubatine. \n\n\n\nPaper:\n\nVolpi T, Toyonaga T, Khattar N, Gallezot JD, Naganawa M, Vanderlinden G, Honhar P, Zeng T, Fontaine K, Mulnix T, Hu L, Sun X, Henry S, Matuskey D, Radhakrishnan R, Guo L, Hu Y, Zhang J, Zheng X, Nabulsi N, Huang Y, Badawi RD, Cherry SR, Hillmer AT, Jones T, Liu C, Morris E, Qi J, Li H, Carson RE. Exceptional brain PET images from the NeuroEXPLORER: scans with targeted radiopharmaceuticals and comparison to HRRT. Eur J Nucl Med Mol Imaging. 2025 Nov 3. https://doi.org/10.1007/s00259-025-07605-4. Epub ahead of print. PMID: 41177836.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "pet",
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural"
+        ],
+        "sessions": [
+          "nx",
+          "hrrt"
+        ],
+        "size": 2962998974,
+        "subjects": [
+          "003",
+          "001",
+          "005",
+          "002",
+          "007",
+          "004",
+          "006"
+        ],
+        "tasks": [],
+        "totalFiles": 90
+      },
+      "tag": "1.0.2"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "pet",
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": "Longitudinal"
+    },
+    "publishDate": "2025-11-09T19:51:56.661Z"
+  },
+  "source": "openneuro"
+}

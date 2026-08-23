@@ -1,0 +1,48 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "mimic-ext-drug-detection",
+  "payload": {
+    "abstract": "<p>This project shares a large, annotated drug detection dataset created from MIMIC-III/IV discharge summaries. The dataset was developed to address the challenge of identifying substance use behaviors in Electronic Health Records (EHRs), where critical details are often embedded in unstructured notes requiring contextual interpretation. The primary aim was to support future systemic substance use surveillance. The data consists of medical notes tokenized into sentences, annotated for eight substance use categories: heroin, cocaine, methamphetamine, illicit use of prescription opioids and benzodiazepines, cannabis, Injection Drug Use (IDU), and general drug use. The dataset was used to evaluate the performance of various large language models (LLMs) for detecting these substance use categories, demonstrating that LLMs, particularly a fine-tuned model, can significantly enhance detection accuracy and show promise for clinical decision support and research.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 396499,
+    "core_doi": "10.13026/e8ew-ed16",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 1320786,
+    "public_project_uuid": "d96a3a51-590b-4870-9cb9-d09e1f39b240",
+    "publish_date": "2025-09-25",
+    "resource_type": "Database",
+    "short_description": "This project offers a multilabel annotated dataset of clinical note sentences from MIMIC-III/IV for substance use detection. It supports NLP research for identifying various co-occurring drug use mentions in patient records.",
+    "slug": "mimic-ext-drug-detection",
+    "source_url": "https://physionet.org/content/mimic-ext-drug-detection/1.0.0/",
+    "title": "MIMIC-Ext-DrugDetection",
+    "topics": [
+      "prescription opioid misuse",
+      "cannabis",
+      "benzodiazepine misuse",
+      "ehr",
+      "injection drug use",
+      "heroin",
+      "methamphetamine",
+      "substance use",
+      "multi-label",
+      "cocaine",
+      "drug detection",
+      "polysubstance use",
+      "mimic-iv",
+      "mimic-iii",
+      "clinical notes"
+    ],
+    "version": "1.0.0",
+    "version_doi": "10.13026/0kyx-r485"
+  },
+  "source": "physionet"
+}

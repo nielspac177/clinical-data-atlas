@@ -1,0 +1,159 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007036",
+  "payload": {
+    "created": "2025-12-08T09:41:17.741Z",
+    "id": "ds007036",
+    "latestSnapshot": {
+      "created": "2026-05-08T01:34:40.000Z",
+      "description": {
+        "Authors": [
+          "Thomas B Shaw",
+          "Aiman al Najjar",
+          "Markus Barth",
+          "Steffen Bollmann",
+          "Pierrick Bourgeat",
+          "Jeryn Chang",
+          "Harriet Dempsey-Jones",
+          "Amir Fazlollahi",
+          "Jurgen Fripp",
+          "Natalie Garden",
+          "Christine Guo",
+          "Robert D Henderson",
+          "Elaine Kuan",
+          "Jinglei Lv",
+          "Pamela A McCombe",
+          "Aswin Narayanan",
+          "Shyuan Ngo",
+          "Vinh Ngyuen",
+          "Kieran O'Brien",
+          "Gail Robinson",
+          "Simon Robinson",
+          "Olivier Salvado",
+          "Ashley Stewart",
+          "Frederik Steyn",
+          "Saskia Bollmann"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007036.v1.1.3",
+        "Funding": [
+          "TS is supported by a Motor Neurone Disease Research Australia (MNDRA) Postdoctoral Research Fellowship (PDF2112), NHMRC Ideas grant APP2029871, and a FightMND Early Career Fellowship grant ECR-202503-01848. JC is supported by the UQ Graduate School Scholarship (RTP) and the MNDRA PhD Scholarship Top-up Grant (TU2201). J. Lv is supported by Brain and Mind Centre Research Development Grant, USYD-Fudan Brain and Intelligence Science Alliance Flagship Research Program, Moyira Elizabeth Vine Fund for Research into Schizophrenia Program and ARC Discovery Project (DP240102161). STN acknowledges support through a FightMND Mid-Career Research Fellowship, and the Australian Institute for Bioengineering and Nanotechnology. GR acknowledges the support of an NHMRC Boosting Dementia Research Leadership Fellowship (APP1135769). HDJ is funded by an Australian Research Council Discovery Project grant (DP250103627). The authors acknowledge funding through an ARC Linkage grant (LP200301393). The financial support by the Austrian Federal Ministry for Digital and Economic Affairs, the National Foundation for Research, Technology and Development and the Christian Doppler Research Association is gratefully acknowledged. This research was funded in part by the Austrian Science Fund (FWF) 10.55776/PAT3786024. This project has received funding from the European Union's Horizon 2020 research and innovation programme under the Marie Skłodowska-Curie grant agreement No 794298. This work was funded in part by Australian Research Council grants (FT140100865, IC170100035, DP200103386, DP250103627). This research was supported by the National Health and Medical Research Council (APP 1088419, DP250103627)."
+        ],
+        "HowToAcknowledge": "DOI of paper",
+        "License": "CC0",
+        "Name": "Multimodal ultra-high-field MRI, clinical, cognitive, and genetic profiles across the ALS–FTD spectrum. ",
+        "ReferencesAndLinks": null
+      },
+      "readme": "# README\n\nThis dataset was acquired and curated to explore the spectrum of Motor Neuron Disease (MND) and Fronto-Temporal Dementia (FTD) with Ultra-High Field Magnetic Resonance Imaging (7 Tesla) and compare these to non-neurodegenerative disease controls (Nicknamed the 7T hEalthy Ageing study [7TEA]). Twenty people living with neurodegenerative disease (plwND) and 14 controls underwent a comprehensive multimodal MRI protocol including structural, diffusion, quantitative MRI, resting state, and task fMRI, alongside cognitive testing and genetic screening. This dataset combines detailed imaging phenotypes with extensive clinical characterisations. It facilitates investigations into the spectrum of MND and FTD, has provided a basis for developing novel quantitative biomarkers, and supports the exploration of interactions between imaging features and clinical progression. The availability of this dataset supports various research avenues, from detailed hippocampal subfield analyses, network connectivity assessments, and multimodal genetic, cognitive, and imaging studies. The dataset is published on OpenNeuro (dataset ds007036) and is curated in the Brain Imaging Data Structure (BIDS) standard.\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural",
+          "mri_diffusion",
+          "mri_functional"
+        ],
+        "sessions": [
+          "01"
+        ],
+        "size": 44841040254,
+        "subjects": [
+          "P0015",
+          "P0013",
+          "P0003",
+          "H0107",
+          "H0104",
+          "P0012",
+          "H0108",
+          "P0001",
+          "H0103",
+          "P0007",
+          "H0105",
+          "P0019",
+          "P0004",
+          "H0102",
+          "P0011",
+          "P0014",
+          "P0016",
+          "H0110",
+          "P0002",
+          "P0017",
+          "P0020",
+          "H0111",
+          "P0005",
+          "H0109",
+          "P0010",
+          "H0113",
+          "H0101",
+          "P0006",
+          "P0018",
+          "H0106",
+          "H0112",
+          "P0009",
+          "H0115"
+        ],
+        "tasks": [
+          "movieviewing",
+          "rest"
+        ],
+        "totalFiles": 2058
+      },
+      "tag": "1.1.3"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        57,
+        63,
+        69,
+        70,
+        53,
+        61,
+        54,
+        57,
+        70,
+        70,
+        51,
+        59,
+        58,
+        68,
+        73,
+        54,
+        56,
+        49,
+        68,
+        74,
+        40,
+        40,
+        72,
+        69,
+        61,
+        53,
+        56,
+        64,
+        67,
+        77,
+        64,
+        60,
+        71
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "ALS",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "Cross-Sectional",
+      "studyDomain": "Brain",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2026-05-08T01:49:27.789Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,32 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "radnli-report-inference",
+  "payload": {
+    "abstract": "<p>The problem of natural language inference (NLI) determines whether a natural language hypothesis can be justifiably inferred from a natural language premise. NLI has attracted researchers to benchmark it in a number of settings including medical ones. While NLI datasets such as the MedNLI dataset exist for the clinical domain, systems trained with them do not generalize well to applications that require understanding of radiology reports. We therefore introduce an NLI dataset in the radiology domain, in which NLI information is annotated on sentences drawn from radiology reports. Sentence pairs in our dataset are sampled from MIMIC-CXR and we annotated them with NLI labels by two experts: one medical expert and one computer science expert. Each pair is annotated twice, swapping its premise and hypothesis, resulting in 960 pairs. The set is then split in half, resulting in 480 pair for a validation set and 480 pairs for a test set. We confirmed that a BERT-based NLI model trained with a distant supervision approach can achieve the accuracy of 77.8% on this test set.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 30878367,
+    "core_doi": "10.13026/qk1q-vq60",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 31919731,
+    "public_project_uuid": "4a500b62-49f3-4117-96b9-d8ac2eaf89ce",
+    "publish_date": "2021-06-29",
+    "resource_type": "Database",
+    "short_description": "A radiology NLI dataset introduced in the paper: Improving Factual Completeness and Consistency of Image-to-text Radiology Report Generation",
+    "slug": "radnli-report-inference",
+    "source_url": "https://physionet.org/content/radnli-report-inference/1.0.0/",
+    "title": "RadNLI: A natural language inference dataset for the radiology domain",
+    "topics": [],
+    "version": "1.0.0",
+    "version_doi": "10.13026/mmab-c762"
+  },
+  "source": "physionet"
+}

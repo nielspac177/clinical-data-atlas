@@ -1,0 +1,131 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004693",
+  "payload": {
+    "created": "2023-08-15T10:26:53.025Z",
+    "id": "ds004693",
+    "latestSnapshot": {
+      "created": "2024-07-13T13:16:22.000Z",
+      "description": {
+        "Authors": [
+          "Johannes Singer",
+          "Agnessa Karapetian",
+          "Martin Hebart",
+          "Radoslaw Cichy"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004693.v1.0.3",
+        "Funding": [
+          "Max Planck Research Group (M.TN.A.NEPF0009)",
+          "ERC Starting Grant (ERC-StG-2021-101039712)",
+          "German Research Council Grants (CI241/1-1, CI241/3-1, CI241/7-1)",
+          "ERC Starting Grant (ERC-StG-2018-803370)"
+        ],
+        "HowToAcknowledge": "Please cite the preprint (Link: https://www.biorxiv.org/content/10.1101/2023.08.17.553708v1)",
+        "License": "CC0",
+        "Name": "Identifying and characterizing scene representations relevant for categorization behavior",
+        "ReferencesAndLinks": []
+      },
+      "readme": "This dataset contains the raw fMRI data accompanying the paper \"Identifying and characterizing scene representations relevant for categorization behavior\" (Link to preprint: https://www.biorxiv.org/content/10.1101/2023.08.17.553708v2). Please cite the above paper if you use this data.\n\nThe dataset includes:\n\n1. anat/ anatomical scans (T1-weighted images) for each subject\n2. func/ part-brain EPI data from either 9 or 11 runs (1 localizer, 8/10 main experiment) for each participant. The events files contain the onsets, durations and trial types for all trials in the corresponding run.\n\nPlease note that the data for subject 12 was excluded, due to incidental neurological findings. \n\nFor a full description of the paradigm and the employed procedures please see the paper.  \n\nResults for the first-level and group-level analyses for this data as well accompanying data such as behavioral data or neural network data can be found on OSF (https://osf.io/y8tx2/). Code for the analysis of the data can be found on Github (https://github.com/Singerjohannes/visdecmak). \n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 36914227508,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30"
+        ],
+        "tasks": [
+          "localizer",
+          "main"
+        ],
+        "totalFiles": 974
+      },
+      "tag": "1.0.3"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        19,
+        20,
+        27,
+        18,
+        20,
+        26,
+        25,
+        30,
+        25,
+        20,
+        25,
+        24,
+        29,
+        26,
+        19,
+        25,
+        22,
+        26,
+        22,
+        30,
+        22,
+        21,
+        23,
+        25,
+        25,
+        28,
+        27,
+        33,
+        26,
+        24
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "Event-related design",
+      "studyDomain": "Scene perception",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2023-08-16T12:58:41.067Z"
+  },
+  "source": "openneuro"
+}

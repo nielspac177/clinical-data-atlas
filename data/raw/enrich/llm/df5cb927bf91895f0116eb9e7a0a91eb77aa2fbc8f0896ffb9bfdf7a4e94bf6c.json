@@ -1,0 +1,40 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:df5cb927bf91895f0116eb9e7a0a91eb77aa2fbc8f0896ffb9bfdf7a4e94bf6c",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "diseases such as Ventilator-Associated Pneumonia (VAP)",
+        "label": "Ventilator-Associated Pneumonia (VAP)"
+      },
+      {
+        "evidence": "nosocomial lower respiratory tract infections in ICU patients",
+        "label": "nosocomial lower respiratory tract infections"
+      }
+    ],
+    "countries": [
+      "CO"
+    ],
+    "domains": [
+      "pulmonology",
+      "critical_care",
+      "infectious_disease"
+    ],
+    "id": "physionet:micro-nav",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "DNA extraction, gene sequencing of the 16S ribosomal unit",
+        "value": "genomics"
+      },
+      {
+        "evidence": "Clinical data and biological samples",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "Adult ICU patients requiring mechanical ventilation without initial pneumonia, in an ICU in Chia, Colombia",
+    "summary": "Prospective observational ICU study of the respiratory microbiome in mechanically ventilated adults, with clinical data and bronchoalveolar lavage, orotracheal secretion and blood samples analyzed by 16S ribosomal gene sequencing."
+  },
+  "prompt_version": "v1"
+}

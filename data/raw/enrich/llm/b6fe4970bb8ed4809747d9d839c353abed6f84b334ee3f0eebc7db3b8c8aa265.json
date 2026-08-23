@@ -1,0 +1,38 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:b6fe4970bb8ed4809747d9d839c353abed6f84b334ee3f0eebc7db3b8c8aa265",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "non-invasive automated preterm birth prediction",
+        "label": "preterm birth"
+      },
+      {
+        "evidence": "induced or cesarean section delivery",
+        "label": "induced delivery"
+      },
+      {
+        "evidence": "cesarean section delivery",
+        "label": "cesarean section delivery"
+      }
+    ],
+    "countries": [
+      "SI"
+    ],
+    "domains": [
+      "obstetrics_gynecology"
+    ],
+    "id": "physionet:icehg-ds",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "surface electrohysterogram (EHG)",
+        "value": "other"
+      }
+    ],
+    "population": "126 EHG records from pregnancies expected to end in spontaneous term delivery but ending in induced or cesarean section delivery, recorded at the 23rd or 31st week at the University Medical Center Ljubljana",
+    "summary": "Open dataset of 30-minute uterine electrohysterogram records collected early and later in pregnancy from pregnancies expected to end in spontaneous term delivery that instead ended in induced or cesarean section delivery."
+  },
+  "prompt_version": "v1"
+}

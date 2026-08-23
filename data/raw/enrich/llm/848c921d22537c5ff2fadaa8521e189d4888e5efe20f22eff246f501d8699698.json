@@ -1,0 +1,28 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:848c921d22537c5ff2fadaa8521e189d4888e5efe20f22eff246f501d8699698",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "contain ectopy of a higher grade",
+        "label": "ectopy"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:ahadb",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Two ECG signals",
+        "value": "ECG"
+      }
+    ],
+    "population": null,
+    "summary": "Two ECG signals digitized and annotated with American Heart Association database methods but excluded from that database because the recording contained higher-grade ectopy than its intended class."
+  },
+  "prompt_version": "v1"
+}

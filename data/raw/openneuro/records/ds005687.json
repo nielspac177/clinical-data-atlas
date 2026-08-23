@@ -1,0 +1,150 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005687",
+  "payload": {
+    "created": "2024-12-02T16:02:26.656Z",
+    "id": "ds005687",
+    "latestSnapshot": {
+      "created": "2024-12-11T10:35:08.000Z",
+      "description": {
+        "Authors": [
+          "G JPC BECQ",
+          "S ACHARD",
+          "E L BARBIER"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005687.v1.0.1",
+        "Funding": [
+          "French program Investissement d'Avenir run by the French National Research Agency grant Infrastructure d'avenir en Biologie Santé [ANR-11-INBS-0006]",
+          "Neurocog IDEX UGA in the framework of the Investissements d'avenir program [ANR-15-IDEX-02]",
+          "Q-Func Advances spatiotemporal statistical models for quantification and estimation of functional connectivity [NSF grant IIS-2135859] "
+        ],
+        "HowToAcknowledge": "Please cite this paper: BECQ, Guillaume JPC, HABET, Tarik, COLLOMB, Nora, et al. Functional connectivity is preserved but reorganized across several anesthetic regimes. NeuroImage, 2020, vol. 219, p. 116945. https://doi.org/10.1016/j.neuroimage.2020.116945",
+        "License": "CC0",
+        "Name": "2016GinRatAnesth",
+        "ReferencesAndLinks": [
+          "https://doi.org/10.1016/j.neuroimage.2020.116945",
+          "https://doi.org/10.1088/1741-2552/ab9fec",
+          "https://doi.org/10.1007/s11222-024-10411-x"
+        ]
+      },
+      "readme": "# 2016GinRatAnesth\n\n## Summary \n\nThe dataset comes from a study on the impact of differents anesthesics on functional connectivity, cerebral perfusion and physiological measures.  \nThe study is performed on rats. \nThe dataset contains three types of data from 38 subjects: structural imaging (anat), resting state functional imaging (func) and perfusion (perf). \nPhysiological measures during resting state are also given in files `*_physio.tsv.gz`.  \nFour anesthetics are evaluated and group of dead rats is also tested.  \n\n\nThe collection and content of this dataset is described in details in: \n\nBECQ, G.J.-P.C., HABET, T., COLLOMB, N., et al. Functional connectivity is preserved but reorganized across several anesthetic regimes. NeuroImage, 2020, p. 116945-116945. \n\n@article{Becq2020Functional, title={Functional connectivity is preserved but reorganized across several anesthetic regimes\", author={Becq, Guillaume J.-P. C. and Habet, Tarik and Collomb, Nora and Faucher, Margaux and Delon-Martin, Chantal and Coizet, Véronique and Achard, Sophie and Barbier, Emmanuel L.}, journal={NeuroImage}, publisher={Elsevier}, volume={219}, pages={116945}, year={2020}, doi={https://doi.org/10.1016/j.neuroimage.2020.116945} } \n\n\n## Abstract\n\nUnder anesthesia, systemic variables and CBF are modified. \nHow does this alter the connectivity measures obtained with rs-fMRI ? \nTo tackle this question, we explored the effect of four different anesthetics on Long Evans and Wistar rats with multimodal recordings of rs-fMRI, systemic variables and CBF. \nAfter multimodal signal processing, we show that the blood-oxygen-level-dependent (BOLD) variations and functional connectivity (FC) evaluated at low frequencies (0.031 – 0.25 Hz) do not depend on systemic variables and are preserved across a large interval of baseline CBF values. \nBased on these findings, we found that most brain areas remain functionally active under any anesthetics, i.e. connected to at least one other brain area, as shown by the connectivity graphs. \nIn addition, we quantified the influence of nodes by a measure of functional connectivity strength to show the specific areas targeted by anesthetics and compare correlation values of edges at different levels. \nThese measures enable us to highlight the specific network alterations induced by anesthetics. \nAltogether, this suggests that changes in connectivity could be evaluated under anesthesia, routinely used in the control of neurological injury.\n\n\n## Anesthesia\n\nAt the beginning of the experiment, animals receive a gaseous mixture, composed of isoflurane and a mixture of 80% air and 20% oxygen, inhaled through a funnel. \nA level of 5% isoflurane is given during 2 min followed by a level of 2% during 10 min (Fig. B.7). \nDuring the animal preparation, ears are filled with a mix of gel (ocry-gel) and wax, to limit air-related susceptibility artifacts in the images. \nAfter this common induction, four anesthetics are evaluated:\n- Isoflurane (Iso): the level of isoflurane is set to 1% to be in a regime showing persistent behavior of spontaneous BOLD fluctuations (Wang et al., 2011). \nTo evaluate the impact of strain, this anesthetic was evaluated in both Long-Evans and Wistar rats.\n- Etomidate (Eto) (B. Braun, Melsungen, Germany): An administration in two stages is performed with a bolus of 10 mg/kg/min (3 min) injected in association with isoflurane at 4% during initiation, followed by a continuous intravenous infusion at 0.5 mg/kg/min.\n- Medetomidine (Med) (Domitor, medetomidine hydrochloride; Orion Corporation, Espoo, Finland): An administration in two stages is performed with a bolus of 0.24 mg/kg injected subcutaneously in association with isoflurane at 4% during initiation, followed by a continuous infusion at 0.05 mg/kg/h.\n- Urethane (Ure): A bolus of 1.25 g/kg is injected intraperitoneally (Rolland et al., 2013). \nThe use of this anesthesia is well regulated and rats are euthanized at the end of the experiment because of the carcinogenic toxicity of this agent.\n- A group of dead rats (Dead) was created by sacrificing 4 animals just before the experiment.\nOverall, 6 groups were evaluated: Eto-L (n = 7), Iso-L (n = 6), Iso-W (n = 7), Med-L (n = 7), Ure-L (n = 7), Dead (n = 4). \n\n## From sourcedata to rawdata\n\nRoutines to transform data and metadata in `/sourcedata` to rawdata using [brkraw](https://github.com/BrkRaw/brkraw) v0.3.7 are available in `/code`. ",
+      "summary": {
+        "dataProcessed": true,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_perfusion",
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 7930373046,
+        "subjects": [
+          "18",
+          "27",
+          "28",
+          "17",
+          "24",
+          "11",
+          "08",
+          "33",
+          "20",
+          "31",
+          "06",
+          "38",
+          "32",
+          "05",
+          "35",
+          "15",
+          "19",
+          "22",
+          "21",
+          "23",
+          "16",
+          "10",
+          "37",
+          "09",
+          "13",
+          "12",
+          "36",
+          "30",
+          "25",
+          "29",
+          "01",
+          "04",
+          "34",
+          "02",
+          "03",
+          "14",
+          "07",
+          "26"
+        ],
+        "tasks": [
+          "rest"
+        ],
+        "totalFiles": 379
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": false,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "https://doi.org/10.1016/j.neuroimage.2020.116945",
+      "dataProcessed": true,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "ANR, NSF",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Rat",
+      "studyDesign": "",
+      "studyDomain": "anesthesia, cbf, functional connectivity",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2024-12-11T10:26:07.107Z"
+  },
+  "source": "openneuro"
+}

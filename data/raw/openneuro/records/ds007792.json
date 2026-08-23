@@ -1,0 +1,118 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007792",
+  "payload": {
+    "created": "2026-05-12T13:14:01.263Z",
+    "id": "ds007792",
+    "latestSnapshot": {
+      "created": "2026-06-29T14:03:28.000Z",
+      "description": {
+        "Authors": [
+          "Shuntaro C. Aoki",
+          "Reo Tsukasa",
+          "Shiyun Yang",
+          "Misato Tanaka",
+          "Eizaburo Doi",
+          "Tomohiro Nakamura",
+          "Jun-Kai Ho",
+          "Yukiyasu Kamitani"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007792.v1.0.1",
+        "Funding": [
+          "Japan Society for the Promotion of Science (KAKENHI grant JP20H05705)",
+          "Japan Society for the Promotion of Science (KAKENHI grant JP25K24743)",
+          "Japan Society for the Promotion of Science (KAKENHI grant JP20H05954)",
+          "New Energy and Industrial Technology Development Organization (grant JPNP20006)",
+          "Japan Science and Technology Agency (CREST grant JPMJCR22P3)"
+        ],
+        "HowToAcknowledge": "Please cite: Aoki, S.C., Tsukasa, R., Yang, S., Tanaka, M., Doi, E., Nakamura, T., Ho, J.-K., and Kamitani, Y. Cross-cue reconstruction of perceived 3D object structure from human visual cortex. bioRxiv. doi:10.64898/2026.06.08.730830",
+        "License": "CC0",
+        "Name": "Cross-cue reconstruction of perceived 3D object structure from human visual cortex",
+        "ReferencesAndLinks": [
+          "https://doi.org/10.64898/2026.06.08.730830",
+          "https://doi.org/10.6084/m9.figshare.c.8508462",
+          "https://github.com/KamitaniLab/3dReconstruction"
+        ]
+      },
+      "readme": "# Cross-cue reconstruction of perceived 3D object structure from human visual cortex\n\nPreprint: https://www.biorxiv.org/content/10.64898/2026.06.08.730830\n\n## Abstract\n\nThe human brain assembles 3D percepts from qualitatively different depth cues, yet the perceived 3D structure the brain builds — a representation shared across cues — has been difficult to measure directly. We show this cue-invariant 3D structure can be externalized as explicit 3D objects from human brain activity: fMRI responses are decoded into the latent features of a pretrained 3D point-cloud autoencoder, and a generator maps these features back to a point cloud. A decoder trained only on responses to 2D rendered objects passed three increasingly stringent tests: (i) it generalized to novel object categories; (ii) it generalized across depth cues to random dot stereograms (RDSs), which evoke 3D percepts through binocular disparity but share no pictorial shape information with the training images; and (iii) it tracked the 3D slant of contour-matched RDSs whose 2D outlines were identical but whose disparity-defined slants varied. Cross-cue generalization was strongest in higher visual areas, particularly along the dorsal stream.\n\n## Dataset overview\n\nWhole-brain fMRI from five subjects (S1–S5) viewing 3D objects presented as 2D rendered images (monocular pictorial cues) or random dot stereograms (RDSs; binocular disparity). The data support a decoding pipeline in which fMRI responses are mapped to the latent features of a pretrained 3D point-cloud autoencoder and then reconstructed as explicit 3D point clouds. Decoders are trained only on responses to 2D rendered images and tested on novel object categories, RDSs, and contour-matched RDSs. See the preprint for full stimulus, presentation, and analysis details.\n\nNote: Stimulus labels in task event files (`stimulus_name`) differ from those in the preprocessed fMRI data shared at [figshare](https://doi.org/10.6084/m9.figshare.c.8508462). Task event files will be updated to match the stimulus names in a future release.\n\n## Tasks\n\n| Task label | Stimuli |\n|---|---|\n| `3dNaturalObjectsTrain` | 2D rendered natural objects, 2,000 stimuli (20 categories), decoder training; 120 runs over 3 repeats |\n| `3dNaturalObjectsTest` | 2D rendered natural objects, 80 test stimuli (40 trained + 40 novel categories) |\n| `3dArtificialObjectsImage` | 2D rendered artificial objects (geometric primitives), 30 stimuli |\n| `3dArtificialObjectsRDS` | The same 30 artificial objects as RDSs (+ 5 2D control stimuli, excluded) |\n| `3dContourMatchedRDSV1` | Contour-matched RDS slant bars: thin (horizontal), thick, cylinder at ±60/±45/±30/±15° (+ 24 2D controls) |\n| `3dContourMatchedRDSV2` | Contour-matched RDS slant bars: thin bars, horizontal and vertical, at the same eight slants (+ 16 2D controls) |\n\nContour-matched RDSs (`V1`, `V2`) share an identical cyclopean (fronto-parallel) 2D contour across slants while the disparity-defined 3D slant varies. Per-bar-type slant slopes use `V1` for the horizontal thin bar, thick bar, and cylinder, and `V2` for the vertical thin bar; `V2` presents both thin-bar orientations together for the matched horizontal-vs-vertical comparison.\n\n## Acquisition\n\n3.0-T Siemens MAGNETOM Verio (Kyoto University). Functional EPI 2 mm isotropic, TR 2000 ms, multiband factor 4; MP-RAGE 1 mm isotropic anatomical. Full parameters are in the preprint (Methods).\n\n## Ethics\n\nAll subjects gave informed consent. Approved by Kyoto University (KUIS-EAR-2017-002) and the ATR International Ethics Committee (no. 106); conducted per the Declaration of Helsinki.\n\n## Related resources\n\n- Preprint: https://www.biorxiv.org/content/10.64898/2026.06.08.730830\n- Processed data & stimulus 3D structures (figshare): https://doi.org/10.6084/m9.figshare.c.8508462\n- Analysis code (GitHub): https://github.com/KamitaniLab/3dReconstruction\n\n## How to cite\n\nAoki, S.C., Tsukasa, R., Yang, S., Tanaka, M., Doi, E., Nakamura, T., Ho, J.-K., and Kamitani, Y. Cross-cue reconstruction of perceived 3D object structure from human visual cortex. bioRxiv. https://doi.org/10.64898/2026.06.08.730830",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "3dNaturalObjectsTrain16",
+          "3dNaturalObjectsTrain02",
+          "3dNaturalObjectsTrain13",
+          "3dNaturalObjectsTrain17",
+          "3dNaturalObjectsTrain09",
+          "3dContourMatchedRDSV2",
+          "3dNaturalObjectsTrain07",
+          "3dNaturalObjectsTest01",
+          "3dContourMatchedRDSV1",
+          "3dNaturalObjectsTrain03",
+          "3dNaturalObjectsTrain10",
+          "3dNaturalObjectsTrain08",
+          "3dArtificialObjectsRDS01",
+          "3dNaturalObjectsTrain06",
+          "3dNaturalObjectsTrain15",
+          "3dNaturalObjectsTrain04",
+          "3dNaturalObjectsTrain01",
+          "anatomy",
+          "3dNaturalObjectsTrain11",
+          "3dNaturalObjectsTrain12",
+          "3dArtificialObjectsImage01",
+          "3dNaturalObjectsTest02",
+          "3dNaturalObjectsTrain14",
+          "3dNaturalObjectsTrain05",
+          "3dNaturalObjectsTrain19",
+          "3dArtificialObjectsRDS02",
+          "3dNaturalObjectsTrain18",
+          "3dNaturalObjectsTest03"
+        ],
+        "size": 151272303800,
+        "subjects": [
+          "S3",
+          "S2",
+          "S4",
+          "S1",
+          "S5"
+        ],
+        "tasks": [
+          "3dNaturalObjectsTrain",
+          "3dContourMatchedRDSV2",
+          "3dNaturalObjectsTest",
+          "3dContourMatchedRDSV1",
+          "3dArtificialObjectsRDS",
+          "3dArtificialObjectsImage"
+        ],
+        "totalFiles": 3124
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2026-06-29T14:06:56.953Z"
+  },
+  "source": "openneuro"
+}

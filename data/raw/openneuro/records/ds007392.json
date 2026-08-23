@@ -1,0 +1,54 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007392",
+  "payload": {
+    "created": "2026-02-09T08:14:08.871Z",
+    "id": "ds007392",
+    "latestSnapshot": {
+      "created": "2026-02-09T09:01:50.000Z",
+      "description": {
+        "Authors": [
+          "unexakorea"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007392.v3.0.2",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Telomere Lengthening Technologies: Current Landscape and Outlook _ unexakorea dataset",
+        "ReferencesAndLinks": null
+      },
+      "readme": "# Telomere technology landscape dataset (BIDS wrapper)\n\nThis OpenNeuro upload is a **BIDS-compatible wrapper** intended to host **non-imaging source documents** under `sourcedata/`.\n\n## Why is there a subject folder?\nOpenNeuro expects a BIDS dataset structure. To satisfy the requirement that at least one `sub-*` directory exists,\nthis dataset includes a minimal placeholder subject folder `sub-01/beh/` containing a tiny behavioral file pair.\n**No human participant measurements or identifiable information are included.**\n\n## Contents\n- `participants.tsv`: lists placeholder subject `sub-01`\n- `sub-01/beh/*_beh.tsv` and `*_beh.json`: placeholder files\n- `sourcedata/*.xlsx`: source spreadsheets for the technology landscape\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [],
+        "secondaryModalities": [],
+        "sessions": [],
+        "size": 1993,
+        "subjects": [],
+        "tasks": [],
+        "totalFiles": 5
+      },
+      "tag": "3.0.2"
+    },
+    "metadata": {
+      "affirmedDefaced": false,
+      "ages": [
+        null
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "N/A",
+      "modalities": [],
+      "species": "Other",
+      "studyDesign": "Scoping review / technology landscape analysis of telomere lengthening approaches and measurement methods; curated structured metadata from public sources.",
+      "studyDomain": "Aging biology; telomere biology; longevity biotechnology; measurement technologies; therapeutic development landscape",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2026-02-09T08:43:14.034Z"
+  },
+  "source": "openneuro"
+}

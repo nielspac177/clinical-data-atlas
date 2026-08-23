@@ -1,0 +1,157 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007353",
+  "payload": {
+    "created": "2026-02-02T07:11:52.115Z",
+    "id": "ds007353",
+    "latestSnapshot": {
+      "created": "2026-02-03T07:31:39.000Z",
+      "description": {
+        "Authors": [
+          "Guohao Zhang",
+          "Sai Ma",
+          "Ming Zhou",
+          "Shaohua Tang",
+          "Shuyi Zhen",
+          "Zheng Li",
+          "Zonglei Zhen"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007353.v1.0.0",
+        "Funding": [
+          "Beijing Natural Science Foundation (#L247010)",
+          "National Natural Science Foundation of China (#62433015, #31771251)",
+          "STI 2030-436 Major Projects of the Ministry of Science and Technology of China437 (#2021ZD0200407)"
+        ],
+        "HowToAcknowledge": "Please cite this paper.TODO: add doi",
+        "License": "CC0",
+        "Name": "HAD-MEEG",
+        "ReferencesAndLinks": [
+          "HAD-fMRI: https://openneuro.org/datasets/ds004488/versions/2.0.0",
+          "Github: https://github.com/colehank/HAD-MEEG"
+        ]
+      },
+      "readme": "Human action recognition is a core component of social cognition, engaging spatially distributed and temporally evolving neural responses that encode visual information and infer intention. To map the brain’s spatial organization supporting this process, we previously released the Human Action Dataset (HAD), a functional magnetic resonance imaging (fMRI) resource. However, fMRI’s limited temporal resolution constrains its ability to capture rapid neural dynamics. Here, we present the HAD-MEEG dataset, which extends HAD-fMRI, leveraging the millisecond-level temporal resolution of magnetoencephalography (MEG) and electroencephalography (EEG). HAD-MEEG were recorded in the same participants and with the same stimuli as HAD-fMRI, in which 30 participants viewed 21,600 video clips spanning 180 categories of human action. By integrating the temporal precision of M/EEG with the spatial precision of fMRI, HAD enables comprehensive spatiotemporal investigation of the neural mechanisms underlying human action recognition.",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "meg",
+          "eeg",
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural"
+        ],
+        "sessions": [
+          "mri",
+          "meg",
+          "eeg",
+          "20211112",
+          "20211111",
+          "20211108",
+          "20211104",
+          "20211117",
+          "20211118",
+          "20211114",
+          "20211109",
+          "20211110"
+        ],
+        "size": 193902192538,
+        "subjects": [
+          "16",
+          "03",
+          "12",
+          "30",
+          "11",
+          "19",
+          "emptyroom",
+          "02",
+          "21",
+          "09",
+          "13",
+          "05",
+          "27",
+          "04",
+          "10",
+          "08",
+          "25",
+          "14",
+          "20",
+          "15",
+          "26",
+          "01",
+          "24",
+          "07",
+          "18",
+          "28",
+          "31",
+          "22",
+          "06",
+          "17",
+          "23",
+          "29"
+        ],
+        "tasks": [
+          "action",
+          "noise"
+        ],
+        "totalFiles": 2567
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": false,
+      "ages": [
+        21,
+        24,
+        21,
+        22,
+        21,
+        21,
+        21,
+        19,
+        18,
+        24,
+        24,
+        20,
+        22,
+        22,
+        25,
+        20,
+        24,
+        24,
+        22,
+        19,
+        23,
+        25,
+        21,
+        24,
+        20,
+        24,
+        29,
+        22,
+        23,
+        20,
+        31,
+        null
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "meg",
+        "eeg",
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2026-02-03T07:32:53.191Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,97 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds001499",
+  "payload": {
+    "created": "2018-09-04T15:00:20.474Z",
+    "id": "ds001499",
+    "latestSnapshot": {
+      "created": "2020-01-28T15:02:52.000Z",
+      "description": {
+        "Authors": [
+          "Nadine Chang",
+          "John A. Pyles",
+          "Austin Marcus",
+          "Abhinav Gupta",
+          "Michael J. Tarr",
+          "Elissa M. Aminoff"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds001499.v1.3.1",
+        "Funding": [],
+        "HowToAcknowledge": "Please cite our paper available on arXiv: http://arxiv.org/abs/1809.01281",
+        "License": "CC0",
+        "Name": "BOLD5000",
+        "ReferencesAndLinks": [
+          "https://bold5000.org"
+        ]
+      },
+      "readme": "BOLD5000: Brains, Objects, Landscapes Dataset\n\nFor details please refer to BOLD5000.org and our paper on arXiv (http://arxiv.org/abs/1809.01281)\n\n*Participant Directories Content*\n1) Four participants: CSI1, CSI2, CSI3, & CSI4\n2) Functional task data acquisition sessions: sessions #1-15\nEach functional session includes:\n-3 sets of fieldmaps (EPI opposite phase encoding; spin-echo opposite phase encoding pairs with partial & non-partial Fourier)\n-9 or 10 functional scans of slow event-related 5000 scene data (5000scenes)\n-1 or 0 functional localizer scans used to define scene selective regions (localizer)\n-each event.json file lists each stimulus, the onset time, and the participant’s response (participants performed a simple valence task) \n3) Anatomical data acquisition session: #16\nAnatomical Data: T1 weighted MPRAGE scan, a T2 weighted SPACE, diffusion spectrum imaging   \n\nNotes:\n-All MRI and fMRI data provided is with Siemens pre-scan normalization filter.  \n-CSI4 only participated in 10 MRI sessions: 1-9 were functional acquisition sessions, and 10 was the anatomical data acquisition session.\n\n*Derivatives Directory Content*\n1) fMRIprep: \n-Preprocessed data for all functional data of CSI1 through CSI4 (listed in folders for each participant: derivatives/fmriprep/sub-CSIX). Data was preprocessed both in T1w image space and on surface space. Functional data was motion corrected, susceptibility distortion corrected, and aligned to the anatomical data using bbregister. Please refer to the paper for the details on preprocessing.\n-Reports resulting from fMRI prep, which include the success of anatomical alignment and distortion correction, among other measures of preprocessing success are all listed in the sub-CSIX.html files.  \n2) Freesurfer: Freesurfer reconstructions as a result of fMRIprep preprocessing stream. \n3) MRIQC: Image quality metrics (IQMs) of the dataset using MRIQC. \n-CSIX-func.csv files are text files with a list of all IQMs for each session, for each run.\n-CSIX-anat.csv files are text files with a list of all IQMs for the scans acquired in the anatomical session (e.g., MPRAGE). \n-CSIX_IQM.xls an excel workbook, each sheet of workbook lists the IQMs for a single run. This is the same data as CSIX-func.csv, except formatted differently. \n-sub-CSIX/derivatives: contain .json with the MRIQC/IQM results for each run. \n-sub-CSIX/reports: contains .html file with MRIQC/IQM results for each run along with mean signal and standard deviation maps. \n4)spm: A directory that contains the masks used to define each region of interest (ROI) in each participant. There were 10 ROIs: early visual (EarlyVis), lateral occipital cortex (LOC), occipital place area (OPA), parahippocampal place area (PPA), retrosplenial complex (RSC) for the left hemisphere (LH) and right hemisphere (RH). ",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_diffusion",
+          "mri_structural"
+        ],
+        "sessions": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16"
+        ],
+        "size": 82971498972,
+        "subjects": [
+          "CSI1",
+          "CSI2",
+          "CSI3",
+          "CSI4"
+        ],
+        "tasks": [
+          "5000scenes",
+          "Scene Localizer"
+        ],
+        "totalFiles": 5994
+      },
+      "tag": "1.3.1"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        27,
+        26,
+        24,
+        25
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2018-09-04T15:00:20.474Z"
+  },
+  "source": "openneuro"
+}

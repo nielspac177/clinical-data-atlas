@@ -1,0 +1,110 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005416",
+  "payload": {
+    "created": "2024-08-19T09:02:50.476Z",
+    "id": "ds005416",
+    "latestSnapshot": {
+      "created": "2024-12-17T01:14:50.000Z",
+      "description": {
+        "Authors": [
+          "Yan Wu",
+          "Chunguang Tao",
+          "Qi Li"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005416.v1.0.1",
+        "Funding": [
+          "Jilin Scientific and Technology Development Program (grant no. 20240101358JC)"
+        ],
+        "HowToAcknowledge": "If you use this dataset in your research, please include the following acknowledgment:  \n\"We gratefully acknowledge the use of the EEG dataset provided by Wu et al. (2024) through OpenNeuro.\"\n",
+        "License": "CC0",
+        "Name": "Fatigue Characterization of EEG under Mixed Reality Stereo Vision",
+        "ReferencesAndLinks": []
+      },
+      "readme": "In this study, we selected 24 electrodes for EEG recording: Fp1, Fp2, AF3, AF4, F7, Fz, F8, FC5, FC6 (frontal), FT7, FT8 (temporal), C3, Cz, C4, CP3, CP4 (central), P3, Pz, P4, PO3, PO4 (parietal), and O1, Oz, O2 (occipital).\nEach participant was required to complete watching 2 resting scenes and 15 movement scenes. \nA rating scene appeared to rate each exercise scene watched. \nEach movement scene consisted of 20 trials of reciprocal periodic movements at a fixed depth and velocity.\nWe focused on analyzing EEG data from watching resting scenes. \nResearchers can use this EEG data to do resting-state analysis (corresponding to events '11' and '13') as well as task-state analysis (corresponding to event '12'). ",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "eeg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [],
+        "size": 22869324774,
+        "subjects": [
+          "s17",
+          "s02",
+          "s07",
+          "s03",
+          "s01",
+          "s18",
+          "s23",
+          "s09",
+          "s19",
+          "s06",
+          "s12",
+          "s20",
+          "s04",
+          "s16",
+          "s14",
+          "s05",
+          "s11",
+          "s15",
+          "s08",
+          "s13",
+          "s22",
+          "s21",
+          "s10"
+        ],
+        "tasks": [
+          "WatchingTask"
+        ],
+        "totalFiles": 143
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": false,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "Jilin Scientific and Technology Development Program",
+      "modalities": [
+        "eeg"
+      ],
+      "species": "Human",
+      "studyDesign": "Watching the fatigue level of a dynamic parallax experimental paradigm in a mixed reality environment",
+      "studyDomain": "Stereo Vision Fatigue under Mixed Reality Environment",
+      "studyLongitudinal": "Longitudinal"
+    },
+    "publishDate": "2024-12-16T00:51:53.997Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,45 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:d4c92d472da0255109f394af81d962d0acc4cdc5ba8ae09e0d0ef7d0d067cf77",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Adenomas and Adenocarcinomas",
+        "label": "Adenomas and Adenocarcinomas"
+      },
+      {
+        "evidence": "adenocarcinoma of lung",
+        "label": "adenocarcinoma of lung"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "pulmonology"
+    ],
+    "id": "gdc:CDDP_EAGLE-1",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "WXS, RNA-Seq, WGS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "Transcriptome Profiling",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Tissue Slide",
+        "value": "pathology"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "50 human cases with lung adenocarcinoma (bronchus and lung)",
+    "summary": "Integrative molecular study of lung adenocarcinoma (phase 2, CDDP_EAGLE), combining whole-exome, whole-genome and RNA sequencing, copy number and structural variation, tissue slides, biospecimen and clinical data."
+  },
+  "prompt_version": "v1"
+}

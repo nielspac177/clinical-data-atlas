@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:f9cd72477b41395a16b2efd2ba1bb1845b547d8dea335f985c0575225fd7370b",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "cardiology",
+      "critical_care"
+    ],
+    "id": "physionet:mimic3wdb-matched",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "continuous ECG",
+        "value": "ECG"
+      },
+      {
+        "evidence": "PPG",
+        "value": "PPG"
+      },
+      {
+        "evidence": "Physiological signals",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "their corresponding clinical records are available in the MIMIC-III Clinical Database",
+        "value": "EHR"
+      }
+    ],
+    "population": "10,282 distinct ICU patients identified and linked to MIMIC-III clinical records",
+    "summary": "Waveform and numerics records from ICU bedside monitors for patients whose corresponding clinical records exist in the MIMIC-III Clinical Database, covering ECG, blood pressure, respiration, PPG and periodic vital signs."
+  },
+  "prompt_version": "v1"
+}

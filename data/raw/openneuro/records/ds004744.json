@@ -1,0 +1,76 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004744",
+  "payload": {
+    "created": "2023-09-07T06:54:00.336Z",
+    "id": "ds004744",
+    "latestSnapshot": {
+      "created": "2023-09-07T07:39:56.000Z",
+      "description": {
+        "Authors": [
+          "keke"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004744.v1.0.0",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "White matter tract and peaks",
+        "ReferencesAndLinks": null
+      },
+      "readme": "For each subject (seventeen in total), there are five files given:\r\n1) Data.nii.gz: the dMRI data after preprocessing including topup, eddy, and skule removing.\r\n2) bvecs: bvecs after preprocessing\r\n3) bvals: b values of the dMRI data\r\n4) mrtrix_peaks.nii.gz: the peaks of fiber orientation maps extracted from dMRI\r\n5) bundle_masks_10.nii.gz: the annotation of ten white matter tracts, and the list of these tracts is:\r\n    bundles = ['CST_left', 'CST_right', 'FPT_left', 'FPT_right', 'OR_left', 'OR_right', 'POPT_left', 'POPT_right', 'UF_left', 'UF_right']\r\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_diffusion"
+        ],
+        "sessions": [],
+        "size": 6732911374,
+        "subjects": [
+          "001",
+          "002",
+          "003",
+          "004",
+          "005",
+          "006",
+          "007",
+          "008",
+          "009",
+          "010",
+          "011",
+          "012",
+          "013",
+          "014",
+          "015",
+          "016",
+          "017"
+        ],
+        "tasks": [],
+        "totalFiles": 54
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": null,
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2023-09-07T08:38:07.265Z"
+  },
+  "source": "openneuro"
+}

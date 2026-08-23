@@ -1,0 +1,93 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004509",
+  "payload": {
+    "created": "2023-02-21T17:09:40.783Z",
+    "id": "ds004509",
+    "latestSnapshot": {
+      "created": "2023-02-22T08:47:45.000Z",
+      "description": {
+        "Authors": [
+          "Joana Carvalho",
+          "Francisca F Fernandes",
+          "Noam Shemesh"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004509.v1.0.0",
+        "Funding": [
+          "We would like to thank Rita Gil and Federico Severo for setting up the Visual deprivation room. This study was funded by the European Research Council (ERC) (agreement No. 679058), as well as by the European Union Horizon 2020 research and innovation programme under the Marie Sklodowska-Curie grant agreement No. 101032056.  The funding organization had no role in the design, conduct, analysis, or publication of this research.  The authors acknowledge the vivarium of the Champalimaud Centre for the Unknown, a facility of CONGENTO which is a research infrastructure co-financed by Lisboa Regional Operational Programme (Lisboa 2020), under the PORTUGAL 2020 Partnership Agreement through the European Regional Development Fund (ERDF) and Fundacao para a Ciencia e Tecnologia (Portugal), project LISBOA-01-0145-FEDER-022170."
+        ],
+        "HowToAcknowledge": "Please cite this preprint: ",
+        "License": "CC0",
+        "Name": "Extensive topographic remapping and functional sharpening in the adult rat visual pathway upon first visual experience",
+        "ReferencesAndLinks": [
+          "https://www.biorxiv.org/content/10.1101/2022.06.20.496863v1"
+        ]
+      },
+      "readme": "This project investigates the topographic remapping in the adult rodent visual pathway using functional MRI (fMRI) coupled with a first-of-its-kind setup for delivering patterned visual stimuli in the scanner. Using this novel setup, and coupled with biologically-inspired computational models, we were able to noninvasively map brain-wide properties (receptive fields (RFs) and spatial frequency (SF) tuning curves) that were insofar only available from invasive electrophysiology or optical imaging. Here you can find the \n\n\nThe dataset consists of 10 normal sighted rats (S01-S10) and 10 visual deprived rats (S11-S20). Each animal was scanned in 4 sessions: Ses-01 (first time the animals were exposed to light), Ses-02 (7 days after light exposure), Ses-03 (17 days after light exposure), Ses-04 (27 days after light exposure).\n\nEach session contains two types of visual stimulus: retinotopy mapping and spatial frequency tuning. The animals underwent a total of 6 runs of the retinotopic stimulus, each run taking 7 min and 39 s to acquire (306 repetitions), and 2 runs of spatial frequency tuning experiment, each lasting 12 min and 15 s (490 repetitions). \n\nStimulus: \nRetinotopy: The visual stimuli consisted of a luminance contrast-inverting checkerboard drifting bar. The bar aperture was composed by alternating rows of high-contrast luminance checks moved in 8 different directions (4 ​bar orientations: horizontal, vertical and the two diagonal orientations, with two opposite drift directions for each orientation, Figure 1C). The bar moved across the screen in 16 equally spaced steps, each lasting 1 TR. The bar contrast, width, and spatial frequency were 50%, ~14.5º, and ~0.2 cycles per degree of visual angle (cpd), respectively. The retinotopic stimulus consisted of four stimulation blocks. At each stimulation block, the bar moved across the entire screen during 24 s (swiping the visual field in the horizontal or vertical directions) and across half of the screen for 12 s (swiping half of the visual field diagonally), followed by a blank full screen stimulus at mean luminance for 45 s. A single retinotopic mapping run consisted of 246 functional images (60 pre-scan images were deliberately planned to be discarded due to coil heating).\n\nSpatial frequency: The stimulus consisted of a block design on/off task, with a baseline of 45 s which consisted of a black screen, and an activation task of 15 s, in a total of 10 stimulation blocks. The activation stimulus consisted of vertical sinusoidal gratings of multiple spatial frequencies: 0.003, 0.02, 0.04, 0.08, 0.1, 0.16, 0.20, 0.25, 0.36, 0.5 cpd moving left to right at 5 Hz. The spatial frequency stimulation blocks were randomized. The grating contrast was 100%. A single retinotopic mapping run consisted of 430 functional images (60 pre-scan images were deliberately planned to be discarded due to coil heating).\n\n\nData acquisition: \nAll the MRI scans were performed using a 9.4T Bruker BioSpin MRI scanner (Bruker, Karlsruhe, Germany) operating at a 1H frequency of 400.13 MHz and equipped with an AVANCE III HD console and a gradient system capable of producing up to 660 mT/m isotropically. An 86 mm volume quadrature resonator was used for transmittance and a 20 mm loop surface coil was used for reception. The software running on this scanner was ParaVision®  6.0.1.\nAfter placing the animal in the scanner bed, localizer scans were performed to ensure that the animal was correctly positioned and routine adjustments were performed. B0 maps were  acquired. A high-definition anatomical T2-weighted Rapid Acquisition with Refocused Echoes (RARE) sequence (TE/TR = 13.3/2000 ms, RARE factor = 5, FOV = 20 × 16 mm2, in-plane resolution = 80 × 80 μm2, slice thickness = 500 μm, tacq = 1 min 18 s) was acquired for accurate referencing. Functional scans were acquired using a gradient-echo echo-planar imaging (GE-EPI) sequence (TE/TR = 16.7/1500 ms, FOV = 20.5 × 15 mm2, resolution = 125 × 125 μm2, slice thickness = 650 μm, 12 slices covering the visual pathway, flip angle = 15º).  \n\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "01",
+          "02",
+          "03",
+          "04"
+        ],
+        "size": 63984212708,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20"
+        ],
+        "tasks": [
+          "ret"
+        ],
+        "totalFiles": 1000
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": false,
+      "ages": null,
+      "associatedPaperDOI": "10.1101/2022.06.20.496863",
+      "dataProcessed": null,
+      "dxStatus": "control vs Dark reared",
+      "grantFunderName": "European Research Council; European Union’s Horizon 2020 research and innovation programme ",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Rat",
+      "studyDesign": "Visual deprivation model",
+      "studyDomain": "Visual Neuroscience",
+      "studyLongitudinal": "Longitudinal"
+    },
+    "publishDate": "2023-02-22T08:50:31.097Z"
+  },
+  "source": "openneuro"
+}

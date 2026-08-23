@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:bd00524c55aee369842a4e2de76411530dd14a41bfce5aa12996beda961eb95c",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "simulated obstructive sleep apnoea (OSA) trials",
+        "label": "obstructive sleep apnoea (OSA)"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "pulmonology"
+    ],
+    "id": "physionet:respiratory-oximetry-apnoea",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "photoplethysmography (PPG) signals from a custom neck-worn reflectance oximeter",
+        "value": "PPG"
+      },
+      {
+        "evidence": "airway gauge pressure, inspiratory differential pressure",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": "20 healthy adult participants (10 females, 10 males)",
+    "summary": "Airway pressure, inspiratory differential pressure, and neck-worn reflectance photoplethysmography capturing arterial and venous waveforms from 20 healthy adults during simulated obstructive sleep apnoea trials at three positive airway pressure settings."
+  },
+  "prompt_version": "v1"
+}

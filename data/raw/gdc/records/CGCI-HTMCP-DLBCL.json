@@ -1,0 +1,97 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "CGCI-HTMCP-DLBCL",
+  "payload": {
+    "dbgap_accession_number": "phs000529",
+    "disease_type": [
+      "Mature B-Cell Lymphomas"
+    ],
+    "id": "CGCI-HTMCP-DLBCL",
+    "name": "HIV+ Tumor Molecular Characterization Project - Diffuse Large B-Cell Lymphoma",
+    "primary_site": [
+      "Hematopoietic and reticuloendothelial systems"
+    ],
+    "program": {
+      "dbgap_accession_number": "phs000235",
+      "name": "CGCI",
+      "program_id": "d339a424-ad52-5351-a499-493973249414"
+    },
+    "project_id": "CGCI-HTMCP-DLBCL",
+    "releasable": false,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 70,
+      "data_categories": [
+        {
+          "case_count": 70,
+          "data_category": "Sequencing Reads",
+          "file_count": 341
+        },
+        {
+          "case_count": 50,
+          "data_category": "Simple Nucleotide Variation",
+          "file_count": 298
+        },
+        {
+          "case_count": 70,
+          "data_category": "Biospecimen",
+          "file_count": 559
+        },
+        {
+          "case_count": 57,
+          "data_category": "Clinical",
+          "file_count": 62
+        },
+        {
+          "case_count": 50,
+          "data_category": "Copy Number Variation",
+          "file_count": 200
+        },
+        {
+          "case_count": 63,
+          "data_category": "Transcriptome Profiling",
+          "file_count": 230
+        },
+        {
+          "case_count": 50,
+          "data_category": "Somatic Structural Variation",
+          "file_count": 201
+        },
+        {
+          "case_count": 55,
+          "data_category": "Structural Variation",
+          "file_count": 221
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 66,
+          "experimental_strategy": "WGS",
+          "file_count": 816
+        },
+        {
+          "case_count": 55,
+          "experimental_strategy": "RNA-Seq",
+          "file_count": 495
+        },
+        {
+          "case_count": 60,
+          "experimental_strategy": "miRNA-Seq",
+          "file_count": 180
+        },
+        {
+          "case_count": 43,
+          "experimental_strategy": "Tissue Slide",
+          "file_count": 496
+        }
+      ],
+      "file_count": 2112,
+      "file_size": 40486656265947
+    }
+  },
+  "source": "gdc"
+}

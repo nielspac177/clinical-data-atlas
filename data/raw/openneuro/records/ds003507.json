@@ -1,0 +1,110 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003507",
+  "payload": {
+    "created": "2021-02-06T21:35:58.706Z",
+    "id": "ds003507",
+    "latestSnapshot": {
+      "created": "2021-02-07T08:46:22.000Z",
+      "description": {
+        "Authors": [
+          "Chuanji Gao",
+          "Christine E. Weber",
+          "Douglas H. Wedell",
+          "Svetlana V. Shinkareva"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds003507.v1.0.1",
+        "Funding": null,
+        "HowToAcknowledge": "Please cite Gao, C., Weber, C. E., Wedell, D. H., & Shinkareva, S. V. (2020). An fMRI study of affective congruence across visual and auditory modalities. Journal of cognitive neuroscience, 32(7), 1251-1262 and this OpenNEURO dataset.",
+        "License": "CC0",
+        "Name": "fMRI: Audiovisual Valence Congruence",
+        "ReferencesAndLinks": [
+          "Gao, C., Weber, C. E., Wedell, D. H., & Shinkareva, S. V. (2020). An fMRI study of affective congruence across visual and auditory modalities. Journal of cognitive neuroscience, 32(7), 1251-1262. Gao, C. & Shinkareva, S. V. (2021). Modality-general and modality-specific audiovisual valence processing. Cortex."
+        ]
+      },
+      "readme": "General description:\nWe measured brain activity in participants while they viewed naturalistic video clips and listened to instrumental music. We created valence congruent or incongruent audiovisual stimuli while matching arousal at a moderate level.\n\nTwenty-one healthy, right-handed adult volunteers (14 women, mean age = 22 years, age range = 19–30 years) participated in the experiment.\n\nStimuli consisted of 3-sec audiovisual clips that were created from video and music components that were selected based on valence and arousal ratings from a previously developed and validated in-house affective stimuli set.\n\nThe experimental design crossed visual valence (positive, negative) with auditory valence (positive, negative), producing four audiovisual conditions: two congruent, visual positive with auditory positive (VpAp) and visual negative with auditory negative (VnAn), and two incongruent, visual positive with auditory negative (VpAn) and visual negative with auditory positive (Vn Ap). In the scanner, participants were presented with 144 experimental trials and 24 catch trials distributed over three sessions. There were 12 experimental and 2 catch trials for each of the four conditions per session (12 experimental trials×4 conditions×3 sessions=144 trials; 2 catch trials× 4 conditions × 3 sessions = 24 trials). Audiovisual pairings with the same exemplars were restricted to the same session (i.e., cross-validation fold) to generalize the identification of audiovisual affective representation across stimuli. In addition to breaks between sessions for the participants to relax, there was also a 12-sec break in the middle of each session.\n\nData were acquired using a 3-T Siemens Prisma Fit scanner with a 32-channel coil (Siemens) at the McCausland Center for Brain Imaging at the University of South Carolina. fMRI data were acquired using a multiband gradient-echo EPI sequence using T2*-weighted BOLD contrast (multiband acceleration factor = 4).\n\nCode specification in event files:\nVisual positive auditory positive: 1\nVisual positive auditory negative: 2\nVisual negative auditory positive: 3\nVisual negative auditory negative: 4\nCatch trials: 5\n\nOther details please see the reference.",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 15428778995,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21"
+        ],
+        "tasks": [
+          "affect"
+        ],
+        "totalFiles": 320
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        21,
+        22,
+        21,
+        20,
+        24,
+        21,
+        29,
+        21,
+        22,
+        21,
+        19,
+        21,
+        30,
+        22,
+        22,
+        19,
+        21,
+        23,
+        21,
+        20,
+        20
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2021-02-06T22:50:24.836Z"
+  },
+  "source": "openneuro"
+}

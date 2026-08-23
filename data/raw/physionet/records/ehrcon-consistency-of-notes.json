@@ -1,0 +1,32 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "ehrcon-consistency-of-notes",
+  "payload": {
+    "abstract": "<p>Electronic Health Records (EHRs) are integral for storing comprehensive patient medical records, combining structured data (e.g., medications) with detailed clinical notes (e.g., physician notes). These elements are essential for straightforward data retrieval and provide deep, contextual insights into patient care. However, they often suffer from discrepancies due to unintuitive EHR system designs and human errors, posing serious risks to patient safety. To address this, we developed EHRCon, a new dataset and task specifically designed to ensure data consistency between structured tables and unstructured notes in EHRs. EHRCon was crafted in collaboration with healthcare professionals using the MIMIC-III EHR dataset, and includes manual annotations of 4,101 entities across 105 clinical notes checked against database entries for consistency. EHRCon has two versions, one using the original MIMIC-III schema, and another using the OMOP CDM schema, in order to increase its applicability and generalizability.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 1550140,
+    "core_doi": "10.13026/x1ea-np24",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 8327081,
+    "public_project_uuid": "f89c4b1f-e06d-4394-b08e-e1761a221d70",
+    "publish_date": "2025-03-19",
+    "resource_type": "Database",
+    "short_description": "Dataset for Checking Consistency between Unstructured Notes and Structured Tables in Electronic Health Records",
+    "slug": "ehrcon-consistency-of-notes",
+    "source_url": "https://physionet.org/content/ehrcon-consistency-of-notes/1.0.1/",
+    "title": "EHRCon: Dataset for Checking Consistency between Unstructured Notes and Structured Tables in Electronic Health Records",
+    "topics": [],
+    "version": "1.0.1",
+    "version_doi": "10.13026/m4vd-y789"
+  },
+  "source": "physionet"
+}

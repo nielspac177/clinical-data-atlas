@@ -1,0 +1,74 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds000216",
+  "payload": {
+    "created": "2017-12-21T18:20:52.420Z",
+    "id": "ds000216",
+    "latestSnapshot": {
+      "created": "2018-07-17T01:18:44.000Z",
+      "description": {
+        "Authors": [
+          "Alexander D. Cohen",
+          "Andrew S. Nencka",
+          "R. Marc Lebel",
+          "Yang Wang"
+        ],
+        "DatasetDOI": null,
+        "Funding": null,
+        "HowToAcknowledge": "This data was obtained from the OpenfMRI database. Its accession number is ds000216.",
+        "License": "CC0",
+        "Name": "Multiband Multi-Echo Imaging of Simultaneous Oxygenation and Flow Timeseries for Resting State Connectivity",
+        "ReferencesAndLinks": [
+          "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5333818/"
+        ]
+      },
+      "readme": "This dataset contains resting state data collected using a multiband, multiecho simultaneous pseudocontinous ASL (pCASL) and BOLD acquisition. Additional information regarding the sequence is as follows:\n\nThe sequence consists of an unbalanced pseudo-continuous ASL (pCASL) tagging module, followed by a post labeling delay period (PLD). Following the PLD, a multiband excitation and multi-echo, gradient-echo EPI readout was implemented. Blipped-CAIPI was also applied to reduce g-factor noise amplification caused by the slice-unaliasing in MB imaging. Each echo in the multi-echo acquisition was obtained consecutively as part of one shot. The last repetition is the M0 image collected for quantification of CBF.\nEach subject underwent one resting-state MBME ASL/BOLD scan, which utilized an unbalanced pCASL labeling scheme with labeling time=1.5 s and PLD=1.0 s. A partial k-space acquisition was employed with 20 overscan lines. To keep the later TEs within reasonable ranges and reduce total readout time, in-plane acceleration was employed with R=2. Additional parameters for the MBME ASL/BOLD run were as follows: number of echoes=4, TE=9.1, 25, 39.6, 54.3 ms, TR=3.5 s, MB-factor=4, number of excitations=9 (total slices=9×4=36), FOV=240 mm, resolution=3×3×3 mm, FA=90°, RF pulse width=6400 ms. Scans lasted 644 seconds resulting in 167 acquisitions excluding calibration reps. Subjects were instructed to lie awake with their eyes closed.\n\n### Comments added by Openfmri Curators ###\n===========================================\n\nGeneral Comments\n----------------\n\n\nDefacing\n--------\nPydeface was used on all anatomical images to ensure deindentification of subjects. The code\ncan be found at https://github.com/poldracklab/pydeface\n\nWhere to discuss the dataset\n----------------------------\n1) www.openfmri.org/dataset/ds000216/ See the comments section at the bottom of the dataset\npage.\n2) www.neurostars.org Please tag any discussion topics with the tags openfmri and ds000216\naccession number.\n3) Send an email to submissions@openfmri.org. Please include the ds000216 accession number in\nyour email.\n\nKnown Issues\n------------\nN/A\n\nBids-validator Output\n---------------------\ns file is not part of the BIDS specification, make sure it isn't included in the dataset by accident. Data derivatives (processed data) should be placed in /derivatives folder.\n       \t\t\tEvidence: .zip\n       \t\t/sub-01/func/sub-01_task-rest_acq-echo-1_bold.nii.gz\n       \t\t\tThis file is not part of the BIDS specification, make sure it isn't included in the dataset by accident. Data derivatives (processed data) should be placed in /derivatives folder.\n       \t\t\tEvidence: sub-01_task-rest_acq-echo-1_bold.nii.gz\n       \t\t/sub-01/func/sub-01_task-rest_acq-echo-2_bold.nii.gz\n       \t\t\tThis file is not part of the BIDS specification, make sure it isn't included in the dataset by accident. Data derivatives (processed data) should be placed in /derivatives folder.\n       \t\t\tEvidence: sub-01_task-rest_acq-echo-2_bold.nii.gz\n       \t\t/sub-01/func/sub-01_task-rest_acq-echo-3_bold.nii.gz\n       \t\t\tThis file is not part of the BIDS specification, make sure it isn't included in the dataset by accident. Data derivatives (processed data) should be placed in /derivatives folder.\n       \t\t\tEvidence: sub-01_task-rest_acq-echo-3_bold.nii.gz\n       \t\t/sub-01/func/sub-01_task-rest_acq-echo-4_bold.nii.gz\n       \t\t\tThis file is not part of the BIDS specification, make sure it isn't included in the dataset by accident. Data derivatives (processed data) should be placed in /derivatives folder.\n       \t\t\tEvidence: sub-01_task-rest_acq-echo-4_bold.nii.gz\n       \t\t/sub-02/func/sub-02_task-rest_acq-echo-1_bold.nii.gz\n       \t\t\tThis file is not part of the BIDS specification, make sure it isn't included in the dataset by accident. Data derivatives (processed data) should be placed in /derivatives folder.\n       \t\t\tEvidence: sub-02_task-rest_acq-echo-1_bold.nii.gz\n       \t\t/sub-02/func/sub-02_task-rest_acq-echo-2_bold.nii.gz\n       \t\t\tThis file is not part of the BIDS specification, make sure it isn't included in the dataset by accident. Data derivatives (processed data) should be placed in /derivatives folder.\n       \t\t\tEvidence: sub-02_task-rest_acq-echo-2_bold.nii.gz\n       \t\t/sub-02/func/sub-02_task-rest_acq-echo-3_bold.nii.gz\n       \t\t\tThis file is not part of the BIDS specification, make sure it isn't included in the dataset by accident. Data derivatives (processed data) should be placed in /derivatives folder.\n       \t\t\tEvidence: sub-02_task-rest_acq-echo-3_bold.nii.gz\n       \t\t/sub-02/func/sub-02_task-rest_acq-echo-4_bold.nii.gz\n       \t\t\tThis file is not part of the BIDS specification, make sure it isn't included in the dataset by accident. Data derivatives (processed data) should be placed in /derivatives folder.\n       \t\t\tEvidence: sub-02_task-rest_acq-echo-4_bold.nii.gz\n       \t\t/sub-03/func/sub-03_task-rest_acq-echo-1_bold.nii.gz\n       \t\t\tThis file is not part of the BIDS specification, make sure it isn't included in the dataset by accident. Data derivatives (processed data) should be placed in /derivatives folder.\n       \t\t\tEvidence: sub-03_task-rest_acq-echo-1_bold.nii.gz\n       \t\t/sub-03/func/sub-03_task-rest_acq-echo-2_bold.nii.gz\n       \t\t\tThis file is not part of the BIDS specification, make sure it isn't included in the dataset by accident. Data derivatives (processed data) should be placed in /derivatives folder.\n       \t\t\tEvidence: sub-03_task-rest_acq-echo-2_bold.nii.gz\n       \t\t/sub-03/func/sub-03_task-rest_acq-echo-3_bold.nii.gz\n       \t\t\tThis file is not part of the BIDS specification, make sure it isn't included in the dataset by accident. Data derivatives (processed data) should be placed in /derivatives folder.\n       \t\t\tEvidence: sub-03_task-rest_acq-echo-3_bold.nii.gz\n       \t\t/sub-03/func/sub-03_task-rest_acq-echo-4_bold.nii.gz\n       \t\t\tThis file is not part of the BIDS specification, make sure it isn't included in the dataset by accident. Data derivatives (processed data) should be placed in /derivatives folder.\n       \t\t\tEvidence: sub-03_task-rest_acq-echo-4_bold.nii.gz\n       \t\t/sub-04/func/sub-04_task-rest_acq-echo-1_bold.nii.gz\n       \t\t\tThis file is not part of the BIDS specification, make sure it isn't included in the dataset by accident. Data derivatives (processed data) should be placed in /derivatives folder.\n       \t\t\tEvidence: sub-04_task-rest_acq-echo-1_bold.nii.gz\n       \t\t/sub-04/func/sub-04_task-rest_acq-echo-2_bold.nii.gz\n       \t\t\tThis file is not part of the BIDS specification, make sure it isn't included in the dataset by accident. Data derivatives (processed data) should be placed in /derivatives folder.\n       \t\t\tEvidence: sub-04_task-rest_acq-echo-2_bold.nii.gz\n       \t\t/sub-04/func/sub-04_task-rest_acq-echo-3_bold.nii.gz\n       \t\t\tThis file is not part of the BIDS specification, make sure it isn't included in the dataset by accident. Data derivatives (processed data) should be placed in /derivatives folder.\n       \t\t\tEvidence: sub-04_task-rest_acq-echo-3_bold.nii.gz\n       \t\t/sub-04/func/sub-04_task-rest_acq-echo-4_bold.nii.gz\n       \t\t\tThis file is not part of the BIDS specification, make sure it isn't included in the dataset by accident. Data derivatives (processed data) should be placed in /derivatives folder.\n       \t\t\tEvidence: sub-04_task-rest_acq-echo-4_bold.nii.gz\n       \t\t/sub-05/func/sub-05_task-rest_acq-echo-1_bold.nii.gz\n       \t\t\tThis file is not part of the BIDS specification, make sure it isn't included in the dataset by accident. Data derivatives (processed data) should be placed in /derivatives folder.\n       \t\t\tEvidence: sub-05_task-rest_acq-echo-1_bold.nii.gz\n       \t\t/sub-05/func/sub-05_task-rest_acq-echo-2_bold.nii.gz\n       \t\t\tThis file is not part of the BIDS specification, make sure it isn't included in the dataset by accident. Data derivatives (processed data) should be placed in /derivatives folder.\n       \t\t\tEvidence: sub-05_task-rest_acq-echo-2_bold.nii.gz\n       \t\t/sub-05/func/sub-05_task-rest_acq-echo-3_bold.nii.gz\n       \t\t\tThis file is not part of the BIDS specification, make sure it isn't included in the dataset by accident. Data derivatives (processed data) should be placed in /derivatives folder.\n       \t\t\tEvidence: sub-05_task-rest_acq-echo-3_bold.nii.gz\n       \t\t/sub-05/func/sub-05_task-rest_acq-echo-4_bold.nii.gz\n       \t\t\tThis file is not part of the BIDS specification, make sure it isn't included in the dataset by accident. Data derivatives (processed data) should be placed in /derivatives folder.\n       \t\t\tEvidence: sub-05_task-rest_acq-echo-4_bold.nii.gz\n       \t\t/sub-06/func/sub-06_task-rest_acq-echo-1_bold.nii.gz\n       \t\t\tThis file is not part of the BIDS specification, make sure it isn't included in the dataset by accident. Data derivatives (processed data) should be placed in /derivatives folder.\n       \t\t\tEvidence: sub-06_task-rest_acq-echo-1_bold.nii.gz\n       \t\t/sub-06/func/sub-06_task-rest_acq-echo-2_bold.nii.gz\n       \t\t\tThis file is not part of the BIDS specification, make sure it isn't included in the dataset by accident. Data derivatives (processed data) should be placed in /derivatives folder.\n       \t\t\tEvidence: sub-06_task-rest_acq-echo-2_bold.nii.gz\n       \t\t/sub-06/func/sub-06_task-rest_acq-echo-3_bold.nii.gz\n       \t\t\tThis file is not part of the BIDS specification, make sure it isn't included in the dataset by accident. Data derivatives (processed data) should be placed in /derivatives folder.\n       \t\t\tEvidence: sub-06_task-rest_acq-echo-3_bold.nii.gz\n       \t\t/sub-06/func/sub-06_task-rest_acq-echo-4_bold.nii.gz\n       \t\t\tThis file is not part of the BIDS specification, make sure it isn't included in the dataset by accident. Data derivatives (processed data) should be placed in /derivatives folder.\n       \t\t\tEvidence: sub-06_task-rest_acq-echo-4_bold.nii.gz\n       \t\t/sub-07/func/sub-07_task-rest_acq-echo-1_bold.nii.gz\n       \t\t\tThis file is not part of the BIDS specification, make sure it isn't included in the dataset by accident. Data derivatives (processed data) should be placed in /derivatives folder.\n       \t\t\tEvidence: sub-07_task-rest_acq-echo-1_bold.nii.gz\n       \t\t/sub-07/func/sub-07_task-rest_acq-echo-2_bold.nii.gz\n       \t\t\tThis file is not part of the BIDS specification, make sure it isn't included in the dataset by accident. Data derivatives (processed data) should be placed in /derivatives folder.\n       \t\t\tEvidence: sub-07_task-rest_acq-echo-2_bold.nii.gz\n       \t\t/sub-07/func/sub-07_task-rest_acq-echo-3_bold.nii.gz\n       \t\t\tThis file is not part of the BIDS specification, make sure it isn't included in the dataset by accident. Data derivatives (processed data) should be placed in /derivatives folder.\n       \t\t\tEvidence: sub-07_task-rest_acq-echo-3_bold.nii.gz\n       \t\t/sub-07/func/sub-07_task-rest_acq-echo-4_bold.nii.gz\n       \t\t\tThis file is not part of the BIDS specification, make sure it isn't included in the dataset by accident. Data derivatives (processed data) should be placed in /derivatives folder.\n       \t\t\tEvidence: sub-07_task-rest_acq-echo-4_bold.nii.gz\n       \t\t/task-rest_acq-echo-1_bold.json\n       \t\t\tThis file is not part of the BIDS specification, make sure it isn't included in the dataset by accident. Data derivatives (processed data) should be placed in /derivatives folder.\n       \t\t\tEvidence: task-rest_acq-echo-1_bold.json\n       \t\t/task-rest_acq-echo-2_bold.json\n       \t\t\tThis file is not part of the BIDS specification, make sure it isn't included in the dataset by accident. Data derivatives (processed data) should be placed in /derivatives folder.\n       \t\t\tEvidence: task-rest_acq-echo-2_bold.json\n       \t\t/task-rest_acq-echo-3_bold.json\n       \t\t\tThis file is not part of the BIDS specification, make sure it isn't included in the dataset by accident. Data derivatives (processed data) should be placed in /derivatives folder.\n       \t\t\tEvidence: task-rest_acq-echo-3_bold.json\n       \t\t/task-rest_acq-echo-4_bold.json\n       \t\t\tThis file is not part of the BIDS specification, make sure it isn't included in the dataset by accident. Data derivatives (processed data) should be placed in /derivatives folder.\n       \t\t\tEvidence: task-rest_acq-echo-4_bold.json\n\n        Summary:                Available Tasks:        Available Modalities:\n        44 Files, 1.97GB                                T1w\n        7 - Subjects\n        1 - Session \n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 2117533500,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07"
+        ],
+        "tasks": [
+          "rest"
+        ],
+        "totalFiles": 43
+      },
+      "tag": "00001"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": null,
+      "associatedPaperDOI": "10.1371/journal.pone.0169253",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "Sequence development",
+      "studyDomain": "Sequence development",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2019-09-30T19:15:50.280Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,38 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "medical-diff-vqa",
+  "payload": {
+    "abstract": "<p>The task of Difference Visual Question Answering involves answering questions about the difference between a pair of main and reference images. This process is consistent with the radiologist&#39;s diagnosis practice that compares the current image with the reference before concluding the report. We&#39;ve assembled a new dataset, called Medical-Diff-VQA, for this purpose. Unlike previous medical VQA datasets, ours is the first one designed specifically for the Difference Visual Question Answering task, with questions crafted to suit the Assessment-Diagnosis-Intervention-Evaluation treatment procedure employed by medical professionals. The Medical-Diff-VQA dataset, a derivative of the MIMIC-CXR dataset, consists of questions categorized into seven categories: abnormality (145,421), location (84,193), type (27,478), level (67,296), view (56,265), presence (155,726), and difference(164,324). The &#39;difference&#39; questions are specifically for comparing two images. In total, the Medical-Diff-VQA dataset contains 700,703 question-answer pairs derived from 164,324 pairs of main and reference images.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 21894282,
+    "core_doi": "10.13026/hbsg-tk87",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 311733683,
+    "public_project_uuid": "b578d397-10be-4c81-b970-902af226f460",
+    "publish_date": "2025-02-03",
+    "resource_type": "Database",
+    "short_description": "MIMIC-Diff-VQA provides a large-scale dataset for Difference visual question answering in medical chest x-ray images.",
+    "slug": "medical-diff-vqa",
+    "source_url": "https://physionet.org/content/medical-diff-vqa/1.0.1/",
+    "title": "Medical-Diff-VQA: A Large-Scale Medical Dataset for Difference Visual Question Answering on Chest X-Ray Images",
+    "topics": [
+      "vqa",
+      "chest x-ray",
+      "difference visual question answering",
+      "difference vqa",
+      "visual question answering"
+    ],
+    "version": "1.0.1",
+    "version_doi": "10.13026/e6dd-cn74"
+  },
+  "source": "physionet"
+}

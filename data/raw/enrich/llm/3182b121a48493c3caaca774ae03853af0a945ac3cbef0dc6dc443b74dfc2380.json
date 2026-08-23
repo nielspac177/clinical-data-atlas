@@ -1,0 +1,35 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:3182b121a48493c3caaca774ae03853af0a945ac3cbef0dc6dc443b74dfc2380",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "suspected sleep-disordered breathing",
+        "label": "sleep-disordered breathing"
+      }
+    ],
+    "countries": [
+      "IE"
+    ],
+    "domains": [
+      "pulmonology",
+      "cardiology"
+    ],
+    "id": "physionet:ucddb",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "simultaneous three-channel Holter ECG",
+        "value": "ECG"
+      },
+      {
+        "evidence": "full overnight polysomnograms",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": "25 adult subjects with suspected sleep-disordered breathing",
+    "summary": "Twenty-five full overnight polysomnograms recorded with simultaneous three-channel Holter ECG in adults with suspected sleep-disordered breathing. A revised version was posted in 2011."
+  },
+  "prompt_version": "v1"
+}

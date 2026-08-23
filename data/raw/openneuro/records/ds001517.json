@@ -1,0 +1,115 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds001517",
+  "payload": {
+    "created": "2018-09-18T14:58:20.370Z",
+    "id": "ds001517",
+    "latestSnapshot": {
+      "created": "2020-01-27T23:21:04.000Z",
+      "description": {
+        "Authors": [
+          "Kok, P.",
+          "Turk-Browne, N.B."
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds001517.v1.0.3",
+        "Funding": [
+          "National Institutes of Health (R01 MH069456)"
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Associative Prediction of Visual Shape in the Hippocampus",
+        "ReferencesAndLinks": null
+      },
+      "readme": "This dataset consists of fMRI data from 24 participants that were exposed to an experiment consisting of auditory cues and abstract visual shapes. The experiment consisted of 6 functional runs (~13 minutes per run), described below.\n\nIn two out of six runs (run 1 and run 6), one of five shapes was presented on each trial, in a pseudorandom manner. In the other four runs, auditory cues (falling or rising tones, respectively) predicted which shape (either shape 2 or shape 4) would be presented on that trial, with 75% validity. In two of the four prediction runs, an unexpected shape was presented on the 25% invalid trials (e.g. shape 2 was predicted, but shape 4 presented). In the other two runs, no shape at all was presented on the 25% invalid trials (omission trials).\n\nAll imaging data were acquired using a 3T Siemens Prisma MR scanner, with a 64-channel head coil. Functional images were obtained with a multiband EPI sequence: TR = 1000 ms; TE = 32.6 ms; 60 transversal slices; voxel size = 1.5 x 1.5 x 1.5mm; 55 degree flip angle; multiband factor = 6. Additionally, anatomical T1 (TR = 2300 ms;\nTE = 2.27 ms; voxel size= 1 x 1 x 1 mm; 192 transversal slices; 8 degree flip angle; GRAPPA acceleration factor 3) and T2 (TR = 11,390 ms; TE = 90 ms; voxel size = 0.44 x 0.44 x 1.5mm; 54 coronal slices, perpendicular to the long axis of the hippocampus; distance factor = 20%; 150 degree flip angle) weighted images were acquired. To correct for susceptibility-induced distortions in the echoplanar images, a pair of spinecho volumes was acquired in opposing phase-encode directions (anterior/posterior and posterior/anterior) with matching slice prescription, voxel size, field of view, bandwidth, and echo spacing (TR = 8000 ms; TE = 66 ms).",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 169581455290,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24"
+        ],
+        "tasks": [
+          "Prediction audio cue",
+          "Shape only"
+        ],
+        "totalFiles": 606
+      },
+      "tag": "1.0.3"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        31,
+        19,
+        22,
+        19,
+        27,
+        19,
+        27,
+        33,
+        20,
+        21,
+        23,
+        20,
+        19,
+        29,
+        31,
+        29,
+        23,
+        18,
+        21,
+        19,
+        22,
+        22,
+        19,
+        23
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2018-09-18T14:58:20.370Z"
+  },
+  "source": "openneuro"
+}

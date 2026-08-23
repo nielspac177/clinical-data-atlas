@@ -1,0 +1,27 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:3413520c9a303f1927f6b8d1914baab01a98fe4200b32a746e2d63d5dd3c04de",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "other"
+    ],
+    "id": "physionet:image-embeddings-mimic-cxr",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Chest X-Ray database",
+        "value": "xray"
+      },
+      {
+        "evidence": "compact, information-rich numerical vectors",
+        "value": "other"
+      }
+    ],
+    "population": null,
+    "summary": "Compact image embeddings derived from the DICOM chest radiographs of the MIMIC-CXR Database using a chest X-ray foundation model API, intended for downstream classification with less compute and data."
+  },
+  "prompt_version": "v1"
+}

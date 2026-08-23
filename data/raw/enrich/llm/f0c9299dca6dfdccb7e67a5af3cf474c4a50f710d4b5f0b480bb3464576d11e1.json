@@ -1,0 +1,31 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:f0c9299dca6dfdccb7e67a5af3cf474c4a50f710d4b5f0b480bb3464576d11e1",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "atrial fibrillation (AF) detection in the intensive care unit",
+        "label": "atrial fibrillation"
+      }
+    ],
+    "countries": [
+      "CA"
+    ],
+    "domains": [
+      "cardiology",
+      "critical_care"
+    ],
+    "id": "physionet:kingston-icu-af",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "596 labelled 10-second electrocardiograms (ECGs)",
+        "value": "ECG"
+      }
+    ],
+    "population": "ICU patients at the Kingston General Hospital in Kingston, Ontario, Canada",
+    "summary": "596 labelled 10-second four-lead ECGs collected from ICU bedside monitors at Kingston General Hospital, containing atrial fibrillation/flutter and sinus rhythm samples, each labelled by at least two clinicians."
+  },
+  "prompt_version": "v1"
+}

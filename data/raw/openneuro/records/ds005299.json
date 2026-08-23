@@ -1,0 +1,139 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005299",
+  "payload": {
+    "created": "2024-06-29T23:25:29.156Z",
+    "id": "ds005299",
+    "latestSnapshot": {
+      "created": "2024-06-30T21:50:33.000Z",
+      "description": {
+        "Authors": [
+          "Laura Pritschet",
+          "Caitlin M. Taylor",
+          "Daniela Cossio",
+          "Joshua Faskowitz",
+          "Tyler Santander",
+          "Daniel A. Handwerker",
+          "Hannah Grotzinger",
+          "Evan Layher",
+          "Elizabeth R. Chrastil",
+          "Emily G. Jacobs"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005299.v1.0.0",
+        "Funding": [
+          "NIH AG063843; EGJ",
+          "NIH F99AG07979; LP",
+          "ReproGrants; HG, EGJ, ERC",
+          "UC Academic Senate; EGJ",
+          "UC Irvine Campus Funds; ERC",
+          "UC Irvine Campus Funds (ERC)",
+          "Intramural Research Program of the National Institute of Mental Health (annual report ZIAMH002783); J.F. & D.A.H",
+          "Ann S. Bowers Women's Brain Health Initiative (EGJ, CT)",
+          "NIH T32 AG00096-40; DC"
+        ],
+        "HowToAcknowledge": "When using this data, please cite: \nPritschet, L., Taylor, C. M., Cossio, D., Faskowitz, J., Santander, T., Handwerker, D. A., ... & Jacobs, E. G. (2023). Neuroanatomical changes observed over the course of a human pregnancy. bioRxiv, 2023-12 ",
+        "License": "CC0",
+        "Name": "Maternal Brain Project",
+        "ReferencesAndLinks": [
+          "https://wbhi.ucsb.edu/",
+          "https://www.biorxiv.org/content/10.1101/2023.12.14.571688v2"
+        ]
+      },
+      "readme": "ReadMe:\n\nThis dataset contains raw data for the Maternal Brain Project, a project that uses precision imaging methods to map the human maternal brain starting pre-conception through postpartum and beyond. Subjects undergo repeated multi-modal MRI, venipuncture, and mood/health assessments over the course of pregnancy. \n\nData will be released iteratively. The first installment of data (V1) involves the Maternal Brain Project-Pilot, wherein a single nulliparous woman completed 26 MRI scans (T1w, high-resolution MTL, DWI) alongside state-dependent measures and serum assessments of sex hormones from pre-conception through two years postpartum. Future data releases will involve extended phenotyping in a larger cohort of participants and their partners both in the United States (V2) and Internationally (V3). More details can be found here: https://wbhi.ucsb.edu/\n\nV1 notes: \n- Final two sessions (ses-26 & ses-27) took place within a 24-hr period to measure test-retest reliability of MRI measures between the two scanning sites, UCI and UCSB.\n- Due to technical difficulties, fmaps for ses-07 have different scan parameters (see json file)\n- For more details regarding scan parameters, see json files located in each session's modality folder \n\nFor questions, please reach out to lpritschet38@gmail.com & ucsbjacobslab@gmail.com \n\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural",
+          "mri_diffusion"
+        ],
+        "sessions": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27"
+        ],
+        "size": 7742639157,
+        "subjects": [
+          "01"
+        ],
+        "tasks": [],
+        "totalFiles": 374
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": "Longitudinal"
+    },
+    "publishDate": "2024-06-30T21:54:59.864Z"
+  },
+  "source": "openneuro"
+}

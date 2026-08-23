@@ -1,0 +1,133 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005264",
+  "payload": {
+    "created": "2024-06-20T03:18:11.661Z",
+    "id": "ds005264",
+    "latestSnapshot": {
+      "created": "2026-03-24T20:03:48.000Z",
+      "description": {
+        "Authors": [
+          "Neil M. Dundon",
+          "Elizabeth Rizor",
+          "Joanne Stasiak",
+          "Jingyi Wang",
+          "Kiana Sabugo",
+          "Christina Villaneuva",
+          "Parker Barandon",
+          "Andreea C. Bostan",
+          "Regina Lapate",
+          "Scott T. Grafton"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005264.v1.1.1",
+        "Funding": [
+          "SKIP was funded in whole by Aligning Science Across Parkinson’s ASAP-020-519 through the Michael J. Fox Foundation for Parkinson’s Research (MJFF)"
+        ],
+        "HowToAcknowledge": "Please cite the following: Rizor, E., Dundon, N. M., Wang, J., Stasiak, J., Li, T., Bostan, A. C., Lapate, R. C., & Grafton, S. T. (2024). Dissociation of putative open loop circuit from ventral putamen to motor cortical areas in humans I: high-resolution connectomics. bioRxiv, 2024.08.28.610129. https://doi.org/10.1101/2024.08.28.610129",
+        "License": "CC0",
+        "Name": "SoCal Kinesia and Incentivization for Parkinson's Disease (SKIP): Ultra-High Field Functional Connectivity",
+        "ReferencesAndLinks": [
+          "www.socalkinesia.org",
+          "https://parkinsonsroadmap.org/#"
+        ]
+      },
+      "readme": "# Ultra-High Field Functional Connectivity / Network Mapping (highresFC) from the SKIP Dataset\n\nThe Socal Kinesia and Incentivization for Parkinson's Disease (SKIP) dataset facilitates research across human sciences, focusing on human movement and the modulatory impact of incentivization, specifically in the context of Parkinson's Disease (PD).\n\nSKIP so far contains three task-based fMRI datasets and one resting-state fMRI dataset.\n\n### This dataset: Ultra-High Field Functional Connectivity / Network Mapping (highresFC)\n- **Description:** 28 participants undergoing ultra-high field (7T) multi-echo scans at rest.\n  - Multi-echo imaging was used to reduce non-BOLD signals.\n  - Ultra-high field imaging provides greater image resolution and reliability of functional connectivity network analyses.\n  - Ideal for mapping network properties of small, deep subcortical nuclei, such as those in the basal ganglia.\n\n**Current Version:** 1.1.1  \n**Note:** This version contains raw data from healthy controls only. Future updates will include data from PD patients and a broader range of assays in both healthy controls and PD subjects, such as cardiac-autonomic and pupillometry data.\n\nOur goal for SKIP is to become the leading global resource as the world advances in its capacity for powerful and innovative analyses, allowing researchers free access to comprehensive physiological and behavioral assays of movement, and how incentives influence them, in the context of PD.\n\n## Funding\nSKIP was funded in whole by Aligning Science Across Parkinson's ASAP-020-519 through the Michael J. Fox Foundation for Parkinson's Research (MJFF).\n\n## More Information\nFor more information, please visit:\n- [SKIP Official Website](http://www.socalkinesia.org)\n- [Aligning Science Across Parkinson's (ASAP)](https://parkinsonsroadmap.org/#)\n\n## Citation\nPlease cite the following:  \nDundon, N. M., Rizor, E.J., Stasiak, J., Wang, J., Li, T., Sabugo, K., Villaneuva, C., Barandon, P., Babenko, V., Beverly-Aylwin, R., Stump, A., Santander, T., Bostan, A. C., Lapate, R. C., & Grafton, S. T. (2025). Incentive valence differentially engages open- and closed-loop basal ganglia circuits during movement initiation. bioRxiv, 2025-12.\n\n## Repository\n[See here for the analysis and processing code used to create the above publications.](https://github.com/ejrise/incentive-valence)\n\n## other fMRI Tasks part of SKIP\n\n### Incentivized Reaching Task (incenreach)\n- **Description:** 68 participants performing time-constrained precision reaches to spatial targets in different monetary incentive contexts.\n  - Trials were categorized into \"standard\" (80%) and \"high incentive\" (20%) trials.\n  - High incentive trials could either obtain a large reward (jackpot) or avoid a large loss (robber).\n  - Task design compares positive and negative incentive valence.\n\n### Approach-Avoid Task (approachavoid)\n- **Description:** 78 participants making time-constrained reaches toward or away from emotional images.\n  - Valence (Positive and Negative) of pictures and joystick movement direction (Approach and Avoid) were manipulated.\n  - Participants pulled the joystick towards themselves (approach) or away from themselves (avoid) based on the picture's valence.\n  - Task design creates emotion-action congruent (Positive-Approach, Negative-Avoid) and incongruent (Positive-Avoid, Negative-Approach) conditions.\n\n### Active Escape Task (activeescape)\n- **Description:** 69 participants tracking an 18-second countdown and making time-sensitive motor responses under the threat of electric shock.\n  - Shock intensity (mild vs unpleasant) and controllability were manipulated.\n  - In \"controllable\" trials, participants could avoid shocks if motor responses were fast enough.\n  - In \"uncontrollable\" trials, a shock was always received.\n  - Task design creates controllable-mild, uncontrollable-mild, controllable-unpleasant, and uncontrollable-unpleasant conditions.\n\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 52671367073,
+        "subjects": [
+          "15",
+          "28",
+          "19",
+          "16",
+          "22",
+          "24",
+          "12",
+          "06",
+          "11",
+          "23",
+          "17",
+          "02",
+          "03",
+          "07",
+          "25",
+          "14",
+          "26",
+          "21",
+          "27",
+          "20",
+          "05",
+          "10",
+          "04",
+          "13",
+          "18",
+          "01",
+          "08",
+          "09"
+        ],
+        "tasks": [
+          "rest"
+        ],
+        "totalFiles": 775
+      },
+      "tag": "1.1.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "Aligning Science Across Parkinson’s",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "Within subjects",
+      "studyDomain": "Parkinson's Disease",
+      "studyLongitudinal": "Resting-state fMRI"
+    },
+    "publishDate": "2024-06-20T06:37:14.742Z"
+  },
+  "source": "openneuro"
+}

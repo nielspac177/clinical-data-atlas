@@ -1,0 +1,46 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:45e704bb92b52c4d3f2b272fb44ed459261fc35b2849ba189283067ca5f0e67f",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Nevi and Melanomas",
+        "label": "Nevi and Melanomas"
+      },
+      {
+        "evidence": "Adenomas and Adenocarcinomas",
+        "label": "Adenomas and Adenocarcinomas"
+      },
+      {
+        "evidence": "Neoplasms, NOS",
+        "label": "Neoplasms, NOS"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "pulmonology",
+      "gastroenterology_hepatology"
+    ],
+    "id": "gdc:MATCH-C1",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "WXS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "RNA-Seq",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "11 human cancer cases in Arm C1 of the CS-MATCH-0007 study",
+    "summary": "Genomic characterization of Arm C1 of CS-MATCH-0007, with exome and RNA sequencing plus clinical and biospecimen data from esophagus, lung, stomach, liver, palate and rectum tumors."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,116 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006564",
+  "payload": {
+    "created": "2025-08-15T08:36:36.925Z",
+    "id": "ds006564",
+    "latestSnapshot": {
+      "created": "2026-04-16T08:15:56.000Z",
+      "description": {
+        "Authors": [
+          "Fernando Bravo"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006564.v1.0.1",
+        "Funding": [
+          "This project was made possible through the support from Queens’ College Cambridge (Walker Studentship to F.B.), the Andrea von Braun Stiftung, and Zukunftskonzept at TU Dresden (Exzellenzinitiative of the Deutsche Forschungsgemeinschaft)."
+        ],
+        "HowToAcknowledge": "How to cite: \nBravo F (2025). Naturalistic fMRI Dataset (film with controlled musical information). OpenNeuro. [Dataset] doi:10.18112/openneuro.ds006564.v1.0.0\n\nConsider also citing this paper: Bravo F, Glogowski J, Stamatakis EA, Herfert K (2024) Dissonant music engages early visual processing. Proc Natl Acad Sci USA 121:e2320378121. \n",
+        "License": "CC0",
+        "Name": "Naturalistic fMRI Dataset (film with controlled musical information)",
+        "ReferencesAndLinks": [
+          "Bravo F, Glogowski J, Stamatakis EA, Herfert K (2024) Dissonant music engages early visual processing. Proc Natl Acad Sci USA 121:e2320378121.",
+          "Bravo F, Cross I, Hopkins C, Gonzalez N, Docampo J, Bruno C, Stamatakis EA (2019) Anterior cingulate and medial prefrontal cortex response to systematically controlled tonal dissonance during passive music listening. Hum Brain Mapp:hbm.24786.",
+          "Bravo F, Cross I, Hawkins S, Gonzalez N, Docampo J, Bruno C, Stamatakis EA (2017) Neural mechanisms underlying valence inferences to sound: The role of the right angular gyrus. Neuropsychologia 102:144–162."
+        ]
+      },
+      "readme": "\nExperiment Details:\n================\nParticipants watched short films during fMRI while focusing on the main character’s mental states.  The films were paired with soundtracks varying in musical properties, enabling investigation of how controlled music-driven memory associations influence theory-of-mind (ToM) encoding through predictive priming mechanisms.\n\nInformation to relate patterns of functional brain organization to phenotypic measures (e.g., autism spectrum disorder traits):\n----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\n\nThe dataset allows to investigate brain mechanisms underlying individual variation in measures related to ASD including: autism traits (Baron-Cohen et al., 2001), empathy traits, and ToM (Baron-Cohen and Wheelwright, 2004)]. The influence of three common co-morbidities: depression, anxiety and alexithymia can also be assessed (Spielberger et al., 1970; Beck, 1991; Vorst and Bermond, 2001; Bird et al., 2010; Heaton et al., 2012; Strang et al., 2012).\n\nScans - technical information:\n------------------------------------------\nLayers: 34\nDistance: 25\nFoV: 192\nFoV (phase): 100,0\nLayer thickness: 3,2\nTR: 2000\n\nGeneral Behavioural Table\n--------------------------------------\nLink: https://docs.google.com/spreadsheets/d/1RtUboA4nd4tg-X9HG_LaLM2eXA8GFAXzZ7xLzVXM2zE/edit?gid=1356882045#gid=1356882045\n\n- Demographics (gender, musical training, paradigm version A or B)\n- Autism traits measures: empathy quotient, cognitive empathy, emotional reactivity, autism quotient, social skills, attention switching, attention to detail, communication, imagination (Baron-Cohen and Wheelwright, 2004).\n- Depression traits (BDI-II), Anxiety traits (A-State score), Alexithimia (Spielberger et al., 1970; Beck, 1991; Vorst and Bermond, 2001; Bird et al., 2010; Heaton et al., 2012; Strang et al., 2012).\n- Behavioural data collected inside the scanner.\n\n\nTask Mapping Table, Timings and Experimental Design:\n-------------------------------------------------------------------------------\n\nThe following table defines how 3D scans are grouped into BIDS-compliant 4D NIfTI files based on the naturalistic task they belong to:\n\nNaturalistic Task Name: natrestpendulous (naturalistic-rest-pendulous)\nScan Index: 6–408\nExperimental Design:\nDesign 01 (block: https://docs.google.com/spreadsheets/d/1RtUboA4nd4tg-X9HG_LaLM2eXA8GFAXzZ7xLzVXM2zE/edit?gid=2013130588#gid=2013130588) and 02 (event-related: https://docs.google.com/spreadsheets/d/1RtUboA4nd4tg-X9HG_LaLM2eXA8GFAXzZ7xLzVXM2zE/edit?gid=127456479#gid=127456479)\nExample: sub-XX_task-natrestpendulous_bold.nii.gz\n\nNaturalistic Task Name: natrorschach (naturalistic-rorschach)\nScan Index: 408–502\nExperimental Design: \nhttps://docs.google.com/spreadsheets/d/1RtUboA4nd4tg-X9HG_LaLM2eXA8GFAXzZ7xLzVXM2zE/edit?gid=11411923#gid=11411923\nExample: sub-XX_task-natrorschach_bold.nii.gz\n\nNaturalistic Task Name: nattunnel (naturalistic-tunnel)\nScan Index: 502–637\nExperimental Design: \nhttps://docs.google.com/spreadsheets/d/1RtUboA4nd4tg-X9HG_LaLM2eXA8GFAXzZ7xLzVXM2zE/edit?gid=389529649#gid=389529649\nExample: sub-XX_task-nattunnel_bold.nii.gz\n\nNaturalistic Task Name: natseti (naturalistic-seti)\nScan Index: 637–913\nExperimental Design:\nhttps://docs.google.com/spreadsheets/d/1RtUboA4nd4tg-X9HG_LaLM2eXA8GFAXzZ7xLzVXM2zE/edit?gid=2055828508#gid=2055828508\nExample: sub-XX_task-natseti_bold.nii.gz\n\nNaturalistic Task Name: natpov (naturalistic-pov)\nScan Index: 913–1046\nExperimental Design:\nhttps://docs.google.com/spreadsheets/d/1RtUboA4nd4tg-X9HG_LaLM2eXA8GFAXzZ7xLzVXM2zE/edit?gid=1748720858#gid=1748720858\nExample: sub-XX_task-natpov_bold.nii.gz\n\nNaturalistic Task Name: natkandinski (naturalistic-kandinski)\nScan Index: 1046–1159\nExample: sub-XX_task-natkandinski_bold.nii.gz\n\nNote: Replace 'sub-XX' with the actual subject ID, e.g., 'sub-01', 'sub-02'.\n\nLink to Technical Table:\n---------------------------------\nhttps://docs.google.com/spreadsheets/d/1RtUboA4nd4tg-X9HG_LaLM2eXA8GFAXzZ7xLzVXM2zE/edit?gid=11411923#gid=11411923) including complete timepoints, audio and visual technical details for all naturalistic paradigms, scanner details.\n\n\nPreprocessing details: Data were processed using Statistical Parametric Mapping (SPM), version 12 (www.fil.ion.ucl.ac.uk/spm). Following correction for the temporal difference in acquisition between slices, EPI volumes were realigned and resliced to correct within subject movement. A mean EPI volume was obtained during realignment and the structural MRI was coregistered with that mean volume. The coregistered structural scan was normalized to the Montreal Neurological Institute (MNI) T1 template (32). The same deformation parameters obtained from the structural image, were applied to the realigned EPI volumes, which were resampled into MNI-space with isotropic voxels of 3 cubic millimetres. The normalized images were smoothed using a 3D Gaussian kernel and a filter size of 6 mm FWHM. A temporal high-pass filter with a cut-off frequency of 256Hz was applied with the purpose of removing scanner attributable low frequency drifts in the fMRI time series. \n\nFor references see: Bravo F, Glogowski J, Stamatakis EA, Herfert K (2024) Dissonant music engages early visual processing. Proc Natl Acad Sci USA 121:e2320378121. (Full text can be downloaded from here: https://drive.google.com/file/d/1VPhewm2k_aG7afdgeSu_364eM29Dcta4/view?usp=sharing)\n\nFor questions or support please email :\nDr. Fernando Bravo\nEmail: nanobravo@fulbrightmail.org\nPI - Coordinating Investigator - Studienleiter",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 12830151095,
+        "subjects": [
+          "34",
+          "39",
+          "16",
+          "32",
+          "03",
+          "12",
+          "30",
+          "11",
+          "19",
+          "40",
+          "02",
+          "21",
+          "09",
+          "33",
+          "13",
+          "42",
+          "05",
+          "27",
+          "35",
+          "04",
+          "10",
+          "08",
+          "25",
+          "14",
+          "20",
+          "36",
+          "15",
+          "26",
+          "01",
+          "24",
+          "43",
+          "07",
+          "41",
+          "18",
+          "28",
+          "31",
+          "22",
+          "06",
+          "37",
+          "17",
+          "38",
+          "23",
+          "29"
+        ],
+        "tasks": [
+          "natpov",
+          "natrestpendulous",
+          "natrorschach",
+          "natseti",
+          "natkandinski",
+          "nattunnel"
+        ],
+        "totalFiles": 562
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": "https://doi.org/10.1073/pnas.2320378121",
+      "dataProcessed": null,
+      "dxStatus": "Autism",
+      "grantFunderName": "Queens’ College Cambridge (Walker Studentship to F.B.), the Andrea von Braun Stiftung, and Zukunftskonzept at TU Dresden ",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "naturalistic paradigms",
+      "studyDomain": "Audiovisual integration, Theory of Mind, Musical Dissonance, Emotion, Psychopathology traits (autism)",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2025-08-18T11:15:57.158Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,85 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004507",
+  "payload": {
+    "created": "2023-02-20T15:19:44.876Z",
+    "id": "ds004507",
+    "latestSnapshot": {
+      "created": "2026-07-27T19:38:20.000Z",
+      "description": {
+        "Authors": [
+          "S. Bédard",
+          "J. Cohen-Adad"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004507.v1.1.2",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Spinal Cord Head Positions",
+        "ReferencesAndLinks": null
+      },
+      "readme": "#Spinal Cord Head Position MRI\n\nThis MRI dataset for the PMJ-based CSA project. \nThe analysis pipeline is available within the GitHub repository: https://github.com/sct-pipeline/pmj-based-csa\n\n## Dataset structure\nThe MRI dataset contains MRIs from 10 healthy participants with 3 different neck positions: felxion, neutral and extension. \nThe following images are included:\n- T2w sagittal isotropic 0.6 mm\n\nThree sessions:\n\n- ses-headDown --> flexion\n- ses-headNormal --> neutral\n- ses-headUp --> extension\nNote: sub-002 has different acqusisition parameters: 0.7 mm isotropic for ses-headDown and ses-headUp\n\n## Derivatives\n\nThe derivatives will be organized according to the following:\nhttps://intranet.neuro.polymtl.ca/data/dataset-curation.html#derivatives-structure\n\nConvention for JSON metadata:\n\n{\n  \"Author\": \"Firstname Lastname\",\n  \"Date\": \"YEAR-MM-DD HH:MM:SS\"\n}\n\n\nDerivatives includes:\n\n- Intervertebral discs labels\n- Spinal cord segmentation\n- Spinal nerve rootet labels\n- PMJ label\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural"
+        ],
+        "sessions": [
+          "headDown",
+          "headUp",
+          "headNormal"
+        ],
+        "size": 388605994,
+        "subjects": [
+          "006",
+          "011",
+          "005",
+          "007",
+          "009",
+          "008",
+          "003",
+          "002",
+          "004",
+          "010"
+        ],
+        "tasks": [],
+        "totalFiles": 65
+      },
+      "tag": "1.1.2"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "Spinal Cord",
+      "studyLongitudinal": "head position-dependent test-retest"
+    },
+    "publishDate": "2023-03-10T19:03:15.354Z"
+  },
+  "source": "openneuro"
+}

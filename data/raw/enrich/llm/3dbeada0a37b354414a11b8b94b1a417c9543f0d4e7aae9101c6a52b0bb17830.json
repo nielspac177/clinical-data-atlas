@@ -1,0 +1,40 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:3dbeada0a37b354414a11b8b94b1a417c9543f0d4e7aae9101c6a52b0bb17830",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "patients with myocardial infarctions",
+        "label": "myocardial infarctions"
+      },
+      {
+        "evidence": "transient ischemia",
+        "label": "transient ischemia"
+      },
+      {
+        "evidence": "ventricular tachyarrhythmias",
+        "label": "ventricular tachyarrhythmias"
+      },
+      {
+        "evidence": "as well as healthy controls",
+        "label": "healthy controls"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:twadb",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "multichannel ECG records sampled at 500 Hz",
+        "value": "ECG"
+      }
+    ],
+    "population": "Patients with myocardial infarctions, transient ischemia, ventricular tachyarrhythmias, and other risk factors for sudden cardiac death, plus healthy controls and synthetic cases",
+    "summary": "One hundred multichannel ECG records assembled for the 2008 Computers in Cardiology Challenge, including patients at risk of sudden cardiac death, healthy controls, and synthetic cases with calibrated T-wave alternans."
+  },
+  "prompt_version": "v1"
+}

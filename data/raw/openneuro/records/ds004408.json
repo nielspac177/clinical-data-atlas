@@ -1,0 +1,81 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004408",
+  "payload": {
+    "created": "2023-01-17T16:49:36.606Z",
+    "id": "ds004408",
+    "latestSnapshot": {
+      "created": "2023-08-01T14:47:06.000Z",
+      "description": {
+        "Authors": [
+          "Giovanni M Di Liberto",
+          "Michael P Broderick",
+          "Ole Bialas",
+          "Edmund C Lalor"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004408.v1.0.8",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "EEG responses to continuous naturalistic speech\n",
+        "ReferencesAndLinks": null
+      },
+      "readme": "The data in one study [^1] and then added to by another [^2] and contains EEG responses of healthy, neurotypical adults who listened to naturalistic speech. The subjects listened to segments from an audio book version of \"The Old Man and the Sea\" and their brain activity was recorded using a 128-channel ActiveTwo EEG system (BioSemi). \n\nThe stimuli folder contains .wav files of the presented audiobook segments as well as a .TextGrid file for each segment, containng the timing of  words and phonemes in that segment. The text grids were generated using the forced-alignment software Prosodylab-Aligner [^3] and inspected by eye. Each subject's folder contains one EEG-recording per audio segment and their starts are aligned (the EEG recordings are longer than the audio to a varying extent).  The recordings are unfiltered, unreferenced and sampled at 512 Hz.\n\n[^1]: Di Liberto, G. M., O’sullivan, J. A., & Lalor, E. C. (2015). Low-frequency cortical entrainment to speech reflects phoneme-level processing. Current Biology, 25(19), 2457-2465.\n\n[^2]: Broderick, M. P., Anderson, A. J., Di Liberto, G. M., Crosse, M. J., & Lalor, E. C. (2018). Electrophysiological correlates of semantic dissimilarity reflect the comprehension of natural, narrative speech. Current Biology, 28(5), 803-809.\n\n[^3]: Gorman, K., Howell, J., & Wagner, M. (2011). Prosodylab-aligner: A tool for forced alignment of laboratory speech. Canadian Acoustics, 39(3), 192-193.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "eeg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [],
+        "size": 20083249467,
+        "subjects": [
+          "001",
+          "002",
+          "003",
+          "004",
+          "005",
+          "006",
+          "007",
+          "008",
+          "009",
+          "010",
+          "011",
+          "012",
+          "013",
+          "014",
+          "015",
+          "016",
+          "017",
+          "018",
+          "019"
+        ],
+        "tasks": [
+          "listening"
+        ],
+        "totalFiles": 1946
+      },
+      "tag": "1.0.8"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": null,
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "eeg"
+      ],
+      "species": "",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2023-01-20T15:17:31.465Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,68 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:224fb9567cfd66802ef854405662de9070d7868f52df69cd412dcbe05b7aec4b",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "structural heart disease",
+        "label": "structural heart disease"
+      },
+      {
+        "evidence": "reduced left ventricular ejection fraction",
+        "label": "reduced left ventricular ejection fraction"
+      },
+      {
+        "evidence": "significant valvular disease",
+        "label": "valvular disease"
+      },
+      {
+        "evidence": "right ventricular dysfunction",
+        "label": "right ventricular dysfunction"
+      },
+      {
+        "evidence": "pulmonary hypertension",
+        "label": "pulmonary hypertension"
+      },
+      {
+        "evidence": "pericardial effusion",
+        "label": "pericardial effusion"
+      },
+      {
+        "evidence": "heart failure",
+        "label": "heart failure"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "cardiology",
+      "pulmonology",
+      "public_health"
+    ],
+    "id": "physionet:echonext",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "12-lead electrocardiograms",
+        "value": "ECG"
+      },
+      {
+        "evidence": "echocardiography",
+        "value": "ultrasound"
+      },
+      {
+        "evidence": "raw waveform data sampled at 250 Hz",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "tabular metadata",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "Patients at Columbia University Irving Medical Center whose 12-lead ECGs were paired with echocardiographic findings; a focused subset of the larger EchoNext training population.",
+    "summary": "De-identified 12-lead ECG waveforms paired with echocardiogram-confirmed structural heart disease labels and demographic and ECG interval metadata, collected at Columbia University Irving Medical Center for developing and validating machine learning detection models."
+  },
+  "prompt_version": "v1"
+}

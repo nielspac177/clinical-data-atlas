@@ -1,0 +1,115 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "CGCI-HTMCP-CC",
+  "payload": {
+    "dbgap_accession_number": "phs000528",
+    "disease_type": [
+      "Epithelial Neoplasms, NOS",
+      "Adenomas and Adenocarcinomas",
+      "Complex Epithelial Neoplasms",
+      "Squamous Cell Neoplasms"
+    ],
+    "id": "CGCI-HTMCP-CC",
+    "name": "HIV+ Tumor Molecular Characterization Project - Cervical Cancer",
+    "primary_site": [
+      "Cervix uteri"
+    ],
+    "program": {
+      "dbgap_accession_number": "phs000235",
+      "name": "CGCI",
+      "program_id": "d339a424-ad52-5351-a499-493973249414"
+    },
+    "project_id": "CGCI-HTMCP-CC",
+    "releasable": true,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 212,
+      "data_categories": [
+        {
+          "case_count": 208,
+          "data_category": "Simple Nucleotide Variation",
+          "file_count": 2154
+        },
+        {
+          "case_count": 212,
+          "data_category": "Sequencing Reads",
+          "file_count": 1241
+        },
+        {
+          "case_count": 212,
+          "data_category": "Biospecimen",
+          "file_count": 743
+        },
+        {
+          "case_count": 212,
+          "data_category": "Clinical",
+          "file_count": 216
+        },
+        {
+          "case_count": 124,
+          "data_category": "Copy Number Variation",
+          "file_count": 640
+        },
+        {
+          "case_count": 123,
+          "data_category": "Transcriptome Profiling",
+          "file_count": 772
+        },
+        {
+          "case_count": 120,
+          "data_category": "DNA Methylation",
+          "file_count": 360
+        },
+        {
+          "case_count": 124,
+          "data_category": "Somatic Structural Variation",
+          "file_count": 640
+        },
+        {
+          "case_count": 123,
+          "data_category": "Structural Variation",
+          "file_count": 394
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 89,
+          "experimental_strategy": "Targeted Sequencing",
+          "file_count": 1366
+        },
+        {
+          "case_count": 124,
+          "experimental_strategy": "WGS",
+          "file_count": 2533
+        },
+        {
+          "case_count": 123,
+          "experimental_strategy": "RNA-Seq",
+          "file_count": 1372
+        },
+        {
+          "case_count": 118,
+          "experimental_strategy": "miRNA-Seq",
+          "file_count": 570
+        },
+        {
+          "case_count": 120,
+          "experimental_strategy": "Methylation Array",
+          "file_count": 360
+        },
+        {
+          "case_count": 211,
+          "experimental_strategy": "Tissue Slide",
+          "file_count": 525
+        }
+      ],
+      "file_count": 7160,
+      "file_size": 97049926878056
+    }
+  },
+  "source": "gdc"
+}

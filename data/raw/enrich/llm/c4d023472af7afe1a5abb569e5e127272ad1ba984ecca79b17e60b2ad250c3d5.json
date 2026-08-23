@@ -1,0 +1,23 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:c4d023472af7afe1a5abb569e5e127272ad1ba984ecca79b17e60b2ad250c3d5",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:but-pdb",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "50 2-minute 2-lead ECG signal records",
+        "value": "ECG"
+      }
+    ],
+    "population": "50 2-minute 2-lead ECG signal records with various types of pathology, selected from three existing databases of ECG signal",
+    "summary": "ECG signal database with P wave peaks manually annotated by two experts, selected from three existing ECG databases, also containing QRS complex annotations and a dominant diagnosis per record for P wave detection algorithms."
+  },
+  "prompt_version": "v1"
+}

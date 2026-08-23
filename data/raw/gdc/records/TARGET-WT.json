@@ -1,0 +1,107 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "TARGET-WT",
+  "payload": {
+    "dbgap_accession_number": "phs000471",
+    "disease_type": [
+      "Complex Mixed and Stromal Neoplasms"
+    ],
+    "id": "TARGET-WT",
+    "name": "High-Risk Wilms Tumor",
+    "primary_site": [
+      "Kidney"
+    ],
+    "program": {
+      "dbgap_accession_number": "phs000218",
+      "name": "TARGET",
+      "program_id": "f1c391e9-8488-55a8-b777-302e786ea11d"
+    },
+    "project_id": "TARGET-WT",
+    "releasable": true,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 652,
+      "data_categories": [
+        {
+          "case_count": 631,
+          "data_category": "Simple Nucleotide Variation",
+          "file_count": 3813
+        },
+        {
+          "case_count": 650,
+          "data_category": "Sequencing Reads",
+          "file_count": 1303
+        },
+        {
+          "case_count": 81,
+          "data_category": "Combined Nucleotide Variation",
+          "file_count": 82
+        },
+        {
+          "case_count": 652,
+          "data_category": "Biospecimen",
+          "file_count": 2
+        },
+        {
+          "case_count": 652,
+          "data_category": "Clinical",
+          "file_count": 4
+        },
+        {
+          "case_count": 128,
+          "data_category": "Transcriptome Profiling",
+          "file_count": 548
+        },
+        {
+          "case_count": 126,
+          "data_category": "DNA Methylation",
+          "file_count": 393
+        },
+        {
+          "case_count": 125,
+          "data_category": "Structural Variation",
+          "file_count": 272
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 127,
+          "experimental_strategy": "miRNA-Seq",
+          "file_count": 414
+        },
+        {
+          "case_count": 81,
+          "experimental_strategy": "WGS",
+          "file_count": 86
+        },
+        {
+          "case_count": 125,
+          "experimental_strategy": "RNA-Seq",
+          "file_count": 952
+        },
+        {
+          "case_count": 45,
+          "experimental_strategy": "WXS",
+          "file_count": 683
+        },
+        {
+          "case_count": 650,
+          "experimental_strategy": "Targeted Sequencing",
+          "file_count": 3883
+        },
+        {
+          "case_count": 126,
+          "experimental_strategy": "Methylation Array",
+          "file_count": 393
+        }
+      ],
+      "file_count": 6417,
+      "file_size": 10384529882311
+    }
+  },
+  "source": "gdc"
+}

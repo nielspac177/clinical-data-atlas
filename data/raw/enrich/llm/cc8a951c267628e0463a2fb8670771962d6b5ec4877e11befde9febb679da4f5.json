@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:cc8a951c267628e0463a2fb8670771962d6b5ec4877e11befde9febb679da4f5",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "surgically treated with image-guided tumor resection",
+        "label": "brain neoplasms"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "neurology",
+      "oncology",
+      "surgery"
+    ],
+    "id": "tcia:remind",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "preoperative MRI, 3D intraoperative ultrasound series, and intraoperative MRI",
+        "value": "MRI"
+      },
+      {
+        "evidence": "3D intraoperative ultrasound series",
+        "value": "ultrasound"
+      }
+    ],
+    "population": "114 consecutive patients who were surgically treated with image-guided tumor resection in the AMIGO Suite at the Brigham and Women's Hospital",
+    "summary": "Pre- and intra-operative imaging from consecutive patients treated with image-guided brain tumor resection: preoperative MRI, 3D intraoperative ultrasound, and intraoperative MRI, plus segmentations of tumor, cerebrum, prior resection cavity, and residual tumor."
+  },
+  "prompt_version": "v1"
+}

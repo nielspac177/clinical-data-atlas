@@ -1,0 +1,147 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006921",
+  "payload": {
+    "created": "2025-11-10T11:05:50.395Z",
+    "id": "ds006921",
+    "latestSnapshot": {
+      "created": "2026-01-21T08:02:22.000Z",
+      "description": {
+        "Authors": [
+          "Ramne, M.",
+          "Damercheli, S.",
+          "Apelgren, F.",
+          "Pettersson, I.",
+          "Lendaro, E."
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006921.v1.1.1",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "High Density Resting State EEG of Phantom Limb Pain and Controls",
+        "ReferencesAndLinks": null
+      },
+      "readme": "# High Density Resting State EEG of Phantom Limb Pain and Controls\n\nThis dataset comprises resting state high density EEG data (64 or 128 channels) collected from three categories of subjects: amputees with phantom limb pain, amputees without phantom limb pain, and intact, pain free controls. The data has been organised according to the BIDS standard for more accessible reuse. Recordings are approximately 7 minutes long with eyes opened or closed, as indicated by task.\n\n## Usage\n\nFor loading and using the data in Matlab we recommend using pop_importbids by EEGLab, example usage here: https://eeglab.org/tutorials/11_Scripting/Analyzing_EEG_BIDS_data_in_EEGLAB.html\n\nFor a complete pipeline for resting state EEG preprocessing and feature extraction in Matlab we recommend DISCOVER-EEG:\nCristina Gil. (2024). crisglav/discover-eeg: 2.0.0 (2.0.0). Zenodo. https://doi.org/10.5281/zenodo.10797803\n\n## Phenotype data note\n\nSession-level questionnaire data are stored in `phenotype/pain-questionnaire_sessions.tsv` with descriptions of the corresponding questionnaire items in `phenotype/pain-questionnaire_sessions.json`. The phenotype files are currently ignored by the BIDS Validator due to incomplete support for phenotype indexing across multiple sessions.\n\n## License\nCC0",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "eeg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "size": 69166826012,
+        "subjects": [
+          "34",
+          "39",
+          "16",
+          "3",
+          "2",
+          "11",
+          "40",
+          "45",
+          "44",
+          "7",
+          "21",
+          "33",
+          "4",
+          "42",
+          "27",
+          "35",
+          "10",
+          "25",
+          "14",
+          "20",
+          "51",
+          "15",
+          "26",
+          "24",
+          "47",
+          "8",
+          "46",
+          "18",
+          "49",
+          "31",
+          "9",
+          "50",
+          "37",
+          "17",
+          "6",
+          "48",
+          "5",
+          "29"
+        ],
+        "tasks": [
+          "EYESOPEN",
+          "EYESCLOSED"
+        ],
+        "totalFiles": 664
+      },
+      "tag": "1.1.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "eeg"
+      ],
+      "species": "Human",
+      "studyDesign": "Observational, resting state",
+      "studyDomain": "Phantom limb pain",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2025-12-18T13:12:56.410Z"
+  },
+  "source": "openneuro"
+}

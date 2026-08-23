@@ -1,0 +1,90 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds001705",
+  "payload": {
+    "created": "2019-01-28T22:06:29.882Z",
+    "id": "ds001705",
+    "latestSnapshot": {
+      "created": "2021-06-01T21:22:11.000Z",
+      "description": {
+        "Authors": [
+          "Mattia Veronese",
+          "Gaia Rizzo",
+          "Martin Belzunce",
+          "Julia Schubert",
+          "Barbara Santangelo",
+          "Ayla Mansur",
+          "Alex Whittington",
+          "Joel Dunn",
+          "Graham Searle",
+          "Andrew Reader",
+          "Roger Gunn"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds001705.v1.0.1",
+        "Funding": [
+          "Invicro London: https://www.invicro.com:",
+          "St Thomas's PET Centre: http://www.sthpetcentre.org.uk"
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "NRM2018 PET Grand Challenge Dataset",
+        "ReferencesAndLinks": [
+          "https://www.nitrc.org/projects/nrm2018_petgc"
+        ]
+      },
+      "readme": "== Introdution ==\n\nFor many years PET centres around the world have developed and optimised their own analysis pipelines, including a mixture of in-house and independent software, and have implemented different modelling choices for PET image processing and data quantification. \nAs a result, many different methods and tools are available for PET image analysis.\n\n== Aim of the dataset ==\n\nThis dataset aims to provide a normative tool to assess the performance and consistency of PET modelling approaches on the same data for which the ground truth is known.\nIt was created and released for the NRM2018 PET Grand Challenge. The challenge aimed at evaluating the performances of different PET analysis tools to identify areas and magnitude of receptor binding changes in a PET radioligand neurotransmission study. \n\nThe present dataset refers to 5 simulated human subjects scanned twice. For each subject the first PET scan (ses-baseline) represents baseline conditions; the second scan (ses-displaced) represents the scan after a pharmacological challenge in which the tracer binding has been displaced in certain regions of interest.\nA total of 10 dynamic scans are provided in the current dataset.\n\nThe nature of the neuroreceptor tracer used for the simulation (hereafter referred to as [11C]LondonPride) wants to be as general as possible. Any similarity to real PET tracer uptake is purely coincidental.\nEach simulated scan consists of a 90 minutes dynamic PET acquisition after bolus tracer injection as obtained with a Siemens Biograph mMR PET/MR scanner. The data were simulated including attenuation, randoms and scatters effects, the decay of the radiotracer and considering the geometry and resolution of the scanner. PET data can be considered motion-free as no motion or motion-related artifacts are included in the simulated dataset. The data were binned into 23 frames: 4×15 s, 4×60 s, 2×150 s, 10×300 s and 3×600 s. Each frame was reconstructed with the MLEM algorithm with 100 iterations. The reconstructed images available in the dataset are already decay corrected.\n\nAll provided PET images are already normalised in standard MNI space (182x218x182 – 1mm).\n\n== Data simulation process ==\n\nFor the simulation of each of the 10 scans (5 patients, 2 scans each), time activity curves (TACs) for each voxel of the phantom were generated from the kinetic parameters using the 2TCM equations. The TACs had a resolution of 1 sec and included the effect of the radiotracer decay, which was simulated with a half-life of 20.34 min (11C half-life).\nEach voxel TAC was binned with the following framing: 4×15 s, 4×60 s, 2×150 s, 10×300 s and 3×600 s by using the mean activity value for each time frame. After this process, the dynamic phantom for each scan is ready to be used in the simulation of each scan. The phantoms had the same resolution as the parametric maps (1×1×1 mm^3).\n\nEach scan was simulated with a total of 3×10e8 counts and by modelling the different physical effects of a PET acquisition. For each frame of a scan, the phantom was smoothed with a 2.5 mm FWHM kernel (lower than the spatial resolution of the mMR scanner since the phantom was already low resolution) and projected into a span 11 sinogram using the mMR scanner geometry. Then the resulting sinograms were multiplied by the attenuation factors, obtained from an attenuation map generated from the CT image of the patient, and by the normalization factors of the mMR scanner. Next, Poisson noise was introduced by simulating a random process for every sinogram bin, obtaining the sinogram with true events. A uniform sinogram multiplied by the normalization factors was used for the randoms and a smoothed version of the emission sinogram for the scatters, which were scaled in order to have 20% of randoms and 25% of scatters of the total counts. Poisson noise was introduced to randoms and scatters and added to the trues sinogram.\nFinally, each frame was individually reconstructed using the MLEM algorithm with 100 iterations, a 2.5 mm PSF and the standard mMR voxel size (2.09x2.09x2.03 mm3). The reconstructed images were corrected for the activity decay and resampled into the original MNI space. For the simulation and reconstruction, an in-house reconstruction framework was used (Belzunce and Reader 2017).\n\n== Simulated Drug ===\n\nThe pharmacological challenge given to the subjects before the second scan (ses-displaced) is based, as is the tracer, on a simulated drug . Any similarity with existing drugs is purely coincidental.\nThe drug has competitive binding to the radiotracer target and has no secondary affinities. The drug is simulated as given as a single oral bolus 30 min prior to the scan.\n\n== Additional data in the folder ===\n\nAlong with the raw data, some additional derivatives data are provided. This data are 6 regions of displacements helpful for the quantification and analysis.\nSix regions of displacement have been manually generated (using ITKSnap) and applied consistently to all the subjects to generate displaced 𝑘3 parametric maps. Based on the neuroreceptor theory (Innis, Cunningham et al. 2007), any change in 𝑘3 would produce an equivalent change in BPnd.\nThe regions volumes of the regions ranged from 343mm3 to 2275mm3 and were selected to be in regions of higher tracer uptake at baseline. None of the displacement ROIs has a purely geometrical (e.g. cube or sphere) or anatomical shape. The regions have been created to represent different sizes and different levels of tracer displacement according to the following values:\n\n    +----- ROI -----+----- Volume(mm^3) -----+----- Displacement (%) -----+\n    |      ROI1     |       2555             |          27                |\n    |      ROI2     |       2275             |          27                |\n    |      ROI3     |       1152             |          21                |\n    |      ROI4     |        493             |          18                |\n    |      ROI5     |        343             |          18                |\n    |      ROI6     |        418             |          18                |\n    +---------------+------------------------+----------------------------+\n\nThe ROIs are not symmetrically spatially distributed across the brain. A definintion of the ROI name can be found in the accompaning dseg.tsv file.\n\n== References ==\n- Belzunce, M. A. and A. J. Reader (2017). \"Assessment of the impact of modeling axial compression on PET image reconstruction.\" Medical physics 44(10): 5172-5186.\n- Innis, R. B., V. J. Cunningham, J. Delforge, M. Fujita, A. Gjedde, R. N. Gunn, J. Holden, S. Houle, S. C. Huang, M. Ichise, H. Iida, H. Ito, Y. Kimura, R. A. Koeppe, G. M. Knudsen, J. Knuuti, A. A. Lammertsma, M. Laruelle, J. Logan, R. P. Maguire, M. A. Mintun, E. D. Morris, R. Parsey, J. C. Price, M. Slifstein, V. Sossi, T. Suhara, J. R. Votaw, D. F. Wong and R. E. Carson (2007). \"Consensus nomenclature for in vivo imaging of reversibly binding radioligands.\" J Cereb Blood Flow Metab 27(9): 1533-1539.\n\n\n\n\n\n== Appendix: Current Folder Contents ==\n\n├── CHANGES\n├── LICENSE\n├── README\n├── dataset_description.json\n├── derivatives\n│   └── masks\n│       ├── dseg.tsv\n│       ├── sub-000101\n│       │   ├── ses-baseline\n│       │   │   └── sub-000101_ses-baseline_label-displacementROI_dseg.nii.gz\n│       │   └── ses-displaced\n│       │       └── sub-000101_ses-displaced_label-displacementROI_dseg.nii.gz\n│       ├── sub-000102\n│       │   ├── ses-baseline\n│       │   │   └── sub-000102_ses-baseline_label-displacementROI_dseg.nii.gz\n│       │   └── ses-displaced\n│       │       └── sub-000102_ses-displaced_label-displacementROI_dseg.nii.gz\n│       ├── sub-000103\n│       │   ├── ses-baseline\n│       │   │   └── sub-000103_ses-baseline_label-displacementROI_dseg.nii.gz\n│       │   └── ses-displaced\n│       │       └── sub-000103_ses-displaced_label-displacementROI_dseg.nii.gz\n│       ├── sub-000104\n│       │   ├── ses-baseline\n│       │   │   └── sub-000104_ses-baseline_label-displacementROI_dseg.nii.gz\n│       │   └── ses-displaced\n│       │       └── sub-000104_ses-displaced_label-displacementROI_dseg.nii.gz\n│       └── sub-000105\n│           ├── ses-baseline\n│           │   └── sub-000105_ses-baseline_label-displacementROI_dseg.nii.gz\n│           └── ses-displaced\n│               └── sub-000105_ses-displaced_label-displacementROI_dseg.nii.gz\n├── participants.json\n├── participants.tsv\n├── sub-000101\n│   ├── ses-baseline\n│   │   ├── anat\n│   │   │   ├── sub-000101_ses-baseline_acq-T1w.json\n│   │   │   └── sub-000101_ses-baseline_acq-T1w.nii.gz\n│   │   └── pet\n│   │       ├── sub-000101_ses-baseline_rec-MLEM_pet.json\n│   │       └── sub-000101_ses-baseline_rec-MLEM_pet.nii.gz\n│   └── ses-displaced\n│       ├── anat\n│       │   ├── sub-000101_ses-displaced_acq-T1w.json\n│       │   └── sub-000101_ses-displaced_acq-T1w.nii.gz\n│       └── pet\n│           ├── sub-000101_ses-displaced_rec-MLEM_pet.json\n│           └── sub-000101_ses-displaced_rec-MLEM_pet.nii.gz\n├── sub-000102\n│   ├── ses-baseline\n│   │   ├── anat\n│   │   │   ├── sub-000102_ses-baseline_acq-T1w.json\n│   │   │   └── sub-000102_ses-baseline_acq-T1w.nii.gz\n│   │   └── pet\n│   │       ├── sub-000102_ses-baseline_rec-MLEM_pet.json\n│   │       └── sub-000102_ses-baseline_rec-MLEM_pet.nii.gz\n│   └── ses-displaced\n│       ├── anat\n│       │   ├── sub-000102_ses-displaced_acq-T1w.json\n│       │   └── sub-000102_ses-displaced_acq-T1w.nii.gz\n│       └── pet\n│           ├── sub-000102_ses-displaced_rec-MLEM_pet.json\n│           └── sub-000102_ses-displaced_rec-MLEM_pet.nii.gz\n├── sub-000103\n│   ├── ses-baseline\n│   │   ├── anat\n│   │   │   ├── sub-000103_ses-baseline_acq-T1w.json\n│   │   │   └── sub-000103_ses-baseline_acq-T1w.nii.gz\n│   │   └── pet\n│   │       ├── sub-000103_ses-baseline_rec-MLEM_pet.json\n│   │       └── sub-000103_ses-baseline_rec-MLEM_pet.nii.gz\n│   └── ses-displaced\n│       ├── anat\n│       │   ├── sub-000103_ses-displaced_acq-T1w.json\n│       │   └── sub-000103_ses-displaced_acq-T1w.nii.gz\n│       └── pet\n│           ├── sub-000103_ses-displaced_rec-MLEM_pet.json\n│           └── sub-000103_ses-displaced_rec-MLEM_pet.nii.gz\n├── sub-000104\n│   ├── ses-baseline\n│   │   ├── anat\n│   │   │   ├── sub-000104_ses-baseline_acq-T1w.json\n│   │   │   └── sub-000104_ses-baseline_acq-T1w.nii.gz\n│   │   └── pet\n│   │       ├── sub-000104_ses-baseline_rec-MLEM_pet.json\n│   │       └── sub-000104_ses-baseline_rec-MLEM_pet.nii.gz\n│   └── ses-displaced\n│       ├── anat\n│       │   ├── sub-000104_ses-displaced_acq-T1w.json\n│       │   └── sub-000104_ses-displaced_acq-T1w.nii.gz\n│       └── pet\n│           ├── sub-000104_ses-displaced_rec-MLEM_pet.json\n│           └── sub-000104_ses-displaced_rec-MLEM_pet.nii.gz\n└── sub-000105\n    ├── ses-baseline\n    │   ├── anat\n    │   │   ├── sub-000105_ses-baseline_acq-T1w.json\n    │   │   └── sub-000105_ses-baseline_acq-T1w.nii.gz\n    │   └── pet\n    │       ├── sub-000105_ses-baseline_rec-MLEM_pet.json\n    │       └── sub-000105_ses-baseline_rec-MLEM_pet.nii.gz\n    └── ses-displaced\n        ├── anat\n        │   ├── sub-000105_ses-displaced_acq-T1w.json\n        │   └── sub-000105_ses-displaced_acq-T1w.nii.gz\n        └── pet\n            ├── sub-000105_ses-displaced_rec-MLEM_pet.json\n            └── sub-000105_ses-displaced_rec-MLEM_pet.nii.gz",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "pet",
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural"
+        ],
+        "sessions": [
+          "baseline",
+          "displaced"
+        ],
+        "size": 3610575725,
+        "subjects": [
+          "000101",
+          "000102",
+          "000103",
+          "000104",
+          "000105"
+        ],
+        "tasks": [],
+        "totalFiles": 46
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        50,
+        39,
+        53,
+        28,
+        36
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "pet",
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2019-01-28T22:06:29.882Z"
+  },
+  "source": "openneuro"
+}

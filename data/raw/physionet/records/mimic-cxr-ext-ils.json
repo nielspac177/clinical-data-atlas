@@ -1,0 +1,36 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "mimic-cxr-ext-ils",
+  "payload": {
+    "abstract": "<p>The applicability of current lesion segmentation models for chest X-rays (CXRs) has been limited both by a small number of target labels and the reliance on complex, expert-level text inputs, creating a barrier to practical use. To address these limitations, we introduce instruction-guided lesion segmentation (ILS), a medical-domain adaptation of referring image segmentation (RIS) designed to segment diverse lesion types based on simple, user-friendly instructions. Under this task, we construct MIMIC-CXR-Ext-ILS, the first large-scale instruction-answer dataset for CXR lesion segmentation, using our fully automated multimodal pipeline that generates annotations from CXR images and their corresponding reports. MIMIC-CXR-Ext-ILS contains 1.1M instruction-answer pairs derived from 192K images and 91K unique segmentation masks, covering seven major lesion types. Despite being constructed entirely without human intervention, expert evaluations report a high acceptance rate of over 95% for this dataset.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 0,
+    "core_doi": "10.13026/gdq0-ej95",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 929981912,
+    "public_project_uuid": "2c51cee9-4f93-4b3c-b08d-07345d5c0922",
+    "publish_date": "2026-03-25",
+    "resource_type": "Database",
+    "short_description": "Instruction-guided lesion segmentation data for chest X-rays, including 1.1M instruction-answer pairs and 91K segmentation masks covering seven major lesion types.",
+    "slug": "mimic-cxr-ext-ils",
+    "source_url": "https://physionet.org/content/mimic-cxr-ext-ils/1.0.0/",
+    "title": "MIMIC-CXR-Ext-ILS: Lesion Segmentation Masks and Instruction-Answer Pairs for Chest X-rays",
+    "topics": [
+      "text-guided segmentation",
+      "lesion segmentation",
+      "chest x-ray segmentation"
+    ],
+    "version": "1.0.0",
+    "version_doi": "10.13026/8ejy-4t06"
+  },
+  "source": "physionet"
+}

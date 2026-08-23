@@ -1,0 +1,41 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:03c74d8c9df0ff84b04f2d938ed320bc4f16e986eef94a14bbc5e78138072128",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Wilms Tumor",
+        "label": "Wilms Tumor"
+      },
+      {
+        "evidence": "Kidney Neoplasms, NOS",
+        "label": "Kidney Neoplasms, NOS"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "nephrology_urology"
+    ],
+    "id": "gdc:MP2PRT-WT",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "WGS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "RNA-Seq, miRNA-Seq",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": null,
+    "summary": "Molecular profiling project on Wilms tumor and kidney neoplasms, with sequencing reads, simple nucleotide and copy number variation, structural variation, transcriptome profiling and clinical data from RNA-Seq, miRNA-Seq and WGS."
+  },
+  "prompt_version": "v1"
+}

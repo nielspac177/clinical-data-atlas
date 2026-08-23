@@ -1,0 +1,23 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:3e18a186f3cb6b82827ec97384baa1d6f40779ab3a1926ef511e1c7efb1ab7af",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "critical_care"
+    ],
+    "id": "physionet:mimic-iv-demo-omop",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "observational data collected in an intensive care environment",
+        "value": "EHR"
+      }
+    ],
+    "population": null,
+    "summary": "Preliminary transformation of the MIMIC-IV demo database into an OMOP Common Data Model instance, reusing and extending template scripts and concept mappings from an earlier MIMIC-III to OMOP conversion."
+  },
+  "prompt_version": "v1"
+}

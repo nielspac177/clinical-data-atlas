@@ -1,0 +1,34 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:ec2ef8a07b7d90803fbacc4e77b679388bb56dc8d7239ac9368d547b0bdb6396",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "diagnosed with invasive breast cancer",
+        "label": "invasive breast cancer"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "oncology"
+    ],
+    "id": "tcia:qin-breast-02",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "multi-parametric quantitative MRI study",
+        "value": "MRI"
+      },
+      {
+        "evidence": "DWI (SE EPI)",
+        "value": "dMRI"
+      }
+    ],
+    "population": "Adult (18+ years old) females diagnosed with invasive breast cancer, lesion size >1cm in longest dimension, undergoing neoadjuvant therapy",
+    "summary": "Multi-site quantitative MRI study of adult women with invasive breast cancer undergoing neoadjuvant therapy, scanned before and after therapy initiation with a research protocol including diffusion, mapping and dynamic contrast-enhanced sequences."
+  },
+  "prompt_version": "v1"
+}

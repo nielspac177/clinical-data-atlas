@@ -1,0 +1,143 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds008066",
+  "payload": {
+    "created": "2026-06-29T22:52:57.881Z",
+    "id": "ds008066",
+    "latestSnapshot": {
+      "created": "2026-07-08T13:15:37.000Z",
+      "description": {
+        "Authors": [
+          "Jacob Stanley"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds008066.v1.0.0",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Choice Overload fMRI Dataset",
+        "ReferencesAndLinks": null
+      },
+      "readme": "Choice Overload fMRI Dataset\n============================\n\nThis dataset contains raw MRI data from a choice overload fMRI task. Data are organized in BIDS format.\n\nDataset contents\n----------------\n\nFor each included participant, the dataset contains:\n\n- one anatomical T1-weighted image\n- three functional BOLD runs of the choice task\n- three single-band reference images, one corresponding to each BOLD run\n- one events.tsv file for each BOLD run\n\nThe dataset does not include preprocessed data, first-level statistical models, scanner localizers, scanner reports, intermediate conversion files, or private source DICOM/IMA files.\n\nTask description\n----------------\n\nParticipants completed a choice task with six experimental conditions:\n\n- d3: decoy condition with 3 options\n- d9: decoy condition with 9 options\n- d24: decoy condition with 24 options\n- n3: no-decoy condition with 3 options\n- n9: no-decoy condition with 9 options\n- n24: no-decoy condition with 24 options\n\nEach participant completed three task runs. Event timing is provided in the corresponding events.tsv files. Each event has a duration of 10 seconds.\n\nData conversion and organization\n--------------------------------\n\nRaw Siemens IMA/DICOM files were converted to NIfTI using dicm2nii in MATLAB. Converted files were then renamed and organized into BIDS format.\n\nThe T1w anatomical image corresponds to the RMS-combined anatomical image generated from the repeated anatomical acquisition. This image was used as the primary anatomical image for BIDS organization.\n\nAnonymization\n-------------\n\nParticipant identifiers were replaced with de-identified subject labels.\n\nDICOM-derived identifying metadata were removed from JSON sidecar files, including patient name, patient ID, birth date, age, sex, acquisition date/time, accession number, institution name, and institution address.\n\nAnatomical T1w images were defaced using SPM's defacing tool before inclusion in the final BIDS dataset.\n\nRaw source files, intermediate conversion folders, undefaced anatomical backups, and defacing preview files are not included in this dataset.\n\nEvents files\n------------\n\nEach functional run has a corresponding events.tsv file with the following columns:\n\n- onset: event onset in seconds relative to the start of the run\n- duration: event duration in seconds\n- trial_type: experimental condition label\n\nAdditional condition descriptions are provided in task-choice_events.json.\n\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 26997008025,
+        "subjects": [
+          "233",
+          "208",
+          "225",
+          "240",
+          "223",
+          "106",
+          "228",
+          "207",
+          "232",
+          "101",
+          "220",
+          "112",
+          "114",
+          "210",
+          "111",
+          "231",
+          "116",
+          "108",
+          "201",
+          "110",
+          "103",
+          "213",
+          "109",
+          "115",
+          "221",
+          "205",
+          "227",
+          "211",
+          "113",
+          "235",
+          "222",
+          "243",
+          "224",
+          "229",
+          "104",
+          "203",
+          "234",
+          "206",
+          "105",
+          "202"
+        ],
+        "tasks": [
+          "choice"
+        ],
+        "totalFiles": 685
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2026-07-08T13:15:45.375Z"
+  },
+  "source": "openneuro"
+}

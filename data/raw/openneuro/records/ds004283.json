@@ -1,0 +1,90 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004283",
+  "payload": {
+    "created": "2022-09-29T22:54:51.589Z",
+    "id": "ds004283",
+    "latestSnapshot": {
+      "created": "2022-10-05T14:29:22.000Z",
+      "description": {
+        "Authors": [
+          "Krista Bond",
+          "Javier Rasero",
+          "Raghav Madan",
+          "Jyotika Bahuguna",
+          "Jonathan Rubin",
+          "Timothy Verstynen"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004283.v1.0.3",
+        "Funding": [
+          "Air Force Research Laboratory"
+        ],
+        "HowToAcknowledge": "Please cite the DOI for this OpenNeuro repository and, if appropriate, the publication (link TBD).",
+        "License": "CC0",
+        "Name": "neuroloki",
+        "ReferencesAndLinks": [
+          "See here for behavioral data and computational derivatives: https://github.com/kalexandriabond/cortico-subcortico_competition_evidence_accum_4_flexibility"
+        ]
+      },
+      "readme": "# README\n\n## Details related to access to the data\n\n\nContact: K. Alexandria Bond (ORCID: 0000-0003-1492-6798; kbond@andrew.cmu.edu) and Timothy Verstynen (ORCID: 0000-0003-4720-0336; timothyv@andrew.cmu.edu).\n\n## Overview\n\nData were acquired from 8/5/19 to 11/24/20, with a break due to the COVID-19 pandemic beginning 03/10/20. Data collection resumed on 10/20/20. Time stamps and the computer state (last reboot, internet access, window refresh time) for the experimental computer were recorded for each session and run.\n\n### Tasks\n\n#### Perceptual discrimination criterion task\nThe experiment used male and female Greebles as selection targets. Participants were first trained to discriminate between male and female Greebles to prevent errors in perceptual discrimination from interfering with selection on the basis of value. Using a two-alternative forced choice task, participants were presented with a male and female Greeble and asked to select the female, with the male and female Greeble identities resampled on each trial. Participants received binary feedback regarding their selection (correct or incorrect). This criterion task ended after participants reached 95% accuracy.  \n\n#### Reinforcement learning task\nAfter reaching perceptual discrimination criterion for each session, each participant was tested under nine reinforcement learning conditions composed of 300 trials each (60 trials per run, 5 runs per session), generating 2700 trials per participant in total. Each learning trial presented a male and female Greeble, with the goal of selecting the gender identity of the Greeble that was most rewarding.\n\nThree levels of the probability of reward for the optimal and suboptimal choices (conflict) and how often the optimal choice shifted (volatility) were independently manipulated for a total of nine conditions.  \n\n### Dependent variables\nReaction time, binary accuracy data, and trial-by-trial BOLD signal.\n\n### Quality assessment of the data\nImaging quality was assessed using MRIQC. See /derivatives/neuroloki_RL_task_QC.csv for QC logs by session and subject. \n\n## Methods\n\n### Subjects\n\nFour neurologically healthy adult human primates (two female, all right-handed, 29-34 years old) were recruited and paid $30 per session, in addition to a performance bonus and a bonus for completing all nine sessions. Data were collected in accordance with a replication-based design, with each participant serving as a replication experiment, undergoing all nine experimental conditions. These participants were recruited from the local university population.\n\nAll procedures were approved by the Carnegie Mellon University Institutional Review Board. All research participants provided informed consent to participate in the study and consent to publish any research findings based on their provided data.\n\n### Apparatus\nData were acquired with a SIEMENS MAGNETOM Prisma 3T MRI Scanner using a 64-channel head coil. Five runs were acquired for each of nine sessions per participant. Each run acquired 738 functional volumes. Acquisition details for functional and anatomical scans are included in /sequence_protocols.\nAnatomical images were deidentified using Pydeface (https://github.com/poldracklab/pydeface). Behavioral responses were collected using two button wands held in the left and right hands for left and right stimulus selection, respectively. An EyeLink 1000 recorded eye-tracking data from within the scanning room using an MR-safe camera and infrared \"hot mirror\". See Initial Setup for further detail regarding physiological measures.\n\nTo prevent motion-related artifacts, a head case was customized for each participant and 3D-printed (CaseForge: https://ipira.berkeley.edu/caseforge-inc).\n\n### Initial setup\n\nThe participant was checked for ferromagnetic objects, then placed on the scanning table. They were outfitted with the following apparatus to capture physiological measures:\n\n* ECG\n\n* Pulse oximeter\n\n* Respiration belt\n\nIn addition, eye-tracking data, including pupillary measurements and gaze position, were recorded. Head cases were worn throughout scanning for each of nine sessions.\n\n### Task organization\n\nEach session included the following steps:\n\n0) Perceptual discrimination task for male and female Greebles. Participants were required to reach 95% accuracy before proceeding with the scan.\n\n1) Eye-tracking calibration and validation. Button wands intended for left/right responses were verified to be in the left and right hands.\n\n2) Test of pupillary range as a function of sinusoidal luminance.\n\n3) Reinforcement learning task. Specific manipulations imposed were ordered pseudorandomly and are described in the reward_condition_key.csv and reward_condition_order.csv files found in /experimental_details.\n\n### Task details\nOnset and offset times for both the visual stimuli and button presses were recorded as events.\n\n### Additional data acquired\n\nECG, pulse oximetry, respiration, and eye-tracking data were acquired during the scans.\n\n### Experimental location\n\nData were collected at the Brain Imaging Data Generation & Education (BRIDGE) Center at the Carnegie Mellon Neuroscience Institute.\n\n### Missing data\n\nEyetracking data and behavioral data for run 1 of Session 4 for Subject 1 are missing. \n\n### Notes\n\nNote that Sessions 3-9 for Sub-01 contain legacy-formatted ECG, respiration, and pulse oximetry data. \n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10"
+        ],
+        "size": 76713720493,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04"
+        ],
+        "tasks": [
+          "lokicat"
+        ],
+        "totalFiles": 1479
+      },
+      "tag": "1.0.3"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        34,
+        29,
+        28,
+        29
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "Air Force Research Laboratory",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "Within-subjects ",
+      "studyDomain": "Decision-making ",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2022-09-30T15:57:04.354Z"
+  },
+  "source": "openneuro"
+}

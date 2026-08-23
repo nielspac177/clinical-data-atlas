@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:ed15703642b6246d8fb10684971cdd8acb76d59458e0f7f7f079478217f3652b",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "pulmonology",
+      "other"
+    ],
+    "id": "physionet:reflacx-xray-localization",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "eye-tracking data collected while radiologists dictated reports",
+        "value": "eye_tracking"
+      },
+      {
+        "evidence": "timestamped transcription of the dictation",
+        "value": "clinical_notes"
+      },
+      {
+        "evidence": "frontal chest x-rays",
+        "value": "xray"
+      }
+    ],
+    "population": "Five radiologists reading 3,032 frontal chest x-ray cases from MIMIC-CXR; a subset of 109 chest x-rays was read by all radiologists.",
+    "summary": "Eye-tracking recordings and time-synchronized dictation transcripts from five radiologists reading 3,032 frontal chest x-ray cases from MIMIC-CXR, with image-level abnormality labels, ellipses localizing anomalies, and bounding boxes around lungs and heart."
+  },
+  "prompt_version": "v1"
+}

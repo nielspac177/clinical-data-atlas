@@ -1,0 +1,78 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds002737",
+  "payload": {
+    "created": "2020-04-24T19:06:48.147Z",
+    "id": "ds002737",
+    "latestSnapshot": {
+      "created": "2020-04-27T22:48:31.000Z",
+      "description": {
+        "Authors": [
+          "Joset A. Etzel",
+          "Todd S. Braver"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds002737.v1.0.1",
+        "Funding": [
+          "This research was supported by NIH R37MH066078 and NIH R21AG058206 to Todd Braver.",
+          "Image acquisition is partially supported by Mallinckrodt Institute of Radiology, Washington University in St. Louis."
+        ],
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "multibandCFtests",
+        "ReferencesAndLinks": [
+          "http://ccpweb.wustl.edu/",
+          "https://pages.wustl.edu/dualmechanisms",
+          "https://mvpa.blogspot.com/2017/09/yet-more-with-respiration-and-motion.html"
+        ]
+      },
+      "readme": "OpenNeuro curator note: This dataset was previously accessible at ds001544. The dataset was reuploaded due to privacy considerations. \n\nIntroduction\n------------\nThis dataset contains task fMRI runs of one person, with either regular head packing (acq-cf0), a very tight-fitting Caseforge (https://caseforge.co/, thanks!) headcase (acq-cf1), or a properly-fitting Caseforge headcase (acq-cf2). The participant is comfortable with fMRI and able to remain quite still (little actual motion), but has prominent respiratory oscillations (apparent motion).\n\nMotion traces and some interpretation of these tests is at https://mvpa.blogspot.com/2017/09/yet-more-with-respiration-and-motion.html\n\nThere were two Caseforge testing sessions: ses-01 with cf1 (tight, collected 26 August 2017), and ses-02 with cf2 (correct fit, collected 16 Sept. 2017). Runs without the head case (cf0) were included in both sessions, but not anatomical imaging, so I included more recent T1 and T2 scans from the same participant as ses-03 (collected 17 July 2018).\n\nPlease contact Jo Etzel (jetzel@wustl.edu) with questions or comments. We have similar task runs spanning several years with the same participant (none with the headcases, but some with a MB8 sequence) which I could add to this dataset if there is interest.\n\n\nAcquisition Notes\n-----------------\nAll scans were collected on a 3T Siemens Prisma with a 32-channel head coil, without in-plane acceleration (iPat = none). CMRR multiband sequences were used, multiband factor 4. 2.4 mm isotropic voxels, 1.2 s TR. Runs were collected with both A to P and P to A encoding directions (AP and PA, respectively, included in the acq fields of the file names).\n\nThe physio recordings were made with Siemens equipment (finger plethysmograph and respiration belt); the recordings were extracted using readCMRRPhysio.m (https://github.com/CMRR-C2P/MB/blob/master/readCMRRPhysio.m) then converted to plain text; no filtering or other processing was performed.\n  \n\nTask Description: \"Stroop\" \n--------------------------\nThe Stroop task here is from the Dual Mechanisms of Cognitive Control project, http://pages.wustl.edu/dualmechanisms/stroop, baseline session. It is word/color Stroop, with responses (color words) spoken aloud in the scanner. These verbal responses cause task-linked respiration and movement. Trials are grouped into three blocks, separated with rest periods of 30 seconds.\n\nActual Stroop task performance is of little interest here, but movement evaluation is, so the onset of each trial is listed in the included events.tsv files. Event duration was very short; the participant spoke the word as soon as possible after the stimulus appeared. The trial_type column lists whether each trial was congruent (\"Con\") or incongruent (\"InCon\"), in case that is of interest.\n\n\nTask Description: \"notStroop\" \n-----------------------------\nSeveral runs in ses-02 are listed with task \"notStroop\". In these runs the same Stroop stimuli were displayed (so the events.tsv files are like the Stroop task runs), but the participant used the Stroop stimuli as timing cues to perform other tasks.\n\nses-02_task-notStroop_acq-cf2AP_run-03: breath-holding periods during blocks 1 and 3; attempted head motion in block 2.\n\nses-02_task-notStroop_acq-cf2PA_run-04 and ses-02_task-notStroop_acq-cf0AP_run-05: breath-holding periods during block 2; right and left hand finger tapping in block 1; right and left toe movement in block 3 (following the HCP MOTOR task instructions).\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "01",
+          "02",
+          "03"
+        ],
+        "size": 3627536017,
+        "subjects": [
+          "01"
+        ],
+        "tasks": [
+          "Stroop",
+          "notStroop"
+        ],
+        "totalFiles": 91
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        0
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "Dual Mechanisms of Cognitive Control",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2020-05-19T00:19:46.351Z"
+  },
+  "source": "openneuro"
+}

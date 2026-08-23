@@ -1,0 +1,34 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "me-llama",
+  "payload": {
+    "abstract": "<p><span><span>Recent advancements in large language models (LLMs) such as ChatGPT and LLaMA have hinted at their potential to revolutionize medical applications, yet their application in clinical settings often reveals limitations due to a lack of specialized training on medical-specific data. In response to this challenge, this study introduces Me-LLaMA, a medical LLM family that includes foundation models &ndash; Me-LLaMA 13/70B, along with their chat-enhanced versions &ndash; Me-LLaMA 13/70B-chat, developed through continual pre-training and instruction tuning of LLaMA2 using large medical datasets. Our methodology leverages a comprehensive domain-specific data suite, including a large-scale, continual pre-training dataset with 129B tokens, an instruction tuning dataset with 214k samples, and we&nbsp;</span></span>proposed <span><span> a new medical evaluation benchmark (MIBE) across six critical medical tasks with 12 datasets. Our extensive evaluation using the MIBE shows that Me-LLaMA models achieve overall better performance than existing open-source medical LLMs in zero-shot, few-shot and supervised learning abilities. With task-specific instruction tuning, Me-LLaMA models outperform ChatGPT on 7 out of 8 datasets and GPT-4 on 5 out of 8 datasets. In addition, we investigated the catastrophic forgetting problem, and our results show that Me-LLaMA models outperform other open-source medical LLMs in mitigating this issue. Me-LLaMA is one of the largest open-source medical foundation LLMs that use both biomedical and clinical data. It exhibits superior performance across both general and medical tasks compared to other open-source medical LLMs, rendering it an attractive choice for medical AI applications. </span></span></p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 280347856420,
+    "core_doi": "10.13026/5158-hm11",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 327973914243,
+    "public_project_uuid": "0966b491-f1fb-40f5-a96e-094157a72a34",
+    "publish_date": "2024-06-05",
+    "resource_type": "Model",
+    "short_description": "Me-LLaMA is a family of large language models for medical applications trained using clinical text with LLaMA2 models as the base. We release model weights for the foundation models as well as the chat-enhanced models.",
+    "slug": "me-llama",
+    "source_url": "https://physionet.org/content/me-llama/1.0.0/",
+    "title": "Me-LLaMA: Foundation Large Language Models for Medical Applications",
+    "topics": [
+      "large language models"
+    ],
+    "version": "1.0.0",
+    "version_doi": "10.13026/wwfd-2t39"
+  },
+  "source": "physionet"
+}

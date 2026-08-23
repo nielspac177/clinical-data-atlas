@@ -1,0 +1,50 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:6d3d4c45da1b8f87b3b5ca7f94031db86d1928806158b061fbdb2e33bc0b560e",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "atrial fibrillation",
+        "label": "atrial fibrillation"
+      },
+      {
+        "evidence": "atrial flutter",
+        "label": "atrial flutter"
+      },
+      {
+        "evidence": "heart block",
+        "label": "heart block"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "cardiology",
+      "pulmonology",
+      "critical_care"
+    ],
+    "id": "physionet:mimic-iii-ext-ppg",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "photoplethysmogram (PPG) segments extracted from the MIMIC-III Waveform Database Matched Subset",
+        "value": "PPG"
+      },
+      {
+        "evidence": "simultaneous electrocardiogram (ECG, lead II)",
+        "value": "ECG"
+      },
+      {
+        "evidence": "arterial blood pressure (ABP), and respiratory (RESP) signals are provided where available",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "heart rhythm being recorded in the medical record",
+        "value": "EHR"
+      }
+    ],
+    "population": "critically-ill patients (6,189) from the MIMIC-III Waveform Database Matched Subset",
+    "summary": "Quality-assessed photoplethysmogram segments from critically ill patients, annotated with reference heart rhythms and accompanied where available by simultaneous ECG, arterial blood pressure, and respiratory signals plus derived annotations."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,87 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006812",
+  "payload": {
+    "created": "2025-10-19T14:12:34.515Z",
+    "id": "ds006812",
+    "latestSnapshot": {
+      "created": "2025-10-19T15:44:27.000Z",
+      "description": {
+        "Authors": [
+          "Kay Igwe",
+          "Karl Landheer",
+          "Martin Gajdošík",
+          "Christoph Juchem"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006812.v1.0.1",
+        "Funding": [
+          "None"
+        ],
+        "HowToAcknowledge": "Please cite this dataset as: Igwe KC, Gajdošík M, Juchem C, Landheer K. Constrained optimized water suppression for 1H MR spectroscopy. Magn Reson Med. 2025;94(3):895-904. doi:10.1002/mrm.30550",
+        "License": "CC0",
+        "Name": "Constrained optimized water suppression for 1H MRS of Metabolites and Macromolecules in 3 brain regions at 3T using sLASER",
+        "ReferencesAndLinks": [
+          "https://doi.org/10.1002/mrm.30550"
+        ]
+      },
+      "readme": "# Constrained optimized water suppression for 1H MRS of Metabolites and Macromolecules in 3 brain regions at 3T using sLASER\n\nContact: Kay Igwe, M.S. ([kci2104 [at] columbia [dot] edu](mailto:kci2104@columbia.edu))\n\n## Overview\n\nThese data were collected as part of a study to test the efficacy of COWS, a new water suppression software package, for acquisition of both metabolite and macromolecule spectra. [COWS](https://doi.org/10.1002/mrm.30550) [sLASER](https://doi.org/10.1002/mrm.21302) localization.\n\nData types included are defaced *T*<sub>1</sub>-weighted 3D structural MRI images and single-voxel sLASER MRS data in the prefrontal cortex, posterior frontal lobe, and occipital lobe.\n\n## Methods\n\n### Participants\n\nTen healthy adults (5 women, 5 men, mean age = 31 ± 9 years).\n\n\nData from all 10 participants are available in this repository.\n\n### Scanning\n\nOne 1-hr scan sessions for each participant with 2 T1 scans, one pre-MRS T1 scans used for voxel localization and a post-MRS T1 scan for measuring degreee of participant movement.\n\n### MR protocol\n\nMR data were acquired at Zuckerman Mind Brain Behavior Institute at Columbia University on a MAGNETOM Prisma 3 T (Siemens Healthineers, Erlangen, Germany) using a <sup>1</sup>H 32-reeive channel RF phased-array head and neck coil.\n\n#### MRI\n\n3D *T*<sub>1</sub>-weighted MPRAGE structural MRI acquisition parameters:\n\n- MPRAGE\n- TE/TR/TI = 2.26/2300/900 ms\n- Flip angle = 8°\n- Voxel resolution = 1 × 1 × 1 mm<sup>3</sup>\n- FOV = 256 × 192 x 256 mm<sup>3</sup>\n- Matrix size = 256 × 192 x 256\n- Slices = 192\n\n\n#### MRS\n\nGeneral acquisition parameters:\n\n- Volumes of interest = prefrontal cortex, posterior frontal lobe, and occipital lobe\n- Voxel resolution = 25 × 25 × 25 mm<sup>3</sup>\n- Spectral width = 4000 Hz\n- Number of points = 2048\n- TE/TR = 26/2000 ms\n- Number of transients (for Metabolite Scans) = 32\n- Number of transients (for Macromolecule Scans) = 64\n- Manual first-order B0 shimming using the Siemens Prisma VE11C native active shimming tool\n\nMRS:\n\n- Metabolite acquisition: Ace, Ala, Asc, Asp, Ch, Cr, GABA, Glc, Glu, Gln, Gly, GPC, GSH, Lac, mI, NAA, NAAG, PCr, PCh, PE, sI, and Tau\n- Macromolecule ONLY acquisition\n- Water reference acquisition\n- Acquisition: sLASER\n- COWS(7;236) water suppression: Water suppression scheme with 7 pulses that takes 236 ms to complete\n- COWS(12;626) water suppression: Water suppression scheme with 12 pulses that takes 626 ms to complete\n- VAPOR(12;626) water suppresion: Water suppression scheme with 7 pulses that takes 626 ms to complete\n\n\nSPECTRA and MRI Per Participant\n\nDAT FILE SPECTRA (RAW)\nEach *.dat file contains both the spectrum and associated water reference\n\n1. sub-\\*_acq\\*-01_svs_slaser_vapor7_metab_PFC.dat\n2. sub-\\*_acq\\*-02_svs_slaser_vapor7_mm_PFC.dat\n3. sub-\\*_acq\\*-03_svs_slaser_cows7_metab_PFC.dat\n4. sub-\\*_acq\\*-04_svs_slaser_cows7_mm_PFC.dat\n5. sub-\\*_acq\\*-05_svs_slaser_cows12_metab_PFC.dat\n6. sub-\\*_acq\\*-06_svs_slaser_vapor7_metab_Occipital.dat\n7. sub-\\*_acq\\*-07_svs_slaser_vapor7_mm_Occipital.dat\n8. sub-\\*_acq\\*-08_svs_slaser_cows7_metab_Occipital.dat\n9. sub-\\*_acq\\*-09_svs_slaser_cows7_mm_Occipital.dat\n10. sub-\\*_acq\\*-10_svs_slaser_cows12_metab_Occipital.dat\n11. sub-\\*_acq\\*-11_svs_slaser_vapor7_metab_Parietal.dat\n12. sub-\\*_acq\\*-12_svs_slaser_vapor7_mm_Parietal.dat\n13. sub-\\*_acq\\*-13_svs_slaser_cows7_metab_Parietal.dat\n14. sub-\\*_acq\\*-14_svs_slaser_cows7_mm_Parietal.dat\n15. sub-\\*_acq\\*-15_svs_slaser_cows12_metab_Parietal.dat\n\n\nMAT FILE SPECTRA\n\nPrefrontal Cortex\n1. Metabolite Spectrum - using COWS(7;236) Water Suppression\n2. Metabolite Water Scan - after COWS(7;236)\n3. Macromolecule Spectrum - using COWS(7;236) Water Suppression\n4. Macromolecule Water Scan - after COWS(7;236)\n5. Metabolite Spectrum - using COWS(12;626) Water Suppression\n6. Metabolite Water Scan - after COWS(12;626) Metabolite Scan\n7. Metabolite Spectrum - using VAPOR(7;626) Water Suppression\n8. Metabolite Water Scan - after VAPOR(7;626) Metabolite Scan\n9. Macromolecule Spectrum - using VAPOR(7;626) Water Suppression\n10. Macromolecule Water Scan - after VAPOR(7;626) Metabolite Scan\n\nPosterior Frontal Lobe\n1. Metabolite Spectrum - using COWS(7;236) water suppression\n2. Metabolite Water Scan - after COWS(7;236)\n3. Macromolecule Spectrum - using COWS(7;236) water suppression\n4. Macromolecule Water Scan - after COWS(7;236)\n5. Metabolite Spectrum - using COWS(12;626) water suppression\n6. Metabolite Water Scan - after COWS(12;626) metabolite scan\n7. Metabolite Spectrum - using VAPOR(7;626) water suppression\n8. Metabolite Water Scan - after VAPOR(7;626) metabolite scan\n9. Macromolecule Spectrum - using VAPOR(7;626) water suppression\n10. Macromolecule Water Scan - after VAPOR(7;626) metabolite scan\n\nOccipital Lobe\n1. Metabolite Spectrum - using COWS(7;236) water suppression\n2. Metabolite Water Scan - after COWS(7;236)\n3. Macromolecule Spectrum - using COWS(7;236) water suppression\n4. Macromolecule Water Scan - after COWS(7;236)\n5. Metabolite Spectrum - using COWS(12;626) water suppression\n6. Metabolite Water Scan - after COWS(12;626) metabolite scan\n7. Metabolite Spectrum - using VAPOR(7;626) water suppression\n8. Metabolite Water Scan - after VAPOR(7;626) metabolite scan\n9. Macromolecule Spectrum - using VAPOR(7;626) water suppression\n10. Macromolecule Water Scan - after VAPOR(7;626) metabolite scan\n\n\nMRI FILES\nEach T1w MPRAGE brain scan was brain extracted using HDBET (https://github.com/MIC-DKFZ/HD-BET).\n\nBefore MRS: This is the T1w MPRAGE scan for voxel placement\n1. sub-\\*/anat/sub-\\*_T1w.nii.gz\n\nAfter MRS: Second T1w MPRAGE scan performed within the same session for subject movement calculations after the MRS scans.\n1. derivatives/mrs_mat/sub-\\*_mat/sub-\\*_T1w.nii.gz\n\n\nSOFTWARE and FILE TYPES Included\n1. COWS (Constrained optimized water suppression)\n\t- SOFTWARE: https://inventions.techventures.columbia.edu/technologies/cows-water--CU21111\n\t- Manuscript: Constrained optimized water suppression for <sub>1</sub>H MR spectroscopy https://doi.org/10.1002/mrm.30550\n2. INSPECTOR Compatible -> .MAT\n\t- SOFTWARE: https://inventions.techventures.columbia.edu/technologies/inspector-magnetic--CU17130\n\t- Manuscript: INSPECTOR: free software for magnetic resonance spectroscopy data inspection, processing, simulation and analysis https://doi.org/10.1038/s41598-021-81193-9\n3. TWIX File format -> .DAT\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 18873917,
+        "subjects": [
+          "10",
+          "03",
+          "07",
+          "02",
+          "01",
+          "06",
+          "09",
+          "08",
+          "04",
+          "05"
+        ],
+        "tasks": [],
+        "totalFiles": 25
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        24,
+        51,
+        24,
+        26,
+        30,
+        34,
+        22,
+        43,
+        26,
+        28
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2025-10-19T15:19:51.188Z"
+  },
+  "source": "openneuro"
+}

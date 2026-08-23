@@ -1,0 +1,102 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "TARGET-ALL-P2",
+  "payload": {
+    "dbgap_accession_number": "phs000464",
+    "disease_type": [
+      "Lymphoid Leukemias"
+    ],
+    "id": "TARGET-ALL-P2",
+    "name": "Acute Lymphoblastic Leukemia - Phase II",
+    "primary_site": [
+      "Hematopoietic and reticuloendothelial systems"
+    ],
+    "program": {
+      "dbgap_accession_number": "phs000218",
+      "name": "TARGET",
+      "program_id": "f1c391e9-8488-55a8-b777-302e786ea11d"
+    },
+    "project_id": "TARGET-ALL-P2",
+    "releasable": true,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 1587,
+      "data_categories": [
+        {
+          "case_count": 768,
+          "data_category": "Simple Nucleotide Variation",
+          "file_count": 10572
+        },
+        {
+          "case_count": 964,
+          "data_category": "Sequencing Reads",
+          "file_count": 3504
+        },
+        {
+          "case_count": 1574,
+          "data_category": "Biospecimen",
+          "file_count": 2
+        },
+        {
+          "case_count": 1034,
+          "data_category": "Clinical",
+          "file_count": 9
+        },
+        {
+          "case_count": 381,
+          "data_category": "Copy Number Variation",
+          "file_count": 1364
+        },
+        {
+          "case_count": 474,
+          "data_category": "Transcriptome Profiling",
+          "file_count": 1526
+        },
+        {
+          "case_count": 76,
+          "data_category": "Somatic Structural Variation",
+          "file_count": 152
+        },
+        {
+          "case_count": 469,
+          "data_category": "Structural Variation",
+          "file_count": 1064
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 784,
+          "experimental_strategy": "WXS",
+          "file_count": 11792
+        },
+        {
+          "case_count": 469,
+          "experimental_strategy": "RNA-Seq",
+          "file_count": 3724
+        },
+        {
+          "case_count": 77,
+          "experimental_strategy": "WGS",
+          "file_count": 761
+        },
+        {
+          "case_count": 191,
+          "experimental_strategy": "miRNA-Seq",
+          "file_count": 693
+        },
+        {
+          "case_count": 330,
+          "experimental_strategy": "Genotyping Array",
+          "file_count": 1212
+        }
+      ],
+      "file_count": 18193,
+      "file_size": 70880292953995
+    }
+  },
+  "source": "gdc"
+}

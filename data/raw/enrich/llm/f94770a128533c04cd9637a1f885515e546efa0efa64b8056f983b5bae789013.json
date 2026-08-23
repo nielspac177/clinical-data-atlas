@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:f94770a128533c04cd9637a1f885515e546efa0efa64b8056f983b5bae789013",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "19 patients with recurrent glioblastoma",
+        "label": "recurrent glioblastoma"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "oncology"
+    ],
+    "id": "tcia:rider-neuro-mri",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "RIDER Neuro MRI contains imaging data",
+        "value": "MRI"
+      },
+      {
+        "evidence": "diffusion tensor imaging (DTI)",
+        "value": "dMRI"
+      }
+    ],
+    "population": "19 patients with recurrent glioblastoma who underwent repeat imaging sets, 17 of whom also had repeat DTI",
+    "summary": "Repeat brain MRI of patients with recurrent glioblastoma scanned about two days apart, including dynamic contrast-enhanced MRI, T1 mapping, diffusion tensor imaging, and contrast-enhanced 3D FLASH sequences."
+  },
+  "prompt_version": "v1"
+}

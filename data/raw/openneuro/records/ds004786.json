@@ -1,0 +1,152 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004786",
+  "payload": {
+    "created": "2023-10-03T17:09:51.659Z",
+    "id": "ds004786",
+    "latestSnapshot": {
+      "created": "2023-10-04T19:47:41.000Z",
+      "description": {
+        "Authors": [
+          "Eddy Cavalli",
+          "Valérie Chanoine",
+          "Johannes C. Ziegler"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004786.v1.0.1",
+        "Funding": [
+          "This research has been supported by funding from the Institute of Convergence ILCB (France 2030, ANR-16-CONV-0002) and the Excellence Initiative of Aix-Marseille University A*MIDEX (ANR-11-IDEX-0001-02), the LABEX CORTEX (ANR-11-LABX-0042) and the Excellence Initiative of the University of Lyon (ANR-11-IDEX-0007), and by the research grant “DYSsuccess” awarded to EC (ANR-18-CE28-0006). YT was supported by a doctoral fellowship of the Chinese Research Council. FP was supported by a postdoc fellowship of AMPIRIC (Aix-Marseille – Pôle d’Innovation, de Recherche, d’Enseignement pour l’Éducation, France 2030). Brain imaging was performed in the MRI center of the INT (UMR 7289, AMU-CNRS), platform member of France Life Imaging network (grant ANR-11-INBS-0006). "
+        ],
+        "HowToAcknowledge": "say here how you would like to be acknowledged",
+        "License": "CC0",
+        "Name": "MorphoSem",
+        "ReferencesAndLinks": [
+          "a data paper",
+          "a resource to be cited when using the data"
+        ]
+      },
+      "readme": "Dataset description ===  This is the dataset that accompanies the following publication under review (2023)  in Imaging NeuroScience  \nTitle : \"Atypical Hemispheric Re-Organization of the Reading Network in High-Functioning Adults with Dyslexia: Evidence from Representational Similarity Analysis\"\nAuthors : Eddy Cavalli , Valérie Chanoine, Yufei Tan, Jean-Luc Anton, Bruno Giordano, Felipe Pegado & Johannes C. Ziegler \n\nThe dataset contains anatomical and functional MRI images\n of 40 partipants (20 typical and  20 dyslexic readers)\n\nMorphoSem = BIDS Directory Structure\n-- Subject-level data  --- raw MRI images at 3 T\n\tsub-{id}/anat    --- anatomical\n\tsub-{id}/fmap   --- functional\n\tsub-{id}/funct   --- fieldmap\n\n-- sourcedata              ---  experimental files during scanning\n\n-- code                          ---  scripts of data analyses\n         univariate            \n         multivariate\n\n\n\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 34019880089,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31",
+          "32",
+          "33",
+          "34",
+          "35",
+          "36",
+          "37",
+          "39",
+          "40",
+          "41",
+          "42"
+        ],
+        "tasks": [
+          "localizerpinel",
+          "morphosem",
+          "morphosemnoimage"
+        ],
+        "totalFiles": 1169
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        27,
+        27,
+        23,
+        24,
+        23,
+        24,
+        21,
+        24,
+        23,
+        23,
+        22,
+        20,
+        29,
+        20,
+        23,
+        22,
+        21,
+        20,
+        25,
+        22,
+        23,
+        22,
+        22,
+        23,
+        21,
+        27,
+        29,
+        26,
+        22,
+        23,
+        21,
+        23,
+        26,
+        22,
+        26,
+        20,
+        20,
+        20,
+        26,
+        23
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "Atypical Hemispheric Re-Organization of the Reading Network in High-Functioning Adults with Dyslexia",
+      "studyLongitudinal": "Functional MRI"
+    },
+    "publishDate": "2023-10-04T05:33:05.616Z"
+  },
+  "source": "openneuro"
+}

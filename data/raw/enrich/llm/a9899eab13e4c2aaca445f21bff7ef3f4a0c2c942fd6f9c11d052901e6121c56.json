@@ -1,0 +1,34 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:a9899eab13e4c2aaca445f21bff7ef3f4a0c2c942fd6f9c11d052901e6121c56",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "histologically confirmed metastatic breast cancer to the brain",
+        "label": "metastatic breast cancer to the brain"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "oncology",
+      "surgery"
+    ],
+    "id": "tcia:bcbm-radiogenomics",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "268 T1-post contrast Magnetic Resonance Images (MRIs) in NIfTI format",
+        "value": "MRI"
+      },
+      {
+        "evidence": "we provide patient age, gender, genetic status",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "165 patients with histologically confirmed metastatic breast cancer to the brain",
+    "summary": "Skull-stripped, bias-corrected T1 post-contrast brain MRIs from 165 patients with metastatic breast cancer to the brain, with segmentations of tumor, resection cavity and nearby structures, radiomic features, and receptor status."
+  },
+  "prompt_version": "v1"
+}

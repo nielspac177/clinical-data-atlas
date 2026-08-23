@@ -1,0 +1,156 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004621",
+  "payload": {
+    "created": "2023-06-26T12:25:41.130Z",
+    "id": "ds004621",
+    "latestSnapshot": {
+      "created": "2025-06-21T10:56:57.000Z",
+      "description": {
+        "Authors": [
+          "Dzianok Patrycja",
+          "Antonova Ingrida",
+          "Wojciechowski Jakub",
+          "Dreszer Joanna",
+          "Kublik Ewa"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004621.v1.0.4",
+        "Funding": [
+          "Polish National Science Center (NCN) grant no. 2016/20/W/NZ4/00354"
+        ],
+        "HowToAcknowledge": "Please cite this paper https://pubmed.ncbi.nlm.nih.gov/35254424/",
+        "License": "CC0",
+        "Name": "The Nencki-Symfonia EEG/ERP dataset",
+        "ReferencesAndLinks": [
+          "Dzianok P, Antonova I, Wojciechowski J, Dreszer J, Kublik E. Supporting data for 'The Nencki-Symfonia EEG/ERP dataset: Multiple cognitive tasks and resting-state data collected in a sample of healthy adults'. GigaScience Database, 2022. http://doi.org/10.5524/100990",
+          "Dzianok P, Antonova I, Wojciechowski J, Dreszer J, Kublik E. The Nencki-Symfonia electroencephalography/event-related potential dataset: Multiple cognitive tasks and resting-state data collected in a sample of healthy adults. Gigascience. 2022 Mar 7;11:giac015. doi: 10.1093/gigascience/giac015"
+        ]
+      },
+      "readme": "The Nencki-Symfonia EEG/ERP dataset (dataset DOI: doi.org/10.5524/100990)\n\nIMPORTANT NOTE: The dataset contains no errors (BIDS-1). The numerous warnings currently displayed are a result of OpenNeuro updating its validator to BIDS-2. The OpenNeuro team is actively working on refining the validator to display only meaningful warnings (more information on OpenNeuro GitHub page). At this time, as dataset owners, we are unable to take any action to resolve these warnings.\n\nDescription: mixed cognitive tasks [(i) an extended multi-source interference task, MSIT+; (ii) a 3-stimuli oddball task; (iii) a control, simple reaction task, SRT; and (iv) a resting-state protocol]\n\nPlease cite the following references if you use these data:\n1. Dzianok P, Antonova I, Wojciechowski J, Dreszer J, Kublik E. The Nencki-Symfonia electroencephalography/event-related potential dataset: Multiple cognitive tasks and resting-state data collected in a sample of healthy adults. Gigascience. 2022 Mar 7;11:giac015. doi: 10.1093/gigascience/giac015.\n2. Dzianok P, Antonova I, Wojciechowski J, Dreszer J, Kublik E. Supporting data for \"The Nencki-Symfonia EEG/ERP dataset: Multiple cognitive tasks and resting-state data collected in a sample of healthy adults\" GigaScience Database, 2022. http://doi.org/10.5524/100990\n\nRelease history:\n\n26/01/2022: Initial release (GigaDB)\n\n15/06/2023: Added to OpenNeuro; updated README and dataset_description.json; minor updated to .json files related with BIDS errors/warnings. Updated events files (ms changed to s).\n\n12/10/2023: public release on OpenNeuro after deleting some additional, not needed system information from raw logfiles\n\n10/2024: minor correction of logfiles in the /sourcedata directory (MSIT and SRT) for sub-01 to sub-03\n\n02/2025 (v1.0.3): corrections to REST files for subjects sub-20 and sub-23 (EEG and .tsv files) – corrected marker names and removed redundant markers",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "eeg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [],
+        "size": 83086874697,
+        "subjects": [
+          "18",
+          "27",
+          "28",
+          "17",
+          "24",
+          "11",
+          "08",
+          "33",
+          "41",
+          "20",
+          "31",
+          "06",
+          "38",
+          "32",
+          "05",
+          "35",
+          "15",
+          "19",
+          "22",
+          "21",
+          "23",
+          "16",
+          "10",
+          "37",
+          "09",
+          "13",
+          "12",
+          "36",
+          "39",
+          "30",
+          "25",
+          "40",
+          "42",
+          "29",
+          "01",
+          "04",
+          "34",
+          "02",
+          "03",
+          "14",
+          "07",
+          "26"
+        ],
+        "tasks": [
+          "Extended Multi-Source Interference Task (MSIT+)",
+          "Simple reaction time task (SRT)",
+          "Resting state protocol (REST)",
+          "Oddball"
+        ],
+        "totalFiles": 848
+      },
+      "tag": "1.0.4"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        22,
+        21,
+        27,
+        26,
+        25,
+        26,
+        25,
+        33,
+        20,
+        20,
+        27,
+        23,
+        21,
+        20,
+        25,
+        32,
+        24,
+        29,
+        25,
+        23,
+        21,
+        34,
+        21,
+        24,
+        21,
+        21,
+        22,
+        24,
+        24,
+        21,
+        32,
+        32,
+        26,
+        22,
+        23,
+        33,
+        23,
+        20,
+        22,
+        20,
+        24,
+        30
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "Polish National Science Center (NCN) grant",
+      "modalities": [
+        "eeg"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "cognitive control",
+      "studyLongitudinal": "Other"
+    },
+    "publishDate": "2023-10-12T13:01:56.891Z"
+  },
+  "source": "openneuro"
+}

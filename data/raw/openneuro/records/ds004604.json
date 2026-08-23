@@ -1,0 +1,173 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004604",
+  "payload": {
+    "created": "2023-06-13T10:40:15.830Z",
+    "id": "ds004604",
+    "latestSnapshot": {
+      "created": "2024-09-10T10:31:27.000Z",
+      "description": {
+        "Authors": [
+          "Rovai, Antonin",
+          "Lolli, Valentina",
+          "Trotta, Nicola",
+          "Goldman, Serge",
+          "De Tiège, Xavier"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004604.v2.0.0",
+        "Funding": [
+          "Fond Erasme (Brussels, Belgium)",
+          "Association Vinçotte Nuclear (AVN research convention)",
+          "FRS-FNRS (Brussels, Belgium)"
+        ],
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "Cerebrovascular Reactivity Normative Dataset",
+        "ReferencesAndLinks": [
+          ""
+        ]
+      },
+      "readme": "# Cerebrovascular Reactivity Normative Dataset\n\n## Description\n\nFifty healthy adult subjects with no prior history of neurological or psychiatric disorder were included in this dataset.\n\nThe goal is to provide a normative dataset for the computation of maps of Cerebrovascular Reactivity Maps. For this purpose, we developed CVRmap, a BIDS-compatible pipeline to process the data. More information on CVRmap can be found on the corresponding github page:\n\n`www.github.com/ln2t/cvrmap`.\n\nThe paper describing CVRmap and this dataset can be found [here](https://rdcu.be/dCCZW).\n\n## Rawdata\n\n- Anatomical data: a standard T1w image was acquired for each subject.\n- Functional data: each subject underwent an fMRI scan with blocs of CO2 inhalation challenges.\n- Physiological data: breath CO2 was recorded using a capnograph during the fMRI acquisition.\n\n## Derivatives\n\n- `derivatives/fmriprep_v21.0.4`: output of fMRIPrep with the `--use-aroma` option enabled.\n- `derivatives/cvrmap_2.0.20`: output of CVRmap (`www.github.com/ln2t/cvrmap`), version 2.0.20.\n- `derivatives/cvrmap_2.0.25`: output of CVRmap (`www.github.com/ln2t/cvrmap`), version 2.0.25.\n- `derivatives/cvrmap_2.0.25_gs`: output of CVRmap (`www.github.com/ln2t/cvrmap`), version 2.0.25, with the global signal option.\n- `derivatives/cvrmap_2.0.25_vs`: output of CVRmap (`www.github.com/ln2t/cvrmap`), version 2.0.25, with the vessel signal option.\n\n## Further analysis\n\nFurther analysis can be done using the jupyter notebook in the repository `www.github.com/ln2t/cvrmap-paper`. This will produce a set of figures and perform some basic statistics on the CVR maps (age regression, grey/white matter averages, etc).\n\n",
+      "summary": {
+        "dataProcessed": true,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 4743231232,
+        "subjects": [
+          "001",
+          "002",
+          "003",
+          "004",
+          "005",
+          "006",
+          "007",
+          "008",
+          "009",
+          "010",
+          "011",
+          "012",
+          "013",
+          "014",
+          "015",
+          "016",
+          "017",
+          "018",
+          "019",
+          "020",
+          "021",
+          "022",
+          "023",
+          "024",
+          "025",
+          "026",
+          "027",
+          "028",
+          "029",
+          "030",
+          "031",
+          "032",
+          "033",
+          "034",
+          "035",
+          "036",
+          "037",
+          "038",
+          "039",
+          "040",
+          "041",
+          "042",
+          "043",
+          "044",
+          "045",
+          "046",
+          "047",
+          "048",
+          "049",
+          "050"
+        ],
+        "tasks": [
+          "gas"
+        ],
+        "totalFiles": 306
+      },
+      "tag": "2.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        29,
+        30,
+        29,
+        39,
+        28,
+        49,
+        25,
+        34,
+        37,
+        26,
+        25,
+        24,
+        32,
+        31,
+        27,
+        31,
+        29,
+        28,
+        29,
+        30,
+        33,
+        59,
+        29,
+        24,
+        21,
+        26,
+        33,
+        24,
+        23,
+        30,
+        23,
+        25,
+        34,
+        48,
+        23,
+        48,
+        50,
+        53,
+        31,
+        29,
+        49,
+        47,
+        36,
+        67,
+        29,
+        51,
+        33,
+        30,
+        23,
+        38
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": true,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "Bloc design",
+      "studyDomain": "Cerebrovascular Reactivity",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2023-08-09T08:23:41.350Z"
+  },
+  "source": "openneuro"
+}

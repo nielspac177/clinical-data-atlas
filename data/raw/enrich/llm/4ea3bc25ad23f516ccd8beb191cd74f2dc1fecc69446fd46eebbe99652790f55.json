@@ -1,0 +1,41 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:4ea3bc25ad23f516ccd8beb191cd74f2dc1fecc69446fd46eebbe99652790f55",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Kidney renal papillary cell carcinoma",
+        "label": "Kidney renal papillary cell carcinoma"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "nephrology_urology"
+    ],
+    "id": "tcia:tcga-kirp",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "CT MR PT",
+        "value": "CT"
+      },
+      {
+        "evidence": "CT MR PT",
+        "value": "MRI"
+      },
+      {
+        "evidence": "CT MR PT",
+        "value": "PET"
+      },
+      {
+        "evidence": "Genomic Data Commons (GDC) Data Portal",
+        "value": "genomics"
+      }
+    ],
+    "population": "Human participants with kidney renal papillary cell carcinoma enrolled in The Cancer Genome Atlas (33 participants per source metadata)",
+    "summary": "Kidney imaging from papillary renal cell carcinoma patients in The Cancer Genome Atlas, matched by patient identifier to clinical, genetic and pathological data in the Genomic Data Commons. Scanners and protocols are heterogeneous."
+  },
+  "prompt_version": "v1"
+}

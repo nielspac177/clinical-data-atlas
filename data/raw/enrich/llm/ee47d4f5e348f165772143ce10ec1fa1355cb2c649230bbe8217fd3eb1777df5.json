@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:ee47d4f5e348f165772143ce10ec1fa1355cb2c649230bbe8217fd3eb1777df5",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "acquired during treatment for various cancer types",
+        "label": "cancer"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "tcia:mediastinal-lymph-node-seg",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "chest CT scans",
+        "value": "CT"
+      },
+      {
+        "evidence": "clinical data (gender/cancer type)",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "Patients whose chest CT scans were acquired during treatment for various cancer types",
+    "summary": "Chest CT scans acquired during cancer treatment, with partially or fully annotated mediastinal lymph node segmentations and clinical data, curated for the LNQ2023 MICCAI challenge to develop segmentation tools from weakly annotated cases."
+  },
+  "prompt_version": "v1"
+}

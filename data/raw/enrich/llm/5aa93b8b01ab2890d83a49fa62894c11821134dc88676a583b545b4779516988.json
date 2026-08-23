@@ -1,0 +1,60 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:5aa93b8b01ab2890d83a49fa62894c11821134dc88676a583b545b4779516988",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Neoplasms, NOS",
+        "label": "Neoplasms, NOS"
+      },
+      {
+        "evidence": "Adenomas and Adenocarcinomas",
+        "label": "Adenomas and Adenocarcinomas"
+      },
+      {
+        "evidence": "Mesothelial Neoplasms",
+        "label": "Mesothelial Neoplasms"
+      },
+      {
+        "evidence": "Epithelial Neoplasms, NOS",
+        "label": "Epithelial Neoplasms, NOS"
+      },
+      {
+        "evidence": "Squamous Cell Neoplasms",
+        "label": "Squamous Cell Neoplasms"
+      },
+      {
+        "evidence": "Transitional Cell Papillomas and Carcinomas",
+        "label": "Transitional Cell Papillomas and Carcinomas"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "endocrinology_metabolism",
+      "gastroenterology_hepatology",
+      "nephrology_urology",
+      "musculoskeletal"
+    ],
+    "id": "gdc:MATCH-Z1A",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Simple Nucleotide Variation, Sequencing Reads",
+        "value": "genomics"
+      },
+      {
+        "evidence": "Transcriptome Profiling",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "45 human cases with tumors of the colon, soft tissue, liver, uterus, heart/mediastinum/pleura, digestive organs, trachea, bone, rectum, bladder, ovary and thyroid",
+    "summary": "Genomic characterization of one MATCH trial arm covering colon, liver, uterine, pleural, bone, rectal, bladder, ovarian and thyroid tumors. Provides WXS and RNA-Seq reads, variation calls, transcriptome profiling, biospecimen and clinical data."
+  },
+  "prompt_version": "v1"
+}

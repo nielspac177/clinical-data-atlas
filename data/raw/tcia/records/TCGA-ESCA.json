@@ -1,0 +1,298 @@
+{
+  "endpoints": [
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getCollectionValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getModalityValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getBodyPartValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getPatient",
+    "https://api.datacite.org/dois?prefix=10.7937"
+  ],
+  "harvest_method": "api:nbia+datacite",
+  "native_id": "TCGA-ESCA",
+  "payload": {
+    "datacite": {
+      "citationCount": 9,
+      "container": {},
+      "contentUrl": [],
+      "contributors": [
+        {
+          "affiliation": [],
+          "contributorType": "DataCurator",
+          "familyName": null,
+          "givenName": null,
+          "name": "TCIA Team",
+          "nameIdentifiers": [],
+          "nameType": null
+        }
+      ],
+      "created": "2016-01-29T13:04:01Z",
+      "creators": [
+        {
+          "affiliation": [],
+          "familyName": "Lucchesi",
+          "givenName": "Fabiano R.",
+          "name": "Lucchesi, Fabiano R.",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Aredes",
+          "givenName": "Natália D.",
+          "name": "Aredes, Natália D.",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2016",
+          "dateInformation": null,
+          "dateType": "Issued"
+        }
+      ],
+      "descriptions": [
+        {
+          "description": "The Cancer Genome Atlas Esophageal Carcinoma (TCGA-ESCA) data collection is part of a larger effort to build a research community focused on connecting cancer phenotypes to genotypes by providing clinical images matched to subjects from The Cancer Genome Atlas (TCGA). Clinical, genetic, and pathological data resides in the Genomic Data Commons (GDC) Data Portal while the radiological data is stored on The Cancer Imaging Archive (TCIA). Matched TCGA patient identifiers allow researchers to explore the TCGA/TCIA databases for correlations between tissue genotype, radiological phenotype and patient outcomes. Tissues for TCGA were collected from many sites all over the world in order to reach their accrual targets, usually around 500 specimens per cancer type. For this reason the image data sets are also extremely heterogeneous in terms of scanner modalities, manufacturers and acquisition protocols. In most cases the images were acquired as part of routine care and not as part of a controlled research study or clinical trial.",
+          "descriptionType": "Abstract",
+          "lang": null
+        }
+      ],
+      "doi": "10.7937/k9/tcia.2016.vptnrgfy",
+      "downloadCount": 0,
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "TCGA-ESCA",
+          "identifierType": "TCIA Short Name"
+        }
+      ],
+      "isActive": true,
+      "language": null,
+      "metadataVersion": 11,
+      "partCount": 0,
+      "partOfCount": 0,
+      "publicationYear": 2016,
+      "published": null,
+      "publisher": "The Cancer Imaging Archive",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2016-01-29T13:04:02Z",
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "10.1038/s41591-024-02857-3",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1109/tmi.2017.2714640",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.3748/wjg.v27.i36.6110",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1001/jamanetworkopen.2022.52553",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        }
+      ],
+      "relatedItems": [],
+      "rightsList": [
+        {
+          "rights": "Creative Commons Attribution 3.0 Unported",
+          "rightsIdentifier": "cc-by-3.0",
+          "rightsIdentifierScheme": "SPDX",
+          "rightsUri": "https://creativecommons.org/licenses/by/3.0/legalcode",
+          "schemeUri": "https://spdx.org/licenses/"
+        }
+      ],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "fabricaForm",
+      "state": "findable",
+      "subjects": [],
+      "titles": [
+        {
+          "lang": null,
+          "title": "The Cancer Genome Atlas Esophageal Carcinoma Collection (TCGA-ESCA)",
+          "titleType": null
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceType": "DICOM",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2025-06-01T01:01:16Z",
+      "url": "https://www.cancerimagingarchive.net/collection/tcga-esca/",
+      "version": "3",
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 2616
+    },
+    "nbia": {
+      "body_parts": [
+        "ESOPHAGUS"
+      ],
+      "collection": "TCGA-ESCA",
+      "modalities": [
+        "CT"
+      ],
+      "patients": [
+        {
+          "Collection": "TCGA-ESCA",
+          "PatientId": "TCGA-VR-A8EO",
+          "PatientName": "TCGA-VR-A8EO",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-ESCA",
+          "PatientId": "TCGA-VR-AA4G",
+          "PatientName": "TCGA-VR-AA4G",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-ESCA",
+          "PatientId": "TCGA-VR-A8EY",
+          "PatientName": "TCGA-VR-A8EY",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-ESCA",
+          "PatientId": "TCGA-VR-A8EZ",
+          "PatientName": "TCGA-VR-A8EZ",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-ESCA",
+          "PatientId": "TCGA-VR-AA7I",
+          "PatientName": "TCGA-VR-AA7I",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-ESCA",
+          "PatientId": "TCGA-VR-A8EQ",
+          "PatientName": "TCGA-VR-A8EQ",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-ESCA",
+          "PatientId": "TCGA-VR-A8ER",
+          "PatientName": "TCGA-VR-A8ER",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-ESCA",
+          "PatientId": "TCGA-VR-A8EW",
+          "PatientName": "TCGA-VR-A8EW",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-ESCA",
+          "PatientId": "TCGA-VR-A8EX",
+          "PatientName": "TCGA-VR-A8EX",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-ESCA",
+          "PatientId": "TCGA-VR-AA7D",
+          "PatientName": "TCGA-VR-AA7D",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-ESCA",
+          "PatientId": "TCGA-VR-A8ET",
+          "PatientName": "TCGA-VR-A8ET",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-ESCA",
+          "PatientId": "TCGA-VR-AA4D",
+          "PatientName": "TCGA-VR-AA4D",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-ESCA",
+          "PatientId": "TCGA-VR-A8EU",
+          "PatientName": "TCGA-VR-A8EU",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-ESCA",
+          "PatientId": "TCGA-VR-A8Q7",
+          "PatientName": "TCGA-VR-A8Q7",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-ESCA",
+          "PatientId": "TCGA-VR-AA7B",
+          "PatientName": "TCGA-VR-AA7B",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-ESCA",
+          "PatientId": "TCGA-VR-A8EP",
+          "PatientName": "TCGA-VR-A8EP",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        }
+      ]
+    }
+  },
+  "source": "tcia"
+}

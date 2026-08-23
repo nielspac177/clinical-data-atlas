@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:24d9acf1926aed57683fe7fc073586b0bf938eafabddfe9771cc3006adcf446a",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "scans for de novo Glioblastoma (GBM) patients",
+        "label": "de novo Glioblastoma (GBM)"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "oncology"
+    ],
+    "id": "tcia:upenn-gbm",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "multi-parametric magnetic resonance imaging (mpMRI) scans",
+        "value": "MRI"
+      },
+      {
+        "evidence": "clinical outcome (e.g., overall survival, genomic information, tumor progression)",
+        "value": "genomics"
+      },
+      {
+        "evidence": "coupled with patient demographics, clinical outcome",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "De novo glioblastoma patients from the Hospital of the University of Pennsylvania",
+    "summary": "Multi-parametric brain MRI of glioblastoma patients with demographics, outcomes, expert-corrected tumor and whole-brain segmentation labels, and extracted radiomic features in co-registered NIfTI volumes."
+  },
+  "prompt_version": "v1"
+}

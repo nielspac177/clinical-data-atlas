@@ -1,0 +1,89 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds001912",
+  "payload": {
+    "created": "2019-05-10T16:43:23.455Z",
+    "id": "ds001912",
+    "latestSnapshot": {
+      "created": "2019-05-16T16:50:15.000Z",
+      "description": {
+        "Authors": [
+          "Milena Kaestner",
+          "Ryan T. Maloney",
+          "Kirstie H. Wailes-Newson",
+          "Marina Bloj",
+          "Julie M. Harris",
+          "Antony B. Morland",
+          "Alex R. Wade"
+        ],
+        "DatasetDOI": null,
+        "Funding": [],
+        "HowToAcknowledge": null,
+        "License": null,
+        "Name": "S-cone_MotionInDepth_fMRI",
+        "ReferencesAndLinks": null
+      },
+      "readme": "Description of columns in the event files, both for MT/MST functional localisers (task-MTMST) and motion in depth (MID) functional scans (task-MID):\n- onset: Onset of each stimulus event in seconds from the start of the scan. Dummy volumes are not included.\n- duration: Duration of each stimulus event in seconds. For the MT/MST localisers, stimuli were presented in a blocked design where each stimulus was shown for 12 seconds. For the MID scans, stimuli were shown in an event-related design with a contrast ramp at the onset and offset of the stimulus. Total duration of each stimulus was 3 seconds but the stimulus was at peak contrast for 1 second.\n- trial_type: Label for the event type. In MT/MST localiser scans, events were full-field radial motion (motionBlockFF), motion constrained to the right hemifield (motionBlockR), motion constrained to the left hemifield (motionBlockL), a static field of dots (staticBlock), and a baseline fixation condition (Fix). The same event sequence was used for each participant and each run. In MID functional scans, stimuli were achromatic changing disparity (CD), achromatic changing disparity control (CD_control), achromatic IOVD (IOVD), achromatic IOVD control (IOVD_control), S-cone CD (CD_Scone), S-cone CD control (CD_control_Scone), S-cone IOVD (IOVD_Scone), S-cone IOVD control (IOVD_control_Scone) and a baseline fixation event (Fixation). The inter-stimulus interval was jittered and is not included in the event file. Different event sequences were used for each participant and each run.",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "01",
+          "02"
+        ],
+        "size": 10193858720,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17"
+        ],
+        "tasks": [
+          "task-MID",
+          "task-MTMST"
+        ],
+        "totalFiles": 480
+      },
+      "tag": "1.0.2"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": null,
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2019-05-16T16:50:44.584Z"
+  },
+  "source": "openneuro"
+}

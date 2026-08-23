@@ -1,0 +1,69 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005672",
+  "payload": {
+    "created": "2024-11-30T09:25:18.469Z",
+    "id": "ds005672",
+    "latestSnapshot": {
+      "created": "2024-12-04T15:03:18.000Z",
+      "description": {
+        "Authors": [
+          "Li Zhiyuan",
+          "Zhao Jiaxin"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005672.v1.0.0",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "PerceiveImagine",
+        "ReferencesAndLinks": [
+          "Roy Y, Banville H, Albuquerque I, et al. Deep learning-based electroencephalography analysis: a systematic review[J]. Journal of neural engineering, 2019, 16(5): 051001."
+        ]
+      },
+      "readme": "Participants perceive the image for 6 seconds based on the prompt, then close their eyes and imagine the image they just saw for 6 seconds based on the prompt. After hearing the prompt sound, they enter the next loop",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "eeg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [],
+        "size": 4545640816,
+        "subjects": [
+          "s2",
+          "s1",
+          "s3"
+        ],
+        "tasks": [
+          "PerceiveImagine"
+        ],
+        "totalFiles": 18
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "eeg"
+      ],
+      "species": "Human",
+      "studyDesign": "Perceive and Imagine",
+      "studyDomain": "",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2024-12-04T15:07:24.414Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,41 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:4e58cba8fe490ec7812d4ae2b76eba4c6b38812bbf4b39e21be17c61726894e0",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Acute Lymphoblastic Leukemia - Phase II",
+        "label": "Acute Lymphoblastic Leukemia"
+      },
+      {
+        "evidence": "Lymphoid Leukemias",
+        "label": "Lymphoid Leukemias"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "pediatrics"
+    ],
+    "id": "gdc:TARGET-ALL-P2",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "WGS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "RNA-Seq",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "1587 human cases",
+    "summary": "TARGET phase II acute lymphoblastic leukemia collection with whole-exome, whole-genome, RNA and miRNA sequencing plus genotyping arrays, reporting nucleotide, copy number and structural variation alongside clinical and biospecimen data."
+  },
+  "prompt_version": "v1"
+}

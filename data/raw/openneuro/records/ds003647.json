@@ -1,0 +1,141 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003647",
+  "payload": {
+    "created": "2021-05-06T16:42:28.298Z",
+    "id": "ds003647",
+    "latestSnapshot": {
+      "created": "2021-05-06T17:31:16.000Z",
+      "description": {
+        "Authors": [
+          "David Hlatky",
+          "Gergely Somogyi"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds003647.v1.0.0",
+        "Funding": [],
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "Deciphering the scopolamine rat model by preclinical functional MRI",
+        "ReferencesAndLinks": [
+          "https://www.biorxiv.org/content/10.1101/2020.04.08.031534v1"
+        ]
+      },
+      "readme": "This dataset contains reconstructed, unprocessed MRI data accompanying the\npaper titled \"Deciphering the scopolamine challenge rat model by preclinical\nfunctional MRI\". Experiment 1 was conducted on subjects 1-18, and experiment 2\non subjects 19-34. Each rat underwent multiple sessions (3 and 4 sessions in\nexperiment 1 and 2 respectively) and were pretreated with either i.p.\nscopolamine, butylscopolamine, donepezil (only in experiment 2), or saline\nbuffer in a randomized cross-over design. They were anesthetised in either\nisoflurane or in a combination of isoflurane and i.p.  medetomidine. For\nfunctional assessment, whisker stimulation was used with an air puff aimed at\nthe right whisker pad. Functional scans were acquired with either gradient echo\nEPI, spin echo EPI or multislice FAIR-ASL. Resting state scans were also\nacquired but are not discussed in the paper. While we publish this dataset as\none BIDS project, it is recommended to slice this dataset into 2 BIDS\ncompatible datasets and handle the 2 experiments separetely during processing,\nas there are substantial differences (eg.: number of sessions, sequences).\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "01",
+          "02",
+          "03",
+          "04"
+        ],
+        "size": 11632772067,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31",
+          "32",
+          "33",
+          "34"
+        ],
+        "tasks": [
+          "rest",
+          "whiskerasl",
+          "whiskerepi"
+        ],
+        "totalFiles": 1021
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "rat",
+      "studyDesign": "cross-over, drug effect",
+      "studyDomain": "scopolamine, sensory response",
+      "studyLongitudinal": "Longitudinal"
+    },
+    "publishDate": "2021-05-07T09:22:32.119Z"
+  },
+  "source": "openneuro"
+}

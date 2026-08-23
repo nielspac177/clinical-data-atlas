@@ -1,0 +1,92 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds002734",
+  "payload": {
+    "created": "2020-04-24T17:45:44.338Z",
+    "id": "ds002734",
+    "latestSnapshot": {
+      "created": "2020-04-29T17:18:55.000Z",
+      "description": {
+        "Authors": [
+          "Andrea Pisauro",
+          "Elsa Fouragnan",
+          "C Retzler",
+          "M Philiastides"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds002734.v1.0.2",
+        "Funding": [
+          "This work was supported by the Biotechnology and Biological Sciences Research Council (BBSRC; grant BB/J015393/2 to M.G.P.) and the Economic and Social Research Council(ESRC; grant ES/L012995/1 to M.G.P.)."
+        ],
+        "HowToAcknowledge": "cite the paper:10.1038/ncomms15808",
+        "License": "CC0",
+        "Name": "Evidence Accumulation in Value-Based decisions",
+        "ReferencesAndLinks": [
+          "DOI:10.1038/ncomms15808",
+          "Neural correlates of evidence accumulation during value-based decisions revealed via simultaneous EEG-fMRI"
+        ]
+      },
+      "readme": "OpenNeuro curator note: This dataset was previously accessible at ds001219. The dataset was reuploaded due to privacy considerations. \n\nEEG_data files contain EEG preprocessed data for each subject,session.\nEEG_events contain two cells of relevant events for the two sessions of each subject\n\nEEG_data \nY : [number of electrodes x number_of_times double] => EEG activity for all electrodes and all times\n\nEEG_events fields for each cell\n\nrespt: [1xnumber_of_trials double] => response onset times (in ms)\n\nrt: [1xnumber_of_trials double] => reaction times (ms)\n\ntstim: [1xnumber_of_trials double] => stimulus onset times (in ms)\n\nresptexcl: [1x13 double] => excluded response times\n\ntstimexcl: 5.8806e+05  => excluded stimulus onset times\n\ndiffV: [1xnumber_of_trials double]=>item rating difference (absolute stimulus difficulty)\n\ncorr: [1xnumber_of_trials logical] =>accuracy (1:correct, 0:error)\n\nratL:  [1xnumber_of_trials double]=>rating of item on the left of fixation cross\n\nratR:  [1xnumber_of_trials double]=>rating of item on the right of fixation cross\n\nchooseL: [1xnumber_of_trials logical]=>choosing left? (1:yes, 0:no)\n\nchooseR: [1xnumber_of_trials logical]=>choosing right? (1:yes, 0:no)\n\nt0: constant time to shift fMRI events to align to EEG onset times (see below)\n\n\nMETHODS OF EEG PREPROCESSING\nWe performed EEG pre-processing offline using MATLAB\n(Mathworks, Natick, MA). EEG signals recorded inside an MR scanner are\ncontaminated with gradient and ballistocardiogram (BCG) artifacts due to\nmagnetic induction on the EEG leads. We first removed the gradient artifacts.\nSpecifically, from each functional volume acquisition we subtracted the average\nartifact template constructed using the 80 volumes centred on the volume-ofinterest\nusing in-house MATLAB software. We repeated this process for as\nmany times as there were functional volumes in our data sets. We subsequently\napplied a 10-ms median filter to remove any residual spike artifacts. Next, we\nband-pass filtered the data by applying a 0.5-Hz high-pass filter to remove direct\ncurrent (DC) drifts and a 40Hz low-pass filter to remove high frequency artifacts\nnot associated with neurophysiological processes of interest. These filters were\napplied together, non-causally to avoid distortions caused by phase delays.\nBCG artifacts share frequency content with the EEG and as such are more\nchallenging to remove. To avoid loss of signal power in the underlying EEG\nwe adopted a conservative approach and removed a small number of BCG\ncomponents using principal component analysis in two steps. Firstly, four BCG\nprincipal components were extracted from data that were initially low-pass filtered\nat 4Hz to extract the signal within the frequency range where BCG artifacts are\nobserved. Secondly, the sensor weightings corresponding to those components\nwere projected onto the broadband (original) data and subtracted out.\n\nfMRI_data files contain fMRI preprocessed data for each subject,session.\n\n\nMETHODS FOR fMRI PREPROCESSING\nWe discarded the first ten volumes from each fMRI run to\nensure a steady-state MR signal, and we used the remaining 307 volumes for the\nstatistical analysis presented in this study. Pre-processing of our data was\nperformed using the FMRIB�s Software Library (Functional MRI of the Brain,\nOxford, UK) and included: head-related motion correction, slice-timing correction,\nhigh-pass filtering (4100 s), and spatial smoothing (with a Gaussian kernel of\n8mm full-width at half maximum). To register our EPI image to standard space,\nwe first transformed the EPI images into each individual�s high-resolution space\nwith a linear six-parameter rigid body transformation. We then registered the\nimage to standard space (Montreal Neurological Institute, MNI) using FMRIB�s\nNon-linear Image Registration Tool with a resolution warp of 10 mm. Finally, B0\nunwarping was applied to correct for signal loss and geometric distortions due to\nB0 field inhomogeneities in the EPI images.\n\nMETHODS TO CREATE fMRI REGRESSORS\nWe performed whole-brain statistical analyses of functional data\nusing a multilevel approach within the generalized linear model (GLM) framework,\nas implemented in FSL through the FEAT module:\nY= Xb + E = b1X1+ b2X2 + b3X3 +b4X4 + E\nwhere Y is the times series of a given voxel comprising T time samples and X is a\nTx4 design matrix  with columns representing four different regressors\n(see below) convolved with a canonical hemodynamic response function (double-g\nfunction). The regressors times are shifted by the fMRI t0 (the EEG time at which the scanner started) which is \nsaved in the EEG events files.\n\nb is a 4x1 column vector of regression coefficients and e a Tx1\ncolumn vector of residual error terms. We performed a first-level analysis to\nanalyse each participant�s individual runs, which were then combined using a\nsecond-level analysis (fixed effects). Finally, we used a third-level, mixed-effects\nmodel (FLAME 1) to combine data across subjects, treating participants as a\nrandom effect. Time-series statistical analysis was carried out using FMRIB�s\nimproved linear model with local autocorrelation correction.\n\nOur GLM model included an EEG-informed regressor capturing the trial-by-trial\ndynamics of the process of EA. Specifically, for each trial we used the raw\nEEG time-series (from the subject-specific sensor that was most predictive of the\nmodel-derived EA profile) to parametrically modulate the regressor amplitudes.\nWe considered the entire trial duration (that is, RT) minus the subject-specific nDT\nestimated by the model, which accounted for stimulus processing and motor\nexecution. More specifically, we split this nDT in two intervals by fixing the motor\npreparation to 100 ms prior to the response (when a sudden increase in\ncorticospinal excitability occurs) and setting the average duration of the stimulus\nencoding to nDT-100 ms . To absorb the variance associated with other\ntask-related processes we included three additional regressors: (1) an unmodulated\nstick function regressor at the onset of the stimuli, (2) a stick function regressor at\nthe onset of stimuli that was parametrically modulated by the VD between the\ndecision alternatives and (3) a stick function regressor aligned at the time of\nresponse and modulated by RT . As a control analysis we also removed the\nRT and VD regressors from the GLM design to test if our EEG-informed regressor\nabsorbed additional activations. The only activation we found in the EEG-informed\nregressor was the one capturing accumulation dynamics as in the main analysis\n(that is, pMFC) with a marginal improvement in the statistical significance of the\narea.",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 4067685017,
+        "subjects": [
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25"
+        ],
+        "tasks": [
+          "main"
+        ],
+        "totalFiles": 114
+      },
+      "tag": "1.0.2"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": null,
+      "associatedPaperDOI": "10.1038/ncomms15808",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "value-based decisions",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2020-04-30T18:15:10.408Z"
+  },
+  "source": "openneuro"
+}

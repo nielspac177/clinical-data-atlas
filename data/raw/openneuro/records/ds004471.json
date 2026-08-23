@@ -1,0 +1,153 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004471",
+  "payload": {
+    "created": "2023-02-07T19:41:36.182Z",
+    "id": "ds004471",
+    "latestSnapshot": {
+      "created": "2023-05-04T14:53:44.000Z",
+      "description": {
+        "Authors": [
+          "Mohamad Abbass",
+          "Greydon Gilmore",
+          "Alaa Taha",
+          "Ryan Chevalier",
+          "Magdalena Jach",
+          "Terry M. Peters",
+          "Ali R. Khan",
+          "Jonathan C. Lau"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004471.v1.0.1",
+        "Funding": [
+          "Canada Research Chairs program #950-231964",
+          "Research start-up funding through the Department of Clinical Neurological Sciences at University of Western Ontario",
+          "Canada First Research Excellence Fund, and Brain Canada",
+          "NSERC Discovery Grant #6639",
+          "Canada Foundation for Innovation (CFI) John R. Evans Leaders Fund Project #37427"
+        ],
+        "HowToAcknowledge": "If using neuroimaging or AFIDs data please cite:\n\n Taha, A. et al. Magnetic resonance imaging datasets with anatomical fiducials for quality control and registration. bioRxiv 2022.11.21.516173 (2022) doi:10.1101/2022.11.21.516173 \n\nand \n\nAbbass, M. et al. Application of the anatomical fiducials framework to a clinical dataset of patients with Parkinson’s disease. Brain Struct. Funct. 227, 393–405 (2022)",
+        "License": "CC0",
+        "Name": "London Heath Sciences Center Parkinson's Disease Dataset (LHSCPD)",
+        "ReferencesAndLinks": null
+      },
+      "readme": "The London Health Sciences Center Parkinson’s disease (LHSCPD) dataset consists of 40 subjects diagnosed with Parkinson’s Disease (age: 60.2 ± 6.8, sex: 13 female and 27 male) and have undergone deep brain stimulation (DBS) surgery. \n\nThis release currently contains pre-DBS gadolinium-enhanced imaging collected at our institution (University Hospital in London, ON, Canada) with a 1.5 T scanner (Signa, General Electric, Milwaukee, Wisconsin, USA). \n\nWe also release anatomical fiducial (AFIDs) placements on this local dataset. AFIDs placements were performed using 3DSlicer version 4.10.0 on structural T1w images. A total of 5 AFIDs protocol applications were performed (6,400 fiducials).\n\nEthics approval was received for anonymized release of patient scans by the Human Subject Research Ethics Board (HSREB) office at the University of Western Ontario (REB# 109045). ",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 324739325,
+        "subjects": [
+          "087",
+          "093",
+          "103",
+          "106",
+          "107",
+          "113",
+          "115",
+          "116",
+          "118",
+          "120",
+          "122",
+          "124",
+          "125",
+          "126",
+          "127",
+          "128",
+          "131",
+          "132",
+          "133",
+          "135",
+          "136",
+          "138",
+          "139",
+          "141",
+          "145",
+          "146",
+          "147",
+          "148",
+          "149",
+          "150",
+          "151",
+          "152",
+          "153",
+          "156",
+          "157",
+          "158",
+          "161",
+          "162",
+          "163",
+          "168"
+        ],
+        "tasks": [],
+        "totalFiles": 46
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        61,
+        60,
+        57,
+        63,
+        55,
+        38,
+        66,
+        69,
+        65,
+        52,
+        68,
+        68,
+        59,
+        57,
+        70,
+        54,
+        56,
+        57,
+        63,
+        62,
+        64,
+        67,
+        61,
+        52,
+        51,
+        59,
+        60,
+        56,
+        70,
+        56,
+        64,
+        65,
+        53,
+        68,
+        53,
+        69,
+        68,
+        62,
+        55,
+        56
+      ],
+      "associatedPaperDOI": "10.1007/s00429-021-02408-3",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "Human Brain",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2023-02-07T19:45:52.234Z"
+  },
+  "source": "openneuro"
+}

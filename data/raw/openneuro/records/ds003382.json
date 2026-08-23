@@ -1,0 +1,112 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003382",
+  "payload": {
+    "created": "2020-11-16T06:24:51.640Z",
+    "id": "ds003382",
+    "latestSnapshot": {
+      "created": "2021-12-10T18:20:54.000Z",
+      "description": {
+        "Authors": [
+          "Sharna Jamadar",
+          "Shenjun Zhong",
+          "Phillip Ward",
+          "Alexandra Carey",
+          "Richard McIntyre",
+          "Alex Fornito",
+          "Malin Premaratne",
+          "N Jon Shah",
+          "Kieran O’Brien",
+          "Daniel Stab",
+          "Zhaolin Chen",
+          "Gary Egan"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds003382.v1.5.0",
+        "Funding": [
+          "Australian Research Council (ARC) Linkage Project (LP170100494) that includes financial support from Siemens Healthineers.",
+          "ARC Centre of Excellence for Integrative Brain Function (CE140100007).",
+          "ARC Discovery Early Career Researcher Award (DE150100406)",
+          "National Health and Medical Research Council Fellowship (APP1174164)."
+        ],
+        "HowToAcknowledge": "Cite the papers: \n[1] Jamadar, S. D., Ward, P. G., Li, S., Sforazzini, F., Baran, J., Chen, Z., & Egan, G. F. (2019). Simultaneous task-based BOLD-fMRI and [18-F] FDG functional PET for measurement of neuronal metabolism in the human visual cortex. Neuroimage, 189, 258-266.  \n[2] Jamadar, S. D., Zhong, S., Carey, A., McIntyre, R., Ward, P. G., Fornito, A., ... & Egan, G. F. (2021). Task-evoked simultaneous FDG-PET and fMRI data for measurement of neural metabolism in the human visual cortex. Scientific Data, 8(1), 1-9.\nConsider including the following message 'This data was obtained from the OpenNeuro database.'",
+        "License": "CC0",
+        "Name": "Monash vis-fPET-fMRI",
+        "ReferencesAndLinks": [
+          "Shenpeng Li, Sharna D. Jamadar, Phillip G.D. Ward, Malin Premaratne, Gary F. Egan, Zhaolin Chen*, (2020) Analysis of continuous infusion functional PET (fPET) in the human brain, NeuroImage",
+          "Viswanath P. Sudarshan, Gary F Egan, Zhaolin Chen, Suyash P. Awate. (2020) Joint MRI-PET image reconstruction using a joint dictionary, Medical Imaging Analysis.",
+          "Zhaolin Chen, Francesco Sforazzini, Jakub Baran, N. Jon Shah, Gary F. Egan, (2019) MR-PET motion correction based on multi-contrast MR image registration. Human Brain Mapping.",
+          "Jakub Baran, Zhaolin Chen, Francesco Sforazzini, Nicholas Ferris, Sharna Jamadar, Ben Schmitt, David Faul, Nadim Jon Shah, Marian Cholewa, Gary F. Egan, (2018) Accurate hybrid template–based and MR-based attenuation correction using UTE images for simultaneous PET/MR brain imaging applications, BMC Medical Imaging"
+        ]
+      },
+      "readme": "Monash vis-fPET-fMRI Dataset\n============================\n\nThe Monash vis-fPET-fMRI dataset contains simultaneous FDG-fPET/BOLD-fMRI acquisitions from 10 young healthy individuals. The dataset comprises unreconstructed fPET list-mode data, as well as data reconstructed in 1-min bins.  The data was acquired using a flickering checkerboard embedded block design (Jamadar et al., 2019a), which allows the examination of a task-evoked signal with known timecourse in a localised region-of-interest. This design is particularly suitable for development of novel processing and analysis pipelines. The release of unreconstructed and reconstructed data acquired during task-evoked visual cortex activation provides significant re-use value. Examples of re-use may include disentangling the glucose metabolic and blood oxygenation level dependent responses to neuronal activity (Jamadar et al., 2019a; Shokri-Kojori et al., 2019), synergistic data reconstruction (Sudarshan et al., 2020; Ovtchinnikov et al., 2020) and fusion techniques (Shenpeng’s mICA), novel multimodal attenuation correction procedures (Baran et al., 2018), and refinement of fPET-fMRI processing pipelines (Li et al., 2020; Jamadar et al., 2020a).\n\n(IMPORTANT: Please note that the UTE, Dixon, 1 minute reconstructed PET data and unconstracted PET listmode data) are not compatible with the current BIDS specifications. They are in the corresponding directories:\n* UTE: /sub-*/ute\n* Dixon: /sub-*/dixon\n* Reconstrcuted PET: /sub-*/pet\n* listmode data: /sourcedata/sub-*/pet\n\nThe entire dataset is about 85GB in size,including MRI images (3.51 GB), and PET-related images and data (~81GB). \n\nRelevant papers\n---------------\n\n* Jamadar, S. D., Ward, P. G., Li, S., Sforazzini, F., Baran, J., Chen, Z., & Egan, G. F. (2019). Simultaneous task-based BOLD-fMRI and [18-F] FDG functional PET for measurement of neuronal metabolism in the human visual cortex. Neuroimage, 189, 258-266.\n* Shenpeng Li, Sharna D. Jamadar, Phillip G.D. Ward, Malin Premaratne, Gary F. Egan, Zhaolin Chen*, (2020) Analysis of continuous infusion functional PET (fPET) in the human brain, NeuroImage\"\n* Viswanath P. Sudarshan, Gary F Egan, Zhaolin Chen, Suyash P. Awate. (2020) Joint MRI-PET image reconstruction using a joint dictionary, Medical Imaging Analysis.\n* Zhaolin Chen, Francesco Sforazzini, Jakub Baran, N. Jon Shah, Gary F. Egan, (2019) MR-PET motion correction based on multi-contrast MR image registration. Human Brain Mapping.\n* Jakub Baran, Zhaolin Chen, Francesco Sforazzini, Nicholas Ferris, Sharna Jamadar, Ben Schmitt, David Faul, Nadim Jon Shah, Marian Cholewa, Gary F. Egan, (2018) Accurate hybrid template–based and MR-based attenuation correction using UTE images for simultaneous PET/MR brain imaging applications, BMC Medical Imaging\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri",
+          "pet"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "pet_static",
+          "mri_structural",
+          "pet_dynamic"
+        ],
+        "sessions": [],
+        "size": 10678559418,
+        "subjects": [
+          "02",
+          "05",
+          "06",
+          "07",
+          "08",
+          "10",
+          "12",
+          "13",
+          "14",
+          "16"
+        ],
+        "tasks": [
+          "fullchecker",
+          "halfchecker",
+          "rest",
+          "checkerboard",
+          "rest fPET and fMRI"
+        ],
+        "totalFiles": 382
+      },
+      "tag": "1.5.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        48,
+        21,
+        29,
+        32,
+        48,
+        21,
+        24,
+        18,
+        24,
+        27
+      ],
+      "associatedPaperDOI": "https://doi.org/10.1016/j.neuroimage.2019.01.003",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "Australian Research Council (ARC)",
+      "modalities": [
+        "mri",
+        "pet"
+      ],
+      "species": "Human",
+      "studyDesign": "Visual tasks and resting state",
+      "studyDomain": "Brain activity, fMRI and fPET, PET",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2020-11-16T22:18:10.093Z"
+  },
+  "source": "openneuro"
+}

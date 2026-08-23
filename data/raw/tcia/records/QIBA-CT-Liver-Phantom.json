@@ -1,0 +1,194 @@
+{
+  "endpoints": [
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getCollectionValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getModalityValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getBodyPartValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getPatient",
+    "https://api.datacite.org/dois?prefix=10.7937"
+  ],
+  "harvest_method": "api:nbia+datacite",
+  "native_id": "QIBA-CT-Liver-Phantom",
+  "payload": {
+    "datacite": {
+      "citationCount": 0,
+      "container": {},
+      "contentUrl": [],
+      "contributors": [],
+      "created": "2021-02-18T18:55:48Z",
+      "creators": [
+        {
+          "affiliation": [],
+          "familyName": "Zhao",
+          "givenName": "Binsheng",
+          "name": "Zhao, Binsheng",
+          "nameIdentifiers": [],
+          "nameType": null
+        },
+        {
+          "affiliation": [],
+          "familyName": "Li",
+          "givenName": "Qin",
+          "name": "Li, Qin",
+          "nameIdentifiers": [],
+          "nameType": null
+        },
+        {
+          "affiliation": [],
+          "familyName": "Liang",
+          "givenName": "Yongguang",
+          "name": "Liang, Yongguang",
+          "nameIdentifiers": [],
+          "nameType": null
+        },
+        {
+          "affiliation": [],
+          "familyName": "Yang",
+          "givenName": "Hao",
+          "name": "Yang, Hao",
+          "nameIdentifiers": [],
+          "nameType": null
+        },
+        {
+          "affiliation": [],
+          "familyName": "Gavrielides",
+          "givenName": "Marios A.",
+          "name": "Gavrielides, Marios A.",
+          "nameIdentifiers": [],
+          "nameType": null
+        },
+        {
+          "affiliation": [],
+          "familyName": "Schwartz",
+          "givenName": "Lawrence H.",
+          "name": "Schwartz, Lawrence H.",
+          "nameIdentifiers": [],
+          "nameType": null
+        },
+        {
+          "affiliation": [],
+          "familyName": "Sullivan",
+          "givenName": "Daniel C.",
+          "name": "Sullivan, Daniel C.",
+          "nameIdentifiers": [],
+          "nameType": null
+        },
+        {
+          "affiliation": [],
+          "familyName": "Petrick",
+          "givenName": "Nicholas A.",
+          "name": "Petrick, Nicholas A.",
+          "nameIdentifiers": [],
+          "nameType": null
+        }
+      ],
+      "dates": [],
+      "descriptions": [
+        {
+          "description": "This database contains a collection of three sets of CT scan images acquired from an anthropomorphic abdominal phantom with removable liver inserts. The anthropomorphic phantoms were designed by a group of scientists from FDA and Columbia University Medical Center and custom manufactured by QRM (Moehrendorf, Germany). Data sets #1 (AP phantom) & #2 (PVP phantom): Two liver inserts, each containing 19 embedded synthetic lesions with known volumes of varying diameter (6–40 mm), shape, contrast (10–65 HU), and density (homogenous and mixed) were designed to have liver parenchyma and lesion CT values simulating arterial phase (AP phantom) and portal venous phase (PVP phantom) imaging, respectively. The two phantoms were scanned using two 64-slice multi-detector helical CT scanners (GE 750HD and Siemens Biograph mCT) across a wide range of abdominal imaging protocols, including three eﬀective mAs (50, 100, 250), two pitches (GE/Siemens: 1.375 and 0.983/1.35 and 1.0), four slice thicknesses (GE/Siemens: 0.625, 1.25, 2.5, and 5 mm/0.6, 1.5, 3, and 5 mm), and two convolution kernels (GE/Siemens: Standard and Soft/B20f and B30f). Two repeated scans were performed for each protocol and for each phantom. Dataset #3 (IR phantom): One non-uniform liver insert was filled with an in-house made gelatin-based background, and varied concentrations of gelatin, salt, and water were used to mimic normal liver tissue and focal fat at the arterial phase. Ten spherical lesions of five sizes (20, 14, 10, 7, and 5 mm in diameter) and two radiodensities (95 and 110 HU) were placed on the border between the fatty and normal parenchyma. The phantom was imaged with a CT scanner (GE 750HD) across a set of imaging protocols, including three eﬀective mAs (50, 100, 250), three slice thicknesses (1.25, 2.5, and 5 mm) and five reconstruction algorithms (standard, AISR30%, AISR50%, ASIR70%, and VEO). Five repeated scans were performed for each protocol.",
+          "descriptionType": "Abstract",
+          "lang": null
+        }
+      ],
+      "doi": "10.7937/tcia.rmv0-9y95",
+      "downloadCount": 0,
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "QIBA-CT-Liver-Phantom",
+          "identifierType": "TCIA Short Name"
+        }
+      ],
+      "isActive": true,
+      "language": null,
+      "metadataVersion": 3,
+      "partCount": 0,
+      "partOfCount": 0,
+      "publicationYear": 2021,
+      "published": null,
+      "publisher": "The Cancer Imaging Archive",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2021-02-18T18:57:10Z",
+      "relatedIdentifiers": [],
+      "relatedItems": [],
+      "rightsList": [
+        {
+          "rights": "Creative Commons Attribution 4.0 International",
+          "rightsIdentifier": "cc-by-4.0",
+          "rightsIdentifierScheme": "SPDX",
+          "rightsUri": "https://creativecommons.org/licenses/by/4.0/legalcode",
+          "schemeUri": "https://spdx.org/licenses/"
+        }
+      ],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "fabricaForm",
+      "state": "findable",
+      "subjects": [],
+      "titles": [
+        {
+          "lang": null,
+          "title": "QIBA Anthropomorphic Abdominal Phantom CT Scans",
+          "titleType": null
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2025-06-01T01:01:11Z",
+      "url": "https://www.cancerimagingarchive.net/collection/qiba-ct-liver-phantom/",
+      "version": "1",
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 1710
+    },
+    "nbia": {
+      "body_parts": [
+        "LIVER"
+      ],
+      "collection": "QIBA-CT-Liver-Phantom",
+      "modalities": [
+        "CT"
+      ],
+      "patients": [
+        {
+          "Collection": "QIBA-CT-Liver-Phantom",
+          "PatientBirthDate": "1914-01-01 00:00:00.0",
+          "PatientId": "QIBA-CT-Liver-Phantom-PVP",
+          "PatientName": "QIBA-CT-Liver-Phantom-PVP",
+          "PatientSex": "M",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "QIBA-CT-Liver-Phantom",
+          "PatientBirthDate": "1914-01-01 00:00:00.0",
+          "PatientId": "QIBA-CT-Liver-Phantom-IR",
+          "PatientName": "QIBA-CT-Liver-Phantom-IR",
+          "PatientSex": "M",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "QIBA-CT-Liver-Phantom",
+          "PatientBirthDate": "1900-01-01 00:00:00.0",
+          "PatientId": "QIBA-CT-Liver-Phantom-AP",
+          "PatientName": "QIBA-CT-Liver-Phantom-AP",
+          "PatientSex": "O",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        }
+      ]
+    }
+  },
+  "source": "tcia"
+}

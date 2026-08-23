@@ -1,0 +1,77 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds001769",
+  "payload": {
+    "created": "2019-02-25T06:17:19.163Z",
+    "id": "ds001769",
+    "latestSnapshot": {
+      "created": "2019-12-03T05:39:00.000Z",
+      "description": {
+        "Authors": [
+          "Xingyu Liu",
+          "Zonglei Zhen",
+          "Anmin Yang",
+          "Haohao Bai",
+          "Jia Liu"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds001769.v1.3.0",
+        "Funding": [
+          "National Natural Science Foundation of China (Grant No.31861143039)",
+          "National Natural Science Foundation of China (Grant No.31771251)",
+          "National Basic Research\nProgram of China (2018YFC0810602)",
+          "Changjiang Scholars Programme of China"
+        ],
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "studyforrest_movie_denoised",
+        "ReferencesAndLinks": [
+          "Liu, X., et al. A manually denoised audio-visual movie watching fMRI dataset for the studyforrest project. Sci Data 6, 295 (2019) (https://www.nature.com/articles/s41597-019-0303-3)",
+          "Hanke, M. et al. A high-resolution 7-Tesla fMRI dataset from complex natural stimulation with an audio movie. Sci. Data 1, sdata20143 (2014) (https://www.nature.com/articles/sdata20143)",
+          "Hanke, M. et al. A studyforrest extension, simultaneous fMRI and eye gaze recordings during prolonged natural stimulation. Sci. Data 3, 160092 (2016) (https://www.nature.com/articles/sdata201693)"
+        ]
+      },
+      "readme": "A manually denoised audio-visual movie watching fMRI dataset for the studyforrest project\n====================\nNote: This dataset is compatible with the BIDS v1.3.0-dev as a standalone derivative dataset. \nDue to that the OpenNeuro.org does not support the BIDs v1.3.0 yet ('desc-<label>' in file names), \na made-up subject 'sub-phantom' was created only to pass the data stucture validation for uploading dataset.\n\nSource data\n===========\nWe here provide a denoised version of the studyforrest 3T movie-watching fMRI data. \nSpecifically, the studyforrest 3T movie-watching fMRI dataset was hosted as ‘ses-movie’ \nunder OpenNeuro ds000113 (https://openneuro.org/datasets/ds000113). Historically, the studyforrest \n3T movie-watching fMRI data was hosted as ds000113d on OpenfMRI (https://legacy.openfmri.org/dataset/ds000113d/). \nIt shall be noted that ‘ses-movie’ under OpenNeuro ds000113 and OpenfMRI ds000113d are the same data, just different in names.  \n\nFor more information about the studyforrest project, please refer to the data papers of the studyforrest project \nand visit http://studyforrest.org.  \nHanke, M. et al. A high-resolution 7-Tesla fMRI dataset from complex natural stimulation with an audio movie. \nSci. Data 1, sdata20143 (2014).  \nHanke, M. et al. A studyforrest extension, simultaneous fMRI and eye gaze recordings during prolonged natural stimulation. \nSci. Data 3, 160092 (2016).\n\n\nPipeline description\n====================\nA four-step procedure was used to denoise the movie-watching fMRI dataset from the studyforrest project, \nproducing a denoised version of the data.  \n\n1. The data were preprocessed using FEAT in FSL v6.00 (https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FEAT) \nincluding motion correction, slice timing correction, brain extraction, high-pass temporal filtering (200s cutoff) \nand with or without spatial smoothing (i.e., FWHM= 5 mm or FWHM=0 mm).  \n2. ICA was performed with MELODIC v3.15 (https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/MELODIC).  \n3. IC classification was manually performed using melview (https://git.fmrib.ox.ac.uk/fsl/melview).  \n4. Artifact removal was performed using fsl_regfilt in FSL’s MELODIC v3.15.   \n\nAll code for data denoising and technical validation can be found at https://github.com/xingyu-liu/studyforrest_denoise.  \n\n\nDataset content overview\n========================\nAfter the four-step denoising procedure, 4 kinds of data were produced for each run of each participant.  \n\n1. the denoised fMRI data  \n./sub-xx/ses-movie/func/sub-xx_ses-movie_task-movie-run-x_space-T1w_desc-{sm5,unsm}Denoised_bold.nii.gz  \n2. spatial maps of decomposed ICs  \n./sub-xx/ses-movie/func/sub-xx_ses-movie_task-movie-run-x_space-T1w_desc-{sm5,unsm}MELODIC_components.nii.gz  \n3. timeseries of decomposed ICs  \n./sub-xx/ses-movie/func/sub-xx_ses-movie_task-movie-run-x_space-T1w_desc-{sm5,unsm}MELODIC_mixing.tsv  \n4. Labels of decomposed ICs  \n./sub-xx/ses-movie/func/sub-xx_ses-movie_task-movie-run-x_space-T1w_desc-{sm5,unsm}MELODIC_decomposition.json\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional"
+        ],
+        "sessions": [
+          "movie"
+        ],
+        "size": 7112052,
+        "subjects": [
+          "phantom"
+        ],
+        "tasks": [
+          "movie"
+        ],
+        "totalFiles": 5
+      },
+      "tag": "1.3.0"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": null,
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2019-02-25T06:17:19.163Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,160 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006642",
+  "payload": {
+    "created": "2025-09-08T18:04:13.674Z",
+    "id": "ds006642",
+    "latestSnapshot": {
+      "created": "2026-08-17T14:47:02.000Z",
+      "description": {
+        "Authors": [
+          "Egor Levchenko",
+          "Hugo Chow-Wing-Bom",
+          "Fred Dick",
+          "Adam Tierney",
+          "Jeremy I Skipper"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006642.v1.1.1",
+        "Funding": [
+          "LIDo BBSRC funding (BB/T008709/1)",
+          "JIS is supported by the Wellcome Leap"
+        ],
+        "HowToAcknowledge": "Levchenko, E., Chow-Wing-Bom, H., Dick, F., Cooper, G., Tierney, A. & Skipper, J. I. A neuroimaging dataset combining movie-watching, eye-tracking, sensorimotor mapping, and cognitive tasks. *Scientific Data* 13, 1184 (2026). https://doi.org/10.1038/s41597-026-07676-4",
+        "License": "CC0",
+        "Name": "Naturalistic Neuroimaging Database 3T+",
+        "ReferencesAndLinks": [
+          "A neuroimaging database combining movie-watching, eye-tracking, sensorimotor mapping, and cognitive tasks (NNDb3T+)",
+          "https://github.com/levchenkoegor/movieproject2",
+          "https://doi.org/10.1038/s41597-026-07676-4"
+        ]
+      },
+      "readme": "# NNDb-3T+: A Neuroimaging Database Combining Movie-Watching, Eye-Tracking, Sensorimotor Mapping, and Cognitive Tasks\n\n\n## Overview\nNNDb-3T+ is a multimodal neuroimaging dataset designed to support research on brain function during both naturalistic and controlled experimental conditions. Data were acquired at 3T using multiple neuroimaging modalities and are complemented by physiological, behavioural, and cognitive measures.\n\nBefore participation, 40 participants completed questionnaires covering demographic information, language background, musical experience, and familiarity with movies. Participants also completed a battery of cognitive assessments before attending two MRI sessions.\n\nDuring Session 1, participants watched the entirety of *Back to the Future* (`backtothefuture`), divided into three runs. Eye-tracker calibration was performed before each run. The complete Session 1 procedure lasted approximately three hours.\n\nDuring Session 2, participants completed several functional mapping tasks inside the MRI scanner. Somatotopic mapping involved performing a series of body movements. Retinotopic mapping involved viewing visual stimulation patterns while maintaining fixation on a central dot and responding whenever the fixation dot changed colour. During tonotopic mapping, participants listened to sequences of tones and responded to infrequent target sounds. All Session 2 tasks together lasted approximately 2.5 hours.\n\n## Data Organisation\nThe dataset follows the Brain Imaging Data Structure (BIDS) specification.\n\n* `sub-<participant_id>/` contains participant-level raw imaging data.\n* `sourcedata/` contains raw eye-tracking files (`.asc` and `.edf`), pulse oximetry recordings, cognitive assessment data, and questionnaire responses.\n* `derivatives/` contains preprocessed fMRI data, FreeSurfer outputs, and behavioural performance measures from the tonotopy and retinotopy tasks.\n* `stimuli/` contains presentation scripts and stimulus materials for all tasks. Due to copyright restrictions, the full movie cannot be distributed with the dataset. Researchers requiring access should contact Jeremy Skipper ([jeremy.skipper@ucl.ac.uk](mailto:jeremy.skipper@ucl.ac.uk)).\n\n## Contents\n* **fMRI data:** Raw and preprocessed fMRI data from movie-watching and functional mapping tasks.\n* **Eye-tracking data:** Gaze position and pupil measurements acquired during movie-watching and retinotopy tasks.\n* **Functional mapping tasks:** Retinotopy, tonotopy, and somatotopy datasets.\n* **Physiological recordings:** Pulse oximetry measurements.\n* **Behavioural and cognitive assessments:** Demographic, questionnaire, and cognitive test data.\n* **Derivatives:** Processed outputs including FreeSurfer and AFNI derivatives.\n\n## Important Note: Movie Playback Timing\nResearchers intending to align stimulus annotations with fMRI data should be aware of a systematic playback onset delay affecting Run 3 of the movie-watching session. Additional details are provided in `stimuli/backtothefuture/timing_correction_note.pdf`.\n\n## Code Availability\nAll preprocessing scripts and analysis code are available on GitHub:\n\nhttps://github.com/levchenkoegor/movieproject2\n\n## Access\nThe dataset is released under the CC BY 4.0 License.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "002",
+          "001"
+        ],
+        "size": 286684010704,
+        "subjects": [
+          "01",
+          "24",
+          "05",
+          "25",
+          "26",
+          "27",
+          "17",
+          "21",
+          "32",
+          "38",
+          "40",
+          "39",
+          "30",
+          "31",
+          "33",
+          "35",
+          "37",
+          "44",
+          "36",
+          "43",
+          "42",
+          "03",
+          "04",
+          "07",
+          "23",
+          "02",
+          "22",
+          "14",
+          "20",
+          "18",
+          "13",
+          "16",
+          "29",
+          "19",
+          "11",
+          "06",
+          "09",
+          "08",
+          "12",
+          "10"
+        ],
+        "tasks": [
+          "retinotopy",
+          "somatotopy",
+          "tonotopy",
+          "backtothefuture"
+        ],
+        "totalFiles": 2627
+      },
+      "tag": "1.1.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        30,
+        32,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": "Other"
+    },
+    "publishDate": "2025-09-24T15:11:46.313Z"
+  },
+  "source": "openneuro"
+}

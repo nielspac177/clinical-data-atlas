@@ -1,0 +1,32 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "mimic-iv-ext-medicalbench",
+  "payload": {
+    "abstract": "<p>Medical concept extraction from electronic health records underpins many downstream applications, yet remains challenging because medically meaningful concepts, such as diagnosis, are frequently implied rather than explicitly stated in medical narratives. Existing benchmarks with human-annotated evidence spans underscore the importance of grounding extracted concepts in medical text. However, they predominantly focus on explicitly stated concepts and provide limited coverage of cases in which medically relevant concepts must be inferred. We present MedicalBench, a new benchmark for medical concept extraction with evidence grounding that evaluates implicit medical reasoning. MedicalBench formulates concept extraction as a verification task over medical note&ndash;concept pairs, coupled with sentence-level evidence identification. Built from MIMIC-IV discharge summaries and human-verified ICD-10 codes, the dataset is curated through a multi-stage large language model (LLM) triage pipeline followed by dual medical annotation and expert review. It deliberately includes implicit positives, semantically confusable negatives, and cases where LLM judgments disagree with human assessments. Annotators provide sentence-level evidence spans and concise medical rationales. In total, the dataset contains 405 high-quality examples, covering a broad range of ICD-10 chapters. By providing ground-truth evidence and confusable alternatives, MedicalBench enables rigorous evaluation of not only <i>whether</i> a model can extract the correct concept, but also <i>why</i> &mdash; rewarding solutions that can highlight relevant evidence and reject plausible-but-incorrect diagnosis and procedures.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 70029,
+    "core_doi": "10.13026/0k22-xc18",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 202896,
+    "public_project_uuid": "48e8e74c-3a31-481d-a0e1-7241d74acba3",
+    "publish_date": "2026-03-24",
+    "resource_type": "Database",
+    "short_description": "This dataset is an evidence‑grounded benchmark built on MIMIC‑IV discharge summaries that evaluates how well large language models can verify ICD‑10 medical concepts, including implicitly documented diagnoses, by identifying supporting text evidence.",
+    "slug": "mimic-iv-ext-medicalbench",
+    "source_url": "https://physionet.org/content/mimic-iv-ext-medicalbench/1.0.0/",
+    "title": "MIMIC-IV-Ext-MedicalBench: Evaluating Large Language Models Towards Improved Medical Concept Extraction",
+    "topics": [],
+    "version": "1.0.0",
+    "version_doi": "10.13026/j98m-g356"
+  },
+  "source": "physionet"
+}

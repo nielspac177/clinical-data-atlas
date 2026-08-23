@@ -1,0 +1,27 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:d515535ba11897f09dfef5d9115a6d15eaa9bb8b07c98bd1bab0e92d0a09639c",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "critical_care"
+    ],
+    "id": "physionet:task-1-3-soap-note-tag",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Intensive Care Unit progress notes",
+        "value": "clinical_notes"
+      },
+      {
+        "evidence": "electronic health records (EHR) data",
+        "value": "EHR"
+      }
+    ],
+    "population": "Intensive Care Unit progress notes sourced from MIMIC-III",
+    "summary": "Annotated intensive care progress notes supporting two tasks: tagging major SOAP sections and generating diagnosis summaries, aimed at clinical text understanding, reasoning, and generation."
+  },
+  "prompt_version": "v1"
+}

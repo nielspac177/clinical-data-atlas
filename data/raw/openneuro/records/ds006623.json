@@ -1,0 +1,96 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006623",
+  "payload": {
+    "created": "2025-09-02T20:07:12.670Z",
+    "id": "ds006623",
+    "latestSnapshot": {
+      "created": "2025-09-12T15:20:27.000Z",
+      "description": {
+        "Authors": [
+          "Zirui Huang",
+          "et al."
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006623.v1.0.0",
+        "Funding": [
+          "R01GM103894"
+        ],
+        "HowToAcknowledge": "Please cite the following papers for reusing of the dataset\n    • Huang, Z. et al. Brain imaging reveals covert consciousness during behavioral unresponsiveness induced by propofol. Sci Rep 8, 13195 (2018). DOI: 10.1038/s41598-018-31436-z\n\n    • Huang, Z. et al. Anterior insula regulates brain network transitions that gate conscious access. Cell Rep 35, 109081 (2021). DOI: 10.1016/j.celrep.2021.109081\n\n    • Huang, Z. et al. Asymmetric neural dynamics characterize loss and recovery of consciousness. Neuroimage 236, 118042 (2021). DOI: 10.1016/j.neuroimage.2021.118042",
+        "License": "CC0",
+        "Name": "Michigan Human Anesthesia fMRI Dataset-1",
+        "ReferencesAndLinks": [
+          "Huang, Z. et al. Brain imaging reveals covert consciousness during behavioral unresponsiveness induced by propofol. Sci Rep 8, 13195 (2018). DOI: 10.1038/s41598-018-31436-z",
+          "Huang, Z. et al. Anterior insula regulates brain network transitions that gate conscious access. Cell Rep 35, 109081 (2021). DOI: 10.1016/j.celrep.2021.109081",
+          "Huang, Z. et al. Asymmetric neural dynamics characterize loss and recovery of consciousness. Neuroimage 236, 118042 (2021). DOI: 10.1016/j.neuroimage.2021.118042"
+        ]
+      },
+      "readme": "This dataset contains MRI, fMRI, and behavioral data acquired from 26 healthy volunteers (ages 19–34) undergoing graded propofol sedation. Participants performed mental imagery tasks (tennis, spatial navigation, hand squeeze) and a motor response task across varying levels of sedation, including periods of behavioral unresponsiveness.\n\nData Contents\nRaw data: Anatomical T1w scans and six BOLD runs per subject (four task-based, two resting-state), organized in BIDS format.\nDerivatives:\nfMRIPrep outputs (preprocessing)\nXCP-D outputs (denoising, functional connectivity, ALFF, ReHo)\nMRIQC outputs (quality metrics)\nFreeSurfer reconstructions\nBehavioral: Hand-squeeze force recordings, task events, propofol effect-site concentrations.\nQC reports: Subject-level .html reports for preprocessing and denoising.\n\nPreprocessing\nAll functional and anatomical data were preprocessed using fMRIPrep (v23.2.1). Denoising was performed with XCP-D (v0.10.6), providing multiple pipelines (with/without global signal regression; band-pass or high-pass filtering).\n\nWhen reusing this dataset, please cite the following publications derived from these data:\nHuang, Z. et al. Brain imaging reveals covert consciousness during behavioral unresponsiveness induced by propofol. Sci Rep 8, 13195 (2018).\nHuang, Z. et al. Anterior insula regulates brain network transitions that gate conscious access. Cell Rep 35, 109081 (2021).\nHuang, Z. et al. Asymmetric neural dynamics characterize loss and recovery of consciousness. Neuroimage 236, 118042 (2021).",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 34147542464,
+        "subjects": [
+          "18",
+          "27",
+          "28",
+          "17",
+          "24",
+          "11",
+          "20",
+          "06",
+          "05",
+          "15",
+          "19",
+          "22",
+          "21",
+          "23",
+          "16",
+          "13",
+          "12",
+          "30",
+          "25",
+          "29",
+          "04",
+          "02",
+          "03",
+          "14",
+          "07",
+          "26"
+        ],
+        "tasks": [
+          "Mental Imagery Tasks",
+          "Resting-state"
+        ],
+        "totalFiles": 235
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "NIGMS of the NIH ",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "Within-Subjects",
+      "studyDomain": "Clinical Neuroscience",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2025-11-05T21:05:52.519Z"
+  },
+  "source": "openneuro"
+}

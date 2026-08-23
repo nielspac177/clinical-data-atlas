@@ -1,0 +1,28 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:f1d0bdb201843fcfc19b993d096064ab785378275db6cb08a5411fb8babbb25a",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "congestive heart failure (NYHA classes I, II, and III)",
+        "label": "congestive heart failure"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:chf2db",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "long-term ECG recordings",
+        "value": "ECG"
+      }
+    ],
+    "population": "29 long-term ECG recordings of subjects aged 34 to 79, with congestive heart failure (NYHA classes I, II, and III)",
+    "summary": "Beat annotation files giving RR interval series from long-term ECG recordings of subjects with congestive heart failure."
+  },
+  "prompt_version": "v1"
+}

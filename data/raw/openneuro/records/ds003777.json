@@ -1,0 +1,81 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003777",
+  "payload": {
+    "created": "2021-08-27T08:45:45.298Z",
+    "id": "ds003777",
+    "latestSnapshot": {
+      "created": "2021-10-26T08:34:46.000Z",
+      "description": {
+        "Authors": [
+          "Redouane Jamil",
+          "Franck Mauconduit",
+          "Caroline Le Ster",
+          "Philipp Ehses",
+          "Benedikt A. Poser",
+          "Alexandre Vignaud",
+          "Nicolas Boulant"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds003777.v1.0.1",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Temporal SNR optimization through RF coil combination in fMRI: The more, the better? - DATASET",
+        "ReferencesAndLinks": null
+      },
+      "readme": "This data set provides support information from the eponym article. It contains for the four subjects, the same reconstructed raw data but with a different RF coil combination: the gold standard covSoS, the tSNR optimal STARC and t-score for the mean optimal STARCtsm coil combinations. The paradigme used is Pinel's localizer (see reference in article). ",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 23397495737,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04"
+        ],
+        "tasks": [
+          "locAPSTARC",
+          "locAPSTARCtsm",
+          "locAPcovSoS",
+          "locPASoS5vol",
+          "locAPSTARCps"
+        ],
+        "totalFiles": 59
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "MRI methodology applied to fMRI",
+      "studyLongitudinal": "comparison of techniques"
+    },
+    "publishDate": "2021-09-14T12:42:34.727Z"
+  },
+  "source": "openneuro"
+}

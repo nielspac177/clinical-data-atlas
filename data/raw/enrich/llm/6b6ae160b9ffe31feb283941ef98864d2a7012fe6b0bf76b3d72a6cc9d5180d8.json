@@ -1,0 +1,43 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:6b6ae160b9ffe31feb283941ef98864d2a7012fe6b0bf76b3d72a6cc9d5180d8",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "confirmed or suspected COVID-19",
+        "label": "COVID-19"
+      }
+    ],
+    "countries": [
+      "ES"
+    ],
+    "domains": [
+      "infectious_disease",
+      "critical_care"
+    ],
+    "id": "physionet:covid-data-shared-learning",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "chest X-ray",
+        "value": "xray"
+      },
+      {
+        "evidence": "computed tomography scans",
+        "value": "CT"
+      },
+      {
+        "evidence": "tabular demographic, diagnostic, clinical and treatment information",
+        "value": "clinical_tabular"
+      },
+      {
+        "evidence": "de-identified structured health data",
+        "value": "EHR"
+      }
+    ],
+    "population": "4,479 patients hospitalized with confirmed or suspected COVID-19 in the Spanish 'HM Hospitales' group from 2019-12-26 to 2021-02-13",
+    "summary": "Multimodal database of de-identified structured demographic, diagnostic, clinical, and treatment data plus chest X-ray and CT images from hospitalized COVID-19 patients, intended for prediction, classification, and optimization models."
+  },
+  "prompt_version": "v1"
+}

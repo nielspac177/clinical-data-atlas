@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:5bede53f130ac4c6764453ef48025b93bba7183214180fc9852ccb9e9fdc1a3d",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Cardiomegaly is a condition characterized by an abnormal enlargement of the heart",
+        "label": "cardiomegaly"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "cardiology",
+      "pulmonology"
+    ],
+    "id": "physionet:cxr-cardiomegaly",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "posterior-anterior chest x-ray scans",
+        "value": "xray"
+      },
+      {
+        "evidence": "Automatically extracted cardiomegaly biomarkers",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "Over 93,000 posterior-anterior chest X-ray scans from MIMIC-CXR/MIMIC-CXR-JPG",
+    "summary": "Cardiothoracic ratio and cardiopulmonary area ratio values extracted by detection and segmentation neural networks from posterior-anterior chest X-rays in MIMIC-CXR/MIMIC-CXR-JPG, reducing imaging information to datapoints that combine with non-imaging data."
+  },
+  "prompt_version": "v1"
+}

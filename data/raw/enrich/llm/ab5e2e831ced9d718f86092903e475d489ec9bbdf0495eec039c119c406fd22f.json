@@ -1,0 +1,34 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:ab5e2e831ced9d718f86092903e475d489ec9bbdf0495eec039c119c406fd22f",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Montgomery County tuberculosis chest X-rays",
+        "label": "tuberculosis"
+      },
+      {
+        "evidence": "models for cardiomegaly diagnosis",
+        "label": "cardiomegaly"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "pulmonology",
+      "infectious_disease",
+      "cardiology"
+    ],
+    "id": "physionet:heart-lung-segmentations-data",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "posterior-anterior chest X-rays",
+        "value": "xray"
+      }
+    ],
+    "population": "200 semi-randomly chosen MIMIC-CXR/MIMIC-CXR-JPG chest X-rays and 138 Montgomery County tuberculosis chest X-rays",
+    "summary": "Manual heart and lung segmentations for 200 MIMIC-CXR posterior-anterior chest X-rays, plus heart segmentations for the 138 Montgomery County tuberculosis chest X-rays, for training detection and segmentation networks."
+  },
+  "prompt_version": "v1"
+}

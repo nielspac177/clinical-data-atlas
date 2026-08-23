@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:de834d447789e580a29e68158809c6ea80b12bd0907df858be718cf1921f9a96",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "residual invasive BC following NAT",
+        "label": "breast cancer"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "surgery"
+    ],
+    "id": "tcia:post-nat-brca",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Histologic sections were prepared and digitized",
+        "value": "pathology"
+      },
+      {
+        "evidence": "clinical features and expert pathology annotations",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "Patients with residual invasive breast cancer following neoadjuvant therapy who underwent breast resection",
+    "summary": "Digitized histologic sections from breast resections in patients with residual invasive breast cancer after neoadjuvant therapy, plus clinical features, tumor cellularity and tumor bed annotations, and cell-level malignant, healthy, lymphocyte and other labels."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,159 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004926",
+  "payload": {
+    "created": "2024-01-07T14:19:33.705Z",
+    "id": "ds004926",
+    "latestSnapshot": {
+      "created": "2026-06-03T12:52:29.000Z",
+      "description": {
+        "Authors": [
+          "Alice Dabbagh",
+          "Ulrike Horn",
+          "Merve Kaptan",
+          "Toralf Mildner",
+          "Roland Mueller",
+          "Joeran Lepsien",
+          "Nikolaus Weiskopf",
+          "Jonathan C.W. Brooks",
+          "Juergen Finsterbusch",
+          "Falk Eippert"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004926.v1.3.1",
+        "Funding": [
+          "ERC StG: PredictingPain GA ID 758974"
+        ],
+        "HowToAcknowledge": "Cite this paper: Dabbagh, A., Horn, U., Kaptan, M., Mildner, T., Mueller, R., Lepsien, J., Weiskopf, N., Brooks, J.C., Finsterbusch, J. and Eippert, F., (2023). Reliability of task-based fMRI in the dorsal horn of the human spinal cord. bioRxiv, pp.2023-12.\n\nConsider including the following message: 'This data was obtained from the OpenNeuro database. Its accession number is ds004926.'\n",
+        "License": "CC0",
+        "Name": "Reliability of taskbased fMRI in the dorsal horn of the human spinal cord",
+        "ReferencesAndLinks": [
+          "https://doi.org/10.1101/2023.12.22.572825 "
+        ]
+      },
+      "readme": "\n# pain-reliability-spinalcord\n\nThis data set consists of two sessions of task-based spinal cord fMRI data from 40 healthy participants. \nFor each participant, we share \ni) a T2-weighted anatomical image, \nii) fMRI acquisitions of multiple runs with 160 volumes each, and \niii) associated peripheral physiological data (behavioral ratings, pupil dilation, ECG and respiratory recordings) \n    of multiple runs for each session and participant.\n    \nFor a more detailed description, please see data set, or check out our manuscript:\nhttps://doi.org/10.1101/2023.12.22.572825 \n\n## Citing this dataset\nShould you make use of this data set in any publication, please cite the following manuscript:\nhttps://doi.org/10.1101/2023.12.22.572825 \n\nDabbagh, A., Horn, U., Kaptan, M., Mildner, T., Mueller, R., Lepsien, J., Weiskopf, N., Brooks, J.C., Finsterbusch, J. and Eippert, F., (2023). Reliability of task-based fMRI in the dorsal horn of the human spinal cord. bioRxiv, pp.2023-12.\n\n## License \nThis data set is made available under the Creative Commons CC0 license. \nFor more information, see https://creativecommons.org/share-your-work/public-domain/cc0/\n\n## Data set \nThis data set is organized according to the Brain Imaging Data Structure (BIDS) specification. \nFor more information on BIDS, see https://bids-specification.readthedocs.io/en/stable/ .\n\n### Dataset Structure\nEach participant’s data are stored in a subdirectory for each of the two sessions (e.g., sub-01/ses-01).These subdirectories contain the raw NIfTI data (after DICOM to NIfTI conversion) for this particular participant, as well as the associated metadata. \nThis study was part of a larger methodological project aimed at investigating the relationship between spinal cord BOLD responses and employed echo times (see https://osf.io/a58h9).\nThe experiment took place on two consecutive days, and we measured five runs in each MRI session (ses-01 and ses-02). One run consisted of 20 trials, with one trial lasting between 11 and 13 seconds (1s stimulations and jittered inter-trial interval of 10-12s) and the duration of one run being four minutes and 48 seconds.  We measured each run with a different echo time (TE; 7 runs: TE = 25ms, 30ms, 35ms, 40ms, 45ms, 50ms, 55ms) and a repetition time (TR) of 1800ms; two runs were additionally measured with the shortest possible TR, but these runs are not included in this dataset. For this reason you will find that one or two of the five runs in each session of a participant are not included in the folder.\n\nIn each session, we measured one run with a TE of 40ms and a TR of 1800ms, which is the main focus of this study. This run carries the label \"acq-te40ReliabilityRun\". While the stimulus intensity (48°C, 1s) was kept identical in each run, the order of TE application and targeted skin patch were pseudo-randomized and counter-balanced between runs across participants, but kept identical across both days for the Reliability Run. \nTargeted skin patch: The stimuli were applied on five different areas of the inner left forearm, where patch-1 was closest to the wrist and patch-5 closest to the elbow. The respective settings of each run can be found in the *_events.tsv file for each run.\n\nFor the peripheral physiological data, raw (for respiratory traces, included in *_physio files) and processed heart beat -included in *_physio files, pupil dilation - included in *_eyetrack files and skin conductance traces - included in *_scr files, events in run-specific events file) peripheral physiological data can be found in each participant’s and session's subdirectory under the “derivatives” folder. For details about the preprocessing pipeline, as well as for the entire code to calculate the results reported in our manuscript, please check our github repository: \nhttps://github.com/eippertlab/pain-reliability-spinalcord. \nIn depth explanations about the preprocessing and analysis procedures are explained in our [manuscript](https://doi.org/10.1101/2023.12.22.572825) \n\n## Data Acquisition\nThe MRI data were acquired on a Siemens PRISMA FIT 3 Tesla scanner (Siemens, Erlangen, Germany), equipped with a whole-body radio-frequency (RF) transmit coil. We used a 64-channel RF head-and-neck coil, of which head coil element 7 and neck coil element groups 1 and 2 were utilized (all receive-only). \n\nShould you have any questions about this data set, please contact dabbagh@cbs.mpg.de or eippert@cbs.mpg.de.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "02",
+          "01"
+        ],
+        "size": 16365052852,
+        "subjects": [
+          "27",
+          "19",
+          "12",
+          "39",
+          "04",
+          "34",
+          "38",
+          "10",
+          "28",
+          "26",
+          "06",
+          "07",
+          "30",
+          "17",
+          "24",
+          "14",
+          "32",
+          "21",
+          "15",
+          "31",
+          "35",
+          "16",
+          "11",
+          "18",
+          "37",
+          "29",
+          "05",
+          "13",
+          "33",
+          "08",
+          "36",
+          "09",
+          "40",
+          "22",
+          "01",
+          "02",
+          "25",
+          "03",
+          "23",
+          "20"
+        ],
+        "tasks": [
+          "Heat Pain Task"
+        ],
+        "totalFiles": 1445
+      },
+      "tag": "1.3.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        31,
+        30,
+        35,
+        22,
+        35,
+        32,
+        28,
+        28,
+        24,
+        32,
+        29,
+        20,
+        30,
+        31,
+        30,
+        34,
+        32,
+        25,
+        23,
+        22,
+        26,
+        21,
+        26,
+        24,
+        25,
+        32,
+        28,
+        28,
+        18,
+        24,
+        22,
+        22,
+        33,
+        21,
+        34,
+        26,
+        28,
+        22,
+        32,
+        25
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "MRI, fMRI, human spinal cord",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2024-01-07T14:44:43.769Z"
+  },
+  "source": "openneuro"
+}

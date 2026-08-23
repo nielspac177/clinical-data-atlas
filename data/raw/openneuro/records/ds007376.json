@@ -1,0 +1,107 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007376",
+  "payload": {
+    "created": "2026-02-06T16:14:15.013Z",
+    "id": "ds007376",
+    "latestSnapshot": {
+      "created": "2026-03-13T15:49:50.000Z",
+      "description": {
+        "Authors": [
+          "Gonzalez-Castillo, J.",
+          "Hoy, C.W.",
+          "Handwerker, D.A.",
+          "Robinson, M.E.",
+          "Buchanan, L.C.",
+          "Saad, Z.S.",
+          "Bandettini, P.A."
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007376.v1.0.0",
+        "Funding": [
+          "This work was funded by the National Institute of Mental Health Intramural Research Program."
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Tracking ongoing cognition in individuals using brief, whole-brain functional connectivity patterns",
+        "ReferencesAndLinks": null
+      },
+      "readme": "# Tracking ongoing cognition in individuals using brief, whole-brain functional connectivity patterns\n\n## Original Paper\n\nThis data was originally published in the manuscript: \"Tracking ongoing cognition in individuals using brief, whole-brain functional connectivity patterns\" (2015). Gonzalez-Castillo, J., Hoy, C.W., Handwerker, D.A., Robinson, M.E., Buchanan, L.C., Saad, Z.S., Bandettini, P.A. PNAS 112(28) 8762-8767. [https://doi.org/10.1073/pnas.1501242112](https://doi.org/10.1073/pnas.1501242112).\n\n## Dataset\n\nThis dataset comprises of 18 healthy volunteers performing one run of a continuous multi-task paradigm. Note that the original paper included data from 20 participants; 2 participants did not provide consent to share data, so only the 18 participants who did consent are included here. Data were originally collected from 2012-2013.\n\n### Task Paradigm\n\nIn this paradigm, participants performed pseudo-randomly interleaved blocks of the following tasks:\n\n- Math: evaluate a short arithmetic problem.\n- Memory: 2-back task with shapes.\n- Video: watch a video of a fish tank and press a button when an 'x' appears on a clown fish\n- Rest: passively stare at a fixation cross\n\nEach task block lasted 3 minutes (180 seconds), preceded by 12 seconds of instructions. The order of task blocks was randomized so that each task was always preceded and followed by a different task. This pseudo-random order of the task blocks was consistent across participants. \n\n### Scanning Parameters\n\nData were collected on a 7T Siemens scanner with a 32-channel head coil at the NIH. Functional runs were collected with a gre-EPI sequence (TR: 1.5s, TE: 25ms, FA: 50°; 36 interleaved slices, voxel size 2mm<sup>3</sup>, FOV 192mm, GRAPPA 2).\n\nFor one subject (sub-006), functional data were collected with a slightly different sequence (TR: 1.5s, TE: 25ms, FA: 70°, 35 oblique interleaved slices, slice thickness 2mm with 0.3mm gap and in-plane resolution of 1.4mm<sup>2</sup>, FOV 200mm, GRAPPA 4).\n\nAdditionally, each subject underwent T1-weighted magnetization-prepared rapid gradient-echo and proton density (PD) sequences were acquired for presentation and alignment purposes (axial prescription, 192 number of slices per slab, 1mm slice thickness; square FOV, 256 mm; image matrix, 256 × 256). All anatomical data shared here have been de-faced.\n\n## Note\n\n1. The \"de-faced\" anatomical data are all extracted (masked) brains.\n1. The instructions for the first resting-state block were on the screen while the scanner was being prepared. Once the first trigger came from the MRI, the experiment clock was reset and the resting-state task started. So, resting-state instruction time varied across participants but the scan didn’t start until the rest block actually began.\n1. The math mental arithmetic task stimuli all take the form \"(X +/- Y) +/- Z = | A,B\", where X, Y, and Z are whole numbers adding or subtracting from one another and there are two solutions (A or B) to choose between. The task-ctask_events.json file has MANY entries in the `stimulus` field's `Levels` to satisfy the BIDS validator.\n\n## Contact\n\nJavier Gonzalez-Castillo: javier.gonzalez-castillo@nih.gov\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 4446440842,
+        "subjects": [
+          "SBJ14",
+          "SBJ12",
+          "SBJ04",
+          "SBJ06",
+          "SBJ02",
+          "SBJ13",
+          "SBJ17",
+          "SBJ20",
+          "SBJ16",
+          "SBJ18",
+          "SBJ03",
+          "SBJ15",
+          "SBJ08",
+          "SBJ07",
+          "SBJ19",
+          "SBJ10",
+          "SBJ09",
+          "SBJ01"
+        ],
+        "tasks": [
+          "ctask"
+        ],
+        "totalFiles": 63
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        27,
+        38,
+        22,
+        24,
+        29,
+        26,
+        23,
+        31,
+        24,
+        23,
+        39,
+        29,
+        36,
+        31,
+        25,
+        22,
+        23,
+        23
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "NIMH",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": null,
+      "studyDomain": "attention, working memory, rest, math",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2026-03-13T15:52:53.572Z"
+  },
+  "source": "openneuro"
+}

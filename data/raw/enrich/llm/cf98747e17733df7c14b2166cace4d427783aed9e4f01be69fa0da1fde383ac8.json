@@ -1,0 +1,23 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:cf98747e17733df7c14b2166cace4d427783aed9e4f01be69fa0da1fde383ac8",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "other"
+    ],
+    "id": "physionet:deidentifiedmedicaltext",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "gold standard corpus of 2,434 deidentified nursing notes",
+        "value": "clinical_notes"
+      }
+    ],
+    "population": "2,434 nursing notes",
+    "summary": "Gold standard corpus of nursing notes deidentified by a multi-pass process combining independent expert review and automated methods, with all detected protected health information replaced by realistic surrogate data."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,46 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:762da7831198475ffcd48f5440e9076c10882713cd0726af98f655e818a6ef73",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "deep vein thrombosis (DVT) ultrasound reports",
+        "label": "deep vein thrombosis (DVT)"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "cardiology",
+      "other"
+    ],
+    "id": "physionet:radgraph-xl",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "chest computed tomography (CT)",
+        "value": "CT"
+      },
+      {
+        "evidence": "brain magnetic resonance imaging (MR)",
+        "value": "MRI"
+      },
+      {
+        "evidence": "CXR",
+        "value": "xray"
+      },
+      {
+        "evidence": "deep vein thrombosis (DVT) ultrasound reports",
+        "value": "ultrasound"
+      },
+      {
+        "evidence": "2,300 radiology reports",
+        "value": "clinical_notes"
+      }
+    ],
+    "population": null,
+    "summary": "Expert-annotated radiology reports spanning chest CT, abdomen/pelvis CT, brain MRI and chest X-ray, labeled with clinical entities and relations, with generalization tested on deep vein thrombosis ultrasound reports."
+  },
+  "prompt_version": "v1"
+}

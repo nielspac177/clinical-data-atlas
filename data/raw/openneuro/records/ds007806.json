@@ -1,0 +1,116 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007806",
+  "payload": {
+    "created": "2026-05-14T10:15:50.358Z",
+    "id": "ds007806",
+    "latestSnapshot": {
+      "created": "2026-05-22T06:03:54.000Z",
+      "description": {
+        "Authors": [
+          "Talitha C. Ford",
+          "Duanghathai Pasanta",
+          "Nina-Francesca Parrella",
+          "Peter G. Enticott",
+          "Gemma Lamp",
+          "David J. White",
+          "Nicolaas A. Puts"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007806.v2.0.0",
+        "Funding": [
+          "Swinburne Neuroimaging Access and Support Scheme Enhanced Capability Grant (2002-TFDW)",
+          "Simons SFARI Human Cognitive and Behavioral Science award (NP)"
+        ],
+        "HowToAcknowledge": "Ford, T. C., Pasanta, D., Parrella, N.-F., Enticott, P. G., White, D. J., & Puts, N. A. (2026). Examining excitation-inhibition modulation during social processing using functional Magnetic Resonance Spectroscopy (p. 2025.12.03.691778). bioRxiv. https://doi.org/10.64898/2025.12.03.691778",
+        "License": "CC0",
+        "Name": "SPfMRS Social Processing Dataset",
+        "ReferencesAndLinks": null
+      },
+      "readme": "## Examining excitation-inhibition modulation during social processing using functional Magnetic Resonance Spectroscopy\n\n### Description\nThis dataset contains T1-weighted images, resting and functional MRS, and fMRI data collected as part of \na study investigating the effect of dynamic face stimuli on GABA and Glx in social brain vs non-social brain. Data were acquired at Swinburne Neuroimaging, Australia \nusing a 3T Siemens Prisma scanner.\n\n### Authors\nTalitha C. Ford (First and Corresponding Author)- Funding acquisition, study design, data collection, data analysis, drafting and finalising manuscript\nDuanghathai Pasanta - data analysis, drafting and finalising manuscript\nNina-Francesca Parrella - data collection, finalising manuscript\nPeter G. Enticott - study design, finalising manuscript, supervision\nGemma Lamp - data collection, finalising manuscript\nDavid J. White (Senior Author) - funding acquisition, study design, data analysis, drafting and finalising manuscript, supervision\nNicolaas A. Puts (Senior Author) - study design, finalising manuscript, supervision\n\n### Contact\nTalitha C. Ford: talitha.ford?@deakin.edu.au\n\n### License\nThis dataset is made available under the CC0 1.0 Public Domain Dedication.\n\n### Citation\nIf you use this dataset, please cite:\nFord, T. C., Pasanta, D., Parrella, N.-F., Enticott, P. G., White, D. J., & Puts, N. A. (2026).  \nExamining excitation-inhibition modulation during social processing using functional Magnetic Resonance Spectroscopy (p. 2025.12.03.691778).  \nbioRxiv. https://doi.org/10.64898/2025.12.03.691778\n\n### Funding\nThis study was funded by a Swinburne Neuroimaging Access and Support Scheme Enhanced Capability Grant (2002-TFDW). NP is supported by a Simons SFARI Human Cognitive and Behavioral Science award. NP is supported through the MRC Centre for Neurodevelopmental Disorders. This study represents independent research in part funded by the National Institute for Health and Care Research (NIHR) Maudsley Biomedical Research Centre (BRC) at South London and Maudsley NHS Foundation Trust and King’s College London.\n\n### Dataset Description\n- N = 40 participants (20 female, 20 male; age range 18–40, mean 30.1 ± 5.8 years)\n- Inclusion criteria: self-reported fluency in written and spoken English, normal or corrected-to-normal vision, normal hearing, and no intellectual disability.\n- Exclusion criteria: psychiatric, developmental, substance use, genetic, and neurological conditions (based on self-report). At the time of testing, participants were free from psychoactive medications (>1 month), nicotine (abstained >12 hrs), caffeine (abstained >12 hrs), alcohol (abstained >12 hrs), and recreational drugs (abstained >1 week). \n\n### Scanner & Acquisition\n- Scanner: Siemens Prisma 3T\n- T1w: MPRAGE, 1mm isotropic, TR=1900ms, TE=2.34ms\n- MRS: HERMES, TR=2000ms, TE=80ms, 780 transients\n- fMRI: EPI, 3mm isotropic, TR=2500ms, TE=30ms, 46 slices\n\n### Notes\n- MRS voxels: right “social brain” incl. TPJ, STG, and insular cortex (40x25x25mm) and control region predominantly within visual cortex (30x30x30mm)\n- MRS tasks: 1st rest block (TRs 1-152), 1st functional block (TRs 153-304, 2nd rest block (TRs 305-546) 2nd functional block (TRs 547-698), 3rd rest block (TRs 699-780)\n- All data have been defaced using pydeface prior to sharing.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri",
+          "mrs"
+        ],
+        "secondaryModalities": [
+          "mri_structural",
+          "mri_functional"
+        ],
+        "sessions": [
+          "1",
+          "2"
+        ],
+        "size": 45494469439,
+        "subjects": [
+          "136",
+          "111",
+          "128",
+          "113",
+          "121",
+          "130",
+          "107",
+          "133",
+          "138",
+          "120",
+          "109",
+          "119",
+          "123",
+          "127",
+          "118",
+          "110",
+          "134",
+          "117",
+          "132",
+          "104",
+          "112",
+          "135",
+          "141",
+          "108",
+          "131",
+          "126",
+          "103",
+          "129",
+          "115",
+          "106",
+          "124",
+          "101",
+          "105",
+          "139",
+          "137",
+          "116",
+          "114",
+          "140",
+          "122",
+          "125"
+        ],
+        "tasks": [
+          "face"
+        ],
+        "totalFiles": 838
+      },
+      "tag": "2.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": "10.64898/2025.12.03.691778",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri",
+        "mrs"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2026-05-19T19:03:24.742Z"
+  },
+  "source": "openneuro"
+}

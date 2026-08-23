@@ -1,0 +1,32 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "echograph-note2num-annotations",
+  "payload": {
+    "abstract": "<p>This repository releases the EchoGraph-annotated ECHO-NOTE2NUM dataset, containing 45,794 echocardiography reports with comprehensive entity and relation annotations. Each report from the ECHO-NOTE2NUM dataset has been automatically annotated using EchoGraph, a BERT-based information extraction model specifically designed for echocardiography reports. The annotations employ a tailored schema capturing clinical observations (definitely present, definitely absent, uncertain), anatomical structures, measurements, and four types of relations (Modify, Gauge, Located at, Suggestive of). The dataset contains a total of 1,709,074 entities and 671,512 relations across all 45,794 reports. EchoGraph was developed using 600 densely annotated Mayo Clinic reports (48,256 entities, 29,731 relations) and validated on 60 MIMIC-EchoNote reports, demonstrating strong performance (entity F1 0.85 internal, 0.80 external; relation F1 0.70 internal, 0.52 external).</p>\n<p>This annotated dataset enables research in clinical NLP, automated report evaluation, and development of AI systems for echocardiography.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 33581483,
+    "core_doi": "10.13026/2h1h-9n57",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 458626759,
+    "public_project_uuid": "7c070c4b-ac5f-4bd0-a0ae-c941d8c41420",
+    "publish_date": "2025-12-04",
+    "resource_type": "Database",
+    "short_description": "EchoGraph is a model that automatically extracts and structures clinical information from echocardiogram reports. The Annotated ECHO-NOTE2NUM Dataset contains MIMIC-III echo reports enhanced with EchoGraph annotations to enhance future research.",
+    "slug": "echograph-note2num-annotations",
+    "source_url": "https://physionet.org/content/echograph-note2num-annotations/1.0.0/",
+    "title": "EchoGraph-annotated ECHO-NOTE2NUM examples",
+    "topics": [],
+    "version": "1.0.0",
+    "version_doi": "10.13026/hb5q-9532"
+  },
+  "source": "physionet"
+}

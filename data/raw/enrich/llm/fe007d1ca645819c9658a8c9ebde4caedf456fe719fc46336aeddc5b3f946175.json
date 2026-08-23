@@ -1,0 +1,31 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:fe007d1ca645819c9658a8c9ebde4caedf456fe719fc46336aeddc5b3f946175",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Confirmed or suspected prostate cancer",
+        "label": "prostate cancer"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "oncology",
+      "nephrology_urology"
+    ],
+    "id": "tcia:qin-prostate-repeatability",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "multiparametric MRI protocol",
+        "value": "MRI"
+      }
+    ],
+    "population": "Patients with confirmed or suspected prostate cancer",
+    "summary": "Multiparametric prostate MRI acquired in a test-retest setting to evaluate repeatability of MRI-based measurements for imaging biomarker development, with segmentation and structured report objects included."
+  },
+  "prompt_version": "v1"
+}

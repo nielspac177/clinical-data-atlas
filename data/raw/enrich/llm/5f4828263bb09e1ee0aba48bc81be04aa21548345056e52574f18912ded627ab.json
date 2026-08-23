@@ -1,0 +1,28 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:5f4828263bb09e1ee0aba48bc81be04aa21548345056e52574f18912ded627ab",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "critical_care",
+      "public_health"
+    ],
+    "id": "physionet:race-ethnicity-clinical-text",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "sentences from clinical notes",
+        "value": "clinical_notes"
+      },
+      {
+        "evidence": "clinical notes in MIMIC-III",
+        "value": "EHR"
+      }
+    ],
+    "population": "17,281 sentences drawn from 12,000 patients and their clinical notes at the Beth Israel Deaconess Medical Center critical care units between 2001 and 2012",
+    "summary": "Gold-standard annotations of race and ethnicity information in clinical notes from MIMIC-III, covering country of origin and spoken language plus clinician-assigned race and ethnicity labels."
+  },
+  "prompt_version": "v1"
+}

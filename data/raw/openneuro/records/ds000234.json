@@ -1,0 +1,74 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds000234",
+  "payload": {
+    "created": "2018-03-13T20:13:07.155Z",
+    "id": "ds000234",
+    "latestSnapshot": {
+      "created": "2018-07-17T02:22:04.000Z",
+      "description": {
+        "Authors": [
+          "Marta Vidorreta",
+          "Ze Wang",
+          "Yulin V. Chang",
+          "Maria A. Fernandez-Seara",
+          "John A. Detre"
+        ],
+        "DatasetDOI": null,
+        "Funding": [],
+        "HowToAcknowledge": "We  are  grateful  to  Tiejun  Zhao  from  Siemens  Healthcare  for  his  valuable  help  in  the  implementation of the online reconstruction algorithm of the sequence for the Siemens platform.,This data was obtained from the OpenfMRI database. Its accession number is ds000234.",
+        "License": "PD",
+        "Name": "Whole-brain background-suppressed pCASL MRI with 1D-accelerated 3D RARE Stack-Of-Spirals Readout- Dataset 1",
+        "ReferencesAndLinks": null
+      },
+      "readme": "Description of the ASL sequence\nA sequence with pseudo-continuous labeling, background suppression and 3D RARE Stack-Of-Spirals readout with optional through-plane acceleration was implemented for this study. At the beginning of the sequence, gradients were rapidly played with alternating polarity to correct for their delay in the spiral trajectories, followed by two preparation TRs, to allow the signal to reach the steady state. A non-accelerated readout was played during the preparation TRs, in order to obtain a fully sampled k-space dataset, used for calibration of the parallel imaging reconstruction kernel, needed to reconstruct the skipped kz partitions in the accelerated images.\n\nDescription of study\nNon-accelerated and accelerated versions of the sequence were compared during the execution of a functional activation paradigm.\nFor each participant, first a high-resolution anatomical T1-weighted image was acquired with a magnetization prepared rapid gradient echo (MPRAGE) sequence.\nSubjects underwent two perfusion runs, in which functional data were acquired with the non-accelerated and the accelerated version of the sequence, in pseudo-randomized order, during a visual-motor activation paradigm. During each run, 3 resting blocks alternated with 3 task blocks, with each block comprising 8 label-control pairs (72 s and 64 s for the non-accelerated and accelerated sequence versions, respectively). During the resting blocks, subjects were instructed to remain still while looking at a fixation cross. During the task blocks, a flashing checkerboard was displayed and subjects were asked to tap their right-hand fingers while looking at the center of the board. Labeling and PLD times were 1.5 and 1.5 s. In addition, four M0 images with long TR and no magnetization preparation were acquired per perfusion run for CBF quantification purposes. \n\n### Comments added by Openfmri Curators ###\n===========================================\n\nGeneral Comments\n----------------\n\n\nDefacing\n--------\nPydeface was used on all anatomical images to ensure deindentification of subjects. The code\ncan be found at https://github.com/poldracklab/pydeface\n\nQuality Control\n---------------\nMriqc was run on the dataset. Results are located in derivatives/mriqc. Learn more about it here: https://mriqc.readthedocs.io/en/latest/\n\nWhere to discuss the dataset\n----------------------------\n1) www.openfmri.org/dataset/ds000234/ See the comments section at the bottom of the dataset\npage.\n2) www.neurostars.org Please tag any discussion topics with the tags openfmri and ds000234.\n3) Send an email to submissions@openfmri.org. Please include the accession number in\nyour email.\n\nKnown Issues\n------------\nN/A\n\nBids-validator Output\n---------------------\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 43802103,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05"
+        ],
+        "tasks": [],
+        "totalFiles": 10
+      },
+      "tag": "00002"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        28,
+        35,
+        55,
+        27,
+        31
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2018-03-13T20:13:07.155Z"
+  },
+  "source": "openneuro"
+}

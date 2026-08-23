@@ -1,0 +1,27 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:a2ef8b953012d11ce4fb4b794c50be544a894a5116f8f12824e2429720e31c51",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "other"
+    ],
+    "id": "physionet:snomed-ct-entity-challenge",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "272 discharge notes from the MIMIC-IV-Note dataset annotated with SNOMED CT concepts",
+        "value": "clinical_notes"
+      },
+      {
+        "evidence": "MIMIC-IV-Note discharge summaries",
+        "value": "EHR"
+      }
+    ],
+    "population": "272 discharge notes from the MIMIC-IV-Note dataset",
+    "summary": "Discharge summaries from MIMIC-IV-Note annotated with SNOMED CT concepts by medical professionals, released as an entity linking challenge dataset with roughly 75,000 annotations across 272 discharge summaries."
+  },
+  "prompt_version": "v1"
+}

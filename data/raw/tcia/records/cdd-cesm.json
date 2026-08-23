@@ -1,0 +1,175 @@
+{
+  "endpoints": [
+    "https://api.datacite.org/dois?prefix=10.7937"
+  ],
+  "harvest_method": "api:nbia+datacite",
+  "native_id": "cdd-cesm",
+  "payload": {
+    "datacite": {
+      "citationCount": 4,
+      "container": {},
+      "contentUrl": [],
+      "contributors": [],
+      "created": "2021-12-14T21:14:08Z",
+      "creators": [
+        {
+          "affiliation": [],
+          "familyName": "Khaled",
+          "givenName": "Rana",
+          "name": "Khaled, Rana",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0003-2167-7662",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Helal",
+          "givenName": "Maha",
+          "name": "Helal, Maha",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "ِAlfarghaly",
+          "givenName": "Omar",
+          "name": "ِAlfarghaly, Omar",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0003-1972-7675",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Mokhtar",
+          "givenName": "Omnia",
+          "name": "Mokhtar, Omnia",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Elkorany",
+          "givenName": "Abeer",
+          "name": "Elkorany, Abeer",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "El Kassas",
+          "givenName": "Hebatalla",
+          "name": "El Kassas, Hebatalla",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Fahmy",
+          "givenName": "Aly",
+          "name": "Fahmy, Aly",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        }
+      ],
+      "dates": [],
+      "descriptions": [
+        {
+          "description": "Deep learning (DL) has a promising potential in reducing the workload of radiologists and helping them provide a more accurate diagnosis. However, fully annotated and large-sized datasets are required. This dataset is a collection of 2,006 high-resolution Contrast-enhanced spectral mammography (CESM) images with annotations and medical reports. \nAcquisition protocol: \n\nCESM is done using the standard digital mammography equipment, with additional software that performs dual-energy image acquisition. Two minutes after intravenously injecting the patient with non-ionic low-osmolar iodinated contrast material (dose: 1.5 mL/kg), craniocaudal (CC) and mediolateral oblique (MLO) views are obtained. Each view comprises two exposures, one with low energy (peak kilo-voltage values ranging from 26 to 31kVp) and one with high energy (45 to 49 kVp). Low and high-energy images are then recombined and subtracted through appropriate image processing to suppress the background breast parenchyma. A complete examination is carried out in about 5-6 minutes.\n\nImage preprocessing:\n\nThe images were converted from DICOM to JPEG using RadiAnt with best 100% image quality (lossless).  They have an average of 2355 x 1315 pixels.\n\nSupporting data:\n\nFull medical reports are also provided for each case (DOCX) along with manual segmentation annotation for the abnormal findings in each image (CSV file).  Each image with its corresponding manual annotation (breast composition, mass shape, mass margin, mass density, architectural distortion, asymmetries, calcification type, calcification distribution, mass enhancement pattern, non-mass enhancement pattern, non-mass enhancement distribution, and overall BIRADS assessment) is compiled into 1 Excel file. \n\nhttps://www.robots.ox.ac.uk/~vgg/software/via/via.html was used for the segmentation annotation.  It can be used to show the annotations on the images by clicking on Annotation--> import annotations (from csv), and then proceeding to upload any image to view the annotations drawn over it.  Moreover, a helper repository is created to help with pre-processing, model training, model evaluation, and segmentation annotation loading: https://github.com/omar-mohamed/CDD-CESM-Dataset\n\nRegarding the tabs on the annotations Excel file, these are commonly used radiological descriptors as defined by the American College of Radiology 2013 lexicon.",
+          "descriptionType": "Abstract",
+          "lang": null
+        }
+      ],
+      "doi": "10.7937/29kw-ae92",
+      "downloadCount": 0,
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "CDD-CESM",
+          "identifierType": "TCIA Short Name"
+        }
+      ],
+      "isActive": true,
+      "language": null,
+      "metadataVersion": 11,
+      "partCount": 0,
+      "partOfCount": 0,
+      "publicationYear": 2021,
+      "published": null,
+      "publisher": "The Cancer Imaging Archive",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2021-12-28T18:59:46Z",
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "10.1148/rycan.230100",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1038/s41467-024-44824-z",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1038/s41597-022-01238-0",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        }
+      ],
+      "relatedItems": [],
+      "rightsList": [
+        {
+          "rights": "Creative Commons Attribution 4.0 International",
+          "rightsIdentifier": "cc-by-4.0",
+          "rightsIdentifierScheme": "SPDX",
+          "rightsUri": "https://creativecommons.org/licenses/by/4.0/legalcode",
+          "schemeUri": "https://spdx.org/licenses/"
+        }
+      ],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "fabricaForm",
+      "state": "findable",
+      "subjects": [],
+      "titles": [
+        {
+          "lang": null,
+          "title": "Categorized Digital Database for Low energy and Subtracted Contrast Enhanced Spectral Mammography images",
+          "titleType": null
+        },
+        {
+          "lang": null,
+          "title": "CDD-CESM",
+          "titleType": "AlternativeTitle"
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2025-06-01T01:01:05Z",
+      "url": "https://www.cancerimagingarchive.net/collection/cdd-cesm/",
+      "version": "1",
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 6849
+    },
+    "nbia": null
+  },
+  "source": "tcia"
+}

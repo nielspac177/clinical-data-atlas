@@ -1,0 +1,151 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004094",
+  "payload": {
+    "created": "2022-03-31T16:00:14.550Z",
+    "id": "ds004094",
+    "latestSnapshot": {
+      "created": "2022-05-20T18:29:38.000Z",
+      "description": {
+        "Authors": [
+          "Athula Pudhiyidath",
+          "Neal W Morton",
+          "Rodrigo Viveros Duran",
+          "Anna C. Schapiro",
+          "Ida Momennejad",
+          "Demitrius M. Hinojosa-Rowland",
+          "Robert J. Molitor",
+          "Alison R. Preston"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004094.v1.0.1",
+        "Funding": [
+          "National Institute of Mental Health Grant R01MH100121"
+        ],
+        "HowToAcknowledge": "Cite the paper (see README for details)",
+        "License": "CC0",
+        "Name": "Effects of temporal community structure learning on reasoning decisions",
+        "ReferencesAndLinks": [
+          "https://doi.org/10.1101/2021.10.12.462707",
+          "https://doi.org/10.5281/zenodo.4793426",
+          "https://doi.org/10.1162/jocn_a_01864"
+        ]
+      },
+      "readme": "# Tesser\n\nThe Tesser study was designed to examine how temporal statistical learning affects reasoning about non-temporal features.\n\n## Experiment\n\nParticipants were exposed to sequences of objects that followed a temporal community structure. They then completed three tasks that tested how temporal statistical learning affected inductive inference about object properties, event segmentation, and perceived object similarity.\n\nTask phases:\n\nlearn - Initial exposure to structured object sequences that were determined based on the temporal community structure.\n\nstruct - During fMRI scanning, further viewing of structured object sequences, with interleaved scrambled object sequences.\n\ninduct - Outside the scanner, a test of inductive inference about object properties.\n\nparse - Viewing of object sequences with button presses to indicate perceived event boundaries.\n\ngroup - Placement of objects on a grid based on subjective non-perceptual similarity.\n\n## Analysis code\n\nAnalysis code in Python, Bash, and Jupyter notebooks is archived at https://doi.org/10.5281/zenodo.4793426. Commands to reproduce the analysis protocol are available at https://github.com/prestonlab/tesser/wiki/Analysis-protocol.\n\n## Reference\n\nAthula Pudhiyidath+, Neal W Morton+, Rodrigo Viveros Duran, Anna C. Schapiro, Ida Momennejad, Demitrius M. Hinojosa-Rowland, Robert J. Molitor, Alison R. Preston. 2022. Representations of temporal community structure in hippocampus and precuneus predict inductive reasoning decisions. Journal of Cognitive Neuroscience. doi: https://doi.org/10.1162/jocn_a_01864. + authors contributed equally.\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 125913657516,
+        "subjects": [
+          "100",
+          "101",
+          "102",
+          "103",
+          "104",
+          "105",
+          "106",
+          "107",
+          "108",
+          "109",
+          "110",
+          "111",
+          "112",
+          "113",
+          "114",
+          "115",
+          "116",
+          "117",
+          "119",
+          "120",
+          "121",
+          "122",
+          "123",
+          "124",
+          "125",
+          "126",
+          "127",
+          "128",
+          "129",
+          "130",
+          "131",
+          "132",
+          "133",
+          "135",
+          "136",
+          "137",
+          "138"
+        ],
+        "tasks": [
+          "struct",
+          "Structured object sequences"
+        ],
+        "totalFiles": 2225
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        20,
+        21,
+        21,
+        18,
+        19,
+        35,
+        19,
+        24,
+        18,
+        24,
+        20,
+        18,
+        20,
+        32,
+        18,
+        19,
+        21,
+        21,
+        25,
+        33,
+        26,
+        32,
+        24,
+        29,
+        30,
+        32,
+        24,
+        30,
+        24,
+        32,
+        24,
+        28,
+        26,
+        26,
+        28,
+        29,
+        24
+      ],
+      "associatedPaperDOI": "10.1101/2021.10.12.462707",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "NIMH",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "Temporal community structure learning and inference",
+      "studyDomain": "Memory and reasoning",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2022-05-20T17:38:40.985Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,96 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007272",
+  "payload": {
+    "created": "2026-01-19T10:14:41.722Z",
+    "id": "ds007272",
+    "latestSnapshot": {
+      "created": "2026-02-24T10:56:03.000Z",
+      "description": {
+        "Authors": [
+          "Mitja Nikolaus",
+          "Milad Mozafari",
+          "Isabelle Berry",
+          "Nicholas Asher",
+          "Leila Reddy",
+          "Rufin VanRullen"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007272.v1.0.0",
+        "Funding": [
+          "ERC Advanced grant GLoW (101096017)",
+          "ANR: AI-REPS (ANR-18-CE37-0007-01)",
+          "ANR: ANITI (ANR-19-PI3A-0004)"
+        ],
+        "HowToAcknowledge": "If you make use of the SemReps-8K dataset, please cite the corresponding paper:\n\nNikolaus, M., Mozafari, M., Berry, I., Asher, N., Reddy, L., & VanRullen, R. (2025). Modality-Agnostic Decoding of Vision and Language from fMRI. eLife. https://doi.org/10.7554/eLife.107933",
+        "License": "CC0",
+        "Name": "SemReps-8K",
+        "ReferencesAndLinks": null
+      },
+      "readme": "# SemReps-8K\n\nThis dataset contains fMRI recordings of 6 subjects viewing more than 8,000 stimuli in the form of images of naturalistic scenes and captions of such images. Additionally, there are conditions during which the subjects were performing mental imagery of visual scenes.\n\n## Experiment details\n\nSix subjects (2 female, age between 20 and 50 years, all right-handed and fluent English speakers) participated in the experiment after providing informed consent. The study was performed in accordance with French national ethical regulations (Comité de Protection des Personnes, ID 2019-A01920-57). \nWe collected functional MRI data using a 3T Philips ACHIEVA scanner (gradient echo pulse sequence, TR=2s, TE=30ms, 46 slices with a 32-channel head coil, slice thickness=3mm with 0.2mm gap, in-plane voxel dimensions 3×3mm). At the start of each session, we further acquired high-resolution anatomical images for each subject (voxel size=1mm^3, TR=8.13ms, TE=3.74ms, 170 sagittal slices).\n\nScanning was spanned over 10 sessions (except for sub-01: 11 sessions), each consisting of 13 to 16 runs during which the subjects were presented with 86 stimuli. Each run started and ended with an 8s fixation period.\nThe stimulus type varied randomly inside each run between images and captions. Each stimulus was presented for 2.5 seconds at the center of the screen (visual angle: 14.6 degrees; captions were displayed in white on a dark gray background (font: \"Consolas\"), the inter-stimulus interval was 1s. Every 10 stimuli there was a fixation trial that lasted for 2.5s. Every 5min there was a longer fixation trial for 16s.\n\nSubjects performed a one-back matching task: They were instructed to press a button whenever the stimulus matched the immediately preceding one. In case the previous stimulus was of the same modality (e.g. two captions in a row), the subjects were instructed to press a button if the stimuli matched exactly. In the cross-modal case (e.g. an image followed by a caption), the button had to be pressed if the caption was a valid description of the image, and vice versa. Positive one-back trials occurred on average every 10 stimuli.\n\nImages and captions were taken from the training and validation sets of the COCO dataset ([COCO - Common Objects in Context](https://cocodataset.org/#home)). This dataset contains 5 matching captions for each image, of which we only considered the shortest one in order to fit on the screen and to ensure a comparable length for all captions. Spelling errors were corrected manually. As our training set, a random subset of images and another random subset of captions were selected for each subject. All these stimuli were presented only a single time. \nAdditionally, a shared subset of 140 stimuli (70 images and 70 captions) was presented repeatedly to each subject in order to reduce noise, serving as our test set (on average: 26 times, min: 22, max: 31). Contrary to the training stimuli which were randomly selected from the COCO dataset, the 70 test stimuli were chosen by hand to avoid including multiple scenes that could match the same semantic description. The 70 chosen images as well as their 70 corresponding captions constituted the test set. These stimuli were inserted randomly between the training stimuli.\n\nIn addition to these perceptual trials, there were 3 imagery trials for each subject. Prior to the first fMRI scanning session, each subject was presented with a set of 20 captions (manually selected to be diverse and easy to visualize) that were not part of the perceptual trials, and they selected 3 captions for which they felt comfortable imagining a corresponding image. Then, they learned a mapping of each caption to a number (1, 2, and 3) so that they could be instructed to perform mental imagery of a specific stimulus, without having to present them with the caption again.\nThe imagery trials occurred every second run, either at the beginning or the end of the run, so that each of the 3 imagery conditions were repeated on average 26 times (min: 23, max: 29).\nAt the start of the imagery trial, the imagery instruction number was presented for 2s, then there was a 1s fixation period followed by the actual imagery period during which a light gray box was depicted for 10s on a dark gray background (the same background that was also used for trials with perceptual input). The light gray box was meant to represent the area in which the mental image should be \"projected\".\n\n## Data structure\n\nData is organized according to [BIDS](http://bids.neuroimaging.io/).\n\nFunctional and anatomical scans can be found in the respective folders named according to the subject identifiers (e.g. sub-01). All anatomical scans were anonymized using [pydeface](https://github.com/poldracklab/pydeface).\n\nThe stimuli folder contains references to all images used in the study, alongside with the corrected captions in `stimuli.csv` (the IDs refer to CoCo IDs). The same folder also contains the subjects' drawings of their mental imagery scenes from the end of the experiment.\n\nThe `derivatives/betas` directory contains preprocessed `betas` for each training, test and imagery stimulus for each subject in their respective subject-specific space (volume). For details on how these were extracted please refer to the paper. In `derivatives/betas/surface` we additionally provide surface-projections onto fsaverage of these betas.\n\n## Citation\n\nIf you make use of the SemReps-8K dataset, please cite the corresponding paper:\n\nNikolaus, M., Mozafari, M., Berry, I., Asher, N., Reddy, L., & VanRullen, R. (2025). Modality-Agnostic Decoding of Vision and Language from fMRI. eLife.\nhttps://doi.org/10.7554/eLife.107933\n\n\n## Acknowledgements\n\nThis research was funded by grants from the French Agence Nationale de la Recherche (ANR: AI-REPS grant number ANR-18-CE37-0007-01 and ANITI grant number ANR-19-PI3A-0004) as well as the European Union (ERC Advanced grant GLoW, 101096017). Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Research Council Executive Agency. Neither the European Union nor the granting authority can be held responsible for them.\n\nWe thank the Inserm/UPS UMR1214 Technical Platform for their help in setting up and for the acquisitions of the MRI sequences.\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "02",
+          "10",
+          "04",
+          "03",
+          "08",
+          "07",
+          "01",
+          "06",
+          "05",
+          "09",
+          "11"
+        ],
+        "size": 35060830795,
+        "subjects": [
+          "04",
+          "07",
+          "05",
+          "01",
+          "02",
+          "03"
+        ],
+        "tasks": [
+          "coco"
+        ],
+        "totalFiles": 2916
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        47,
+        34,
+        27,
+        22,
+        25,
+        26
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2026-02-24T11:06:59.773Z"
+  },
+  "source": "openneuro"
+}

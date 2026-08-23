@@ -1,0 +1,44 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:e262ea414deec4cd34844b8d76c1e4b488c5af6e1fa33df41e4af5e6ff2f10c0",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "pediatric subjects with histologically approved high-grade glioma",
+        "label": "high-grade glioma"
+      },
+      {
+        "evidence": "high-grade astrocytoma",
+        "label": "high-grade astrocytoma"
+      },
+      {
+        "evidence": "diffuse midline glioma (DMG)",
+        "label": "diffuse midline glioma (DMG)"
+      },
+      {
+        "evidence": "diffuse intrinsic pontine glioma (DIPG)",
+        "label": "diffuse intrinsic pontine glioma (DIPG)"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "oncology",
+      "pediatrics",
+      "neurology"
+    ],
+    "id": "tcia:dfci-bch-bwh-peds-hgg",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "conventional/structural magnetic resonance imaging (MRI) sequences",
+        "value": "MRI"
+      }
+    ],
+    "population": "Pediatric subjects with histologically approved high-grade glioma, including diffuse midline glioma and diffuse intrinsic pontine glioma, from Boston's Children Hospital and Dana-Farber Cancer Institute (n=61); infants under one month excluded.",
+    "summary": "Retrospective multi-institutional collection of structural brain MRI (pre- and post-gadolinium T1, T2, T2-FLAIR) from pediatric patients with histologically confirmed high-grade glioma, forming a subset of a segmentation challenge dataset."
+  },
+  "prompt_version": "v1"
+}

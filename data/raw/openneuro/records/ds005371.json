@@ -1,0 +1,101 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005371",
+  "payload": {
+    "created": "2024-07-25T00:53:11.609Z",
+    "id": "ds005371",
+    "latestSnapshot": {
+      "created": "2025-12-08T15:49:53.000Z",
+      "description": {
+        "Authors": [
+          "Jessica Archibald",
+          "Amy E. Bouchard",
+          "Ralph Noeske",
+          "Dikoma C. Shungu",
+          "Mark Mikkelsen"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005371.v2.3.1",
+        "Funding": [
+          "National Institute of Biomedical Imaging and Bioengineering (NIBIB) grant K99EB028828"
+        ],
+        "HowToAcknowledge": "Please cite the associated paper when using this dataset: Archibald J,Bouchard AE, Noeske R, Shungu DC, Mikkelsen M. Test-retest reliability of multi-metabolite edited MRS at 3T using PRESS and sLASER. Magn Reson Med. 2025. doi:10.1002/mrm.70161",
+        "License": "CC0",
+        "Name": "Test-retest reliability of multi-metabolite edited MRS at 3T using PRESS and sLASER",
+        "ReferencesAndLinks": [
+          "https://doi.org/10.1002/mrm.70161"
+        ]
+      },
+      "readme": "# Test-retest reliability of multi-metabolite edited MRS at 3T using PRESS and sLASER\n\nContact: Mark Mikkelsen, Ph.D. ([mam4041@med.cornell.edu](mailto:mam4041@med.cornell.edu))\n\n## Overview\n\nThese data were collected as part of a study to assess the test-retest reliability of multi-metabolite edited MRS using [HERMES](https://doi.org/10.1016/j.neuroimage.2016.07.056) and [HERCULES](https://doi.org/10.1016/j.neuroimage.2018.10.002) editing and [PRESS](https://doi.org/10.1111/j.1749-6632.1987.tb32915.x) and [sLASER](https://doi.org/10.1002/mrm.21302) localization.\n\nData types included are defaced *T*<sub>1</sub>-weighted 3D structural MRI images and single-voxel HERMES- and HERCULES-edited PRESS and sLASER MRS data.\n\n## Methods\n\n### Participants\n\nSixteen healthy adults (10 females, 6 males, mean age = 38.4 ± 18.2 years).\n\n**Important note**: Data of two participants (sub-05 and sub-06) was not uploaded to this repository because they did not provide the relevant consent for data sharing.\nThe data of the remaining 14 participants are available in this repository.\n\n### Scanning\n\nTwo 1-hr scan sessions for each participant separated by a time interval (median = 0 days; range = 0-29 days).\n\n### MR protocol\n\nMR data were acquired on a 3T GE Discovery MR750 MRI scanner using a <sup>1</sup>H 32-channel RF phased-array head coil for receive and a body coil for transmit.\n\n#### MRI\n\n*T*<sub>1</sub>-weighted BRAVO structural MRI acquisition parameters:\n\n- FSPGR\n- TE/TR/TI = 5.2/12.2/725 ms\n- Flip angle = 7°\n- Voxel resolution = 0.9 × 0.9 × 1.5 mm<sup>3</sup>\n- FOV = 256 × 256 mm<sup>2</sup>\n- Matrix size = 256 × 256\n- Slices = 124\n- Parallel acquisition technique: GRAPPA\n- Parallel acquisition factor: 2\n\n#### MRS\n\nGeneral acquisition parameters:\n\n- Volume of interest = medial parietal lobe\n- Voxel resolution = 30 × 30 × 30 mm<sup>3</sup>\n- Spectral width = 5000 Hz\n- Number of points = 4096\n- TE/TR = 82/2000 ms\n- Number of transients = 224\n- Duration = 7 min 28 s\n- Double-echo GRE autoshimming\n- OVS = 3 orthogonal slabs\n\nHERMES:\n\n- Target metabolites: GABA and GSH\n- Two acquisitions: PRESS and sLASER\n- CHESS water suppression\n\nHERCULES:\n\n- Target metabolites: GABA, GSH, ascorbate, aspartate, lactate, NAA, and NAAG\n- Two acquisitions: PRESS and sLASER\n- VAPOR water suppression\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural"
+        ],
+        "sessions": [
+          "02",
+          "01"
+        ],
+        "size": 454074711,
+        "subjects": [
+          "12",
+          "04",
+          "10",
+          "07",
+          "14",
+          "15",
+          "16",
+          "11",
+          "13",
+          "08",
+          "09",
+          "01",
+          "02",
+          "03"
+        ],
+        "tasks": [],
+        "totalFiles": 62
+      },
+      "tag": "2.3.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        23,
+        66,
+        39,
+        30,
+        74,
+        60,
+        39,
+        20,
+        21,
+        19,
+        30,
+        25,
+        31,
+        59,
+        25,
+        53
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "National Institute of Biomedical Imaging and Bioengineering of the National Institutes of Health",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "Test-retest",
+      "studyDomain": null,
+      "studyLongitudinal": "Longitudinal"
+    },
+    "publishDate": "2024-08-07T01:51:16.609Z"
+  },
+  "source": "openneuro"
+}

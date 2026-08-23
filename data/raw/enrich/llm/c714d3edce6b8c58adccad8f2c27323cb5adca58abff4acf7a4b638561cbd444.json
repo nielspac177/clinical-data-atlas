@@ -1,0 +1,40 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:c714d3edce6b8c58adccad8f2c27323cb5adca58abff4acf7a4b638561cbd444",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "lung cancer",
+        "label": "lung cancer"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "oncology",
+      "pulmonology",
+      "public_health"
+    ],
+    "id": "tcia:nlst",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "low-dose CT scans",
+        "value": "CT"
+      },
+      {
+        "evidence": "single-view posteroanterior chest radiography",
+        "value": "xray"
+      },
+      {
+        "evidence": "digitized histopathology images",
+        "value": "pathology"
+      }
+    ],
+    "population": "Persons at high risk for lung cancer enrolled from August 2002 through April 2004 at 33 U.S. medical centers and randomly assigned to annual low-dose CT or chest radiography screening",
+    "summary": "Imaging from the National Lung Screening Trial, a randomized trial comparing low-dose CT with chest radiography for lung cancer screening; the dataset includes low-dose CT scans and digitized histopathology images from enrolled subjects."
+  },
+  "prompt_version": "v1"
+}

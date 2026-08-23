@@ -1,0 +1,36 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "lung-segment-mimic-cxr",
+  "payload": {
+    "abstract": "<p>As more and more artificial intelligence (AI) or deep learning technologies have been applied to medical image applications such as radiological finding identification in chest X-rays (CXRs), the interpretability of the prediction model is crucial for building trust in AI. In pulmonary pathology detection, the CXR images with proper anatomical segmentations could aid in interpreting the models. However, the accuracy of the auto-segmentation algorithms was not high enough to create such a benchmark. In this project, we provided segmentation results of 1,141 frontal-view CXRs randomly selected from the MIMIC-CXR database. These CXRs were first processed into a pair of segmented images with the lung lobes and the rest parts by deep learning-based algorithms. We then manually filtered out the incorrect segmentation results. The segmented images maybe helpful for model interpretability.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 33290735,
+    "core_doi": "10.13026/k0v0-6j70",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 35981639,
+    "public_project_uuid": "4c293910-5a17-45a5-8b3c-9435167658e8",
+    "publish_date": "2022-08-18",
+    "resource_type": "Database",
+    "short_description": "A chest x-rays segmentation dataset derived from MIMIC-CXR based on deep learning algorithm and human examination.",
+    "slug": "lung-segment-mimic-cxr",
+    "source_url": "https://physionet.org/content/lung-segment-mimic-cxr/1.0.0/",
+    "title": "Chest X-ray segmentation images based on MIMIC-CXR",
+    "topics": [
+      "cxr",
+      "segmentation",
+      "chest x-rays"
+    ],
+    "version": "1.0.0",
+    "version_doi": "10.13026/d9zv-4d92"
+  },
+  "source": "physionet"
+}

@@ -1,0 +1,47 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:f5a3d06d67409b8b56fb59960fba6d847a6d2c3b2f015f7da80534f722d4ef17",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "work in detecting cancer in women with dense breasts",
+        "label": "breast cancer"
+      },
+      {
+        "evidence": "Screening Women With Dense Breasts",
+        "label": "dense breasts"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "oncology",
+      "public_health"
+    ],
+    "id": "tcia:ea1141",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "abbreviated breast magnetic resonance imaging (MRI)",
+        "value": "MRI"
+      },
+      {
+        "evidence": "digital tomosynthesis mammography",
+        "value": "mammography"
+      },
+      {
+        "evidence": "CT MG MR",
+        "value": "CT"
+      },
+      {
+        "evidence": "Imaging and clinical data from 500 of those subjects",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "Women with dense breasts enrolled in ECOG trial EA1141; 1,516 subjects randomized, imaging and clinical data from 500 released",
+    "summary": "Imaging and clinical data released from a randomized phase II cooperative-group screening trial comparing abbreviated breast MRI with digital tomosynthesis mammography in women with dense breasts."
+  },
+  "prompt_version": "v1"
+}

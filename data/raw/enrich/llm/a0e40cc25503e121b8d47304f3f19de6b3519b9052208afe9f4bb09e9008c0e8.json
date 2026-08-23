@@ -1,0 +1,41 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:a0e40cc25503e121b8d47304f3f19de6b3519b9052208afe9f4bb09e9008c0e8",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Adjuvant Lung Cancer Enrichment",
+        "label": "Lung Cancer"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "pulmonology"
+    ],
+    "id": "gdc:ALCHEMIST-ALCH",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "WXS, RNA-Seq, WGS, miRNA-Seq",
+        "value": "genomics"
+      },
+      {
+        "evidence": "Transcriptome Profiling",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Tissue Slide",
+        "value": "pathology"
+      },
+      {
+        "evidence": "Clinical, Copy Number Variation",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": null,
+    "summary": "Genomic and transcriptomic data from the ALCHEMIST adjuvant lung cancer trial: WXS, WGS, RNA-Seq and miRNA-Seq reads with simple nucleotide, copy number and structural variation, tissue slides, biospecimen and clinical data."
+  },
+  "prompt_version": "v1"
+}

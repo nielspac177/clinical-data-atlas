@@ -1,0 +1,81 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004271",
+  "payload": {
+    "created": "2022-09-19T07:39:54.020Z",
+    "id": "ds004271",
+    "latestSnapshot": {
+      "created": "2022-09-22T18:02:34.000Z",
+      "description": {
+        "Authors": [
+          "Martin Szinte",
+          "Tomas Knapen",
+          "Matthias Nau"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004271.v1.1.0",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "gaze_exp",
+        "ReferencesAndLinks": null
+      },
+      "readme": "# gaze_exp\nBy :      Martin SZINTE<br/>\nProjet :  gaze_exp<br/>\nWith :    Matthias NAU, Jan Patrick STELLMANN & Tomas KNAPEN\nVersion:  1.0<br/>\n\n## Version description\nCodes grouping analyses of 2 preliminary projects made to determine<br/>\ngaze modulation effects on fMRI data together with a PRF protocol.<br/>\n\n## Acquisition sequences\n\n#### Structural:\nPhillips Achieva 3T, 32 channel receive-coil array with single channel tranmit coil.<br/>\n1.0 mm isotropic T1w (4 scans) + 1.0 mm isotropic T2w.<br/>\n\n#### Fonctional:\nPhilips Achieva 7T scanner with a 32-channel receive-coil array with 8-channel transmit coil (Nova Medical, Wilmington, MA).<br/>\n3D-EPI sequence at a resolution of 1.8 mm isotropic with a 1.3s volume acquisition time, 44ms TR, 17ms TE. <br/>\n98 x 112 x 112 voxels covering the entire brain, SENSE acceleration was applied in both the AP (2.61-fold) and RL (3.27-fold).\nSusceptibility-induced distortions corection donw with topup.\n\n## Experiment 1: __\"pRFexp7T\"__\npRf protocol with either attention on the stimulus (bar) or fixation texture.<br/>\nParticipant fixate at the screen center.<br/>\n\n#### Tasks:\n1. AttendFixGazeCenterFS: fixate screen center and report orientation of a pink noise patern shown at screen center.<br/>\n\n2. AttendStimGazeCenterFS: fixate screen center and report orientation of a pink noise pattern shown in the scanning bar. <br/>\n\n#### Session 1\n- Run 1 : task-AttendFixGazeCenterFS_run-01<br/>\n- Run 2 : task-AttendStimGazeCenterFS_run-01<br/>\n- Run 3 : task-AttendFixGazeCenterFS_run-02<br/>\n- Run 4 : task-AttendStimGazeCenterFS_run-02<br/>\n\n#### Session 2\n- Run 1 : task-AttendFixGazeCenterFS_run-03<br/>\n- Run 2 : task-AttendStimGazeCenterFS_run-03<br/>\n- Run 3 : task-AttendFixGazeCenterFS_run-04<br/>\n- Run 4 : task-AttendStimGazeCenterFS_run-04<br/>\n\n## Experiment 2: __\"gazeField7T\"__\nEffect of gaze direction on resting state data. <br/>\nParticipants fixate straight ahead or 4 cardianl directions for about 1.5 min<br/>\n* run the experiment using _experiment/gazeField7T/main/expLauncher.m_\n\n#### Tasks:\n1. Calib: Calibration with 9 extreme eye directions, fixating 13 sec each<br/>\n   order: center, up, down, left, right, left-up, right-up, left-down, right-down<br/>\n\n2. GazeCW: 4 cardianal eye directions, 1 min 28.4 sec  <br/>\n   order: center -> right -> up -> left -> down<br/>\n\n3. GazeCCW: 4 cardianal eye directions, 1 min 28.4 sec  <br/>\n   order : down -> left -> up -> right -> center<br/>\n\n#### Session 4\n- Run 1 : task-Calib_run-01 :<br/>\n- Run 2 : task-GazeCW_run-01 : 7 min 22 sec<br/>\n- Run 3 : task-GazeCCW_run-01 : 7 min 22 sec<br/>\n- Run 4 : task-GazeCW_run-02 : 7 min 22 sec<br/>\n- Run 5 : task-GazeCCW_run-02 : 7 min 22 sec<br/>\n- Run 6 : task-GazeCW_run-03 : 7 min 22 sec<br/>\n- Run 7 : task-GazeCCW_run-03 : 7 min 22 sec<br/>\n\n## Experiment 3: __\"pGFexp7T\"__\nDetermine gain field maps using an equivalent to pRF scanning design but with gaze changes<br/>\nover a large visual portion of the visual field in total darkness.<br/>\n* run the experiment using _experiment/pGFexp7T/main/expLauncher.m_\n\n#### Tasks:\n1. Calib: Calibration with 9 extreme eye directions, fixating 13 sec each<br/>\n   order: center, up, down, left, right, left-up, right-up, left-down, right-down<br/>\n\n2. GazeLines: 97 eye directions (5 by 5 grid in lines zigzag), 2TR each<br/>\n\n3. GazeColumns: 97 eye directions (5 by 5 grid in columns zigzag), 2TR each <br/>\n\n#### Session 5\n- Run  1 : task-Calib_run-01: 90TRs - 1 min 57 sec\n- Run  2 : task-GazeLines_run-01 : 194TRs - 4 min 12.2 sec\n- Run  3 : task-GazeColumns_run-01 : 194TRs - 4 min 12.2 sec\n- Run  4 : task-GazeLines_run-02 : 194TRs - 4 min 12.2 sec\n- Run  5 : task-GazeColumns_run-02 : 194TRs - 4 min 12.2 sec\n- Run  6 : task-GazeLines_run-03 : 194TRs - 4 min 12.2 sec\n- Run  7 : task-GazeColumns_run-03 : 194TRs - 4 min 12.2 sec\n- Run  8 : task-GazeLines_run-04 : 194TRs - 4 min 12.2 sec\n- Run  9 : task-GazeColumns_run-04 : 194TRs - 4 min 12.2 sec\n- Run 10 : task-GazeLines_run-05 : 194TRs - 4 min 12.2 sec\n- Run 11 : task-GazeColumns_run-05 : 194TRs - 4 min 12.2 sec",
+      "summary": {
+        "dataProcessed": true,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05"
+        ],
+        "size": 37990865983,
+        "subjects": [
+          "001",
+          "002"
+        ],
+        "tasks": [
+          "AttendFixGazeCenterFS",
+          "AttendStimGazeCenterFS",
+          "GazeCCW",
+          "Calib",
+          "GazeCW",
+          "GazeColumns",
+          "GazeLines"
+        ],
+        "totalFiles": 210
+      },
+      "tag": "1.1.0"
+    },
+    "metadata": {
+      "affirmedDefaced": false,
+      "ages": [
+        43,
+        37
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": true,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": "gaze experiment"
+    },
+    "publishDate": "2023-04-20T11:09:58.099Z"
+  },
+  "source": "openneuro"
+}

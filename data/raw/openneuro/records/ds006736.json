@@ -1,0 +1,142 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006736",
+  "payload": {
+    "created": "2025-09-30T04:44:55.393Z",
+    "id": "ds006736",
+    "latestSnapshot": {
+      "created": "2026-07-27T16:29:30.000Z",
+      "description": {
+        "Authors": [
+          "Xinxu Shen",
+          "Lauri Gurguryam",
+          "Hazel Chen",
+          "Halle Dimsdale-Zucker",
+          "Ian C. Ballard"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006736.v1.0.0",
+        "Funding": null,
+        "HowToAcknowledge": "Please cite our related publication",
+        "License": "CC0",
+        "Name": "CS_fmri",
+        "ReferencesAndLinks": null
+      },
+      "readme": "Dataset overview\n\nThis dataset contains MRI data from the Click & Switch study (N=68), which examined self-directed switching between Lecture and Instagram content. The data are organized according to the Brain Imaging Data Structure (BIDS).\n\nEach participant folder contains BIDS-formatted data for the following tasks and scans:\n- preTestRest: A resting-state scan acquired before the main iPad task. Participants were instructed to remain still and rest while viewing a fixation display.\n- iPad task: Participants viewed a mathematics lecture and could freely switch between the lecture and Instagram Reels. Participants could switch to Instagram, advance to the next Reel, or return to the lecture at any time. \n- postTestRest: A resting-state scan acquired after the main iPad task. Participants were instructed to remain still and rest while viewing a fixation display.\n- freerecall: Participants verbally recalled as much information as possible from the mathematics lecture and Instagram Reels viewed during the iPad task.\n- yoke: Participants viewed a recording of a history lecture and Instagram content. The timing of switches was determined by a previously recorded switching sequence rather than by the participant’s own choices.\n- localizer: A functional localizer task involving Instagram and control cues. Participants viewed Instagram, weather logos, and phase-scrambled images.\n\nThe fmriprep directory contains participant-level preprocessing outputs generated with fMRIPrep version 25.2.5.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 35215869382,
+        "subjects": [
+          "081",
+          "084",
+          "051",
+          "036",
+          "020",
+          "022",
+          "012",
+          "007",
+          "063",
+          "050",
+          "053",
+          "075",
+          "085",
+          "113",
+          "071",
+          "041",
+          "107",
+          "033",
+          "080",
+          "040",
+          "006",
+          "109",
+          "049",
+          "047",
+          "046",
+          "011",
+          "065",
+          "042",
+          "110",
+          "066",
+          "092",
+          "059",
+          "043",
+          "029",
+          "112",
+          "018",
+          "045",
+          "044",
+          "108",
+          "024",
+          "030",
+          "102",
+          "026",
+          "074",
+          "098",
+          "015",
+          "103",
+          "062",
+          "016",
+          "028",
+          "069",
+          "106",
+          "004",
+          "048",
+          "100",
+          "105",
+          "068",
+          "010",
+          "019",
+          "099",
+          "055",
+          "052",
+          "058",
+          "094",
+          "096",
+          "067",
+          "095",
+          "039"
+        ],
+        "tasks": [
+          "localizer",
+          "freeRecall",
+          "ipad",
+          "yoke",
+          "preTestRest",
+          "postTestRest",
+          "postrest",
+          "recall",
+          "prerest"
+        ],
+        "totalFiles": 1334
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2026-07-27T16:33:15.039Z"
+  },
+  "source": "openneuro"
+}

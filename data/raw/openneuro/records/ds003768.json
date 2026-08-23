@@ -1,0 +1,109 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003768",
+  "payload": {
+    "created": "2021-08-16T22:59:17.194Z",
+    "id": "ds003768",
+    "latestSnapshot": {
+      "created": "2026-01-06T15:53:55.000Z",
+      "description": {
+        "Authors": [
+          "Yameng Gu",
+          "Feng Han",
+          "Lucas E. Sainburg",
+          "Margeaux M. Schade",
+          "Xiao Liu"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds003768.v1.0.13",
+        "Funding": [
+          "National Institutes of Health Pathway to Independence Award K99/R00 (5R00NS092996-03)",
+          "Brain Initiative Award (1RF1MH123247-01)",
+          "National Institutes of Health R01 Award (1R01NS113889-01A1)"
+        ],
+        "HowToAcknowledge": "Please cite the following two papers: \n\nAn orderly sequence of autonomic and neural events at transient arousal changes, Yameng Gu, Feng Han, Lucas E. Sainburg, Margeaux M. Schade, Orfeu M. Buxton, Jeff H. Duyn, Xiao Liu, NeuroImage, 2022, https://doi.org/10.1016/j.neuroimage.2022.119720;\n\nSimultaneous EEG and functional MRI data during rest and sleep from humans, Yameng Gu, Lucas E. Sainburg, Feng Han, Xiao Liu, Data in Brief, 2023, https://doi.org/10.1016/j.dib.2023.109059.",
+        "License": "CC0",
+        "Name": "Simultaneous EEG and fMRI signals during sleep from humans",
+        "ReferencesAndLinks": [
+          "An orderly sequence of autonomic and neural events at transient arousal changes, Yameng Gu, Feng Han, Lucas E. Sainburg, Margeaux M. Schade, Orfeu M. Buxton, Jeff H. Duyn, Xiao Liu, NeuroImage, 2022, https://doi.org/10.1016/j.neuroimage.2022.119720",
+          "Simultaneous EEG and functional MRI data during rest and sleep from humans, Yameng Gu, Lucas E. Sainburg, Feng Han, Xiao Liu, Data in Brief, 2023, https://doi.org/10.1016/j.dib.2023.109059"
+        ]
+      },
+      "readme": "\nThis dataset included 33 healthy participants collected at Pennsylvania State University with informed consent. Simultaneously collected EEG and BOLD signals for each participant were recorded and organized at each folder. \n\nEach scanning section consisted of an anatomical session, two 10-min resting-state sessions, and several 15-min sleep sessions. The first resting-state session was conducted before a visual-motor adaptation task (Albouy et al, Journal of Sleep Research, 2013) and the second resting-state session was conducted after a visual-motor adaptation task. \n\nThe scored sleep stages for these 33 subjects were organized under 'sourcedata' folder. Each TSV file contained the sleep stages for each 30-sec epoch across different sessions for each subject. In the TSV file, “w” represents wakefulness and “1, 2, 3” represents NREM1, NREM2, and NREM3, respectively. Some epochs scoring with uncertainty are noted as “uncertain” and some epochs with too large artifacts to score reasonably are noted as “unscorable”. \n\nMR imaging data were collected on a 3 Tesla Prisma Siemens Fit scanner using a Siemens 20-channel receive-array coil. Anatomical images were acquired using a MPRAGE sequence (TR: 2300 milliseconds, TE: 2.28 milliseconds, 1mm isotropic spatial resolution, FOV: 256 millimeters, flip angle: 8 degrees, matrix size: 256×256×192, acceleration factor: 2). Blood oxygenation level-dependent (BOLD) fMRI data were acquired using an EPI sequence (TR: 2100 milliseconds, TE: 25 milliseconds, slice thickness: 4mm, slices: 35, FOV: 240mm, in-plane resolution: 3mm×3mm).\n\nEEG data were collected using a 32-channel MR-compatible EEG system from Brain Products, Germany. Electrodes were placed based on the 10-20 international system. EOG and ECG recorded eye movement and cardiac signal, respectively. EEG data were collected at a sampling rate of 5000 Hz with a band-pass filter of 0-250 Hz. R128 in the EEG signals corresponds to the BOLD fMRI volume trigger. S1 markers in the EEG during sleep sessions correspond to participants hitting buttons indicating wakefulness state. S2 and S3 markers during sleep sessions represent no button hitting and can be ignored.\n\nFor more information or any questions about this dataset, please see the two papers listed in the References and Links section or contact Dr. Yameng Gu (ymgu95@gmail.com)",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "eeg",
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 92938507671,
+        "subjects": [
+          "16",
+          "32",
+          "03",
+          "12",
+          "30",
+          "11",
+          "19",
+          "02",
+          "21",
+          "09",
+          "33",
+          "13",
+          "05",
+          "27",
+          "04",
+          "10",
+          "08",
+          "25",
+          "14",
+          "20",
+          "15",
+          "26",
+          "01",
+          "24",
+          "07",
+          "18",
+          "28",
+          "31",
+          "22",
+          "06",
+          "17",
+          "23",
+          "29"
+        ],
+        "tasks": [
+          "rest",
+          "sleep"
+        ],
+        "totalFiles": 1346
+      },
+      "tag": "1.0.13"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "National Institutes of Health",
+      "modalities": [
+        "eeg",
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "Human sleep",
+      "studyLongitudinal": "Multimodal study"
+    },
+    "publishDate": "2021-08-17T16:50:30.020Z"
+  },
+  "source": "openneuro"
+}

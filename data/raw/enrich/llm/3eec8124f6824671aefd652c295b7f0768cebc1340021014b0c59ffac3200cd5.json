@@ -1,0 +1,29 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:3eec8124f6824671aefd652c295b7f0768cebc1340021014b0c59ffac3200cd5",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "lung nodule size estimation",
+        "label": "lung nodule"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "pulmonology",
+      "oncology"
+    ],
+    "id": "tcia:phantom-fda",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "conducting phantom CT studies with an anthropomorphic thoracic phantom",
+        "value": "CT"
+      }
+    ],
+    "population": "An anthropomorphic thoracic phantom containing a vasculature insert on which synthetic nodules were inserted or attached; ten repeat scans per protocol and nodule layout.",
+    "summary": "Repeat CT scans of an anthropomorphic thoracic phantom with synthetic nodules of known size and location, acquired across imaging protocols and nodule layouts to assess lung nodule size estimation methods."
+  },
+  "prompt_version": "v1"
+}

@@ -12,7 +12,12 @@ SITE_URL ?= https://nielspac177.github.io/clinical-data-atlas/
 FG_VERSION := 1.80.0
 FG_URL := https://unpkg.com/3d-force-graph@$(FG_VERSION)/dist/3d-force-graph.min.js
 
-.PHONY: help setup vendor harvest normalize enrich graph diff validate refresh site serve test test-live e2e dod clean
+# What a failing browser test leaves behind for the CI artifact upload.
+# The directory is gitignored and pytest-playwright empties it per run.
+E2E_CAPTURE := --screenshot=only-on-failure --tracing=retain-on-failure \
+  --output=tests/e2e/artifacts
+
+.PHONY: help setup vendor harvest normalize enrich graph diff validate refresh site serve test test-js test-live e2e og dod clean
 
 help: ## Show this help
 	@grep -E '^[a-zA-Z0-9_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-12s\033[0m %s\n", $$1, $$2}'
@@ -50,14 +55,23 @@ site: ## Build the static site into _site/
 serve: site ## Build the site, then serve _site/ locally on $(PORT)
 	uv run python -m http.server $(PORT) --directory _site
 
-test: ## Run the unit test suite (no network, no browser)
+test: ## Run both unit suites, Python and JS (no network, no browser)
 	uv run pytest -q -m "not live and not e2e"
+	$(MAKE) test-js
+
+test-js: ## Run the JS module tests (node's built-in runner, no deps)
+	node --test tests/js/*.test.mjs
 
 test-live: ## Run tests marked "live" (hits the real network)
 	ATLAS_LIVE=1 ATLAS_OFFLINE=0 uv run pytest -q -m live
 
-e2e: ## Install Chromium and run browser tests against a served site
-	uv run playwright install chromium && uv run pytest -q -m e2e tests/e2e --base-url http://127.0.0.1:$(PORT)$(BASE_URL)
+e2e: ## Install Chromium and run browser tests (they build and serve the site)
+	uv run --group e2e playwright install chromium && \
+	uv run --group e2e pytest -q -m e2e tests/e2e $(E2E_CAPTURE)
+
+og: ## Re-render site/assets/img/og.png from og.svg (commit the result)
+	uv run --group e2e playwright install chromium && \
+	uv run --group e2e python -m atlas.tools.og_png
 
 dod: ## Check phase PHASE's definition-of-done against URL
 	uv run atlas dod --phase $(PHASE) --url $(SITE_URL)

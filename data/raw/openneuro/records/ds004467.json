@@ -1,0 +1,113 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004467",
+  "payload": {
+    "created": "2023-02-07T12:23:24.633Z",
+    "id": "ds004467",
+    "latestSnapshot": {
+      "created": "2023-02-07T14:28:48.000Z",
+      "description": {
+        "Authors": [
+          "Halie Olson",
+          "Emily Chen",
+          "Kirsten Lydic",
+          "Rebecca Saxe"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004467.v1.0.0",
+        "Funding": [
+          "This research was supported by the Simons Foundation Autism Research Initiative via the Simons Center for the Social Brain at MIT and the NSF Graduate Research Fellowship Program (#1745302 to HO)."
+        ],
+        "HowToAcknowledge": " Please cite the following paper when acknowledging use of this dataset: (will fill in once published! for now, check out the preprint on biorxiv: https://www.biorxiv.org/content/10.1101/2023.01.30.526344v1)",
+        "License": "CC0",
+        "Name": "MRI data from 20 adults in response to videos of dialogue and monologue from Sesame Street",
+        "ReferencesAndLinks": [
+          "TODO"
+        ]
+      },
+      "readme": "Experiment\n\n20 adult participants (18 participants consented to open data sharing and are included here) watched video clips from Sesame Street, in which the audio was played either forward or reversed. Code and stimuli descriptions shared here: https://osf.io/whsb7/. We also scanned participants on two localizer tasks.\n\nSS-BlockedLang Language Task (litshort)\n2x2 block task design with four conditions: Forward Dialogue, Forward Monologue, Backward Dialogue, and Backward Monologue. Participants were asked to watch the 20-second videos and press a button on an in-scanner button box when they saw a still image of Elmo appear on the screen after each 20-second block. Participants completed 4 runs, each 6 min 18 sec long. Each run contained unique clips, and participants never saw a Forward and Backward version of the same clip. Each run contained 3 sets of 4 blocks, one of each condition (total of 12 blocks), with 22-second rest blocks after each set of 4 blocks. Forward and Backward versions of each clip were counterbalanced between participants (randomly assigned Set A or Set B). Run order was randomized for each participant.\n\nSS-IntDialog Language Task (litlong)\n1–3-minute dialogue clips of Sesame Street in which one character’s audio stream was played Forward and the other was played Backward. Additional sounds in the video (e.g., blowing bubbles, a crash from something falling) were played forwards. Participants watched the videos and pressed a button on an in-scanner button box when they saw a still image of Elmo appear on the screen immediately after each block. Participants completed 2 runs, each approximately 8 min 52 sec long. Each run contained unique clips, and participants never saw a version of the same clip with the Forward/Backward streams reversed. Each run contained 3 clips, 1-3 minutes each, presented in the same order. Between each video, as well as at the beginning and end of the run, there was a 22-second fixation block. Versions of each clip with the opposite character Forward and Backward were counterbalanced between participants (randomly assigned Set A or Set B). 11 participants saw version A, and 9 participants saw version B (1 run from group A was excluded due to participant falling asleep, and one run from group B was excluded due to motion). Run order was randomized for each participant (random sequence 1-2). \n\nAuditory Language Localizer (langloc)\nWe used a localizer task previously validated for identifying high-level language processing regions (Scott et al., 2017). Participants listened to Intact and Degraded 18-second blocks of speech. The Intact condition consisted of audio clips of spoken English (e.g., clips from interviews in which one person is speaking), and the Degraded condition consisted of acoustically degraded versions of these clips. Participants viewed a black dot on a white background during the task while passively listening to the auditory stimuli. 14-second fixation blocks (no sound) were present after every 4 speech blocks, as well as at the beginning and end of each run (5 fixation blocks per run). Participants completed two runs, each approximately 6 min 6 sec long. Each run contained 16 blocks of speech (8 intact, 8 degraded). \n\nTheory of Mind Localizer (tomloc)\nWe used a task previously validated for identifying regions that are involved in ToM and social cognition (Dodell-Feder et al., 2011). Participants read short stories in two conditions: False Beliefs and False Photos. Stories in the False Beliefs condition described scenarios in which a character holds a false belief. Stories in the False Photos condition described outdated photographs and maps. Each story was displayed in white text on a black screen for 10 seconds, followed by a 4-second true/false question based on the story (which participants responded to via the in-scanner button box), followed by 12 seconds of a blank screen (rest). Each run contained 10 blocks. Participants completed two runs, each approximately 4 min 40 sec long. \n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 7836977871,
+        "subjects": [
+          "SAXLIT201",
+          "SAXLIT202",
+          "SAXLIT204",
+          "SAXLIT205",
+          "SAXLIT206",
+          "SAXLIT207",
+          "SAXLIT208",
+          "SAXLIT209",
+          "SAXLIT210",
+          "SAXLIT211",
+          "SAXLIT212",
+          "SAXLIT213",
+          "SAXLIT214",
+          "SAXLIT215",
+          "SAXLIT216",
+          "SAXLIT217",
+          "SAXLIT218",
+          "SAXLIT219"
+        ],
+        "tasks": [
+          "langloc",
+          "litlong",
+          "litshort",
+          "tom",
+          "Auditory Language Localizer",
+          "Sesame Street - Interleaved Dialogue",
+          "Sesame Street - Blocked Language",
+          "Theory of Mind Localizer"
+        ],
+        "totalFiles": 602
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        24,
+        22,
+        20,
+        30,
+        22,
+        30,
+        30,
+        28,
+        24,
+        26,
+        28,
+        20,
+        22,
+        20,
+        24,
+        20,
+        22,
+        26
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "Simons Foundation Autism Research Initiative via the Simons Center for the Social Brain at MIT and the NSF Graduate Research Fellowship Program (#1745302 to HO)",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "fMRI study; see OSF page for details",
+      "studyDomain": "language",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2023-09-14T14:34:01.834Z"
+  },
+  "source": "openneuro"
+}

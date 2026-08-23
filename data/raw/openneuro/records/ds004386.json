@@ -1,0 +1,164 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004386",
+  "payload": {
+    "created": "2022-12-22T02:24:41.509Z",
+    "id": "ds004386",
+    "latestSnapshot": {
+      "created": "2023-05-05T19:35:41.000Z",
+      "description": {
+        "Authors": [
+          "Merve Kaptan",
+          "Falk Eippert"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004386.v1.1.2",
+        "Funding": [
+          "This project has received funding from the Max Planck Society as well as the European Research Council under the European Union’s Horizon 2020 research and innovation programme (grant agreement No 758974)."
+        ],
+        "HowToAcknowledge": "Cite this paper:  https://doi.org/10.1016/j.neuroimage.2023.120152. Consider including the following message: 'This data was obtained from the OpenNeuro database. Its accession number is ds004386.'",
+        "License": "CC0",
+        "Name": "fc-reliability-spinalcord",
+        "ReferencesAndLinks": [
+          "Kaptan, M., Horn, U., Vannesjo, S. J., Mildner, T., Weiskopf, N., Finsterbusch, J., Brooks, J. C. W., & Eippert, F. (2023). Reliability of resting-state functional connectivity in the human spinal cord: Assessing the impact of distinct noise sources. NeuroImage, 120152. https://doi.org/10.1016/j.neuroimage.2023.120152"
+        ]
+      },
+      "readme": "README\n\nDescription\n-------- \nThis data set consists of two sessions of resting-state spinal cord fMRI data from 48 healthy participants. This data set was collected as a part of a larger methodological project (see https://doi.org/10.1002/hbm.26018). Data from these 48 participants have already been shared (https://openneuro.org/datasets/ds004068/versions/1.0.3), but here we provide previously unavailable resting-state fMRI data associated with the following manuscript: https://www.sciencedirect.com/science/article/pii/S1053811923003038?via%3Dihub\n. \nFor each participant, we share i) a T2-weighted anatomical image, ii) two resting-state fMRI acquisitions of 250 volumes each (acquired with manual and automated slice-specific z-shimming), and iii) associated peripheral physiological data (ECG and respiratory recordings).\nFor a detailed description, please see: \n\nhttps://www.sciencedirect.com/science/article/pii/S1053811923003038?via%3Dihub\n\nCiting this dataset \n-------- \nShould you make use of this data set in any publication, please cite the following article: \n\nhttps://www.sciencedirect.com/science/article/pii/S1053811923003038?via%3Dihub\n\nKaptan, M., Horn, U., Vannesjo, S. J., Mildner, T., Weiskopf, N., Finsterbusch, J., Brooks, J. C. W., & Eippert, F. (2023). Reliability of resting-state functional connectivity in the human spinal cord: Assessing the impact of distinct noise sources. NeuroImage, 120152. https://doi.org/10.1016/j.neuroimage.2023.120152\n\n\nLicense \n------- \nThis data set is made available under the Creative Commons CC0 license. For more information, see https://creativecommons.org/share-your-work/public-domain/cc0/\n\nData set \n------- \nThis data set is organized according to the Brain Imaging Data Structure (BIDS) specification. For more information on BIDS, see https://bids-specification.readthedocs.io/en/stable/\nEach participant’s data are in one subdirectory (e.g., sub-ZS001), which contains the raw NIfTI data (after DICOM to NIfTI conversion) for this particular participant, as well as the associated metadata.\nRaw and processed peripheral physiological data can be found in each participant’s subdirectory under the “derivatives” folder. Manually obtained or adjusted MRI-based derivatives (e.g., spinal cord masks, segmental labels) are also shared for each participant and can be found in each participant’s subdirectory of the “derivatives” folder. For more details about the preprocessing pipeline and the description of each derivative, please see the following links: https://github.com/eippertlab/restingstate-reliability-spinalcord/ and PREPRINT LINK. Please note that data from three participants (sub-ZS009, sub-ZS018, sub-ZS030) are excluded from all analyses due to technical errors in the acquisition of peripheral physiological data, but their datasets are still provided for the sake of completeness.\nShould you have any questions about this data set, please contact mkaptan@stanford.edu or eippert@cbs.mpg.de.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 7861372741,
+        "subjects": [
+          "ZS001",
+          "ZS002",
+          "ZS003",
+          "ZS004",
+          "ZS005",
+          "ZS006",
+          "ZS007",
+          "ZS008",
+          "ZS009",
+          "ZS010",
+          "ZS011",
+          "ZS012",
+          "ZS013",
+          "ZS014",
+          "ZS015",
+          "ZS016",
+          "ZS017",
+          "ZS018",
+          "ZS019",
+          "ZS020",
+          "ZS021",
+          "ZS022",
+          "ZS023",
+          "ZS024",
+          "ZS025",
+          "ZS026",
+          "ZS027",
+          "ZS028",
+          "ZS029",
+          "ZS030",
+          "ZS031",
+          "ZS032",
+          "ZS033",
+          "ZS034",
+          "ZS035",
+          "ZS036",
+          "ZS037",
+          "ZS038",
+          "ZS039",
+          "ZS040",
+          "ZS041",
+          "ZS042",
+          "ZS043",
+          "ZS044",
+          "ZS045",
+          "ZS046",
+          "ZS047",
+          "ZS048"
+        ],
+        "tasks": [
+          "rest"
+        ],
+        "totalFiles": 294
+      },
+      "tag": "1.1.2"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        21,
+        22,
+        37,
+        30,
+        28,
+        32,
+        21,
+        33,
+        31,
+        22,
+        29,
+        26,
+        27,
+        30,
+        24,
+        27,
+        30,
+        27,
+        30,
+        25,
+        20,
+        28,
+        30,
+        33,
+        23,
+        24,
+        29,
+        33,
+        28,
+        31,
+        26,
+        24,
+        26,
+        24,
+        28,
+        27,
+        23,
+        32,
+        27,
+        31,
+        24,
+        26,
+        25,
+        31,
+        26,
+        23,
+        28,
+        22
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "resting-state",
+      "studyDomain": "spinal cord",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2023-05-02T23:16:36.636Z"
+  },
+  "source": "openneuro"
+}

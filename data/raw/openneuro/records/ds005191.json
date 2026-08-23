@@ -1,0 +1,94 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005191",
+  "payload": {
+    "created": "2024-05-28T07:17:36.041Z",
+    "id": "ds005191",
+    "latestSnapshot": {
+      "created": "2024-05-29T15:15:13.000Z",
+      "description": {
+        "Authors": [
+          "Tomoyasu Horikawa"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005191.v1.0.2",
+        "Funding": [
+          "This research was supported by grants from JST PRESTO Grant Number JPMJPR185B Japan and JSPS KAKENHI Grant Number JP21H03536."
+        ],
+        "HowToAcknowledge": "Please cite https://www.biorxiv.org/content/10.1101/2024.04.23.590673v1",
+        "License": "CC0",
+        "Name": "Mind Captioning",
+        "ReferencesAndLinks": [
+          "Horikawa, T. Mind captioning: Evolving descriptive text of mental content from human brain activity. bioRxiv (2024). https://www.biorxiv.org/content/10.1101/2024.04.23.590673v1"
+        ]
+      },
+      "readme": "# Mind Captioning\n\n##Original paper\nHorikawa, T. Mind captioning: Evolving descriptive text of mental content from human brain activity. bioRxiv (2024). https://www.biorxiv.org/content/10.1101/2024.04.23.590673v1\n\n##Dataset\n\n###MRI data\n\nThis dataset contains fMRI data from six subjects ('sub-01', 'sub-02', 'sub-03', 'sub-04', 'sub-05', and 'sub-06'). Each subject data contains three types of fMRI data ('trainPerception', 'testPerception', 'testImagery') collected over multiple scanning sessions ('ses-01', 'ses-02', ...). \n\nEach scanning session consisted of functional (EPI) images, fieldmap data ('magnitude1','magnitude2','magnitude', 'phasediff'), and anatomical (inplane T2) images. The functional EPI images covered the entire brain (TR, 1000 ms; TE, 30 ms; flip angle, 65°; FOV, 192 × 192 mm; voxel size, 2 × 2 × 2 mm; slice gap, 0 mm; number of slices, 76; multiband factor, 6) and inplane T2-weighted anatomical images were acquired with the same slices used for the EPI (TR, 11,000 ms; TE, 59 ms; flip angle, 160°; FOV, 192 × 192 mm; voxel size, 0.75 × 0.75 × 2.0 mm). The dataset also includes a T1-weighted (T1w) magnetization-prepared rapid acquisition gradient-echo (MP-RAGE) fine-structural images for each subject (TR, 2000 ms; TE, 1.97 ms; TI, 900 ms; flip angle, 10°; voxel size; FOV, 256 × 256 mm, 1.0 × 1.0 × 1.0 mm). The T1-weighted images were scanned only once for each subject in a separate scanning session and are stored in 'ses-anatomy' directories. The T1-weighted images were defaced by pydeface (https://github.com/poldracklab/pydeface).\n\n###Task event files\n\nTask event files for 'trainPerception' and 'testPerception' data shared common contents ('sub-*_ses-*_task-trainPerception*/testPerception*_run-*_events.tsv'), containing recorded event during fMRI runs. Each column of the task event files represents:\n\n- 'onset': onset time of an event (sec)\n- 'duration': duration of the event (sec)\n- 'trial_type': type of the event (2: Stimulus presentation block, 3: Evaluation block, -1: Initial rest block, -2: Inter-trial rest block, and -3: End rest block)\n- 'stimID': video file name presented in a stimulus block (1-2196)\n- 'stimLabel': stimulus video index of a presented stimulus (1-2180)\n- 'evalScore01-05': five scores evaluated by the subject\n- 'evalStim01-05': video file name evaluated by the subject (1-2196)\n- 'evalSent01-05': caption sentence index evaluated by the subject (1-20)\n\nTask event files for 'testImagery' data ('sub-*_ses-*_task-testImagery*_run-*_events.tsv') contain recorded event during fMRI runs. Each column of the task event files represents:\n\n- 'onset': onset time of an event (sec)\n- 'duration': duration of the event (sec)\n- 'trial_type': type of the event (2: Imagery block, 3: Stimulus presentation block, -1: Initial rest block, -2: Preparation block, -3: After-imagery rest block, -4: After-stimulus rest block, -5: Evaluation block, -6: Inter-trial rest block, and -7: End rest blocks)\n- 'cueID': video file name of target video cued in a prepartion block (1-2196)\n- 'imageryID': video file name imagined in a imagery block (1-2196)\n- 'stimID': video file name presented in a stimulus block (1-2196)\n- 'accuracy': accuracy scores evaluated by the subject (0-5)\n- 'vividness': vividness scores evaluated by the subject (0-5)\n\n## Stimulus videos\nWe used short video clips collected by Cowen and Keltner (2017). The videos can be requested from the following URL managed by the authors: https://goo.gl/forms/XErJw9sBeyuOyp5Q2.\n\n\n## Note\nPreprocessed fMRI data and semantic features are available on [figshare](https://doi.org/10.6084/m9.figshare.25808179).\n\nThe code that support the findings of the study is available from our GitHub repository:  [GitHub/horikawa-t/MindCaptioning](https://github.com/horikawa-t/MindCaptioning)\n\n## Contact\n\nIf you encounter any issues accessing the data, please open an issue on our GitHub repository: [GitHub/horikawa-t/MindCaptioning/issues](https://github.com/horikawa-t/MindCaptioning/issues).\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "anat",
+          "testImagery01",
+          "testImagery02",
+          "testImagery03",
+          "testImagery04",
+          "testImagery05",
+          "testPerception01",
+          "testPerception02",
+          "trainPerception01",
+          "trainPerception02",
+          "trainPerception03",
+          "trainPerception04",
+          "trainPerception05",
+          "trainPerception06",
+          "trainPerception07",
+          "trainPerception08",
+          "trainPerception09",
+          "trainPerception10",
+          "trainPerception11"
+        ],
+        "size": 398847251512,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06"
+        ],
+        "tasks": [
+          "testImagery",
+          "testPerception",
+          "trainPerception"
+        ],
+        "totalFiles": 2633
+      },
+      "tag": "1.0.2"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": null,
+      "associatedPaperDOI": "https://www.biorxiv.org/content/10.1101/2024.04.23.590673v1",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "JST PRESTO, JSPS KAKENHI",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "fMRI, perception, imagery, video",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2024-05-29T13:54:36.309Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,80 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "CMI-ASC",
+  "payload": {
+    "dbgap_accession_number": "phs001931",
+    "disease_type": [
+      "Soft Tissue Tumors and Sarcomas, NOS"
+    ],
+    "id": "CMI-ASC",
+    "name": "Count Me In (CMI): The Angiosarcoma (ASC) Project",
+    "primary_site": [
+      "Bronchus and lung",
+      "Breast",
+      "Heart, mediastinum, and pleura",
+      "Other and ill-defined sites",
+      "Other and ill-defined digestive organs",
+      "Skin",
+      "Other and ill-defined sites within respiratory system and intrathoracic organs",
+      "Bladder",
+      "Lymph nodes"
+    ],
+    "program": {
+      "dbgap_accession_number": null,
+      "name": "CMI",
+      "program_id": "82bbf180-0679-5344-86f4-9f3d6b00b7ef"
+    },
+    "project_id": "CMI-ASC",
+    "releasable": true,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 36,
+      "data_categories": [
+        {
+          "case_count": 36,
+          "data_category": "Simple Nucleotide Variation",
+          "file_count": 644
+        },
+        {
+          "case_count": 36,
+          "data_category": "Sequencing Reads",
+          "file_count": 109
+        },
+        {
+          "case_count": 36,
+          "data_category": "Clinical",
+          "file_count": 1
+        },
+        {
+          "case_count": 8,
+          "data_category": "Transcriptome Profiling",
+          "file_count": 18
+        },
+        {
+          "case_count": 8,
+          "data_category": "Structural Variation",
+          "file_count": 34
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 36,
+          "experimental_strategy": "WXS",
+          "file_count": 726
+        },
+        {
+          "case_count": 8,
+          "experimental_strategy": "RNA-Seq",
+          "file_count": 79
+        }
+      ],
+      "file_count": 806,
+      "file_size": 2414456969978
+    }
+  },
+  "source": "gdc"
+}

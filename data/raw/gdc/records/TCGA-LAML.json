@@ -1,0 +1,112 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "TCGA-LAML",
+  "payload": {
+    "dbgap_accession_number": null,
+    "disease_type": [
+      "Myeloid Leukemias"
+    ],
+    "id": "TCGA-LAML",
+    "name": "Acute Myeloid Leukemia",
+    "primary_site": [
+      "Hematopoietic and reticuloendothelial systems"
+    ],
+    "program": {
+      "dbgap_accession_number": "phs000178",
+      "name": "TCGA",
+      "program_id": "b80aa962-9650-5110-b3eb-bd087da808db"
+    },
+    "project_id": "TCGA-LAML",
+    "releasable": true,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 200,
+      "data_categories": [
+        {
+          "case_count": 200,
+          "data_category": "Simple Nucleotide Variation",
+          "file_count": 2656
+        },
+        {
+          "case_count": 200,
+          "data_category": "Sequencing Reads",
+          "file_count": 1082
+        },
+        {
+          "case_count": 200,
+          "data_category": "Biospecimen",
+          "file_count": 205
+        },
+        {
+          "case_count": 200,
+          "data_category": "Clinical",
+          "file_count": 201
+        },
+        {
+          "case_count": 200,
+          "data_category": "Copy Number Variation",
+          "file_count": 2066
+        },
+        {
+          "case_count": 194,
+          "data_category": "Transcriptome Profiling",
+          "file_count": 861
+        },
+        {
+          "case_count": 194,
+          "data_category": "DNA Methylation",
+          "file_count": 1164
+        },
+        {
+          "case_count": 151,
+          "data_category": "Structural Variation",
+          "file_count": 604
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 151,
+          "experimental_strategy": "RNA-Seq",
+          "file_count": 1359
+        },
+        {
+          "case_count": 188,
+          "experimental_strategy": "miRNA-Seq",
+          "file_count": 564
+        },
+        {
+          "case_count": 50,
+          "experimental_strategy": "WGS",
+          "file_count": 118
+        },
+        {
+          "case_count": 150,
+          "experimental_strategy": "WXS",
+          "file_count": 2579
+        },
+        {
+          "case_count": 200,
+          "experimental_strategy": "Genotyping Array",
+          "file_count": 2466
+        },
+        {
+          "case_count": 194,
+          "experimental_strategy": "Methylation Array",
+          "file_count": 1164
+        },
+        {
+          "case_count": 183,
+          "experimental_strategy": "Expression Array",
+          "file_count": 183
+        }
+      ],
+      "file_count": 8839,
+      "file_size": 43129853942939
+    }
+  },
+  "source": "gdc"
+}

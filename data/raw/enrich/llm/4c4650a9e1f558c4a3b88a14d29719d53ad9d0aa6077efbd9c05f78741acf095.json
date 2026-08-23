@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:4c4650a9e1f558c4a3b88a14d29719d53ad9d0aa6077efbd9c05f78741acf095",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "melanoma xenograft 425362-245-T",
+        "label": "melanoma"
+      },
+      {
+        "evidence": "develops spontaneous lung metastases",
+        "label": "lung metastases"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "pulmonology"
+    ],
+    "id": "tcia:pdmr-425362-245-t",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "MR SR",
+        "value": "MRI"
+      }
+    ],
+    "population": "Mice carrying the melanoma patient derived xenograft 425362-245-T",
+    "summary": "MR imaging characterization of a patient derived xenograft model of melanoma that develops spontaneous lung metastases; tumors were resected in half the mice and allowed to grow in the others."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,51 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:d8fd26a5665d3436678ae2acb0b342850215bbf910bf9da9883e095a73611e08",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Sarcomas (CPTAC-SAR) cohort",
+        "label": "Sarcomas"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "oncology",
+      "musculoskeletal"
+    ],
+    "id": "tcia:cptac-sar",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "CT MR PT",
+        "value": "CT"
+      },
+      {
+        "evidence": "CT MR PT",
+        "value": "MRI"
+      },
+      {
+        "evidence": "CT MR PT",
+        "value": "PET"
+      },
+      {
+        "evidence": "Radiology and pathology images from CPTAC patients",
+        "value": "pathology"
+      },
+      {
+        "evidence": "large-scale proteome and genome analysis",
+        "value": "genomics"
+      },
+      {
+        "evidence": "large-scale proteome and genome analysis",
+        "value": "proteomics"
+      }
+    ],
+    "population": "Subjects from the CPTAC Sarcomas cohort",
+    "summary": "Radiology and pathology images from the CPTAC sarcomas cohort, released by The Cancer Imaging Archive so researchers can relate imaging phenotypes to proteomic, genomic and clinical data."
+  },
+  "prompt_version": "v1"
+}

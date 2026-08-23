@@ -1,0 +1,51 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:0c188603c207d8f198c3e06cf6168b04c121e6dcb1d3123339d5c15871f49516",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Adenomas and Adenocarcinomas",
+        "label": "Adenomas and Adenocarcinomas"
+      },
+      {
+        "evidence": "Neoplasms, NOS",
+        "label": "Neoplasms, NOS"
+      },
+      {
+        "evidence": "Squamous Cell Neoplasms",
+        "label": "Squamous Cell Neoplasms"
+      },
+      {
+        "evidence": "Transitional Cell Papillomas and Carcinomas",
+        "label": "Transitional Cell Papillomas and Carcinomas"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "pulmonology",
+      "nephrology_urology",
+      "gastroenterology_hepatology"
+    ],
+    "id": "gdc:MATCH-Z1B",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Simple Nucleotide Variation, Sequencing Reads",
+        "value": "genomics"
+      },
+      {
+        "evidence": "Transcriptome Profiling",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "29 human cases with tumors of the esophagus, vulva, lung, stomach, colon, prostate, uterus, pancreas, gallbladder, tongue, bladder, mouth, parotid gland, oropharynx and larynx",
+    "summary": "Genomic characterization of one MATCH trial arm covering esophageal, lung, gastric, colon, prostate, pancreatic, head and neck and bladder tumors. Provides WXS and RNA-Seq reads, variation calls, transcriptome profiling, biospecimen and clinical data."
+  },
+  "prompt_version": "v1"
+}

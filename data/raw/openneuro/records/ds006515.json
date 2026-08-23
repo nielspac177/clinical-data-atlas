@@ -1,0 +1,136 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006515",
+  "payload": {
+    "created": "2025-07-30T08:03:29.969Z",
+    "id": "ds006515",
+    "latestSnapshot": {
+      "created": "2025-07-31T13:52:37.000Z",
+      "description": {
+        "Authors": [
+          "Cognition, Attention, and Brain Lab, PI: Monica D. Rosenberg"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006515.v1.0.0",
+        "Funding": [
+          ""
+        ],
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "Chicago Attention and Thoughts",
+        "ReferencesAndLinks": [
+          ""
+        ]
+      },
+      "readme": "This openneuro repository includes data from a two-session fMRI study (N = 60) collecting rest, movie-watching and attentional performance. The Cognition, Attention and Brain Lab at the University of Chicago, led by Monica D. Rosenberg, designed the study and collected these data. For questions please reach out to mdrosenberg@uchicago.edu.\n\nThe experiment consisted of two 3-hour experiment sessions. Participants completed the sessions on two separate days, with an average time interval of 10.90 ( 9.61) days between sessions. Four participants did not come back for the second session after completing the first. Each session consisted of an in-scanner phase and a post-scan behavioral experiment phase. Each in-scanner phase included two annotated rest, two naturalistic tasks (movie watching and/or story listening), and a audio-visual continuous performance task (avCPT)49 run. Participants completed the tasks in the following order: single-modality naturalistic task (aNT or vNT), the first annotated rest, audiovisual movie watching (avNorth or avCake), the second annotated rest, and avCPT. The order of aNT and vNT across sessions as well as the order of avNorth and avCake across sessions were counterbalanced across participants.\n\nNote: subject-1002 session1 aNT and Rest2 has TR = 1.026s due to an error in data collection. Other tasks of this participant and all other subjects have TR = 1.000s.",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "01",
+          "02"
+        ],
+        "size": 144616085230,
+        "subjects": [
+          "1016",
+          "1050",
+          "1002",
+          "1023",
+          "1030",
+          "1044",
+          "1042",
+          "1013",
+          "1051",
+          "1025",
+          "1018",
+          "1024",
+          "1036",
+          "1054",
+          "1057",
+          "1007",
+          "1048",
+          "1052",
+          "1049",
+          "1021",
+          "1045",
+          "1047",
+          "1031",
+          "1012",
+          "1040",
+          "1060",
+          "1009",
+          "1003",
+          "1037",
+          "1033",
+          "1039",
+          "1062",
+          "1014",
+          "1041",
+          "1058",
+          "1027",
+          "1006",
+          "1029",
+          "1061",
+          "1022",
+          "1053",
+          "1015",
+          "1046",
+          "1043",
+          "1020",
+          "1001",
+          "1055",
+          "1056",
+          "1017",
+          "1026",
+          "1010",
+          "1035",
+          "1034",
+          "1011",
+          "1032",
+          "1005",
+          "1008",
+          "1059",
+          "1028",
+          "1038"
+        ],
+        "tasks": [
+          "avNW",
+          "Rest2",
+          "Rest1",
+          "aNT",
+          "aCPT",
+          "avCake",
+          "vNT",
+          "vCPT"
+        ],
+        "totalFiles": 1381
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "National Science Foundation",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "Naturalistic movies, annotated rest, attention task",
+      "studyDomain": "Cognitive Neuroscience, attention, thoughts",
+      "studyLongitudinal": "Longitudinal"
+    },
+    "publishDate": "2026-06-15T08:00:38.340Z"
+  },
+  "source": "openneuro"
+}

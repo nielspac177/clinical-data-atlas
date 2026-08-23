@@ -1,0 +1,103 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds000122",
+  "payload": {
+    "created": "2016-11-08T00:03:53.228Z",
+    "id": "ds000122",
+    "latestSnapshot": {
+      "created": "2018-07-14T02:27:43.000Z",
+      "description": {
+        "Authors": [
+          "J Xu",
+          "S Zhang",
+          "VD Calhoun",
+          "J Monterosso",
+          "MN Potenza"
+        ],
+        "DatasetDOI": null,
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "This dataset is made available under the Public Domain Dedication and License \nv1.0, whose full text can be found at \nhttp://www.opendatacommons.org/licenses/pddl/1.0/. \nWe hope that all users will follow the ODC Attribution/Share-Alike \nCommunity Norms (http://www.opendatacommons.org/norms/odc-by-sa/); \nin particular, while not legally required, we hope that all users \nof the data will acknowledge the OpenfMRI project and NSF Grant \nOCI-1131441 (R. Poldrack, PI) in any publications.",
+        "Name": "Task-related concurrent but opposite modulations of overlapping functional networks as revealed by spatial ICA",
+        "ReferencesAndLinks": [
+          "J Xu, S Zhang, VD Calhoun, J Monterosso, MN Potenza 2013 Task-related\nconcurrent but opposite modulations of overlapping functional networks as\nrevealed by spatial ICA. NeuroImage 79:62-71 (PMCID: PMC3677796)"
+        ]
+      },
+      "readme": "This dataset was obtained from the OpenfMRI project (http://www.openfmri.org).\nAccession #: ds000122\nDescription: Visual Attention Task (block design)\n\nPlease cite the following references if you use these data:\n\nJ Xu, S  Zhang, VD Calhoun, J Monterosso, MN Potenza 2013 Task-related concurrent but opposite modulations of overlapping functional networks as revealed by spatial ICA. NeuroImage 79:62-71 (PMCID: PMC3677796)\n\n04/08/2016: initial release\n\nThis dataset is made available under the Public Domain Dedication and License \nv1.0, whose full text can be found at \nhttp://www.opendatacommons.org/licenses/pddl/1.0/. \nWe hope that all users will follow the ODC Attribution/Share-Alike \nCommunity Norms (http://www.opendatacommons.org/norms/odc-by-sa/); \nin particular, while not legally required, we hope that all users \nof the data will acknowledge the OpenfMRI project and NSF Grant \nOCI-1131441 (R. Poldrack, PI) in any publications.\n\n\nEvents Headings:\n-ReactionTime: Reaction Time\n-ResponseButtonCode: Response Button Code (33 is hit, \n0 is no response, others were wrong response)\n-OnsetBlock: Starting time of each block\n-OnsetTrial: Starting time of each trial\n-TaskLevel: Task level\n-TargetNontarget: 1=target; 0=nontarget\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 1729493096,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17"
+        ],
+        "tasks": [
+          "visual attention task"
+        ],
+        "totalFiles": 124
+      },
+      "tag": "00001"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        28,
+        22,
+        28,
+        24,
+        24,
+        33,
+        30,
+        31,
+        26,
+        30,
+        32,
+        41,
+        30,
+        30,
+        32,
+        29,
+        30
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2016-11-08T00:03:53.228Z"
+  },
+  "source": "openneuro"
+}

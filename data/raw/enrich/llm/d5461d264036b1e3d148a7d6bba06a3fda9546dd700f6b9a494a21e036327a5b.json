@@ -1,0 +1,28 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:d5461d264036b1e3d148a7d6bba06a3fda9546dd700f6b9a494a21e036327a5b",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "multi-cancer clinical DICOM images",
+        "label": "multi-cancer"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "tcia:midi-b-test-midi-b-validation",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "multi-site, multi-modality, and multi-cancer clinical DICOM images",
+        "value": "other"
+      }
+    ],
+    "population": "538 subjects whose DICOM images were infused with synthetic PHI/PII.",
+    "summary": "Multi-site, multi-modality clinical DICOM images infused with synthetic identifiers, plus a TCIA-curated version, mapping files, ground truth answer keys and a validation script for evaluating medical image de-identification workflows."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,53 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:9f791ab8f18cef731d1d640cf3de461045c6fb5107e1533687da9e33985a40a9",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Cancer Moonshot Biobank-Multiple Myeloma (CMB-MML) cohort",
+        "label": "Multiple Myeloma"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "oncology",
+      "musculoskeletal",
+      "neurology",
+      "pulmonology"
+    ],
+    "id": "tcia:cmb-mml",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "CR CT DX MR PT XA",
+        "value": "CT"
+      },
+      {
+        "evidence": "CR CT DX MR PT XA",
+        "value": "MRI"
+      },
+      {
+        "evidence": "CR CT DX MR PT XA",
+        "value": "PET"
+      },
+      {
+        "evidence": "CR CT DX MR PT XA",
+        "value": "xray"
+      },
+      {
+        "evidence": "de-identified radiology and histopathology imaging",
+        "value": "pathology"
+      },
+      {
+        "evidence": "Associated genomic, phenotypic and clinical data",
+        "value": "genomics"
+      }
+    ],
+    "population": "Subjects in NCI's Cancer Moonshot Biobank-Multiple Myeloma (CMB-MML) cohort: patients receiving standard of care cancer treatment at multiple NCI Community Oncology Research Program (NCORP) sites.",
+    "summary": "De-identified radiology and histopathology imaging from the Cancer Moonshot Biobank multiple myeloma cohort, including radiographs, CT, MR and PET. Associated genomic, phenotypic and clinical data are hosted by dbGaP and other NCI databases."
+  },
+  "prompt_version": "v1"
+}

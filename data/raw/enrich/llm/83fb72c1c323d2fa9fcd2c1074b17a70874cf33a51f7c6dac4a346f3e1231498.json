@@ -1,0 +1,31 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:83fb72c1c323d2fa9fcd2c1074b17a70874cf33a51f7c6dac4a346f3e1231498",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:mimic-iv-echo",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "echocardiogram DICOM files",
+        "value": "ultrasound"
+      },
+      {
+        "evidence": "who are in the MIMIC-IV Clinical Database",
+        "value": "EHR"
+      },
+      {
+        "evidence": "structured echocardiographic measurements",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "91,372 unique patients in the MIMIC-IV Clinical Database with echocardiograms conducted between 2008 and 2022",
+    "summary": "Echocardiography module with structured cardiologist-recorded measurements covering chamber sizes, systolic and diastolic function, valvular morphology and Doppler hemodynamics, plus transthoracic echocardiogram DICOM image sequences, matched to MIMIC-IV patients."
+  },
+  "prompt_version": "v1"
+}

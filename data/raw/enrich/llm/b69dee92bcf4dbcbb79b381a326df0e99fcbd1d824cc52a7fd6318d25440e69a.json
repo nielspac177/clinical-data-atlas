@@ -1,0 +1,45 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:b69dee92bcf4dbcbb79b381a326df0e99fcbd1d824cc52a7fd6318d25440e69a",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "pulmonology",
+      "nephrology_urology"
+    ],
+    "id": "tcia:midi-b-synthetic-validation",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "CT",
+        "value": "CT"
+      },
+      {
+        "evidence": "MR",
+        "value": "MRI"
+      },
+      {
+        "evidence": "PT",
+        "value": "PET"
+      },
+      {
+        "evidence": "DX",
+        "value": "xray"
+      },
+      {
+        "evidence": "MG",
+        "value": "mammography"
+      },
+      {
+        "evidence": "US",
+        "value": "ultrasound"
+      }
+    ],
+    "population": null,
+    "summary": "Synthetic validation split of a multi-modality imaging collection spanning body regions including abdomen, bladder, breast, cervix, chest, colon, kidney, lung, ovary, pancreas, pelvis and prostate."
+  },
+  "prompt_version": "v1"
+}

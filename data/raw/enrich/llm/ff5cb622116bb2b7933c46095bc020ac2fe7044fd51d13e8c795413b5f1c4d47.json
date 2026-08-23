@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:ff5cb622116bb2b7933c46095bc020ac2fe7044fd51d13e8c795413b5f1c4d47",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "230 patients with stage II colorectal cancer",
+        "label": "stage II colorectal cancer"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "surgery"
+    ],
+    "id": "tcia:stageii-colorectal-ct",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "abdominal or pelvic enhanced CT images",
+        "value": "CT"
+      },
+      {
+        "evidence": "stage II CRC confirmed by histology and pathology",
+        "value": "pathology"
+      }
+    ],
+    "population": "230 patients with stage II colorectal cancer (CRC) who underwent radical surgery, excluding those with preoperative neoadjuvant treatment, concurrent other tumors, or death within 1 month after surgery",
+    "summary": "Preoperative contrast-enhanced abdominal or pelvic CT acquired within 10 days before radical surgery in patients with histologically confirmed stage II colorectal cancer, with stated inclusion and exclusion criteria and documented scanner and contrast protocols."
+  },
+  "prompt_version": "v1"
+}

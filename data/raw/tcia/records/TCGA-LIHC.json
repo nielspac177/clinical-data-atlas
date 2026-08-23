@@ -1,0 +1,1260 @@
+{
+  "endpoints": [
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getCollectionValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getModalityValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getBodyPartValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getPatient",
+    "https://api.datacite.org/dois?prefix=10.7937"
+  ],
+  "harvest_method": "api:nbia+datacite",
+  "native_id": "TCGA-LIHC",
+  "payload": {
+    "datacite": {
+      "citationCount": 49,
+      "container": {},
+      "contentUrl": [],
+      "contributors": [
+        {
+          "affiliation": [],
+          "contributorType": "DataCurator",
+          "familyName": null,
+          "givenName": null,
+          "name": "TCIA Team",
+          "nameIdentifiers": [],
+          "nameType": null
+        }
+      ],
+      "created": "2016-01-29T13:04:15Z",
+      "creators": [
+        {
+          "affiliation": [],
+          "familyName": "Erickson",
+          "givenName": "Bradley J.",
+          "name": "Erickson, Bradley J.",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Kirk",
+          "givenName": "Shanah",
+          "name": "Kirk, Shanah",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Lee",
+          "givenName": "Yueh",
+          "name": "Lee, Yueh",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Bathe",
+          "givenName": "Oliver",
+          "name": "Bathe, Oliver",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Kearns",
+          "givenName": "Melissa",
+          "name": "Kearns, Melissa",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Gerdes",
+          "givenName": "Cindy",
+          "name": "Gerdes, Cindy",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Rieger-Christ",
+          "givenName": "Kimberly",
+          "name": "Rieger-Christ, Kimberly",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Lemmerman",
+          "givenName": "John",
+          "name": "Lemmerman, John",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2016",
+          "dateInformation": null,
+          "dateType": "Issued"
+        }
+      ],
+      "descriptions": [
+        {
+          "description": "The Cancer Genome Atlas Liver Hepatocellular Carcinoma (TCGA-LIHC) data collection is part of a larger effort to build a research community focused on connecting cancer phenotypes to genotypes by providing clinical images matched to subjects from The Cancer Genome Atlas (TCGA). Clinical, genetic, and pathological data resides in the Genomic Data Commons (GDC) Data Portal while the radiological data is stored on The Cancer Imaging Archive (TCIA). Matched TCGA patient identifiers allow researchers to explore the TCGA/TCIA databases for correlations between tissue genotype, radiological phenotype and patient outcomes. Tissues for TCGA were collected from many sites all over the world in order to reach their accrual targets, usually around 500 specimens per cancer type. For this reason the image data sets are also extremely heterogeneous in terms of scanner modalities, manufacturers and acquisition protocols. In most cases the images were acquired as part of routine care and not as part of a controlled research study or clinical trial.",
+          "descriptionType": "Abstract",
+          "lang": null
+        }
+      ],
+      "doi": "10.7937/k9/tcia.2016.immqw8uq",
+      "downloadCount": 0,
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "TCGA-LIHC",
+          "identifierType": "TCIA Short Name"
+        }
+      ],
+      "isActive": true,
+      "language": null,
+      "metadataVersion": 20,
+      "partCount": 0,
+      "partOfCount": 0,
+      "publicationYear": 2016,
+      "published": null,
+      "publisher": "The Cancer Imaging Archive",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2016-01-29T13:04:16Z",
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "10.1117/12.2224777",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.18201/ijisae.2019457233",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1007/s11548-020-02165-4",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1007/978-3-030-50516-5_3",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1038/s41467-020-16517-w",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.2147/cmar.s251413",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1007/s11548-021-02410-4",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.3390/diagnostics11091573",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1007/978-3-030-87202-1_20",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1093/jrr/rrab095",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1007/s13755-021-00151-x",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1371/journal.pone.0255605",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1007/s11042-022-12229-z",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.3390/s22031107",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.media.2022.102680",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.phro.2023.100483",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.dib.2023.109662",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.3390/cancers15082338",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1145/3599957.3606225",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1007/s00330-023-09417-2",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.media.2023.103041",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1148/radiol.222729",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.acra.2024.01.013",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1038/s41597-024-03337-6",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.bbe.2018.03.004",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1088/1361-6560/aaa609",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1049/iet-ipr.2018.5158",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1109/access.2020.3012160",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.21897/23460466.2667",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1002/mp.15562",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1007/978-3-030-97281-3_25",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1109/tmi.2022.3213983",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1002/ima.22846",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1039/d2sc05709c",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.phrs.2024.107535",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1109/tetci.2024.3502404",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1117/1.jmi.12.1.014504",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1038/s41597-024-03977-8",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        },
+        {
+          "relatedIdentifier": "10.1001/jamanetworkopen.2022.52553",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        }
+      ],
+      "relatedItems": [],
+      "rightsList": [
+        {
+          "rights": "Creative Commons Attribution 3.0 Unported",
+          "rightsIdentifier": "cc-by-3.0",
+          "rightsIdentifierScheme": "SPDX",
+          "rightsUri": "https://creativecommons.org/licenses/by/3.0/legalcode",
+          "schemeUri": "https://spdx.org/licenses/"
+        }
+      ],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "fabricaForm",
+      "state": "findable",
+      "subjects": [],
+      "titles": [
+        {
+          "lang": null,
+          "title": "The Cancer Genome Atlas Liver Hepatocellular Carcinoma Collection (TCGA-LIHC)",
+          "titleType": null
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceType": "DICOM",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2025-06-01T01:01:18Z",
+      "url": "https://www.cancerimagingarchive.net/collection/tcga-lihc/",
+      "version": "5",
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 14150
+    },
+    "nbia": {
+      "body_parts": [
+        "LIVER"
+      ],
+      "collection": "TCGA-LIHC",
+      "modalities": [
+        "CT",
+        "MR",
+        "PT"
+      ],
+      "patients": [
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-DD-A3A9",
+          "PatientName": "TCGA-DD-A3A9",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-DD-A3A0",
+          "PatientName": "TCGA-DD-A3A0",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-DD-A3A1",
+          "PatientName": "TCGA-DD-A3A1",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-DD-A3A8",
+          "PatientName": "TCGA-DD-A3A8",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-DD-A39X",
+          "PatientName": "TCGA-DD-A39X",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-DD-A39Y",
+          "PatientName": "TCGA-DD-A39Y",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-DD-A3A7",
+          "PatientName": "TCGA-DD-A3A7",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-DD-A39V",
+          "PatientName": "TCGA-DD-A39V",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-DD-A3A4",
+          "PatientName": "TCGA-DD-A3A4",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-DD-A3A6",
+          "PatientName": "TCGA-DD-A3A6",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-DD-A113",
+          "PatientName": "TCGA-DD-A113",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-DD-A4NK",
+          "PatientName": "TCGA-DD-A4NK",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-DD-A11C",
+          "PatientName": "TCGA-DD-A11C",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-DD-A11D",
+          "PatientName": "TCGA-DD-A11D",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-DD-A1EE",
+          "PatientName": "TCGA-DD-A1EE",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-DD-A4NI",
+          "PatientName": "TCGA-DD-A4NI",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-DD-A4NS",
+          "PatientName": "TCGA-DD-A4NS",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-DD-A4NV",
+          "PatientName": "TCGA-DD-A4NV",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-DD-A1EA",
+          "PatientName": "TCGA-DD-A1EA",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-DD-A4ND",
+          "PatientName": "TCGA-DD-A4ND",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-DD-A4NQ",
+          "PatientName": "TCGA-DD-A4NQ",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-DD-A114",
+          "PatientName": "TCGA-DD-A114",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-DD-A11B",
+          "PatientName": "TCGA-DD-A11B",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-DD-A1EF",
+          "PatientName": "TCGA-DD-A1EF",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-DD-A1EL",
+          "PatientName": "TCGA-DD-A1EL",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-DD-A4NB",
+          "PatientName": "TCGA-DD-A4NB",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-DD-A4NO",
+          "PatientName": "TCGA-DD-A4NO",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-DD-A4NP",
+          "PatientName": "TCGA-DD-A4NP",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-DD-A1EG",
+          "PatientName": "TCGA-DD-A1EG",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-DD-A4NR",
+          "PatientName": "TCGA-DD-A4NR",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-DD-A118",
+          "PatientName": "TCGA-DD-A118",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-DD-A1EK",
+          "PatientName": "TCGA-DD-A1EK",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-DD-A115",
+          "PatientName": "TCGA-DD-A115",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-DD-A116",
+          "PatientName": "TCGA-DD-A116",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-DD-A1E9",
+          "PatientName": "TCGA-DD-A1E9",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-DD-A119",
+          "PatientName": "TCGA-DD-A119",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-DD-A1EB",
+          "PatientName": "TCGA-DD-A1EB",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-DD-A11A",
+          "PatientName": "TCGA-DD-A11A",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-DD-A4NN",
+          "PatientName": "TCGA-DD-A4NN",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-DD-A1EC",
+          "PatientName": "TCGA-DD-A1EC",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-DD-A1EH",
+          "PatientName": "TCGA-DD-A1EH",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-DD-A1EJ",
+          "PatientName": "TCGA-DD-A1EJ",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-DD-A4NG",
+          "PatientName": "TCGA-DD-A4NG",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-DD-A4NL",
+          "PatientName": "TCGA-DD-A4NL",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-DD-A1ED",
+          "PatientName": "TCGA-DD-A1ED",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-DD-A1EI",
+          "PatientName": "TCGA-DD-A1EI",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-DD-A4NA",
+          "PatientName": "TCGA-DD-A4NA",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-DD-A4NE",
+          "PatientName": "TCGA-DD-A4NE",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-DD-A4NF",
+          "PatientName": "TCGA-DD-A4NF",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-DD-A4NH",
+          "PatientName": "TCGA-DD-A4NH",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-DD-A4NJ",
+          "PatientName": "TCGA-DD-A4NJ",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-BC-4073",
+          "PatientName": "TCGA-BC-4073",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "EthnicGroup": "7",
+          "PatientId": "TCGA-BC-A5W4",
+          "PatientName": "TCGA-BC-A5W4",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "EthnicGroup": "W",
+          "PatientId": "TCGA-BC-A112",
+          "PatientName": "TCGA-BC-A112",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-BC-A10X",
+          "PatientName": "TCGA-BC-A10X",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-BC-A10Y",
+          "PatientName": "TCGA-BC-A10Y",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-BC-A10Z",
+          "PatientName": "TCGA-BC-A10Z",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-BC-A110",
+          "PatientName": "TCGA-BC-A110",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-BC-A216",
+          "PatientName": "TCGA-BC-A216",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-BC-A217",
+          "PatientName": "TCGA-BC-A217",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "EthnicGroup": "1",
+          "PatientId": "TCGA-BC-A3KG",
+          "PatientName": "TCGA-BC-A3KG",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "EthnicGroup": "1",
+          "PatientId": "TCGA-BC-A69I",
+          "PatientName": "TCGA-BC-A69I",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-BC-A3KF",
+          "PatientName": "TCGA-BC-A3KF",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-BC-A69H",
+          "PatientName": "TCGA-BC-A69H",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-BC-A10W",
+          "PatientName": "TCGA-BC-A10W",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-G3-A25Y",
+          "PatientName": "TCGA-G3-A25Y",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-G3-A3CG",
+          "PatientName": "TCGA-G3-A3CG",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "EthnicGroup": "Unk",
+          "PatientId": "TCGA-G3-AAUZ",
+          "PatientName": "TCGA-G3-AAUZ",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-G3-A7M9",
+          "PatientName": "TCGA-G3-A7M9",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-G3-AAV4",
+          "PatientName": "TCGA-G3-AAV4",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "EthnicGroup": "Unk",
+          "PatientId": "TCGA-G3-A5SI",
+          "PatientName": "TCGA-G3-A5SI",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-G3-A7M8",
+          "PatientName": "TCGA-G3-A7M8",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-G3-A5SK",
+          "PatientName": "TCGA-G3-A5SK",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-G3-A25Z",
+          "PatientName": "TCGA-G3-A25Z",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-G3-AAV6",
+          "PatientName": "TCGA-G3-AAV6",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-G3-A5SL",
+          "PatientName": "TCGA-G3-A5SL",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-G3-AAV7",
+          "PatientName": "TCGA-G3-AAV7",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-G3-A25T",
+          "PatientName": "TCGA-G3-A25T",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-G3-A3CK",
+          "PatientName": "TCGA-G3-A3CK",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-G3-A25U",
+          "PatientName": "TCGA-G3-A25U",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-G3-A25X",
+          "PatientName": "TCGA-G3-A25X",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-G3-A3CI",
+          "PatientName": "TCGA-G3-A3CI",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-G3-A7M5",
+          "PatientName": "TCGA-G3-A7M5",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-G3-A25S",
+          "PatientName": "TCGA-G3-A25S",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-G3-A6UC",
+          "PatientName": "TCGA-G3-A6UC",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-G3-A5SJ",
+          "PatientName": "TCGA-G3-A5SJ",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "EthnicGroup": "Unk",
+          "PatientId": "TCGA-G3-A3CH",
+          "PatientName": "TCGA-G3-A3CH",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-G3-AAV5",
+          "PatientName": "TCGA-G3-AAV5",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-G3-A3CJ",
+          "PatientName": "TCGA-G3-A3CJ",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "EthnicGroup": "UNK",
+          "PatientId": "TCGA-G3-A7M7",
+          "PatientName": "TCGA-G3-A7M7",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-G3-AAV1",
+          "PatientName": "TCGA-G3-AAV1",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-G3-AAV2",
+          "PatientName": "TCGA-G3-AAV2",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-G3-AAV3",
+          "PatientName": "TCGA-G3-AAV3",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-K7-AAU7",
+          "PatientName": "TCGA-K7-AAU7",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-K7-A6G5",
+          "PatientName": "TCGA-K7-A6G5",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-K7-A5RG",
+          "PatientName": "TCGA-K7-A5RG",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "TCGA-LIHC",
+          "PatientId": "TCGA-K7-A5RF",
+          "PatientName": "TCGA-K7-A5RF",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        }
+      ]
+    }
+  },
+  "source": "tcia"
+}

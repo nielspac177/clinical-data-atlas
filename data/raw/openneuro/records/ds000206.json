@@ -1,0 +1,140 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds000206",
+  "payload": {
+    "created": "2018-03-09T21:55:59.204Z",
+    "id": "ds000206",
+    "latestSnapshot": {
+      "created": "2020-07-22T18:06:38.000Z",
+      "description": {
+        "Authors": [
+          "Vincent A. Magnotta",
+          "Joy T. Matsui",
+          "Dawei Liu",
+          "Hans J. Johnson",
+          "Jeffrey D. Long",
+          "Bradley D. Bolster Jr",
+          "Bryon A. Mueller",
+          "Kelvin Lim",
+          "Susumu Mori",
+          "Karl G. Helmer",
+          "Jessica A. Turner",
+          "Sarah Reading",
+          "Mark J. Lowe",
+          "Elizabeth Aylward",
+          "Laura A. Flashman",
+          "Greg Bonett",
+          "Jane S. Paulsen"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds000206.v1.0.0",
+        "Funding": [],
+        "HowToAcknowledge": "Please reference the following papers:  DOI: 10.1089/brain.2012.0112 V. a. Magnotta, J. T. Matsui, D. Liu, H. J. Johnson, J. D. Long, B. D. Bolster, B. a. Mueller, K. O. Lim, S. Mori, K. Helmer, J. a. Turner, M. J. Lowe, E. Aylward, L. a. Flashman, G. Bonett, and J. S. Paulsen, 'Multi-Center Reliability of Diffusion Tensor Imaging,' Brain Connect., vol. 2, no. 6, p. 121018043201009, Jan. 2012.",
+        "License": "CC0",
+        "Name": "DWI Traveling Human Phantom Study",
+        "ReferencesAndLinks": [
+          "http://online.liebertpub.com/doi/abs/10.1089/brain.2012.0112"
+        ]
+      },
+      "readme": "\nThis Datasets is from a Traveling Human Phantom (THP) dataset that was\ncollected for a multi-site neuroimaging reliability study.  The THP dataset\nincludes repeated multi-modal magnetic resonance (MR) images\nobtained for five healthy controls performed at eight imaging centers. The\nmodalities include diffusion weighted images (DWI) and three-dimensional T1\nweighted MP-RAGE and T2 SPACE sequences.  Intra-subject and inter-site\nvariability for MRI scans was and can be assessed as repeated images were taken\nacross multiple imaging protocols.\n\nAnother use for the THP dataset could be to evaluate and improve one's tool\nagainst multi-modal and multi-site data. In addition to the THP dataset, which\nis useful as it is, we share our processed results. DWI datasets were processed\nto produce common rotationally invariant scalar images and diffusion tensor\nimages. Anatomical images, T1 and T2, were processed with the BRAINSTools suite\nto produce anatomical segmentations. \n\n@article{magnotta2012multicenter,\nabstract = {A number of studies are now collecting diffusion tensor imaging\n(DTI) data across sites. While the reliability of anatomical images has been\nestablished by a number of groups, the reliability of DTI data has not been\nstudied as extensively. In this study, five healthy controls were recruited and\nimaged at eight imaging centers. Repeated measures were obtained across two\nimaging protocols allowing intra-subject and inter-site variability to be\nassessed. Regional measures within white matter were obtained for standard\nrotationally invariant measures: fractional anisotropy, mean diffusivity,\nradial diffusivity, and axial diffusivity. Intra-subject coefficient of\nvariation (CV) was typically {\\textless}1{\\%} for all scalars and regions.\nInter-site CV increased to {\\~{}}1{\\%}-3{\\%}. Inter-vendor variation was\nsimilar to inter-site variability. This variability includes differences in the\nactual implementation of the sequence.}, author = {Magnotta, Vincent a. and\nMatsui, Joy T. and Liu, Dawei and Johnson, Hans J. and Long, Jeffrey D. and\nBolster, Bradley D. and Mueller, Bryon a. and Lim, Kelvin O. and Mori, Susumu\nand Helmer, Karl and Turner, Jessica a. and Lowe, Mark J. and Aylward,\nElizabeth and Flashman, Laura a. and Bonett, Greg and Paulsen, Jane S.},\ndoi = {10.1089/brain.2012.0112},\nisbn = {8605457767},\nissn = {2158-0014},\njournal = {Brain Connectivity},\nkeywords = {diffusion tensor,fractional anisotropy,magnetic resonance,mean diffusivity,reliability,white matter},\nmendeley-groups = {ReginaThesis,BiosketchReferences,JoysThesis,JoyCrossSectionalDWI,TEMP{\\_}HOWES{\\_}RE},\nmonth = {jan},\nnumber = {6},\npages = {121018043201009},\npmid = {23075313},\npublisher = {Mary Ann Liebert, Inc. 140 Huguenot Street, 3rd Floor New Rochelle, NY 10801 USA},\ntitle = {{Multi-Center Reliability of Diffusion Tensor Imaging}},\nurl = {http://www.ncbi.nlm.nih.gov/pubmed/23075313 http://online.liebertpub.com/doi/abs/10.1089/brain.2012.0112 http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=3623569},\nvolume = {2},\nyear = {2012}\n}\n\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_diffusion",
+          "mri_structural"
+        ],
+        "sessions": [
+          "THP0001CCF1",
+          "THP0001DART1",
+          "THP0001IOWA1",
+          "THP0001IOWA2",
+          "THP0001IOWA3",
+          "THP0001JHU1",
+          "THP0001MGH1",
+          "THP0001UCI1",
+          "THP0001UMN1",
+          "THP0001UW1",
+          "THP0002CCF1",
+          "THP0002DART1",
+          "THP0002IOWA2",
+          "THP0002JHU1",
+          "THP0002MGH1",
+          "THP0002UCI1",
+          "THP0002UMN1",
+          "THP0002UW1",
+          "THP0003CCF1",
+          "THP0003DART1",
+          "THP0003IOWA2",
+          "THP0003IOWA3",
+          "THP0003JHU1",
+          "THP0003MGH1",
+          "THP0003UCI1",
+          "THP0003UMN1",
+          "THP0003UW1",
+          "THP0004CCF1",
+          "THP0004DART1",
+          "THP0004IOWA1",
+          "THP0004IOWA2",
+          "THP0004IOWA3",
+          "THP0004IOWA4",
+          "THP0004IOWA5",
+          "THP0004IOWA6",
+          "THP0004JHU1",
+          "THP0004MGH1",
+          "THP0004UCI1",
+          "THP0004UMN1",
+          "THP0004UW1",
+          "THP0005CCF1",
+          "THP0005DART1",
+          "THP0005IOWA2",
+          "THP0005IOWA3",
+          "THP0005JHU1",
+          "THP0005MGH1",
+          "THP0005UCI1",
+          "THP0005UMN1",
+          "THP0005UW1",
+          "THPBALLCCF1",
+          "THPBALLIOWA1",
+          "THPBALLIOWA2",
+          "THPBALLMGH1",
+          "THPBALLUCI1",
+          "THPBALLUMN1"
+        ],
+        "size": 13586765573,
+        "subjects": [
+          "THP0001",
+          "THP0002",
+          "THP0003",
+          "THP0004",
+          "THP0005",
+          "THPBALL"
+        ],
+        "tasks": [],
+        "totalFiles": 1515
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": null,
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2018-03-09T21:55:59.204Z"
+  },
+  "source": "openneuro"
+}

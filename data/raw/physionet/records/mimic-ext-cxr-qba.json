@@ -1,0 +1,37 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "mimic-ext-cxr-qba",
+  "payload": {
+    "abstract": "<p>Visual Question Answering (VQA) enables flexible and context-dependent analysis of medical images, such as chest X-rays (CXRs), by allowing users to pose specific questions and receive nuanced answers. However, existing CXR VQA datasets are typically limited to short and simplistic answer, lack localization information (such as bounding boxes), and provide little structured metadata (e.g., hierarchical answer formats or tags like region and finding annotations). To address these limitations, we introduce MIMIC-Ext-CXR-QBA, a new large-scale CXR VQA dataset derived from MIMIC-CXR, comprising 42 million QA pairs, which provides multi-granular, hierarchical answers composed of full sentences in the style of radiology reports, as well as detailed bounding boxes, and structured tags. Additionally, we provide scene graphs for each study, containing both regions and observation nodes with bounding boxes, tags, and textual descriptions derived from the original radiology reports. We created the scene graphs using LLM-based information extraction, semantic mention mapping, and localization models before generating question-answer pairs based on the extracted information stored in these graphs. Using automatic quality assessments, we have selected 31,230,906 QA pairs intended for pre-training and 7,532,281 of these intended for fine-tuning VQA models, therefore providing, to the best of our knowledge, the most sophisticated and largest VQA dataset for CXRs yet.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 27215038197,
+    "core_doi": "10.13026/6193-he91",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 28017838528,
+    "public_project_uuid": "bb39665e-b379-47f6-b294-fe0a5933514a",
+    "publish_date": "2025-07-23",
+    "resource_type": "Database",
+    "short_description": "We present a large-scale CXR VQA dataset derived from MIMIC-CXR with 42M QA pairs, featuring hierarchical answers, bounding boxes, and structured tags. We generated QA-pairs using LLM-based extraction from radiology reports and localization models.",
+    "slug": "mimic-ext-cxr-qba",
+    "source_url": "https://physionet.org/content/mimic-ext-cxr-qba/1.0.0/",
+    "title": "MIMIC-Ext-CXR-QBA: A Structured, Tagged, and Localized Visual Question Answering Dataset with Question-Box-Answer Triplets and Scene Graphs for Chest X-ray Images",
+    "topics": [
+      "localization",
+      "chest x-rays",
+      "scene graphs",
+      "vqa"
+    ],
+    "version": "1.0.0",
+    "version_doi": "10.13026/8qmz-da41"
+  },
+  "source": "physionet"
+}

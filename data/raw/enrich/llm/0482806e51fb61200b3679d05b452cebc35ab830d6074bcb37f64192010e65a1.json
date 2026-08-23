@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:0482806e51fb61200b3679d05b452cebc35ab830d6074bcb37f64192010e65a1",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "other",
+      "critical_care"
+    ],
+    "id": "physionet:mimic-iv-ed",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "electronic health record",
+        "value": "EHR"
+      },
+      {
+        "evidence": "Vital signs",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "triage information",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "~425,000 emergency department stays at the Beth Israel Deaconess Medical Center between 2011 and 2019",
+    "summary": "Emergency department admissions database containing vital signs, triage information, medication reconciliation, medication administration and discharge diagnoses, deidentified under HIPAA Safe Harbor."
+  },
+  "prompt_version": "v1"
+}

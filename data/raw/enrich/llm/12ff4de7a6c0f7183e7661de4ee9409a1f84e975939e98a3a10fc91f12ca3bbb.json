@@ -1,0 +1,23 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:12ff4de7a6c0f7183e7661de4ee9409a1f84e975939e98a3a10fc91f12ca3bbb",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "pulmonology"
+    ],
+    "id": "physionet:lung-segment-mimic-cxr",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "1,141 frontal-view CXRs",
+        "value": "xray"
+      }
+    ],
+    "population": "Frontal-view chest X-rays randomly selected from the MIMIC-CXR database",
+    "summary": "Lung lobe segmentation results for frontal chest X-rays drawn from MIMIC-CXR, produced by deep learning algorithms and then manually filtered to remove incorrect segmentations, intended to support model interpretability."
+  },
+  "prompt_version": "v1"
+}

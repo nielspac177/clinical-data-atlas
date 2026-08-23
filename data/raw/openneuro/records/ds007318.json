@@ -1,0 +1,156 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007318",
+  "payload": {
+    "created": "2026-01-26T03:41:02.136Z",
+    "id": "ds007318",
+    "latestSnapshot": {
+      "created": "2026-01-26T15:51:40.000Z",
+      "description": {
+        "Authors": [
+          "Tianze Wang",
+          "Yunjing Li & Xin Zhao"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007318.v1.0.0",
+        "Funding": [
+          "National Natural Science Foundation of China (Grant No. 32260207)"
+        ],
+        "HowToAcknowledge": "under review",
+        "License": "CC0",
+        "Name": "fMRI Study Dataset",
+        "ReferencesAndLinks": [
+          "Northwest Normal University"
+        ]
+      },
+      "readme": "# BIDS Dataset for fMRI Study\n\nThis dataset contains fMRI data for a removal task.\nData includes:\n  - Anatomical T1-weighted images\n  - Functional BOLD images\n  - Field maps for distortion correction\n\nSubjects: 43\nSessions: 2 per subject (except where noted)\nTask: removal\n\n## Data Excluded\n\n| runs  | state     | note                |\n|-------|-----------|---------------------|\n| 1_1   | included  |                     |\n| 1_2   | included  |                     |\n| 2_1   | included  |                     |\n| 2_2   | excluded  |  quit            |\n| 3_1   | included  |                     |\n| 3_2   | included  |                     |\n| 4_1   | included  |                     |\n| 4_2   | excluded  | acc<0.5             |\n| 5_1   | included  |                     |\n| 5_2   | included  |                     |\n| 6_1   | excluded  |  quit           |\n| 6_2   | excluded  |  quit           |\n| 7_1   | included  |                     |\n| 7_2   | included  |                     |\n| 8_1   | included  |                     |\n| 8_2   | included  |                     |\n| 9_1   | included  |                     |\n| 9_2   | included  |                     |\n| 10_1  | included  |                     |\n| 10_2  | included  |                     |\n| 11_1  | included  |                     |\n| 11_2  | included  |                     |\n| 12_1  | included  |                     |\n| 12_2  | included  |                     |\n| 13_1  | included  |                     |\n| 13_2  | excluded  | acc<0.5             |\n| 14_1  | included  |                     |\n| 14_2  | included  |                     |\n| 15_1  | excluded  | acc<0.5             |\n| 15_2  | included  |                     |\n| 16_1  | included  |                     |\n| 16_2  | included  |                     |\n| 17_1  | included  |                     |\n| 17_2  | included  |                     |\n| 18_1  | included  |                     |\n| 18_2  | included  |                     |\n| 19_1  | included  |                     |\n| 19_2  | included  |                     |\n| 20_1  | included  |                     |\n| 20_2  | included  |                     |\n| 21_1  | excluded  | acc<0.5             |\n| 21_2  | excluded  | acc<0.5             |\n| 22_1  | excluded  | acc<0.5             |\n| 22_2  | excluded  | acc<0.5             |\n| 23_1  | excluded  | acc<0.5             |\n| 23_2  | included  |                     |\n| 24_1  | excluded  | acc<0.5             |\n| 24_2  | excluded  | acc<0.5             |\n| 25_1  | excluded  | acc<0.5             |\n| 25_2  | excluded  | acc<0.5             |\n| 26_1  | excluded  | acc<0.5             |\n| 26_2  | excluded  | acc<0.5             |\n| 27_1  | included  |                     |\n| 27_2  | included  |                     |\n| 28_1  | included  |                     |\n| 28_2  | included  |                     |\n| 29_1  | included  |                     |\n| 29_2  | included  |                     |\n| 30_1  | included  |                     |\n| 30_2  | included  |                     |\n| 31_1  | included  |                     |\n| 31_2  | included  |                     |\n| 32_1  | excluded  | acc<0.5             |\n| 32_2  | excluded  | acc<0.5             |\n| 33_1  | included  |                     |\n| 33_2  | excluded  | head motion         |\n| 34_1  | excluded  | head motion         |\n| 34_2  | included  |                     |\n| 35_1  | included  |                     |\n| 35_2  | included  |                     |\n| 36_1  | excluded  | acc<0.5             |\n| 36_2  | excluded  | acc<0.5             |\n| 37_1  | excluded  | head motion         |\n| 37_2  | excluded  | head motion         |\n| 38_1  | included  |                     |\n| 38_2  | included  |                     |\n| 39_1  | excluded  | head motion         |\n| 39_2  | excluded  | acc<0.5             |\n| 40_1  | excluded  | acc<0.5             |\n| 40_2  | excluded  | head motion         |\n| 41_1  | excluded  | head motion         |\n| 41_2  | excluded  | head motion         |\n| 42_1  | included  |                     |\n| 42_2  | included  | head motion         |\n| 43_1  | included  |                     |\n| 43_2  | included  | head motion         |",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "1",
+          "2"
+        ],
+        "size": 22609068537,
+        "subjects": [
+          "34",
+          "39",
+          "16",
+          "32",
+          "03",
+          "12",
+          "30",
+          "11",
+          "19",
+          "40",
+          "02",
+          "21",
+          "09",
+          "33",
+          "13",
+          "42",
+          "05",
+          "27",
+          "35",
+          "04",
+          "10",
+          "08",
+          "25",
+          "14",
+          "20",
+          "36",
+          "15",
+          "26",
+          "01",
+          "24",
+          "43",
+          "07",
+          "41",
+          "18",
+          "28",
+          "31",
+          "22",
+          "37",
+          "17",
+          "38",
+          "23",
+          "29"
+        ],
+        "tasks": [
+          "removal"
+        ],
+        "totalFiles": 919
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        23,
+        28,
+        17,
+        22,
+        28,
+        25,
+        24,
+        24,
+        20,
+        20,
+        20,
+        21,
+        20,
+        22,
+        24,
+        20,
+        25,
+        20,
+        18,
+        20,
+        22,
+        23,
+        23,
+        28,
+        23,
+        18,
+        23,
+        26,
+        21,
+        20,
+        25,
+        23,
+        18,
+        22,
+        25,
+        21,
+        28,
+        27,
+        20,
+        28,
+        20,
+        22,
+        23
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "working memory",
+      "studyLongitudinal": "Other"
+    },
+    "publishDate": "2026-01-26T15:53:03.018Z"
+  },
+  "source": "openneuro"
+}

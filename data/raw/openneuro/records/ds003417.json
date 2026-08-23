@@ -1,0 +1,125 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003417",
+  "payload": {
+    "created": "2020-12-03T21:11:25.425Z",
+    "id": "ds003417",
+    "latestSnapshot": {
+      "created": "2021-01-20T18:38:01.000Z",
+      "description": {
+        "Authors": [
+          "Paul A. Yushkevich",
+          "Mónica Muñoz López",
+          "Maria Mercedes Iñiguez de Onzoño Martin",
+          "Ranjit Ittyerah",
+          "Sydney Lim",
+          "Sadhana Ravikumar",
+          "Madigan L. Bedard",
+          "Stephen Pickup",
+          "Weixia Liu",
+          "Jiancong Wang",
+          "Ling Yu Hung",
+          "Jade Lasserve",
+          "Nicolas Vergnet",
+          "Long Xie",
+          "Mengjin Dong",
+          "Salena Cui",
+          "Lauren McCollum",
+          "John L. Robinson",
+          "Theresa Schuck",
+          "Robin de Flores",
+          "Murray Grossman",
+          "M. Dylan Tisdall",
+          "Karthik Prabhakaran",
+          "Gabor Mizsei",
+          "Sandhitsu R. Das",
+          "Emilio Artacho-Pérula",
+          "María del Mar Arroyo Jiménez",
+          "María Pilar Marcos Rabal",
+          "Francisco Javier Molina Romero",
+          "Sandra Cebada Sánchez",
+          "José Carlos Delgado González",
+          "Carlos de la Rosa-Prieto",
+          "Marta Córcoles Parada",
+          "Edward B. Lee",
+          "John Q. Trojanowski",
+          "Daniel T. Ohm",
+          "Laura E.M. Wisse",
+          "David A. Wolk",
+          "David J. Irwin",
+          "Ricardo Insausti"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds003417.v1.0.1",
+        "Funding": [
+          "NIH grant R01 AG056014",
+          "NIH grant P30 AG010124",
+          "NIH grant R01 EB017255"
+        ],
+        "HowToAcknowledge": "Please cite https://www.biorxiv.org/content/10.1101/2021.01.15.421909v1",
+        "License": "CC0",
+        "Name": "3D Mapping of Neurofibrillary Tangle Burden in the Human Medial Temporal Lobe",
+        "ReferencesAndLinks": [
+          "https://www.biorxiv.org/content/10.1101/2021.01.15.421909v1"
+        ]
+      },
+      "readme": "Dataset description\n===\nThis is a dataset to accompany the 2020 journal submission \"3D Mapping of Neurofibrillary Tangle Burden in the Human Medial Temporal Lobe\" by Yushkevich et al.. A preliminary study using a portion of this dataset was presented in \n\n* P. A. Yushkevich et al., \"3D Mapping of TAU Neurofibrillary Tangle Pathology in the Human Medial Temporal Lobe,\" 2020 IEEE 17th International Symposium on Biomedical Imaging (ISBI), Iowa City, IA, USA, 2020, pp. 1312-1316, doi: 10.1109/ISBI45749.2020.9098462.\n\nThe dataset contains ex vivo MRI scans, reconstructed Nissl histology sections, reconstructed anti-tau immmunohistochemistry sections, and derived tau neurofibrillary tangle burden maps for 18 brain donors.\n\nBIDS Directory Structure\n===\n\nSubject-level data\n---\nRaw MRI images at 7T and 9T\n\n    sub-{id}/ses-9T/anat\n    sub-{id}/ses-7T/anat\n    \nReconstructed MRI and histological data in whole-specimen space (i.e., Figure 6 in the paper):\n\n    derivatives/historecon-subjspace/sub-{id}\n\nReconstructed MRI and histological data in template space:\n\n    derivatives/historecon-tempspace/sub-{id}\n\nGroup-level data\n---\nAverage burden and frequency maps in template space (Figure 7):\n\n    derivatives/historecon-tempspace/template",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural"
+        ],
+        "sessions": [
+          "7T",
+          "9T"
+        ],
+        "size": 1266008771,
+        "subjects": [
+          "00x01",
+          "00x02",
+          "00x03",
+          "00x04",
+          "00x05",
+          "00x06",
+          "00x07",
+          "00x08",
+          "00x09",
+          "00x10",
+          "00x11",
+          "00x12",
+          "00x13",
+          "00x14",
+          "00x15",
+          "00x16",
+          "00x17",
+          "00x18"
+        ],
+        "tasks": [],
+        "totalFiles": 75
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": null,
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2020-12-04T03:06:41.685Z"
+  },
+  "source": "openneuro"
+}

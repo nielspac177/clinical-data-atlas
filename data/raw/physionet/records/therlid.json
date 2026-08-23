@@ -1,0 +1,37 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "therlid",
+  "payload": {
+    "abstract": "<p>A recent study showed that infrared (IR) sensors may be prone to calibration discrepancies among darker-pigmented patients. Similar disparities have already been verified in pulse oximetry. This raises questions about whether thermometry measurements may inadvertently overlook hypothermia, fever, or sepsis cases, potentially leading to delayed diagnoses and ultimately exacerbating poorer outcomes among vulnerable subpopulations.</p>\n\n<p>TherLiD is a derived dataset from 3 Electronic Health Record databases: MIMIC-IV, eICU-CRD-1, and eICU-CRD-2. It consists of 13,251 temperature pairs, along with comprehensive demographic data and time-synchronized hospital information, offering a detailed profile of each patient. These pairs have one reference (contact thermometers - oral, core, and rectal) and one infrared-based (temporal) temperature value measured within a 1-hour time window, with temperature values between 30&deg;C to 45&deg;C. TherLiD not only provides high-quality, clinically relevant data but also offers a reproducible framework, allowing researchers to tailor the dataset to their specific research needs, including training machine learning models. This dataset was also built to facilitate temperature-related retrospective studies and promote research on racial and ethnic healthcare disparities.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 2471003,
+    "core_doi": "10.13026/eskc-3e36",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 11206758,
+    "public_project_uuid": "4022fdc3-27b4-4014-a6ff-8f8f9b459737",
+    "publish_date": "2025-01-21",
+    "resource_type": "Database",
+    "short_description": "TherLiD is an open-source dataset of 13,251 paired temperature readings (contact and infrared) from MIMIC-IV and eICU databases. With added demographics and derived data, it supports research on racial and ethnic disparities in infrared thermometry.",
+    "slug": "therlid",
+    "source_url": "https://physionet.org/content/therlid/1.0.0/",
+    "title": "TherLid: A Thermometry Linked Dataset",
+    "topics": [
+      "thermometry",
+      "intensive care unit",
+      "health equity",
+      "electronic health records"
+    ],
+    "version": "1.0.0",
+    "version_doi": "10.13026/tkww-8b64"
+  },
+  "source": "physionet"
+}

@@ -1,0 +1,67 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006721",
+  "payload": {
+    "created": "2025-09-27T00:31:09.742Z",
+    "id": "ds006721",
+    "latestSnapshot": {
+      "created": "2025-09-29T15:16:52.000Z",
+      "description": {
+        "Authors": [
+          "Kevin Xu",
+          "Andrew Stark",
+          "Hong Chen",
+          "Ilya E. Monosov"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006721.v1.0.0",
+        "Funding": [
+          "NIH UG3MH126861"
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Measuring brain temperature in response to focused ultrasound using MR thermometry",
+        "ReferencesAndLinks": null
+      },
+      "readme": "# README\n## Details related to access to the data\n\n-   [ ] Contact person\n\nName: Hong Chen\nEmail: hongchen@wustl.edu\n\n-   [ ] Practical information to access the data\n\nThe data includes acquired field map images measure the temperature of the brain in response to ultrasound stimulation. The acquired MR field maps (magnitude and phase) were then converted to temperature maps using Image Guided Therapy Thermoguide software.\n(http://www.imageguidedtherapy.com/Software/Software-for-real-time-monitoring-and-control-of-thermal-ablation.html).\n\nThis dataset only includes the raw magnitude and phase files acquired from the MR scanner.\n\n## Overview\n-   [ ] Brief overview of the tasks in the experiment\n\nThe purpose of the experiment is to measure the temperature of the brain in response to focused ultrasound stimulation of the brain.\nTo measure the temperature of the brain, we utilized MR-thermometry, which can non-invasively measure relative changes temperatures in the brain in response to an event.\nIn this case, the event is a stimuli of focused ultrasound applied to the brain.\n\n-   [ ] Description of the contents of the dataset\n\nThe dataset contains:\n(1) an anatomical T1-MPRAGE image acquired at the beginning of the scan,\n(2) magnitude and phase field map images which are needed to create a temperature map of the brain,\n(3) accompanying T2-FLAIR images to assess the safety of the stimulation before proceeding with further scans.\n\nFor (2) and (3), there are multiple runs (i.e. run-01 through run-09).\nrun-01 corresponds to the baseline / sham condition.\nrun-02, -03, and -04 correspond to stimulation at 150 mVpp, or 1.05 MPa.\nrun-05, -06, and -07 correspond to stimulation at 200 mVpp, or 1.40 MPa.\n\n-   [ ] Independent variables\n\nUltrasound is a type of energy that can be manipulated in several ways to alter the amount of energy delivered to the brain at any given time.\nFor this experiment, we manipulated the acoustic pressure by changing the input voltage to drive the ultrasound transducer.\nThe acoustic pressure is proportional to the ultrasound power and intensity delivered.\n\n-   [ ] Dependent variables\n\nThe temperature of the brain in the target region was measured in response to changes in acoustic pressure.\n\n-   [ ] Control variables\n\nN/A.\n\n-   [ ] Quality assessment of the data\n\nQuality assessment of the data was performed by evaluating the temperature maps on Thermoguide to see if the temperature rise in response to FUS follows reasonable heating and cooling kinetics consistent with literature.\n\n## Methods\n\n### Subjects\n\nA brief sentence about the subject pool in this experiment.\n\nThe subject was a male rhesus macaque, aged 11 at the time of data acquisition.\nThe subject had two recording chambers with craniotomy on each hemisphere to enable access to the brain for electrophysiological recording and stimulation.\nAll procedures conducted to the subject was approved by the IACUC protocol.\n\n### Apparatus\n\nThe subject was placed in the prone position with the head fixed in an MR-compatible large animal stereotaxic frame.\nThe ultrasound system contained:\n(1) a function generator that generates the ultrasound waveform,\n(2) a power amplifier to amplifier the energy from the function generator,\n(3) the ultrasound device + housing which delivers ultrasound energy to the subject's brain.\n\n(1) and (2) are not MR-compatible and placed inside the MR control room. (3) is connected to (1) and (2) via a long wire that is passed through a small hole that connects the MR scanner room with the MR control room.\n\n### Initial setup\n\nPrior to the experiment, the subject's recording chambers were cleaned thoroughly with aseptic technique. The subject was then anesthetized in the home cage and transported to the MR-scanning bay.\nThe subject was brought to the MR-scanner bed and placed in the prone position. The anesthesia system was promptly switched from the animal transport cart to the MR-compatible anesthesia system. A pulse-oximeter sensor was attached to the subject's fingers to ensure proper anesthesia depth throughout the whole experiment. The subject's vitals were checked to ensure the subject was under stable anesthesia before proceeding with other procedures.\nThe subject's head was fixed in an MR-compatible large animal stereotaxic frame to reduce motion during the data acquisition period.\nSterilized ultrasound gel was applied inside the recording chambers. A sterile syringe was used to remove any bubbles present from loading the ultrasound gel.\nThe ultrasound device was sterilized using sterile alcohol swabs. Sterilized ultrasound gel was also applied to the surface of the device (the transducer) to ensure adequate coupling.\nThe ultrasound device was inserted into the chamber and fixed via the device housing fitting tightly to the subject's recording chamber.\nThe ultrasound device was then connected to the rest of the ultrasound system via a long wire.\nThe subject was covered with warm blankets.\n\n### Task organization\n\nNo task was performed during the acquisition of this dataset.\n\n### Task details\n\nNo task was performed during the acquisition of this dataset.\nThe ultrasound device contained a transducer with the following properties:\nDL-47 (DeL Piezo Specialties, LLC), 15 mm diameter, 25 mm radius of curvature, 1.5 MHz resonance frequency.\n\nUltrasound stimulation was delivered with the following parameters:\n1.5 MHz frequency, 10 HZ PRF, 50% duty cycle, 15s stimulation duration, acoustic pressure 0 - 1.4 MPa.\nAt 0 mVpp, the acoustic pressure is 0 MPa.\nAt 150 mVpp, the acoustic pressure was approximately 1.05 MPa.\nAt 200 mVpp, the acoustic pressure was approximately 1.40 MPa.\n\nThe stimulation was triggered by a TTL signal from the MR control room to the function generator. The stimulation always started on frame 10 out of 100 total acquisition frames.\n\n### Additional data acquired\n\nNo additional data was acquired.\n\n### Experimental location\n\nPlease refer to JSON files for more details.\n\n### Missing data\n\nN/A.\n\n### Notes\n\nN/A.",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural"
+        ],
+        "sessions": [
+          "01"
+        ],
+        "size": 1272247024,
+        "subjects": [
+          "01"
+        ],
+        "tasks": [],
+        "totalFiles": 47
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "NIH",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Monkey",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": "Experimental study"
+    },
+    "publishDate": "2025-09-29T15:17:22.269Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,128 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds001545",
+  "payload": {
+    "created": "2018-10-10T16:14:59.237Z",
+    "id": "ds001545",
+    "latestSnapshot": {
+      "created": "2019-07-23T16:04:48.000Z",
+      "description": {
+        "Authors": [
+          "Aly, M.",
+          "Chen, J.",
+          "Turk-Browne, N.B.",
+          "Hasson, U."
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds001545.v1.1.1",
+        "Funding": [],
+        "HowToAcknowledge": "Please cite the paper in References And Links. ",
+        "License": "",
+        "Name": "Learning Naturalistic Temporal Structure in the Posterior Medial Network",
+        "ReferencesAndLinks": [
+          "https://www.mitpressjournals.org/doi/full/10.1162/jocn_a_01308"
+        ]
+      },
+      "readme": "Participants watched three different clips from the movie \"The Grand Budapest Hotel\", six times each. \n\nOne clip was \"intact\" (viewed in its original order); one clip was scrambled but viewed in the same scrambled order for all six repetitions (\"scrambled-fixed\"). The last clip was also scrambled, but viewed in a different scrambled order for each of the six repetitions (\"scrambled-random\").\n\n**TIMING**\nThe onset times in each '_events.tsv' reflects the onset times (in seconds) after discarding 3 volumes in a preprocessing step (for T1 equilibration). For these timing files to be relevant, first discard 3 volumes at the beginning of each functional run.\n\nThe \"waiting for scanner\" period at the beginning of the run-specific mp4 files takes longer than 4.5s (3 volumes at 1.5s TR) because the first multiband volume takes a long time to collect. Therefore, although the countdown to the first movie clip does not start until 37 seconds into each run-specific mp4, only 3 volumes were collected during that time. The first clip in each run onsets right after the countdown, which takes 6 seconds.\n\nFor convenience, below is a list of which volumes correspond to which movie clip in each run, after discarding the first 3 volumes of each run:\nClip 1: volumes 5 to 64 \nClip 2: volumes 71 to 130 \nClip 3: volumes 137 to 196 \nClip 4: volumes 203 to 262 \nClip 5: volumes 269 to 328 \nClip 6: volumes 335 to 394 \n\nTiming is the same for all subjects and runs, though the assignment of specific movie clips to each of these 6 positions varies between runs and between counterbalancing conditions 1 and 2.\n\n**COUNTERBALANCING CONDITIONS**\nSubjects 1-15 are in counterbalancing condition #1 (stimuli labeled cond1); they viewed identical stimuli in the same order\n\nSubjects 16-30 are in counterbalancing condition #2 (stimuli labeled cond2); they viewed identical stimuli in the same order. \n\nSubjects in counterbalancing conditions 1 & 2 watched the same 'intact' clip. The 'scrambled-fixed' clip for subjects in counterbalancing condition 1 was the 'scrambled-random' clip for subjects in counterbalancing condition 2, and vice versa. \n\n**FURTHER HELP**\nSee the paper in References And Links for more information. The first author (Dr. Mariam Aly) can provide further clarification if needed.",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 28569172541,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30"
+        ],
+        "tasks": [
+          "movie watching"
+        ],
+        "totalFiles": 433
+      },
+      "tag": "1.1.1"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        29,
+        27,
+        28,
+        25,
+        27,
+        20,
+        21,
+        21,
+        33,
+        23,
+        32,
+        32,
+        24,
+        23,
+        18,
+        22,
+        22,
+        19,
+        20,
+        21,
+        22,
+        21,
+        18,
+        21,
+        19,
+        20,
+        21,
+        21,
+        19,
+        22
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2018-10-10T16:14:59.237Z"
+  },
+  "source": "openneuro"
+}

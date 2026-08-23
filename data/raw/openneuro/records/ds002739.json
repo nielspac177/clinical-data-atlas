@@ -1,0 +1,87 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds002739",
+  "payload": {
+    "created": "2020-04-24T20:47:46.085Z",
+    "id": "ds002739",
+    "latestSnapshot": {
+      "created": "2020-05-05T21:47:33.000Z",
+      "description": {
+        "Authors": [
+          "Sabina Gherman",
+          "Marios G. Philiastides"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds002739.v1.0.0",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Simultaneous EEG-fMRI - Confidence in perceptual decisions",
+        "ReferencesAndLinks": null
+      },
+      "readme": "OpenNeuro curator note: This dataset was previously accessible at ds001512. The dataset was reuploaded due to privacy considerations. \n\nEEG\n\nEEG_data contains preprocessed EEG data (see below for preprocessing details). EEG_events contains event times and behavioural data. There is a file for each of the two experimental sessions of each subject.\n\n\nEEG data\nEEGdata: [number_of_valid_electrodes x data_samples] - EEG activity for all electrodes across time\nfs: 1000 - sampling frequency (after preprocessing)\nexcludedchannels: [1 x number_of_electrodes] - indices of channels removed from analysis \n\n\nEEG events\ndotdirection: [1 x number_of_valid_trials] - direction of coherent motion in dot stimulus (1=left, 2=right)\nchoice: [1 x number_of_valid_trials] - subject's direction choice (1=left, 2=right)\naccuracy: [1 x number_of_valid_trials] - accuracy of direction choice (1=correct, 0=incorrect)\nRT: [1 x number_of_valid_trials] - response time on direction choice (milliseconds)\nconfidence: [1 x number_of_valid_trials] - confidence report\ntstim: [1 x number_of_valid_trials] - onset of visual motion stimulus\ntresp: [1 x number_of_valid_trials] - time of perceptual choice\ntconf: [1 x number_of_valid_trials] - onset of confidence rating visual prompt\ntotaltrials: 160 - original number of trials in the experimental session\nexcludedtrials: [1 x number_of_trials] - indices of trials excluded from analysis\n\n\nfMRI\n\"_bold\" and \"_events\" files contain preprocessed fMRI data and relevant events, respectively, for each subject and experimental session.\n\nfMRI events\ndot_stim_validtrials - random dot motion stimulus, for valid trials only\ndot_resp_validtrials - subjects' responses on the motion discrimination task, for valid trials only\nrating_stim_validtrials - confidence rating visual prompt, for valid trials only\n\nrating_firstresp_alltrials - first button press during confidence rating, for all trials where at least one button was pressed (valid + invalid trials); duration represents time difference between first and last button press\nrating_allresp_alltrials - all motor activity during confidence rating, for all trials where at least one button was pressed (valid + invalid trials); each entry represents one button press; multiple consecutive entries can belong to the same trial)\nrest_break - task-unrelated periods of time where subject received no visual stimulation\ndot_stim_alltrials - random dot motion stimulus, for all trials in the session (valid + invalid trials)\nrating_stim_alltrials - confidence rating visual prompt, for all trials where this was presented (valid + invalid trials)\n\nmotionparams_rotX - head motion parameters (rotation, x axis) in radians\nmotionparams_rotY - head motion parameters (rotation, y axis) in radians\nmotionparams_rotZ - head motion parameters (rotation, z axis) in radians\nmotionparams_translX - head motion parameters (translation, x axis) in mm\nmotionparams_translY- head motion parameters (translation, y axis) in mm\nmotionparams_translZ- head motion parameters (translation, z axis) in mm\n\n***\n\nMETHODS OF EEG PREPROCESSING\nPreprocessing of the EEG signals was performed using Matlab (Mathworks, Natick, MA). EEG signals recorded inside an MR scanner are contaminated with gradient artifacts and ballistocardiogram (BCG) artifacts due to magnetic induction on the EEG leads. To correct for gradient-related artifacts, we constructed average artifact templates from sets of 80 consecutive functional volumes centred on each volume of interest, and subtracted these from the EEG signal. This process was repeated for each functional volume in the dataset. Additionally, we applied a 12 ms median filter to remove any residual spike artifacts. We corrected for standard EEG artifacts and applied a 0.5-40 Hz band-pass filter to remove slow DC drifts and high frequency noise. All data were downsampled to 1000 Hz. \n\nTo remove eye movement artifacts, subjects performed an eye movement calibration task prior to the main experiment (with the MRI scanner turned off, to avoid gradient artifacts), where they were instructed to blink repeatedly several times while a central fixation cross was displayed in the centre of the computer screen, and to make lateral and vertical saccades according to the position of a fixation. We used principal component analysis to identify linear components associated with blinks and saccades, which were subsequently removed from the EEG data (Parra et al., 2005). \n\nNext, we corrected for cardiac-related (i.e., ballistocardiogram, BCG) artifacts. To minimise loss of signal power in the underlying EEG signal, we adopted a conservative approach by only removing a small number of subject-specific BCG components, using principal component analysis. We relied on the single-trial classifiers to identify discriminating components that are likely to be orthogonal to the BCG. BCG principal components were extracted from the data after low-pass filtering (at 4 Hz), to extract the signal within the frequency range where BCG artifacts are observed. Subject-specific principal components were then determined (average number of components across subjects: 1.8). The sensor weightings corresponding to those components were projected onto the broadband data and subtracted out. Finally, data were baseline corrected by removing the average signal during the 100 ms prestimulus interval.\n\n\nMETHODS FOR FMRI PREPROCESSING\nThe first 10 volumes prior to task onset were discarded from each fMRI run to ensure a steady-state MR signal. Additionally, 13 volumes were discarded from the post-task period at the end of each block. The remaining 771 volumes were used for statistical analyses. Pre-processing of the MRI data was performed using the FEAT tool of the FSL software (http://www.fmrib.ox.ac.uk/fsl) and included slice-timing correction, high-pass filtering (>100 s), and spatial smoothing (with a Gaussian kernel of 8 mm full width at half maximum), and head motion correction (using the MCFLIRT tool). The motion correction preprocessing step generated motion parameters which were subsequently included as regressors of no interest in the general linear model (GLM) analysis (see fMRI analysis below). Brain extraction of the structural and functional images was performed using the Brain Extraction tool (BET). Registration of EPI images to standard space (Montreal Neurological Institute, MNI) was performed using the Non-linear Image Registration Tool with a 10-mm warp resolution. The registration procedure involved transforming the EPI images into an individual's high-resolution space (with a linear, boundary-based registration algorithm (Greve and Fischl, 2009) prior to transforming to standard space. Registration outcome was visually checked for each subject to ensure correct alignment.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 7634199975,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24"
+        ],
+        "tasks": [
+          "main"
+        ],
+        "totalFiles": 125
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": null,
+      "associatedPaperDOI": "10.7554/eLife.38293",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "multimodal",
+      "studyDomain": "decision formulation",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2020-05-19T00:15:52.783Z"
+  },
+  "source": "openneuro"
+}

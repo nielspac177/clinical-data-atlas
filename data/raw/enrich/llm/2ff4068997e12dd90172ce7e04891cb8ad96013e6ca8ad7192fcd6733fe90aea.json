@@ -1,0 +1,46 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:2ff4068997e12dd90172ce7e04891cb8ad96013e6ca8ad7192fcd6733fe90aea",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "physical stress",
+        "label": "physical stress"
+      },
+      {
+        "evidence": "cognitive stress",
+        "label": "cognitive stress"
+      },
+      {
+        "evidence": "emotional stress",
+        "label": "emotional stress"
+      },
+      {
+        "evidence": "emotional stress and relaxation",
+        "label": "relaxation"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "physionet:noneeg",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Non-EEG physiological signals",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "non-invasive wrist worn biosensors",
+        "value": "wearable"
+      }
+    ],
+    "population": "20 healthy subjects",
+    "summary": "Wrist-worn biosensor recordings of electrodermal activity, temperature, acceleration, heart rate and arterial oxygen level from healthy subjects, used to infer neurological status across stress and relaxation states."
+  },
+  "prompt_version": "v1"
+}

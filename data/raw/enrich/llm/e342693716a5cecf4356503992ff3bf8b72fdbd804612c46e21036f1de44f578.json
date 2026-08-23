@@ -1,0 +1,44 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:e342693716a5cecf4356503992ff3bf8b72fdbd804612c46e21036f1de44f578",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "prior to the development of prediabetes",
+        "label": "prediabetes"
+      },
+      {
+        "evidence": "prediabetes and hyperglycemia risk",
+        "label": "hyperglycemia"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "endocrinology_metabolism"
+    ],
+    "id": "physionet:big-ideas-glycemic-wearable",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "wrist-worn wearable sensor data",
+        "value": "wearable"
+      },
+      {
+        "evidence": "heart rate, accelerometry, and electrodermal conductance",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "Blood was collected during the study for measurement of glucose, hemoglobin A1C, lipoproteins, and triglycerides",
+        "value": "clinical_tabular"
+      },
+      {
+        "evidence": "continuous glucose monitor (CGM)",
+        "value": "other"
+      }
+    ],
+    "population": "subjects aged 35-65 years, inclusive, including only post-menopausal females, with a point of care A1C measurement between 5.2-6.4%",
+    "summary": "Continuous glucose monitor readings and wrist-worn wearable sensor data collected over 10 days, with blood measurements and an oral glucose tolerance test, to study wearable detection of early physiological changes before prediabetes."
+  },
+  "prompt_version": "v1"
+}

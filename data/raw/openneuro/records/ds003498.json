@@ -1,0 +1,83 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003498",
+  "payload": {
+    "created": "2021-02-01T13:44:55.139Z",
+    "id": "ds003498",
+    "latestSnapshot": {
+      "created": "2023-09-26T00:54:04.000Z",
+      "description": {
+        "Authors": [
+          "Fedele T",
+          "Krayenbühl N",
+          "Hilfiker P",
+          "Adam Li",
+          "Sarnthein J."
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds003498.v1.1.1",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "interictal iEEG during slow-wave sleep with HFO markings",
+        "ReferencesAndLinks": null
+      },
+      "readme": "Zurich iEEG HFO Dataset\n====================\n\nThis dataset was obtained from the publication [1].\n\nThere are 20 subjects with HFO events. We converted the dataset into BIDS format. The channels that were included in the resected region and channels excluded from analysis are included in the clinical Excel file under the ``sourcedata/`` directory. The channels were extracted from the Supplementary table at: https://static-content.springer.com/esm/art%3A10.1038%2Fs41598-017-13064-1/MediaObjects/41598_2017_13064_MOESM1_ESM.pdf.\n\nThe original uploader: adam2392 obtained explicit permission from the authors of the dataset to upload this to openneuro. Adam worked on an open-source Python implementation of HFO detection algorithms, and uses this dataset in validation. Even though the publication involves a ``Morphology`` HFO detector, we have implemented our interpretation of the RMS, LineLength and Hilbert detectors in the [mne-hfo repository] (https://github.com/mne-tools/mne-hfo) [2].For more information, visit: https://github.com/mne-tools/mne-hfo.\n\n# Note from the paper\n\"We excluded all electrode contacts where electrical stimulation evoked motor or language responses (Table S1).\nIn TLE patients, we included only the 3 most mesial bipolar channels\".\n\nBIDS Conversion\n------------------------\n\nMNE-BIDS was used to convert the dataset into BIDS format. The code inside `code/` was used to generate the\ndata.\n\nHFO Events From Original Paper\n----------------------------------------------\n\nThe HFO events from the original paper that were validated and detected are stored in the `*events.tsv` file per dataset run. The format is similar to ``mne-hfo`` and can be easily read in using ``mne-bids`` and/or ``mne-python``.\n\nEach row in the events.tsv file corresponds to a HFO detected in the original source dataset. The ``trial_type`` column stores the information pertaining type of HFO (e.g. ``ripple``, ``fr`` for fast ripple, or ``frandr`` for fast ripple and ripple). The channel name (possibly in bipolar reference) is `\"-\"` character delimited and appended to the type of HFO with a `\"_\"` separating. For example: ``<hfo_type>_<channel_name>`` is the form. \n\nReference Dataset\n---------------------------\n\nThe following website was where the original data was downloaded.\n\nhttp://crcns.org/data-sets/methods/ieeg-1\n\nReferences\n----------------\n\n[1] Fedele T, Burnos S, Boran E, Krayenbühl N, Hilfiker P, Grunwald T, Sarnthein J.\nResection of high frequency oscillations predicts seizure outcome in the individual patient.\nScientific Reports. 2017;7(1):13836.\nhttps://www.nature.com/articles/s41598-017-13064-1\ndoi:10.1038/s41598-017-13064-1\n\n[2] Dataset meta analysis with mne-hfo. 10.5281/zenodo.4485036\n\n[3] Appelhoff, S., Sanderson, M., Brooks, T., Vliet, M., Quentin, R., Holdgraf, C., Chaumon, M., Mikulan, E., Tavabi, K., Höchenberger, R., Welke, D., Brunner, C., Rockhill, A., Larson, E., Gramfort, A. and Jas, M. (2019). MNE-BIDS: Organizing electrophysiological data into the BIDS format and facilitating their analysis. Journal of Open Source Software 4: (1896). https://doi.org/10.21105/joss.01896\n\n[4] Holdgraf, C., Appelhoff, S., Bickel, S., Bouchard, K., D'Ambrosio, S., David, O., … Hermes, D. (2019). iEEG-BIDS, extending the Brain Imaging Data Structure specification to human intracranial electrophysiology. Scientific Data, 6, 102. https://doi.org/10.1038/s41597-019-0105-7\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "ieeg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [
+          "interictalsleep"
+        ],
+        "size": 48030875385,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20"
+        ],
+        "tasks": [],
+        "totalFiles": 2335
+      },
+      "tag": "1.1.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": null,
+      "associatedPaperDOI": "https://doi.org/10.1038/s41598-017-13064-1",
+      "dataProcessed": null,
+      "dxStatus": "Epilepsy",
+      "grantFunderName": "Swiss National Science Foundation",
+      "modalities": [
+        "ieeg"
+      ],
+      "species": "Human",
+      "studyDesign": "observational",
+      "studyDomain": "",
+      "studyLongitudinal": "Longitudinal"
+    },
+    "publishDate": "2021-03-10T15:56:12.138Z"
+  },
+  "source": "openneuro"
+}

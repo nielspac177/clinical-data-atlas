@@ -1,0 +1,42 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "symile-mimic",
+  "payload": {
+    "abstract": "<p>Symile-MIMIC is a multimodal clinical dataset derived from MIMIC-IV and MIMIC-CXR, consisting of chest X-rays (CXRs), electrocardiograms (ECGs), and blood laboratory tests. It was developed to evaluate Symile, a contrastive learning objective designed to handle multiple modalities and enable any model to generate representations for each modality. The dataset explores whether ECG and blood work collected at admission are predictive of a CXR taken shortly thereafter. Symile-MIMIC includes 11,622 admissions, split into training, validation, and test sets with no patient overlap between splits. Each sample contains an ECG, a CXR, and up to 50 common blood lab results. This module provides: (1) the dataset in CSV format, (2) pre-processed tensors of the dataset, (3) the code to generate the dataset from MIMIC-IV and MIMIC-CXR, and (4) the best model checkpoint trained on the Symile-MIMIC dataset using the Symile objective.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 8129800256,
+    "core_doi": "10.13026/762h-qf80",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 34439695796,
+    "public_project_uuid": "d773f7bf-f6c7-4d17-9b2f-7cac181dcc32",
+    "publish_date": "2025-01-28",
+    "resource_type": "Database",
+    "short_description": "A multimodal clinical dataset consisting of CXRs, ECGs, and blood labs, designed to evaluate Symile, a simple contrastive loss that accommodates any number of modalities and allows any model to produce representations for each modality.",
+    "slug": "symile-mimic",
+    "source_url": "https://physionet.org/content/symile-mimic/1.0.0/",
+    "title": "Symile-MIMIC: a multimodal clinical dataset of chest X-rays, electrocardiograms, and blood labs from MIMIC-IV",
+    "topics": [
+      "contrastive learning",
+      "model",
+      "cxr",
+      "multimodal",
+      "chest x-ray",
+      "mimic",
+      "ecg",
+      "electrocardiogram",
+      "database"
+    ],
+    "version": "1.0.0",
+    "version_doi": "10.13026/3vvj-s428"
+  },
+  "source": "physionet"
+}

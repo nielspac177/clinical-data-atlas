@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:8327d73e01ef32b78e1d0f87cb640e0332e5383383ab32396878e44540e18b0e",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "acute respiratory failure (4h and 12h)",
+        "label": "acute respiratory failure"
+      },
+      {
+        "evidence": "and shock (4h and 12h)",
+        "label": "shock"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "critical_care",
+      "pulmonology"
+    ],
+    "id": "physionet:mimic-eicu-fiddle-feature",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "two large-scale electronic health record (EHR) databases",
+        "value": "EHR"
+      },
+      {
+        "evidence": "high-dimensional feature representations (up to ~8,000 features)",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "Patient records in MIMIC-III and eICU, two large-scale electronic health record databases",
+    "summary": "Preprocessed features and labels derived from MIMIC-III and eICU-CRD records using the FIDDLE pipeline, covering five prediction tasks for in-hospital mortality, acute respiratory failure and shock, released for reproducible machine learning research."
+  },
+  "prompt_version": "v1"
+}

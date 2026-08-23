@@ -1,0 +1,76 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds001547",
+  "payload": {
+    "created": "2018-10-11T19:20:44.038Z",
+    "id": "ds001547",
+    "latestSnapshot": {
+      "created": "2018-10-12T15:54:03.000Z",
+      "description": {
+        "Authors": [
+          "Renzo Huber"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds001547.v1.1.0",
+        "Funding": [],
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "Layer VASO in visual system",
+        "ReferencesAndLinks": []
+      },
+      "readme": "# High-resolution VASO in V1\n\nRenzo Huber \n\n### Abstract\nWith recent developments of ultra-high field MRI and high-resolution CBV-sensitive VASO sequences, it became possible to measure activity changes across cortical depths in brain areas of large cortical thicknesses (4mm in M1). Applications of layer-dependent CBV-fMRI in the visual cortex, however, have been complicated by long arterial-arrival-times, coverage requirements, and lower cortical thickness (1.9mm). Here, we developed new sequence setups for layer-dependent acquisition of CBV changes during tasks and resting-state. We find that the proposed large-coverage VASO protocols with 0.8mm (iso) resolutions can pinpoint feedforward and feedback input into V1 from LGN and V5 during tasks and resting-state. \nThe data uploaded here are used in the ISMRM abstract entitled: Measuring layer-dependent CBV fMRI in the visual system.\nA full list of sequence parameters can be found here: https://github.com/layerfMRI/Sequence_Github/blob/master/Visual/S26_protocol.pdf\nA description of all the pitfalls in acquiring these data is given here: https://layerfmri.com/2018/04/12/ss-si-vaso-pitfalls-in-visual-cortex/ ",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 12403428710,
+        "subjects": [
+          "180817ANDV1LGN",
+          "180921JOSV1LGN",
+          "180928CHEV1LGN",
+          "181004LEEV1LGN",
+          "181015ANDV1LGN"
+        ],
+        "tasks": [
+          "imagery",
+          "rest",
+          "swirly stars"
+        ],
+        "totalFiles": 84
+      },
+      "tag": "1.1.0"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        32,
+        23,
+        25,
+        21,
+        33,
+        32
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2018-10-11T19:20:44.038Z"
+  },
+  "source": "openneuro"
+}

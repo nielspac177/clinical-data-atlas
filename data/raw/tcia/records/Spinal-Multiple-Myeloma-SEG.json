@@ -1,0 +1,807 @@
+{
+  "endpoints": [
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getCollectionValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getModalityValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getBodyPartValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getPatient",
+    "https://api.datacite.org/dois?prefix=10.7937"
+  ],
+  "harvest_method": "api:nbia+datacite",
+  "native_id": "Spinal-Multiple-Myeloma-SEG",
+  "payload": {
+    "datacite": {
+      "citationCount": 0,
+      "container": {},
+      "contentUrl": null,
+      "contributors": [],
+      "created": "2025-06-17T15:38:55Z",
+      "creators": [
+        {
+          "affiliation": [],
+          "familyName": "Nohel",
+          "givenName": "Michal",
+          "name": "Nohel, Michal",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-2679-2160",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Valek",
+          "givenName": "Vlastimil",
+          "name": "Valek, Vlastimil",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0001-6851-9595",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Rohan",
+          "givenName": "Tomas",
+          "name": "Rohan, Tomas",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-7105-583X",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Stork",
+          "givenName": "Martin",
+          "name": "Stork, Martin",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-7072-8537",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Jakubicek",
+          "givenName": "Roman",
+          "name": "Jakubicek, Roman",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0003-4293-260X",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Chmelik",
+          "givenName": "Jiri",
+          "name": "Chmelik, Jiri",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0001-9950-6279",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Dostál",
+          "givenName": "Marek",
+          "name": "Dostál, Marek",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0003-1740-9227",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        }
+      ],
+      "dates": [],
+      "descriptions": [
+        {
+          "description": "This dataset consists of dual-energy low-dose CT scans from 67 patients diagnosed with multiple myeloma, with a total of 72 scans. The dataset includes conventional CT images, virtual monoenergetic images (at 40, 80, and 120 keV), calcium-suppressed images (with suppression indices of 25, 50, 75, and 100), as well as segmentation masks of vertebrae (including vertebra type classification) and multiple myeloma lesions in the spine. In total, the dataset contains 576 image series comprising 564,464 axial slices. \n\nIn addition to image data, the dataset provides supporting non-image information, including basic demographic details of patients (mean age 66 years, range 48–85; 36% female) and their clinical data related to disease progression. \n\nThis dataset holds substantial promise for advancing and objectively evaluating Computer-Aided Detection and Diagnostic systems, particularly those based on machine learning and artificial intelligence. ",
+          "descriptionType": "Abstract",
+          "lang": null
+        }
+      ],
+      "doi": "10.7937/k4qv-hh78",
+      "downloadCount": 0,
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "Spinal-Multiple-Myeloma-SEG",
+          "identifierType": "TCIA Shortname"
+        }
+      ],
+      "isActive": true,
+      "language": null,
+      "metadataVersion": 2,
+      "partCount": 0,
+      "partOfCount": 0,
+      "publicationYear": 2026,
+      "published": null,
+      "publisher": "The Cancer Imaging Archive",
+      "reason": null,
+      "referenceCount": 6,
+      "registered": "2026-03-27T19:46:10Z",
+      "relatedIdentifiers": [],
+      "relatedItems": [],
+      "rightsList": [
+        {
+          "rights": "Creative Commons Attribution 4.0 International",
+          "rightsIdentifier": "cc-by-4.0",
+          "rightsIdentifierScheme": "SPDX",
+          "rightsUri": "https://creativecommons.org/licenses/by/4.0/legalcode",
+          "schemeUri": "https://spdx.org/licenses/"
+        }
+      ],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "fabricaForm",
+      "state": "findable",
+      "subjects": [],
+      "titles": [
+        {
+          "lang": null,
+          "title": "Segmentation of spinal multiple myeloma lesions in dual-energy CT (Spinal-Multiple-Myeloma-SEG)",
+          "titleType": null
+        },
+        {
+          "lang": null,
+          "title": "Spinal-Multiple-Myeloma-SEG",
+          "titleType": "AlternativeTitle"
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2026-03-27T19:46:10Z",
+      "url": "https://www.cancerimagingarchive.net/collection/Spinal-Multiple-Myeloma-SEG",
+      "version": "1",
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 2441
+    },
+    "nbia": {
+      "body_parts": [
+        "LSPINE"
+      ],
+      "collection": "Spinal-Multiple-Myeloma-SEG",
+      "modalities": [
+        "CT",
+        "SEG"
+      ],
+      "patients": [
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_014",
+          "PatientName": "Myel_014",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_063",
+          "PatientName": "Myel_063",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_056",
+          "PatientName": "Myel_056",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_002",
+          "PatientName": "Myel_002",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_028",
+          "PatientName": "Myel_028",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_062",
+          "PatientName": "Myel_062",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_001",
+          "PatientName": "Myel_001",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_046",
+          "PatientName": "Myel_046",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_071",
+          "PatientName": "Myel_071",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_057",
+          "PatientName": "Myel_057",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_027",
+          "PatientName": "Myel_027",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_072",
+          "PatientName": "Myel_072",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_068",
+          "PatientName": "Myel_068",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_016",
+          "PatientName": "Myel_016",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_077",
+          "PatientName": "Myel_077",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_025",
+          "PatientName": "Myel_025",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_042",
+          "PatientName": "Myel_042",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_029",
+          "PatientName": "Myel_029",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_031",
+          "PatientName": "Myel_031",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_034",
+          "PatientName": "Myel_034",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_039",
+          "PatientName": "Myel_039",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_065",
+          "PatientName": "Myel_065",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_020",
+          "PatientName": "Myel_020",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_041",
+          "PatientName": "Myel_041",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_006",
+          "PatientName": "Myel_006",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_045",
+          "PatientName": "Myel_045",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_017",
+          "PatientName": "Myel_017",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_055",
+          "PatientName": "Myel_055",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_050",
+          "PatientName": "Myel_050",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_040",
+          "PatientName": "Myel_040",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_022",
+          "PatientName": "Myel_022",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_053",
+          "PatientName": "Myel_053",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_051",
+          "PatientName": "Myel_051",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_003",
+          "PatientName": "Myel_003",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_060",
+          "PatientName": "Myel_060",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_054",
+          "PatientName": "Myel_054",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_058",
+          "PatientName": "Myel_058",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_009",
+          "PatientName": "Myel_009",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_036",
+          "PatientName": "Myel_036",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_048",
+          "PatientName": "Myel_048",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_011",
+          "PatientName": "Myel_011",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_008",
+          "PatientName": "Myel_008",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_038",
+          "PatientName": "Myel_038",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_010",
+          "PatientName": "Myel_010",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_066",
+          "PatientName": "Myel_066",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_064",
+          "PatientName": "Myel_064",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_019",
+          "PatientName": "Myel_019",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_015",
+          "PatientName": "Myel_015",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_067",
+          "PatientName": "Myel_067",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_030",
+          "PatientName": "Myel_030",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_005",
+          "PatientName": "Myel_005",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_007",
+          "PatientName": "Myel_007",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_079",
+          "PatientName": "Myel_079",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_004",
+          "PatientName": "Myel_004",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_026",
+          "PatientName": "Myel_026",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_044",
+          "PatientName": "Myel_044",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_081",
+          "PatientName": "Myel_081",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_080",
+          "PatientName": "Myel_080",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_078",
+          "PatientName": "Myel_078",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_021",
+          "PatientName": "Myel_021",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_033",
+          "PatientName": "Myel_033",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_061",
+          "PatientName": "Myel_061",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_012",
+          "PatientName": "Myel_012_a",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_043",
+          "PatientName": "Myel_043_a",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_018",
+          "PatientName": "Myel_018_a",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_052",
+          "PatientName": "Myel_052_b",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "Spinal-Multiple-Myeloma-SEG",
+          "PatientId": "Myel_023",
+          "PatientName": "Myel_023_b",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        }
+      ]
+    }
+  },
+  "source": "tcia"
+}

@@ -1,0 +1,87 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006184",
+  "payload": {
+    "created": "2025-04-28T18:33:03.281Z",
+    "id": "ds006184",
+    "latestSnapshot": {
+      "created": "2026-02-10T16:54:01.000Z",
+      "description": {
+        "Authors": [
+          "Juliette B. H. Brook",
+          "Taylor Salo",
+          "Audrey C. Luo",
+          "Joelle Bagautdinova",
+          "Sage Rush",
+          "Aaron F. Alexander-Bloch",
+          "Erica B. Baller",
+          "Monica E. Calkins",
+          "Matt Cieslak",
+          "Elena C. Cooper",
+          "John A. Detre",
+          "Mark A. Elliot",
+          "Damien A. Fair",
+          "Phoebe Freedman",
+          "Philip R. Gehrman",
+          "Ruben C. Gur",
+          "Raquel E. Gur",
+          "Arno Klein",
+          "Nina Laney",
+          "Timothy O. Laumann",
+          "Kahini Mehta",
+          "Kathleen Merikangas",
+          "Michael Milham",
+          "Jonathan A. Mitchell",
+          "Tyler M. Moore",
+          "Steven M. Nelson",
+          "Kosha Ruparel",
+          "Brooke L. Sevchik",
+          "Sheila Shanmugan",
+          "Haochang Shou",
+          "Manuel Taso",
+          "Lauren K. White",
+          "Daniel H. Wolf",
+          "M. Dylan Tisdall",
+          "David R. Roalf",
+          "Theodore D. Satterthwaite"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006184.v2.0.0",
+        "Funding": null,
+        "HowToAcknowledge": "Please cite the PAFIN paper (https://doi.org/10.52294/001c.151820) and QSIPrep paper (https://www.nature.com/articles/s41592-021-01185-5#citeas), and include the generated citation boilerplate within the Methods section of the text.",
+        "License": "CC0",
+        "Name": "PAFIN: PennLINC AFfective INstability- QSIRecon Derivatives",
+        "ReferencesAndLinks": null
+      },
+      "readme": "This dataset contains QSIRecon (version 1.0.1) derivatives for the PAFIN dataset (https://openneuro.org/datasets/ds006131), derived from QSIPrep outputs (https://openneuro.org/datasets/ds006182).\n\nThe command used is:\n\n```\nqsirecon \\\n    /data/qsiprep \\\n    /data/qsirecon \\\n    participant \\\n    --output-resolution 1.7 \\\n    --recon-spec /code/recon_spec.yml \\\n    --report-output-level session  \n```\n",
+      "summary": {
+        "dataProcessed": true,
+        "modalities": [],
+        "secondaryModalities": [],
+        "sessions": [],
+        "size": 54106,
+        "subjects": [],
+        "tasks": [],
+        "totalFiles": 4
+      },
+      "tag": "2.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": null,
+      "dataProcessed": true,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2025-05-14T16:03:54.062Z"
+  },
+  "source": "openneuro"
+}

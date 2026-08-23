@@ -1,0 +1,42 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:94024d76018bfdac2468e5dfcc43901695d87eab7beeccf856f79e3d55ba665d",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "High-Risk Wilms Tumor",
+        "label": "High-Risk Wilms Tumor"
+      },
+      {
+        "evidence": "Complex Mixed and Stromal Neoplasms",
+        "label": "Complex Mixed and Stromal Neoplasms"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "pediatrics",
+      "nephrology_urology"
+    ],
+    "id": "gdc:TARGET-WT",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "WGS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "RNA-Seq",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "652 human cases",
+    "summary": "TARGET high-risk Wilms tumor collection of kidney tumors, combining whole-genome, whole-exome, targeted, RNA and miRNA sequencing with methylation arrays, structural variation calls, clinical and biospecimen data."
+  },
+  "prompt_version": "v1"
+}

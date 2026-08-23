@@ -1,0 +1,30 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:b1f265476a61932df82c17a395ae263a884d0e32f012a3a58e47da2732d47efa",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [
+      "AT"
+    ],
+    "domains": [
+      "critical_care",
+      "surgery"
+    ],
+    "id": "physionet:sicdb",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "vital signs",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "case information, vital signs, laboratory results and medication data",
+        "value": "EHR"
+      }
+    ],
+    "population": "27350 admissions to intensive care units at the University Hospital Salzburg, collected between 2013 and 2021 across four ICUs.",
+    "summary": "Deidentified intensive care database from four ICUs at an Austrian tertiary hospital, covering admissions with case information, vital signs, laboratory results, medication and preceding surgeries, at hourly and per-minute resolution."
+  },
+  "prompt_version": "v1"
+}

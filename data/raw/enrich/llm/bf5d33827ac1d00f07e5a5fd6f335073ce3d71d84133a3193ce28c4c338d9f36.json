@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:bf5d33827ac1d00f07e5a5fd6f335073ce3d71d84133a3193ce28c4c338d9f36",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "pulmonology",
+      "cardiology",
+      "neurology"
+    ],
+    "id": "physionet:psg-ipa",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "electroencephalography (EEG)",
+        "value": "EEG"
+      },
+      {
+        "evidence": "electromyography (EMG) of both the chin and lower limbs",
+        "value": "EMG"
+      },
+      {
+        "evidence": "electrocardiography (ECG)",
+        "value": "ECG"
+      },
+      {
+        "evidence": "various respiratory derivations",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": "20 polysomnography (PSG) recordings, scored by 12 independent expert sleep technologists",
+    "summary": "Polysomnography recordings with EEG, EOG, EMG, ECG and respiratory signals, each accompanied by manual and computer-assisted scorings from independent expert sleep technologists, for studying inter-scorer variability and automated sleep analysis."
+  },
+  "prompt_version": "v1"
+}

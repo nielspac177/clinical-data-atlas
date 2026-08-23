@@ -1,0 +1,144 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds001417",
+  "payload": {
+    "created": "2018-07-03T15:30:03.146Z",
+    "id": "ds001417",
+    "latestSnapshot": {
+      "created": "2020-07-22T18:31:11.000Z",
+      "description": {
+        "Authors": [
+          "Rotem Botvinik-Nezer",
+          "Tom Salomon",
+          "Tom Schonberg"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds001417.v1.0.0",
+        "Funding": [
+          "Israel Science Foundation (ISF) grant no. 1798/15 granted to Tom Schonberg"
+        ],
+        "HowToAcknowledge": "https://doi.org/10.1093/cercor/bhz132",
+        "License": "CC0",
+        "Name": "CAT snacks functional plasticity",
+        "ReferencesAndLinks": []
+      },
+      "readme": "This dataset include 36 healthy right-handed participants which completed the stages of the cue-approach training (CAT) paradigm (see Schonberg, T. et al. Changing value through cued approach: an automatic mechanism of behavior change. Nat. Neurosci. 17, 625–30 (2014) and Salomon, T. et al. The Cue-Approach Task as a General Mechanism for Long-Term Non-Reinforced Behavioral Change. Sci. Rep. 8, 3614 (2018)).\n\nFor each participant the following data is available for each session (before CAT, after CAT and for 27 participants a one-month follow-up session):\n1. Behavioral BDM auction data on 60 snack-food items.\n2. fMRI data from a passive viewing task (40 snack food items, two runs in each session). This task is named \"esponsetosnacks\" in the data files.\n3. T1w (MPRAGE) image.\n4. fMRI and behavioral data from the probe (binary choices) task (from the after and follow-up sessions).\nIn addition, behavioral data from the training task is also shared (.tsv files).\n\nNote that the shared data is defaced, while the preprocessing of the fMRI data was performed prior to the defacing of the structural images.\n\nThere is a derivatives directory in which the following data is included:\n* .txt files for the EVs of each first level analysis.\n* .tsv files for the motion confounds of each first level analysis.\n* design.fsf files for all levels of analyses.\n* Masks for the small volume correction (SVC) analyses.\n\nPlease cite https://doi.org/10.1093/cercor/bhz132",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "after",
+          "before",
+          "followup"
+        ],
+        "size": 94926553570,
+        "subjects": [
+          "study002",
+          "study003",
+          "study004",
+          "study005",
+          "study006",
+          "study007",
+          "study008",
+          "study010",
+          "study011",
+          "study012",
+          "study013",
+          "study014",
+          "study015",
+          "study016",
+          "study017",
+          "study018",
+          "study019",
+          "study020",
+          "study021",
+          "study023",
+          "study024",
+          "study025",
+          "study026",
+          "study027",
+          "study028",
+          "study030",
+          "study031",
+          "study032",
+          "study033",
+          "study034",
+          "study035",
+          "study037",
+          "study038",
+          "study039",
+          "study040",
+          "study041"
+        ],
+        "tasks": [
+          "probe",
+          "responsetosnacks"
+        ],
+        "totalFiles": 2194
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        25,
+        27,
+        28,
+        25,
+        26,
+        30,
+        23,
+        28,
+        22,
+        22,
+        24,
+        20,
+        31,
+        33,
+        22,
+        23,
+        28,
+        28,
+        25,
+        25,
+        25,
+        21,
+        25,
+        31,
+        25,
+        24,
+        34,
+        29,
+        23,
+        28,
+        31,
+        26,
+        26,
+        27,
+        21,
+        29
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2018-07-03T15:30:03.146Z"
+  },
+  "source": "openneuro"
+}

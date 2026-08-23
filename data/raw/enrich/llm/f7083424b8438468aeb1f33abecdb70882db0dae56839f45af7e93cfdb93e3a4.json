@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:f7083424b8438468aeb1f33abecdb70882db0dae56839f45af7e93cfdb93e3a4",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Pulse oximetry inaccuracies can fail to detect episodes of hidden hypoxemia",
+        "label": "hidden hypoxemia"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "critical_care"
+    ],
+    "id": "physionet:mit-critical-datathon-2023",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Derived from MIMIC-IV v2.2",
+        "value": "EHR"
+      },
+      {
+        "evidence": "it includes 81,797 Intensive Care Unit (ICU) S a O 2 − S p O 2 SaO_2 - SpO_2 pairs",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "Intensive Care Unit patients with paired SaO2-SpO2 measurements derived from MIMIC-IV v2.2",
+    "summary": "Paired arterial and peripheral oxygen saturation measurements derived from an intensive care database, intended for building pulse oximetry correction models addressing measurement bias across skin tones."
+  },
+  "prompt_version": "v1"
+}

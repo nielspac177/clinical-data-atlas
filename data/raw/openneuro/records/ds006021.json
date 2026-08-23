@@ -1,0 +1,97 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006021",
+  "payload": {
+    "created": "2025-03-14T11:19:10.704Z",
+    "id": "ds006021",
+    "latestSnapshot": {
+      "created": "2026-04-16T08:48:43.000Z",
+      "description": {
+        "Authors": [
+          "J S H Taylor",
+          "Adam Jowett",
+          "Tibor Auer",
+          "Angelika Lingnau",
+          "Kathleen Rastle"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006021.v1.0.1",
+        "Funding": [
+          "Funding for this work was provided by the Economic and Social Research Council (ES/L002264/1)."
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Learning to read in different writing systems",
+        "ReferencesAndLinks": [
+          "Please cite the following papers when using this data:",
+          "add link to manuscript",
+          "https://doi.org/10.1162/NOL.a.248"
+        ]
+      },
+      "readme": "This dataset contains data from 24 native English speaking adult participants who took part in multiple days of behavioural training on two novel writing systems, followed by an MRI scanning session (split over two days to ensure participants didn’t spend too long in the scanner). In total, the MRI session comprised 4 visual and 4 auditory runs (12 blocks of 16 trials per run). Within each run, blocks alternated between the two novel writing systems. At the start of each block a semantic category was cued. On each trial participants heard/saw a trained word, were asked to think of its meaning, and to press a button when the trained word was from the semantic category. \n\nThe raw MRI data are all provided here, excluding three runs from two participants (scan-to-scan movement >2 mm).\n\nBehavioural data are shared on the open science framework https://osf.io/nujm3/?view_only=41eab9e538f443d7a64f8d7859338769\nHere you can also find a file aap_prov.png which shows the neuroimaging analysis pipeline (which used Automatic Analysis, version 5). \n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 11422292530,
+        "subjects": [
+          "P114",
+          "P117",
+          "P105",
+          "P111",
+          "P109",
+          "P108",
+          "P103",
+          "P115",
+          "P116",
+          "P122",
+          "P120",
+          "P106",
+          "P110",
+          "P118",
+          "P123",
+          "P104",
+          "P113",
+          "P112",
+          "P121",
+          "P102",
+          "P107",
+          "P124",
+          "P119",
+          "P101"
+        ],
+        "tasks": [
+          "Auditory",
+          "Visual"
+        ],
+        "totalFiles": 613
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": "https://doi.org/10.1037/a0030266; https://doi.org/10.1037/xge0000301; https://doi.org/10.1073/pnas.1818575116; https://doi.org/10.1177/0956797620968790; ",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "Economic and Social Research Council",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "within-subject",
+      "studyDomain": "reading acquisition",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2026-02-11T11:19:09.911Z"
+  },
+  "source": "openneuro"
+}

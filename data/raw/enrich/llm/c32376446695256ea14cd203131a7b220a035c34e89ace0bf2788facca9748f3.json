@@ -1,0 +1,28 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:c32376446695256ea14cd203131a7b220a035c34e89ace0bf2788facca9748f3",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "4,761 cardiac disease patients",
+        "label": "cardiac disease"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:mimic-iv-ext-cardiac-disease",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "the examination results and diagnostic information",
+        "value": "EHR"
+      }
+    ],
+    "population": "4,761 patients diagnosed with cardiac diseases in MIMIC-IV",
+    "summary": "A MIMIC-IV subset of cardiac disease patients containing all relevant clinical examinations from admission to discharge plus final diagnoses, built to test large language models on real patient data."
+  },
+  "prompt_version": "v1"
+}

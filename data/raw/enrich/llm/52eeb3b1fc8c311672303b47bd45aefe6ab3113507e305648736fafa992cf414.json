@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:52eeb3b1fc8c311672303b47bd45aefe6ab3113507e305648736fafa992cf414",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [
+      "BR"
+    ],
+    "domains": [
+      "critical_care"
+    ],
+    "id": "physionet:mimic-br",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "demographic information, diagnoses, procedures, laboratory tests, medications, and vital signs",
+        "value": "EHR"
+      },
+      {
+        "evidence": "medications, and vital signs",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "structured using the OMOP Common Data Model",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "28,799 adult patients admitted to Einstein Hospital Israelita over three consecutive years between 2015 and 2025",
+    "summary": "Anonymized Brazilian hospital and ICU records covering 31,789 admissions, with demographics, diagnoses, procedures, laboratory tests, medications and vital signs structured in the OMOP Common Data Model."
+  },
+  "prompt_version": "v1"
+}

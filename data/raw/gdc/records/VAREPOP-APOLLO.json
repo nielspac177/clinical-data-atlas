@@ -1,0 +1,53 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "VAREPOP-APOLLO",
+  "payload": {
+    "dbgap_accession_number": "phs001374",
+    "disease_type": [
+      "Epithelial Neoplasms, NOS",
+      "Squamous Cell Neoplasms"
+    ],
+    "id": "VAREPOP-APOLLO",
+    "name": "VA Research Precision Oncology Program",
+    "primary_site": [
+      "Bronchus and lung"
+    ],
+    "program": {
+      "dbgap_accession_number": null,
+      "name": "VAREPOP",
+      "program_id": "a996a5fa-bed0-539c-aafd-e70b2e9bd4ba"
+    },
+    "project_id": "VAREPOP-APOLLO",
+    "releasable": true,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 7,
+      "data_categories": [
+        {
+          "case_count": 7,
+          "data_category": "Simple Nucleotide Variation",
+          "file_count": 35
+        },
+        {
+          "case_count": 7,
+          "data_category": "Sequencing Reads",
+          "file_count": 7
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 7,
+          "experimental_strategy": "Targeted Sequencing",
+          "file_count": 42
+        }
+      ],
+      "file_count": 42,
+      "file_size": 14693027602
+    }
+  },
+  "source": "gdc"
+}

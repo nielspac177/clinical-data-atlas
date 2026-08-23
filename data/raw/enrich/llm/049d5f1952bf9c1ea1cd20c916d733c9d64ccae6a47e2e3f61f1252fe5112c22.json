@@ -1,0 +1,51 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:049d5f1952bf9c1ea1cd20c916d733c9d64ccae6a47e2e3f61f1252fe5112c22",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "including dementia",
+        "label": "dementia"
+      },
+      {
+        "evidence": "mood disorders",
+        "label": "mood disorders"
+      },
+      {
+        "evidence": "and cancer",
+        "label": "cancer"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "pediatrics",
+      "neurology",
+      "psychiatry",
+      "oncology"
+    ],
+    "id": "physionet:b2ai-voice-pediatric",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "questionnaire responses",
+        "value": "survey"
+      },
+      {
+        "evidence": "derived audio features",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "spectrograms",
+        "value": "other"
+      },
+      {
+        "evidence": "Detailed demographic, clinical, and validated questionnaire data",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "300 participants aged 2-18",
+    "summary": "Pediatric arm of the Bridge2AI voice biomarker project: derived audio features for 23,533 recordings from 300 participants aged 2-18, plus demographic, clinical, and validated questionnaire data. Original recordings are not released."
+  },
+  "prompt_version": "v1"
+}

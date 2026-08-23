@@ -1,0 +1,101 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "ALCHEMIST-ALCH",
+  "payload": {
+    "disease_type": [
+      "Not Reported"
+    ],
+    "id": "ALCHEMIST-ALCH",
+    "name": "Adjuvant Lung Cancer Enrichment Marker Identification and Sequencing Trial",
+    "primary_site": [
+      "Not Reported"
+    ],
+    "program": {
+      "dbgap_accession_number": "phs001140",
+      "name": "ALCHEMIST",
+      "program_id": "d60aaa73-efec-550a-bf5d-b837aa9b5693"
+    },
+    "project_id": "ALCHEMIST-ALCH",
+    "releasable": false,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 1176,
+      "data_categories": [
+        {
+          "case_count": 1170,
+          "data_category": "Simple Nucleotide Variation",
+          "file_count": 22905
+        },
+        {
+          "case_count": 1174,
+          "data_category": "Sequencing Reads",
+          "file_count": 8790
+        },
+        {
+          "case_count": 1176,
+          "data_category": "Biospecimen",
+          "file_count": 2342
+        },
+        {
+          "case_count": 1176,
+          "data_category": "Clinical",
+          "file_count": 1176
+        },
+        {
+          "case_count": 1030,
+          "data_category": "Copy Number Variation",
+          "file_count": 4165
+        },
+        {
+          "case_count": 1133,
+          "data_category": "Transcriptome Profiling",
+          "file_count": 4102
+        },
+        {
+          "case_count": 1002,
+          "data_category": "Somatic Structural Variation",
+          "file_count": 2049
+        },
+        {
+          "case_count": 1107,
+          "data_category": "Structural Variation",
+          "file_count": 4552
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 1162,
+          "experimental_strategy": "WXS",
+          "file_count": 18991
+        },
+        {
+          "case_count": 1107,
+          "experimental_strategy": "RNA-Seq",
+          "file_count": 10242
+        },
+        {
+          "case_count": 1040,
+          "experimental_strategy": "WGS",
+          "file_count": 14591
+        },
+        {
+          "case_count": 892,
+          "experimental_strategy": "miRNA-Seq",
+          "file_count": 2739
+        },
+        {
+          "case_count": 1175,
+          "experimental_strategy": "Tissue Slide",
+          "file_count": 1349
+        }
+      ],
+      "file_count": 50081,
+      "file_size": 286419443686203
+    }
+  },
+  "source": "gdc"
+}

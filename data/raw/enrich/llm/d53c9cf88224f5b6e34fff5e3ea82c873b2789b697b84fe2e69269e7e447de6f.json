@@ -1,0 +1,31 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:d53c9cf88224f5b6e34fff5e3ea82c873b2789b697b84fe2e69269e7e447de6f",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "assess breast cancer response to neoadjuvant chemotherapy",
+        "label": "breast cancer"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "oncology",
+      "surgery"
+    ],
+    "id": "tcia:qin-breast-dce-mri",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "breast dynamic contrast-enhanced (DCE) MRI data",
+        "value": "MRI"
+      }
+    ],
+    "population": "Patients in a longitudinal study of breast cancer response to neoadjuvant chemotherapy, imaged at four treatment time points.",
+    "summary": "Longitudinal breast dynamic contrast-enhanced MRI acquired before, during and after neoadjuvant chemotherapy, shared as a multicenter data analysis challenge for developing and validating quantitative imaging measures of treatment response."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,41 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:c2fdcffe18db4d7766597a50f7fb98f0e4152b4230d7c01feb7e242cc195392c",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "heart failure status",
+        "label": "heart failure"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "cardiology",
+      "pulmonology"
+    ],
+    "id": "physionet:scg-rhc-wearable-database",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "electrocardiogram (ECG)",
+        "value": "ECG"
+      },
+      {
+        "evidence": "tri-axial seismocardiogram (SCG)",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "chest-worn wearable patch data",
+        "value": "wearable"
+      },
+      {
+        "evidence": "demographic data such as sex, age, weight, height, heart failure status",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "an open access dataset of 73 patients",
+    "summary": "Simultaneous right heart catheter pressure measurements and chest-worn wearable patch signals (ECG and seismocardiogram), with demographics, collected to study non-invasive monitoring of pulmonary arterial and capillary wedge pressure."
+  },
+  "prompt_version": "v1"
+}

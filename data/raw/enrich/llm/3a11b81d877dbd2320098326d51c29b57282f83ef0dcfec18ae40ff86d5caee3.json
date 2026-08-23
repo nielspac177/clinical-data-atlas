@@ -1,0 +1,43 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:3a11b81d877dbd2320098326d51c29b57282f83ef0dcfec18ae40ff86d5caee3",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "detecting the presence or absence of murmurs",
+        "label": "murmurs"
+      },
+      {
+        "evidence": "Congenital heart diseases affect about 1% of newborns",
+        "label": "Congenital heart diseases"
+      },
+      {
+        "evidence": "including advanced heart failure",
+        "label": "heart failure"
+      },
+      {
+        "evidence": "the current COVID-19 pandemic",
+        "label": "COVID-19"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "cardiology",
+      "pediatrics",
+      "infectious_disease",
+      "public_health"
+    ],
+    "id": "physionet:challenge-2022",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "multiple heart sound recordings from multiple auscultation locations",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": null,
+    "summary": "Challenge dataset of heart sound (phonocardiogram) recordings taken at multiple auscultation locations, used to detect the presence or absence of murmurs and to predict clinical outcomes."
+  },
+  "prompt_version": "v1"
+}

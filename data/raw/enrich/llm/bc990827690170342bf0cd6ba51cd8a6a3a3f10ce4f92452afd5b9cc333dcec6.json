@@ -1,0 +1,27 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:bc990827690170342bf0cd6ba51cd8a6a3a3f10ce4f92452afd5b9cc333dcec6",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "other"
+    ],
+    "id": "physionet:rad-coreference-resolution",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Findings and Impression sections extracted from full radiology reports",
+        "value": "clinical_notes"
+      },
+      {
+        "evidence": "a small subset of MIMIC-CXR",
+        "value": "EHR"
+      }
+    ],
+    "population": null,
+    "summary": "A subset of MIMIC-CXR radiology report sections with manually annotated coreference mentions and clusters, split into training, validation and test sets, supporting coreference resolution on radiology reports."
+  },
+  "prompt_version": "v1"
+}

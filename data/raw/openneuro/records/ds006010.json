@@ -1,0 +1,161 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006010",
+  "payload": {
+    "created": "2025-03-13T18:28:37.519Z",
+    "id": "ds006010",
+    "latestSnapshot": {
+      "created": "2025-03-14T17:04:08.000Z",
+      "description": {
+        "Authors": [
+          "Mathias Sablé-Meyer",
+          "Lucas Benjamin",
+          "Cassandra Potier Watkins",
+          "Chenxi He",
+          "Maxence Pajot",
+          "Théo Morfoisse",
+          "Fosca Al Roumi",
+          "Stanislas Dehaene"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006010.v1.0.1",
+        "Funding": [
+          "ERC-ADG-2015 NeuroSyntax to Stanislas Dehaene",
+          "CEA to Stanislas Dehaene",
+          "INSERM to Stanislas Dehaene",
+          "Collège de France to Stanislas Dehaene",
+          "FYSSEN to Mathias Sablé-Meyer"
+        ],
+        "HowToAcknowledge": "Please cite our preprint at https://doi.org/10.1101/2024.03.13.584141 or the published version of this paper",
+        "License": "CC0",
+        "Name": "A geometric shape regularity effect in the human brain: fMRI dataset",
+        "ReferencesAndLinks": null
+      },
+      "readme": "# A geometric shape regularity effect in the human brain: fMRI dataset\n\nAuthors:\n\n* Mathias Sablé-Meyer*\n* Lucas Benjamin\n* Cassandra Potier Watkins\n* Chenxi He\n* Maxence Pajot\n* Théo Morfoisse\n* Fosca Al Roumi\n* Stanislas Dehaene\n\n*Corresponding author: [mathias.sable-meyer@ucl.ac.uk](mailto:mathias.sable-meyer@ucl.ac.uk)\n\n## Abstract\n\nThe perception and production of regular geometric shapes is a characteristic trait of human cultures since prehistory, whose neural mechanisms are unknown. Behavioral studies suggest that humans are attuned to discrete regularities such as symmetries and parallelism, and rely on their combinations to encode regular geometric shapes in a compressed form. To identify the relevant brain systems and their dynamics, we collected functional MRI and magnetoencephalography data in both adults and six-year-olds during the perception of simple shapes such as hexagons, triangles and quadrilaterals. The results revealed that geometric shapes, relative to other visual categories, induce a hypoactivation of ventral visual areas and an overactivation of the intraparietal and inferior temporal regions also involved in mathematical processing, whose activation is modulated by geometric regularity. While convolutional neural networks captured the early visual activity evoked by geometric shapes, they failed to account for subsequent dorsal parietal and prefrontal signals, which could only be captured by discrete geometric features or by more advanced transformer models of vision. We propose that the perception of abstract geometric regularities engages an additional symbolic mode of visual perception.\n\n## Notes about this dataset\n\nWe separately share the MEG dataset at [https://openneuro.org/datasets/ds006012](https://openneuro.org/datasets/ds006012). Below are some notes about the\nfMRI dataset of N=20 adult participants (`sub-2xx`, numbers between 204 and\n223), and N=22 children (`sub-3xx`, numbers between 301 and 325).\n\n* The code for the analyses is provided at\n  [https://github.com/mathias-sm/AGeometricShapeRegularityEffectHumanBrain](https://github.com/mathias-sm/AGeometricShapeRegularityEffectHumanBrain)  \n  However, the analyses work from already preprocessed data. Since there is no\n  custom code per se for the preprocessing, I have not included it in the\n  repository. To preprocess the data as was done in the published article, here\n  is the command and software information:\n    * fMRIPrep version: `20.0.5`\n    * fMRIPrep command: `/usr/local/miniconda/bin/fmriprep /data /out participant --participant-label <label> --output-spaces MNI152NLin6Asym:res-2 MNI152NLin2009cAsym:res-2`\n* Defacing has been performed with `bidsonym` running the `pydeface` masking,\n  and `nobrainer` brain registraction pipeline.  \n  The published analyses have been performed on the non-defaced data. I have\n  checked for data quality on all participants after defacing. In specific\n  cases, I may be able to request the permission to share the original,\n  non-defaced dataset.\n* `sub-325` was acquired by a different experimenter and defaced *before* being\n  shared with the rest of the research team, hence why the slightly different\n  defacing mask. That participant was also preprocessed separately, and using a\n  more recent fMRIPrep version: `20.2.6`.\n* The data associated with the children has a few missing files. Notably:\n    1. `sub-313` and `sub-316` are missing one run of the localizer each\n    2. `sub-316` has no data at all for the geometry\n    3. `sub-308` has eno useable data for the intruder task\n  Since all of these still have some data to contribute to either task, all\n  available files were kept on this dataset. The analysis code reflects these\n  inconsistencies where required with specific exceptions.",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 30156018744,
+        "subjects": [
+          "223",
+          "214",
+          "222",
+          "305",
+          "206",
+          "325",
+          "210",
+          "219",
+          "204",
+          "307",
+          "309",
+          "302",
+          "218",
+          "312",
+          "208",
+          "216",
+          "303",
+          "212",
+          "318",
+          "304",
+          "205",
+          "209",
+          "221",
+          "314",
+          "322",
+          "213",
+          "207",
+          "313",
+          "310",
+          "315",
+          "320",
+          "301",
+          "321",
+          "316",
+          "211",
+          "317",
+          "217",
+          "306",
+          "308",
+          "215",
+          "323",
+          "220"
+        ],
+        "tasks": [
+          "geometry",
+          "category"
+        ],
+        "totalFiles": 1294
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        29,
+        24,
+        20,
+        24,
+        37,
+        20,
+        28,
+        26,
+        23,
+        22,
+        21,
+        28,
+        19,
+        22,
+        21,
+        32,
+        34,
+        20,
+        21,
+        21,
+        6,
+        6,
+        6,
+        7,
+        6,
+        6,
+        6,
+        5,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "associatedPaperDOI": "https://doi.org/10.1073/pnas.2023123118; https://doi.org/10.1016/j.tics.2022.06.010; https://doi.org/10.7554/eLife.84376.sa0 ",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "European Research Council",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "Visual Localizer; Oddball Paradigm; Intruder Detection",
+      "studyDomain": "Geometric Shape; Geometry",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2025-03-14T15:04:11.460Z"
+  },
+  "source": "openneuro"
+}

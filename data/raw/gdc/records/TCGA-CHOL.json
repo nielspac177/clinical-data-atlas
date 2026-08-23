@@ -1,0 +1,139 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "TCGA-CHOL",
+  "payload": {
+    "dbgap_accession_number": null,
+    "disease_type": [
+      "Adenomas and Adenocarcinomas"
+    ],
+    "id": "TCGA-CHOL",
+    "name": "Cholangiocarcinoma",
+    "primary_site": [
+      "Liver and intrahepatic bile ducts",
+      "Pancreas",
+      "Other and unspecified parts of biliary tract"
+    ],
+    "program": {
+      "dbgap_accession_number": "phs000178",
+      "name": "TCGA",
+      "program_id": "b80aa962-9650-5110-b3eb-bd087da808db"
+    },
+    "project_id": "TCGA-CHOL",
+    "releasable": true,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 51,
+      "data_categories": [
+        {
+          "case_count": 51,
+          "data_category": "Simple Nucleotide Variation",
+          "file_count": 1076
+        },
+        {
+          "case_count": 51,
+          "data_category": "Sequencing Reads",
+          "file_count": 395
+        },
+        {
+          "case_count": 51,
+          "data_category": "Biospecimen",
+          "file_count": 222
+        },
+        {
+          "case_count": 51,
+          "data_category": "Clinical",
+          "file_count": 116
+        },
+        {
+          "case_count": 51,
+          "data_category": "Copy Number Variation",
+          "file_count": 617
+        },
+        {
+          "case_count": 36,
+          "data_category": "Transcriptome Profiling",
+          "file_count": 178
+        },
+        {
+          "case_count": 36,
+          "data_category": "DNA Methylation",
+          "file_count": 135
+        },
+        {
+          "case_count": 30,
+          "data_category": "Proteome Profiling",
+          "file_count": 30
+        },
+        {
+          "case_count": 49,
+          "data_category": "Somatic Structural Variation",
+          "file_count": 204
+        },
+        {
+          "case_count": 41,
+          "data_category": "Structural Variation",
+          "file_count": 198
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 36,
+          "experimental_strategy": "RNA-Seq",
+          "file_count": 396
+        },
+        {
+          "case_count": 51,
+          "experimental_strategy": "WXS",
+          "file_count": 829
+        },
+        {
+          "case_count": 36,
+          "experimental_strategy": "miRNA-Seq",
+          "file_count": 135
+        },
+        {
+          "case_count": 49,
+          "experimental_strategy": "WGS",
+          "file_count": 783
+        },
+        {
+          "case_count": 5,
+          "experimental_strategy": "ATAC-Seq",
+          "file_count": 5
+        },
+        {
+          "case_count": 36,
+          "experimental_strategy": "Genotyping Array",
+          "file_count": 520
+        },
+        {
+          "case_count": 36,
+          "experimental_strategy": "Methylation Array",
+          "file_count": 135
+        },
+        {
+          "case_count": 30,
+          "experimental_strategy": "Reverse Phase Protein Array",
+          "file_count": 30
+        },
+        {
+          "case_count": 39,
+          "experimental_strategy": "Diagnostic Slide",
+          "file_count": 39
+        },
+        {
+          "case_count": 51,
+          "experimental_strategy": "Tissue Slide",
+          "file_count": 71
+        }
+      ],
+      "file_count": 3171,
+      "file_size": 24511795664802
+    }
+  },
+  "source": "gdc"
+}

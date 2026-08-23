@@ -1,0 +1,73 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004280",
+  "payload": {
+    "created": "2022-09-27T11:43:30.041Z",
+    "id": "ds004280",
+    "latestSnapshot": {
+      "created": "2022-12-14T21:57:52.000Z",
+      "description": {
+        "Authors": [
+          "Thirza Dado",
+          "Yağmur Güçlütürk",
+          "Luca Ambrogioni",
+          "Gabriëlle Ras",
+          "Sander Bosch",
+          "Marcel van Gerven",
+          "Umut Güçlü"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004280.v1.0.1",
+        "Funding": null,
+        "HowToAcknowledge": "Dado, T., Güçlütürk, Y., Ambrogioni, L. et al. Hyperrealistic neural decoding for reconstructing faces from fMRI activations via the GAN latent space. Sci Rep 12, 141 (2022). https://doi.org/10.1038/s41598-021-03938-w",
+        "License": "CC0",
+        "Name": "hyper",
+        "ReferencesAndLinks": null
+      },
+      "readme": "# Citation\n\nDado, T., Güçlütürk, Y., Ambrogioni, L., Ras, G., Bosch, S., van Gerven, M., & Güçlü, U. (2022). Hyperrealistic neural decoding for reconstructing faces from fMRI activations via the GAN latent space. Scientific reports, 12(1), 1-9.\n\n# Contact person\nThirza Dado, thirza.dado@donders.ru.nl\n\n# Abstract\n\nNeural decoding can be conceptualized as the problem of mapping brain responses back to sensory stimuli via a feature space. We introduce (i) a novel experimental paradigm that uses well-controlled yet highly naturalistic stimuli with a priori known feature representations and (ii) an implementation thereof for HYPerrealistic reconstruction of PERception (HYPER) of faces from brain recordings. To this end, we embrace the use of generative adversarial networks (GANs) at the earliest step of our neural decoding pipeline by acquiring fMRI data as participants perceive face images synthesized by the generator network of a GAN. We show that the latent vectors used for generation effectively capture the same defining stimulus properties as the fMRI measurements. As such, these latents (conditioned on the GAN) are used as the in-between feature representations underlying the perceived images that can be predicted in neural decoding for (re-)generation of the originally perceived stimuli, leading to the most accurate reconstructions of perception to date.\n\n# Stimuli\n\nThe stimuli folder contains the presented images (cropped, resized and superimposed fixation cross) and a Numpy file of 1086 latents of size (1086, 512) that these images are synthesised from using Progressive growing of GANs (for more information, go to https://github.com/tkarras/progressive_growing_of_gans). Note that none of the face images in this manuscript are of real people but instead computer-generated.\n\n# Background information\n\nYou can find more information at https://doi.org/10.1038/s41598-021-03938-w.\n\n# Restrictions on data access and reuse \n\nThe access to and use of this dataset is only allowed under the conditions listed in the data use agreement, as detailed below. \n\nNeither the Donders Institute or Radboud University, nor the researchers that provide this dataset should be included as an author of publications or presentations if this authorship would be based solely on the use of this data. \n\nHowever, we ask you to acknowledge the use of the data and data derived from the data when publicly presenting any results or algorithms that benefitted from their use:\n\n    1) Papers, book chapters, books, posters, oral presentations, and all other presentations of results derived from the data should acknowledge the origin of the data as follows: \"Data were provided (in part) by the Donders Institute for Brain, Cognition and Behaviour, Radboud University Nijmegen\".\n    2) Authors of publications or presentations using the data should cite relevant publications describing the methods developed and used by the Donders Institute to acquire and process the data. The specific publications that are appropriate to cite in any given study will depend on what the data were used for and for what purposes. When applicable, a list of publications will be specified on the collection overview page.\n\n# Data use agreement for identifiable human data\n\nVersion RU-DI-HD-1.0\n\nI request access to the data collected in the digital repository of the Donders Institute for Brain, Cognition and Behaviour, part of the Radboud University, established at Nijmegen, the Netherlands (hereinafter referred to as the Donders Institute), and I agree to the following:\n\n1. I will comply with all relevant rules and regulations imposed by my institution and my government.  This may mean that I need my research to be approved or declared exempt by a committee that oversees research on human subjects, e.g. my Institutional Review Board or Ethics Committee.\n\n2. I will not attempt to establish the identity of or attempt to contact any of the included human subjects. I will not link this data to any other database in a way that could provide identifying information. I understand that under no circumstances will the code that would link these data to an individuals personal information be given to me, nor will any additional information about individual subjects be released to me under these Data Use Terms.\n\n3. I will not redistribute or share the data with others, including individuals in my research group, unless they have independently applied and been granted access to this data.\n\n4. I will acknowledge the use of the data and data derived from the data when publicly presenting any results or algorithms that benefitted from their use.\n (a) Papers, book chapters, books, posters, oral presentations, and all other presentations of results derived from the data should acknowledge the origin of the data as follows: \"Data were provided (in part) by the Donders Institute for Brain, Cognition and Behaviour\".\n (b) Authors of publications or presentations using the data should cite relevant publications describing the methods developed and used by the Donders Institute to acquire and process the data. The specific publications that are appropriate to cite in any given study will depend on what the data were used and for what purposes. When applicable, a list of publications will be included in the collection.\n (c) Neither the Donders Institute or Radboud University, nor the researchers that provide this data should be included as an author of publications or presentations if this authorship would be based solely on the use of this data.\n\n5. Failure to abide by these guidelines will result in termination of my privileges to access to these data.",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 38016690660,
+        "subjects": [
+          "01",
+          "02"
+        ],
+        "tasks": [
+          "hyper task"
+        ],
+        "totalFiles": 1132
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        30,
+        32
+      ],
+      "associatedPaperDOI": "https://doi.org/10.1038/s41598-021-03938-w",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "Rapid event-related design",
+      "studyDomain": "Neural decoding",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2022-09-27T16:45:48.460Z"
+  },
+  "source": "openneuro"
+}

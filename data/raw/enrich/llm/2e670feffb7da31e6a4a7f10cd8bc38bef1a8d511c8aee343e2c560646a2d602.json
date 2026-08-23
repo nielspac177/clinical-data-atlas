@@ -1,0 +1,34 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:2e670feffb7da31e6a4a7f10cd8bc38bef1a8d511c8aee343e2c560646a2d602",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "paroxysmal atrial fibrillation",
+        "label": "atrial fibrillation"
+      },
+      {
+        "evidence": "expert annotations of Supraventricular arrhythmias at the beat level",
+        "label": "Supraventricular arrhythmias"
+      }
+    ],
+    "countries": [
+      "JP"
+    ],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:shdb-af",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Holter ECG database",
+        "value": "ECG"
+      }
+    ],
+    "population": "Patients with paroxysmal atrial fibrillation; the text states both 100 unique patients and 122 unique subjects, across 128 recordings, 98 of which carry beat-level annotations.",
+    "summary": "Open Holter ECG database from Japan of subjects with paroxysmal atrial fibrillation. Most recordings include beat-level rhythm annotations made by a cardiology fellow; the rest are unannotated ECG traces."
+  },
+  "prompt_version": "v1"
+}

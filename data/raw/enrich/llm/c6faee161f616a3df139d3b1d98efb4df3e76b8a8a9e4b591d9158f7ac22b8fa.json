@@ -1,0 +1,29 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:c6faee161f616a3df139d3b1d98efb4df3e76b8a8a9e4b591d9158f7ac22b8fa",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [
+      "CH"
+    ],
+    "domains": [
+      "critical_care"
+    ],
+    "id": "physionet:hirid",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "a total of 681 routinely collected physiological variables",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "diagnostic test results and treatment parameters",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "Patient admissions to the Department of Intensive Care Medicine of the Bern University Hospital, an interdisciplinary 60-bed adult unit, from January 2008 to June 2016",
+    "summary": "High time-resolution intensive care database from a Swiss university hospital, with de-identified demographics plus routinely collected physiological variables, diagnostic test results and treatment parameters recorded every two minutes during ICU admissions."
+  },
+  "prompt_version": "v1"
+}

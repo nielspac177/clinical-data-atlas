@@ -1,0 +1,25 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:1aa2a40f691e67701c6365435d83da7bc6ce7bcfb52d79f76e1765e72c200d23",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "critical_care",
+      "pulmonology",
+      "nephrology_urology"
+    ],
+    "id": "physionet:mimic-iv-ext-clif",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "core demographics (patient, hospitalization), clinical monitoring (vitals, labs)",
+        "value": "EHR"
+      }
+    ],
+    "population": "Intensive care unit patients and hospitalizations in the de-identified MIMIC-IV v3.1 dataset",
+    "summary": "MIMIC-IV v3.1 transformed into the Common Longitudinal ICU data Format, with tables covering demographics, vitals, labs, respiratory support, medication administration and ICU interventions such as continuous renal replacement therapy."
+  },
+  "prompt_version": "v1"
+}

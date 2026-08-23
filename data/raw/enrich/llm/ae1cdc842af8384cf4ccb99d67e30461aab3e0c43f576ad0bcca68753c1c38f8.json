@@ -1,0 +1,49 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:ae1cdc842af8384cf4ccb99d67e30461aab3e0c43f576ad0bcca68753c1c38f8",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Lung Squamous Cell Carcinoma",
+        "label": "Lung Squamous Cell Carcinoma"
+      },
+      {
+        "evidence": "Squamous Cell Neoplasms",
+        "label": "Squamous Cell Neoplasms"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "pulmonology"
+    ],
+    "id": "gdc:TCGA-LUSC",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Tissue Slide, Diagnostic Slide",
+        "value": "pathology"
+      },
+      {
+        "evidence": "WXS, WGS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "Transcriptome Profiling",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Reverse Phase Protein Array",
+        "value": "proteomics"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "Human cases with lung squamous cell carcinoma (bronchus and lung)",
+    "summary": "TCGA project on lung squamous cell carcinoma of the bronchus and lung, with sequencing, copy number, methylation, transcriptome and proteome profiling alongside clinical, biospecimen and slide data."
+  },
+  "prompt_version": "v1"
+}

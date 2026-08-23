@@ -1,0 +1,34 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "transformer-deid",
+  "payload": {
+    "abstract": "<p>Sharing patient data such as clinical notes among clinicians and researchers is fundamental to advancements in clinical practice and biomedical research. Prior to distribution, it is often necessary and legally mandated to remove identifiers such as names, contact details, identification numbers, and dates to safeguard patient privacy. This process is known as deidentification. Here we provide a neural network model for the removal of patient identifiers from clinical text based upon Bidirectional Encoder Representations from Transformers (BERT) and two variations of BERT, namely Robustly Optimized BERT Approach (RoBERTa) and Distilled BERT (DistilBERT). The models demonstrated excellent performance on a publicly available benchmark and are made freely available to maximize reuse.</p>",
+    "access_policy": "Open",
+    "compressed_storage_size": 1083415115,
+    "core_doi": "10.13026/gyp9-4164",
+    "dua": null,
+    "is_latest_version": true,
+    "license": {
+      "name": "MIT License"
+    },
+    "main_storage_size": 1188235127,
+    "public_project_uuid": "bcba7c48-82ad-4e5c-96d6-3e5309feda0d",
+    "publish_date": "2023-11-02",
+    "resource_type": "Software",
+    "short_description": "Fine tune transformer-based neural networks to deidentify clinical text data.",
+    "slug": "transformer-deid",
+    "source_url": "https://physionet.org/content/transformer-deid/1.0.0/",
+    "title": "Transformer-DeID: Deidentification of free-text clinical notes with transformers",
+    "topics": [
+      "neural networks",
+      "transformers",
+      "deidentification"
+    ],
+    "version": "1.0.0",
+    "version_doi": "10.13026/7dj5-7x85"
+  },
+  "source": "physionet"
+}

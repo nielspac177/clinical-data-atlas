@@ -1,0 +1,66 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007958",
+  "payload": {
+    "created": "2026-06-12T08:33:42.048Z",
+    "id": "ds007958",
+    "latestSnapshot": {
+      "created": "2026-06-12T08:51:08.000Z",
+      "description": {
+        "Authors": [
+          "Jiye Kim",
+          "Yuting Chen",
+          "Berkin Bilgic",
+          "Yohan Jun",
+          "Jongho Lee"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007958.v1.0.1",
+        "Funding": null,
+        "HowToAcknowledge": "Please acknowledge the Athinoula A. Martinos Center for Biomedical Imaging, Massachusetts General Hospital and Harvard Medical School when using this dataset.",
+        "License": "CC0",
+        "Name": "In vivo 250 um isotropic COSMOS dataset at 7T",
+        "ReferencesAndLinks": null
+      },
+      "readme": "This dataset contains an in vivo 250 um isotropic COSMOS QSM dataset acquired at 7T.\n\nData acquisition was performed at the Athinoula A. Martinos Center for Biomedical Imaging, Massachusetts General Hospital and Harvard Medical School.\n\nThe raw BIDS folder contains GRE magnitude images acquired at three head orientations.\nThe derivatives folder contains orientation-specific R2* maps, a 3-orientation COSMOS susceptibility map, and a brain mask.\n\nData summary:\n- Institution: Athinoula A. Martinos Center for Biomedical Imaging, Massachusetts General Hospital and Harvard Medical School\n- Scanner: 7T Siemens Terra X\n- Voxel size: 0.25 mm isotropic\n- Number of head orientations: 3\n- Derivatives: R2* maps, COSMOS susceptibility map, brain mask\n\nFuture Updates:\n- A fourth head orientation will be added in a future release to improve angular coverage and COSMOS reconstruction quality.\n- Raw multi-echo GRE magnitude and phase images will be included in a future release.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 792405881,
+        "subjects": [
+          "01"
+        ],
+        "tasks": [],
+        "totalFiles": 11
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "NIH NIBIB",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "Cross-sectional ultra-high-field MRI study with multiple head orientations for COSMOS reconstruction",
+      "studyDomain": "MRI; NeuroImaging",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2026-06-12T08:44:54.897Z"
+  },
+  "source": "openneuro"
+}

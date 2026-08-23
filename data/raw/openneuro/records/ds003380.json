@@ -1,0 +1,76 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003380",
+  "payload": {
+    "created": "2020-11-13T05:11:59.469Z",
+    "id": "ds003380",
+    "latestSnapshot": {
+      "created": "2020-11-13T05:13:05.000Z",
+      "description": {
+        "Authors": [
+          "Martin G. Frasch",
+          "Bernd Walter",
+          "Chrstophe L. Herry",
+          "Reinhard Bauer"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds003380.v1.0.0",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Corticothalamic communication under analgesia, sedation and gradual ischemia: a multimodal model of controlled gradual cerebral ischemia in pig",
+        "ReferencesAndLinks": [
+          "arXiv:2002.09154"
+        ]
+      },
+      "readme": "This sedation, ischemia, recovery experiment contains 11 animals (juvenile pigs).\n\nAnimals were surgically instrumented, and then monitored under sedation states 1-5 (isoflurane, fentanyl, propofol), followed by 1 or 2 episodes of gradual ischemia (states 6 and 8) and recovery (recovery 1 = state 7, between state 6 and 8; recovery 2, after state 8, corresponding to states 9-12).\n\nTwo crude groups are indicated: \n1) sedation - animals had no ischemia and \n2) ischemia - animals had sedation, followed by ischemia episodes and followed by recovery.\n\nThe scientific article (see Reference) contains all methodological details.\n- Martin Frasch and Reinhard Bauer, October 2, 2020\n\nPS. Sub-12 folder is to be ignored. It was added to satisfy the BIDS validation algorithm.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "eeg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [],
+        "size": 20614209,
+        "subjects": [
+          "12"
+        ],
+        "tasks": [],
+        "totalFiles": 5
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "eeg"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2020-11-13T05:20:09.869Z"
+  },
+  "source": "openneuro"
+}

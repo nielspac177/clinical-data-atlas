@@ -1,0 +1,125 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006243",
+  "payload": {
+    "created": "2025-05-15T18:27:18.313Z",
+    "id": "ds006243",
+    "latestSnapshot": {
+      "created": "2025-11-13T20:11:14.000Z",
+      "description": {
+        "Authors": [
+          "Marla Dressel",
+          "Naomi Nero",
+          "Paige Freeburg",
+          "Melinda Somers",
+          "Ashley S. VanMeter",
+          "Shawn A. Rhoads",
+          "Abigail A. Marsh"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006243.v1.1.2",
+        "Funding": [
+          "We thank the Mind and Life Institute for funding this research."
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Empathic Pain Task",
+        "ReferencesAndLinks": [
+          "Dressel, M., Nero, N. M., Freeburg, P., Somers, M., VanMeter, A. S., Rhoads, S. A., & Marsh, A. (2025, November 13). Lonelier people feel less empathic despite intact neural empathy responses after meditation training. Retrieved from osf.io/preprints/psyarxiv/5jpf7_v1"
+        ]
+      },
+      "readme": "Dataset Description \n\nThis dataset contains only MNI‐normalized BOLDs from fMRIPrep.\n\nParticipants: 54 meditation-trained participants (29 LKM, 25 PMR) scanned ≤ 2 weeks post-training\n\nScanning Site & Hardware: Center for Functional and Molecular Imaging (Georgetown University) using a 3 T Siemens TIM Trio with a 64-channel phased-array head coil. \n\nAcquisition Parameters: Structural (T1 MP-RAGE): 176 slices, 1 mm isotropic voxels; TR = 1,900 ms; TE = 2.52 ms; matrix = 256 × 256; FoV = 250 mm; Functional (T2 EPI):* 46 transversal slices, 3 mm isotropic voxels; TR = 2,500 ms; TE = 30 ms; matrix = 64 × 64; FoV = 192 mm. \nPMC\n\nTask Structure: Two counter-balanced runs—Experience (Self) and Observe (Other) —each with 30 trials (15 fear-anticipation, 15 pain-experience); Audio cues (distinct beeps/buzzes) signal whether the participant or a study partner may/will not receive pressure-pain; Before scanning, each participant briefly meets a stranger “study partner,” told to be seated next door and who's hand is visible via live video feed during the scan (participant screen); Computer-controlled pneumatic device applies pressure (2.5–125 PSI, capped at 80 PSI for safety) to the lunula of the right thumbnail via a 1 cm² plastic probe; Device sits outside the magnet; pressure delivered through a flexible tube to a piston fixed on the participant’s (or partner’s) thumbnail; Pre-scan calibration ensures each participant experiences a matched “moderately painful” intensity.\n\n- 30 trials\n    - 30 cues (15 neutral, 15 pain)\n    - 30 anticipation (15 neutral, 15 pain)\n    - 30 stimulation (10 pain, 20 no pain)\n    - 30 rest (10 pain, 20 no pain)\n\n- 1 trial = 24 seconds \n    - 3 s auditory signal for anticipation or safety (pain may or may not occur)\n    - 3-12 s anticipation\n    - 6 s pain stimulation (including 1 s pain/no pain cue)\n    - 3-12 rest (anticipation and rest always add up to 15 s)\n\n- Task time\n     - acquisition time is 750 s \n    -  pure task time is 720 s per run (about 12 min, so total task time is 24 min)\n    - subtracted 10 s (4 volumes) from imaging data, events, and confounds\n\nNOTE: The confound (and outlier) files are trimmed (3 volumes in the beginning and 3 at the end, as can be seen in the getConfounds.py file, line 53, on GitHub in the folder fMRI_Data_Python_Bash_Scripts). So they contain 290 volumes (725 s) instead of 296 (740 s). However, the fMRI data on OpenNeuro is not trimmed. They are being trimmed during the first-level analysis, for which you can also find the script on GitHub. It's the 1stlevel_smoothed.sh file, lines 51, 64, 68 in the folder fMRI_Data_Python_Bash_Scripts. \n\nOSF: https://osf.io/2sx3v/\nScripts to run the analysis: https://github.com/princessamygdala/loneliness-empathy-meditation-study\n",
+      "summary": {
+        "dataProcessed": true,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional"
+        ],
+        "sessions": [],
+        "size": 26637390553,
+        "subjects": [
+          "179",
+          "194",
+          "159",
+          "075",
+          "119",
+          "052",
+          "003",
+          "018",
+          "115",
+          "122",
+          "001",
+          "005",
+          "149",
+          "039",
+          "156",
+          "008",
+          "071",
+          "043",
+          "002",
+          "196",
+          "158",
+          "081",
+          "050",
+          "192",
+          "007",
+          "106",
+          "074",
+          "195",
+          "154",
+          "053",
+          "191",
+          "136",
+          "102",
+          "064",
+          "139",
+          "169",
+          "088",
+          "187",
+          "130",
+          "076",
+          "197",
+          "004",
+          "006",
+          "167",
+          "034",
+          "109",
+          "031",
+          "014",
+          "058",
+          "180",
+          "067",
+          "193",
+          "063",
+          "057"
+        ],
+        "tasks": [
+          "empathy"
+        ],
+        "totalFiles": 435
+      },
+      "tag": "1.1.2"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": null,
+      "dataProcessed": true,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2025-05-15T19:54:27.437Z"
+  },
+  "source": "openneuro"
+}

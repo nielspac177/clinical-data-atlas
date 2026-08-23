@@ -1,0 +1,28 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:19e749f7bb57b01d0775a7bb14868630698030e6a472b2d6afc62ffd2c9ae48f",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "patients with HER2-positive breast cancer",
+        "label": "HER2-positive breast cancer"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "tcia:her2-tumor-rois",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "H&E whole slide images (WSIs) manually annotated for tumor regions of interest (ROIs)",
+        "value": "pathology"
+      }
+    ],
+    "population": "Patients with HER2-positive breast cancer, including pre-treatment samples from HER2+ patients that subsequently received trastuzumab therapy",
+    "summary": "Hematoxylin and eosin whole slide images with pathologist-annotated tumor regions of interest, used to train classifiers predicting HER2 status and trastuzumab treatment response in breast cancer."
+  },
+  "prompt_version": "v1"
+}

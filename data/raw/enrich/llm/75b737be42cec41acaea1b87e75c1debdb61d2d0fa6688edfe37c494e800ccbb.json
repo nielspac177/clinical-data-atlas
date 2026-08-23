@@ -1,0 +1,61 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:75b737be42cec41acaea1b87e75c1debdb61d2d0fa6688edfe37c494e800ccbb",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Squamous Cell Neoplasms",
+        "label": "Squamous Cell Neoplasms"
+      },
+      {
+        "evidence": "Adenomas and Adenocarcinomas",
+        "label": "Adenomas and Adenocarcinomas"
+      },
+      {
+        "evidence": "Epithelial Neoplasms, NOS",
+        "label": "Epithelial Neoplasms, NOS"
+      },
+      {
+        "evidence": "Complex Epithelial Neoplasms",
+        "label": "Complex Epithelial Neoplasms"
+      },
+      {
+        "evidence": "uterine cervical neoplasms",
+        "label": "uterine cervical neoplasms"
+      },
+      {
+        "evidence": "HIV+",
+        "label": "HIV+"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "infectious_disease"
+    ],
+    "id": "gdc:CGCI-HTMCP-CC",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Targeted Sequencing, WGS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "RNA-Seq, miRNA-Seq",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Tissue Slide",
+        "value": "pathology"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "212 human cases of cervical cancer in HIV-positive patients",
+    "summary": "Molecular characterization of cervical cancer in HIV-positive patients, with targeted and whole-genome sequencing, RNA-Seq, miRNA-Seq, methylation arrays, copy number and structural variation, tissue slides and clinical data."
+  },
+  "prompt_version": "v1"
+}

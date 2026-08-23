@@ -1,0 +1,127 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005088",
+  "payload": {
+    "created": "2024-04-16T20:19:07.316Z",
+    "id": "ds005088",
+    "latestSnapshot": {
+      "created": "2024-04-17T12:18:50.000Z",
+      "description": {
+        "Authors": [
+          "Keith M. Vogt",
+          "Alex C. Burlew",
+          "Sujatha N. Reddy",
+          "Marcus Simmons",
+          "Courtney N. Kozdron",
+          "James W. Ibinson"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005088.v1.0.0",
+        "Funding": [
+          "National Institutes of Health (NIH); National Institute of General Medical Sciences (NIGMS): R35GM146822"
+        ],
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "Neural Correlates of Lidocaine Analgesic (NLA) Study",
+        "ReferencesAndLinks": [
+          ""
+        ]
+      },
+      "readme": "# README\n\n## Details related to access to the data\n\n- [ ] Contact person\nKeith M. Vogt, kev18@pitt.edu\n\n- [ ] Practical information to access the data\n\nOpenNeuro weblink: \n\n## Overview\n\n- [ ] Project name : Neural Correlates of Lidocaine Analgesic (NLA) Study\n\n- [ ] Brief overview \nTwenty-seven adults (age 22-55) participated in this single-arm, open-label study. \nPain response task and resting-state scans were obtained at baseline and then under a constant effect-site concentration of lidocaine at 3 T. \nElectric nerve stimulation, titrated in advance to 7/10 intensity, was employed (5x 10 sec) for the pain task. \n\n\n- [ ] Description of the contents of the dataset\n\nName of the Dataset: NLA_BIDS\n\nSummary:\n653 Files, 49.29GB\n27 - Subjects\n1 - Session\n\nAvailable Tasks:\nPain\nResting state\n\nAvailable Modalities:\nMRI\n\n\nStimulus onset time starts 56 seconds after the start of the trial in run-02 for subjects sub-ID12 and sub-ID27. First stimulus was not administered at 24 seconds unlike the rest of the task data because of technical error.\n    ",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 52928692028,
+        "subjects": [
+          "ID02",
+          "ID03",
+          "ID04",
+          "ID05",
+          "ID07",
+          "ID08",
+          "ID09",
+          "ID10",
+          "ID11",
+          "ID12",
+          "ID13",
+          "ID14",
+          "ID15",
+          "ID16",
+          "ID17",
+          "ID19",
+          "ID20",
+          "ID21",
+          "ID24",
+          "ID25",
+          "ID26",
+          "ID27",
+          "ID29",
+          "ID31",
+          "ID33",
+          "ID34",
+          "ID35"
+        ],
+        "tasks": [
+          "pain",
+          "rest"
+        ],
+        "totalFiles": 653
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "National Institutes of Health; National Institute of General Medical Sciences ",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "Open-label",
+      "studyDomain": "Lidocaine, pain",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2024-04-19T16:05:16.790Z"
+  },
+  "source": "openneuro"
+}

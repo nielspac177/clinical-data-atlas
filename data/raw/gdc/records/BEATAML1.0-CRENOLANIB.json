@@ -1,0 +1,52 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "BEATAML1.0-CRENOLANIB",
+  "payload": {
+    "dbgap_accession_number": "phs001628",
+    "disease_type": [
+      "Myeloid Leukemias"
+    ],
+    "id": "BEATAML1.0-CRENOLANIB",
+    "name": "Clinical Resistance to Crenolanib in Acute Myeloid Leukemia Due to Diverse Molecular Mechanisms",
+    "primary_site": [
+      "Hematopoietic and reticuloendothelial systems"
+    ],
+    "program": {
+      "dbgap_accession_number": null,
+      "name": "BEATAML1.0",
+      "program_id": "1eaac0a3-91f6-54b3-9a7c-e34468eaf527"
+    },
+    "project_id": "BEATAML1.0-CRENOLANIB",
+    "releasable": false,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 56,
+      "data_categories": [
+        {
+          "case_count": 51,
+          "data_category": "Simple Nucleotide Variation",
+          "file_count": 428
+        },
+        {
+          "case_count": 56,
+          "data_category": "Sequencing Reads",
+          "file_count": 119
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 56,
+          "experimental_strategy": "WXS",
+          "file_count": 547
+        }
+      ],
+      "file_count": 547,
+      "file_size": 3608907348655
+    }
+  },
+  "source": "gdc"
+}

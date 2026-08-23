@@ -1,0 +1,41 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:aa716f51bd8dad127aa653ef7f354f657987d20340d85b78f28214d7bb043aa0",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Prostate Adenocarcinoma",
+        "label": "Prostate Adenocarcinoma"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "nephrology_urology"
+    ],
+    "id": "tcia:tcga-prad",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "CT MR PT",
+        "value": "CT"
+      },
+      {
+        "evidence": "CT MR PT",
+        "value": "MRI"
+      },
+      {
+        "evidence": "CT MR PT",
+        "value": "PET"
+      },
+      {
+        "evidence": "Genomic Data Commons (GDC) Data Portal",
+        "value": "genomics"
+      }
+    ],
+    "population": "Prostate adenocarcinoma patients drawn from The Cancer Genome Atlas; imaging mostly acquired during routine care rather than a controlled study (14 participants per source facts).",
+    "summary": "Radiology images of prostate adenocarcinoma patients, matched by patient identifier to TCGA clinical, genetic and pathological data for studying genotype, radiological phenotype and outcome relationships."
+  },
+  "prompt_version": "v1"
+}

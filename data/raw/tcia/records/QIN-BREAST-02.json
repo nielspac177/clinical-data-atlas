@@ -1,0 +1,280 @@
+{
+  "endpoints": [
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getCollectionValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getModalityValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getBodyPartValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getPatient",
+    "https://api.datacite.org/dois?prefix=10.7937"
+  ],
+  "harvest_method": "api:nbia+datacite",
+  "native_id": "QIN-BREAST-02",
+  "payload": {
+    "datacite": {
+      "citationCount": 7,
+      "container": {},
+      "contentUrl": [],
+      "contributors": [
+        {
+          "affiliation": [],
+          "contributorType": "DataCurator",
+          "familyName": null,
+          "givenName": null,
+          "name": "TCIA Team",
+          "nameIdentifiers": [],
+          "nameType": null
+        }
+      ],
+      "created": "2019-07-10T17:53:12Z",
+      "creators": [
+        {
+          "affiliation": [],
+          "familyName": "Yankeelov",
+          "givenName": "Thomas E.",
+          "name": "Yankeelov, Thomas E.",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Karczmar",
+          "givenName": "Gregory S.",
+          "name": "Karczmar, Gregory S.",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Abramson",
+          "givenName": "Richard G.",
+          "name": "Abramson, Richard G.",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2019",
+          "dateInformation": null,
+          "dateType": "Issued"
+        }
+      ],
+      "descriptions": [
+        {
+          "description": "This data is from a multi-site, multi-parametric quantitative MRI study of adult (18+ years old) females diagnosed with invasive breast cancer. Subjects all had a lesion size &gt;1cm in longest dimension and were undergoing neoadjuvant therapy. Participants were scanned prior to any therapy and then 2-3 times after the initiation of neoadjuvant therapy, depending upon their treatment regimen. All data sets were acquired with a research-only protocol, including: DWI (SE EPI), OGSE, qMT, B0 map, multi-flip T1 map, Bloch-Siegert B1 map, DCE, and a T1-weighted anatomical image. This dataset is an extension of the original QIN-Breast ( https://doi.org/10.7937/K9/TCIA.2016.21JUebH0 ) collection, with updated scan protocols and data collected at both Vanderbilt University Medical Center and the University of Chicago to demonstrate reproducible results at multiple sites (both using Philips 3T MR scanners).",
+          "descriptionType": "Abstract",
+          "lang": null
+        }
+      ],
+      "doi": "10.7937/tcia.2019.4cfm06rr",
+      "downloadCount": 0,
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "QIN-BREAST-02",
+          "identifierType": "TCIA Short Name"
+        }
+      ],
+      "isActive": true,
+      "language": null,
+      "metadataVersion": 10,
+      "partCount": 0,
+      "partOfCount": 0,
+      "publicationYear": 2019,
+      "published": null,
+      "publisher": "The Cancer Imaging Archive",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2019-07-10T17:53:12Z",
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "10.1148/rycan.230100",
+          "relatedIdentifierType": "DOI",
+          "relatedMetadataScheme": null,
+          "relationType": "IsCitedBy",
+          "resourceTypeGeneral": null,
+          "schemeType": null,
+          "schemeUri": null
+        },
+        {
+          "relatedIdentifier": "10.1063/5.0189815",
+          "relatedIdentifierType": "DOI",
+          "relatedMetadataScheme": null,
+          "relationType": "IsCitedBy",
+          "resourceTypeGeneral": null,
+          "schemeType": null,
+          "schemeUri": null
+        },
+        {
+          "relatedIdentifier": "10.1063/5.0190561",
+          "relatedIdentifierType": "DOI",
+          "relatedMetadataScheme": null,
+          "relationType": "IsCitedBy",
+          "resourceTypeGeneral": null,
+          "schemeType": null,
+          "schemeUri": null
+        }
+      ],
+      "relatedItems": [],
+      "rightsList": [
+        {
+          "rights": "NIH Controlled Data Access Policy",
+          "rightsUri": "https://www.cancerimagingarchive.net/nih-controlled-data-access-policy/"
+        }
+      ],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "fabricaForm",
+      "state": "findable",
+      "subjects": [],
+      "titles": [
+        {
+          "lang": null,
+          "title": "Data from QIN-BREAST-02",
+          "titleType": null
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2025-12-17T18:33:11Z",
+      "url": "https://www.cancerimagingarchive.net/collection/qin-breast-02/",
+      "version": "1",
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 5293
+    },
+    "nbia": {
+      "body_parts": [],
+      "collection": "QIN-BREAST-02",
+      "modalities": [
+        "MR"
+      ],
+      "patients": [
+        {
+          "Collection": "QIN-BREAST-02",
+          "PatientId": "QIN-BREAST-02-0001",
+          "PatientName": "QIN-BREAST-02-0001",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "QIN-BREAST-02",
+          "PatientId": "QIN-BREAST-02-0007",
+          "PatientName": "QIN-BREAST-02-0007",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "QIN-BREAST-02",
+          "PatientId": "QIN-BREAST-02-0008",
+          "PatientName": "QIN-BREAST-02-0008",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "QIN-BREAST-02",
+          "PatientId": "QIN-BREAST-02-0009",
+          "PatientName": "QIN-BREAST-02-0009",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "QIN-BREAST-02",
+          "PatientId": "QIN-BREAST-02-0010",
+          "PatientName": "QIN-BREAST-02-0010",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "QIN-BREAST-02",
+          "PatientId": "QIN-BREAST-02-0013",
+          "PatientName": "QIN-BREAST-02-0013",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "QIN-BREAST-02",
+          "PatientId": "QIN-BREAST-02-0005",
+          "PatientName": "QIN-BREAST-02-0005",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "QIN-BREAST-02",
+          "PatientId": "QIN-BREAST-02-0006",
+          "PatientName": "QIN-BREAST-02-0006",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "QIN-BREAST-02",
+          "PatientId": "QIN-BREAST-02-0003",
+          "PatientName": "QIN-BREAST-02-0003",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "QIN-BREAST-02",
+          "PatientId": "QIN-BREAST-02-0004",
+          "PatientName": "QIN-BREAST-02-0004",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "QIN-BREAST-02",
+          "PatientId": "QIN-BREAST-02-0002",
+          "PatientName": "QIN-BREAST-02-0002",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "QIN-BREAST-02",
+          "PatientId": "QIN-BREAST-02-0011",
+          "PatientName": "QIN-BREAST-02-0011",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "QIN-BREAST-02",
+          "PatientId": "QIN-BREAST-02-0012",
+          "PatientName": "QIN-BREAST-02-0012",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        }
+      ]
+    }
+  },
+  "source": "tcia"
+}

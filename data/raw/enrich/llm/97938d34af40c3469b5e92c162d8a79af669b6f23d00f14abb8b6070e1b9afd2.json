@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:97938d34af40c3469b5e92c162d8a79af669b6f23d00f14abb8b6070e1b9afd2",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "post-ischemic ventricular tachycardia (VT)",
+        "label": "post-ischemic ventricular tachycardia"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:argo",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "12-lead surface ECGs",
+        "value": "ECG"
+      },
+      {
+        "evidence": "unipolar and bipolar EGMs",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "electroanatomical (EA) map data",
+        "value": "other"
+      }
+    ],
+    "population": "Nine post-ischemic VT patients, contributing 1962 entries collected using the CARTO 3 mapping system.",
+    "summary": "Open-access recordings from post-ischemic ventricular tachycardia patients: intracardiac electrograms, 12-lead surface ECGs and electroanatomical maps, annotated by three electrophysiologists with a consensus, plus spatial information on ablations performed."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:79d642d887e65d4a9de292f5bdc34d5479ee422f2325c479c8fd4bb42596eaa7",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "arrhythmia",
+        "label": "arrhythmia"
+      },
+      {
+        "evidence": "tachycardia",
+        "label": "tachycardia"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "cardiology",
+      "critical_care"
+    ],
+    "id": "physionet:challenge-2015",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "multiparameter",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": "Patients monitored in the Intensive Care Unit (ICU)",
+    "summary": "PhysioNet/CinC Challenge 2015 encouraging algorithms that reduce the incidence of false arrhythmia alarms in the Intensive Care Unit."
+  },
+  "prompt_version": "v1"
+}

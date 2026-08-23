@@ -1,0 +1,44 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:c91d0e1c60ea93026b9b6997fbcb9483a5cd7f40b611c4f29d7c3d4149482202",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "sleep disorders",
+        "label": "sleep disorders"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "pediatrics",
+      "neurology",
+      "cardiology"
+    ],
+    "id": "physionet:nch-sleep",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "contains the patient's physiological signals",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "extracted from the Electronic Health Record (EHR)",
+        "value": "EHR"
+      },
+      {
+        "evidence": "eeg",
+        "value": "EEG"
+      },
+      {
+        "evidence": "ecg",
+        "value": "ECG"
+      }
+    ],
+    "population": "Pediatric patients who had sleep studies at Nationwide Children's Hospital in Columbus, Ohio, USA between 2017 and 2019",
+    "summary": "Pediatric sleep studies from Nationwide Children's Hospital, with polysomnography recordings, technician sleep-stage assessments and annotations, plus linked longitudinal clinical records extracted from the electronic health record."
+  },
+  "prompt_version": "v1"
+}

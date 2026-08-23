@@ -1,0 +1,77 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds002672",
+  "payload": {
+    "created": "2020-03-31T05:22:26.844Z",
+    "id": "ds002672",
+    "latestSnapshot": {
+      "created": "2020-03-31T10:19:02.000Z",
+      "description": {
+        "Authors": [
+          "Yazhu Qian",
+          "Jinyou Zou",
+          "Zihao Zhang",
+          "Zhentao Zuo",
+          "Yan Zhuo",
+          "Danny JJ",
+          "Wang",
+          "Peng Zhang"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds002672.v1.0.0",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Robust functional mapping of layer-selective responses in human lateral geniculate nucleus with high-resolution 7T fMRI",
+        "ReferencesAndLinks": null
+      },
+      "readme": "\n## Two sessions means two different sequences\nses-01 = 2D EPI\nses-02 = 3D SSFP\n\n## The stimtype in the task_events file\nLE = left eye stimulus\nRE = right eye stimulus\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "01",
+          "02"
+        ],
+        "size": 4439059282,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05"
+        ],
+        "tasks": [
+          "locLREye"
+        ],
+        "totalFiles": 246
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": null,
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2020-04-01T05:08:30.930Z"
+  },
+  "source": "openneuro"
+}

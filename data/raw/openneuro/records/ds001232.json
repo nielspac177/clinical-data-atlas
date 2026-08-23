@@ -1,0 +1,109 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds001232",
+  "payload": {
+    "created": "2018-02-15T17:52:56.557Z",
+    "id": "ds001232",
+    "latestSnapshot": {
+      "created": "2019-02-22T14:43:07.000Z",
+      "description": {
+        "Authors": [
+          "Lewis-Peacock, J.A.",
+          "Norman, K.A."
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds001232.v1.0.0",
+        "Funding": [],
+        "HowToAcknowledge": "",
+        "License": "",
+        "Name": "Competition between items in working memory leads to forgetting",
+        "ReferencesAndLinks": [
+          "https://www.nature.com/articles/ncomms6768"
+        ]
+      },
+      "readme": "Citation:\nLewis-Peacock, J. A., & Norman, K. A. (2014). Competition between items in working memory leads to forgetting. Nat Commun, 5, 5768. https://doi.org/10.1038/ncomms6768\n\nTask:\nThis dataset contains 21 subjects performing two tests of working memory. In Phase 1, subjects remembered a face or a scene image on each trial. In Phase 2, subjects remembered two images (one face and one scene) on each trial. Each subject has 4 functional runs of 170 TRs each for Phase 1, and 6 functional runs of 214 TRs for Phase 2. Between runs, participants were given a break during which the experimenter checked that the participant was comfortable and alert. \n\nImage acquisition:\nAll imaging data were acquired using a 3T Siemens Skyra MRI scanner with a 16-channel head coil. A brief scout localizer scan (15 s) was run to verify that head position was within the designated field of view and to derive automatic anterior commissure–posterior commissure alignment parameters for subsequent scans. For Phases 1 and 2, we used a gradient-echo, echo-planar sequence (repetition time = 2,000 ms, echo time = 34 ms), with automatic shimming enabled, to acquire T2*-weighted data sensitive to the blood-oxygen-level dependent signal within a 64 􏰀x 64 matrix (196 mm FoV, 34 axial slices, 3 mm isotropic voxels) using integrated parallel acquisition techniques with both retrospective and prospective acquisition motion correction enabled. Each functional scan began with 20 seconds (10 TRs) of dummy pulses to achieve a steady state of tissue magnetization. Finally, we used a magnetization-prepared rapid gradient-echo (MPRAGE) sequence to acquire high-resolution T1-weighted images (repetition time = 2,300 ms, echo time = 3.08 ms, 0.9 mm isotropic voxels, 9 min 0 s acquisition time).",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 7637478569,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21"
+        ],
+        "tasks": [
+          "Phase 1",
+          "Phase 2"
+        ],
+        "totalFiles": 699
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        18,
+        23,
+        21,
+        19,
+        21,
+        20,
+        19,
+        19,
+        18,
+        29,
+        25,
+        22,
+        19,
+        18,
+        20,
+        24,
+        20,
+        27,
+        18,
+        21,
+        22
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2018-02-15T17:52:56.557Z"
+  },
+  "source": "openneuro"
+}

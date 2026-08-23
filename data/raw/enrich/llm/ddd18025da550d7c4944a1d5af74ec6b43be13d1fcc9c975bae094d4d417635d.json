@@ -1,0 +1,29 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:ddd18025da550d7c4944a1d5af74ec6b43be13d1fcc9c975bae094d4d417635d",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "critical_care"
+    ],
+    "id": "physionet:mimic-iv-note",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "free-text clinical notes",
+        "value": "clinical_notes"
+      },
+      {
+        "evidence": "electronic health record",
+        "value": "EHR"
+      }
+    ],
+    "population": "145,915 patients admitted to the hospital and emergency department at the Beth Israel Deaconess Medical Center in Boston, MA, USA, plus 237,427 patients with radiology reports",
+    "summary": "Deidentified free-text notes linked to MIMIC-IV: 331,794 discharge summaries from 145,915 patients and 2,321,355 radiology reports for 237,427 patients, deidentified under HIPAA Safe Harbor, intended for clinical natural language processing."
+  },
+  "prompt_version": "v1"
+}

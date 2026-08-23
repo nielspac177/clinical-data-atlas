@@ -1,0 +1,31 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:a5dba6b058a01558de2379fd1506bef4b30d8ea7773c2918a1d7a4d9b62bbc1a",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "common thoracic diseases",
+        "label": "common thoracic diseases"
+      }
+    ],
+    "countries": [
+      "VN"
+    ],
+    "domains": [
+      "pediatrics",
+      "pulmonology"
+    ],
+    "id": "physionet:vindr-pcxr",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "pediatric chest X-ray dataset",
+        "value": "xray"
+      }
+    ],
+    "population": "9,125 pediatric chest X-ray studies retrospectively collected from a major pediatric hospital in Vietnam between 2020-2021",
+    "summary": "Pediatric chest X-ray studies retrospectively collected from a pediatric hospital, each annotated by a radiologist for critical findings and diseases, with bounding boxes for abnormal findings and a training/test split."
+  },
+  "prompt_version": "v1"
+}

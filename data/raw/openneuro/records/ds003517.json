@@ -1,0 +1,97 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003517",
+  "payload": {
+    "created": "2021-02-15T16:30:23.774Z",
+    "id": "ds003517",
+    "latestSnapshot": {
+      "created": "2021-02-15T18:10:41.000Z",
+      "description": {
+        "Authors": [
+          "James F Cavanagh",
+          "Joel Castellanos"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds003517.v1.1.0",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "EEG: Continuous gameplay of an 8-bit style video game",
+        "ReferencesAndLinks": [
+          "PMID: 26952196"
+        ]
+      },
+      "readme": "EEG during during continuous gameplay of an 8-bit style video game.  EEG published here: 10.1016/j.neuroimage.2016.02.075.   N=17 participants.  in addition to the video game, participants first completed a 2-stim visual oddball and a 2-doors gambling task.  Tasks included in Java programming language.    Its pretty fun...    Each task sends triggers to the EEG file, and also outputs continuous data in a .csv log file. For the Escape from Asteroid Axon video game this has a wealth of movement, player position and action, antagonist position, loot box, etc info.   Data collected circa 2015 in Cognitive Rhythms and Computation Lab at University of New Mexico.  Some analytic scripts are inlcuded, but I cant verify that these were what I used in the final analysis.  Some (ExAAx_Log.m) are clearly pilot analyses.  Your best bet would be to play the game and record some triggers and examine how those line up with the .csv log, etc.   - James F Cavanagh 02/10/2021",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "eeg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [],
+        "size": 6262665570,
+        "subjects": [
+          "001",
+          "002",
+          "003",
+          "004",
+          "005",
+          "006",
+          "007",
+          "008",
+          "009",
+          "010",
+          "011",
+          "012",
+          "013",
+          "014",
+          "015",
+          "016",
+          "017"
+        ],
+        "tasks": [
+          "ContinuousVideoGamePlay"
+        ],
+        "totalFiles": 389
+      },
+      "tag": "1.1.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        39,
+        19,
+        20,
+        20,
+        18,
+        20,
+        20,
+        19,
+        20,
+        20,
+        18,
+        22,
+        19,
+        19,
+        26,
+        19,
+        18
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "eeg"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2021-02-15T18:10:24.958Z"
+  },
+  "source": "openneuro"
+}

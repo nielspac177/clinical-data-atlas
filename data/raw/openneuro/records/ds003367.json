@@ -1,0 +1,110 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003367",
+  "payload": {
+    "created": "2020-11-10T13:32:55.302Z",
+    "id": "ds003367",
+    "latestSnapshot": {
+      "created": "2020-11-10T13:35:49.000Z",
+      "description": {
+        "Authors": [
+          "Samuel B. Snider",
+          "Yelena G. Bodien",
+          "Aina Frau-Pascual",
+          "Marta Bianciardi",
+          "Andrea S. Foulkes",
+          "Brian L. Edlow"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds003367.v1.0.0",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Ascending arousal network connectivity during recovery from traumatic coma",
+        "ReferencesAndLinks": [
+          "Snider SB, Bodien YG, Frau-Pascual A, Bianciardi M, Foulkes AS, Edlow BL. Ascending arousal network connectivity during recovery from traumatic coma. NeuroImage:Clinical. 2020; in press. PMCID pending."
+        ]
+      },
+      "readme": "2020-11-10\n\nCITATION: \n\tSnider SB, Bodien YG, Frau-Pascual A, Bianciardi M, Foulkes AS, Edlow BL. \n\tAscending arousal network connectivity during recovery from traumatic \n\tcoma. NeuroImage:Clinical. 2020; in press. PMCID pending.\n\nEXPERIMENT\nOur goal was to identify the connections with the ascending arousal network with 1) the largest change during recovery of consciousness after a TBI and 2) had the largest connectivity differences between subjects with or without a chronic disorder of consciousness.\n\nWe pulled from a dataset of N = 18 subjects with acute severe TBI and coma(GCS <= 6, no eye opening for 24 hours, abnormal CT scan). 2 subjects (sub-TCRp014, sub-TCRp016) died during the acute hospitalization and were excluded from analyses in the manuscript above. All others recovered consciousness. 9 subjects had follow-up imaging >= 5 months after the initial hospitalization, while 7 subjects did not.\n\nFor comparison, we included N = 16 age,sex-matched control subjects and a convenience sample of N = 6 subjects with a chronic disorder of consciousness (DoC) >= 5 months following their TBI.\n\nDATA\nData included herein at this time only include the HARDI volumes, skull-stripped (bet2) for deidentification.\n\nAcquired on 3T Skyra (Siemens) using 32-channel head coil. HARDI scan params: 2mm isotropic resolution, 60 diffusion encoding directions, 10 b0 volumes, b=2000 sec/mm2.\n\nSUBJECT GROUPINGS\nTBI recovery patients, longitudinal imaging(N = 9): \n\t sub-TCRp001 ses-early ses-late\n\t sub-TCRp003 ses-early ses-late\n\t sub-TCRp005 ses-early ses-late\n\t sub-TCRp006 ses-early ses-late\n\t sub-TCRp008 ses-early ses-late\n\t sub-TCRp013 ses-early ses-late\n\t sub-TCRp017 ses-early ses-late\n\t sub-TCRp018 ses-early ses-late\n\t sub-TCRp023 ses-early ses-late \n\nTBI patients, acute imaging only(N = 9)\n\tsub-TCRp007 ses-early\n\tsub-TCRp009 ses-early\n\tsub-TCRp010 ses-early\n\tsub-TCRp011 ses-early\n\tsub-TCRp012 ses-early\n\tsub-TCRp014 ses-early\n\tsub-TCRp015 ses-early\n\tsub-TCRp016 ses-early\n\tsub-TCRp022 ses-early\n\nChronic DOC (N = 6):\n\t sub-TCRp002 ses-late\n\t sub-TCRp019 ses-late\n\t sub-TCRp020 ses-late\n         sub-TCRp021 ses-late\n\t sub-TCRp024 ses-late\n\t sub-TCRp025 ses-late\n\nAge/Sex-matched healthy controls (N = 16): \n\tsub-TCRc* ses-1\n\n\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_diffusion"
+        ],
+        "sessions": [
+          "1",
+          "early",
+          "late"
+        ],
+        "size": 1169933125,
+        "subjects": [
+          "TCRc007",
+          "TCRc008",
+          "TCRc010",
+          "TCRc011",
+          "TCRc012",
+          "TCRc013",
+          "TCRc014",
+          "TCRc015",
+          "TCRc016",
+          "TCRc017",
+          "TCRc018",
+          "TCRc019",
+          "TCRc020",
+          "TCRc021",
+          "TCRc022",
+          "TCRc023",
+          "TCRp001",
+          "TCRp002",
+          "TCRp003",
+          "TCRp005",
+          "TCRp006",
+          "TCRp007",
+          "TCRp008",
+          "TCRp009",
+          "TCRp010",
+          "TCRp011",
+          "TCRp012",
+          "TCRp013",
+          "TCRp014",
+          "TCRp015",
+          "TCRp016",
+          "TCRp017",
+          "TCRp018",
+          "TCRp019",
+          "TCRp020",
+          "TCRp021",
+          "TCRp022",
+          "TCRp023",
+          "TCRp024",
+          "TCRp025"
+        ],
+        "tasks": [],
+        "totalFiles": 202
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": null,
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "",
+      "studyDesign": "",
+      "studyDomain": "TBI",
+      "studyLongitudinal": "Longitudinal and Cross-sectional"
+    },
+    "publishDate": "2020-11-10T13:37:36.905Z"
+  },
+  "source": "openneuro"
+}

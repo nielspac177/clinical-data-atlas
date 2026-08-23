@@ -1,0 +1,128 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007822",
+  "payload": {
+    "created": "2026-05-21T13:10:24.578Z",
+    "id": "ds007822",
+    "latestSnapshot": {
+      "created": "2026-05-21T13:22:51.000Z",
+      "description": {
+        "Authors": [
+          "n/a"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007822.v1.0.0",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Prisoner's Dilemma EEG Dataset",
+        "ReferencesAndLinks": null
+      },
+      "readme": "EEG-BIDS dataset for a three-person hyperscanning EEG prisoner's dilemma experiment.\nThe dataset contains 11 triads x 3 participants. Participant IDs preserve the original triad and subject slot, for example sub-G01S01, sub-G01S02, and sub-G01S03.\n\nTasks are pddecision, pdfeedback, and pdrest. EEG files are stored in EEGLAB .set format. Behavior labels are provided in each task events.tsv file.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "eeg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [],
+        "size": 379391340,
+        "subjects": [
+          "G02S02",
+          "G01S02",
+          "G01S03",
+          "G05S02",
+          "G10S03",
+          "G10S02",
+          "G06S03",
+          "G03S03",
+          "G02S01",
+          "G04S03",
+          "G04S02",
+          "G08S02",
+          "G04S01",
+          "G07S01",
+          "G09S03",
+          "G05S01",
+          "G11S02",
+          "G08S03",
+          "G03S01",
+          "G06S02",
+          "G03S02",
+          "G08S01",
+          "G10S01",
+          "G05S03",
+          "G02S03",
+          "G09S01",
+          "G11S01",
+          "G01S01",
+          "G11S03",
+          "G07S02",
+          "G07S03",
+          "G06S01",
+          "G09S02"
+        ],
+        "tasks": [
+          "pdfeedback",
+          "pddecision",
+          "pdrest"
+        ],
+        "totalFiles": 602
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "eeg"
+      ],
+      "species": "",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2026-05-21T13:23:47.215Z"
+  },
+  "source": "openneuro"
+}

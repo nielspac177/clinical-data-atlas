@@ -1,0 +1,84 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004473",
+  "payload": {
+    "created": "2023-02-07T22:05:05.338Z",
+    "id": "ds004473",
+    "latestSnapshot": {
+      "created": "2023-02-09T20:17:20.000Z",
+      "description": {
+        "Authors": [
+          "Alexander P. Rockhill",
+          "Alessandra Mantovani",
+          "Brittany Stedelin",
+          "Admed M. Raslan",
+          "Nicole C. Swann"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004473.v1.0.2",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "sEEG Forced Two-Choice Task",
+        "ReferencesAndLinks": null
+      },
+      "readme": "Welcome to our dataset! Here we present stereoelectroencephalography data from a forced two-choice response task collected in the epilepsy monitoring unit at Oregon Health & Science University. The data was analyzed in collaboration with the University of Oregon. The accompanying paper the first reference below.\n\nReferences\n----------\n\nRockhill, A. P., Mantovani, A., Stedelin, B., Nerison, C. S., Raslan, A. M., & Swann, N. C. (2022). Stereo-EEG recordings extend known distributions of canonical movement-related oscillations. Journal of Neural Engineering. https://doi.org/10.1088/1741-2552/acae0a\n\nAppelhoff, S., Sanderson, M., Brooks, T., Vliet, M., Quentin, R., Holdgraf, C., Chaumon, M., Mikulan, E., Tavabi, K., Höchenberger, R., Welke, D., Brunner, C., Rockhill, A., Larson, E., Gramfort, A. and Jas, M. (2019). MNE-BIDS: Organizing electrophysiological data into the BIDS format and facilitating their analysis. Journal of Open Source Software 4: (1896). https://doi.org/10.21105/joss.01896\n\nHoldgraf, C., Appelhoff, S., Bickel, S., Bouchard, K., D'Ambrosio, S., David, O., … Hermes, D. (2019). iEEG-BIDS, extending the Brain Imaging Data Structure specification to human intracranial electrophysiology. Scientific Data, 6, 102. https://doi.org/10.1038/s41597-019-0105-7\n\n",
+      "summary": {
+        "dataProcessed": true,
+        "modalities": [
+          "ieeg",
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 6767566336,
+        "subjects": [
+          "1",
+          "10",
+          "11",
+          "12",
+          "2",
+          "5",
+          "6",
+          "9"
+        ],
+        "tasks": [
+          "SlowFast"
+        ],
+        "totalFiles": 126
+      },
+      "tag": "1.0.2"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        44,
+        47,
+        33,
+        31,
+        39,
+        31,
+        30,
+        26
+      ],
+      "associatedPaperDOI": "10.1088/1741-2552/acae0a",
+      "dataProcessed": true,
+      "dxStatus": "Epilepsy",
+      "grantFunderName": "University of Oregon, NIH",
+      "modalities": [
+        "ieeg",
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "Forced Two-Choice Task",
+      "studyDomain": "Motor Neuroscience",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2023-02-08T00:47:59.036Z"
+  },
+  "source": "openneuro"
+}

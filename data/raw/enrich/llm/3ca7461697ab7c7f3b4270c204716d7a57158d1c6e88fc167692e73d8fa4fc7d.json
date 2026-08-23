@@ -1,0 +1,53 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:3ca7461697ab7c7f3b4270c204716d7a57158d1c6e88fc167692e73d8fa4fc7d",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "DICOM images of lung cancer subjects",
+        "label": "lung cancer"
+      },
+      {
+        "evidence": "diagnosed with Adenocarcinoma",
+        "label": "Adenocarcinoma"
+      },
+      {
+        "evidence": "'B' with Small Cell Carcinoma",
+        "label": "Small Cell Carcinoma"
+      },
+      {
+        "evidence": "'C' with Large Cell Carcinoma",
+        "label": "Large Cell Carcinoma"
+      },
+      {
+        "evidence": "'G' with Squamous Cell Carcinoma",
+        "label": "Squamous Cell Carcinoma"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "pulmonology"
+    ],
+    "id": "tcia:lung-pet-ct-dx",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "CT and PET-CT DICOM images",
+        "value": "CT"
+      },
+      {
+        "evidence": "CT and PET-CT DICOM images",
+        "value": "PET"
+      },
+      {
+        "evidence": "tissue histopathological diagnosis",
+        "value": "pathology"
+      }
+    ],
+    "population": "Patients with suspicion of lung cancer who underwent standard-of-care lung biopsy and PET/CT; images acquired retrospectively.",
+    "summary": "CT and PET/CT DICOM images of lung cancer subjects with XML annotation files marking tumor location by bounding box. Subjects are grouped by tissue histopathological diagnosis into four carcinoma types."
+  },
+  "prompt_version": "v1"
+}

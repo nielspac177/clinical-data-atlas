@@ -1,0 +1,46 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:4d2a91b6584c16061da03d0cb259e83f0eb6d6a5a7e9a2fe421a8fc1c1b143fe",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "922 patients with invasive breast cancer",
+        "label": "invasive breast cancer"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "oncology"
+    ],
+    "id": "tcia:duke-breast-cancer-mri",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "prone position axial breast MRI images were acquired by 1.5T or 3T scanners",
+        "value": "MRI"
+      },
+      {
+        "evidence": "Demographic, clinical, pathology, treatment, outcomes, and genomic data",
+        "value": "pathology"
+      },
+      {
+        "evidence": "outcomes, and genomic data",
+        "value": "genomics"
+      },
+      {
+        "evidence": "collected from a variety of sources including clinical notes",
+        "value": "clinical_notes"
+      },
+      {
+        "evidence": "Demographic, clinical, pathology, treatment, outcomes",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "922 patients with invasive breast cancer imaged on 1.5T or 3T scanners",
+    "summary": "Dynamic contrast-enhanced breast MRI for 922 patients with invasive breast cancer, shared with demographic, clinical, pathology, treatment, outcome and genomic data plus 529 precomputed imaging features and tumor locations."
+  },
+  "prompt_version": "v1"
+}

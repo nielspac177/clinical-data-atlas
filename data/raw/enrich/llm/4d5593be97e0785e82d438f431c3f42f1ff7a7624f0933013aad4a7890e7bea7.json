@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:4d5593be97e0785e82d438f431c3f42f1ff7a7624f0933013aad4a7890e7bea7",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "76 patients diagnosed with Brugada syndrome",
+        "label": "Brugada syndrome"
+      },
+      {
+        "evidence": "287 healthy control subjects",
+        "label": "healthy control subjects"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:brugada-huca",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "12-lead electrocardiogram (ECG) recordings",
+        "value": "ECG"
+      }
+    ],
+    "population": "363 subjects in total, including 76 patients diagnosed with Brugada syndrome and 287 healthy control subjects",
+    "summary": "Retrospectively collected 12-lead ECG recordings from patients evaluated at a hospital cardiology department, with expert-reviewed diagnostic labels for Brugada syndrome and healthy controls, fully anonymized to support ECG classification research."
+  },
+  "prompt_version": "v1"
+}

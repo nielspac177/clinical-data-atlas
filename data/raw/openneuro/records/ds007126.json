@@ -1,0 +1,139 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007126",
+  "payload": {
+    "created": "2025-12-24T14:09:49.969Z",
+    "id": "ds007126",
+    "latestSnapshot": {
+      "created": "2025-12-27T04:01:13.000Z",
+      "description": {
+        "Authors": [
+          "Congcong Liu",
+          "Xiangting Dai",
+          "MengYuan",
+          "Zijie Wei",
+          "Juan Kou"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007126.v1.0.0",
+        "Funding": [
+          "National Nature Science Foundation of China [NSFC32100893] and the Sichuan Science and Technology Program [2024NSFSC1227]"
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "An open fMRI dataset examining the effects of online social and non-social information distraction on global-local attention",
+        "ReferencesAndLinks": null
+      },
+      "readme": "This dataset contains the raw MRI data accompanying the paper \"An open fMRI dataset examining the effects of online social and non-social information distraction on global-local attention\". Please cite the above paper if you use this data.\n\nThe dataset includes:\n\n1. anat/ anatomical scans (T1-weighted images) for each subject\n2. func/ whole-brain EPI data from 3 task runs per participant. \n\nThe events files contain the onsets, durations, trial types  for all trials in the corresponding run. \n\n\nFor a full description of the paradigm and the employed procedures please see the paper.   \n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 13134820355,
+        "subjects": [
+          "048",
+          "059",
+          "028",
+          "013",
+          "020",
+          "029",
+          "030",
+          "017",
+          "056",
+          "049",
+          "008",
+          "024",
+          "022",
+          "005",
+          "045",
+          "042",
+          "034",
+          "058",
+          "043",
+          "004",
+          "026",
+          "062",
+          "010",
+          "037",
+          "040",
+          "055",
+          "011",
+          "033",
+          "053",
+          "014",
+          "007",
+          "031",
+          "016",
+          "039"
+        ],
+        "tasks": [
+          "sms_bold_2mm_run4",
+          "sms_bold_2mm_run2",
+          "sms_bold_2mm_run6"
+        ],
+        "totalFiles": 413
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        20,
+        20,
+        20,
+        18,
+        21,
+        20,
+        20,
+        20,
+        19,
+        20,
+        18,
+        20,
+        17,
+        17,
+        19,
+        20,
+        18,
+        24,
+        23,
+        17,
+        18,
+        23,
+        19,
+        23,
+        18,
+        19,
+        20,
+        19,
+        18,
+        20,
+        20,
+        18,
+        23,
+        19
+      ],
+      "associatedPaperDOI": "https://doi.org/10.1016/j.chb.2024.108258",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "National Nature Science Foundation of China [NSFC32100893] and the Sichuan Science and Technology Program [2024NSFSC1227]",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "within-subject design",
+      "studyDomain": "the impacts of social media on  crucial cognitive functions",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2025-12-27T04:09:53.663Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,106 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds001110",
+  "payload": {
+    "created": "2017-10-13T17:57:38.695Z",
+    "id": "ds001110",
+    "latestSnapshot": {
+      "created": "2018-07-14T04:26:31.000Z",
+      "description": {
+        "Authors": [
+          "Zadbood, A., Chen, J., Leong, Y.C., Norman, K.A., & Hasson, U."
+        ],
+        "DatasetDOI": null,
+        "Funding": [],
+        "HowToAcknowledge": null,
+        "License": null,
+        "Name": "Sherlock_Merlin",
+        "ReferencesAndLinks": [
+          "https://academic.oup.com/cercor/article/doi/10.1093/cercor/bhx202/4080827/How-We-Transmit-Memories-to-Other-Brains"
+        ]
+      },
+      "readme": "This directory includes the data of 18 particpants who watched Sherlock movie and listened to the audio recording of Merlin movie.\nIt also includes the data of 18 particpants who watched Merlin movie and listened to the audio recording of Sherlock movie.\nIn addition there is the data of one particpants who watching both of these movies and recalling each of them in the scanner (two seperate days for the two movies). \nThe audio recording of these sessions was used as stimuli that the lsiteners listened to in the scanner. Deskulled anatomical scan images are included for each subject.\n\nThe data needs to be cropped from the beginning and the end to be aligned and matches the onset of the stimuli.\n\n\nCropping info (in seconds, NOT including HRF delay):\n\nviewers:\nMerlin Movie: start 25.5  end 1528  (matching stimulus file: Merlin.mp4)\nSherlock Movie: start 25.5  end 1441 (matching stimulus file: Sherlock.m4v)\n\nNote: the crop at the beginning includes an eye tracking set up and scanner delay. \nThe cropped data will include all the movie data, including the cartoon intro. \nDepending on the research questions the movie can be time stamped and cropped further if needed)\n\n-------------------------------------\n\nlisteners:\nMerlin Audio: start 3  end 915  (matching stimulus file: Merlin_Recall_For_Listener.wav)\nSherlock Audio: start 3  end 1080  (matching stimulus file:  Sherlock_Recall_For_Listener.wav)\n\nNote: the crop at the beginning includes scanner delay. \nThe cropped data will include all the audio data, including the intro music. \nDepending on the research questions the audio recording can be time stamped and cropped further if needed)\n\n------------------------------------\n\nspeaker:\nMerlin Movie: start 25.5  end 1528  (matching stimulus file: Merlin.mp4)\nSherlock Movie: start 25.5  end 1441  (matching stimulus file: Sherlock.m4v)\n\nNote: the crop at the beginning includes an eye-tracking set up and scanner delay. \nThe cropped data will include all the movie data, including the cartoon intro. \nDepending on the research questions the movie can be time stamped and cropped further if needed)\n\nMerlin Recall: start 3 end 906  (matching stimulus file: freerecall_merlin.wav)\nSherlock Recall: start 3 end 1062  (matching stimulus file: freerecall_sherlock.wav)\n\nNote: the crop at the beginning includes scanner delay. \nThe audio file should be used to do accurate time stamping to find the start time of the speech. This is not included in the crop info provided above.\n\nIn general, time stamping should be done separately depending on the research question and is not included in crop info.\n\n\nFor more info about the methods please refer to https://academic.oup.com/cercor/article/doi/10.1093/cercor/bhx202/4080827/How-We-Transmit-Memories-to-Other-Brains\n\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 9712179638,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31",
+          "32",
+          "33",
+          "34",
+          "35",
+          "36",
+          "37"
+        ],
+        "tasks": [
+          "Merlin Audio",
+          "Merlin Movie",
+          "Merlin free recall",
+          "Sherlock free recall",
+          "Sherlock Audio",
+          "Sherlock Movie"
+        ],
+        "totalFiles": 206
+      },
+      "tag": "00003"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": null,
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2017-10-13T17:57:38.695Z"
+  },
+  "source": "openneuro"
+}

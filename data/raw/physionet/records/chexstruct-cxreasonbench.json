@@ -1,0 +1,42 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "chexstruct-cxreasonbench",
+  "payload": {
+    "abstract": "<p>Recent progress in Large Vision-Language Models (LVLMs) has enabled promising applications in medical tasks such as report generation and visual question answering. However, existing benchmarks focus mainly on the final diagnostic answer, offering limited insight into whether models engage in clinically meaningful reasoning.</p>\n<p>To address this, we present CheXStruct and CXReasonBench, a structured pipeline and benchmark built on the publicly available MIMIC-CXR-JPG dataset. CheXStruct automatically derives a sequence of intermediate reasoning steps directly from chest X-rays, such as segmenting anatomical regions, deriving anatomical landmarks and diagnostic measurements, computing diagnostic indices, and applying clinical thresholds. CXReasonBench leverages this pipeline to evaluate whether models can perform clinically valid reasoning steps and to what extent they can learn from structured guidance, enabling fine-grained and transparent assessment of diagnostic reasoning. The benchmark comprises 18,988 QA pairs across 12 diagnostic tasks and 1,200 cases, each paired with up to four visual inputs, and supports multi-path, multi-stage evaluation including visual grounding via anatomical region selection and diagnostic measurements.</p>\n<p>This dataset is intended to serve as a standardized resource for developing, evaluating, and comparing vision-language models on clinically grounded reasoning tasks in chest X-rays.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 0,
+    "core_doi": "10.13026/wgz6-zx42",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 0,
+    "public_project_uuid": "c8fa482d-9436-4ba6-8b9e-8940a1b9464a",
+    "publish_date": "2025-10-23",
+    "resource_type": "Database",
+    "short_description": "CheXStruct is an automated pipeline that derives structured diagnostic reasoning steps from chest X-rays. CXReasonBench builds on this to evaluate whether models perform clinically grounded, multi-step reasoning beyond final diagnoses.",
+    "slug": "chexstruct-cxreasonbench",
+    "source_url": "https://physionet.org/content/chexstruct-cxreasonbench/1.0.1/",
+    "title": "CXReasonBench: A Benchmark for Evaluating Structured Diagnostic Reasoning in Chest X-rays",
+    "topics": [
+      "structured chest x-ray qa",
+      "intermediate reasoning steps",
+      "evaluation",
+      "structured reasoning",
+      "chest x-ray",
+      "benchmark",
+      "grounded reasoning",
+      "diagnostic reasoning",
+      "structured diagnostic pipeline"
+    ],
+    "version": "1.0.1",
+    "version_doi": "10.13026/d14j-1b45"
+  },
+  "source": "physionet"
+}

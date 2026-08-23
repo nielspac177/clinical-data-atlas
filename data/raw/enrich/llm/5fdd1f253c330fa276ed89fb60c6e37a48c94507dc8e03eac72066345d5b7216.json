@@ -1,0 +1,39 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:5fdd1f253c330fa276ed89fb60c6e37a48c94507dc8e03eac72066345d5b7216",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "recordings from healthy volunteers",
+        "label": "healthy volunteers"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "cardiology",
+      "other"
+    ],
+    "id": "physionet:drivedb",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "which include ECG",
+        "value": "ECG"
+      },
+      {
+        "evidence": "EMG (right trapezius)",
+        "value": "EMG"
+      },
+      {
+        "evidence": "GSR (galvanic skin resistance) measured on the hand and foot, and respiration",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": "Healthy volunteers recorded while driving a prescribed route including city streets and highways in and around Boston, Massachusetts",
+    "summary": "Multiparameter recordings from healthy volunteers driving a prescribed route of city streets and highways around Boston, including ECG, EMG, galvanic skin resistance and respiration, collected to study automated stress recognition."
+  },
+  "prompt_version": "v1"
+}

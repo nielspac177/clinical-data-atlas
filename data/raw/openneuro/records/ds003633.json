@@ -1,0 +1,96 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003633",
+  "payload": {
+    "created": "2021-04-24T03:09:05.237Z",
+    "id": "ds003633",
+    "latestSnapshot": {
+      "created": "2022-12-29T03:52:29.000Z",
+      "description": {
+        "Authors": [
+          "Xingyu Liu",
+          "Yuxuan Dai",
+          "Hailun Xie",
+          "Zonglei Zhen"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds003633.v1.0.4",
+        "Funding": [
+          "National Key R&D Program of China (Grant No. 2019YFA0709503)",
+          "National Natural Science Foundation of China (Grant No. 31771251)"
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": " ForrestGump-MEG",
+        "ReferencesAndLinks": null
+      },
+      "readme": "\n**ForrestGump-MEG: A audio-visual movie watching MEG dataset**\n\nFor details please refer to our paper on https://www.biorxiv.org/content/10.1101/2021.06.04.446837v1.\n\nThis dataset contains MEG data recorded from 11 subjects while watching the 2h long Chinese-dubbed audio-visual movie 'Forrest Gump'. The data were acquired with a 275-channel CTF MEG. Auxiliary data (T1w) as well as derivation data such as preprocessed data and MEG-MRI co-registration are also included. \n\nPlease noted that For sub-01, the MEG machine collapsed at the 500th second in run 7 (segment 7), a supplementary run (run 8, segment 7, 200 s) was recorded subsequently after the collapse. So there are 9 runs in total for sub-01 with run 7&8 for segment 7 and run 9 for segment 8. \n\n\n**Pre-process procedure description**\n\nThe T1w images stored as NIFTI files were minimally-preprocessed using the anatomical preprocessing pipeline from fMRIPrep with default settings. \n\nMEG data were pre-processed using MNE following a three-step procedure: 1. bad channels were detected and removed. 2. a high-pass filter of 1 Hz was applied to remove possible slow drifts from the continuous MEG data. 3. artifacts removal was performed with ICA.\n\n\n**Stimulus material**\n\nThe audio-visual stimulus materials were from the Chinese-dubbed 'Forrest Gump' DVD released in 2013 (ISBN: 978-7-7991-3934-0), which cannot be publicly released due to copyright restrictions. The stimulus materials are available upon reasonable request and on condition of a research-only data use agreement (correspondence with Xingyu Liu, liuxingyu987@foxmail.com).\n\n\n**Dataset content overview**\n\nthe data were organized following the MEG-BIDS using MNE-BIDS toolbox.\n\n*the pre-processed MEG data*\n\nThe preprocessed MEG recordings including the preprocessed MEG data, the event files, the ICA decomposition and label files and the MEG-MRI coordinate transformation file are hosted here. \n\n\t|---./derivatives/preproc_meg-mne_mri-fmriprep/sub-xx/ses-movie/meg/\n\t\t|---sub-xx_ses-movie_coordsystem.json\n\t\t|---sub-xx_ses-movie_task-movie_run-xx_channels.tsv\n\t\t|---sub-xx_ses-movie_task-movie_run-xx_decomposition.tsv\n\t\t|---sub-xx_ses-movie_task-movie_run-xx_events.tsv\n\t\t|---sub-xx_ses-movie_task-movie_run-xx_ica.fif.gz\n\t\t|---sub-xx_ses-movie_task-movie_run-xx_meg.fif\n\t\t|---sub-xx_ses-movie_task-movie_run-xx_meg.json\n\t\t|---...\n\t\t|---sub-xx_ses-movie_task-movie_trans.fif\n\n\n*the pre-processed MRI data*\n\nThe preprocessed MRI volume, reconstructed surface, and other associations including transformation files are hosted here\n\n\t|---./derivatives/preproc_meg-mne_mri-fmriprep/sub-xx/ses-movie/anat/\n\t\t|---sub-xx_ses-movie_desc-preproc_T1w.nii.gz\n\t\t|---sub-xx_ses-movie_hemi-L_inflated.surf.gii\n\t\t|---sub-xx_ses-movie_hemi-L_midthickness.surf.gii\n\t\t|---sub-xx_ses-movie_hemi-L_pial.surf.gii\n\t\t|---sub-xx_ses-movie_hemi-L_smoothwm.surf.gii\n\t\t|---sub-xx_ses-movie_hemi-R_inflated.surf.gii\n\t\t|---sub-xx_ses-movie_hemi-R_midthickness.surf.gii\n\t\t|---sub-xx_ses-movie_hemi-R_pial.surf.gii\n\t\t|---sub-xx_ses-movie_hemi-R_smoothwm.surf.gii\n\t\t|---sub-xx_ses-movie_space-MNI152NLin2009cAsym_desc-preproc_T1w.nii.gz\n\t\t|---sub-xx_ses-movie_space-MNI152NLin6Asym_desc-preproc_T1w.nii.gz\n\t\t|---...\n\nthe FreeSurfer surface data, the high-resolution head surface and the MRI-fiducials are provided here\n\n\t|---./derivatives/preproc_meg-mne_mri-fmriprep/sourcedata/\n\t\t|---freesurfer\t\n\t\t    |---sub-xx\n\t\t    |---...\n\n\n*the raw data*\n\n\t|---./sub-xx/ses-movie/\t\n\t\t|---meg/\n\t\t|\t|---sub-xx_ses-movie_coordsystem.json\n\t\t|\t|---sub-xx_ses-movie_task-movie_run-xx_channels.tsv\n\t\t|\t|---sub-xx_ses-movie_task-movie_run-xx_events.tsv\n\t\t|\t|---sub-xx_ses-movie_task-movie_run-xx_meg.ds\n\t\t|\t|---sub-xx_ses-movie_task-movie_run-xx_meg.json\n\t\t|\t|---...\t\t\n\t\t|---anat/\n\t\t\t|---sub-xx_ses-movie_T1w.json\n\t\t\t|---sub-xx_ses-movie_T1w.nii.gz\n\n",
+      "summary": {
+        "dataProcessed": true,
+        "modalities": [
+          "meg",
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural"
+        ],
+        "sessions": [
+          "movie"
+        ],
+        "size": 78926559646,
+        "subjects": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11"
+        ],
+        "tasks": [
+          "movie",
+          "noise"
+        ],
+        "totalFiles": 2298
+      },
+      "tag": "1.0.4"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        21,
+        19,
+        22,
+        22,
+        23,
+        21,
+        24,
+        22,
+        20,
+        23,
+        25,
+        null
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": true,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "meg",
+        "mri"
+      ],
+      "species": "",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2021-05-16T07:35:57.034Z"
+  },
+  "source": "openneuro"
+}

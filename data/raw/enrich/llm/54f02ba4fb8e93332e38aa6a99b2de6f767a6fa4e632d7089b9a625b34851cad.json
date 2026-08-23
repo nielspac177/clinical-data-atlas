@@ -1,0 +1,43 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:54f02ba4fb8e93332e38aa6a99b2de6f767a6fa4e632d7089b9a625b34851cad",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Rhabdoid Tumor",
+        "label": "Rhabdoid Tumor"
+      },
+      {
+        "evidence": "Complex Mixed and Stromal Neoplasms",
+        "label": "Complex Mixed and Stromal Neoplasms"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "pediatrics",
+      "gastroenterology_hepatology",
+      "nephrology_urology"
+    ],
+    "id": "gdc:TARGET-RT",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "WGS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "RNA-Seq",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "69 human cases",
+    "summary": "TARGET rhabdoid tumor collection with primary sites in kidney, liver and lip, providing whole-genome, RNA and miRNA sequencing, methylation arrays, structural variation, and clinical and biospecimen records."
+  },
+  "prompt_version": "v1"
+}

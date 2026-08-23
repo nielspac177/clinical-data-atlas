@@ -1,0 +1,28 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:32bea390c55b2f2c900e4296f1410c8e70269ce2ec17aa7c162cff18df913c57",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "public_health",
+      "other"
+    ],
+    "id": "physionet:annotation-dataset-sdoh",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Clinical Care Database notes",
+        "value": "clinical_notes"
+      },
+      {
+        "evidence": "incompletely collected from the electronic health records (EHR)",
+        "value": "EHR"
+      }
+    ],
+    "population": "Notes from the MIMIC-III Clinical Care Database, including notes written by physicians and social workers",
+    "summary": "Sentence-level annotations of social determinants of health in clinical notes, covering employment, housing, transportation, parental status, relationship and social support, and whether mentions are adverse."
+  },
+  "prompt_version": "v1"
+}

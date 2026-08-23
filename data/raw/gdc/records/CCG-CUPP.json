@@ -1,0 +1,123 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "CCG-CUPP",
+  "payload": {
+    "dbgap_accession_number": "phs001801",
+    "disease_type": [
+      "Ductal and Lobular Neoplasms",
+      "Transitional Cell Papillomas and Carcinomas",
+      "Germ Cell Neoplasms",
+      "Neoplasms, NOS",
+      "Myomatous Neoplasms",
+      "Adnexal and Skin Appendage Neoplasms",
+      "Complex Epithelial Neoplasms",
+      "Squamous Cell Neoplasms",
+      "Soft Tissue Tumors and Sarcomas, NOS",
+      "Adenomas and Adenocarcinomas",
+      "Cystic, Mucinous and Serous Neoplasms",
+      "Epithelial Neoplasms, NOS"
+    ],
+    "id": "CCG-CUPP",
+    "name": "Center for Cancer Genomics (CCG) Cancers of Unknown Primary Project (CUPP)",
+    "primary_site": [
+      "Unknown"
+    ],
+    "program": {
+      "dbgap_accession_number": null,
+      "name": "CCG",
+      "program_id": "7033649e-8829-5adf-840d-e8a7feb81ddd"
+    },
+    "project_id": "CCG-CUPP",
+    "releasable": false,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 272,
+      "data_categories": [
+        {
+          "case_count": 28,
+          "data_category": "Simple Nucleotide Variation",
+          "file_count": 278
+        },
+        {
+          "case_count": 33,
+          "data_category": "Sequencing Reads",
+          "file_count": 229
+        },
+        {
+          "case_count": 272,
+          "data_category": "Clinical",
+          "file_count": 272
+        },
+        {
+          "case_count": 25,
+          "data_category": "Copy Number Variation",
+          "file_count": 100
+        },
+        {
+          "case_count": 30,
+          "data_category": "Transcriptome Profiling",
+          "file_count": 108
+        },
+        {
+          "case_count": 33,
+          "data_category": "DNA Methylation",
+          "file_count": 99
+        },
+        {
+          "case_count": 272,
+          "data_category": "Biospecimen",
+          "file_count": 291
+        },
+        {
+          "case_count": 25,
+          "data_category": "Somatic Structural Variation",
+          "file_count": 56
+        },
+        {
+          "case_count": 29,
+          "data_category": "Structural Variation",
+          "file_count": 116
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 33,
+          "experimental_strategy": "WXS",
+          "file_count": 194
+        },
+        {
+          "case_count": 26,
+          "experimental_strategy": "WGS",
+          "file_count": 357
+        },
+        {
+          "case_count": 29,
+          "experimental_strategy": "RNA-Seq",
+          "file_count": 261
+        },
+        {
+          "case_count": 25,
+          "experimental_strategy": "miRNA-Seq",
+          "file_count": 75
+        },
+        {
+          "case_count": 33,
+          "experimental_strategy": "Methylation Array",
+          "file_count": 99
+        },
+        {
+          "case_count": 272,
+          "experimental_strategy": "Tissue Slide",
+          "file_count": 291
+        }
+      ],
+      "file_count": 1549,
+      "file_size": 6790750098398
+    }
+  },
+  "source": "gdc"
+}

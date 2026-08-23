@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:8c44f9c9c6aa6d2b376c42ff979963e96d5851cb0b14e513d99674e71822c0b3",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Sarcoma",
+        "label": "Sarcoma"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "tcia:tcga-sarc",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "CT MR",
+        "value": "CT"
+      },
+      {
+        "evidence": "CT MR",
+        "value": "MRI"
+      },
+      {
+        "evidence": "Genomic Data Commons (GDC) Data Portal",
+        "value": "genomics"
+      }
+    ],
+    "population": "Sarcoma patients drawn from The Cancer Genome Atlas; imaging mostly acquired during routine care rather than a controlled study (5 participants per source facts).",
+    "summary": "Radiology images of sarcoma patients covering chest, abdomen, pelvis, lower limb and thoracic spine, matched by patient identifier to TCGA clinical, genetic and pathological data."
+  },
+  "prompt_version": "v1"
+}

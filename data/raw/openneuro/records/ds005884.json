@@ -1,0 +1,117 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005884",
+  "payload": {
+    "created": "2025-01-27T03:18:14.148Z",
+    "id": "ds005884",
+    "latestSnapshot": {
+      "created": "2025-07-01T03:34:57.000Z",
+      "description": {
+        "Authors": [
+          "Zhaoxing Wei",
+          "Xiaomin Lin",
+          "Lingfei Guo",
+          "Jixin Liu",
+          "Li Hu",
+          "Yaou Liu",
+          "Yazhuo Kong"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005884.v1.1.0",
+        "Funding": [
+          "National Key R&D Program of China (2022YFC3500603)",
+          "National Natural Science Foundation of China (82072010)",
+          "Beijing Natural Science Foundation (IS23108)"
+        ],
+        "HowToAcknowledge": "Please cite our paper: Wei, et al. (2025). CoSpine Database: An Innovative Protocol and Open-Access Resource for Simultaneous Cortico-Spinal fMRI.",
+        "License": "CC0",
+        "Name": "CoSpine Database_motor_dataset",
+        "ReferencesAndLinks": []
+      },
+      "readme": "# Simultaneous cortico-spinal fMRI (CoSpine) Motor-dataset\n\n**Version:** v1.0.0  \n**Date:** 2025-06-30  \n**BIDS-compliant**\n\n---\n\n## 1. Dataset Overview\n\nThis is the first open-access, BIDS-compliant cortico-spinal task-based fMRI dataset using **voluntary motor tasks**. It enables exploration of cortico-spinal dynamics during repetitive hand movements by providing simultaneous brain-and-spinal fMRI, physiological recordings, and task structure.\n\n- **Task:** Voluntary hand grasping (left and right)\n- **Modalities:** fMRI (task-motor BOLD), structural MRI (T1w), EPI-based field maps (reverse phase encoding), physiological signals (pulse & respiration), events/behavioural logs\n- **Subjects:** 22 healthy participants  \n\n\n---\n\n## 2. Experimental Design\n\n- **Task:** Participants performed hand grasping using a **6.5 cm diameter dynamometer**.\n- **Cueing:** Auditory cues presented via MRI-compatible headphones.\n- **Design:** 12 blocks in total (6 for each hand). Each block consisted of **8 grasps at 1 Hz**.\n- **ITI:** Randomized between **16–20 seconds**.\n- **Software:** Stimuli were presented and synchronized using **E-Prime 2.0** on Windows.\n\nEvent timings (onset, duration) and trial types (motorL, motorR) are documented in each `*_events.tsv`.\n\n---\n\n## 3. Data Acquisition\n\n- **Scanner:** 3T Siemens Prisma (Erlangen, Germany)\n- **Head coil:** Standard 64-channel head-neck coil\n- **fMRI protocol:** Simultaneous acquisition of brain and spinal cord\n- **Physiology:** Pulse and respiration recorded during all task runs\n\n---\n\n## 4. Dataset Structure\n\n## 4. Dataset Structure\n\n```text\ndataset/\n├── dataset_description.json\n├── README\n├── task-motor_events.json\n├── participants.tsv + .json\n├── sub-01/\n│   ├── anat/\n│   │   ├── sub-01_T1w.nii.gz\n│   │   └── sub-01_T1w.json\n│   ├── fmap/\n│   │   ├── sub-01_dir-AP_epi.nii.gz\n│   │   ├── sub-01_dir-AP_epi.json\n│   │   ├── sub-01_dir-PA_epi.nii.gz\n│   │   └── sub-01_dir-PA_epi.json\n│   └── func/\n│       ├── sub-01_task-motorL_bold.nii.gz\n│       ├── sub-01_task-motorL_bold.json\n│       ├── sub-01_task-motorL_events.tsv\n│       ├── sub-01_task-motorL_recording-pulse_physio.tsv.gz\n│       ├── sub-01_task-motorL_recording-pulse_physio.json\n│       ├── sub-01_task-motorL_recording-respiratory_physio.tsv.gz\n│       ├── sub-01_task-motorL_recording-respiratory_physio.json\n│       ├── sub-01_task-motorR_bold.nii.gz\n│       ├── sub-01_task-motorR_bold.json\n│       ├── sub-01_task-motorR_events.tsv\n│       ├── sub-01_task-motorR_recording-pulse_physio.tsv.gz\n│       ├── sub-01_task-motorR_recording-pulse_physio.json\n│       ├── sub-01_task-motorR_recording-respiratory_physio.tsv.gz\n│       └── sub-01_task-motorR_recording-respiratory_physio.json\n```\n\n\n\n## 5 Quality control / preprocessing\n\n- Structural T1-weighted images have been defaced for privacy.\n- Preprocessed data is placed in `derivatives/preprocessed/`.\n\n---\n\n\n## Contact\n\nZhaoxing Wei (zhaoxing.wei@dartmouth.edu)  \nYazhuo Kong (kongyz@psych.ac.cn)",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 7558949256,
+        "subjects": [
+          "22",
+          "15",
+          "16",
+          "05",
+          "18",
+          "21",
+          "10",
+          "06",
+          "14",
+          "01",
+          "17",
+          "19",
+          "02",
+          "11",
+          "20",
+          "13",
+          "12",
+          "03",
+          "04",
+          "07",
+          "09",
+          "08"
+        ],
+        "tasks": [
+          "motor"
+        ],
+        "totalFiles": 531
+      },
+      "tag": "1.1.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        44,
+        59,
+        66,
+        35,
+        48,
+        64,
+        46,
+        56,
+        54,
+        64,
+        74,
+        40,
+        37,
+        62,
+        59,
+        52,
+        46,
+        40,
+        46,
+        42,
+        59,
+        59
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "Each participant performed 8 grasping movements with the left hand and 8 with the right hand. Cortico-spinal fMRI data were acquired during the movements to investigate the neural correlates of motor processing, including cortical and spinal cord activity. Additionally, structural images, field maps, and physiological signal data were collected.",
+      "studyDomain": "motor",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2025-02-04T21:14:27.420Z"
+  },
+  "source": "openneuro"
+}

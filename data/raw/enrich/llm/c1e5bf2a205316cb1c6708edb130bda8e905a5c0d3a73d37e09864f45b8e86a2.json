@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:c1e5bf2a205316cb1c6708edb130bda8e905a5c0d3a73d37e09864f45b8e86a2",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "3 lesion types (benign cyst, hemangioma, and metastasis)",
+        "label": "benign cyst"
+      },
+      {
+        "evidence": "(benign cyst, hemangioma, and metastasis)",
+        "label": "hemangioma"
+      },
+      {
+        "evidence": "hemangioma, and metastasis) were manually annotated",
+        "label": "metastasis"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "gastroenterology_hepatology"
+    ],
+    "id": "tcia:ct-phantom4radiomics",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "240 CT series with 8 parameter variations",
+        "value": "CT"
+      }
+    ],
+    "population": "A 3D-printed radiopaque CT phantom developed using real patient data; no human participants.",
+    "summary": "CT series of a 3D-printed anthropomorphic phantom built from real patient data, with annotated normal liver tissue and lesion types, used to assess radiomics feature stability across CT acquisition parameters."
+  },
+  "prompt_version": "v1"
+}

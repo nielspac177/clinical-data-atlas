@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:11f931f8baf3f2d8cb4d20bd90eb6aafa210fee579dc303303c496e67c491e03",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "dehydration (total body water loss)",
+        "label": "dehydration"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "endocrinology_metabolism"
+    ],
+    "id": "physionet:qde",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "bioimpedance measurements, temperature measurements",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "salivary samples, and sweat samples",
+        "value": "other"
+      }
+    ],
+    "population": null,
+    "summary": "Measurements for estimating dehydration, or total body water loss, using bioimpedance, temperature readings, and salivary and sweat samples."
+  },
+  "prompt_version": "v1"
+}

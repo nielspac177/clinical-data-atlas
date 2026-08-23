@@ -1,0 +1,160 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds007095",
+  "payload": {
+    "created": "2025-12-16T02:23:16.155Z",
+    "id": "ds007095",
+    "latestSnapshot": {
+      "created": "2025-12-16T07:22:28.000Z",
+      "description": {
+        "Authors": [
+          "Chen Feng",
+          "Haoqi Ni",
+          "Zhoule Zhu",
+          "Hongjie Jiang",
+          "Zhe Zheng",
+          "Wenjie Ming",
+          "Shuang Wang",
+          "Kedi Xu",
+          "Junming Zhu"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds007095.v1.0.0",
+        "Funding": [
+          "National Science and Technology Major Project (2025ZD0215100)",
+          "Science and Technology Innovation 2030-Major Project (2021ZD0200404)",
+          "National Natural Science Foundation of China (Grant No. 82272112)",
+          "Outstanding Youth Program of Zhejiang Natural Science Foundation (LR23H180002)"
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "RNS_Epilepsy-iBIDS",
+        "ReferencesAndLinks": [
+          ""
+        ]
+      },
+      "readme": "Dataset of long-term iEEG invasively recorded in epilepsy patients implanted with responsive neurostimulation system  (RNS)\n----------\nWe provided a long-term intracranial electroencephalography (iEEG) dataset of 8 epilepsy patients implanted with responsive neurostimulation (RNS) devices. The dataset was constituted by iEEG data recorded from bilateral epileptic lesion areas.\n\nEach recording contains 90 seconds of dual-channel iEEG around each stimulation, 60 seconds before the start of the stimulation, and about 30 seconds after the end of the stimulation. The stimulation markers are contained in the events.tsv files, including the onset and duration for each stimulus. The ieeg.json files contain the electrical stimulation parameters for the current session, which were set by the neurosurgeon during each regular clinical follow-up of epilepsy patients. \n\nThe iEEG data were saved in EDF format, stored as the Brain Imaging Data Structure (BIDS), and published on the OpenNeuro. The criterion for including patients in this dataset is to intracranially record the seizure events for more than six months. For each subject, one week is considered as a session, which includes all seizures within a day with high frequency seizure onset during that week.\n\nThe dataset can be used to evaluate the alterations of seizure onset pattern during the development of epilepsy, as well as the changes in iEEG characteristics after the electrical stimulation. We have technically validated the dataset through specific signal analysis, such as power spectral analysis, calculation of envelop length, and calculation of phase locking value.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "ieeg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [
+          "26",
+          "02",
+          "06",
+          "16",
+          "09",
+          "30",
+          "24",
+          "19",
+          "18",
+          "04",
+          "07",
+          "05",
+          "20",
+          "11",
+          "15",
+          "13",
+          "14",
+          "10",
+          "23",
+          "27",
+          "08",
+          "29",
+          "31",
+          "21",
+          "25",
+          "28",
+          "03",
+          "12",
+          "22",
+          "01",
+          "17",
+          "36",
+          "37",
+          "35",
+          "32",
+          "33",
+          "34",
+          "64",
+          "50",
+          "60",
+          "42",
+          "59",
+          "53",
+          "66",
+          "62",
+          "45",
+          "41",
+          "57",
+          "55",
+          "49",
+          "54",
+          "52",
+          "38",
+          "40",
+          "61",
+          "68",
+          "43",
+          "63",
+          "48",
+          "51",
+          "46",
+          "56",
+          "47",
+          "67",
+          "39",
+          "44",
+          "65",
+          "58"
+        ],
+        "size": 521941815,
+        "subjects": [
+          "06",
+          "02",
+          "03",
+          "07",
+          "05",
+          "04",
+          "01",
+          "08"
+        ],
+        "tasks": [
+          "seizure"
+        ],
+        "totalFiles": 25153
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        39,
+        55,
+        33,
+        41,
+        30,
+        54,
+        30,
+        24
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Epilepsy",
+      "grantFunderName": "the National Science and Technology Major Project, Science and Technology Innovation 2030-Major Project, National Natural Science Foundation of China, Outstanding Youth Program of Zhejiang Natural Science Foundation",
+      "modalities": [
+        "ieeg"
+      ],
+      "species": "Human",
+      "studyDesign": "Seizure detection and responsive electrical stimulation",
+      "studyDomain": "Epilepsy, Responsive Neurostimulation",
+      "studyLongitudinal": "Longitudinal"
+    },
+    "publishDate": "2025-12-16T07:23:38.895Z"
+  },
+  "source": "openneuro"
+}

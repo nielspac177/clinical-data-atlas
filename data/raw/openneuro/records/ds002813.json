@@ -1,0 +1,153 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds002813",
+  "payload": {
+    "created": "2020-05-19T17:53:39.265Z",
+    "id": "ds002813",
+    "latestSnapshot": {
+      "created": "2020-05-19T20:34:48.000Z",
+      "description": {
+        "Authors": [
+          "Bowman, C.R.",
+          "Iwashita, T.",
+          "Zeithamova, D."
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds002813.v1.0.0",
+        "Funding": [
+          "",
+          "",
+          ""
+        ],
+        "HowToAcknowledge": "",
+        "License": "CC0",
+        "Name": "Model-based fMRI reveals co-existing specific and generalized concept representations",
+        "ReferencesAndLinks": [
+          "",
+          "",
+          ""
+        ]
+      },
+      "readme": "Title: Model-based fMRI reveals co-existing specific and generalized concept representations\r\n\r\nfMRI task with three types of runs: train, imtest, and finest\r\n\r\nTrain (8 runs): observational training of 2 categories: febbles (category 1) and badoons (category 2) \r\n\r\nImtest (4 runs): immediate/interim test of category knowledge/generalization to new items\r\n\r\nFintest (4 runs): final test of category knowledge/generalization to new items \r\n\r\nTask order: train_run-1, train_run-2, imtest_run-1, train_run-3, train_run-4,\r\nimtest_run-2, train_run-5, train_run-6, imtest_run-3, train_run-7, train_run-8,\r\nimtest_run-4, fintest_run-1, fintest_run-2, fintest_run-3, fintest_run-4\r\n\r\nInformation for generating trial-by-trial exemplar and prototype model regressors provided in event.tsv files for imtest and fintest runs.\r\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 98549355674,
+        "subjects": [
+          "201",
+          "202",
+          "203",
+          "204",
+          "205",
+          "206",
+          "207",
+          "208",
+          "209",
+          "210",
+          "211",
+          "212",
+          "213",
+          "214",
+          "215",
+          "216",
+          "217",
+          "218",
+          "220",
+          "221",
+          "222",
+          "223",
+          "224",
+          "225",
+          "226",
+          "227",
+          "228",
+          "229",
+          "231",
+          "232",
+          "233",
+          "234",
+          "235",
+          "236",
+          "237",
+          "238",
+          "239",
+          "240"
+        ],
+        "tasks": [
+          "imtest",
+          "fintest",
+          "train"
+        ],
+        "totalFiles": 2326
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        21,
+        19,
+        20,
+        19,
+        27,
+        19,
+        27,
+        20,
+        29,
+        23,
+        18,
+        21,
+        19,
+        20,
+        22,
+        21,
+        32,
+        19,
+        23,
+        26,
+        24,
+        20,
+        26,
+        22,
+        22,
+        20,
+        21,
+        20,
+        22,
+        19,
+        18,
+        30,
+        19,
+        19,
+        19,
+        18,
+        21,
+        22,
+        20,
+        25
+      ],
+      "associatedPaperDOI": "10.7554/eLife.59360",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "NIA",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "categorization",
+      "studyLongitudinal": "Single session repeated-measures"
+    },
+    "publishDate": "2020-12-16T19:23:25.160Z"
+  },
+  "source": "openneuro"
+}

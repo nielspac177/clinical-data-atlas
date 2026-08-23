@@ -1,0 +1,306 @@
+{
+  "endpoints": [
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getCollectionValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getModalityValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getBodyPartValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getPatient",
+    "https://api.datacite.org/dois?prefix=10.7937"
+  ],
+  "harvest_method": "api:nbia+datacite",
+  "native_id": "CPTAC-STAD",
+  "payload": {
+    "datacite": {
+      "citationCount": 0,
+      "container": {},
+      "contentUrl": null,
+      "contributors": [
+        {
+          "affiliation": [],
+          "contributorType": "DataCurator",
+          "familyName": null,
+          "givenName": null,
+          "name": "TCIA Team",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": null,
+              "nameIdentifierScheme": null,
+              "schemeUri": null
+            }
+          ],
+          "nameType": null
+        }
+      ],
+      "created": "2026-02-26T18:46:47Z",
+      "creators": [
+        {
+          "affiliation": [],
+          "familyName": null,
+          "givenName": null,
+          "name": "National Cancer Institute Clinical Proteomic Tumor Analysis Consortium (CPTAC)",
+          "nameIdentifiers": [],
+          "nameType": null
+        }
+      ],
+      "dates": [
+        {
+          "date": "2026",
+          "dateInformation": null,
+          "dateType": "Issued"
+        }
+      ],
+      "descriptions": [
+        {
+          "description": "This collection contains subjects from the National Cancer Institute’s Clinical Proteomic Tumor Analysis Consortium (https://proteomics.cancer.gov/programs/cptac) Stomach Adenocarcinoma (CPTAC-STAD) cohort. CPTAC is a national effort to accelerate the understanding of the molecular basis of cancer through the application of large-scale proteome and genome analysis, or proteogenomics. Radiology and pathology images from CPTAC patients are being collected and made publicly available by The Cancer Imaging Archive to enable researchers to investigate cancer phenotypes which may correlate to corresponding proteomic, genomic and clinical data.",
+          "descriptionType": "Abstract",
+          "lang": null
+        }
+      ],
+      "doi": "10.7937/jw9a-8k71",
+      "downloadCount": 0,
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "CPTAC-STAD",
+          "identifierType": "TCIA Short Name"
+        }
+      ],
+      "isActive": true,
+      "language": null,
+      "metadataVersion": 3,
+      "partCount": 0,
+      "partOfCount": 0,
+      "publicationYear": 2026,
+      "published": null,
+      "publisher": "The Cancer Imaging Archive",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2026-03-12T15:15:54Z",
+      "relatedIdentifiers": [],
+      "relatedItems": [],
+      "rightsList": [
+        {
+          "rights": "Creative Commons Attribution 4.0 International",
+          "rightsIdentifier": "cc-by-4.0",
+          "rightsIdentifierScheme": "SPDX",
+          "rightsUri": "https://creativecommons.org/licenses/by/4.0/legalcode",
+          "schemeUri": "https://spdx.org/licenses/"
+        }
+      ],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "fabricaForm",
+      "state": "findable",
+      "subjects": [],
+      "titles": [
+        {
+          "lang": null,
+          "title": "The Clinical Proteomic Tumor Analysis Consortium Stomach Adenocarcinoma Collection (CPTAC-STAD)",
+          "titleType": null
+        },
+        {
+          "lang": null,
+          "title": "CPTAC-STAD",
+          "titleType": "AlternativeTitle"
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2026-03-12T15:15:54Z",
+      "url": "https://www.cancerimagingarchive.net/collection/cptac-stad",
+      "version": "1",
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 1674
+    },
+    "nbia": {
+      "body_parts": [
+        "ABDOMEN",
+        "ABDOMENPELVIS",
+        "CHEST",
+        "CHESTABDPELVIS"
+      ],
+      "collection": "CPTAC-STAD",
+      "modalities": [
+        "CT",
+        "US"
+      ],
+      "patients": [
+        {
+          "Collection": "CPTAC-STAD",
+          "PatientId": "C3L-08791",
+          "PatientName": "C3L-08791",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-STAD",
+          "PatientId": "C3L-07123",
+          "PatientName": "C3L-07123",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-STAD",
+          "PatientId": "C3L-10231",
+          "PatientName": "C3L-10231",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-STAD",
+          "PatientId": "C3N-08896",
+          "PatientName": "C3N-08896",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-STAD",
+          "PatientId": "C3L-08144",
+          "PatientName": "C3L-08144",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-STAD",
+          "PatientId": "C3L-08169",
+          "PatientName": "C3L-08169",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-STAD",
+          "PatientId": "C3L-06423",
+          "PatientName": "C3L-06423",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-STAD",
+          "PatientId": "C3L-06418",
+          "PatientName": "C3L-06418",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-STAD",
+          "PatientId": "C3L-06940",
+          "PatientName": "C3L-06940",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-STAD",
+          "PatientId": "C3L-08146",
+          "PatientName": "C3L-08146",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-STAD",
+          "PatientId": "C3L-08154",
+          "PatientName": "C3L-08154",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-STAD",
+          "PatientId": "C3L-06776",
+          "PatientName": "C3L-06776",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-STAD",
+          "PatientId": "C3L-06774",
+          "PatientName": "C3L-06774",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-STAD",
+          "PatientId": "C3L-06421",
+          "PatientName": "C3L-06421",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-STAD",
+          "PatientId": "C3L-06935",
+          "PatientName": "C3L-06935",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-STAD",
+          "PatientId": "C3L-08152",
+          "PatientName": "C3L-08152",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-STAD",
+          "PatientId": "C3L-06937",
+          "PatientName": "C3L-06937",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-STAD",
+          "PatientId": "C3L-06707",
+          "PatientName": "C3L-06707",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-STAD",
+          "PatientId": "C3L-08145",
+          "PatientName": "C3L-08145",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "CPTAC-STAD",
+          "PatientId": "C3L-06706",
+          "PatientName": "C3L-06706",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        }
+      ]
+    }
+  },
+  "source": "tcia"
+}

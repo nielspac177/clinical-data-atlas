@@ -1,0 +1,42 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:7e3ae1e1048cee37c24c7a979a1aebefd523b4431a31d23716b8c78393a736f5",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Intraoperative cardiac arrhythmias present distinct characteristics",
+        "label": "intraoperative cardiac arrhythmias"
+      },
+      {
+        "evidence": "arrhythmia detection algorithms in the surgical context",
+        "label": "arrhythmia"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "cardiology",
+      "critical_care",
+      "surgery"
+    ],
+    "id": "physionet:vitaldb-arrhythmia",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "continuous ECG data from 482 surgical patients",
+        "value": "ECG"
+      },
+      {
+        "evidence": "\"ppg\"",
+        "value": "PPG"
+      },
+      {
+        "evidence": "734,528 seconds of ECG recordings",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": "482 surgical patients",
+    "summary": "Annotated intraoperative ECG recordings from surgical patients, with heartbeats labeled across four beat types and ten rhythm categories, validated by five anesthesiologists with reported inter-rater agreement."
+  },
+  "prompt_version": "v1"
+}

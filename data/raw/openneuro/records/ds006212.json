@@ -1,0 +1,130 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006212",
+  "payload": {
+    "created": "2025-05-10T00:52:49.130Z",
+    "id": "ds006212",
+    "latestSnapshot": {
+      "created": "2025-10-31T01:10:46.000Z",
+      "description": {
+        "Authors": [
+          "Fanhua Guo",
+          "Chenyang Zhao",
+          "Qinyang Shou",
+          "Ning Jin",
+          "Kay Jann",
+          "Xingfeng Shao",
+          "Danny JJ Wang"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006212.v1.0.3",
+        "Funding": [
+          "US National Institute of Health grant UF1-NS100614",
+          "US National Institute of Health grant S10-OD025312",
+          "US National Institute of Health grant R01-NS114382",
+          "US National Institute of Health grant R01-EB032169",
+          "US National Institute of Health grant RF1AG084072",
+          "US National Institute of Health grant R01-EB028297",
+          "US National Institute of Health grant R01-NS134712",
+          "US National Institute of Health grant R01-NS121040"
+        ],
+        "HowToAcknowledge": "Please cite the corresponding paper or contact the authors for details.",
+        "License": "CC0",
+        "Name": "Assess microvascular volumetric pulsatility index by VASO",
+        "ReferencesAndLinks": [
+          "https://doi.org/...",
+          "..."
+        ]
+      },
+      "readme": "raw data for analyzing cerebral microvascular volumetric pulsatility using 7T MRI\n\ncite this paper: Guo, F., Zhao, C., Shou, Q. et al. Assessing cerebral microvascular volumetric with high-resolution 4D cerebral blood volume MRI at 7 T. Nat Cardiovasc Res 4, 1424–1438 (2025). https://doi.org/10.1038/s44161-025-00722-1\n\ndescribe:\n1. sub-XX_ses-XX_T1w.nii.gz is the anatomical image collected by MP2RAGE\n2. sub-XX_ses-XX_task-rest_run-XX_bold/cbv.nii.gz is the BOLD/VASO images collected by VASO\n3. sub-XX_ses-XX_task-rest_acq-flow_run-01_part-mag/phase1/phase2/phase3_bold. is the mag/phase images collected by 4D-flow\n4. sub-XX_ses-XX_task-rest_acq-asl_run-01_desc-cbf/control.nii.gz in derivatives folder is the custom reconstructed CBF/control images collected by ASL\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "test",
+          "retest"
+        ],
+        "size": 36632349145,
+        "subjects": [
+          "18",
+          "17",
+          "11",
+          "08",
+          "20",
+          "06",
+          "05",
+          "15",
+          "19",
+          "22",
+          "21",
+          "23",
+          "16",
+          "10",
+          "09",
+          "13",
+          "12",
+          "01",
+          "04",
+          "02",
+          "03",
+          "14",
+          "07"
+        ],
+        "tasks": [
+          "rest"
+        ],
+        "totalFiles": 450
+      },
+      "tag": "1.0.3"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        29,
+        29,
+        28,
+        32,
+        23,
+        29,
+        28,
+        29,
+        63,
+        19,
+        42,
+        24,
+        57,
+        59,
+        71,
+        59,
+        67,
+        53,
+        60,
+        54,
+        72,
+        51,
+        56
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2025-08-16T00:48:42.669Z"
+  },
+  "source": "openneuro"
+}

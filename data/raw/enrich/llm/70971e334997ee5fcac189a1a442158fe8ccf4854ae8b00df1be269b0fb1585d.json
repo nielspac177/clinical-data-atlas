@@ -1,0 +1,49 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:70971e334997ee5fcac189a1a442158fe8ccf4854ae8b00df1be269b0fb1585d",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Kidney Renal Papillary Cell Carcinoma",
+        "label": "Kidney Renal Papillary Cell Carcinoma"
+      },
+      {
+        "evidence": "Adenomas and Adenocarcinomas",
+        "label": "Adenomas and Adenocarcinomas"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "nephrology_urology"
+    ],
+    "id": "gdc:TCGA-KIRP",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Tissue Slide, Diagnostic Slide",
+        "value": "pathology"
+      },
+      {
+        "evidence": "WXS",
+        "value": "genomics"
+      },
+      {
+        "evidence": "RNA-Seq",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Reverse Phase Protein Array",
+        "value": "proteomics"
+      },
+      {
+        "evidence": "Biospecimen, Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "291 human cases",
+    "summary": "TCGA molecular profiling of papillary renal cell carcinoma, including exome, genome, RNA and miRNA sequencing, ATAC-Seq, methylation and genotyping arrays, protein arrays, tissue slides, plus clinical and biospecimen data."
+  },
+  "prompt_version": "v1"
+}

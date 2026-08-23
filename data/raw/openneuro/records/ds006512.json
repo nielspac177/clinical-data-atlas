@@ -1,0 +1,97 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds006512",
+  "payload": {
+    "created": "2025-07-29T19:19:57.009Z",
+    "id": "ds006512",
+    "latestSnapshot": {
+      "created": "2025-07-30T20:56:25.000Z",
+      "description": {
+        "Authors": [
+          "TODO:",
+          "First1 Last1",
+          "First2 Last2",
+          "..."
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds006512.v1.0.0",
+        "Funding": [
+          "TODO",
+          "GRANT #1",
+          "GRANT #2"
+        ],
+        "HowToAcknowledge": "TODO: describe how to acknowledge -- either cite a corresponding paper, or just in acknowledgement section",
+        "License": "CC0",
+        "Name": "Spatial attention alters visual cortical representation during target anticipation",
+        "ReferencesAndLinks": [
+          "TODO",
+          "List of papers or websites"
+        ]
+      },
+      "readme": "The data in this repository were collected using Siemens 3T fMRI at NYU Center for Brain Imaging from 8 participant, and is organized in BIDS format.\n\nThis study is now in press in Nature Communications with the title \"Spatial attention alters visual cortical representation during target anticipation\".\n\nThe main objective of the study is to investigate how visual cortex prepares to represent attentional targets in visual periphery presented at different angular positions. The participants completed four scan sessions (except for sub-wlsubj049), performing an orientation discrimination task in the scanner with an attentional cueing paradigm. On every trial, a central cue indicated one of the four target locations to be attended in the visual periphery (focal attention) or all four targets simultaneously (distributed attention). Before the participant performed the task at the target location, which could be different than the cued location, a retinotopic mapping stimulus was presented at a randomized location in their visual field. We measured the visual cortical BOLD response to the mapping stimulus bar that varied in location, under different attention conditions. Population receptive fields of individual voxels across cortical hierarchy were estimated for different attention conditions based on voxel responses to mapping stimuli.\n\nWe also collected extensive psychophysics and eye-tracking data, which can be found under the derivatives folder. \n\nTo briefly summarize, we find that focal attention when compared to distributed attention reorganizes visual cortex responses across the representation of space by altering both the BOLD response amplitude and spatial tuning. Focal attention results in response enhancement at the attended locations, and response suppression at unattended locations, compared to distributed attention. Focal attention also results in an attraction of population receptive fields centers towards the attended location, an effect that increases across visual cortical hierarchy. ",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "nyu3t03",
+          "nyu3t02",
+          "nyu3t01",
+          "nyu3t04",
+          "anat"
+        ],
+        "size": 76119929205,
+        "subjects": [
+          "wlsubj122",
+          "wlsubj049",
+          "wlsubj138",
+          "wlsubj127",
+          "wlsubj079",
+          "wlsubj123",
+          "wlsubj141",
+          "wlsubj135"
+        ],
+        "tasks": [
+          "attprf"
+        ],
+        "totalFiles": 1486
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2025-07-30T20:58:32.429Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,46 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:0f4c64671cf4120894034a857f15ab01773d0441a0add0a44058bef029664da4",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "brain tumor patients",
+        "label": "brain tumor"
+      },
+      {
+        "evidence": "the anatomic and genetic basis of glioblastoma",
+        "label": "glioblastoma"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "oncology",
+      "surgery"
+    ],
+    "id": "tcia:ivygap",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "MRI/CT scan data",
+        "value": "MRI"
+      },
+      {
+        "evidence": "MRI/CT scan data",
+        "value": "CT"
+      },
+      {
+        "evidence": "RNA sequencing (RNA-Seq) data",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "associated histological dataset is annotated",
+        "value": "pathology"
+      }
+    ],
+    "population": "399 scans for 41 brain tumor patients, including pre-surgery, post-surgery and follow up scans",
+    "summary": "MRI and CT scans from brain tumor patients in the Ivy Glioblastoma Atlas Project, including pre-surgery, post-surgery, and follow-up imaging, linked to in situ hybridization, RNA sequencing, and annotated histological data."
+  },
+  "prompt_version": "v1"
+}

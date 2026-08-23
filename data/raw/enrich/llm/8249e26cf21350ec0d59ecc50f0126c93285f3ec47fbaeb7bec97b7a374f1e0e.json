@@ -1,0 +1,27 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:8249e26cf21350ec0d59ecc50f0126c93285f3ec47fbaeb7bec97b7a374f1e0e",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "other"
+    ],
+    "id": "physionet:medisumqa",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "MIMIC-IV discharge summaries",
+        "value": "clinical_notes"
+      },
+      {
+        "evidence": "created from MIMIC-IV discharge summaries",
+        "value": "EHR"
+      }
+    ],
+    "population": null,
+    "summary": "Patient-oriented question-answer pairs built from MIMIC-IV discharge summaries via an automated language model pipeline with manual quality checks, used to evaluate models on patient-friendly clinical question answering."
+  },
+  "prompt_version": "v1"
+}

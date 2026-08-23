@@ -1,0 +1,23 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:cc5a89cdc002e7b100a4bf56cc16dc3806e90640a62145e062d7ce524fec7b0a",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:kurias-ecg",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "12-lead electrocardiogram (ECG)",
+        "value": "ECG"
+      }
+    ],
+    "population": "ECG cases with computerized diagnoses, 2000 extracted per Minnesota classification category",
+    "summary": "12-lead ECG database built from computerized ECG machine diagnoses mapped to standard vocabularies (SNOMED-CT, OMOP-CDM), with 147 diagnoses grouped into 10 Minnesota code categories and inappropriate or poor-quality cases removed."
+  },
+  "prompt_version": "v1"
+}

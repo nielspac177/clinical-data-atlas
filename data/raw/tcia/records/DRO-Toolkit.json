@@ -1,0 +1,423 @@
+{
+  "endpoints": [
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getCollectionValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getModalityValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getBodyPartValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getPatient",
+    "https://api.datacite.org/dois?prefix=10.7937"
+  ],
+  "harvest_method": "api:nbia+datacite",
+  "native_id": "DRO-Toolkit",
+  "payload": {
+    "datacite": {
+      "citationCount": 1,
+      "container": {},
+      "contentUrl": [],
+      "contributors": [],
+      "created": "2020-03-24T15:04:06Z",
+      "creators": [
+        {
+          "affiliation": [],
+          "familyName": "Jaggi",
+          "givenName": "Akshay",
+          "name": "Jaggi, Akshay",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-7493-6958",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Mattonen",
+          "givenName": "Sarah A.",
+          "name": "Mattonen, Sarah A.",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-8172-1074",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "McNitt-Gray",
+          "givenName": "Michael",
+          "name": "McNitt-Gray, Michael",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0003-3004-4613",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Napel",
+          "givenName": "Sandy",
+          "name": "Napel, Sandy",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-6876-5507",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2020",
+          "dateInformation": null,
+          "dateType": "Issued"
+        }
+      ],
+      "descriptions": [
+        {
+          "description": "This is a sample collection of synthetic 3D digital reference objects (DROs) intended for standardization of quantitative imaging feature extraction pipelines. We have developed a software toolkit for the creation of DROs with customizable size, shape, intensity, texture, and margin sharpness values. Using user-supplied input parameters, these objects are defined mathematically as continuous functions, discretized, and then saved as DICOM objects. This collection includes objects with a range of values for the various feature categories and many combinations of these categories.",
+          "descriptionType": "Abstract",
+          "lang": null
+        }
+      ],
+      "doi": "10.7937/t062-8262",
+      "downloadCount": 0,
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "DRO-Toolkit",
+          "identifierType": "TCIA Short Name"
+        }
+      ],
+      "isActive": true,
+      "language": null,
+      "metadataVersion": 7,
+      "partCount": 0,
+      "partOfCount": 0,
+      "publicationYear": 2020,
+      "published": null,
+      "publisher": "The Cancer Imaging Archive",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2020-04-03T17:26:04Z",
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "10.18383/j.tom.2019.00030",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        }
+      ],
+      "relatedItems": [],
+      "rightsList": [
+        {
+          "rights": "Creative Commons Attribution 3.0 Unported",
+          "rightsIdentifier": "cc-by-3.0",
+          "rightsIdentifierScheme": "SPDX",
+          "rightsUri": "https://creativecommons.org/licenses/by/3.0/legalcode",
+          "schemeUri": "https://spdx.org/licenses/"
+        }
+      ],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "fabricaForm",
+      "state": "findable",
+      "subjects": [],
+      "titles": [
+        {
+          "lang": null,
+          "title": "Stanford DRO Toolkit: Digital Reference Objects for Standardization of Radiomic Features",
+          "titleType": null
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2025-06-01T01:01:11Z",
+      "url": "https://www.cancerimagingarchive.net/collection/dro-toolkit/",
+      "version": "1",
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 490
+    },
+    "nbia": {
+      "body_parts": [],
+      "collection": "DRO-Toolkit",
+      "modalities": [
+        "CT",
+        "SEG"
+      ],
+      "patients": [
+        {
+          "Collection": "DRO-Toolkit",
+          "PatientId": "Phantom-100.0-1.0-1.0-1.0-9.0-0.0--100.0-10.0-0.0-0.0",
+          "PatientName": "Phantom-100.0-1.0-1.0-1.0-9.0-0.0--100.0-10.0-0.0-0.0",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "DRO-Toolkit",
+          "PatientId": "Phantom-100.0-1.0-1.0-1.0-9.0-0.0--100.0-10.0-0.0-10.0",
+          "PatientName": "Phantom-100.0-1.0-1.0-1.0-9.0-0.0--100.0-10.0-0.0-10.0",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "DRO-Toolkit",
+          "PatientId": "Phantom-100.0-1.0-1.0-1.0-9.0-0.0--100.0-10.0-50.0-0.0",
+          "PatientName": "Phantom-100.0-1.0-1.0-1.0-9.0-0.0--100.0-10.0-50.0-0.0",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "DRO-Toolkit",
+          "PatientId": "Phantom-100.0-1.0-1.0-1.0-9.0-0.0--100.0-10.0-50.0-10.0",
+          "PatientName": "Phantom-100.0-1.0-1.0-1.0-9.0-0.0--100.0-10.0-50.0-10.0",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "DRO-Toolkit",
+          "PatientId": "Phantom-100.0-1.0-1.0-1.0-9.0-0.0-100.0-10.0-0.0-0.0",
+          "PatientName": "Phantom-100.0-1.0-1.0-1.0-9.0-0.0-100.0-10.0-0.0-0.0",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "DRO-Toolkit",
+          "PatientId": "Phantom-100.0-1.0-1.0-1.0-9.0-0.0-100.0-10.0-0.0-10.0",
+          "PatientName": "Phantom-100.0-1.0-1.0-1.0-9.0-0.0-100.0-10.0-0.0-10.0",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "DRO-Toolkit",
+          "PatientId": "Phantom-100.0-1.0-1.0-1.0-9.0-0.0-100.0-10.0-50.0-0.0",
+          "PatientName": "Phantom-100.0-1.0-1.0-1.0-9.0-0.0-100.0-10.0-50.0-0.0",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "DRO-Toolkit",
+          "PatientId": "Phantom-100.0-1.0-1.0-1.0-9.0-0.0-100.0-10.0-50.0-10.0",
+          "PatientName": "Phantom-100.0-1.0-1.0-1.0-9.0-0.0-100.0-10.0-50.0-10.0",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "DRO-Toolkit",
+          "PatientId": "Phantom-100.0-1.0-1.0-1.0-9.0-0.2--100.0-10.0-0.0-0.0",
+          "PatientName": "Phantom-100.0-1.0-1.0-1.0-9.0-0.2--100.0-10.0-0.0-0.0",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "DRO-Toolkit",
+          "PatientId": "Phantom-100.0-1.0-1.0-1.0-9.0-0.2--100.0-10.0-0.0-10.0",
+          "PatientName": "Phantom-100.0-1.0-1.0-1.0-9.0-0.2--100.0-10.0-0.0-10.0",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "DRO-Toolkit",
+          "PatientId": "Phantom-100.0-1.0-1.0-1.0-9.0-0.2--100.0-10.0-50.0-0.0",
+          "PatientName": "Phantom-100.0-1.0-1.0-1.0-9.0-0.2--100.0-10.0-50.0-0.0",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "DRO-Toolkit",
+          "PatientId": "Phantom-100.0-1.0-1.0-1.0-9.0-0.2--100.0-10.0-50.0-10.0",
+          "PatientName": "Phantom-100.0-1.0-1.0-1.0-9.0-0.2--100.0-10.0-50.0-10.0",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "DRO-Toolkit",
+          "PatientId": "Phantom-100.0-1.0-1.0-1.0-9.0-0.2-100.0-10.0-0.0-0.0",
+          "PatientName": "Phantom-100.0-1.0-1.0-1.0-9.0-0.2-100.0-10.0-0.0-0.0",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "DRO-Toolkit",
+          "PatientId": "Phantom-100.0-1.0-1.0-1.0-9.0-0.2-100.0-10.0-0.0-10.0",
+          "PatientName": "Phantom-100.0-1.0-1.0-1.0-9.0-0.2-100.0-10.0-0.0-10.0",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "DRO-Toolkit",
+          "PatientId": "Phantom-100.0-1.0-1.0-1.0-9.0-0.2-100.0-10.0-50.0-0.0",
+          "PatientName": "Phantom-100.0-1.0-1.0-1.0-9.0-0.2-100.0-10.0-50.0-0.0",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "DRO-Toolkit",
+          "PatientId": "Phantom-100.0-1.0-1.0-1.0-9.0-0.2-100.0-10.0-50.0-10.0",
+          "PatientName": "Phantom-100.0-1.0-1.0-1.0-9.0-0.2-100.0-10.0-50.0-10.0",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "DRO-Toolkit",
+          "PatientId": "Phantom-20.0-1.0-1.0-1.0-9.0-0.0--100.0-10.0-0.0-0.0",
+          "PatientName": "Phantom-20.0-1.0-1.0-1.0-9.0-0.0--100.0-10.0-0.0-0.0",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "DRO-Toolkit",
+          "PatientId": "Phantom-20.0-1.0-1.0-1.0-9.0-0.0--100.0-10.0-0.0-10.0",
+          "PatientName": "Phantom-20.0-1.0-1.0-1.0-9.0-0.0--100.0-10.0-0.0-10.0",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "DRO-Toolkit",
+          "PatientId": "Phantom-20.0-1.0-1.0-1.0-9.0-0.0--100.0-10.0-50.0-0.0",
+          "PatientName": "Phantom-20.0-1.0-1.0-1.0-9.0-0.0--100.0-10.0-50.0-0.0",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "DRO-Toolkit",
+          "PatientId": "Phantom-20.0-1.0-1.0-1.0-9.0-0.0--100.0-10.0-50.0-10.0",
+          "PatientName": "Phantom-20.0-1.0-1.0-1.0-9.0-0.0--100.0-10.0-50.0-10.0",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "DRO-Toolkit",
+          "PatientId": "Phantom-20.0-1.0-1.0-1.0-9.0-0.0-100.0-10.0-0.0-0.0",
+          "PatientName": "Phantom-20.0-1.0-1.0-1.0-9.0-0.0-100.0-10.0-0.0-0.0",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "DRO-Toolkit",
+          "PatientId": "Phantom-20.0-1.0-1.0-1.0-9.0-0.0-100.0-10.0-0.0-10.0",
+          "PatientName": "Phantom-20.0-1.0-1.0-1.0-9.0-0.0-100.0-10.0-0.0-10.0",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "DRO-Toolkit",
+          "PatientId": "Phantom-20.0-1.0-1.0-1.0-9.0-0.0-100.0-10.0-50.0-0.0",
+          "PatientName": "Phantom-20.0-1.0-1.0-1.0-9.0-0.0-100.0-10.0-50.0-0.0",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "DRO-Toolkit",
+          "PatientId": "Phantom-20.0-1.0-1.0-1.0-9.0-0.0-100.0-10.0-50.0-10.0",
+          "PatientName": "Phantom-20.0-1.0-1.0-1.0-9.0-0.0-100.0-10.0-50.0-10.0",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "DRO-Toolkit",
+          "PatientId": "Phantom-20.0-1.0-1.0-1.0-9.0-0.2--100.0-10.0-0.0-0.0",
+          "PatientName": "Phantom-20.0-1.0-1.0-1.0-9.0-0.2--100.0-10.0-0.0-0.0",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "DRO-Toolkit",
+          "PatientId": "Phantom-20.0-1.0-1.0-1.0-9.0-0.2--100.0-10.0-0.0-10.0",
+          "PatientName": "Phantom-20.0-1.0-1.0-1.0-9.0-0.2--100.0-10.0-0.0-10.0",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "DRO-Toolkit",
+          "PatientId": "Phantom-20.0-1.0-1.0-1.0-9.0-0.2--100.0-10.0-50.0-0.0",
+          "PatientName": "Phantom-20.0-1.0-1.0-1.0-9.0-0.2--100.0-10.0-50.0-0.0",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "DRO-Toolkit",
+          "PatientId": "Phantom-20.0-1.0-1.0-1.0-9.0-0.2--100.0-10.0-50.0-10.0",
+          "PatientName": "Phantom-20.0-1.0-1.0-1.0-9.0-0.2--100.0-10.0-50.0-10.0",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "DRO-Toolkit",
+          "PatientId": "Phantom-20.0-1.0-1.0-1.0-9.0-0.2-100.0-10.0-0.0-0.0",
+          "PatientName": "Phantom-20.0-1.0-1.0-1.0-9.0-0.2-100.0-10.0-0.0-0.0",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "DRO-Toolkit",
+          "PatientId": "Phantom-20.0-1.0-1.0-1.0-9.0-0.2-100.0-10.0-0.0-10.0",
+          "PatientName": "Phantom-20.0-1.0-1.0-1.0-9.0-0.2-100.0-10.0-0.0-10.0",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "DRO-Toolkit",
+          "PatientId": "Phantom-20.0-1.0-1.0-1.0-9.0-0.2-100.0-10.0-50.0-0.0",
+          "PatientName": "Phantom-20.0-1.0-1.0-1.0-9.0-0.2-100.0-10.0-50.0-0.0",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "DRO-Toolkit",
+          "PatientId": "Phantom-20.0-1.0-1.0-1.0-9.0-0.2-100.0-10.0-50.0-10.0",
+          "PatientName": "Phantom-20.0-1.0-1.0-1.0-9.0-0.2-100.0-10.0-50.0-10.0",
+          "Phantom": "YES",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        }
+      ]
+    }
+  },
+  "source": "tcia"
+}

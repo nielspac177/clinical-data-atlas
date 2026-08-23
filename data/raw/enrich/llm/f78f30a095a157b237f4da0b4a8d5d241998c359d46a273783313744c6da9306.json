@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:f78f30a095a157b237f4da0b4a8d5d241998c359d46a273783313744c6da9306",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "mice undergoing stroke and drug treatments",
+        "label": "stroke"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "physionet:mouse-stroke-cylinder-rearing",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "behavioral test of cylinder rearing",
+        "value": "behavioral"
+      },
+      {
+        "evidence": "video recordings (.mp4) of these sessions",
+        "value": "other"
+      }
+    ],
+    "population": "59 mice assigned to four drug treatment groups (lemborexant 10 mg/kg, lemborexant 30 mg/kg, zolpidem 30 mg/kg, and vehicle)",
+    "summary": "Longitudinal cylinder rearing videos and frame-level paw-usage annotations from mice in a stroke model across four drug treatment groups, assessed at baseline, maximal deficit, and recovery timepoints."
+  },
+  "prompt_version": "v1"
+}

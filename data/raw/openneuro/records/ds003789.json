@@ -1,0 +1,138 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003789",
+  "payload": {
+    "created": "2021-09-02T02:59:04.655Z",
+    "id": "ds003789",
+    "latestSnapshot": {
+      "created": "2025-08-25T06:35:25.000Z",
+      "description": {
+        "Authors": [
+          "Xuhao Shao",
+          "Chuansheng Chen",
+          "Elizabeth F. Loftus",
+          "Gui Xue",
+          "Bi Zhu"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds003789.v2.1.0",
+        "Funding": [
+          "TODO",
+          "GRANT #1",
+          "GRANT #2"
+        ],
+        "HowToAcknowledge": "TODO: describe how to acknowledge -- either cite a corresponding paper, or just in acknowledgement section",
+        "License": "CC0",
+        "Name": "Dynamic changes in neural representations underlie the repetition eﬀect on false memory",
+        "ReferencesAndLinks": [
+          "https://doi.org/10.1016/j.neuroimage.2022.119442"
+        ]
+      },
+      "readme": "This dataset contains the data used in the paper \"Dynamic changes in neural representations underlie the repetition eﬀect on false memory\".\n\nAbstract:  \nRestudying word lists (e.g., dream, awake, and bed) strengthens true memory of the studied words and reduces false memory for unstudied but semantically related lures (e.g., sleep). Yet, the neural mechanisms involved in this repetition eﬀect on false memory remain unclear. Possible mechanisms involve item-speciﬁc and semantic neural representations at encoding, and the memory strength between encoding and retrieval. This study ﬁrst replicated the behavioral results (Exp. 1) and then investigated various neural mechanisms by using slow event-related functional magnetic resonance imaging (fMRI) and representational similarity analysis (Exp. 2). Behavioral results conﬁrmed that restudy improved true memory and reduced false memory. The fMRI results showed that restudy induced item-speciﬁc neural representations at encoding in the left occipital pole, but reduced neural overlap between semantic representations at encoding in the left temporal pole. Individual diﬀerences in these two encoding neural mechanisms were correlated with the behavioral measure of false memory, with greater restudy-induced representational changes at encoding (item-speciﬁc neural representations and reduced neural overlap between semantic representations) being associated with lower false memory. Moreover, restudy enhanced the memory strength between encoding and retrieval in the visuoparietal cortex but reduced it in the frontal cortex. These ﬁndings suggest that dynamic changes in neural representations underlie the repetition eﬀect on false memory, supporting a dual-coding neural framework.\n\nExperimental design:  \nAt encoding, participants in the restudy condition in two experiments were exposed to each word list three times within a run, referred to hereafter as Time 1 (T1), Time 2 (T2), and Time 3 (T3). There were nine runs, with one run for each word list. Participants in the control condition in Exp. 1 were exposed to each word list only once. Before studying a word list at each study time (three times for the restudy condition and once for the control condition), a 2-second visual cue was used to identify the list with a number (e.g., “List 1”). The presentation order of the nine word lists, as well as the presentation order of the eight studied words within each list for each study time, was randomized across participants. A slow event-related design was used (12 seconds for each trial). Each trial started with a 1-second ﬁxation point. Next, a studied word was presented visually for 3 seconds. To help participants to remember these words, they were asked to make a pleasantness judgment on each word by pressing 1 of 4 buttons (1 = “very pleasant”, 2 = “mildly pleasant”, 3 = “mildly unpleasant”, 4 = “very unpleasant”)\n\nas quickly and accurately as possible within 3 seconds. Participants used their index and middle ﬁngers on both hands to respond, with half of the participants using one type of correspondence (left middle ﬁnger = 1, left index ﬁnger = 2, right index ﬁnger = 3, and left middle ﬁnger = 4) and the other half using the opposite pattern (left middle ﬁnger = 4, left index ﬁnger = 3, right index ﬁnger = 2, and left middle ﬁnger = 1). Participants practiced pressing the buttons until they were familiar with them. In the next 8 seconds, participants were asked to perform a self-paced perceptual judgment task, to prevent further processing of this word. Participants were asked to judge the orientation of a Gabor image, tilting 45 degrees to either left or right, by pressing 1 of 2 buttons (button 1 for left tilt, button 4 for right tilt) as quickly and accurately as possible.\n\nAt retrieval (24 hours after study), participants took a recognition test by judging 108 words (i.e., 36 targets, 36 lures, and 36 foils). These words were presented in a pseudorandomized order over three runs. The slow event-related design (12 seconds for each trial) was also used for the retrieval phase (i.e., 1-second ﬁxation, 3-second visual presentation of a word for memory judgment, and 8-second self-paced perceptual judgment task). For memory judgment, participants were asked to judge whether they had studied these words one day earlier, by pressing 1 of 4 buttons (1 = “deﬁnitely new”, 2 = “probably new”, 3 = “probably old”, 4 = “deﬁnitely old”) within 3 seconds. The response buttons were the same as for the pleasantness judgment at encoding mentioned above.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 13826298686,
+        "subjects": [
+          "5407",
+          "5417",
+          "5439",
+          "5433",
+          "5408",
+          "5416",
+          "5426",
+          "5412",
+          "5404",
+          "5432",
+          "5427",
+          "5420",
+          "5401",
+          "5429",
+          "5423",
+          "5422",
+          "5430",
+          "5410",
+          "5437",
+          "5411",
+          "5435",
+          "5425",
+          "5414",
+          "5428",
+          "5419",
+          "5436",
+          "5415",
+          "5409",
+          "5424",
+          "5418",
+          "5421",
+          "5440"
+        ],
+        "tasks": [
+          "retrieval",
+          "encoding"
+        ],
+        "totalFiles": 1222
+      },
+      "tag": "2.1.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        19,
+        22,
+        18,
+        22,
+        22,
+        22,
+        21,
+        18,
+        22,
+        23,
+        21,
+        22,
+        23,
+        22,
+        20,
+        18,
+        19,
+        19,
+        19,
+        22,
+        23,
+        23,
+        22,
+        19,
+        23,
+        24,
+        19,
+        23,
+        19,
+        23,
+        19,
+        22
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2022-07-08T03:38:36.032Z"
+  },
+  "source": "openneuro"
+}

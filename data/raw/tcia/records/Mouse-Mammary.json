@@ -1,0 +1,436 @@
+{
+  "endpoints": [
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getCollectionValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getModalityValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getBodyPartValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getPatient",
+    "https://api.datacite.org/dois?prefix=10.7937"
+  ],
+  "harvest_method": "api:nbia+datacite",
+  "native_id": "Mouse-Mammary",
+  "payload": {
+    "datacite": {
+      "citationCount": 1,
+      "container": {},
+      "contentUrl": [],
+      "contributors": [
+        {
+          "affiliation": [],
+          "contributorType": "DataCurator",
+          "name": "TCIA Team",
+          "nameIdentifiers": []
+        }
+      ],
+      "created": "2015-06-30T15:27:57Z",
+      "creators": [
+        {
+          "affiliation": [],
+          "familyName": "Jansen",
+          "givenName": "Sunny",
+          "name": "Jansen, Sunny",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Ileva",
+          "givenName": "Lilia",
+          "name": "Ileva, Lilia",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Lu",
+          "givenName": "Lucy",
+          "name": "Lu, Lucy",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Van Dyke",
+          "givenName": "Terry",
+          "name": "Van Dyke, Terry",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2015",
+          "dateType": "Issued"
+        }
+      ],
+      "descriptions": [
+        {
+          "description": "This collection consists of magnetic resonance images (MRI) of genetically engineered mouse models (GEMMs) of breast cancer. These images were acquired as part of a Department of Defense (DOD) Breast Cancer Research Program (BCRP) Postdoctoral Award W81XWH-12-1-0307 entitled “Investigating Ductal Carcinoma in Situ Using Noninvasive Imaging of Genetically Engineered Mouse Models A particular emphasis of this project was to study the earliest stages of breast cancer—preinvasive ductal carcinoma in situ (DCIS)—and to interrogate the underlying genetic events that influence progression into invasive disease. In particular, we focused on the role of perturbed Rb, p53 and BRCA1 functionality and how these pathways, acting alone and in combination, can influence the development and progression of DCIS. GEMMs serve as an excellent model system wherein genetic changes can be controlled and manipulated over time. In vivo MRI is a superb technique for noninvasively tracking and characterizing these microscopic early stage cancers as they develop, change and transition into lethal invasive disease.",
+          "descriptionType": "Abstract"
+        }
+      ],
+      "doi": "10.7937/k9/tcia.2015.9p42kse6",
+      "downloadCount": 0,
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "Mouse-Mammary",
+          "identifierType": "TCIA Short Name"
+        }
+      ],
+      "isActive": true,
+      "language": null,
+      "metadataVersion": 11,
+      "partCount": 0,
+      "partOfCount": 0,
+      "publicationYear": 2015,
+      "published": null,
+      "publisher": "The Cancer Imaging Archive",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2015-06-30T15:27:58Z",
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "10.1007/s11045-020-00746-9",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        }
+      ],
+      "relatedItems": [],
+      "rightsList": [
+        {
+          "rights": "Creative Commons Attribution 3.0 Unported",
+          "rightsIdentifier": "cc-by-3.0",
+          "rightsIdentifierScheme": "SPDX",
+          "rightsUri": "https://creativecommons.org/licenses/by/3.0/legalcode",
+          "schemeUri": "https://spdx.org/licenses/"
+        }
+      ],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "api",
+      "state": "findable",
+      "subjects": [],
+      "titles": [
+        {
+          "title": "TCIA Mouse-Mammary Collection"
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceType": "DICOM",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2025-06-01T01:01:16Z",
+      "url": "https://www.cancerimagingarchive.net/collection/mouse-mammary/",
+      "version": "1",
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 483
+    },
+    "nbia": {
+      "body_parts": [
+        "ABDOMEN"
+      ],
+      "collection": "Mouse-Mammary",
+      "modalities": [
+        "MR"
+      ],
+      "patients": [
+        {
+          "Collection": "Mouse-Mammary",
+          "PatientId": "MMC_SJ_1211711",
+          "PatientName": "MMC_SJ_1211711",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Mammary",
+          "PatientId": "MMC_SJ_1210187",
+          "PatientName": "MMC_SJ_1210187",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Mammary",
+          "PatientId": "MMC_SJ_1212204",
+          "PatientName": "MMC_SJ_1212204",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Mammary",
+          "PatientId": "MMC_SJ_1210190",
+          "PatientName": "MMC_SJ_1210190",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Mammary",
+          "PatientId": "MMC_SJ_1212197",
+          "PatientName": "MMC_SJ_1212197",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Mammary",
+          "PatientId": "MMC_SJ_1211714",
+          "PatientName": "MMC_SJ_1211714",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Mammary",
+          "PatientId": "MMC_SJ_1211723",
+          "PatientName": "MMC_SJ_1211723",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Mammary",
+          "PatientId": "MMC_SJ_1211713",
+          "PatientName": "MMC_SJ_1211713",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Mammary",
+          "PatientId": "MMC_SJ_1211722",
+          "PatientName": "MMC_SJ_1211722",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Mammary",
+          "PatientId": "MMC_SJ_1212200",
+          "PatientName": "MMC_SJ_1212200",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Mammary",
+          "PatientId": "MMC_SJ_1209932",
+          "PatientName": "MMC_SJ_1209932",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Mammary",
+          "PatientId": "MMC_SJ_1211712",
+          "PatientName": "MMC_SJ_1211712",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Mammary",
+          "PatientId": "MMC_SJ_1210189",
+          "PatientName": "MMC_SJ_1210189",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Mammary",
+          "PatientId": "MMC_SJ_1209929",
+          "PatientName": "MMC_SJ_1209929",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Mammary",
+          "PatientId": "MMC_SJ_1211717",
+          "PatientName": "MMC_SJ_1211717",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Mammary",
+          "PatientId": "MMC_SJ_21167",
+          "PatientName": "SJ_21167",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Mammary",
+          "PatientId": "MMC_SJ_18736",
+          "PatientName": "SJ_18736",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Mammary",
+          "PatientId": "MMC_SJ_20451",
+          "PatientName": "SJ_20451",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Mammary",
+          "PatientId": "MMC_SJ_18737",
+          "PatientName": "SJ_18737",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Mammary",
+          "PatientId": "MMC_SJ_18734",
+          "PatientName": "SJ_18734",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Mammary",
+          "PatientId": "MMC_SJ_20160",
+          "PatientName": "SJ_20160",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Mammary",
+          "PatientId": "MMC_SJ_18735",
+          "PatientName": "SJ_18735",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Mammary",
+          "PatientId": "MMC_SJ_19110",
+          "PatientName": "SJ_19110",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Mammary",
+          "PatientId": "MMC_SJ_19112",
+          "PatientName": "SJ_19112",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Mammary",
+          "PatientId": "MMC_SJ_21160",
+          "PatientName": "SJ_21160",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Mammary",
+          "PatientId": "MMC_SJ_19111",
+          "PatientName": "SJ_19111",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Mammary",
+          "PatientId": "MMC_SJ_21165",
+          "PatientName": "SJ_21165",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Mammary",
+          "PatientId": "MMC_SJ_20161",
+          "PatientName": "SJ_20161",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Mammary",
+          "PatientId": "MMC_SJ_21169",
+          "PatientName": "SJ_21169",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Mammary",
+          "PatientId": "MMC_SJ_21166",
+          "PatientName": "SJ_21166",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Mammary",
+          "PatientId": "MMC_SJ_21168",
+          "PatientName": "SJ_21168",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        },
+        {
+          "Collection": "Mouse-Mammary",
+          "PatientId": "MMC_SJ_20162",
+          "PatientName": "SJ_20162",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "447612001",
+          "SpeciesDescription": "Mus musculus"
+        }
+      ]
+    }
+  },
+  "source": "tcia"
+}

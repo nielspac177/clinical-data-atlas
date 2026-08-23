@@ -1,0 +1,121 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds003171",
+  "payload": {
+    "created": "2020-09-23T18:17:53.151Z",
+    "id": "ds003171",
+    "latestSnapshot": {
+      "created": "2021-10-26T01:07:44.000Z",
+      "description": {
+        "Authors": [
+          "Sivayini Kandeepan",
+          "Jorge Rudas",
+          "Francisco Gomez",
+          "Bobby Stojanoski",
+          "Sreeram Valluri",
+          "Adrian Mark Owen",
+          "Lorina Naci",
+          "Andrea Soddu",
+          "Emily Sophia Nichols"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds003171.v2.0.1",
+        "Funding": [
+          "NSERC Discovery grant (05578-2014RGPIN)",
+          "Canada Excellence Research Chair (215063)",
+          "CIHR Foundation Fund (167264)"
+        ],
+        "HowToAcknowledge": "Please cite Naci et al., 2018 and Kandeepan et al., 2020",
+        "License": "CC0",
+        "Name": "Modeling an auditory stimulated brain under altered states of consciousness using the generalized ising model",
+        "ReferencesAndLinks": [
+          "Naci, L., Haugg, A., MacDonald, A., Anello, M., Houldin, E., Naqshbandi, S., Gonzalez-Lara, L. E., Arango, M., Harle, C., Cusack, R., & Owen, A. M. (2018). Functional diversity of brain networks supports consciousness and verbal intelligence. Scientific Reports, 8(1), 1–15. https://doi.org/10.1038/s41598-018-31525-z",
+          "Kandeepan, S., Rudas, J., Gomez, F., Stojanoski, B., Valluri, S., Owen, A. M., Naci, L., Nichols, E. S., & Soddu, A. (2020). Modeling an auditory stimulated brain under altered states of consciousness using the generalized ising model. NeuroImage, 223(December), 1–11. https://doi.org/10.1016/j.neuroimage.2020.117367"
+        ]
+      },
+      "readme": "17 healthy adults scanned on a 3T Siemens scanner. Participants completed auditory task (passive listening to a clip from the movie \"Taken\") and rest conditions at 4 levels of sedation: Awake, Light, Deep, Recovery.\n\nStimulus during task conditions was continuous. The audio clip was begun 10 seconds into the scan, however the five dummy volumes (TR=2s) at the beginning have already been removed, so the stimulus onset in the nifti file lines up with the first volume.",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_diffusion",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 4830971038,
+        "subjects": [
+          "02CB",
+          "04HD",
+          "04SG",
+          "08BC",
+          "08VR",
+          "10JR",
+          "13CA",
+          "16RA",
+          "17EK",
+          "17NA",
+          "19AK",
+          "19SA",
+          "22CY",
+          "22TK",
+          "2525JK",
+          "27HF",
+          "30AQ"
+        ],
+        "tasks": [
+          "audioawake",
+          "audiodeep",
+          "audiorecovery",
+          "rest",
+          "audiolight",
+          "restrecovery",
+          "restlight",
+          "audio",
+          "restdeep"
+        ],
+        "totalFiles": 531
+      },
+      "tag": "2.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "Canada Excellence Research Chair",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "Consciousness",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2020-09-23T18:21:10.684Z"
+  },
+  "source": "openneuro"
+}

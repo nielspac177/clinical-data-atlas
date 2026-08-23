@@ -1,0 +1,51 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:caa680d5dd694a5bcc682dd3b4492a7cdcde636ed2742ff8eb50787d012c03e9",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "type 2 diabetes mellitus (DM)",
+        "label": "type 2 diabetes mellitus"
+      },
+      {
+        "evidence": "cerebrovascular disease",
+        "label": "cerebrovascular disease"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "endocrinology_metabolism",
+      "neurology",
+      "neuroscience",
+      "cardiology"
+    ],
+    "id": "physionet:cded",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "3 Tesla MRI",
+        "value": "MRI"
+      },
+      {
+        "evidence": "diffusion tensor imaging (DTI) MRI",
+        "value": "dMRI"
+      },
+      {
+        "evidence": "Transcranial Doppler ultrasound (TCD)",
+        "value": "ultrasound"
+      },
+      {
+        "evidence": "heart rate, blood pressure, and respiratory parameters",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "laboratory and retinopathy measures",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "69 diabetic and control participants aged 55 to 75 years at baseline, with 41 subjects completing two years of follow-up",
+    "summary": "Prospective observational study of cerebral vasoregulation and perfusion in type 2 diabetes, combining transcranial Doppler, structural and perfusion MRI, diffusion imaging, cardiorespiratory monitoring, balance and walking, laboratory and retinopathy measures."
+  },
+  "prompt_version": "v1"
+}

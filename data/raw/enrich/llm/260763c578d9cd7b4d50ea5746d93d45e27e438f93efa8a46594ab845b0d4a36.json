@@ -1,0 +1,46 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:260763c578d9cd7b4d50ea5746d93d45e27e438f93efa8a46594ab845b0d4a36",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "pulmonology",
+      "endocrinology_metabolism",
+      "nephrology_urology"
+    ],
+    "id": "tcia:midi-b-curated-test",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "CT",
+        "value": "CT"
+      },
+      {
+        "evidence": "MR",
+        "value": "MRI"
+      },
+      {
+        "evidence": "PT",
+        "value": "PET"
+      },
+      {
+        "evidence": "DX",
+        "value": "xray"
+      },
+      {
+        "evidence": "MG",
+        "value": "mammography"
+      },
+      {
+        "evidence": "US",
+        "value": "ultrasound"
+      }
+    ],
+    "population": null,
+    "summary": "Curated test split of a multi-modality imaging collection spanning many body regions, including abdomen, chest, breast, kidney, lung, pelvis, prostate and thyroid."
+  },
+  "prompt_version": "v1"
+}

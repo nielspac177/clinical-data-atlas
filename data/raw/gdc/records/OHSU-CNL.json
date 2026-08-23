@@ -1,0 +1,67 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "OHSU-CNL",
+  "payload": {
+    "dbgap_accession_number": "phs001799",
+    "disease_type": [
+      "Chronic Myeloproliferative Disorders"
+    ],
+    "id": "OHSU-CNL",
+    "name": "Philadelphia-Negative Neutrophilic Leukemias (CNL/aCML/MDS/MPNu)",
+    "primary_site": [
+      "Hematopoietic and reticuloendothelial systems"
+    ],
+    "program": {
+      "dbgap_accession_number": null,
+      "name": "OHSU",
+      "program_id": "20cb9ac3-d202-5471-86d9-2bf2fe303f76"
+    },
+    "project_id": "OHSU-CNL",
+    "releasable": true,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 176,
+      "data_categories": [
+        {
+          "case_count": 158,
+          "data_category": "Simple Nucleotide Variation",
+          "file_count": 750
+        },
+        {
+          "case_count": 176,
+          "data_category": "Sequencing Reads",
+          "file_count": 398
+        },
+        {
+          "case_count": 80,
+          "data_category": "Transcriptome Profiling",
+          "file_count": 160
+        },
+        {
+          "case_count": 80,
+          "data_category": "Structural Variation",
+          "file_count": 320
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 158,
+          "experimental_strategy": "WXS",
+          "file_count": 908
+        },
+        {
+          "case_count": 80,
+          "experimental_strategy": "RNA-Seq",
+          "file_count": 720
+        }
+      ],
+      "file_count": 1628,
+      "file_size": 4485991654389
+    }
+  },
+  "source": "gdc"
+}

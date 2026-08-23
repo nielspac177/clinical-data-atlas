@@ -1,0 +1,46 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:a1279c492295660172a2d0ad92a50bbf1d4e3f384f2fc1847b3287c572640085",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Acute Myeloid Leukemia",
+        "label": "Acute Myeloid Leukemia"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "oncology"
+    ],
+    "id": "tcia:cmb-aml",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "CT MR XA",
+        "value": "CT"
+      },
+      {
+        "evidence": "CT MR XA",
+        "value": "MRI"
+      },
+      {
+        "evidence": "CT MR XA",
+        "value": "xray"
+      },
+      {
+        "evidence": "histopathology imaging",
+        "value": "pathology"
+      },
+      {
+        "evidence": "Associated genomic, phenotypic and clinical data",
+        "value": "genomics"
+      }
+    ],
+    "population": "Patients in the Cancer Moonshot Biobank acute myeloid leukemia cohort, receiving standard of care cancer treatment at NCI Community Oncology Research Program sites; 9 participants per source facts.",
+    "summary": "De-identified radiology and histopathology imaging from the Cancer Moonshot Biobank acute myeloid leukemia cohort. Associated genomic, phenotypic and clinical data are hosted by dbGaP and other NCI databases."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,97 @@
+{
+  "endpoints": [
+    "https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary%2Csummary.data_categories%2Csummary.experimental_strategies%2Cprogram&format=json"
+  ],
+  "harvest_method": "api:gdc-projects",
+  "native_id": "CDDP_EAGLE-1",
+  "payload": {
+    "dbgap_accession_number": "phs001239",
+    "disease_type": [
+      "Adenomas and Adenocarcinomas"
+    ],
+    "id": "CDDP_EAGLE-1",
+    "name": "CDDP Integrative Analysis of Lung Adenocarcinoma (Phase 2)",
+    "primary_site": [
+      "Bronchus and lung"
+    ],
+    "program": {
+      "dbgap_accession_number": null,
+      "name": "CDDP_EAGLE",
+      "program_id": "8e1f8ca7-0a89-5f0e-ad9d-67ee0c0c9bdb"
+    },
+    "project_id": "CDDP_EAGLE-1",
+    "releasable": true,
+    "released": true,
+    "state": "open",
+    "summary": {
+      "case_count": 50,
+      "data_categories": [
+        {
+          "case_count": 50,
+          "data_category": "Simple Nucleotide Variation",
+          "file_count": 988
+        },
+        {
+          "case_count": 50,
+          "data_category": "Sequencing Reads",
+          "file_count": 344
+        },
+        {
+          "case_count": 50,
+          "data_category": "Biospecimen",
+          "file_count": 99
+        },
+        {
+          "case_count": 50,
+          "data_category": "Clinical",
+          "file_count": 101
+        },
+        {
+          "case_count": 50,
+          "data_category": "Copy Number Variation",
+          "file_count": 188
+        },
+        {
+          "case_count": 48,
+          "data_category": "Transcriptome Profiling",
+          "file_count": 96
+        },
+        {
+          "case_count": 44,
+          "data_category": "Somatic Structural Variation",
+          "file_count": 88
+        },
+        {
+          "case_count": 48,
+          "data_category": "Structural Variation",
+          "file_count": 192
+        }
+      ],
+      "experimental_strategies": [
+        {
+          "case_count": 50,
+          "experimental_strategy": "WXS",
+          "file_count": 800
+        },
+        {
+          "case_count": 48,
+          "experimental_strategy": "RNA-Seq",
+          "file_count": 432
+        },
+        {
+          "case_count": 50,
+          "experimental_strategy": "WGS",
+          "file_count": 664
+        },
+        {
+          "case_count": 49,
+          "experimental_strategy": "Tissue Slide",
+          "file_count": 49
+        }
+      ],
+      "file_count": 2096,
+      "file_size": 17557760871118
+    }
+  },
+  "source": "gdc"
+}

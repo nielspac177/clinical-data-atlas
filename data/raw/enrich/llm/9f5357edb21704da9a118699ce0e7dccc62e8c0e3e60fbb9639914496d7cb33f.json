@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:9f5357edb21704da9a118699ce0e7dccc62e8c0e3e60fbb9639914496d7cb33f",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "sepsis",
+        "label": "sepsis"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "critical_care",
+      "infectious_disease",
+      "cardiology",
+      "pediatrics",
+      "public_health"
+    ],
+    "id": "physionet:challenge-2019",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "predict sepsis in clinical data",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": null,
+    "summary": "PhysioNet/CinC Challenge 2019 inviting participants to predict sepsis early from clinical data, motivated by evidence that delayed detection and antibiotic treatment worsen sepsis outcomes."
+  },
+  "prompt_version": "v1"
+}

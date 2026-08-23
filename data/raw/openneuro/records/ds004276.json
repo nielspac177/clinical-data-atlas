@@ -1,0 +1,126 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds004276",
+  "payload": {
+    "created": "2022-09-23T14:41:43.515Z",
+    "id": "ds004276",
+    "latestSnapshot": {
+      "created": "2026-08-18T14:50:54.000Z",
+      "description": {
+        "Authors": [
+          "Phoebe Gaston",
+          "Christian Brodbeck",
+          "Colin Phillips",
+          "Ellen Lau"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds004276.v1.1.0",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Auditory single word recognition in MEG",
+        "ReferencesAndLinks": [
+          "https://doi.org/10.1162/nol_a_00084",
+          "https://doi.org/10.3758/s13428-018-1056-1"
+        ]
+      },
+      "readme": "# Auditory single word recognition in MEG\n\nThis dataset is described in Gaston et al. (2022).\n\nStimuli and TextGrids are available from the Massive Auditory Lexical Decision database (Tucker et al., 2019).\n\nConverted to BIDS using MNE-BIDS (Appelhoff et al., 2019; Niso et al., 2018).\n\n\n# References\n\nAppelhoff, S., Sanderson, M., Brooks, T., Vliet, M., Quentin, R., Holdgraf, C., Chaumon, M., Mikulan, E., Tavabi, K., Höchenberger, R., Welke, D., Brunner, C., Rockhill, A., Larson, E., Gramfort, A. and Jas, M. (2019). MNE-BIDS: Organizing electrophysiological data into the BIDS format and facilitating their analysis. Journal of Open Source Software 4: (1896). https://doi.org/10.21105/joss.01896\n\nGaston, P., Brodbeck, C., Phillips, C., & Lau, E. (2022). Auditory word comprehension is less incremental in isolated words. Neurobiology of Language\n\nNiso, G., Gorgolewski, K. J., Bock, E., Brooks, T. L., Flandin, G., Gramfort, A., Henson, R. N., Jas, M., Litvak, V., Moreau, J., Oostenveld, R., Schoffelen, J., Tadel, F., Wexler, J., Baillet, S. (2018). MEG-BIDS, the brain imaging data structure extended to magnetoencephalography. Scientific Data, 5, 180110. https://doi.org/10.1038/sdata.2018.110\n\nTucker, B. V., Brenner, D., Danielson, D. K., Kelley, M. C., Nenadić, F., & Sims, M. (2019). The Massive Auditory Lexical Decision (MALD) database. Behavior Research Methods, 51(3), 1187–1204. https://doi.org/10.3758/s13428-018-1056-1\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "meg",
+          "beh"
+        ],
+        "secondaryModalities": [],
+        "sessions": [
+          "20191212",
+          "20191206",
+          "20191213",
+          "20191115",
+          "20191015",
+          "20190930",
+          "20191211",
+          "20191216",
+          "20191210",
+          "20191209",
+          "20191204",
+          "20191202",
+          "20191125",
+          "20191122",
+          "20191112",
+          "20191025",
+          "20191007",
+          "20190925"
+        ],
+        "size": 16087882081,
+        "subjects": [
+          "016",
+          "006",
+          "008",
+          "012",
+          "002",
+          "013",
+          "017",
+          "001",
+          "003",
+          "004",
+          "005",
+          "007",
+          "009",
+          "010",
+          "011",
+          "014",
+          "015",
+          "018",
+          "emptyroom"
+        ],
+        "tasks": [
+          "words",
+          "noise"
+        ],
+        "totalFiles": 223
+      },
+      "tag": "1.1.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        21,
+        19,
+        21,
+        19,
+        20,
+        30,
+        18,
+        20,
+        19,
+        20,
+        19,
+        20,
+        23,
+        24,
+        20,
+        20,
+        22,
+        21,
+        null
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "NSF",
+      "modalities": [
+        "meg",
+        "beh"
+      ],
+      "species": "Human",
+      "studyDesign": "MEG study",
+      "studyDomain": "Auditory word recognition",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2022-10-07T15:21:12.141Z"
+  },
+  "source": "openneuro"
+}

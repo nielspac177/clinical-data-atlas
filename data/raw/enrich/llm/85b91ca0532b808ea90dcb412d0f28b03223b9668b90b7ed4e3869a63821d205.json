@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:85b91ca0532b808ea90dcb412d0f28b03223b9668b90b7ed4e3869a63821d205",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "80 elderly patients with frailty after an open-heart surgery",
+        "label": "frailty"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "cardiology",
+      "surgery"
+    ],
+    "id": "physionet:wearable-exercise-frailty",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "single-lead electrocardiogram",
+        "value": "ECG"
+      },
+      {
+        "evidence": "chest-based heart rate monitor worn by the patients",
+        "value": "wearable"
+      },
+      {
+        "evidence": "demographic and clinical characteristics of the patients",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "80 elderly frailty patients, who entered a cardiac rehabilitation program after open-heart surgery",
+    "summary": "Single-lead electrocardiogram and triaxial acceleration signals from elderly patients with frailty in cardiac rehabilitation after open-heart surgery, recorded during exercise tests, with demographic and clinical characteristics and exercise test results."
+  },
+  "prompt_version": "v1"
+}

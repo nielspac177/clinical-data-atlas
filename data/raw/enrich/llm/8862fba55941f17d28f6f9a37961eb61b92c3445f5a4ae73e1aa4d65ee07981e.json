@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:8862fba55941f17d28f6f9a37961eb61b92c3445f5a4ae73e1aa4d65ee07981e",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Diffuse Large B-Cell Lymphoma (DLBCL) is the most common non-Hodgkin lymphoma",
+        "label": "Diffuse Large B-Cell Lymphoma (DLBCL)"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "tcia:dlbcl-morphology",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "42 digital high-magnification scans of tissue microarrays",
+        "value": "pathology"
+      },
+      {
+        "evidence": "a wide variety of clinical and cytogenetic variables",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "209 DLBCL cases at Stanford Hospital",
+    "summary": "Tissue microarray scans stained for H&E and for CD10, BCL6, MUM1, BCL2 and MYC, with pathologist-annotated regions, nucleus-level geometric features, survival and follow-up data, and clinical and cytogenetic variables."
+  },
+  "prompt_version": "v1"
+}

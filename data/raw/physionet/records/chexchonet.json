@@ -1,0 +1,38 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "chexchonet",
+  "payload": {
+    "abstract": "<p>Existing chest radiograph datasets, such as CheXpert and ChestX-ray14, have driven the development of new machine learning approaches to achieve expert or near-expert level performance on a variety of tasks. The primary focus of models developed using these datasets has been to replicate human-level performance by training on labels computationally extracted from radiology reports. We propose a different paradigm: pair an existing diagnostic test with labels from a more accurate, higher fidelity diagnostic test. This approach seeks to ask whether data from a cheaper, lower fidelity diagnostic test contains information for detection of pathologies using more accurate, gold standard labels. In the context of chest X-rays, a good example is the radiologic comment of cardiomegaly, a catch-all term or an abnormally enlarged heart. Cardiomegaly is known to be poorly predictive of cardiac disease and does not trigger meaningful clinical action. Instead, we can pair chest X-rays with gold standard structural heart disease labels derived from echocardiograms conducted on the same patients. This resource contains 71,589 unique chest X-rays from 24,689 different patients paired with key echocardiography measurements indicative of left ventricular hypertrophy and dilated left ventricle, pathologies which occur during early stage heart failure. The data also includes information about the relative times of the chest X-rays, the age/sex of the patient at the time of recording, and related metadata information. This data can be used as a resource for the community to build novel approaches to detect clinically actionable labels.</p>",
+    "access_policy": "Restricted",
+    "compressed_storage_size": 2905808151,
+    "core_doi": "10.13026/zsej-wt49",
+    "dua": {
+      "name": "PhysioNet Restricted Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Restricted Health Data License 1.5.0"
+    },
+    "main_storage_size": 2916338326,
+    "public_project_uuid": "f1c9de66-1b69-450b-9162-2b2f92a7ed10",
+    "publish_date": "2024-03-20",
+    "resource_type": "Database",
+    "short_description": "Early detection of heart failure is vital for improving outcomes. The dataset contains 71,589 CXRs paired with gold standard labels from echocardiograms to enable the training of models to detect pathologies indicative of early stage heart failure.",
+    "slug": "chexchonet",
+    "source_url": "https://physionet.org/content/chexchonet/1.0.0/",
+    "title": "CheXchoNet: A Chest Radiograph Dataset with Gold Standard Echocardiography Labels",
+    "topics": [
+      "early detection",
+      "heart failure",
+      "cardiac structural abnormalties",
+      "deep learning",
+      "chest x-rays"
+    ],
+    "version": "1.0.0",
+    "version_doi": "10.13026/kp08-ws25"
+  },
+  "source": "physionet"
+}

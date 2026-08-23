@@ -1,0 +1,192 @@
+{
+  "endpoints": [
+    "https://api.datacite.org/dois?prefix=10.7937"
+  ],
+  "harvest_method": "api:nbia+datacite",
+  "native_id": "dlbcl-morphology",
+  "payload": {
+    "datacite": {
+      "citationCount": 1,
+      "container": {},
+      "contentUrl": [],
+      "contributors": [],
+      "created": "2022-03-25T18:26:20Z",
+      "creators": [
+        {
+          "affiliation": [],
+          "familyName": "Fernandez-Pol",
+          "givenName": "Sebastian",
+          "name": "Fernandez-Pol, Sebastian",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-0428-0199",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Natkunam",
+          "givenName": "Yasodha",
+          "name": "Natkunam, Yasodha",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-9816-1018",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Vrabac",
+          "givenName": "Damir",
+          "name": "Vrabac, Damir",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0001-8942-2880",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Rojansky",
+          "givenName": "Rebecca",
+          "name": "Rojansky, Rebecca",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-3735-8159",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Advani",
+          "givenName": "Ranjana",
+          "name": "Advani, Ranjana",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-3219-2292",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Rajpurkar",
+          "givenName": "Pranav",
+          "name": "Rajpurkar, Pranav",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-8030-3727",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "S",
+          "givenName": null,
+          "name": "Smit, Akshay",
+          "nameIdentifiers": [],
+          "nameType": null
+        },
+        {
+          "affiliation": [],
+          "familyName": null,
+          "givenName": null,
+          "name": "Ng, Andrew Y.",
+          "nameIdentifiers": [],
+          "nameType": null
+        }
+      ],
+      "dates": [],
+      "descriptions": [
+        {
+          "description": "Diffuse Large B-Cell Lymphoma (DLBCL) is the most common non-Hodgkin lymphoma worldwide. DLBCL is fatal without treatment, but early detection and therapy can cure up to 70% of patients. The current best prognostic classification, the National Comprehensive Cancer Network International Prognostic Index, is insufficient to guide therapeutic decision-making for individual patients. No tumor-intrinsic prognostication method is currently available. \n\nThe DLBCL-Morph dataset contains 42 digital high-magnification scans of tissue microarrays (TMAs) containing tissue cores from 209 DLBCL cases at Stanford Hospital. Each DLBCL case is accompanied by survival data, follow-up status and a wide variety of clinical and cytogenetic variables. The TMAs are stained for H&E, which shows cell morphology, as well as for the expression of several prognostically relevant proteins: CD10, BCL6, MUM1, BCL2, and MYC. The TMAs are accompanied by pathologist-annotated regions of interest (ROIs) that specify areas of tissue representative of DLBCL. We used deep learning to segment out cancerous nuclei from the ROIs, and computed several geometric features for each cancerous nucleus, which are provided as part of our dataset. These geometric features quantify several morphologic properties of a nucleus, such as size and elongation, and can be used as input for automated prognostic models to predict survival. In addition, DLBCL-Morph contains 204 digital high-magnification whole-slide images (WSIs) from 149 DLBCL cases, stained for H&E.\n\nA total of 152,194 patches (240x240 pixels each) were extracted from the H&E stained ROIs and a HoVer-Net model was used to segment tumor nuclei (1,035,909 binary masks).  Geometric descriptors were computed for each segmented nucleus and a Cox proportional hazards model was evaluated using A) only clinical features, B) only morphologic features, or C) both sets of features. The Cox model achieved a concordance index of A) 0.703 (p = 0.005) B) 0.645 (p = 0.07), and C) 0.723 (p < 0.001) on a randomly sampled validation set of 51 patients. Our findings suggest that a risk calculator based on both clinical and morphologic data could yield improved prognostic value for DLBCL without the need for additional diagnostic testing.\n\nSeveral studies have thus far failed to conclusively demonstrate that morphologic classification can predict outcomes in DLBCL. Automated medical imaging methods on whole slide images (WSI) could potentially identify novel, prognostically significant morphological or immunohistochemical biomarkers. The ability of automated methods to identify prognostically relevant features on H&E sections that have eluded pathologists has been demonstrated (Beck et al Science Translational Med). Furthermore, if successful, automated image analysis could potentially be scaled up into a cost-effective alternative to current classifcation methods which are typically costly and/or labor intensive. A critical requirement for the development of such deep learning models is the availability of datasets containing WSIs appropriately stained to show cell morphology and oncogene expression, with accompanying prognostic outcome data.",
+          "descriptionType": "Abstract",
+          "lang": null
+        }
+      ],
+      "doi": "10.7937/nva3-n783",
+      "downloadCount": 0,
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "DLBCL-Morphology",
+          "identifierType": "TCIA Short Name"
+        }
+      ],
+      "isActive": true,
+      "language": null,
+      "metadataVersion": 3,
+      "partCount": 0,
+      "partOfCount": 0,
+      "publicationYear": 2022,
+      "published": null,
+      "publisher": "The Cancer Imaging Archive",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2022-04-28T14:06:44Z",
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "10.1088/1748-3190/ad6825",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        }
+      ],
+      "relatedItems": [],
+      "rightsList": [
+        {
+          "rights": "Creative Commons Attribution Non Commercial 4.0 International",
+          "rightsIdentifier": "cc-by-nc-4.0",
+          "rightsIdentifierScheme": "SPDX",
+          "rightsUri": "https://creativecommons.org/licenses/by-nc/4.0/legalcode",
+          "schemeUri": "https://spdx.org/licenses/"
+        }
+      ],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "fabricaForm",
+      "state": "findable",
+      "subjects": [],
+      "titles": [
+        {
+          "lang": null,
+          "title": "H&E and immunohistochemical stain images of 209 cases of diffuse large B-cell lymphoma linked with cytogenetic features and clinical outcomes",
+          "titleType": null
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2025-06-01T01:01:05Z",
+      "url": "https://www.cancerimagingarchive.net/collection/dlbcl-morphology/",
+      "version": "1",
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 4079
+    },
+    "nbia": null
+  },
+  "source": "tcia"
+}

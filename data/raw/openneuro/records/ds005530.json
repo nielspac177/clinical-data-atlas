@@ -1,0 +1,113 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005530",
+  "payload": {
+    "created": "2024-09-25T19:04:42.320Z",
+    "id": "ds005530",
+    "latestSnapshot": {
+      "created": "2025-02-24T20:34:28.000Z",
+      "description": {
+        "Authors": [
+          "Viviana Greco",
+          "Tamas A. Foldes",
+          "Neil A. Harrison",
+          "Kevin Murphy",
+          "Marta Wawrzuta",
+          "Mahmoud E. A. Abdellahi",
+          "Penelope A. Lewis"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005530.v1.0.9",
+        "Funding": [
+          "ERC consolidator grant SolutionSleep to Lewis P.A.",
+          "The Wellcome Trust [WT224267] to Murphy K"
+        ],
+        "HowToAcknowledge": "Please cite the associated publication (citation to be added upon publication).",
+        "License": "CC0",
+        "Name": "Depotentiation of emotional reactivity using TMR during REM sleep",
+        "ReferencesAndLinks": []
+      },
+      "readme": "# Disarming emotional memories using Targeted Memory Reactivation during Rapid Eye Movement sleep\n\nThis dataset contains fMRI and EEG data from a study investigating the effects of Targeted Memory Reactivation (TMR) during REM sleep on emotional reactivity. As well as behavioural data and ECG collected during behavioural tasks.\n\n## Study Design\n\nParticipants rated the arousal of 48 affective images paired with semantically matching sounds. Heart rate deceleration was used as a measure of their autonomic arousal. Half of these sounds were cued during REM in the subsequent overnight sleep cycle. Participants rated the images in an MRI scanner with pulse oximetry 48 hours after encoding, and they completed an online follow up two weeks later.\n\n### Sessions\n1. Baseline: Initial arousal ratings as well as overnight sleep with TMR\n2. Session 48-H: fMRI scanning, pulse oximetry and arousal ratings (48 hours after baseline)\n3. Session 2-Wk: Online follow-up (2 weeks after baseline)\n\n## Data Acquisition\n\n- **fMRI**: Acquired using a Siemens Magnetom Prisma 3T scanner with a 32-channel head coil\n- **Heart Rate**: Recorded using BrainVision BrainAmp ExG with ExG AUX box and multitrodes during the behavioural session and pulse oximetry during the fMRI session3\n- **Polysomnography**: Recorded using ten electrodes including 6 EEG channels (F3, F4, C3, C4, O1 and O2), 2 EMG channels and 2 EOG channels. All channels were live referenced to the average of left and right mastoids.\n\n## Dataset Contents\n\nThis initial upload contains:\n- T1-weighted structural images\n- Functional MRI data from Session 48-H\n- B0 field maps\n- Behavioural data from all sessions\n\n## Preprocessing\n\nfMRI data were preprocessed using fMRIPrep 20.2.7. Details of the preprocessing pipeline can be found in the methods section of the associated publication.\n\nT1-weighted structural scans were defaced using pydeface version 2.0.2 to ensure participant anonymity.\n\nWithin the behavioral data, the baseline ratings were centered within each participant. This was achieved by subtracting each participant's mean baseline rating from the item-specific ratings they gave to the stimuli.\n\n## Additional Information\n\nFor more detailed information about the study design, methods, and results, please refer to the associated publication (citation to be added upon publication).\n\nThis dataset was initially converted to BIDS format using ezBIDS (https://brainlife.io/ezbids).\n\n### Contact\n\nFor questions about the MRI dataset, please contact:\nDr Tamas Foldes\nfoldesta@cardiff.ac.uk\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri",
+          "eeg",
+          "beh"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 6949640968,
+        "subjects": [
+          "06102021302",
+          "19012022302",
+          "21102021301",
+          "19012022303",
+          "07102021301",
+          "13102021301",
+          "12012022301",
+          "12012022302",
+          "24112021302",
+          "26012022301",
+          "08122021301",
+          "03112021304",
+          "06102021301",
+          "28102021301",
+          "28102021302",
+          "14102021301",
+          "01122021301",
+          "20102021304"
+        ],
+        "tasks": [
+          "sleep",
+          "arousal"
+        ],
+        "totalFiles": 431
+      },
+      "tag": "1.0.9"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        26,
+        22,
+        29,
+        29,
+        22,
+        29,
+        23,
+        22,
+        27,
+        21,
+        21,
+        22,
+        27,
+        29,
+        32,
+        23,
+        22,
+        26
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "European Research Council (ERC)",
+      "modalities": [
+        "mri",
+        "eeg",
+        "beh"
+      ],
+      "species": "Human",
+      "studyDesign": "Within-subject design with longitudinal follow-up",
+      "studyDomain": "Cognitive Neuroscience",
+      "studyLongitudinal": "Longitudinal"
+    },
+    "publishDate": "2024-09-25T19:11:10.898Z"
+  },
+  "source": "openneuro"
+}

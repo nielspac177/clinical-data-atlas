@@ -1,0 +1,40 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:d23fd0d783240c1440dc5450bec7c42d744045edcee433ad8186121ef0f10e4f",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Colorectal Cancer",
+        "label": "Colorectal Cancer"
+      },
+      {
+        "evidence": "Adenomas and Adenocarcinomas",
+        "label": "Adenomas and Adenocarcinomas"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology"
+    ],
+    "id": "gdc:PECGS-COPECC",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Sequencing Reads",
+        "value": "genomics"
+      },
+      {
+        "evidence": "RNA-Seq",
+        "value": "transcriptomics"
+      },
+      {
+        "evidence": "Clinical",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "Hispanic Colorectal Cancer Patients",
+    "summary": "Cancer genomic characterization study focused on engaging Hispanic colorectal cancer patients, sampling rectosigmoid junction, colon and rectum, with sequencing reads, clinical data, transcriptome profiling and structural variation from RNA-Seq."
+  },
+  "prompt_version": "v1"
+}

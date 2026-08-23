@@ -1,0 +1,45 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds002385",
+  "payload": {
+    "created": "2020-01-10T15:54:53.183Z",
+    "id": "ds002385",
+    "latestSnapshot": {
+      "created": "2025-04-08T18:52:32.000Z",
+      "description": {
+        "Authors": [
+          "Beatriz Luna"
+        ],
+        "DatasetDOI": "10.18112/openneuro.ds002385.v1.1.0",
+        "Funding": [
+          "R01MH080243"
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "PETfrog",
+        "ReferencesAndLinks": null
+      },
+      "readme": "Combined PET MR longitudinal study\n\nParticipants with PET (>=18yo at visit 1) have enter the scanner twice on the same day (collapsed within the same BIDS session):\n * PET:raclopride + MR:functional (tw1 x 2, task x 6, rest x 2, mt x 4)\n * PET:dtbz + MR:structural (t1w, dsi, r2prime, rest x 1)\n\nMR only participants (<18yo at visit 1) enter the scanner only once on a given day. Task x 6, rest x 2, mt, r2prime, and DWI are collected.\n\nAt least 2 fieldmaps are collected, before task and before rest. One fieldmap is collected in PET:dtbz session before rest.\n\nIn any session, there will be at most 2 T1w acquisitions. One slow and the other accelerated (G2). For PET participants, there could be up to T1w 4 runs.  At return visits, only G2 is collected for MR-only participants.\n\n\nBIDS populated with https://github.com/LabNeuroCogDevel/mMR_PETDA/tree/master/bids (/Volumes/Phillips/mMR_PETDA/scripts/bids/)\n",
+      "summary": null,
+      "tag": "1.1.0"
+    },
+    "metadata": {
+      "affirmedDefaced": null,
+      "ages": null,
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "NIH",
+      "modalities": [],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": "Longitudinal"
+    },
+    "publishDate": "2020-01-18T03:41:33.225Z"
+  },
+  "source": "openneuro"
+}

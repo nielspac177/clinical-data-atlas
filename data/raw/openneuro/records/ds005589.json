@@ -1,0 +1,97 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds005589",
+  "payload": {
+    "created": "2024-10-23T13:04:22.831Z",
+    "id": "ds005589",
+    "latestSnapshot": {
+      "created": "2025-06-07T17:17:57.000Z",
+      "description": {
+        "Authors": [
+          "Shuning Xue",
+          "Bu Jin",
+          "Jie Jiang",
+          "Longteng Guo",
+          "Jin Zhou",
+          "Changyong Wang",
+          "Jing Liu"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds005589.v1.0.3",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "A multi-subject and multi-session EEG dataset for modelling human visual object recognition",
+        "ReferencesAndLinks": null
+      },
+      "readme": "#### Overview\r\n\r\nThis multi-subject and multi-session EEG dataset for modelling human visual object recognition (MSS) contains:\r\n\r\n1. 122-channel EEG data collected on 32 participants during natural visual stimulation;\r\n2. totally 100 sessions for 1.5 hours each;\r\n3. each session consists of 4 RSVP runs and 4 low-speed presentation runs;\r\n4. each participant completed between 1 to 5 sessions on different days, around one week apart.\r\n\r\nMore details about the dataset are described as follows.\r\n\r\n#### Participants\r\n\r\n32 participants were recruited from college students in Beijing, of which 4 were female, and 28 were male, with an age range of 21-33 years.\r\n100 sessions were conducted.\r\nThey were paid and gave written informed consent. \r\nThe study was conducted under the approval of the ethical committee of the Institute of Automation at the Chinese Academy of Sciences, with the approval number: IA21-2410-020201.\r\n\r\n#### Experimental Procedures\r\n\r\n1. RSVP experiment:\r\nDuring the RSVP experiment, the participants were shown images at a rate of 5 Hz, and each run consisted of 2,000 trials. There were 20 image categories, with 100 images in each category, making up the 2,000 stimuli. The 100 images in each category were further divided into five image sequences, resulting in 100 image sequences per run. Each sequence was composed of 20 images from the same class, and the 100 sequences were presented in a pseudo-random order. \r\n\r\nAfter every 50 sequences, there was a break for the participants to rest. Each rapid serial sequence lasted approximately 7.5 seconds, starting with a 750ms blank screen with a white fixation cross, followed by 20 or 21 images presented at 5 Hz with a 50% duty cycle. The sequence ended with another 750ms blank screen. \r\n\r\nAfter the rapid serial sequence, there was a 2-second interval during which participants were instructed to blink and then report whether a special image appeared in the sequence using a keyboard. During each run, 20 sequences were randomly inserted with additional special images at random positions. \r\nThe special images are logos for brain-computer interfaces.\r\n\r\n2. Low-speed experiment:\r\nDuring the low-speed experiment, each run consisted of 100 trials, with 1 second per image for a slower paradigm. The 100 stimuli were presented in a pseudo-random order and included 20 image categories, each containing 5 images. A break was given to the participants after every 20 images for them to rest.\r\n\r\nEach image was displayed for 1 second and was followed by 11 choice boxes (1 correct class box, 9 random class boxes, and 1 reject box). Participants were required to select the correct class of the displayed image using a mouse to increase their engagement. After the selection, a white fixation cross was displayed for 1 second in the centre of the screen to remind participants to pay attention to the upcoming task.\r\n\r\n#### Stimuli\r\n\r\nThe stimuli are from two image databases, ImageNet and PASCAL.\r\nThe final set consists of 10,000 images, with 500 images for each class.\r\n\r\n#### Annotations\r\n\r\nIn the derivatives/annotations folder, there are additional information of MSS:\r\n\r\n1. Videos of two paradigms.\r\n2. Dataset_info: Main features of MSS.\r\n3. Experiment_schedule: Schedule of each session. \r\n4. Stimuli_source: Source categories of ImageNet and PASCAL.\r\n5. Subject_info: Age and sex of participants.\r\n6. Task_event: The meaning of eventID.\r\n\r\n#### Preprocessing\r\n\r\nThe EEG signals were pre-processed using the MNE package, version 1.3.1, with Python 3.9.16. \r\nThe data was sampled at a rate of 1,000 Hz with a bandpass filter applied between 0.1 and 100 Hz. \r\nA notch filter was used to remove 50 Hz power frequency.\r\nEpochs were created for each trial ranging from 0 to 500 ms relative to stimulus onset. \r\nNo further preprocessing or artefact correction methods were applied in technical validation. However, researchers may want to consider widely used preprocessing steps such as baseline correction or eye movement correction. \r\nAfter the preprocessing, each session resulted in two matrices: RSVP EEG data matrix of shape (8,000 image conditions × 122 EEG channels × 125 EEG time points) and low-speed EEG data matrix of shape (400 image conditions × 122 EEG channels × 125 EEG time points).\r\n\r\n\r\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [],
+        "secondaryModalities": [],
+        "sessions": [
+          "01",
+          "02",
+          "03",
+          "05",
+          "04"
+        ],
+        "size": 11594835,
+        "subjects": [
+          "10",
+          "03",
+          "19",
+          "07",
+          "27",
+          "20",
+          "23",
+          "14",
+          "28",
+          "13",
+          "02",
+          "24",
+          "15",
+          "01",
+          "29",
+          "21",
+          "22",
+          "30",
+          "06",
+          "17",
+          "26",
+          "32",
+          "16",
+          "12",
+          "11",
+          "31",
+          "18",
+          "09",
+          "08",
+          "25",
+          "04",
+          "05"
+        ],
+        "tasks": [],
+        "totalFiles": 809
+      },
+      "tag": "1.0.3"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "Brain-computer interface",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2024-10-26T16:37:08.454Z"
+  },
+  "source": "openneuro"
+}

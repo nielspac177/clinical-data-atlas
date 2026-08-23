@@ -1,0 +1,35 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "mednli",
+  "payload": {
+    "abstract": "<p>State of the art models using deep neural networks have become very good in learning an accurate mapping from inputs to outputs. However, they still lack generalization capabilities in conditions that differ from the ones encountered during training. This is even more challenging in specialized, and knowledge intensive domains, where training data is limited. To address this gap, we introduce MedNLI - a dataset annotated by doctors, performing a natural language inference task (NLI), grounded in the medical history of patients.&nbsp;As the source of premise sentences, we used the MIMIC-III. More specifically, to minimize the risks to patient privacy, we worked with clinical notes corresponding to the deceased patients. The clinicians in our team suggested the Past Medical History to be the most informative section of a clinical note, from which useful inferences can be drawn about the patient.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 1516111,
+    "core_doi": "10.13026/c6kh-4h33",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 13817812,
+    "public_project_uuid": "fcc37b2d-c1eb-4594-87d8-f2759ee95641",
+    "publish_date": "2019-10-01",
+    "resource_type": "Database",
+    "short_description": "This is a resource for training machine learning models for language inference in the medical domain.",
+    "slug": "mednli",
+    "source_url": "https://physionet.org/content/mednli/1.0.0/",
+    "title": "MedNLI - A Natural Language Inference Dataset For The Clinical Domain",
+    "topics": [
+      "natural language inference",
+      "recognizing textual entailment"
+    ],
+    "version": "1.0.0",
+    "version_doi": "10.13026/C2RS98"
+  },
+  "source": "physionet"
+}
