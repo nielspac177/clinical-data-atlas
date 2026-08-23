@@ -1,0 +1,184 @@
+{
+  "endpoints": [
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getCollectionValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getModalityValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getBodyPartValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getPatient",
+    "https://api.datacite.org/dois?prefix=10.7937"
+  ],
+  "harvest_method": "api:nbia+datacite",
+  "native_id": "ACNS0332",
+  "payload": {
+    "datacite": {
+      "citationCount": 0,
+      "container": {},
+      "contentUrl": [],
+      "contributors": [],
+      "created": "2021-04-13T17:52:35Z",
+      "creators": [
+        {
+          "affiliation": [],
+          "familyName": "Hwang",
+          "givenName": "Eugene I.",
+          "name": "Hwang, Eugene I.",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Kool",
+          "givenName": "Marcel",
+          "name": "Kool, Marcel",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Burger",
+          "givenName": "Peter C.",
+          "name": "Burger, Peter C.",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Capper",
+          "givenName": "David",
+          "name": "Capper, David",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Chavez",
+          "givenName": "Lukas",
+          "name": "Chavez, Lukas",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        }
+      ],
+      "dates": [],
+      "descriptions": [
+        {
+          "description": "This collection contains data from the Children’s Oncology Group (COG) Clinical Trial NCT00392327, Chemotherapy and Radiation Therapy in Treating Young Patients With Newly Diagnosed, Previously Untreated, High-Risk Medulloblastoma/PNET, \" Study Chair: James M. Olson, M.D., Ph.D. It was sponsored by NCI and performed by the Children's Oncology Group under study number ACSN0332. This randomized phase III trial studies different chemotherapy and radiation therapy regimens to compare how well they work in treating young patients with newly diagnosed, previously untreated, high-risk medulloblastoma.",
+          "descriptionType": "Abstract",
+          "lang": null
+        }
+      ],
+      "doi": "10.7937/tcia.582b-xz89",
+      "downloadCount": 0,
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "ACNS0332",
+          "identifierType": "TCIA Short Name"
+        }
+      ],
+      "isActive": true,
+      "language": null,
+      "metadataVersion": 6,
+      "partCount": 0,
+      "partOfCount": 0,
+      "publicationYear": 2021,
+      "published": null,
+      "publisher": "The Cancer Imaging Archive",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2021-05-04T16:09:42Z",
+      "relatedIdentifiers": [],
+      "relatedItems": [],
+      "rightsList": [
+        {
+          "rights": "NCTN Data Archive License",
+          "rightsUri": "https://nctn-data-archive.nci.nih.gov/sites/default/files/DUA/NCTN_NCORP_Data_Archive_DUA_No%20CA_v2019-06-12.pdf"
+        }
+      ],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "fabricaForm",
+      "state": "findable",
+      "subjects": [],
+      "titles": [
+        {
+          "lang": null,
+          "title": "Chemotherapy and Radiation Therapy in Treating Young Patients With Newly Diagnosed, Previously Untreated, High-Risk Medulloblastoma/PNET (ACNS0332)",
+          "titleType": null
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2025-06-01T01:01:10Z",
+      "url": "https://www.cancerimagingarchive.net/collection/acns0332/",
+      "version": "1",
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 2476
+    },
+    "nbia": {
+      "body_parts": [
+        "BRAIN",
+        "HEADNECK",
+        "SPINE"
+      ],
+      "collection": "ACNS0332",
+      "modalities": [
+        "RTSTRUCT"
+      ],
+      "patients": [
+        {
+          "Collection": "ACNS0332",
+          "PatientId": "ACNS0332_PASFHY",
+          "PatientName": "ACNS0332_PASFHY",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACNS0332",
+          "PatientId": "ACNS0332_PARMZW",
+          "PatientName": "ACNS0332_PARMZW",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACNS0332",
+          "PatientId": "ACNS0332_PASEUA",
+          "PatientName": "ACNS0332_PASEUA",
+          "PatientSex": "M",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACNS0332",
+          "PatientId": "ACNS0332_PASFUN",
+          "PatientName": "ACNS0332_PASFUN",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "ACNS0332",
+          "PatientId": "ACNS0332_PARJKJ",
+          "PatientName": "ACNS0332_PARJKJ",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        }
+      ]
+    }
+  },
+  "source": "tcia"
+}

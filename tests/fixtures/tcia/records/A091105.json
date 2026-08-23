@@ -1,0 +1,196 @@
+{
+  "endpoints": [
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getCollectionValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getModalityValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getBodyPartValues",
+    "https://services.cancerimagingarchive.net/nbia-api/services/v1/getPatient",
+    "https://api.datacite.org/dois?prefix=10.7937"
+  ],
+  "harvest_method": "api:nbia+datacite",
+  "native_id": "A091105",
+  "payload": {
+    "datacite": {
+      "citationCount": 0,
+      "container": {},
+      "contentUrl": [],
+      "contributors": [],
+      "created": "2023-01-18T14:35:56Z",
+      "creators": [
+        {
+          "affiliation": [],
+          "familyName": "Gounder",
+          "givenName": "Mrinal M.",
+          "name": "Gounder, Mrinal M.",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Mahoney",
+          "givenName": "Michelle R.",
+          "name": "Mahoney, Michelle R.",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Van Tine",
+          "givenName": "Brian A.",
+          "name": "Van Tine, Brian A.",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Ravi",
+          "givenName": "Vinod",
+          "name": "Ravi, Vinod",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Attia",
+          "givenName": "Steven",
+          "name": "Attia, Steven",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        }
+      ],
+      "dates": [],
+      "descriptions": [
+        {
+          "description": "This collection contains data from the Alliance for Clinical Trials in Oncology Clinical Trial NCT02066181  “Sorafenib Tosylate in Treating Patients With Desmoid Tumors or Aggressive Fibromatosis\". Principal Investigator: Mrinal M Gounder. It was sponsored by NCI and performed by the Alliance for Clinical Trials in Oncology under study number A091105. This randomized phase III trial compares the effects, good and/or bad, of sorafenib tosylate in treating patients with desmoid tumors or aggressive fibromatosis. Sorafenib tosylate may stop the growth of tumor cells by blocking some of the proteins needed for cell growth. Select patient-level data from this trial is available via the following link:  https://nctn-data-archive.nci.nih.gov/node/1266.",
+          "descriptionType": "Abstract",
+          "lang": null
+        }
+      ],
+      "doi": "10.7937/0wf5-sj50",
+      "downloadCount": 0,
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "A091105",
+          "identifierType": "TCIA Short Name"
+        }
+      ],
+      "isActive": true,
+      "language": null,
+      "metadataVersion": 5,
+      "partCount": 0,
+      "partOfCount": 0,
+      "publicationYear": 2023,
+      "published": null,
+      "publisher": "The Cancer Imaging Archive",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2023-02-09T11:02:00Z",
+      "relatedIdentifiers": [],
+      "relatedItems": [],
+      "rightsList": [
+        {
+          "rights": "NCTN Data Archive License",
+          "rightsUri": "https://nctn-data-archive.nci.nih.gov/sites/default/files/DUA/NCTN_NCORP_Data_Archive_DUA_CA.pdf"
+        }
+      ],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "fabricaForm",
+      "state": "findable",
+      "subjects": [],
+      "titles": [
+        {
+          "lang": null,
+          "title": "Sorafenib Tosylate in Treating Patients With Desmoid Tumors or Aggressive Fibromatosis (A091105)",
+          "titleType": null
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2025-06-01T01:01:10Z",
+      "url": "https://www.cancerimagingarchive.net/collection/a091105/",
+      "version": "1",
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 904
+    },
+    "nbia": {
+      "body_parts": [
+        "ABDOMEN",
+        "ARM",
+        "ARMPITSHOULDER",
+        "BACK",
+        "BUTTOCKS",
+        "CHEST",
+        "HEADNECK",
+        "LEFTSHOULDER",
+        "LOWERLIMB",
+        "NECK",
+        "PELVIS",
+        "RIGHTARM",
+        "RIGHTSHOULDER",
+        "SHOULDER",
+        "UPPERLIMB"
+      ],
+      "collection": "A091105",
+      "modalities": [
+        "RTSTRUCT"
+      ],
+      "patients": [
+        {
+          "Collection": "A091105",
+          "PatientId": "A091105-9102787",
+          "PatientName": "A091105-9102787",
+          "PatientSex": "F",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "A091105",
+          "PatientId": "A091105-9101655",
+          "PatientName": "A091105-9101655",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "A091105",
+          "PatientId": "A091105-9105427",
+          "PatientName": "A091105-9105427",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "A091105",
+          "PatientId": "A091105-9101207",
+          "PatientName": "A091105-9101207",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        },
+        {
+          "Collection": "A091105",
+          "PatientId": "A091105-9103836",
+          "PatientName": "A091105-9103836",
+          "PatientSex": "O",
+          "Phantom": "NO",
+          "SpeciesCode": "337915000",
+          "SpeciesDescription": "Homo sapiens"
+        }
+      ]
+    }
+  },
+  "source": "tcia"
+}
