@@ -64,6 +64,19 @@ function stableFacetCounts(rows, state, facet) {
   return merged;
 }
 
+/** Focus the checkbox for `value` in `facet`'s rail, if it's on screen. */
+function focusFacetCheckbox(facet, value) {
+  const container = document.querySelector(`[data-facet-options="${facet}"]`);
+  if (!container) return false;
+  for (const input of container.querySelectorAll("input")) {
+    if (input.value === value) {
+      input.focus();
+      return true;
+    }
+  }
+  return false;
+}
+
 function main() {
   initTheme();
   initA11y();
@@ -101,9 +114,18 @@ function main() {
       const current = new Set(filterState[kind] ?? []);
       current.add(value);
       filterState = { ...filterState, [kind]: [...current] };
+      // Close before refresh(): refresh() rebuilds the table (the panel's
+      // "opener" row button may no longer exist once the new filter is
+      // applied), so closing first, while the opener is still attached,
+      // is what lets panel.close()'s own focus-return actually land.
+      panel.close();
       refresh();
       writeState({ [kind]: [...current] });
-      panel.close();
+      // Either way, land somewhere concrete rather than <body>: the
+      // checkbox that now reflects the filter just added is guaranteed
+      // to exist (it's the value the chip itself came from) and is
+      // exactly what the reader's attention should confirm next.
+      focusFacetCheckbox(kind, value);
     },
     onNavigate(id) {
       // "View in graph" - the table page has no in-page graph, so this
@@ -138,7 +160,7 @@ function main() {
 
   function refresh() {
     const filtered = applyFilters(allRows, filterState);
-    table.setRows(filtered);
+    table.setRows(filtered, { total: allRows.length });
     renderAllFacets();
   }
 
@@ -197,21 +219,15 @@ function main() {
     const end = toRaw ? Number(toRaw) : undefined;
     const validStart = Number.isFinite(start) ? start : undefined;
     const validEnd = Number.isFinite(end) ? end : undefined;
+    const years =
+      validStart === undefined && validEnd === undefined ? undefined : { start: validStart, end: validEnd };
 
-    filterState = {
-      ...filterState,
-      years: validStart === undefined && validEnd === undefined ? undefined : { start: validStart, end: validEnd },
-    };
+    filterState = { ...filterState, years };
     refresh();
-
-    // The URL's `years=start-end` needs both bounds; sync only once
-    // complete (or once fully cleared) so a half-typed value doesn't
-    // clobber the last complete range in the address bar.
-    if (validStart !== undefined && validEnd !== undefined) {
-      writeState({ years: { start: validStart, end: validEnd } });
-    } else if (validStart === undefined && validEnd === undefined) {
-      writeState({ years: undefined });
-    }
+    // url-state.js round-trips open-ended ranges ("2018-"/"-2020") as
+    // well as complete ones, so whatever's in the inputs - even a single
+    // filled bound - can go straight to the URL.
+    writeState({ years });
   }
   yearFromInput?.addEventListener("input", onYearsInput);
   yearToInput?.addEventListener("input", onYearsInput);

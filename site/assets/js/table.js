@@ -6,7 +6,7 @@
  */
 
 import { ACCESS } from "./config.js";
-import { accessLabel, fmtNumber } from "./format.js";
+import { accessLabel, countryName, fmtNumber } from "./format.js";
 import { announce } from "./a11y.js";
 import { capitalize, domainLabel, sourceLabel } from "./filters.js";
 
@@ -67,12 +67,13 @@ function textCell(text) {
   return td;
 }
 
-function nameCell(row, onRowSelect) {
+function nameCell(row, onRowSelect, active) {
   const td = document.createElement("td");
   td.className = "cell-name";
   const button = document.createElement("button");
   button.type = "button";
   button.className = "btn btn-quiet";
+  if (active) button.setAttribute("aria-current", "true");
   button.textContent = row.name || row.id;
   button.addEventListener("click", () => onRowSelect?.(row.id));
   td.appendChild(button);
@@ -86,23 +87,24 @@ function listCell(values, limit, labelFn, colored) {
     td.textContent = "—";
     return td;
   }
+  const wrap = document.createElement("span");
+  wrap.className = "cell-chips";
   const shown = list.slice(0, limit);
   for (const value of shown) {
     const chip = document.createElement("span");
     chip.className = "chip";
     if (colored) chip.dataset.domain = value;
     chip.textContent = labelFn(value);
-    chip.style.marginInlineEnd = "4px";
-    chip.style.marginBlockEnd = "2px";
-    td.appendChild(chip);
+    wrap.appendChild(chip);
   }
   const extra = list.length - shown.length;
   if (extra > 0) {
     const more = document.createElement("span");
     more.className = "muted text-sm";
     more.textContent = `+${extra}`;
-    td.appendChild(more);
+    wrap.appendChild(more);
   }
+  td.appendChild(wrap);
   return td;
 }
 
@@ -134,17 +136,21 @@ function sampleCell(size, unit) {
 function buildRow(row, { onRowSelect, active }) {
   const tr = document.createElement("tr");
   tr.dataset.id = row.id;
-  if (active) tr.setAttribute("aria-selected", "true");
+  // `aria-selected` isn't a valid state on a plain <tr> (no grid/row
+  // role here) — assistive tech would just ignore it. `data-active` is a
+  // styling hook only; the real "this is the open record" semantic lives
+  // on the Name button's `aria-current="true"` (see nameCell).
+  if (active) tr.dataset.active = "true";
 
   tr.append(
-    nameCell(row, onRowSelect),
+    nameCell(row, onRowSelect, active),
     textCell(sourceLabel(row.source)),
     listCell(row.domains, DOMAINS_SHOWN, domainLabel, true),
     listCell(row.modalities, MODALITIES_SHOWN, (m) => m, false),
     accessCell(row.access),
     textCell(yearsText(row.years)),
     sampleCell(row.sample_size, row.sample_unit),
-    textCell((row.countries ?? []).join(", ")),
+    textCell((row.countries ?? []).map((c) => countryName(c)).join(", ")),
     textCell(capitalize(row.species)),
   );
   return tr;
@@ -168,6 +174,7 @@ export function createTable(
   { rows = [], onRowSelect, onSort, showMoreBtn, showAllBtn } = {},
 ) {
   let allRows = [];
+  let catalogTotal = 0;
   let sortColumn = "name";
   let sortDir = "asc";
   let visibleCount = CHUNK;
@@ -176,28 +183,6 @@ export function createTable(
   const headerEls = new Map();
   const tableEl = tbody?.closest?.("table") ?? null;
   if (tableEl) {
-    // Workaround for a real layout bug in the inherited shell, not this
-    // module's own CSS to fix: `.table-wrap` sets `overflow-x: auto`,
-    // and a box is a *scroll container* - the sticky positioning context
-    // for its descendants - as soon as either axis is non-`visible`,
-    // regardless of the other axis's value (confirmed: forcing
-    // `overflow-y` to `clip`/`hidden`/`visible` doesn't change this,
-    // since `overflow-x: auto` alone already qualifies). So
-    // `thead th { position: sticky; top: var(--header-h) }` sticks
-    // `--header-h` (56px) below *`.table-wrap`'s* top edge, not the
-    // page's - and since the wrapper's top sits only ~1px above the
-    // header's natural position, that 56px minimum-gap rule pushes the
-    // header down into the first data row (confirmed via
-    // `elementFromPoint`: the header's button, not the row, receives the
-    // click there) on every load, with no scrolling required to trigger
-    // it. `.table-wrap` has no height/max-height, so it never actually
-    // scrolls internally - "sticky" is moot for it regardless of `top` -
-    // making `top: 0` a safe, purely corrective override: it removes the
-    // artificial push without changing any real scroll behaviour.
-    for (const th of tableEl.querySelectorAll("thead th")) {
-      th.style.top = "0";
-    }
-
     for (const th of tableEl.querySelectorAll("thead th[data-column]")) {
       const column = th.getAttribute("data-column");
       headerEls.set(column, th);
@@ -233,12 +218,16 @@ export function createTable(
   }
 
   function updateStatus() {
-    const shown = Math.min(visibleCount, allRows.length);
-    const total = allRows.length;
-    const text =
-      shown >= total
-        ? `${fmtNumber(total)} dataset${total === 1 ? "" : "s"}`
-        : `${fmtNumber(shown)} of ${fmtNumber(total)} datasets`;
+    // Per the plan's own example ("312 of 2,704 datasets"): the two
+    // numbers are the filtered count and the *catalog* total, not the
+    // rendered-so-far count and the filtered count — pagination gets its
+    // own trailing clause instead, so "everything currently loaded
+    // matches, and here's how much of that is actually on screen" stays
+    // two distinct, unambiguous facts.
+    const filtered = allRows.length;
+    const shown = Math.min(visibleCount, filtered);
+    let text = `${fmtNumber(filtered)} of ${fmtNumber(catalogTotal)} datasets`;
+    if (shown < filtered) text += ` · showing ${fmtNumber(shown)}`;
     if (statusEl) statusEl.textContent = text;
     announce(text);
   }
@@ -266,8 +255,12 @@ export function createTable(
     render();
   }
 
-  function setRows(newRows) {
+  function setRows(newRows, { total } = {}) {
     allRows = Array.isArray(newRows) ? newRows : [];
+    // `total` is the catalog-wide count (independent of any filtering);
+    // defaults to the given rows' own length so a caller that never
+    // passes it still gets a sane (if filter-blind) status line.
+    catalogTotal = typeof total === "number" ? total : allRows.length;
     visibleCount = CHUNK;
     render();
   }
@@ -286,8 +279,13 @@ export function createTable(
     activeId = id ?? null;
     if (!tbody) return;
     for (const tr of tbody.querySelectorAll("tr[data-id]")) {
-      if (tr.dataset.id === activeId) tr.setAttribute("aria-selected", "true");
-      else tr.removeAttribute("aria-selected");
+      const isActive = tr.dataset.id === activeId;
+      if (isActive) tr.dataset.active = "true";
+      else delete tr.dataset.active;
+      const button = tr.querySelector(".cell-name button");
+      if (!button) continue;
+      if (isActive) button.setAttribute("aria-current", "true");
+      else button.removeAttribute("aria-current");
     }
   }
 
@@ -300,7 +298,6 @@ export function createTable(
     showAll,
     setActiveId,
     toCSV,
-    getSort: () => ({ column: sortColumn, dir: sortDir }),
   };
 }
 
@@ -325,8 +322,18 @@ const CSV_COLUMNS = [
 
 const LIST_JOIN = "; ";
 
+// CSV/formula injection guard: a cell opening a spreadsheet formula
+// (=, +, -, @ — Excel/Sheets/LibreOffice all treat these as live
+// formulas on open) gets a leading `'`, which every one of them already
+// treats as "force this cell to plain text" and strips from the display.
+// Checked after trimming (so " =SUM(...)" doesn't sneak past on leading
+// whitespace) but applied to the original value, so the visible content
+// is otherwise untouched.
+const FORMULA_PREFIX_RE = /^[=+\-@]/;
+
 function csvField(value) {
-  const s = value === null || value === undefined ? "" : String(value);
+  const raw = value === null || value === undefined ? "" : String(value);
+  const s = FORMULA_PREFIX_RE.test(raw.trim()) ? `'${raw}` : raw;
   return `"${s.replace(/"/g, '""')}"`;
 }
 

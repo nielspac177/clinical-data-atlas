@@ -68,11 +68,33 @@ test("list values round-trip even with spaces inside a token", () => {
   assert.deepEqual(parseState(formatState(state)), state);
 });
 
-test("years requires both bounds to be written", () => {
-  assert.equal(formatState({ years: { start: 2010 } }), "");
-  assert.equal(formatState({ years: {} }), "");
+test("years: a complete range serializes as start-end", () => {
   const qs = formatState({ years: { start: 2010, end: 2020 } });
   assert.match(qs, /years=2010-2020/);
+});
+
+test("years: an empty range writes nothing", () => {
+  assert.equal(formatState({ years: {} }), "");
+});
+
+test("years: open-ended ranges round-trip (start only, end only)", () => {
+  const startOnly = { years: { start: 2018 } };
+  const qsStart = formatState(startOnly);
+  assert.match(qsStart, /years=2018-(&|$)/);
+  assert.deepEqual(parseState(qsStart), startOnly);
+
+  const endOnly = { years: { end: 2020 } };
+  const qsEnd = formatState(endOnly);
+  assert.match(qsEnd, /years=-2020(&|$)/);
+  assert.deepEqual(parseState(qsEnd), endOnly);
+});
+
+test("years: parses open ranges directly out of a query string", () => {
+  assert.deepEqual(parseState("years=2018-"), { years: { start: 2018 } });
+  assert.deepEqual(parseState("years=-2020"), { years: { end: 2020 } });
+  assert.deepEqual(parseState("years=2018-2020"), { years: { start: 2018, end: 2020 } });
+  // A bare "-" (both sides empty) is an empty range, not a filter.
+  assert.deepEqual(parseState("years=-"), {});
 });
 
 test("formatState never emits an unrecognized sort token", () => {

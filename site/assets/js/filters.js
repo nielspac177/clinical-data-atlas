@@ -217,16 +217,54 @@ export function facetValueLabel(facet, value) {
 // in that order rather than by count, matching the graph legend/badges.
 const VOCAB_ORDER = { domain: DOMAINS, access: ACCESS };
 
-function sortFacetEntries(facet, counts) {
+/**
+ * Order `facet`'s entries for display: a fixed vocab order where one
+ * exists (domain, access), else alphabetical by display label.
+ *
+ * Deliberately *not* sorted by count: counts shift on every filter
+ * change (that's the whole point of `facetCounts`), and a facet whose
+ * option order also shifted with them would visibly reshuffle under the
+ * reader on every click — disorienting on its own, and it also defeats
+ * `renderFacetOptions`'s in-place update (which relies on the value set
+ * *and order* being stable so it never has to recreate, and thereby
+ * un-focus, a checkbox the reader just activated). Pure and exported for
+ * direct testing.
+ */
+export function sortFacetEntries(facet, counts) {
   const entries = [...counts.entries()];
   const order = VOCAB_ORDER[facet];
   if (order) {
     const rank = new Map(order.map((v, i) => [v, i]));
     entries.sort((a, b) => (rank.get(a[0]) ?? order.length) - (rank.get(b[0]) ?? order.length));
   } else {
-    entries.sort((a, b) => b[1] - a[1] || String(a[0]).localeCompare(String(b[0])));
+    entries.sort(
+      (a, b) =>
+        facetValueLabel(facet, a[0]).localeCompare(facetValueLabel(facet, b[0])) ||
+        String(a[0]).localeCompare(String(b[0])),
+    );
   }
   return entries;
+}
+
+function buildOptionLabel(facet, value, count, checked, onToggle) {
+  const label = document.createElement("label");
+
+  const input = document.createElement("input");
+  input.type = "checkbox";
+  input.value = value;
+  input.checked = checked;
+  input.addEventListener("change", () => onToggle?.(value, input.checked));
+
+  const text = document.createElement("span");
+  text.className = "facet-option-label";
+  text.textContent = facetValueLabel(facet, value);
+
+  const countEl = document.createElement("span");
+  countEl.className = "facet-count";
+  countEl.textContent = String(count ?? 0);
+
+  label.append(input, text, countEl);
+  return label;
 }
 
 /**
@@ -236,35 +274,58 @@ function sortFacetEntries(facet, counts) {
  * fires on every change. Native checkboxes, matching the shell's own
  * `.facet-options label > input + .facet-option-label + .facet-count`
  * markup (see `components.css`).
+ *
+ * Never destroys a checkbox the reader just activated: when the value
+ * set/order already on screen matches what's about to be rendered (the
+ * normal case — see `sortFacetEntries`), existing `<input>`s are updated
+ * in place (checked state, count text) rather than torn down and
+ * recreated, so a checkbox mid-`change`-event keeps focus. Only an
+ * actual change in the value set rebuilds the list from scratch, and
+ * even then the previously-focused value (if it's still present) is
+ * refocused afterwards.
  */
 export function renderFacetOptions(container, facet, counts, selected, onToggle) {
   if (!container) return;
-  container.textContent = "";
 
   const selectedSet = new Set(selected ?? []);
   const entries = sortFacetEntries(facet, counts ?? new Map());
-  const frag = document.createDocumentFragment();
 
-  for (const [value, count] of entries) {
-    const label = document.createElement("label");
+  const existingLabels = [...container.children];
+  const existingValues = existingLabels.map((label) => label.querySelector("input")?.value);
+  const desiredValues = entries.map(([value]) => value);
+  const sameShape =
+    existingLabels.length === desiredValues.length &&
+    existingValues.every((v, i) => v === desiredValues[i]);
 
-    const input = document.createElement("input");
-    input.type = "checkbox";
-    input.value = value;
-    input.checked = selectedSet.has(value);
-    input.addEventListener("change", () => onToggle?.(value, input.checked));
-
-    const text = document.createElement("span");
-    text.className = "facet-option-label";
-    text.textContent = facetValueLabel(facet, value);
-
-    const countEl = document.createElement("span");
-    countEl.className = "facet-count";
-    countEl.textContent = String(count ?? 0);
-
-    label.append(input, text, countEl);
-    frag.appendChild(label);
+  if (sameShape) {
+    entries.forEach(([value, count], i) => {
+      const label = existingLabels[i];
+      const input = label.querySelector("input");
+      const checked = selectedSet.has(value);
+      if (input && input.checked !== checked) input.checked = checked;
+      const countEl = label.querySelector(".facet-count");
+      if (countEl) {
+        const countText = String(count ?? 0);
+        if (countEl.textContent !== countText) countEl.textContent = countText;
+      }
+    });
+    return;
   }
 
+  // The value set genuinely changed: rebuild, but re-focus whichever
+  // value was focused before, if it still exists, rather than dropping
+  // focus to <body>.
+  const active = document.activeElement;
+  const activeValue = active && container.contains(active) ? active.value : null;
+
+  container.textContent = "";
+  const frag = document.createDocumentFragment();
+  let toFocus = null;
+  for (const [value, count] of entries) {
+    const label = buildOptionLabel(facet, value, count, selectedSet.has(value), onToggle);
+    if (value === activeValue) toFocus = label.querySelector("input");
+    frag.appendChild(label);
+  }
   container.appendChild(frag);
+  toFocus?.focus();
 }

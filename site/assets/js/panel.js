@@ -59,10 +59,17 @@ function safeHref(url) {
   return SAFE_HREF_RE.test(s) ? s : null;
 }
 
+// Standard DOI syntax (ISO 26324): "10." + a 4-9 digit registrant code +
+// "/" + a suffix with no whitespace. A harvested `dataset_doi`/paper
+// `doi` that doesn't match this is rendered as plain text instead of a
+// link — better than a link to a URL that's confidently wrong.
+const DOI_RE = /^10\.\d{4,9}\/\S+$/;
+
 function doiUrl(doi) {
   if (!doi) return null;
   const clean = String(doi).replace(/^doi:/i, "").trim();
-  return clean ? safeHref(`https://doi.org/${clean}`) : null;
+  if (!DOI_RE.test(clean)) return null;
+  return safeHref(`https://doi.org/${clean}`);
 }
 
 function yearsFactText(years) {
@@ -133,10 +140,13 @@ function renderPrimaryLinks(data) {
       `<p><a class="btn btn-primary" href="${escapeHTML(openHref)}" target="_blank" rel="noopener">Open dataset ↗</a></p>`,
     );
   }
-  const doiHref = doiUrl(data.dataset_doi);
-  if (doiHref) {
+  if (data.dataset_doi) {
+    const doiHref = doiUrl(data.dataset_doi);
+    const doiText = escapeHTML(data.dataset_doi);
     parts.push(
-      `<p class="text-sm"><a href="${escapeHTML(doiHref)}" target="_blank" rel="noopener">${escapeHTML(data.dataset_doi)}</a></p>`,
+      doiHref
+        ? `<p class="text-sm"><a href="${escapeHTML(doiHref)}" target="_blank" rel="noopener">${doiText}</a></p>`
+        : `<p class="text-sm">${doiText}</p>`,
     );
   }
   return parts.join("");
@@ -194,17 +204,30 @@ function renderInstitutions(data) {
   return `<div class="panel-section"><h3>Institutions</h3><ul>${lis}</ul></div>`;
 }
 
+const AUTHORS_SHOWN = 5;
+
 function renderAuthors(data, { authorsExpanded }) {
   const items = data.authors ?? [];
   if (items.length === 0) return "";
-  const shown = authorsExpanded ? items : items.slice(0, 5);
-  const lis = shown.map((a) => `<li>${escapeHTML(a.name ?? "")}</li>`).join("");
+  const shown = authorsExpanded ? items : items.slice(0, AUTHORS_SHOWN);
+  const lis = shown
+    .map((a, i) => {
+      // The reader's attention belongs on what "Show all" just revealed:
+      // mark the first newly-shown author as the focus target (tabindex
+      // makes a <li> focusable at all), with the heading itself as a
+      // fallback if there's no such item (e.g. exactly AUTHORS_SHOWN+1
+      // authors and this is somehow the first render already expanded).
+      const isFirstNew = authorsExpanded && i === AUTHORS_SHOWN;
+      const attr = isFirstNew ? ' tabindex="-1" data-authors-focus' : "";
+      return `<li${attr}>${escapeHTML(a.name ?? "")}</li>`;
+    })
+    .join("");
   const remaining = items.length - shown.length;
   const more =
     remaining > 0
       ? `<button type="button" class="btn-quiet text-sm" data-show-all-authors>Show all ${items.length}</button>`
       : "";
-  return `<div class="panel-section"><h3>Authors</h3><ul>${lis}</ul>${more}</div>`;
+  return `<div class="panel-section"><h3 tabindex="-1" data-authors-heading>Authors</h3><ul>${lis}</ul>${more}</div>`;
 }
 
 function renderPapers(data) {
@@ -427,6 +450,13 @@ export function createPanel(aside, { mode = "table", onChip, onNavigate, onClose
     if (event.target.closest("[data-show-all-authors]")) {
       authorsExpanded = true;
       if (lastData) paintDataset(lastData, lastCtx);
+      // paintDataset's innerHTML replace destroys the button that was
+      // just clicked - land on the first newly-revealed author (what the
+      // reader's attention should follow), falling back to the section
+      // heading, rather than letting focus drop to <body>.
+      const firstNew = bodyEl.querySelector("[data-authors-focus]");
+      const heading = bodyEl.querySelector("[data-authors-heading]");
+      (firstNew ?? heading)?.focus();
       return;
     }
     if (event.target.closest("[data-entity-more]")) {

@@ -116,13 +116,6 @@ export function buildSearch(rows) {
 
 const DEBOUNCE_MS = 120;
 
-function isTypingTarget(el) {
-  if (!el) return false;
-  if (el.isContentEditable) return true;
-  const tag = el.tagName;
-  return tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT";
-}
-
 /**
  * Wire an `<input role="combobox">` + its `role="listbox"` result list
  * (named by the input's `aria-controls`) into a live search box.
@@ -156,22 +149,18 @@ export function createSearchBox(input, { getSearch, onSelect, limit = 20 } = {})
     input.removeAttribute("aria-activedescendant");
   }
 
-  function render(query) {
+  function render() {
     list.textContent = "";
 
     if (items.length === 0) {
-      input.setAttribute("aria-expanded", query ? "true" : "false");
+      // No results (whether there's no query, or a query that matched
+      // nothing) collapses the listbox entirely rather than showing an
+      // "expanded" popup with nothing selectable in it - the "no
+      // matches" message is carried by the live-region announcement in
+      // runSearch(), not by a presentation-only list item here.
+      list.hidden = true;
+      input.setAttribute("aria-expanded", "false");
       input.removeAttribute("aria-activedescendant");
-      if (!query) {
-        list.hidden = true;
-        return;
-      }
-      const empty = document.createElement("li");
-      empty.className = "search-empty";
-      empty.setAttribute("role", "presentation");
-      empty.textContent = "No matches";
-      list.appendChild(empty);
-      list.hidden = false;
       return;
     }
 
@@ -220,7 +209,7 @@ export function createSearchBox(input, { getSearch, onSelect, limit = 20 } = {})
     const search = getSearch?.();
     items = trimmed && typeof search === "function" ? search(trimmed, limit) : [];
     activeIndex = items.length ? 0 : -1;
-    render(trimmed);
+    render();
     if (trimmed) {
       announce(
         items.length === 0
@@ -243,15 +232,15 @@ export function createSearchBox(input, { getSearch, onSelect, limit = 20 } = {})
       event.preventDefault();
       const delta = event.key === "ArrowDown" ? 1 : -1;
       activeIndex = (activeIndex + delta + items.length) % items.length;
-      render(input.value.trim());
+      render();
     } else if (items.length > 0 && event.key === "Home") {
       event.preventDefault();
       activeIndex = 0;
-      render(input.value.trim());
+      render();
     } else if (items.length > 0 && event.key === "End") {
       event.preventDefault();
       activeIndex = items.length - 1;
-      render(input.value.trim());
+      render();
     } else if (event.key === "Enter" && activeIndex >= 0) {
       event.preventDefault();
       select(activeIndex);

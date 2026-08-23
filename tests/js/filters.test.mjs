@@ -11,6 +11,7 @@ import {
   domainLabel,
   sourceLabel,
   capitalize,
+  sortFacetEntries,
 } from "../../site/assets/js/filters.js";
 
 const rows = [
@@ -170,4 +171,34 @@ test("label helpers", () => {
   assert.equal(sourceLabel("mystery_source"), "Mystery source");
   assert.equal(capitalize("epilepsy"), "Epilepsy");
   assert.equal(capitalize(""), "");
+});
+
+test("sortFacetEntries: domain/access use their fixed vocab order, not count", () => {
+  // Counts here would sort oncology before neurology by count alone -
+  // vocab order (neurology comes first in config.js's DOMAINS) must win.
+  const counts = new Map([
+    ["oncology", 100],
+    ["neurology", 1],
+  ]);
+  const entries = sortFacetEntries("domain", counts);
+  assert.deepEqual(entries.map(([v]) => v), ["neurology", "oncology"]);
+});
+
+test("sortFacetEntries: other facets sort alphabetically by display label, not count", () => {
+  const counts = new Map([
+    ["stroke", 1],
+    ["epilepsy", 100],
+    ["sepsis", 50],
+  ]);
+  const entries = sortFacetEntries("condition", counts);
+  assert.deepEqual(entries.map(([v]) => v), ["epilepsy", "sepsis", "stroke"]);
+});
+
+test("sortFacetEntries: order is stable across calls even when only counts change", () => {
+  // This is the property renderFacetOptions' in-place update depends on:
+  // the same value set must produce the same order regardless of counts,
+  // or a focused checkbox would appear to jump around as filters change.
+  const before = sortFacetEntries("source", new Map([["openneuro", 1], ["physionet", 1]]));
+  const after = sortFacetEntries("source", new Map([["openneuro", 1], ["physionet", 99]]));
+  assert.deepEqual(before.map(([v]) => v), after.map(([v]) => v));
 });

@@ -10,7 +10,8 @@
  *
  * Keys: `node` (single id, graph selection), `q` (free-text query),
  * seven comma-joined facet lists (`domain`, `modality`, `condition`,
- * `access`, `source`, `country`, `species`), `years` (`"2010-2020"`), and
+ * `access`, `source`, `country`, `species`), `years` (`"2010-2020"`, or
+ * open-ended: `"2018-"` / `"-2020"`), and
  * `sort` (one of `SORT_VALUES`). A key absent from the state is a key
  * absent from the URL — there is no serialized "unset" marker.
  *
@@ -53,7 +54,10 @@ const SORT_VALUES = new Set([
 /** The default sort — omitted from the URL rather than written out. */
 const DEFAULT_SORT = "name";
 
-const YEARS_RE = /^(-?\d+)-(-?\d+)$/;
+// Years are never negative in this domain, so `-` is purely the range
+// separator; either side may be omitted for an open-ended range
+// ("2018-" = from 2018 on, "-2020" = up to 2020).
+const YEARS_RE = /^(\d+)?-(\d+)?$/;
 
 function splitList(raw) {
   return raw
@@ -88,13 +92,16 @@ export function parseState(search) {
   if (years) {
     const match = YEARS_RE.exec(years.trim());
     if (match) {
-      const start = Number(match[1]);
-      const end = Number(match[2]);
-      if (Number.isFinite(start) && Number.isFinite(end)) {
-        state.years = { start, end };
+      const start = match[1] !== undefined ? Number(match[1]) : undefined;
+      const end = match[2] !== undefined ? Number(match[2]) : undefined;
+      if (start !== undefined || end !== undefined) {
+        state.years = {};
+        if (start !== undefined) state.years.start = start;
+        if (end !== undefined) state.years.end = end;
       }
+      // Both sides absent ("years=-") -> an empty range, i.e. no filter.
     }
-    // No match / non-finite -> malformed, silently ignored.
+    // No match at all (garbage, no "-") -> malformed, silently ignored.
   }
 
   const sort = params.get("sort");
@@ -125,8 +132,10 @@ export function formatState(state) {
   }
 
   const years = s.years;
-  if (years && Number.isFinite(years.start) && Number.isFinite(years.end)) {
-    params.set("years", `${years.start}-${years.end}`);
+  if (years && (Number.isFinite(years.start) || Number.isFinite(years.end))) {
+    const startPart = Number.isFinite(years.start) ? years.start : "";
+    const endPart = Number.isFinite(years.end) ? years.end : "";
+    params.set("years", `${startPart}-${endPart}`);
   }
 
   if (s.sort && s.sort !== DEFAULT_SORT && SORT_VALUES.has(s.sort)) {

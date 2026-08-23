@@ -102,3 +102,26 @@ test("an empty row set still produces a header-only CSV", () => {
 test("tolerates a missing rows argument", () => {
   assert.doesNotThrow(() => toCSV());
 });
+
+test("CSV/formula injection: a cell starting with =, +, -, @ is prefixed with '", () => {
+  const evil = [
+    { id: "a:1", name: "=SUM(A1:A9)", source: "curated", url: "" },
+    { id: "a:2", name: "+1 234", source: "curated", url: "" },
+    { id: "a:3", name: "-2 (decrease)", source: "curated", url: "" },
+    { id: "a:4", name: "@mention", source: "curated", url: "" },
+    // Leading whitespace must not smuggle a formula past the check.
+    { id: "a:5", name: "  =HYPERLINK(\"http://evil\")", source: "curated", url: "" },
+  ];
+  const csv = toCSV(evil);
+  assert.ok(csv.includes('"\'=SUM(A1:A9)"'));
+  assert.ok(csv.includes('"\'+1 234"'));
+  assert.ok(csv.includes('"\'-2 (decrease)"'));
+  assert.ok(csv.includes('"\'@mention"'));
+  assert.ok(csv.includes('"\'  =HYPERLINK(""http://evil"")"'));
+});
+
+test("CSV/formula injection: ordinary values are left untouched", () => {
+  const csv = toCSV([{ id: "a:1", name: "Sepsis Registry", source: "curated", url: "" }]);
+  assert.ok(csv.includes('"Sepsis Registry"'));
+  assert.ok(!csv.includes("'Sepsis"));
+});
