@@ -14,6 +14,8 @@ import socket
 
 import pytest
 
+from atlas import config
+
 
 def test_connect_is_blocked_by_default():
     """A default (unmarked) test must never be able to open a real socket."""
@@ -44,3 +46,21 @@ def test_live_marked_tests_bypass_the_guard():
     """
     assert socket.socket.connect is _socket.socket.connect
     assert socket.socket.connect_ex is _socket.socket.connect_ex
+
+
+@pytest.mark.live
+@pytest.mark.skipif(
+    os.environ.get("ATLAS_LIVE") != "1",
+    reason="live-marked tests only run with ATLAS_LIVE=1 (see `make test-live`)",
+)
+def test_live_marked_tests_see_config_offline_false():
+    """A live-marked test must behave as an online run even when
+    `ATLAS_OFFLINE=1` is still set in the environment.
+
+    `atlas.config.OFFLINE` is read once, at import time, and gates every
+    call in `atlas.http` -- so unsetting it is what makes `ATLAS_LIVE=1
+    uv run pytest -m live` work on its own, without also having to
+    remember `ATLAS_OFFLINE=0`. Offline-safe: asserts a flag, opens
+    nothing.
+    """
+    assert config.OFFLINE is False

@@ -54,7 +54,7 @@ test: ## Run the unit test suite (no network, no browser)
 	uv run pytest -q -m "not live and not e2e"
 
 test-live: ## Run tests marked "live" (hits the real network)
-	ATLAS_LIVE=1 uv run pytest -q -m live
+	ATLAS_LIVE=1 ATLAS_OFFLINE=0 uv run pytest -q -m live
 
 e2e: ## Install Chromium and run browser tests against a served site
 	uv run playwright install chromium && uv run pytest -q -m e2e tests/e2e --base-url http://127.0.0.1:$(PORT)$(BASE_URL)

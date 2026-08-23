@@ -41,8 +41,8 @@ import re
 import time
 
 from atlas import http, io
-from atlas.harvest import datacite
-from atlas.harvest.base import Harvester, HarvestResult, _strip_volatile
+from atlas.harvest import base, datacite
+from atlas.harvest.base import Harvester, HarvestResult
 
 NBIA_BASE = "https://services.cancerimagingarchive.net/nbia-api/services/v1"
 DOI_PREFIX = "10.7937"
@@ -71,11 +71,10 @@ def strip_volatile(payload: dict) -> dict:
     `provenance.raw_hash` rather than a hash of the payload as stored:
     hashing DataCite's view/download counters would churn every TCIA
     record's `raw_hash` on every refresh and drown the changelog in
-    changes that never happened. Thin wrapper over
-    `atlas.harvest.base._strip_volatile`, which is private today and to be
-    made public there later.
+    changes that never happened. Thin wrapper binding this source's
+    `VOLATILE` paths to `atlas.harvest.base.strip_volatile`.
     """
-    return _strip_volatile(payload, VOLATILE)
+    return base.strip_volatile(payload, VOLATILE)
 
 
 # Per-collection detail endpoints: endpoint name -> (payload key, the field

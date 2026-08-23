@@ -88,16 +88,28 @@ def _pop_dotted(obj: dict, dotted_path: str) -> None:
         node.pop(leaf, None)
 
 
-def _strip_volatile(payload: dict, volatile: tuple[str, ...]) -> dict:
+def strip_volatile(payload: dict, volatile: tuple[str, ...]) -> dict:
     """A deep copy of `payload` with every `volatile` dotted path
     removed, ready to hash. Returns `payload` itself, uncopied, when
-    `volatile` is empty."""
+    `volatile` is empty.
+
+    Public because a normalizer needs the *same* stripped payload this
+    module hashes in order to put that hash in `provenance.raw_hash`
+    (see `atlas.normalize.tcia`): hashing the payload as stored would
+    churn a record's `raw_hash` on every refresh whenever the source
+    stamps a volatile counter on it.
+    """
     if not volatile:
         return payload
     stripped = copy.deepcopy(payload)
     for dotted_path in volatile:
         _pop_dotted(stripped, dotted_path)
     return stripped
+
+
+# Kept for one release: `strip_volatile` was private until Task 2.7, and an
+# out-of-tree caller may still import the underscored name.
+_strip_volatile = strip_volatile
 
 
 _FILENAME_SAFE_RE = re.compile(r"[A-Za-z0-9._-]+")
@@ -240,7 +252,7 @@ class RawStore:
         the file untouched, when it matches.
         """
         filename = self._claim_filename(native_id)
-        new_hash = io.content_hash(_strip_volatile(payload, volatile))
+        new_hash = io.content_hash(strip_volatile(payload, volatile))
 
         prior = self._run_records.get(native_id) or self._previous.get(native_id)
         changed = prior is None or prior["hash"] != new_hash
