@@ -8,3 +8,4 @@ endpoints verified so far. Per-source notes live in `docs/sources/<source>.md`.
 
 | Source | Endpoint | Auth | Politeness | Verified | Count | Notes |
 |---|---|---|---|---|---|---|
+| PhysioNet | `GET /api/v1/project/published/` | none | 350 ms/host | 2026-08-22 | 532 latest-version entries (716 total incl. older versions) | Single-request flat listing, all resource types kept in raw; brief's `/rest/database-list/`-style endpoints are 404 — see `docs/sources/physionet.md` |
