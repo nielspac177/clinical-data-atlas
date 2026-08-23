@@ -119,6 +119,10 @@ const DEBOUNCE_MS = 120;
 /** Announced while the (lazily fetched) search index is still on its way. */
 export const LOADING_MESSAGE = "Loading search index…";
 
+function idleState() {
+  return { status: "idle", query: "", items: [], message: "" };
+}
+
 /**
  * What a query currently resolves to — the pure half of the combobox, so
  * the index-arrival race below is testable without a DOM.
@@ -134,10 +138,6 @@ export const LOADING_MESSAGE = "Loading search index…";
  * - `"empty"` — a real search over a real index that matched nothing.
  * - `"results"` — hits, in rank order.
  */
-function idleState() {
-  return { status: "idle", query: "", items: [], message: "" };
-}
-
 export function searchState(query, search, limit = 20) {
   const trimmed = String(query ?? "").trim();
   if (!trimmed) return idleState();
@@ -168,6 +168,13 @@ export function searchState(query, search, limit = 20) {
  * cleared it, or picked a result, while the fetch was in flight) and what
  * they are looking at is a non-answer: the "loading" state, or a
  * "No results" that a stale/absent index produced.
+ *
+ * The `"empty"` arm is deliberate but nearly unreachable: the wait is only
+ * ever armed from `"loading"`, so reaching it needs the index to land by
+ * another path *and* the reader to type again before the awaited promise
+ * settles. It then costs one redundant `runSearch()` whose announcement
+ * the live region's own debounce coalesces — cheap insurance against a
+ * caller whose `getSearch()` returns an empty searcher rather than null.
  */
 export function needsRerun(state, query) {
   if (!String(query ?? "").trim()) return false;
@@ -367,6 +374,8 @@ export function createSearchBox(
     close,
     destroy() {
       destroyed = true;
+      if (debounceTimer !== null) clearTimeout(debounceTimer);
+      debounceTimer = null;
       close();
       unregisterEscape();
     },
