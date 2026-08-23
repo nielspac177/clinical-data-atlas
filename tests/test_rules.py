@@ -74,6 +74,110 @@ def test_rx_every_table_term_has_at_most_one_trailing_star():
             assert term.endswith("*"), f"{term!r} has a non-trailing '*'"
 
 
+def test_no_stem_body_is_shorter_than_six_characters():
+    # A short stem body is the class of bug fix round 2 found twice
+    # ("metasta*" matched "metastable", "infant*" matched "infantry"): the
+    # shorter the body, the more likely it accidentally prefixes some
+    # unrelated English word. Every stem must be >= 6 chars unless the
+    # exact term is in rules._SHORT_STEM_ALLOWLIST (empty right now -- see
+    # that constant's comment for the policy on adding to it).
+    offenders = []
+    for table in (rules.MODALITY_TERMS, rules.DOMAIN_TERMS, rules.CONDITION_TERMS):
+        for term in table:
+            if term.endswith("*") and term not in rules._SHORT_STEM_ALLOWLIST:
+                body = term[:-1]
+                if len(body) < rules._MIN_STEM_BODY_LENGTH:
+                    offenders.append(term)
+    for term in rules.ANIMAL_TERMS:
+        if term.endswith("*") and term not in rules._SHORT_STEM_ALLOWLIST:
+            body = term[:-1]
+            if len(body) < rules._MIN_STEM_BODY_LENGTH:
+                offenders.append(term)
+    assert offenders == []
+
+
+def test_require_raises_on_a_deliberately_short_stem_body():
+    with pytest.raises(RuntimeError):
+        rules._require(len("ab") >= rules._MIN_STEM_BODY_LENGTH, "too short")
+
+
+# ---------------------------------------------------------------------------
+# Fix round 2: two Important false positives introduced by round-1 stem
+# consolidation (a stem body safe-looking in isolation still needs a real
+# audit against plausible unrelated English words, not just a length check).
+# ---------------------------------------------------------------------------
+
+
+def test_infantry_text_is_not_flagged_as_pediatrics():
+    # "infant*" matched "infantry"/"infantryman"/"infanta" (no trailing
+    # boundary). Now replaced with exact whole-word forms.
+    result = hints(
+        "Combat exposure among infantry veterans and PTSD outcomes",
+        source="curated",
+    )
+    assert "pediatrics" not in result.domains
+
+
+def test_infant_infants_infancy_still_match_pediatrics():
+    for text in (
+        "an infant born preterm",
+        "a cohort of infants",
+        "outcomes in early infancy",
+    ):
+        assert "pediatrics" in hints(text, source="curated").domains
+
+
+def test_infant_is_a_whole_word_term_not_a_stem():
+    assert "infant" in rules.DOMAIN_TERMS
+    assert "infant*" not in rules.DOMAIN_TERMS
+
+
+def test_metastable_alloy_text_is_not_flagged_as_oncology():
+    # "metasta*" matched "metastable"/"metastability"/"metastannate" (no
+    # trailing boundary). Now split at the real metastasis/metastatic
+    # divergence point, both bodies well clear of "metastable".
+    result = hints("A metastable phase was observed in the alloy", source="curated")
+    assert "oncology" not in result.domains
+
+
+def test_metastasis_family_still_matches_oncology():
+    for text in (
+        "widespread metastasis was observed",
+        "multiple metastases were found",
+        "a metastatic tumor",
+        "the cancer began to metastasize",
+    ):
+        assert "oncology" in hints(text, source="curated").domains
+
+
+def test_metasta_stem_no_longer_exists():
+    assert "metasta*" not in rules.DOMAIN_TERMS
+    assert "metastas*" in rules.DOMAIN_TERMS
+    assert "metastat*" in rules.DOMAIN_TERMS
+
+
+def test_genome_genomic_split_still_covers_both_families():
+    for text in ("genome sequencing data", "genomic analysis", "genomics pipeline"):
+        assert "genomics" in hints(text, source="curated").modalities
+
+
+def test_autism_autistic_split_still_covers_both_tables():
+    result = hints("autistic children with autism spectrum disorder", source="curated")
+    assert "psychiatry" in result.domains
+    assert "autism spectrum disorder" in result.conditions
+
+
+def test_hepato_split_covers_liver_terms_including_hepato_compounds():
+    for text in (
+        "acute hepatitis diagnosis",
+        "hepatic function tests",
+        "hepatorenal syndrome",
+        "hepatobiliary imaging",
+        "hepatotoxicity screening",
+    ):
+        assert "gastroenterology_hepatology" in hints(text, source="curated").domains
+
+
 # ---------------------------------------------------------------------------
 # CRITICAL fix regression: bare "rat" silently matched as a prefix (no
 # trailing boundary) because it happened to end in "at" under the old

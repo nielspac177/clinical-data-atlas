@@ -156,7 +156,8 @@ MODALITY_TERMS: dict[str, str] = {
     "whole slide": "pathology",
     "h&e": "pathology",
     # genomics
-    "genom*": "genomics",
+    "genome*": "genomics",
+    "genomic*": "genomics",
     "wgs": "genomics",
     "wes": "genomics",
     "exome": "genomics",
@@ -261,7 +262,8 @@ DOMAIN_TERMS: dict[str, str] = {
     "bipolar": "psychiatry",
     "anxiety": "psychiatry",
     "ptsd": "psychiatry",
-    "autis*": "psychiatry",
+    "autism*": "psychiatry",
+    "autistic*": "psychiatry",
     "adhd": "psychiatry",
     "psychiatr*": "psychiatry",
     # neuroscience -- bare "perception"/"language"/"attention" removed
@@ -295,7 +297,8 @@ DOMAIN_TERMS: dict[str, str] = {
     "lymphoma": "oncology",
     "oncolog*": "oncology",
     "neoplasm*": "oncology",
-    "metasta*": "oncology",
+    "metastas*": "oncology",
+    "metastat*": "oncology",
     # pulmonology
     "copd": "pulmonology",
     "asthma": "pulmonology",
@@ -320,7 +323,9 @@ DOMAIN_TERMS: dict[str, str] = {
     "pediatric*": "pediatrics",
     "paediatric*": "pediatrics",
     "neonat*": "pediatrics",
-    "infant*": "pediatrics",
+    "infant": "pediatrics",
+    "infants": "pediatrics",
+    "infancy": "pediatrics",
     "children": "pediatrics",
     # obstetrics_gynecology
     "pregnan*": "obstetrics_gynecology",
@@ -345,7 +350,9 @@ DOMAIN_TERMS: dict[str, str] = {
     "metabolic": "endocrinology_metabolism",
     # gastroenterology_hepatology
     "liver": "gastroenterology_hepatology",
-    "hepat*": "gastroenterology_hepatology",
+    "hepatitis": "gastroenterology_hepatology",
+    "hepatic*": "gastroenterology_hepatology",
+    "hepato*": "gastroenterology_hepatology",
     "gastrointestinal": "gastroenterology_hepatology",
     "gastroenterology": "gastroenterology_hepatology",
     "crohn's disease": "gastroenterology_hepatology",
@@ -583,7 +590,8 @@ CONDITION_TERMS: dict[str, str] = {
     "schizophren*": "schizophrenia",
     "bipolar disorder": "bipolar disorder",
     "autism spectrum disorder": "autism spectrum disorder",
-    "autis*": "autism spectrum disorder",
+    "autism*": "autism spectrum disorder",
+    "autistic*": "autism spectrum disorder",
     "attention deficit hyperactivity disorder": (
         "attention deficit disorder with hyperactivity"
     ),
@@ -847,6 +855,37 @@ def _require(condition: bool, message: str) -> None:
         raise RuntimeError(message)
 
 
+# A stem's body is the part of the term that actually gets matched with no
+# trailing boundary -- the shorter it is, the more likely it is to also be
+# a prefix of some unrelated English word ("metasta*" matched "metastable";
+# "infant*" matched "infantry"). Every stem body must be >= 6 characters
+# unless the exact term is listed here, with a comment justifying why no
+# 6+-character stem (or split into two longer stems) can cover the same
+# inflections without losing real coverage. Currently empty: every stem in
+# this module was either already >= 6 chars, or split into two longer
+# stems at its natural divergence point (see the fix-round-2 report).
+_SHORT_STEM_ALLOWLIST: frozenset[str] = frozenset()
+
+_MIN_STEM_BODY_LENGTH = 6
+
+for _table in (MODALITY_TERMS, DOMAIN_TERMS, CONDITION_TERMS):
+    for _term in _table:
+        if _term.endswith("*") and _term not in _SHORT_STEM_ALLOWLIST:
+            _require(
+                len(_term[:-1]) >= _MIN_STEM_BODY_LENGTH,
+                f"stem {_term!r} has a body shorter than {_MIN_STEM_BODY_LENGTH} "
+                "chars -- lengthen it, split it, or add it to "
+                "_SHORT_STEM_ALLOWLIST with a justifying comment",
+            )
+for _term in ANIMAL_TERMS:
+    if _term.endswith("*") and _term not in _SHORT_STEM_ALLOWLIST:
+        _require(
+            len(_term[:-1]) >= _MIN_STEM_BODY_LENGTH,
+            f"stem {_term!r} has a body shorter than {_MIN_STEM_BODY_LENGTH} "
+            "chars -- lengthen it, split it, or add it to "
+            "_SHORT_STEM_ALLOWLIST with a justifying comment",
+        )
+
 for _value in MODALITY_TERMS.values():
     _require(
         _value in vocab.MODALITIES, f"MODALITY_TERMS target {_value!r} not in vocab"
@@ -896,7 +935,7 @@ for _term in (
 ):
     _rx(_term)  # force compilation now, not on first hints() call
 
-del _value, _kind, _target, _label, _alias_label, _term
+del _table, _value, _kind, _target, _label, _alias_label, _term
 
 
 # ---------------------------------------------------------------------------
