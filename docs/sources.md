@@ -23,7 +23,7 @@ does not duplicate them.
 | OpenNeuro | POST `https://openneuro.org/crn/graphql` (`datasets(first:100, after, orderBy:{created:descending})`, cursor-paged) | none | 350 ms/host | 2026-08-22, re-probed 2026-08-23 | 2026-08-23 | 1,858 | 1,858 | [openneuro.md](sources/openneuro.md) |
 | PhysioNet | GET `https://physionet.org/api/v1/project/published/` (single unpaginated array) | none | 350 ms/host | 2026-08-22, re-probed 2026-08-23 | 2026-08-22 | 532 | 464 | [physionet.md](sources/physionet.md) |
 | GDC | GET `https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary,summary.data_categories,summary.experimental_strategies,program&format=json` | none | 350 ms/host | 2026-08-22, re-probed 2026-08-23 | 2026-08-23 | 93 | 92 | [gdc.md](sources/gdc.md) |
-| TCIA | NBIA v1 `getCollectionValues` + per-collection `getModalityValues` / `getBodyPartValues` / `getPatient`; DataCite `dois?prefix=10.7937` (cursor-paged) | none | 350 ms/host | 2026-08-22, re-probed 2026-08-23 | 2026-08-22 | 241 | 241 | [tcia.md](sources/tcia.md) |
+| TCIA | NBIA v1 `getCollectionValues` + per-collection `getModalityValues` / `getBodyPartValues` / `getPatient`; DataCite `dois?prefix=10.7937` (cursor-paged) | none | 350 ms/host | 2026-08-22, re-probed 2026-08-23 | 2026-08-23 | 241 | 241 | [tcia.md](sources/tcia.md) |
 
 **Totals:** 2,724 raw records committed under `data/raw/`; 2,655 records in
 `data/catalog/catalog.jsonl`; 69 in `data/catalog/excluded.jsonl` (68
@@ -242,15 +242,13 @@ Applies to every request the pipeline makes, from `atlas/http.py` and
   reports `meta.total` = **317** DOIs under prefix `10.7937`, on both
   dates.
 - **Committed snapshot:** `data/raw/tcia/manifest.json` `harvested_at` =
-  **2026-08-22**, **241** records — 155 with an NBIA half (151 of them
+  **2026-08-23**, **241** records — 156 with an NBIA half (152 of them
   joined to a DataCite DOI, 4 NBIA-only `needs_review` records with no DOI
-  match) plus 86 DataCite-only gated collections; all 241 reach the
-  catalog. One live collection, `PSMA-PET-CT-Lesions`, is currently
-  cataloged from its DataCite half alone and carries
-  `record_status: needs_review` — its landing-page slug is mixed-case
-  while the url-slug join rule compares against a lowercased slug, so the
-  two halves did not meet. Flagged rather than hand-corrected: the fix
-  belongs in the join rule, not in the catalog.
+  match) plus 85 DataCite-only gated collections; all 241 reach the
+  catalog. The url-slug join rule compares `io.slugify` on both sides since
+  2026-08-23 (it used to miss mixed-case landing-page slugs such as
+  `PSMA-PET-CT-Lesions`, which was cataloged from its DataCite half alone
+  until then — see [tcia.md § Quirks](sources/tcia.md)).
 - **Field mapping:** [tcia.md § Field mapping](sources/tcia.md#field-mapping).
 
 ---

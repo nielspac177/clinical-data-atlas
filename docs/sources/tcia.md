@@ -21,12 +21,10 @@
   public NBIA collections and 317 DataCite DOIs under prefix `10.7937`,
   identical on both dates.
 - **Committed snapshot:** `data/raw/tcia/manifest.json` `harvested_at` =
-  2026-08-22, **241** records, all 241 in `data/catalog/catalog.jsonl`:
-  155 with an NBIA half (151 joined to a DataCite DOI, 4 NBIA-only) plus 86
-  gated DataCite `/collection/` DOIs that NBIA does not list publicly. The
-  156th public collection, `PSMA-PET-CT-Lesions`, is in the snapshot as a
-  DataCite-only record — see "A mixed-case url slug defeats join rule (c)"
-  under Quirks.
+  2026-08-23 (re-harvested after the join fix below), **241** records, all
+  241 in `data/catalog/catalog.jsonl`: 156 with an NBIA half (152 joined to a
+  DataCite DOI, 4 NBIA-only) plus 85 gated DataCite `/collection/` DOIs that
+  NBIA does not list publicly.
 - **Deviation from brief:** `getCollectionDescriptions` and every
   `*ValuesAndCounts` endpoint are unusable and are never called (see Quirks);
   the brief's example gated collection `prostate-mri-us-biopsy` is in fact a
@@ -78,14 +76,14 @@ through `urlencode`, so the URL is assembled by hand and passed to `get_json`
 whole.
 
 **The join has no shared identifier.** Three signals, any one sufficient,
-jointly covering 151 of 156 collections on 2026-08-22 (49 by url slug, 59 by
+jointly covering 152 of 156 collections on 2026-08-23 (50 by url slug, 59 by
 parenthesised suffix, 48 by alternative title — with overlap):
 
 | Rule | Example |
 |---|---|
 | (a) an alternative title equal to the collection name | `C-NMC 2019` |
 | (b) a parenthesised suffix in the main title equal to the name | `… Aggressive Fibromatosis (A091105)` |
-| (c) the url slug equal to `io.slugify(name)` | `…/collection/4d-lung/` → `4D-Lung` |
+| (c) the url slug equal to the collection name, both sides reduced by `io.slugify` (case-insensitive) | `…/collection/4d-lung/` → `4D-Lung` |
 
 (a) and (b) are exact and case-sensitive on purpose: TCIA's short names are
 the collection names verbatim, and loosening the comparison starts matching
@@ -102,16 +100,15 @@ them the same way instead of flipping a record's DOI between runs.
 that *is* in NBIA, so it is excluded from `gated_records` along with the
 winner; treating it as gated would list the same collection twice.
 
-**Five collections match no DOI** (`MIDI-B-*` ×4, `PSMA-PET-CT-Lesions`).
-They still produce records — from NBIA alone, `record_status="needs_review"`,
-name = the collection name, summary = a template built from NBIA facts. Four
-of them (the `MIDI-B-*` set) are in the committed snapshot in exactly that
-shape; the fifth is the case below.
+**Four collections match no DOI** (`MIDI-B-*` ×4). They still produce
+records — from NBIA alone, `record_status="needs_review"`, name = the
+collection name, summary = a template built from NBIA facts; all four are in
+the committed snapshot in exactly that shape.
 
-**A mixed-case url slug defeats join rule (c).** `by_slug` in
-`_candidates()` is keyed on the DataCite landing-page slug exactly as the
-url spells it, while the lookup asks for `io.slugify(name)`, which is
-lowercased. A slug that is already lowercase (`4d-lung`) matches; one that
+**A mixed-case url slug used to defeat join rule (c)** (found and fixed on
+2026-08-23, task 4.4b). `by_slug` in `_candidates()` was keyed on the
+DataCite landing-page slug exactly as the url spelled it, while the lookup
+asked for `io.slugify(name)`, which is lowercased. A slug that is already lowercase (`4d-lung`) matches; one that
 is not does not. The live case is `PSMA-PET-CT-Lesions`: NBIA lists the
 collection, DataCite has `10.7937/r7ep-3x37` at
 `…/collection/PSMA-PET-CT-Lesions/`, and rules (a) and (b) do not fire for
@@ -121,10 +118,13 @@ lands on the identical raw-store key as the NBIA-only record and is the one
 that survives — hence 241 records for 156 collections, and
 `tcia:psma-pet-ct-lesions` carrying `access="registration"` and
 `record_status="needs_review"` for what is really a public collection. The
-`needs_review` flag is doing its job; the fix belongs in the join rule
-(compare slugs case-insensitively) and is deliberately not papered over by
-hand-editing the catalog. Not yet fixed — recorded here so the next TCIA
-change starts from the real behavior.
+`needs_review` flag did its job and the catalog was never hand-edited. The
+fix: rule (c) now reduces both sides with `io.slugify`; `_gated()` also
+excludes any slug that is a listed collection; and `harvest()` refuses a
+gated write onto a store key already claimed by an NBIA collection,
+reporting it through `HarvestResult.error` instead of clobbering the record.
+After the fix the re-harvest joined `PSMA-PET-CT-Lesions` to its DOI (152
+joined, 85 gated, 241 records).
 
 **`limit` caps records, not collections.** A truncated run spends what is
 left of `limit` on gated records, and gating is always decided against the
@@ -162,7 +162,7 @@ DOIs has not been verified.
 **`publicationYear` is the DOI's minting year**, not when the data was
 collected, so `published` and `years` are left null rather than fabricated.
 
-**Known validation warnings.** The 86 gated records have no NBIA half, so
+**Known validation warnings.** The 85 gated records have no NBIA half, so
 they warn `no modalities assigned` and `access=… has no access_notes`
 (`access_notes` is not part of this source's mapping). Both are warnings, not
 errors.
