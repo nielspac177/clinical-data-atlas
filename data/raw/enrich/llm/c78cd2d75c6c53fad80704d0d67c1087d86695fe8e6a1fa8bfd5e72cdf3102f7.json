@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:c78cd2d75c6c53fad80704d0d67c1087d86695fe8e6a1fa8bfd5e72cdf3102f7",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "late-stage amyotrophic lateral sclerosis (ALS)",
+        "label": "amyotrophic lateral sclerosis"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "physionet:bigp3bci",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "electroencephalography (EEG) signals",
+        "value": "EEG"
+      },
+      {
+        "evidence": "eye tracker signals",
+        "value": "eye_tracking"
+      },
+      {
+        "evidence": "BCI spelling outcomes and feedback event markers",
+        "value": "behavioral"
+      }
+    ],
+    "population": "Participants in single- and multi-session visual P300-based BCI speller studies, including individuals with an ALS diagnosis and ALS Functional Rating Scale score from medical records",
+    "summary": "Curated collection of visual P300-based brain-computer interface speller studies, sharing EEG, stimulus and feedback event markers, eye tracker signals, and where available demographics and ALS diagnosis with functional rating scores."
+  },
+  "prompt_version": "v1"
+}

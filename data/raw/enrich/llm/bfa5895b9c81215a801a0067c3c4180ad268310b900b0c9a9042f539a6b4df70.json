@@ -1,0 +1,50 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:bfa5895b9c81215a801a0067c3c4180ad268310b900b0c9a9042f539a6b4df70",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "atrial fibrillation",
+        "label": "atrial fibrillation"
+      },
+      {
+        "evidence": "atrial flutter",
+        "label": "atrial flutter"
+      },
+      {
+        "evidence": "heart block",
+        "label": "heart block"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "cardiology",
+      "critical_care",
+      "pulmonology"
+    ],
+    "id": "physionet:mimic-iii-ext-ppg",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "photoplethysmogram (PPG) segments",
+        "value": "PPG"
+      },
+      {
+        "evidence": "simultaneous electrocardiogram (ECG, lead II)",
+        "value": "ECG"
+      },
+      {
+        "evidence": "arterial blood pressure (ABP), and respiratory (RESP) signals",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "heart rhythm being recorded in the medical record",
+        "value": "EHR"
+      }
+    ],
+    "population": "6,189 critically-ill patients from the MIMIC-III Waveform Database Matched Subset",
+    "summary": "Annotated, quality-assessed benchmark of 30-second photoplethysmogram segments from critically-ill patients with reference heart rhythm labels, plus simultaneous ECG, arterial blood pressure and respiratory signals, derived annotations, and signal quality metrics."
+  },
+  "prompt_version": "v1"
+}

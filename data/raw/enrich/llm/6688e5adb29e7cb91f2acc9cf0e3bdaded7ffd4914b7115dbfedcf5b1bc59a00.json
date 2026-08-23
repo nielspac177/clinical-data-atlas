@@ -1,0 +1,39 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:6688e5adb29e7cb91f2acc9cf0e3bdaded7ffd4914b7115dbfedcf5b1bc59a00",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "14 healthy adults",
+        "label": "healthy adults"
+      },
+      {
+        "evidence": "83 healthy children",
+        "label": "healthy children"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "neuroscience",
+      "pediatrics"
+    ],
+    "id": "openneuro:ds003416",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "diffusion MRI variability",
+        "value": "MRI"
+      },
+      {
+        "evidence": "Diffusion Weighted Magnetic Resonance Imaging",
+        "value": "dMRI"
+      }
+    ],
+    "population": "14 healthy adults and 83 healthy children (5 to 8 years), scanned across three sites and four scanners",
+    "summary": "Diffusion weighted MRI dataset acquired across three sites and four scanners in healthy adults and children, with repeated sessions and scans per subject, curated to support investigation of diffusion MRI variability."
+  },
+  "prompt_version": "v1"
+}

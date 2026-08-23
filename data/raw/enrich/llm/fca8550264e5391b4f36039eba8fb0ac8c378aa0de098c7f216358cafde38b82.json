@@ -1,0 +1,35 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:fca8550264e5391b4f36039eba8fb0ac8c378aa0de098c7f216358cafde38b82",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds004493",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "This dataset contains 3T fMRI data",
+        "value": "MRI"
+      },
+      {
+        "evidence": "3T fMRI data from 16 subjects who completed a visual task",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "Physiological data is available from each run",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "pulse oximetry",
+        "value": "PPG"
+      }
+    ],
+    "population": "16 subjects who completed a visual task; human, ages 19–31",
+    "summary": "3T fMRI from 16 subjects viewing a radial checkerboard flickering at 4, 8, 12 or 40 Hz, with per-run pulse oximetry, respiration and trigger channels."
+  },
+  "prompt_version": "v1"
+}

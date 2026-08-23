@@ -1,0 +1,41 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:ce8530805053252057e8ed8af0eee458e411f234a5c57ab663b3e05eefd316ea",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "individuals with a schizophrenia spectrum disorder",
+        "label": "schizophrenia spectrum disorder"
+      },
+      {
+        "evidence": "schizophrenia or schizoaffective disorder",
+        "label": "schizoaffective disorder"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "psychiatry",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds004367",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Raw EEG data",
+        "value": "EEG"
+      },
+      {
+        "evidence": "We used a visual discrimination task",
+        "value": "behavioral"
+      },
+      {
+        "evidence": "report their confidence about their response using a vertical visual analog scale",
+        "value": "survey"
+      }
+    ],
+    "population": "Twenty individuals with a schizophrenia spectrum disorder (16 males, 4 females) and 22 healthy participants (15 males, 7 females) from the general population",
+    "summary": "Raw EEG recorded while patients and controls judged the direction of moving dots and rated their confidence on a visual analog scale, with motion coherence staircased to match task performance across groups."
+  },
+  "prompt_version": "v1"
+}

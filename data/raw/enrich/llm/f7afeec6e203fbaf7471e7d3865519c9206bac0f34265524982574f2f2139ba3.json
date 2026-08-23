@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:f7afeec6e203fbaf7471e7d3865519c9206bac0f34265524982574f2f2139ba3",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "COVID-19",
+        "label": "COVID-19"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience",
+      "infectious_disease"
+    ],
+    "id": "openneuro:ds005364",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "MRI dWI and fMRI",
+        "value": "MRI"
+      },
+      {
+        "evidence": "fMRI with reversal learning",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "dWI",
+        "value": "dMRI"
+      }
+    ],
+    "population": "Human; COVID-19; ages 19–66",
+    "summary": "Structural, diffusion-weighted and functional MRI acquired with a reversal learning decision-making task in participants with COVID-19."
+  },
+  "prompt_version": "v1"
+}

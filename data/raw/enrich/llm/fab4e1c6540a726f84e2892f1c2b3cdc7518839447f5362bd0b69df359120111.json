@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:fab4e1c6540a726f84e2892f1c2b3cdc7518839447f5362bd0b69df359120111",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Disuse",
+        "label": "Disuse"
+      },
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds002766",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "daily 30-minute resting-state functional MRI scans before, during and after casting",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "resting-state functional MRI data in each individual",
+        "value": "MRI"
+      }
+    ],
+    "population": "Three healthy adult participants who wore a cast covering the entire right upper extremity for two weeks",
+    "summary": "Three healthy adults wore a cast on the right upper extremity for two weeks and were scanned daily with resting-state functional MRI before, during and after casting, plus a movement task and a control experiment."
+  },
+  "prompt_version": "v1"
+}

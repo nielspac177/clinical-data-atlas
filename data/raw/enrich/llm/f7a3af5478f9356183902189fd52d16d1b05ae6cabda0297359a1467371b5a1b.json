@@ -1,0 +1,40 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:f7a3af5478f9356183902189fd52d16d1b05ae6cabda0297359a1467371b5a1b",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "fifty-seven obese and non-obese preteens",
+        "label": "obesity"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "neuroscience",
+      "pediatrics",
+      "endocrinology_metabolism"
+    ],
+    "id": "openneuro:ds004151",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "This EEG dataset contains the electrophysiological signal",
+        "value": "EEG"
+      },
+      {
+        "evidence": "during a stop-signal task",
+        "value": "behavioral"
+      },
+      {
+        "evidence": "contains age, gender, body mass index (BMI), and weight status (WS)",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "fifty-seven obese and non-obese preteens",
+    "summary": "Raw event-related potential recordings from obese and non-obese preteens performing a stop-signal task, with participant age, gender, body mass index and weight status provided."
+  },
+  "prompt_version": "v1"
+}

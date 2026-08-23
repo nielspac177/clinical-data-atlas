@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:2b746d0561693440df2a50b5cd9b4981b92a3671f01d78e926f047e5d54fb6cb",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "6 represented moderate pain",
+        "label": "pain"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds005284",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Evidence from an EEG Study",
+        "value": "EEG"
+      },
+      {
+        "evidence": "\"modalities\":[\"EEG\",\"eye_tracking\"]",
+        "value": "eye_tracking"
+      },
+      {
+        "evidence": "they provided pain ratings ranging from 0 to 10",
+        "value": "behavioral"
+      }
+    ],
+    "population": "Human",
+    "summary": "Participants received fixed-intensity laser stimulation about every 20 seconds for 16 trials and rated pain from 0 to 10 by clicking on a screen scale while fixating a cross."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:a00194233c0cd32aa34ef46747da99f34c3e66b25935fadf89f660c634ea60bc",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds000216",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "resting-state MBME ASL/BOLD scan",
+        "value": "MRI"
+      },
+      {
+        "evidence": "multiband, multiecho simultaneous pseudocontinous ASL (pCASL) and BOLD acquisition",
+        "value": "fMRI"
+      }
+    ],
+    "population": "Human healthy/control participants, each scanned once at rest",
+    "summary": "Sequence-development dataset of resting-state scans acquired with a combined multiband multi-echo pseudo-continuous ASL and BOLD sequence, including an M0 image for cerebral blood flow quantification, with detailed acquisition parameters reported."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,39 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:331b6c2ba60225dd462903ce66a3ca117632cf95d9abae4e6f04cf0cc141ecf5",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "adults with a diagnosis of dyslexia",
+        "label": "dyslexia"
+      }
+    ],
+    "countries": [
+      "BE"
+    ],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds005577",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "T1-weighted image",
+        "value": "MRI"
+      },
+      {
+        "evidence": "Task related functional MRI images",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "Diffusion weighted images",
+        "value": "dMRI"
+      }
+    ],
+    "population": "Thirty-five adults with a diagnosis of dyslexia and 35 individuals without any diagnosis of language or reading impairment; Dutch first language, right-handed, age between 18 and 40",
+    "summary": "Structural, diffusion, and task fMRI collected to investigate functional and structural differences in adults with dyslexia, using covert letter fluency, visual rhyme decision, and lexical decision tasks."
+  },
+  "prompt_version": "v1"
+}

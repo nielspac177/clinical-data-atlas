@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:c6e79c02661e4fbcdf4e19e1a1dc28c931887f5c6be5951f28be54c3422420b7",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Gestational diabetes",
+        "label": "Gestational diabetes"
+      },
+      {
+        "evidence": "Diabetes",
+        "label": "Diabetes"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "endocrinology_metabolism",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds004145",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "This is a MRI dataset",
+        "value": "MRI"
+      }
+    ],
+    "population": "Mouse; offsprings of experimentally induced GDM mothers, 26 controls and 23 age-matched GDM offsprings of 2-3 months of age",
+    "summary": "MRI dataset from offspring of experimentally induced gestational diabetes mothers alongside age-matched controls, aged 2-3 months, converted from Bruker raw data."
+  },
+  "prompt_version": "v1"
+}

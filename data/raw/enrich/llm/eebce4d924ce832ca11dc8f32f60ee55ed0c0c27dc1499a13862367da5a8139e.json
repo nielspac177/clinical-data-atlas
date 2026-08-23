@@ -1,0 +1,38 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:eebce4d924ce832ca11dc8f32f60ee55ed0c0c27dc1499a13862367da5a8139e",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "children with ADHD",
+        "label": "ADHD"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "psychiatry",
+      "neuroscience",
+      "pediatrics"
+    ],
+    "id": "openneuro:ds003500",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "functional MRI data from 11 adults",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "T1-weigted structural MRI at each visit",
+        "value": "MRI"
+      },
+      {
+        "evidence": "Task performance data is stored in the events.tsv files",
+        "value": "behavioral"
+      }
+    ],
+    "population": "11 adults, 12 children with ADHD, and 15 aged matched children without ADHD",
+    "summary": "Functional and structural MRI collected while adults, children with ADHD, and age-matched children without ADHD performed selective attention and response inhibition tasks; children also completed standardized cognitive assessments."
+  },
+  "prompt_version": "v1"
+}

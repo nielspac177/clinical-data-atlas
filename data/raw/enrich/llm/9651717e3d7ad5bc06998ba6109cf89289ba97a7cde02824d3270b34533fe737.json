@@ -1,0 +1,27 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:9651717e3d7ad5bc06998ba6109cf89289ba97a7cde02824d3270b34533fe737",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds008143",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "raw fMRI data",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "defaced every structural (T1-weighted) image",
+        "value": "MRI"
+      }
+    ],
+    "population": "30 participants, labeled `sub-001` … `sub-033` in the original study numbering, with three excluded participants omitted",
+    "summary": "Raw fMRI and de-identified anatomical scans from participants viewing images synthesised to drive individual layers of a convolutional neural network, released with preprocessed per-image responses and the CNN layer activations used for comparison."
+  },
+  "prompt_version": "v1"
+}

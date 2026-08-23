@@ -1,0 +1,38 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:5f37bb4eb16cae168649c14c69849a51df358203a0da9cb61118a85e4f289823",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "subjects with acute severe TBI and coma",
+        "label": "traumatic brain injury"
+      },
+      {
+        "evidence": "subjects with a chronic disorder of consciousness (DoC)",
+        "label": "chronic disorder of consciousness"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience",
+      "critical_care"
+    ],
+    "id": "openneuro:ds003367",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Acquired on 3T Skyra (Siemens) using 32-channel head coil",
+        "value": "MRI"
+      },
+      {
+        "evidence": "60 diffusion encoding directions",
+        "value": "dMRI"
+      }
+    ],
+    "population": "subjects with acute severe TBI and coma, age,sex-matched control subjects, and subjects with a chronic disorder of consciousness",
+    "summary": "Skull-stripped HARDI diffusion imaging from subjects with acute severe traumatic brain injury and coma, matched controls, and subjects with chronic disorder of consciousness, studying ascending arousal network connectivity during recovery."
+  },
+  "prompt_version": "v1"
+}

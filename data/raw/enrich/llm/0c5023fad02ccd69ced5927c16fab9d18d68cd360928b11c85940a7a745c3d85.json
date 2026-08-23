@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:0c5023fad02ccd69ced5927c16fab9d18d68cd360928b11c85940a7a745c3d85",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds003922",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Magnetoencephalography (MEG) dataset recorded",
+        "value": "MEG"
+      },
+      {
+        "evidence": "\"modalities\":[\"MRI\",\"MEG\"]",
+        "value": "MRI"
+      },
+      {
+        "evidence": "causality judgment task and temporal order judgment task",
+        "value": "behavioral"
+      }
+    ],
+    "population": "Healthy / Control participants",
+    "summary": "MEG recorded during presentation of audiovisual sequences with causality judgment and temporal order judgment tasks, prepared in MEG-BIDS format. The same sequences were used in both tasks, with blocks counterbalanced across participants."
+  },
+  "prompt_version": "v1"
+}

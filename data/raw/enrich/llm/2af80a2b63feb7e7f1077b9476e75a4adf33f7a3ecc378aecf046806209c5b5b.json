@@ -1,0 +1,35 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:2af80a2b63feb7e7f1077b9476e75a4adf33f7a3ecc378aecf046806209c5b5b",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds006576",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "This dataset contains the fMRI and EEG data",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "one EEG session per participant",
+        "value": "EEG"
+      },
+      {
+        "evidence": "do not include a T1w anatomical scan",
+        "value": "MRI"
+      },
+      {
+        "evidence": "the same task was re-run as decision_run-03 to collect behavioral responses",
+        "value": "behavioral"
+      }
+    ],
+    "population": "69 participants with three fMRI scans and one EEG session each; EEG session contains sleep data from a nap or quiet wake, depending on condition",
+    "summary": "fMRI and EEG data accompanying a study of rapid eye movement sleep and neural differentiation of memories in the hippocampus, with three fMRI scans and one EEG session per participant."
+  },
+  "prompt_version": "v1"
+}

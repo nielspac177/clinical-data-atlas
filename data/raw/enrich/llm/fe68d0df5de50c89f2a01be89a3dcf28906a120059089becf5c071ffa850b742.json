@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:fe68d0df5de50c89f2a01be89a3dcf28906a120059089becf5c071ffa850b742",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "major depressive disorder",
+        "label": "major depressive disorder"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "psychiatry",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds006731",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "This dataset contains T1, T2 and DTi",
+        "value": "MRI"
+      },
+      {
+        "evidence": "functional scans (resting state and goal priming task)",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "DTi",
+        "value": "dMRI"
+      }
+    ],
+    "population": "Human participants with and without depression, ages 18-70",
+    "summary": "Brain imaging dataset with structural, diffusion and functional scans, including resting state and a goal priming task, from participants with and without depression, organized in BIDS format."
+  },
+  "prompt_version": "v1"
+}

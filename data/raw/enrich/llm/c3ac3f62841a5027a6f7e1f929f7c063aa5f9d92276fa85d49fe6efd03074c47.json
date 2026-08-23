@@ -1,0 +1,44 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:c3ac3f62841a5027a6f7e1f929f7c063aa5f9d92276fa85d49fe6efd03074c47",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Menstrual Cycle",
+        "label": "Menstrual Cycle"
+      },
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "neuroscience",
+      "neurology",
+      "obstetrics_gynecology"
+    ],
+    "id": "openneuro:ds005360",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "T1-weighted anatomical and multidimensional diffusion MRI",
+        "value": "MRI"
+      },
+      {
+        "evidence": "multidimensional diffusion MRI",
+        "value": "dMRI"
+      },
+      {
+        "evidence": "physiological recording techniques",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": "Human; Healthy / Control; ages 18–28; young, naturally cycling female participants who completed 3 MRI sessions",
+    "summary": "Structural and diffusion MRI from young, naturally cycling female participants scanned across estimated menstrual cycle phases, studying how hypothalamic-pituitary-gonadal hormones relate to brain structure and function."
+  },
+  "prompt_version": "v1"
+}

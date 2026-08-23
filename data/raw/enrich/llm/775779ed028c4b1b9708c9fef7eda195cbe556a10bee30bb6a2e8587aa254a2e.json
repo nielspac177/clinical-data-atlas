@@ -1,0 +1,35 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:775779ed028c4b1b9708c9fef7eda195cbe556a10bee30bb6a2e8587aa254a2e",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Pediatric Patients with Prior Craniotomy",
+        "label": "prior craniotomy"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience",
+      "surgery",
+      "pediatrics"
+    ],
+    "id": "openneuro:ds005083",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "BIDS iEEG dataset",
+        "value": "iEEG"
+      },
+      {
+        "evidence": "post-operative CT imaging space",
+        "value": "CT"
+      }
+    ],
+    "population": "60 pediatric patients with prior craniotomy",
+    "summary": "Stereoelectroencephalography electrode data in BIDS iEEG format from pediatric patients with prior craniotomy, with coordinates in each individual's native post-operative CT space and no atlas alignment."
+  },
+  "prompt_version": "v1"
+}

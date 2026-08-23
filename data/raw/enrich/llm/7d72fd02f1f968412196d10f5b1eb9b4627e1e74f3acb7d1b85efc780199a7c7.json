@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:7d72fd02f1f968412196d10f5b1eb9b4627e1e74f3acb7d1b85efc780199a7c7",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds004666",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Denoising diffusion MRI (dMRI)",
+        "value": "MRI"
+      },
+      {
+        "evidence": "Complex data (magnitude and phase) is acquired for a single subject at different SNR/resolution regimes",
+        "value": "dMRI"
+      }
+    ],
+    "population": "Human; Healthy / Control; a single subject",
+    "summary": "Complex-valued (magnitude and phase) diffusion MRI acquired repeatedly in a single subject across different SNR and resolution regimes, released to support evaluation of diffusion MRI denoising methods."
+  },
+  "prompt_version": "v1"
+}

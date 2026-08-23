@@ -1,0 +1,35 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:b7dff4fc52b73a7b90eda7dc212a978779bd03669c4a22061b759c67a672f70b",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "elderly suffering from dementia",
+        "label": "dementia"
+      },
+      {
+        "evidence": "Alzheimer's Diseases (AD)",
+        "label": "Alzheimers"
+      }
+    ],
+    "countries": [
+      "IR"
+    ],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds005048",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "EEG signal recording during the auditory brain stimulation",
+        "value": "EEG"
+      }
+    ],
+    "population": "Elderly humans with dementia / Alzheimer's disease",
+    "summary": "EEG recorded during synthetic auditory stimulation in elderly people with dementia, to study the effect of gamma entrainment on brain oscillations. Both short and long entrainment sessions were offered to participants."
+  },
+  "prompt_version": "v1"
+}

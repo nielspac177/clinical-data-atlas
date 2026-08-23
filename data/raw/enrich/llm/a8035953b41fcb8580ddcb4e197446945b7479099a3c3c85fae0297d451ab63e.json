@@ -1,0 +1,44 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:a8035953b41fcb8580ddcb4e197446945b7479099a3c3c85fae0297d451ab63e",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "neuroscience",
+      "cardiology"
+    ],
+    "id": "openneuro:ds003838",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "raw 64-channel EEG",
+        "value": "EEG"
+      },
+      {
+        "evidence": "electrocardiography",
+        "value": "ECG"
+      },
+      {
+        "evidence": "photoplethysmography",
+        "value": "PPG"
+      },
+      {
+        "evidence": "pupillometry data",
+        "value": "eye_tracking"
+      },
+      {
+        "evidence": "beh - behavioral data",
+        "value": "behavioral"
+      },
+      {
+        "evidence": "peripheral physiological (electrocardiography, photoplethysmography, and pupillometry) signals",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": "86 human participants during 4 minutes of eyes-closed resting and during performance of a classic working memory task",
+    "summary": "Raw 64-channel EEG with cardiovascular and pupillometry recordings and behavioral responses, collected during eyes-closed rest and an auditory digit span task with serial recall."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,45 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:e0052f7c5f007174687168c970058080576c5bdc93acea648f3dd695d13c1c26",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience",
+      "psychiatry"
+    ],
+    "id": "openneuro:ds007328",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "195 T1-weighted structural scans",
+        "value": "MRI"
+      },
+      {
+        "evidence": "85 hours of resting-state fMRI",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "54 DTI sessions",
+        "value": "dMRI"
+      },
+      {
+        "evidence": "Physiological monitoring",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "Pre-session psychological assessments (PANAS, Psychomotor Vigilance Task)",
+        "value": "behavioral"
+      }
+    ],
+    "population": "A single healthy participant, age 34, scanned repeatedly over 321 days including a venlafaxine taper",
+    "summary": "Dense longitudinal multimodal MRI from one participant scanned mostly self-administered on a clinical 3T scanner across eleven months, spanning a venlafaxine taper, with medication logs, psychological assessments, physiological monitoring and daily lifestyle tracking."
+  },
+  "prompt_version": "v1"
+}

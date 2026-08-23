@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:1cda71a2031532a0bccedd6d01a52a56a1667da97d472585e8220dcc6b83fdbc",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience",
+      "neurology"
+    ],
+    "id": "openneuro:ds004401",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "underwent a [11C]PS13 PET scan",
+        "value": "PET"
+      },
+      {
+        "evidence": "MRI data were analyzed in FreeSurfer",
+        "value": "MRI"
+      }
+    ],
+    "population": "Public deidentified MRI and PET data were obtained from openneuro.org for 16 subjects who underwent a [11C]PS13 PET scan; healthy controls",
+    "summary": "A Molecular Imaging Brain Atlas of cyclooxygenase-1 built from public deidentified MRI and PET data. Distribution volumes were quantified with PETsurfer and averaged across subjects into ROI tables and voxel-wise maps on standard brain templates."
+  },
+  "prompt_version": "v1"
+}

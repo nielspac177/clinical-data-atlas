@@ -1,0 +1,41 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:a3b33052ac9cd4447fb2c457d4f820b218b71840112297e71447a4d8f85ba18f",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Perinatal Stroke",
+        "label": "Perinatal Stroke"
+      },
+      {
+        "evidence": "Healthy / Control",
+        "label": "healthy controls"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds004498",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "\"modalities\":[\"MRI\",\"fMRI\",\"dMRI\"]",
+        "value": "MRI"
+      },
+      {
+        "evidence": "\"modalities\":[\"MRI\",\"fMRI\",\"dMRI\"]",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "\"modalities\":[\"MRI\",\"fMRI\",\"dMRI\"]",
+        "value": "dMRI"
+      }
+    ],
+    "population": "One participant, age 13; labelled healthy/control",
+    "summary": "Perinatal stroke neuroimaging dataset with motor and resting-state runs. The record carries almost no descriptive text beyond the title, a healthy/control label, and the task names."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,40 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:414372c0c67ff7a616c1c15d10cf1b00b3bf7d42032b1535417f3137fd219da0",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      },
+      {
+        "evidence": "6 represented moderate pain",
+        "label": "pain"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds005292",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "\"modalities\":[\"EEG\",\"eye_tracking\"]",
+        "value": "EEG"
+      },
+      {
+        "evidence": "\"modalities\":[\"EEG\",\"eye_tracking\"]",
+        "value": "eye_tracking"
+      },
+      {
+        "evidence": "provided pain ratings individually",
+        "value": "behavioral"
+      }
+    ],
+    "population": "Human; Healthy / Control",
+    "summary": "Healthy participants received fixed-intensity laser stimuli at high and low energy levels across 3 blocks of 10 stimuli, rating pain from 0 to 10 after each stimulation."
+  },
+  "prompt_version": "v1"
+}

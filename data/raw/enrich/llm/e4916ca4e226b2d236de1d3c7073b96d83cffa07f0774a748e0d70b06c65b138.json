@@ -1,0 +1,34 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:e4916ca4e226b2d236de1d3c7073b96d83cffa07f0774a748e0d70b06c65b138",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "experimental stroke",
+        "label": "stroke"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience",
+      "surgery"
+    ],
+    "id": "openneuro:ds004632",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "longitudinal DTI and T2w imaging",
+        "value": "MRI"
+      },
+      {
+        "evidence": "longitudinal DTI",
+        "value": "dMRI"
+      }
+    ],
+    "population": "Male Sprague Dawley OFA rats scanned at three time points following stroke surgery",
+    "summary": "Longitudinal diffusion tensor and T2-weighted brain imaging in male Sprague Dawley rats after experimental stroke, acquired at 7T at three post-surgery time points, with derived DTI maps, supporting design of a preclinical stem-cell therapy trial."
+  },
+  "prompt_version": "v1"
+}

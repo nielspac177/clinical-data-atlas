@@ -1,0 +1,90 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds008695",
+  "payload": {
+    "created": "2026-08-14T20:03:35.569Z",
+    "id": "ds008695",
+    "latestSnapshot": {
+      "created": "2026-08-23T09:10:41.000Z",
+      "description": {
+        "Authors": [
+          "Tomasz Pieciak"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds008695.v1.0.0",
+        "Funding": [
+          "Agencia Estatal de Investigación (Ministerio de Ciencia, Innovación y Universidades of Spain), research grant PID2024-158963NB-I00."
+        ],
+        "HowToAcknowledge": "Kindly ask you to cite the following paper: Pieciak T., Guadilla I., Ciupek D., Navarro-González R., Merino-Caviedes S., Villacorta‐Aylagas P., Magdaleno Humayor L., Villa Aparicio M., Rueda-Ramos J., Santiesteban Mendo R., Moro Boyero R., Tristán Vega A., A multi-b-value test-retest diffusion MRI brain dataset for model validation and reproducibility assessment, 2026.",
+        "License": "CC0",
+        "Name": "Multi-b-value longitudinal test-retest diffusion MRI brain dataset",
+        "ReferencesAndLinks": null
+      },
+      "readme": "# Multi-b-value longitudinal test-retest diffusion MRI brain dataset\n\nLaboratorio de Procesado de Imagen (LPI), ETSI Telecomunicación, Universidad de Valladolid, Valladolid, Spain\n\n\n## Description:\n\nThe dataset was acquired using a Philips Achieva dStream 3T scanner equipped with a 32-channel head coil. The gradient system has a maximum gradient strength of 62 mT/m and a maximum slew rate of 100 mT/m/ms. For each volunteer, the acquisition was divided into four sessions: two sessions performed on consecutive days (test data) and two repeated sessions performed one week later also on consecutive days (retest data). For one volunteer (sub-01), the test data were acquired during two sessions on the same day, whereas the retest data were acquired during two sessions on the same day one week later.\n\nThe dataset is available in two variants:\n- raw data – **8.3 GB**,\n- fully preprocessed and merged data (folder: /derivatives/preproc/) – **39.5 GB**.\n\nAll images are provided in the compressed NIfTI format.\n\nWe also provide the DTI parameters estimated using FSL v6 and the streamlines corresponding to the white matter bundles:\n- DTI parameters (folder: /derivatives/measures/) – **178 MB**,\n- streamlines (folder: /derivatives/tractography/) – **409 MB**.\n\n\n## Participants (n = 11):\n\nEleven healthy volunteers (5F/6M, aged: 24–48/23–45) have not reported any neurological or neuropsychiatric disorders, nor any head trauma in the past. Exclusion criteria: head trauma, volunteers not compatible with our scanning procedure (e.g., individuals with implants, pacemakers, intrauterine devices), and pregnant volunteers.\n\n## Data acquisition:\n\n- **T1-weighted MRI data:** Anatomical data were acquired using the 3D Turbo Field Echo (TFE) gradient-echo sequence. Reconstruction parameters were: voxel size: 0.9375 × 0.9375 × 1 mm^3, reconstruction matrix: 256 × 256 with 177 sagittal slices covering the brain. \n\n- **Diffusion-weighted MRI data:** Images were acquired using the single-shot echo-planar imaging (EPI) sequence in anterior-posterior (AP) encoding direction. Acquisition parameters were: TE: 95 ms, EPI factor: 47, effective echo spacing: 0.56 ms, acquisition voxel size: 2.5 × 2.5 × 2.5 mm^3. Reconstruction parameters were: 128 × 128 matrix and 55 axial slices, in-plane resolution of 1.875 × 1.875 mm^2 and slice thickness 2.5 mm. In total, twenty-two b-values were used in the acquisition procedure spread over two sessions:\n  - ses-01 and ses-03: b = 10, 20, 30, 50, 80, 100 s/mm^2 (6 diffusion gradient directions for each shell), 200, 300, 400, 500, 600, 700, 800, 900 s/mm^2 (32 diffusion gradient directions per shell), and six non-diffusion-weighted volumes, i.e., volumes acquired at b = 0 s/mm^2,\n  - ses-02 and ses-04: b = 1000, 1200, 1400, 1600, 1800, 2200, 2600, 3000 s/mm^2 (32 diffusion gradient directions per shell), and five non-diffusion-weighted volumes.\n\nOne additional non-diffusion-weighted volume per session was acquired in the posterior-anterior (PA).\n\n\n## Data pseudonymisation:\nAll files were pseudonymised at two levels prior to sharing:\n  - removal of meta-information from the headers of the NIfTI and JSON files (diffusion-weighted MRI and T1-weighted MRI data),\n  - face masking in T1-weighted MRI data.\n\n## Data preprocessing and registration:\n- **Preprocessing:** Each of the four sessions was preprocessed separately using the following pipeline: 1) noise estimation and denoising, 2) Gibbs artefacts removal, 3) susceptibility-induced distortions estimation, 4) head movements and eddy current correction, 5) B1 field intensity variations correction, 6) time-varying drift correction.\n- **Data registration and concatenation:** Volumes from sessions ses-01 and ses-02, as well as ses-03 and ses-04, were registered and concatenated to generate the test and retest datasets. These data are considered preprocessed.\n\n## Important note:\n\n- The spatial dimensions of the original diffusion-weighted MRI data are **128 × 128 × 55**.\n- For preprocessing purposes, the diffusion-weighted MRI data were extended to **128 × 128 × 56** by adding an empty axial slice.\n\n\n## Reference for the dataset description:\n\nPieciak T., Guadilla I., Ciupek D., Navarro-González R., Merino-Caviedes S., Villacorta‐Aylagas P., Magdaleno Humayor L., Villa Aparicio M., Rueda-Ramos J., Santiesteban Mendo R., Moro Boyero R., Tristán Vega A., A multi-b-value test-retest diffusion MRI brain dataset for model validation and reproducibility assessment, 2026.\n\n\n## Funding:\n\nThis work was funded by the Agencia Estatal de Investigación (Ministerio de Ciencia, Innovación y Universidades of Spain) with the research grant PID2024-158963NB-I00.\n\n## Contact:\n\n- Tomasz Pieciak\n- tpieciak__at__tel.uva.es\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_diffusion",
+          "mri_structural"
+        ],
+        "sessions": [
+          "03",
+          "02",
+          "04",
+          "01"
+        ],
+        "size": 8290140621,
+        "subjects": [
+          "01",
+          "07",
+          "02",
+          "03",
+          "11",
+          "10",
+          "09",
+          "08",
+          "06",
+          "05",
+          "04"
+        ],
+        "tasks": [],
+        "totalFiles": 444
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        34,
+        24,
+        40,
+        48,
+        25,
+        23,
+        26,
+        30,
+        28,
+        45,
+        34
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "Agencia Estatal de Investigación",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "brain",
+      "studyLongitudinal": "Longitudinal"
+    },
+    "publishDate": "2026-08-23T09:11:57.612Z"
+  },
+  "source": "openneuro"
+}

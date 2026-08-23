@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:839ee5f21e551382374084e0f140ecfa643f0e710dd93a85acb3d253f5fa2b5c",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "individuals with chronic focal brain lesions",
+        "label": "chronic focal brain lesions"
+      },
+      {
+        "evidence": "including ischemic stroke and surgical resections",
+        "label": "ischemic stroke"
+      }
+    ],
+    "countries": [
+      "GB"
+    ],
+    "domains": [
+      "neurology",
+      "neuroscience",
+      "surgery"
+    ],
+    "id": "openneuro:ds007212",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "T1-weighted MRI",
+        "value": "MRI"
+      }
+    ],
+    "population": "204 participants with chronic focal brain lesions (heterogeneous aetiologies); participant-level demographic or clinical variables not included",
+    "summary": "Defaced T1-weighted structural MRI scans with binary lesion masks manually delineated by a senior neurologist, from individuals with chronic focal brain lesions of heterogeneous aetiologies, supporting automated lesion segmentation."
+  },
+  "prompt_version": "v1"
+}

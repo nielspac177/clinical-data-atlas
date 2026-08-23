@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:166a26c686d82a1c2f340761a18d110fc7cfde2dd39584694b6a9ebcb6c3be50",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience",
+      "endocrinology_metabolism"
+    ],
+    "id": "openneuro:ds003151",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "anat - includes a T1 structural scan",
+        "value": "MRI"
+      },
+      {
+        "evidence": "These task-associated and resting state fMRI data",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "all nback-related BOLD scans are included in this folder with event timings",
+        "value": "behavioral"
+      }
+    ],
+    "population": "Participants scanned in both the hormone-present and hormone-absent phases of hormonal contraception",
+    "summary": "Task and resting-state fMRI with T1 structural and arterial spin labeling scans, acquired after stress during hormone-present and hormone-absent phases of hormonal contraception, with an n-back working memory task."
+  },
+  "prompt_version": "v1"
+}

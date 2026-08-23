@@ -1,0 +1,27 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:c0194bf5fd78392e715cfb7fe613675bc3071ad8760fadb711b55bf2c0cc513b",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "other"
+    ],
+    "id": "physionet:bionlp-workshop-2023-task-1a",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "hospital daily progress notes",
+        "value": "clinical_notes"
+      },
+      {
+        "evidence": "electronic health record",
+        "value": "EHR"
+      }
+    ],
+    "population": "Hospitalized patients whose provider progress notes were written during hospitalization",
+    "summary": "Shared task dataset of hospital daily progress notes annotated with the diagnoses and problems appearing in them, for training models that summarize a patient's main problems from Subjective, Objective and Assessment sections."
+  },
+  "prompt_version": "v1"
+}

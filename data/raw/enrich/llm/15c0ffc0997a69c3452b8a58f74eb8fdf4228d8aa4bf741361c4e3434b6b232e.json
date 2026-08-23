@@ -1,0 +1,41 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:15c0ffc0997a69c3452b8a58f74eb8fdf4228d8aa4bf741361c4e3434b6b232e",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "anesthesia, cbf, functional connectivity",
+        "label": "anesthesia"
+      },
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience",
+      "surgery"
+    ],
+    "id": "openneuro:ds005687",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "structural imaging (anat)",
+        "value": "MRI"
+      },
+      {
+        "evidence": "resting state functional imaging (func)",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "Physiological measures during resting state are also given",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": "Rats; 38 subjects; four anesthetics evaluated plus a group of dead rats",
+    "summary": "Rat dataset studying how different anesthetics affect functional connectivity, cerebral perfusion and physiology, containing structural, resting-state functional and perfusion imaging plus physiological recordings."
+  },
+  "prompt_version": "v1"
+}

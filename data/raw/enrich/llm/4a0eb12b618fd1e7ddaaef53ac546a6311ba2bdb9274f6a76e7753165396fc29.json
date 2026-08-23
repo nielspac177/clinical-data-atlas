@@ -1,0 +1,42 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:4a0eb12b618fd1e7ddaaef53ac546a6311ba2bdb9274f6a76e7753165396fc29",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Parkinson's Disease",
+        "label": "Parkinson's Disease"
+      },
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience",
+      "cardiology"
+    ],
+    "id": "openneuro:ds005263",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "three task-based fMRI datasets",
+        "value": "MRI"
+      },
+      {
+        "evidence": "task-based fMRI datasets and one resting-state fMRI dataset",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "performing time-constrained precision reaches to spatial targets",
+        "value": "behavioral"
+      }
+    ],
+    "population": "68 participants, ages 18–26; this version contains raw data from healthy controls only",
+    "summary": "Task-based functional MRI of an incentivized reaching task comparing standard and high-incentive trials with reward or loss outcomes, part of a movement and incentivization resource aimed at Parkinson's disease."
+  },
+  "prompt_version": "v1"
+}

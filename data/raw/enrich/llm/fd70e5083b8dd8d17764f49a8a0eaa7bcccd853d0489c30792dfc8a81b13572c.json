@@ -1,0 +1,35 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:fd70e5083b8dd8d17764f49a8a0eaa7bcccd853d0489c30792dfc8a81b13572c",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [
+      "NO"
+    ],
+    "domains": [
+      "psychiatry",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds007615",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "64 EEG channels and 4 auxiliary oculogram channels",
+        "value": "EEG"
+      },
+      {
+        "evidence": "depressive symptoms (BDI-II), impulsivity (UPPS-P)",
+        "value": "survey"
+      }
+    ],
+    "population": "69 healthy women, age range 19-40 years, acquired at the Department of Psychology, University of Oslo",
+    "summary": "EEG from healthy women in a single session with two paradigms: resting-state (eyes-open and eyes-closed) and loudness dependence of auditory evoked potentials, studying hormonal contraceptive use and serotonergic activity. Questionnaire and cycle data included."
+  },
+  "prompt_version": "v1"
+}

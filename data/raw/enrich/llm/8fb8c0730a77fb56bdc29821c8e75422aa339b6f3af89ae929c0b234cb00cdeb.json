@@ -1,0 +1,41 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:8fb8c0730a77fb56bdc29821c8e75422aa339b6f3af89ae929c0b234cb00cdeb",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Alzheimer's Dementia",
+        "label": "Alzheimer's Dementia"
+      },
+      {
+        "evidence": "Mild Cognitive Impairment",
+        "label": "Mild Cognitive Impairment"
+      },
+      {
+        "evidence": "and Normal cognition",
+        "label": "Normal cognition"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds007561",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "(11-c) UCB-J PET",
+        "value": "PET"
+      },
+      {
+        "evidence": "T1 Weighted (MPnRAGE_VFA : motion corrected) images",
+        "value": "MRI"
+      }
+    ],
+    "population": "Adults who are 60 years and above with a variety of clinical cognitive diagnoses",
+    "summary": "UCB-J PET and motion-corrected T1-weighted MPnRAGE images from an older-adult cohort spanning Alzheimer's dementia, mild cognitive impairment, and normal cognition. Images are in native space, not co-registered to a common space."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,39 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:143f31765876f997a9704f0cd9790c87260c8a2a34d44066009e54ee67caaf9e",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "symptoms consistent with attention-deficit/hyperactivity disorder (ADHD) in adulthood",
+        "label": "attention-deficit/hyperactivity disorder (ADHD)"
+      },
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "psychiatry",
+      "neuroscience",
+      "public_health"
+    ],
+    "id": "openneuro:ds006018",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "electroencephalogram (EEG) data",
+        "value": "EEG"
+      },
+      {
+        "evidence": "a symptoms checklist",
+        "value": "survey"
+      }
+    ],
+    "population": "127 young adults (18-30 years); socioeconomically diverse, neurotypical",
+    "summary": "EEG dataset from young adults performing ERP CORE tasks including oddball, flanker and visual search, paired with childhood and adult socioeconomic status indicators and an ADHD symptoms checklist."
+  },
+  "prompt_version": "v1"
+}

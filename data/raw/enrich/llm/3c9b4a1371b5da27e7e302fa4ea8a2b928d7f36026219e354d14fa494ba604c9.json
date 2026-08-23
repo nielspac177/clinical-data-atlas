@@ -1,0 +1,39 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:3c9b4a1371b5da27e7e302fa4ea8a2b928d7f36026219e354d14fa494ba604c9",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "iEEG Epilepsy Fragility Multi-Center Retrospective Study",
+        "label": "Epilepsy"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds003029",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Epilepsy-iEEG-Multicenter-Dataset",
+        "value": "iEEG"
+      },
+      {
+        "evidence": "EEG data from 5 centers",
+        "value": "EEG"
+      },
+      {
+        "evidence": "refer to the clinical Excel table in the publication",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "Human; epilepsy patients; ages 13–59; 35 participants released, from a study of 100 subjects across 5 centers",
+    "summary": "Intracranial and scalp EEG from epilepsy patients pooled across clinical centers, including ECoG and SEEG acquisitions, with runs capturing snapshots around seizure events. Cleveland Clinic data requires a separate data use agreement."
+  },
+  "prompt_version": "v1"
+}

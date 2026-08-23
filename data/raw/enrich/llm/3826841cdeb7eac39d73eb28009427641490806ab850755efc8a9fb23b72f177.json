@@ -1,0 +1,35 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:3826841cdeb7eac39d73eb28009427641490806ab850755efc8a9fb23b72f177",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds000030",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "MR_Scan_Parameters.tsv",
+        "value": "MRI"
+      },
+      {
+        "evidence": "the Breath Hold and Resting State functional scans",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "\"modalities\":[\"MRI\",\"fMRI\",\"dMRI\"]",
+        "value": "dMRI"
+      },
+      {
+        "evidence": "a plot of the physiological recording trace",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": "272 participants, ages 21–50",
+    "summary": "Imaging dataset from the UCLA Consortium for Neuropsychiatric Phenomics LA5c study, with resting-state and task scans, diffusion imaging, physiological recordings, participant demographics, scan-parameter plots, and preprocessed derivatives available separately."
+  },
+  "prompt_version": "v1"
+}

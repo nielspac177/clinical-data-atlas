@@ -1,0 +1,34 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:9fcbc6fdbfef4fd1e623cdd4c4fa0dddb6fae28701a10f078e6de8685c77a7bc",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds002578",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Fuse all BDF BIOSEMI files",
+        "value": "EEG"
+      },
+      {
+        "evidence": "the anatomical MRI is provided",
+        "value": "MRI"
+      }
+    ],
+    "population": "Human; Healthy / Control; ages 30",
+    "summary": "High-density 256-channel EEG from a visual oddball selective attention task, with scanned electrode positions and anatomical MRI allowing source localization. Part of a larger corpus of earlier 32-channel recordings."
+  },
+  "prompt_version": "v1"
+}

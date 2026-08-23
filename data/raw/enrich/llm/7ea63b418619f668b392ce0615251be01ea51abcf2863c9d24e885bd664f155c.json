@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:7ea63b418619f668b392ce0615251be01ea51abcf2863c9d24e885bd664f155c",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Alzheimer's Disease biomarkers",
+        "label": "Alzheimer's Disease"
+      },
+      {
+        "evidence": "Healthy (asymptomatic) subjects",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds007427",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Electroencephalography (EEG)",
+        "value": "EEG"
+      }
+    ],
+    "population": "Human; healthy asymptomatic PSEN1-E280A carriers (G1) and matched non-carrier controls (G2); 44 participants, ages 21–65",
+    "summary": "EEG dataset supporting a methodology for enriching samples in EEG biomarker studies of Alzheimer's risk. Groups are healthy asymptomatic PSEN1-E280A variant carriers and matched non-carrier controls."
+  },
+  "prompt_version": "v1"
+}

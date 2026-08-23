@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:750c8c9633b0804990eaeafb8fcb77d240bb84da288173b3cb951b89a2d0a8b5",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "healthy controls"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds005178",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "nightly EEG recordings from 10 healthy participants",
+        "value": "EEG"
+      },
+      {
+        "evidence": "polysomnogrpahy (PSG) measurements",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": "10 healthy participants",
+    "summary": "Nightly ear-EEG sleep recordings from ten healthy participants, with polysomnography recorded alongside ear-EEG for the first two nights. Each file holds a video task sequence followed by an overnight sleep sequence."
+  },
+  "prompt_version": "v1"
+}

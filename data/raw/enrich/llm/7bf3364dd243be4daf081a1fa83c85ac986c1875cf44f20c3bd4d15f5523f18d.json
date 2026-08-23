@@ -1,0 +1,30 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:7bf3364dd243be4daf081a1fa83c85ac986c1875cf44f20c3bd4d15f5523f18d",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Pituitary Adenoma",
+        "label": "Pituitary Adenoma"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience",
+      "surgery",
+      "oncology"
+    ],
+    "id": "openneuro:ds006248",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "collection of **multiparametric MRI scans**",
+        "value": "MRI"
+      }
+    ],
+    "population": "Patients with pituitary adenomas",
+    "summary": "BIDS-organized multiparametric MRI scans from patients with pituitary adenomas, with expert-validated ground truth annotations of anatomical structures, outputs from several segmentation models, and benchmarking metrics."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:98954090deca0f6e9e035349388920f32681fb76e56b83d7f3f2aa733b44c547",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "healthy controls"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds005189",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "In an EEG study with eye tracking",
+        "value": "EEG"
+      },
+      {
+        "evidence": "We recorded both EEG and eye movements",
+        "value": "eye_tracking"
+      },
+      {
+        "evidence": "Behavioral data is split into encoding (Encode_beh) and memory testing (Test_beh)",
+        "value": "behavioral"
+      }
+    ],
+    "population": "30 healthy participants aged 18–34",
+    "summary": "EEG and eye movements recorded while participants searched for objects in scenes or intentionally memorized them, followed by a surprise recognition memory test. Behavioral data split into encoding and memory testing."
+  },
+  "prompt_version": "v1"
+}

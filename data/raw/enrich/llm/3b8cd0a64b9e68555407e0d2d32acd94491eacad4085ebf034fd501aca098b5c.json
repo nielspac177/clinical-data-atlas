@@ -1,0 +1,42 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:3b8cd0a64b9e68555407e0d2d32acd94491eacad4085ebf034fd501aca098b5c",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "we recruited 20 fibromyalgia (FM) patients",
+        "label": "fibromyalgia"
+      },
+      {
+        "evidence": "20 matched healthy controls (HC)",
+        "label": "healthy controls"
+      }
+    ],
+    "countries": [
+      "MX"
+    ],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds001928",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "a GE 3T MRI scanner",
+        "value": "MRI"
+      },
+      {
+        "evidence": "acquiring rs-fMRI with a GE 3T MRI scanner",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "Data also includes T1w and DWI sequences.",
+        "value": "dMRI"
+      }
+    ],
+    "population": "Human; Fibromyalgia; ages 21–70; fibromyalgia patients and matched healthy controls",
+    "summary": "Resting-state functional MRI acquired before and after music or pink noise exposure in fibromyalgia patients and matched healthy controls, with T1-weighted and diffusion-weighted sequences also included."
+  },
+  "prompt_version": "v1"
+}

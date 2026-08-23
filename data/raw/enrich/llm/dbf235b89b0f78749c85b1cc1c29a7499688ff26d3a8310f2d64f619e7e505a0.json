@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:dbf235b89b0f78749c85b1cc1c29a7499688ff26d3a8310f2d64f619e7e505a0",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds007647",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "\"modalities\":[\"EEG\",\"behavioral\",\"survey\"]",
+        "value": "EEG"
+      },
+      {
+        "evidence": "Forty participants selected one of two doors",
+        "value": "behavioral"
+      },
+      {
+        "evidence": "each block was followed by a short survey",
+        "value": "survey"
+      }
+    ],
+    "population": "Forty participants, ages 18–39, healthy controls",
+    "summary": "Data from a two-door choice task with monetary gain or loss feedback, alternating learnable blocks, where one door paid out more often, with unlearnable blocks whose outcomes were unrelated to participant choices."
+  },
+  "prompt_version": "v1"
+}

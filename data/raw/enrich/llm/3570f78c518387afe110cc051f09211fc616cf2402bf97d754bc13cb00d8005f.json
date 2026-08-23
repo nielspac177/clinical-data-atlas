@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:3570f78c518387afe110cc051f09211fc616cf2402bf97d754bc13cb00d8005f",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "psychiatry",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds000116",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "\"modalities\":[\"MRI\",\"fMRI\",\"EEG\"]",
+        "value": "MRI"
+      },
+      {
+        "evidence": "start triggered by fMRI scan start",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "custom built MR-compatible EEG system",
+        "value": "EEG"
+      }
+    ],
+    "population": "17 participants, ages 20–40",
+    "summary": "Simultaneous EEG and fMRI recorded during separate auditory and visual oddball tasks with button responses to target stimuli. EEG used an MR-compatible system at 1000 Hz sampling rate with 49 channels."
+  },
+  "prompt_version": "v1"
+}

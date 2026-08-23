@@ -1,0 +1,60 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:58128e157613f85d6808ded881edbc5daf740f44c59b10ee8ef65cf7b45bf073",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "including glioma, meningioma",
+        "label": "glioma"
+      },
+      {
+        "evidence": "glioma, meningioma, diffuse large B-cell",
+        "label": "meningioma"
+      },
+      {
+        "evidence": "diffuse large B-cell",
+        "label": "diffuse large B-cell"
+      },
+      {
+        "evidence": "multiple sclerosis",
+        "label": "multiple sclerosis"
+      },
+      {
+        "evidence": "cortical cerebral infarction",
+        "label": "cortical cerebral infarction"
+      },
+      {
+        "evidence": "and brain abscess",
+        "label": "brain abscess"
+      },
+      {
+        "evidence": "two healthy individuals",
+        "label": "healthy individuals"
+      }
+    ],
+    "countries": [
+      "CN"
+    ],
+    "domains": [
+      "neurology",
+      "neuroscience",
+      "oncology"
+    ],
+    "id": "openneuro:ds004910",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "The MRI data was collected from 18 patients",
+        "value": "MRI"
+      },
+      {
+        "evidence": "multi-echo multi-shell HARDI diffusion-weighted MRI",
+        "value": "dMRI"
+      }
+    ],
+    "population": "18 patients and two healthy individuals (11 females and 9 males; age range: 28.0 - 70.0 years)",
+    "summary": "Relaxation-diffusion MRI for neurosurgical studies, acquired on a 3T Philips scanner with multiple echo times, including T1-weighted anatomical scans and multi-echo multi-shell diffusion-weighted imaging."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:d41e5c800795364e3dcc88cea150faecff69800ae4f8e3afadd05e86676c8213",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "PRIOS network epilepsy",
+        "label": "epilepsy"
+      }
+    ],
+    "countries": [
+      "NL"
+    ],
+    "domains": [
+      "neurology",
+      "neuroscience",
+      "surgery"
+    ],
+    "id": "openneuro:ds004370",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "contains the iEEG recordings data for that patient",
+        "value": "iEEG"
+      },
+      {
+        "evidence": "recorded with Electro-CorticoGraphy (ECoG)",
+        "value": "iEEG"
+      }
+    ],
+    "population": "Patients with epilepsy, age 13-53 years, undergoing clinical single pulse electrical stimulation",
+    "summary": "Intracranial ECoG recordings of cortico-cortical evoked potentials during single pulse electrical stimulation in epilepsy patients, acquired both awake for clinical routine and under propofol anesthesia, organized in BIDS format."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:db8dc2112b01da82d4eceb4e43f7422722f278701c8ccb93d95094306dcc2444",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "psychiatry",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds005418",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "a standard T1w image was acquired for each subject",
+        "value": "MRI"
+      },
+      {
+        "evidence": "each subject underwent an fMRI scan with blocs of CO2 inhalation challenges",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "breath CO2 was recorded using a capnograph",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": "Thirty-five healthy adult subjects with no prior history of neurological or psychiatric disorder, ages 23–67",
+    "summary": "Healthy adults scanned with anatomical and functional MRI during CO2 inhalation challenges and a resting-state session, with capnograph CO2 recordings, comparing cerebrovascular reactivity from breathing challenges to resting-state relative CVR. Includes fMRIPrep and CVRmap derivatives."
+  },
+  "prompt_version": "v1"
+}

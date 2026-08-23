@@ -1,0 +1,38 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:3f9f0065fd033ee6c9026a168abb491c42cd76b6c75c207cc2cebf1e4b8d0b09",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "patients with focal epilepsy",
+        "label": "Epilepsy"
+      },
+      {
+        "evidence": "Pediatric Epilepsy",
+        "label": "Pediatric Epilepsy"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience",
+      "pediatrics"
+    ],
+    "id": "openneuro:ds007445",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "intracranial EEG (iEEG) recordings",
+        "value": "EEG"
+      },
+      {
+        "evidence": "intracranial EEG (iEEG) recordings",
+        "value": "iEEG"
+      }
+    ],
+    "population": "Human; 19 patients with focal epilepsy, with thalamic iEEG sampling; pediatric epilepsy",
+    "summary": "Intracranial EEG recordings with thalamic sampling from patients with focal epilepsy, shared in BIDS format, used to study thalamocortical network dynamics during seizures."
+  },
+  "prompt_version": "v1"
+}

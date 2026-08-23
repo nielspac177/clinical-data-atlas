@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:7f3c3bce206ba655e1556b22cc76ab295be34cc4d7cd877ff245d3b10165b9fc",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "structural MRI study of cannabis users",
+        "label": "cannabis use"
+      },
+      {
+        "evidence": "AUDIT (Alcohol Use Disorder Identification Test)",
+        "label": "alcohol use"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "psychiatry",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds000174",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "T1-weighted structural MRI",
+        "value": "MRI"
+      },
+      {
+        "evidence": "The scores from the CUDIT (Cannabis Use Disorder Identification Test) and AUDIT (Alcohol Use Disorder Identification Test)",
+        "value": "survey"
+      }
+    ],
+    "population": "cannabis users at baseline and 3 years follow up",
+    "summary": "T1-weighted structural MRI of cannabis users scanned at baseline and at three-year follow up. Cannabis and alcohol use screening scores are provided in the participants file."
+  },
+  "prompt_version": "v1"
+}

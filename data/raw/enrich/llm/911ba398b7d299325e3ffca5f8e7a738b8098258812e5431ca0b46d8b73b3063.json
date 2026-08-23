@@ -1,0 +1,41 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:911ba398b7d299325e3ffca5f8e7a738b8098258812e5431ca0b46d8b73b3063",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "patients diagnosed with Parkinson's disease",
+        "label": "Parkinson's disease"
+      },
+      {
+        "evidence": "patients with Parkinson's disease and mild cognitive impairment",
+        "label": "mild cognitive impairment"
+      },
+      {
+        "evidence": "Parkinson's disease dementia",
+        "label": "Parkinson's disease dementia"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds004392",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "scanned with resting state fMRI",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "underwent a neurocognitive test battery",
+        "value": "behavioral"
+      }
+    ],
+    "population": "Patients diagnosed with Parkinson's disease, cognitively normal or with mild cognitive impairment or dementia",
+    "summary": "Resting state functional MRI with neurocognitive testing in Parkinson's disease patients spanning cognitively normal, mild cognitive impairment, and dementia stages, for study of functional connectivity and cognition."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,45 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:75f56f70ddd4f8eb938faf5a1761e4368ee236126ed95e62f5a94bbebb677cd1",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "focal dystonia (cervical dystonia and upper limb dystonia)",
+        "label": "cervical dystonia"
+      },
+      {
+        "evidence": "cervical dystonia and upper limb dystonia",
+        "label": "upper limb dystonia"
+      },
+      {
+        "evidence": "scans from healthy controls and patients with focal dystonia",
+        "label": "healthy controls"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds006395",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "raw T1-weighted, diffusion MRI, and functional MRI (task and resting-state) scans",
+        "value": "MRI"
+      },
+      {
+        "evidence": "diffusion MRI",
+        "value": "dMRI"
+      },
+      {
+        "evidence": "functional MRI (task and resting-state) scans",
+        "value": "fMRI"
+      }
+    ],
+    "population": "Right-handed adults aged 18 to 78 years, literate in Portuguese: patients with idiopathic focal dystonia recruited from movement disorder clinics and advertisements, plus healthy controls free of neurological or psychiatric conditions",
+    "summary": "Structural, diffusion, and functional MRI (task and resting-state) scans from healthy controls and patients with idiopathic focal dystonia, collected on a single 3 Tesla scanner and de-identified."
+  },
+  "prompt_version": "v1"
+}

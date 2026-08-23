@@ -1,0 +1,38 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:f0e4245e430025e3083f804d8ca54d3a744b579d014654da090c6ff37f407c59",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Brain Tumor",
+        "label": "Brain Tumor"
+      },
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds006318",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Magnetic Resonance Imaging of Brain Tumor",
+        "value": "MRI"
+      },
+      {
+        "evidence": "Computed Tomography of Head",
+        "value": "CT"
+      }
+    ],
+    "population": "Humans; healthy / control",
+    "summary": "Multi-sequence brain MRI together with head CT, assembled for artificial intelligence and deep learning work on brain tumor analysis, including data augmentation. Record text is largely an RTF-formatted title, author, and affiliation block."
+  },
+  "prompt_version": "v1"
+}

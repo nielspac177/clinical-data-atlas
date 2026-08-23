@@ -1,0 +1,38 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:ea848e25a1cd175ed149b834fe9fe2cdb520339f7d56316b842ee63577b1cacd",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "216 individuals with epilepsy",
+        "label": "epilepsy"
+      },
+      {
+        "evidence": "98 healthy controls",
+        "label": "healthy controls"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience",
+      "surgery"
+    ],
+    "id": "openneuro:ds007401",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "T1-weighted and FLAIR MRI",
+        "value": "MRI"
+      },
+      {
+        "evidence": "raw DWI data from 216 individuals with epilepsy",
+        "value": "dMRI"
+      }
+    ],
+    "population": "216 individuals with epilepsy and 98 healthy controls",
+    "summary": "Raw and processed diffusion MRI from people with epilepsy and healthy controls, with diffusion metric maps and parcellated structural connectomes. Identifiers align with an earlier release holding surgical details and post-surgical seizure outcomes."
+  },
+  "prompt_version": "v1"
+}

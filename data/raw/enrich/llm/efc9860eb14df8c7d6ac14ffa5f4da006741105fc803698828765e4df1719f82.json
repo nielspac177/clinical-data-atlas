@@ -1,0 +1,47 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:efc9860eb14df8c7d6ac14ffa5f4da006741105fc803698828765e4df1719f82",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "middle-aged people at risk of dementia",
+        "label": "dementia"
+      },
+      {
+        "evidence": "Alzheimer’s Risk-genes",
+        "label": "Alzheimer’s"
+      }
+    ],
+    "countries": [
+      "PL"
+    ],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds004796",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "EEG, fMRI, health and lifestyle data of middle-aged people at risk of dementia",
+        "value": "EEG"
+      },
+      {
+        "evidence": "EEG, fMRI, health and lifestyle data of middle-aged people at risk of dementia",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "Lifestyle and Neuroimaging (PEARL-Neuro) Database",
+        "value": "MRI"
+      },
+      {
+        "evidence": "Alzheimer’s Risk-genes",
+        "value": "genomics"
+      }
+    ],
+    "population": "Human; middle-aged people at risk of dementia, ages 50–63",
+    "summary": "EEG, fMRI, health and lifestyle data plus Alzheimer's risk-gene information from middle-aged Polish participants at risk of dementia, covering resting state and cognitive tasks."
+  },
+  "prompt_version": "v1"
+}

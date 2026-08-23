@@ -1,0 +1,52 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:77484ed0e69b30d5ca1d28af416f47c18c024935e775a93cca3fa254fc6d1c29",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "neurology",
+      "neuroscience",
+      "psychiatry"
+    ],
+    "id": "openneuro:ds004131",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "structural and functional magnetic resonance imaging (MRI)",
+        "value": "MRI"
+      },
+      {
+        "evidence": "functional magnetic resonance imaging (MRI)",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "diffusion tensor imaging (DTI)",
+        "value": "dMRI"
+      },
+      {
+        "evidence": "magnetoencephalography battery (MEG)",
+        "value": "MEG"
+      },
+      {
+        "evidence": "cognitive and neuropsychological functioning",
+        "value": "behavioral"
+      },
+      {
+        "evidence": "Phenotype Data",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "Human; Healthy / Control; ages 18–89",
+    "summary": "Copy of the NIMH Healthy Research Volunteer Dataset used as a BIDS external phenotype example. Contains structural and functional MRI, diffusion tensor imaging, MEG, and clinical, cognitive and mental health assessments of healthy volunteers."
+  },
+  "prompt_version": "v1"
+}

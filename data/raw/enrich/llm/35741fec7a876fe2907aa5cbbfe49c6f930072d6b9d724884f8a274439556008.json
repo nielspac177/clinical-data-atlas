@@ -1,0 +1,43 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:35741fec7a876fe2907aa5cbbfe49c6f930072d6b9d724884f8a274439556008",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "neuroscience",
+      "endocrinology_metabolism"
+    ],
+    "id": "openneuro:ds005115",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "whole-brain structure",
+        "value": "MRI"
+      },
+      {
+        "evidence": "large-scale brain network connectivity",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "daily questionnaire",
+        "value": "survey"
+      },
+      {
+        "evidence": "endocrine sampling at 7am",
+        "value": "other"
+      }
+    ],
+    "population": "One right-handed Caucasian male, aged 26, with no history of neuropsychiatric diagnosis, endocrine disorders, or prior head trauma",
+    "summary": "Dense-sampling, deep phenotyping study of one male tested daily for 30 consecutive days, pairing questionnaires and saliva and blood endocrine sampling with brain network connectivity and whole-brain structure."
+  },
+  "prompt_version": "v1"
+}

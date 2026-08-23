@@ -1,0 +1,40 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:e4da72e95844c55bf659e3a4352c1abf90daf4702585edd8addb0d4a3b232680",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "focal epilepsy",
+        "label": "focal epilepsy"
+      }
+    ],
+    "countries": [
+      "NL"
+    ],
+    "domains": [
+      "neurology",
+      "neuroscience",
+      "surgery"
+    ],
+    "id": "openneuro:ds005448",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "intracranial EEG (iEEG)",
+        "value": "iEEG"
+      },
+      {
+        "evidence": "intracranial EEG",
+        "value": "EEG"
+      },
+      {
+        "evidence": "Registry for Epilepsy Surgery Patients",
+        "value": "registry"
+      }
+    ],
+    "population": "13 epilepsy surgery patients with long-term intracranial recordings, ages 10–50",
+    "summary": "Long-term intracranial EEG recordings from 13 epilepsy surgery patients at UMC Utrecht, part of the RESPect registry; 5 recorded with electrocorticography and 8 with stereo-encephalography, organized in BIDS format."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:38b5232c7bb341d862e0f96374f8ccba6a78887f348dc9d0c4b561ce0683e490",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds005329",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "structural T1 images",
+        "value": "MRI"
+      },
+      {
+        "evidence": "raw BOLD fMRI data",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "naming to auditory definitions or to environmental sounds",
+        "value": "behavioral"
+      }
+    ],
+    "population": "Healthy participants, some excluded for technical issues or incidental findings",
+    "summary": "Auditory naming fMRI dataset testing whether ventral anterior temporal lobes support conceptual access during spoken word production. Includes raw and processed functional data, structural images, field maps, events, and SPM analysis derivatives."
+  },
+  "prompt_version": "v1"
+}

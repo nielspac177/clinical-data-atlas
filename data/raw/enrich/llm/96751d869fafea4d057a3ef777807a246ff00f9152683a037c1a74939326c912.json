@@ -1,0 +1,53 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:96751d869fafea4d057a3ef777807a246ff00f9152683a037c1a74939326c912",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience",
+      "neurology"
+    ],
+    "id": "openneuro:ds007554",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "EEG (32 channels, 10-20 system)",
+        "value": "EEG"
+      },
+      {
+        "evidence": "fNIRS (prefrontal and sensorimotor montages)",
+        "value": "fNIRS"
+      },
+      {
+        "evidence": "ECG (Delsys Trigno)",
+        "value": "ECG"
+      },
+      {
+        "evidence": "physiological (ECG and EMG)",
+        "value": "EMG"
+      },
+      {
+        "evidence": "behavioral (push-button, torque)",
+        "value": "behavioral"
+      },
+      {
+        "evidence": "Biodex torque and kinematic measures",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "Karolinska Sleepiness Scale, cognitive load ratings, demographics, handedness",
+        "value": "survey"
+      }
+    ],
+    "population": "30 right-handed healthy adults (12 males, 18 females), three sessions each",
+    "summary": "Raw BIDS multimodal recordings from healthy adults performing cognitive, motor, and combined cognitive-motor tasks across three sessions, with EEG, fNIRS, ECG, EMG, torque, push-button responses, and subjective sleepiness and cognitive load ratings."
+  },
+  "prompt_version": "v1"
+}

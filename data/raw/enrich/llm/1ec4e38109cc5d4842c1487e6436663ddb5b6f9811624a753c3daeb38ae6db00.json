@@ -1,0 +1,42 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:1ec4e38109cc5d4842c1487e6436663ddb5b6f9811624a753c3daeb38ae6db00",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "depressive symptoms in young men",
+        "label": "depressive symptoms"
+      },
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "psychiatry",
+      "neuroscience",
+      "public_health"
+    ],
+    "id": "openneuro:ds004937",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "T1 weighted MRI data",
+        "value": "MRI"
+      },
+      {
+        "evidence": "data of the CES-D Questionnaire",
+        "value": "survey"
+      },
+      {
+        "evidence": "This dataset includes demographic data",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "Young men from the general population; healthy / control",
+    "summary": "Within-subjects running intervention study in young men from the general population, with MRI at four time points, CES-D depression scores, demographics and VO2-max from a standardized walking test."
+  },
+  "prompt_version": "v1"
+}

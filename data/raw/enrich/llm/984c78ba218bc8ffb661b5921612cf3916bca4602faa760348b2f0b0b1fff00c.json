@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:984c78ba218bc8ffb661b5921612cf3916bca4602faa760348b2f0b0b1fff00c",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "6 represented moderate pain",
+        "label": "pain"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds005285",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "\"modalities\":[\"EEG\",\"eye_tracking\"]",
+        "value": "EEG"
+      },
+      {
+        "evidence": "\"modalities\":[\"EEG\",\"eye_tracking\"]",
+        "value": "eye_tracking"
+      },
+      {
+        "evidence": "participants provided pain ratings ranging from 0 to 10",
+        "value": "behavioral"
+      }
+    ],
+    "population": null,
+    "summary": "Laser stimulation at two fixed intensities delivered in 4 blocks of 40 trials, half high and half low intensity, with participants rating pain from 0 to 10 after each stimulus."
+  },
+  "prompt_version": "v1"
+}

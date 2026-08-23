@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:5383a6f2ad6ceb83b05441b81af93e68d22e26c43795088e74818e3c5fc571ab",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "100 individuals with Parkinsons disease",
+        "label": "Parkinsons disease"
+      },
+      {
+        "evidence": "49 controls",
+        "label": "control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds004584",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "EEG was recorded with a 64-channel BrainVision cap",
+        "value": "EEG"
+      }
+    ],
+    "population": "149 subjects: 100 individuals with Parkinsons disease, and 49 controls",
+    "summary": "Resting-state EEG recorded with a 64-channel cap from 149 subjects, 100 with Parkinsons disease and 49 controls, sitting in a quiet room with eyes open for two minutes."
+  },
+  "prompt_version": "v1"
+}

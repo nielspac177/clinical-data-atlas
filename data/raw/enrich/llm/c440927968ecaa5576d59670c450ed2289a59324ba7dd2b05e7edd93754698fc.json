@@ -1,0 +1,52 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:c440927968ecaa5576d59670c450ed2289a59324ba7dd2b05e7edd93754698fc",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "neurology",
+      "neuroscience",
+      "psychiatry"
+    ],
+    "id": "openneuro:ds004129",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "structural and functional magnetic resonance imaging (MRI)",
+        "value": "MRI"
+      },
+      {
+        "evidence": "functional magnetic resonance imaging (MRI)",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "diffusion tensor imaging (DTI)",
+        "value": "dMRI"
+      },
+      {
+        "evidence": "magnetoencephalography battery (MEG)",
+        "value": "MEG"
+      },
+      {
+        "evidence": "cognitive and neuropsychological functioning",
+        "value": "behavioral"
+      },
+      {
+        "evidence": "Phenotype Data",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "Human; Healthy / Control; ages 18–89",
+    "summary": "Copy of the NIMH Healthy Research Volunteer Dataset restructured to demonstrate BIDS phenotype segregation. Contains structural and functional MRI, diffusion tensor imaging, MEG, and clinical, cognitive and mental health assessments of healthy volunteers."
+  },
+  "prompt_version": "v1"
+}

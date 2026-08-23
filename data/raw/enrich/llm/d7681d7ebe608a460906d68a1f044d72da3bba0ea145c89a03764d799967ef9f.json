@@ -1,0 +1,35 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:d7681d7ebe608a460906d68a1f044d72da3bba0ea145c89a03764d799967ef9f",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "healthy controls"
+      }
+    ],
+    "countries": [
+      "GB"
+    ],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds002207",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "a 3T MRI segmentation tool",
+        "value": "MRI"
+      },
+      {
+        "evidence": "the slices used for the behavioural",
+        "value": "behavioral"
+      }
+    ],
+    "population": "7 healthy control subjects scanned at the Centre for Cognitive Neuroimaging (CCNi), Institute of Neuroscience and Psychology, University of Glasgow",
+    "summary": "Testing dataset of 3T brain MRI from healthy subjects scanned in Glasgow, distributed with defaced anatomical images plus FreeSurfer and Cerebrum segmentations, supporting a convolutional encoder-decoder method for fully volumetric brain MRI segmentation."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,38 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:9bb297bf8b4ec857545910388a9268660b486c4bbf12e51c5a0a83910cde35f1",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [
+      "CN"
+    ],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds004301",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "fMRI data collected on the 11 participants while they were listening to 672 Chinese concepts",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "high-resolution structural (T1) for each subject",
+        "value": "MRI"
+      },
+      {
+        "evidence": "each participant can fill in as much surveys",
+        "value": "survey"
+      }
+    ],
+    "population": "11 MRI participants aged 22-28 recruited from universities in Beijing, right-handed native Mandarin speakers; separate participants provided semantic feature annotations",
+    "summary": "fMRI data recorded while participants listened to Chinese concepts, with structural scans and linguistic annotations including part-of-speech tags, category, semantic feature ratings, and word and character embeddings."
+  },
+  "prompt_version": "v1"
+}

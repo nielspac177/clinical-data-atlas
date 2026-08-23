@@ -1,0 +1,40 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:b0e9a694665109292173edfc0b15641e1b0dbbfc4e916d2318c4ab5383a284af",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "healthy controls"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds004645",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "This dataset contains 7T fMRI data from 15 subjects",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "7T fMRI data from 15 subjects",
+        "value": "MRI"
+      },
+      {
+        "evidence": "continuous measurements of pulse oximetry and respiration",
+        "value": "PPG"
+      },
+      {
+        "evidence": "Physiological data is available from the majority of runs",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": "Human; healthy/control participants, ages 22–42",
+    "summary": "7T functional MRI from subjects across visual checkerboard, breath-hold and resting-state runs, with continuous pulse oximetry and respiration recordings available for most runs."
+  },
+  "prompt_version": "v1"
+}

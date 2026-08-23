@@ -1,0 +1,41 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:3b6ec334c9487308c4e30805be90bdf7eb54a163d18267ce686be41feb41b384",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Aphasia Recovery Cohort (ARC) Dataset",
+        "label": "aphasia"
+      },
+      {
+        "evidence": "s t r o k e",
+        "label": "chronic stroke"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds004884",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "\"modalities\":[\"MRI\",\"fMRI\",\"dMRI\"]",
+        "value": "MRI"
+      },
+      {
+        "evidence": "\"modalities\":[\"MRI\",\"fMRI\",\"dMRI\"]",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "\"modalities\":[\"MRI\",\"fMRI\",\"dMRI\"]",
+        "value": "dMRI"
+      }
+    ],
+    "population": "Human; individuals with chronic stroke and speech and language impairments, many scanned in multiple sessions",
+    "summary": "Imaging from individuals with chronic stroke who have speech and language impairments, including naming and resting scans; many contributed multiple sessions, supporting longitudinal study of aphasia recovery."
+  },
+  "prompt_version": "v1"
+}

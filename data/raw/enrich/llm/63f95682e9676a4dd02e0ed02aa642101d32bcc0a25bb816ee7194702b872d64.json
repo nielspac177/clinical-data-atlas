@@ -1,0 +1,31 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:63f95682e9676a4dd02e0ed02aa642101d32bcc0a25bb816ee7194702b872d64",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds002837",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "functional magnetic resonance imaging (fMRI)",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "T1-weighted anatomical MRI scan (MPRAGE)",
+        "value": "MRI"
+      },
+      {
+        "evidence": "doing the NIH Toolbox",
+        "value": "behavioral"
+      }
+    ],
+    "population": "86 human participants, ages 18–58; right-handed native English speakers with no history of neurological/psychiatric illnesses, no hearing impairments, unimpaired or corrected vision, taking no medication",
+    "summary": "Participants completed the NIH Toolbox then watched one of 10 full-length movies during fMRI, in 2-6 runs, plus a T1-weighted anatomical scan. Version 2.0 reprocessed derivatives with AFNI's afni_proc.py."
+  },
+  "prompt_version": "v1"
+}

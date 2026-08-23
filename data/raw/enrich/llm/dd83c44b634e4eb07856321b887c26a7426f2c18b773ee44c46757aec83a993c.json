@@ -1,0 +1,31 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:dd83c44b634e4eb07856321b887c26a7426f2c18b773ee44c46757aec83a993c",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds008453",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "rebuilt from local MRI NIfTI",
+        "value": "MRI"
+      },
+      {
+        "evidence": "\"modalities\":[\"MRI\",\"fMRI\",\"behavioral\"]",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "PsychoPy behavioral Excel files",
+        "value": "behavioral"
+      }
+    ],
+    "population": "Participants scanned while viewing videos; subject sub-16 excluded before BIDS organization",
+    "summary": "Raw BIDS neuroimaging and behavioral dataset on neural synchronization across videos and crowdfunding outcomes. Behavioral timing files mark phase-level events for movie, question and inter-trial periods; one subject was excluded before BIDS organization."
+  },
+  "prompt_version": "v1"
+}

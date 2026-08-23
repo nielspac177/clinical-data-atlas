@@ -1,0 +1,44 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:36ab9355a1b0d7c6724178d7b7cff477337d63fe162d95da93e64a0b4ed4ff64",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "a history of refractory epilepsy",
+        "label": "refractory epilepsy"
+      }
+    ],
+    "countries": [
+      "BE"
+    ],
+    "domains": [
+      "neurology",
+      "neuroscience",
+      "pediatrics"
+    ],
+    "id": "openneuro:ds005873",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "wearable EEG, ECG, EMG and movement data",
+        "value": "EEG"
+      },
+      {
+        "evidence": "wearable EEG, ECG, EMG and movement data",
+        "value": "ECG"
+      },
+      {
+        "evidence": "wearable EEG, ECG, EMG and movement data",
+        "value": "EMG"
+      },
+      {
+        "evidence": "recorded with the Sensor Dot device",
+        "value": "wearable"
+      }
+    ],
+    "population": "Adult and pediatric patients with a history of refractory epilepsy admitted to the Epilepsy Monitoring Unit for presurgical long-term vEEG monitoring",
+    "summary": "BIDS version of SeizeIT2: wearable EEG, ECG, EMG and movement recordings from the Sensor Dot device in adult and pediatric epilepsy patients undergoing long-term video-EEG monitoring, with seizure annotations as TSV files."
+  },
+  "prompt_version": "v1"
+}

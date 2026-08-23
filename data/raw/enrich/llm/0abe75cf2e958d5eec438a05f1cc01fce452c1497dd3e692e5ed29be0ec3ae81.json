@@ -1,0 +1,41 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:0abe75cf2e958d5eec438a05f1cc01fce452c1497dd3e692e5ed29be0ec3ae81",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Screen for Child Related Anxiety Disorders (SCARED)",
+        "label": "anxiety disorders"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "neurology",
+      "psychiatry",
+      "neuroscience",
+      "pediatrics"
+    ],
+    "id": "openneuro:ds007179",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "structural magnetic resonance imaging (sMRI)",
+        "value": "MRI"
+      },
+      {
+        "evidence": "task-based functional magnetic resonance imaging (fMRI)",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "clinical assessment",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "Youth aged 8 to 18 years, 48 participants",
+    "summary": "Structural and task-based functional MRI with clinical assessments in youth, studying neural responses to error and the impact of social context, anxiety and worry. Collected at the National Institute of Mental Health."
+  },
+  "prompt_version": "v1"
+}

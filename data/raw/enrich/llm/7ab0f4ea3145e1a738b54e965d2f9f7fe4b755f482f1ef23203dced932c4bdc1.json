@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:7ab0f4ea3145e1a738b54e965d2f9f7fe4b755f482f1ef23203dced932c4bdc1",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "participants with treatment-resistant depression (TRD)",
+        "label": "treatment-resistant depression"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "psychiatry",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds008064",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "T1-weighted anatomical MRI",
+        "value": "MRI"
+      },
+      {
+        "evidence": "Functional MRI (fMRI)",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "Diffusion-weighted imaging (DTI)",
+        "value": "dMRI"
+      }
+    ],
+    "population": "Participants with treatment-resistant depression who received rTMS combined with psychotherapy",
+    "summary": "Structural, diffusion, and functional MRI collected before and after six weeks of active or sham rTMS combined with psychotherapy in participants with treatment-resistant depression, including a goal-priming task and resting state."
+  },
+  "prompt_version": "v1"
+}

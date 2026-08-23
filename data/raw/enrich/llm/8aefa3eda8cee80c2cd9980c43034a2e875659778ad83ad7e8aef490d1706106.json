@@ -1,0 +1,41 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:8aefa3eda8cee80c2cd9980c43034a2e875659778ad83ad7e8aef490d1706106",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "children with dyslexia",
+        "label": "dyslexia"
+      },
+      {
+        "evidence": "isolated spelling deficits (SpD)",
+        "label": "isolated spelling deficits"
+      },
+      {
+        "evidence": "children with typical reading and spelling skills",
+        "label": "typical reading and spelling skills"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience",
+      "pediatrics"
+    ],
+    "id": "openneuro:ds003126",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "T1 structural images",
+        "value": "MRI"
+      },
+      {
+        "evidence": "raw 3 Tesla fMRI data",
+        "value": "fMRI"
+      }
+    ],
+    "population": "Children aged 8–10 with typical reading and spelling skills, isolated spelling deficits, or dyslexia",
+    "summary": "Raw functional and structural MRI from children reading aloud words and matched pseudohomophones, comparing typically developing readers, children with isolated spelling deficits, and children with dyslexia."
+  },
+  "prompt_version": "v1"
+}

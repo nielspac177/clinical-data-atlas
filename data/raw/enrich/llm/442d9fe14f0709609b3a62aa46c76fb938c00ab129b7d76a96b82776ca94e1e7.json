@@ -1,0 +1,39 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:442d9fe14f0709609b3a62aa46c76fb938c00ab129b7d76a96b82776ca94e1e7",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "subjective loneliness",
+        "label": "loneliness"
+      }
+    ],
+    "countries": [
+      "NL"
+    ],
+    "domains": [
+      "neuroscience",
+      "psychiatry"
+    ],
+    "id": "openneuro:ds007827",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "64-channel EEG recordings",
+        "value": "EEG"
+      },
+      {
+        "evidence": "behavioural ratings of the same stimuli on valence, arousal, and dominance",
+        "value": "behavioral"
+      },
+      {
+        "evidence": "self-report questionnaire totals",
+        "value": "survey"
+      }
+    ],
+    "population": "99 adults grouped by UCLA Loneliness Scale (UCLA-LS) score into Lonely (n = 36) and Non-Lonely (n = 63), with demographics and self-report questionnaires",
+    "summary": "Sixty-four-channel EEG during a roving oddball task with emotional face stimuli, plus behavioural valence, arousal and dominance ratings, in adults grouped as Lonely or Non-Lonely by UCLA Loneliness Scale score, with questionnaire measures."
+  },
+  "prompt_version": "v1"
+}

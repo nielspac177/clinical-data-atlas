@@ -1,0 +1,39 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:fff0ea1ed64203104a3cb6ac6e92d512b3c95d190a537ff03e3ab5d648b14ab1",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Circadian misaligned",
+        "label": "circadian misalignment"
+      },
+      {
+        "evidence": "energy balance and insulin resistance",
+        "label": "insulin resistance"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "neuroscience",
+      "endocrinology_metabolism"
+    ],
+    "id": "openneuro:ds005525",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "MRI data acquisition was performed",
+        "value": "MRI"
+      },
+      {
+        "evidence": "This dataset includes fMRI data from a clinical trial",
+        "value": "fMRI"
+      }
+    ],
+    "population": "11 participants, ages 24–46; scanned under circadian aligned and misaligned conditions",
+    "summary": "fMRI from a clinical trial of altered sleep and meal timing, comparing circadian aligned and misaligned conditions to study energy balance, insulin resistance, brain connectivity, and reward valuation of food. Each participant scanned four times."
+  },
+  "prompt_version": "v1"
+}

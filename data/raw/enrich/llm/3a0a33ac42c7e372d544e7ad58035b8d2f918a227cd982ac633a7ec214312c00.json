@@ -1,0 +1,35 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:3a0a33ac42c7e372d544e7ad58035b8d2f918a227cd982ac633a7ec214312c00",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "acquired from 10 Parkinson's disease patients",
+        "label": "Parkinson's disease"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds005906",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "de-identified fMRI and T1-weighted imaging data",
+        "value": "MRI"
+      },
+      {
+        "evidence": "Test-retest reliability of resting-state functional MRI during DBS",
+        "value": "fMRI"
+      }
+    ],
+    "population": "Parkinson's disease patients (aged 50-76 years) receiving deep brain stimulation therapy, implanted in the subthalamic nucleus or globus pallidus internus",
+    "summary": "Test-retest resting-state fMRI and T1-weighted imaging from Parkinson's disease patients receiving deep brain stimulation of the subthalamic nucleus or globus pallidus internus, with stimulation-off and stimulation-on runs, acquired at UCSF."
+  },
+  "prompt_version": "v1"
+}

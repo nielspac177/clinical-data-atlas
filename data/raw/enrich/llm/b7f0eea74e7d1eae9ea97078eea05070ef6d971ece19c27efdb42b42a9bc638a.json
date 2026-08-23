@@ -1,0 +1,40 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:b7f0eea74e7d1eae9ea97078eea05070ef6d971ece19c27efdb42b42a9bc638a",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds002385",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Combined PET MR longitudinal study",
+        "value": "PET"
+      },
+      {
+        "evidence": "MR:structural (t1w, dsi, r2prime, rest x 1)",
+        "value": "MRI"
+      },
+      {
+        "evidence": "MR:functional",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "DWI are collected",
+        "value": "dMRI"
+      }
+    ],
+    "population": "Human; Healthy / Control; PET participants aged 18 or older at visit 1, MR-only participants under 18",
+    "summary": "Longitudinal combined PET and MR study. Older participants receive raclopride and DTBZ PET alongside functional and structural MR in one day; younger participants receive MR only, including task, rest and diffusion scans."
+  },
+  "prompt_version": "v1"
+}

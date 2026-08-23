@@ -1,0 +1,40 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:d97b0f69b3ca1adf6e5c541116207f3987d2d3ec5752e756d2031893b3c89c63",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds003751",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "it contains EEG, ECG and EMG data for 40 subjects",
+        "value": "EEG"
+      },
+      {
+        "evidence": "it contains EEG, ECG and EMG data for 40 subjects",
+        "value": "ECG"
+      },
+      {
+        "evidence": "it contains EEG, ECG and EMG data for 40 subjects",
+        "value": "EMG"
+      },
+      {
+        "evidence": "A tsv file inside beh folder having entries about the feedbacks given by subject",
+        "value": "behavioral"
+      }
+    ],
+    "population": "Human; 40 healthy/control subjects, ages 19–26",
+    "summary": "EEG, ECG and EMG recordings from 40 subjects emotionally stimulated with naturalistic multimedia video stimuli, distributed with behavioural feedback files and participant metadata in a BIDS-style layout."
+  },
+  "prompt_version": "v1"
+}

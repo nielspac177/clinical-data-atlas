@@ -1,0 +1,39 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:5f2bc00a744bf83dbe80a39f2689d62a778d4d5406f9addc054882f60a70010b",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "20 healthy participants",
+        "label": "healthy controls"
+      }
+    ],
+    "countries": [
+      "GB"
+    ],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds005207",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "The data set contains nightly EEG recordings from 20 healthy participants",
+        "value": "EEG"
+      },
+      {
+        "evidence": "Some recordings are full polysomnography (PSG) measurements",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "a research project on wearable sleep monitoring",
+        "value": "wearable"
+      }
+    ],
+    "population": "20 healthy participants, most with both PSG and cEEGrid recordings from the same night",
+    "summary": "Overnight EEG from healthy participants recorded with cEEGrid ear electrodes and polysomnography in a sleep laboratory, formatted in BIDS. Alignment information between cEEGrid and PSG recordings was not saved; a best-effort aligned derivative is included."
+  },
+  "prompt_version": "v1"
+}

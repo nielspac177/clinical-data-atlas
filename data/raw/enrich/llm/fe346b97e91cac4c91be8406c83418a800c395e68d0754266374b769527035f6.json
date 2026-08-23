@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:fe346b97e91cac4c91be8406c83418a800c395e68d0754266374b769527035f6",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Epilepsy",
+        "label": "Epilepsy"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds004194",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Visual ECoG dataset",
+        "value": "iEEG"
+      },
+      {
+        "evidence": "[\"MRI\",\"iEEG\"]",
+        "value": "MRI"
+      }
+    ],
+    "population": "Human participants with epilepsy, ages 18-47",
+    "summary": "Intracranial ECoG recordings from people with epilepsy during visual stimulation tasks, with processed data and model fits from published analyses, electrode positions, and surface reconstructions."
+  },
+  "prompt_version": "v1"
+}

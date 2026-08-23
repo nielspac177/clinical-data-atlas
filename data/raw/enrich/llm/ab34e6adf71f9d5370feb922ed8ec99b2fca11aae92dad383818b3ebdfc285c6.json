@@ -1,0 +1,44 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:ab34e6adf71f9d5370feb922ed8ec99b2fca11aae92dad383818b3ebdfc285c6",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "with and without anxiety disorders",
+        "label": "Anxiety"
+      },
+      {
+        "evidence": "Anxiety, Healthy Control",
+        "label": "Healthy Control"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "psychiatry",
+      "neuroscience",
+      "pediatrics"
+    ],
+    "id": "openneuro:ds006948",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "\"modalities\":[\"MRI\",\"fMRI\",\"survey\"]",
+        "value": "MRI"
+      },
+      {
+        "evidence": "Functional MRI consisted of three runs",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "evaluation of anxiety symptoms",
+        "value": "survey"
+      }
+    ],
+    "population": "Pediatric sample with and without anxiety disorders, ages 8.1–18 (N = 84 before exclusion); data shared only for participants who consented.",
+    "summary": "Pediatric study linking subjective anxiety to brain function: resting-state and movie-watching fMRI with an anxiogenic animated stimulus, plus demographics, anxiety symptom measures, post-scan interviews and natural language processing derivatives."
+  },
+  "prompt_version": "v1"
+}

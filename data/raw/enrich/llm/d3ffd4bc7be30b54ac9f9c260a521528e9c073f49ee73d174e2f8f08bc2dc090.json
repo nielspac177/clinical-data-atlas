@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:d3ffd4bc7be30b54ac9f9c260a521528e9c073f49ee73d174e2f8f08bc2dc090",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds004021",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "MRI compatible force sensor",
+        "value": "MRI"
+      },
+      {
+        "evidence": "Resting state scan (6 min; 180 imaging volumes)",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "Behavioral data",
+        "value": "behavioral"
+      }
+    ],
+    "population": "Human; Healthy / Control; subjects scanned in two sessions on consecutive days",
+    "summary": "Imaging and behavioural data from a visuomotor rotation task run over two consecutive days, with baseline, learning and washout blocks interleaved with resting state scans, recording response time and angular error."
+  },
+  "prompt_version": "v1"
+}

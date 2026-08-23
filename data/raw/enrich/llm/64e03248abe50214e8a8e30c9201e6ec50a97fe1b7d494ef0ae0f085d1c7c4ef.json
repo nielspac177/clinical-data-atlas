@@ -1,0 +1,38 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:64e03248abe50214e8a8e30c9201e6ec50a97fe1b7d494ef0ae0f085d1c7c4ef",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "human epilepsy patients performing a visuomotor task",
+        "label": "epilepsy"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience",
+      "pediatrics"
+    ],
+    "id": "openneuro:ds005931",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Contains the raw iEEG data in .edf format",
+        "value": "iEEG"
+      },
+      {
+        "evidence": "during interictal EEG recording",
+        "value": "EEG"
+      },
+      {
+        "evidence": "the information on the timing of the finger tapping",
+        "value": "behavioral"
+      }
+    ],
+    "population": "Epilepsy patients undergoing intracranial monitoring for localization of epileptic seizures; children, ages 9–20",
+    "summary": "Interictal intracranial EEG recorded while epilepsy patients undergoing intracranial monitoring played sessions of a visuomotor speed-matching game. Raw EDF files, channel tables, and trial timing for finger tapping are included."
+  },
+  "prompt_version": "v1"
+}

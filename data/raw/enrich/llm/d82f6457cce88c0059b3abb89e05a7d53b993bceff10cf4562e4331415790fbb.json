@@ -1,0 +1,40 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:d82f6457cce88c0059b3abb89e05a7d53b993bceff10cf4562e4331415790fbb",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds003505",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "high-density EEG",
+        "value": "EEG"
+      },
+      {
+        "evidence": "structural MRI",
+        "value": "MRI"
+      },
+      {
+        "evidence": "diffusion weighted images (DWI)",
+        "value": "dMRI"
+      },
+      {
+        "evidence": "behavioral measures",
+        "value": "behavioral"
+      }
+    ],
+    "population": "20 participants, ages 20-32, healthy controls",
+    "summary": "BIDS dataset of high-density EEG visual evoked potentials recorded during face and motion discrimination tasks, with structural and diffusion MRI, multi-scale brain parcellations and structural connectomes as derivatives."
+  },
+  "prompt_version": "v1"
+}

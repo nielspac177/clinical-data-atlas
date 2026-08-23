@@ -1,0 +1,34 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:05b0dc3af1939660399721661ba0fade69ef1984c9a830c2f145b6488e723c9b",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "brain metabolism, brain aging, diabetes",
+        "label": "diabetes"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience",
+      "endocrinology_metabolism"
+    ],
+    "id": "openneuro:ds003455",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "\"modalities\":[\"MRI\",\"fMRI\"]",
+        "value": "MRI"
+      },
+      {
+        "evidence": "conducted at resting-state (rest) and while performing spatial navigation",
+        "value": "fMRI"
+      }
+    ],
+    "population": "A single human individual, scanned twice in a within-subjects design",
+    "summary": "Case study of one participant scanned on two days, with and without a ketone ester bolus after a glucose bolus, during rest, spatial navigation, and motor tasks."
+  },
+  "prompt_version": "v1"
+}

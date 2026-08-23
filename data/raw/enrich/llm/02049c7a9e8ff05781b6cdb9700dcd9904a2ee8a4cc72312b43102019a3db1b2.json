@@ -1,0 +1,48 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:02049c7a9e8ff05781b6cdb9700dcd9904a2ee8a4cc72312b43102019a3db1b2",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds006642",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Data were acquired at 3T using multiple neuroimaging modalities",
+        "value": "MRI"
+      },
+      {
+        "evidence": "\"modalities\":[\"MRI\",\"fMRI\",\"eye_tracking\",\"behavioral\"]",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "Eye-tracker calibration was performed before each run",
+        "value": "eye_tracking"
+      },
+      {
+        "evidence": "physiological, behavioural, and cognitive measures",
+        "value": "behavioral"
+      },
+      {
+        "evidence": "physiological, behavioural, and cognitive measures",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "completed questionnaires covering demographic information",
+        "value": "survey"
+      }
+    ],
+    "population": "40 participants; healthy/control; ages 30–32",
+    "summary": "Multimodal 3T neuroimaging database combining full-movie watching with eye-tracking, somatotopic, retinotopic and tonotopic mapping tasks, plus questionnaires and cognitive assessments across two scanning sessions."
+  },
+  "prompt_version": "v1"
+}

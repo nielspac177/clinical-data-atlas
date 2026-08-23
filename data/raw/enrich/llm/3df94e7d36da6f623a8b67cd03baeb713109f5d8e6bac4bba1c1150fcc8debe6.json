@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:3df94e7d36da6f623a8b67cd03baeb713109f5d8e6bac4bba1c1150fcc8debe6",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "neuroscience",
+      "pediatrics"
+    ],
+    "id": "openneuro:ds003604",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "t1 weighted images with varied resolution",
+        "value": "MRI"
+      },
+      {
+        "evidence": "we added 6 volumes to the end of the functional runs",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "A few diffusion weighted images",
+        "value": "dMRI"
+      },
+      {
+        "evidence": "remind them to respond timely",
+        "value": "behavioral"
+      }
+    ],
+    "population": "Children scanned at ages 5, 7, and 9 years old; 322 participants",
+    "summary": "Longitudinal pediatric neuroimaging dataset on language processing, with anatomical, functional, and diffusion scans across sessions plus language tasks. Documented issues include missing sessions and varying scan parameters."
+  },
+  "prompt_version": "v1"
+}

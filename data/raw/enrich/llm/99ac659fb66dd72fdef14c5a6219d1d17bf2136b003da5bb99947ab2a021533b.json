@@ -1,0 +1,38 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:99ac659fb66dd72fdef14c5a6219d1d17bf2136b003da5bb99947ab2a021533b",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy controls",
+        "label": "Healthy controls"
+      },
+      {
+        "evidence": "Osteoarthritis (OA) patients",
+        "label": "Osteoarthritis (OA)"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience",
+      "musculoskeletal"
+    ],
+    "id": "openneuro:ds000208",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "you will find the following T1 and resting state scans",
+        "value": "MRI"
+      },
+      {
+        "evidence": "T1 and resting state scans",
+        "value": "fMRI"
+      }
+    ],
+    "population": "Healthy controls and osteoarthritis patients from two placebo-controlled treatment studies, scanned before treatment",
+    "summary": "T1 and resting-state scans from healthy controls and osteoarthritis patients enrolled in placebo-controlled chronic pain trials, scanned before treatment, with demographics provided in a participants file. Studies placebo response prediction from brain connectivity."
+  },
+  "prompt_version": "v1"
+}

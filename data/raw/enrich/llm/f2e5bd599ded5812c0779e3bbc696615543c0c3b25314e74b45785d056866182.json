@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:f2e5bd599ded5812c0779e3bbc696615543c0c3b25314e74b45785d056866182",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "healthy controls"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds007463",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Very High Density Diffuse Optical Tomography (VHD-DOT)",
+        "value": "fNIRS"
+      },
+      {
+        "evidence": "include the fMRI data in NIFTI format",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "\"modalities\":[\"MRI\",\"fMRI\",\"fNIRS\"]",
+        "value": "MRI"
+      }
+    ],
+    "population": "8 healthy control participants completing functional localizer and movie-viewing tasks",
+    "summary": "Participants completed functional localizer and movie-viewing tasks in both very-high-density diffuse optical tomography and fMRI. VHD-DOT data are in SNIRF format, fMRI in NIFTI, with preprocessed fMRI in derivatives."
+  },
+  "prompt_version": "v1"
+}

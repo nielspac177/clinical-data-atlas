@@ -1,0 +1,38 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:8de6eba3a417d7769358b969979f9df18d130f23686e33cd0b10cfa7bf7d0772",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [
+      "AU"
+    ],
+    "domains": [
+      "neuroscience",
+      "neurology"
+    ],
+    "id": "openneuro:ds004169",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "multimodal neuroimaging dataset",
+        "value": "MRI"
+      },
+      {
+        "evidence": "[\"MRI\",\"fMRI\",\"dMRI\"]",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "[\"MRI\",\"fMRI\",\"dMRI\"]",
+        "value": "dMRI"
+      },
+      {
+        "evidence": "limited non-imaging phenotypic data",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "Young adult twins and siblings aged 18-30, plus adolescent twins scanned at 12 or 16 years, some rescanned four years later",
+    "summary": "Multimodal neuroimaging of young adult twins and siblings, with a test-retest subsample and adolescent twins scanned at 12 or 16 years. Includes demographics, limited phenotypic data, and FreeSurfer-derived cortical and subcortical measures."
+  },
+  "prompt_version": "v1"
+}

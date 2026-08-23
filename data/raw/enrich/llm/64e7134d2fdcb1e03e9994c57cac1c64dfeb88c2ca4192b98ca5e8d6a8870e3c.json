@@ -1,0 +1,51 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:64e7134d2fdcb1e03e9994c57cac1c64dfeb88c2ca4192b98ca5e8d6a8870e3c",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      },
+      {
+        "evidence": "PET biomarkers associated with Alzheimer's disease",
+        "label": "Alzheimer's disease"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds004856",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "structural MRI",
+        "value": "MRI"
+      },
+      {
+        "evidence": "diffusion MRI",
+        "value": "dMRI"
+      },
+      {
+        "evidence": "functional MRI",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "amyloid and tau PET imaging were performed",
+        "value": "PET"
+      },
+      {
+        "evidence": "comprehensive cognitive and psychosocial assessments",
+        "value": "behavioral"
+      }
+    ],
+    "population": "Adults across the entire adult lifespan, ranging from ages 20-90; healthy/control participants studied longitudinally over three waves",
+    "summary": "Longitudinal multi-modal neuroimaging study of the aging mind across three waves, combining structural, diffusion and functional MRI, amyloid and tau PET, and cognitive and psychosocial assessments across the adult lifespan."
+  },
+  "prompt_version": "v1"
+}

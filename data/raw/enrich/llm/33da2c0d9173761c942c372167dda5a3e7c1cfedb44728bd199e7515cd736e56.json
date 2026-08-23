@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:33da2c0d9173761c942c372167dda5a3e7c1cfedb44728bd199e7515cd736e56",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "healthy controls"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience",
+      "neurology"
+    ],
+    "id": "openneuro:ds002306",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "We measured brain activity using functional MRI",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "anat: T1-weighted structural images",
+        "value": "MRI"
+      },
+      {
+        "evidence": "performed 103 cognitive tasks",
+        "value": "behavioral"
+      }
+    ],
+    "population": "Human; Healthy / Control; six subjects",
+    "summary": "Task functional MRI dataset in which six subjects performed 103 cognitive tasks, with T1-weighted structural images, multi-band functional runs split into training and test sets, and event files listing task onsets and durations."
+  },
+  "prompt_version": "v1"
+}

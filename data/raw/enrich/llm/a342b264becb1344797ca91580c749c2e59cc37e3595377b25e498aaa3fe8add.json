@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:a342b264becb1344797ca91580c749c2e59cc37e3595377b25e498aaa3fe8add",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "ADHD Dualcontrol Dataset",
+        "label": "ADHD"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "psychiatry",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds005899",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "\"modalities\":[\"MRI\",\"fMRI\"]",
+        "value": "MRI"
+      },
+      {
+        "evidence": "Participants completed two runs of the CSST in the scanner",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "make an accurate and speedy button press in response to the pointing direction of the green arrow",
+        "value": "behavioral"
+      }
+    ],
+    "population": "Human participants completing the conditional stop-signal task in the scanner",
+    "summary": "Functional MRI dataset using a conditional stop-signal task modified to dissociate proactive from reactive control, with cue color signaling stop-signal probability and staircase-adjusted stop-signal delays across two scanner runs."
+  },
+  "prompt_version": "v1"
+}

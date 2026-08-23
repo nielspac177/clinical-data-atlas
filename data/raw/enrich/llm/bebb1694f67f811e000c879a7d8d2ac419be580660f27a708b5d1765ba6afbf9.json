@@ -1,0 +1,42 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:bebb1694f67f811e000c879a7d8d2ac419be580660f27a708b5d1765ba6afbf9",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "people with epilepsy",
+        "label": "Epilepsy"
+      },
+      {
+        "evidence": "focal cortical dysplasia (FCD) type II",
+        "label": "Focal cortical dysplasia (FCD) type II"
+      },
+      {
+        "evidence": "85 healthy controls",
+        "label": "Healthy controls"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience",
+      "surgery"
+    ],
+    "id": "openneuro:ds004199",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "MRI data from T1 and FLAIR weighted images",
+        "value": "MRI"
+      },
+      {
+        "evidence": "selected clinical features",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "85 people with epilepsy due to focal cortical dysplasia type II and 85 healthy controls",
+    "summary": "Presurgery T1 and FLAIR MRI from people with epilepsy due to focal cortical dysplasia type II and healthy controls, with manually labeled lesion masks and selected clinical features, intended for automated lesion detection."
+  },
+  "prompt_version": "v1"
+}

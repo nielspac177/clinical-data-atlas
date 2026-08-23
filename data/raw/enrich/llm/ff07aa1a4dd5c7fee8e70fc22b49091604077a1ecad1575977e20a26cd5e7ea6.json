@@ -1,0 +1,35 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:ff07aa1a4dd5c7fee8e70fc22b49091604077a1ecad1575977e20a26cd5e7ea6",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "diagnosed with Alzheimer's disease",
+        "label": "Alzheimer's disease"
+      },
+      {
+        "evidence": "diagnosed with Frontotemporal Dementia",
+        "label": "Frontotemporal Dementia"
+      }
+    ],
+    "countries": [
+      "GR"
+    ],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds004504",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "EEG resting state-closed eyes recordings",
+        "value": "EEG"
+      }
+    ],
+    "population": "88 subjects: 36 with Alzheimer's disease, 23 with frontotemporal dementia, 29 healthy controls; group mean ages 63.6–67.9 years",
+    "summary": "Resting-state eyes-closed EEG from people with Alzheimer's disease, frontotemporal dementia, and healthy subjects, recorded with 19 scalp electrodes at a hospital neurology department, with MMSE cognitive scores."
+  },
+  "prompt_version": "v1"
+}

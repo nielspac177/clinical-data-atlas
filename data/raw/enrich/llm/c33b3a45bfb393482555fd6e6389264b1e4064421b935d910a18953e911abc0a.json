@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:c33b3a45bfb393482555fd6e6389264b1e4064421b935d910a18953e911abc0a",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "healthy controls"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds002158",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "\"modalities\":[\"MRI\",\"fMRI\",\"EEG\"]",
+        "value": "MRI"
+      },
+      {
+        "evidence": "\"modalities\":[\"MRI\",\"fMRI\",\"EEG\"]",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "concurrent electroencephalography and hemodynamic recordings",
+        "value": "EEG"
+      }
+    ],
+    "population": "Human; Healthy / Control; ages 20–32",
+    "summary": "Concurrent EEG and MRI from 20 healthy volunteers reporting confidence in decisions they made or observed, used to separate decisional from postdecisional contributions to metacognition."
+  },
+  "prompt_version": "v1"
+}

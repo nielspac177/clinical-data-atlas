@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:9357b7641750b3e33817b0763644ac111622a9706c6ebbbbf5dba42c47ca8fe0",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds007629",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "EEG (BioSemi ActiveTwo, 64 channels)",
+        "value": "EEG"
+      },
+      {
+        "evidence": "Eye tracking (SR Research EyeLink 1000 Plus)",
+        "value": "eye_tracking"
+      },
+      {
+        "evidence": "Reading comprehension responses",
+        "value": "behavioral"
+      }
+    ],
+    "population": "Human; Healthy / Control; ages 18–64; one representative participant in BIDS, 44 participants in derivatives",
+    "summary": "Simultaneous EEG and eye-tracking during naturalistic reading with span-level mind-wandering annotations. One representative participant is released in BIDS format; raw and synchronized data for all participants sit in derivatives."
+  },
+  "prompt_version": "v1"
+}

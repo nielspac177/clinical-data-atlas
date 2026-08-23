@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:f8fad3a6d78cbbca6dff5cee49914450ef9612ecad19f2e860b4cd5f81c0769e",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds004532",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "EEG: Probabilistic Selection Task",
+        "value": "EEG"
+      },
+      {
+        "evidence": "Probabilistic Selection Task",
+        "value": "behavioral"
+      }
+    ],
+    "population": "Human; healthy participants aged 18-30, including a subset in a double-blind cabergoline/placebo drug study",
+    "summary": "EEG recorded during a probabilistic selection task in healthy participants, including a double-blind session with cabergoline or placebo. Data organized in BIDS, with task code in Matlab and session/drug assignment tables."
+  },
+  "prompt_version": "v1"
+}

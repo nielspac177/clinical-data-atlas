@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:9918c8b3e0709088e6beb6ae8f3ff8f33028d00360a7fcf0030de25fefb04cf5",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "healthy controls"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds002737",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "more recent T1 and T2 scans",
+        "value": "MRI"
+      },
+      {
+        "evidence": "task fMRI runs of one person",
+        "value": "fMRI"
+      }
+    ],
+    "population": "Human; Healthy / Control; one participant scanned across three sessions",
+    "summary": "Cognitive control task fMRI and anatomical scans from a single participant, comparing regular head packing against a tight-fitting and a properly-fitting head case, with notes on motion and respiratory oscillations."
+  },
+  "prompt_version": "v1"
+}

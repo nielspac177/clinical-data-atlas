@@ -1,0 +1,39 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:d774edf8566b566e37c83939199d74ec111431df9f8dee6a569967c53ac0bbc4",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Humans, Epilepsy, DBS",
+        "label": "epilepsy"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds004993",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "intracranial recordings collected by the Hamilton Lab",
+        "value": "iEEG"
+      },
+      {
+        "evidence": "We have published previously using these stimuli in EEG",
+        "value": "EEG"
+      },
+      {
+        "evidence": "\"modalities\":[\"MRI\",\"EEG\",\"iEEG\"]",
+        "value": "MRI"
+      }
+    ],
+    "population": "Human; epilepsy; ages 14–19",
+    "summary": "Sample BIDS dataset of intracranial recordings from patients listening to movie clips and TIMIT sentences, including examples of seizure-related activity and vagus nerve stimulator artifact, prepared as tutorial data for a workshop."
+  },
+  "prompt_version": "v1"
+}

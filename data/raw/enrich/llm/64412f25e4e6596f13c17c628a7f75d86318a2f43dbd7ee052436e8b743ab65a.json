@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:64412f25e4e6596f13c17c628a7f75d86318a2f43dbd7ee052436e8b743ab65a",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "healthy participants",
+        "label": "healthy participants"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds007391",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "structural (T1-weighted)",
+        "value": "MRI"
+      },
+      {
+        "evidence": "(task-based) functional BOLD MRI data",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "psychometric variables",
+        "value": "behavioral"
+      }
+    ],
+    "population": "64 healthy participants, ages 18–33",
+    "summary": "Moral Foundations MRI Collection dataset with 3T structural and task-based functional BOLD scans plus demographics and psychometric variables from healthy participants. Onsets are already adjusted for dummy scans, which remain in the BOLD files."
+  },
+  "prompt_version": "v1"
+}

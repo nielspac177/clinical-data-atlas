@@ -1,0 +1,41 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:fc1448d6b17cdcb11777804d54a32b6b49e638a69eb83e62bd287391b6044948",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "discrimination tasks in Alzheimer's disease",
+        "label": "Alzheimer's disease"
+      },
+      {
+        "evidence": "Parkinson's disease",
+        "label": "Parkinson's disease"
+      },
+      {
+        "evidence": "traumatic brain injury cohorts",
+        "label": "traumatic brain injury"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds006001",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "ex vivo Diffusion MRI",
+        "value": "MRI"
+      },
+      {
+        "evidence": "diffusion MRI tractography",
+        "value": "dMRI"
+      }
+    ],
+    "population": "Human; 7 participants; includes ex vivo brain specimens, healthy in vivo subjects, and a comatose patient with a midbrain lesion",
+    "summary": "Ex vivo and in vivo diffusion MRI of human brainstem white matter bundles, used to build and validate an automated tool that segments eight bundles and to test it across neurological disease cohorts."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,40 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:95f97072b0e9362c666d9888c2199f960159aafbebe81c44bfa51cc5ff5da160",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds005365",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "T1 weighted structural scans",
+        "value": "MRI"
+      },
+      {
+        "evidence": "Human fMRI, breathwork",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "fMRS",
+        "value": "MRS"
+      },
+      {
+        "evidence": "associated behavioral data",
+        "value": "behavioral"
+      }
+    ],
+    "population": "Human; Healthy / Control; ages 32",
+    "summary": "Multi-modal MRI of participants practicing high ventilation breathwork in the scanner, including resting-state BOLD, fMRS and T1-weighted structural scans, with associated behavioral data described in the paper."
+  },
+  "prompt_version": "v1"
+}

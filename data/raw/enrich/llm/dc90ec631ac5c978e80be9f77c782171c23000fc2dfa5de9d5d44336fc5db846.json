@@ -1,0 +1,35 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:dc90ec631ac5c978e80be9f77c782171c23000fc2dfa5de9d5d44336fc5db846",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "subjects suffered a stroke",
+        "label": "stroke"
+      }
+    ],
+    "countries": [
+      "RU"
+    ],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds003999",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "fMRI data of post-stroke patients",
+        "value": "MRI"
+      },
+      {
+        "evidence": "fMRI data of post-stroke patients",
+        "value": "fMRI"
+      }
+    ],
+    "population": "Patients who had a stroke and underwent a course of comprehensive rehabilitation",
+    "summary": "Functional MRI collected before and after a course of comprehensive rehabilitation in patients who had a stroke, at a medical and surgical centre in Moscow, Russia. Organised in BIDS format, including resting-state data."
+  },
+  "prompt_version": "v1"
+}

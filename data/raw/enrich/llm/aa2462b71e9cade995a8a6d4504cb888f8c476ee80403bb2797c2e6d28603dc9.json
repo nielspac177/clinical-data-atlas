@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:aa2462b71e9cade995a8a6d4504cb888f8c476ee80403bb2797c2e6d28603dc9",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "pain and EEG",
+        "label": "pain"
+      },
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds005280",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "pain and EEG",
+        "value": "EEG"
+      },
+      {
+        "evidence": "\"modalities\":[\"EEG\",\"eye_tracking\"]",
+        "value": "eye_tracking"
+      }
+    ],
+    "population": "Human; Healthy / Control; participants receiving fixed-intensity pain stimuli and providing pain ratings",
+    "summary": "EEG dataset in which participants received laser stimuli at fixed low and high intensities across blocks and rated the intensity of the pain after each stimulation."
+  },
+  "prompt_version": "v1"
+}

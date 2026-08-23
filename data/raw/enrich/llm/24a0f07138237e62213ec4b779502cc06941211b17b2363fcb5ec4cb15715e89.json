@@ -1,0 +1,49 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:24a0f07138237e62213ec4b779502cc06941211b17b2363fcb5ec4cb15715e89",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "69 individuals with high schizotypy (HS)",
+        "label": "high schizotypy"
+      },
+      {
+        "evidence": "72 individuals with low schizotypy",
+        "label": "low schizotypy"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience",
+      "psychiatry"
+    ],
+    "id": "openneuro:ds007694",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "structural T1-weighted imaging",
+        "value": "MRI"
+      },
+      {
+        "evidence": "resting-state fMRI",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "proton magnetic resonance spectroscopy of the left hippocampus",
+        "value": "MRS"
+      },
+      {
+        "evidence": "16S ribosomal RNA gene sequencing",
+        "value": "genomics"
+      },
+      {
+        "evidence": "clinical and cognitive testing",
+        "value": "behavioral"
+      }
+    ],
+    "population": "142 healthy participants recruited from the general population, ages 18–25; MRI data available for 139",
+    "summary": "Cross-sectional study of healthy adults with high or low schizotypy combining clinical and cognitive testing, multimodal MRI including resting-state fMRI, hippocampal spectroscopy and arterial spin labeling, and gut microbiota sequencing."
+  },
+  "prompt_version": "v1"
+}

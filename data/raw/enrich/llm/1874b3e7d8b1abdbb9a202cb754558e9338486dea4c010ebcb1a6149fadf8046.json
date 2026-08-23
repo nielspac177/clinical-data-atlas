@@ -1,0 +1,31 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:1874b3e7d8b1abdbb9a202cb754558e9338486dea4c010ebcb1a6149fadf8046",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds002000",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "the raw MRI files can be found in the root directory",
+        "value": "MRI"
+      },
+      {
+        "evidence": "\"modalities\":[\"MRI\",\"fMRI\",\"EEG\"]",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "the preprocessed EEG data can be found in the /sourcedata/ subdirectory",
+        "value": "EEG"
+      }
+    ],
+    "population": null,
+    "summary": "Combined MRI and EEG data accompanying a study relating alpha/beta power decreases to the fidelity of stimulus-specific information. Raw MRI sits in the root directory, preprocessed EEG in sourcedata; structural MRIs were defaced."
+  },
+  "prompt_version": "v1"
+}

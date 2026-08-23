@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:285ea679d86699f8532c5568f4ff97b8461ce885641a15345e28f96b6ee2916a",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "diagnosed with endometriosis",
+        "label": "endometriosis"
+      },
+      {
+        "evidence": "\"conditions\":[\"healthy controls\",\"endometriosis\"]",
+        "label": "healthy controls"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience",
+      "neurology",
+      "psychiatry",
+      "obstetrics_gynecology",
+      "endocrinology_metabolism"
+    ],
+    "id": "openneuro:ds006491",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "NeuroCycle+ MRI Healthy / Control",
+        "value": "MRI"
+      }
+    ],
+    "population": "Four individuals: a female with endometriosis, a female with a typical cycle, a female using oral contraceptives, and a male",
+    "summary": "Dense-sampling, deep phenotyping MRI study of how sex hormone variation affects large-scale brain structure over five weeks in four individuals: one with endometriosis, one with a typical cycle, one on oral contraceptives, and one male."
+  },
+  "prompt_version": "v1"
+}

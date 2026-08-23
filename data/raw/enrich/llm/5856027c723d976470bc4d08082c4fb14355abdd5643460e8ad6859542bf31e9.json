@@ -1,0 +1,27 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:5856027c723d976470bc4d08082c4fb14355abdd5643460e8ad6859542bf31e9",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds006182",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "--denoise-method dwidenoise",
+        "value": "MRI"
+      },
+      {
+        "evidence": "--denoise-method dwidenoise",
+        "value": "dMRI"
+      }
+    ],
+    "population": null,
+    "summary": "QSIPrep preprocessing derivatives for the PAFIN dataset, generated with a documented qsiprep command specifying dwidenoise denoising, sessionwise anatomical reference, 3dSHORE head motion correction, and DRBUDDI distortion correction."
+  },
+  "prompt_version": "v1"
+}

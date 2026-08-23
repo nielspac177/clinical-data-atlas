@@ -1,0 +1,49 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:e21bc2e875c062086bd956a7c5dc9b53505765f84acbf0d9035f3cbae265a407",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Parkinson s Disease (PD)",
+        "label": "Parkinson's disease (MPTP mouse model)"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds005402",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "\"modalities\":[\"MRI\",\"fMRI\",\"dMRI\",\"SPECT\",\"pathology\",\"behavioral\"]",
+        "value": "MRI"
+      },
+      {
+        "evidence": "\"modalities\":[\"MRI\",\"fMRI\",\"dMRI\",\"SPECT\",\"pathology\",\"behavioral\"]",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "\"modalities\":[\"MRI\",\"fMRI\",\"dMRI\",\"SPECT\",\"pathology\",\"behavioral\"]",
+        "value": "dMRI"
+      },
+      {
+        "evidence": "dopamine transporter nuclear imaging (DAT-SPECT)",
+        "value": "SPECT"
+      },
+      {
+        "evidence": "\"modalities\":[\"MRI\",\"fMRI\",\"dMRI\",\"SPECT\",\"pathology\",\"behavioral\"]",
+        "value": "pathology"
+      },
+      {
+        "evidence": "behavioural measurements were performed by using open field, rotarod, grip test, gait analysis and fear conditioning",
+        "value": "behavioral"
+      }
+    ],
+    "population": "Mice; MPTP Parkinson's disease model; 34 animals in four experimental groups (compound or control diet, MPTP or vehicle injection)",
+    "summary": "Mouse dataset from the MPTP Parkinson's disease model testing a ROS-redox modulating compound, combining behavioural testing, DAT-SPECT and structural and functional brain imaging across four experimental groups."
+  },
+  "prompt_version": "v1"
+}

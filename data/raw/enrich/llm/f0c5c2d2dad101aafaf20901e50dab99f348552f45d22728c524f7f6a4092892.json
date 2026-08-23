@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:f0c5c2d2dad101aafaf20901e50dab99f348552f45d22728c524f7f6a4092892",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "8 epilepsy patients implanted with responsive neurostimulation (RNS) devices",
+        "label": "epilepsy"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds007095",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "long-term intracranial electroencephalography (iEEG) dataset",
+        "value": "iEEG"
+      },
+      {
+        "evidence": "iEEG data recorded from bilateral epileptic lesion areas",
+        "value": "EEG"
+      }
+    ],
+    "population": "Human; epilepsy patients implanted with responsive neurostimulation devices; ages 24–55",
+    "summary": "Long-term intracranial EEG recorded from epilepsy patients with responsive neurostimulation implants, with 90-second dual-channel segments around each stimulation, stimulation markers and parameters, stored in BIDS format on OpenNeuro."
+  },
+  "prompt_version": "v1"
+}

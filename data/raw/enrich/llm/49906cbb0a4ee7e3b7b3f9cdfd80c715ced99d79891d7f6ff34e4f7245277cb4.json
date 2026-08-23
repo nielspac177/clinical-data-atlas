@@ -1,0 +1,35 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:49906cbb0a4ee7e3b7b3f9cdfd80c715ced99d79891d7f6ff34e4f7245277cb4",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "25 Parkinson patients and 25 matched controls",
+        "label": "Parkinson's"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds003490",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "EEG: 3-Stim Auditory Oddball and Rest in Parkinson's",
+        "value": "EEG"
+      },
+      {
+        "evidence": "acceleromter taped to their most tremor affected hand",
+        "value": "wearable"
+      }
+    ],
+    "population": "25 Parkinson patients and 25 matched controls, ages 48-84",
+    "summary": "EEG recorded during a three-stimulus auditory oddball task and at rest in Parkinson patients and matched controls, with hand accelerometry; patients attended twice, on or off medication."
+  },
+  "prompt_version": "v1"
+}

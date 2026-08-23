@@ -1,0 +1,31 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:9da7df6be11b90b8646ff28b32b6a084d34cbd4ae548322dbea7f3bc91fe5760",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds004097",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "ABCD-BIDS MRI processing pipeline",
+        "value": "MRI"
+      },
+      {
+        "evidence": "\"modalities\":[\"MRI\",\"fMRI\",\"dMRI\"]",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "\"modalities\":[\"MRI\",\"fMRI\",\"dMRI\"]",
+        "value": "dMRI"
+      }
+    ],
+    "population": "8 participants, each with 5 sessions spaced 1 week apart; task-based data excluded for one participant",
+    "summary": "An accelerated adult equivalent of the ABCD Study neuroimaging protocol, with five sessions per participant spaced one week apart, in BIDS format plus derivatives from the ABCD-BIDS processing pipeline."
+  },
+  "prompt_version": "v1"
+}

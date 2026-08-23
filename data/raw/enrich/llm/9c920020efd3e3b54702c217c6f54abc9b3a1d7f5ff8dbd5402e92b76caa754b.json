@@ -1,0 +1,35 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:9c920020efd3e3b54702c217c6f54abc9b3a1d7f5ff8dbd5402e92b76caa754b",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "participants with Essential Tremor",
+        "label": "Essential Tremor"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds008336",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "This dataset contains structural MRI",
+        "value": "MRI"
+      },
+      {
+        "evidence": "diffusion-weighted MRI",
+        "value": "dMRI"
+      }
+    ],
+    "population": "Participants with essential tremor, ages 39–86",
+    "summary": "BIDS-organized structural and diffusion MRI from participants with essential tremor, including T1-weighted MPRAGE, T2-FLAIR, white-matter-nulled and diffusion scans on a Siemens 3 Tesla scanner. Anatomical images were defaced."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,42 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:3427bc18d2ad296ec913a4597767ce68afce31be1d9a8eab7691310c73e14981",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      },
+      {
+        "evidence": "Sleep scoring in mice, variability between labs",
+        "label": "sleep"
+      }
+    ],
+    "countries": [
+      "IT",
+      "DK",
+      "CH",
+      "FR"
+    ],
+    "domains": [
+      "neuroscience",
+      "neurology"
+    ],
+    "id": "openneuro:ds006366",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "EEG recordings with sleep scores from 92 healthy mice",
+        "value": "EEG"
+      },
+      {
+        "evidence": "at least one EEG and one EMG channel",
+        "value": "EMG"
+      }
+    ],
+    "population": "92 healthy mice from five laboratories, recorded in dark and light phases",
+    "summary": "EEG and EMG recordings with expert sleep scores from healthy mice, collected at five laboratories to study scoring variability between labs. BIDS-formatted, stored as EDF, downsampled, with four-second scoring epochs."
+  },
+  "prompt_version": "v1"
+}

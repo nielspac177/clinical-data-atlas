@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:f717326f47f92c94c8ec09223df866b6be3181d0bfd2f47a1ea47ae4b38f934b",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds002550",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "contains MEG data in BIDS format",
+        "value": "MEG"
+      },
+      {
+        "evidence": "contains T1 MRI of the participant",
+        "value": "MRI"
+      },
+      {
+        "evidence": "behavioral task scripts",
+        "value": "behavioral"
+      }
+    ],
+    "population": "Human; Healthy / Control",
+    "summary": "MEG recordings across two sessions with T1 anatomical MRI and behavioral data, from a study of selection and maintenance of information during working memory. Re-uploaded from an earlier accession for privacy reasons."
+  },
+  "prompt_version": "v1"
+}

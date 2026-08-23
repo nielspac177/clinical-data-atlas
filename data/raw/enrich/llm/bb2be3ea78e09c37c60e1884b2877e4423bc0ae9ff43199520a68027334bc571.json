@@ -1,0 +1,34 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:bb2be3ea78e09c37c60e1884b2877e4423bc0ae9ff43199520a68027334bc571",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Human reaction times and fatigue.",
+        "label": "fatigue"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds004118",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "64-channel Biosemi EEG headset",
+        "value": "EEG"
+      },
+      {
+        "evidence": "driving performance at the calibration level",
+        "value": "behavioral"
+      }
+    ],
+    "population": "Human; 156 participants recorded at three sites",
+    "summary": "Short calibration drives in a simulator recorded with EEG at three sites, providing non-fatigued baseline data for driver performance prediction algorithms used across the wider fatigue studies."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,27 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:ecd0f2ea603d30feb3b73426d506b15c71de55e71ed4595c54998a049cfae2fd",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "other"
+    ],
+    "id": "physionet:rad-eval-x",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "the corresponding X-ray image",
+        "value": "xray"
+      },
+      {
+        "evidence": "candidate radiology reports",
+        "value": "clinical_notes"
+      }
+    ],
+    "population": null,
+    "summary": "Radiologist annotations of errors in automatically generated chest X-ray reports, covering eight error categories and marking clinically significant versus insignificant errors, built to compare automated metrics against human scoring."
+  },
+  "prompt_version": "v1"
+}

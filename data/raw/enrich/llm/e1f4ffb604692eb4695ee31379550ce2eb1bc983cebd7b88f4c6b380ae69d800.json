@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:e1f4ffb604692eb4695ee31379550ce2eb1bc983cebd7b88f4c6b380ae69d800",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Patients with Post-Stroke Anomia",
+        "label": "Post-Stroke Anomia"
+      },
+      {
+        "evidence": "post-stroke patients with chronic anomia",
+        "label": "stroke"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds007315",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "This dataset includes EEG recordings from two post-stroke patients",
+        "value": "EEG"
+      },
+      {
+        "evidence": "Behavioral and EEG data were collected",
+        "value": "behavioral"
+      }
+    ],
+    "population": "Human; ages 38–54",
+    "summary": "EEG and picture-naming behavioral data from two patients with chronic post-stroke anomia in an 8-week individualized tACS intervention, with recordings across intervention weeks and follow-ups in tACS and no-tACS conditions."
+  },
+  "prompt_version": "v1"
+}

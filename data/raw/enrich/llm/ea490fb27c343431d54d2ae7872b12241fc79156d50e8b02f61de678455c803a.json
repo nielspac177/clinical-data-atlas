@@ -1,0 +1,31 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:ea490fb27c343431d54d2ae7872b12241fc79156d50e8b02f61de678455c803a",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds000031",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "EchoTime and RepetitionTime",
+        "value": "MRI"
+      },
+      {
+        "evidence": "Resting fmri",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "\"modalities\":[\"MRI\",\"fMRI\",\"dMRI\"]",
+        "value": "dMRI"
+      }
+    ],
+    "population": "1 participant, age 46, scanned repeatedly across many sessions",
+    "summary": "BIDS-converted version of the MyConnectome dataset: repeated scanning of a single individual across many sessions, including resting-state and task scans, diffusion imaging, follow-up sessions, and a mean field map."
+  },
+  "prompt_version": "v1"
+}

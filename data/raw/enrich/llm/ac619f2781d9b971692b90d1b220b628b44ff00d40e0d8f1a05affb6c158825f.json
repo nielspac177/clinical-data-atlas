@@ -1,0 +1,35 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:ac619f2781d9b971692b90d1b220b628b44ff00d40e0d8f1a05affb6c158825f",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "epilepsy monitoring unit",
+        "label": "epilepsy"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds004473",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "stereoelectroencephalography data",
+        "value": "iEEG"
+      },
+      {
+        "evidence": "forced two-choice response task",
+        "value": "behavioral"
+      }
+    ],
+    "population": "Patients in an epilepsy monitoring unit",
+    "summary": "Stereo-EEG recordings from patients in an epilepsy monitoring unit performing a forced two-choice response task, shared in BIDS format and used to study movement-related oscillations."
+  },
+  "prompt_version": "v1"
+}

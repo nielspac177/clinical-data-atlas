@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:778f4336d3268b93e38bb16a3721ed01a1c3fdbc55e8ad2c0e666b7208b7b25d",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds004604",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "a standard T1w image was acquired for each subject",
+        "value": "MRI"
+      },
+      {
+        "evidence": "each subject underwent an fMRI scan with blocs of CO2 inhalation challenges",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "breath CO2 was recorded using a capnograph",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": "Human; Healthy / Control; ages 21–67; fifty healthy adult subjects with no prior history of neurological or psychiatric disorder",
+    "summary": "Normative dataset for cerebrovascular reactivity mapping in healthy adults: T1-weighted anatomy, fMRI with CO2 inhalation challenges, and capnograph breath CO2, plus fMRIPrep and CVRmap derivatives."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,50 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:28e06f1e08d4a81d65647fda94746390da683d3abd80286f8362cf594a9054f8",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [
+      "DE"
+    ],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds005795",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "combined fMRI/EEG experiment",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "combined fMRI/EEG experiment",
+        "value": "EEG"
+      },
+      {
+        "evidence": "T1 weighted whole-brain anatomical MR scan",
+        "value": "MRI"
+      },
+      {
+        "evidence": "The EEG files contain 63 head channels, ECG",
+        "value": "ECG"
+      },
+      {
+        "evidence": "facial EMG",
+        "value": "EMG"
+      },
+      {
+        "evidence": "respiration and finger-pulse data",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": "Healthy/control participants, ages 18-36, who gave written informed consent",
+    "summary": "Combined fMRI/EEG dataset from an auditory category learning and resting-state study, including EEG with ECG, EOG, facial EMG and skin conductance, respiration and finger-pulse recordings, and T1- and PD-weighted anatomical scans."
+  },
+  "prompt_version": "v1"
+}

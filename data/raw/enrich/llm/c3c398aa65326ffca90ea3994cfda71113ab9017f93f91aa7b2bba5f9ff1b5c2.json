@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:c3c398aa65326ffca90ea3994cfda71113ab9017f93f91aa7b2bba5f9ff1b5c2",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "seven healthy adult participants",
+        "label": "healthy adults"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds007788",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "60-channel EEG",
+        "value": "EEG"
+      },
+      {
+        "evidence": "4-channel EOG",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "motion data from two IMU sensors",
+        "value": "wearable"
+      }
+    ],
+    "population": "7 healthy adults (4 male, 3 female), ages 20–30 years; mean = 24.3, SD = 3.8",
+    "summary": "Longitudinal brain-machine interface study in which healthy adults used motor imagery to control a lower-limb exoskeleton, recording EEG, EOG, IMU motion and exoskeleton control signals across nine sessions per participant."
+  },
+  "prompt_version": "v1"
+}

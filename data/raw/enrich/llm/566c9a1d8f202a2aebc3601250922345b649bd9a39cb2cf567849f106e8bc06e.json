@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:566c9a1d8f202a2aebc3601250922345b649bd9a39cb2cf567849f106e8bc06e",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "healthy / control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds005625",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Anatomical: T1w image (defaced)",
+        "value": "MRI"
+      },
+      {
+        "evidence": "A standard 6 minutes resting-state scan",
+        "value": "fMRI"
+      }
+    ],
+    "population": "One healthy/control human participant, age 47",
+    "summary": "Single-participant anatomical and resting-state functional MRI dataset with fMRIPrep, AROMA and connectomix derivatives, created to test features of the connectomix software."
+  },
+  "prompt_version": "v1"
+}

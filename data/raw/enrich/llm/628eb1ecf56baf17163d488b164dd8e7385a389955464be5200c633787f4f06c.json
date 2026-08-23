@@ -1,0 +1,38 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:628eb1ecf56baf17163d488b164dd8e7385a389955464be5200c633787f4f06c",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "no history of cardiovascular events, such as stroke or myocardial infarction",
+        "label": "stroke"
+      },
+      {
+        "evidence": "no history of cardiovascular events, such as stroke or myocardial infarction",
+        "label": "myocardial infarction"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience",
+      "neurology",
+      "cardiology"
+    ],
+    "id": "openneuro:ds003763",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "The dataset contains fMRI data from a heartbeat detection task",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "according to structural MRI",
+        "value": "MRI"
+      }
+    ],
+    "population": "Human; 50 participants aged 40–65 years with no history of cardiovascular events and no severe white matter hyperintensities, plus 12 young healthy adults aged 18–24 years",
+    "summary": "fMRI during a heartbeat detection interoception task in middle-aged adults screened to exclude stroke, myocardial infarction and severe white matter hyperintensities, plus young adults; includes stimulus scripts and participant age, sex and self-reported conditions."
+  },
+  "prompt_version": "v1"
+}

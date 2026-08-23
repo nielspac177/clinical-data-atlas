@@ -1,1177 +1,285 @@
-# Monthly refresh 2026-08-23: +0 new, ~779 changed, -0 removed
+# Monthly refresh 2026-08-23: +1 new, ~1518 changed, -0 removed
 
-**+0 new, ~779 changed, -0 removed, 1876 unchanged**
+**+1 new, ~1518 changed, -0 removed, 1137 unchanged**
 
 ## Sources
 
 | source | status | listed | written | unchanged | removed | seconds | error |
 |---|---|---|---|---|---|---|---|
-| gdc | ok | 93 | 0 | 93 | 0 | 0.36 |  |
-| openneuro | unselected | 0 | 0 | 0 | 0 | 0.00 |  |
-| physionet | ok | 532 | 0 | 532 | 0 | 7.18 |  |
-| tcia | ok | 241 | 2 | 240 | 0 | 16.65 |  |
+| gdc | ok | 93 | 0 | 93 | 0 | 0.58 |  |
+| openneuro | ok | 1859 | 1 | 1858 | 0 | 85.80 |  |
+| physionet | ok | 532 | 0 | 532 | 0 | 7.71 |  |
+| tcia | ok | 241 | 0 | 241 | 0 | 14.90 |  |
 
 ## Failures
 
 none
 
-## Added (0)
+## Added (1)
 
-none
+- `openneuro:ds008695` — Multi-b-value longitudinal test-retest diffusion MRI brain dataset — https://openneuro.org/datasets/ds008695
 
 ## Removed (0)
 
 none
 
-## Changed (779)
+## Changed (1518)
 
-- `gdc:ALCHEMIST-ALCH` — Adjuvant Lung Cancer Enrichment Marker Identification and Sequencing Trial (ALCHEMIST-ALCH)
+- `openneuro:ds000002` — Classification learning
   - `/provenance/enrichment/fields/summary`: `null` → `llm`
   - `/provenance/enrichment/method`: `rules` → `rules+llm`
   - `/provenance/enrichment/model`: `null` → `opus`
   - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Adjuvant Lung Cancer Enrichment Marker Identification and Sequencing Trial: ALCHEMIST project in the NCI Genomic Data Co…` → `Genomic and transcriptomic data from the ALCHEMIST adjuvant lung cancer trial: WXS, WGS, RNA-Seq and miRNA-Seq reads wit…`
-- `gdc:APOLLO-BRCA-1` — Proteogenomic analysis of tumors from young women with breast cancer (APOLLO-BRCA-1)
-  - `/population`: `null` → `Young women with breast cancer`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
+  - `/summary`: `This dataset was obtained from the OpenfMRI project (http://www.openfmri.org). Accession #: ds002 Description: Classific…` → `OpenfMRI dataset of adults performing deterministic and probabilistic classification learning tasks with a mixed event-r…`
+- `openneuro:ds000005` — Mixed-gambles task
   - `/provenance/enrichment/fields/summary`: `null` → `llm`
   - `/provenance/enrichment/method`: `rules` → `rules+llm`
   - `/provenance/enrichment/model`: `null` → `opus`
   - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Proteogenomic analysis of tumors from young women with breast cancer: APOLLO project in the NCI Genomic Data Commons wit…` → `APOLLO study of tumors from young women with breast cancer, providing sequencing reads, transcriptome profiling and stru…`
-- `gdc:APOLLO-LUAD` — APOLLO1: Proteogenomic characterization of lung adenocarcinoma (APOLLO-LUAD)
+  - `/summary`: `This dataset was obtained from the OpenfMRI project (http://www.openfmri.org). Accession #: ds005 Description: Mixed-gam…` → `OpenfMRI dataset of adults performing a mixed-gambles task, collected for a study of loss aversion in decision-making un…`
+- `openneuro:ds000006` — ds000006
   - `/provenance/enrichment/fields/summary`: `null` → `llm`
   - `/provenance/enrichment/method`: `rules` → `rules+llm`
   - `/provenance/enrichment/model`: `null` → `opus`
   - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `APOLLO1: Proteogenomic characterization of lung adenocarcinoma: APOLLO project in the NCI Genomic Data Commons with 87 c…` → `APOLLO1 characterization of lung adenocarcinoma from bronchus and lung, with RNA-Seq and WGS sequencing reads, simple nu…`
-- `gdc:APOLLO-OV` — APOLLO2: Proteogenomic characterization of ovarian serous cystadenocarcinoma (APOLLO-OV)
-  - `/conditions`: `[{"label": "epithelial neoplasms, nos", "mesh_id": null}]` → `[{"label": "epithelial neoplasms, nos", "mesh_id": null}, {"label": "ovarian serous cystadenocarcinoma", "mesh_id": null…`
-  - `/provenance/enrichment/fields/conditions`: `null` → `llm`
+  - `/summary`: `This dataset was obtained from the OpenfMRI project (http://www.openfmri.org). Accession #: ds006A Description: Living-n…` → `OpenfMRI dataset of adults making living-nonliving decisions about plain or mirror-reversed text, released into the publ…`
+- `openneuro:ds000007` — Stop-signal task with spoken & manual responses
   - `/provenance/enrichment/fields/summary`: `null` → `llm`
   - `/provenance/enrichment/method`: `rules` → `rules+llm`
   - `/provenance/enrichment/model`: `null` → `opus`
   - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `APOLLO2: Proteogenomic characterization of ovarian serous cystadenocarcinoma: APOLLO project in the NCI Genomic Data Com…` → `APOLLO2 characterization of ovarian serous cystadenocarcinoma from ovary, retroperitoneum and peritoneum, with WGS and R…`
-- `gdc:BEATAML1.0-COHORT` — Functional Genomic Landscape of Acute Myeloid Leukemia (BEATAML1.0-COHORT)
-  - `/conditions`: `[{"label": "myeloid leukemias", "mesh_id": null}, {"label": "leukemias, nos", "mesh_id": null}, {"label": "unknown", "me…` → `[{"label": "myeloid leukemias", "mesh_id": null}, {"label": "leukemias, nos", "mesh_id": null}, {"label": "unknown", "me…`
-  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
+  - `/summary`: `This dataset was obtained from the OpenfMRI project (http://www.openfmri.org). Accession #: ds007 Description: Stop-sign…` → `OpenfMRI dataset of adults performing stop-signal tasks with spoken and manual responses, collected for a study of neura…`
+- `openneuro:ds000009` — The generality of self-control
   - `/provenance/enrichment/fields/summary`: `null` → `llm`
   - `/provenance/enrichment/method`: `rules` → `rules+llm`
   - `/provenance/enrichment/model`: `null` → `opus`
   - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Functional Genomic Landscape of Acute Myeloid Leukemia: BEATAML1.0 project in the NCI Genomic Data Commons with 826 case…` → `Beat AML functional genomic landscape of acute myeloid leukemia and related hematopoietic neoplasms, with WXS, targeted …`
-- `gdc:BEATAML1.0-CRENOLANIB` — Clinical Resistance to Crenolanib in Acute Myeloid Leukemia Due to Diverse Molecular Mechanisms (BEATAML1.0-CRENOLANIB)
-  - `/conditions`: `[{"label": "myeloid leukemias", "mesh_id": null}, {"label": "leukemia", "mesh_id": "D007938"}]` → `[{"label": "myeloid leukemias", "mesh_id": null}, {"label": "leukemia", "mesh_id": "D007938"}, {"label": "Acute Myeloid …`
-  - `/population`: `null` → `Acute myeloid leukemia cases with clinical resistance to crenolanib`
-  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
+  - `/summary`: `This dataset was obtained from the OpenfMRI project (http://www.openfmri.org). Accession #: ds009 Description: The Gener…` → `OpenfMRI dataset on the generality of self-control, with adults completing balloon analog risk, discounting, emotional r…`
+- `openneuro:ds000011` — Classification learning and tone-counting
   - `/provenance/enrichment/fields/summary`: `null` → `llm`
   - `/provenance/enrichment/method`: `rules` → `rules+llm`
   - `/provenance/enrichment/model`: `null` → `opus`
   - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Clinical Resistance to Crenolanib in Acute Myeloid Leukemia Due to Diverse Molecular Mechanisms: BEATAML1.0 project in t…` → `Beat AML study of clinical resistance to crenolanib in acute myeloid leukemia due to diverse molecular mechanisms, provi…`
-- `gdc:CCDI-MCI` — Molecular Characterization Initiative (MCI) (CCDI-MCI)
+  - `/summary`: `This dataset was obtained from the OpenfMRI project (http://www.openfmri.org). Accession #: ds011 Description: Classific…` → `Task fMRI dataset from the OpenfMRI project on classification learning, with single-task and dual-task weather predictio…`
+- `openneuro:ds000030` — UCLA Consortium for Neuropsychiatric Phenomics LA5c Study
+  - `/modalities`: `["MRI", "fMRI", "dMRI"]` → `["MRI", "fMRI", "dMRI", "physiological_signals"]`
+  - `/provenance/enrichment/fields/modalities`: `null` → `llm`
   - `/provenance/enrichment/fields/summary`: `null` → `llm`
   - `/provenance/enrichment/method`: `rules` → `rules+llm`
   - `/provenance/enrichment/model`: `null` → `opus`
   - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Molecular Characterization Initiative (MCI): CCDI project in the NCI Genomic Data Commons with 3076 cases; primary sites…` → `Molecular Characterization Initiative covering tumors across many primary sites, including brain, spinal cord, endocrine…`
-- `gdc:CCG-CUPP` — Center for Cancer Genomics (CCG) Cancers of Unknown Primary Project (CUPP) (CCG-CUPP)
-  - `/population`: `null` → `Cases with cancers of unknown primary`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-- `gdc:CDDP_EAGLE-1` — CDDP Integrative Analysis of Lung Adenocarcinoma (Phase 2) (CDDP_EAGLE-1)
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `CDDP Integrative Analysis of Lung Adenocarcinoma (Phase 2): CDDP_EAGLE project in the NCI Genomic Data Commons with 50 c…` → `Integrative molecular study of lung adenocarcinoma (phase 2, CDDP_EAGLE), combining whole-exome, whole-genome and RNA se…`
-- `gdc:CGCI-HTMCP-CC` — HIV+ Tumor Molecular Characterization Project - Cervical Cancer (CGCI-HTMCP-CC)
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `HIV+ Tumor Molecular Characterization Project - Cervical Cancer: CGCI project in the NCI Genomic Data Commons with 212 c…` → `Molecular characterization of cervical cancer in HIV-positive patients, with targeted and whole-genome sequencing, RNA-S…`
-- `gdc:CGCI-HTMCP-DLBCL` — HIV+ Tumor Molecular Characterization Project - Diffuse Large B-Cell Lymphoma (CGCI-HTMCP-DLBCL)
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `HIV+ Tumor Molecular Characterization Project - Diffuse Large B-Cell Lymphoma: CGCI project in the NCI Genomic Data Comm…` → `Molecular characterization of diffuse large B-cell lymphoma in HIV-positive patients, using whole-genome sequencing, RNA…`
-- `gdc:CGCI-HTMCP-LC` — HIV+ Tumor Molecular Characterization Project - Lung Cancer (CGCI-HTMCP-LC)
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `HIV+ Tumor Molecular Characterization Project - Lung Cancer: CGCI project in the NCI Genomic Data Commons with 39 cases;…` → `Molecular characterization of lung cancer in HIV-positive patients, with whole-genome sequencing, RNA-Seq, miRNA-Seq, co…`
-- `gdc:CMI-ASC` — Count Me In (CMI): The Angiosarcoma (ASC) Project (CMI-ASC)
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Count Me In (CMI): The Angiosarcoma (ASC) Project: CMI project in the NCI Genomic Data Commons with 36 cases; primary si…` → `Patient-partnered Count Me In angiosarcoma project covering tumors at many sites including lung, breast, heart, skin and…`
-- `gdc:CMI-MBC` — Count Me In (CMI): The Metastatic Breast Cancer (MBC) Project (CMI-MBC)
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Count Me In (CMI): The Metastatic Breast Cancer (MBC) Project: CMI project in the NCI Genomic Data Commons with 200 case…` → `Patient-partnered Count Me In metastatic breast cancer project, providing whole-exome sequencing, RNA-Seq, simple nucleo…`
-- `gdc:CMI-MPC` — Count Me In (CMI): The Metastatic Prostate Cancer (MPC) Project (CMI-MPC)
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Count Me In (CMI): The Metastatic Prostate Cancer (MPC) Project: CMI project in the NCI Genomic Data Commons with 63 cas…` → `Patient-partnered Count Me In metastatic prostate cancer project, sampling prostate gland and lymph nodes, with whole-ex…`
-- `gdc:CPTAC-2` — CPTAC-Breast, Colon, Ovary (CPTAC-2)
-  - `/conditions`: `[{"label": "cptac-breast, colon, ovary", "mesh_id": null}]` → `[{"label": "cptac-breast, colon, ovary", "mesh_id": null}, {"label": "Cystic, Mucinous and Serous Neoplasms", "mesh_id":…`
-  - `/provenance/enrichment/fields/conditions`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-- `gdc:CPTAC-3` — CPTAC-Brain, Head and Neck, Kidney, Lung, Pancreas, Uterus (CPTAC-3)
-  - `/domains`: `["neurology", "oncology", "pulmonology", "nephrology_urology"]` → `["neurology", "oncology", "pulmonology", "gastroenterology_hepatology", "nephrology_urology"]`
-  - `/provenance/enrichment/fields/domains`: `rules` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-- `gdc:CTSP-DLBCL1` — CTSP Diffuse Large B-Cell Lymphoma (DLBCL) CALGB 50303 (CTSP-DLBCL1)
-  - `/conditions`: `[{"label": "mature b-cell lymphomas", "mesh_id": null}, {"label": "lymphoma", "mesh_id": "D008223"}]` → `[{"label": "mature b-cell lymphomas", "mesh_id": null}, {"label": "lymphoma", "mesh_id": "D008223"}, {"label": "Diffuse …`
-  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-- `gdc:EXCEPTIONAL_RESPONDERS-ER` — Exceptional Responders (EXCEPTIONAL_RESPONDERS-ER)
-  - `/conditions`: `[{"label": "exceptional responders", "mesh_id": null}, {"label": "glioma", "mesh_id": "D005910"}, {"label": "kidney neop…` → `[{"label": "exceptional responders", "mesh_id": null}, {"label": "glioma", "mesh_id": "D005910"}, {"label": "kidney neop…`
-  - `/domains`: `["neurology", "oncology", "pulmonology", "nephrology_urology"]` → `["neurology", "oncology", "pulmonology", "gastroenterology_hepatology", "nephrology_urology"]`
-  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
-  - `/provenance/enrichment/fields/domains`: `rules` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-- `gdc:FM-AD` — Foundation Medicine Adult Cancer Clinical Dataset (FM-AD) (FM-AD)
-  - `/domains`: `["oncology", "pulmonology", "endocrinology_metabolism", "gastroenterology_hepatology", "nephrology_urology"]` → `["neurology", "oncology", "pulmonology", "endocrinology_metabolism", "gastroenterology_hepatology", "nephrology_urology"…`
-  - `/provenance/enrichment/fields/domains`: `rules` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-- `gdc:MATCH-B` — Genomic Characterization CS-MATCH-0007 Arm B (MATCH-B)
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Genomic Characterization CS-MATCH-0007 Arm B: MATCH project in the NCI Genomic Data Commons with 33 cases; primary sites…` → `Genomic characterization of Arm B of CS-MATCH-0007, with exome and RNA sequencing plus clinical and biospecimen data fro…`
-- `gdc:MATCH-C1` — Genomic Characterization CS-MATCH-0007 Arm C1 (MATCH-C1)
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Genomic Characterization CS-MATCH-0007 Arm C1: MATCH project in the NCI Genomic Data Commons with 11 cases; primary site…` → `Genomic characterization of Arm C1 of CS-MATCH-0007, with exome and RNA sequencing plus clinical and biospecimen data fr…`
-- `gdc:MATCH-H` — Genomic Characterization CS-MATCH-0007 Arm H (MATCH-H)
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Genomic Characterization CS-MATCH-0007 Arm H: MATCH project in the NCI Genomic Data Commons with 21 cases; primary sites…` → `Genomic characterization of Arm H of CS-MATCH-0007, with exome and RNA sequencing plus clinical and biospecimen data fro…`
-- `gdc:MATCH-I` — Genomic Characterization CS-MATCH-0007 Arm I (MATCH-I)
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Genomic Characterization CS-MATCH-0007 Arm I: MATCH project in the NCI Genomic Data Commons with 60 cases; primary sites…` → `Genomic characterization of MATCH trial Arm I: whole-exome and RNA sequencing with structural and simple nucleotide vari…`
-- `gdc:MATCH-P` — Genomic Characterization CS-MATCH-0007 Arm P (MATCH-P)
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Genomic Characterization CS-MATCH-0007 Arm P: MATCH project in the NCI Genomic Data Commons with 28 cases; primary sites…` → `Genomic characterization of MATCH trial Arm P: whole-exome and RNA sequencing with variant, biospecimen and clinical dat…`
-- `gdc:MATCH-Q` — Genomic Characterization CS-MATCH-0007 Arm Q (MATCH-Q)
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Genomic Characterization CS-MATCH-0007 Arm Q: MATCH project in the NCI Genomic Data Commons with 35 cases; primary sites…` → `Genomic characterization of MATCH trial Arm Q: whole-exome and RNA sequencing with variant, biospecimen and clinical dat…`
-- `gdc:MATCH-R` — Genomic Characterization CS-MATCH-0007 Arm R (MATCH-R)
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Genomic Characterization CS-MATCH-0007 Arm R: MATCH project in the NCI Genomic Data Commons with 28 cases; primary sites…` → `Genomic characterization of MATCH trial Arm R: whole-exome and RNA sequencing with variant, biospecimen and clinical dat…`
-- `gdc:MATCH-S1` — Genomic Characterization CS-MATCH-0007 Arm S1 (MATCH-S1)
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Genomic Characterization CS-MATCH-0007 Arm S1: MATCH project in the NCI Genomic Data Commons with 41 cases; primary site…` → `Genomic characterization of MATCH trial Arm S1: whole-exome and RNA sequencing with variant, biospecimen and clinical da…`
-- `gdc:MATCH-U` — Genomic Characterization CS-MATCH-0007 Arm U (MATCH-U)
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Genomic Characterization CS-MATCH-0007 Arm U: MATCH project in the NCI Genomic Data Commons with 23 cases; primary sites…` → `Genomic characterization of MATCH trial Arm U: whole-exome and RNA sequencing with variant, biospecimen and clinical dat…`
-- `gdc:MATCH-Y` — Genomic Characterization CS-MATCH-0007 Arm Y (MATCH-Y)
-  - `/domains`: `["oncology", "pulmonology", "nephrology_urology"]` → `["oncology", "pulmonology", "gastroenterology_hepatology", "nephrology_urology"]`
-  - `/provenance/enrichment/fields/domains`: `rules` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-- `gdc:MATCH-Z1A` — Genomic Characterization CS-MATCH-0007 Arm Z1A (MATCH-Z1A)
-  - `/domains`: `["oncology", "endocrinology_metabolism", "gastroenterology_hepatology"]` → `["oncology", "endocrinology_metabolism", "gastroenterology_hepatology", "nephrology_urology", "musculoskeletal"]`
-  - `/provenance/enrichment/fields/domains`: `rules` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-- `gdc:MATCH-Z1B` — Genomic Characterization CS-MATCH-0007 Arm Z1B (MATCH-Z1B)
-  - `/domains`: `["oncology", "pulmonology", "nephrology_urology"]` → `["oncology", "pulmonology", "gastroenterology_hepatology", "nephrology_urology"]`
-  - `/provenance/enrichment/fields/domains`: `rules` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-- `gdc:MATCH-Z1D` — Genomic Characterization CS-MATCH-0007 Arm Z1D (MATCH-Z1D)
-  - `/domains`: `["neurology", "oncology", "endocrinology_metabolism", "gastroenterology_hepatology", "nephrology_urology"]` → `["neurology", "oncology", "endocrinology_metabolism", "gastroenterology_hepatology", "nephrology_urology", "musculoskele…`
-  - `/provenance/enrichment/fields/domains`: `rules` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Genomic Characterization CS-MATCH-0007 Arm Z1D: MATCH project in the NCI Genomic Data Commons with 36 cases; primary sit…` → `Genomic characterization of one MATCH trial arm covering esophageal, endocrine, gastric, biliary, breast, liver, uterine…`
-- `gdc:MATCH-Z1I` — Genomic Characterization CS-MATCH-0007 Arm Z1I (MATCH-Z1I)
-  - `/domains`: `["oncology", "pulmonology"]` → `["oncology", "pulmonology", "gastroenterology_hepatology"]`
-  - `/provenance/enrichment/fields/domains`: `rules` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Genomic Characterization CS-MATCH-0007 Arm Z1I: MATCH project in the NCI Genomic Data Commons with 26 cases; primary sit…` → `Genomic characterization of one MATCH trial arm covering lung, breast, pancreatic, anal, rectal, ovarian and oral tumors…`
-- `gdc:MMRF-COMMPASS` — Multiple Myeloma CoMMpass Study (MMRF-COMMPASS)
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Multiple Myeloma CoMMpass Study: MMRF project in the NCI Genomic Data Commons with 995 cases; primary sites: Hematopoiet…` → `Multiple myeloma study of hematopoietic and reticuloendothelial system plasma cell tumors. Provides WXS, WGS and RNA-Seq…`
-- `gdc:MP2PRT-ALL` — Molecular Profiling to Predict Response to Treatment for Acute Lymphoblastic Leukemia (MP2PRT-ALL)
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Molecular Profiling to Predict Response to Treatment for Acute Lymphoblastic Leukemia: MP2PRT project in the NCI Genomic…` → `Molecular profiling to predict treatment response in acute lymphoblastic leukemia. Provides WXS, WGS and RNA-Seq reads w…`
-- `gdc:MP2PRT-WT` — Molecular Profiling to Predict Response to Treatment - Wilms Tumor (MP2PRT-WT)
-  - `/conditions`: `[{"label": "neoplasms, nos", "mesh_id": null}, {"label": "kidney neoplasms", "mesh_id": "D007680"}]` → `[{"label": "neoplasms, nos", "mesh_id": null}, {"label": "kidney neoplasms", "mesh_id": "D007680"}, {"label": "Wilms Tum…`
-  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Molecular Profiling to Predict Response to Treatment - Wilms Tumor: MP2PRT project in the NCI Genomic Data Commons with …` → `Molecular profiling project on Wilms tumor and kidney neoplasms, with sequencing reads, simple nucleotide and copy numbe…`
-- `gdc:NCICCR-DLBCL` — Genomic Variation in Diffuse Large B Cell Lymphomas (NCICCR-DLBCL)
-  - `/conditions`: `[{"label": "mature b-cell lymphomas", "mesh_id": null}, {"label": "lymphoma", "mesh_id": "D008223"}]` → `[{"label": "mature b-cell lymphomas", "mesh_id": null}, {"label": "lymphoma", "mesh_id": "D008223"}, {"label": "Diffuse …`
-  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Genomic Variation in Diffuse Large B Cell Lymphomas: NCICCR project in the NCI Genomic Data Commons with 489 cases; prim…` → `Genomic variation study of diffuse large B cell lymphoma in lymph node samples, providing sequencing reads, transcriptom…`
-- `gdc:OHSU-CNL` — Philadelphia-Negative Neutrophilic Leukemias (CNL/aCML/MDS/MPNu) (OHSU-CNL)
-  - `/conditions`: `[{"label": "philadelphia-negative neutrophilic leukemias (cnl/acml/mds/mpnu)", "mesh_id": null}]` → `[{"label": "philadelphia-negative neutrophilic leukemias (cnl/acml/mds/mpnu)", "mesh_id": null}, {"label": "Chronic Myel…`
-  - `/provenance/enrichment/fields/conditions`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Philadelphia-Negative Neutrophilic Leukemias (CNL/aCML/MDS/MPNu): OHSU project in the NCI Genomic Data Commons with 176 …` → `Study of Philadelphia-negative neutrophilic leukemias and chronic myeloproliferative disorders in hematopoietic and reti…`
-- `gdc:ORGANOID-PANCREATIC` — Pancreas Cancer Organoid Profiling (ORGANOID-PANCREATIC)
-  - `/conditions`: `[{"label": "pancreas cancer organoid profiling", "mesh_id": null}]` → `[{"label": "pancreas cancer organoid profiling", "mesh_id": null}, {"label": "Pancreas Cancer", "mesh_id": null}, {"labe…`
-  - `/population`: `null` → `Pancreas cancer organoids`
-  - `/provenance/enrichment/fields/conditions`: `null` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Pancreas Cancer Organoid Profiling: ORGANOID project in the NCI Genomic Data Commons with 70 cases; primary sites: Pancr…` → `Profiling of pancreas cancer organoids, covering adenomas and adenocarcinomas, with simple nucleotide variation, sequenc…`
-- `gdc:PECGS-COPECC` — USC PE-CGS: Optimizing Engagement of Hispanic Colorectal Cancer Patients in Cancer Genomic Characterization Studies (PECGS-COPECC)
-  - `/conditions`: `[{"label": "adenomas and adenocarcinomas", "mesh_id": null}, {"label": "colorectal neoplasms", "mesh_id": "D015179"}]` → `[{"label": "adenomas and adenocarcinomas", "mesh_id": null}, {"label": "colorectal neoplasms", "mesh_id": "D015179"}, {"…`
-  - `/population`: `null` → `Hispanic Colorectal Cancer Patients`
-  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `USC PE-CGS: Optimizing Engagement of Hispanic Colorectal Cancer Patients in Cancer Genomic Characterization Studies: PEC…` → `Cancer genomic characterization study focused on engaging Hispanic colorectal cancer patients, sampling rectosigmoid jun…`
-- `gdc:RC-PTCL` — Refractory Cancers (RC) - Peripheral T-Cell Lymphoma (PTCL) (RC-PTCL)
-  - `/conditions`: `[{"label": "mature t- and nk-cell lymphomas", "mesh_id": null}, {"label": "lymphoma", "mesh_id": "D008223"}]` → `[{"label": "mature t- and nk-cell lymphomas", "mesh_id": null}, {"label": "lymphoma", "mesh_id": "D008223"}, {"label": "…`
-  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
+  - `/summary`: `## UCLA Consortium for Neuropsychiatric Phenomics LA5c Study Preprocessed data described in Gorgolewski KJ, Durnez J and…` → `Imaging dataset from the UCLA Consortium for Neuropsychiatric Phenomics LA5c study, with resting-state and task scans, d…`
+- `openneuro:ds000051` — Cross-language repetition priming
   - `/provenance/enrichment/fields/summary`: `null` → `llm`
   - `/provenance/enrichment/method`: `rules` → `rules+llm`
   - `/provenance/enrichment/model`: `null` → `opus`
   - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Refractory Cancers (RC) - Peripheral T-Cell Lymphoma (PTCL): RC project in the NCI Genomic Data Commons with 58 cases; p…` → `Refractory peripheral T-cell lymphoma study sampling soft tissue, liver, lymph nodes and hematopoietic tissue, with nucl…`
-- `gdc:REBC-THYR` — Comprehensive genomic characterization of radiation-related papillary thyroid cancer in the Ukraine (REBC-THYR)
-  - `/conditions`: `[{"label": "epithelial neoplasms, nos", "mesh_id": null}, {"label": "adenomas and adenocarcinomas", "mesh_id": null}, {"…` → `[{"label": "epithelial neoplasms, nos", "mesh_id": null}, {"label": "adenomas and adenocarcinomas", "mesh_id": null}, {"…`
-  - `/countries`: `[]` → `["UA"]`
-  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
-  - `/provenance/enrichment/fields/countries`: `null` → `llm`
+  - `/summary`: `This dataset was obtained from the OpenfMRI project (http://www.openfmri.org). Accession #: ds051 Description: Cross-lan…` → `Task fMRI dataset from the OpenfMRI project studying cross-language repetition priming, using an abstract-concrete judgm…`
+- `openneuro:ds000052` — Classification learning and reversal
   - `/provenance/enrichment/fields/summary`: `null` → `llm`
   - `/provenance/enrichment/method`: `rules` → `rules+llm`
   - `/provenance/enrichment/model`: `null` → `opus`
   - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Comprehensive genomic characterization of radiation-related papillary thyroid cancer in the Ukraine: REBC project in the…` → `Genomic characterization of radiation-related papillary thyroid cancer in Ukraine, with thyroid gland samples yielding s…`
-- `gdc:TARGET-ALL-P1` — Acute Lymphoblastic Leukemia - Phase I (TARGET-ALL-P1)
-  - `/conditions`: `[{"label": "lymphoid leukemias", "mesh_id": null}, {"label": "leukemia", "mesh_id": "D007938"}]` → `[{"label": "lymphoid leukemias", "mesh_id": null}, {"label": "leukemia", "mesh_id": "D007938"}, {"label": "Acute Lymphob…`
-  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
+  - `/summary`: `This dataset was obtained from the OpenfMRI project (http://www.openfmri.org). Accession #: ds052 Description: Classific…` → `Task fMRI dataset from the OpenfMRI project on classification learning and reversal, using weather prediction and revers…`
+- `openneuro:ds000053` — Training of loss aversion modulates neural sensitivity toward potential gains
   - `/provenance/enrichment/fields/summary`: `null` → `llm`
   - `/provenance/enrichment/method`: `rules` → `rules+llm`
   - `/provenance/enrichment/model`: `null` → `opus`
   - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Acute Lymphoblastic Leukemia - Phase I: TARGET project in the NCI Genomic Data Commons with 24 cases; primary sites: Hem…` → `TARGET phase I acute lymphoblastic leukemia study of hematopoietic and reticuloendothelial samples, providing sequencing…`
-- `gdc:TARGET-ALL-P2` — Acute Lymphoblastic Leukemia - Phase II (TARGET-ALL-P2)
-  - `/conditions`: `[{"label": "lymphoid leukemias", "mesh_id": null}, {"label": "leukemia", "mesh_id": "D007938"}]` → `[{"label": "lymphoid leukemias", "mesh_id": null}, {"label": "leukemia", "mesh_id": "D007938"}, {"label": "Acute Lymphob…`
-  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-- `gdc:TARGET-ALL-P3` — Acute Lymphoblastic Leukemia - Phase III (TARGET-ALL-P3)
-  - `/conditions`: `[{"label": "leukemias, nos", "mesh_id": null}, {"label": "myeloid leukemias", "mesh_id": null}, {"label": "not applicabl…` → `[{"label": "leukemias, nos", "mesh_id": null}, {"label": "myeloid leukemias", "mesh_id": null}, {"label": "not applicabl…`
-  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-- `gdc:TARGET-AML` — Acute Myeloid Leukemia (TARGET-AML)
-  - `/conditions`: `[{"label": "acute myeloid leukemia", "mesh_id": null}, {"label": "leukemia", "mesh_id": "D007938"}]` → `[{"label": "acute myeloid leukemia", "mesh_id": null}, {"label": "leukemia", "mesh_id": "D007938"}, {"label": "Myeloid L…`
-  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-- `gdc:TARGET-CCSK` — Clear Cell Sarcoma of the Kidney (TARGET-CCSK)
-  - `/conditions`: `[{"label": "clear cell sarcoma of the kidney", "mesh_id": null}, {"label": "sarcoma", "mesh_id": "D012509"}]` → `[{"label": "clear cell sarcoma of the kidney", "mesh_id": null}, {"label": "sarcoma", "mesh_id": "D012509"}, {"label": "…`
-  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Clear Cell Sarcoma of the Kidney: TARGET project in the NCI Genomic Data Commons with 13 cases; primary sites: Kidney; d…` → `TARGET collection of clear cell sarcoma of the kidney, with whole-genome and RNA sequencing, genotyping and methylation …`
-- `gdc:TARGET-NBL` — Neuroblastoma (TARGET-NBL)
-  - `/conditions`: `[{"label": "neuroblastoma", "mesh_id": "D009447"}]` → `[{"label": "neuroblastoma", "mesh_id": "D009447"}, {"label": "Neuroepitheliomatous Neoplasms", "mesh_id": null}]`
-  - `/provenance/enrichment/fields/conditions`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-- `gdc:TARGET-OS` — Osteosarcoma (TARGET-OS)
-  - `/conditions`: `[{"label": "osteosarcoma", "mesh_id": "D012516"}, {"label": "bone neoplasms", "mesh_id": "D001859"}]` → `[{"label": "osteosarcoma", "mesh_id": "D012516"}, {"label": "bone neoplasms", "mesh_id": "D001859"}, {"label": "Osseous …`
-  - `/domains`: `["oncology", "pediatrics"]` → `["oncology", "pediatrics", "musculoskeletal"]`
-  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
-  - `/provenance/enrichment/fields/domains`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-- `gdc:TARGET-RT` — Rhabdoid Tumor (TARGET-RT)
-  - `/conditions`: `[{"label": "rhabdoid tumor", "mesh_id": "D018335"}]` → `[{"label": "rhabdoid tumor", "mesh_id": "D018335"}, {"label": "Complex Mixed and Stromal Neoplasms", "mesh_id": null}]`
-  - `/provenance/enrichment/fields/conditions`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-- `gdc:TARGET-WT` — High-Risk Wilms Tumor (TARGET-WT)
-  - `/conditions`: `[{"label": "high-risk wilms tumor", "mesh_id": null}]` → `[{"label": "high-risk wilms tumor", "mesh_id": null}, {"label": "Complex Mixed and Stromal Neoplasms", "mesh_id": null}]`
-  - `/provenance/enrichment/fields/conditions`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-- `gdc:TCGA-ACC` — Adrenocortical Carcinoma (TCGA-ACC)
-  - `/conditions`: `[{"label": "adrenocortical carcinoma", "mesh_id": "D018268"}]` → `[{"label": "adrenocortical carcinoma", "mesh_id": "D018268"}, {"label": "Adenomas and Adenocarcinomas", "mesh_id": null}…`
-  - `/provenance/enrichment/fields/conditions`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Adrenocortical Carcinoma: TCGA project in the NCI Genomic Data Commons with 92 cases; primary sites: Adrenal gland; data…` → `TCGA project on adrenocortical carcinoma of the adrenal gland. Covers sequencing reads, nucleotide and copy number varia…`
-- `gdc:TCGA-BLCA` — Bladder Urothelial Carcinoma (TCGA-BLCA)
-  - `/conditions`: `[{"label": "bladder urothelial carcinoma", "mesh_id": null}]` → `[{"label": "bladder urothelial carcinoma", "mesh_id": null}, {"label": "Transitional Cell Papillomas and Carcinomas", "m…`
-  - `/provenance/enrichment/fields/conditions`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Bladder Urothelial Carcinoma: TCGA project in the NCI Genomic Data Commons with 412 cases; primary sites: Bladder; data:…` → `TCGA project on bladder urothelial carcinoma. Covers sequencing reads, nucleotide and copy number variation, transcripto…`
-- `gdc:TCGA-BRCA` — Breast Invasive Carcinoma (TCGA-BRCA)
-  - `/conditions`: `[{"label": "breast invasive carcinoma", "mesh_id": null}]` → `[{"label": "breast invasive carcinoma", "mesh_id": null}, {"label": "Ductal and Lobular Neoplasms", "mesh_id": null}, {"…`
-  - `/provenance/enrichment/fields/conditions`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Breast Invasive Carcinoma: TCGA project in the NCI Genomic Data Commons with 1098 cases; primary sites: Breast; data: Si…` → `TCGA project on breast invasive carcinoma. Covers sequencing reads, nucleotide and copy number variation, transcriptome …`
-- `gdc:TCGA-CESC` — Cervical Squamous Cell Carcinoma and Endocervical Adenocarcinoma (TCGA-CESC)
-  - `/conditions`: `[{"label": "adenomas and adenocarcinomas", "mesh_id": null}, {"label": "cystic, mucinous and serous neoplasms", "mesh_id…` → `[{"label": "adenomas and adenocarcinomas", "mesh_id": null}, {"label": "cystic, mucinous and serous neoplasms", "mesh_id…`
-  - `/domains`: `["oncology"]` → `["oncology", "obstetrics_gynecology"]`
-  - `/provenance/enrichment/fields/conditions`: `null` → `llm`
-  - `/provenance/enrichment/fields/domains`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Cervical Squamous Cell Carcinoma and Endocervical Adenocarcinoma: TCGA project in the NCI Genomic Data Commons with 307 …` → `TCGA project on cervical squamous cell carcinoma and endocervical adenocarcinoma, sampling ovary and cervix uteri. Cover…`
-- `gdc:TCGA-CHOL` — Cholangiocarcinoma (TCGA-CHOL)
-  - `/conditions`: `[{"label": "cholangiocarcinoma", "mesh_id": "D018281"}]` → `[{"label": "cholangiocarcinoma", "mesh_id": "D018281"}, {"label": "Adenomas and Adenocarcinomas", "mesh_id": null}]`
-  - `/provenance/enrichment/fields/conditions`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Cholangiocarcinoma: TCGA project in the NCI Genomic Data Commons with 51 cases; primary sites: Liver and intrahepatic bi…` → `TCGA project on cholangiocarcinoma, sampling liver and intrahepatic bile ducts, pancreas, and other biliary tract sites.…`
-- `gdc:TCGA-COAD` — Colon Adenocarcinoma (TCGA-COAD)
-  - `/conditions`: `[{"label": "colon adenocarcinoma", "mesh_id": null}]` → `[{"label": "colon adenocarcinoma", "mesh_id": null}, {"label": "Epithelial Neoplasms, NOS", "mesh_id": null}, {"label": …`
-  - `/domains`: `["oncology"]` → `["oncology", "gastroenterology_hepatology"]`
-  - `/provenance/enrichment/fields/conditions`: `null` → `llm`
-  - `/provenance/enrichment/fields/domains`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Colon Adenocarcinoma: TCGA project in the NCI Genomic Data Commons with 461 cases; primary sites: Rectosigmoid junction,…` → `TCGA project on colon adenocarcinoma, sampling colon and rectosigmoid junction. Covers sequencing reads, nucleotide and …`
-- `gdc:TCGA-DLBC` — Lymphoid Neoplasm Diffuse Large B-cell Lymphoma (TCGA-DLBC)
-  - `/conditions`: `[{"label": "lymphoid neoplasm diffuse large b-cell lymphoma", "mesh_id": null}, {"label": "lymphoma", "mesh_id": "D00822…` → `[{"label": "lymphoid neoplasm diffuse large b-cell lymphoma", "mesh_id": null}, {"label": "lymphoma", "mesh_id": "D00822…`
-  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Lymphoid Neoplasm Diffuse Large B-cell Lymphoma: TCGA project in the NCI Genomic Data Commons with 58 cases; primary sit…` → `TCGA project on diffuse large B-cell lymphoma, with tissue sampled across many sites including lymph nodes and hematopoi…`
-- `gdc:TCGA-ESCA` — Esophageal Carcinoma (TCGA-ESCA)
-  - `/conditions`: `[{"label": "esophageal carcinoma", "mesh_id": null}]` → `[{"label": "esophageal carcinoma", "mesh_id": null}, {"label": "Adenomas and Adenocarcinomas", "mesh_id": null}, {"label…`
-  - `/domains`: `["oncology"]` → `["oncology", "gastroenterology_hepatology"]`
-  - `/provenance/enrichment/fields/conditions`: `null` → `llm`
-  - `/provenance/enrichment/fields/domains`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Esophageal Carcinoma: TCGA project in the NCI Genomic Data Commons with 185 cases; primary sites: Esophagus, Stomach; da…` → `TCGA project on esophageal carcinoma, sampling esophagus and stomach. Covers sequencing reads, nucleotide and copy numbe…`
-- `gdc:TCGA-GBM` — Glioblastoma Multiforme (TCGA-GBM)
-  - `/conditions`: `[{"label": "glioblastoma", "mesh_id": "D005909"}, {"label": "glioma", "mesh_id": "D005910"}]` → `[{"label": "glioblastoma", "mesh_id": "D005909"}, {"label": "glioma", "mesh_id": "D005910"}, {"label": "Gliomas", "mesh_…`
-  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-- `gdc:TCGA-HNSC` — Head and Neck Squamous Cell Carcinoma (TCGA-HNSC)
-  - `/conditions`: `[{"label": "head and neck squamous cell carcinoma", "mesh_id": null}]` → `[{"label": "head and neck squamous cell carcinoma", "mesh_id": null}, {"label": "Squamous Cell Neoplasms", "mesh_id": nu…`
-  - `/provenance/enrichment/fields/conditions`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Head and Neck Squamous Cell Carcinoma: TCGA project in the NCI Genomic Data Commons with 528 cases; primary sites: Base …` → `TCGA molecular profiling of head and neck squamous cell carcinoma across oral cavity, pharynx and larynx sites, with seq…`
-- `gdc:TCGA-KICH` — Kidney Chromophobe (TCGA-KICH)
-  - `/conditions`: `[{"label": "kidney chromophobe", "mesh_id": null}]` → `[{"label": "kidney chromophobe", "mesh_id": null}, {"label": "Adenomas and Adenocarcinomas", "mesh_id": null}]`
-  - `/provenance/enrichment/fields/conditions`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-- `gdc:TCGA-KIRC` — Kidney Renal Clear Cell Carcinoma (TCGA-KIRC)
-  - `/conditions`: `[{"label": "kidney renal clear cell carcinoma", "mesh_id": null}]` → `[{"label": "kidney renal clear cell carcinoma", "mesh_id": null}, {"label": "Adenomas and Adenocarcinomas", "mesh_id": n…`
-  - `/provenance/enrichment/fields/conditions`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-- `gdc:TCGA-KIRP` — Kidney Renal Papillary Cell Carcinoma (TCGA-KIRP)
-  - `/conditions`: `[{"label": "kidney renal papillary cell carcinoma", "mesh_id": null}]` → `[{"label": "kidney renal papillary cell carcinoma", "mesh_id": null}, {"label": "Adenomas and Adenocarcinomas", "mesh_id…`
-  - `/provenance/enrichment/fields/conditions`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-- `gdc:TCGA-LAML` — Acute Myeloid Leukemia (TCGA-LAML)
-  - `/conditions`: `[{"label": "acute myeloid leukemia", "mesh_id": null}, {"label": "leukemia", "mesh_id": "D007938"}]` → `[{"label": "acute myeloid leukemia", "mesh_id": null}, {"label": "leukemia", "mesh_id": "D007938"}, {"label": "Myeloid L…`
-  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Acute Myeloid Leukemia: TCGA project in the NCI Genomic Data Commons with 200 cases; primary sites: Hematopoietic and re…` → `TCGA molecular profiling of acute myeloid leukemia in hematopoietic and reticuloendothelial tissue, with genome and exom…`
-- `gdc:TCGA-LGG` — Brain Lower Grade Glioma (TCGA-LGG)
-  - `/conditions`: `[{"label": "brain lower grade glioma", "mesh_id": null}, {"label": "glioma", "mesh_id": "D005910"}]` → `[{"label": "brain lower grade glioma", "mesh_id": null}, {"label": "glioma", "mesh_id": "D005910"}, {"label": "Gliomas",…`
-  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-- `gdc:TCGA-LIHC` — Liver Hepatocellular Carcinoma (TCGA-LIHC)
-  - `/conditions`: `[{"label": "liver hepatocellular carcinoma", "mesh_id": null}, {"label": "liver neoplasms", "mesh_id": "D008113"}]` → `[{"label": "liver hepatocellular carcinoma", "mesh_id": null}, {"label": "liver neoplasms", "mesh_id": "D008113"}, {"lab…`
-  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Liver Hepatocellular Carcinoma: TCGA project in the NCI Genomic Data Commons with 377 cases; primary sites: Liver and in…` → `TCGA molecular profiling of hepatocellular carcinoma of the liver and intrahepatic bile ducts, with sequencing, methylat…`
-- `gdc:TCGA-LUAD` — Lung Adenocarcinoma (TCGA-LUAD)
-  - `/conditions`: `[{"label": "adenocarcinoma of lung", "mesh_id": "D000077192"}]` → `[{"label": "adenocarcinoma of lung", "mesh_id": "D000077192"}, {"label": "Adenomas and Adenocarcinomas", "mesh_id": null…`
-  - `/population`: `null` → `Human cases with lung adenocarcinoma (bronchus and lung)`
-  - `/provenance/enrichment/fields/conditions`: `null` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Lung Adenocarcinoma: TCGA project in the NCI Genomic Data Commons with 585 cases; primary sites: Bronchus and lung; data…` → `TCGA project on lung adenocarcinoma of the bronchus and lung, combining sequencing, copy number, methylation, transcript…`
-- `gdc:TCGA-LUSC` — Lung Squamous Cell Carcinoma (TCGA-LUSC)
-  - `/conditions`: `[{"label": "lung squamous cell carcinoma", "mesh_id": null}]` → `[{"label": "lung squamous cell carcinoma", "mesh_id": null}, {"label": "Squamous Cell Neoplasms", "mesh_id": null}]`
-  - `/population`: `null` → `Human cases with lung squamous cell carcinoma (bronchus and lung)`
-  - `/provenance/enrichment/fields/conditions`: `null` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Lung Squamous Cell Carcinoma: TCGA project in the NCI Genomic Data Commons with 504 cases; primary sites: Bronchus and l…` → `TCGA project on lung squamous cell carcinoma of the bronchus and lung, with sequencing, copy number, methylation, transc…`
-- `gdc:TCGA-MESO` — Mesothelioma (TCGA-MESO)
-  - `/conditions`: `[{"label": "mesothelioma", "mesh_id": "D008654"}]` → `[{"label": "mesothelioma", "mesh_id": "D008654"}, {"label": "Mesothelial Neoplasms", "mesh_id": null}]`
-  - `/population`: `null` → `Human cases with mesothelioma of heart, mediastinum, pleura and lung`
-  - `/provenance/enrichment/fields/conditions`: `null` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Mesothelioma: TCGA project in the NCI Genomic Data Commons with 87 cases; primary sites: Heart, mediastinum, and pleura,…` → `TCGA project on mesothelioma arising in heart, mediastinum, pleura and lung, with sequencing, copy number, methylation, …`
-- `gdc:TCGA-OV` — Ovarian Serous Cystadenocarcinoma (TCGA-OV)
-  - `/conditions`: `[{"label": "ovarian serous cystadenocarcinoma", "mesh_id": null}]` → `[{"label": "ovarian serous cystadenocarcinoma", "mesh_id": null}, {"label": "Cystic, Mucinous and Serous Neoplasms", "me…`
-  - `/domains`: `["oncology"]` → `["oncology", "obstetrics_gynecology"]`
-  - `/population`: `null` → `Human cases with ovarian serous cystadenocarcinoma (ovary, retroperitoneum and peritoneum)`
-  - `/provenance/enrichment/fields/conditions`: `null` → `llm`
-  - `/provenance/enrichment/fields/domains`: `null` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
+  - `/summary`: `# Training of loss aversion modulates neural sensitivity toward potential gains ## Aims: We investigated behavioral and …` → `Task fMRI and behavioral dataset on training loss aversion, with baseline, training, and post-test sessions of an adapte…`
+- `openneuro:ds000102` — Flanker task (event-related)
+  - `/modalities`: `["MRI", "fMRI"]` → `["MRI", "fMRI", "behavioral"]`
+  - `/provenance/enrichment/fields/modalities`: `null` → `llm`
   - `/provenance/enrichment/fields/summary`: `null` → `llm`
   - `/provenance/enrichment/method`: `rules` → `rules+llm`
   - `/provenance/enrichment/model`: `null` → `opus`
   - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - … and 1 more
-- `gdc:TCGA-PAAD` — Pancreatic Adenocarcinoma (TCGA-PAAD)
-  - `/conditions`: `[{"label": "pancreatic adenocarcinoma", "mesh_id": null}]` → `[{"label": "pancreatic adenocarcinoma", "mesh_id": null}, {"label": "Ductal and Lobular Neoplasms", "mesh_id": null}]`
-  - `/population`: `null` → `Human cases with pancreatic adenocarcinoma`
-  - `/provenance/enrichment/fields/conditions`: `null` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
+  - `/summary`: `This dataset was obtained from the OpenfMRI project (http://www.openfmri.org). Accession #: ds102 Description: Flanker t…` → `Functional MRI collected from healthy adults performing a slow event-related Eriksen Flanker task with congruent and inc…`
+- `openneuro:ds000105` — Visual object recognition
   - `/provenance/enrichment/fields/summary`: `null` → `llm`
   - `/provenance/enrichment/method`: `rules` → `rules+llm`
   - `/provenance/enrichment/model`: `null` → `opus`
   - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Pancreatic Adenocarcinoma: TCGA project in the NCI Genomic Data Commons with 185 cases; primary sites: Pancreas; data: S…` → `TCGA project on pancreatic adenocarcinoma, combining sequencing, copy number, methylation, transcriptome and proteome pr…`
-- `gdc:TCGA-PCPG` — Pheochromocytoma and Paraganglioma (TCGA-PCPG)
-  - `/conditions`: `[{"label": "pheochromocytoma and paraganglioma", "mesh_id": null}]` → `[{"label": "pheochromocytoma and paraganglioma", "mesh_id": null}, {"label": "Paragangliomas and Glomus Tumors", "mesh_i…`
-  - `/domains`: `["oncology"]` → `["oncology", "endocrinology_metabolism"]`
-  - `/population`: `null` → `Human cases with pheochromocytoma and paraganglioma of adrenal gland, endocrine glands and other sites`
-  - `/provenance/enrichment/fields/conditions`: `null` → `llm`
-  - `/provenance/enrichment/fields/domains`: `null` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
+  - `/summary`: `This dataset was obtained from the OpenfMRI project (http://www.openfmri.org). Accession #: ds105 Description: Visual ob…` → `Functional MRI of visual object recognition, used in studies of representations of faces and objects in ventral temporal…`
+- `openneuro:ds000107` — Word and object processing
   - `/provenance/enrichment/fields/summary`: `null` → `llm`
   - `/provenance/enrichment/method`: `rules` → `rules+llm`
   - `/provenance/enrichment/model`: `null` → `opus`
   - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - … and 1 more
-- `gdc:TCGA-PRAD` — Prostate Adenocarcinoma (TCGA-PRAD)
-  - `/conditions`: `[{"label": "prostate adenocarcinoma", "mesh_id": null}]` → `[{"label": "prostate adenocarcinoma", "mesh_id": null}, {"label": "Adenomas and Adenocarcinomas", "mesh_id": null}]`
-  - `/population`: `null` → `Human cases with prostate adenocarcinoma (prostate gland)`
-  - `/provenance/enrichment/fields/conditions`: `null` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
+  - `/summary`: `This dataset was obtained from the OpenfMRI project (http://www.openfmri.org). Accession #: ds107 Description: Word and …` → `Functional MRI acquired during a one-back task on words and objects, collected for work on consistency and variability i…`
+- `openneuro:ds000109` — Social cognitive tasks (animate movement task, moral judgment task, false belief task)
   - `/provenance/enrichment/fields/summary`: `null` → `llm`
   - `/provenance/enrichment/method`: `rules` → `rules+llm`
   - `/provenance/enrichment/model`: `null` → `opus`
   - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Prostate Adenocarcinoma: TCGA project in the NCI Genomic Data Commons with 500 cases; primary sites: Prostate gland; dat…` → `TCGA project on prostate adenocarcinoma of the prostate gland, with sequencing, copy number, methylation, transcriptome …`
-- `gdc:TCGA-READ` — Rectum Adenocarcinoma (TCGA-READ)
-  - `/conditions`: `[{"label": "rectum adenocarcinoma", "mesh_id": null}]` → `[{"label": "rectum adenocarcinoma", "mesh_id": null}, {"label": "Adenomas and Adenocarcinomas", "mesh_id": null}]`
-  - `/domains`: `["oncology"]` → `["oncology", "gastroenterology_hepatology"]`
-  - `/population`: `null` → `Human cases with rectum adenocarcinoma (rectum, rectosigmoid junction, colon)`
-  - `/provenance/enrichment/fields/conditions`: `null` → `llm`
-  - `/provenance/enrichment/fields/domains`: `null` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
+  - `/summary`: `Social cognitive tasks (animate movement task, moral judgment task, false belief task): MRI, fMRI dataset on OpenNeuro (…` → `Social cognition study using an animate movement task, a moral judgment task and a false belief task, including a theory…`
+- `openneuro:ds000110` — Incidental encoding task (Posner Cueing Paradigm)
+  - `/modalities`: `["MRI", "fMRI"]` → `["MRI", "fMRI", "behavioral"]`
+  - `/provenance/enrichment/fields/modalities`: `null` → `llm`
   - `/provenance/enrichment/fields/summary`: `null` → `llm`
   - `/provenance/enrichment/method`: `rules` → `rules+llm`
   - `/provenance/enrichment/model`: `null` → `opus`
   - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - … and 1 more
-- `gdc:TCGA-SARC` — Sarcoma (TCGA-SARC)
-  - `/conditions`: `[{"label": "sarcoma", "mesh_id": "D012509"}]` → `[{"label": "sarcoma", "mesh_id": "D012509"}, {"label": "Soft Tissue Tumors and Sarcomas, NOS", "mesh_id": null}, {"label…`
-  - `/provenance/enrichment/fields/conditions`: `null` → `llm`
+  - `/summary`: `This dataset was obtained from the OpenfMRI project (http://www.openfmri.org). Accession #: ds110 Description: Incidenta…` → `Functional MRI during an incidental encoding task using a Posner cueing paradigm with object versus greeble judgments, c…`
+- `openneuro:ds000113` — Forrest Gump
   - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Sarcoma: TCGA project in the NCI Genomic Data Commons with 261 cases; primary sites: Colon, Stomach, Meninges, Corpus ut…` → `TCGA sarcoma project covering soft tissue, bone, nerve and visceral sites, with tissue and diagnostic slides, sequencing…`
-- `gdc:TCGA-SKCM` — Skin Cutaneous Melanoma (TCGA-SKCM)
-  - `/conditions`: `[{"label": "skin cutaneous melanoma", "mesh_id": null}, {"label": "melanoma", "mesh_id": "D008545"}]` → `[{"label": "skin cutaneous melanoma", "mesh_id": null}, {"label": "melanoma", "mesh_id": "D008545"}, {"label": "Nevi and…`
-  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-- `gdc:TCGA-STAD` — Stomach Adenocarcinoma (TCGA-STAD)
-  - `/conditions`: `[{"label": "stomach adenocarcinoma", "mesh_id": null}]` → `[{"label": "stomach adenocarcinoma", "mesh_id": null}, {"label": "Adenomas and Adenocarcinomas", "mesh_id": null}]`
-  - `/domains`: `["oncology"]` → `["oncology", "gastroenterology_hepatology"]`
-  - `/provenance/enrichment/fields/conditions`: `null` → `llm`
-  - `/provenance/enrichment/fields/domains`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-- `gdc:TCGA-TGCT` — Testicular Germ Cell Tumors (TCGA-TGCT)
-  - `/conditions`: `[{"label": "testicular germ cell tumors", "mesh_id": null}]` → `[{"label": "testicular germ cell tumors", "mesh_id": null}, {"label": "Germ Cell Neoplasms", "mesh_id": null}]`
-  - `/domains`: `["oncology"]` → `["oncology", "nephrology_urology"]`
-  - `/provenance/enrichment/fields/conditions`: `null` → `llm`
-  - `/provenance/enrichment/fields/domains`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Testicular Germ Cell Tumors: TCGA project in the NCI Genomic Data Commons with 263 cases; primary sites: Testis; data: S…` → `TCGA testicular germ cell tumor project with tissue and diagnostic slides, sequencing, copy number, methylation, chromat…`
-- `gdc:TCGA-THCA` — Thyroid Carcinoma (TCGA-THCA)
-  - `/conditions`: `[{"label": "thyroid carcinoma", "mesh_id": "D065646"}]` → `[{"label": "thyroid carcinoma", "mesh_id": "D065646"}, {"label": "Epithelial Neoplasms, NOS", "mesh_id": null}]`
-  - `/provenance/enrichment/fields/conditions`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-- `gdc:TCGA-THYM` — Thymoma (TCGA-THYM)
-  - `/conditions`: `[{"label": "thymoma", "mesh_id": "D013945"}]` → `[{"label": "thymoma", "mesh_id": "D013945"}, {"label": "Thymic Epithelial Neoplasms", "mesh_id": null}]`
-  - `/provenance/enrichment/fields/conditions`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Thymoma: TCGA project in the NCI Genomic Data Commons with 124 cases; primary sites: Heart, mediastinum, and pleura, Oth…` → `TCGA thymoma project covering thymus and mediastinal sites, with slide images, sequencing, copy number, methylation, pro…`
-- `gdc:TCGA-UCEC` — Uterine Corpus Endometrial Carcinoma (TCGA-UCEC)
-  - `/conditions`: `[{"label": "uterine corpus endometrial carcinoma", "mesh_id": null}]` → `[{"label": "uterine corpus endometrial carcinoma", "mesh_id": null}, {"label": "Adenomas and Adenocarcinomas", "mesh_id"…`
-  - `/domains`: `["oncology"]` → `["oncology", "obstetrics_gynecology"]`
-  - `/provenance/enrichment/fields/conditions`: `null` → `llm`
-  - `/provenance/enrichment/fields/domains`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Uterine Corpus Endometrial Carcinoma: TCGA project in the NCI Genomic Data Commons with 560 cases; primary sites: Corpus…` → `TCGA endometrial carcinoma project of the uterine corpus, with slide images, sequencing, copy number, methylation, chrom…`
-- `gdc:TCGA-UCS` — Uterine Carcinosarcoma (TCGA-UCS)
-  - `/conditions`: `[{"label": "uterine carcinosarcoma", "mesh_id": null}]` → `[{"label": "uterine carcinosarcoma", "mesh_id": null}, {"label": "Complex Mixed and Stromal Neoplasms", "mesh_id": null}…`
-  - `/domains`: `["oncology"]` → `["oncology", "obstetrics_gynecology"]`
-  - `/provenance/enrichment/fields/conditions`: `null` → `llm`
-  - `/provenance/enrichment/fields/domains`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Uterine Carcinosarcoma: TCGA project in the NCI Genomic Data Commons with 57 cases; primary sites: Corpus uteri, Uterus,…` → `TCGA uterine carcinosarcoma project of the uterine corpus, with slide images, sequencing, copy number, methylation, prot…`
-- `gdc:TCGA-UVM` — Uveal Melanoma (TCGA-UVM)
-  - `/conditions`: `[{"label": "uveal melanoma", "mesh_id": "D000098943"}, {"label": "melanoma", "mesh_id": "D008545"}]` → `[{"label": "uveal melanoma", "mesh_id": "D000098943"}, {"label": "melanoma", "mesh_id": "D008545"}, {"label": "Nevi and …`
-  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Uveal Melanoma: TCGA project in the NCI Genomic Data Commons with 80 cases; primary sites: Eye and adnexa; data: Simple …` → `TCGA project on uveal melanoma of the eye and adnexa, with sequencing, copy number, methylation, transcriptome and prote…`
-- `gdc:TRIO-CRU` — Ukrainian National Research Center for Radiation Medicine Trio Study (TRIO-CRU)
-  - `/countries`: `[]` → `["UA"]`
-  - `/provenance/enrichment/fields/countries`: `null` → `llm`
   - `/provenance/enrichment/method`: `rules` → `rules+llm`
   - `/provenance/enrichment/model`: `null` → `opus`
   - `/provenance/enrichment/prompt_version`: `null` → `v1`
-- `gdc:VAREPOP-APOLLO` — VA Research Precision Oncology Program (VAREPOP-APOLLO)
+  - `/summary`: `Note: This dataset is the combination of four related datasets that were originally hosted on OpenfMRI.org: ds000113, ds…` → `High-field functional MRI recorded during prolonged stimulation with an auditory feature film, plus anatomical, diffusio…`
+- `openneuro:ds000115` — Working memory in healthy and schizophrenic individuals
   - `/provenance/enrichment/fields/summary`: `null` → `llm`
   - `/provenance/enrichment/method`: `rules` → `rules+llm`
   - `/provenance/enrichment/model`: `null` → `opus`
   - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `VA Research Precision Oncology Program: VAREPOP project in the NCI Genomic Data Commons with 7 cases; primary sites: Bro…` → `VA Research Precision Oncology Program project covering bronchus and lung epithelial and squamous cell neoplasms, with t…`
-- `gdc:WCDT-MCRPC` — Genomic Characterization of Metastatic Castration Resistant Prostate Cancer (WCDT-MCRPC)
-  - `/conditions`: `[{"label": "adenomas and adenocarcinomas", "mesh_id": null}, {"label": "prostatic neoplasms", "mesh_id": "D011471"}]` → `[{"label": "adenomas and adenocarcinomas", "mesh_id": null}, {"label": "prostatic neoplasms", "mesh_id": "D011471"}, {"l…`
-  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
+  - `/summary`: `1. grab original data from xnat and setup using setup_all_subs.py 2. set up new directories using reformat_data.py 3. se…` → `Functional and anatomical MRI collected while healthy individuals and individuals with schizophrenia performed letter 0-…`
+- `openneuro:ds000116` — Auditory and Visual Oddball EEG-fMRI
   - `/provenance/enrichment/fields/summary`: `null` → `llm`
   - `/provenance/enrichment/method`: `rules` → `rules+llm`
   - `/provenance/enrichment/model`: `null` → `opus`
   - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Genomic Characterization of Metastatic Castration Resistant Prostate Cancer: WCDT project in the NCI Genomic Data Common…` → `Genomic characterization of metastatic castration resistant prostate cancer, providing whole genome and RNA sequencing w…`
-- `physionet:aami-ec13` — ANSI/AAMI EC13 Test Waveforms
+  - `/summary`: `**The EEG component of this dataset is available as part of R1.0.0 at https://legacy.openfmri.org/dataset/ds000116/** Da…` → `Simultaneous EEG and fMRI recorded during separate auditory and visual oddball tasks with button responses to target sti…`
+- `openneuro:ds000119` — Maturational Changes in Anterior Cingulate and Frontoparietal Recruitment Support the Development of Error Processing and Inhibitory Control (Antistate)
   - `/provenance/enrichment/fields/summary`: `null` → `llm`
   - `/provenance/enrichment/method`: `rules` → `rules+llm`
   - `/provenance/enrichment/model`: `null` → `opus`
   - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `The files in this set can be used for testing a variety of devices that monitor the electrocardiogram. The recordings in…` → `Set of synthetic and real electrocardiogram test waveforms intended for testing devices that monitor the ECG, distribute…`
-- `physionet:accelerometry-walk-climb-drive` — Labeled raw accelerometry data captured during walking, stair climbing and driving
-  - `/domains`: `[]` → `["other"]`
-  - `/modalities`: `["wearable"]` → `["wearable", "behavioral"]`
-  - `/population`: `null` → `32 healthy adults`
-  - `/provenance/enrichment/fields/domains`: `null` → `llm`
+  - `/summary`: `This dataset contains the data from paper: Velanova, K., M. E. Wheeler, and B. Luna. 'Maturational Changes in Anterior C…` → `Imaging and eye-tracking data from visually guided saccade and antisaccade tasks, used to study maturational changes in …`
+- `openneuro:ds000120` — Developmental changes in brain function underlying the influence of reward processing on inhibitory control (Slot Reward)
+  - `/modalities`: `["MRI", "fMRI", "behavioral"]` → `["MRI", "fMRI", "eye_tracking", "behavioral"]`
   - `/provenance/enrichment/fields/modalities`: `rules` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `# Slot Reward ## Citations Padmanabhan, Aarthi, Charles F. Geier, Sarah J. Ordaz, Theresa Teslovich, and Beatriz Luna. “…` → `Imaging and behavioral data from an antisaccade task with rewarded, neutral and visually guided saccade trials, examinin…`
+- `openneuro:ds000121` — Immaturities in Reward Processing and Its Influence on Inhibitory Control in Adolescence (Ring Reward)
+  - `/modalities`: `["MRI", "fMRI"]` → `["MRI", "fMRI", "eye_tracking", "behavioral"]`
+  - `/provenance/enrichment/fields/modalities`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+- `openneuro:ds000133` — Modafinil alters intrinsic functional connectivity of the right posterior insula: a pharmacological resting state fMRI study
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `This dataset was obtained from the OpenfMRI project (http://www.openfmri.org). Accession #: ds000133 Description: Modafi…` → `Pharmacological resting-state functional MRI study examining how modafinil alters intrinsic functional connectivity of t…`
+- `openneuro:ds000138` — Spinal fMRI reveals decreased descending inhibition during secondary mechanical hyperalgesia
+  - `/conditions`: `[]` → `[{"label": "secondary mechanical hyperalgesia", "mesh_id": null}]`
+  - `/domains`: `["neuroscience"]` → `["neurology", "neuroscience"]`
+  - `/provenance/enrichment/fields/conditions`: `null` → `llm`
+  - `/provenance/enrichment/fields/domains`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+- `openneuro:ds000140` — Distinct brain systems mediate the effects of nociceptive input and self-regulation on pain
+  - `/conditions`: `[]` → `[{"label": "heat pain", "mesh_id": null}]`
+  - `/provenance/enrichment/fields/conditions`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+- `openneuro:ds000144` — Preschool Anxiety Disorders
+  - `/conditions`: `[{"label": "anxiety disorders", "mesh_id": "D001008"}]` → `[{"label": "anxiety disorders", "mesh_id": "D001008"}, {"label": "Preschool Anxiety Disorders", "mesh_id": null}]`
+  - `/domains`: `["neurology", "psychiatry", "neuroscience"]` → `["neurology", "psychiatry", "neuroscience", "pediatrics"]`
+  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
+  - `/provenance/enrichment/fields/domains`: `rules` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `### Comments added by Openfmri Curators ### =========================================== General Comments ---------------…` → `Functional and anatomical brain imaging in preschool children with anxiety disorders, using an emotional faces task. Som…`
+- `openneuro:ds000149` — Scene Perception
+  - `/modalities`: `["MRI", "fMRI"]` → `["MRI", "fMRI", "behavioral"]`
+  - `/provenance/enrichment/fields/modalities`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+- `openneuro:ds000157` — Block design food and nonfood picture viewing task
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `This dataset was obtained from the OpenfMRI project (http://www.openfmri.org). Accession #: ds000157 Description: Thirty…` → `Block-design imaging study in which female subjects passively viewed blocks of food and nonfood images, with interleaved…`
+- `openneuro:ds000158` — The human Voice Areas: spatial organisation and inter-individual variability in temporal and extra-temporal cortices
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `### Comments added by Openfmri Curators ### =========================================== Defacing -------- Performed by s…` → `Passive listening imaging dataset mapping human voice areas and their spatial organisation and inter-individual variabil…`
+- `openneuro:ds000168` — Offline Processing in Associative Learning
+  - `/conditions`: `[{"label": "healthy controls", "mesh_id": null}]` → `[{"label": "healthy controls", "mesh_id": null}, {"label": "healthy volunteers", "mesh_id": "D064368"}]`
+  - `/modalities`: `["MRI", "fMRI"]` → `["MRI", "fMRI", "behavioral"]`
+  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
+  - `/provenance/enrichment/fields/modalities`: `null` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `Offline Processing in Associative Learning This is structural and functional MRI data from 35 healthy volunteers that ac…` → `Structural and functional MRI from healthy volunteers who encoded paired associates, then did a distractor task before b…`
+- `openneuro:ds000170` — Learning and memory: motor skill consolidation and intermanual transfer
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `This dataset was obtained from the OpenfMRI project (http://www.openfmri.org). Accession #: ds000170 Description: Please…` → `OpenfMRI dataset on motor skill consolidation and intermanual transfer, with conditions crossing trained and untrained h…`
+- `openneuro:ds000171` — Neural Processing of Emotional Musical and Nonmusical Stimuli in Depression
+  - `/conditions`: `[{"label": "anxiety disorders", "mesh_id": "D001008"}, {"label": "depressive disorder, major", "mesh_id": null}]` → `[{"label": "anxiety disorders", "mesh_id": "D001008"}, {"label": "depressive disorder, major", "mesh_id": null}, {"label…`
+  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `The present dataset uses functional MRI and an validated emotional music and nonmusical auditory paradigm (Lepping, et a…` → `Functional MRI while participants with depression and never-depressed controls listened to positive and negative emotion…`
+- `openneuro:ds000172` — Physiological Contribution in Spontaneous Oscillations: An Approximate Quality - Assurance Index for Resting-State fMRI Signals
+  - `/population`: `null` → `resting-state human dataset (n=12, age: 26.4 ± 2.1 y, females/males: 6/6)`
   - `/provenance/enrichment/fields/population`: `null` → `llm`
   - `/provenance/enrichment/fields/summary`: `null` → `llm`
   - `/provenance/enrichment/method`: `rules` → `rules+llm`
   - `/provenance/enrichment/model`: `null` → `opus`
   - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - … and 1 more
-- `physionet:actes-cycloergometer-exercise` — Cardiorespiratory measurement from graded cycloergometer exercise testing
-  - `/countries`: `[]` → `["FR"]`
-  - `/domains`: `[]` → `["cardiology", "pulmonology", "pediatrics"]`
-  - `/modalities`: `[]` → `["physiological_signals", "clinical_tabular"]`
-  - `/population`: `null` → `18 teenage athletes (15.2±2 years) from the Regional Physical and Sports Education Centre of French West Indies, in spri…`
-  - `/provenance/enrichment/fields/countries`: `null` → `llm`
+  - `/summary`: `This dataset was obtained from the OpenfMRI project (http://www.openfmri.org). Accession #: ds000172 Description: Physio…` → `Resting-state fMRI acquired in humans and in a spherical water phantom at four image resolutions, used to validate a pro…`
+- `openneuro:ds000174` — T1-weighted structural MRI study of cannabis users at baseline and 3 years follow up
+  - `/conditions`: `[{"label": "alcoholism", "mesh_id": "D000437"}]` → `[{"label": "alcoholism", "mesh_id": "D000437"}, {"label": "cannabis use", "mesh_id": null}, {"label": "alcohol use", "me…`
+  - `/domains`: `["neuroscience"]` → `["psychiatry", "neuroscience"]`
+  - `/modalities`: `["MRI"]` → `["MRI", "survey"]`
+  - `/population`: `null` → `cannabis users at baseline and 3 years follow up`
+  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
   - `/provenance/enrichment/fields/domains`: `null` → `llm`
   - `/provenance/enrichment/fields/modalities`: `null` → `llm`
   - `/provenance/enrichment/fields/population`: `null` → `llm`
   - `/provenance/enrichment/fields/summary`: `null` → `llm`
   - `/provenance/enrichment/method`: `rules` → `rules+llm`
   - … and 3 more
-- `physionet:adfecgdb` — Abdominal and Direct Fetal ECG Database
-  - `/countries`: `[]` → `["PL"]`
-  - `/population`: `null` → `5 women in labor, between 38 and 41 weeks of gestation, and their fetuses`
-  - `/provenance/enrichment/fields/countries`: `null` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Multichannel fetal electrocardiogram recordings obtained from 5 different women in labor, between 38 and 41 weeks of ges…` → `Multichannel fetal electrocardiogram recordings from five women in labor, each comprising four differential signals from…`
-- `physionet:afdb` — MIT-BIH Atrial Fibrillation Database
-  - `/population`: `null` → `Human subjects with atrial fibrillation (mostly paroxysmal)`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `This database includes 25 long-term ECG recordings of human subjects with atrial fibrillation (mostly paroxysmal).` → `Long-term ECG recordings from human subjects with atrial fibrillation, mostly paroxysmal. Openly licensed cardiology sig…`
-- `physionet:afpdb` — PAF Prediction Challenge Database
-  - `/conditions`: `[{"label": "atrial fibrillation", "mesh_id": "D001281"}]` → `[{"label": "atrial fibrillation", "mesh_id": "D001281"}, {"label": "paroxysmal atrial fibrillation", "mesh_id": null}]`
-  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `ECG recordings created for use in the Computers in Cardiology Challenge 2001, a competition with the goal of developing …` → `Two-channel ECG recordings assembled for the Computers in Cardiology Challenge 2001, an open competition on automated pr…`
-- `physionet:aftdb` — AF Termination Challenge Database
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `ECG recordings created for the Computers in Cardiology Challenge 2004, which focused on predicting spontaneous terminati…` → `Two-channel ECG recordings created for the Computers in Cardiology Challenge 2004, aimed at automated prediction of spon…`
-- `physionet:ahadb` — AHA Database Sample Excluded Record
-  - `/conditions`: `[]` → `[{"label": "ectopy", "mesh_id": null}]`
-  - `/provenance/enrichment/fields/conditions`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Two ECG signals that were excluded from the 1980 American Heart Association database.` → `Two ECG signals digitized and annotated with American Heart Association database methods but excluded from that database…`
-- `physionet:aipatient-kg` — AIPatient KG: MIMIC-III and CORAL Electronic Health Records based Patient Knowledge Graph
-  - `/domains`: `["oncology"]` → `["oncology", "other"]`
-  - `/population`: `null` → `MIMIC-III data from over 40,000 patients and CORAL oncology-specific information from 40 patients`
-  - `/provenance/enrichment/fields/domains`: `rules` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `This project integrates MIMIC-III and CORAL electronic health records into knowledge graphs to improve medical analysis …` → `Knowledge graph snapshots and question-answering sets built from MIMIC-III and CORAL electronic health records using LLM…`
-- `physionet:alott` — ALarms, Outcomes Telemetry with Timing (ALOTT): a Bedside-EMR Database
-  - `/domains`: `["oncology"]` → `["cardiology", "oncology", "critical_care"]`
-  - `/modalities`: `["ECG", "physiological_signals"]` → `["ECG", "physiological_signals", "EHR"]`
-  - `/population`: `null` → `270 beds and over 15,000 hospital admissions from September 2018 through November 2020 at The James Cancer Hospital and …`
-  - `/provenance/enrichment/fields/domains`: `rules` → `llm`
-  - `/provenance/enrichment/fields/modalities`: `rules` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - … and 1 more
-- `physionet:ann-pt-summ` — Medical Expert Annotations of Unsupported Facts in Doctor-Written and LLM-Generated Patient Summaries
-  - `/domains`: `[]` → `["other"]`
-  - `/modalities`: `["EHR"]` → `["EHR", "clinical_notes"]`
-  - `/population`: `null` → `100 original MIMIC patient summaries (discharge instructions) and 100 Large Language Model (LLM) generated patient summa…`
-  - `/provenance/enrichment/fields/domains`: `null` → `llm`
-  - `/provenance/enrichment/fields/modalities`: `rules` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - … and 1 more
-- `physionet:annotation-dataset-sdoh` — Annotation dataset of social determinants of health from MIMIC-III Clinical Care Database
-  - `/domains`: `[]` → `["public_health", "other"]`
-  - `/modalities`: `["EHR"]` → `["EHR", "clinical_notes"]`
-  - `/population`: `null` → `Notes from the MIMIC-III Clinical Care Database, including notes written by physicians and social workers`
-  - `/provenance/enrichment/fields/domains`: `null` → `llm`
-  - `/provenance/enrichment/fields/modalities`: `rules` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - … and 1 more
-- `physionet:annotation-opioid-use-notes` — Annotation dataset of problematic opioid use and related contexts from MIMIC-III Critical Care Database discharge summaries
-  - `/conditions`: `[{"label": "opioid-related disorders", "mesh_id": "D009293"}]` → `[{"label": "opioid-related disorders", "mesh_id": "D009293"}, {"label": "opioid use disorder", "mesh_id": null}]`
-  - `/domains`: `["critical_care"]` → `["psychiatry", "critical_care"]`
-  - `/population`: `null` → `De-identified patients with International Classification of Diseases (ICD-9) OUD diagnostic codes; two annotators review…`
-  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
-  - `/provenance/enrichment/fields/domains`: `rules` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - … and 1 more
-- `physionet:antimicrobial-resistance-uti` — AMR-UTI: Antimicrobial Resistance in Urinary Tract Infections
-  - `/countries`: `[]` → `["US"]`
-  - `/population`: `null` → `Over 80,000 patients with urinary tract infections (UTI) treated at Massachusetts General Hospital and Brigham & Women's…`
-  - `/provenance/enrichment/fields/countries`: `null` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `AMR-UTI is a freely accessible dataset, derived from electronic health record (EHR) information on over 100,000 urinary …` → `Electronic health record dataset of urine specimens sent for antimicrobial susceptibility testing, each with the suscept…`
-- `physionet:apnea-ecg` — Apnea-ECG Database
-  - `/conditions`: `[{"label": "sleep apnea, obstructive", "mesh_id": "D020181"}]` → `[{"label": "sleep apnea, obstructive", "mesh_id": "D020181"}, {"label": "sleep apnea", "mesh_id": null}]`
-  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Seventy ECG signals with expert-labelled apnea annotations and machine-generated QRS annotations.` → `Seventy overnight ECG recordings with expert apnea annotations and machine-generated QRS annotations, split into learnin…`
-- `physionet:archehr-qa-bionlp-task-2025` — ArchEHR-QA: A Dataset for Addressing Patient's Information Needs related to Clinical Course of Hospitalization
-  - `/population`: `null` → `134 cases from intensive care unit and emergency department settings, with patient-initiated questions drawn from real-w…`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `A dataset for grounded question answering (QA) from electronic health records (EHRs).` → `Expert-annotated question answering dataset pairing patient-initiated questions with clinician-interpreted questions, se…`
-- `physionet:argo` — Annotated dataset of post-ischemic ventricular tachycardia electrograms (ARGO)
-  - `/conditions`: `[]` → `[{"label": "post-ischemic ventricular tachycardia", "mesh_id": null}]`
-  - `/domains`: `["psychiatry"]` → `["psychiatry", "cardiology"]`
-  - `/modalities`: `[]` → `["ECG", "physiological_signals", "other"]`
-  - `/population`: `null` → `Nine post-ischemic VT patients, contributing 1962 entries collected using the CARTO 3 mapping system.`
-  - `/provenance/enrichment/fields/conditions`: `null` → `llm`
-  - `/provenance/enrichment/fields/domains`: `rules` → `llm`
-  - `/provenance/enrichment/fields/modalities`: `null` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - … and 3 more
-- `physionet:armd-mgb` — Antibiotic Resistance Microbiology Dataset Mass General Brigham (ARMD-MGB)
-  - `/conditions`: `[]` → `[{"label": "antimicrobial resistance", "mesh_id": null}]`
-  - `/domains`: `[]` → `["infectious_disease"]`
-  - `/population`: `null` → `Over 225,000 adult patients over 10 years from hospitals in the Mass General Brigham healthcare system, covering over 97…`
-  - `/provenance/enrichment/fields/conditions`: `null` → `llm`
-  - `/provenance/enrichment/fields/domains`: `null` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - … and 1 more
-- `physionet:auditory-eeg` — Auditory evoked potential EEG-Biometric dataset
-  - `/domains`: `[]` → `["neuroscience"]`
-  - `/population`: `null` → `20 volunteers.`
-  - `/provenance/enrichment/fields/domains`: `null` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Recording of electroencephalogram (EEG) signals with the aim to develop an EEG-based Biometric. The Data includes restin…` → `Over 240 two-minute EEG recordings covering resting state with eyes open and eyes closed plus six auditory stimulus expe…`
-- `physionet:autonomic-aging-cardiovascular` — Autonomic Aging: A dataset to quantify changes of cardiovascular autonomic function during healthy aging
-  - `/conditions`: `[{"label": "dementia", "mesh_id": "D003704"}, {"label": "healthy controls", "mesh_id": null}]` → `[{"label": "dementia", "mesh_id": "D003704"}, {"label": "healthy controls", "mesh_id": null}, {"label": "healthy volunte…`
-  - `/modalities`: `["ECG"]` → `["ECG", "physiological_signals"]`
-  - `/population`: `null` → `Healthy volunteers recorded at rest; the database contains recordings of 1,104 healthy volunteers, with signals recorded…`
-  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
-  - `/provenance/enrichment/fields/modalities`: `rules` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - … and 1 more
-- `physionet:b2ai-voice` — Bridge2AI-Voice: An ethically-sourced, diverse voice dataset linked to health information
-  - `/conditions`: `[{"label": "dementia", "mesh_id": "D003704"}]` → `[{"label": "dementia", "mesh_id": "D003704"}, {"label": "mood disorders", "mesh_id": "D019964"}, {"label": "cancer", "me…`
-  - `/domains`: `["neurology", "oncology", "pulmonology"]` → `["neurology", "psychiatry", "oncology", "pulmonology", "other"]`
-  - `/modalities`: `["physiological_signals"]` → `["physiological_signals", "clinical_tabular", "other"]`
-  - `/population`: `null` → `833 participants across five sites in North America, selected based on known conditions which manifest within the voice …`
-  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
-  - `/provenance/enrichment/fields/domains`: `rules` → `llm`
-  - `/provenance/enrichment/fields/modalities`: `rules` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - … and 3 more
-- `physionet:b2ai-voice-pediatric` — Bridge2AI-Voice Pediatric Dataset
-  - `/conditions`: `[{"label": "dementia", "mesh_id": "D003704"}]` → `[{"label": "dementia", "mesh_id": "D003704"}, {"label": "mood disorders", "mesh_id": "D019964"}, {"label": "cancer", "me…`
-  - `/domains`: `["neurology", "oncology", "pediatrics"]` → `["neurology", "psychiatry", "oncology", "pediatrics"]`
-  - `/modalities`: `["survey"]` → `["physiological_signals", "survey", "clinical_tabular"]`
-  - `/population`: `null` → `300 participants aged 2-18`
-  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
-  - `/provenance/enrichment/fields/domains`: `rules` → `llm`
-  - `/provenance/enrichment/fields/modalities`: `rules` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - … and 3 more
-- `physionet:bhi-2018-challenge` — 2018 IEEE BHI and BSN Data Challenge
-  - `/domains`: `[]` → `["critical_care"]`
-  - `/population`: `null` → `critically ill patients`
-  - `/provenance/enrichment/fields/domains`: `null` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `A challenge to explore real clinical questions in critically ill patients using the MIMIC. A collaboration with the IEEE…` → `Announcement of a data challenge run with the IEEE BHI and BSN 2018 conferences, inviting participants to study clinical…`
-- `physionet:bhx-brain-bounding-box` — Brain Hemorrhage Extended (BHX): Bounding box extrapolation from thick to thin slice CT images
-  - `/conditions`: `[{"label": "cerebral hemorrhage", "mesh_id": "D002543"}]` → `[{"label": "cerebral hemorrhage", "mesh_id": "D002543"}, {"label": "acute hemorrhage", "mesh_id": null}, {"label": "intr…`
-  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `The first version of this dataset was made available in the forum of Kaggle competition 'RSNA Intracranial Hemorrhage De…` → `Bounding box annotations for five types of acute hemorrhage on brain CT images, extending the qure.ai CQ500 dataset, con…`
-- `physionet:bidmc` — BIDMC PPG and Respiration Dataset
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `ECG signals extracted from the MIMIC-II Matched Waveform Database, with manual breath annotations added by annotators us…` → `Signals and numerics extracted from the MIMIC-II matched waveform database, including ECG and photoplethysmogram, with m…`
-- `physionet:bidmc-metabolomic-masld` — BIDMC Metabolomic Cohort of Adults with Biopsy-Proven MASLD
-  - `/conditions`: `[]` → `[{"label": "MASLD", "mesh_id": null}, {"label": "MASH", "mesh_id": null}]`
-  - `/countries`: `[]` → `["AU"]`
-  - `/modalities`: `[]` → `["clinical_tabular", "other"]`
-  - `/population`: `null` → `110 adult subjects presenting with abnormal liver function tests at a Gastroenterology–Hepatology clinic in the Sydney W…`
-  - `/provenance/enrichment/fields/conditions`: `null` → `llm`
-  - `/provenance/enrichment/fields/countries`: `null` → `llm`
-  - `/provenance/enrichment/fields/modalities`: `null` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - … and 3 more
-- `physionet:bidsleep-dataset` — A Multi-Night Instantaneous Heart Rate and Accelerometry Dataset with EEG Sleep Stage Labels
-  - `/countries`: `[]` → `["US"]`
-  - `/domains`: `[]` → `["neurology", "neuroscience"]`
-  - `/modalities`: `["EEG", "wearable"]` → `["EEG", "physiological_signals", "wearable"]`
-  - `/population`: `null` → `47 healthy adult volunteers with no history of sleep disorders, recruited from the local community`
-  - `/provenance/enrichment/fields/countries`: `null` → `llm`
-  - `/provenance/enrichment/fields/domains`: `null` → `llm`
-  - `/provenance/enrichment/fields/modalities`: `rules` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - … and 3 more
-- `physionet:big-ideas-glycemic-wearable` — BIG IDEAs Lab Glycemic Variability and Wearable Device Data
-  - `/conditions`: `[{"label": "diabetes mellitus", "mesh_id": "D003920"}]` → `[{"label": "diabetes mellitus", "mesh_id": "D003920"}, {"label": "prediabetes", "mesh_id": null}, {"label": "hyperglycem…`
-  - `/modalities`: `["wearable"]` → `["physiological_signals", "wearable", "clinical_tabular", "other"]`
-  - `/population`: `null` → `subjects aged 35-65 years, inclusive, including only post-menopausal females, with a point of care A1C measurement betwe…`
-  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
-  - `/provenance/enrichment/fields/modalities`: `rules` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - … and 1 more
-- `physionet:brateca` — BRATECA (Brazilian Tertiary Care Dataset): a Clinical Information Dataset for the Portuguese Language
-  - `/countries`: `[]` → `["BR"]`
-  - `/modalities`: `["clinical_notes"]` → `["EHR", "clinical_notes"]`
-  - `/population`: `null` → `Over 70,000 admissions from 10 hospitals in two Brazilian states`
-  - `/provenance/enrichment/fields/countries`: `null` → `llm`
-  - `/provenance/enrichment/fields/modalities`: `rules` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - … and 1 more
-- `physionet:brax` — BRAX, a Brazilian labeled chest X-ray dataset
-  - `/countries`: `[]` → `["BR"]`
-  - `/domains`: `[]` → `["pulmonology"]`
-  - `/population`: `null` → `Patients presenting to a large general Brazilian hospital`
-  - `/provenance/enrichment/fields/countries`: `null` → `llm`
-  - `/provenance/enrichment/fields/domains`: `null` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - … and 1 more
-- `physionet:brazilian-ophthalmological` — A Brazilian Multilabel Ophthalmological Dataset (BRSET)
-  - `/countries`: `[]` → `["BR"]`
-  - `/domains`: `[]` → `["other"]`
-  - `/modalities`: `[]` → `["clinical_tabular", "other"]`
-  - `/population`: `null` → `16,266 images from 8,524 Brazilian patients`
-  - `/provenance/enrichment/fields/countries`: `null` → `llm`
-  - `/provenance/enrichment/fields/domains`: `null` → `llm`
-  - `/provenance/enrichment/fields/modalities`: `null` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - … and 3 more
-- `physionet:brugada-huca` — Brugada-HUCA: 12-Lead ECG Recordings for the Study of Brugada Syndrome
-  - `/conditions`: `[{"label": "arrhythmia, cardiac", "mesh_id": null}, {"label": "healthy controls", "mesh_id": null}]` → `[{"label": "arrhythmia, cardiac", "mesh_id": null}, {"label": "healthy controls", "mesh_id": null}, {"label": "Brugada s…`
-  - `/population`: `null` → `363 subjects in total, including 76 patients diagnosed with Brugada syndrome and 287 healthy control subjects`
-  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Brugada syndrome is a rare but potentially life-threatening cardiac arrhythmia disorder, with an elevated risk of sudden…` → `Retrospectively collected 12-lead ECG recordings from patients evaluated at a hospital cardiology department, with exper…`
-- `physionet:but-pdb` — Brno University of Technology ECG Signal Database with Annotations of P Wave (BUT PDB)
-  - `/population`: `null` → `50 2-minute 2-lead ECG signal records with various types of pathology, selected from three existing databases of ECG sig…`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `BUT PDB is an ECG signal database with marked peaks of P waves created for the development, and objective comparison of …` → `ECG signal database with P wave peaks manually annotated by two experts, selected from three existing ECG databases, als…`
-- `physionet:butppg` — Brno University of Technology Smartphone PPG Database (BUT PPG)
-  - `/modalities`: `["ECG", "PPG"]` → `["ECG", "PPG", "physiological_signals"]`
-  - `/population`: `null` → `50 subjects (25 female, 25 male) aged between 19 to 76 years at rest and during various types of movement`
-  - `/provenance/enrichment/fields/modalities`: `rules` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `BUT PPG is a database created for the purpose of evaluating PPG signal quality and estimation of heart rate. The data co…` → `Smartphone-recorded photoplethysmography signals with simultaneous reference ECG and accelerometer data, collected at re…`
-- `physionet:butqdb` — Brno University of Technology ECG Quality Database (BUT QDB)
-  - `/population`: `null` → `15 subjects (9 female, 6 male) aged between 21 to 83 years`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `The database is intended for the development and objective comparison of algorithms designed to assess the quality of EC…` → `Long-term single-lead ECG and accelerometer recordings collected during free-living conditions, annotated for signal qua…`
-- `physionet:cad-chest` — CAD-Chest: Comprehensive Annotation of Diseases based on MIMIC-CXR Radiology Report
-  - `/domains`: `[]` → `["pulmonology"]`
-  - `/provenance/enrichment/fields/domains`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `The CAD-Chest dataset provides comprehensive annotations of disease, including disease severity, uncertainty, and locati…` → `Annotation dataset built from MIMIC-CXR radiology reports, extending chest X-ray labels beyond binary presence with dise…`
-- `physionet:calcium-imaging-sleep-state` — Wide-field calcium imaging sleep state database
-  - `/countries`: `[]` → `["US"]`
-  - `/domains`: `["neurology"]` → `["neurology", "neuroscience"]`
-  - `/modalities`: `["EEG", "EMG", "physiological_signals"]` → `["EEG", "EMG", "physiological_signals", "other"]`
-  - `/population`: `null` → `Twelve transgenic mice expressing GCaMP6f in excitatory neurons, recorded at Washington University of St Louis School of…`
-  - `/provenance/enrichment/fields/countries`: `null` → `llm`
-  - `/provenance/enrichment/fields/domains`: `rules` → `llm`
-  - `/provenance/enrichment/fields/modalities`: `rules` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - … and 3 more
-- `physionet:capslpdb` — CAP Sleep Database
+- `openneuro:ds000200` — Pre-adolescents Exposure to Manganese
+  - `/conditions`: `[]` → `[{"label": "Manganese exposure", "mesh_id": null}]`
   - `/countries`: `[]` → `["IT"]`
-  - `/domains`: `["psychiatry", "cardiology"]` → `["neurology", "psychiatry", "cardiology", "pulmonology"]`
-  - `/population`: `null` → `108 polysomnographic recordings registered at the Sleep Disorders Center of the Ospedale Maggiore of Parma, Italy`
+  - `/domains`: `["neuroscience"]` → `["neuroscience", "pediatrics", "public_health"]`
+  - `/provenance/enrichment/fields/conditions`: `null` → `llm`
   - `/provenance/enrichment/fields/countries`: `null` → `llm`
-  - `/provenance/enrichment/fields/domains`: `rules` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
+  - `/provenance/enrichment/fields/domains`: `null` → `llm`
   - `/provenance/enrichment/fields/summary`: `null` → `llm`
   - `/provenance/enrichment/method`: `rules` → `rules+llm`
   - `/provenance/enrichment/model`: `null` → `opus`
   - `/provenance/enrichment/prompt_version`: `null` → `v1`
   - … and 1 more
-- `physionet:cardiac-accel-canine-porcine` — Epicardially attached cardiac accelerometer data from canines and porcines
-  - `/modalities`: `["ECG", "wearable"]` → `["ECG", "physiological_signals", "wearable", "other"]`
-  - `/population`: `null` → `289 recordings from 19 canines and 27 porcines, average duration 15 seconds`
-  - `/provenance/enrichment/fields/modalities`: `rules` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `The dataset contains data recorded from epicardially attached accelerometer to canines' and porcines' hearts. The data c…` → `Recordings from accelerometers attached directly to the epicardium of the left ventricle in canines and porcines during …`
-- `physionet:cardiac-implantable-device-cxr` — Dataset for Segmentation and Classification of Cardiac Implantable Electronic Devices in Chest X-Rays
-  - `/countries`: `[]` → `["DE"]`
-  - `/modalities`: `["xray"]` → `["xray", "other"]`
-  - `/population`: `null` → `897 patients at the Charité - Universitätsmedizin Berlin, images collected January 2012 to January 2022`
+- `openneuro:ds000201` — The Stockholm Sleepy Brain Study: Effects of Sleep Deprivation on Cognitive and Emotional Processing in Young and Old
+  - `/conditions`: `[]` → `[{"label": "sleep deprivation", "mesh_id": "D012892"}]`
+  - `/countries`: `[]` → `["SE"]`
+  - `/modalities`: `["MRI", "fMRI", "dMRI", "EMG"]` → `["MRI", "fMRI", "dMRI", "EMG", "survey"]`
+  - `/population`: `null` → `young and old participants studied in a randomized cross-over sleep deprivation design`
+  - `/provenance/enrichment/fields/conditions`: `null` → `llm`
   - `/provenance/enrichment/fields/countries`: `null` → `llm`
   - `/provenance/enrichment/fields/modalities`: `rules` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - … and 1 more
-- `physionet:cardioresp-response-orthostat` — Two-tiered response of cardiorespiratory-cerebrovascular networks to orthostatic challenge
-  - `/domains`: `["cardiology", "pulmonology"]` → `["neurology", "neuroscience", "cardiology", "pulmonology"]`
-  - `/modalities`: `["MRS", "ultrasound", "fNIRS"]` → `["MRS", "ultrasound", "fNIRS", "physiological_signals"]`
-  - `/population`: `null` → `Ten young healthy adults, studied between December 2009 and February 2010 at Semmelweis University, Faculty of Medicine`
-  - `/provenance/enrichment/fields/domains`: `rules` → `llm`
-  - `/provenance/enrichment/fields/modalities`: `rules` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - … and 1 more
-- `physionet:carmen-i` — CARMEN-I: A resource of anonymized electronic health records in Spanish and Catalan for training and testing NLP tools
-  - `/conditions`: `[{"label": "covid-19", "mesh_id": "D000086382"}]` → `[{"label": "covid-19", "mesh_id": "D000086382"}, {"label": "kidney failure", "mesh_id": "D007676"}, {"label": "cardiovas…`
-  - `/countries`: `[]` → `["ES"]`
-  - `/domains`: `["cardiology", "infectious_disease", "nephrology_urology"]` → `["cardiology", "oncology", "infectious_disease", "nephrology_urology"]`
-  - `/population`: `null` → `2,000 clinical records of COVID-19 patients with comorbidities from Hospital Clínic of Barcelona, March 2020 to March 20…`
-  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
-  - `/provenance/enrichment/fields/countries`: `null` → `llm`
-  - `/provenance/enrichment/fields/domains`: `rules` → `llm`
   - `/provenance/enrichment/fields/population`: `null` → `llm`
   - `/provenance/enrichment/fields/summary`: `null` → `llm`
   - `/provenance/enrichment/method`: `rules` → `rules+llm`
   - … and 3 more
-- `physionet:cdb` — MIT-BIH ECG Compression Test Database
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `This database contains 168 short ECG recordings (20.48 seconds each) selected to pose a variety of challenges for ECG co…` → `Short ECG recordings of 20.48 seconds each, selected to pose a variety of challenges for ECG compressors, particularly l…`
-- `physionet:cded` — Cerebromicrovascular Disease in Elderly with Diabetes
-  - `/conditions`: `[{"label": "diabetes mellitus", "mesh_id": "D003920"}, {"label": "diabetes mellitus, type 2", "mesh_id": "D003924"}]` → `[{"label": "diabetes mellitus", "mesh_id": "D003920"}, {"label": "diabetes mellitus, type 2", "mesh_id": "D003924"}, {"l…`
-  - `/modalities`: `["MRI", "dMRI", "ultrasound"]` → `["MRI", "dMRI", "ultrasound", "physiological_signals", "clinical_tabular"]`
-  - `/population`: `null` → `69 diabetic and control participants aged 55 to 75 years at baseline, with 41 subjects completing two years of follow-up`
-  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
-  - `/provenance/enrichment/fields/modalities`: `rules` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - … and 1 more
-- `physionet:cebsdb` — Combined measurement of ECG, Breathing and Seismocardiograms
-  - `/conditions`: `[{"label": "healthy controls", "mesh_id": null}]` → `[{"label": "healthy controls", "mesh_id": null}, {"label": "healthy volunteers", "mesh_id": "D064368"}]`
-  - `/population`: `null` → `20 presumed healthy volunteers`
-  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-- `physionet:cerebral-perfusion-diabetes` — Cerebral perfusion and cognitive decline in type 2 diabetes
-  - `/conditions`: `[{"label": "diabetes mellitus", "mesh_id": "D003920"}, {"label": "diabetes mellitus, type 2", "mesh_id": "D003924"}, {"l…` → `[{"label": "diabetes mellitus", "mesh_id": "D003920"}, {"label": "diabetes mellitus, type 2", "mesh_id": "D003924"}, {"l…`
-  - `/modalities`: `["MRI", "ultrasound"]` → `["MRI", "ultrasound", "physiological_signals", "clinical_tabular"]`
-  - `/population`: `null` → `70 patients with type 2 DM and 70 healthy controls (50-85 years old)`
-  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
-  - `/provenance/enrichment/fields/modalities`: `rules` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - … and 1 more
-- `physionet:cerebral-vasoreg-diabetes` — Cerebral Vasoregulation in Diabetes
-  - `/conditions`: `[{"label": "diabetes mellitus", "mesh_id": "D003920"}, {"label": "diabetes mellitus, type 2", "mesh_id": "D003924"}]` → `[{"label": "diabetes mellitus", "mesh_id": "D003920"}, {"label": "diabetes mellitus, type 2", "mesh_id": "D003924"}, {"l…`
-  - `/modalities`: `["MRI"]` → `["MRI", "ultrasound", "physiological_signals"]`
-  - `/population`: `null` → `37 diabetic participants and 49 controls (aged 55 to 75 years)`
-  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
-  - `/provenance/enrichment/fields/modalities`: `rules` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - … and 1 more
-- `physionet:cgmacros` — CGMacros: a scientific dataset for personalized nutrition and diet monitoring
-  - `/conditions`: `[{"label": "diabetes mellitus", "mesh_id": "D003920"}, {"label": "diabetes mellitus, type 2", "mesh_id": "D003924"}, {"l…` → `[{"label": "diabetes mellitus", "mesh_id": "D003920"}, {"label": "diabetes mellitus, type 2", "mesh_id": "D003924"}, {"l…`
-  - `/modalities`: `[]` → `["wearable", "clinical_tabular", "other"]`
-  - `/population`: `null` → `45 study participants (15 healthy adults, 16 with pre-diabetes, and 14 with Type 2 diabetes)`
-  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
+- `openneuro:ds000202` — The heterogeneity in retrieved relations between the personality trait 'Harm avoidance' and gray matter volumes due to variations in the VBM and ROI labeling processing settings
+  - `/countries`: `[]` → `["BE"]`
+  - `/modalities`: `["MRI"]` → `["MRI", "survey"]`
+  - `/population`: `null` → `95 healthy female volunteers (age: 18-30 years)`
+  - `/provenance/enrichment/fields/countries`: `null` → `llm`
   - `/provenance/enrichment/fields/modalities`: `null` → `llm`
   - `/provenance/enrichment/fields/population`: `null` → `llm`
   - `/provenance/enrichment/fields/summary`: `null` → `llm`
@@ -1179,279 +287,345 @@ none
   - `/provenance/enrichment/model`: `null` → `opus`
   - `/provenance/enrichment/prompt_version`: `null` → `v1`
   - … and 1 more
-- `physionet:challenge-2000` — Detecting and Quantifying Apnea Based on the ECG: The PhysioNet/Computing in Cardiology Challenge 2000
-  - `/conditions`: `[{"label": "hypertension", "mesh_id": "D006973"}, {"label": "myocardial infarction", "mesh_id": "D009203"}, {"label": "s…` → `[{"label": "hypertension", "mesh_id": "D006973"}, {"label": "myocardial infarction", "mesh_id": "D009203"}, {"label": "s…`
-  - `/domains`: `["neurology", "cardiology"]` → `["neurology", "cardiology", "pulmonology"]`
-  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
-  - `/provenance/enrichment/fields/domains`: `rules` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Obstructive sleep apnea (intermittent cessation of breathing) is a common problem with major health implications, rangin…` → `Challenge dataset for detecting and quantifying obstructive sleep apnea from the electrocardiogram, provided so ECG-base…`
-- `physionet:challenge-2001` — Predicting Paroxysmal Atrial Fibrillation/Flutter: The PhysioNet/Computing in Cardiology Challenge 2001
-  - `/conditions`: `[{"label": "atrial fibrillation", "mesh_id": "D001281"}]` → `[{"label": "atrial fibrillation", "mesh_id": "D001281"}, {"label": "paroxysmal atrial fibrillation/flutter", "mesh_id": …`
-  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-- `physionet:challenge-2003` — Distinguishing Ischemic from Non-Ischemic ST Changes: The PhysioNet/Computing in Cardiology Challenge 2003
-  - `/conditions`: `[]` → `[{"label": "myocardial ischemia", "mesh_id": "D017202"}]`
+- `openneuro:ds000203` — Visual imagery and false memory for pictures
+  - `/conditions`: `[]` → `[{"label": "healthy participants", "mesh_id": null}]`
+  - `/population`: `null` → `healthy participants`
   - `/provenance/enrichment/fields/conditions`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `For the fourth annual PhysioNet/Computers in Cardiology Challenge, we propose a provocative question of considerable cli…` → `Challenge dataset asking whether transient ST changes in the ECG caused by myocardial ischemia can be distinguished from…`
-- `physionet:challenge-2004` — Spontaneous Termination of Atrial Fibrillation: The PhysioNet/Computing in Cardiology Challenge 2004
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `The fifth annual PhysioNet/Computers in Cardiology Challenge focusses on this question : Is it possible to predict if (o…` → `PhysioNet/Computing in Cardiology Challenge 2004 asks whether it is possible to predict if or when an episode of atrial …`
-- `physionet:challenge-2005` — The First Five Challenges Revisited: The PhysioNet/Computing in Cardiology Challenge 2005
-  - `/conditions`: `[{"label": "atrial fibrillation", "mesh_id": "D001281"}, {"label": "sleep apnea, obstructive", "mesh_id": "D020181"}]` → `[{"label": "atrial fibrillation", "mesh_id": "D001281"}, {"label": "sleep apnea, obstructive", "mesh_id": "D020181"}, {"…`
-  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-- `physionet:challenge-2006` — QT Interval Measurement: The PhysioNet/Computing in Cardiology Challenge 2006
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `The seventh annual PhysioNet/Computers in Cardiology Challenge addresses a question of high clinical interest: Can the Q…` → `PhysioNet/Computing in Cardiology Challenge 2006 addresses whether the QT interval can be measured by fully automated me…`
-- `physionet:challenge-2007` — Electrocardiographic Imaging of Myocardial Infarction: The PhysioNet/Computing in Cardiology Challenge 2007
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `The aim of Challenge 2007 is to establish how well one can characterize the location and extent of moderate to large, re…` → `Challenge 2007 asks how well the location and extent of moderate to large infarcts can be characterized from electrocard…`
-- `physionet:challenge-2008` — Detecting and Quantifying T-Wave Alternans: The PhysioNet/Computing in Cardiology Challenge 2008
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `The ninth annual PhysioNet/Computers in Cardiology Challenge aims to improve understanding of methods for identification…` → `PhysioNet/Computing in Cardiology Challenge 2008 aims to improve understanding of methods for identifying and analyzing …`
-- `physionet:challenge-2009` — Predicting Acute Hypotensive Episodes: The PhysioNet/Computing in Cardiology Challenge 2009
-  - `/conditions`: `[{"label": "hypertension", "mesh_id": "D006973"}]` → `[{"label": "hypertension", "mesh_id": "D006973"}, {"label": "acute hypotensive episode", "mesh_id": null}]`
-  - `/population`: `null` → `patients in the challenge dataset`
-  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
   - `/provenance/enrichment/fields/population`: `null` → `llm`
   - `/provenance/enrichment/fields/summary`: `null` → `llm`
   - `/provenance/enrichment/method`: `rules` → `rules+llm`
   - `/provenance/enrichment/model`: `null` → `opus`
   - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `This year's challenge is the tenth in the annual series of open challenges hosted by PhysioNet in cooperation with Compu…` → `PhysioNet/Computing in Cardiology Challenge 2009 asks participants to predict which patients in the challenge dataset wi…`
-- `physionet:challenge-2010` — Mind the Gap: The PhysioNet/Computing in Cardiology Challenge 2010
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `The aim of this year's challenge is to develop robust methods for filling in gaps in multiparameter physiologic data (in…` → `Challenge 2010 asks for robust methods to fill gaps in multiparameter physiologic data, including ECG signals, continuou…`
-- `physionet:challenge-2011` — Improving the Quality of ECGs Collected using Mobile Phones: The PhysioNet/Computing in Cardiology Challenge 2011
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `The aim of the PhysioNet/Computing in Cardiology Challenge 2011 is to develop an efficient algorithm able to run in near…` → `Challenge 2011 asks for an efficient algorithm that runs in near real-time on a mobile phone and gives a layperson feedb…`
-- `physionet:challenge-2012` — Predicting Mortality of ICU Patients: The PhysioNet/Computing in Cardiology Challenge 2012
-  - `/population`: `null` → `ICU patients, using information collected during the first two days of an ICU stay`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `The focus of the PhysioNet/CinC Challenge 2012 is to develop methods for patient-specific prediction of in-hospital mort…` → `PhysioNet/CinC Challenge 2012 task on patient-specific prediction of in-hospital mortality, using information collected …`
-- `physionet:challenge-2013` — Noninvasive Fetal ECG: The PhysioNet/Computing in Cardiology Challenge 2013
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `The aim of this year's PhysioNet/Computing in Cardiology Challenge is to encourage development of accurate algorithms fo…` → `PhysioNet/CinC Challenge 2013 on noninvasive fetal ECG, aimed at algorithms for locating QRS complexes and estimating th…`
-- `physionet:challenge-2014` — Robust Detection of Heart Beats in Multimodal Data: The PhysioNet/Computing in Cardiology Challenge 2014
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `This challenge aims to encourage the exploration of robust methods for locating heart beats in continuous long-term data…` → `PhysioNet/CinC Challenge 2014 on robust detection of heart beats in continuous long-term recordings from bedside monitor…`
-- `physionet:challenge-2015` — Reducing False Arrhythmia Alarms in the ICU: The PhysioNet/Computing in Cardiology Challenge 2015
-  - `/population`: `null` → `Patients monitored in the Intensive Care Unit (ICU)`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `The 2015 PhysioNet/CinC Challenge aims to encourage the development of algorithms to reduce the incidence of false alarm…` → `PhysioNet/CinC Challenge 2015 encouraging algorithms that reduce the incidence of false arrhythmia alarms in the Intensi…`
-- `physionet:challenge-2016` — Classification of Heart Sound Recordings: The PhysioNet/Computing in Cardiology Challenge 2016
-  - `/modalities`: `[]` → `["other"]`
-  - `/population`: `null` → `Subjects recorded in a variety of clinical or nonclinical (such as in-home visits) environments`
-  - `/provenance/enrichment/fields/modalities`: `null` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `The 2016 PhysioNet/CinC Challenge aims to encourage the development of algorithms to classify heart sound recordings col…` → `PhysioNet/CinC Challenge 2016 on classifying heart sound recordings, deciding from a single short recording at one preco…`
-- `physionet:challenge-2017` — AF Classification from a Short Single Lead ECG Recording: The PhysioNet/Computing in Cardiology Challenge 2017
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `The 2017 PhysioNet/CinC Challenge aims to encourage the development of algorithms to classify, from a single short ECG l…` → `PhysioNet/CinC Challenge 2017 on classifying a single short ECG lead recording as normal sinus rhythm, atrial fibrillati…`
-- `physionet:challenge-2018` — You Snooze You Win: The PhysioNet/Computing in Cardiology Challenge 2018
-  - `/domains`: `["cardiology"]` → `["cardiology", "pulmonology"]`
-  - `/provenance/enrichment/fields/domains`: `rules` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `The goal of the challenge is use information from the available signals to correctly classify target arousal regions.` → `PhysioNet/CinC Challenge 2018 sleep dataset whose goal is to use information from the available signals to correctly cla…`
-- `physionet:challenge-2019` — Early Prediction of Sepsis from Clinical Data: The PhysioNet/Computing in Cardiology Challenge 2019
-  - `/modalities`: `[]` → `["clinical_tabular"]`
-  - `/provenance/enrichment/fields/modalities`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `The 2019 PhysioNet Computing in Cardiology Challenge invites participants to predict sepsis in clinical data` → `PhysioNet/CinC Challenge 2019 inviting participants to predict sepsis early from clinical data, motivated by evidence th…`
-- `physionet:challenge-2020` — Classification of 12-lead ECGs: The PhysioNet/Computing in Cardiology Challenge 2020
-  - `/conditions`: `[]` → `[{"label": "cardiac abnormalities", "mesh_id": null}, {"label": "cardiac arrhythmias", "mesh_id": null}]`
-  - `/provenance/enrichment/fields/conditions`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `The goal of the 2020 PhysioNet - Computing in Cardiology Challenge is to design and implement a working, open-source alg…` → `Challenge dataset of 12-lead ECG recordings for building open-source algorithms that automatically identify cardiac abno…`
-- `physionet:challenge-2021` — Will Two Do? Varying Dimensions in Electrocardiography: The PhysioNet/Computing in Cardiology Challenge 2021
-  - `/conditions`: `[]` → `[{"label": "cardiac abnormalities", "mesh_id": null}]`
-  - `/provenance/enrichment/fields/conditions`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-- `physionet:challenge-2022` — Heart Murmur Detection from Phonocardiogram Recordings: The George B. Moody PhysioNet Challenge 2022
-  - `/conditions`: `[{"label": "covid-19", "mesh_id": "D000086382"}, {"label": "heart failure", "mesh_id": "D006333"}]` → `[{"label": "covid-19", "mesh_id": "D000086382"}, {"label": "heart failure", "mesh_id": "D006333"}, {"label": "murmurs", …`
-  - `/modalities`: `["survey"]` → `["physiological_signals", "survey"]`
-  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
-  - `/provenance/enrichment/fields/modalities`: `rules` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `2022 Physionet Challenge is devoted to detecting the presence or absence of murmurs from multiple heart sound recordings…` → `Challenge dataset of heart sound (phonocardiogram) recordings taken at multiple auscultation locations, used to detect t…`
-- `physionet:chaos-heart-rate` — Is the normal heart rate chaotic?
-  - `/conditions`: `[{"label": "atrial fibrillation", "mesh_id": "D001281"}, {"label": "heart failure", "mesh_id": "D006333"}]` → `[{"label": "atrial fibrillation", "mesh_id": "D001281"}, {"label": "heart failure", "mesh_id": "D006333"}, {"label": "co…`
-  - `/modalities`: `["ECG"]` → `["ECG", "physiological_signals"]`
-  - `/population`: `null` → `15 heart beat (RR-interval) time series in health and disease (congestive heart failure and atrial fibrillation), each a…`
-  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
-  - `/provenance/enrichment/fields/modalities`: `rules` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - … and 1 more
-- `physionet:charisdb` — CHARIS database
-  - `/population`: `null` → `patients diagnosed with traumatic brain injury (TBI)`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Multi-channel recordings of ECG, arterial blood pressure (ABP), and intracranial pressure (ICP) of patients diagnosed wi…` → `Multi-channel recordings of ECG, arterial blood pressure, and intracranial pressure from traumatic brain injury patients…`
-- `physionet:chbmit` — CHB-MIT Scalp EEG Database
-  - `/conditions`: `[{"label": "epilepsy", "mesh_id": "D004827"}]` → `[{"label": "epilepsy", "mesh_id": "D004827"}, {"label": "intractable seizures", "mesh_id": null}]`
+  - `/summary`: `This dataset was obtained from the OpenfMRI project (http://www.openfmri.org). Accession #: ds000203 Description: Visual…` → `Functional MRI dataset from a visual imagery and false memory for pictures task in healthy participants, released throug…`
+- `openneuro:ds000205` — Affective Videos
   - `/countries`: `[]` → `["US"]`
-  - `/population`: `null` → `22 pediatric subjects (5 males and 17 females) with intractable seizures, grouped into 23 cases`
-  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
+  - `/population`: `null` → `Participants who viewed affect-eliciting audiovisual clips`
   - `/provenance/enrichment/fields/countries`: `null` → `llm`
   - `/provenance/enrichment/fields/population`: `null` → `llm`
   - `/provenance/enrichment/fields/summary`: `null` → `llm`
   - `/provenance/enrichment/method`: `rules` → `rules+llm`
   - `/provenance/enrichment/model`: `null` → `opus`
   - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `Data acquisition methods have been described in detail in Kim et al. (2016, PLoS ONE), but we outline them here and prov…` → `Task fMRI dataset in which participants passively viewed affect-eliciting audiovisual clips spanning four quadrants of v…`
+- `openneuro:ds000206` — DWI Traveling Human Phantom Study
+  - `/population`: `null` → `five healthy controls imaged at eight imaging centers`
+  - `/provenance/enrichment/fields/population`: `null` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `This Datasets is from a Traveling Human Phantom (THP) dataset that was collected for a multi-site neuroimaging reliabili…` → `Traveling Human Phantom dataset for a multi-site neuroimaging reliability study: repeated multi-modal MR scans of health…`
+- `openneuro:ds000208` — Brain connectivity predicts placebo response across chronic pain clinical trials
+  - `/conditions`: `[{"label": "healthy controls", "mesh_id": null}, {"label": "osteoarthritis", "mesh_id": "D010003"}]` → `[{"label": "healthy controls", "mesh_id": null}, {"label": "osteoarthritis", "mesh_id": "D010003"}, {"label": "Osteoarth…`
+  - `/population`: `null` → `Healthy controls and osteoarthritis patients from two placebo-controlled treatment studies, scanned before treatment`
+  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
+  - `/provenance/enrichment/fields/population`: `null` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `In this dataset you will find the following T1 and resting state scans for; -20 Healthy controls. -17 Osteoarthritis (OA…` → `T1 and resting-state scans from healthy controls and osteoarthritis patients enrolled in placebo-controlled chronic pain…`
+- `openneuro:ds000210` — Multi-echo fMRI replication sample of autobiographical memory, prospection and theory of mind reasoning tasks
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `A multi-echo replication sample of autobiographical memory, prospection and theory of mind reasoning tasks published in …` → `Multi-echo fMRI replication sample covering autobiographical memory, prospection, and theory of mind reasoning tasks, wi…`
+- `openneuro:ds000212` — Moral judgments of intentional and accidental moral violations across Harm and Purity domains
+  - `/conditions`: `[{"label": "autism spectrum disorder", "mesh_id": "D000067877"}]` → `[{"label": "autism spectrum disorder", "mesh_id": "D000067877"}, {"label": "Autism Spectrum Disorder (ASD)", "mesh_id": …`
+  - `/countries`: `[]` → `["US"]`
+  - `/modalities`: `["MRI", "fMRI"]` → `["MRI", "fMRI", "behavioral"]`
+  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
+  - `/provenance/enrichment/fields/countries`: `null` → `llm`
+  - `/provenance/enrichment/fields/modalities`: `null` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
   - … and 1 more
-- `physionet:chest-ct-sepsis-er` — Chest Computed Tomography for patients with sepsis in the Emergency Department
-  - `/conditions`: `[{"label": "sepsis", "mesh_id": "D018805"}]` → `[{"label": "sepsis", "mesh_id": "D018805"}, {"label": "sepsis-induced lung injury", "mesh_id": null}]`
-  - `/modalities`: `["CT"]` → `["CT", "clinical_tabular"]`
-  - `/population`: `null` → `728 admissions with sepsis`
-  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
-  - `/provenance/enrichment/fields/modalities`: `rules` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - … and 1 more
-- `physionet:chest-imagenome` — Chest ImaGenome Dataset
-  - `/modalities`: `["xray", "genomics", "EHR"]` → `["xray", "genomics", "EHR", "clinical_notes"]`
-  - `/population`: `null` → `automatically labeled frontal MIMIC CXRs, with a manually annotated gold standard for 500 patients`
-  - `/provenance/enrichment/fields/modalities`: `rules` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `The Chest ImaGenome dataset is a scene graph dataset with additional chronological comparison relations for chest X-rays…` → `Scene graph dataset for chest X-rays with chronological comparison relations, automatically derived from MIMIC-CXR using…`
-- `physionet:chest-x-ray-segmentation` — Chest X-ray Dataset with Lung Segmentation
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `CXLSeg dataset: Chest X-ray with Lung Segmentation, a comparatively large dataset of segmented Chest X-ray radiographs b…` → `Segmentation masks for frontal chest radiographs derived from the MIMIC-CXR dataset, paired with the original images for…`
-- `physionet:chexchonet` — CheXchoNet: A Chest Radiograph Dataset with Gold Standard Echocardiography Labels
-  - `/conditions`: `[{"label": "heart failure", "mesh_id": "D006333"}]` → `[{"label": "heart failure", "mesh_id": "D006333"}, {"label": "structural heart disease", "mesh_id": null}]`
-  - `/population`: `null` → `71,589 unique chest X-rays from 24,689 different patients`
-  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Early detection of heart failure is vital for improving outcomes. The dataset contains 71,589 CXRs paired with gold stan…` → `Chest radiographs paired with structural heart disease labels derived from echocardiograms performed on the same patient…`
-- `physionet:chexmask-cxr-segmentation-data` — CheXmask Database: a large-scale dataset of anatomical segmentation masks for chest x-ray images
-  - `/domains`: `[]` → `["other"]`
-  - `/provenance/enrichment/fields/domains`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `CheXmask Database is a 657,566 uniformly annotated chest radiographs with segmentation masks. Images were segmented usin…` → `Anatomical segmentation masks for chest radiographs aggregated from five public databases, produced with the HybridGNet …`
-- `physionet:chexstruct-cxreasonbench` — CXReasonBench: A Benchmark for Evaluating Structured Diagnostic Reasoning in Chest X-rays
-  - `/domains`: `[]` → `["other"]`
-  - `/population`: `null` → `18,988 QA pairs across 12 diagnostic tasks and 1,200 cases`
-  - `/provenance/enrichment/fields/domains`: `null` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `CheXStruct is an automated pipeline that derives structured diagnostic reasoning steps from chest X-rays. CXReasonBench …` → `A benchmark of question-answer pairs and intermediate reasoning steps built from MIMIC-CXR-JPG, evaluating whether visio…`
-- `physionet:chf2db` — Congestive Heart Failure RR Interval Database
-  - `/conditions`: `[{"label": "heart failure", "mesh_id": "D006333"}]` → `[{"label": "heart failure", "mesh_id": "D006333"}, {"label": "congestive heart failure", "mesh_id": null}]`
-  - `/population`: `null` → `29 long-term ECG recordings of subjects aged 34 to 79, with congestive heart failure (NYHA classes I, II, and III)`
-  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `This database includes beat annotation files for 29 long-term ECG recordings of subjects aged 34 to 79, with congestive …` → `Beat annotation files giving RR interval series from long-term ECG recordings of subjects with congestive heart failure.`
-- `physionet:chfdb` — BIDMC Congestive Heart Failure Database
-  - `/conditions`: `[{"label": "heart failure", "mesh_id": "D006333"}]` → `[{"label": "heart failure", "mesh_id": "D006333"}, {"label": "severe congestive heart failure", "mesh_id": null}]`
-  - `/population`: `null` → `15 subjects (11 men, aged 22 to 71, and 4 women, aged 54 to 63) with severe congestive heart failure`
-  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Long-term ECG recordings from 15 subjects with severe congestive heart failure.` → `Long-term ECG recordings from subjects with severe congestive heart failure who were part of a larger study group receiv…`
-- `physionet:circor-heart-sound` — The CirCor DigiScope Phonocardiogram Dataset
-  - `/conditions`: `[]` → `[{"label": "heart murmurs", "mesh_id": "D006337"}]`
-  - `/modalities`: `[]` → `["physiological_signals"]`
-  - `/population`: `null` → `5272 heart sound recordings were collected from the main four auscultation locations of 1568 subjects, aged between 0 an…`
+- `openneuro:ds000214` — EUPD Cyberball
+  - `/conditions`: `[]` → `[{"label": "borderline personality disorder", "mesh_id": "D001883"}, {"label": "controls", "mesh_id": null}]`
+  - `/countries`: `[]` → `["GB"]`
+  - `/domains`: `["neuroscience", "obstetrics_gynecology"]` → `["psychiatry", "neuroscience", "obstetrics_gynecology"]`
+  - `/modalities`: `["MRI", "fMRI", "survey"]` → `["MRI", "fMRI", "behavioral", "survey"]`
   - `/provenance/enrichment/fields/conditions`: `null` → `llm`
+  - `/provenance/enrichment/fields/countries`: `null` → `llm`
+  - `/provenance/enrichment/fields/domains`: `rules` → `llm`
+  - `/provenance/enrichment/fields/modalities`: `rules` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - … and 3 more
+- `openneuro:ds000216` — Multiband Multi-Echo Imaging of Simultaneous Oxygenation and Flow Timeseries for Resting State Connectivity
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `This dataset contains resting state data collected using a multiband, multiecho simultaneous pseudocontinous ASL (pCASL)…` → `Sequence-development dataset of resting-state scans acquired with a combined multiband multi-echo pseudo-continuous ASL …`
+- `openneuro:ds000218` — Flavour Pleasantness (Oral Nutritional Supplements)
+  - `/modalities`: `["MRI", "fMRI"]` → `["MRI", "fMRI", "behavioral"]`
+  - `/provenance/enrichment/fields/modalities`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+- `openneuro:ds000219` — Flavour Pleasantness (Regular Products)
+  - `/modalities`: `["MRI", "fMRI"]` → `["MRI", "fMRI", "behavioral"]`
+  - `/provenance/enrichment/fields/modalities`: `null` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `Data acquisition methods have been described in detail in Dalenberg et al. (2017, Plos One) ————————————————————————————…` → `Flavour pleasantness study using regular commercial drink and dairy products, with stimulus descriptions and composition…`
+- `openneuro:ds000220` — Cost Analysis TBI
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `This dataset was obtained from the OpenfMRI project (http:www.openfmri.org). Accession #: ds00220 Description: The evolu…` → `Longitudinal resting-state imaging accompanying a study of cost-efficiency in neural networks during recovery from traum…`
+- `openneuro:ds000221` — MPI-Leipzig_Mind-Brain-Body
+  - `/countries`: `[]` → `["DE"]`
+  - `/population`: `null` → `318 participants, all with at least a quantitative T1-weighted image and a 15-minute eyes-open resting-state session; su…`
+  - `/provenance/enrichment/fields/countries`: `null` → `llm`
+  - `/provenance/enrichment/fields/population`: `null` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `The MPI-Leipzig Mind-Brain-Body dataset contains MRI and behavioral data from 318 participants. Datasets for all partici…` → `MRI and behavioral data from participants in two protocols: LEMON, focused on structural imaging with T1, T2, diffusion,…`
+- `openneuro:ds000222` — Sequential Inference VBM
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `��Sequential Inference VBM dataset. These data comprise behaviour from 79 subjects on a probabilistic reversal task toge…` → `Voxel-based morphometry dataset pairing T1-weighted structural images with behaviour on a probabilistic reversal task, f…`
+- `openneuro:ds000223` — Magnitude Effect
+  - `/countries`: `[]` → `["US"]`
+  - `/population`: `null` → `19 participants, scanned across two sites (sub-01 through sub-06 at site 1, sub-07 through sub-19 at site 2)`
+  - `/provenance/enrichment/fields/countries`: `null` → `llm`
+  - `/provenance/enrichment/fields/population`: `null` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `Description: Magnitude Effect Temporal Discounting Experiment Please cite the following references if you use these data…` → `Brain imaging dataset from a temporal discounting experiment on the magnitude effect in intertemporal choice. Data were …`
+- `openneuro:ds000224` — The Midnight Scan Club (MSC) dataset
+  - `/modalities`: `["MRI", "fMRI"]` → `["MRI", "fMRI", "behavioral"]`
+  - `/provenance/enrichment/fields/modalities`: `null` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `This dataset contains the Midnight Scanning Club (MSC) data, a dataset focused on the precise characterization of ten in…` → `Deep-phenotyping dataset of ten individuals, each scanned in twelve two-hour sessions covering structural, angiographic,…`
+- `openneuro:ds000228` — MRI data of 3-12 year old children and adults during viewing of a short animated film
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `Experiment Details Participants watched Disney Pixar’s “Partly Cloudy” while lying in the scanner. There was no task; pa…` → `Brain imaging collected while children and adults passively watched a short animated film with no task. Event annotation…`
+- `openneuro:ds000229` — Integration of sweet taste and metabolism determines carbohydrate reward - study 1
+  - `/countries`: `[]` → `["US"]`
+  - `/provenance/enrichment/fields/countries`: `null` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `Data acquisition methods have been described in detail in Veldhuizen et al. (under revision) xxx and de Araujo, I. E., L…` → `Flavor-nutrient conditioning study of how sweet taste and metabolism shape carbohydrate reward. Healthy adults rated and…`
+- `openneuro:ds000231` — Integration of sweet taste and metabolism determines carbohydrate reward-study 3
+  - `/conditions`: `[]` → `[{"label": "healthy", "mesh_id": null}]`
+  - `/countries`: `[]` → `["US"]`
+  - `/modalities`: `["MRI", "fMRI"]` → `["MRI", "fMRI", "physiological_signals"]`
+  - `/provenance/enrichment/fields/conditions`: `null` → `llm`
+  - `/provenance/enrichment/fields/countries`: `null` → `llm`
+  - `/provenance/enrichment/fields/modalities`: `null` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - … and 1 more
+- `openneuro:ds000232` — Adjudicating between face-coding models with individual-face fMRI responses
+  - `/conditions`: `[]` → `[{"label": "healthy human volunteers", "mesh_id": null}]`
+  - `/provenance/enrichment/fields/conditions`: `null` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `This is a human fMRI dataset that investigates coding of individual faces in the visual cortex of healthy human voluntee…` → `Human imaging dataset investigating how individual faces are coded in visual cortex, paired with behavioral similarity j…`
+- `openneuro:ds000233` — Neural responses to naturalistic clips of behaving animals in two different task contexts
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `Source data (sourcedata/) may contain sensitive information and therefore not distributed publicly. The 40 video clip st…` → `Brain imaging responses to naturalistic video clips of behaving animals under two task contexts, behavioral and taxonomi…`
+- `openneuro:ds000234` — Whole-brain background-suppressed pCASL MRI with 1D-accelerated 3D RARE Stack-Of-Spirals Readout- Dataset 1
+  - `/modalities`: `["MRI"]` → `["MRI", "fMRI"]`
+  - `/provenance/enrichment/fields/modalities`: `null` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `Description of the ASL sequence A sequence with pseudo-continuous labeling, background suppression and 3D RARE Stack-Of-…` → `Arterial spin labeling dataset comparing accelerated and non-accelerated versions of a background-suppressed pCASL seque…`
+- `openneuro:ds000235` — Whole-brain background-suppressed pCASL MRI with 1D-accelerated 3D RARE Stack-Of-Spirals Readout- Dataset 2
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `Description of the ASL sequence A sequence with pseudo-continuous labeling, background suppression and 3D RARE Stack-Of-…` → `Arterial spin labeling MRI acquired at rest in adults with an accelerated 3D RARE stack-of-spirals readout, plus anatomi…`
+- `openneuro:ds000236` — Whole-brain background-suppressed pCASL MRI with 1D-accelerated 3D RARE Stack-Of-Spirals Readout- Dataset 3
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `Description of the ASL sequence A sequence with pseudo-continuous labeling, background suppression and 3D RARE Stack-Of-…` → `Resting arterial spin labeling perfusion MRI in an older cohort using a single-shot accelerated readout, with anatomical…`
+- `openneuro:ds000238` — Trial timing for multivariate pattern analysis
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `### Comments added by Openfmri Curators ### =========================================== General Comments ---------------…` → `Imaging dataset on trial timing for multivariate pattern analysis, including defaced anatomical images and MRIQC quality…`
+- `openneuro:ds000239` — Maclaren test-retest brain volume dataset
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `s dataset is a re-publishing in BIDS format of a dataset previously published on figshare: Maclaren, Julian; Han, Zhaoyi…` → `Test-retest structural brain imaging dataset of repeated T1-weighted volumes, defaced and republished in BIDS format fro…`
+- `openneuro:ds000240` — Resting State Perfusion in Healthy Aging
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `All subjects underwent an MRI resting-state scan. Subjects were instructed to lie still with their eyes open, without fa…` → `Resting-state arterial spin labeling perfusion imaging in healthy aging, acquired on a 3T scanner with pseudo-continuous…`
+- `openneuro:ds000241` — AK6
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `Accession #: ds000241 Description: AK6: Animal Kingdom; 6 Species Dataset for study reported in: Connolly, A. C., J. S. …` → `Brain imaging dataset accompanying a study of how biological classes are represented in the human brain, using stimuli f…`
+- `openneuro:ds000243` — Washington University 120
+  - `/countries`: `[]` → `["US"]`
+  - `/population`: `null` → `120 typical young adults reporting no significant neurological or psychiatric history, right-handed, English first langu…`
+  - `/provenance/enrichment/fields/countries`: `null` → `llm`
+  - `/provenance/enrichment/fields/population`: `null` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `These 120 MRI datasets are being released to the public along as part of the materials for “Temporal interpolation alter…` → `Anatomical and resting-state BOLD scans from typical young adults, released to accompany work on temporal interpolation …`
+- `openneuro:ds000244` — Individual Brain Charting
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `Overview ======== Functional Magnetic Resonance Imaging (fMRI) has opened the door to brain mapping of perceptual, motor…` → `Multi-task fMRI collection mapping brain responses for many mental functions in the same twelve participants, plus high-…`
+- `openneuro:ds000246` — MEG-BIDS Brainstorm data sample
+  - `/countries`: `[]` → `["CA"]`
+  - `/modalities`: `["MRI", "MEG"]` → `["MRI", "MEG", "behavioral"]`
+  - `/provenance/enrichment/fields/countries`: `null` → `llm`
+  - `/provenance/enrichment/fields/modalities`: `null` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `# Brainstorm - Auditory Dataset ## License This dataset (MEG and MRI data) was collected by the MEG Unit Lab, McConnell …` → `Auditory oddball MEG and MRI sample from one subject, recorded as tutorial data for the Brainstorm software. Regular and…`
+- `openneuro:ds000247` — MEG-BIDS OMEGA RestingState_sample
+  - `/countries`: `[]` → `["CA"]`
+  - `/provenance/enrichment/fields/countries`: `null` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `# OMEGA - Resting State Sample Dataset ## License - This dataset was obtained from **The Open MEG Archive** (OMEGA, http…` → `Resting-state MEG sample from the Open MEG Archive: five subjects recorded with eyes open on a CTF 275 system, including…`
+- `openneuro:ds000248` — ds000248
+  - `/modalities`: `["MRI", "EEG", "MEG"]` → `["MRI", "EEG", "MEG", "behavioral"]`
+  - `/population`: `null` → `One subject`
+  - `/provenance/enrichment/fields/modalities`: `rules` → `llm`
+  - `/provenance/enrichment/fields/population`: `null` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `MNE-Sample-Data --------------- The MNE software is accompanied by a sample data set. These data were acquired with the …` → `Sample MEG/EEG dataset distributed with the MNE software: checkerboards presented to left and right visual fields inters…`
+- `openneuro:ds000253` — Female action video game players.
+  - `/population`: `null` → `Female action video game players; 20 subjects`
+  - `/provenance/enrichment/fields/population`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+- `openneuro:ds000254` — Multiband Multi-Echo Simultaneous ASL/BOLD for task-induced functional MRI
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `This dataset contains resting state data collected using a multiband, multiecho simultaneous pseudocontinous ASL (pCASL)…` → `Imaging dataset acquired with a multiband, multi-echo simultaneous pseudo-continuous ASL and BOLD sequence. Each subject…`
+- `openneuro:ds000255` — Visual image reconstruction
+  - `/population`: `null` → `Two human subjects viewing contrast-based flickering patch images (random image viewing and figure image viewing runs).`
+  - `/provenance/enrichment/fields/population`: `null` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `# Visual image reconstruction Original paper: Miyawaki Y, Uchida H, Yamashita O, Sato M, Morito Y, Tanabe HC, Sadato N &…` → `fMRI data from two subjects viewing contrast-based images of 12 x 12 flickering patches, in random and figure image view…`
+- `openneuro:ds000256` — Behavioral interventions for reducing head motion during MRI scans in children
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `A major limitation to structural and functional MRI (fMRI) scans is their susceptibility to head motion artifacts. Even …` → `Children underwent fMRI scans while viewing a fixation cross or a cartoon movie, with and without real-time visual feedb…`
+- `openneuro:ds000258` — Multi-echo Cambridge
+  - `/population`: `null` → `89 subject datasets, collected from consenting neurotypical subjects with standard inclusion/exclusion criteria (English…`
+  - `/provenance/enrichment/fields/population`: `null` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `## Subjects There are 89 subject datasets, collected from consenting neurotypical subjects with standard inclusion/exclu…` → `Resting-state multi-echo BOLD data and T1-weighted anatomical images from 89 neurotypical subjects, acquired eyes open o…`
+- `openneuro:ds001021` — NKI-sample
+  - `/modalities`: `["MRI", "fMRI", "dMRI"]` → `["MRI", "fMRI", "dMRI", "behavioral", "genomics"]`
+  - `/provenance/enrichment/fields/modalities`: `null` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `The enhanced Nathan Kline Institute-Rockland Sample (NKI-RS) is an ongoing, institutionally centered endeavor aimed at c…` → `Enhanced Nathan Kline Institute-Rockland Sample: an ongoing community lifespan cohort combining resting-state and task s…`
+- `openneuro:ds001110` — Sherlock_Merlin
+  - `/modalities`: `["MRI", "fMRI", "eye_tracking"]` → `["MRI", "fMRI", "eye_tracking", "behavioral"]`
+  - `/population`: `null` → `18 participants who watched Sherlock movie and listened to the audio recording of Merlin movie, 18 participants who watc…`
+  - `/provenance/enrichment/fields/modalities`: `rules` → `llm`
+  - `/provenance/enrichment/fields/population`: `null` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `This directory includes the data of 18 particpants who watched Sherlock movie and listened to the audio recording of Mer…` → `Participants watched one movie (Sherlock or Merlin) and listened to an audio recall of the other, with one participant w…`
+- `openneuro:ds001132` — Sherlock
+  - `/modalities`: `["MRI", "fMRI"]` → `["MRI", "fMRI", "behavioral"]`
+  - `/population`: `null` → `Sixteen subjects`
+  - `/provenance/enrichment/fields/modalities`: `null` → `llm`
+  - `/provenance/enrichment/fields/population`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+- `openneuro:ds001145` — Twilight Zone Movie Watching Dataset
+  - `/population`: `null` → `24 subjects`
+  - `/provenance/enrichment/fields/population`: `null` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `Task: 24 subjects watched a complete 25-minute black-and-white television episode (the Twilight Zone, https://en.wikiped…` → `Functional and anatomical MRI acquired while subjects watched a complete black-and-white television episode with no inst…`
+- `openneuro:ds001168` — A high resolution 7-Tesla resting-state fMRI test-retest dataset with cognitive and physiological measures
+  - `/modalities`: `["MRI", "fMRI"]` → `["MRI", "fMRI", "physiological_signals", "behavioral"]`
+  - `/population`: `null` → `22 participants scanned during two sessions spaced one week apart`
+  - `/provenance/enrichment/fields/modalities`: `null` → `llm`
+  - `/provenance/enrichment/fields/population`: `null` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `Here we present a test-retest dataset of functional magnetic resonance imaging (fMRI) data acquired at rest. 22 particip…` → `High-resolution 7-Tesla resting-state fMRI test-retest data from two sessions one week apart, with whole-brain and prefr…`
+- `openneuro:ds001226` — BTC_preop
+  - `/conditions`: `[{"label": "brain neoplasms", "mesh_id": "D001932"}, {"label": "glioma", "mesh_id": "D005910"}, {"label": "meningioma", …` → `[{"label": "brain neoplasms", "mesh_id": "D001932"}, {"label": "glioma", "mesh_id": "D005910"}, {"label": "meningioma", …`
+  - `/modalities`: `["MRI", "fMRI", "dMRI"]` → `["MRI", "fMRI", "dMRI", "behavioral", "survey"]`
+  - `/population`: `null` → `11 glioma patients, 14 meningioma patients and 11 control subjects`
+  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
   - `/provenance/enrichment/fields/modalities`: `null` → `llm`
   - `/provenance/enrichment/fields/population`: `null` → `llm`
   - `/provenance/enrichment/fields/summary`: `null` → `llm`
@@ -1459,157 +633,538 @@ none
   - `/provenance/enrichment/model`: `null` → `opus`
   - `/provenance/enrichment/prompt_version`: `null` → `v1`
   - … and 1 more
-- `physionet:clinical-trajectory-flow-icu` — Clinical Time Series Datasets for Trajectory Flow Matching Evaluation: ICU Sepsis, ICU Cardiac Arrest, and ICU GIB Cohorts
-  - `/conditions`: `[{"label": "cardiac arrest", "mesh_id": null}, {"label": "sepsis", "mesh_id": "D018805"}]` → `[{"label": "cardiac arrest", "mesh_id": null}, {"label": "sepsis", "mesh_id": "D018805"}, {"label": "gastrointestinal bl…`
-  - `/population`: `null` → `ICU patients: 3362 with sepsis, 64589 at risk for cardiac arrest, and 2602 with gastrointestinal bleeding`
-  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
+- `openneuro:ds001228` — Decoding intentions of self and others
+  - `/modalities`: `["MRI", "fMRI"]` → `["MRI", "fMRI", "behavioral"]`
+  - `/provenance/enrichment/fields/modalities`: `null` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `Please cite the following reference if you use these data: Gilbert, S.J., & Fung, H. (2018). Decoding intentions of self…` → `Functional MRI from a collaborative two-player task used to decode intentions of self and others. Event files mark trial…`
+- `openneuro:ds001229` — Neural Evidence of the Strategic Choice Between Working Memory and Episodic Memory in Prospective Remembering.
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `Citation: Lewis-Peacock, J. A., Cohen, J. D., & Norman, K. A. (2016). Neural Evidence of the Strategic Choice Between Wo…` → `Task fMRI study of prospective memory. Participants monitored for a face or scene target while performing an ongoing wor…`
+- `openneuro:ds001232` — Competition between items in working memory leads to forgetting
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `Citation: Lewis-Peacock, J. A., & Norman, K. A. (2014). Competition between items in working memory leads to forgetting.…` → `Task fMRI study of working memory. In Phase 1 subjects remembered a single face or scene image; in Phase 2 they remember…`
+- `openneuro:ds001233` — singleFingerRSA
+  - `/countries`: `[]` → `["US"]`
+  - `/modalities`: `["MRI", "fMRI"]` → `["MRI", "fMRI", "behavioral"]`
+  - `/population`: `null` → `Neurotypical adult participants (n=18), English speaking, right handed, no history of neurological or psychiatric illnes…`
+  - `/provenance/enrichment/fields/countries`: `null` → `llm`
+  - `/provenance/enrichment/fields/modalities`: `null` → `llm`
+  - `/provenance/enrichment/fields/population`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+- `openneuro:ds001235` — Human-Object Interaction
+  - `/population`: `null` → `12 subjects`
+  - `/provenance/enrichment/fields/population`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+- `openneuro:ds001241` — OLVSL_ Object-location visual statistical learning
+  - `/modalities`: `["MRI", "fMRI"]` → `["MRI", "fMRI", "behavioral"]`
+  - `/provenance/enrichment/fields/modalities`: `null` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `This dataset was obtained from the OpenfMRI project (http://www.openfmri.org) Description: Object-location incidental le…` → `fMRI dataset on object-location incidental visual statistical learning, corresponding to a published experiment. Some ru…`
+- `openneuro:ds001242` — Examining effects of arousal on responses to salient and non-salient stimuli in younger and older adults
+  - `/population`: `null` → `Younger and older adults; a participants file indicates each participant's age group and sex`
   - `/provenance/enrichment/fields/population`: `null` → `llm`
   - `/provenance/enrichment/fields/summary`: `null` → `llm`
   - `/provenance/enrichment/method`: `rules` → `rules+llm`
   - `/provenance/enrichment/model`: `null` → `opus`
   - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `This resource comprises three clinical time series datasets used in the paper Trajectory Flow Matching with Applications…` → `Three irregularly sampled clinical time series cohorts drawn from eICU and MIMIC-III, split into training, validation an…`
-- `physionet:consumer-grade-wearables` — CogWear: Can we detect cognitive effort with consumer-grade wearables?
-  - `/modalities`: `["EEG", "wearable", "survey"]` → `["EEG", "physiological_signals", "wearable", "behavioral", "survey"]`
-  - `/population`: `null` → `Volunteers: 11 in the pilot dataset and 13 in the survey gamification experiment`
-  - `/provenance/enrichment/fields/modalities`: `rules` → `llm`
+  - `/summary`: `These functional, ECG, pupil, locus coeruleus, and structural MRI data have been published in: Lee, Greening, Ueno, Clew…` → `Study of how arousal affects neural responses to salient and non-salient stimuli in younger and older adults, combining …`
+- `openneuro:ds001246` — Generic Object Decoding (fMRI on ImageNet)
+  - `/population`: `null` → `Subjects who completed image presentation and imagery experiments`
   - `/provenance/enrichment/fields/population`: `null` → `llm`
   - `/provenance/enrichment/fields/summary`: `null` → `llm`
   - `/provenance/enrichment/method`: `rules` → `rules+llm`
   - `/provenance/enrichment/model`: `null` → `opus`
   - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Physiological data captured in experimental condition by three wearable devices.` → `Physiological recordings from consumer wearables (Empatica E4, Galaxy Watch4, Muse S EEG headband) collected while volun…`
-- `physionet:corpus-fungal-infections` — CHIFIR: Cytology and Histopathology Invasive Fungal Infection Reports
-  - `/conditions`: `[]` → `[{"label": "invasive fungal infection", "mesh_id": "D000072742"}]`
-  - `/domains`: `["infectious_disease"]` → `["infectious_disease", "other"]`
-  - `/population`: `null` → `283 de-identified cytology and histopathology reports`
+  - `/summary`: `# Generic Object Decoding (fMRI on ImageNet) ## Original paper Horikawa, T. & Kamitani, Y. (2017) Generic decoding of se…` → `fMRI recorded while subjects viewed object images from ImageNet or imagined images from previously seen categories, used…`
+- `openneuro:ds001293` — Multi-resolution 7T fMRI data on the representation of visual orientation
+  - `/population`: `null` → `7 participants`
+  - `/provenance/enrichment/fields/population`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+- `openneuro:ds001299` — NumberlineMarking
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `Description of columns in event files (see the associated publication for more details): - onset: Onset of all events on…` → `Functional MRI and behavioral data from a number line marking experiment. Each trial has an encoding phase and a marking…`
+- `openneuro:ds001306` — negative_template
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `A "target template", specifying target features, is thought to benefit visual search performance. Setting up a "negative…` → `Functional MRI study of visual search in which colour cues signalled the target colour, a distractor colour, or neither.…`
+- `openneuro:ds001338` — ParanoiaStory
+  - `/conditions`: `[]` → `[{"label": "paranoia", "mesh_id": null}]`
+  - `/domains`: `["neurology", "neuroscience"]` → `["neurology", "psychiatry", "neuroscience"]`
   - `/provenance/enrichment/fields/conditions`: `null` → `llm`
   - `/provenance/enrichment/fields/domains`: `rules` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `This dataset contains raw fMRI data for 22 healthy participants listening to an original audio narrative designed to eli…` → `Raw functional MRI data from 22 healthy participants listening to an audio narrative built to elicit variation in suspic…`
+- `openneuro:ds001344` — phfMRI_Control_Tasks
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `April 2018, Jessica-Lily Harvey, Lysia Demetriou, John McGonigle, Matthew B. Wall **************************************…` → `Functional MRI control tasks testing basic sensory and cognitive functions. Two variants include visual, auditory and mo…`
+- `openneuro:ds001345` — Decoding of multisensory semantics and memories in low-level visual cortex
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `# Decoding of multisensory semantics and memories in low-level visual cortex ## Abstract Ample evidence indicates that r…` → `Functional MRI study of encoding and later retrieval of semantically congruent audio-visual objects during a continuous …`
+- `openneuro:ds001353` — Information Filtering in Electronic Networks of Practice: An fMRI Investigation of Expectation [Dis]confirmation
+  - `/name`: `Information Filtering in Electronic Networks of Practice: An fMRI Investigation of Expectation [Dis]confirmation` → `Information Filtering in Electronic Networks of Practice: An fMRI Investigation of Expectation [Dis]confirmation`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `Online forums sponsored by electronic networks of practice (ENPs) have become an important platform for technology-media…` → `Functional MRI study of how people filter and evaluate information on a mock online forum, pairing positive or negative …`
+- `openneuro:ds001371` — Rule learning in adolescents at clinical high risk for psychosis shows altered patterns of activation
+  - `/conditions`: `[]` → `[{"label": "clinical high risk for psychosis", "mesh_id": null}, {"label": "control", "mesh_id": null}]`
+  - `/domains`: `["neuroscience"]` → `["psychiatry", "neuroscience"]`
+  - `/provenance/enrichment/fields/conditions`: `null` → `llm`
+  - `/provenance/enrichment/fields/domains`: `null` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `24 control and 22 CHR adolescents underwent rapid, high-resolution fMRI while performing a paradigm which required them …` → `Task fMRI in adolescents at clinical high risk for psychosis and in controls, applying novel or practiced task rules to …`
+- `openneuro:ds001378` — SCA2 Diffusion Tensor Imaging
+  - `/conditions`: `[{"label": "healthy controls", "mesh_id": null}]` → `[{"label": "healthy controls", "mesh_id": null}, {"label": "SCA2", "mesh_id": null}]`
+  - `/domains`: `["neuroscience"]` → `["neurology", "neuroscience"]`
+  - `/population`: `null` → `Nine SCA2 patients and 16 age-matched healthy controls, examined twice on the same 1.5T MRI scanner`
+  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
+  - `/provenance/enrichment/fields/domains`: `null` → `llm`
   - `/provenance/enrichment/fields/population`: `null` → `llm`
   - `/provenance/enrichment/fields/summary`: `null` → `llm`
   - `/provenance/enrichment/method`: `rules` → `rules+llm`
   - `/provenance/enrichment/model`: `null` → `opus`
   - `/provenance/enrichment/prompt_version`: `null` → `v1`
   - … and 1 more
-- `physionet:covid-19-thermal` — Upper body thermal images and associated clinical data from a pilot cohort study of COVID-19
-  - `/modalities`: `["physiological_signals"]` → `["physiological_signals", "clinical_tabular", "other"]`
-  - `/population`: `null` → `252 participants with positive and negative COVID-19 tests`
-  - `/provenance/enrichment/fields/modalities`: `rules` → `llm`
+- `openneuro:ds001379` — Loci case study
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `This dataset was obtained in three sessions over two days with a single subject (PM), a competitive memory champion who …` → `Single-subject case study of a competitive memory champion using the method of loci, scanned across three sessions over …`
+- `openneuro:ds001399` — multibandACQtests
+  - `/countries`: `[]` → `["US"]`
+  - `/provenance/enrichment/fields/countries`: `null` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `# Introduction This dataset has files from two different instances of task fMRI sequence testing. The first was in 2018 …` → `Task fMRI sequence testing from two sessions on the same 3T scanner and head coil. Participants ran a cued task-switchin…`
+- `openneuro:ds001408` — rsfMRI_single_session_EEG_NF
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `# Dataset: rsfMRI before and after one session EEG NF vs Sham NF Data from the study published in: Dobrushina, O.R., Vla…` → `Resting-state functional MRI collected immediately before and after a single session of real or sham infra-low frequency…`
+- `openneuro:ds001415` — Audio Cartography
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `The Audio Cartography project investigated the influence of temporal arrangement on the interpretation of information fr…` → `Functional MRI study of how temporal arrangement affects interpretation of auditory maps. Participants trained on three …`
+- `openneuro:ds001417` — CAT snacks functional plasticity
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `This dataset include 36 healthy right-handed participants which completed the stages of the cue-approach training (CAT) …` → `Healthy adults completed the cue-approach training paradigm with snack-food items. Data include auction ratings, passive…`
+- `openneuro:ds001419` — thoughtExperiment
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `# Thought experiment: decoding cognitive processes from the fMRI data of one individual Martin Wegrzyn, Joana Aust, Lari…` → `Single-subject functional MRI study using mental imagery tasks covering language production, motor function, visuo-spati…`
+- `openneuro:ds001420` — [11C]DASB PET Cimbi database example
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `This dataset consists of test and retest measurements from two individuals using [11C]DASB to measure serotonin transpor…` → `Test and retest PET measurements using the tracer [11C]DASB to quantify serotonin transporter binding. No arterial measu…`
+- `openneuro:ds001421` — [11C]SB207145 PET Cimbi database example
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `This dataset consists of test and retest measurements from one individual using [11C]SB207145 to measure 5-HT4R availabi…` → `Test and retest PET measurements using the tracer [11C]SB207145 to quantify 5-HT4 receptor availability. No arterial mea…`
+- `openneuro:ds001430` — Neural Overlap in Item Representations Across Episodes Impairs Context Memory
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `Behavioral data Column information: Onset Duration Block Trial: Trial (within a block) Task: task (1:artist, 2:function;…` → `Memory experiment with encoding, item repetition, and source memory test phases plus a task localizer. Trial-level behav…`
+- `openneuro:ds001439` — A role for the medial temporal lobe subsystem in guiding prosociality: the effect of episodic processes on willingness to help others
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `The fMRI data for Experiment 2 (TMS) is also available on OpenNeuro on a separate page: Dataset DOI: 10.18112/openneuro.…` → `Task fMRI study of the medial temporal lobe subsystem in guiding prosociality and willingness to help others. A related …`
+- `openneuro:ds001454` — Human hippocampal replay during rest prioritizes weakly learned information and predicts memory performance
+  - `/modalities`: `["MRI", "fMRI"]` → `["MRI", "fMRI", "behavioral"]`
+  - `/provenance/enrichment/fields/modalities`: `null` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `24 participants learned the features of 15 novel “satellite” objects organized into three classes. Each satellite has a …` → `Participants learned features of novel satellite objects grouped into three categories, then rested during scanning. The…`
+- `openneuro:ds001486` — Brain Correlates of Math Development
+  - `/modalities`: `["MRI", "fMRI"]` → `["MRI", "fMRI", "behavioral"]`
+  - `/provenance/enrichment/fields/modalities`: `null` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `## Known Issues ## * 133 bold scans contain a different number of volumes due to an adjustment in the number occuring af…` → `Task fMRI on brain correlates of math development, acquired at two sessions with single-digit multiplication and subtrac…`
+- `openneuro:ds001497` — Long-term Memory (LTM) for famous Faces, Places, and common Objects
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `# Long-term Memory (LTM) for famous Faces, Places, and common Objects Data were initially published by Jarrod A. Lewis-P…` → `Reanalyzed and BIDS-converted fMRI data from a stimulus judgment task probing long-term memory for famous faces, famous …`
+- `openneuro:ds001499` — BOLD5000
+  - `/modalities`: `["MRI", "fMRI", "dMRI"]` → `["MRI", "fMRI", "dMRI", "behavioral"]`
+  - `/provenance/enrichment/fields/modalities`: `null` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `BOLD5000: Brains, Objects, Landscapes Dataset For details please refer to BOLD5000.org and our paper on arXiv (http://ar…` → `BOLD5000: fMRI responses to 5000 scene images viewed in slow event-related sessions by four participants, plus scene loc…`
+- `openneuro:ds001506` — Deep Image Reconstruction
+  - `/population`: `null` → `Three subjects ('sub-01', 'sub-02', and 'sub-03')`
   - `/provenance/enrichment/fields/population`: `null` → `llm`
   - `/provenance/enrichment/fields/summary`: `null` → `llm`
   - `/provenance/enrichment/method`: `rules` → `rules+llm`
   - `/provenance/enrichment/model`: `null` → `opus`
   - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Thermal videos of people with positive and negative COVID-19 tests.` → `Prospective pilot cohort collecting upper body thermal videos during breath-holds in four positions, alongside PCR resul…`
-- `physionet:covid-data-shared-learning` — COVID Data for Shared Learning (CDSL): A comprehensive, multimodal COVID-19 dataset from HM Hospitales
-  - `/countries`: `[]` → `["ES"]`
-  - `/domains`: `["infectious_disease"]` → `["critical_care", "infectious_disease"]`
-  - `/modalities`: `["CT", "xray"]` → `["CT", "xray", "EHR", "clinical_tabular"]`
-  - `/population`: `null` → `4,479 patients hospitalized with confirmed or suspected COVID-19 in the Spanish 'HM Hospitales' group from 2019-12-26 to…`
+  - `/summary`: `# Deep Image Reconstruction ## Original paper Shen, Horikawa, Majima, and Kamitani (2019) Deep image reconstruction from…` → `fMRI dataset from three subjects viewing natural images, geometric shapes and letters, plus imagery sessions, with funct…`
+- `openneuro:ds001510` — Schematic narrative perception and recall (intact)
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `This dataset contains the intact-story data from: C. Baldassano, U. Hasson, K. Norman. "Representation of real-world eve…` → `Intact-story imaging data on narrative perception and recall, used to study event schema representations during narrativ…`
+- `openneuro:ds001517` — Associative Prediction of Visual Shape in the Hippocampus
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `This dataset consists of fMRI data from 24 participants that were exposed to an experiment consisting of auditory cues a…` → `fMRI dataset in which auditory cues predicted abstract visual shapes across six functional runs, including invalid and o…`
+- `openneuro:ds001521` — Lingering representations of stimuli influence recall organization
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `This dataset contains the data from: Chan, S. C., Applegate, M. C., Morton, N. W., Polyn, S. M., & Norman, K. A. "Linger…` → `Imaging data from a study of how lingering stimulus representations influence recall organization, including localizer a…`
+- `openneuro:ds001525` — Syllable level speech sequencing
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `The Neuroanatomy of Speech Sequencing at the Syllable Level This dataset contains materials from the syllable level spee…` → `Imaging materials from a speech sequencing study contrasting covert repetition of syllable sequences versus individual s…`
+- `openneuro:ds001534` — Calorie-labeled food cues
+  - `/modalities`: `["MRI", "fMRI"]` → `["MRI", "fMRI", "behavioral"]`
+  - `/provenance/enrichment/fields/modalities`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+- `openneuro:ds001541` — Mouse_opto_DRN
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `Optogenetics functional MRI targeting the dorsal raphe nucleus in the mouse brain. ePet-Cre mice expressing either ChR2-…` → `Optogenetic functional MRI of the mouse dorsal raphe nucleus. ePet-Cre mice expressing ChR2-YFP or YFP in DRN 5-HT neuro…`
+- `openneuro:ds001545` — Learning Naturalistic Temporal Structure in the Posterior Medial Network
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `Participants watched three different clips from the movie "The Grand Budapest Hotel", six times each. One clip was "inta…` → `Movie-watching study of naturalistic temporal structure learning. Participants viewed three clips from a film six times …`
+- `openneuro:ds001553` — 100 runs at 3T
+  - `/modalities`: `["MRI", "fMRI"]` → `["MRI", "fMRI", "behavioral"]`
+  - `/provenance/enrichment/fields/modalities`: `null` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `Three subjects were scanned on a General Electric 3T MRI scanner. All subjects underwent 100 functional runs , which con…` → `Three healthy subjects each completed 100 functional runs at 3T, alternating blocks of flickering checkerboard stimulati…`
+- `openneuro:ds001555` — Large Single-Subject Functional MRI Datasets at 7T
+  - `/countries`: `[]` → `["US"]`
+  - `/modalities`: `["MRI", "fMRI"]` → `["MRI", "fMRI", "behavioral"]`
   - `/provenance/enrichment/fields/countries`: `null` → `llm`
-  - `/provenance/enrichment/fields/domains`: `rules` → `llm`
-  - `/provenance/enrichment/fields/modalities`: `rules` → `llm`
+  - `/provenance/enrichment/fields/modalities`: `null` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `# Overview ## Subjects Three subjects with no known history of neurological disorders (2 females; age=25±2.5 years) comp…` → `Three subjects each completed 100 functional runs at 7T with identical block structure, performing one of three visual s…`
+- `openneuro:ds001563` — CMRR Workshop
+  - `/countries`: `[]` → `["NL", "US"]`
+  - `/provenance/enrichment/fields/countries`: `null` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `# CMRR Layer fMRI Hands on tutorial This dataset consists of one mani participant from one session. There are other case…` → `Educational layer fMRI dataset from one participant in a single session, acquired as high-resolution EPI on 7T scanners,…`
+- `openneuro:ds001576` — Refresh my memory: Episodic memory reinstatements intrude on working memory maintenance
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `Refresh my memory: Episodic memory reinstatements intrude on working memory maintenance: MRI, fMRI dataset on OpenNeuro …` → `Functional MRI dataset for a study of episodic memory reinstatements intruding on working memory maintenance, acquired w…`
+- `openneuro:ds001590` — Feature Discrimination
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `Please cite the following references if you use these data: Ballard, I.B, Wagner, S.M., McClure, S.M. Hippocampal Patter…` → `Feature discrimination imaging dataset supporting a study of hippocampal pattern separation in reinforcement learning. A…`
+- `openneuro:ds001591` — Mouse_rest_KCLtraining
+  - `/countries`: `[]` → `["SG"]`
+  - `/population`: `null` → `Two male mice (30-34 g, 15-20 weeks old)`
+  - `/provenance/enrichment/fields/countries`: `null` → `llm`
   - `/provenance/enrichment/fields/population`: `null` → `llm`
   - `/provenance/enrichment/fields/summary`: `null` → `llm`
   - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - … and 3 more
-- `physionet:covidentify` — CovIdentify Dataset
-  - `/domains`: `["infectious_disease"]` → `["infectious_disease", "public_health"]`
-  - `/modalities`: `["wearable"]` → `["physiological_signals", "wearable"]`
-  - `/population`: `null` → `2,887 participants who connected their smartwatches to the CovIdentify platform, including 1,689 Garmin, 1,091 Fitbit, a…`
-  - `/provenance/enrichment/fields/domains`: `rules` → `llm`
-  - `/provenance/enrichment/fields/modalities`: `rules` → `llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `Dataset acquired during a training session organised by Singapore Bioimaging Consortium for King's College London BRAIN …` → `Resting-state fMRI and anatomical imaging of two anesthetized, mechanically ventilated male mice at 11.75T, acquired dur…`
+- `openneuro:ds001597` — multiFingerRSA
+  - `/countries`: `[]` → `["US"]`
+  - `/modalities`: `["MRI", "fMRI"]` → `["MRI", "fMRI", "behavioral"]`
+  - `/population`: `null` → `Participants (n=20) ... consenting neurotypical subjects with standard inclusion/exclusion criteria (English speaking, r…`
+  - `/provenance/enrichment/fields/countries`: `null` → `llm`
+  - `/provenance/enrichment/fields/modalities`: `null` → `llm`
   - `/provenance/enrichment/fields/population`: `null` → `llm`
   - `/provenance/enrichment/fields/summary`: `null` → `llm`
   - `/provenance/enrichment/method`: `rules` → `rules+llm`
   - `/provenance/enrichment/model`: `null` → `opus`
   - `/provenance/enrichment/prompt_version`: `null` → `v1`
   - … and 1 more
-- `physionet:cpap-data-canterbury` — CPAP Pressure and Flow Data from a Local Trial of 30 Adults at the University of Canterbury
-  - `/modalities`: `["survey"]` → `["physiological_signals", "survey"]`
-  - `/population`: `null` → `30 adults at the University of Canterbury undergoing CPAP therapy`
-  - `/provenance/enrichment/fields/modalities`: `rules` → `llm`
+- `openneuro:ds001614` — Perceptual decisions result from the continuous accumulation of memory and sensory evidence
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `Perceptual decisions result from the continuous accumulation of memory and sensory evidence: dataset on OpenNeuro (31 pa…` → `Brain imaging dataset on perceptual decisions arising from accumulation of memory and sensory evidence, with response tr…`
+- `openneuro:ds001618` — Shared and differential default-mode related patterns of activity in an autobiographical, a self-referential and an attentional task
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `Shared and differential default-mode related patterns of activity in an autobiographical, a self-referential and an atte…` → `Functional brain imaging dataset comparing default-mode related activity across an autobiographical memory task, a self/…`
+- `openneuro:ds001621` — Neural representations of events arise from temporal community structure
+  - `/population`: `null` → `20 participants`
   - `/provenance/enrichment/fields/population`: `null` → `llm`
   - `/provenance/enrichment/fields/summary`: `null` → `llm`
   - `/provenance/enrichment/method`: `rules` → `rules+llm`
   - `/provenance/enrichment/model`: `null` → `opus`
   - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `A pressure and flow dataset was collected from a trial of 30 adults at the University of Canterbury undergoing CPAP ther…` → `Pressure and flow recordings from adults on CPAP therapy breathing at five instructed rates at two PEEP levels, captured…`
-- `physionet:cps-dataset-sleep` — Comprehensive Polysomnography (CPS) Dataset: A Resource for Sleep-Related Arousal Research
-  - `/conditions`: `[]` → `[{"label": "sleep-related arousals", "mesh_id": null}, {"label": "sleep disorders", "mesh_id": null}]`
-  - `/countries`: `[]` → `["DE"]`
-  - `/domains`: `[]` → `["neurology", "other"]`
-  - `/modalities`: `["physiological_signals", "survey"]` → `["EEG", "physiological_signals", "survey"]`
-  - `/population`: `null` → `113 diagnostic polysomnographic sleep recordings assembled at Klinikum Esslingen, Germany, collected during 2021-2022`
+  - `/summary`: `This dataset corresponds to the fMRI portion of Experiment 3 from Schapiro, A.C., Rogers, T.T., Cordova, N.I., Turk-Brow…` → `Functional imaging data from Experiment 3 of a study on how event representations arise from temporal community structur…`
+- `openneuro:ds001634` — Visual working memory: Study one Task fMRI and Behavioural response
+  - `/countries`: `[]` → `["CA"]`
+  - `/population`: `null` → `Nineteen right-handed healthy adults (6 female, mean age 22.368, range 18-28 years of age)`
+  - `/provenance/enrichment/fields/countries`: `null` → `llm`
+  - `/provenance/enrichment/fields/population`: `null` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `Subjects and MRI protocol ------------------------------------- Nineteen right-handed healthy adults (6 female, mean age…` → `Task functional imaging and behavioural responses from a visual working memory study. Participants encoded and maintaine…`
+- `openneuro:ds001635` — Visual working memory: Study two Task fMRI and Behavioural response
+  - `/countries`: `[]` → `["CA"]`
+  - `/population`: `null` → `Sixteen right-handed healthy adults (11 female, mean age 23.938, range 19-41 years of age)`
+  - `/provenance/enrichment/fields/countries`: `null` → `llm`
+  - `/provenance/enrichment/fields/population`: `null` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `Subjects and MRI protocol ------------------------------------- Sixteen right-handed healthy adults (11 female, mean age…` → `Second visual working memory study with task functional imaging and behavioural responses. Participants encoded number o…`
+- `openneuro:ds001705` — NRM2018 PET Grand Challenge Dataset
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `== Introdution == For many years PET centres around the world have developed and optimised their own analysis pipelines,…` → `Simulated dynamic PET neuroreceptor scans released for the NRM2018 PET Grand Challenge, with each subject scanned at bas…`
+- `openneuro:ds001715` — Dissociable neural mechanisms track evidence accumulation for selection of attention versus action
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `Dissociable neural mechanisms track evidence accumulation for selection of attention versus action: MRI, fMRI dataset on…` → `Functional MRI data collected during a decision-making task, studying neural mechanisms that track evidence accumulation…`
+- `openneuro:ds001722` — A role for the medial temporal lobe subsystem in guiding prosociality: the effect of episodic processes on willingness to help others (Experiment 2)
+  - `/population`: `null` → `19 subjects on the theory of mind (ToM) localizer task`
+  - `/provenance/enrichment/fields/population`: `null` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `This dataset contains data from 19 subjects on the theory of mind (ToM) localizer task ( (Saxe & Kanwisher, 2003). This …` → `Functional MRI data from a theory of mind localizer task, used to localize the right temporoparietal junction in each su…`
+- `openneuro:ds001734` — NARPS
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `Raw and preprocessed fMRI data of two versions of the mixed gambles task, from the Neuroimaging Analysis Replication and…` → `Raw and preprocessed fMRI, anatomical scans, and behavioral data from two versions of the mixed gambles task, collected …`
+- `openneuro:ds001740` — Brain activity during reciprocal social interaction investigated using conversational robots as control condition
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `Brain activity during reciprocal social interaction investigated using conversational robots as control condition: MRI, …` → `Functional and structural MRI study of brain activity during reciprocal social interaction, using conversational robots …`
+- `openneuro:ds001743` — Unilateral Glaucoma 3T dMRI
+  - `/conditions`: `[]` → `[{"label": "Unilateral Glaucoma", "mesh_id": null}]`
   - `/provenance/enrichment/fields/conditions`: `null` → `llm`
-  - `/provenance/enrichment/fields/countries`: `null` → `llm`
-  - `/provenance/enrichment/fields/domains`: `null` → `llm`
-  - `/provenance/enrichment/fields/modalities`: `rules` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - … and 5 more
-- `physionet:cpsc2021` — Paroxysmal Atrial Fibrillation Events Detection from Dynamic ECG Recordings: The 4th China Physiological Signal Challenge 2021
-  - `/conditions`: `[{"label": "atrial fibrillation", "mesh_id": "D001281"}]` → `[{"label": "atrial fibrillation", "mesh_id": "D001281"}, {"label": "paroxysmal atrial fibrillation", "mesh_id": null}]`
-  - `/countries`: `[]` → `["CN"]`
-  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
-  - `/provenance/enrichment/fields/countries`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+- `openneuro:ds001745` — A neural signature of contextually mediated intentional forgetting
   - `/provenance/enrichment/fields/summary`: `null` → `llm`
   - `/provenance/enrichment/method`: `rules` → `rules+llm`
   - `/provenance/enrichment/model`: `null` → `opus`
   - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `CPSC2021 for paroxysmal atrial fibrillation events detection.` → `Dynamic ECG database built for a challenge on locating the onsets and ends of paroxysmal atrial fibrillation episodes, r…`
-- `physionet:crisdb` — CAST RR Interval Sub-Study Database
-  - `/population`: `null` → `3,549 patients who were survivors of myocardial infarction within the preceding 2 years with 6 or more PVCs per hour on …`
+  - `/summary`: `A neural signature of contextually mediated intentional forgetting: MRI, fMRI dataset on OpenNeuro (24 participants).` → `Functional MRI study of a neural signature of contextually mediated intentional forgetting, with image localizer, study-…`
+- `openneuro:ds001747` — Exploring the Resting State Neural Activity of Monolinguals and Late and Early Bilinguals
+  - `/modalities`: `["MRI", "fMRI"]` → `["MRI", "fMRI", "survey"]`
+  - `/provenance/enrichment/fields/modalities`: `null` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `Exploring the Resting State Neural Activity of Monolinguals and Late and Early Bilinguals ABSTRACT Individuals who speak…` → `Structural and resting-state functional MRI of the default mode network in young healthy adults grouped as early bilingu…`
+- `openneuro:ds001748` — Differentiation of functional networks during long-term memory retrieval in children and adolescents
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `fMRI data of long-term memory retrieval in children (aged 10-12), adolescents (aged 14-16), and young adults (aged 20-35…` → `Functional MRI during autobiographical, episodic, and semantic long-term memory retrieval in children, adolescents, and …`
+- `openneuro:ds001751` — Context-dependent cognitive control \| Flanker task
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `Context-dependent cognitive control \| Flanker task: MRI, fMRI dataset on OpenNeuro (20 participants).` → `Functional MRI study of context-dependent cognitive control using a flanker task.`
+- `openneuro:ds001761` — Reconstructing Faces from fMRI Patterns using Deep Generative Neural Networks.
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `# Reconstructing Faces from fMRI Patterns using Deep Generative Neural Networks Data folder related to the paper: ["Reco…` → `Multi-session (f)MRI dataset in which participants viewed face stimuli, released with the paper on reconstructing faces …`
+- `openneuro:ds001762` — Dorsal anterior cingulate and ventromedial prefrontal cortex have inverse roles in both foraging and economic choice
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `Dorsal anterior cingulate and ventromedial prefrontal cortex have inverse roles in both foraging and economic choice: MR…` → `Functional MRI during a foraging task, examining inverse roles of dorsal anterior cingulate and ventromedial prefrontal …`
+- `openneuro:ds001769` — studyforrest_movie_denoised
+  - `/population`: `null` → `A made-up subject 'sub-phantom' was created only to pass data structure validation for uploading; derived from the study…`
   - `/provenance/enrichment/fields/population`: `null` → `llm`
   - `/provenance/enrichment/fields/summary`: `null` → `llm`
   - `/provenance/enrichment/method`: `rules` → `rules+llm`
   - `/provenance/enrichment/model`: `null` → `opus`
   - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Data from the Cardiac Arrhythmia Suppression Trial (CAST), a study designed to test the hypothesis that suppression of v…` → `RR interval data from the Cardiac Arrhythmia Suppression Trial, testing whether suppressing ventricular premature comple…`
-- `physionet:ct-ich` — Computed Tomography Images for Intracranial Hemorrhage Detection and Segmentation
-  - `/conditions`: `[{"label": "cerebral hemorrhage", "mesh_id": "D002543"}, {"label": "traumatic brain injury", "mesh_id": null}]` → `[{"label": "cerebral hemorrhage", "mesh_id": "D002543"}, {"label": "traumatic brain injury", "mesh_id": null}, {"label":…`
-  - `/population`: `null` → `82 CT scans of patients with traumatic brain injury were collected; scans of 75 subjects are made public`
-  - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
+  - `/summary`: `A manually denoised audio-visual movie watching fMRI dataset for the studyforrest project ==================== Note: Thi…` → `Manually denoised version of the studyforrest movie-watching fMRI data, released as a standalone BIDS derivative of the …`
+- `openneuro:ds001771` — InterTVA. A multimodal MRI dataset for the study of inter-individual differences in voice perception and identification.
   - `/provenance/enrichment/fields/summary`: `null` → `llm`
   - `/provenance/enrichment/method`: `rules` → `rules+llm`
   - `/provenance/enrichment/model`: `null` → `opus`
   - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Head computed tomography (CT) scans with intracranial hemorrhage (ICH) segmentation, ICH subtypes and skull fracture.` → `Head CT scans from patients with traumatic brain injury, with intracranial hemorrhage regions delineated slice by slice …`
-- `physionet:ctu-uhb-ctgdb` — CTU-CHB Intrapartum Cardiotocography Database
-  - `/countries`: `[]` → `["CZ"]`
-  - `/population`: `null` → `552 cardiotocography (CTG) recordings selected from 9164 recordings collected between 2010 and 2012`
-  - `/provenance/enrichment/fields/countries`: `null` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
+  - `/summary`: `The InterTVA dataset has been acquired with two main objectives. First, from a neuroscientific perspective, it aims at s…` → `Multimodal MRI dataset acquired to study inter-individual differences in voice perception and identification, and to ben…`
+- `openneuro:ds001775` — Neural Differentiation Tracks Improved Recall of Competing Memories Following Interleaved Study and Retrieval Practice
   - `/provenance/enrichment/fields/summary`: `null` → `llm`
   - `/provenance/enrichment/method`: `rules` → `rules+llm`
   - `/provenance/enrichment/model`: `null` → `opus`
   - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `552 cardiotocography records collected between 2010 and 2012 at the Czech Technical University and University Hospital i…` → `Intrapartum cardiotocography recordings, including fetal heart rate, selected from a larger set of recordings collected …`
-- `physionet:cudb` — CU Ventricular Tachyarrhythmia Database
-  - `/conditions`: `[]` → `[{"label": "sustained ventricular tachycardia", "mesh_id": null}, {"label": "ventricular flutter", "mesh_id": "D054141"}…`
-  - `/population`: `null` → `35 eight-minute ECG recordings of human subjects who experienced episodes of sustained ventricular tachycardia, ventricu…`
+  - `/summary`: `Neural Differentiation Tracks Improved Recall of Competing Memories Following Interleaved Study and Retrieval Practice: …` → `Neuroimaging dataset on neural differentiation and recall of competing memories following interleaved study and retrieva…`
+- `openneuro:ds001784` — Effects of ON/OFF deep brain stimulation on cognitive control in treatment-resistant depression (EEG)
+  - `/conditions`: `[]` → `[{"label": "treatment-resistant depression", "mesh_id": null}]`
   - `/provenance/enrichment/fields/conditions`: `null` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `Effects of ON/OFF deep brain stimulation on cognitive control in treatment-resistant depression (EEG) Please cite the fo…` → `EEG recorded with deep brain stimulation ON and OFF in treatment-resistant depression, during a modified Multi-Source In…`
+- `openneuro:ds001785` — Evidence accumulation relates to perceptual consciousness and monitoring
+  - `/countries`: `[]` → `["CH"]`
+  - `/provenance/enrichment/fields/countries`: `null` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `This dataset contains the EEG used in the paper: Evidence accumulation relates to perceptual consciousness and monitorin…` → `EEG recorded during a tactile detection task studying how evidence accumulation relates to perceptual consciousness and …`
+- `openneuro:ds001787` — EEG meditation study
+  - `/modalities`: `["EEG"]` → `["EEG", "behavioral"]`
+  - `/provenance/enrichment/fields/modalities`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+- `openneuro:ds001796` — Bilingualism and the brain
+  - `/modalities`: `["MRI", "fMRI", "dMRI"]` → `["MRI", "fMRI", "dMRI", "behavioral"]`
+  - `/provenance/enrichment/fields/modalities`: `null` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `Dataset title: "Bilingualism and the brain". Dataset used for examining neurological effects of different individual lan…` → `Multimodal MRI dataset examining neurological effects of individual language differences in bilingual adults, with struc…`
+- `openneuro:ds001810` — EEG study of the attentional blink; before, during, and after transcranial Direct Current Stimulation (tDCS)
+  - `/modalities`: `["EEG"]` → `["EEG", "behavioral"]`
+  - `/population`: `null` → `Participants who performed an attentional blink task across two lab visits; complete data for 40 participants, some did …`
+  - `/provenance/enrichment/fields/modalities`: `null` → `llm`
   - `/provenance/enrichment/fields/population`: `null` → `llm`
   - `/provenance/enrichment/fields/summary`: `null` → `llm`
   - `/provenance/enrichment/method`: `rules` → `rules+llm`
   - `/provenance/enrichment/model`: `null` → `opus`
   - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `This database includes 35 eight-minute ECG recordings of human subjects who experienced episodes of sustained ventricula…` → `Eight-minute ECG recordings from human subjects who experienced episodes of sustained ventricular tachycardia, ventricul…`
-- `physionet:cuiless16` — CUILESS2016
-  - `/domains`: `[]` → `["other"]`
-  - `/modalities`: `["CT"]` → `["CT", "other"]`
-  - `/provenance/enrichment/fields/domains`: `null` → `llm`
+  - `/summary`: `Overview -------- AB_tDCS-EEG: EEG data from participants who performed an attentional blink (AB) task before, during an…` → `EEG recorded while participants performed an attentional blink task before, during and after anodal or cathodal transcra…`
+- `openneuro:ds001814` — Neuroanatomical correlates of approach-avoidance conflict (fMRI)
+  - `/modalities`: `["fMRI"]` → `["fMRI", "behavioral"]`
   - `/provenance/enrichment/fields/modalities`: `rules` → `llm`
   - `/provenance/enrichment/fields/summary`: `null` → `llm`
   - `/provenance/enrichment/method`: `rules` → `rules+llm`
   - `/provenance/enrichment/model`: `null` → `opus`
   - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `A corpus of Concept Unique Identifier concepts taken from the SemEval2015 Task 14.` → `An annotation corpus in which previously unmapped concepts from a shared task are assigned Unified Medical Language Syst…`
-- `physionet:culm` — Complex Upper-Limb Movements
-  - `/domains`: `[]` → `["neuroscience"]`
+  - `/summary`: `Description: Neuroanatomical correlates of approach-avoidance conflict (fMRI) Please cite the following reference if you…` → `Functional MRI during a modified Aversion-Reward Conflict task in which participants chose between a safe small reward a…`
+- `openneuro:ds001818` — CAT Faces MRI experiment
+  - `/modalities`: `["MRI", "fMRI"]` → `["MRI", "fMRI", "behavioral"]`
+  - `/provenance/enrichment/fields/modalities`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+- `openneuro:ds001838` — Handedness and Symbolic Number Representation
+  - `/modalities`: `["MRI", "fMRI"]` → `["MRI", "fMRI", "behavioral"]`
+  - `/provenance/enrichment/fields/modalities`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+- `openneuro:ds001839` — Spinal stimulation stepping and standing dataset
+  - `/countries`: `[]` → `["US"]`
   - `/modalities`: `[]` → `["behavioral"]`
-  - `/population`: `null` → `ten subjects`
-  - `/provenance/enrichment/fields/domains`: `null` → `llm`
+  - `/population`: `null` → `healthy individuals with no history of neurological disease or injury`
+  - `/provenance/enrichment/fields/countries`: `null` → `llm`
   - `/provenance/enrichment/fields/modalities`: `null` → `llm`
   - `/provenance/enrichment/fields/population`: `null` → `llm`
   - `/provenance/enrichment/fields/summary`: `null` → `llm`
@@ -1617,178 +1172,354 @@ none
   - `/provenance/enrichment/model`: `null` → `opus`
   - `/provenance/enrichment/prompt_version`: `null` → `v1`
   - … and 1 more
-- `physionet:curated-oncology-reports` — CORAL: expert-Curated medical Oncology Reports to Advance Language model inference
-  - `/conditions`: `[{"label": "pancreatic neoplasms", "mesh_id": "D010190"}]` → `[{"label": "pancreatic neoplasms", "mesh_id": "D010190"}, {"label": "breast neoplasms", "mesh_id": "D001943"}, {"label":…`
-  - `/countries`: `[]` → `["US"]`
-  - `/population`: `null` → `40 de-identified breast and pancreatic cancer progress notes at University of California, San Francisco`
+- `openneuro:ds001847` — A Probability Distribution over Latent Causes, in the Orbitofrontal Cortex
+  - `/modalities`: `["MRI", "fMRI"]` → `["MRI", "fMRI", "behavioral"]`
+  - `/provenance/enrichment/fields/modalities`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+- `openneuro:ds001875` — TheVirtualBrain Macaque MRI
+  - `/population`: `null` → `9 macaques`
+  - `/provenance/enrichment/fields/population`: `null` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `This dataset contains the raw MRI data used to build and validate the macaque connectome in TheVirtualBrain (thevirtualb…` → `Raw macaque MRI data including T1, diffusion and resting-state fMRI scans, used to build and validate the macaque connec…`
+- `openneuro:ds001882` — Social Decision-Making Intertemporal Choice Task Dataset
+  - `/modalities`: `["MRI", "fMRI"]` → `["MRI", "fMRI", "behavioral"]`
+  - `/provenance/enrichment/fields/modalities`: `null` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `This task requires participants to make choices either for themselves or for other individuals in the study between a la…` → `Imaging dataset from an intertemporal choice task in which participants chose between a larger amount of money later and…`
+- `openneuro:ds001883` — Social Decision-Making Risky Choice Task Dataset
+  - `/modalities`: `["MRI", "fMRI"]` → `["MRI", "fMRI", "behavioral"]`
+  - `/provenance/enrichment/fields/modalities`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+- `openneuro:ds001890` — Mouse_rest_3xTG
+  - `/population`: `null` → `a cohort of triple transgenic mice for Alzheimer's disease-like pathology, 3xTGAD, and a cohort of controls`
+  - `/provenance/enrichment/fields/population`: `null` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `Resting state fMRI data acquired on a cohort of triple transgenic mice for Alzheimer's disease-like pathology, 3xTGAD, a…` → `Resting-state fMRI in triple transgenic mice modelling Alzheimer's disease-like pathology and in controls, scanned at tw…`
+- `openneuro:ds001894` — Longitudinal Brain Correlates of Multisensory Lexical Processing in Children
+  - `/population`: `null` → `Children`
+  - `/provenance/enrichment/fields/population`: `null` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `#Known Issues BIDS validator warns that some stimuli files are not included in events.tsv. This is due to listing stimul…` → `Longitudinal brain imaging dataset on multisensory lexical processing in children, using audio-audio, audio-visual and v…`
+- `openneuro:ds001907` — ANT: Healthy aging and Parkinson's disease
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `This project contains 46 healthy aging (n = 25, RC41\*) participants and participants with Parkinson's disease (n = 21, …` → `Imaging dataset with ANT task, anatomical, resting and DTI scans from healthy aging participants and participants with P…`
+- `openneuro:ds001912` — S-cone_MotionInDepth_fMRI
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `Description of columns in the event files, both for MT/MST functional localisers (task-MTMST) and motion in depth (MID) …` → `Functional MRI dataset with event files for MT/MST functional localisers and motion-in-depth scans, covering achromatic …`
+- `openneuro:ds001921` — Anterior cingulate engagement in a foraging context reflects choice difficulty, not foraging value
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `Anterior cingulate engagement in a foraging context reflects choice difficulty, not foraging value: MRI, fMRI dataset on…` → `Functional MRI dataset from a forage-engage decision task, examining whether anterior cingulate engagement reflects choi…`
+- `openneuro:ds001927` — The physiological effects of non-invasive brain stimulation fundamentally differ across the human cortex
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `### Data Twenty-three healthy participants underwent three counterbalanced rTMS-fMRI sessions on different days, where a…` → `Resting-state functional MRI recorded before and after low-frequency rTMS applied to prefrontal, occipital and temporo-p…`
+- `openneuro:ds001928` — Functional Connectivity of Music-Induced Analgesia in Fibromyalgia
+  - `/conditions`: `[{"label": "healthy controls", "mesh_id": null}]` → `[{"label": "healthy controls", "mesh_id": null}, {"label": "fibromyalgia", "mesh_id": "D005356"}]`
+  - `/countries`: `[]` → `["MX"]`
   - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
   - `/provenance/enrichment/fields/countries`: `null` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `To study the analgesic effects of music in chronic pain we recruited 20 fibromyalgia (FM) patients and 20 matched health…` → `Resting-state functional MRI acquired before and after music or pink noise exposure in fibromyalgia patients and matched…`
+- `openneuro:ds001942` — Auditory localization with 7T fMRI
+  - `/countries`: `[]` → `["NL"]`
+  - `/provenance/enrichment/fields/countries`: `null` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `In vivo 7T MRI dataset probing the auditory system (cortical and subcortical) collected at Maastricht University by Faru…` → `In vivo 7T MRI dataset probing cortical and subcortical auditory system, with anatomical, diffusion-weighted, resting-st…`
+- `openneuro:ds001945` — MouseLemurAtlas_MRIraw
+  - `/population`: `null` → `34 animals (mouse lemur)`
   - `/provenance/enrichment/fields/population`: `null` → `llm`
   - `/provenance/enrichment/fields/summary`: `null` → `llm`
   - `/provenance/enrichment/method`: `rules` → `rules+llm`
   - `/provenance/enrichment/model`: `null` → `opus`
   - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - … and 1 more
-- `physionet:cves` — Cerebral Vasoregulation in Elderly with Stroke
-  - `/modalities`: `["ECG", "EMG", "physiological_signals", "wearable"]` → `["ultrasound", "ECG", "EMG", "physiological_signals", "wearable"]`
-  - `/population`: `null` → `60 subjects who suffered strokes compared to 60 control subjects, elderly`
-  - `/provenance/enrichment/fields/modalities`: `rules` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
+  - `/summary`: `This dataset contains the raw MRI data used to build and validate the mouse lemur template and atlas (available through …` → `Raw T2-weighted fast spin echo brain MRI from mouse lemurs, used to build and validate a population-based template and a…`
+- `openneuro:ds001946` — Hippocampal-neocortical interactions sharpen over time for predictive actions
   - `/provenance/enrichment/fields/summary`: `null` → `llm`
   - `/provenance/enrichment/method`: `rules` → `rules+llm`
   - `/provenance/enrichment/model`: `null` → `opus`
   - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Multimodal data from a large study investigating the effects of ischemic stroke on cerebral vasoregulation.` → `Multimodal recordings from a cross-sectional study of cerebral vasoregulation after ischemic stroke, collected over mult…`
-- `physionet:cxr-align` — CXR-Align: A Benchmark for CXR-Report Alignment with Negations
-  - `/domains`: `["neuroscience"]` → `["neuroscience", "pulmonology", "other"]`
-  - `/modalities`: `["xray", "EHR"]` → `["xray", "EHR", "clinical_notes"]`
-  - `/provenance/enrichment/fields/domains`: `rules` → `llm`
-  - `/provenance/enrichment/fields/modalities`: `rules` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `CXR-Align is a benchmark dataset created to evaluate vision-language models' capability to interpret negations in chest …` → `Benchmark of systematically modified chest X-ray reports derived from MIMIC-III, with negations introduced to positive f…`
-- `physionet:cxr-cardiomegaly` — Image-derived cardiomegaly biomarker values for 96K chest X-rays in MIMIC-CXR/MIMIC-CXR-JPG
-  - `/conditions`: `[]` → `[{"label": "cardiomegaly", "mesh_id": "D006332"}]`
-  - `/modalities`: `["xray", "EHR"]` → `["xray", "EHR", "clinical_tabular"]`
-  - `/population`: `null` → `Over 93,000 posterior-anterior chest X-ray scans from MIMIC-CXR/MIMIC-CXR-JPG`
-  - `/provenance/enrichment/fields/conditions`: `null` → `llm`
-  - `/provenance/enrichment/fields/modalities`: `rules` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - … and 1 more
-- `physionet:cxr-lt-iccv-workshop-cvamd` — CXR-LT: Multi-Label Long-Tailed Classification on Chest X-Rays
-  - `/conditions`: `[]` → `[{"label": "thorax disease", "mesh_id": null}]`
-  - `/domains`: `[]` → `["cardiology", "pulmonology"]`
-  - `/population`: `null` → `Expanded dataset of 377,110 chest X-rays labeled for 45 diseases`
-  - `/provenance/enrichment/fields/conditions`: `null` → `llm`
-  - `/provenance/enrichment/fields/domains`: `null` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - … and 1 more
-- `physionet:cxr-phone` — Smartphone-Captured Chest X-Ray Photographs
-  - `/conditions`: `[]` → `[{"label": "pulmonary pathology", "mesh_id": null}, {"label": "lung abnormalities", "mesh_id": null}]`
-  - `/modalities`: `["xray", "pathology", "EHR"]` → `["xray", "pathology", "EHR", "other"]`
-  - `/population`: `null` → `6,453 smartphone photographs of frontal-view CXR images from MIMIC-CXR and CheXpert`
-  - `/provenance/enrichment/fields/conditions`: `null` → `llm`
-  - `/provenance/enrichment/fields/modalities`: `rules` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - … and 1 more
-- `physionet:cxr-pro` — CXR-PRO: MIMIC-CXR with Prior References Omitted
-  - `/domains`: `[]` → `["pulmonology", "other"]`
-  - `/population`: `null` → `374,139 free-text radiology reports and associated chest radiographs`
-  - `/provenance/enrichment/fields/domains`: `null` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `CXR-PRO is an adaptation of the MIMIC-CXR dataset (consisting of chest radiographs and their associated free-text radiol…` → `Adaptation of MIMIC-CXR pairing chest radiographs with free-text radiology reports in which references to non-existent p…`
-- `physionet:cxrgraph` — CXRGraph: Using Information Extraction to Normalize the Training Data for Automatic Radiology Report Generation
-  - `/domains`: `[]` → `["pulmonology", "other"]`
-  - `/modalities`: `["EHR", "clinical_notes"]` → `["EHR", "clinical_notes", "other"]`
-  - `/population`: `null` → `550 manually annotated MIMIC-CXR reports, 50 CheXpert reports, and 227,835 automatically annotated MIMIC-CXR reports`
-  - `/provenance/enrichment/fields/domains`: `null` → `llm`
-  - `/provenance/enrichment/fields/modalities`: `rules` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - `/provenance/enrichment/model`: `null` → `opus`
-  - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - … and 1 more
-- `physionet:deidentifiedmedicaltext` — Deidentified Medical Text
-  - `/domains`: `[]` → `["other"]`
-  - `/modalities`: `[]` → `["clinical_notes"]`
-  - `/population`: `null` → `2,434 nursing notes`
-  - `/provenance/enrichment/fields/domains`: `null` → `llm`
+  - `/summary`: `This dataset includes structural and functional MRI data collected from 24 participants, and is described in more detail…` → `Structural and functional MRI from 24 participants on a 3T Siemens Skyra, with partial-volume functional runs covering h…`
+- `openneuro:ds001971` — Audiocue walking study
+  - `/modalities`: `["EEG"]` → `["EEG", "behavioral"]`
+  - `/population`: `null` → `18 subjects walking on a treadmill`
   - `/provenance/enrichment/fields/modalities`: `null` → `llm`
   - `/provenance/enrichment/fields/population`: `null` → `llm`
   - `/provenance/enrichment/fields/summary`: `null` → `llm`
   - `/provenance/enrichment/method`: `rules` → `rules+llm`
   - `/provenance/enrichment/model`: `null` → `opus`
   - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - … and 1 more
-- `physionet:discharge-me` — Discharge Me: BioNLP ACL'24 Shared Task on Streamlining Discharge Documentation
-  - `/domains`: `[]` → `["other"]`
-  - `/population`: `null` → `109,168 emergency department admissions`
-  - `/provenance/enrichment/fields/domains`: `null` → `llm`
+  - `/summary`: `This mobile brain body imaging (MoBI) gait adaptation experiment contains 18 subjects. Participants were walking on a tr…` → `Mobile brain body imaging gait adaptation experiment with 18 subjects walking on a treadmill, stepping in time to an aud…`
+- `openneuro:ds001978` — Image segmentation Based on Relative Motion and Relative Disparity Cues (central letter task)
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `Anatomical data associated with this data set is available at: http://openneuro.org/datasets/ds001972 This is Experiment…` → `Functional imaging experiment on image segmentation from relative motion and relative disparity cues, using a central le…`
+- `openneuro:ds001981` — Temporal stability of fMRI in medetomidine-anesthetized rats
+  - `/countries`: `[]` → `["DE"]`
+  - `/provenance/enrichment/fields/countries`: `null` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `This dataset contains un-processed MRI data from **24 female adult Wistar rats**, acquired at the Functional Imaging Lab…` → `Unprocessed anatomical and BOLD fMRI scans from 24 female adult Wistar rats anesthetized with medetomidine for up to six…`
+- `openneuro:ds001984` — Image segmentation Based on Relative Motion and Relative Disparity Cues (passive fixation)
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `Anatomical data associated with this data set is available at: http://openneuro.org/datasets/ds001972 This is Experiment…` → `Functional imaging experiment on image segmentation from relative motion and relative disparity cues under passive fixat…`
+- `openneuro:ds002000` — reinstatement_fidelity
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `Data relating "Alpha/beta power decreases track the fidelity of stimulus-specific information" In this dataset, the raw …` → `Combined MRI and EEG data accompanying a study relating alpha/beta power decreases to the fidelity of stimulus-specific …`
+- `openneuro:ds002011` — Locus coeruleus activity strengthens prioritized memories under arousal
+  - `/modalities`: `["MRI", "fMRI", "behavioral"]` → `["MRI", "fMRI", "eye_tracking", "behavioral"]`
+  - `/population`: `null` → `22 participants; a participants file indicates each participant's age group and sex`
+  - `/provenance/enrichment/fields/modalities`: `rules` → `llm`
   - `/provenance/enrichment/fields/population`: `null` → `llm`
   - `/provenance/enrichment/fields/summary`: `null` → `llm`
   - `/provenance/enrichment/method`: `rules` → `rules+llm`
   - `/provenance/enrichment/model`: `null` → `opus`
   - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Data for the "Discharge Me!" Shared Task on Streamlining Discharge Documentation for BioNLP ACL'24` → `Shared-task dataset compiled from MIMIC-IV-Note and MIMIC-IV-ED for generating the Brief Hospital Course and Discharge I…`
-- `physionet:discharge-summary-templates` — Annotated MIMIC-IV discharge summaries for a study on deidentification of names
-  - `/domains`: `[]` → `["other"]`
-  - `/provenance/enrichment/fields/domains`: `null` → `llm`
+  - `/summary`: `These pupil, behavioral, functional and structural MRI data have been published in: Clewett, D. V., Huang, R., Velasco, …` → `Pupil, behavioral, functional and structural MRI data from an Overlap monetary encoding incentive task and a PPA localiz…`
+- `openneuro:ds002013` — StimDisc
   - `/provenance/enrichment/fields/summary`: `null` → `llm`
   - `/provenance/enrichment/method`: `rules` → `rules+llm`
   - `/provenance/enrichment/model`: `null` → `opus`
   - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Annotated MIMIC-IV discharge summaries used to explore deidentification of names` → `Name sets varying by gender, race, name popularity and decade of popularity, plus clinical note templates curated from M…`
-- `physionet:discq` — Learning to Ask Like a Physician: a Discharge Summary Clinical Questions (DiSCQ) Dataset
-  - `/domains`: `[]` → `["other"]`
-  - `/population`: `null` → `Medical experts generating questions from 100+ MIMIC-III, version 1.4, discharge summaries`
-  - `/provenance/enrichment/fields/domains`: `null` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
+  - `/summary`: `Visual Receptive Field Mapping Experiment ========================================= This BIDS data set encompasses the d…` → `BIDS dataset for a visual receptive field mapping experiment, including SPM conversion and preprocessing jobs, region of…`
+- `openneuro:ds002014` — Language Production fMRI
   - `/provenance/enrichment/fields/summary`: `null` → `llm`
   - `/provenance/enrichment/method`: `rules` → `rules+llm`
   - `/provenance/enrichment/model`: `null` → `opus`
   - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `Dataset of questions asked by medical experts about patients. Medical experts will read a discharge summary line-by-line…` → `Questions asked by medical experts reading MIMIC-III discharge summaries, each paired with the text snippet that trigger…`
-- `physionet:dreamt` — DREAMT: Dataset for Real-time sleep stage EstimAtion using Multisensor wearable Technology
-  - `/conditions`: `[{"label": "sleep apnea, obstructive", "mesh_id": "D020181"}]` → `[{"label": "sleep apnea, obstructive", "mesh_id": "D020181"}, {"label": "sleep apnea", "mesh_id": null}, {"label": "slee…`
-  - `/domains`: `[]` → `["neurology", "pulmonology"]`
-  - `/population`: `null` → `100 participants; sleep abnormal patients with sleep apnea`
+  - `/summary`: `Description: Language production task Release history: 7/2019: initial release This dataset is made available under the …` → `Functional MRI dataset from a language production task involving semantic fluency, released under a public domain dedica…`
+- `openneuro:ds002016` — BigBrainMRICoreg
+  - `/countries`: `[]` → `["CA", "DE"]`
+  - `/provenance/enrichment/fields/countries`: `null` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `This dataset includes co-registration of the BigBrain dataset to the MNI PD25 atlas and the ICBM152 2009b atlases. The d…` → `Co-registration of the BigBrain dataset to the MNI PD25 and ICBM152 atlases, with deformed BigBrain atlases, MRI templat…`
+- `openneuro:ds002034` — Real-time EEG feedback on alpha power lateralization leads to behavioral improvements in a covert attention task
+  - `/countries`: `[]` → `["CH"]`
+  - `/provenance/enrichment/fields/countries`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+- `openneuro:ds002040` — BIDS_PARKINSON
+  - `/domains`: `["neuroscience"]` → `["neurology", "neuroscience"]`
+  - `/provenance/enrichment/fields/domains`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+- `openneuro:ds002041` — Mesolimbic dopamine D2 receptors and neural representations of subjective value
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `This dataset contains the data of 25 healthy young adults who completed a delay discounting task during fMRI scanning an…` → `Twenty-five healthy young adults completed a delay discounting task during fMRI and, on a separate visit, a PET scan wit…`
+- `openneuro:ds002076` — Layer-dependent activity in human prefrontal cortex during working memory
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `The bids file format requires us to specify scan type in the file name, but the specification isn't entirely accurate he…` → `Human prefrontal cortex imaging during working memory, examining layer-dependent activity. Functional directories contai…`
+- `openneuro:ds002080` — BTC_postop
+  - `/conditions`: `[{"label": "brain neoplasms", "mesh_id": "D001932"}, {"label": "glioma", "mesh_id": "D005910"}, {"label": "healthy contr…` → `[{"label": "brain neoplasms", "mesh_id": "D001932"}, {"label": "glioma", "mesh_id": "D005910"}, {"label": "healthy contr…`
   - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
-  - `/provenance/enrichment/fields/domains`: `null` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `Brain Tumor Connectomics Data Post-operative data of 7 glioma patients, 12 meningioma patients (1 [sub-PAT11] with bad d…` → `Post-operative brain imaging of glioma and meningioma patients plus control subjects, following an earlier pre-surgical …`
+- `openneuro:ds002087` — Datasets with and without deliberate head movements for detection and imputation of dropout in diffusion MRI
+  - `/population`: `null` → `1 participant`
   - `/provenance/enrichment/fields/population`: `null` → `llm`
   - `/provenance/enrichment/fields/summary`: `null` → `llm`
   - `/provenance/enrichment/method`: `rules` → `rules+llm`
   - `/provenance/enrichment/model`: `null` → `opus`
   - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - … and 1 more
-- `physionet:drivedb` — Stress Recognition in Automobile Drivers
-  - `/conditions`: `[{"label": "healthy controls", "mesh_id": null}]` → `[{"label": "healthy controls", "mesh_id": null}, {"label": "healthy volunteers", "mesh_id": "D064368"}]`
-  - `/countries`: `[]` → `["US"]`
-  - `/domains`: `["cardiology"]` → `["cardiology", "other"]`
-  - `/population`: `null` → `Healthy volunteers recorded while driving a prescribed route including city streets and highways in and around Boston, M…`
+  - `/summary`: `This is the diffusion MRI data acquired with and without deliberate head movements and used to investigate the correctio…` → `Diffusion MRI acquired with and without deliberate head movements, plus additional b=0 scans with reverse phase encoding…`
+- `openneuro:ds002105` — Multi-Domain Task Battery (MDTB)
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `This dataset contains cerebellar fMRI data from the Multi-Domain Task Battery (MDTB). Description: 26 unique cognitive t…` → `Cerebellar functional imaging from a multi-domain task battery of 26 cognitive tasks and 47 task conditions across 4 sca…`
+- `openneuro:ds002116` — Development of Symbolic Number Processing
+  - `/domains`: `["neuroscience"]` → `["neuroscience", "pediatrics"]`
+  - `/provenance/enrichment/fields/domains`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+- `openneuro:ds002134` — Mouse_opto_3xTG
+  - `/conditions`: `[{"label": "alzheimer disease", "mesh_id": "D000544"}]` → `[{"label": "alzheimer disease", "mesh_id": "D000544"}, {"label": "Alzheimer's disease-like pathology", "mesh_id": null}]`
   - `/provenance/enrichment/fields/conditions`: `rules` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `Optogenetics fMRI data acquired on a cohort of triple transgenic mice for Alzheimer's disease-like pathology, 3xTGAD, an…` → `Optogenetic functional imaging in triple transgenic 3xTGAD mice and controls, scanned at 3 and 6 months of age, to inves…`
+- `openneuro:ds002156` — Multi-echo masking test dataset
+  - `/conditions`: `[]` → `[{"label": "adolescent depression", "mesh_id": null}]`
+  - `/population`: `null` → `One participant, scanned as part of a longitudinal study of adolescent depression`
+  - `/provenance/enrichment/fields/conditions`: `null` → `llm`
+  - `/provenance/enrichment/fields/population`: `null` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `This is one run of multi-echo resting state data and accompanying defaced anatomical scans shared to help debug masking …` → `One run of multi-echo resting-state data with defaced anatomical scans from a single participant, shared to help debug m…`
+- `openneuro:ds002168` — Pattern Separation beyond the Hippocampus: A High-Resolution Whole-Brain Investigation of Mnemonic Discrimination in Healthy Adults
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `Abstract Episodic memory depends on the computational process of pattern separation in order to establish distinct memor…` → `Whole-brain high-resolution functional MRI from 48 healthy young adults completing a mnemonic discrimination task, exami…`
+- `openneuro:ds002179` — 7 Tesla MRI of the ex vivo human brain at 100 micron resolution
+  - `/population`: `null` → `One ex vivo human brain specimen, donated by a 58-year-old woman with no history of neurological disease who died of non…`
+  - `/provenance/enrichment/fields/population`: `null` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `Abstract: We present an ultra-high resolution MRI dataset of an ex vivohuman brain specimen. The brain specimen was dona…` → `Ultra-high resolution 7 Tesla MRI of a single ex vivo human brain specimen at 100 micron isotropic resolution, distribut…`
+- `openneuro:ds002181` — CRYPTO and PROVIDE EEG Baseline Data
+  - `/conditions`: `[]` → `[{"label": "stunting", "mesh_id": null}]`
+  - `/countries`: `[]` → `["BD"]`
+  - `/domains`: `["neurology", "neuroscience", "pediatrics"]` → `["neurology", "neuroscience", "pediatrics", "public_health"]`
+  - `/provenance/enrichment/fields/conditions`: `null` → `llm`
   - `/provenance/enrichment/fields/countries`: `null` → `llm`
   - `/provenance/enrichment/fields/domains`: `rules` → `llm`
-  - `/provenance/enrichment/fields/population`: `null` → `llm`
-  - `/provenance/enrichment/fields/summary`: `null` → `llm`
-  - `/provenance/enrichment/method`: `rules` → `rules+llm`
-  - … and 3 more
-- `physionet:drugehrqa` — DrugEHRQA: A Question Answering Dataset on Structured and Unstructured Electronic Health Records For Medicine Related Queries
-  - `/domains`: `[]` → `["other"]`
-  - `/provenance/enrichment/fields/domains`: `null` → `llm`
   - `/provenance/enrichment/fields/summary`: `null` → `llm`
   - `/provenance/enrichment/method`: `rules` → `rules+llm`
   - `/provenance/enrichment/model`: `null` → `opus`
   - `/provenance/enrichment/prompt_version`: `null` → `v1`
-  - `/summary`: `DrugEHRQA is a QA dataset containing question-answers from MIMIC-III tables and discharge summaries.` → `Medication-related question-answer pairs drawn from structured MIMIC-III tables and unstructured clinical notes, includi…`
-- … and 579 more
+  - … and 1 more
+- `openneuro:ds002185` — Human Olfaction Without Apparent Olfactory Bulbs
+  - `/conditions`: `[]` → `[{"label": "Without Apparent Olfactory Bulbs", "mesh_id": null}]`
+  - `/modalities`: `["MRI", "fMRI", "dMRI"]` → `["MRI", "fMRI", "dMRI", "behavioral"]`
+  - `/provenance/enrichment/fields/conditions`: `null` → `llm`
+  - `/provenance/enrichment/fields/modalities`: `rules` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `Functional MRI paradigm and analysis: In each of two functional runs, 10 stimuli per valence were delivered, culminating…` → `Olfactory functional MRI study in people without apparent olfactory bulbs. Two runs delivered pleasant and unpleasant od…`
+- `openneuro:ds002207` — CEREBRuM: a 3T MRI segmentation tool
+  - `/countries`: `[]` → `["GB"]`
+  - `/provenance/enrichment/fields/countries`: `null` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `The dataset is composed by 7 subjects, scanned at the Centre for Cognitive Neuroimaging (CCNi) at the Institute of Neuro…` → `Testing dataset of 3T brain MRI from healthy subjects scanned in Glasgow, distributed with defaced anatomical images plu…`
+- `openneuro:ds002218` — Auditory and Visual Rhythm Omission EEG
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `This EEG dataset was recorded as part of a study of the predictive mechanisms of rhythm perception by using an omission …` → `EEG recordings from participants who separately listened to auditory rhythms and watched visual flashing rhythms contain…`
+- `openneuro:ds002232` — Caltech rsfMRI Dataset
+  - `/conditions`: `[]` → `[{"label": "single cerebral hemisphere", "mesh_id": null}]`
+  - `/provenance/enrichment/fields/conditions`: `null` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `Caltech dataset for "Intrinsic functional connectivity of the brain in adults with a single cerebral hemisphere" by Dori…` → `Resting-state functional MRI dataset collected at Caltech, supporting a study of intrinsic functional connectivity of th…`
+- `openneuro:ds002241` — Relating visual production and recognition of objects in human visual cortex
+  - `/countries`: `[]` → `["US"]`
+  - `/provenance/enrichment/fields/countries`: `null` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `## Participants Based on initial piloting, we developed a target sample size of 36 participants, across whom all conditi…` → `Imaging study relating drawing production and object recognition in human visual cortex. Participants repeatedly practic…`
+- `openneuro:ds002242` — Correcting False Memories: The Effect of Mnemonic Generalization on Original Memory Traces
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `Correcting False Memories: The Effect of Mnemonic Generalization on Original Memory Traces ABSTRACT False memories are a…` → `Functional MRI study of false memory correction in healthy young adults. A mnemonic discrimination task induced memory e…`
+- `openneuro:ds002250` — When my wrongs are worse than yours: behavioral and neural asymmetries in first-person and third-person perspectives of accidents
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `OpenNeuro curator note: This dataset was previously accessible at ds002222.` → `Imaging and behavioral dataset on moral judgment and decision making, comparing first-person and third-person perspectiv…`
+- `openneuro:ds002270` — Viewing_food_cues
+  - `/modalities`: `["MRI", "fMRI"]` → `["MRI", "fMRI", "behavioral"]`
+  - `/provenance/enrichment/fields/modalities`: `null` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `Dataset description =================== This dataset allows to explore how spatial resolution influences activations eli…` → `Functional imaging dataset exploring how spatial resolution influences activation elicited by appetizing food pictures. …`
+- `openneuro:ds002274` — Hands on analysis tutorial
+  - `/countries`: `[]` → `["NL", "US"]`
+  - `/provenance/enrichment/fields/countries`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+- `openneuro:ds002278` — Dense Investigation of Variability of Affect (DIVA)
+  - `/countries`: `[]` → `["US"]`
+  - `/modalities`: `["MRI", "fMRI", "dMRI", "survey"]` → `["MRI", "fMRI", "dMRI", "physiological_signals", "behavioral", "survey"]`
+  - `/provenance/enrichment/fields/countries`: `null` → `llm`
+  - `/provenance/enrichment/fields/modalities`: `rules` → `llm`
+  - `/provenance/enrichment/fields/summary`: `null` → `llm`
+  - `/provenance/enrichment/method`: `rules` → `rules+llm`
+  - `/provenance/enrichment/model`: `null` → `opus`
+  - `/provenance/enrichment/prompt_version`: `null` → `v1`
+  - `/summary`: `# Dense Investigation of Variability of Affect Dense Investigation of Variability of Affect (DIVA) was a pilot study acq…` → `Deeply sampled pilot study of variability of affect, with imaging, physiological, and in-scanner task data from a small …`
+- … and 1318 more
 
 ## Enrichment
 
 - backend: `claude_cli`
 - model: `opus`
-- calls: 100
-- cache_hits: 0
-- guard_drops: 468
-- failures: 1
-- record_errors: 1
+- calls: 4
+- cache_hits: 2626
+- guard_drops: 2084
+- failures: 0
+- record_errors: 0
 
-## Validation warnings: 125
+## Validation warnings: 107

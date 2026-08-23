@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:df09335e2f9ea69aadc291f9b3beb6215555fe052e2aeb038a4eff4f6c129bfc",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      },
+      {
+        "evidence": "sleep deprivation(SD---session2)",
+        "label": "sleep deprivation"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds004902",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "resting-state EEG data (eyes open,partially eyes closed)",
+        "value": "EEG"
+      },
+      {
+        "evidence": "\"modalities\":[\"EEG\",\"behavioral\"]",
+        "value": "behavioral"
+      }
+    ],
+    "population": "71 participants who underwent two experiments involving normal sleep and sleep deprivation",
+    "summary": "Resting-state EEG recorded with a 61-electrode system in two sessions, one after normal sleep and one after sleep deprivation, plus information on participants' sleepiness and mood states."
+  },
+  "prompt_version": "v1"
+}

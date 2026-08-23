@@ -1,0 +1,43 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:8f2b6cba16ed994d77e8dcf1c0a04cbf9997e25cb548a6f09d2c756ed5111481",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "people with multiple sclerosis (MS)",
+        "label": "multiple sclerosis"
+      },
+      {
+        "evidence": "8 healthy controls",
+        "label": "healthy controls"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds007908",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "longitudinal, multi-modal MRI data",
+        "value": "MRI"
+      },
+      {
+        "evidence": "\"modalities\":[\"MRI\",\"fMRI\",\"dMRI\"]",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "\"modalities\":[\"MRI\",\"fMRI\",\"dMRI\"]",
+        "value": "dMRI"
+      }
+    ],
+    "population": "Baseline data for 20 MS patients and 8 healthy controls; ages 23–58",
+    "summary": "First release of a longitudinal multi-modal brain MRI study of cognitive impairment in multiple sclerosis, containing baseline sessions with functional and structural connectivity and neuronal integrity measures."
+  },
+  "prompt_version": "v1"
+}

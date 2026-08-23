@@ -1,0 +1,43 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:4ba0b2c9eeea50516af1a64e03a4c55b6e3645d73b6442b3e59104b8060e7d76",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds004024",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "TMS-EEG-MRI-fMRI-DWI data",
+        "value": "EEG"
+      },
+      {
+        "evidence": "MRI-fMRI-DWI data",
+        "value": "MRI"
+      },
+      {
+        "evidence": "fMRI-DWI data",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "DWI data",
+        "value": "dMRI"
+      }
+    ],
+    "population": "Human; Healthy / Control",
+    "summary": "Combined transcranial magnetic stimulation, EEG and multimodal MRI data on paired associative stimulation and connectivity, including resting and single-pulse TMS runs, organised in BIDS format."
+  },
+  "prompt_version": "v1"
+}

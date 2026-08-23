@@ -1,0 +1,39 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:6a08d00f2e240bf5b4d28cb6720e12afad48c792d1d4a12fcf1d7b9da3463e1a",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "non bothersome tinnitus",
+        "label": "tinnitus"
+      }
+    ],
+    "countries": [
+      "FR"
+    ],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds002896",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "a T1w scan",
+        "value": "MRI"
+      },
+      {
+        "evidence": "a resting-state BOLD fMRI scan",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "a diffusion weighted imaging scan",
+        "value": "dMRI"
+      }
+    ],
+    "population": "Tinnitus / Controls",
+    "summary": "Brain imaging of non-bothersome tinnitus and controls, with T1-weighted, resting-state BOLD fMRI and diffusion scans acquired on a 3T scanner, plus age, hearing-loss and tinnitus handicap inventory measures."
+  },
+  "prompt_version": "v1"
+}

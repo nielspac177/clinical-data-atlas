@@ -1,0 +1,27 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:2499c96281c7584c20146ed04c08f2041b87fcd3233946e5d880dc6bd445fd75",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds008066",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "one anatomical T1-weighted image",
+        "value": "MRI"
+      },
+      {
+        "evidence": "three functional BOLD runs of the choice task",
+        "value": "fMRI"
+      }
+    ],
+    "population": null,
+    "summary": "Raw BIDS-format MRI from a choice overload task with decoy and no-decoy conditions at varying option counts, including anatomical images, three BOLD runs per participant, and event timing files."
+  },
+  "prompt_version": "v1"
+}

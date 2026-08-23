@@ -1,0 +1,35 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:f7f5662cd2d9b47dfd41304cc0c86a69d4eabe042b9a1db3d7367c5f3b3e7a74",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds001110",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "\"fMRI\"",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "Deskulled anatomical scan images are included for each subject",
+        "value": "MRI"
+      },
+      {
+        "evidence": "the crop at the beginning includes an eye tracking set up",
+        "value": "eye_tracking"
+      },
+      {
+        "evidence": "recalling each of them in the scanner",
+        "value": "behavioral"
+      }
+    ],
+    "population": "18 participants who watched Sherlock movie and listened to the audio recording of Merlin movie, 18 participants who watched Merlin and listened to Sherlock audio, and one participant who watched and recalled both.",
+    "summary": "Participants watched one movie (Sherlock or Merlin) and listened to an audio recall of the other, with one participant watching and recalling both. Anatomical scans and stimulus cropping times are included."
+  },
+  "prompt_version": "v1"
+}

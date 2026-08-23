@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:2df4f64d0dd63e1f8073a4570d3165f81621c45a80cf7740f2714189bd927986",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "identify periods of driver fatigue",
+        "label": "driver fatigue"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds004123",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "EEG (BioSemi 64 (+8) channel systems",
+        "value": "EEG"
+      },
+      {
+        "evidence": "Eye Tracking (Sensomotoric Instruments (SMI); REDEYE250)",
+        "value": "eye_tracking"
+      }
+    ],
+    "population": "Volunteers from the local community recruited through advertisements",
+    "summary": "EEG and eye tracking during extended simulated driving with varied visual complexity and perturbation frequency, used to study fatigue-related biomarkers alongside driving performance measures."
+  },
+  "prompt_version": "v1"
+}

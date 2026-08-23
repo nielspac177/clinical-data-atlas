@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:071c992f80c824c6e4427b225fbfe52a6812dd75076e10649dbf65ac08e5150a",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      },
+      {
+        "evidence": "resting-state pain susceptibility network",
+        "label": "pain susceptibility"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds002609",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "\"modalities\":[\"MRI\",\"fMRI\"]",
+        "value": "MRI"
+      },
+      {
+        "evidence": "\"modalities\":[\"MRI\",\"fMRI\"]",
+        "value": "fMRI"
+      }
+    ],
+    "population": "Human; Healthy / Control; 49 participants",
+    "summary": "Resting-state MRI from 49 healthy participants, described as Study 2 of the RPN-signature paper and used to validate the predictive signature of individual pain sensitivity from pain-free resting-state connectivity."
+  },
+  "prompt_version": "v1"
+}

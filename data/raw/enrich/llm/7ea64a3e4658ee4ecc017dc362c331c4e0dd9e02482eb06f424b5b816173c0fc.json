@@ -1,0 +1,39 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:7ea64a3e4658ee4ecc017dc362c331c4e0dd9e02482eb06f424b5b816173c0fc",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "First-episode Schizophrenia (FESZ)",
+        "label": "First-episode Schizophrenia"
+      },
+      {
+        "evidence": "First-episode Affective Psychosis (FEAFF)",
+        "label": "First-episode Affective Psychosis"
+      },
+      {
+        "evidence": "Healthy controls (HC)",
+        "label": "Healthy controls"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "psychiatry",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds004837",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Magnetoencephalographic (MEG) Pitch and Duration Mismatch Negativity",
+        "value": "MEG"
+      }
+    ],
+    "population": "60 human participants: healthy controls, first-episode schizophrenia, and first-episode affective psychosis",
+    "summary": "MEG recordings of an auditory oddball paradigm with standard, pitch deviant and duration deviant tones, measuring mismatch negativity in first-episode psychosis. Clinical, neuropsychological, demographic and medication data accompany the recordings."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:de169351c6396c4a54777d7a86c9a495b70e3bab198467425ab24d22a297b2fa",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds005533",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "raw 3T and 7T anatomical and functional MRI data",
+        "value": "MRI"
+      },
+      {
+        "evidence": "In fMRI runs, participants performed a block design visual task",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "with the Inknet EEG net",
+        "value": "EEG"
+      }
+    ],
+    "population": "1 phantom and 8 human subjects (5 subjects at 3T and 3 subjects at 7T); healthy controls",
+    "summary": "Raw 3T and 7T anatomical and functional MRI acquired with and without a conductive-ink polymer-thick-film EEG net, compared against a conventional copper wire net, including a flickering checkerboard visual task at 7T."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:f44b47772b1e50712ffa59ffb5217b11b71aefb848fdcc6610a34476cde30635",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "healthy controls"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds005403",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Delayed Auditory Feedback EEG/EGG",
+        "value": "EEG"
+      },
+      {
+        "evidence": "Electroglottography (EGG) and audio are included in the EEG files themselves",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": "32 healthy control human participants",
+    "summary": "EEG recorded with simultaneous electroglottography and audio during speech production under delayed auditory feedback in healthy participants. Organized in BIDS format for EEG data using MNE-BIDS software."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,31 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:b7013ef294a10b97fe7a718cd81b6972e157eb564d15f8b86b7bd4f7c6e55e0c",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "brain tumor resections in the perirolandic region",
+        "label": "brain tumor"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience",
+      "oncology",
+      "surgery"
+    ],
+    "id": "openneuro:ds004642",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Contains the raw ieeg data in .edf format",
+        "value": "iEEG"
+      }
+    ],
+    "population": "Patients undergoing brain tumor resections in the perirolandic region, median age 40 years, range 19-56, 6 female",
+    "summary": "Continuous intraoperative electrocorticography recorded during median nerve stimulation from paired low- and high-impedance electrode strips in patients undergoing brain tumor resection, organized in BIDS format to compare fast ripple detection between electrode types."
+  },
+  "prompt_version": "v1"
+}

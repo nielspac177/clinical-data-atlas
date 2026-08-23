@@ -1,0 +1,40 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:8cbceb7ddd6d0508108f77ca9dff6e289b842238c8c3707087fedfecd91f9273",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      },
+      {
+        "evidence": "6 represented moderate pain",
+        "label": "pain"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds005291",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "\"modalities\":[\"EEG\",\"eye_tracking\"]",
+        "value": "EEG"
+      },
+      {
+        "evidence": "\"modalities\":[\"EEG\",\"eye_tracking\"]",
+        "value": "eye_tracking"
+      },
+      {
+        "evidence": "provided verbal pain ratings one by one",
+        "value": "behavioral"
+      }
+    ],
+    "population": "Human; Healthy / Control",
+    "summary": "Healthy participants each underwent 30 laser stimuli at an intensity matched to an average rating of 7 and gave verbal pain ratings from 0 to 10 while fixating a crosshair."
+  },
+  "prompt_version": "v1"
+}

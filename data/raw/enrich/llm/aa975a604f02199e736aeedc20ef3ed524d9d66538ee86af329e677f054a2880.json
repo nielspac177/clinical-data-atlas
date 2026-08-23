@@ -1,0 +1,40 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:aa975a604f02199e736aeedc20ef3ed524d9d66538ee86af329e677f054a2880",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds004625",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "dual-layer electroencephalography (EEG)",
+        "value": "EEG"
+      },
+      {
+        "evidence": "neck electromyography (EMG)",
+        "value": "EMG"
+      },
+      {
+        "evidence": "inertial measurement unit (IMU) acceleration",
+        "value": "wearable"
+      },
+      {
+        "evidence": "T1 structural MR images",
+        "value": "MRI"
+      }
+    ],
+    "population": "Human; Healthy / Control; ages 20–35",
+    "summary": "High-density dual-layer EEG, neck EMG, inertial measurement unit acceleration, ground reaction forces, and head models from T1 images, recorded in 32 participants walking over uneven terrain at different speeds."
+  },
+  "prompt_version": "v1"
+}

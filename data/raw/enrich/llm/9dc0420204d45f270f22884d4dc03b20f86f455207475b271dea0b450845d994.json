@@ -1,0 +1,59 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:9dc0420204d45f270f22884d4dc03b20f86f455207475b271dea0b450845d994",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Tetralogy of Fallot (TOF)",
+        "label": "Tetralogy of Fallot (TOF)"
+      },
+      {
+        "evidence": "congenital heart disease (CHD)",
+        "label": "congenital heart disease (CHD)"
+      },
+      {
+        "evidence": "neurodevelopmental disorders (NDDs)",
+        "label": "neurodevelopmental disorders (NDDs)"
+      }
+    ],
+    "countries": [
+      "CN"
+    ],
+    "domains": [
+      "neuroscience",
+      "cardiology",
+      "pulmonology",
+      "critical_care",
+      "surgery",
+      "pediatrics"
+    ],
+    "id": "openneuro:ds006556",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "MRI and neurodevelopmental data",
+        "value": "MRI"
+      },
+      {
+        "evidence": "cerebral oxygenation, EEG, and pulse oximetry",
+        "value": "EEG"
+      },
+      {
+        "evidence": "neuroimaging, clinical, and behavioral data",
+        "value": "behavioral"
+      },
+      {
+        "evidence": "Demographic and Clinical Data",
+        "value": "clinical_tabular"
+      },
+      {
+        "evidence": "Hemodynamic and respiratory parameters",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": "31 pediatric participants (18 males; age range: 4–33 months) who underwent surgical intervention for Tetralogy of Fallot at the Children's Hospital of Nanjing Medical University between 2022 and 2023",
+    "summary": "Neuroimaging, clinical, and behavioral data from pediatric patients who had surgery for Tetralogy of Fallot, covering demographics, surgical and perioperative monitoring measures, developmental test scores, and follow-up assessments after discharge."
+  },
+  "prompt_version": "v1"
+}

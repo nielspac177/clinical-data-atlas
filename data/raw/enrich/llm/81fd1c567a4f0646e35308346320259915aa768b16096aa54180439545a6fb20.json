@@ -1,0 +1,40 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:81fd1c567a4f0646e35308346320259915aa768b16096aa54180439545a6fb20",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Diminished Physical Growth",
+        "label": "Diminished Physical Growth"
+      }
+    ],
+    "countries": [
+      "BD"
+    ],
+    "domains": [
+      "neuroscience",
+      "pediatrics",
+      "public_health"
+    ],
+    "id": "openneuro:ds003877",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Raw T1 MRI images in nifti format",
+        "value": "MRI"
+      },
+      {
+        "evidence": "Height-for-age",
+        "value": "clinical_tabular"
+      },
+      {
+        "evidence": "Full-scale IQ",
+        "value": "behavioral"
+      }
+    ],
+    "population": "Bangladeshi children growing up in extreme poverty, followed longitudinally",
+    "summary": "Longitudinal study of brain morphometry and physical growth in Bangladeshi children growing up in extreme poverty. Includes raw T1 MRI, age, sex, C-reactive protein elevations, growth measures, maternal education, income-to-needs and full-scale IQ."
+  },
+  "prompt_version": "v1"
+}

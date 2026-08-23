@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:eca155313e4ff6606b5530ff049a9d358075c96d3e710f5f50e8b44aad1d8b4a",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "healthy controls"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds007126",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "whole-brain EPI data from 3 task runs per participant",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "anatomical scans (T1-weighted images) for each subject",
+        "value": "MRI"
+      },
+      {
+        "evidence": "The events files contain the onsets, durations, trial types for all trials",
+        "value": "behavioral"
+      }
+    ],
+    "population": "Human; Healthy / Control; ages 17–24; 34 participants",
+    "summary": "Raw anatomical and task fMRI data examining how online social and non-social information distraction affects global-local attention, with event files describing trial onsets, durations and types."
+  },
+  "prompt_version": "v1"
+}

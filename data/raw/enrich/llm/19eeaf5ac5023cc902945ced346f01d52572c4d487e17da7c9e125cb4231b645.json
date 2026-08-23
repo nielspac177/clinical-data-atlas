@@ -1,0 +1,44 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:19eeaf5ac5023cc902945ced346f01d52572c4d487e17da7c9e125cb4231b645",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Participants are healthy adults",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds007537",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "electroencephalography (EEG)",
+        "value": "EEG"
+      },
+      {
+        "evidence": "eye-tracking",
+        "value": "eye_tracking"
+      },
+      {
+        "evidence": "photoplethysmography (PPG)",
+        "value": "PPG"
+      },
+      {
+        "evidence": "galvanic skin response (GSR) signals",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "engage in naturalistic smartphone use",
+        "value": "behavioral"
+      }
+    ],
+    "population": "Human; healthy adults, ages 20–33",
+    "summary": "Simultaneous EEG, eye-tracking, photoplethysmography and galvanic skin response recordings while participants freely used their own smartphones and while they watched a standardized video on a monitor, with hardware synchronization markers."
+  },
+  "prompt_version": "v1"
+}

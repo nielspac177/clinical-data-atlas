@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:125607a1db03bea91461b78e475813f13af1c53d310cbe2ca4ad0285f3b28518",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds007262",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "EEG was converted to BrainVision format",
+        "value": "EEG"
+      },
+      {
+        "evidence": "ECG is captured on the EEG system",
+        "value": "ECG"
+      },
+      {
+        "evidence": "Pupil Labs gaze/pupil data",
+        "value": "eye_tracking"
+      }
+    ],
+    "population": "Human; Healthy / Control; ages 18–48",
+    "summary": "Cognitive workload dataset from an arithmetic task with eight difficulty levels, converted from XDF to BIDS, containing EEG, ECG and eye tracking with task and dropout event markers."
+  },
+  "prompt_version": "v1"
+}

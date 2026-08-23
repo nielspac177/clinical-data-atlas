@@ -1,0 +1,43 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:07a1f2f8c7eab8f6667fbc8ef0445a25eab48b80eec7195972291be498ea7573",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "subjects with fragile X syndrome",
+        "label": "fragile X syndrome"
+      },
+      {
+        "evidence": "There are 16 healthy control subjects",
+        "label": "healthy control"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "neuroscience",
+      "neurology"
+    ],
+    "id": "openneuro:ds004654",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Positron Emission Tomography (PET) images",
+        "value": "PET"
+      },
+      {
+        "evidence": "Defaced/anonymized anatomical MRI T1-weighted images",
+        "value": "MRI"
+      },
+      {
+        "evidence": "blood sampling data",
+        "value": "other"
+      }
+    ],
+    "population": "Males aged 18 to 24 years, free of psychotropic medication; 16 healthy controls and 12 with fragile X syndrome",
+    "summary": "Leucine PET measures of cerebral protein synthesis with co-registered T1-weighted MRI, blood sampling, and FreeSurfer derivatives, in young adult males with fragile X syndrome and healthy controls."
+  },
+  "prompt_version": "v1"
+}

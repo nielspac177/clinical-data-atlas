@@ -1,0 +1,31 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:e0a4f0feb12c5300c2b24cb2b7d43ffe41805fc67dd7d27fda1e704f037b8d25",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds005134",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "T1w and T2w images were used in Freesurfer 7.4.1",
+        "value": "MRI"
+      },
+      {
+        "evidence": "\"modalities\":[\"MRI\",\"fMRI\",\"dMRI\"]",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "multiband DWI acquisition",
+        "value": "dMRI"
+      }
+    ],
+    "population": "1 participant, age 40",
+    "summary": "Single-participant sequence development acquisition testing a multiband diffusion-weighted sequence and a magnetization transfer sequence for a neuromelanin-sensitive protocol, with T1w, T2w, resting-state and preprocessed diffusion data."
+  },
+  "prompt_version": "v1"
+}

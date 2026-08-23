@@ -1,0 +1,31 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:c21301bd86a6d6320edb6f27d43fd0068b113e015845108a7c01ac6c235fad92",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds003425",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "\"modalities\":[\"MRI\",\"fMRI\"]",
+        "value": "MRI"
+      },
+      {
+        "evidence": "4 dummy volumes for each of the bold files",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "In the behaviour logs the trial types are numeric",
+        "value": "behavioral"
+      }
+    ],
+    "population": null,
+    "summary": "Functional MRI with behaviour logs from a differential fear conditioning study across two sessions, where participants viewed or were cued to imagine oriented gabor stimuli under shock and no-shock conditions."
+  },
+  "prompt_version": "v1"
+}

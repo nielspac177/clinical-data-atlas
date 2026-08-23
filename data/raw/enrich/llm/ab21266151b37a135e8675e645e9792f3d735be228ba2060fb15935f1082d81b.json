@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:ab21266151b37a135e8675e645e9792f3d735be228ba2060fb15935f1082d81b",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "patients affected by epilepsy",
+        "label": "epilepsy"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds003374",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "intracranial EEG (iEEG)",
+        "value": "iEEG"
+      },
+      {
+        "evidence": "from the macroscopic EEG",
+        "value": "EEG"
+      },
+      {
+        "evidence": "neuronal spike times and waveforms",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": "Nine subjects, patients affected by epilepsy who underwent preoperative invasive monitoring in the mesial temporal lobe; ages 19–48",
+    "summary": "Intracranial EEG and neuronal recordings from the amygdala of nine epilepsy patients under preoperative invasive monitoring, while viewing fearful faces and neutral landscapes. Shared in BIDS, with an extended version containing spike times and waveforms."
+  },
+  "prompt_version": "v1"
+}

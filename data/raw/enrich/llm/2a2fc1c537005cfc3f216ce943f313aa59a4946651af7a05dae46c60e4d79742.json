@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:2a2fc1c537005cfc3f216ce943f313aa59a4946651af7a05dae46c60e4d79742",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds003900",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "T1W image",
+        "value": "MRI"
+      },
+      {
+        "evidence": "DWI image with bval/bvec",
+        "value": "dMRI"
+      }
+    ],
+    "population": "Healthy / Control",
+    "summary": "Multi-site diffusion MRI tractography database for machine learning, with pre-split training, validation and testing subjects providing T1-weighted images, DTI metric maps, DWI with bval/bvec, fODF maps, tissue masks and delineated bundle tractograms."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:9dfd8312f897e7d0dbe74e1d801c18dd7e906fce81ab155ab89dd9445cfa3a33",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "healthy controls"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds004280",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "\"modalities\":[\"MRI\",\"fMRI\"]",
+        "value": "MRI"
+      },
+      {
+        "evidence": "acquiring fMRI data as participants perceive face images",
+        "value": "fMRI"
+      }
+    ],
+    "population": "Human; Healthy / Control; ages 30–32",
+    "summary": "fMRI recorded while participants viewed GAN-synthesized face images, supporting neural decoding that reconstructs perceived faces from brain activity via the GAN latent space; presented stimuli are included."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,35 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:725d947e9b9c8d5616ddb68fd1f1613428eca0491af67e9d0b519aec21d95043",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "epilepsy patients",
+        "label": "epilepsy"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds005415",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "stereoelectroencephalography recordings of epilepsy patients",
+        "value": "iEEG"
+      },
+      {
+        "evidence": "\"modalities\":[\"MRI\",\"iEEG\"]",
+        "value": "MRI"
+      }
+    ],
+    "population": "Epilepsy patients on the epilepsy monitoring unit at Oregon Health & Science University (13 participants)",
+    "summary": "Intracranial stereoelectroencephalography recorded from epilepsy patients waiting on an epilepsy monitoring unit while they were shown auditory and visual numbers, symbolic (Arabic and spoken) or non-symbolic (dots and beeps)."
+  },
+  "prompt_version": "v1"
+}

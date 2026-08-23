@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:8140d599c8cf186d9e7deeab2239e9101ea669368ca2839c2662c695732a97e9",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds006185",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "This dataset contains fMRIPrep derivatives",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "followed by fMRIPrep 25.2.4",
+        "value": "MRI"
+      }
+    ],
+    "population": "Human; Healthy / Control",
+    "summary": "fMRIPrep derivatives for the PAFIN dataset in healthy control participants, produced by running a Python translation of NORDIC followed by fMRIPrep via BABS, with processing code publicly available."
+  },
+  "prompt_version": "v1"
+}

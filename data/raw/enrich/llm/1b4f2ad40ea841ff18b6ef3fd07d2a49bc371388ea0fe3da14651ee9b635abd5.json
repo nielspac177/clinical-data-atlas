@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:1b4f2ad40ea841ff18b6ef3fd07d2a49bc371388ea0fe3da14651ee9b635abd5",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience",
+      "neurology"
+    ],
+    "id": "openneuro:ds004400",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "T1-weighted images for each subject",
+        "value": "MRI"
+      },
+      {
+        "evidence": "raw fMRI data",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "pressing one of the two buttons on the response pad",
+        "value": "behavioral"
+      }
+    ],
+    "population": "Twenty-five healthy individuals (all female; median age = 25, range = 22–32), all right-handed and monolingual",
+    "summary": "Raw fMRI and T1-weighted images from a number comparison task in healthy adults, with numerosities presented as Arabic digits, dot sets, or tactile Braille. Event files with onsets, durations, and trial types are included."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,38 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:96eb31b064ebd40641b9be9c5928f3f0fc8bb18aa841773e7509c5ce91fea7ef",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "healthy controls"
+      }
+    ],
+    "countries": [
+      "CN"
+    ],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds004148",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "state EEG recordings with 60 participants",
+        "value": "EEG"
+      },
+      {
+        "evidence": "cognitive(subtraction, music, memory) state",
+        "value": "behavioral"
+      },
+      {
+        "evidence": "sleep, emotion, mental health, and mind-wandering related measures",
+        "value": "survey"
+      }
+    ],
+    "population": "60 participants recorded during three experimental sessions",
+    "summary": "Test-retest EEG recorded during resting (eyes closed, eyes open) and cognitive (subtraction, music, memory) states over three sessions, alongside sleep, emotion, mental health and mind-wandering measures."
+  },
+  "prompt_version": "v1"
+}

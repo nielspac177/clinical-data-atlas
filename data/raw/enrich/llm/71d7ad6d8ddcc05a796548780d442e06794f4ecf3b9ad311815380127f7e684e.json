@@ -1,0 +1,38 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:71d7ad6d8ddcc05a796548780d442e06794f4ecf3b9ad311815380127f7e684e",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds007532",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "T1-weighted 3D MPRAGE",
+        "value": "MRI"
+      },
+      {
+        "evidence": "high-resolution fMRI and eye-tracking data",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "EyeLink 1000 Plus (500 Hz)",
+        "value": "eye_tracking"
+      }
+    ],
+    "population": "Human; healthy adults, ages 18–49; participants enrolled with a subset included in fMRI analyses",
+    "summary": "High-resolution functional MRI with simultaneous eye tracking across two sessions while participants performed a visual sequence mismatch detection task, used to study spatial and semantic memory along the hippocampal long axis."
+  },
+  "prompt_version": "v1"
+}

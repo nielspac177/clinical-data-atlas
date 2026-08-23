@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:a4eb76c3690a78bd3ccf4f5443b5e045fe02d89bed7268f99e4217b8fb50fc96",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds000120",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "\"modalities\":[\"MRI\",\"fMRI\",\"behavioral\"]",
+        "value": "MRI"
+      },
+      {
+        "evidence": "\"modalities\":[\"MRI\",\"fMRI\",\"behavioral\"]",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "code sent from eprime to eyetracker for this trial",
+        "value": "eye_tracking"
+      },
+      {
+        "evidence": "## Behavioral format like:",
+        "value": "behavioral"
+      }
+    ],
+    "population": "26 participants, ages 8–25",
+    "summary": "Imaging and behavioral data from an antisaccade task with rewarded, neutral and visually guided saccade trials, examining developmental changes in how reward processing influences inhibitory control. Saccade scores and latencies are provided per trial."
+  },
+  "prompt_version": "v1"
+}

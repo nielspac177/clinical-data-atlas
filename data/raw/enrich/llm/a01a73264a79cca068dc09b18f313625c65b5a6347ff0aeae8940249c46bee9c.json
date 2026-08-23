@@ -1,0 +1,57 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:a01a73264a79cca068dc09b18f313625c65b5a6347ff0aeae8940249c46bee9c",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Brain ALS",
+        "label": "ALS"
+      },
+      {
+        "evidence": "Motor Neuron Disease (MND)",
+        "label": "Motor Neuron Disease (MND)"
+      },
+      {
+        "evidence": "Fronto-Temporal Dementia (FTD)",
+        "label": "Fronto-Temporal Dementia (FTD)"
+      },
+      {
+        "evidence": "non-neurodegenerative disease controls",
+        "label": "non-neurodegenerative disease controls"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds007036",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "comprehensive multimodal MRI protocol including structural",
+        "value": "MRI"
+      },
+      {
+        "evidence": "resting state, and task fMRI",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "structural, diffusion, quantitative MRI",
+        "value": "dMRI"
+      },
+      {
+        "evidence": "cognitive testing",
+        "value": "behavioral"
+      },
+      {
+        "evidence": "genetic screening",
+        "value": "genomics"
+      }
+    ],
+    "population": "Twenty people living with neurodegenerative disease and 14 controls, ages 40–77",
+    "summary": "Ultra-high-field 7T MRI across the motor neuron disease and frontotemporal dementia spectrum with controls, combining structural, diffusion, quantitative, resting-state and task imaging with cognitive testing, genetic screening and clinical characterisation, curated in BIDS."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,39 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:6d68f100623c9d4eb89828f27fbb7c30d9fccfe6464af95d4b42f53c53a9cba4",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "sub-acute mild TBI",
+        "label": "sub-acute mild TBI"
+      },
+      {
+        "evidence": "chronic TBI",
+        "label": "chronic TBI"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds003522",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "EEG: Three-Stim Auditory Oddball",
+        "value": "EEG"
+      },
+      {
+        "evidence": "the only session with MRI",
+        "value": "MRI"
+      }
+    ],
+    "population": "ages 18–55",
+    "summary": "EEG during a three-stimulus auditory oddball task and rest in controls, sub-acute mild TBI and chronic TBI, collected across follow-up sessions at the UNM Health Sciences Center. MRI from the first session to be added later."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,45 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:af50b7a64a63ad573c5fc92c5474a358089e2f66a63f995ae8e647b2ece7d125",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "patients with chronic right hand impairment due to peripheral nerve injury",
+        "label": "peripheral nerve injury"
+      },
+      {
+        "evidence": "Peripheral nerve injury; Healthy/Control",
+        "label": "Healthy/Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience",
+      "neurology"
+    ],
+    "id": "openneuro:ds008162",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Available Modalities: MRI, beh",
+        "value": "MRI"
+      },
+      {
+        "evidence": "The primary data was task fMRI collected while participants completed a precision drawing task",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "t1, t2, and diffusion",
+        "value": "dMRI"
+      },
+      {
+        "evidence": "Additional behavioral tasks include the Block Building Task",
+        "value": "behavioral"
+      }
+    ],
+    "population": "Human; Peripheral nerve injury; Healthy/Control; ages 20.733–82.361",
+    "summary": "Task fMRI of precision drawing with each hand in healthy adults and people with peripheral nerve injury, plus resting state, structural and diffusion scans, drawing performance and behavioral assessments."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,43 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:f06fa604bfd5cf6bd91f4a099ec5397a3202f8cd150115feb463a9cc39836b3e",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Chronic Pain, Opiate Use Disorder, Anxiety",
+        "label": "Chronic Pain"
+      },
+      {
+        "evidence": "Chronic Pain, Opiate Use Disorder, Anxiety",
+        "label": "Opiate Use Disorder"
+      },
+      {
+        "evidence": "Chronic Pain, Opiate Use Disorder, Anxiety",
+        "label": "Anxiety"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "psychiatry",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds006949",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Defaced structural MRIs",
+        "value": "MRI"
+      },
+      {
+        "evidence": "Low-Intensity Focused Ultrasound Neuromodulation",
+        "value": "ultrasound"
+      }
+    ],
+    "population": "Human participants with chronic pain, opiate use disorder, or anxiety enrolled in the Focused Ultrasound for the Complex Patient study.",
+    "summary": "Defaced structural MRI scans acquired for clinical safety evaluation in a low-intensity focused ultrasound neuromodulation study of complex patients, released publicly as part of the NIH HEAL Initiative."
+  },
+  "prompt_version": "v1"
+}

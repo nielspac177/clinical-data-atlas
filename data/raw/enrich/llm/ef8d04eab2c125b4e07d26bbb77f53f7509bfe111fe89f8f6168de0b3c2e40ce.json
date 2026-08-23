@@ -1,0 +1,42 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:ef8d04eab2c125b4e07d26bbb77f53f7509bfe111fe89f8f6168de0b3c2e40ce",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Precision Functional Imaging in Autism",
+        "label": "Autism"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "psychiatry",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds007182",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Precision Functional Imaging in Autism",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "Direction labels (dwi/fmap)",
+        "value": "dMRI"
+      },
+      {
+        "evidence": "Behavioural and phenotypic data are provided",
+        "value": "behavioral"
+      },
+      {
+        "evidence": "Physiological recordings are stored",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": "Participants labelled sub-001 to sub-067, each with up to three sessions; autism",
+    "summary": "BIDS-organised neuroimaging dataset for precision functional imaging in autism, with resting-state and naturalistic viewing tasks, diffusion and fieldmap acquisitions, physiological recordings, and behavioural and phenotypic tables across multiple sessions."
+  },
+  "prompt_version": "v1"
+}

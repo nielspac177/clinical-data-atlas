@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:fe0c9fcce2e7bf52a1c9a60ec215c3f1aa0732836b889e97c93d3212ba2fccdf",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "tau neurofibrillary tangle burden maps",
+        "label": "tau neurofibrillary tangle pathology"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds003417",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Raw MRI images at 7T and 9T",
+        "value": "MRI"
+      },
+      {
+        "evidence": "reconstructed Nissl histology sections",
+        "value": "pathology"
+      }
+    ],
+    "population": "18 brain donors, medial temporal lobe specimens",
+    "summary": "Ex vivo MRI scans with reconstructed Nissl histology and anti-tau immunohistochemistry sections, plus derived tau neurofibrillary tangle burden maps, for brain donors, organised in subject and template space in BIDS."
+  },
+  "prompt_version": "v1"
+}

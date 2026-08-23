@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:2b51cc2840127e9145a5fd7aef75273a89e20077d7e4cde0cb32b78f4f8e43c0",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Drug-resistant epilepsy",
+        "label": "Drug-resistant epilepsy"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds005169",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "iEEG recordings of responses",
+        "value": "iEEG"
+      },
+      {
+        "evidence": "stereo-EEG presurgical evaluation",
+        "value": "EEG"
+      },
+      {
+        "evidence": "\"modalities\":[\"MRI\",\"EEG\",\"iEEG\"]",
+        "value": "MRI"
+      }
+    ],
+    "population": "Patients undergoing stereo-EEG presurgical evaluation for drug-resistant epilepsy, ages 18–47",
+    "summary": "Intracranial EEG segments recorded around high-frequency cortical stimulations that evoked visual effects, in patients undergoing stereo-EEG presurgical evaluation. Events files give stimulated contact pair, current intensity, and clinical response category."
+  },
+  "prompt_version": "v1"
+}

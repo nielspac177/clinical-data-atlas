@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:9560263a85170da783bd05271994934ccfb8dc8d4c48a5a51a3fccf61178900a",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "sub-acute mild TBI",
+        "label": "mild TBI"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds005114",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "EEG: DPX Cog Ctl Task",
+        "value": "EEG"
+      },
+      {
+        "evidence": "the only session with MRI",
+        "value": "MRI"
+      },
+      {
+        "evidence": "Dot Probe Continuous Performance Task",
+        "value": "behavioral"
+      }
+    ],
+    "population": "Control and sub-acute mild TBI participants, ages 18–55; 91 participants",
+    "summary": "EEG recorded during a Dot Probe Continuous Performance cognitive control task in control and sub-acute mild TBI participants, with follow-up sessions, task code, analysis scripts, and a metadata spreadsheet."
+  },
+  "prompt_version": "v1"
+}

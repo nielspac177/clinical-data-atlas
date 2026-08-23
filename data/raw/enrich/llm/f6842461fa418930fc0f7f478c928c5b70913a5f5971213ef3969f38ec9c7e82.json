@@ -1,0 +1,34 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:f6842461fa418930fc0f7f478c928c5b70913a5f5971213ef3969f38ec9c7e82",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "collected as part of surgical treatment for drug resistant epilepsy",
+        "label": "drug resistant epilepsy"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience",
+      "surgery"
+    ],
+    "id": "openneuro:ds004100",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "underwent intracranial EEG with subdural grid, strip, and depth electrodes (ECoG)",
+        "value": "iEEG"
+      },
+      {
+        "evidence": "underwent intracranial EEG with subdural grid, strip, and depth electrodes (ECoG)",
+        "value": "EEG"
+      }
+    ],
+    "population": "Subjects with drug resistant epilepsy who underwent intracranial EEG and subsequent surgical resection or laser ablation; ages 16–59",
+    "summary": "De-identified intracranial EEG from patients treated surgically for drug resistant epilepsy, covering interictal and ictal periods, with electrode localizations in MNI space, clinically determined seizure onset channels, and channels overlapping the resection or ablation zone."
+  },
+  "prompt_version": "v1"
+}

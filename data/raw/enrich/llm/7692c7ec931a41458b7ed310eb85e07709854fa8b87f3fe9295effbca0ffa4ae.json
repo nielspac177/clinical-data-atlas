@@ -1,0 +1,41 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:7692c7ec931a41458b7ed310eb85e07709854fa8b87f3fe9295effbca0ffa4ae",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "patients with chronic low back pain",
+        "label": "chronic low back pain"
+      },
+      {
+        "evidence": "patients with knee osteoarthritis",
+        "label": "knee osteoarthritis"
+      },
+      {
+        "evidence": "healthy control subjects",
+        "label": "healthy controls"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience",
+      "musculoskeletal"
+    ],
+    "id": "openneuro:ds007907",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "positron emission tomography (PET) with the radiotracer [11C]PBR28",
+        "value": "PET"
+      },
+      {
+        "evidence": "structural MRI (T1-weighted)",
+        "value": "MRI"
+      }
+    ],
+    "population": "Patients with chronic low back pain, patients with knee osteoarthritis, and healthy control subjects; ages 19–85",
+    "summary": "Observational cross-sectional multimodal neuroimaging dataset combining [11C]PBR28 TSPO PET and defaced T1-weighted structural MRI in chronic low back pain patients, knee osteoarthritis patients, and healthy controls."
+  },
+  "prompt_version": "v1"
+}

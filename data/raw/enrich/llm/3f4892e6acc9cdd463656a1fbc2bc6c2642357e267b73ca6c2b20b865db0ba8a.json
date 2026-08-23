@@ -1,0 +1,50 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:3f4892e6acc9cdd463656a1fbc2bc6c2642357e267b73ca6c2b20b865db0ba8a",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "pediatric patients with a primary anxiety disorder",
+        "label": "anxiety disorder"
+      },
+      {
+        "evidence": "healthy volunteer youth",
+        "label": "healthy volunteers"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "psychiatry",
+      "neuroscience",
+      "pediatrics"
+    ],
+    "id": "openneuro:ds006577",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "two task-based functional magnetic resonance imaging (fMRI) scans",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "BIDS-formatted imaging data",
+        "value": "MRI"
+      },
+      {
+        "evidence": "attention-bias threat-based dot-probe task",
+        "value": "behavioral"
+      },
+      {
+        "evidence": "completed questionnaires",
+        "value": "survey"
+      },
+      {
+        "evidence": "demographic variables, clinical symptoms reported by clinicians, self, and parent",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "Treatment-seeking pediatric patients with a primary anxiety disorder (n = 121) and healthy volunteer youth (n = 90)",
+    "summary": "Randomized controlled trial dataset pairing demographic and clinician-, self- and parent-reported clinical measures with two dot-probe fMRI scans in youth with anxiety disorders and healthy volunteers, around CBT plus gamified attention bias modification training."
+  },
+  "prompt_version": "v1"
+}

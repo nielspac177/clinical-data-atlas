@@ -1,0 +1,35 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:3be371553b983579fc1691f496a5a7c195598167ef99203d80181ff9fa00a4be",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds003670",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "high-density electroencephalography (EEG)",
+        "value": "EEG"
+      },
+      {
+        "evidence": "EEG/ECG/EOG were recorded concurrently",
+        "value": "ECG"
+      },
+      {
+        "evidence": "physiological (ECG, EOG)",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "continuous behavioral vigilance/alertness metrics",
+        "value": "behavioral"
+      }
+    ],
+    "population": "19 unique human participants (some repeated experiments), ages 19–43, recorded over 62 sessions during a continuous tracking task",
+    "summary": "BIDS-formatted GX dataset combining high-density EEG with ECG, EOG and continuous behavioral vigilance measures during nine High-Definition transcranial electrical stimulation montages targeting frontal, motor and parietal regions with DC, 5 Hz and 30 Hz waveforms."
+  },
+  "prompt_version": "v1"
+}

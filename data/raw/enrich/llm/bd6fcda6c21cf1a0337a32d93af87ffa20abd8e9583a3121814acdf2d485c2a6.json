@@ -1,0 +1,43 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:bd6fcda6c21cf1a0337a32d93af87ffa20abd8e9583a3121814acdf2d485c2a6",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Parkinson's disease (PD) patients",
+        "label": "Parkinson's disease"
+      },
+      {
+        "evidence": "healthy controls (HC)",
+        "label": "healthy controls"
+      }
+    ],
+    "countries": [
+      "IL"
+    ],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds007526",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "EEG recordings from Parkinson's disease (PD) patients",
+        "value": "EEG"
+      },
+      {
+        "evidence": "collected under two behavioral conditions",
+        "value": "behavioral"
+      },
+      {
+        "evidence": "Additional clinical data were collected",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "Human; Parkinson's disease patients (Hoehn & Yahr stage 3 or below, able to walk independently) and healthy controls; ages 39–84",
+    "summary": "EEG recorded from Parkinson's disease patients and healthy controls during eyes-open sitting rest and treadmill walking, with demographic, medication dose and cognitive screening measures, collected at a medical center in Tel Aviv."
+  },
+  "prompt_version": "v1"
+}

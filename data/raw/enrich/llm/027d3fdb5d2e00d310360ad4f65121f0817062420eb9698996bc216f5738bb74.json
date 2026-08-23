@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:027d3fdb5d2e00d310360ad4f65121f0817062420eb9698996bc216f5738bb74",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [
+      "DE"
+    ],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds000221",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "structural quantitative T1-weighted image",
+        "value": "MRI"
+      },
+      {
+        "evidence": "single 15-minute eyes-open resting-state fMRI session",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "a diffusion-weighted image with 64 directions",
+        "value": "dMRI"
+      },
+      {
+        "evidence": "MRI and behavioral data from 318 participants",
+        "value": "behavioral"
+      }
+    ],
+    "population": "318 participants, all with at least a quantitative T1-weighted image and a 15-minute eyes-open resting-state session; subsets took part in the LEMON and/or Neuroanatomy & Connectivity protocols",
+    "summary": "MRI and behavioral data from participants in two protocols: LEMON, focused on structural imaging with T1, T2, diffusion, FLAIR and gradient-echo scans, and a Neuroanatomy & Connectivity protocol focused on resting-state fMRI."
+  },
+  "prompt_version": "v1"
+}

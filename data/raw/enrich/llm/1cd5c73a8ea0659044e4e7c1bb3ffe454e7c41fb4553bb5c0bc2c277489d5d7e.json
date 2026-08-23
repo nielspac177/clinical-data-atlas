@@ -1,0 +1,31 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:1cd5c73a8ea0659044e4e7c1bb3ffe454e7c41fb4553bb5c0bc2c277489d5d7e",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds006243",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "contains only MNI‐normalized BOLDs from fMRIPrep",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "Structural (T1 MP-RAGE)",
+        "value": "MRI"
+      },
+      {
+        "evidence": "each with 30 trials (15 fear-anticipation, 15 pain-experience)",
+        "value": "behavioral"
+      }
+    ],
+    "population": "Meditation-trained participants scanned within two weeks post-training",
+    "summary": "MNI-normalized BOLD fMRI and structural scans from meditation-trained participants performing an empathic pain task with self and other runs, using computer-controlled pressure pain applied to the thumbnail."
+  },
+  "prompt_version": "v1"
+}

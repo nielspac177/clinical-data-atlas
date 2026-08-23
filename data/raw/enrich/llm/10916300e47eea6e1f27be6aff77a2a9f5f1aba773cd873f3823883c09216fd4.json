@@ -1,0 +1,45 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:10916300e47eea6e1f27be6aff77a2a9f5f1aba773cd873f3823883c09216fd4",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy, epilepsy, tumor",
+        "label": "Healthy"
+      },
+      {
+        "evidence": "Healthy, epilepsy, tumor",
+        "label": "epilepsy"
+      },
+      {
+        "evidence": "Healthy, epilepsy, tumor",
+        "label": "tumor"
+      }
+    ],
+    "countries": [
+      "NL"
+    ],
+    "domains": [
+      "neuroscience",
+      "neurology",
+      "oncology",
+      "pediatrics"
+    ],
+    "id": "openneuro:ds005366",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Large-scale fMRI dataset",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "\"modalities\":[\"MRI\",\"fMRI\"]",
+        "value": "MRI"
+      }
+    ],
+    "population": "Human; Healthy, epilepsy, tumor; ages 6–89",
+    "summary": "Motor and sensory task fMRI with structural scans for designing motor-based brain-computer interfaces, in healthy, epilepsy and tumor participants, part of the PANDA project on implanted communication BCIs for children."
+  },
+  "prompt_version": "v1"
+}

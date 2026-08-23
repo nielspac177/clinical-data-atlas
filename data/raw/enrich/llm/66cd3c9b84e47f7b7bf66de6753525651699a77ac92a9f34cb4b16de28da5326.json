@@ -1,0 +1,31 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:66cd3c9b84e47f7b7bf66de6753525651699a77ac92a9f34cb4b16de28da5326",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "histologically confirmed primary glioblastoma",
+        "label": "glioblastoma"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "oncology",
+      "neurology",
+      "neuroscience",
+      "surgery"
+    ],
+    "id": "openneuro:ds007045",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "raw and processed MRI data",
+        "value": "MRI"
+      }
+    ],
+    "population": "Adults with histologically confirmed primary glioblastoma who underwent preoperative neuroimaging before surgery; raw MRI for 337 patients, ages 29–86",
+    "summary": "Multi-center preoperative brain MRI from adults with primary glioblastoma, including T1-weighted pre- and post-contrast, T2-weighted and FLAIR scans, defaced anatomicals, skull-stripped MNI152-registered derivatives, and neuroradiologist-reviewed tumor segmentation masks."
+  },
+  "prompt_version": "v1"
+}

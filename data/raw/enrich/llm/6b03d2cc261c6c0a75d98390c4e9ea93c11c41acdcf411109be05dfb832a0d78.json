@@ -1,0 +1,28 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:6b03d2cc261c6c0a75d98390c4e9ea93c11c41acdcf411109be05dfb832a0d78",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "critical_care",
+      "public_health"
+    ],
+    "id": "physionet:blood-gas-oximetry",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "harmonizing three Electronic Health Record databases",
+        "value": "EHR"
+      },
+      {
+        "evidence": "Paired SpO2 and SaO2 measurements were time-aligned and combined with various other clinical parameters",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "Intensive Care Unit stays drawn from MIMIC-III, MIMIC-IV and eICU-CRD, including a substantial share of minority racial and ethnic groups",
+    "summary": "Dataset pairing pulse oximetry (SpO2) with arterial blood gas (SaO2) measurements plus other clinical parameters, harmonized from three intensive care electronic health record databases to support studies of oximetry bias and health equity."
+  },
+  "prompt_version": "v1"
+}

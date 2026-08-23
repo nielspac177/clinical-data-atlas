@@ -1,0 +1,47 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:9bd20eec7e728c6b6ca404fb975a35f264cef4a73545b6f4c9a61044b4bba388",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "7 glioma patients",
+        "label": "glioma"
+      },
+      {
+        "evidence": "12 meningioma patients",
+        "label": "meningioma"
+      },
+      {
+        "evidence": "10 healthy controls",
+        "label": "healthy controls"
+      },
+      {
+        "evidence": "Brain Tumor Connectomics Data",
+        "label": "brain tumor"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience",
+      "oncology",
+      "surgery"
+    ],
+    "id": "openneuro:ds002080",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "T1w MPRAGE anatomical scan (anat)",
+        "value": "MRI"
+      },
+      {
+        "evidence": "resting-state fMRI (func)",
+        "value": "fMRI"
+      }
+    ],
+    "population": "7 glioma patients, 12 meningioma patients and 10 control subjects, ages 39–77",
+    "summary": "Post-operative brain imaging of glioma and meningioma patients plus control subjects, following an earlier pre-surgical dataset. Includes T1w anatomical and resting-state functional scans used for modeling brain dynamics after tumor resection."
+  },
+  "prompt_version": "v1"
+}

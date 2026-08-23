@@ -1,0 +1,30 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:f00542e055fb915b6541f56bb585465990767c5c606b18ddc4250ac0c93382be",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "patients undergoing resective epilepsy surgery",
+        "label": "epilepsy"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience",
+      "surgery"
+    ],
+    "id": "openneuro:ds004944",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "intraoperative Electrocorticography (ECoG)",
+        "value": "iEEG"
+      }
+    ],
+    "population": "22 patients undergoing resective epilepsy surgery; ages 1–67",
+    "summary": "Intraoperative electrocorticography recorded before and after resection in patients undergoing epilepsy surgery, with raw recordings plus derivatives from a neuromorphic pipeline that encodes the signals and detects epileptiform patterns."
+  },
+  "prompt_version": "v1"
+}

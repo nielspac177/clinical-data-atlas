@@ -1,0 +1,31 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:347ff2b8616fc548e1b6ef693cd25c1b42552ea50214b32cb824bebab6a7cc59",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "healthy participants with no current psychiatric or neurological diagnosis",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [
+      "ES"
+    ],
+    "domains": [
+      "psychiatry",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds007987",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "This dataset contains raw EEG recordings in resting state",
+        "value": "EEG"
+      }
+    ],
+    "population": "Human; healthy / control; ages 18–30",
+    "summary": "Raw resting-state EEG from healthy adults with no current psychiatric or neurological diagnosis, recorded in Madrid across alternating eyes-open and eyes-closed runs in one session, converted to BIDS without preprocessing."
+  },
+  "prompt_version": "v1"
+}

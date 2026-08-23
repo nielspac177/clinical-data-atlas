@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:3f9fac259b9ad695df5c9a349904226556b2601940937cf1482bb4d01d368294",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Cognition Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds004393",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "\"modalities\":[\"MRI\",\"fMRI\"]",
+        "value": "MRI"
+      },
+      {
+        "evidence": "3 dummy volumes should be removed at the start of each event file",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "In the behaviour logs the trial types are numeric",
+        "value": "behavioral"
+      }
+    ],
+    "population": "Healthy participants",
+    "summary": "Brain imaging and behavioural logs from a differential fear conditioning study comparing viewed and imagined conditioned stimuli, with trial type and shock coding documented for the event files."
+  },
+  "prompt_version": "v1"
+}

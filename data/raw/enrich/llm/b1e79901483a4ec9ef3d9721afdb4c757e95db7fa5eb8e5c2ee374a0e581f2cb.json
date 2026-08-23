@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:b1e79901483a4ec9ef3d9721afdb4c757e95db7fa5eb8e5c2ee374a0e581f2cb",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "EEG Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds006394",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Electrophysiological markers of surprise-induced failures of visual and auditory awareness EEG",
+        "value": "EEG"
+      },
+      {
+        "evidence": "\"modalities\":[\"EEG\",\"behavioral\"]",
+        "value": "behavioral"
+      }
+    ],
+    "population": "Human; Healthy / Control; 33 participants",
+    "summary": "EEG and behavioral data from 33 participants who each completed a visual and an auditory surprise task in counterbalanced order. Recorded EEG values are scaled by a known factor."
+  },
+  "prompt_version": "v1"
+}

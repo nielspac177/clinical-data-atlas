@@ -1,0 +1,43 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:c01349a4ce82d347663c48843fc14b8ebe072688b7729c9f260cf9675077c7d8",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "inter-ictal, temporal lobe epilepsy patients",
+        "label": "temporal lobe epilepsy"
+      },
+      {
+        "evidence": "18 healthy controls",
+        "label": "healthy controls"
+      }
+    ],
+    "countries": [
+      "CN"
+    ],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds004054",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "simultaneous positron emission tomography (PET) and magnetic resonance imaging (MRI) scans",
+        "value": "PET"
+      },
+      {
+        "evidence": "sagittal T1-weighted imaging(T1WI)",
+        "value": "MRI"
+      },
+      {
+        "evidence": "calibrated functional MRI",
+        "value": "fMRI"
+      }
+    ],
+    "population": "18 healthy controls and 24 inter-ictal, temporal lobe epilepsy patients",
+    "summary": "Simultaneous FDG-PET and MRI in healthy controls and inter-ictal temporal lobe epilepsy patients, measuring cerebral glucose metabolism and relative oxygen consumption to compute relative oxygen-glucose index maps."
+  },
+  "prompt_version": "v1"
+}

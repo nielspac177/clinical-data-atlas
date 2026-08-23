@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:24946a1a4ff412721b5334f40e0e4138008c41939462250d9e03efc65aa70b93",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds007305",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "This dataset contains fMRI and behavioral data",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "Anatomical: MPRAGE T1-weighted",
+        "value": "MRI"
+      },
+      {
+        "evidence": "simultaneous eye-tracking",
+        "value": "eye_tracking"
+      },
+      {
+        "evidence": "fMRI and behavioral data",
+        "value": "behavioral"
+      }
+    ],
+    "population": "N = 23 right-handed participants, adults, no history of neurological disorders",
+    "summary": "fMRI with simultaneous eye-tracking and behavioral data from 23 right-handed adults choosing between food lotteries, examining how visual attention modulates decision-related signals. Images are minimally preprocessed and normalized to MNI space."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:904fbd30144830516ed6742cd102e08ac85f2466de5b79de7e5d1330030ff6d4",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Memory Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds004395",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "memory testing sessions with recorded EEG data",
+        "value": "EEG"
+      },
+      {
+        "evidence": "characterize the behavioral and electrophysiological (EEG) correlates",
+        "value": "behavioral"
+      }
+    ],
+    "population": "Healthy, highly practiced participants across five PEERS experiments",
+    "summary": "Behavioural and EEG data from the Penn Electrophysiology of Encoding and Retrieval Study, covering three memory experiments recorded with Geodesic Sensor Net or BioSemi caps; electrode coordinates are generic, not individual."
+  },
+  "prompt_version": "v1"
+}

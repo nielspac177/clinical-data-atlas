@@ -1,0 +1,39 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:db368e990c0a2b4517c48d05734f0bd29bea5ef31f54043c99cfa6fba0a5cd26",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Alzheimer's disease",
+        "label": "Alzheimer's disease"
+      },
+      {
+        "evidence": "Frontotemporal Dementia (FTD)",
+        "label": "Frontotemporal Dementia"
+      },
+      {
+        "evidence": "healthy controls (CN)",
+        "label": "healthy controls"
+      }
+    ],
+    "countries": [
+      "GR"
+    ],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds006036",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "EEG recordings",
+        "value": "EEG"
+      }
+    ],
+    "population": "36 individuals with Alzheimer's disease (AD), 23 with Frontotemporal Dementia (FTD), and 29 healthy controls (CN)",
+    "summary": "Eyes-open EEG recordings under photic stimulation at incremental frequencies, complementing an earlier eyes-closed dataset from the same cohort of people with Alzheimer's disease, frontotemporal dementia, and healthy controls."
+  },
+  "prompt_version": "v1"
+}

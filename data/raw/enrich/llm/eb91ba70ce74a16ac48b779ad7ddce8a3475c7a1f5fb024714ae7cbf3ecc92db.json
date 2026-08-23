@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:eb91ba70ce74a16ac48b779ad7ddce8a3475c7a1f5fb024714ae7cbf3ecc92db",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy, ADHD, PS",
+        "label": "ADHD"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "psychiatry",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds004450",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "with T1s, two rest runs",
+        "value": "MRI"
+      },
+      {
+        "evidence": "their fMRIPrep derivatives",
+        "value": "fMRI"
+      }
+    ],
+    "population": "Three human subjects described as Healthy, ADHD, PS",
+    "summary": "Walkthrough set of BIDS-compatible data for three subjects from an executive function study: T1-weighted scans, two resting runs with functional maps, field maps and fMRIPrep derivatives."
+  },
+  "prompt_version": "v1"
+}

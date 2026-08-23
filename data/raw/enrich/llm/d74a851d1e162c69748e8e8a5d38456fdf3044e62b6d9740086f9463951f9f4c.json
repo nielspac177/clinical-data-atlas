@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:d74a851d1e162c69748e8e8a5d38456fdf3044e62b6d9740086f9463951f9f4c",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Alcohol Use",
+        "label": "Alcohol Use"
+      },
+      {
+        "evidence": "hazardous drinkers",
+        "label": "hazardous drinkers"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience",
+      "psychiatry"
+    ],
+    "id": "openneuro:ds004595",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "EEG: RL Task (3-Armed Bandit)",
+        "value": "EEG"
+      },
+      {
+        "evidence": "RL task (3-armed bandit) with alcohol vs. beverage cues",
+        "value": "behavioral"
+      }
+    ],
+    "population": "Human; Alcohol Use; ages 18–55; N=53 community participants",
+    "summary": "EEG from community participants doing a three-armed bandit reinforcement-learning task with alcohol versus beverage cues, comparing hazardous drinkers and controls. Collected 2019-2021 in the CRCL at UNM."
+  },
+  "prompt_version": "v1"
+}

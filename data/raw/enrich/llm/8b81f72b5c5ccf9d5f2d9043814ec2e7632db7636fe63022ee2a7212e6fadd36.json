@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:8b81f72b5c5ccf9d5f2d9043814ec2e7632db7636fe63022ee2a7212e6fadd36",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds004602",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Raw EGI MFF files were imported with EEGLAB",
+        "value": "EEG"
+      },
+      {
+        "evidence": "gonogo, flanker, stroop",
+        "value": "behavioral"
+      }
+    ],
+    "population": "Human; Healthy / Control; ages 18–32; N=182",
+    "summary": "EEG from a registered replication study of ERN/Pe psychometrics using go/no-go, flanker and Stroop tasks in healthy participants, with events recoded to response- and stimulus-locked labels and exported to BIDS."
+  },
+  "prompt_version": "v1"
+}

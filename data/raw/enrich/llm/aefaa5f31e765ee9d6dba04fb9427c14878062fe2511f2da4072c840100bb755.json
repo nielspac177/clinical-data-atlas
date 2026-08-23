@@ -1,0 +1,41 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:aefaa5f31e765ee9d6dba04fb9427c14878062fe2511f2da4072c840100bb755",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "cortical and spinal responses to thermal pain in healthy adults",
+        "label": "Pain"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds005883",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "fMRI (task-pain BOLD)",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "T1-weighted structural MRI",
+        "value": "MRI"
+      },
+      {
+        "evidence": "physiological signals (pulse & respiration)",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "events/behavioural logs",
+        "value": "behavioral"
+      }
+    ],
+    "population": "Human; healthy adults; ages 18–28",
+    "summary": "Open-access, BIDS-compliant simultaneous cortico-spinal task fMRI during thermal pain stimulation in healthy adults, with T1-weighted structural MRI, field maps, pulse and respiration recordings, and pain intensity and unpleasantness ratings."
+  },
+  "prompt_version": "v1"
+}

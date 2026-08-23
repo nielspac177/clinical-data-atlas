@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:c21d76b1de3791da2be230b68bdc0a81a200b701b28d263b20654af20c878645",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Epilepsy",
+        "label": "Epilepsy"
+      }
+    ],
+    "countries": [
+      "NL"
+    ],
+    "domains": [
+      "neurology",
+      "neuroscience",
+      "surgery"
+    ],
+    "id": "openneuro:ds004080",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Electro-CorticoGraphy (ECoG)",
+        "value": "iEEG"
+      },
+      {
+        "evidence": "Registry for Epilepsy Surgery Patients",
+        "value": "registry"
+      }
+    ],
+    "population": "74 patients age 4-51 years old undergoing epilepsy surgery evaluation",
+    "summary": "Cortico-cortical evoked potentials measured with electrocorticography during single pulse electrical stimulation in 74 patients aged 4-51, part of the RESPect epilepsy surgery registry at University Medical Center Utrecht, organized in BIDS format."
+  },
+  "prompt_version": "v1"
+}

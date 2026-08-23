@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:ca7a205e13bd3aac278b744578869a70d97afe4cc133ec9ebc5f1a3882cf9c9b",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "streptozotocin (STZ) for Alzheimer's disease-like pathology",
+        "label": "Alzheimer's disease"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds004441",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Diffusion MRI data acquired on a cohort of rats",
+        "value": "MRI"
+      },
+      {
+        "evidence": "Diffusion MRI data include 3 b-values",
+        "value": "dMRI"
+      },
+      {
+        "evidence": "Resting state fMRI data acquired on the same cohort of rats",
+        "value": "fMRI"
+      }
+    ],
+    "population": "Rats with intracerebroventricular streptozotocin (STZ) injection and a control cohort with sham injection; scanned at 2, 6, 13 and 21 weeks after injection",
+    "summary": "Diffusion MRI in rats given intracerebroventricular streptozotocin to model Alzheimer's-disease-like pathology, plus sham-injected controls, scanned at four time points to track brain microstructure. Resting-state fMRI from the same cohort is linked separately."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,48 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:0f9472c69198f27b003cd4b313bca62fab0bda399a093182be8f0954a3a58ee6",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Trigeminal neuralgia",
+        "label": "Trigeminal neuralgia"
+      },
+      {
+        "evidence": "as well as healthy volunteers",
+        "label": "healthy volunteers"
+      }
+    ],
+    "countries": [
+      "RU"
+    ],
+    "domains": [
+      "neurology",
+      "neuroscience",
+      "surgery"
+    ],
+    "id": "openneuro:ds005713",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "high-resolution 3D_T1w_TFE",
+        "value": "MRI"
+      },
+      {
+        "evidence": "resting-state bold-fMRI data",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "DTI with 64 diffusion directions",
+        "value": "dMRI"
+      },
+      {
+        "evidence": "Clinical, demographic and treatment-related information for each participant is provided in the participants.tsv file",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "Adults with diagnosed primary trigeminal neuralgia and healthy volunteers; 119 patients, 53 controls, follow-up MRI for 64 patients",
+    "summary": "Pre- and post-surgical brain MRI from adults with primary trigeminal neuralgia and healthy volunteers, including T1w, T2w, diffusion and resting-state fMRI, with clinical, demographic and treatment tables. Follow-up scans available for some patients."
+  },
+  "prompt_version": "v1"
+}

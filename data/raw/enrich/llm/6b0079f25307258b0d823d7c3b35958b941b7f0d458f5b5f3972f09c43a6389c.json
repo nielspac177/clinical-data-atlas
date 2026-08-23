@@ -1,0 +1,34 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:6b0079f25307258b0d823d7c3b35958b941b7f0d458f5b5f3972f09c43a6389c",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "upper-limb amputation",
+        "label": "upper-limb amputation"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience",
+      "surgery"
+    ],
+    "id": "openneuro:ds008022",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "functional MRI datasets of finger tapping",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "Anatomical MRI",
+        "value": "MRI"
+      }
+    ],
+    "population": "ages 18–69; individuals with upper-limb amputation together with able-bodied comparison groups",
+    "summary": "Four combined MRI datasets covering finger tapping and whole-body movement, with longitudinal scans of individuals before and after planned upper-limb amputation plus able-bodied and chronic amputee comparison cohorts, organized in BIDS."
+  },
+  "prompt_version": "v1"
+}

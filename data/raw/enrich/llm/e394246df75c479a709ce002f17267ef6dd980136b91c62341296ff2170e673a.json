@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:e394246df75c479a709ce002f17267ef6dd980136b91c62341296ff2170e673a",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "individuals with depressive disorders",
+        "label": "depressive disorders"
+      },
+      {
+        "evidence": "was diagnosed with MDD during the course of the study",
+        "label": "MDD"
+      },
+      {
+        "evidence": "healthy controls",
+        "label": "healthy controls"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "psychiatry",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds003653",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "includes T1w, T2w, and spin echo fieldmaps",
+        "value": "MRI"
+      }
+    ],
+    "population": "Participants with depressive disorders and healthy controls scanned and passed QA by January 2021, ages 19–44; one control converted to MDD during the study",
+    "summary": "Structural MRI (T1w, T2w and spin echo fieldmaps) from an ongoing longitudinal study of individuals with depressive disorders and healthy controls, used to measure cortical myelin via the T1w/T2w ratio."
+  },
+  "prompt_version": "v1"
+}

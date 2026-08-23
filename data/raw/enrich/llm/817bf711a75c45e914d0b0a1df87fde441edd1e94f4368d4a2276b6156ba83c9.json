@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:817bf711a75c45e914d0b0a1df87fde441edd1e94f4368d4a2276b6156ba83c9",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "have been identified in Parkinson’s disease patients",
+        "label": "Parkinson’s disease"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds005895",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "A CT and a PE2I PET scan were acquired at different times after the intervention",
+        "value": "PET"
+      },
+      {
+        "evidence": "scans = 1 pet, 1 ct, tracer is [18F]PE2I",
+        "value": "CT"
+      }
+    ],
+    "population": "Rats injected at the age of 11-12 weeks; three cohorts (scrambled control miRNA, miR5 knockdown, miR7 knockdown)",
+    "summary": "Rat study of ATP10B knockdown in substantia nigra pars compacta using viral vectors, with [18F]PE2I PET and CT scans acquired at several timepoints after intervention in scrambled-control and two knockdown cohorts."
+  },
+  "prompt_version": "v1"
+}

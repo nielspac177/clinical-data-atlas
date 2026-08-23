@@ -1,0 +1,27 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:85dc24742ef613c233c93370df8c50298a1197254250ec0b0632495f3877f2e4",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds001705",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "dynamic PET acq",
+        "value": "PET"
+      },
+      {
+        "evidence": "\"modalities\":[\"MRI\",\"PET\"]",
+        "value": "MRI"
+      }
+    ],
+    "population": "5 simulated human subjects scanned twice; ages 28–53",
+    "summary": "Simulated dynamic PET neuroreceptor scans released for the NRM2018 PET Grand Challenge, with each subject scanned at baseline and after a pharmacological challenge displacing tracer binding, providing known ground truth for benchmarking PET analysis pipelines."
+  },
+  "prompt_version": "v1"
+}

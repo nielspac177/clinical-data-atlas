@@ -1,0 +1,49 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:8298de7eb5d9ecd854c6603732ab6e58c3c721d8794152eef8447c6b7978612e",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "zoster-associated neuralgia (ZAN) patients",
+        "label": "zoster-associated neuralgia"
+      },
+      {
+        "evidence": "healthy controls (HC)",
+        "label": "healthy controls"
+      },
+      {
+        "evidence": "neuropathic pain",
+        "label": "neuropathic pain"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds007181",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "anatomical T1-weighted MRI",
+        "value": "MRI"
+      },
+      {
+        "evidence": "raw multi-echo resting-state fMRI",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "PSG/EEG Dataset",
+        "value": "EEG"
+      },
+      {
+        "evidence": "as well as PSG data",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": "Adults with zoster-associated neuralgia and healthy controls: 29 HC and 27 ZAN for MRI, 32 HC and 27 ZAN for PSG; ages 44–70",
+    "summary": "Anatomical T1-weighted MRI, multi-echo resting-state fMRI and polysomnography recordings comparing healthy controls with zoster-associated neuralgia patients. MRI and PSG data partially overlap across participants and follow the BIDS specification."
+  },
+  "prompt_version": "v1"
+}

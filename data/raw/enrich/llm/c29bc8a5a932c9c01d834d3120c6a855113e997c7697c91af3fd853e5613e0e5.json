@@ -1,0 +1,54 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:c29bc8a5a932c9c01d834d3120c6a855113e997c7697c91af3fd853e5613e0e5",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Investigating Cognitive Impairment in Obstructive Sleep Apnea",
+        "label": "Obstructive Sleep Apnea"
+      },
+      {
+        "evidence": "matched healthy controls",
+        "label": "healthy controls"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience",
+      "pulmonology"
+    ],
+    "id": "openneuro:ds008108",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "structural and resting-state functional MRI scans",
+        "value": "MRI"
+      },
+      {
+        "evidence": "resting-state functional MRI scans",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "EEG",
+        "value": "EEG"
+      },
+      {
+        "evidence": "Nocturnal polysomnography (PSG) recording",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "behavioral",
+        "value": "behavioral"
+      },
+      {
+        "evidence": "questionnaire recordings",
+        "value": "survey"
+      }
+    ],
+    "population": "Human; patients with OSA and matched healthy controls; ages 19–65; 142 participants",
+    "summary": "Multimodal BIDS dataset on cognitive impairment in obstructive sleep apnea: nocturnal polysomnography, structural and resting-state functional MRI, cognitive assessment batteries, and questionnaires collected across evening, post-sleep, pre-nap, and post-nap sessions in patients and matched controls."
+  },
+  "prompt_version": "v1"
+}

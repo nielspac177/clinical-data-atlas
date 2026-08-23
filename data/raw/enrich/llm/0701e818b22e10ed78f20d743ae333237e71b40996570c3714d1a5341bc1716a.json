@@ -1,0 +1,38 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:0701e818b22e10ed78f20d743ae333237e71b40996570c3714d1a5341bc1716a",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Parkinson's Disease",
+        "label": "Parkinson's Disease"
+      },
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience",
+      "cardiology"
+    ],
+    "id": "openneuro:ds005264",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "ultra-high field (7T) multi-echo scans at rest",
+        "value": "MRI"
+      },
+      {
+        "evidence": "one resting-state fMRI dataset",
+        "value": "fMRI"
+      }
+    ],
+    "population": "28 participants undergoing ultra-high field (7T) multi-echo scans at rest; raw data from healthy controls only",
+    "summary": "Resting-state ultra-high field 7T multi-echo functional MRI for connectivity and network mapping, suited to small deep subcortical nuclei, part of a movement and incentivization resource targeting Parkinson's disease."
+  },
+  "prompt_version": "v1"
+}

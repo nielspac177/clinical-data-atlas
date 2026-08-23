@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:a427378538464aa8779ef34079040820f37ead4e6e916468e41abce813891d3e",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "drug-resistant epilepsy",
+        "label": "drug-resistant epilepsy"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds006519",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "we included iEEG recordings",
+        "value": "iEEG"
+      },
+      {
+        "evidence": "undergoing stereo-EEG presurgical evaluation",
+        "value": "EEG"
+      },
+      {
+        "evidence": "\"modalities\":[\"MRI\",\"EEG\",\"iEEG\"]",
+        "value": "MRI"
+      }
+    ],
+    "population": "Patients undergoing stereo-EEG presurgical evaluation for drug-resistant epilepsy, ages 9–54",
+    "summary": "Intracranial EEG recorded around high-frequency cortical stimulations that evoked negative motor responses, in patients undergoing stereo-EEG presurgical evaluation, with pre- and post-stimulation epochs and stimulation parameters listed in the events files."
+  },
+  "prompt_version": "v1"
+}

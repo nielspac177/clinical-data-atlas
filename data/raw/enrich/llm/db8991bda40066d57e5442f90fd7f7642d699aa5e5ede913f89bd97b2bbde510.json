@@ -1,0 +1,39 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:db8991bda40066d57e5442f90fd7f7642d699aa5e5ede913f89bd97b2bbde510",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Thirty-two healthy volunteers were mostly recruited among University of Barcelona students",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [
+      "ES"
+    ],
+    "domains": [
+      "psychiatry",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds007114",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "low signal-to-noise ratio on the electrophysiological data",
+        "value": "EEG"
+      },
+      {
+        "evidence": "maintaining their gaze on a permanent fixation cross at the center of the screen",
+        "value": "eye_tracking"
+      },
+      {
+        "evidence": "pressing a keyboard button with their right index or middle finger",
+        "value": "behavioral"
+      }
+    ],
+    "population": "Healthy volunteers, mostly University of Barcelona students; final sample twenty-eight participants (12 females; age range 18-31)",
+    "summary": "Electrophysiological and behavioral data from a fear conditioning paradigm using voices as conditioned stimuli and loud white noise as the unconditioned stimulus, across pre-conditioning, conditioning and extinction phases in healthy volunteers."
+  },
+  "prompt_version": "v1"
+}

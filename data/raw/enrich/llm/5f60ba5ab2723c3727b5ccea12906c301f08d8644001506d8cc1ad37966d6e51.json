@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:5f60ba5ab2723c3727b5ccea12906c301f08d8644001506d8cc1ad37966d6e51",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Parkinson's Disease",
+        "label": "Parkinson's Disease"
+      },
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds005266",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "three task-based fMRI datasets",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "task-based fMRI datasets",
+        "value": "MRI"
+      }
+    ],
+    "population": "Human; Healthy / Control; participants tracking a countdown and making time-sensitive motor responses under the threat of electric shock",
+    "summary": "Task-based fMRI dataset from the SKIP project in which participants tracked a countdown and made time-sensitive motor responses under threat of electric shock, with shock intensity and controllability manipulated. Healthy controls only."
+  },
+  "prompt_version": "v1"
+}

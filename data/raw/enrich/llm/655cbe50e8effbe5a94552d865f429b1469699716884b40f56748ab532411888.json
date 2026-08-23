@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:655cbe50e8effbe5a94552d865f429b1469699716884b40f56748ab532411888",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "tumor patients",
+        "label": "tumor"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience",
+      "oncology"
+    ],
+    "id": "openneuro:ds005597",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "\"modalities\":[\"MRI\",\"fMRI\"]",
+        "value": "MRI"
+      },
+      {
+        "evidence": "Task/Rest fMRI Data",
+        "value": "fMRI"
+      }
+    ],
+    "population": "Human; tumor patients; 4 participants",
+    "summary": "Retrospective language task and resting-state fMRI data from tumor patients, shared as a test case."
+  },
+  "prompt_version": "v1"
+}

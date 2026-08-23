@@ -1,0 +1,39 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:7c2a49f16427192e961d580899dff63edfe3df7067a3eef3a97ec439c175d9cd",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "28 Parkinson patients and 28 matched controls",
+        "label": "Parkinson's disease"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds003509",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "EEG published here: 10.1016/j.neuropsychologia.2018.05.020",
+        "value": "EEG"
+      },
+      {
+        "evidence": "Beh data first published here",
+        "value": "behavioral"
+      },
+      {
+        "evidence": "acceleromter taped to their most tremor affected hand",
+        "value": "wearable"
+      }
+    ],
+    "population": "56 participants aged 48–84: 28 Parkinson patients and 28 matched controls",
+    "summary": "EEG and behavioral data from Parkinson patients and matched controls performing a Simon conflict task with reinforcement manipulation. Patients attended twice, on and off medication; hand accelerometry was also recorded."
+  },
+  "prompt_version": "v1"
+}

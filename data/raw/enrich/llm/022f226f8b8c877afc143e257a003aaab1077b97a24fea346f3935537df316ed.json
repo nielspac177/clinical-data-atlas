@@ -1,0 +1,40 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:022f226f8b8c877afc143e257a003aaab1077b97a24fea346f3935537df316ed",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Post-COVID-19",
+        "label": "Post-COVID-19"
+      }
+    ],
+    "countries": [
+      "DE"
+    ],
+    "domains": [
+      "neurology",
+      "neuroscience",
+      "infectious_disease"
+    ],
+    "id": "openneuro:ds007605",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "by the means of EEG",
+        "value": "EEG"
+      },
+      {
+        "evidence": "The PVT is a simple reaction-time task",
+        "value": "behavioral"
+      },
+      {
+        "evidence": "self-reported cognitive symptoms",
+        "value": "survey"
+      }
+    ],
+    "population": "Human; following SARS-CoV-2; ages 22–78; grouped by presence or absence of self-reported cognitive symptoms",
+    "summary": "EEG recordings investigating neurophysiological correlates of Post-COVID-19, with a psychomotor vigilance reaction-time task. Participants are grouped by presence or absence of self-reported cognitive symptoms; fatigue assessed by questionnaire."
+  },
+  "prompt_version": "v1"
+}

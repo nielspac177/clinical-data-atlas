@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:5c5e2205ced6b5c86811daf253d377ecfcfcf43582a42d055be28429799fa9d4",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds004341",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "DICOM to NIFTI conversion from scanner",
+        "value": "MRI"
+      },
+      {
+        "evidence": "anatomical normalisation and functional smoothing",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "behavioral_data : data of behavioral task acquired during the encoding phase",
+        "value": "behavioral"
+      }
+    ],
+    "population": "Human; Healthy / Control; ages 19–35",
+    "summary": "Semantic encoding memory study with imaging data plus behavioral data recorded during the encoding phase. Includes raw subject data, preprocessing derivatives in BIDS format, and code for normalisation and smoothing."
+  },
+  "prompt_version": "v1"
+}

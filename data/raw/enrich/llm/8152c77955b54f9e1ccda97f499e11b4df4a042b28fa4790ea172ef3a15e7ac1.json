@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:8152c77955b54f9e1ccda97f499e11b4df4a042b28fa4790ea172ef3a15e7ac1",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds005012",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Structural: T1w and T2w",
+        "value": "MRI"
+      },
+      {
+        "evidence": "Functional: Monetary Incentive Delay task BOLD",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "the physio files contained in each subject's ./func folder",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "Associated phenotype/behavioral data",
+        "value": "behavioral"
+      }
+    ],
+    "population": "ages 17–21",
+    "summary": "Structural and Monetary Incentive Delay task imaging from an adolescent health risk behavior study, with physiological files included; associated phenotype and behavioral data are obtained from the original investigator."
+  },
+  "prompt_version": "v1"
+}

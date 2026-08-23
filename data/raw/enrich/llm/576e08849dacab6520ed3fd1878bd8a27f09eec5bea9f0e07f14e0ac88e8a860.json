@@ -1,0 +1,44 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:576e08849dacab6520ed3fd1878bd8a27f09eec5bea9f0e07f14e0ac88e8a860",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "33 fibromyalgia female patients",
+        "label": "Fibromyalgia"
+      },
+      {
+        "evidence": "33 paired healthy controls",
+        "label": "healthy controls"
+      }
+    ],
+    "countries": [
+      "MX"
+    ],
+    "domains": [
+      "musculoskeletal",
+      "neuroscience",
+      "neurology"
+    ],
+    "id": "openneuro:ds004144",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Dataset includes MRI data",
+        "value": "MRI"
+      },
+      {
+        "evidence": "resting state fMRI and task-fMRI sequences",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "behavioral data",
+        "value": "behavioral"
+      }
+    ],
+    "population": "33 fibromyalgia female patients and 33 paired healthy controls recruited from a Mexican population",
+    "summary": "Brain imaging dataset of female fibromyalgia patients and paired healthy controls from a Mexican population, with T1w, T2w, resting-state and emotion regulation task fMRI; demographic, clinical and behavioral data are hosted on Zenodo."
+  },
+  "prompt_version": "v1"
+}

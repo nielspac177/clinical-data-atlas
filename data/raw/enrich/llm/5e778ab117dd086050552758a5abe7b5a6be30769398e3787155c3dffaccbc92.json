@@ -1,0 +1,34 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:5e778ab117dd086050552758a5abe7b5a6be30769398e3787155c3dffaccbc92",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Subjects were epilepsy patients undergoing intracranial monitoring",
+        "label": "epilepsy"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience",
+      "pediatrics"
+    ],
+    "id": "openneuro:ds004770",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Contains the raw iEEG data in .edf format for each subject",
+        "value": "iEEG"
+      },
+      {
+        "evidence": "Dataset of intracranial EEG from human epilepsy patients",
+        "value": "EEG"
+      }
+    ],
+    "population": "Human epilepsy patients undergoing intracranial monitoring; children and young people, ages 9–20",
+    "summary": "Intracranial EEG recorded from children and young people with epilepsy during interictal monitoring while they played a visuospatial working memory game, with stimulus and finger-tapping timing plus channel information and baseline recordings."
+  },
+  "prompt_version": "v1"
+}

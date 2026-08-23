@@ -1,0 +1,41 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:e61727036418df0683b65e925d133413fc67d6840a96acf27a167512dc39a114",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Schizophrenia",
+        "label": "schizophrenia"
+      },
+      {
+        "evidence": "Bipolar Disorder",
+        "label": "bipolar disorder"
+      },
+      {
+        "evidence": "The healthy control data have been published",
+        "label": "healthy controls"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "psychiatry",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds005073",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "The MRI Files included are",
+        "value": "MRI"
+      },
+      {
+        "evidence": "epi files including a 10 minute rest scan",
+        "value": "fMRI"
+      }
+    ],
+    "population": "31 participants with schizophrenia or bipolar disorder, ages 23–53",
+    "summary": "Structural and functional MRI during a visual shape completion perception task plus resting state, in people with schizophrenia and bipolar disorder; healthy control data were published separately."
+  },
+  "prompt_version": "v1"
+}

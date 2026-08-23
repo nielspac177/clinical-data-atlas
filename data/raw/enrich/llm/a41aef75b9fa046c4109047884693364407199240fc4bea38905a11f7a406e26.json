@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:a41aef75b9fa046c4109047884693364407199240fc4bea38905a11f7a406e26",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "8 patients with severe traumatic brain injury",
+        "label": "severe traumatic brain injury"
+      },
+      {
+        "evidence": "16 healthy control subjects participated in one session",
+        "label": "healthy control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds002675",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "These are the functional and structural MRI data",
+        "value": "MRI"
+      },
+      {
+        "evidence": "All functional BOLD data were reoriented",
+        "value": "fMRI"
+      }
+    ],
+    "population": "16 healthy control subjects participated in one session; 8 patients with severe traumatic brain injury participated in two sessions",
+    "summary": "Functional and structural MRI from healthy controls and patients recovering from severe traumatic brain injury, acquired with a language task; control subjects were scanned once and patients twice."
+  },
+  "prompt_version": "v1"
+}

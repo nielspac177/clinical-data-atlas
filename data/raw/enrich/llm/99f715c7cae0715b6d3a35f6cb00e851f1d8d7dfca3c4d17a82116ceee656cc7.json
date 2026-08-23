@@ -1,0 +1,27 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:99f715c7cae0715b6d3a35f6cb00e851f1d8d7dfca3c4d17a82116ceee656cc7",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds003104",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "running the FreeSurfer pipeline `recon-all` on the MRI data",
+        "value": "MRI"
+      },
+      {
+        "evidence": "\"modalities\":[\"MRI\",\"MEG\"]",
+        "value": "MEG"
+      }
+    ],
+    "population": "One human participant",
+    "summary": "The MNE somatosensory demonstration dataset converted to BIDS format, including MRI data and derivatives from FreeSurfer recon-all plus forward and boundary element models generated through MNE."
+  },
+  "prompt_version": "v1"
+}

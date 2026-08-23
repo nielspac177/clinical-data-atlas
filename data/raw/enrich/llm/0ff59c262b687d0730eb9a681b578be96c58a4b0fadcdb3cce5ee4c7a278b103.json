@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:0ff59c262b687d0730eb9a681b578be96c58a4b0fadcdb3cce5ee4c7a278b103",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds004286",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "skull-stripped **T1 MPRAGE** anatomical scans",
+        "value": "MRI"
+      },
+      {
+        "evidence": "Whole-brain EPI Data from 10 runs of the **memory video task**",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "data from a **post-scan behavioral task**",
+        "value": "behavioral"
+      }
+    ],
+    "population": "23 participants, some completing one session and some two sessions at least six months apart",
+    "summary": "Neuroimaging and behavioral data on autobiographical memory: participants viewed their own and matched participants' daily memory videos during scanning, plus a localizer and a post-scan video feature labeling task."
+  },
+  "prompt_version": "v1"
+}

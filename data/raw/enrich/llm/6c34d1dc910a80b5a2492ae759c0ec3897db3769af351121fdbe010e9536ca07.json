@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:6c34d1dc910a80b5a2492ae759c0ec3897db3769af351121fdbe010e9536ca07",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds002270",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "imaged at 3 T with two different voxel volumes",
+        "value": "MRI"
+      },
+      {
+        "evidence": "After the fMRI session",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "rate each picture showing food for motivational salience on a 7-point scale",
+        "value": "behavioral"
+      }
+    ],
+    "population": "Human; Healthy / Control; ages 21–29",
+    "summary": "Functional imaging dataset exploring how spatial resolution influences activation elicited by appetizing food pictures. Blocks alternated food and non-food images at two voxel volumes, followed by post-scan appetite ratings."
+  },
+  "prompt_version": "v1"
+}

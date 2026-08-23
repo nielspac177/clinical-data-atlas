@@ -1,0 +1,40 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:cb250c3312565eec681e13616896dcb45b400f15fc05e1d21fbf969b1c743d07",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Dataset Clinical Epilepsy iEEG to BIDS",
+        "label": "epilepsy"
+      }
+    ],
+    "countries": [
+      "NL"
+    ],
+    "domains": [
+      "neurology",
+      "neuroscience",
+      "surgery"
+    ],
+    "id": "openneuro:ds003848",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "intracranial EEG (iEEG)",
+        "value": "iEEG"
+      },
+      {
+        "evidence": "recorded intraoperatively using electrocorticography (acute ECoG)",
+        "value": "EEG"
+      },
+      {
+        "evidence": "RESPect (Registry for Epilepsy Surgery Patients)",
+        "value": "registry"
+      }
+    ],
+    "population": "Human epilepsy surgery patients; ages 14–46",
+    "summary": "Intracranial EEG recordings from epilepsy surgery patients at UMC Utrecht, part of the RESPect registry, organized in BIDS format, covering intraoperative electrocorticography and long-term ECoG and stereo-EEG recordings."
+  },
+  "prompt_version": "v1"
+}

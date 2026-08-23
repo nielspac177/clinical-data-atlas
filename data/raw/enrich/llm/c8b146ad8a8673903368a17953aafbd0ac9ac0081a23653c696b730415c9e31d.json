@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:c8b146ad8a8673903368a17953aafbd0ac9ac0081a23653c696b730415c9e31d",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Anesthesia, Neuroimaging, Propofol, Resting-state fMRI",
+        "label": "Anesthesia"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds007783",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Resting-state functional MRI data from 10 mice",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "T2-weighted anatomical images",
+        "value": "MRI"
+      }
+    ],
+    "population": "10 mice (sub-02 to sub-11)",
+    "summary": "Resting-state functional MRI and T2-weighted anatomical images from mice during propofol-induced sleep with an awake baseline, organized in BIDS format and accompanied by Python analysis scripts."
+  },
+  "prompt_version": "v1"
+}

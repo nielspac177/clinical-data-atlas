@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:8bf645dd74847d1512dee35a4edfb1d04fc14b0235471151fff18bb63d9b5b2f",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "five healthy controls performed at eight imaging centers",
+        "label": "healthy controls"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds000206",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "three-dimensional T1 weighted MP-RAGE and T2 SPACE sequences",
+        "value": "MRI"
+      },
+      {
+        "evidence": "diffusion weighted images (DWI)",
+        "value": "dMRI"
+      }
+    ],
+    "population": "five healthy controls imaged at eight imaging centers",
+    "summary": "Traveling Human Phantom dataset for a multi-site neuroimaging reliability study: repeated multi-modal MR scans of healthy controls across imaging centers, plus processed diffusion scalar, tensor, and anatomical segmentation results."
+  },
+  "prompt_version": "v1"
+}

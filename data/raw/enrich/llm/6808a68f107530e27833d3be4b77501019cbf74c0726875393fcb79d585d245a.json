@@ -1,0 +1,27 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:6808a68f107530e27833d3be4b77501019cbf74c0726875393fcb79d585d245a",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:bigideaslab-step-hr-smartwatch",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "HR values reported by ECG (Bittium Faros)",
+        "value": "ECG"
+      },
+      {
+        "evidence": "wearables including Biovotion Everion, Empatica E4, Apple Watch",
+        "value": "wearable"
+      }
+    ],
+    "population": "53 participants with differing skin tones, recorded July-August 2019",
+    "summary": "Heart rate values from a chest ECG device compared with several consumer wearables during sitting, deep breathing, walking and typing, with activity, skin tone and subject ID; de-identified and time-synced."
+  },
+  "prompt_version": "v1"
+}

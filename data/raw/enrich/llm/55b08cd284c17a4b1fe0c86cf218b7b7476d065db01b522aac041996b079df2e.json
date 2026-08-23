@@ -1,0 +1,38 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:55b08cd284c17a4b1fe0c86cf218b7b7476d065db01b522aac041996b079df2e",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [
+      "AU"
+    ],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds005427",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "a structural MRI image (T1w)",
+        "value": "MRI"
+      },
+      {
+        "evidence": "ultra-high field (7T) functional magnetic resonance imaging (fMRI)",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "Accuracy of the responses in the knapsack decision task",
+        "value": "behavioral"
+      }
+    ],
+    "population": "20 participants performing the knapsack decision task; healthy / control",
+    "summary": "Structural MRI and ultra-high field 7T BOLD data acquired while participants solved instances of the 0-1 knapsack decision problem varying in computational hardness and satisfiability, with response accuracy recorded."
+  },
+  "prompt_version": "v1"
+}

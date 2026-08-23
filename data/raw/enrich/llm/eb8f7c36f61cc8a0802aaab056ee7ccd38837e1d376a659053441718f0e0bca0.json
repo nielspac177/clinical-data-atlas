@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:eb8f7c36f61cc8a0802aaab056ee7ccd38837e1d376a659053441718f0e0bca0",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds005095",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "contain RAW EEG data",
+        "value": "EEG"
+      },
+      {
+        "evidence": "Raven Progressive Standard Matrices scores for each participant are provided in participants.tsv",
+        "value": "behavioral"
+      }
+    ],
+    "population": "Human; Healthy / Control; ages 19–32",
+    "summary": "Raw EEG recorded while participants performed a Sternberg working-memory task with letter sets of varying size, plus Raven Progressive Standard Matrices scores for each participant."
+  },
+  "prompt_version": "v1"
+}

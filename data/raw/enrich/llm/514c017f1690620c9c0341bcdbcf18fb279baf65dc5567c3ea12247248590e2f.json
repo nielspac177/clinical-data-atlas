@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:514c017f1690620c9c0341bcdbcf18fb279baf65dc5567c3ea12247248590e2f",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds006945",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "synchronized MRI (structural and functional)",
+        "value": "MRI"
+      },
+      {
+        "evidence": "Functional MRI data were acquired in two runs",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "EEG recordings organized according to the BIDS specification",
+        "value": "EEG"
+      }
+    ],
+    "population": "Five healthy human participants, scanned after completing nine sessions of EEG-controlled exoskeleton walking and standing experiments.",
+    "summary": "Multimodal BIDS dataset from five participants performing kinesthetic motor imagery while viewing first-person video of themselves walking in an exoskeleton, including structural MRI, task and baseline fMRI, and EEG recordings."
+  },
+  "prompt_version": "v1"
+}

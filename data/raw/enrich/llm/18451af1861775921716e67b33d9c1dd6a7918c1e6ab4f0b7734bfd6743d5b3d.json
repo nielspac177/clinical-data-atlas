@@ -1,0 +1,27 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:18451af1861775921716e67b33d9c1dd6a7918c1e6ab4f0b7734bfd6743d5b3d",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds000249",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "./sub-22/anat/sub-22_T1w.nii.gz",
+        "value": "MRI"
+      },
+      {
+        "evidence": "./sub-02/func/sub-02_task-genInstrAv_run-01_bold.nii.gz",
+        "value": "fMRI"
+      }
+    ],
+    "population": "26 subjects, ages 20–45",
+    "summary": "Task-based fMRI dataset on value generalization in human avoidance learning, with anatomical scans, fieldmaps and MRIQC derivatives. Curator notes report that scanning parameters are not identical across all subjects."
+  },
+  "prompt_version": "v1"
+}

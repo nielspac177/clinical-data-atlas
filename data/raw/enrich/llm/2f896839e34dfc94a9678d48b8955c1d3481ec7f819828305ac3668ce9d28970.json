@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:2f896839e34dfc94a9678d48b8955c1d3481ec7f819828305ac3668ce9d28970",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience",
+      "pediatrics"
+    ],
+    "id": "openneuro:ds006239",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "A fMRI neuroimaging dataset of word reading",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "fMRI neuroimaging dataset",
+        "value": "MRI"
+      },
+      {
+        "evidence": "In all the events TSV files, trials with no response are coded as 'n/a'",
+        "value": "behavioral"
+      }
+    ],
+    "population": "Children and adolescents; Healthy / Control",
+    "summary": "Functional MRI dataset of word reading with semantic and phonological localizer tasks in children and adolescents, including event files where no-response trials are coded 'n/a'."
+  },
+  "prompt_version": "v1"
+}

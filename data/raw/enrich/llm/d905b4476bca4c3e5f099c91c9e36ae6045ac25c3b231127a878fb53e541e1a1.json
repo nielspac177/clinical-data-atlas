@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:d905b4476bca4c3e5f099c91c9e36ae6045ac25c3b231127a878fb53e541e1a1",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "51 subjects with mild depression",
+        "label": "Depression"
+      },
+      {
+        "evidence": "21 healthy controls",
+        "label": "healthy controls"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "psychiatry",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds002748",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "FMRI",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "A session consist of 100 dynamic scans with TR = 2.5 s and 25 slices",
+        "value": "MRI"
+      }
+    ],
+    "population": "Human; 51 subjects with mild depression and 21 healthy controls; ages 19–55",
+    "summary": "Resting-state scans acquired with eyes closed in patients with mild depression and in healthy controls, used for resting-state network analysis. Each session consists of 100 dynamic scans."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,35 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:dd6808014f0454d374e1e809179976ffb915c8ed377ad53d7c08b947ab67bf19",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Epilepsy",
+        "label": "Epilepsy"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds004977",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "intracranial EEG recordings",
+        "value": "iEEG"
+      },
+      {
+        "evidence": "intracranial EEG recordings",
+        "value": "EEG"
+      }
+    ],
+    "population": "Four patients with epilepsy recorded at the Mayo Clinic",
+    "summary": "Intracranial EEG recorded during single pulse electrical stimulation, supporting the CARLA adjusted common average referencing method for cortico-cortical evoked potentials. Some data samples are censored pending other manuscripts."
+  },
+  "prompt_version": "v1"
+}

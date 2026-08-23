@@ -1,0 +1,42 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:4b991a5e1f51b9b6191ae515db37bdff3e1f0fd8216aec4af671d16329864ff9",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "three healthy individuals",
+        "label": "healthy individuals"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds006947",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "\"modalities\":[\"MRI\",\"fMRI\",\"behavioral\"]",
+        "value": "MRI"
+      },
+      {
+        "evidence": "short-TR BOLD fMRI was acquired",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "with associated physiological recordings and pupilometry",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "pupilometry",
+        "value": "eye_tracking"
+      }
+    ],
+    "population": "Three healthy human individuals, ages 25–59.",
+    "summary": "Dense fMRI dataset from three healthy adults passively watching movies, TV series and trailers, with slab-selective short-TR complex-valued BOLD, plus physiological recordings and pupilometry, acquired at the Caltech Brain Imaging Center."
+  },
+  "prompt_version": "v1"
+}

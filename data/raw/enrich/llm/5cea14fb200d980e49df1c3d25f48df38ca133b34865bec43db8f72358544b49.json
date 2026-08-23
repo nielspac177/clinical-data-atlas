@@ -1,0 +1,46 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:5cea14fb200d980e49df1c3d25f48df38ca133b34865bec43db8f72358544b49",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy Volunteers, Depression",
+        "label": "Depression"
+      },
+      {
+        "evidence": "Healthy Volunteers",
+        "label": "Healthy Volunteers"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "psychiatry",
+      "neuroscience",
+      "pediatrics"
+    ],
+    "id": "openneuro:ds004627",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "MRI",
+        "value": "MRI"
+      },
+      {
+        "evidence": "fMRI",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "dMRI",
+        "value": "dMRI"
+      },
+      {
+        "evidence": "behavioral data associated with a scanning session",
+        "value": "behavioral"
+      }
+    ],
+    "population": "Human; Healthy Volunteers, Depression",
+    "summary": "Preliminary release of multi-echo resting-state imaging and linked behavioral data from the NIMH Characterization and Treatment of Adolescent Depression study, covering 190 longitudinal sessions across 43 healthy and depressed adolescents."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,50 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:7fe179d6ea9e3f00f197a9210ec8c5d1b679996e94269eda0c818fadc9352e20",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "healthy controls"
+      }
+    ],
+    "countries": [
+      "DK"
+    ],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds005185",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "ear-EEG as a sleep monitoring platform",
+        "value": "EEG"
+      },
+      {
+        "evidence": "EEG, EOG and chin EMG electrodes",
+        "value": "EMG"
+      },
+      {
+        "evidence": "a partial PSG (EEG, EOG and chin EMG electrodes)",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "a wristworn actigraph",
+        "value": "wearable"
+      },
+      {
+        "evidence": "This has been archived as behavioral data",
+        "value": "behavioral"
+      },
+      {
+        "evidence": "the subject answered a short questionnaire regarding the quality of the night's sleep",
+        "value": "survey"
+      }
+    ],
+    "population": "20 healthy adults aged 22–36, each sleeping 4 nights at home; 10 of them slept a further 12 nights with ear-EEG only",
+    "summary": "Ear-EEG sleep monitoring dataset: participants slept at home with partial polysomnography, ear-EEG and a wrist actigraph, plus post-night comfort questionnaires and sleep diaries. Some participants recorded further nights with ear-EEG only."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,40 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:5ff4a8b941998880468b84cdbf1a8252934a7cbe95b0c5c5be1bc25a06cd737c",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "healthy controls"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds002734",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "\"MRI\"",
+        "value": "MRI"
+      },
+      {
+        "evidence": "shift fMRI events",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "EEG_data files contain EEG preprocessed data",
+        "value": "EEG"
+      },
+      {
+        "evidence": "reaction times (ms)",
+        "value": "behavioral"
+      }
+    ],
+    "population": "Human; Healthy / Control",
+    "summary": "Simultaneous EEG and fMRI during value-based decisions in healthy adults. Includes preprocessed EEG per subject and session plus trial events with item ratings, choices, reaction times and accuracy."
+  },
+  "prompt_version": "v1"
+}

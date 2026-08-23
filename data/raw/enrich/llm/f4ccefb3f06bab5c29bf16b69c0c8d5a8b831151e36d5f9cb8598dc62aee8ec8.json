@@ -1,0 +1,35 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:f4ccefb3f06bab5c29bf16b69c0c8d5a8b831151e36d5f9cb8598dc62aee8ec8",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [
+      "MX"
+    ],
+    "domains": [
+      "neuroscience",
+      "pediatrics"
+    ],
+    "id": "openneuro:ds007398",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "diffusion-weighted MRI (DWI) data",
+        "value": "MRI"
+      },
+      {
+        "evidence": "Multishell diffusion (b = 800 and b = 2500)",
+        "value": "dMRI"
+      }
+    ],
+    "population": "61 Mexican Spanish-speaking children between 6.0 and 8.5 years old, classified as early readers; monolingual, without neurological, developmental, or psychiatric diagnoses",
+    "summary": "Preprocessed multishell diffusion MRI from Spanish-speaking Mexican children learning to read, released to study white matter pathways linked to phonological awareness and early reading. Cross-sectional observational design, de-identified, no in-scanner tasks."
+  },
+  "prompt_version": "v1"
+}

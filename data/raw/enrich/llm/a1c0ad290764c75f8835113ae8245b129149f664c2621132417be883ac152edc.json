@@ -1,0 +1,39 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:a1c0ad290764c75f8835113ae8245b129149f664c2621132417be883ac152edc",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "26 healthy volunteers",
+        "label": "healthy volunteers"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "neuroscience",
+      "surgery"
+    ],
+    "id": "openneuro:ds006623",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Anatomical T1w scans",
+        "value": "MRI"
+      },
+      {
+        "evidence": "six BOLD runs per subject",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "Behavioral: Hand-squeeze force recordings",
+        "value": "behavioral"
+      }
+    ],
+    "population": "26 healthy volunteers (ages 19–34) undergoing graded propofol sedation",
+    "summary": "MRI, fMRI and behavioral data from healthy volunteers under graded propofol sedation performing mental imagery and motor response tasks, with fMRIPrep, XCP-D, MRIQC and FreeSurfer derivatives."
+  },
+  "prompt_version": "v1"
+}

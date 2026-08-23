@@ -1,0 +1,38 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:9e86aebcbde912b98fc4dddcab98280147838f6464d9ec2f66f065378508c340",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Chronic low back pain (patient only)",
+        "label": "Chronic low back pain"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience",
+      "musculoskeletal"
+    ],
+    "id": "openneuro:ds007135",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "positron emission tomography (PET) with the radiotracer [11C]Martinostat",
+        "value": "PET"
+      },
+      {
+        "evidence": "Structural MRI: T1w, T2w, FLAIR",
+        "value": "MRI"
+      },
+      {
+        "evidence": "Functional MRI: resting-state BOLD",
+        "value": "fMRI"
+      }
+    ],
+    "population": "Patients diagnosed with chronic low back pain, no healthy controls; 25 participants",
+    "summary": "Observational cross-sectional multimodal neuroimaging in patients with chronic low back pain: [11C]Martinostat PET, structural MRI (T1w, T2w, FLAIR) and resting-state functional MRI, with no task or intervention."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:43a9f1abbac50ba2b5f1ba72f88675d85efbf2b2860d2b4747da849c7a870501",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "healthy and schizophrenic individuals",
+        "label": "schizophrenia"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "psychiatry",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds000115",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Pydeface was used on all anatomical images",
+        "value": "MRI"
+      },
+      {
+        "evidence": "set up functional data using copy_func_data.py",
+        "value": "fMRI"
+      }
+    ],
+    "population": "99 participants, ages 11–30, healthy and schizophrenic individuals",
+    "summary": "Functional and anatomical MRI collected while healthy individuals and individuals with schizophrenia performed letter 0-back, 1-back and 2-back working memory tasks. Anatomical images were defaced; some subjects are missing."
+  },
+  "prompt_version": "v1"
+}

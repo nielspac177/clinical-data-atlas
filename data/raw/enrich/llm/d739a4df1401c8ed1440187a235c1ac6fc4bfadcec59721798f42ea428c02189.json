@@ -1,0 +1,38 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:d739a4df1401c8ed1440187a235c1ac6fc4bfadcec59721798f42ea428c02189",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Pain, Post-Surgical Pain",
+        "label": "Post-Surgical Pain"
+      },
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience",
+      "neurology",
+      "surgery"
+    ],
+    "id": "openneuro:ds005839",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "fMRI studies show consistent brain activity changes",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "GABA Pain fMRI",
+        "value": "MRI"
+      }
+    ],
+    "population": "In a rat model for post-surgical pain",
+    "summary": "Rodent functional MRI study of post-surgical pain. Examines how a unilateral surgical incision changes cerebral processing at rest and during mechanical stimulation, and how spinal GABAA-receptor circuits influence that processing."
+  },
+  "prompt_version": "v1"
+}

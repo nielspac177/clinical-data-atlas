@@ -1,0 +1,39 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:39ca63fde6afec0b4f99f6dd433f9c68529104e419b2b5a85d38123d169cd264",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "investigating **Parkinson's Disease (PD)** and its associated cognitive impairments",
+        "label": "Parkinson's disease"
+      },
+      {
+        "evidence": "including healthy controls (HC)",
+        "label": "healthy control (HC)"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds005892",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Resting-state fMRI data were collected from participants",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "Resting State MRI data",
+        "value": "MRI"
+      }
+    ],
+    "population": "Human; healthy control (HC), Parkinson's disease with normal cognition (PD-NC), and Parkinson's disease with mild cognitive impairment (PD-MCI); ages 60–94",
+    "summary": "Resting-state functional and structural MRI from healthy controls and Parkinson's disease patients with normal cognition or mild cognitive impairment, part of a longitudinal study. Organized following the BIDS specification and acquired on a Siemens scanner."
+  },
+  "prompt_version": "v1"
+}

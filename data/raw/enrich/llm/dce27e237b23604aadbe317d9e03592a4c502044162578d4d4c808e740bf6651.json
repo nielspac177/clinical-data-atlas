@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:dce27e237b23604aadbe317d9e03592a4c502044162578d4d4c808e740bf6651",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "patients with mild depression",
+        "label": "depression"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "psychiatry",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds003007",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "\"MRI\"",
+        "value": "MRI"
+      },
+      {
+        "evidence": "FMRI Depression",
+        "value": "fMRI"
+      }
+    ],
+    "population": "Human; patients with mild depression; ages 21–52",
+    "summary": "Eyes-closed resting-state fMRI in patients with mild depression, scanned in two sessions two months apart across three groups: no treatment, CBT, or fMRI neurofeedback. Used for resting-state network analysis."
+  },
+  "prompt_version": "v1"
+}

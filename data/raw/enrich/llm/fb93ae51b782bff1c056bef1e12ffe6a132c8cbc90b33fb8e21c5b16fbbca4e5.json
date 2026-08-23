@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:fb93ae51b782bff1c056bef1e12ffe6a132c8cbc90b33fb8e21c5b16fbbca4e5",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Nine SCA2 patients",
+        "label": "SCA2"
+      },
+      {
+        "evidence": "age-matched healthy controls",
+        "label": "healthy controls"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds001378",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "3D T1-weighted turbo gradient echo images",
+        "value": "MRI"
+      },
+      {
+        "evidence": "axial diffusion-weighted images",
+        "value": "dMRI"
+      }
+    ],
+    "population": "Nine SCA2 patients and 16 age-matched healthy controls, examined twice on the same 1.5T MRI scanner",
+    "summary": "Diffusion tensor and T1-weighted MRI in SCA2 patients and age-matched healthy controls, each examined twice on the same 1.5T scanner. Anatomical images were defaced with Pydeface for de-identification."
+  },
+  "prompt_version": "v1"
+}

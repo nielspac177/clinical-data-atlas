@@ -1,0 +1,48 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:05ed37b3b259a72f8d9d750f180667df1f2d484bc8de857f4f9bd600a29a2240",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "attention-deficit/hyperactivity disorder (ADHD)",
+        "label": "attention-deficit/hyperactivity disorder (ADHD)"
+      },
+      {
+        "evidence": "disruptive mood dysregulation disorder (DMDD)",
+        "label": "disruptive mood dysregulation disorder (DMDD)"
+      },
+      {
+        "evidence": "healthy volunteer, HV",
+        "label": "healthy volunteers"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "psychiatry",
+      "neuroscience",
+      "pediatrics"
+    ],
+    "id": "openneuro:ds004605",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "structural magnetic resonance imaging (MRI)",
+        "value": "MRI"
+      },
+      {
+        "evidence": "diffusion tensor imaging (DTI)",
+        "value": "dMRI"
+      },
+      {
+        "evidence": "using clinical assessments",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "Human; ADHD, DMDD, and healthy volunteers; youth aged 7 to 20 years; N=132",
+    "summary": "Clinical assessments, structural MRI, and diffusion tensor imaging in a transdiagnostic sample of youth aged 7 to 20 with ADHD, disruptive mood dysregulation disorder, or no psychiatric diagnosis, collected at NIMH."
+  },
+  "prompt_version": "v1"
+}

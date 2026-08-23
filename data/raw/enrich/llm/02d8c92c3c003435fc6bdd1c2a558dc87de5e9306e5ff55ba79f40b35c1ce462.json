@@ -1,0 +1,53 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:02d8c92c3c003435fc6bdd1c2a558dc87de5e9306e5ff55ba79f40b35c1ce462",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Met the criteria for an anxiety disorder",
+        "label": "anxiety disorders"
+      },
+      {
+        "evidence": "panic disorder",
+        "label": "panic disorder"
+      },
+      {
+        "evidence": "healthy volunteer, HV",
+        "label": "healthy controls"
+      },
+      {
+        "evidence": "autism spectrum disorder",
+        "label": "autism spectrum disorder"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "psychiatry",
+      "neuroscience",
+      "pediatrics",
+      "neurology"
+    ],
+    "id": "openneuro:ds006303",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "structural magnetic resonance imaging (sMRI)",
+        "value": "MRI"
+      },
+      {
+        "evidence": "functional magnetic resonance imaging (fMRI)",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "clinical assessments",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "Human; youth aged 8 to 18 years",
+    "summary": "Clinical assessments with structural and functional MRI in youth with anxiety disorders and healthy volunteers, collected at the National Institute of Mental Health to study threat-related neural efficiency as a possible biomarker."
+  },
+  "prompt_version": "v1"
+}

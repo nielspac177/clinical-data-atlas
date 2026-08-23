@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:3820dc16c1ae5d73c1d6c8e13c17ef99a3c16c797c2956860df30fb008dada57",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "medically refractory epilepsy",
+        "label": "medically refractory epilepsy"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds002799",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "T1s, T2s",
+        "value": "MRI"
+      },
+      {
+        "evidence": "whole-brain functional MRI",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "surgically implanted intracranial electrodes",
+        "value": "iEEG"
+      }
+    ],
+    "population": "Human patients with medically refractory epilepsy requiring surgically implanted intracranial electrodes; ages 13–59",
+    "summary": "Electrical stimulation through implanted intracranial electrodes recorded concurrently with whole-brain functional MRI in patients with medically refractory epilepsy. Pre- and post-implantation sessions include structural scans, resting-state scans, electrode coordinates, stimulation parameters and preprocessed derivatives."
+  },
+  "prompt_version": "v1"
+}

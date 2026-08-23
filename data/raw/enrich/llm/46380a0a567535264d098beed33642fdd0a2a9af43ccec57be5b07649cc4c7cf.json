@@ -1,0 +1,56 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:46380a0a567535264d098beed33642fdd0a2a9af43ccec57be5b07649cc4c7cf",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "self-reports of symptoms for anxiety and depression",
+        "label": "anxiety"
+      },
+      {
+        "evidence": "self-reports of symptoms for anxiety and depression",
+        "label": "depression"
+      }
+    ],
+    "countries": [
+      "AU"
+    ],
+    "domains": [
+      "neuroscience",
+      "psychiatry",
+      "pediatrics"
+    ],
+    "id": "openneuro:ds004146",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "The MRI protocol consisted of T1-weighted (MP2RAGE)",
+        "value": "MRI"
+      },
+      {
+        "evidence": "resting-state fMRI, DWI, and ASL scans",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "resting-state fMRI, DWI, and ASL scans",
+        "value": "dMRI"
+      },
+      {
+        "evidence": "several biological samples for genomic and metagenomic analysis",
+        "value": "genomics"
+      },
+      {
+        "evidence": "we assessed cognitive function using standardised tests",
+        "value": "behavioral"
+      },
+      {
+        "evidence": "obtained self-reports of symptoms for anxiety and depression",
+        "value": "survey"
+      }
+    ],
+    "population": "Adolescent twins; session 1: N = 422, age 9-14 years; session 2: N = 304, 10-16 years",
+    "summary": "Multimodal neuroimaging of adolescent twins across two sessions, with structural, resting-state and task fMRI, diffusion and ASL scans, plus cognitive testing, mental health self-reports, pubertal and family measures, and biological samples."
+  },
+  "prompt_version": "v1"
+}

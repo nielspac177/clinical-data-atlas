@@ -1,0 +1,58 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:48085dfec70787220efdd9cdfc7ee94ab2eb093ca2c3842521523e15998c2a2f",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "a primary diagnosis of an anxiety disorder (generalized, social, and/or separation anxiety disorder)",
+        "label": "anxiety disorder"
+      },
+      {
+        "evidence": "disruptive mood dysregulation disorder (DMDD)",
+        "label": "disruptive mood dysregulation disorder (DMDD)"
+      },
+      {
+        "evidence": "or ADHD",
+        "label": "ADHD"
+      },
+      {
+        "evidence": "clinically-significant irritability",
+        "label": "clinically-significant irritability"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "psychiatry",
+      "pediatrics",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds005754",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "structural and resting state functional magnetic resonance imaging (MRI) data",
+        "value": "MRI"
+      },
+      {
+        "evidence": "structural and resting state functional magnetic resonance imaging (MRI) data",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "behavior from four canonical cognitive function neuropsychological tests",
+        "value": "behavioral"
+      },
+      {
+        "evidence": "parent-reported clinical symptoms",
+        "value": "survey"
+      },
+      {
+        "evidence": "This dataset contains demographic variables",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "Youth ages 8-18 years with an anxiety disorder, DMDD, ADHD, clinically-significant irritability, or no psychiatric diagnosis; IQ below 70 and autism spectrum diagnosis excluded",
+    "summary": "Youth study of inhibitory control and psychopathology, with demographics, parent-reported clinical symptoms, four neuropsychological tests, and structural plus resting-state functional MRI. Participants had an anxiety disorder, DMDD, ADHD, irritability, or no psychiatric diagnosis."
+  },
+  "prompt_version": "v1"
+}

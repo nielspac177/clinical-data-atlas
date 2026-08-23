@@ -1,0 +1,46 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:6eb135736c2e1d255f81058b2ae4fbd32e3d4b81773e09593b3f96fe2c8cd869",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "23 healthy adult participants",
+        "label": "healthy adult participants"
+      }
+    ],
+    "countries": [
+      "FR"
+    ],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds006720",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "anonymized raw magnetoencephalography (MEG) recordings",
+        "value": "MEG"
+      },
+      {
+        "evidence": "individual high-resolution structural Magnetic Resonance Imaging (MRI) recordings",
+        "value": "MRI"
+      },
+      {
+        "evidence": "the 3D coordinates of the EEG electrodes",
+        "value": "EEG"
+      },
+      {
+        "evidence": "and -cardiogram (ECG)",
+        "value": "ECG"
+      },
+      {
+        "evidence": "electro-occulogram (EOG, horizontal and vertical eye movements)",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": "23 healthy adult participants",
+    "summary": "MEG recordings from healthy adults performing an n-item delayed temporal reproduction task, with EOG and ECG, electrode and head-position coordinates, an eyes-open resting state recording, and individual structural MRI."
+  },
+  "prompt_version": "v1"
+}

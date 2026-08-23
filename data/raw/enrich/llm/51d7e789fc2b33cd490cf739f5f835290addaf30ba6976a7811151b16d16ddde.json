@@ -1,0 +1,41 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:51d7e789fc2b33cd490cf739f5f835290addaf30ba6976a7811151b16d16ddde",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "amputees with phantom limb pain",
+        "label": "phantom limb pain"
+      },
+      {
+        "evidence": "amputees without phantom limb pain",
+        "label": "amputees without phantom limb pain"
+      },
+      {
+        "evidence": "intact, pain free controls",
+        "label": "pain free controls"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds006921",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "resting state high density EEG data (64 or 128 channels)",
+        "value": "EEG"
+      },
+      {
+        "evidence": "Session-level questionnaire data",
+        "value": "survey"
+      }
+    ],
+    "population": "38 participants in three groups: amputees with phantom limb pain, amputees without phantom limb pain, and intact, pain free controls.",
+    "summary": "Resting-state high-density EEG recorded with eyes open or closed from amputees with phantom limb pain, amputees without it, and pain-free controls, organised in BIDS, with session-level pain questionnaire data."
+  },
+  "prompt_version": "v1"
+}

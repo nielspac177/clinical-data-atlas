@@ -1,0 +1,40 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:05db53494bb3d87fcff6cb5c5eef6b63eec35352aba65b131fd69c0c3a4d57bb",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      },
+      {
+        "evidence": "rate pain intensity",
+        "label": "pain"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds005289",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "\"modalities\":[\"EEG\",\"eye_tracking\"]",
+        "value": "EEG"
+      },
+      {
+        "evidence": "\"modalities\":[\"EEG\",\"eye_tracking\"]",
+        "value": "eye_tracking"
+      },
+      {
+        "evidence": "rate pain intensity",
+        "value": "behavioral"
+      }
+    ],
+    "population": "Human; Healthy / Control",
+    "summary": "Healthy participants received 10 laser stimulations and rated pain intensity and unpleasantness on a numeric rating scale from 0 to 10 by clicking a position with a mouse."
+  },
+  "prompt_version": "v1"
+}

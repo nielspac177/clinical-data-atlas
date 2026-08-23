@@ -1,0 +1,53 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:5344aa812d401eae425cb61efdada6700432fc949f6e347044e6f69e068844e0",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "40 healthy participants",
+        "label": "healthy participants"
+      },
+      {
+        "evidence": "pain-reliability-spinalcord",
+        "label": "pain"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience",
+      "neurology"
+    ],
+    "id": "openneuro:ds004926",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "a T2-weighted anatomical image",
+        "value": "MRI"
+      },
+      {
+        "evidence": "task-based spinal cord fMRI data",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "ECG and respiratory recordings",
+        "value": "ECG"
+      },
+      {
+        "evidence": "associated peripheral physiological data",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "behavioral ratings",
+        "value": "behavioral"
+      },
+      {
+        "evidence": "pupil dilation",
+        "value": "eye_tracking"
+      }
+    ],
+    "population": "40 healthy participants",
+    "summary": "Two sessions of task-based spinal cord fMRI in 40 healthy participants, with T2-weighted anatomical images, multi-run functional acquisitions, and peripheral physiological data including behavioral ratings, pupil dilation, ECG and respiration. Organized in BIDS."
+  },
+  "prompt_version": "v1"
+}

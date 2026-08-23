@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:fb2b77c0e9cb8e4d2446f79ee1e26487906a9d6c1f339aba14b7d3c9673e4570",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "All participants were healthy, right-handed individuals",
+        "label": "healthy"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds004647",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "the bids-formatted fMRI data used in the study",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "Functional whole-brain MRI data for each subject",
+        "value": "MRI"
+      },
+      {
+        "evidence": "Event files containing onsets, durations, trial types, reaction times",
+        "value": "behavioral"
+      }
+    ],
+    "population": "Healthy, right-handed adults with normal or corrected-to-normal vision who passed quality check; ages 19–34",
+    "summary": "BIDS-formatted task fMRI with T1-weighted images and event files, from healthy adults in a study of working memory load and Pavlovian influences on instrumental learning."
+  },
+  "prompt_version": "v1"
+}

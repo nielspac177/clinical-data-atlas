@@ -1,0 +1,39 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:82f79e9188ad5737d6357228df0e463750f3ca742cf8b292cb0d51d681eacbcf",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "28 Parkinson patients and 28 matched controls",
+        "label": "Parkinson's"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds003506",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "EEG: Reinforcement Learning in Parkinson's",
+        "value": "EEG"
+      },
+      {
+        "evidence": "behavioral files from the task",
+        "value": "behavioral"
+      },
+      {
+        "evidence": "acceleromter taped to their most tremor affected hand",
+        "value": "wearable"
+      }
+    ],
+    "population": "28 Parkinson patients and 28 matched controls, ages 48-84",
+    "summary": "EEG and behavioral data from a reinforcement learning task with volitional and instructed choices in Parkinson patients and matched controls, with hand accelerometry; patients attended twice, on or off medication."
+  },
+  "prompt_version": "v1"
+}

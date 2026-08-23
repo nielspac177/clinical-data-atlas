@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:8b3b891179ee344eec4a2c544785ef7fb25b9d2833d61749e1b0f228c73dc030",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds002411",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "fMRI data was recorded",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "\"modalities\":[\"MRI\",\"fMRI\"]",
+        "value": "MRI"
+      },
+      {
+        "evidence": "by pressing a button",
+        "value": "behavioral"
+      }
+    ],
+    "population": "Human; healthy/control adults aged 20–24; top- and middle-rated programmers plus novice controls (29 participants)",
+    "summary": "fMRI recorded while programmers of differing expertise categorized Java code snippets into functional categories; per-subject decoding models predicted the category of viewed code from brain activity."
+  },
+  "prompt_version": "v1"
+}

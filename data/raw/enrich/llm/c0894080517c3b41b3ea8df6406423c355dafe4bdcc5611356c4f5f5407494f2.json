@@ -1,0 +1,38 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:c0894080517c3b41b3ea8df6406423c355dafe4bdcc5611356c4f5f5407494f2",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "MEG-BIDS OMEGA RestingState_sample Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [
+      "CA"
+    ],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds000247",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Acquisition with CTF 275 MEG system at 2400Hz sampling rate",
+        "value": "MEG"
+      },
+      {
+        "evidence": "1 ECG bipolar (EEG057/#298)",
+        "value": "ECG"
+      },
+      {
+        "evidence": "\"modalities\":[\"MRI\",\"MEG\",\"ECG\"]",
+        "value": "MRI"
+      }
+    ],
+    "population": "Human; Healthy / Control; ages 21–35; 5 subjects, 5 minute resting sessions, eyes open",
+    "summary": "Resting-state MEG sample from the Open MEG Archive: five subjects recorded with eyes open on a CTF 275 system, including ECG and EOG channels, empty-room recordings, and 3D head-shape digitization."
+  },
+  "prompt_version": "v1"
+}

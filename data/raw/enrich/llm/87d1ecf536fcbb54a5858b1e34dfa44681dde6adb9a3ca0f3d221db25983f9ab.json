@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:87d1ecf536fcbb54a5858b1e34dfa44681dde6adb9a3ca0f3d221db25983f9ab",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "patients diagnosed with Obsessive-Compulsive Disorder (OCD)",
+        "label": "Obsessive-Compulsive Disorder (OCD)"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "psychiatry",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds008110",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "structural (T1-weighted)",
+        "value": "MRI"
+      },
+      {
+        "evidence": "resting-state functional (fMRI)",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "diffusion tensor imaging (DTI)",
+        "value": "dMRI"
+      }
+    ],
+    "population": "Patients (n = 41) meeting DSM-5 criteria for OCD, aged 18-50 years, with or without pharmacological treatment at the time of scanning",
+    "summary": "Structural T1-weighted MRI, resting-state fMRI, and diffusion tensor imaging from adult patients meeting DSM-5 criteria for obsessive-compulsive disorder, with or without pharmacological treatment, acquired on a 3.0 T scanner with a 32-channel head coil."
+  },
+  "prompt_version": "v1"
+}

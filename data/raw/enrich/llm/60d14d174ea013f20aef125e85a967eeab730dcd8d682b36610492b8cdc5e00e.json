@@ -1,0 +1,41 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:60d14d174ea013f20aef125e85a967eeab730dcd8d682b36610492b8cdc5e00e",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "nightly EEG recordings from 9 healthy participants",
+        "label": "healthy participants"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds004348",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "nightly EEG recordings",
+        "value": "EEG"
+      },
+      {
+        "evidence": "chin EMG",
+        "value": "EMG"
+      },
+      {
+        "evidence": "'partial polysomnography' (PSG) measurements",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "Sleep monitoring using wearable EEG",
+        "value": "wearable"
+      }
+    ],
+    "population": "Human; Other",
+    "summary": "Home-recorded ear-EEG sleep monitoring dataset with partial polysomnography, including EEG, EOG and chin EMG plus ear electrodes. Each subject made a wake recording before bed and an overnight sleep recording."
+  },
+  "prompt_version": "v1"
+}

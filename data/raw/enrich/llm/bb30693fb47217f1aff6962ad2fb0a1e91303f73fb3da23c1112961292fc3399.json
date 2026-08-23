@@ -1,0 +1,51 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:bb30693fb47217f1aff6962ad2fb0a1e91303f73fb3da23c1112961292fc3399",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Patients with major depressive disorder (MDD) were medication-free",
+        "label": "major depressive disorder"
+      },
+      {
+        "evidence": "Recruitment for the bipolar (BP) group was ended early",
+        "label": "bipolar disorder"
+      },
+      {
+        "evidence": "which included both patients and healthy volunteers",
+        "label": "healthy volunteers"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "psychiatry",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds005917",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Magnetic Resonance Imaging (MRI) scans per subject at 3 Tesla",
+        "value": "MRI"
+      },
+      {
+        "evidence": "\"modalities\":[\"MRI\",\"fMRI\",\"dMRI\",\"MRS\"]",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "\"modalities\":[\"MRI\",\"fMRI\",\"dMRI\",\"MRS\"]",
+        "value": "dMRI"
+      },
+      {
+        "evidence": "\"modalities\":[\"MRI\",\"fMRI\",\"dMRI\",\"MRS\"]",
+        "value": "MRS"
+      }
+    ],
+    "population": "Patients with major depressive disorder, a bipolar group, and healthy controls, ages 20–66; MDD patients medication-free for at least 2 weeks",
+    "summary": "Double-blind placebo crossover trial of a single ketamine or saline infusion at NIMH, with MRI scans at baseline and after infusion in patients with depression or bipolar disorder and healthy volunteers."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,40 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:4d70a9e93699a521652787a2cb49856610d8a3598ec502d731d167873c78e5b6",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "healthy controls"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds002739",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "\"MRI\"",
+        "value": "MRI"
+      },
+      {
+        "evidence": "Simultaneous EEG-fMRI",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "Simultaneous EEG-fMRI",
+        "value": "EEG"
+      },
+      {
+        "evidence": "EEG_events contains event times and behavioural data",
+        "value": "behavioral"
+      }
+    ],
+    "population": "Human; Healthy / Control",
+    "summary": "Simultaneous EEG-fMRI during a visual motion perceptual decision task in healthy adults, with preprocessed EEG and per-trial direction choices, accuracy, response times and confidence reports."
+  },
+  "prompt_version": "v1"
+}

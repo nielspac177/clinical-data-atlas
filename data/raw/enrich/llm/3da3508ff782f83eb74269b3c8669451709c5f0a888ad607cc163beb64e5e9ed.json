@@ -1,0 +1,31 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:3da3508ff782f83eb74269b3c8669451709c5f0a888ad607cc163beb64e5e9ed",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "cardiology"
+    ],
+    "id": "physionet:bp-graphene-bioimpedance",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "synchronized continuous blood pressure and PPG signals",
+        "value": "PPG"
+      },
+      {
+        "evidence": "raw time data for the 4-channel GET Bioimpedance signals",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "graphene electronic tattoos (GETs)",
+        "value": "wearable"
+      }
+    ],
+    "population": "7 subjects, each monitored for 300+ minutes of continuous blood pressure recording",
+    "summary": "Cuffless blood pressure repository sharing raw four-channel bioimpedance signals recorded from graphene electronic tattoos on the wrist, with synchronized continuous blood pressure from a medical-grade device and PPG signals."
+  },
+  "prompt_version": "v1"
+}

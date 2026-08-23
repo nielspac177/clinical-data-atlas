@@ -1,0 +1,43 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:2e9710cf44e97b25d77e7a908893367e3e15159d9d930960d02c28e3403d0b69",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "diagnostic criteria for a broad range of psychiatric illnesses",
+        "label": "psychiatric illnesses"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "psychiatry",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds005237",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "high-resolution anatomical scans",
+        "value": "MRI"
+      },
+      {
+        "evidence": "functional MRI runs",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "behavioral and Magnetic Resonance Imaging (MRI) data",
+        "value": "behavioral"
+      },
+      {
+        "evidence": "over 50 psychological and cognitive questionnaires",
+        "value": "survey"
+      }
+    ],
+    "population": "241 individuals aged 18 to 70, comprising 148 individuals meeting diagnostic criteria for a broad range of psychiatric illnesses and a healthy comparison group of 93 individuals",
+    "summary": "Transdiagnostic dataset pairing anatomical, resting-state, and task-based functional MRI with questionnaires and a semi-structured clinical interview, covering people with psychiatric diagnoses and a healthy comparison group."
+  },
+  "prompt_version": "v1"
+}

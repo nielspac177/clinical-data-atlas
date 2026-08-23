@@ -1,0 +1,34 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:ee21ee08d759c91821fc7e988984038253982015b0120065aa139761335f6327",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "patients diagnosed with brain tumors",
+        "label": "brain tumors"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "oncology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds005003",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "functional magnetic resonance imaging (fMRI) data",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "magnetic resonance imaging",
+        "value": "MRI"
+      }
+    ],
+    "population": "Human; brain tumors",
+    "summary": "Retrospective task-based and resting-state functional MRI collected from patients diagnosed with brain tumors, covering rest, language, and motor tasks."
+  },
+  "prompt_version": "v1"
+}

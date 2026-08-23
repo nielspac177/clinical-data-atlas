@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:885d7f365fec061a9ac90c5bbe3ad341dcdc7a7eb4b612581215d8734f548b34",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds005239",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "in an MRI scanner",
+        "value": "MRI"
+      },
+      {
+        "evidence": "the fMRIPrep derivatives",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "mimic hand postures (w/ motion tracking)",
+        "value": "behavioral"
+      }
+    ],
+    "population": "4 healthy adult subjects; 3 female and 1 male, all right handed, aged 24 to 28; individual demographics withheld",
+    "summary": "Densely sampled functional MRI from four subjects across two sessions: a hand-posture motor control task with motion tracking, a muscle stimulation agency protocol, and mostly a resting-state scan."
+  },
+  "prompt_version": "v1"
+}

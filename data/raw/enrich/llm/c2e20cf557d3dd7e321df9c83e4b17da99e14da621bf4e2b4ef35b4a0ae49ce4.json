@@ -1,0 +1,41 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:c2e20cf557d3dd7e321df9c83e4b17da99e14da621bf4e2b4ef35b4a0ae49ce4",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Subjects were epilepsy patients undergoing intracranial monitoring",
+        "label": "epilepsy"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds004752",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "intracranial EEG (iEEG) recorded with depth electrodes",
+        "value": "iEEG"
+      },
+      {
+        "evidence": "simultaneously recorded scalp EEG with the 10-20 system",
+        "value": "EEG"
+      },
+      {
+        "evidence": "electrophysiological dataset recorded from fifteen subjects",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "correct/incorrect, response, response time for each trial",
+        "value": "behavioral"
+      }
+    ],
+    "population": "Human epilepsy patients undergoing intracranial monitoring for localization of epileptic seizures; ages 18–56",
+    "summary": "Simultaneous scalp EEG and intracranial EEG from epilepsy patients performing a modified Sternberg verbal working memory task, with electrode coordinates and anatomical labels, beamformed virtual sensor data, and trial-level task information."
+  },
+  "prompt_version": "v1"
+}

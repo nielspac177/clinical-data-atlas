@@ -1,0 +1,38 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:177720c8859db2cc8a533150eab8918458a9f7dee59e8aaf8a58ef9e64f9ee7d",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [
+      "NL"
+    ],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds003495",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "T1-weighted",
+        "value": "MRI"
+      },
+      {
+        "evidence": "both resting-state and task-based functional MRI scans",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "DWI",
+        "value": "dMRI"
+      }
+    ],
+    "population": "Human; Healthy / Control participants scanned pre and post scanner upgrade",
+    "summary": "Raw and preprocessed diffusion, T1-weighted, resting-state and task-based functional MRI acquired from the same participants before and after a scanner upgrade, with group-level SNR and GLM maps shared separately."
+  },
+  "prompt_version": "v1"
+}

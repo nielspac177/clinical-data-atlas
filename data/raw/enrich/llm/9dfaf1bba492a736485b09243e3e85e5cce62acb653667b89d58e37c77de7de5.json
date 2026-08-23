@@ -1,0 +1,55 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:9dfaf1bba492a736485b09243e3e85e5cce62acb653667b89d58e37c77de7de5",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "11 glioma patients",
+        "label": "glioma"
+      },
+      {
+        "evidence": "14 meningioma patients",
+        "label": "meningioma"
+      },
+      {
+        "evidence": "Brain Tumor Connectomics Data",
+        "label": "brain tumor"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience",
+      "oncology",
+      "surgery"
+    ],
+    "id": "openneuro:ds001226",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "T1w MPRAGE anatomical scan (anat)",
+        "value": "MRI"
+      },
+      {
+        "evidence": "resting-state fMRI (func)",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "multi-shell HARDI diffusion-weighted MRI",
+        "value": "dMRI"
+      },
+      {
+        "evidence": "cognitive assessment using the Cambridge Neuropsychological Test Automated Battery (CANTAB)",
+        "value": "behavioral"
+      },
+      {
+        "evidence": "questionnaires assessing demographic information, lifestyle habits & emotional functioning",
+        "value": "survey"
+      }
+    ],
+    "population": "11 glioma patients, 14 meningioma patients and 11 control subjects",
+    "summary": "Pre-operative brain imaging of glioma and meningioma patients plus control subjects, with anatomical, resting-state functional and diffusion MRI, cognitive testing, questionnaires, and derived tumor masks, used for virtual brain modeling studies."
+  },
+  "prompt_version": "v1"
+}

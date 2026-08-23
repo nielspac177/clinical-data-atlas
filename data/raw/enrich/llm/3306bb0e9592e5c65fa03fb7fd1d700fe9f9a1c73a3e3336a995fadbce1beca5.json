@@ -1,0 +1,41 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:3306bb0e9592e5c65fa03fb7fd1d700fe9f9a1c73a3e3336a995fadbce1beca5",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "First Episode Psychosis (FEP) individuals",
+        "label": "First Episode Psychosis"
+      },
+      {
+        "evidence": "samples of healthy and First Episode Psychosis",
+        "label": "healthy"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "psychiatry",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds003944",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Resting EEG and MEG data was gathered",
+        "value": "EEG"
+      },
+      {
+        "evidence": "Resting EEG and MEG data was gathered",
+        "value": "MEG"
+      },
+      {
+        "evidence": "The phenotype directory contains clinical assessment results",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "Healthy and First Episode Psychosis (FEP) individuals, ages 12–35",
+    "summary": "First of two resting EEG samples from healthy and first-episode psychosis individuals, recorded for five minutes on an Elekta Neuromag system with a 60-channel cap, plus clinical and cognitive assessment scores."
+  },
+  "prompt_version": "v1"
+}

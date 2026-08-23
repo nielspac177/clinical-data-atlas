@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:e06c2aa205f13d2b1bf12e39d90a5812c76d20d9632937cdc9d9b693149dfa41",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds003810",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "electroencephalography (EEG) signals adquired with a low-cost consumer-grade device",
+        "value": "EEG"
+      },
+      {
+        "evidence": "The EMG signals of the dominant hand was adquired for protocol control",
+        "value": "EMG"
+      }
+    ],
+    "population": "10 participants with no previous BCI experience; Healthy / Control; ages 20–30",
+    "summary": "EEG recorded with a low-cost consumer device while participants imagined grasping with the dominant hand versus resting, across five runs, with EMG recorded for protocol control."
+  },
+  "prompt_version": "v1"
+}

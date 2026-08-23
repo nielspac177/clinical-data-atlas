@@ -1,0 +1,42 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:9fcca11da7195cd6053424756bf0fb926743792ad1915c9980aee544850f6b62",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [
+      "GB"
+    ],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds004073",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "This fMRI dataset was acquired in 2021-2022",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "The MR protocol for the Oxford site",
+        "value": "MRI"
+      },
+      {
+        "evidence": "functional transcranial doppler sonography (fTCD)",
+        "value": "ultrasound"
+      },
+      {
+        "evidence": "an online behavioural testing session",
+        "value": "behavioral"
+      }
+    ],
+    "population": "51 participants scanned at Bangor and Oxford, all of whom had previously completed an online behavioural session and an fTCD session",
+    "summary": "Raw fMRI data from six language tasks scanned at two sites, Bangor and Oxford, collected to test how closely laterality indices from functional transcranial doppler sonography and fMRI correlate; participant file includes fTCD laterality indices."
+  },
+  "prompt_version": "v1"
+}

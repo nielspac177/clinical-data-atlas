@@ -1,0 +1,40 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:5ecfcfc5bca157593fb5a53929aa7399d62bdf098054b50644f3db939c552e9d",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds004505",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "dual-layer electroencephalography (EEG)",
+        "value": "EEG"
+      },
+      {
+        "evidence": "neck electromyography (EMG)",
+        "value": "EMG"
+      },
+      {
+        "evidence": "T1 structural MR images",
+        "value": "MRI"
+      },
+      {
+        "evidence": "inertial measurement unit (IMU) acceleration",
+        "value": "wearable"
+      }
+    ],
+    "population": "25 participants playing real-world table tennis; healthy/control",
+    "summary": "High-density dual-layer EEG, neck EMG, IMU acceleration, T1 structural MRI, and video from participants playing real-world table tennis against a ball machine and a human player, plus standing baseline."
+  },
+  "prompt_version": "v1"
+}

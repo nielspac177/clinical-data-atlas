@@ -1,0 +1,48 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:e9fcb2a3a410a9efa5a55f543bfc4f6d9db9ccf6938526a4e27717b11ab5544b",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "24 healthy individuals aged 18-35",
+        "label": "healthy individuals"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds007216",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "simultaneous EEG-fMRI recordings",
+        "value": "MRI"
+      },
+      {
+        "evidence": "simultaneous EEG-fMRI recordings",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "simultaneous EEG-fMRI recordings",
+        "value": "EEG"
+      },
+      {
+        "evidence": "electrocardiogram (ECG)",
+        "value": "ECG"
+      },
+      {
+        "evidence": "behavioral task responses",
+        "value": "behavioral"
+      },
+      {
+        "evidence": "mental health surveys",
+        "value": "survey"
+      }
+    ],
+    "population": "24 healthy individuals aged 18-35",
+    "summary": "Multi-session simultaneous EEG-fMRI dataset in BIDS format with ECG, behavioral task responses, experience sampling ratings and mental health surveys, collected during a continuous performance task and resting state on two days."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,36 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:c9984d7bad39abdadc42fe672a717933c1b858bcdd9a1b80f2d0fcb4a88234bd",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds004662",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "motor-task fMRI data with multi-echo ICA",
+        "value": "MRI"
+      },
+      {
+        "evidence": "Denoising task-correlated head motion from motor-task fMRI data",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "end-tidal CO2 regressors",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": "Human; Healthy / Control; ages 23–30",
+    "summary": "Motor-task functional MRI data from healthy participants, released to evaluate denoising of task-correlated head motion with multi-echo ICA; a later release added hand-grasp and end-tidal CO2 regressors."
+  },
+  "prompt_version": "v1"
+}

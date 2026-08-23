@@ -1,0 +1,32 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:db41d0fd83c35f8b2ac1b129cb1d579f4131869e2c05aa975b200b11f352b49e",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds006721",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "an anatomical T1-MPRAGE image acquired at the beginning of the scan",
+        "value": "MRI"
+      },
+      {
+        "evidence": "focused ultrasound stimulation of the brain",
+        "value": "ultrasound"
+      }
+    ],
+    "population": "Monkey; Healthy / Control",
+    "summary": "MR thermometry data measuring brain temperature response to focused ultrasound stimulation, containing anatomical T1-MPRAGE, raw magnitude and phase field map images for temperature mapping, and T2-FLAIR images for safety assessment."
+  },
+  "prompt_version": "v1"
+}

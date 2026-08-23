@@ -1,0 +1,38 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:8d8f8579c89e057635794dd36605960c19d97b6279a4098389cc0903df3aa8a4",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds003673",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "raw T1-weighted 3D anatomical images",
+        "value": "MRI"
+      },
+      {
+        "evidence": "two resting state fMRI data",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "Eye-tracking data",
+        "value": "eye_tracking"
+      }
+    ],
+    "population": "Healthy / Control participants: 27 subjects (26.52 ± 4.04 years old; 16/11 females/males)",
+    "summary": "Resting-state fMRI with simultaneous in-scanner pupillometry plus a T1-weighted anatomical image per subject, acquired on a Siemens 3T Prisma scanner from healthy control participants at Yale."
+  },
+  "prompt_version": "v1"
+}

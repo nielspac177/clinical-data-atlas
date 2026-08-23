@@ -1,0 +1,39 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:33a54c555ad20b51e2f2f3768df6cc09a16c85f10ed0d3044c46f9a3d3ab6ef0",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "suspected or diagnosed prostate carcinoma",
+        "label": "prostate carcinoma"
+      }
+    ],
+    "countries": [
+      "DE"
+    ],
+    "domains": [
+      "oncology",
+      "nephrology_urology"
+    ],
+    "id": "tcia:psma-pet-ct-lesions",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "whole-body PSMA-PET/CT studies",
+        "value": "PET"
+      },
+      {
+        "evidence": "PET/CT manufacturer and model name",
+        "value": "CT"
+      },
+      {
+        "evidence": "a TSV file with patient age at imaging",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "378 male patients with suspected or diagnosed prostate carcinoma",
+    "summary": "Whole-body PSMA-PET/CT studies with all PSMA-avid tumor lesions manually segmented in 3D, plus anonymized DICOM files, segmentation masks and a table of acquisition and patient details."
+  },
+  "prompt_version": "v1"
+}

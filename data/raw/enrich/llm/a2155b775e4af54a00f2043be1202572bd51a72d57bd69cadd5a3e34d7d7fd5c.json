@@ -1,0 +1,39 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:a2155b775e4af54a00f2043be1202572bd51a72d57bd69cadd5a3e34d7d7fd5c",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "children with reading or math learning difficulties",
+        "label": "learning difficulties"
+      },
+      {
+        "evidence": "Healthy / Control",
+        "label": "healthy controls"
+      }
+    ],
+    "countries": [
+      "MX"
+    ],
+    "domains": [
+      "neuroscience",
+      "pediatrics"
+    ],
+    "id": "openneuro:ds006260",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "electrophysiological data",
+        "value": "EEG"
+      },
+      {
+        "evidence": "psychometric evaluations",
+        "value": "behavioral"
+      }
+    ],
+    "population": "Human; children with reading or math learning difficulties",
+    "summary": "Psychometric and electrophysiological data from Mexican children with reading or math learning difficulties, collected to evaluate skill improvement after using the Smartick online learning method. Measures include spelling, reading speed and comprehension."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,41 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:f6ea5f8614a94745ab59fa2a3105c235f66b972da2e25e4647144ceb8cedae91",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "chronic stroke survivors",
+        "label": "stroke"
+      },
+      {
+        "evidence": "aphasia severity",
+        "label": "aphasia"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds006533",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "clinical-grade MR",
+        "value": "MRI"
+      },
+      {
+        "evidence": "or CT (in three cases)",
+        "value": "CT"
+      },
+      {
+        "evidence": "a behavioral assessment of precise and approximate numeracy",
+        "value": "behavioral"
+      }
+    ],
+    "population": "105 left hemisphere chronic stroke survivors, ages 25–82",
+    "summary": "Processed lesion masks and normalized skull-stripped brain images from left hemisphere chronic stroke survivors, together with precise and approximate numeracy scores and aphasia severity, for lesion-symptom mapping."
+  },
+  "prompt_version": "v1"
+}

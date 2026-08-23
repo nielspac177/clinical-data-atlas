@@ -1,0 +1,40 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:f541b61b0ce0b4b7f56ea14e9fb1bea3a8d9200e489728043ed7e3182af846cd",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Dataset Clinical Epilepsy iEEG to BIDS",
+        "label": "epilepsy"
+      }
+    ],
+    "countries": [
+      "NL"
+    ],
+    "domains": [
+      "neurology",
+      "neuroscience",
+      "surgery"
+    ],
+    "id": "openneuro:ds003844",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "intracranial EEG (iEEG)",
+        "value": "iEEG"
+      },
+      {
+        "evidence": "electrocorticography (acute ECoG)",
+        "value": "EEG"
+      },
+      {
+        "evidence": "Registry for Epilepsy Surgery Patients",
+        "value": "registry"
+      }
+    ],
+    "population": "12 patients: six patients recorded intraoperatively using electrocorticography (acute ECoG), six patients with long-term recordings",
+    "summary": "Clinical intracranial EEG from epilepsy surgery patients, recorded intraoperatively with electrocorticography and long term with ECoG and stereo-encephalography, organized according to the Brain Imaging Data Structure specification."
+  },
+  "prompt_version": "v1"
+}

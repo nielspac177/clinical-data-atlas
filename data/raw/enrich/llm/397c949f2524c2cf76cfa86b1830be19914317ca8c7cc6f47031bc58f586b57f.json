@@ -1,0 +1,38 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:397c949f2524c2cf76cfa86b1830be19914317ca8c7cc6f47031bc58f586b57f",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [
+      "NL"
+    ],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds002603",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "This 3T fMRI dataset",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "two T1-weighted anatomical scans",
+        "value": "MRI"
+      },
+      {
+        "evidence": "physiology (*_physio.tsv.gz) is included",
+        "value": "physiological_signals"
+      }
+    ],
+    "population": "Human; Healthy / Control; ages 19–25",
+    "summary": "3T dataset collected to evaluate sequential and multiband EPI sequences during a working memory task, with anatomical scans, a phase-difference fieldmap, reverse-polarity scans and per-run physiology recordings."
+  },
+  "prompt_version": "v1"
+}

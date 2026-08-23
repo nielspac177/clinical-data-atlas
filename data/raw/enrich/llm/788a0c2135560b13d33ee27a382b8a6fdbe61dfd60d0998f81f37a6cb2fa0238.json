@@ -1,0 +1,38 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:788a0c2135560b13d33ee27a382b8a6fdbe61dfd60d0998f81f37a6cb2fa0238",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "asymmetric glaucoma",
+        "label": "asymmetric glaucoma"
+      },
+      {
+        "evidence": "Age-matched healthy controls",
+        "label": "healthy controls"
+      }
+    ],
+    "countries": [
+      "MX"
+    ],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds006837",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "anatomical MRI data",
+        "value": "MRI"
+      },
+      {
+        "evidence": "multi-shell diffusion MRI",
+        "value": "dMRI"
+      }
+    ],
+    "population": "Asymmetric glaucoma patients and age-matched healthy controls",
+    "summary": "BIDS-formatted raw multi-shell diffusion MRI, fieldmaps, and T1-weighted and FLAIR anatomical scans from asymmetric glaucoma patients and age-matched healthy controls, for evaluating white matter microstructure of the visual pathway."
+  },
+  "prompt_version": "v1"
+}

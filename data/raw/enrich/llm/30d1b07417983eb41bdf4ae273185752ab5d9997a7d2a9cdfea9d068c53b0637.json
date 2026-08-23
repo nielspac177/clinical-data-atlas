@@ -1,0 +1,29 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:30d1b07417983eb41bdf4ae273185752ab5d9997a7d2a9cdfea9d068c53b0637",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "two healthy subjects",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds004560",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "re-scans of T1-weighted MRI",
+        "value": "MRI"
+      }
+    ],
+    "population": "Two healthy volunteers, repeatedly scanned in the same session",
+    "summary": "Eight same-session re-scans of T1-weighted MRI with different sequence parameter combinations on two healthy subjects. Anonymized DICOM files are included, supporting study of how acquisition parameters affect image contrast; FreeSurfer and DL+DiReCT derivatives provided."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,37 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:ed3220d0c8d463d3ba900d9b6c8fc285434b931b63060eca96ac40274f04bc92",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "healthy controls"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience",
+      "cardiology"
+    ],
+    "id": "openneuro:ds007169",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "EEG was converted to BrainVision format",
+        "value": "EEG"
+      },
+      {
+        "evidence": "ECG is captured on the EEG system",
+        "value": "ECG"
+      },
+      {
+        "evidence": "Pupil Labs gaze/pupil data was exported from the XDF pupil_capture stream",
+        "value": "eye_tracking"
+      }
+    ],
+    "population": "Human; Healthy / Control; ages 18–48",
+    "summary": "Multimodal recordings during an n-back working memory task at four difficulty levels, combining EEG, an ECG channel and pupil/gaze data, converted from LSL/XDF recordings into BIDS format."
+  },
+  "prompt_version": "v1"
+}

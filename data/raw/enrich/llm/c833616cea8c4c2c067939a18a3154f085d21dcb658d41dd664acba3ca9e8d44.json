@@ -1,0 +1,35 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:c833616cea8c4c2c067939a18a3154f085d21dcb658d41dd664acba3ca9e8d44",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Intracranial Aneurysm",
+        "label": "Intracranial Aneurysm"
+      }
+    ],
+    "countries": [
+      "AU"
+    ],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds005096",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "patients with TOF-MRA scans",
+        "value": "MRI"
+      },
+      {
+        "evidence": "clinical annotation files (measurements, demographics, imaging parameters)",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "63 patients with TOF-MRA scans, containing 85 intracranial aneurysms",
+    "summary": "Time-of-flight MRA scans of patients with intracranial aneurysms, including clinician segmentations, 3D models, masks, and clinical annotations; some patients have interval surveillance imaging with shape-change annotations."
+  },
+  "prompt_version": "v1"
+}

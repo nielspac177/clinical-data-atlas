@@ -1,0 +1,43 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:5c0935638ca19c0fb14662e3608d2ef19a6a6231cd9323a689cc6dfd6343e8bf",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "acute stroke",
+        "label": "acute stroke"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds004889",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "MRI data directories for each subject",
+        "value": "MRI"
+      },
+      {
+        "evidence": "Diffusion weighted Trace and apparent diffusion coefficient (ADC) images",
+        "value": "dMRI"
+      },
+      {
+        "evidence": "behavioral measures",
+        "value": "behavioral"
+      },
+      {
+        "evidence": "demographic variables, and impairment measures",
+        "value": "clinical_tabular"
+      }
+    ],
+    "population": "Human; individuals from South Carolina with acute stroke; ages 16–89",
+    "summary": "Anonymized BIDS-compatible MRI, behavioral measures and demographics from a South Carolina cohort with acute stroke, including T1w and T2w-FLAIR anatomical images plus diffusion trace and ADC images."
+  },
+  "prompt_version": "v1"
+}

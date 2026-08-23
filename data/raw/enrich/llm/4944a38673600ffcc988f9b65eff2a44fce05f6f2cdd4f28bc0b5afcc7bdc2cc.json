@@ -1,0 +1,41 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:4944a38673600ffcc988f9b65eff2a44fce05f6f2cdd4f28bc0b5afcc7bdc2cc",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "nonsmoking-schizophrenia",
+        "label": "schizophrenia"
+      },
+      {
+        "evidence": "nonsmoking-healthy controls",
+        "label": "healthy controls"
+      },
+      {
+        "evidence": "smoking-schizophrenia",
+        "label": "smoking"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "psychiatry",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds001461",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "\"modalities\":[\"MRI\",\"fMRI\"]",
+        "value": "MRI"
+      },
+      {
+        "evidence": "rsfMRI_comrobidity",
+        "value": "fMRI"
+      }
+    ],
+    "population": "ages 17–60, split into nonsmoking and smoking participants with schizophrenia and nonsmoking and smoking healthy controls",
+    "summary": "Resting-state fMRI comparing four groups: smoking and nonsmoking participants with schizophrenia, and smoking and nonsmoking healthy controls, addressing smoking comorbidity in schizophrenia."
+  },
+  "prompt_version": "v1"
+}

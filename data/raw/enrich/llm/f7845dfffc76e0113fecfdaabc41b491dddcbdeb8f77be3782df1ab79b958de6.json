@@ -1,0 +1,34 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:f7845dfffc76e0113fecfdaabc41b491dddcbdeb8f77be3782df1ab79b958de6",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "patients undergoing general anesthesia",
+        "label": "general anesthesia"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience",
+      "surgery"
+    ],
+    "id": "openneuro:ds004541",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Multimodal EEG-fNIRS data",
+        "value": "EEG"
+      },
+      {
+        "evidence": "Multimodal EEG-fNIRS data",
+        "value": "fNIRS"
+      }
+    ],
+    "population": "Human; patients undergoing endoscopy and colonoscopy under general anesthesia",
+    "summary": "Simultaneous EEG and fNIRS recordings from patients under general anesthesia during endoscopy and colonoscopy, aimed at studying consciousness. Data are formatted following BIDS electrophysiology conventions."
+  },
+  "prompt_version": "v1"
+}

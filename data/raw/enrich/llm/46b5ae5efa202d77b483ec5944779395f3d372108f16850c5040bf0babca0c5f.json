@@ -1,0 +1,46 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:46b5ae5efa202d77b483ec5944779395f3d372108f16850c5040bf0babca0c5f",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "implanted for monitoring of epileptic seizures",
+        "label": "epileptic seizures"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience",
+      "surgery"
+    ],
+    "id": "openneuro:ds004798",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "intracranial recordings, fMRI, and eye tracking",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "functional and structural MRI scans",
+        "value": "MRI"
+      },
+      {
+        "evidence": "intracranial EEG activity acquired from depth electrodes",
+        "value": "iEEG"
+      },
+      {
+        "evidence": "assess eye tracking quality",
+        "value": "eye_tracking"
+      },
+      {
+        "evidence": "spike times, field potential activity, behavior",
+        "value": "behavioral"
+      }
+    ],
+    "population": "Human patients with depth electrodes implanted for epilepsy monitoring; ages 18–67",
+    "summary": "Multimodal recordings during movie watching in patients with depth electrodes implanted for seizure monitoring: single neurons, local field potential, intracranial EEG, eye tracking, behavior, and fMRI recorded before surgery."
+  },
+  "prompt_version": "v1"
+}

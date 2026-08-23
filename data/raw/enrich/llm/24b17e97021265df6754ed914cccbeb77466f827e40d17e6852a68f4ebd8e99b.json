@@ -1,0 +1,34 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:24b17e97021265df6754ed914cccbeb77466f827e40d17e6852a68f4ebd8e99b",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "healthy controls"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds006525",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "The EEG data was recorded using the 128-channel",
+        "value": "EEG"
+      },
+      {
+        "evidence": "Structural MRI data for the same participants were acquired",
+        "value": "MRI"
+      }
+    ],
+    "population": "34 human participants; healthy / control",
+    "summary": "Resting EEG recorded with a 128-channel system and preprocessed in EEGLAB with band-pass and notch filtering, artifact removal, channel interpolation and average referencing, plus structural MRI for the same participants."
+  },
+  "prompt_version": "v1"
+}

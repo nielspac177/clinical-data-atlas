@@ -1,0 +1,31 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:a7c37e711ed2370a52702cb42767afd80169c23e71e84016a7f56b8fbc364534",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Epilepsy Zurich iEEG HFO Dataset",
+        "label": "Epilepsy"
+      }
+    ],
+    "countries": [
+      "CH"
+    ],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds003498",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "interictal iEEG during slow-wave sleep with HFO markings",
+        "value": "iEEG"
+      }
+    ],
+    "population": "20 subjects with HFO events",
+    "summary": "Interictal intracranial EEG recorded during slow-wave sleep in epilepsy patients, converted to BIDS format, with marked high-frequency oscillation events and clinical channel information including resected and excluded contacts."
+  },
+  "prompt_version": "v1"
+}

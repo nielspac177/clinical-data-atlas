@@ -1,0 +1,44 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:2927c0d3771af9be9e7a09b7fa461214fb96e2fe7896a32619d18777dadd1121",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "over the course of pregnancy",
+        "label": "pregnancy"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "neurology",
+      "neuroscience",
+      "obstetrics_gynecology"
+    ],
+    "id": "openneuro:ds005299",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Subjects undergo repeated multi-modal MRI",
+        "value": "MRI"
+      },
+      {
+        "evidence": "T1w, high-resolution MTL, DWI",
+        "value": "dMRI"
+      },
+      {
+        "evidence": "mood/health assessments",
+        "value": "survey"
+      },
+      {
+        "evidence": "serum assessments of sex hormones",
+        "value": "other"
+      }
+    ],
+    "population": "A single nulliparous woman in the pilot release; larger cohorts and partners planned for later releases",
+    "summary": "Precision imaging of the maternal brain from pre-conception through postpartum. The first release covers a single nulliparous woman scanned repeatedly with structural and diffusion MRI alongside mood, health, and serum hormone measures."
+  },
+  "prompt_version": "v1"
+}

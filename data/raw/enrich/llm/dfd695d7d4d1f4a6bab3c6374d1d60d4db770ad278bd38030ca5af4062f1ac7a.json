@@ -1,0 +1,40 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:dfd695d7d4d1f4a6bab3c6374d1d60d4db770ad278bd38030ca5af4062f1ac7a",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Turone Sheep Chronic Stress (TSCS) Chronic Stress",
+        "label": "Chronic Stress"
+      },
+      {
+        "evidence": "Healthy / Control",
+        "label": "healthy controls"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds004161",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "\"modalities\":[\"MRI\",\"fMRI\",\"dMRI\"]",
+        "value": "MRI"
+      },
+      {
+        "evidence": "Resting-State",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "\"modalities\":[\"MRI\",\"fMRI\",\"dMRI\"]",
+        "value": "dMRI"
+      }
+    ],
+    "population": "Sheep; Healthy / Control; ages 4",
+    "summary": "Sheep neuroimaging dataset on chronic stress, including resting-state and topup acquisitions, converted to BIDS with BIDScoin; provenance and conversion settings stored in the dataset code directory."
+  },
+  "prompt_version": "v1"
+}

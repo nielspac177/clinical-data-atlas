@@ -1,0 +1,29 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:2c5562bf11f46197a60ba40088ec9bdf6091a309cc852761e6956b4079e95e67",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience",
+      "neurology"
+    ],
+    "id": "openneuro:ds004795",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "the motion-free (STAND) image volumes of the MR-ART dataset",
+        "value": "MRI"
+      }
+    ],
+    "population": "Healthy/control human participants from the MR-ART dataset; ages 18–74",
+    "summary": "Simulated head-motion artifacts applied to motion-free structural brain image volumes from the MR-ART dataset, using either the standard random motion transform or a modified version with non-random movement and defined phase encoding direction."
+  },
+  "prompt_version": "v1"
+}

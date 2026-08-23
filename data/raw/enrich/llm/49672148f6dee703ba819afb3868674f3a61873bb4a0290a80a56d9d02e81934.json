@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:49672148f6dee703ba819afb3868674f3a61873bb4a0290a80a56d9d02e81934",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Parkinson's Disease",
+        "label": "Parkinson's Disease"
+      },
+      {
+        "evidence": "age-matched healthy control subjects",
+        "label": "healthy controls"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds007020",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "resting-state EEG recordings",
+        "value": "EEG"
+      }
+    ],
+    "population": "Individuals with Parkinson's disease and age-matched healthy control subjects",
+    "summary": "De-identified resting-state EEG from individuals with Parkinson's disease and age-matched healthy controls, recorded on a clinical BrainVision system in BIDS format, labelled living or deceased for mortality classification. No other demographic or clinical information included."
+  },
+  "prompt_version": "v1"
+}

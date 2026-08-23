@@ -1,0 +1,34 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:f22f81851e03e90915070d77e3db00501a128bbf80e6f113b67e8ab4a2721d19",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "healthy controls"
+      }
+    ],
+    "countries": [
+      "CZ"
+    ],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds004499",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "structural scan (T1 MRAGE)",
+        "value": "MRI"
+      },
+      {
+        "evidence": "evaluation of multi-echo fMRI at various levels of acceleration",
+        "value": "fMRI"
+      }
+    ],
+    "population": "Human, healthy/control participants, ages 18–41",
+    "summary": "Multi-echo simultaneous multislice fMRI acquired on a 3T Siemens Prisma: each subject has a structural scan, field map, and seven functional runs with identical visual-motor tasks but different acquisition parameters."
+  },
+  "prompt_version": "v1"
+}

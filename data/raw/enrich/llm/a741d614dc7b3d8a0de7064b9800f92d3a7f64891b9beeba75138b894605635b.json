@@ -1,0 +1,38 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:a741d614dc7b3d8a0de7064b9800f92d3a7f64891b9beeba75138b894605635b",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds006654",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "MRI sequences",
+        "value": "MRI"
+      },
+      {
+        "evidence": "fMRI acquisitions at two different resolutions",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "eye tracking data from human subjects",
+        "value": "eye_tracking"
+      }
+    ],
+    "population": "Human; healthy control subjects, 7 subjects included",
+    "summary": "High-field 7T fMRI and eye-tracking from healthy adults repeatedly watching silent 5-minute movie clips at two resolutions, acquired to test how fMRI resolution affects machine-learning classifier accuracy."
+  },
+  "prompt_version": "v1"
+}

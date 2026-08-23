@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:e5dc3826abb9b8cea509b7367df05d9a0860fbce516a80e9869ea2ebae8af333",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Healthy / Control",
+        "label": "Healthy / Control"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience",
+      "psychiatry"
+    ],
+    "id": "openneuro:ds006407",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "raw T2-weighted structural MRI images",
+        "value": "MRI"
+      },
+      {
+        "evidence": "functional images acquired using the GRE-EPI sequence",
+        "value": "fMRI"
+      }
+    ],
+    "population": "Mice, healthy / control",
+    "summary": "Mouse brain imaging dataset with T2-weighted structural MRI and GRE-EPI functional scans from a 7T small-animal scanner with a cryogenic coil, including optogenetic stimulation during EPI runs, supporting a study of anxiety-like behavior."
+  },
+  "prompt_version": "v1"
+}

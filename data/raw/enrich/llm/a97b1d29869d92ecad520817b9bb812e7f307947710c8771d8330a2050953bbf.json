@@ -1,0 +1,31 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:a97b1d29869d92ecad520817b9bb812e7f307947710c8771d8330a2050953bbf",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds003381",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "These MRI scans",
+        "value": "MRI"
+      },
+      {
+        "evidence": "in-scanner eye tracker video",
+        "value": "eye_tracking"
+      },
+      {
+        "evidence": "\"modalities\":[\"MRI\",\"fMRI\"]",
+        "value": "fMRI"
+      }
+    ],
+    "population": "21 participants, ages 21–66",
+    "summary": "Structural MRI scans paired with in-scanner eye tracker video, used to train and validate a convolutional neural network that predicts head pose changes during scanning."
+  },
+  "prompt_version": "v1"
+}

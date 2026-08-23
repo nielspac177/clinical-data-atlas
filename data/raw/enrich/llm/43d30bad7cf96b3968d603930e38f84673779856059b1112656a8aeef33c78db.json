@@ -1,0 +1,51 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:43d30bad7cf96b3968d603930e38f84673779856059b1112656a8aeef33c78db",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "olfactory groove meningioma (OGM)",
+        "label": "olfactory groove meningioma"
+      },
+      {
+        "evidence": "brain tumor",
+        "label": "brain tumor"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "oncology",
+      "surgery",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds007345",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "high-resolution structural MRI",
+        "value": "MRI"
+      },
+      {
+        "evidence": "diffusion MRI",
+        "value": "dMRI"
+      },
+      {
+        "evidence": "resting-state functional MRI",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "associated clinical and neuropsychological assessments",
+        "value": "clinical_tabular"
+      },
+      {
+        "evidence": "clinical and neuropsychological assessments",
+        "value": "behavioral"
+      }
+    ],
+    "population": "Patients diagnosed with olfactory groove meningioma, ages 37–73, imaged preoperatively and postoperatively",
+    "summary": "Prospective single-center dataset of structural, diffusion and resting-state functional MRI with clinical and neuropsychological assessments in patients with olfactory groove meningioma, collected before and after surgery and organized in BIDS format."
+  },
+  "prompt_version": "v1"
+}

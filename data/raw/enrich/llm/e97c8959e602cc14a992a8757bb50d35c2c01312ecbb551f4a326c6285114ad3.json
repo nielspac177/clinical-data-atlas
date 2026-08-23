@@ -1,0 +1,31 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:e97c8959e602cc14a992a8757bb50d35c2c01312ecbb551f4a326c6285114ad3",
+  "model": "opus",
+  "output": {
+    "conditions": [],
+    "countries": [],
+    "domains": [
+      "neuroscience"
+    ],
+    "id": "openneuro:ds007955",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "EEG recordings (8 channels, 250 Hz)",
+        "value": "EEG"
+      },
+      {
+        "evidence": "Electrodermal Activity (EDA)",
+        "value": "physiological_signals"
+      },
+      {
+        "evidence": "Behavioral event markers corresponding to word generation and word selection",
+        "value": "behavioral"
+      }
+    ],
+    "population": "9 participants",
+    "summary": "Synchronized EEG, autonomic physiological recordings and behavioral responses collected while participants completed an emotional word association task, either selecting suggested words or generating their own. Includes semantic similarity measures between consecutive words."
+  },
+  "prompt_version": "v1"
+}

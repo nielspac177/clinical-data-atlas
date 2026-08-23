@@ -1,0 +1,45 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:3246dea77dff8307188330fc3c8fbd6f4d7a7fd128b8d6dd3c019c287648f4ce",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "98 adults with episodic migraine",
+        "label": "migraine"
+      },
+      {
+        "evidence": "35 matched healthy controls",
+        "label": "healthy controls"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds005016",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "MRI outcomes included activity of left dorsolateral prefrontal cortex",
+        "value": "MRI"
+      },
+      {
+        "evidence": "resting state connectivity of right dorsal anterior insula",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "1 DTI scan",
+        "value": "dMRI"
+      },
+      {
+        "evidence": "cognitive task network during cognitive challenge",
+        "value": "behavioral"
+      }
+    ],
+    "population": "147 participants: 112 patients (adults with episodic migraine) and 35 matched healthy controls, with up to 3 sessions each",
+    "summary": "Multimodal MRI dataset from a randomized trial comparing enhanced mindfulness-based stress reduction with stress management for headache in adults with episodic migraine, plus matched healthy controls. Includes resting state, pain, MSIT and DTI scans."
+  },
+  "prompt_version": "v1"
+}

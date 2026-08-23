@@ -1,0 +1,35 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:a0273f18ca1c9f40a0c7b2915babb8aea02392277eade29016183de10aa859f8",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "patients with brain aneurysm(s)",
+        "label": "brain aneurysm"
+      },
+      {
+        "evidence": "127 are healthy controls",
+        "label": "healthy controls"
+      }
+    ],
+    "countries": [
+      "CH"
+    ],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds003949",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Time-Of-Flight Magnetic Resonance Angiography (TOF-MRA)",
+        "value": "MRI"
+      }
+    ],
+    "population": "284 TOF-MRA subjects, of which 127 are healthy controls and 157 are patients with brain aneurysm(s)",
+    "summary": "Time-of-flight MR angiography with T1-weighted volumes from Lausanne University Hospital for brain aneurysm detection, with derivatives including skull-stripped volumes, manual aneurysm masks, bias-field-corrected images and registration quality metrics."
+  },
+  "prompt_version": "v1"
+}

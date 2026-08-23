@@ -1,0 +1,31 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:784783222c682ea7a60c8f50e2ef177305bd4a58549a5025082855a1e314f8bc",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "EEG: Depression rest",
+        "label": "Depression"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "domains": [
+      "psychiatry",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds003478",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "Resting EEG data with 122 college-age participants",
+        "value": "EEG"
+      }
+    ],
+    "population": "122 college-age participants, ages 18–24, scoring reliably high or low in Beck Depression Inventory",
+    "summary": "Resting EEG with eyes-open and eyes-closed blocks in college-age participants scoring reliably high or low on the Beck Depression Inventory; same participants as the probabilistic selection dataset."
+  },
+  "prompt_version": "v1"
+}

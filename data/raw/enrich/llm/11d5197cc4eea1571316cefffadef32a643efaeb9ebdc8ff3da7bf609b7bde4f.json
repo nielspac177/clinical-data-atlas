@@ -1,0 +1,43 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:11d5197cc4eea1571316cefffadef32a643efaeb9ebdc8ff3da7bf609b7bde4f",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "data from 53 healthy volunteers",
+        "label": "healthy volunteers"
+      }
+    ],
+    "countries": [
+      "CL"
+    ],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds004917",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "structural magnetic resonance imaging (MRI: T1w, T2w, and DWI)",
+        "value": "MRI"
+      },
+      {
+        "evidence": "MRI: T1w, T2w, and DWI",
+        "value": "dMRI"
+      },
+      {
+        "evidence": "functional MRI (fMRI) acquired during task performance",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "concurrent electrophysiological (EEG) recordings",
+        "value": "EEG"
+      }
+    ],
+    "population": "53 healthy volunteers aged between 18 and 31 years",
+    "summary": "Structural and functional MRI with concurrent EEG recorded during a decision-making task under risk and ambiguity, including inhibitory transcranial magnetic stimulation over two parietal regions and the vertex."
+  },
+  "prompt_version": "v1"
+}

@@ -1,0 +1,33 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:4e49e4bba000541de360f483bddad61f365fb62649a4536c6c271394efdc82f1",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Parkinson's Disease",
+        "label": "Parkinson's Disease"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neurology",
+      "neuroscience"
+    ],
+    "id": "openneuro:ds006224",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "containing their respective MRI data",
+        "value": "MRI"
+      },
+      {
+        "evidence": "are 'anat' and 'func' folders containing respective MRI data",
+        "value": "fMRI"
+      }
+    ],
+    "population": "Participants selected from the PPMI dataset with Parkinson's Disease",
+    "summary": "MRI data from participants selected from the PPMI dataset, organized in BIDS with three sessions per participant corresponding to Visits 1-3, converted from raw DICOMs to NIFTI."
+  },
+  "prompt_version": "v1"
+}

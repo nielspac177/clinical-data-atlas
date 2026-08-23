@@ -1,0 +1,41 @@
+{
+  "backend": "claude_cli",
+  "key": "sha256:f6d19def19518a3cf8ca4d9f9f77e6df15c443eadd46e4fd667a0c9398220499",
+  "model": "opus",
+  "output": {
+    "conditions": [
+      {
+        "evidence": "Neurodegeneration",
+        "label": "Neurodegeneration"
+      }
+    ],
+    "countries": [],
+    "domains": [
+      "neuroscience",
+      "neurology"
+    ],
+    "id": "openneuro:ds006148",
+    "in_scope": true,
+    "modalities": [
+      {
+        "evidence": "rfMRI_Harm_InvPE-On",
+        "value": "MRI"
+      },
+      {
+        "evidence": "tfMRI_Harm_PatCom_InvPE-On",
+        "value": "fMRI"
+      },
+      {
+        "evidence": "dMRI",
+        "value": "dMRI"
+      },
+      {
+        "evidence": "PET",
+        "value": "PET"
+      }
+    ],
+    "population": null,
+    "summary": "Multimodal imaging dataset investigating task-evoked negative BOLD response and neurodegeneration, with resting-state and many task fMRI runs converted to BIDS. Use requires completing and returning a data use agreement."
+  },
+  "prompt_version": "v1"
+}
