@@ -510,6 +510,26 @@ def test_name_falls_back_to_native_id_when_name_is_blank():
     assert record.name == "ds000002"
 
 
+def test_name_with_an_embedded_newline_is_collapsed_to_one_line():
+    """Live OpenNeuro `description.Name` values wrap mid-sentence -- e.g.
+    `openneuro:ds003126` -- and a name is rendered inline everywhere (graph
+    label, table cell, changelog row), so it has to stay one line."""
+    record = openneuro.normalize(
+        _minimal_envelope(
+            description={
+                "Name": "Reading-related functional activity in children with"
+                " isolated\nspelling deficits and dyslexia"
+            }
+        ),
+        harvested_at=HARVESTED_AT,
+        first_seen="2026-01-01",
+    )
+    assert record.name == (
+        "Reading-related functional activity in children with isolated "
+        "spelling deficits and dyslexia"
+    )
+
+
 def test_population_is_none_when_no_parts_are_present():
     record = openneuro.normalize(
         _minimal_envelope(metadata={"species": "", "dxStatus": "", "ages": []}),

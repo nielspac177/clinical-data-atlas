@@ -1084,7 +1084,8 @@ button.node-label:hover {
   border-bottom: 1px solid var(--border);
 }
 
-/* The date leads the entry; the body's own `###` headings sit under it. */
+/* The date leads the entry; the body's headings, demoted at build time to
+   `h3` and below, sit under it. */
 .changelog article > h2 {
   margin-top: 0;
   padding-top: 0;

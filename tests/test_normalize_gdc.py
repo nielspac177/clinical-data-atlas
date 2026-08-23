@@ -144,6 +144,14 @@ def test_id_url_and_name():
     assert result.name == "Lung Adenocarcinoma (TCGA-LUAD)"
 
 
+def test_name_with_an_embedded_newline_is_collapsed_to_one_line():
+    payload = _minimal_payload(name="Lung\nAdenocarcinoma", project_id="TEST-2")
+    result = gdc.normalize(
+        _envelope(payload), harvested_at=HARVESTED_AT, first_seen=FIRST_SEEN
+    )
+    assert result.name == "Lung Adenocarcinoma (TEST-2)"
+
+
 # ---------------------------------------------------------------------------
 # summary template + word limit
 # ---------------------------------------------------------------------------

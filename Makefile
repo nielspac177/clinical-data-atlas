@@ -12,6 +12,17 @@ SITE_URL ?= https://nielspac177.github.io/clinical-data-atlas/
 FG_VERSION := 1.80.0
 FG_URL := https://unpkg.com/3d-force-graph@$(FG_VERSION)/dist/3d-force-graph.min.js
 
+# Where `serve` roots the local server. The built site's asset and data
+# URLs are absolute (`$(BASE_URL)data/stats.json`), so serving `_site/` at
+# `/` 404s every one of them; instead `_site` is reached *through* the base
+# path, the same shape the e2e harness and GitHub Pages serve. SERVE_PATH is
+# BASE_URL stripped of its slashes ("/clinical-data-atlas/" ->
+# "clinical-data-atlas"); when it's empty (BASE_URL=/) there is nothing to
+# indirect through and `_site` is served directly.
+SERVE_PATH := $(patsubst /%,%,$(patsubst %/,%,$(BASE_URL)))
+SERVE_DIR := .cache/serve
+SERVE_ROOT := $(if $(SERVE_PATH),$(SERVE_DIR),_site)
+
 # What a failing browser test leaves behind for the CI artifact upload.
 # The directory is gitignored and pytest-playwright empties it per run.
 E2E_CAPTURE := --screenshot=only-on-failure --tracing=retain-on-failure \
@@ -34,7 +45,7 @@ harvest: ## Run harvesters (all sources, or SOURCE=<name> for one)
 normalize: ## Normalize raw records into the canonical schema
 	uv run atlas normalize $(if $(SOURCE),--source $(SOURCE))
 
-enrich: ## Classify and resolve records into data/catalog/enriched.jsonl
+enrich: ## Classify and resolve records into .cache/enriched.jsonl
 	uv run atlas enrich
 
 graph: ## Build data/graph/graph.json, search-index.json, stats.json
@@ -52,8 +63,14 @@ refresh: ## Run the full pipeline end to end (harvest -> ... -> diff)
 site: ## Build the static site into _site/
 	uv run python -m atlas.sitebuild --base-url "$(BASE_URL)" --build "$(BUILD)" --out _site && touch _site/.nojekyll && test -d _site && ! grep -rl -e '__BUILD__' -e '__BASE_URL__' -e '__SITE_URL__' -e '__UPDATED__' -e '__MAINTAINER__' -e '__REPO_URL__' --exclude-dir=vendor _site/
 
-serve: site ## Build the site, then serve _site/ locally on $(PORT)
-	uv run python -m http.server $(PORT) --directory _site
+serve: site ## Build the site, then serve it locally under BASE_URL on PORT
+	@if [ -n "$(SERVE_PATH)" ]; then \
+	  rm -rf "$(SERVE_DIR)"; \
+	  mkdir -p "$(dir $(SERVE_DIR)/$(SERVE_PATH))"; \
+	  ln -s "$(abspath _site)" "$(SERVE_DIR)/$(SERVE_PATH)"; \
+	fi
+	@echo "Serving _site/ at http://127.0.0.1:$(PORT)$(BASE_URL)"
+	uv run python -m http.server $(PORT) --directory $(SERVE_ROOT)
 
 test: ## Run both unit suites, Python and JS (no network, no browser)
 	uv run pytest -q -m "not live and not e2e"

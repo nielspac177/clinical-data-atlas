@@ -697,3 +697,142 @@ def test_failed_harvest_reports_what_it_managed_to_write(http_fixture, tmp_path)
     assert "disk full" in result.error
     assert result.written == 3
     assert result.listed == 3
+
+
+# ---------------------------------------------------------------------------
+# case-insensitive url-slug join (task 4.4b)
+# ---------------------------------------------------------------------------
+
+
+def test_match_by_url_slug_ignores_the_case_of_the_slug():
+    """TCIA spells a handful of landing-page slugs in the collection's own
+    mixed case (`.../collection/PSMA-PET-CT-Lesions/`). A url slug is
+    case-insensitive, so rule (c) must be too -- keying the index on the
+    url's spelling while looking it up with `io.slugify(name)` made those
+    DOIs look unmatched, and they came back as *gated* records landing on
+    the very raw-store key the NBIA collection already held."""
+    record = _dc(
+        "10.7937/r7ep-3x37",
+        title="A whole-body PSMA-PET/CT dataset with annotated tumor lesions",
+        url="https://www.cancerimagingarchive.net/collection/PSMA-PET-CT-Lesions/",
+    )
+    matches = tcia.match_collections(["PSMA-PET-CT-Lesions"], [record])
+
+    assert matches["PSMA-PET-CT-Lesions"]["attributes"]["doi"] == "10.7937/r7ep-3x37"
+
+
+def test_a_mixed_case_slug_is_not_also_a_gated_collection():
+    """The other half of the same bug: the DOI describes a collection NBIA
+    *does* list, so it must not also produce a gated record."""
+    record = _dc(
+        "10.7937/r7ep-3x37",
+        title="A whole-body PSMA-PET/CT dataset with annotated tumor lesions",
+        url="https://www.cancerimagingarchive.net/collection/PSMA-PET-CT-Lesions/",
+    )
+    assert tcia.gated_records(["PSMA-PET-CT-Lesions"], [record]) == {}
+
+
+def test_match_by_url_slug_still_matches_an_underscored_collection_name():
+    """`io.slugify` keeps `_` and `.`, and TCIA spells them the same way on
+    both sides (`Anti-PD-1_Lung` <-> `.../collection/anti-pd-1_lung/`), so
+    the fix normalises both sides with that one function rather than
+    inventing a looser key that could collide sibling collections."""
+    record = _dc(
+        "10.7937/underscore",
+        title="Unrelated title",
+        url="https://www.cancerimagingarchive.net/collection/anti-pd-1_lung/",
+    )
+    matches = tcia.match_collections(["Anti-PD-1_Lung"], [record])
+
+    assert matches["Anti-PD-1_Lung"]["attributes"]["doi"] == "10.7937/underscore"
+
+
+def _page_with_a_mixed_case_slug() -> dict:
+    """The fixture DataCite page with 4D-Lung's landing page respelled in
+    the collection's own case. That record matches on rule (c) alone -- no
+    alternative title, no parenthesised suffix -- which is exactly the
+    shape of the live `PSMA-PET-CT-Lesions` record."""
+    page = fixture("datacite_page.json")
+    for record in page["data"]:
+        if record["attributes"]["doi"] == "10.7937/k9/tcia.2016.eln8ygle":
+            record["attributes"]["url"] = (
+                "https://www.cancerimagingarchive.net/collection/4D-Lung/"
+            )
+    return page
+
+
+def test_harvest_joins_a_mixed_case_slug_to_its_nbia_collection(http_fixture, tmp_path):
+    http_fixture(datacite_pages=[_page_with_a_mixed_case_slug()])
+    store = RawStore("tcia", root=tmp_path)
+
+    result = tcia.TciaHarvester(store=store).harvest()
+
+    assert result.status == "ok"
+    payload = store.load("4D-Lung")["payload"]
+    assert payload["nbia"]["collection"] == "4D-Lung"
+    assert payload["datacite"]["doi"] == "10.7937/k9/tcia.2016.eln8ygle"
+
+
+def test_harvest_writes_no_gated_duplicate_for_a_mixed_case_slug(
+    http_fixture, tmp_path
+):
+    http_fixture(datacite_pages=[_page_with_a_mixed_case_slug()])
+    store = RawStore("tcia", root=tmp_path)
+
+    result = tcia.TciaHarvester(store=store).harvest()
+
+    assert sorted(store.load_all()) == sorted(COLLECTIONS + GATED)
+    assert result.listed == len(COLLECTIONS) + len(GATED)
+    assert result.error is None
+
+
+def _sabotage_join(monkeypatch, slug: str) -> None:
+    """Make `join` hand `harvest` a gated record under `slug` whatever the
+    matching rules decided -- the failure mode the guard exists for."""
+    real_join = tcia.join
+
+    def sabotaged(collections, records):
+        matched, gated = real_join(collections, records)
+        gated[slug] = _dc(
+            "10.7937/sabotage",
+            url=f"https://www.cancerimagingarchive.net/collection/{slug}/",
+        )
+        return matched, gated
+
+    monkeypatch.setattr(tcia, "join", sabotaged)
+
+
+def test_a_gated_record_never_overwrites_an_nbia_collection(
+    http_fixture, tmp_path, monkeypatch
+):
+    """Belt and braces for the clobber this fix removes: even if the join
+    hands back a gated slug that is an NBIA collection's native id, the
+    NBIA record survives and the run reports the collision."""
+    _sabotage_join(monkeypatch, "4D-Lung")
+    http_fixture()
+    store = RawStore("tcia", root=tmp_path)
+
+    result = tcia.TciaHarvester(store=store).harvest()
+
+    assert result.status == "ok"
+    payload = store.load("4D-Lung")["payload"]
+    assert payload["nbia"]["collection"] == "4D-Lung"
+    assert payload["datacite"]["doi"] == "10.7937/k9/tcia.2016.eln8ygle"
+    assert "4D-Lung" in (result.error or "")
+
+
+def test_a_gated_slug_differing_only_in_case_does_not_fail_the_harvest(
+    http_fixture, tmp_path, monkeypatch
+):
+    """`RawStore` refuses two native ids that share a filename
+    case-insensitively, so an unguarded `4d-lung` gated record would abort
+    the whole run rather than merely corrupt one record."""
+    _sabotage_join(monkeypatch, "4d-lung")
+    http_fixture()
+    store = RawStore("tcia", root=tmp_path)
+
+    result = tcia.TciaHarvester(store=store).harvest()
+
+    assert result.status == "ok"
+    assert store.load("4D-Lung")["payload"]["nbia"]["collection"] == "4D-Lung"
+    assert "4d-lung" in (result.error or "")

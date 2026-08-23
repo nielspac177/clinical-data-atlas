@@ -64,12 +64,16 @@ def _summary(payload: dict, abstract_text: str) -> str:
     the abstract. If even the abstract is empty, the record's own title
     is the last resort -- never an empty string, which `Record.summary`
     (min_length=1) would reject outright.
+
+    The abstract branch is single-spaced by `io.first_words`; the other
+    two are used as the source wrote them, so they go through
+    `common.clean_title` to match.
     """
-    short = (payload.get("short_description") or "").strip()
+    short = common.clean_title(payload.get("short_description"))
     if short and word_count(short) <= _SUMMARY_MAX_WORDS:
         return short
     from_abstract = io.first_words(abstract_text, _SUMMARY_MAX_WORDS)
-    return from_abstract or (payload.get("title") or "").strip()
+    return from_abstract or common.clean_title(payload.get("title"))
 
 
 def normalize(
@@ -108,7 +112,7 @@ def normalize(
         id=f"{SOURCE}:{slug}",
         source=SOURCE,
         source_native_id=native_id,
-        name=payload["title"],
+        name=common.clean_title(payload["title"]),
         summary=_summary(payload, abstract_text),
         url=payload["source_url"],
         dataset_doi=common.clean_doi(
