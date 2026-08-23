@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark light" />
+    <title>What&rsquo;s new — Clinical Data Atlas</title>
+    <meta
+      name="description"
+      content="Every monthly refresh of the Clinical Data Atlas, as a human-readable diff: datasets added, updated, and removed, per source."
+    />
+    <link rel="canonical" href="__SITE_URL__whats-new.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Clinical Data Atlas" />
+    <meta property="og:title" content="What&rsquo;s new — Clinical Data Atlas" />
+    <meta
+      property="og:description"
+      content="Every monthly refresh of the atlas, as a human-readable diff."
+    />
+    <meta property="og:url" content="__SITE_URL__whats-new.html" />
+    <meta property="og:image" content="__SITE_URL__assets/img/og.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="What&rsquo;s new — Clinical Data Atlas" />
+    <meta
+      name="twitter:description"
+      content="Every monthly refresh of the atlas, as a human-readable diff."
+    />
+    <meta name="twitter:image" content="__SITE_URL__assets/img/og.svg" />
+    <link rel="icon" href="assets/img/favicon.svg?v=__BUILD__" type="image/svg+xml" />
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("cda-theme");
+          if (t === "dark" || t === "light") {
+            document.documentElement.setAttribute("data-theme", t);
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="stylesheet" href="assets/css/tokens.css?v=__BUILD__" />
+    <link rel="stylesheet" href="assets/css/base.css?v=__BUILD__" />
+    <link rel="stylesheet" href="assets/css/layout.css?v=__BUILD__" />
+    <link rel="stylesheet" href="assets/css/components.css?v=__BUILD__" />
+  </head>
+  <body class="page-content">
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+      <a class="wordmark" href="index.html">
+        <svg
+          class="wordmark-mark"
+          width="20"
+          height="20"
+          viewBox="0 0 32 32"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <g stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none">
+            <path d="M16 8 L7 23" />
+            <path d="M16 8 L25 23" />
+            <path d="M7 23 L25 23" />
+          </g>
+          <g fill="currentColor">
+            <circle cx="16" cy="8" r="4.4" />
+            <circle cx="7" cy="23" r="3.6" />
+            <circle cx="25" cy="23" r="3.6" />
+          </g>
+        </svg>
+        <span class="wordmark-text">Clinical Data Atlas</span>
+      </a>
+
+      <div class="header-mid">
+        <nav class="site-nav" aria-label="Primary">
+          <a href="index.html">Graph</a>
+          <a href="table.html">Table</a>
+          <a href="whats-new.html" aria-current="page">What&rsquo;s new</a>
+          <a href="about.html">About</a>
+        </nav>
+
+        <form class="search header-search" role="search" action="table.html" method="get">
+          <svg class="search-icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+            <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+              <circle cx="7" cy="7" r="4.5" />
+              <path d="M10.5 10.5 L14 14" />
+            </g>
+          </svg>
+          <label class="visually-hidden" for="search-input">Search datasets</label>
+          <input
+            id="search-input"
+            class="search-input"
+            type="search"
+            name="q"
+            placeholder="Search datasets  /"
+            autocomplete="off"
+            autocapitalize="off"
+            spellcheck="false"
+          />
+        </form>
+      </div>
+
+      <div class="header-end">
+        <button id="theme-toggle" class="icon-btn" type="button" aria-pressed="false">
+          <svg class="icon-dark" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path
+              fill="currentColor"
+              d="M20.7 14.6A8.6 8.6 0 0 1 9.4 3.3 8.9 8.9 0 1 0 20.7 14.6Z"
+            />
+          </svg>
+          <svg class="icon-light" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+              <circle cx="12" cy="12" r="4.2" />
+              <path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.2 5.2l1.4 1.4M17.4 17.4l1.4 1.4M18.8 5.2l-1.4 1.4M6.6 17.4l-1.4 1.4" />
+            </g>
+          </svg>
+          <span class="visually-hidden">Light theme</span>
+        </button>
+
+        <a class="icon-btn github-link" href="__REPO_URL__" rel="noopener">
+          <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+            <path
+              fill="currentColor"
+              d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38v-1.34C3.81 14.35 3.35 12.9 3.35 12.9c-.36-.92-.88-1.16-.88-1.16-.72-.49.05-.48.05-.48.8.06 1.22.82 1.22.82.71 1.21 1.86.86 2.31.66.07-.52.28-.86.5-1.06-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.01.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 4 0c1.53-1.03 2.2-.82 2.2-.82.44 1.11.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48v2.2c0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"
+            />
+          </svg>
+          <span class="visually-hidden">Source and issues on GitHub</span>
+        </a>
+      </div>
+    </header>
+
+    <main id="main" class="content-main" tabindex="-1">
+      <div class="page-head">
+        <p class="eyebrow">Changelog</p>
+        <h1>What&rsquo;s new</h1>
+        <p class="lede">
+          The atlas refreshes monthly. Every run writes a diff of what each
+          source added, changed, and dropped; a human reviews and merges it,
+          and merging is what publishes this site. The twelve most recent
+          runs are below.
+        </p>
+      </div>
+
+      <div class="changelog">
+        <!--CHANGELOG:START-->
+        <p class="muted">The changelog is rendered at build time.</p>
+        <!--CHANGELOG:END-->
+      </div>
+
+      <p class="muted">
+        Older entries, and the raw markdown for every run, live in
+        <a
+          href="__REPO_URL__/tree/main/data/changelog"
+          rel="noopener"
+          >data/changelog</a
+        >
+        in the repository.
+      </p>
+    </main>
+
+    <footer class="site-footer">
+      <ul>
+        <li>Metadata only</li>
+        <li>
+          Catalog data
+          <a href="https://creativecommons.org/licenses/by/4.0/" rel="license noopener">CC BY 4.0</a>
+        </li>
+        <li>Updated __UPDATED__</li><!--?updated-->
+        <li>Not yet published</li><!--?not-updated-->
+        <li>
+          <a
+            href="__REPO_URL__/issues/new?template=propose-dataset.yml"
+            rel="noopener"
+            >Propose a dataset</a
+          >
+        </li>
+        <li><a href="about.html#cite">Cite</a></li>
+      </ul>
+    </footer>
+
+    <div id="a11y-live" class="visually-hidden" role="status" aria-live="polite"></div>
+
+    <script type="module" src="assets/js/app-page.js?v=__BUILD__"></script>
+  </body>
+</html>

@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark light" />
+    <title>About &amp; methods — Clinical Data Atlas</title>
+    <meta
+      name="description"
+      content="What the Clinical Data Atlas is and isn't, which sources it harvests and how, the canonical schema and access tiers, how to cite it, and how to propose or correct a dataset."
+    />
+    <link rel="canonical" href="__SITE_URL__about.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Clinical Data Atlas" />
+    <meta property="og:title" content="About &amp; methods — Clinical Data Atlas" />
+    <meta
+      property="og:description"
+      content="What the atlas is and isn't, its sources and methods, the schema, and how to cite or contribute."
+    />
+    <meta property="og:url" content="__SITE_URL__about.html" />
+    <meta property="og:image" content="__SITE_URL__assets/img/og.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="About &amp; methods — Clinical Data Atlas" />
+    <meta
+      name="twitter:description"
+      content="What the atlas is and isn't, its sources and methods, the schema, and how to cite or contribute."
+    />
+    <meta name="twitter:image" content="__SITE_URL__assets/img/og.svg" />
+    <link rel="icon" href="assets/img/favicon.svg?v=__BUILD__" type="image/svg+xml" />
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("cda-theme");
+          if (t === "dark" || t === "light") {
+            document.documentElement.setAttribute("data-theme", t);
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="stylesheet" href="assets/css/tokens.css?v=__BUILD__" />
+    <link rel="stylesheet" href="assets/css/base.css?v=__BUILD__" />
+    <link rel="stylesheet" href="assets/css/layout.css?v=__BUILD__" />
+    <link rel="stylesheet" href="assets/css/components.css?v=__BUILD__" />
+  </head>
+  <body class="page-content">
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+      <a class="wordmark" href="index.html">
+        <svg
+          class="wordmark-mark"
+          width="20"
+          height="20"
+          viewBox="0 0 32 32"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <g stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none">
+            <path d="M16 8 L7 23" />
+            <path d="M16 8 L25 23" />
+            <path d="M7 23 L25 23" />
+          </g>
+          <g fill="currentColor">
+            <circle cx="16" cy="8" r="4.4" />
+            <circle cx="7" cy="23" r="3.6" />
+            <circle cx="25" cy="23" r="3.6" />
+          </g>
+        </svg>
+        <span class="wordmark-text">Clinical Data Atlas</span>
+      </a>
+
+      <div class="header-mid">
+        <nav class="site-nav" aria-label="Primary">
+          <a href="index.html">Graph</a>
+          <a href="table.html">Table</a>
+          <a href="whats-new.html">What&rsquo;s new</a>
+          <a href="about.html" aria-current="page">About</a>
+        </nav>
+
+        <form class="search header-search" role="search" action="table.html" method="get">
+          <svg class="search-icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+            <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+              <circle cx="7" cy="7" r="4.5" />
+              <path d="M10.5 10.5 L14 14" />
+            </g>
+          </svg>
+          <label class="visually-hidden" for="search-input">Search datasets</label>
+          <input
+            id="search-input"
+            class="search-input"
+            type="search"
+            name="q"
+            placeholder="Search datasets  /"
+            autocomplete="off"
+            autocapitalize="off"
+            spellcheck="false"
+          />
+        </form>
+      </div>
+
+      <div class="header-end">
+        <button id="theme-toggle" class="icon-btn" type="button" aria-pressed="false">
+          <svg class="icon-dark" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path
+              fill="currentColor"
+              d="M20.7 14.6A8.6 8.6 0 0 1 9.4 3.3 8.9 8.9 0 1 0 20.7 14.6Z"
+            />
+          </svg>
+          <svg class="icon-light" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+              <circle cx="12" cy="12" r="4.2" />
+              <path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.2 5.2l1.4 1.4M17.4 17.4l1.4 1.4M18.8 5.2l-1.4 1.4M6.6 17.4l-1.4 1.4" />
+            </g>
+          </svg>
+          <span class="visually-hidden">Light theme</span>
+        </button>
+
+        <a class="icon-btn github-link" href="__REPO_URL__" rel="noopener">
+          <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+            <path
+              fill="currentColor"
+              d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38v-1.34C3.81 14.35 3.35 12.9 3.35 12.9c-.36-.92-.88-1.16-.88-1.16-.72-.49.05-.48.05-.48.8.06 1.22.82 1.22.82.71 1.21 1.86.86 2.31.66.07-.52.28-.86.5-1.06-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.01.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 4 0c1.53-1.03 2.2-.82 2.2-.82.44 1.11.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48v2.2c0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"
+            />
+          </svg>
+          <span class="visually-hidden">Source and issues on GitHub</span>
+        </a>
+      </div>
+    </header>
+
+    <main id="main" class="content-main" tabindex="-1">
+      <div class="page-head">
+        <p class="eyebrow">About &amp; methods</p>
+        <h1>A map of the clinical data landscape</h1>
+        <p class="lede">
+          The Clinical Data Atlas is a living catalog of open and gated
+          clinical and neuroscience datasets, described in one schema,
+          rebuilt from its sources every month, and published from a single
+          public repository.
+        </p>
+      </div>
+
+      <div class="prose">
+        <h2 id="what-it-is">What this is</h2>
+        <p>
+          Finding clinical data is mostly a memory problem: the datasets exist,
+          but they are scattered across repositories, journal descriptors and
+          institutional portals, each with its own vocabulary for the same
+          ideas. The atlas normalizes all of it into one record shape &mdash;
+          what the dataset contains, which modalities and conditions it covers,
+          who collected it, where, when, and on what terms you can get it
+          &mdash; and then gives you two ways to move through the result: a 3D
+          graph of how sources, modalities, conditions and institutions
+          connect, and a filterable table over the same records.
+        </p>
+        <p>
+          The data files are the product; this site is a view of them. Every
+          record, the raw responses it was built from, and the code that did
+          the building live in the
+          <a href="__REPO_URL__" rel="noopener"
+            >repository</a
+          >, so any number in the graph can be traced back to the API response
+          that produced it.
+        </p>
+
+        <h2 id="what-it-isnt">What this isn&rsquo;t &mdash; metadata only</h2>
+        <ul>
+          <li>
+            <strong>It never hosts or redistributes dataset contents.</strong>
+            No images, no waveforms, no patient records &mdash; not even copies
+            of small ones. Each entry links out to the source&rsquo;s own page,
+            and that is where access happens.
+          </li>
+          <li>
+            <strong>It is not an access broker.</strong> Gated resources are
+            described from their public documentation; the atlas cannot grant,
+            speed up, or vouch for access to any of them.
+          </li>
+          <li>
+            <strong>It is not a review or a ranking.</strong> Inclusion is not
+            an endorsement, and the atlas makes no claim about a dataset&rsquo;s
+            quality, validity, or fitness for your question.
+          </li>
+          <li>
+            <strong>It is not a substitute for the source.</strong> Always read
+            a dataset&rsquo;s own documentation, license, and data use agreement
+            before planning work around it.
+          </li>
+        </ul>
+
+        <h2 id="sources">Sources &amp; methods</h2>
+        <p>
+          The pipeline runs in four stages: <em>harvest</em> (talk to a
+          source&rsquo;s API and cache the raw response), <em>normalize</em>
+          (map that response into the canonical schema), <em>enrich</em>
+          (classify domains, modalities and conditions, write the short
+          summary, resolve institutions and de-duplicate), and <em>graph</em>
+          (derive the nodes, edges and search index this site loads).
+        </p>
+        <p>The current release harvests four repositories:</p>
+        <ul>
+          <li>
+            <strong>OpenNeuro</strong> &mdash; public GraphQL API; BIDS
+            neuroimaging datasets with their snapshot metadata.
+          </li>
+          <li>
+            <strong>PhysioNet</strong> &mdash; published-projects API;
+            physiological signal, waveform and clinical databases, with the
+            access policy the project itself declares.
+          </li>
+          <li>
+            <strong>NCI Genomic Data Commons</strong> &mdash; projects API;
+            cancer genomics programs with case and file summaries.
+          </li>
+          <li>
+            <strong>The Cancer Imaging Archive</strong> &mdash; the public NBIA
+            services for collections, modalities and body parts, joined to
+            DataCite for descriptions, licenses and DOIs.
+          </li>
+        </ul>
+        <p>
+          Journal data descriptors and a hand-written curated tier (for
+          resources with no API at all &mdash; NHANES, ADNI, PPMI and the like)
+          come in later phases.
+        </p>
+        <p>
+          Every request identifies itself with a descriptive User-Agent and a
+          contact address, is rate-limited per host, backs off on errors, and
+          respects <code>robots.txt</code>; a source that disallows automated
+          access is documented rather than scraped. Raw responses are committed
+          to the repository, so each record carries real provenance: how it was
+          harvested, the date it was first seen, and the date a refresh last
+          confirmed it still exists.
+        </p>
+        <p>
+          Enrichment is rules-first, with an LLM used only where the rules
+          can&rsquo;t decide &mdash; classification and the short summary. Each
+          record records the origin of each enriched field, and no value is ever
+          invented: if a source doesn&rsquo;t report a sample size, the field is
+          explicitly null rather than guessed. Per-source endpoint notes,
+          quirks, and verification dates are kept in
+          <a
+            href="__REPO_URL__/blob/main/docs/sources.md"
+            rel="noopener"
+            >docs/sources.md</a
+          >.
+        </p>
+
+        <h2 id="schema">The schema</h2>
+        <p>
+          One record shape covers every source. It is defined once as a
+          <a
+            href="__REPO_URL__/blob/main/atlas/schema.py"
+            rel="noopener"
+            >pydantic model</a
+          >, and the human and machine-readable copies
+          (<a
+            href="__REPO_URL__/blob/main/docs/schema.md"
+            rel="noopener"
+            >docs/schema.md</a
+          >,
+          <a
+            href="__REPO_URL__/blob/main/docs/schema.json"
+            rel="noopener"
+            >docs/schema.json</a
+          >) are generated from it, so they cannot drift.
+        </p>
+
+        <h3>Seventeen clinical domains</h3>
+        <p>
+          Domains are the color axis of the graph. A dataset can carry more
+          than one; <code>other</code> is a deliberate catch-all rather than a
+          dumping ground for anything unclassified.
+        </p>
+        <ul class="chip-list">
+          <li><span class="chip" data-domain="neurology">Neurology</span></li>
+          <li><span class="chip" data-domain="psychiatry">Psychiatry</span></li>
+          <li><span class="chip" data-domain="neuroscience">Neuroscience</span></li>
+          <li><span class="chip" data-domain="cardiology">Cardiology</span></li>
+          <li><span class="chip" data-domain="oncology">Oncology</span></li>
+          <li><span class="chip" data-domain="pulmonology">Pulmonology</span></li>
+          <li><span class="chip" data-domain="critical_care">Critical care</span></li>
+          <li><span class="chip" data-domain="surgery">Surgery</span></li>
+          <li><span class="chip" data-domain="pediatrics">Pediatrics</span></li>
+          <li><span class="chip" data-domain="obstetrics_gynecology">Obstetrics &amp; gynecology</span></li>
+          <li><span class="chip" data-domain="infectious_disease">Infectious disease</span></li>
+          <li><span class="chip" data-domain="endocrinology_metabolism">Endocrinology &amp; metabolism</span></li>
+          <li><span class="chip" data-domain="gastroenterology_hepatology">Gastroenterology &amp; hepatology</span></li>
+          <li><span class="chip" data-domain="nephrology_urology">Nephrology &amp; urology</span></li>
+          <li><span class="chip" data-domain="musculoskeletal">Musculoskeletal</span></li>
+          <li><span class="chip" data-domain="public_health">Public health</span></li>
+          <li><span class="chip" data-domain="other">Other</span></li>
+        </ul>
+        <p>
+          Alongside them: 33 modalities (imaging, electrophysiology, omics,
+          records and tabular data), conditions resolved against MeSH where
+          possible, institutions resolved against ROR, countries as ISO
+          two-letter codes, species, sample size with its unit, years of
+          collection, license, authors and related papers.
+        </p>
+
+        <h3 id="access">Five access tiers</h3>
+        <p>
+          <code>access</code> is the <em>least</em>-restrictive tier at which
+          substantive data is usable. Where a source offers several paths, the
+          extra tiers are listed separately and explained in a note; where its
+          own signals conflict, the atlas resolves to the
+          <em>more</em> restrictive reading.
+        </p>
+        <dl class="tiers">
+          <div>
+            <dt><span class="badge" data-access="open">Open</span></dt>
+            <dd>
+              Downloadable with no account and no agreement beyond the
+              dataset&rsquo;s license.
+            </dd>
+          </div>
+          <div>
+            <dt><span class="badge" data-access="registration">Registration</span></dt>
+            <dd>
+              A free account, or a click-through agreement, and then immediate
+              access.
+            </dd>
+          </div>
+          <div>
+            <dt><span class="badge" data-access="credentialed">Credentialed</span></dt>
+            <dd>
+              A verified identity plus human-subjects training and a signed data
+              use agreement &mdash; PhysioNet&rsquo;s credentialed databases are
+              the canonical example.
+            </dd>
+          </div>
+          <div>
+            <dt><span class="badge" data-access="application">Application</span></dt>
+            <dd>
+              A written request reviewed by a data access committee, which can
+              decline. Most controlled-access genomic and cohort data sits here.
+            </dd>
+          </div>
+          <div>
+            <dt><span class="badge" data-access="purchase">Purchase</span></dt>
+            <dd>A fee or a purchased license, sometimes on top of an agreement.</dd>
+          </div>
+        </dl>
+
+        <h2 id="cite">How to cite</h2>
+        <p>
+          If the atlas helped you find or characterize datasets, cite it
+          &mdash; and cite each dataset you actually use in the way its own
+          source asks. The
+          <a
+            href="__REPO_URL__/blob/main/CITATION.cff"
+            rel="noopener"
+            >CITATION.cff</a
+          >
+          file in the repository is the authoritative, machine-readable version
+          and carries the current release number.
+        </p>
+        <div class="copy-row">
+          <p class="eyebrow" id="bibtex-label">BibTeX</p>
+          <button class="btn btn-quiet" type="button" data-copy="#bibtex">Copy</button>
+        </div>
+        <pre id="bibtex" aria-labelledby="bibtex-label" tabindex="0"><code>@software{clinical_data_atlas,
+  author  = {__MAINTAINER__},
+  title   = {Clinical Data Atlas: a living catalog of open and gated
+             clinical and neuroscience datasets},
+  year    = {2026},
+  url     = {__SITE_URL__},
+  version = {__BUILD__},
+  urldate = {__UPDATED__},<!--?updated-->
+  note    = {Catalog metadata licensed CC BY 4.0}
+}</code></pre>
+
+        <h2 id="contribute">Propose a dataset, or correct one</h2>
+        <p>
+          Missing datasets and wrong fields are both bugs, and both are fixed
+          the same way: open an issue. The forms are schema-shaped, so what you
+          fill in maps directly onto a record.
+        </p>
+        <ul>
+          <li>
+            <a
+              href="__REPO_URL__/issues/new?template=propose-dataset.yml"
+              rel="noopener"
+              >Propose a dataset</a
+            >
+            &mdash; for a resource the atlas doesn&rsquo;t know about yet.
+          </li>
+          <li>
+            <a
+              href="__REPO_URL__/issues/new?template=dataset-edit.yml"
+              rel="noopener"
+              >Correct a record</a
+            >
+            &mdash; for a dataset that is here but described wrongly, or has
+            moved, or is gone.
+          </li>
+        </ul>
+        <p>
+          Corrections that belong upstream get fixed in the harvester or the
+          normalization rules rather than by hand-editing the catalog, so the
+          fix survives the next refresh.
+        </p>
+
+        <h2 id="licenses">Licenses</h2>
+        <ul>
+          <li>
+            <strong>Code</strong> &mdash; the pipeline and this site are
+            <a href="__REPO_URL__/blob/main/LICENSE" rel="noopener"
+              >MIT</a
+            >.
+          </li>
+          <li>
+            <strong>Catalog metadata</strong> &mdash; the records under
+            <code>data/</code> are
+            <a href="https://creativecommons.org/licenses/by/4.0/" rel="license noopener"
+              >CC BY 4.0</a
+            >. Reuse them freely, with attribution, so provenance stays attached.
+          </li>
+          <li>
+            <strong>The datasets themselves</strong> &mdash; not the
+            atlas&rsquo;s to license. A record&rsquo;s <code>license</code>
+            field reports what its source states; it grants nothing and can be
+            out of date. The source&rsquo;s own terms always govern.
+          </li>
+        </ul>
+
+        <h2 id="disclaimer">Disclaimer</h2>
+        <p>
+          This catalog is assembled automatically from third-party APIs and
+          public documentation, with machine assistance for classification and
+          summaries. It will contain records that are incomplete, stale, or
+          wrong. Verify anything that matters against the source before you
+          rely on it &mdash; especially access terms, licensing, and anything
+          bearing on human-subjects protections.
+        </p>
+        <p>
+          The atlas is an independent project. It is not affiliated with,
+          endorsed by, or speaking for any of the repositories, institutions or
+          funders it catalogs, and nothing here is legal, regulatory, or
+          clinical advice.
+        </p>
+
+        <h2 id="accessibility">Keyboard use &amp; accessibility</h2>
+        <p>
+          <strong
+            >The graph is a visual complement; search and the Table view are
+            the keyboard-accessible path</strong
+          >
+          to the same records. Nothing is reachable only through the 3D scene:
+          every dataset the graph can show is in the table, with the same
+          fields and the same detail panel.
+        </p>
+        <ul>
+          <li><kbd>/</kbd> focuses the search box from anywhere on the page.</li>
+          <li>
+            <kbd>Esc</kbd> closes the search results, then the detail panel.
+          </li>
+          <li>
+            The theme follows your operating system by default; the toggle in
+            the header overrides it and is remembered on this device.
+          </li>
+          <li>
+            Counts and filter results are announced in a polite live region, so
+            a screen reader hears what changed without losing your place.
+          </li>
+          <li>
+            Motion is reduced automatically when your system asks for it: camera
+            moves become cuts.
+          </li>
+        </ul>
+        <p>
+          Found something that doesn&rsquo;t work with your setup? That is a bug
+          worth reporting &mdash;
+          <a href="__REPO_URL__/issues" rel="noopener"
+            >open an issue</a
+          >.
+        </p>
+
+        <h2 id="maintainer">Who maintains it</h2>
+        <p>
+          The atlas is maintained by __MAINTAINER__. The full brief, the design
+          spec, and the implementation plan are all in the repository &mdash;
+          the project is meant to be reproducible by someone else, not just
+          readable.
+        </p>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <ul>
+        <li>Metadata only</li>
+        <li>
+          Catalog data
+          <a href="https://creativecommons.org/licenses/by/4.0/" rel="license noopener">CC BY 4.0</a>
+        </li>
+        <li>Updated __UPDATED__</li><!--?updated-->
+        <li>Not yet published</li><!--?not-updated-->
+        <li>
+          <a
+            href="__REPO_URL__/issues/new?template=propose-dataset.yml"
+            rel="noopener"
+            >Propose a dataset</a
+          >
+        </li>
+        <li><a href="about.html#cite">Cite</a></li>
+      </ul>
+    </footer>
+
+    <div id="a11y-live" class="visually-hidden" role="status" aria-live="polite"></div>
+
+    <script type="module" src="assets/js/app-page.js?v=__BUILD__"></script>
+  </body>
+</html>
