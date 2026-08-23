@@ -1,1 +1,1 @@
-"""Enrichment: LLM classification, summaries, MeSH/ROR resolution, dedupe."""
+"""Enrichment stage: rules, LLM classification, MeSH/ROR resolution, dedupe/merge."""

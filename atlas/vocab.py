@@ -123,6 +123,18 @@ SOURCES: tuple[str, ...] = (
     "curated",
 )
 
+# The subset of `SOURCES` that are journals -- article listings whose
+# "records" are papers describing data, not repository dataset entries.
+# Every other source is a data repository, whose own listing is better
+# evidence that a record is a dataset than any classifier's opinion; the
+# enrich stage derives its repository set as `SOURCES - JOURNAL_SOURCES`,
+# so a source appended to `SOURCES` later defaults to repository
+# semantics rather than being silently treated as a journal.
+JOURNAL_SOURCES: tuple[str, ...] = (
+    "scientific_data",
+    "data_in_brief",
+)
+
 # Lifecycle status of a catalog record (3).
 RECORD_STATUS: tuple[str, ...] = (
     "active",
