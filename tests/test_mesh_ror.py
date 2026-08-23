@@ -110,7 +110,67 @@ def test_mesh_resolve_alias_path_exact_hit(tmp_path, monkeypatch):
     assert len(calls) == 2
 
 
+def test_mesh_resolve_identity_alias_skips_redundant_exact_lookup(
+    tmp_path, monkeypatch
+):
+    """CONDITION_ALIASES maps several labels to themselves (e.g.
+    "stroke" -> "stroke", ~30% of the table). resolve() must not
+    re-issue the exact lookup that step 1 already tried and failed just
+    because the alias happens to be the same string -- that would be a
+    guaranteed-duplicate network call."""
+    calls = []
+
+    def fake(url, *, params=None, **_kwargs):
+        calls.append(dict(params))
+        if params["match"] == "exact":
+            return []
+        assert params["match"] == "startswith"
+        return [{"resource": "http://id.nlm.nih.gov/mesh/D020521", "label": "Stroke"}]
+
+    monkeypatch.setattr(mesh.http, "get_json", fake)
+    result = mesh.resolve("stroke", cache_path=tmp_path / "mesh.json")
+    assert result == "D020521"
+    # exact + startswith only -- not a third, redundant exact(alias) call.
+    assert len(calls) == 2
+    assert [c["match"] for c in calls] == ["exact", "startswith"]
+    assert [c["label"] for c in calls] == ["stroke", "stroke"]
+
+
+def test_mesh_resolve_startswith_uses_alias_term_when_alias_exact_fails(
+    tmp_path, monkeypatch
+):
+    """Pins the alias-vs-label choice for the startswith fallback: once
+    both exact(label) and exact(alias) have failed, startswith must run
+    against the ALIAS ("adenocarcinoma of lung", the cleaner MeSH-shaped
+    term) rather than the raw source label."""
+    calls = []
+
+    def fake(url, *, params=None, **_kwargs):
+        calls.append(dict(params))
+        if params["match"] == "exact":
+            return []  # neither the raw label nor its alias exact-matches
+        assert params["match"] == "startswith"
+        return [
+            {
+                "resource": "http://id.nlm.nih.gov/mesh/D002289",
+                "label": "Adenocarcinoma of Lung",
+            }
+        ]
+
+    monkeypatch.setattr(mesh.http, "get_json", fake)
+    result = mesh.resolve("lung adenocarcinoma", cache_path=tmp_path / "mesh.json")
+    assert result == "D002289"
+    assert [c["match"] for c in calls] == ["exact", "exact", "startswith"]
+    assert [c["label"] for c in calls] == [
+        "lung adenocarcinoma",
+        "adenocarcinoma of lung",
+        "adenocarcinoma of lung",  # startswith pinned to the ALIAS, not the label
+    ]
+
+
 def test_mesh_resolve_startswith_single_hit_is_accepted(tmp_path, monkeypatch):
+    """Also pins the no-alias case: startswith must run against the raw
+    label itself when CONDITION_ALIASES has no entry for it at all."""
     calls = []
 
     def fake(url, *, params=None, **_kwargs):
@@ -126,6 +186,7 @@ def test_mesh_resolve_startswith_single_hit_is_accepted(tmp_path, monkeypatch):
     result = mesh.resolve("epileptic", cache_path=tmp_path / "mesh.json")
     assert result == "D000001"
     assert [c["match"] for c in calls] == ["exact", "startswith"]
+    assert [c["label"] for c in calls] == ["epileptic", "epileptic"]
 
 
 def test_mesh_resolve_startswith_multiple_hits_is_rejected(tmp_path, monkeypatch):

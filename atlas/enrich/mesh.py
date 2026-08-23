@@ -14,7 +14,11 @@ D004827", "label": "Epilepsy"}``. ``match`` also supports ``startswith``
 2. An exact match on ``atlas.vocab.CONDITION_ALIASES[label.lower()]`` --
    the seed table of messy-source-string -> canonical-MeSH-ish-string,
    for labels a source spells in a way MeSH's exact match won't find
-   (`"lung adenocarcinoma"` -> `"adenocarcinoma of lung"`).
+   (`"lung adenocarcinoma"` -> `"adenocarcinoma of lung"`). Skipped
+   entirely when the alias *is* the label (~30% of the table maps a
+   string to itself, e.g. `"stroke"` -> `"stroke"`, to document that no
+   further normalization applies) -- re-running the identical query
+   step 1 just tried would only waste a request.
 3. A `startswith` match on whichever of the two strings above was tried
    last (the alias when one exists -- it is the cleaner, more
    MeSH-shaped string -- otherwise the raw label), accepted only when it
@@ -119,7 +123,11 @@ def _resolve_uncached(label: str) -> tuple[str | None, bool]:
 
     alias = CONDITION_ALIASES.get(_cache_key(label))
     term = label
-    if alias:
+    if alias and _cache_key(alias) != _cache_key(label):
+        # Skip when the alias is just the label itself (~30% of
+        # CONDITION_ALIASES, e.g. "stroke" -> "stroke") -- re-issuing the
+        # exact lookup would just repeat the query that already failed
+        # above, for a guaranteed-duplicate network call.
         alias_hits = _lookup(alias, "exact")
         if alias_hits is None:
             return None, False
