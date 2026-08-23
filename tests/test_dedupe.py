@@ -65,7 +65,7 @@ class _RuleHitsStub:
 
 
 # ===========================================================================
-# dedupe.keys() -- individual key extraction
+# dedupe.doi_key() / normalize_url() / url_key()
 # ===========================================================================
 
 
@@ -105,38 +105,92 @@ def test_normalize_url_none_for_missing():
     assert dedupe.normalize_url("") is None
 
 
-def test_accession_key_openneuro_from_url_and_from_native_id():
-    from_url = dedupe.accession_key(
-        "https://openneuro.org/datasets/ds000117/versions/1.0.0"
-    )
-    from_id = dedupe.accession_key(None, "ds000117", None)
-    assert from_url == "openneuro:ds000117"
-    assert from_id == "openneuro:ds000117"
-
-
-def test_accession_key_physionet_slug():
+def test_url_key_passes_through_a_specific_two_segment_page():
     url = "https://physionet.org/content/mimiciv/2.2/"
-    assert dedupe.accession_key(url) == "physionet:mimiciv"
+    assert dedupe.url_key(url) == "physionet.org/content/mimiciv/2.2"
 
 
-def test_accession_key_gdc_project_id():
+def test_url_key_none_for_bare_host_or_single_segment():
+    assert dedupe.url_key("https://physionet.org/") is None
+    assert dedupe.url_key("https://physionet.org/content/") is None  # 1 segment
+
+
+def test_url_key_blocks_listing_roots_even_with_two_path_segments():
+    # microdata.worldbank.org's catalog root itself has 2 segments, so the
+    # segment-count rule alone wouldn't block it -- the explicit
+    # LISTING_ROOTS entry is what does.
+    assert dedupe.url_key("https://microdata.worldbank.org/index.php/catalog") is None
     assert (
-        dedupe.accession_key(None, "TCGA-BRCA", "TCGA-BRCA breast cancer")
-        == "gdc:TCGA-BRCA"
+        dedupe.url_key("https://microdata.worldbank.org/index.php/catalog/12345")
+        == "microdata.worldbank.org/index.php/catalog/12345"
     )
-    assert dedupe.accession_key(None, "BEATAML1.0", None) == "gdc:BEATAML1.0"
 
 
-def test_accession_key_tcia_collection_slug():
+def test_url_key_none_for_missing_url():
+    assert dedupe.url_key(None) is None
+
+
+# ===========================================================================
+# dedupe.accession_key() -- dispatched by source + url shape, never by name
+# ===========================================================================
+
+
+def test_accession_key_openneuro_from_own_source_native_id():
+    assert dedupe.accession_key("openneuro", "ds000117", None) == "openneuro:ds000117"
+
+
+def test_accession_key_openneuro_from_url_for_a_different_source():
+    url = "https://openneuro.org/datasets/ds000117/versions/1.0.0"
+    assert dedupe.accession_key("curated", "mirror-1", url) == "openneuro:ds000117"
+
+
+def test_accession_key_physionet_from_own_source_native_id():
+    assert dedupe.accession_key("physionet", "mimiciv", None) == "physionet:mimiciv"
+
+
+def test_accession_key_physionet_from_url_for_a_different_source():
+    url = "https://physionet.org/content/mimiciv/2.2/"
+    assert (
+        dedupe.accession_key("scientific_data", "paper-1", url) == "physionet:mimiciv"
+    )
+
+
+def test_accession_key_gdc_from_own_source_native_id_preserves_case():
+    assert dedupe.accession_key("gdc", "TCGA-BRCA", None) == "gdc:TCGA-BRCA"
+
+
+def test_accession_key_gdc_from_url_for_a_different_source():
+    url = "https://portal.gdc.cancer.gov/projects/TCGA-BRCA"
+    assert dedupe.accession_key("curated", "mirror-2", url) == "gdc:TCGA-BRCA"
+
+
+def test_accession_key_tcia_from_own_source_native_id():
+    assert dedupe.accession_key("tcia", "TCGA-GBM", None) == "tcia:tcga-gbm"
+
+
+def test_accession_key_tcia_from_url_for_a_different_source():
     url = "https://www.cancerimagingarchive.net/collection/tcga-gbm/"
-    assert dedupe.accession_key(url) == "tcia:tcga-gbm"
+    assert dedupe.accession_key("curated", "mirror-3", url) == "tcia:tcga-gbm"
+
+
+def test_accession_key_own_source_native_id_wins_even_if_url_looks_like_another_repo():
+    # Source dispatch happens first: a gdc-sourced record's own native id
+    # is authoritative regardless of what its url contains.
+    url = "https://www.cancerimagingarchive.net/collection/tcga-gbm/"
+    assert dedupe.accession_key("gdc", "TCGA-GBM", url) == "gdc:TCGA-GBM"
 
 
 def test_accession_key_none_when_nothing_matches():
     assert (
-        dedupe.accession_key("https://example.org/whatever", "abc123", "A Study")
+        dedupe.accession_key("curated", "abc123", "https://example.org/whatever")
         is None
     )
+    assert dedupe.accession_key("curated", "abc123", None) is None
+
+
+# ===========================================================================
+# dedupe.title_fingerprint()
+# ===========================================================================
 
 
 def test_title_fingerprint_lowercase_stopwords_sorted_dedup():
@@ -213,12 +267,15 @@ def test_cluster_url_match_merges():
 
 
 def test_cluster_accession_match_merges_openneuro_url_vs_id():
+    # A curated pointer whose url is the real OpenNeuro page (with a
+    # version segment the openneuro-sourced record's own url lacks) --
+    # the two share an accession despite different exact urls.
     a = _record(
         id="curated:mirror-ds117",
         source="curated",
         source_native_id="mirror-ds117",
-        url="https://example.org/mirrors/ds000117-copy",  # mentions accession only via name below
-        name="A mirror of ds000117",
+        url="https://openneuro.org/datasets/ds000117/versions/1.0.0",
+        name="A curated pointer to the OpenNeuro page",
     )
     b = _record(
         id="openneuro:ds000117",
@@ -268,6 +325,74 @@ def test_cluster_singletons_included_and_sorted_deterministically():
     clusters_2 = dedupe.cluster([b, a])
     assert clusters_1 == clusters_2
     assert [c[0].id for c in clusters_1] == ["gdc:aaa", "tcia:zzz"]
+
+
+# ---------------------------------------------------------------------------
+# Critical regressions (fix round 1, controller ruling R19): keys must
+# never be derivable from free text or a shared listing page.
+# ---------------------------------------------------------------------------
+
+
+def test_c1_tcia_listing_fallback_url_does_not_merge_unrelated_records():
+    a = _record(
+        id="tcia:collection-a",
+        source="tcia",
+        source_native_id="collection-a",
+        url="https://www.cancerimagingarchive.net/collections/",
+    )
+    b = _record(
+        id="tcia:collection-b",
+        source="tcia",
+        source_native_id="collection-b",
+        url="https://www.cancerimagingarchive.net/collections/",
+    )
+    clusters = dedupe.cluster([a, b])
+    assert sorted(len(c) for c in clusters) == [1, 1]
+
+
+def test_c2_gdc_and_tcia_same_cohort_are_two_clusters_then_linked():
+    gdc = _record(
+        id="gdc:TCGA-GBM",
+        source="gdc",
+        source_native_id="TCGA-GBM",
+        name="Glioblastoma Multiforme (TCGA-GBM)",
+        url="https://portal.gdc.cancer.gov/projects/TCGA-GBM",
+    )
+    tcia = _record(
+        id="tcia:tcga-gbm",
+        source="tcia",
+        source_native_id="TCGA-GBM",
+        name="Genomic Data Commons: TCGA-GBM related collection [TCGA-GBM]",
+        url="https://www.cancerimagingarchive.net/collection/tcga-gbm/",
+    )
+    clusters = dedupe.cluster([gdc, tcia])
+    assert sorted(len(c) for c in clusters) == [1, 1]
+
+    linked = dedupe.link_same_cohort([gdc, tcia])
+    linked_by_id = {r.id: r for r in linked}
+    assert linked_by_id["gdc:TCGA-GBM"].related == [
+        Related(id="tcia:tcga-gbm", relation="same_cohort")
+    ]
+    assert linked_by_id["tcia:tcga-gbm"].related == [
+        Related(id="gdc:TCGA-GBM", relation="same_cohort")
+    ]
+
+
+def test_c3_short_gdc_program_codes_do_not_match_inside_unrelated_titles():
+    a = _record(
+        id="curated:a",
+        source="curated",
+        url="https://example.org/a",
+        name="NIH FMRI study of working memory",
+    )
+    b = _record(
+        id="curated:b",
+        source="curated",
+        url="https://example.org/b",
+        name="FMRIB Software Library analysis pipeline TRIO scanner MATCHED cohort",
+    )
+    clusters = dedupe.cluster([a, b])
+    assert sorted(len(c) for c in clusters) == [1, 1]
 
 
 # ===========================================================================
@@ -380,6 +505,47 @@ def test_merge_cluster_access_tiers_union_in_vocab_order():
     assert merged.access_tiers == ["open", "registration", "application"]
 
 
+def test_merge_cluster_access_escalation_carries_notes_and_howto():
+    primary = _record(
+        id="openneuro:ds1",
+        source="openneuro",
+        access="open",
+        access_notes=None,
+        access_howto=None,
+    )
+    secondary = _record(
+        id="curated:z",
+        source="curated",
+        access="credentialed",
+        access_notes="Requires a signed DUA.",
+        access_howto="Apply via the portal.",
+    )
+    merged, _ = merge.merge_cluster([primary, secondary])
+    assert merged.access == "credentialed"
+    assert merged.access_notes == "Requires a signed DUA."
+    assert merged.access_howto == "Apply via the portal."
+
+
+def test_merge_cluster_access_no_escalation_keeps_primary_notes():
+    primary = _record(
+        id="openneuro:ds1",
+        source="openneuro",
+        access="open",
+        access_notes="Primary's own note.",
+        access_howto="Primary's own howto.",
+    )
+    secondary = _record(
+        id="curated:z",
+        source="curated",
+        access="open",
+        access_notes="Secondary's note.",
+        access_howto="Secondary's howto.",
+    )
+    merged, _ = merge.merge_cluster([primary, secondary])
+    assert merged.access_notes == "Primary's own note."
+    assert merged.access_howto == "Primary's own howto."
+
+
 def test_merge_cluster_secondary_doi_becomes_describes_paper():
     primary = _record(id="openneuro:ds1", source="openneuro")
     secondary = _record(
@@ -410,22 +576,56 @@ def test_merge_cluster_secondary_doi_not_duplicated_if_already_present():
     ]
 
 
-def test_merge_cluster_list_fields_union_preserve_primary_order_then_secondary():
+def test_merge_cluster_papers_dedup_via_doi_key_keeps_original_string():
     primary = _record(
         id="openneuro:ds1",
         source="openneuro",
-        domains=["neurology", "psychiatry"],
-        keywords=["mri"],
+        papers=[{"doi": "10.1038/S41597-020-00000-0.v1.0.0", "relation": "describes"}],
     )
     secondary = _record(
         id="curated:z",
         source="curated",
-        domains=["psychiatry", "oncology"],
-        keywords=["mri", "t1"],
+        # same doi as primary's paper once doi_key-normalized (lowercased,
+        # version-collapsed) -- but reported with different case/suffix.
+        dataset_doi="10.1038/s41597-020-00000-0",
     )
     merged, _ = merge.merge_cluster([primary, secondary])
-    assert merged.domains == ["neurology", "psychiatry", "oncology"]
+    # deduped via dedupe.doi_key, but the primary's original string survives verbatim.
+    assert merged.papers == [
+        Paper(doi="10.1038/S41597-020-00000-0.v1.0.0", relation="describes")
+    ]
+
+
+def test_merge_cluster_domains_modalities_vocab_ordered():
+    primary = _record(
+        id="openneuro:ds1", source="openneuro", domains=["oncology"], modalities=["CT"]
+    )
+    secondary = _record(
+        id="curated:z", source="curated", domains=["neurology"], modalities=["MRI"]
+    )
+    merged, _ = merge.merge_cluster([primary, secondary])
+    # vocab.DOMAINS order (neurology, ..., oncology, ...) -- not insertion order.
+    assert merged.domains == ["neurology", "oncology"]
+    # vocab.MODALITIES order (MRI, ..., CT, ...) -- not insertion order.
+    assert merged.modalities == ["MRI", "CT"]
+
+
+def test_merge_cluster_other_list_fields_union_preserve_primary_order_then_secondary():
+    primary = _record(
+        id="openneuro:ds1",
+        source="openneuro",
+        keywords=["mri"],
+        countries=["US"],
+    )
+    secondary = _record(
+        id="curated:z",
+        source="curated",
+        keywords=["mri", "t1"],
+        countries=["PE", "US"],
+    )
+    merged, _ = merge.merge_cluster([primary, secondary])
     assert merged.keywords == ["mri", "t1"]
+    assert merged.countries == ["US", "PE"]
 
 
 def test_merge_cluster_conditions_dedupe_by_label_keeps_mesh_id():
@@ -467,6 +667,34 @@ def test_merge_cluster_institutions_and_authors_dedupe_by_name():
     assert merged.authors == [Author(name="Ada Lovelace"), Author(name="Grace Hopper")]
 
 
+def test_merge_cluster_related_drops_self_loops_within_cluster():
+    primary = _record(id="openneuro:ds1", source="openneuro")
+    secondary = _record(
+        id="curated:z",
+        source="curated",
+        related=[
+            {"id": "openneuro:ds1", "relation": "duplicate_of"},  # points at primary
+            {"id": "openneuro:ds-other", "relation": "derived_from"},  # unrelated, kept
+        ],
+    )
+    merged, _ = merge.merge_cluster([primary, secondary])
+    assert merged.related == [Related(id="openneuro:ds-other", relation="derived_from")]
+
+
+def test_merge_cluster_related_drops_links_to_any_cluster_member():
+    primary = _record(id="openneuro:ds1", source="openneuro")
+    secondary_a = _record(
+        id="curated:a",
+        source="curated",
+        related=[
+            {"id": "curated:b", "relation": "duplicate_of"}
+        ],  # points at fellow secondary
+    )
+    secondary_b = _record(id="curated:b", source="curated")
+    merged, _ = merge.merge_cluster([primary, secondary_a, secondary_b])
+    assert merged.related == []
+
+
 def test_merge_cluster_scalar_fields_fill_from_secondary_only_when_primary_empty():
     primary = _record(
         id="openneuro:ds1",
@@ -489,6 +717,54 @@ def test_merge_cluster_scalar_fields_fill_from_secondary_only_when_primary_empty
     assert merged.sample_size == 42
     assert merged.sample_unit == "participants"
     assert merged.version == "v1"  # primary's own value wins, never overwritten
+
+
+def test_merge_cluster_fills_species_population_size_bytes_years_from_secondary():
+    primary = _record(
+        id="openneuro:ds1",
+        source="openneuro",
+        species="unknown",
+        population=None,
+        size_bytes=None,
+        years={"start": None, "end": None},
+    )
+    secondary = _record(
+        id="curated:z",
+        source="curated",
+        species="animal",
+        population="Laboratory mice.",
+        size_bytes=123456,
+        years={"start": 2018, "end": 2020},
+    )
+    merged, _ = merge.merge_cluster([primary, secondary])
+    assert merged.species == "animal"
+    assert merged.population == "Laboratory mice."
+    assert merged.size_bytes == 123456
+    assert merged.years.start == 2018
+    assert merged.years.end == 2020
+
+
+def test_merge_cluster_species_stays_when_primary_already_known():
+    primary = _record(id="openneuro:ds1", source="openneuro", species="human")
+    secondary = _record(id="curated:z", source="curated", species="animal")
+    merged, _ = merge.merge_cluster([primary, secondary])
+    assert merged.species == "human"
+
+
+def test_merge_cluster_years_fills_start_and_end_independently_from_different_secondaries():
+    primary = _record(
+        id="openneuro:ds1", source="openneuro", years={"start": 2015, "end": None}
+    )
+    secondary_a = _record(
+        id="curated:a", source="curated", years={"start": 1999, "end": None}
+    )
+    secondary_b = _record(
+        id="curated:b", source="curated", years={"start": None, "end": 2021}
+    )
+    merged, _ = merge.merge_cluster([primary, secondary_a, secondary_b])
+    # primary already has a start -> kept; end fills from whichever secondary has one.
+    assert merged.years.start == 2015
+    assert merged.years.end == 2021
 
 
 def test_merge_cluster_record_status_needs_review_if_any_member_is():
@@ -522,6 +798,10 @@ def test_merge_cluster_no_data_loss_secondary_fields_all_present():
         authors=[{"name": "Grace Hopper"}],
         related=[{"id": "openneuro:ds2", "relation": "derived_from"}],
         dataset_doi="10.1000/secondary-doi",
+        species="animal",
+        population="A secondary population note.",
+        size_bytes=999,
+        years={"start": 2001, "end": 2002},
     )
     merged, _ = merge.merge_cluster([primary, secondary])
     assert "oncology" in merged.domains
@@ -532,6 +812,12 @@ def test_merge_cluster_no_data_loss_secondary_fields_all_present():
     assert any(a.name == "Grace Hopper" for a in merged.authors)
     assert any(r.id == "openneuro:ds2" for r in merged.related)
     assert any(p.doi == "10.1000/secondary-doi" for p in merged.papers)
+    # primary.species defaults to "human" (known) in this test's _record(),
+    # so it -- correctly -- is not overwritten by the secondary's "animal".
+    assert merged.population == "A secondary population note."
+    assert merged.size_bytes == 999
+    assert merged.years.start == 2001
+    assert merged.years.end == 2002
 
 
 def test_merge_cluster_is_deterministic_regardless_of_input_order():
@@ -542,6 +828,86 @@ def test_merge_cluster_is_deterministic_regardless_of_input_order():
     merged_2, excluded_2 = merge.merge_cluster([secondary_b, secondary_a, primary])
     assert merged_1 == merged_2
     assert excluded_1 == excluded_2
+
+
+# ===========================================================================
+# merge.build_alias_map() / merge.remap_related()
+# ===========================================================================
+
+
+def test_build_alias_map_from_excluded_merged_into_reasons():
+    excluded = [
+        Excluded(native_id="curated:a", reason="merged_into:openneuro:ds1"),
+        Excluded(native_id="curated:b", reason="merged_into:openneuro:ds1"),
+        Excluded(native_id="physionet:x", reason="not_a_dataset"),
+    ]
+    assert merge.build_alias_map(excluded) == {
+        "curated:a": "openneuro:ds1",
+        "curated:b": "openneuro:ds1",
+    }
+
+
+def test_remap_related_rewrites_drops_dangling_dedups_no_self_loops():
+    survivor = _record(id="openneuro:ds1", source="openneuro")
+    other = _record(
+        id="curated:other",
+        source="curated",
+        related=[
+            {"id": "curated:a", "relation": "duplicate_of"},  # aliases to survivor
+            {
+                "id": "curated:b",
+                "relation": "duplicate_of",
+            },  # aliases to survivor too -> dedup
+            {
+                "id": "openneuro:ds1",
+                "relation": "derived_from",
+            },  # already survivor -> dedup
+            {"id": "unknown:ghost", "relation": "part_of"},  # dangling -> dropped
+        ],
+    )
+    alias_map = {"curated:a": "openneuro:ds1", "curated:b": "openneuro:ds1"}
+    updated = merge.remap_related([survivor, other], alias_map)
+    updated_other = next(r for r in updated if r.id == "curated:other")
+    assert updated_other.related == [
+        Related(id="openneuro:ds1", relation="duplicate_of")
+    ]
+
+
+def test_remap_related_drops_self_loop_created_by_remap():
+    survivor = _record(
+        id="openneuro:ds1",
+        source="openneuro",
+        related=[{"id": "curated:a", "relation": "duplicate_of"}],  # aliases to itself
+    )
+    alias_map = {"curated:a": "openneuro:ds1"}
+    updated = merge.remap_related([survivor], alias_map)
+    updated_survivor = next(r for r in updated if r.id == "openneuro:ds1")
+    assert updated_survivor.related == []
+
+
+def test_remap_related_no_change_returns_same_record_object():
+    record = _record(id="openneuro:ds1", source="openneuro")
+    updated = merge.remap_related([record], {})
+    assert updated == [record]
+    assert updated[0] is record
+
+
+def test_remap_related_end_to_end_with_build_alias_map():
+    primary = _record(id="openneuro:ds1", source="openneuro")
+    secondary = _record(id="curated:z", source="curated")
+    _, excluded = merge.merge_cluster([primary, secondary])
+
+    other = _record(
+        id="openneuro:ds2",
+        source="openneuro",
+        related=[{"id": "curated:z", "relation": "derived_from"}],
+    )
+    alias_map = merge.build_alias_map(excluded)
+    updated = merge.remap_related([primary, other], alias_map)
+    updated_other = next(r for r in updated if r.id == "openneuro:ds2")
+    assert updated_other.related == [
+        Related(id="openneuro:ds1", relation="derived_from")
+    ]
 
 
 # ===========================================================================
@@ -728,6 +1094,20 @@ def test_apply_enrichment_no_change_leaves_record_untouched():
     assert result.provenance.enrichment.at is None
 
 
+def test_apply_enrichment_llm_pass_with_zero_changes_leaves_record_identical():
+    """I7: `.at`/`.method` are stamped only when `fields_changed` is
+    non-empty -- a confirming LLM pass (llm_out provided but proposing
+    nothing new) must not bump the method to "rules+llm" or touch `.at`.
+    """
+    record = _record(id="openneuro:ds1", source="openneuro")
+    rule_hits = _RuleHitsStub()
+    llm_out = {"domains": [], "modalities": [], "conditions": [], "countries": []}
+    result = merge.apply_enrichment(record, llm_out, rule_hits)
+    assert result == record
+    assert result.provenance.enrichment.method == "rules"
+    assert result.provenance.enrichment.at is None
+
+
 def test_apply_enrichment_curated_method_is_never_touched():
     record = _record(
         id="curated:z",
@@ -751,3 +1131,35 @@ def test_apply_enrichment_curated_method_is_never_touched():
     assert result == record
     assert result.domains == []
     assert result.provenance.enrichment.method == "curated"
+
+
+def test_apply_enrichment_invalid_rule_domain_is_not_counted_as_a_change():
+    """M10: attribution is computed from the post-vocab-filter delta --
+    a rule hit that isn't a real `vocab.DOMAINS` member is silently
+    dropped by the vocab filter and must not itself count as "rules
+    changed domains" (which would otherwise stamp `.at`/`.method` for a
+    change nobody can actually see)."""
+    record = _record(id="openneuro:ds1", source="openneuro", domains=["oncology"])
+    rule_hits = _RuleHitsStub(domains=["not-a-real-domain"])
+    result = merge.apply_enrichment(record, None, rule_hits)
+    assert result == record
+    assert "domains" not in result.provenance.enrichment.fields
+
+
+def test_apply_enrichment_accepts_none_rule_hits_as_empty():
+    record = _record(id="openneuro:ds1", source="openneuro", domains=[])
+    llm_out = {
+        "domains": ["neurology"],
+        "modalities": [],
+        "conditions": [],
+        "countries": [],
+    }
+    result = merge.apply_enrichment(record, llm_out, None)
+    assert result.domains == ["neurology"]
+    assert result.provenance.enrichment.fields["domains"] == "llm"
+
+
+def test_apply_enrichment_none_rule_hits_and_none_llm_out_is_a_no_op():
+    record = _record(id="openneuro:ds1", source="openneuro")
+    result = merge.apply_enrichment(record, None, None)
+    assert result == record

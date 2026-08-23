@@ -12,7 +12,27 @@ instead of its own regex):
 
 - `doi`, `url`, `accession` are *authoritative*: two records sharing any
   one of these are, for certain, the same dataset, and `cluster` merges
-  them without hesitation.
+  them without hesitation. Because of that, both `url_key` and
+  `accession_key` are deliberately conservative -- each would rather
+  emit `None` (no key, no automatic merge) than risk a false match. Two
+  concrete failure modes drove that (fix-round-1 review, controller
+  ruling R19 -- "keys must never be derivable from free text or shared
+  listing pages"):
+    1. A *listing/catalog root* page (e.g. TCIA's `/collections/` browse
+       page, or a bare `physionet.org/content`) is specific-*looking*
+       but actually shared by many records -- `url_key` refuses to key
+       on one (see `LISTING_ROOTS`).
+    2. Scanning a record's free-text `name`/title for a repository's
+       accession shape is unsound: a GDC program code as short as `"FM"`
+       or `"TRIO"` matches as a substring inside unrelated titles (e.g.
+       "NIH FMRI study"), and would even let a GDC record's title claim
+       a TCIA record referencing the same project code -- exactly the
+       pair `link_same_cohort` exists to *link*, never merge.
+       `accession_key` is now dispatched by the record's own `source`
+       (trusting `source_native_id`, which each source's normalizer sets
+       from structured API data) with a fallback, for any other source,
+       to a small set of URL-*shape*-anchored patterns -- `name` is
+       never consulted at all.
 - `title` is *indicative only*: a suggestive signal, never enough on its
   own (two unrelated datasets can share a generic title; the same dataset
   can be titled differently by two sources). `cluster` never merges on
@@ -47,7 +67,9 @@ def doi_key(doi: str | None) -> str | None:
 
 
 # ---------------------------------------------------------------------------
-# url: scheme/www/query/fragment/trailing-slash dropped, host lowercased
+# url: scheme/www/query/fragment/trailing-slash dropped, host lowercased,
+# then gated so only a page specific enough to identify one record can act
+# as an authoritative key
 # ---------------------------------------------------------------------------
 
 _SCHEME_RE = re.compile(r"^https?://", re.IGNORECASE)
@@ -55,15 +77,20 @@ _WWW_RE = re.compile(r"^www\.", re.IGNORECASE)
 
 
 def normalize_url(url: str | None) -> str | None:
-    """The URL dedupe key: scheme dropped, a leading `www.` dropped, the
-    query string and fragment dropped (portals append tracking parameters
-    that would otherwise make an already-known link look new), a trailing
-    slash dropped, and the host lowercased.
+    """A URL, normalized for comparison: scheme dropped, a leading
+    `www.` dropped, the query string and fragment dropped (portals
+    append tracking parameters that would otherwise make an
+    already-known link look new), a trailing slash dropped, and the
+    host lowercased.
 
     Only the host is lowercased, not the whole URL: hostnames are
     case-insensitive but HTTP paths are not, and a source's dataset slug
-    in the path should be compared exactly as reported. `None` when `url`
-    is falsy or reduces to nothing (e.g. was only a scheme).
+    in the path should be compared exactly as reported. `None` when
+    `url` is falsy or reduces to nothing (e.g. was only a scheme).
+
+    This is pure normalization, not a dedupe-safety judgment -- see
+    `url_key` for the gating that decides whether a normalized URL is
+    specific enough to actually key on.
     """
     if not url:
         return None
@@ -81,67 +108,124 @@ def normalize_url(url: str | None) -> str | None:
     return host + sep + rest
 
 
-# ---------------------------------------------------------------------------
-# accession: native repository identifier, e.g. "openneuro:ds000001"
-# ---------------------------------------------------------------------------
-
-# `ds\d{6}` is OpenNeuro's own accession shape. Guarded on both sides
-# (`(?<![A-Za-z])` / `(?!\d)`) so it can't match as a substring of a longer
-# word or a longer digit run (e.g. "...seeds000001kg" or "ds0000012").
-_OPENNEURO_RE = re.compile(r"(?<![A-Za-z])ds\d{6}(?!\d)", re.IGNORECASE)
-
-# PhysioNet content URLs are `physionet.org/content/<slug>/<version>/...`;
-# the slug is the accession, the version is a separate path segment.
-_PHYSIONET_RE = re.compile(
-    r"physionet\.org/content/([a-z0-9][a-z0-9-]*)", re.IGNORECASE
-)
-
-# GDC project ids: one of the program codes GDC actually uses, followed by
-# a project-specific, uppercase/digit/hyphen suffix (e.g. "TCGA-BRCA",
-# "BEATAML1.0", "CPTAC-3"). Deliberately case-sensitive -- GDC project ids
-# are always reported upper-case, and a case-insensitive match here would
-# risk pulling a project code out of unrelated prose.
-_GDC_RE = re.compile(
-    r"(TCGA|TARGET|CPTAC|CGCI|HCMI|MMRF|BEATAML1\.0|CMI|WCDT|OHSU|ORGANOID|TRIO|"
-    r"EXCEPTIONAL_RESPONDERS|NCICCR|CTSP|VAREPOP|FM|GENIE|APOLLO|REBC|MATCH|"
-    r"ALCHEMIST|CDDP_EAGLE|MP2PRT)[-A-Z0-9]*"
-)
-
-# TCIA collection pages are `cancerimagingarchive.net/collection/<slug>`.
-_TCIA_RE = re.compile(
-    r"cancerimagingarchive\.net/collection/([a-z0-9][a-z0-9-]*)", re.IGNORECASE
+# Listing/catalog root pages: specific-*looking* but actually shared by
+# many records -- keying on one would merge every record that happens to
+# link to it. Matched *exactly* against the normalized URL (see
+# `normalize_url`), so e.g. `"openneuro.org/datasets/ds000001"` (a real
+# per-dataset page) is untouched; only the bare listing page itself,
+# `"openneuro.org/datasets"`, is blocked. Most of these would already be
+# caught by `url_key`'s two-path-segment rule, but a couple of listing
+# roots (worldbank's) clear that bar too, so both checks apply.
+LISTING_ROOTS: frozenset[str] = frozenset(
+    {
+        "cancerimagingarchive.net/collections",
+        "cancerimagingarchive.net/collection",
+        "physionet.org/content",
+        "openneuro.org/datasets",
+        "portal.gdc.cancer.gov/projects",
+        "microdata.worldbank.org/index.php/catalog",
+        "dhsprogram.com/data",
+    }
 )
 
 
-def accession_key(*texts: str | None) -> str | None:
-    """The native-repository accession dedupe key (e.g.
-    `"openneuro:ds000001"`) -- the strongest signal available, since it
-    survives a portal changing domains or URL schemes entirely. Tries
-    each pattern in turn (openneuro, physionet, gdc, tcia) against the
-    concatenation of `texts` (falsy entries skipped) and returns the
-    first hit; `None` when nothing matches.
+def url_key(url: str | None) -> str | None:
+    """The url dedupe key: `normalize_url`'s output, but only when it's
+    specific enough to safely be authoritative. `None` (no key emitted)
+    when the normalized URL has fewer than two path segments -- this
+    alone rules out a bare host and most listing pages -- or exactly
+    matches a `LISTING_ROOTS` entry (needed for the rare listing root
+    that itself happens to have two-or-more segments, e.g.
+    `"microdata.worldbank.org/index.php/catalog"`).
     """
-    blob = " ".join(t for t in texts if t)
-    if not blob:
+    normalized = normalize_url(url)
+    if normalized is None:
         return None
+    path_segments = normalized.split("/")[1:]
+    if len(path_segments) < 2:
+        return None
+    if normalized in LISTING_ROOTS:
+        return None
+    return normalized
 
-    match = _OPENNEURO_RE.search(blob)
-    if match:
-        return f"openneuro:{match.group(0).lower()}"
 
-    match = _PHYSIONET_RE.search(blob)
-    if match:
-        return f"physionet:{match.group(1).lower()}"
+# ---------------------------------------------------------------------------
+# accession: native repository identifier, e.g. "openneuro:ds000001" --
+# dispatched by source + URL shape only, never by scanning free text
+# ---------------------------------------------------------------------------
 
-    match = _GDC_RE.search(blob)
-    if match:
-        return f"gdc:{match.group(0)}"
+_OPENNEURO_URL_RE = re.compile(r"openneuro\.org/datasets/(ds\d{6})", re.IGNORECASE)
+_PHYSIONET_URL_RE = re.compile(r"physionet\.org/content/([^/]+)/", re.IGNORECASE)
+_GDC_URL_RE = re.compile(
+    r"portal\.gdc\.cancer\.gov/projects/([A-Za-z0-9._-]+)", re.IGNORECASE
+)
+_TCIA_URL_RE = re.compile(
+    r"cancerimagingarchive\.net/collection/([^/?#]+)/?", re.IGNORECASE
+)
 
-    match = _TCIA_RE.search(blob)
-    if match:
-        return f"tcia:{match.group(1).lower()}"
 
-    return None
+def _openneuro_from_url(url: str | None) -> str | None:
+    if not url:
+        return None
+    match = _OPENNEURO_URL_RE.search(url)
+    return f"openneuro:{match.group(1).lower()}" if match else None
+
+
+def _physionet_from_url(url: str | None) -> str | None:
+    if not url:
+        return None
+    match = _PHYSIONET_URL_RE.search(url)
+    return f"physionet:{match.group(1).lower()}" if match else None
+
+
+def _gdc_from_url(url: str | None) -> str | None:
+    if not url:
+        return None
+    match = _GDC_URL_RE.search(url)
+    return f"gdc:{match.group(1)}" if match else None
+
+
+def _tcia_from_url(url: str | None) -> str | None:
+    if not url:
+        return None
+    match = _TCIA_URL_RE.search(url)
+    return f"tcia:{match.group(1).lower()}" if match else None
+
+
+def accession_key(source: str, source_native_id: str, url: str | None) -> str | None:
+    """The native-repository accession dedupe key (e.g.
+    `"openneuro:ds000001"`), dispatched by `source` -- never by scanning
+    `name`/title free text (see the module docstring for why that was
+    unsound).
+
+    For a record actually *from* one of the four repositories,
+    `source_native_id` (set by that source's own normalizer directly
+    from structured API data, never scraped text) is trusted outright:
+    openneuro and physionet and tcia ids are lowercased for the key; gdc
+    project ids keep their conventional upper case as-is.
+
+    For a record from any other source (`curated`, a data-descriptor
+    journal, ...), the only path to an accession is `url` matching one
+    of the four repositories' own URL shape exactly -- e.g. a curated
+    mirror entry whose `url` points at the real `openneuro.org/datasets/
+    dsXXXXXX` page. Checked in openneuro/physionet/gdc/tcia order;
+    returns the first match, `None` if none matches.
+    """
+    if source == "openneuro":
+        return f"openneuro:{source_native_id.lower()}"
+    if source == "physionet":
+        return f"physionet:{source_native_id.lower()}"
+    if source == "gdc":
+        return f"gdc:{source_native_id}"
+    if source == "tcia":
+        return f"tcia:{source_native_id.lower()}"
+
+    return (
+        _openneuro_from_url(url)
+        or _physionet_from_url(url)
+        or _gdc_from_url(url)
+        or _tcia_from_url(url)
+    )
 
 
 # ---------------------------------------------------------------------------
@@ -208,8 +292,8 @@ def keys(record: Record) -> dict[str, str | None]:
     indicative only (see `flag_title_collisions`)."""
     return {
         "doi": doi_key(record.dataset_doi),
-        "url": normalize_url(record.url),
-        "accession": accession_key(record.url, record.source_native_id, record.name),
+        "url": url_key(record.url),
+        "accession": accession_key(record.source, record.source_native_id, record.url),
         "title": title_fingerprint(record.name),
     }
 
@@ -341,7 +425,9 @@ def link_same_cohort(records: list[Record]) -> list[Record]:
     These are deliberately *linked*, never merged by `cluster`: a GDC
     project and a TCIA collection for the same patient cohort are
     genuinely different data (genomic vs. imaging), just about the same
-    people.
+    people -- and, since `accession_key` keys each by its own source
+    (`"gdc:..."` vs. `"tcia:..."`), `cluster` can never confuse the two
+    for the same record in the first place.
 
     Returns a new list, same order as `records`; only records that gain
     a link are rebuilt (via `model_copy`), and a link already present
