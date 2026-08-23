@@ -239,6 +239,18 @@ def _git_show(path: Path) -> str | None:
     return completed.stdout if completed.returncode == 0 else None
 
 
+def head_catalog(path: Path | None = None) -> list[dict]:
+    """The catalog as committed at `HEAD`, or `[]` when there isn't one
+    (no git, not a repo, path outside it, or the file was never
+    committed). This is the "old" side `atlas diff` compares the working
+    tree against."""
+    path = path if path is not None else paths().catalog_file
+    text = _git_show(path)
+    if not text:
+        return []
+    return [json.loads(line) for line in text.splitlines() if line.strip()]
+
+
 def load_previous_catalog(path: Path | None = None) -> list[dict]:
     """The catalog this run is diffing against: the working-tree file if
     it exists, else the version committed at `HEAD`, else empty.
@@ -253,10 +265,51 @@ def load_previous_catalog(path: Path | None = None) -> list[dict]:
     path = path if path is not None else paths().catalog_file
     if path.exists():
         return io.read_jsonl(path)
-    text = _git_show(path)
-    if not text:
-        return []
-    return [json.loads(line) for line in text.splitlines() if line.strip()]
+    return head_catalog(path)
+
+
+def read_manifests(
+    sources: Iterable[str], *, raw_root: Path | None = None
+) -> dict[str, dict | None]:
+    """`{source: manifest | None}` for `sources`, straight off disk --
+    what the last harvest of each source reported, without re-running it.
+    `None` means that source has never been harvested."""
+    root = raw_root if raw_root is not None else paths().raw
+    manifests: dict[str, dict | None] = {}
+    for source in sources:
+        try:
+            manifests[source] = RawStore(source, root=root).manifest()
+        except (OSError, ValueError):
+            manifests[source] = None
+    return manifests
+
+
+def manifest_results(
+    sources: Iterable[str], *, raw_root: Path | None = None
+) -> list[HarvestResult]:
+    """The raw store's own state as `HarvestResult`s, for a changelog
+    written outside a refresh run (`atlas diff`): each source's last
+    harvest status and counts, or `skipped` where it has never run."""
+    results = []
+    for source, manifest in read_manifests(sources, raw_root=raw_root).items():
+        if manifest is None:
+            results.append(
+                HarvestResult(source=source, status="skipped", error="no raw data")
+            )
+            continue
+        counts = manifest.get("counts") or {}
+        results.append(
+            HarvestResult(
+                source=source,
+                status=manifest.get("status", "ok"),
+                listed=counts.get("listed", 0),
+                written=counts.get("written", 0),
+                unchanged=counts.get("unchanged", 0),
+                removed=counts.get("removed", 0),
+                error=manifest.get("error"),
+            )
+        )
+    return results
 
 
 def _by_source(records: Iterable[dict]) -> dict[str, list[dict]]:
@@ -265,6 +318,34 @@ def _by_source(records: Iterable[dict]) -> dict[str, list[dict]]:
     for record in records:
         grouped.setdefault(str(record.get("source")), []).append(record)
     return grouped
+
+
+def _exclusions_by_source(rows: Iterable[dict]) -> dict[str, list[dict]]:
+    """Group `excluded.jsonl` rows by the source their id names.
+
+    Both kinds of exclusion carry a `<source>:<id>` id -- a normalizer's
+    ("this raw record isn't a dataset") and a merge's ("folded into
+    ...") -- so the prefix is enough to say whose exclusion it is.
+    """
+    grouped: dict[str, list[dict]] = {}
+    for row in rows:
+        source = str(row.get("id", "")).split(":", 1)[0]
+        grouped.setdefault(source, []).append(row)
+    return grouped
+
+
+def load_previous_exclusions(path: Path | None = None) -> list[dict]:
+    """The previous `excluded.jsonl`, or `[]` when it is absent or
+    unreadable -- a missing exclusions file is never worth failing a run
+    over, since every exclusion a *selected* source produces is
+    recomputed from scratch anyway."""
+    path = path if path is not None else paths().excluded_file
+    if not path.exists():
+        return []
+    try:
+        return io.read_jsonl(path)
+    except (OSError, ValueError):
+        return []
 
 
 def _parse_retained(rows: list[dict], outcome: SourceOutcome) -> list[Record]:
@@ -891,12 +972,21 @@ def run(
         print(f"previous catalog unreadable ({exc}); diffing against nothing")
         previous = []
     previous_by_source = _by_source(previous)
+    previous_exclusions = _exclusions_by_source(
+        load_previous_exclusions(p.excluded_file)
+    )
 
     # -- per source: harvest + normalize ---------------------------------
     outcomes: list[SourceOutcome] = []
     records: list[Record] = []
     excluded_rows: list[dict] = []
     texts: dict[str, str] = {}
+    # Sources whose records came from the snapshot rather than this run --
+    # their exclusions have to come from the snapshot too, or the catalog
+    # would keep a source's records while silently forgetting what it left
+    # out. Merge-time exclusions are *not* carried over: dedupe runs over
+    # the whole catalog every time, so it re-derives all of those itself.
+    retained_sources: list[str] = []
 
     for source in selected:
         outcome, source_records, source_excluded, source_texts = _run_source(
@@ -911,6 +1001,7 @@ def run(
             retained = _parse_retained(previous_by_source.get(source, []), outcome)
             outcome.retained = len(retained)
             records.extend(retained)
+            retained_sources.append(source)
         else:
             records.extend(source_records)
             excluded_rows.extend(source_excluded)
@@ -923,6 +1014,7 @@ def run(
             untouched = SourceOutcome(source=source, status="unselected")
             retained = _parse_retained(previous_by_source.get(source, []), untouched)
             records.extend(retained)
+            retained_sources.append(source)
 
     timings["harvest+normalize"] = time.monotonic() - started
 
@@ -970,6 +1062,15 @@ def run(
     )
     records = [_finalize_record(record) for record in records]
     records.sort(key=lambda record: record.id)
+
+    known_ids = {record.id for record in records}
+    seen_exclusions = {row["id"] for row in excluded_rows}
+    for source in retained_sources:
+        for row in previous_exclusions.get(source, []):
+            if row["id"] in seen_exclusions or row["id"] in known_ids:
+                continue
+            seen_exclusions.add(row["id"])
+            excluded_rows.append(row)
     excluded_rows.sort(key=lambda row: (row["id"], row["reason"]))
     timings["dedupe"] = time.monotonic() - stage_started
 

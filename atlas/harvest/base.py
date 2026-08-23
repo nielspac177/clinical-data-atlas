@@ -133,9 +133,16 @@ def _filename_for(native_id: str) -> str:
 class RawStore:
     """Filesystem store for one source's raw harvested records."""
 
-    def __init__(self, source: str, root: Path = config.RAW) -> None:
+    def __init__(self, source: str, root: Path | None = None) -> None:
+        """`root` defaults to `atlas.config.RAW` -- resolved **here**, on
+        every construction, not bound once as a default argument at import
+        time. That is what lets a test (or an orchestrator run) point the
+        whole pipeline at a temporary tree by monkeypatching `config.RAW`;
+        with an import-time default, `RawStore(source)` would keep writing
+        to the repo's real `data/raw/` no matter what `config` said.
+        """
         self.source = source
-        self.root = Path(root) / source
+        self.root = Path(root if root is not None else config.RAW) / source
         self.records_dir = self.root / "records"
         self.manifest_path = self.root / "manifest.json"
 

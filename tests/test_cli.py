@@ -1,13 +1,16 @@
-"""Tests for the atlas CLI subcommands added in Task 0.5: `harvest`,
-`normalize`, and the stub commands (`enrich`, `graph`, `diff`,
-`validate`, `refresh`, `check-urls`, `dod`).
+"""Tests for the atlas CLI subcommands: `harvest` and `normalize` (Task
+0.5), and `enrich`, `graph`, `diff`, `validate`, `refresh`, `check-urls`
+and `dod` (Task 2.7).
 
 `schema` and the no-args help path are already covered in
-tests/test_schema.py. Nothing here touches the network or the real
-`data/` tree: harvesters are fakes injected via monkeypatching
-`atlas.harvest.get_registry`, and the `normalize` tests monkeypatch
-`atlas.cli.RawStore` and `atlas.config.CATALOG` so they only ever touch
-`tmp_path`.
+tests/test_schema.py; `atlas.refresh`'s own behaviour is covered in
+tests/test_refresh.py -- what matters here is the *wiring*: which files
+each subcommand reads and writes, what it prints, and its exit code.
+
+Nothing here touches the network or the real `data/` tree. Harvesters are
+fakes injected via monkeypatching `atlas.harvest.get_registry`, and the
+module-wide `_isolate_data_tree` fixture points every `atlas.config` path
+at `tmp_path` so a subcommand that writes can only ever write there.
 """
 
 from __future__ import annotations
@@ -16,9 +19,39 @@ import json
 
 import pytest
 
-from atlas import cli, config, harvest, normalize, schema
+from atlas import cli, config, harvest, http, io, normalize, refresh, schema
 from atlas.harvest.base import Harvester, HarvestResult, RawStore
 from atlas.normalize import common as normalize_common
+
+
+@pytest.fixture(autouse=True)
+def _isolate_data_tree(monkeypatch, tmp_path):
+    """No test in this module may touch the repo's real `data/` tree.
+
+    Every subcommand here writes somewhere under `atlas.config`'s path
+    constants, so pointing all of them at `tmp_path` for the whole module
+    means a test that forgets to isolate itself still cannot clobber the
+    committed catalog, graph or changelog -- `RawStore` included, since it
+    resolves `config.RAW` per construction rather than at import time.
+    Tests that need to *see* the tree use `tree` below, which resolves the
+    same paths.
+
+    This is not hypothetical: an earlier version of this module ran
+    `cli.main(["refresh"])` for real and rewrote all four `data/raw/*/
+    manifest.json` files with the offline harvest failures it produced.
+    """
+    monkeypatch.setattr(config, "DATA", tmp_path / "data")
+    monkeypatch.setattr(config, "RAW", tmp_path / "data" / "raw")
+    monkeypatch.setattr(config, "CATALOG", tmp_path / "data" / "catalog")
+    monkeypatch.setattr(config, "GRAPH", tmp_path / "data" / "graph")
+    monkeypatch.setattr(config, "CHANGELOG", tmp_path / "data" / "changelog")
+
+
+@pytest.fixture
+def tree():
+    """The isolated tree's resolved paths."""
+    return refresh.paths()
+
 
 # ---------------------------------------------------------------------------
 # harvest: fake Harvester machinery
@@ -492,39 +525,588 @@ def test_rawstore_manifest_returns_none_before_first_harvest_then_the_manifest(
 
 
 # ---------------------------------------------------------------------------
-# stub commands: enrich, graph, diff, validate, refresh, check-urls, dod
+# Task 2.7 subcommands: shared helpers
 # ---------------------------------------------------------------------------
 
 
-@pytest.mark.parametrize(
-    "argv,cmd",
-    [
-        (["enrich"], "enrich"),
-        (["graph"], "graph"),
-        (["diff"], "diff"),
-        (["validate"], "validate"),
-        (["validate", "--strict"], "validate"),
-        (["refresh"], "refresh"),
-        (["refresh", "--sources", "openneuro,physionet", "--dry-run"], "refresh"),
-        (["check-urls", "--sample", "10", "--seed", "0"], "check-urls"),
-        (["dod", "--phase", "0", "--url", "https://example.org"], "dod"),
-    ],
-)
-def test_stub_commands_print_not_implemented_to_stderr_and_return_2(argv, cmd, capsys):
-    assert cli.main(argv) == 2
-    captured = capsys.readouterr()
-    assert captured.out == ""
-    assert captured.err.strip() == f"{cmd}: not implemented yet"
+def _record(**overrides) -> dict:
+    """One valid catalog row, as `Record.model_dump(mode="json")` shapes
+    it, with any field overridable."""
+    record = {
+        "id": "openneuro:ds001",
+        "source": "openneuro",
+        "source_native_id": "ds001",
+        "name": "Example dataset",
+        "summary": "A short summary of the dataset.",
+        "url": "https://example.org/ds001",
+        "domains": ["neurology"],
+        "modalities": ["MRI"],
+        "conditions": [],
+        "keywords": [],
+        "countries": [],
+        "years": {"start": None, "end": None},
+        "institutions": [],
+        "authors": [],
+        "papers": [],
+        "related": [],
+        "species": "human",
+        "sample_size": None,
+        "sample_unit": None,
+        "access": "open",
+        "access_tiers": [],
+        "record_status": "active",
+        "provenance": {
+            "harvested_via": "api",
+            "harvested_at": "2026-08-01",
+            "last_verified": "2026-08-20",
+            "raw_hash": None,
+            "enrichment": {
+                "method": "rules",
+                "model": None,
+                "prompt_version": None,
+                "at": None,
+                "fields": {},
+            },
+        },
+    }
+    record.update(overrides)
+    return record
+
+
+def _write_catalog(tree, rows: list[dict]) -> None:
+    io.write_jsonl(tree.catalog_file, rows)
+
+
+def _build_graph_outputs(tree, rows: list[dict]) -> None:
+    """Build the real graph outputs for `rows`, the way `atlas graph`
+    would -- so the contract checks below run against genuine files."""
+    records = [schema.Record.model_validate(row) for row in rows]
+    graph, index, stats = refresh.stage_graph(records)
+    from atlas.graph import build as graph_build
+
+    graph_build.write_outputs(graph, index, stats, out_dir=tree.graph)
+
+
+def _squeezed(text: str) -> str:
+    """`text` with every run of spaces collapsed, so an assertion about a
+    padded table row doesn't depend on the width of its widest column."""
+    return "\n".join(" ".join(line.split()) for line in text.splitlines())
+
+
+# ---------------------------------------------------------------------------
+# enrich
+# ---------------------------------------------------------------------------
+
+
+def test_enrich_without_any_input_returns_1(capsys):
+    assert cli.main(["enrich"]) == 1
+    assert "nothing to enrich" in capsys.readouterr().err
+
+
+def test_enrich_reads_normalized_records_and_writes_enriched_jsonl(
+    tree, monkeypatch, capsys
+):
+    io.write_jsonl(
+        tree.catalog / "normalized" / "openneuro.jsonl",
+        [
+            _record(
+                id="openneuro:ds002",
+                source_native_id="ds002",
+                domains=[],
+                modalities=[],
+            ),
+            _record(
+                id="openneuro:ds001",
+                source_native_id="ds001",
+                domains=[],
+                modalities=[],
+            ),
+        ],
+    )
+    io.write_jsonl(
+        tree.catalog / "normalized" / "openneuro.excluded.jsonl",
+        [{"native_id": "ds999", "reason": "not a dataset"}],
+    )
+    # One raw envelope, so one of the two records has an enrichment text.
+    store = RawStore("openneuro", root=tree.raw)
+    store.write(
+        "ds001",
+        {"text": "An EEG study of epilepsy."},
+        harvest_method="api",
+        endpoints=[],
+    )
+    store.finalize(
+        listed_ids={"ds001"}, harvested_at="2026-08-20", endpoints=[], status="ok"
+    )
+    monkeypatch.setattr(
+        normalize,
+        "get_normalizers",
+        lambda: {
+            "openneuro": (
+                lambda envelope, **kw: None,
+                lambda envelope: envelope["payload"]["text"],
+            )
+        },
+    )
+
+    assert cli.main(["enrich", "--llm", "none"]) == 0
+
+    rows = io.read_jsonl(tree.catalog / "enriched.jsonl")
+    assert [row["id"] for row in rows] == ["openneuro:ds001", "openneuro:ds002"]
+    assert rows[0]["modalities"] == ["EEG"]  # rules ran on the enrichment text
+    assert rows[1]["modalities"] == []  # no text: left alone, never guessed
+    out = capsys.readouterr().out
+    assert "enriching 2 records" in out
+    assert "1 record(s) have no enrichment text" in out
+    assert "backend=none" in out
+
+
+def test_enrich_falls_back_to_the_catalog_when_nothing_is_normalized(tree, capsys):
+    _write_catalog(tree, [_record()])
+
+    assert cli.main(["enrich", "--llm", "none"]) == 0
+    assert str(tree.catalog_file) in capsys.readouterr().out
+    assert (tree.catalog / "enriched.jsonl").exists()
+
+
+def test_enrich_never_writes_the_catalog(tree):
+    """Half a pipeline must not be able to produce `catalog.jsonl` -- that
+    file is `refresh`'s output, written only after dedupe and
+    validation."""
+    _write_catalog(tree, [_record()])
+    before = tree.catalog_file.read_bytes()
+
+    assert cli.main(["enrich", "--llm", "none"]) == 0
+    assert tree.catalog_file.read_bytes() == before
 
 
 def test_enrich_llm_flag_accepts_documented_choices():
-    assert cli.main(["enrich", "--llm", "claude_cli", "--max-llm-calls", "5"]) == 2
+    # Exit 1 == "nothing to enrich" (the tree is empty), i.e. the flag and
+    # its value parsed fine and the command got as far as looking for input.
+    assert cli.main(["enrich", "--llm", "claude_cli", "--max-llm-calls", "5"]) == 1
 
 
 def test_enrich_llm_flag_rejects_invalid_choice():
     with pytest.raises(SystemExit) as exc_info:
         cli.main(["enrich", "--llm", "bogus"])
     assert exc_info.value.code == 2
+
+
+# ---------------------------------------------------------------------------
+# graph
+# ---------------------------------------------------------------------------
+
+
+def test_graph_without_a_catalog_returns_1(tree, capsys):
+    assert cli.main(["graph"]) == 1
+    assert "no catalog at" in capsys.readouterr().err
+
+
+def test_graph_writes_the_three_outputs(tree, capsys):
+    _write_catalog(tree, [_record()])
+
+    assert cli.main(["graph"]) == 0
+
+    _graph, index, stats = refresh.read_graph_outputs(tree.graph)
+    assert stats["record_count"] == 1
+    assert [row["id"] for row in index] == ["openneuro:ds001"]
+    assert "1 records" in capsys.readouterr().out
+
+
+# ---------------------------------------------------------------------------
+# diff
+# ---------------------------------------------------------------------------
+
+
+def test_diff_without_a_catalog_returns_1(tree, capsys):
+    assert cli.main(["diff"]) == 1
+    assert "no catalog at" in capsys.readouterr().err
+
+
+def test_diff_writes_a_changelog_against_head(tree, monkeypatch, capsys):
+    _write_catalog(tree, [_record()])
+    monkeypatch.setattr(refresh, "head_catalog", lambda *a, **kw: [])
+    monkeypatch.setattr(harvest, "get_registry", dict)
+    monkeypatch.setattr(
+        normalize, "get_normalizers", lambda: {"openneuro": (None, None)}
+    )
+
+    assert cli.main(["diff"]) == 0
+
+    latest = (tree.changelog / "latest.md").read_text(encoding="utf-8")
+    assert "## Added (1)" in latest
+    assert "openneuro" in latest  # the Sources table row, from the raw manifest
+    assert "+1 new, ~0 changed" in capsys.readouterr().out
+
+
+# ---------------------------------------------------------------------------
+# validate
+# ---------------------------------------------------------------------------
+
+
+def test_validate_without_a_catalog_returns_1(tree, capsys):
+    assert cli.main(["validate"]) == 1
+    assert "no catalog at" in capsys.readouterr().err
+
+
+def test_validate_passes_on_a_catalog_and_matching_graph(tree, capsys):
+    rows = [_record()]
+    _write_catalog(tree, rows)
+    _build_graph_outputs(tree, rows)
+
+    assert cli.main(["validate", "--strict"]) == 0
+    assert "1 records, 0 error(s), 0 warning(s)" in capsys.readouterr().out
+
+
+def test_validate_reports_schema_errors_and_returns_1(tree, capsys):
+    _write_catalog(tree, [_record(species="martian")])
+
+    assert cli.main(["validate"]) == 1
+    captured = capsys.readouterr()
+    assert "error: openneuro:ds001 (species)" in captured.err
+    assert "1 error(s)" in captured.out
+
+
+def test_validate_counts_warnings_without_failing(tree, capsys):
+    rows = [_record(domains=[], modalities=[])]
+    _write_catalog(tree, rows)
+    _build_graph_outputs(tree, rows)
+
+    assert cli.main(["validate"]) == 0
+    assert "0 error(s), 2 warning(s)" in capsys.readouterr().out
+
+
+def test_validate_catches_a_graph_that_disagrees_with_the_catalog(tree, capsys):
+    rows = [_record()]
+    _write_catalog(tree, rows)
+    _build_graph_outputs(tree, rows)
+    # The catalog gains a record the graph has never heard of.
+    _write_catalog(
+        tree, [*rows, _record(id="openneuro:ds002", source_native_id="ds002")]
+    )
+
+    assert cli.main(["validate"]) == 1
+    err = capsys.readouterr().err
+    assert "search-index.json: 1 catalog id(s) missing: openneuro:ds002" in err
+    assert "stats.json: record_count" in err
+
+
+def test_validate_strict_requires_the_graph_to_exist(tree, capsys):
+    _write_catalog(tree, [_record()])
+
+    assert cli.main(["validate"]) == 0
+    assert "graph outputs not built" in capsys.readouterr().out
+
+    assert cli.main(["validate", "--strict"]) == 1
+    assert "graph outputs not built" in capsys.readouterr().err
+
+
+# ---------------------------------------------------------------------------
+# refresh
+# ---------------------------------------------------------------------------
+
+
+def test_refresh_forwards_every_flag_to_refresh_run(monkeypatch, tmp_path):
+    seen = {}
+
+    def fake_run(sources, **kwargs):
+        seen["sources"] = sources
+        seen.update(kwargs)
+        return 0
+
+    monkeypatch.setattr(refresh, "run", fake_run)
+
+    exit_code = cli.main(
+        [
+            "refresh",
+            "--sources",
+            "openneuro, physionet",
+            "--skip-enrich",
+            "--offline",
+            "--fast",
+            "--strict",
+            "--dry-run",
+            "--llm",
+            "claude_cli",
+            "--max-llm-calls",
+            "7",
+            "--report",
+            str(tmp_path / "report.md"),
+            "--summary-json",
+            str(tmp_path / "summary.json"),
+        ]
+    )
+
+    assert exit_code == 0
+    assert seen["sources"] == ["openneuro", "physionet"]
+    assert seen["skip_enrich"] is True
+    assert seen["offline"] is True
+    assert seen["fast"] is True
+    assert seen["strict"] is True
+    assert seen["dry_run"] is True
+    assert seen["llm"] == "claude_cli"
+    assert seen["max_llm_calls"] == 7
+    assert seen["report"] == tmp_path / "report.md"
+    assert seen["summary_json"] == tmp_path / "summary.json"
+
+
+def test_refresh_defaults_are_all_off(monkeypatch):
+    seen = {}
+    monkeypatch.setattr(
+        refresh, "run", lambda sources, **kwargs: seen.update(kwargs) or 0
+    )
+
+    assert cli.main(["refresh"]) == 0
+    assert seen == {
+        "skip_enrich": False,
+        "offline": False,
+        "fast": False,
+        "strict": False,
+        "dry_run": False,
+        "llm": None,
+        "max_llm_calls": None,
+        "report": None,
+        "summary_json": None,
+    }
+
+
+def test_refresh_propagates_the_exit_code(monkeypatch):
+    monkeypatch.setattr(refresh, "run", lambda sources, **kwargs: 3)
+    assert cli.main(["refresh"]) == 3
+
+
+# ---------------------------------------------------------------------------
+# check-urls
+# ---------------------------------------------------------------------------
+
+
+def test_check_urls_offline_checks_nothing_and_exits_0(tree, capsys):
+    _write_catalog(tree, [_record()])
+    assert cli.main(["check-urls", "--sample", "5", "--seed", "0", "--offline"]) == 0
+    assert "offline, nothing checked" in capsys.readouterr().out
+
+
+def test_check_urls_reports_a_status_table_and_the_failures(tree, monkeypatch, capsys):
+    monkeypatch.setattr(config, "OFFLINE", False)
+    rows = [
+        _record(id=f"openneuro:ds00{n}", source_native_id=f"ds00{n}", url=url)
+        for n, url in enumerate(
+            [
+                "https://example.org/a",
+                "https://example.org/b",
+                "https://example.org/gone",
+                "https://example.org/d",
+            ]
+        )
+    ]
+    _write_catalog(tree, rows)
+    statuses = {"https://example.org/gone": 404}
+    checked: list[str] = []
+
+    def fake_head_status(url, timeout=20):
+        checked.append(url)
+        return statuses.get(url, 200), url
+
+    monkeypatch.setattr(http, "head_status", fake_head_status)
+
+    assert cli.main(["check-urls", "--sample", "4", "--seed", "0"]) == 0
+
+    assert sorted(checked) == sorted(row["url"] for row in rows)
+    out = _squeezed(capsys.readouterr().out)
+    assert "checked 4 of 4 urls (seed 0)" in out
+    assert "200 3" in out
+    assert "404 1" in out
+    assert "1 failing url(s):" in out
+    assert "404 https://example.org/gone" in out
+
+
+def test_check_urls_sample_is_seeded_and_reproducible(tree, monkeypatch):
+    monkeypatch.setattr(config, "OFFLINE", False)
+    _write_catalog(
+        tree,
+        [
+            _record(
+                id=f"openneuro:ds{n:03d}",
+                source_native_id=f"ds{n:03d}",
+                url=f"https://example.org/{n}",
+            )
+            for n in range(20)
+        ],
+    )
+    seen: list[list[str]] = []
+
+    def fake_head_status(url, timeout=20):
+        seen[-1].append(url)
+        return 200, url
+
+    monkeypatch.setattr(http, "head_status", fake_head_status)
+
+    for _ in range(2):
+        seen.append([])
+        assert cli.main(["check-urls", "--sample", "5", "--seed", "42"]) == 0
+    seen.append([])
+    assert cli.main(["check-urls", "--sample", "5", "--seed", "7"]) == 0
+
+    assert len(seen[0]) == 5
+    assert seen[0] == seen[1]
+    assert seen[2] != seen[0]
+
+
+def test_check_urls_unreachable_is_reported_not_fatal(tree, monkeypatch, capsys):
+    monkeypatch.setattr(config, "OFFLINE", False)
+    _write_catalog(tree, [_record()])
+    monkeypatch.setattr(http, "head_status", lambda url, timeout=20: (0, url))
+
+    assert cli.main(["check-urls", "--sample", "1", "--seed", "0"]) == 0
+    out = _squeezed(capsys.readouterr().out)
+    assert "unreachable 1" in out
+    assert "0 https://example.org/ds001" in out
+
+
+# ---------------------------------------------------------------------------
+# dod
+# ---------------------------------------------------------------------------
+
+
+def _pass_every_local_gate(tree, monkeypatch, tmp_path, *, records: int = 2_400):
+    """Build the tree a green Phase-0 `dod` run expects: enough records, a
+    matching graph, a changelog, an ok manifest, and a built site."""
+    rows = [
+        _record(
+            id=f"openneuro:ds{n:05d}",
+            source_native_id=f"ds{n:05d}",
+            url=f"https://example.org/ds{n:05d}",
+        )
+        for n in range(records)
+    ]
+    _write_catalog(tree, rows)
+    _build_graph_outputs(tree, rows)
+    io.write_atomic(tree.changelog / "latest.md", "# Refresh\n")
+    store = RawStore("openneuro", root=tree.raw)
+    store.write("ds00000", {"a": 1}, harvest_method="api", endpoints=[])
+    store.finalize(
+        listed_ids={"ds00000"}, harvested_at="2026-08-20", endpoints=[], status="ok"
+    )
+    monkeypatch.setattr(harvest, "get_registry", dict)
+    monkeypatch.setattr(
+        normalize, "get_normalizers", lambda: {"openneuro": (None, None)}
+    )
+    monkeypatch.setattr(config, "ROOT", tmp_path)
+    io.write_atomic(tmp_path / "_site" / "index.html", "<!doctype html>")
+    return rows
+
+
+def test_dod_unknown_phase_returns_2(capsys):
+    assert cli.main(["dod", "--phase", "9", "--url", "https://example.org/"]) == 2
+    assert "no definition-of-done defined for phase 9" in capsys.readouterr().err
+
+
+def test_dod_all_local_gates_pass(tree, monkeypatch, tmp_path, capsys):
+    _pass_every_local_gate(tree, monkeypatch, tmp_path)
+    monkeypatch.setattr(config, "OFFLINE", False)
+    monkeypatch.setattr(http, "head_status", lambda url, timeout=20: (200, url))
+
+    assert cli.main(["dod", "--phase", "0", "--url", "https://example.org/site/"]) == 0
+
+    out = _squeezed(capsys.readouterr().out)
+    assert "catalog >= 2400 records pass 2400 records" in out
+    assert "validate: 0 errors pass" in out
+    assert "graph contract pass" in out
+    assert "every source harvested ok pass 1/1 ok" in out
+    assert "site built pass" in out
+    assert "site url 200 pass 200 https://example.org/site/" in out
+    assert "e2e suite green n/a CI" in out
+    assert "(0 FAIL)" in out
+
+
+def test_dod_checks_the_deployed_url_and_its_stats_json(tree, monkeypatch, tmp_path):
+    _pass_every_local_gate(tree, monkeypatch, tmp_path)
+    monkeypatch.setattr(config, "OFFLINE", False)
+    checked: list[str] = []
+
+    def fake_head_status(url, timeout=20):
+        checked.append(url)
+        return 200, url
+
+    monkeypatch.setattr(http, "head_status", fake_head_status)
+
+    assert cli.main(["dod", "--phase", "0", "--url", "https://example.org/site/"]) == 0
+    assert checked == [
+        "https://example.org/site/",
+        "https://example.org/site/data/stats.json",
+    ]
+
+
+def test_dod_offline_marks_the_url_gates_not_applicable(
+    tree, monkeypatch, tmp_path, capsys
+):
+    _pass_every_local_gate(tree, monkeypatch, tmp_path)
+
+    def explode(url, timeout=20):  # pragma: no cover -- must never be called
+        raise AssertionError("dod --offline must not touch the network")
+
+    monkeypatch.setattr(http, "head_status", explode)
+
+    assert (
+        cli.main(
+            ["dod", "--phase", "0", "--url", "https://example.org/site/", "--offline"]
+        )
+        == 0
+    )
+    out = _squeezed(capsys.readouterr().out)
+    assert "site url 200 n/a offline" in out
+    assert "data/stats.json 200 n/a offline" in out
+
+
+def test_dod_fails_on_a_short_catalog_and_a_missing_site(
+    tree, monkeypatch, tmp_path, capsys
+):
+    _pass_every_local_gate(tree, monkeypatch, tmp_path, records=3)
+    (tmp_path / "_site" / "index.html").unlink()
+
+    assert (
+        cli.main(["dod", "--phase", "0", "--url", "https://example.org/", "--offline"])
+        == 1
+    )
+    out = _squeezed(capsys.readouterr().out)
+    assert "catalog >= 2400 records FAIL 3 records" in out
+    assert "site built FAIL" in out
+    assert "(2 FAIL)" in out
+
+
+def test_dod_without_any_data_fails_loudly(tree, monkeypatch, tmp_path, capsys):
+    monkeypatch.setattr(config, "ROOT", tmp_path)
+    monkeypatch.setattr(harvest, "get_registry", dict)
+    monkeypatch.setattr(normalize, "get_normalizers", dict)
+
+    assert (
+        cli.main(["dod", "--phase", "0", "--url", "https://example.org/", "--offline"])
+        == 1
+    )
+    out = _squeezed(capsys.readouterr().out)
+    assert "catalog exists FAIL" in out
+    assert "graph contract FAIL" in out
+    assert "every source harvested ok FAIL 0/0 ok" in out
+
+
+# ---------------------------------------------------------------------------
+# data-tree isolation
+# ---------------------------------------------------------------------------
+
+
+def test_rawstore_follows_a_monkeypatched_config_raw(tmp_path, monkeypatch):
+    """`RawStore(source)` must resolve `config.RAW` when it is
+    constructed, not when `atlas.harvest.base` was imported -- otherwise
+    the isolation fixture above is decorative and a subcommand that
+    harvests writes into the repo's real `data/raw/`.
+    """
+    monkeypatch.setattr(config, "RAW", tmp_path / "elsewhere")
+    assert RawStore("openneuro").root == tmp_path / "elsewhere" / "openneuro"
+
+
+# ---------------------------------------------------------------------------
+# argument validation
+# ---------------------------------------------------------------------------
 
 
 def test_check_urls_requires_sample_and_seed():

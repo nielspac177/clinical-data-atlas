@@ -446,6 +446,79 @@ def test_refreshing_one_source_keeps_the_others_records(tree, monkeypatch):
     ]
 
 
+def test_untouched_sources_keep_their_exclusions_too(tree, monkeypatch):
+    """A source that keeps its records across a run must keep its
+    exclusions with them -- otherwise `excluded.jsonl` would quietly claim
+    a source excluded nothing."""
+    _install(monkeypatch, ["openneuro", "physionet"])
+    _seed_raw(tree, "openneuro", {"ds001": _record_payload()})
+    _seed_raw(
+        tree,
+        "physionet",
+        {
+            "waveforms": _record_payload(),
+            "dropme": _record_payload(exclude="not clinical data"),
+        },
+    )
+    assert refresh.run(None, offline=True, skip_enrich=True) == 0
+
+    assert refresh.run(["openneuro"], offline=True, skip_enrich=True) == 0
+
+    assert _ids(tree) == ["openneuro:ds001", "physionet:waveforms"]
+    assert io.read_jsonl(tree.excluded_file) == [
+        {"id": "physionet:dropme", "reason": "not clinical data"}
+    ]
+
+
+def test_failed_sources_keep_their_exclusions_too(tree, monkeypatch):
+    _install(monkeypatch, ["openneuro", "physionet"])
+    _seed_raw(tree, "openneuro", {"ds001": _record_payload()})
+    _seed_raw(
+        tree,
+        "physionet",
+        {
+            "waveforms": _record_payload(),
+            "dropme": _record_payload(exclude="not clinical data"),
+        },
+    )
+    assert refresh.run(None, offline=True, skip_enrich=True) == 0
+
+    _install(
+        monkeypatch,
+        ["openneuro", "physionet"],
+        failing={"physionet": RuntimeError("down")},
+    )
+    assert refresh.run(None, skip_enrich=True) == 0
+
+    assert io.read_jsonl(tree.excluded_file) == [
+        {"id": "physionet:dropme", "reason": "not clinical data"}
+    ]
+
+
+def test_a_retained_exclusion_is_dropped_once_the_record_is_catalogued(
+    tree, monkeypatch
+):
+    """A stale exclusion must never contradict the catalog: if the record
+    it names is back, the exclusion goes."""
+    _install(monkeypatch, ["openneuro", "physionet"])
+    _seed_raw(tree, "openneuro", {"ds001": _record_payload()})
+    _seed_raw(tree, "physionet", {"dropme": _record_payload(exclude="not clinical")})
+    assert refresh.run(None, offline=True, skip_enrich=True) == 0
+    assert io.read_jsonl(tree.excluded_file) == [
+        {"id": "physionet:dropme", "reason": "not clinical"}
+    ]
+
+    # physionet now catalogs the record it used to exclude, and only
+    # openneuro is refreshed -- so physionet's records come from the
+    # snapshot while its stale exclusion must not.
+    _seed_raw(tree, "physionet", {"dropme": _record_payload()})
+    assert refresh.run(None, offline=True, skip_enrich=True) == 0
+    assert refresh.run(["openneuro"], offline=True, skip_enrich=True) == 0
+
+    assert "physionet:dropme" in _ids(tree)
+    assert io.read_jsonl(tree.excluded_file) == []
+
+
 # ---------------------------------------------------------------------------
 # Validation gate and --dry-run
 # ---------------------------------------------------------------------------

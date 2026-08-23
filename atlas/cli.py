@@ -1,24 +1,31 @@
 """Command-line entry point for the ``atlas`` console script.
 
-``schema``, ``harvest``, and ``normalize`` are fully wired up (Tasks 0.2
-and 0.5). ``enrich``, ``graph``, ``diff``, ``validate``, ``refresh``,
-``check-urls``, and ``dod`` are argument-parsing-only stubs for now: each
-prints ``<cmd>: not implemented yet`` to stderr and returns 2 -- later
-tasks (see each stub's docstring) replace their ``func`` with a real
-implementation. An unrecognized subcommand, or invalid arguments to a
-known one, is handled by argparse itself (exit 2), as usual.
+Every subcommand is thin: it resolves paths, loads or writes files, and
+prints. The pipeline logic lives in `atlas.refresh` (which owns the stage
+order) and in the stage modules themselves, so `atlas refresh` and
+`python -m atlas.refresh` cannot drift apart, and `enrich`/`graph`/`diff`
+run *the same* code the full pipeline runs, one stage at a time, for
+debugging.
+
+`harvest`, `normalize`, `enrich`, `graph` and `diff` are stage commands;
+`refresh` is all of them in order; `validate`, `check-urls` and `dod` are
+checks. An unrecognized subcommand, or invalid arguments to a known one,
+is handled by argparse itself (exit 2), as usual.
 """
 
 from __future__ import annotations
 
 import argparse
 import dataclasses
+import random
 import sys
+from collections import Counter
 from collections.abc import Callable
 from pathlib import Path
 from typing import TypeVar
 
-from atlas import config, harvest, io, normalize, schema
+from atlas import config, diff, harvest, http, io, normalize, refresh, schema
+from atlas.graph import build as graph_build
 from atlas.harvest.base import HarvestResult, RawStore
 from atlas.normalize import common
 
@@ -253,58 +260,467 @@ def _cmd_normalize(args: argparse.Namespace) -> int:
 
 
 # ---------------------------------------------------------------------------
-# Stubs: enrich, graph, diff, validate, refresh, check-urls, dod
+# enrich
 # ---------------------------------------------------------------------------
 
 
-def _not_implemented(cmd: str) -> int:
-    """Shared body for every stub subcommand below: print `<cmd>: not
-    implemented yet` to stderr and return 2."""
-    print(f"{cmd}: not implemented yet", file=sys.stderr)
-    return 2
+def _load_records(paths: refresh.Paths) -> tuple[list[schema.Record], str]:
+    """`(records, where)` -- the records a stage-only subcommand should
+    work on: the per-source `data/catalog/normalized/*.jsonl` files when
+    the normalize stage has run, else the catalog itself, else nothing.
+
+    Normalized files come first deliberately: they are the freshest
+    pre-enrichment state, so `atlas enrich` re-runs classification from
+    the same starting point `atlas refresh` would, rather than layering a
+    second pass on top of an already-enriched catalog.
+    """
+    normalized_dir = paths.catalog / "normalized"
+    files = [
+        path
+        for path in sorted(normalized_dir.glob("*.jsonl"))
+        if not path.name.endswith(".excluded.jsonl")
+    ]
+    if files:
+        rows = [row for path in files for row in io.read_jsonl(path)]
+        return (
+            [schema.Record.model_validate(row) for row in rows],
+            str(normalized_dir),
+        )
+    if paths.catalog_file.exists():
+        rows = io.read_jsonl(paths.catalog_file)
+        return (
+            [schema.Record.model_validate(row) for row in rows],
+            str(paths.catalog_file),
+        )
+    return [], ""
+
+
+def _collect_texts(
+    records: list[schema.Record], paths: refresh.Paths
+) -> tuple[dict[str, str], int]:
+    """`(texts, missing)` -- each record's enrichment text, rebuilt from
+    its raw envelope via its source's `enrichment_text`, plus a count of
+    the records no text could be built for (their raw record is gone, or
+    the source has no normalizer registered). Those records still go
+    through the stage; they just have nothing to classify from.
+    """
+    normalizers = normalize.get_normalizers()
+    envelopes_by_source: dict[str, dict] = {}
+    texts: dict[str, str] = {}
+    missing = 0
+    for record in records:
+        pair = normalizers.get(record.source)
+        if pair is None:
+            missing += 1
+            continue
+        if record.source not in envelopes_by_source:
+            try:
+                envelopes_by_source[record.source] = RawStore(
+                    record.source, root=paths.raw
+                ).load_all()
+            except (OSError, ValueError, KeyError):
+                envelopes_by_source[record.source] = {}
+        envelope = envelopes_by_source[record.source].get(record.source_native_id)
+        if envelope is None:
+            missing += 1
+            continue
+        try:
+            texts[record.id] = pair[1](envelope)
+        except Exception:  # noqa: BLE001 -- no text just means rules-only
+            missing += 1
+    return texts, missing
 
 
 def _cmd_enrich(args: argparse.Namespace) -> int:
-    """Stub -- classification/summarization lands in Tasks 2.1-2.2.
-    Always returns 2."""
-    return _not_implemented("enrich")
+    """Run the enrichment stages -- rules, LLM, MeSH, ROR -- over the
+    normalized records (or the catalog, when nothing is normalized) and
+    write `data/catalog/enriched.jsonl`.
+
+    A debugging/cache-warming counterpart to `refresh`, which runs the
+    same stage in the middle of the full pipeline: the LLM answers, MeSH
+    ids and ROR ids this fills are cached on disk, so a later `refresh`
+    reuses them instead of re-asking. It deliberately does **not** touch
+    `catalog.jsonl` -- that file is `refresh`'s output, after dedupe and
+    validation, and half a pipeline must not be able to produce it.
+
+    Exit codes: 0 on success, 1 when there is nothing to enrich (no
+    normalized records and no catalog -- run `harvest`/`normalize` first)
+    or the input can't be parsed, 2 for an unknown `--llm` backend.
+    """
+    paths = refresh.paths()
+    try:
+        records, where = _load_records(paths)
+    except Exception as exc:  # noqa: BLE001 -- a bad input file, not a crash
+        print(f"cannot read records: {type(exc).__name__}: {exc}", file=sys.stderr)
+        return 1
+    if not records:
+        print(
+            "nothing to enrich: no normalized records and no catalog "
+            "(run `atlas harvest` and `atlas normalize` first)",
+            file=sys.stderr,
+        )
+        return 1
+
+    texts, missing = _collect_texts(records, paths)
+    print(f"enriching {len(records)} records from {where}")
+    if missing:
+        print(f"{missing} record(s) have no enrichment text")
+
+    try:
+        stats = refresh.stage_enrich(
+            records,
+            texts,
+            offline=config.OFFLINE,
+            llm_backend=args.llm,
+            max_llm_calls=args.max_llm_calls,
+        )
+    except ValueError as exc:  # an unknown --llm backend name
+        print(str(exc), file=sys.stderr)
+        return 2
+
+    records.sort(key=lambda record: record.id)
+    out_path = paths.catalog / "enriched.jsonl"
+    io.write_jsonl(out_path, [record.model_dump(mode="json") for record in records])
+    print(
+        f"backend={stats['backend']} calls={stats['calls']} "
+        f"cache_hits={stats['cache_hits']} guard_drops={stats['guard_drops']} "
+        f"failures={stats['failures']} rules={stats['rules_applied']} "
+        f"llm={stats['records_enriched']} mesh={stats['mesh_resolved']} "
+        f"ror={stats['ror_resolved']}"
+    )
+    print(f"wrote {out_path}")
+    return 0
+
+
+# ---------------------------------------------------------------------------
+# graph
+# ---------------------------------------------------------------------------
+
+
+def _read_catalog(paths: refresh.Paths) -> list[dict] | None:
+    """The catalog as plain dicts, or `None` (having said so on stderr)
+    when it hasn't been built yet."""
+    if not paths.catalog_file.exists():
+        print(
+            f"no catalog at {paths.catalog_file} (run `atlas refresh` first)",
+            file=sys.stderr,
+        )
+        return None
+    return io.read_jsonl(paths.catalog_file)
 
 
 def _cmd_graph(args: argparse.Namespace) -> int:
-    """Stub -- graph + search index + stats output lands in Task 2.5.
-    Always returns 2."""
-    return _not_implemented("graph")
+    """Rebuild `data/graph/{graph,search-index,stats}.json` from the
+    committed catalog. Exit 1 when there is no catalog to build from."""
+    paths = refresh.paths()
+    rows = _read_catalog(paths)
+    if rows is None:
+        return 1
+
+    records = [schema.Record.model_validate(row) for row in rows]
+    graph, index, stats = refresh.stage_graph(records)
+    graph_build.write_outputs(graph, index, stats, out_dir=paths.graph)
+    print(
+        f"{stats['node_count']} nodes, {stats['link_count']} links, "
+        f"{len(index)} index rows, {stats['record_count']} records"
+    )
+    print(f"wrote {paths.graph}")
+    return 0
+
+
+# ---------------------------------------------------------------------------
+# diff
+# ---------------------------------------------------------------------------
 
 
 def _cmd_diff(args: argparse.Namespace) -> int:
-    """Stub -- changelog diffing lands in Task 2.6. Always returns 2."""
-    return _not_implemented("diff")
+    """Write a changelog entry for the working tree's catalog versus the
+    one committed at `HEAD` -- the same rendering `refresh` produces, for
+    a catalog that was rebuilt stage by stage. Exit 1 without a catalog."""
+    paths = refresh.paths()
+    rows = _read_catalog(paths)
+    if rows is None:
+        return 1
+
+    sources = sorted(set(harvest.get_registry()) | set(normalize.get_normalizers()))
+    catalog_diff, markdown = refresh.stage_diff(
+        refresh.head_catalog(paths.catalog_file),
+        rows,
+        date=refresh._today(),
+        source_results=refresh.manifest_results(sources, raw_root=paths.raw),
+    )
+    dated_path, _latest = diff.write_changelog(
+        markdown, date=refresh._today(), out_dir=paths.changelog
+    )
+    counts = catalog_diff.counts
+    print(
+        f"+{counts['added']} new, ~{counts['changed']} changed, "
+        f"-{counts['removed']} removed, {counts['unchanged']} unchanged"
+    )
+    print(f"wrote {dated_path}")
+    return 0
+
+
+# ---------------------------------------------------------------------------
+# validate
+# ---------------------------------------------------------------------------
 
 
 def _cmd_validate(args: argparse.Namespace) -> int:
-    """Stub -- catalog/graph validation lands in Task 2.7. Always
-    returns 2."""
-    return _not_implemented("validate")
+    """Validate the committed catalog against the schema, and the built
+    graph against its contract.
+
+    Always checked: every record parses as a `Record`, ids are unique, and
+    every `related` id names a record that exists. When the graph outputs
+    exist they are checked too -- unique node ids, no dangling link
+    endpoint, one search-index row per catalogued dataset, and a
+    `stats.json` `record_count` that agrees with the catalog.
+
+    `--strict` is about *completeness*, not severity: it additionally
+    requires the graph outputs to exist at all (CI runs it after a full
+    refresh, where a missing `graph.json` means the pipeline didn't
+    finish). Errors always exit 1, with or without `--strict`; warnings
+    are counted and printed, never fatal -- they are quality signal
+    (a record with no modalities), not breakage.
+    """
+    paths = refresh.paths()
+    rows = _read_catalog(paths)
+    if rows is None:
+        return 1
+
+    errors, warnings = schema.validate_records(rows)
+
+    try:
+        graph, index, stats = refresh.read_graph_outputs(paths.graph)
+    except (FileNotFoundError, ValueError) as exc:
+        message = f"graph outputs not built: {exc}"
+        if args.strict:
+            errors.append(message)
+        else:
+            print(message)
+    else:
+        errors.extend(refresh.graph_contract_errors(graph, index, stats, rows))
+
+    for message in errors[:50]:
+        print(f"error: {message}", file=sys.stderr)
+    if len(errors) > 50:
+        print(f"error: … and {len(errors) - 50} more", file=sys.stderr)
+
+    print(f"{len(rows)} records, {len(errors)} error(s), {len(warnings)} warning(s)")
+    return 1 if errors else 0
+
+
+# ---------------------------------------------------------------------------
+# refresh
+# ---------------------------------------------------------------------------
 
 
 def _cmd_refresh(args: argparse.Namespace) -> int:
-    """Stub -- the one-command pipeline orchestrator lands in Task 2.7.
-    Always returns 2 (its eventual real exit codes are 0 ok / 1
-    validation failed / 2 a source failed under `--strict` / 3 every
-    source failed)."""
-    return _not_implemented("refresh")
+    """Run the whole pipeline (`atlas.refresh.run`). Exit codes: 0 ok, 1
+    validation errors, 2 a source failed under `--strict` or the run was
+    misconfigured, 3 every source failed."""
+    return refresh.run(
+        refresh.parse_sources(args.sources),
+        skip_enrich=args.skip_enrich,
+        offline=args.offline,
+        fast=args.fast,
+        strict=args.strict,
+        dry_run=args.dry_run,
+        llm=args.llm,
+        max_llm_calls=args.max_llm_calls,
+        report=Path(args.report) if args.report else None,
+        summary_json=Path(args.summary_json) if args.summary_json else None,
+    )
+
+
+# ---------------------------------------------------------------------------
+# check-urls
+# ---------------------------------------------------------------------------
+
+# What a link check counts as alive: 2xx and 3xx. Everything else --
+# including 0, this project's "the request never completed" code -- is
+# reported as a failure for a human to look at.
+_URL_OK_RANGE = range(200, 400)
 
 
 def _cmd_check_urls(args: argparse.Namespace) -> int:
-    """Stub -- the URL spot-check sampler lands in Task 2.7. Always
-    returns 2."""
-    return _not_implemented("check-urls")
+    """HEAD (falling back to GET) a seeded random sample of catalog URLs
+    and report the status codes.
+
+    Informational by design: it always exits 0, even with dead links.
+    Sources move pages, and a monthly refresh must not fail because one
+    dataset was renamed -- the sample is evidence for a human (and for
+    `atlas dod`), not a gate. `--seed` makes the sample reproducible, so
+    re-running after a fix checks the same URLs.
+    """
+    paths = refresh.paths()
+    if args.offline or config.OFFLINE:
+        print("check-urls: offline, nothing checked")
+        return 0
+    if not paths.catalog_file.exists():
+        print(f"no catalog at {paths.catalog_file}", file=sys.stderr)
+        return 0
+
+    urls = sorted(
+        {row["url"] for row in io.read_jsonl(paths.catalog_file) if row.get("url")}
+    )
+    if not urls:
+        print("no urls in the catalog")
+        return 0
+
+    sample = sorted(random.Random(args.seed).sample(urls, min(args.sample, len(urls))))
+    counts: Counter = Counter()
+    failures: list[tuple[int, str]] = []
+    for url in sample:
+        status, _final_url = http.head_status(url)
+        counts[status] += 1
+        if status not in _URL_OK_RANGE:
+            failures.append((status, url))
+
+    print(f"checked {len(sample)} of {len(urls)} urls (seed {args.seed})")
+    print("status  count")
+    for status, count in sorted(counts.items()):
+        label = "unreachable" if status == 0 else str(status)
+        print(f"{label:<7} {count}")
+    if failures:
+        print(f"\n{len(failures)} failing url(s):")
+        for status, url in failures:
+            print(f"  {status} {url}")
+    return 0
+
+
+# ---------------------------------------------------------------------------
+# dod
+# ---------------------------------------------------------------------------
+
+# graph.json's budget: the site fetches it on first paint, so it is the
+# one generated file with a hard size ceiling (plan §M4/T4.4).
+MAX_GRAPH_BYTES = 2_500_000
+MIN_PHASE0_RECORDS = 2_400
+
+
+def _gate(name: str, ok: bool | None, detail: str = "") -> tuple[str, str, str]:
+    """One definition-of-done row: `ok=None` means "not checkable here"."""
+    status = "n/a" if ok is None else ("pass" if ok else "FAIL")
+    return name, status, detail
+
+
+def _phase0_gates(url: str | None, *, offline: bool) -> list[tuple[str, str, str]]:
+    """Every Phase 0 gate this machine can answer, plus `n/a` rows for the
+    ones only CI can (the browser suite and the Pages deploy)."""
+    paths = refresh.paths()
+    gates: list[tuple[str, str, str]] = []
+
+    rows: list[dict] = []
+    if paths.catalog_file.exists():
+        rows = io.read_jsonl(paths.catalog_file)
+        gates.append(
+            _gate(
+                f"catalog >= {MIN_PHASE0_RECORDS} records",
+                len(rows) >= MIN_PHASE0_RECORDS,
+                f"{len(rows)} records",
+            )
+        )
+    else:
+        gates.append(_gate("catalog exists", False, str(paths.catalog_file)))
+
+    errors, warnings = schema.validate_records(rows) if rows else ([], [])
+    gates.append(
+        _gate(
+            "validate: 0 errors",
+            not errors,
+            f"{len(errors)} error(s), {len(warnings)} warning(s)",
+        )
+    )
+
+    try:
+        graph, index, stats = refresh.read_graph_outputs(paths.graph)
+    except (FileNotFoundError, ValueError) as exc:
+        gates.append(_gate("graph contract", False, str(exc)))
+        graph_bytes = None
+    else:
+        contract = refresh.graph_contract_errors(graph, index, stats, rows)
+        gates.append(
+            _gate(
+                "graph contract",
+                not contract,
+                contract[0] if contract else f"{len(index)} index rows",
+            )
+        )
+        graph_bytes = (paths.graph / "graph.json").stat().st_size
+    gates.append(
+        _gate(
+            f"graph.json <= {MAX_GRAPH_BYTES // 1000} kB",
+            graph_bytes is not None and graph_bytes <= MAX_GRAPH_BYTES,
+            "not built" if graph_bytes is None else f"{graph_bytes // 1000} kB",
+        )
+    )
+
+    latest = paths.changelog / "latest.md"
+    gates.append(_gate("changelog latest.md", latest.exists(), str(latest)))
+
+    sources = sorted(set(harvest.get_registry()) | set(normalize.get_normalizers()))
+    manifests = refresh.read_manifests(sources, raw_root=paths.raw)
+    ok_sources = [
+        name
+        for name, manifest in manifests.items()
+        if manifest and manifest.get("status") == "ok"
+    ]
+    gates.append(
+        _gate(
+            "every source harvested ok",
+            bool(sources) and len(ok_sources) == len(sources),
+            f"{len(ok_sources)}/{len(sources)} ok",
+        )
+    )
+
+    index_html = config.ROOT / "_site" / "index.html"
+    gates.append(_gate("site built", index_html.exists(), str(index_html)))
+
+    if url and not offline:
+        for label, target in (
+            ("site url 200", url),
+            ("data/stats.json 200", url.rstrip("/") + "/data/stats.json"),
+        ):
+            status, _final = http.head_status(target)
+            gates.append(_gate(label, status in _URL_OK_RANGE, f"{status} {target}"))
+    else:
+        reason = "offline" if offline else "no --url"
+        gates.append(_gate("site url 200", None, reason))
+        gates.append(_gate("data/stats.json 200", None, reason))
+
+    gates.append(_gate("url sample 2xx/3xx", None, "run `atlas check-urls`"))
+    gates.append(_gate("e2e suite green", None, "CI"))
+    gates.append(_gate("0 console errors", None, "CI"))
+    gates.append(_gate("Pages deploy green", None, "CI"))
+    return gates
 
 
 def _cmd_dod(args: argparse.Namespace) -> int:
-    """Stub -- the definition-of-done gate lands in Task 4.4. Always
-    returns 2."""
-    return _not_implemented("dod")
+    """Print a phase's definition-of-done as a pass/fail table.
+
+    Only the gates answerable from this checkout are actually evaluated;
+    the browser suite, the console-error count and the Pages deploy are
+    CI's job and print as `n/a`, so the table never claims to have checked
+    something it didn't. Exit 1 if any evaluated gate fails, 2 for a phase
+    with no gates defined yet.
+    """
+    if args.phase != 0:
+        print(f"no definition-of-done defined for phase {args.phase}", file=sys.stderr)
+        return 2
+
+    offline = args.offline or config.OFFLINE
+    gates = _phase0_gates(args.url, offline=offline)
+    width = max(len(name) for name, _status, _detail in gates)
+    for name, status, detail in gates:
+        print(f"{name.ljust(width)}  {status:<4}  {detail}".rstrip())
+
+    failed = [name for name, status, _detail in gates if status == "FAIL"]
+    print(
+        f"phase {args.phase}: {len(gates) - len(failed)} of {len(gates)} "
+        f"gate(s) not failing ({len(failed)} FAIL)"
+    )
+    return 1 if failed else 0
 
 
 # ---------------------------------------------------------------------------
@@ -369,7 +785,7 @@ def build_parser() -> argparse.ArgumentParser:
 
     enrich_parser = subparsers.add_parser(
         "enrich",
-        help="Classify, summarize, and dedupe records (not implemented yet)",
+        help="Run the enrichment stages and write data/catalog/enriched.jsonl",
     )
     enrich_parser.add_argument(
         "--llm",
@@ -387,39 +803,51 @@ def build_parser() -> argparse.ArgumentParser:
 
     graph_parser = subparsers.add_parser(
         "graph",
-        help="Build the graph, search index, and stats outputs (not implemented yet)",
+        help="Build the graph, search index, and stats outputs from the catalog",
     )
     graph_parser.set_defaults(func=_cmd_graph)
 
     diff_parser = subparsers.add_parser(
         "diff",
-        help="Write a changelog entry for the current catalog state (not implemented yet)",
+        help="Write a changelog entry for the catalog versus the one at HEAD",
     )
     diff_parser.set_defaults(func=_cmd_diff)
 
     validate_parser = subparsers.add_parser(
         "validate",
-        help="Validate the catalog against the canonical schema (not implemented yet)",
+        help="Validate the catalog against the schema and the graph contract",
     )
     validate_parser.add_argument(
         "--strict",
         action="store_true",
-        help="Also fail on warnings, not just errors",
+        help="Also require the graph outputs to exist",
     )
     validate_parser.set_defaults(func=_cmd_validate)
 
     refresh_parser = subparsers.add_parser(
         "refresh",
-        help="Run the full pipeline end to end (not implemented yet)",
+        help="Run the full pipeline end to end",
     )
     refresh_parser.add_argument(
         "--sources", default=None, help="Comma-separated list of sources (default: all)"
     )
-    refresh_parser.add_argument("--skip-enrich", action="store_true")
-    refresh_parser.add_argument("--offline", action="store_true")
-    refresh_parser.add_argument("--fast", action="store_true")
-    refresh_parser.add_argument("--strict", action="store_true")
-    refresh_parser.add_argument("--dry-run", action="store_true")
+    refresh_parser.add_argument(
+        "--skip-enrich", action="store_true", help="Skip the LLM classification pass"
+    )
+    refresh_parser.add_argument(
+        "--offline",
+        action="store_true",
+        help="Don't harvest; normalize the raw store as it stands (caches only)",
+    )
+    refresh_parser.add_argument(
+        "--fast", action="store_true", help="Skip optional per-record detail requests"
+    )
+    refresh_parser.add_argument(
+        "--strict", action="store_true", help="Exit 2 if any source failed"
+    )
+    refresh_parser.add_argument(
+        "--dry-run", action="store_true", help="Run every stage, write no output"
+    )
     refresh_parser.add_argument("--llm", default=None, help="LLM backend override")
     refresh_parser.add_argument("--max-llm-calls", type=int, default=None)
     refresh_parser.add_argument(
@@ -434,7 +862,7 @@ def build_parser() -> argparse.ArgumentParser:
 
     check_urls_parser = subparsers.add_parser(
         "check-urls",
-        help="Spot-check a random sample of catalog URLs (not implemented yet)",
+        help="Spot-check a seeded random sample of catalog URLs (always exits 0)",
     )
     check_urls_parser.add_argument(
         "--sample", type=int, required=True, help="Number of URLs to sample"
@@ -442,17 +870,23 @@ def build_parser() -> argparse.ArgumentParser:
     check_urls_parser.add_argument(
         "--seed", type=int, required=True, help="Random seed for a reproducible sample"
     )
+    check_urls_parser.add_argument(
+        "--offline", action="store_true", help="Check nothing and exit 0"
+    )
     check_urls_parser.set_defaults(func=_cmd_check_urls)
 
     dod_parser = subparsers.add_parser(
         "dod",
-        help="Check a phase's definition-of-done against a deployed URL (not implemented yet)",
+        help="Check a phase's definition-of-done against this checkout and a URL",
     )
     dod_parser.add_argument(
         "--phase", type=int, required=True, help="Phase number to check"
     )
     dod_parser.add_argument(
         "--url", required=True, help="Deployed site URL to check against"
+    )
+    dod_parser.add_argument(
+        "--offline", action="store_true", help="Skip the gates that need the network"
     )
     dod_parser.set_defaults(func=_cmd_dod)
 

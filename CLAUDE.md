@@ -49,6 +49,16 @@ descriptions.
 `validate`, `refresh` (orchestrates all of the above), `check-urls`, `dod`
 (definition-of-done gate for a phase). Run python commands via `uv run`.
 
+`atlas refresh` == `python -m atlas.refresh` (same flags, same code):
+`--sources a,b --skip-enrich --offline --fast --strict --dry-run --llm X
+--max-llm-calls N --report PATH --summary-json PATH`. Exit codes: 0 ok, 1
+validation errors (nothing written), 2 a source failed under `--strict` or
+the run was misconfigured, 3 every source failed (nothing written).
+`--offline` skips harvesting and normalizes `data/raw/` as it stands, with
+the LLM/MeSH/ROR caches serving reads only. `enrich`/`graph`/`diff` run
+single stages of that same pipeline for debugging; only `refresh` writes
+`data/catalog/catalog.jsonl`.
+
 ## 4. Schema
 `atlas/schema.py` (pydantic v2) is the single source of truth. `docs/schema.json`
 and `docs/schema.md` are generated from it via `atlas schema --export` —
