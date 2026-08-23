@@ -24,6 +24,8 @@ from __future__ import annotations
 import csv
 import io
 import re
+from collections.abc import Iterator
+from contextlib import contextmanager
 from pathlib import Path
 from urllib.parse import quote
 
@@ -76,19 +78,22 @@ def open_graph(page: Page) -> None:
     expect(page.locator("#graph canvas")).to_be_visible()
 
 
-def search_is_ready(page: Page) -> None:
-    """Wait until the focused search box can actually answer a query.
+@contextmanager
+def search_index_loaded(page: Page) -> Iterator[None]:
+    """Wrap whatever focuses the search box; return once it can answer.
 
     The graph page fetches `search-index.json` the first time the box is
     focused, and `search.js` debounces the query without re-running it
     when the index later arrives — so a query typed into a box that was
     focused a moment ago is answered "no results" and never revisited.
-    Waiting for the network to go quiet is what makes the next keystroke
-    deterministic. (That the app cannot recover on its own is a real
-    bug, filed against `app-graph.js`; when it is fixed this wait
+    Waiting for that response, body and all, is what makes the next
+    keystroke deterministic. (That the app cannot recover on its own is
+    a real bug, filed against `app-graph.js`; when it is fixed this wait
     becomes belt and braces rather than load-bearing.)
     """
-    page.wait_for_load_state("networkidle")
+    with page.expect_response(re.compile(r"search-index\.json")) as response:
+        yield
+    response.value.finished()
 
 
 def open_dataset_link(panel: Locator) -> Locator:
@@ -107,6 +112,13 @@ def test_page_loads_without_console_errors(page: Page, name: str) -> None:
     expect(page).to_have_title(re.compile("Clinical Data Atlas"))
     # "Exactly one <h1>" is asserted at build time by
     # tests/test_sitebuild.py; here it only has to have arrived.
+    #
+    # TODO: tighten to `to_have_count(1)` once the changelog writer emits
+    # `###` bodies. Today a real-data `whats-new.html` carries a second
+    # <h1> ("Monthly refresh …") because `atlas/diff.py` writes `#` where
+    # `atlas/sitebuild.py` documents `###`, and the fixture changelog the
+    # sitebuild test uses is well-formed -- so nothing catches it. Fix
+    # belongs in the diff writer plus a realistically-shaped fixture.
     expect(page.locator("h1").first).to_be_attached()
     # The console guard in conftest.py asserts the "0 errors" half.
 
@@ -130,10 +142,12 @@ def test_no_horizontal_scroll_on_a_small_phone(page: Page, name: str) -> None:
 # ---------------------------------------------------------------------------
 
 
-def test_graph_has_a_webgl_canvas(page: Page) -> None:
-    open_graph(page)
+def test_graph_has_a_webgl_canvas(page: Page, console_guard: list[str]) -> None:
+    page.goto("index.html")
+    # Wait for whichever of the two outcomes arrives: waiting for the
+    # canvas alone would make the fallback branch below unreachable.
+    expect(page.locator("#graph canvas, #graph .graph-empty").first).to_be_visible()
     canvas = page.locator("#graph canvas")
-    expect(canvas).to_be_visible()
 
     has_gl = page.evaluate(
         """() => {
@@ -155,10 +169,16 @@ def test_graph_has_a_webgl_canvas(page: Page) -> None:
     # blank stage. `app-graph.js` renders that into `.graph-empty`.
     expect(page.locator("#graph .graph-empty")).to_be_visible()
     expect(page.locator('#graph .graph-empty a[href="table.html"]')).to_be_visible()
+    # That path is reached through `main().catch()`, which reports the
+    # failure it just recovered from; the guard is right to fail every
+    # other test on a console error, and this is the one place where one
+    # is the expected behaviour.
+    console_guard.clear()
 
 
 def test_stats_bar_counts_the_catalog(page: Page, catalog: dict) -> None:
     open_graph(page)
+    assert catalog["stats"]["record_count"] > 0
     expect(page.locator('#stats-bar dd[data-stat="record_count"]')).to_have_text(
         fmt(catalog["stats"]["record_count"])
     )
@@ -173,8 +193,8 @@ def test_stats_bar_counts_the_catalog(page: Page, catalog: dict) -> None:
 def test_search_opens_the_record_panel(page: Page, catalog: dict) -> None:
     wanted = records(catalog)[0]
     open_graph(page)
-    page.locator("#search-input").click()  # focus is what loads the index
-    search_is_ready(page)
+    with search_index_loaded(page):
+        page.locator("#search-input").click()  # focus is what loads the index
     page.locator("#search-input").fill(wanted["name"])
 
     results = page.locator("#search-results li")
@@ -238,16 +258,16 @@ def test_keyboard_reaches_search_then_the_panel_close_button(
     open_graph(page)
 
     # Tab from the top of the document rather than clicking: the count is
-    # not the contract, "you can get there with Tab alone" is.
-    for _ in range(12):
-        page.keyboard.press("Tab")
-        if page.evaluate("() => document.activeElement?.id") == "search-input":
-            break
-    else:  # pragma: no cover - only reached when the header regresses
-        pytest.fail("Tab never reached #search-input")
+    # not the contract, "you can get there with Tab alone" is. Tabbing
+    # into the box is itself what starts the index download.
+    with search_index_loaded(page):
+        for _ in range(12):
+            page.keyboard.press("Tab")
+            if page.evaluate("() => document.activeElement?.id") == "search-input":
+                break
+        else:  # pragma: no cover - only reached when the header regresses
+            pytest.fail("Tab never reached #search-input")
 
-    # Tabbing into the box is itself what starts the index download.
-    search_is_ready(page)
     page.keyboard.type(records(catalog)[0]["name"][:24])
     expect(page.locator("#search-results li").first).to_be_visible()
 
@@ -445,6 +465,30 @@ def test_screenshots(page: Page, artifacts_dir: Path, name: str) -> None:
     _shoot(page, artifacts_dir, stem)
     page.set_viewport_size(MOBILE)
     _shoot(page, artifacts_dir, stem)
+
+
+# ---------------------------------------------------------------------------
+# The guards themselves
+# ---------------------------------------------------------------------------
+
+
+def test_a_data_less_build_only_skips_without_a_catalog(
+    missing_data_guard, tmp_path: Path
+) -> None:
+    """The "no data yet" skip must not be able to hide a broken build.
+
+    `conftest.catalog` skips the whole suite when the served site has no
+    `data/`, which is right in the window before the first data commit
+    and dangerous after it. This pins the sentinel that separates the
+    two: no committed catalog -> skip, committed catalog -> fail.
+    """
+    assert not missing_data_guard(tmp_path)
+
+    catalog_file = tmp_path / "data" / "catalog" / "catalog.jsonl"
+    catalog_file.parent.mkdir(parents=True)
+    catalog_file.write_text('{"id": "src:one"}\n', encoding="utf-8")
+
+    assert missing_data_guard(tmp_path)
 
 
 # ---------------------------------------------------------------------------

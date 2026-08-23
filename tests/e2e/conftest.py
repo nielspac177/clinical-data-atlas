@@ -36,15 +36,35 @@ from collections.abc import Iterator
 from functools import partial
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
-from typing import Any, ClassVar
+from typing import Any, ClassVar, NoReturn
 
 import pytest
-from playwright.sync_api import ConsoleMessage, Error, Page
+
+try:
+    from playwright.sync_api import ConsoleMessage, Error, Page, expect
+except ModuleNotFoundError as error:  # pragma: no cover - depends on the env
+    # `tests/conftest.py` keeps this directory out of collection entirely
+    # when playwright is absent, so this only fires for someone who named
+    # `tests/e2e` on the command line -- pytest loads an argument's
+    # conftest before any hook can object. Say what to install rather
+    # than leaving them with a bare ModuleNotFoundError. (The wording is
+    # duplicated in `tests/conftest.py`'s E2E_HINT, which cannot be
+    # imported from here: both files are called `conftest`.)
+    raise ModuleNotFoundError(
+        "the browser suite needs the e2e dependency group: run `make e2e`, "
+        "or `uv sync --group e2e && uv run playwright install chromium`"
+    ) from error
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 ARTIFACTS = Path(__file__).resolve().parent / "artifacts"
 FIXTURE_DATA = REPO_ROOT / "tests" / "fixtures" / "site"
 REAL_GRAPH = REPO_ROOT / "data" / "graph" / "graph.json"
+REAL_CATALOG = REPO_ROOT / "data" / "catalog" / "catalog.jsonl"
+
+# The default 5 s is measured on a warm laptop. A two-core CI runner
+# booting ForceGraph3D under swiftshader is several times slower, and a
+# timeout this generous costs a passing run nothing.
+expect.set_options(timeout=15_000)
 
 #: The project-site path prefix the pages are built for and served under.
 BASE_PATH = "/clinical-data-atlas/"
@@ -73,7 +93,7 @@ def pytest_collection_modifyitems(items: list[pytest.Item]) -> None:
     """
     here = Path(__file__).parent
     for item in items:
-        if here in Path(str(item.path)).parents:
+        if here in item.path.parents:
             item.add_marker(pytest.mark.e2e)
 
 
@@ -132,13 +152,12 @@ def _serve(site: Path, www: Path) -> Iterator[str]:
     """Serve `site` as `www/clinical-data-atlas`; yield its base URL."""
     www.mkdir(parents=True, exist_ok=True)
     link = www / BASE_PATH.strip("/")
-    if not link.exists():
+    if not (link.exists() or link.is_symlink()):
         link.symlink_to(site, target_is_directory=True)
 
     server = ThreadingHTTPServer(
         ("127.0.0.1", 0), partial(_QuietHandler, directory=str(www))
     )
-    server.daemon_threads = True
     thread = threading.Thread(target=server.serve_forever, daemon=True)
     thread.start()
     try:
@@ -174,14 +193,18 @@ def base_url(request: pytest.FixtureRequest, tmp_path_factory) -> Iterator[str]:
 
 
 @pytest.fixture(scope="session")
-def real_base_url(
-    request: pytest.FixtureRequest, base_url: str, tmp_path_factory
-) -> Iterator[str]:
-    """A site built from `data/` -- skipped when this checkout has none."""
+def real_base_url(request: pytest.FixtureRequest, tmp_path_factory) -> Iterator[str]:
+    """A site built from `data/` -- skipped when this checkout has none.
+
+    `base_url` is resolved lazily, and only on the branch that reuses it:
+    asking for it up front would build and serve the fixture site for a
+    `-k real_data_smoke` run that never looks at it.
+    """
     if not REAL_GRAPH.is_file():
         pytest.skip("no data/graph/graph.json in this checkout")
     if _external_base_url(request.config) or _real_data_wanted():
-        yield base_url  # Already the real thing; don't build it twice.
+        # Already the real thing; don't build and serve it twice.
+        yield request.getfixturevalue("base_url")
         return
     root = tmp_path_factory.mktemp("site-real")
     site = _build_site(root, real=True)
@@ -196,6 +219,34 @@ def _fetch_json(url: str) -> Any:
         return json.load(response)
 
 
+def catalog_is_committed(root: Path = REPO_ROOT) -> bool:
+    """True when `root` ships a catalog, so a data-less site is a bug.
+
+    The same sentinel CI's `validate` step uses. Kept as a plain function
+    (and exposed through `missing_data_guard`) because everything about
+    whether this suite skips or fails hangs off it.
+    """
+    return (root / "data" / "catalog" / "catalog.jsonl").is_file()
+
+
+@pytest.fixture(scope="session")
+def missing_data_guard():
+    """`catalog_is_committed`, for the test that guards the guard."""
+    return catalog_is_committed
+
+
+def _no_usable_data(base_url: str, reason: str) -> NoReturn:
+    """Skip a data-less site, or fail it -- see `catalog_is_committed`."""
+    where = f"the site at {base_url} serves no usable data/ ({reason})"
+    if catalog_is_committed():
+        pytest.fail(
+            f"{where}, but this checkout has "
+            f"{REAL_CATALOG.relative_to(REPO_ROOT)} -- the build dropped the "
+            f"data rather than the data not existing"
+        )
+    pytest.skip(f"{where}; this checkout has no catalog either")
+
+
 @pytest.fixture(scope="session", autouse=True)
 def catalog(base_url: str) -> dict:
     """What the served build contains: `{rows, stats, graph}`.
@@ -204,19 +255,22 @@ def catalog(base_url: str) -> dict:
     same suite means the same thing whether it is pointed at the six-row
     fixture catalog or at the real one under CI's `--base-url`.
 
-    A site built before the first refresh has no `data/` at all. Every
-    page then fails its fetch and logs to the console, so there is
-    nothing here worth asserting; say so once rather than failing twenty
-    tests with the same cause.
+    A site built before the first refresh has no `data/` at all; every
+    page then fails its fetch, so there is nothing worth asserting and
+    the suite skips with one reason rather than twenty identical
+    failures. Once the checkout *has* a catalog the same symptom means
+    something else entirely -- the build lost the data -- so it fails
+    instead. Nothing upstream catches that: `atlas/sitebuild.py` only
+    warns about missing graph JSON and still exits 0.
     """
     try:
         rows = _fetch_json(f"{base_url}data/search-index.json")
         stats = _fetch_json(f"{base_url}data/stats.json")
         graph = _fetch_json(f"{base_url}data/graph.json")
     except urllib.error.HTTPError as error:
-        pytest.skip(f"the site at {base_url} was built without data/ ({error})")
+        _no_usable_data(base_url, str(error))
     if not rows:
-        pytest.skip(f"the site at {base_url} has an empty catalog")
+        _no_usable_data(base_url, "search-index.json is empty")
     return {"rows": rows, "stats": stats, "graph": graph}
 
 
