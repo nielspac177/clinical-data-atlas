@@ -1,0 +1,325 @@
+/* Design tokens — the only file in the site that spells out a raw value.
+ *
+ * Structure, and why:
+ *   1. `--d-*` / `--l-*` (and `--dom-*-d` / `--dom-*-l`) are the *raw*
+ *      palettes. Every literal hex in the design system appears here
+ *      exactly once, so a color can never drift between themes.
+ *   2. Semantic tokens (`--canvas`, `--text`, `--dom-neurology`, ...) are
+ *      what components consume. They point at the dark palette on bare
+ *      `:root` — dark is the default — and are remapped to the light
+ *      palette in the two "light" blocks below.
+ *   3. Two light blocks, because there are two ways to be light:
+ *      an explicit user choice (`:root[data-theme="light"]`, written by
+ *      the pre-paint script from localStorage) and the OS preference with
+ *      no explicit choice (`@media (prefers-color-scheme: light)` guarded
+ *      by `:not([data-theme="dark"])` so an explicit dark choice wins).
+ *      They must stay identical — they are the same theme reached two
+ *      ways. Add a token to one, add it to the other.
+ */
+
+:root {
+  /* ---- raw palette: core (dark) ---- */
+  --d-canvas: #0d1117;
+  --d-surface: #151a21;
+  --d-surface-2: #1c232c;
+  --d-text: #e8eef5;
+  --d-muted: #9fb0c0;
+  --d-accent: #63a0ff;
+  --d-accent-contrast: #0d1117;
+  --d-focus: #ffcc4d;
+  --d-border: #232b35;
+  --d-border-strong: #323c48;
+  --d-scrim: rgba(3, 6, 10, 0.66);
+  --d-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+
+  /* ---- raw palette: core (light) ---- */
+  --l-canvas: #f7f9fb;
+  --l-surface: #ffffff;
+  --l-surface-2: #f0f3f7;
+  --l-text: #131a24;
+  --l-muted: #55636f;
+  --l-accent: #045fff;
+  --l-accent-contrast: #ffffff;
+  --l-focus: #7a3d00;
+  --l-border: #dde3ea;
+  --l-border-strong: #c3ccd6;
+  --l-scrim: rgba(19, 26, 36, 0.34);
+  --l-shadow: 0 10px 30px rgba(19, 26, 36, 0.14);
+
+  /* ---- raw palette: clinical domains (17, vocab order) ---- */
+  --dom-neurology-d: #60a5fa;
+  --dom-neurology-l: #1d4ed8;
+  --dom-psychiatry-d: #a78bfa;
+  --dom-psychiatry-l: #6d28d9;
+  --dom-neuroscience-d: #2dd4bf;
+  --dom-neuroscience-l: #0f766e;
+  --dom-cardiology-d: #f87171;
+  --dom-cardiology-l: #b91c1c;
+  --dom-oncology-d: #e879f9;
+  --dom-oncology-l: #a21caf;
+  --dom-pulmonology-d: #38bdf8;
+  --dom-pulmonology-l: #0369a1;
+  --dom-critical_care-d: #fb923c;
+  --dom-critical_care-l: #c2410c;
+  --dom-surgery-d: #9db8d9;
+  --dom-surgery-l: #35597f;
+  --dom-pediatrics-d: #f472b6;
+  --dom-pediatrics-l: #be185d;
+  --dom-obstetrics_gynecology-d: #fda4af;
+  --dom-obstetrics_gynecology-l: #9f1239;
+  --dom-infectious_disease-d: #4ade80;
+  --dom-infectious_disease-l: #15803d;
+  --dom-endocrinology_metabolism-d: #facc15;
+  --dom-endocrinology_metabolism-l: #a16207;
+  --dom-gastroenterology_hepatology-d: #b08968;
+  --dom-gastroenterology_hepatology-l: #7c4a1e;
+  --dom-nephrology_urology-d: #818cf8;
+  --dom-nephrology_urology-l: #4338ca;
+  --dom-musculoskeletal-d: #a3e635;
+  --dom-musculoskeletal-l: #4d7c0f;
+  --dom-public_health-d: #a8a878;
+  --dom-public_health-l: #5f6b2e;
+  --dom-other-d: #8b93a1;
+  --dom-other-l: #6b7280;
+
+  /* ---- raw palette: graph node types (neutrals; datasets take a
+         domain color, everything else stays deliberately quiet) ---- */
+  --node-source-d: #d5dee8;
+  --node-source-l: #26313d;
+  --node-modality-d: #9aa8b8;
+  --node-modality-l: #48586a;
+  --node-condition-d: #78889a;
+  --node-condition-l: #6a7b8d;
+  --node-institution-d: #5d6b7c;
+  --node-institution-l: #7e8c9b;
+  --node-dataset-d: #8b93a1;
+  --node-dataset-l: #6b7280;
+
+  /* ---- raw palette: access badges (bg/text pairs, each >= 7:1) ---- */
+  --acc-open-bg-d: #0e2a1c;
+  --acc-open-fg-d: #7ee2a8;
+  --acc-open-bg-l: #e6f6ec;
+  --acc-open-fg-l: #10492b;
+  --acc-registration-bg-d: #10243d;
+  --acc-registration-fg-d: #8ec5ff;
+  --acc-registration-bg-l: #e8f0fe;
+  --acc-registration-fg-l: #123a75;
+  --acc-credentialed-bg-d: #2e2410;
+  --acc-credentialed-fg-d: #f5cf6b;
+  --acc-credentialed-bg-l: #fbf0d8;
+  --acc-credentialed-fg-l: #5a4108;
+  --acc-application-bg-d: #2f1f12;
+  --acc-application-fg-d: #ffb27a;
+  --acc-application-bg-l: #fdeee2;
+  --acc-application-fg-l: #6b3310;
+  --acc-purchase-bg-d: #2f1620;
+  --acc-purchase-fg-d: #ff9db4;
+  --acc-purchase-bg-l: #fdeaf0;
+  --acc-purchase-fg-l: #6d1030;
+
+  /* ---- semantic tokens: dark is the default ---- */
+  color-scheme: dark;
+
+  --canvas: var(--d-canvas);
+  --surface: var(--d-surface);
+  --surface-2: var(--d-surface-2);
+  --text: var(--d-text);
+  --muted: var(--d-muted);
+  --accent: var(--d-accent);
+  --accent-contrast: var(--d-accent-contrast);
+  --focus: var(--d-focus);
+  --border: var(--d-border);
+  --border-strong: var(--d-border-strong);
+  --scrim: var(--d-scrim);
+  --shadow: var(--d-shadow);
+
+  --dom-neurology: var(--dom-neurology-d);
+  --dom-psychiatry: var(--dom-psychiatry-d);
+  --dom-neuroscience: var(--dom-neuroscience-d);
+  --dom-cardiology: var(--dom-cardiology-d);
+  --dom-oncology: var(--dom-oncology-d);
+  --dom-pulmonology: var(--dom-pulmonology-d);
+  --dom-critical_care: var(--dom-critical_care-d);
+  --dom-surgery: var(--dom-surgery-d);
+  --dom-pediatrics: var(--dom-pediatrics-d);
+  --dom-obstetrics_gynecology: var(--dom-obstetrics_gynecology-d);
+  --dom-infectious_disease: var(--dom-infectious_disease-d);
+  --dom-endocrinology_metabolism: var(--dom-endocrinology_metabolism-d);
+  --dom-gastroenterology_hepatology: var(--dom-gastroenterology_hepatology-d);
+  --dom-nephrology_urology: var(--dom-nephrology_urology-d);
+  --dom-musculoskeletal: var(--dom-musculoskeletal-d);
+  --dom-public_health: var(--dom-public_health-d);
+  --dom-other: var(--dom-other-d);
+
+  --node-source: var(--node-source-d);
+  --node-modality: var(--node-modality-d);
+  --node-condition: var(--node-condition-d);
+  --node-institution: var(--node-institution-d);
+  --node-dataset: var(--node-dataset-d);
+
+  --acc-open-bg: var(--acc-open-bg-d);
+  --acc-open-fg: var(--acc-open-fg-d);
+  --acc-registration-bg: var(--acc-registration-bg-d);
+  --acc-registration-fg: var(--acc-registration-fg-d);
+  --acc-credentialed-bg: var(--acc-credentialed-bg-d);
+  --acc-credentialed-fg: var(--acc-credentialed-fg-d);
+  --acc-application-bg: var(--acc-application-bg-d);
+  --acc-application-fg: var(--acc-application-fg-d);
+  --acc-purchase-bg: var(--acc-purchase-bg-d);
+  --acc-purchase-fg: var(--acc-purchase-fg-d);
+
+  /* ---- theme-independent tokens ---- */
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+    "Liberation Mono", monospace;
+
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.8125rem;
+  --fs-base: 0.9375rem;
+  --fs-md: 1.0625rem;
+  --fs-lg: 1.375rem;
+  --fs-xl: 1.75rem;
+  --fs-2xl: 2.25rem;
+
+  --lh-tight: 1.2;
+  --lh-normal: 1.5;
+  --lh-prose: 1.65;
+
+  --tracking-tight: -0.011em;
+  --tracking-caps: 0.06em;
+
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-7: 3rem;
+
+  --r-sm: 4px;
+  --r-md: 8px;
+  --r-lg: 12px;
+  --r-pill: 999px;
+
+  /* Layout constants. Media queries can't read custom properties, so the
+     breakpoint below is documentation — layout.css hard-codes 900px. */
+  --header-h: 56px;
+  --rail-w: 260px;
+  --drawer-w: 380px;
+  --measure: 68ch;
+  --bp-md: 900px;
+
+  --dur-fast: 120ms;
+  --dur-base: 200ms;
+  --ease: cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+
+/* Light, chosen explicitly (pre-paint script wrote data-theme="light"). */
+:root[data-theme="light"] {
+  color-scheme: light;
+
+  --canvas: var(--l-canvas);
+  --surface: var(--l-surface);
+  --surface-2: var(--l-surface-2);
+  --text: var(--l-text);
+  --muted: var(--l-muted);
+  --accent: var(--l-accent);
+  --accent-contrast: var(--l-accent-contrast);
+  --focus: var(--l-focus);
+  --border: var(--l-border);
+  --border-strong: var(--l-border-strong);
+  --scrim: var(--l-scrim);
+  --shadow: var(--l-shadow);
+
+  --dom-neurology: var(--dom-neurology-l);
+  --dom-psychiatry: var(--dom-psychiatry-l);
+  --dom-neuroscience: var(--dom-neuroscience-l);
+  --dom-cardiology: var(--dom-cardiology-l);
+  --dom-oncology: var(--dom-oncology-l);
+  --dom-pulmonology: var(--dom-pulmonology-l);
+  --dom-critical_care: var(--dom-critical_care-l);
+  --dom-surgery: var(--dom-surgery-l);
+  --dom-pediatrics: var(--dom-pediatrics-l);
+  --dom-obstetrics_gynecology: var(--dom-obstetrics_gynecology-l);
+  --dom-infectious_disease: var(--dom-infectious_disease-l);
+  --dom-endocrinology_metabolism: var(--dom-endocrinology_metabolism-l);
+  --dom-gastroenterology_hepatology: var(--dom-gastroenterology_hepatology-l);
+  --dom-nephrology_urology: var(--dom-nephrology_urology-l);
+  --dom-musculoskeletal: var(--dom-musculoskeletal-l);
+  --dom-public_health: var(--dom-public_health-l);
+  --dom-other: var(--dom-other-l);
+
+  --node-source: var(--node-source-l);
+  --node-modality: var(--node-modality-l);
+  --node-condition: var(--node-condition-l);
+  --node-institution: var(--node-institution-l);
+  --node-dataset: var(--node-dataset-l);
+
+  --acc-open-bg: var(--acc-open-bg-l);
+  --acc-open-fg: var(--acc-open-fg-l);
+  --acc-registration-bg: var(--acc-registration-bg-l);
+  --acc-registration-fg: var(--acc-registration-fg-l);
+  --acc-credentialed-bg: var(--acc-credentialed-bg-l);
+  --acc-credentialed-fg: var(--acc-credentialed-fg-l);
+  --acc-application-bg: var(--acc-application-bg-l);
+  --acc-application-fg: var(--acc-application-fg-l);
+  --acc-purchase-bg: var(--acc-purchase-bg-l);
+  --acc-purchase-fg: var(--acc-purchase-fg-l);
+}
+
+/* Light, inherited from the OS — unless dark was chosen explicitly.
+   Keep this block byte-identical to :root[data-theme="light"] above. */
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    color-scheme: light;
+
+    --canvas: var(--l-canvas);
+    --surface: var(--l-surface);
+    --surface-2: var(--l-surface-2);
+    --text: var(--l-text);
+    --muted: var(--l-muted);
+    --accent: var(--l-accent);
+    --accent-contrast: var(--l-accent-contrast);
+    --focus: var(--l-focus);
+    --border: var(--l-border);
+    --border-strong: var(--l-border-strong);
+    --scrim: var(--l-scrim);
+    --shadow: var(--l-shadow);
+
+    --dom-neurology: var(--dom-neurology-l);
+    --dom-psychiatry: var(--dom-psychiatry-l);
+    --dom-neuroscience: var(--dom-neuroscience-l);
+    --dom-cardiology: var(--dom-cardiology-l);
+    --dom-oncology: var(--dom-oncology-l);
+    --dom-pulmonology: var(--dom-pulmonology-l);
+    --dom-critical_care: var(--dom-critical_care-l);
+    --dom-surgery: var(--dom-surgery-l);
+    --dom-pediatrics: var(--dom-pediatrics-l);
+    --dom-obstetrics_gynecology: var(--dom-obstetrics_gynecology-l);
+    --dom-infectious_disease: var(--dom-infectious_disease-l);
+    --dom-endocrinology_metabolism: var(--dom-endocrinology_metabolism-l);
+    --dom-gastroenterology_hepatology: var(--dom-gastroenterology_hepatology-l);
+    --dom-nephrology_urology: var(--dom-nephrology_urology-l);
+    --dom-musculoskeletal: var(--dom-musculoskeletal-l);
+    --dom-public_health: var(--dom-public_health-l);
+    --dom-other: var(--dom-other-l);
+
+    --node-source: var(--node-source-l);
+    --node-modality: var(--node-modality-l);
+    --node-condition: var(--node-condition-l);
+    --node-institution: var(--node-institution-l);
+    --node-dataset: var(--node-dataset-l);
+
+    --acc-open-bg: var(--acc-open-bg-l);
+    --acc-open-fg: var(--acc-open-fg-l);
+    --acc-registration-bg: var(--acc-registration-bg-l);
+    --acc-registration-fg: var(--acc-registration-fg-l);
+    --acc-credentialed-bg: var(--acc-credentialed-bg-l);
+    --acc-credentialed-fg: var(--acc-credentialed-fg-l);
+    --acc-application-bg: var(--acc-application-bg-l);
+    --acc-application-fg: var(--acc-application-fg-l);
+    --acc-purchase-bg: var(--acc-purchase-bg-l);
+    --acc-purchase-fg: var(--acc-purchase-fg-l);
+  }
+}
