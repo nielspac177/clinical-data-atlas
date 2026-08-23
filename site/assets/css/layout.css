@@ -260,7 +260,19 @@ body.page-graph {
     padding: var(--sp-4) var(--sp-3) var(--sp-6);
   }
 
+  /* Task 3.6 (Q-F): with the real catalog this rail is ~1,818px tall,
+     and stacked above `.table-panel` it put the table's first row
+     2,038px down a 375x812 phone - every reader had to scroll past
+     seven facet groups to reach the search box, the count line and the
+     data. Collapsed by default here instead, behind the `.facets-toggle`
+     button `facets-toggle.js` inserts immediately before this element
+     (components.css styles it; it has no box at all above 900px, where
+     nothing on this page changes). The closed state is the CSS default
+     rather than something JS applies, so the table is at the top of the
+     page from the first paint - and a JS-less visit, where the facet
+     lists are empty anyway, is not offered a rail it cannot fill. */
   .facets {
+    display: none;
     position: static;
     max-height: none;
     overflow: visible;
@@ -268,6 +280,17 @@ body.page-graph {
     border: 1px solid var(--border);
     border-radius: var(--r-md);
     background: var(--surface);
+  }
+
+  /* Opened, the rail is a bounded, self-scrolling panel rather than its
+     full natural height: 22rem keeps the toolbar, the "N of M datasets"
+     line and the top of the table on screen underneath it at 812px, so
+     ticking a facet shows its effect without a scroll back down. */
+  .facets[data-expanded="true"] {
+    display: block;
+    max-height: min(50dvh, 22rem);
+    overflow-y: auto;
+    overscroll-behavior: contain;
   }
 }
 

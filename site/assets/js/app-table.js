@@ -17,6 +17,7 @@ import { createPanel } from "./panel.js";
 import { applyFilters, facetCounts, renderFacetOptions, FACETS } from "./filters.js";
 import { createTable, toCSV } from "./table.js";
 import { readState, writeState, onChange } from "./url-state.js";
+import { createFacetsToggle } from "./facets-toggle.js";
 
 async function fetchJSON(path) {
   const url = `${BASE_URL}${path}?v=${BUILD}`;
@@ -90,6 +91,10 @@ function main() {
   const downloadBtn = document.getElementById("download-csv");
   const panelEl = document.getElementById("panel");
   const searchInput = document.getElementById("search-input");
+
+  // Below 900px the facets rail is collapsed behind this button (it is
+  // `display: none` above); the rail itself is untouched either way.
+  const facetsToggle = createFacetsToggle(document.querySelector(".facets"));
 
   let allRows = [];
   let rowsById = new Map();
@@ -165,6 +170,7 @@ function main() {
   }
 
   function renderAllFacets() {
+    facetsToggle.update(filterState);
     for (const facet of FACETS) {
       const container = document.querySelector(`[data-facet-options="${facet}"]`);
       if (!container) continue;

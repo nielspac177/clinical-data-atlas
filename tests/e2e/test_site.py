@@ -403,6 +403,110 @@ def test_a_table_row_opens_the_panel(page: Page, catalog: dict) -> None:
     expect(page.locator("#panel-title")).to_have_text(name)
 
 
+def test_the_table_is_at_the_top_of_the_page_on_a_phone(page: Page) -> None:
+    """Q-F: below 900px the rail is collapsed, so the data leads.
+
+    Measured against the real 2,655-record catalog the rail is ~1,818px
+    tall; stacked above `.table-panel` it put the search box 1,914px and
+    the first row 2,038px down a 375x812 phone. The whole
+    disclosure/toolbar/count/table stack now has to fit inside the first
+    screenful, with the table itself well inside it.
+    """
+    page.set_viewport_size(MOBILE)
+    page.goto("table.html")
+    expect(page.locator("#table-body tr").first).to_be_visible()
+
+    toggle = page.locator(".facets-toggle")
+    expect(toggle).to_be_visible()
+    expect(toggle).to_have_attribute("aria-expanded", "false")
+
+    tops = {}
+    for selector in (".facets-toggle", ".toolbar", "#table-status", ".table-wrap"):
+        box = page.locator(selector).bounding_box()
+        assert box is not None, selector
+        tops[selector] = box["y"]
+    assert max(tops.values()) < MOBILE["height"], tops
+    # Not merely on screen: near the top of it, above the fold on any
+    # phone this site claims to support.
+    assert tops[".table-wrap"] < 400, tops
+
+    # Collapsed means collapsed, not merely scrolled past.
+    panel = page.locator(f"#{toggle.get_attribute('aria-controls')}")
+    expect(panel).to_be_hidden()
+
+
+def test_the_filters_disclosure_opens_the_rail_from_the_keyboard(page: Page) -> None:
+    """Focus it, press Enter, and the rail it names appears."""
+    page.set_viewport_size(MOBILE)
+    page.goto("table.html")
+    expect(page.locator("#table-body tr").first).to_be_visible()
+
+    toggle = page.locator(".facets-toggle")
+    panel = page.locator(f"#{toggle.get_attribute('aria-controls')}")
+    toggle.focus()
+    assert toggle.evaluate("(el) => el === document.activeElement")
+
+    page.keyboard.press("Enter")
+    expect(toggle).to_have_attribute("aria-expanded", "true")
+    expect(panel).to_be_visible()
+    expect(page.locator("#a11y-live")).to_contain_text("Filters shown")
+    # Focus stays put, so a second press is a close rather than a hunt.
+    assert toggle.evaluate("(el) => el === document.activeElement")
+
+    page.keyboard.press("Enter")
+    expect(toggle).to_have_attribute("aria-expanded", "false")
+    expect(panel).to_be_hidden()
+
+
+def test_filtering_from_the_phone_rail_updates_the_table_and_the_count(
+    page: Page, catalog: dict
+) -> None:
+    """A facet ticked on a phone filters the table and re-labels the button."""
+    total = len(records(catalog))
+    opens = with_access(catalog, "open")
+    if not 0 < len(opens) < total:
+        pytest.skip("this catalog is entirely open (or has no open datasets)")
+
+    page.set_viewport_size(MOBILE)
+    page.goto("table.html")
+    expect(page.locator("#table-body tr").first).to_be_visible()
+
+    toggle = page.locator(".facets-toggle")
+    expect(toggle).to_have_text("Filters")
+    toggle.click()
+    page.locator('[data-facet-options="access"] input[value="open"]').check()
+
+    expect(page.locator("#table-status")).to_contain_text(
+        f"{fmt(len(opens))} of {fmt(total)} datasets"
+    )
+    expect(page.locator("#table-body tr")).to_have_count(rendered(len(opens)))
+    # Collapsed, the button is the only thing that can still say a filter
+    # is on -- so it has to say it.
+    expect(toggle).to_have_text("Filters (1)")
+    # And the count line stays where the reader can read it.
+    status = page.locator("#table-status").bounding_box()
+    assert status is not None and 0 < status["y"] < MOBILE["height"], status
+
+
+def test_the_desktop_table_page_keeps_its_open_rail(page: Page) -> None:
+    """Above the breakpoint nothing about the table page changed."""
+    page.set_viewport_size(DESKTOP)
+    page.goto("table.html")
+    expect(page.locator("#table-body tr").first).to_be_visible()
+
+    expect(page.locator(".facets-toggle")).to_be_hidden()
+    facets = page.locator(".facets")
+    expect(facets).to_be_visible()
+    expect(page.locator('[data-facet-options="domain"] input').first).to_be_visible()
+
+    # The rail is the left column and the table its neighbour, not a
+    # stack -- the two-column grid, unchanged.
+    rail = facets.bounding_box()
+    wrap = page.locator(".table-wrap").bounding_box()
+    assert rail is not None and wrap is not None
+    assert rail["x"] + rail["width"] <= wrap["x"] + 1, (rail, wrap)
+
+
 # ---------------------------------------------------------------------------
 # Theme
 # ---------------------------------------------------------------------------
