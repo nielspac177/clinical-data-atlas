@@ -12,6 +12,11 @@ SITE_URL ?= https://nielspac177.github.io/clinical-data-atlas/
 FG_VERSION := 1.80.0
 FG_URL := https://unpkg.com/3d-force-graph@$(FG_VERSION)/dist/3d-force-graph.min.js
 
+# What a failing browser test leaves behind for the CI artifact upload.
+# The directory is gitignored and pytest-playwright empties it per run.
+E2E_CAPTURE := --screenshot=only-on-failure --tracing=retain-on-failure \
+  --output=tests/e2e/artifacts
+
 .PHONY: help setup vendor harvest normalize enrich graph diff validate refresh site serve test test-live e2e og dod clean
 
 help: ## Show this help
@@ -57,10 +62,12 @@ test-live: ## Run tests marked "live" (hits the real network)
 	ATLAS_LIVE=1 ATLAS_OFFLINE=0 uv run pytest -q -m live
 
 e2e: ## Install Chromium and run browser tests (they build and serve the site)
-	uv run playwright install chromium && uv run pytest -q -m e2e tests/e2e
+	uv run --group e2e playwright install chromium && \
+	uv run --group e2e pytest -q -m e2e tests/e2e $(E2E_CAPTURE)
 
 og: ## Re-render site/assets/img/og.png from og.svg (commit the result)
-	uv run playwright install chromium && uv run python -m atlas.tools.og_png
+	uv run --group e2e playwright install chromium && \
+	uv run --group e2e python -m atlas.tools.og_png
 
 dod: ## Check phase PHASE's definition-of-done against URL
 	uv run atlas dod --phase $(PHASE) --url $(SITE_URL)
