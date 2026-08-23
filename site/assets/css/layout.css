@@ -201,8 +201,23 @@ body.page-graph {
   min-width: 0;
 }
 
+/* Task 3.3 fix (Ruling R22): a box is a scroll container - the sticky
+   positioning context for its descendants - as soon as *either* overflow
+   axis is non-`visible`, regardless of the other axis's value. With only
+   `overflow-x: auto` declared, this element was *already* becoming that
+   container (per the CSS Overflow spec's "unset visible -> auto" coupling
+   rule for the other axis), but with no bounded height it never actually
+   scrolled - so `.data-table thead th`'s `position: sticky; top: 0`
+   (below) had a scrolling context that never scrolled, while genuinely
+   page-level scrolling did nothing for it at all. Declaring `overflow:
+   auto` and a real `max-height` explicitly here makes that scroll
+   container intentional: the table now scrolls *within itself* past a
+   viewport-relative height, with its own header staying pinned to its own
+   top edge - a standard, working "frozen header" table, on both axes, and
+   still never the page (no horizontal *or* vertical page scroll). */
 .table-wrap {
-  overflow-x: auto;
+  overflow: auto;
+  max-height: calc(100dvh - var(--header-h) - 8rem);
   border: 1px solid var(--border);
   border-radius: var(--r-md);
   background: var(--surface);
