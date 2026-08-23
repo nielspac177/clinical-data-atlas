@@ -164,21 +164,40 @@ def _preference(record: dict) -> tuple[int, int, str]:
 # ---------------------------------------------------------------------------
 
 
+def _slug_key(value: str) -> str:
+    """Rule (c)'s join key, applied to **both** sides of the comparison:
+    a collection name and a DataCite landing-page url slug.
+
+    Url slugs are case-insensitive and TCIA spells a handful of them in
+    the collection's own case (`.../collection/PSMA-PET-CT-Lesions/`)
+    while spelling most in lower case, so the two sides can only be
+    compared through one shared normalisation. It has to be *the same
+    function* on both sides, not merely one that lowercases: `io.slugify`
+    keeps `_` and `.` (`Anti-PD-1_Lung` -> `anti-pd-1_lung`, whose
+    landing page is spelled exactly that way), and a key that collapsed
+    those to `-` on one side only would silently stop matching them.
+    """
+    return io.slugify(value)
+
+
 def _candidates(collections: list[str], records: list[dict]) -> dict[str, list[dict]]:
     """Every DataCite record that plausibly describes each collection.
 
     Three signals, any one of which is enough (all three verified against
-    the live APIs on 2026-08-22, jointly covering 151 of 156 public
+    the live APIs on 2026-08-22, jointly covering 152 of 156 public
     collections):
 
     a. an alternative title equal to the collection name,
     b. a parenthesised suffix in the main title equal to the name,
-    c. the landing-page url slug equal to ``io.slugify(name)``.
+    c. the landing-page url slug equal to the name's, both sides reduced
+       by :func:`_slug_key`.
 
     (a) and (b) are exact, case-sensitive comparisons on purpose -- TCIA's
     short names are the collection names verbatim, and loosening this
     would start matching sibling collections that differ only in case or
-    punctuation (e.g. `Vestibular-Schwannoma-MC-RC` vs `-MC-RC 2`).
+    punctuation (e.g. `Vestibular-Schwannoma-MC-RC` vs `-MC-RC 2`). (c) is
+    case-*insensitive* because a url slug is: it is not a name TCIA chose
+    twice, it is one identifier spelled by one system.
     """
     by_alt_title: dict[str, list[dict]] = {}
     by_paren: dict[str, list[dict]] = {}
@@ -193,7 +212,7 @@ def _candidates(collections: list[str], records: list[dict]) -> dict[str, list[d
             by_paren.setdefault(match.group(1).strip(), []).append(record)
         _, slug = url_parts(attributes)
         if slug:
-            by_slug.setdefault(slug, []).append(record)
+            by_slug.setdefault(_slug_key(slug), []).append(record)
 
     candidates: dict[str, list[dict]] = {}
     for name in collections:
@@ -201,7 +220,7 @@ def _candidates(collections: list[str], records: list[dict]) -> dict[str, list[d
         for record in (
             *by_alt_title.get(name, []),
             *by_paren.get(name, []),
-            *by_slug.get(io.slugify(name), []),
+            *by_slug.get(_slug_key(name), []),
         ):
             found.setdefault(_doi(record), record)
         if found:
@@ -233,7 +252,11 @@ def _best_matches(candidates: dict[str, list[dict]]) -> dict[str, dict]:
     return matched
 
 
-def _gated(candidates: dict[str, list[dict]], records: list[dict]) -> dict[str, dict]:
+def _gated(
+    collections: list[str],
+    candidates: dict[str, list[dict]],
+    records: list[dict],
+) -> dict[str, dict]:
     """``{url slug: DataCite record}`` for the ``/collection/`` DOIs that
     describe a collection NBIA does not list publicly -- TCIA's gated and
     limited-access collections.
@@ -244,13 +267,24 @@ def _gated(candidates: dict[str, list[dict]], records: list[dict]) -> dict[str, 
     Two gated records that somehow share a url slug collapse to the
     :func:`_preference`-preferred one, since the slug is the record's
     native id and two records can't claim the same one.
+
+    A slug that *is* an NBIA-listed collection is excluded too, whatever
+    the candidate index says. Rule (c) already claims those, so this is
+    redundant by construction -- deliberately: a gated record's native id
+    is its slug, so anything that slips through here would overwrite that
+    collection's raw record with a DataCite-only envelope and publish a
+    public collection as gated (which is exactly what the case-sensitive
+    slug comparison used to do to `PSMA-PET-CT-Lesions`).
     """
     claimed = {_doi(record) for found in candidates.values() for record in found}
+    listed = {_slug_key(name) for name in collections}
 
     gated: dict[str, dict] = {}
     for record in records:
         kind, slug = url_parts(_attributes(record))
         if kind != "collection" or not slug or _doi(record) in claimed:
+            continue
+        if _slug_key(slug) in listed:
             continue
         incumbent = gated.get(slug)
         if incumbent is None or _preference(record) < _preference(incumbent):
@@ -266,7 +300,7 @@ def join(
     twice per run. :func:`match_collections` and :func:`gated_records` are
     the same thing one half at a time, for callers that want only one."""
     candidates = _candidates(collections, records)
-    return _best_matches(candidates), _gated(candidates, records)
+    return _best_matches(candidates), _gated(collections, candidates, records)
 
 
 def match_collections(collections: list[str], records: list[dict]) -> dict[str, dict]:
@@ -279,12 +313,31 @@ def match_collections(collections: list[str], records: list[dict]) -> dict[str, 
 def gated_records(collections: list[str], records: list[dict]) -> dict[str, dict]:
     """``{url slug: DataCite record}`` for the gated collections -- see
     :func:`_gated`."""
-    return _gated(_candidates(collections, records), records)
+    return _gated(collections, _candidates(collections, records), records)
 
 
 # ---------------------------------------------------------------------------
 # Harvester
 # ---------------------------------------------------------------------------
+
+
+def _collision_note(collided: list[str]) -> str | None:
+    """The `HarvestResult`/manifest note for gated records the harvest
+    refused to write because an NBIA collection already owns their raw
+    record. `None` -- a clean run -- when nothing collided.
+
+    It rides on `error` with `status="ok"`: the run did produce a
+    complete, usable listing, but the skipped DOIs are a real signal that
+    the join rules have drifted, and `error` is the field that reaches
+    both `atlas harvest`'s summary line and the changelog's Sources
+    table. Sorted, so a refresh's diff doesn't churn on ordering.
+    """
+    if not collided:
+        return None
+    return (
+        f"skipped {len(collided)} gated DataCite record(s) whose native id is "
+        "already an NBIA-listed collection's: " + ", ".join(sorted(collided))
+    )
 
 
 class TciaHarvester(Harvester):
@@ -356,7 +409,18 @@ class TciaHarvester(Harvester):
             # `limit` caps records, not collections: a truncated run
             # should stay small rather than pull in ~90 gated records.
             budget = None if limit is None else max(0, limit - len(listed))
+            written_keys = {base.store_key(name) for name in listed}
+            collided: list[str] = []
             for slug in sorted(gated)[:budget]:
+                # Last line of defence for the record `join` has already
+                # excluded (see `_gated`): a gated envelope must never take
+                # over an NBIA-listed collection's file. Writing it would
+                # replace a public collection with a DataCite-only record
+                # -- or, for ids differing only in case, abort the run --
+                # so it is skipped and reported instead.
+                if base.store_key(slug) in written_keys:
+                    collided.append(slug)
+                    continue
                 payload = {"nbia": None, "datacite": _attributes(gated[slug])}
                 self._write(slug, payload, endpoints=endpoints[-1:])
                 listed.add(slug)
@@ -366,6 +430,7 @@ class TciaHarvester(Harvester):
                 harvested_at=harvested_at,
                 endpoints=endpoints,
                 status="ok",
+                error=_collision_note(collided),
             )
         except Exception as exc:  # noqa: BLE001 -- harvest() never raises
             error = f"{type(exc).__name__}: {exc}"

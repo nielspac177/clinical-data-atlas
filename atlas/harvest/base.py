@@ -125,6 +125,21 @@ def _filename_for(native_id: str) -> str:
     return f"{stem}.json"
 
 
+def store_key(native_id: str) -> str:
+    """The record `native_id` would occupy, as a comparable key: its
+    filename, case-folded (see :meth:`RawStore._claim_filename` for why
+    the fold).
+
+    Two ids with the same key are the same file, so a harvester that
+    derives native ids from two different listings (TCIA: NBIA collection
+    names *and* DataCite url slugs) can check for a collision *before*
+    writing, rather than discovering it as a silently overwritten record
+    or, when the two ids differ only in case, as a `ValueError` that
+    aborts the run.
+    """
+    return _filename_for(native_id).casefold()
+
+
 # ---------------------------------------------------------------------------
 # RawStore
 # ---------------------------------------------------------------------------
@@ -229,8 +244,7 @@ class RawStore:
         real case; only the collision check is case-folded.
         """
         filename = _filename_for(native_id)
-        key = filename.casefold()
-        claimant = self._filenames.setdefault(key, native_id)
+        claimant = self._filenames.setdefault(store_key(native_id), native_id)
         if claimant != native_id:
             raise ValueError(
                 f"native ids {claimant!r} and {native_id!r} both map to "

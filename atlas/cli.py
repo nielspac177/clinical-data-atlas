@@ -334,7 +334,7 @@ def _collect_texts(
 def _cmd_enrich(args: argparse.Namespace) -> int:
     """Run the enrichment stages -- rules, LLM, MeSH, ROR -- over the
     normalized records (or the catalog, when nothing is normalized) and
-    write `data/catalog/enriched.jsonl`.
+    write `.cache/enriched.jsonl`.
 
     A debugging/cache-warming counterpart to `refresh`, which runs the
     same stage in the middle of the full pipeline: the LLM answers, MeSH
@@ -849,7 +849,7 @@ def build_parser() -> argparse.ArgumentParser:
 
     enrich_parser = subparsers.add_parser(
         "enrich",
-        help="Run the enrichment stages and write data/catalog/enriched.jsonl",
+        help="Run the enrichment stages and write .cache/enriched.jsonl",
     )
     enrich_parser.add_argument(
         "--llm",
