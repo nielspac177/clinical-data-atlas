@@ -56,8 +56,8 @@ test: ## Run the unit test suite (no network, no browser)
 test-live: ## Run tests marked "live" (hits the real network)
 	ATLAS_LIVE=1 ATLAS_OFFLINE=0 uv run pytest -q -m live
 
-e2e: ## Install Chromium and run browser tests against a served site
-	uv run playwright install chromium && uv run pytest -q -m e2e tests/e2e --base-url http://127.0.0.1:$(PORT)$(BASE_URL)
+e2e: ## Install Chromium and run browser tests (they build and serve the site)
+	uv run playwright install chromium && uv run pytest -q -m e2e tests/e2e
 
 dod: ## Check phase PHASE's definition-of-done against URL
 	uv run atlas dod --phase $(PHASE) --url $(SITE_URL)
