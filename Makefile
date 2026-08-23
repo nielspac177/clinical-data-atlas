@@ -17,7 +17,7 @@ FG_URL := https://unpkg.com/3d-force-graph@$(FG_VERSION)/dist/3d-force-graph.min
 E2E_CAPTURE := --screenshot=only-on-failure --tracing=retain-on-failure \
   --output=tests/e2e/artifacts
 
-.PHONY: help setup vendor harvest normalize enrich graph diff validate refresh site serve test test-live e2e og dod clean
+.PHONY: help setup vendor harvest normalize enrich graph diff validate refresh site serve test test-js test-live e2e og dod clean
 
 help: ## Show this help
 	@grep -E '^[a-zA-Z0-9_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-12s\033[0m %s\n", $$1, $$2}'
@@ -55,8 +55,12 @@ site: ## Build the static site into _site/
 serve: site ## Build the site, then serve _site/ locally on $(PORT)
 	uv run python -m http.server $(PORT) --directory _site
 
-test: ## Run the unit test suite (no network, no browser)
+test: ## Run both unit suites, Python and JS (no network, no browser)
 	uv run pytest -q -m "not live and not e2e"
+	$(MAKE) test-js
+
+test-js: ## Run the JS module tests (node's built-in runner, no deps)
+	node --test tests/js/*.test.mjs
 
 test-live: ## Run tests marked "live" (hits the real network)
 	ATLAS_LIVE=1 ATLAS_OFFLINE=0 uv run pytest -q -m live

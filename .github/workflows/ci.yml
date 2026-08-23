@@ -56,6 +56,15 @@ jobs:
       - name: Run unit tests
         run: uv run pytest -q -m "not live and not e2e"
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Run JS module tests
+        # The glob is required: node's test runner takes files, and a
+        # bare directory argument is not a test path.
+        run: node --test tests/js/*.test.mjs
+
       - name: Check schema docs are up to date
         run: uv run atlas schema --check
 
