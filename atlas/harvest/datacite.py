@@ -33,6 +33,11 @@ from atlas import http
 
 API = "https://api.datacite.org/dois"
 
+# Hard stop on the `links.next` walk. At the default page size that is
+# 20,000 records -- far beyond any prefix this project reads -- so hitting
+# it means the cursor is looping, not that a prefix is genuinely huge.
+MAX_PAGES = 200
+
 
 def _page_data(body: object) -> list | None:
     """The ``data`` array of a `GET /dois` response, or `None` when the
@@ -50,12 +55,14 @@ def list_by_prefix(prefix: str, *, page_size: int = 100) -> list[dict]:
     Returns the raw ``data`` entries (``{"id", "type", "attributes",
     "relationships"}``) in the order DataCite returned them.
 
-    Raises `AssertionError` when the same DOI appears twice or when the
+    Raises `AssertionError` when the same DOI appears twice, when the
     number of records collected disagrees with the ``meta.total`` reported
-    by the first page -- both mean the snapshot is inconsistent and must
-    not be treated as a complete listing. Raises `RuntimeError` when a page
-    request fails outright (`atlas.http.get_json` returning `None` after
-    its retries) or comes back without a `data` array.
+    by the first page, or when the `links.next` walk runs past
+    `MAX_PAGES` -- each means the snapshot is inconsistent (or the cursor
+    is looping) and must not be treated as a complete listing. Raises
+    `RuntimeError` when a page request fails outright
+    (`atlas.http.get_json` returning `None` after its retries) or comes
+    back without a `data` array.
     """
     url = (
         f"{API}?prefix={urllib.parse.quote(prefix)}"
@@ -66,7 +73,7 @@ def list_by_prefix(prefix: str, *, page_size: int = 100) -> list[dict]:
     seen: set[str] = set()
     total: int | None = None
 
-    while url:
+    for _ in range(MAX_PAGES):
         body = http.get_json(url)
         page = _page_data(body)
         if page is None:
@@ -76,16 +83,32 @@ def list_by_prefix(prefix: str, *, page_size: int = 100) -> list[dict]:
             total = (body.get("meta") or {}).get("total")
 
         for record in page:
-            doi = (record.get("attributes") or {}).get("doi")
-            if doi in seen:
-                raise AssertionError(
-                    f"DataCite returned duplicate DOI {doi!r} for prefix "
-                    f"{prefix!r} -- the cursor paging snapshot is inconsistent"
-                )
-            seen.add(doi)
+            # DataCite's `id` is the DOI, and unlike `attributes.doi` it is
+            # always present -- keying the duplicate check on it means two
+            # records that merely *lack* a DOI can't look like a duplicate
+            # pair (`None` seen twice).
+            key = record.get("id") or (record.get("attributes") or {}).get("doi")
+            if key is not None:
+                if key in seen:
+                    raise AssertionError(
+                        f"DataCite returned duplicate DOI {key!r} for prefix "
+                        f"{prefix!r} -- the cursor paging snapshot is inconsistent"
+                    )
+                seen.add(key)
             records.append(record)
 
-        url = (body.get("links") or {}).get("next")
+        next_url = (body.get("links") or {}).get("next")
+        # An empty page still carrying a `next` link is DataCite's cursor
+        # walking past the end; without this the loop would spin until the
+        # page cap.
+        if not next_url or not page:
+            break
+        url = next_url
+    else:
+        raise AssertionError(
+            f"DataCite prefix {prefix!r}: still paging after {MAX_PAGES} pages "
+            f"({len(records)} records) -- refusing to follow `links.next` further"
+        )
 
     if total is not None and len(records) != total:
         raise AssertionError(

@@ -13,6 +13,9 @@ from pathlib import Path
 
 import pytest
 
+from atlas import io
+from atlas.harvest import tcia as harvest_tcia
+from atlas.harvest.base import RawStore
 from atlas.normalize import tcia
 from atlas.schema import Record, word_count
 
@@ -682,3 +685,115 @@ def test_normalizer_is_discovered_by_the_registry():
     normalize_fn, enrichment_fn = get_normalizers()["tcia"]
     assert normalize_fn is tcia.normalize
     assert enrichment_fn is tcia.enrichment_text
+
+
+# ---------------------------------------------------------------------------
+# raw_hash stability (controller ruling R12, fix round 1)
+# ---------------------------------------------------------------------------
+
+
+def test_raw_hash_ignores_datacite_volatile_counters():
+    """DataCite recomputes view/download/citation counters constantly. If
+    they reached `raw_hash`, every TCIA record would look changed on every
+    refresh and bury the real changes in the changelog."""
+    before = normalize("4D-Lung")
+
+    env = envelope("4D-Lung")
+    env["payload"]["datacite"]["viewCount"] = 999_999
+    env["payload"]["datacite"]["downloadCount"] = 4_242
+    env["payload"]["datacite"]["updated"] = "2099-01-01T00:00:00Z"
+    env["payload"]["datacite"]["viewsOverTime"] = [{"yearMonth": "2099-01", "total": 7}]
+    after = tcia.normalize(env, harvested_at=HARVESTED_AT, first_seen=FIRST_SEEN)
+
+    assert after.provenance.raw_hash == before.provenance.raw_hash
+    # ... and the mutation really was substantial: hashing the payload as
+    # stored (what this used to do) would have changed.
+    assert io.content_hash(env["payload"]) != io.content_hash(
+        envelope("4D-Lung")["payload"]
+    )
+
+
+def test_raw_hash_still_moves_when_real_metadata_changes():
+    env = envelope("4D-Lung")
+    env["payload"]["datacite"]["titles"] = [{"title": "Renamed"}]
+    after = tcia.normalize(env, harvested_at=HARVESTED_AT, first_seen=FIRST_SEEN)
+
+    assert after.provenance.raw_hash != normalize("4D-Lung").provenance.raw_hash
+
+
+def test_raw_hash_is_the_hash_rawstore_recorded(tmp_path):
+    """The point of the stripped hash: `provenance.raw_hash` is the same
+    value `manifest.json` carries, so the two can be compared directly."""
+    store = RawStore("tcia", root=tmp_path)
+    for native_id in ALL_NATIVE_IDS:
+        store.write(
+            native_id,
+            envelope(native_id)["payload"],
+            harvest_method=harvest_tcia.TciaHarvester.harvest_method,
+            endpoints=[],
+            volatile=harvest_tcia.VOLATILE,
+        )
+    manifest = store.finalize(
+        listed_ids=set(ALL_NATIVE_IDS),
+        harvested_at=HARVESTED_AT,
+        endpoints=[],
+        status="ok",
+    )
+
+    for native_id in ALL_NATIVE_IDS:
+        assert (
+            normalize(native_id).provenance.raw_hash
+            == manifest["records"][native_id]["hash"]
+        ), native_id
+
+
+# ---------------------------------------------------------------------------
+# Remaining fix-round-1 mappings
+# ---------------------------------------------------------------------------
+
+
+@pytest.mark.parametrize(
+    "title",
+    [
+        "Impedance cardiography phantoms",
+        "Expedited review cohort",
+        "Covidien device imaging",
+        "Unhealthy tissue samples",
+    ],
+)
+def test_domain_overrides_do_not_fire_on_substring_matches(title):
+    record = tcia.normalize(
+        synthetic(datacite={"doi": "10.7937/x", "titles": [{"title": title}]}),
+        harvested_at=HARVESTED_AT,
+        first_seen=FIRST_SEEN,
+    )
+    assert record.domains == ["oncology"]
+
+
+def test_dataset_doi_is_version_collapsed():
+    record = tcia.normalize(
+        synthetic(datacite={"doi": "10.7937/abcd.v2.1", "titles": [{"title": "T"}]}),
+        harvested_at=HARVESTED_AT,
+        first_seen=FIRST_SEEN,
+    )
+    assert record.dataset_doi == "10.7937/abcd"
+
+
+def test_enrichment_text_does_not_repeat_the_title():
+    """`name` *is* the DataCite title when there is one, so emitting both
+    would waste budget and skew term frequencies."""
+    text = tcia.enrichment_text(envelope("4D-Lung"))
+    title = "Data from 4D Lung Imaging of NSCLC Patients"
+
+    assert text.count(title) == 1
+    assert text.startswith(title)
+
+
+def test_enrichment_text_keeps_a_title_that_differs_from_the_name():
+    text = tcia.enrichment_text(
+        synthetic(
+            nbia={"collection": "My-Collection"},
+            datacite={"doi": "10.7937/x", "titles": [{"title": "A Longer Title"}]},
+        )
+    )
+    assert "A Longer Title" in text

@@ -541,3 +541,159 @@ def test_harvester_is_discovered_by_the_registry():
     from atlas.harvest import get_registry
 
     assert get_registry()["tcia"] is tcia.TciaHarvester
+
+
+# ---------------------------------------------------------------------------
+# datacite paging guards (review fix round 1)
+# ---------------------------------------------------------------------------
+
+
+def test_list_by_prefix_stops_on_an_empty_page_that_still_links_next(monkeypatch):
+    """DataCite's cursor can walk past the end and keep handing out a
+    `links.next`; without the empty-page break that spins to the cap."""
+    pages = [
+        _page(["10.7937/a"], total=1, next_url="https://api/next-1"),
+        _page([], total=1, next_url="https://api/next-2"),
+    ]
+    monkeypatch.setattr("atlas.http.get_json", lambda url, **_k: pages.pop(0))
+
+    records = datacite.list_by_prefix("10.7937")
+
+    assert [r["attributes"]["doi"] for r in records] == ["10.7937/a"]
+    assert pages == []  # the second page was fetched, a third never was
+
+
+def test_list_by_prefix_refuses_to_page_past_the_cap(monkeypatch):
+    counter = iter(range(10_000))
+
+    def endless(url, **_kwargs):
+        n = next(counter)
+        return _page([f"10.7937/{n}"], total=10_000, next_url=f"https://api/p{n}")
+
+    monkeypatch.setattr("atlas.http.get_json", endless)
+
+    with pytest.raises(AssertionError, match=f"after {datacite.MAX_PAGES} pages"):
+        datacite.list_by_prefix("10.7937")
+
+
+def test_list_by_prefix_does_not_mistake_two_doi_less_records_for_duplicates(
+    monkeypatch,
+):
+    page = {
+        "data": [{"id": "10.7937/a", "attributes": {}}, {"attributes": {}}, {}],
+        "meta": {"total": 3},
+        "links": {},
+    }
+    monkeypatch.setattr("atlas.http.get_json", lambda url, **_k: page)
+
+    assert len(datacite.list_by_prefix("10.7937")) == 3
+
+
+# ---------------------------------------------------------------------------
+# url parsing, join sharing, ambiguous claims (review fix round 1)
+# ---------------------------------------------------------------------------
+
+
+def test_url_parts_ignores_query_and_fragment():
+    attributes = {
+        "url": "https://www.cancerimagingarchive.net/collection/4d-lung/?utm=x#top"
+    }
+    assert tcia.url_parts(attributes) == ("collection", "4d-lung")
+
+
+def test_url_parts_is_empty_without_a_url():
+    assert tcia.url_parts({}) == ("", "")
+
+
+def test_match_collections_rejects_a_doi_claimed_by_two_collections():
+    shared = _dc(
+        "10.7937/shared",
+        title="Something (Collection-B)",
+        alt="Collection-A",
+        url="https://www.cancerimagingarchive.net/collection/shared/",
+    )
+    with pytest.raises(AssertionError, match="matched both collection"):
+        tcia.match_collections(["Collection-A", "Collection-B"], [shared])
+
+
+def test_join_returns_the_same_pair_as_the_two_halves():
+    records = fixture("datacite_page.json")["data"]
+    matched, gated = tcia.join(COLLECTIONS, records)
+
+    assert matched == tcia.match_collections(COLLECTIONS, records)
+    assert gated == tcia.gated_records(COLLECTIONS, records)
+
+
+# ---------------------------------------------------------------------------
+# harvest ordering, self-healing fast, partial-failure counts (fix round 1)
+# ---------------------------------------------------------------------------
+
+
+def test_harvest_fetches_datacite_before_the_nbia_detail_loop(http_fixture, tmp_path):
+    fake = http_fixture()
+    tcia.TciaHarvester(store=RawStore("tcia", root=tmp_path)).harvest()
+
+    datacite_at = next(
+        i for i, c in enumerate(fake.calls) if c.startswith(datacite.API)
+    )
+    first_detail_at = next(
+        i for i, c in enumerate(fake.calls) if "getModalityValues" in c
+    )
+    assert datacite_at < first_detail_at
+
+
+def test_harvest_fails_before_spending_the_nbia_detail_requests(monkeypatch, tmp_path):
+    calls: list[str] = []
+
+    def fake(url, *, params=None, **_kwargs):
+        calls.append(url)
+        if url.startswith(datacite.API):
+            return None  # DataCite down
+        return fixture("collections.json")
+
+    monkeypatch.setattr("atlas.http.get_json", fake)
+    result = tcia.TciaHarvester(store=RawStore("tcia", root=tmp_path)).harvest()
+
+    assert result.status == "failed"
+    assert not [c for c in calls if "getPatient" in c or "getModalityValues" in c]
+
+
+def test_harvest_fast_refetches_a_collection_whose_cached_detail_had_errors(
+    http_fixture, tmp_path
+):
+    http_fixture(fail={("getPatient", "A091105"): None})
+    store = RawStore("tcia", root=tmp_path)
+    tcia.TciaHarvester(store=store).harvest()
+    assert "errors" in store.load("A091105")["payload"]["nbia"]
+
+    fake = http_fixture()
+    tcia.TciaHarvester(store=RawStore("tcia", root=tmp_path)).harvest(fast=True)
+
+    # only the collection that was broken is re-fetched; the healthy four
+    # are still served from cache
+    assert sum(1 for c in fake.calls if "getPatient" in c) == 1
+    healed = store.load("A091105")["payload"]["nbia"]
+    assert "errors" not in healed
+    assert len(healed["patients"]) == 5
+
+
+def test_failed_harvest_reports_what_it_managed_to_write(http_fixture, tmp_path):
+    http_fixture()
+    store = RawStore("tcia", root=tmp_path)
+    real_write = store.write
+    written = 0
+
+    def exploding_write(*args, **kwargs):
+        nonlocal written
+        if written == 3:
+            raise OSError("disk full")
+        written += 1
+        return real_write(*args, **kwargs)
+
+    store.write = exploding_write
+    result = tcia.TciaHarvester(store=store).harvest()
+
+    assert result.status == "failed"
+    assert "disk full" in result.error
+    assert result.written == 3
+    assert result.listed == 3

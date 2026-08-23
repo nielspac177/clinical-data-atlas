@@ -42,7 +42,7 @@ import time
 
 from atlas import http, io
 from atlas.harvest import datacite
-from atlas.harvest.base import Harvester, HarvestResult
+from atlas.harvest.base import Harvester, HarvestResult, _strip_volatile
 
 NBIA_BASE = "https://services.cancerimagingarchive.net/nbia-api/services/v1"
 DOI_PREFIX = "10.7937"
@@ -61,6 +61,22 @@ VOLATILE = (
     "datacite.downloadsOverTime",
     "datacite.citationsOverTime",
 )
+
+
+def strip_volatile(payload: dict) -> dict:
+    """A copy of `payload` with the `VOLATILE` fields removed -- the exact
+    thing `RawStore.write` hashes.
+
+    Exists so the normalizer can put *that* hash in
+    `provenance.raw_hash` rather than a hash of the payload as stored:
+    hashing DataCite's view/download counters would churn every TCIA
+    record's `raw_hash` on every refresh and drown the changelog in
+    changes that never happened. Thin wrapper over
+    `atlas.harvest.base._strip_volatile`, which is private today and to be
+    made public there later.
+    """
+    return _strip_volatile(payload, VOLATILE)
+
 
 # Per-collection detail endpoints: endpoint name -> (payload key, the field
 # to read out of each returned object). `getPatient` keeps whole objects.
@@ -107,8 +123,13 @@ def _alt_titles(attributes: dict) -> list[str]:
 def url_parts(attributes: dict) -> tuple[str, str]:
     """``(kind, slug)`` of a DataCite landing-page url, e.g.
     ``https://www.cancerimagingarchive.net/collection/4d-lung/`` ->
-    ``("collection", "4d-lung")``. ``("", "")`` when there is no url."""
-    url = (attributes.get("url") or "").rstrip("/")
+    ``("collection", "4d-lung")``. ``("", "")`` when there is no url.
+
+    A ``?query`` or ``#fragment`` is dropped before splitting -- it is not
+    part of the slug, and leaving it in would silently stop a record from
+    matching its collection.
+    """
+    url = (attributes.get("url") or "").split("?")[0].split("#")[0].rstrip("/")
     if not url:
         return "", ""
     segments = url.split("/")
@@ -189,17 +210,31 @@ def _candidates(collections: list[str], records: list[dict]) -> dict[str, list[d
     return candidates
 
 
-def match_collections(collections: list[str], records: list[dict]) -> dict[str, dict]:
-    """``{collection name: DataCite record}`` for every collection that
-    matched at least one record, best candidate only (:func:`_preference`).
-    Collections with no candidate are simply absent."""
-    return {
-        name: min(found, key=_preference)
-        for name, found in _candidates(collections, records).items()
-    }
+def _best_matches(candidates: dict[str, list[dict]]) -> dict[str, dict]:
+    """Winner per collection, and a check that no two collections walked
+    away with the same DOI.
+
+    A shared winner would mean two catalog records claiming one
+    `dataset_doi` -- almost certainly a matching-rule bug (say, a new
+    collection whose name is another's alternative title) rather than
+    anything TCIA meant. Failing here names both collections and the DOI;
+    letting it through would surface much later as a confusing duplicate.
+    """
+    matched = {name: min(found, key=_preference) for name, found in candidates.items()}
+
+    claimant: dict[str, str] = {}
+    for name, record in sorted(matched.items()):
+        doi = _doi(record)
+        first = claimant.setdefault(doi, name)
+        if first != name:
+            raise AssertionError(
+                f"DataCite DOI {doi!r} matched both collection {first!r} and "
+                f"{name!r} -- the NBIA/DataCite join rules are ambiguous here"
+            )
+    return matched
 
 
-def gated_records(collections: list[str], records: list[dict]) -> dict[str, dict]:
+def _gated(candidates: dict[str, list[dict]], records: list[dict]) -> dict[str, dict]:
     """``{url slug: DataCite record}`` for the ``/collection/`` DOIs that
     describe a collection NBIA does not list publicly -- TCIA's gated and
     limited-access collections.
@@ -211,11 +246,7 @@ def gated_records(collections: list[str], records: list[dict]) -> dict[str, dict
     :func:`_preference`-preferred one, since the slug is the record's
     native id and two records can't claim the same one.
     """
-    claimed = {
-        _doi(record)
-        for found in _candidates(collections, records).values()
-        for record in found
-    }
+    claimed = {_doi(record) for found in candidates.values() for record in found}
 
     gated: dict[str, dict] = {}
     for record in records:
@@ -226,6 +257,30 @@ def gated_records(collections: list[str], records: list[dict]) -> dict[str, dict
         if incumbent is None or _preference(record) < _preference(incumbent):
             gated[slug] = record
     return gated
+
+
+def join(
+    collections: list[str], records: list[dict]
+) -> tuple[dict[str, dict], dict[str, dict]]:
+    """``(matched, gated)`` from a single pass over the candidate index --
+    what `harvest` calls, so 156 collections x 317 DOIs aren't scanned
+    twice per run. :func:`match_collections` and :func:`gated_records` are
+    the same thing one half at a time, for callers that want only one."""
+    candidates = _candidates(collections, records)
+    return _best_matches(candidates), _gated(candidates, records)
+
+
+def match_collections(collections: list[str], records: list[dict]) -> dict[str, dict]:
+    """``{collection name: DataCite record}`` for every collection that
+    matched at least one record, best candidate only (:func:`_preference`).
+    Collections with no candidate are simply absent."""
+    return _best_matches(_candidates(collections, records))
+
+
+def gated_records(collections: list[str], records: list[dict]) -> dict[str, dict]:
+    """``{url slug: DataCite record}`` for the gated collections -- see
+    :func:`_gated`."""
+    return _gated(_candidates(collections, records), records)
 
 
 # ---------------------------------------------------------------------------
@@ -273,20 +328,21 @@ class TciaHarvester(Harvester):
         try:
             all_names = [entry["Collection"] for entry in self.probe()]
             selected = all_names if limit is None else all_names[:limit]
-            cached_ids = self.store.existing()
 
+            # DataCite first: it is 4 requests against the NBIA detail
+            # loop's ~470, so a DataCite outage should cost seconds, not
+            # the whole NBIA crawl before failing anyway. Gating is decided
+            # against the *full* listing, never the `limit`-truncated one
+            # -- otherwise a short dev run would invent "not in NBIA"
+            # records for collections it merely skipped.
+            records = datacite.list_by_prefix(DOI_PREFIX)
+            matched, gated = join(all_names, records)
+
+            cached_ids = self.store.existing()
             details = {
                 name: self._nbia_detail(name, fast=fast, cached_ids=cached_ids)
                 for name in selected
             }
-
-            records = datacite.list_by_prefix(DOI_PREFIX)
-            # Gating is decided against the *full* listing, never the
-            # `limit`-truncated one -- otherwise a short dev run would
-            # invent "not in NBIA" records for collections it merely
-            # skipped.
-            matched = match_collections(all_names, records)
-            gated = gated_records(all_names, records)
 
             for name in selected:
                 record = matched.get(name)
@@ -314,17 +370,14 @@ class TciaHarvester(Harvester):
             )
         except Exception as exc:  # noqa: BLE001 -- harvest() never raises
             error = f"{type(exc).__name__}: {exc}"
+            # Whatever got written before the failure still counts -- a
+            # partial run that saved 90 records should say so rather than
+            # report zeros next to its error.
             manifest = self.store.finalize(
                 listed_ids=listed,
                 harvested_at=harvested_at,
                 endpoints=endpoints,
                 status="failed",
-                error=error,
-            )
-            return HarvestResult(
-                source=self.name,
-                status="failed",
-                seconds=round(time.monotonic() - started, 3),
                 error=error,
             )
 
@@ -358,15 +411,20 @@ class TciaHarvester(Harvester):
         previous run's detail is reused verbatim instead of spending three
         requests on it -- NBIA's per-collection endpoints are the slow part
         of a harvest and a collection's modality/body-part/patient lists
-        change only when TCIA republishes it. A record the manifest claims
-        but whose file has gone missing falls through to a live fetch.
+        change only when TCIA republishes it.
+
+        Two cases fall through to a live fetch anyway: a record the
+        manifest claims but whose file has gone missing, and a cached half
+        carrying `errors` -- reusing a half-fetched collection forever
+        would make one flaky request permanent, so `--fast` retries those
+        and heals them.
         """
         if fast and name in cached_ids:
             try:
                 cached = self.store.load(name)["payload"].get("nbia")
             except FileNotFoundError:
                 cached = None
-            if cached:
+            if cached and not cached.get("errors"):
                 return cached
 
         detail: dict = {"collection": name}

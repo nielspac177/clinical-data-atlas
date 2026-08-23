@@ -26,7 +26,7 @@ from __future__ import annotations
 import re
 
 from atlas import io, vocab
-from atlas.harvest.tcia import main_title
+from atlas.harvest.tcia import main_title, strip_volatile
 from atlas.normalize import common
 from atlas.schema import Author, Condition, Institution, Paper, Record, Years
 
@@ -94,10 +94,12 @@ _MAX_PAPERS = 20
 # TCIA is a cancer-imaging archive, so `oncology` is the default rather
 # than an inference. These three title patterns are the collections where
 # that default is provably wrong or incomplete.
+# Word-anchored on purpose: an unanchored `pedi` also fires on
+# "impedance" and "expedited", and an unanchored `covid` on "Covidien".
 _DOMAIN_OVERRIDES: tuple[tuple[re.Pattern[str], str], ...] = (
-    (re.compile(r"COVID", re.IGNORECASE), "covid"),
-    (re.compile(r"healthy|normative", re.IGNORECASE), "not_oncology"),
-    (re.compile(r"pedi", re.IGNORECASE), "pediatrics"),
+    (re.compile(r"\bcovid\b", re.IGNORECASE), "covid"),
+    (re.compile(r"\bhealthy\b|\bnormative\b", re.IGNORECASE), "not_oncology"),
+    (re.compile(r"\bpedi\w*", re.IGNORECASE), "pediatrics"),
 )
 
 # Cancer phrases specific enough to name a condition straight from a
@@ -330,6 +332,17 @@ def _conditions(datacite: dict) -> list[Condition]:
     return [Condition(label=label) for label in labels]
 
 
+def _dataset_doi(datacite: dict) -> str | None:
+    """The collection's own DOI, version-collapsed per `Record.dataset_doi`.
+
+    `collapse_version_doi` is a no-op on every TCIA DOI seen so far (they
+    carry no `.vX` suffix); it is applied anyway so the field means the
+    same thing across sources.
+    """
+    doi = common.clean_doi(datacite.get("doi"))
+    return common.collapse_version_doi(doi) if doi else None
+
+
 def _summary(name: str, datacite: dict, modalities: list[str], size: int | None) -> str:
     """The DataCite abstract's first 40 words, or -- for the collections
     DataCite has never heard of -- a template built only from facts NBIA
@@ -382,7 +395,7 @@ def normalize(envelope: dict, *, harvested_at: str, first_seen: str) -> Record:
         name=name,
         summary=_summary(name, datacite, modalities, sample_size),
         url=datacite.get("url") or COLLECTIONS_URL,
-        dataset_doi=common.clean_doi(datacite.get("doi")),
+        dataset_doi=_dataset_doi(datacite),
         version=str(datacite["version"]) if datacite.get("version") else None,
         # DataCite reports only a `publicationYear`, which is when the DOI
         # was minted, not when the data was collected -- neither `published`
@@ -408,7 +421,7 @@ def normalize(envelope: dict, *, harvested_at: str, first_seen: str) -> Record:
             via=HARVEST_METHOD,
             harvested_at=harvested_at,
             first_seen=first_seen,
-            raw_hash=io.content_hash(envelope.get("payload")),
+            raw_hash=io.content_hash(strip_volatile(envelope.get("payload") or {})),
         ),
     )
 
@@ -425,4 +438,10 @@ def enrichment_text(envelope: dict) -> str:
         " ".join(nbia.get("body_parts") or []),
         " ".join(nbia.get("modalities") or []),
     ]
-    return "\n".join(part for part in parts if part)[:1500]
+
+    # `name` *is* the DataCite title whenever there is one, so emitting
+    # both would spend budget repeating it and bias any downstream
+    # term-frequency scoring.
+    seen: set[str] = set()
+    unique = [part for part in parts if part and not (part in seen or seen.add(part))]
+    return "\n".join(unique)[:1500]

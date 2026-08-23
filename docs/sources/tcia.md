@@ -61,9 +61,14 @@ payload keeps the remaining values as plain strings rather than the
 records shift between pages mid-walk, silently dropping and duplicating DOIs.
 `list_by_prefix` starts at `page[cursor]=1`, follows `links.next` verbatim,
 and refuses to return a listing it can't vouch for: it raises `AssertionError`
-on a repeated DOI or when the record count disagrees with the first page's
-`meta.total`. The bracketed parameter names can't go through
-`urlencode`, so the URL is assembled by hand and passed to `get_json` whole.
+on a repeated record id, when the record count disagrees with the first page's
+`meta.total`, or when the walk runs past `MAX_PAGES` (200). It also stops on
+an empty page that still carries a `links.next` — the cursor walking past the
+end — which would otherwise spin to the cap. Duplicate detection keys on the
+record's `id` rather than `attributes.doi`, so two records that merely *lack* a
+DOI can't look like a duplicate pair. The bracketed parameter names can't go
+through `urlencode`, so the URL is assembled by hand and passed to `get_json`
+whole.
 
 **The join has no shared identifier.** Three signals, any one sufficient,
 jointly covering 151 of 156 collections on 2026-08-22 (49 by url slug, 59 by
@@ -99,6 +104,19 @@ left of `limit` on gated records, and gating is always decided against the
 *full* collection listing — otherwise a `--limit 5` run would invent 234
 phantom "not in NBIA" records for the collections it merely skipped.
 
+**DataCite is fetched before the NBIA detail loop.** Four requests versus
+~470, so a DataCite outage costs seconds rather than the whole NBIA crawl
+before failing anyway.
+
+**`--fast` self-heals.** A cached `nbia` half carrying `errors` is re-fetched
+rather than reused, so one flaky request doesn't become permanent.
+
+**One DOI, two collections is a hard error.** `match_collections` raises
+`AssertionError` naming both collections and the DOI. It has never fired on
+the live data (151 matches over 156 × 317), and if it does it means the join
+rules have gone ambiguous — two catalog records would otherwise claim the same
+`dataset_doi`.
+
 **Volatile DataCite fields.** `updated`, `viewCount`, `downloadCount`,
 `citationCount` and the three `*OverTime` arrays change without the metadata
 changing. They stay in the stored payload (they are real API output) but are
@@ -122,10 +140,11 @@ they warn `no modalities assigned` and `access=… has no access_notes`
 (`access_notes` is not part of this source's mapping). Both are warnings, not
 errors.
 
-**`provenance.raw_hash` is the hash of the whole payload**, volatile fields
-included, per the brief — so it churns monthly even when nothing meaningful
-changed. `RawStore`'s own change detection is unaffected (it hashes the
-stripped payload). Worth revisiting when the diff stage lands.
+**`provenance.raw_hash` is the volatile-stripped hash** — the same value
+`manifest.json` records, via the public `harvest.tcia.strip_volatile()`
+(controller ruling R12). Hashing the payload as stored would make every TCIA
+record's `raw_hash` change on every refresh, purely because someone viewed a
+DataCite landing page, and bury the real changes in the changelog.
 
 ## Field mapping
 
@@ -152,15 +171,16 @@ Either may be `null`.
 | `dc.creators[].nameIdentifiers[]` where scheme `ORCID` | `authors[].orcid` | verbatim (bare id or url, as given) |
 | `dc.creators[].affiliation[]` | `institutions[].name` | string or `{"name"}`; deduped by name, first mention wins |
 | `dc.relatedIdentifiers[]` of type `DOI` | `papers[]` | `IsCitedBy`→`is_cited_by`, `IsDescribedBy`/`IsSupplementTo`→`describes`, anything else→`other`; DOIs via `common.clean_doi`, deduped, capped at 20 |
-| `dc.doi` | `dataset_doi` | `common.clean_doi` |
+| `dc.doi` | `dataset_doi` | `common.clean_doi` then `common.collapse_version_doi` (a no-op on every TCIA DOI seen, applied for cross-source consistency) |
 | `dc.version` | `version` | as a string |
-| `name` | `domains` | `["oncology"]`, then: `/COVID/i` → `["infectious_disease","pulmonology"]`, `/healthy\|normative/i` → drop `oncology`, `/pedi/i` → add `pediatrics`; emitted in `vocab.DOMAINS` order |
+| `name` | `domains` | `["oncology"]`, then (word-anchored, so `impedance`/`Covidien` don't fire): `/\bcovid\b/i` → `["infectious_disease","pulmonology"]`, `/\bhealthy\b\|\bnormative\b/i` → drop `oncology`, `/\bpedi\w*/i` → add `pediatrics`; emitted in `vocab.DOMAINS` order |
 | `dc` main title | `conditions[]` | only the four unambiguous multi-word cancer phrases present in `vocab.CONDITION_ALIASES` (`glioblastoma multiforme`, `lung adenocarcinoma`, `breast cancer`, `lung cancer`); everything else is left to the enrich stage |
 | — | `published`, `years`, `countries`, `population`, `size_bytes`, `access_notes` | always null/empty — no source field supports them |
-| whole payload | `provenance` | `common.make_provenance(via="api:nbia+datacite", …, raw_hash=io.content_hash(payload))` |
+| whole payload | `provenance` | `common.make_provenance(via="api:nbia+datacite", …, raw_hash=io.content_hash(strip_volatile(payload)))` — the volatile-stripped hash, identical to the one in `manifest.json` |
 
 `enrichment_text(envelope)` = name + DataCite main title + description +
-body parts + modality codes, HTML-stripped, capped at 1,500 characters.
+body parts + modality codes, HTML-stripped, deduplicated (`name` *is* the title
+whenever there is one), capped at 1,500 characters.
 
 ## Fixtures
 
