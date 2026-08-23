@@ -87,6 +87,24 @@ def test_clean_title_strips_a_stray_html_fragment():
     assert common.clean_title("A &amp; B") == "A &amp; B"
 
 
+def test_clean_title_strips_markup_without_eating_a_literal_bracket():
+    """Only the spans that were recognized as tags are removed. Handing the
+    whole string to a general tag-stripper would swallow `<18 years</p>` as
+    if it were one tag and silently shorten the title."""
+    assert common.clean_title("<p>Children <18 years</p>") == "Children <18 years"
+    assert common.clean_title("<em>SpO2 < 90%</em> subgroup") == "SpO2 < 90% subgroup"
+
+
+def test_clean_title_drops_script_and_style_with_their_contents():
+    """A title is never script or style source, so these go whole rather
+    than leaving their bodies behind as visible text."""
+    assert common.clean_title("<script>alert(1)</script>Sepsis cohort") == (
+        "Sepsis cohort"
+    )
+    assert common.clean_title("Name<style>.x{color:red}</style>") == "Name"
+    assert common.clean_title('<iframe src="https://x.test"></iframe>Name') == "Name"
+
+
 def test_clean_title_keeps_angle_brackets_that_are_not_markup():
     """Dataset titles really do contain `<` and `>`; only a recognizable
     HTML tag counts as markup."""

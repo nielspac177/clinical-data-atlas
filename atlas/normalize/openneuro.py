@@ -408,7 +408,7 @@ def enrichment_text(envelope: dict) -> str:
     description = snapshot.get("description") or {}
     summary = snapshot.get("summary") or {}
 
-    name = (description.get("Name") or "").strip() or str(payload.get("id") or "")
+    name = common.clean_title(description.get("Name")) or str(payload.get("id") or "")
     tasks = ", ".join(t for t in (summary.get("tasks") or []) if isinstance(t, str))
     parts = [
         name,

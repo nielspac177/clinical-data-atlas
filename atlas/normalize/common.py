@@ -17,19 +17,21 @@ on a source's license string, and `make_provenance` to build every
 
 from __future__ import annotations
 
+import html
 import re
 from dataclasses import dataclass
 
-from atlas import io, vocab
+from atlas import vocab
 from atlas.schema import EnrichmentProv, Provenance
 
 # ---------------------------------------------------------------------------
 # Titles
 # ---------------------------------------------------------------------------
 
-# Non-whitespace control characters. Tab/LF/VT/FF/CR (0x09-0x0d) are
-# deliberately excluded: they are whitespace, and the collapse below turns
-# them into a space rather than deleting them and running words together.
+# Tab/LF/VT/FF/CR (0x09-0x0d) are excluded from this class: they are
+# whitespace, and the collapse below turns them into a space instead. The
+# information-separator controls 0x1c-0x1f are `\s` too but are deleted
+# anyway -- they are corruption in a title, not word separators.
 _CONTROL_CHARS_RE = re.compile(r"[\x00-\x08\x0e-\x1f\x7f]")
 _WHITESPACE_RUN_RE = re.compile(r"\s+")
 
@@ -39,6 +41,9 @@ _WHITESPACE_RUN_RE = re.compile(r"\s+")
 _HTML_TAG_NAMES = (
     "a|b|br|code|div|em|h[1-6]|hr|i|img|li|ol|p|pre|small|span|strong|sub|sup"
     "|table|tbody|td|th|thead|tr|u|ul"
+    # Never a legitimate title, and stripped rather than passed through so
+    # that this stays the single hygiene chokepoint for names.
+    "|script|style|noscript|iframe|object|embed|svg"
 )
 # Either a bare tag (`<p>`, `</em>`, `<br/>`) or one carrying something that
 # looks like an attribute (`<a href="...">`). The `=` in that second form is
@@ -47,6 +52,9 @@ _HTML_TAG_NAMES = (
 _HTML_FRAGMENT_RE = re.compile(
     rf"(?i)</?({_HTML_TAG_NAMES})\s*/?>|<({_HTML_TAG_NAMES})\s[^<>]*=[^<>]*>"
 )
+# Elements whose *contents* are markup too, never title text: dropped whole
+# rather than leaving a script body behind as visible words.
+_HTML_DROP_ELEMENT_RE = re.compile(r"(?is)<(script|style|noscript)\b[^>]*>.*?</\1\s*>")
 
 
 def clean_title(s: str | None) -> str:
@@ -60,18 +68,21 @@ def clean_title(s: str | None) -> str:
     CSV column, changelog table row), so it must never carry a newline or
     a control character.
 
-    Text that is *plainly* a stray HTML fragment -- a recognizable tag,
-    per `_HTML_FRAGMENT_RE` -- is run through `io.strip_html` first, which
-    also unescapes its entities. Text that merely contains `<` or `>` is
-    left exactly as the source wrote it: comparisons ("children <18
-    years") are part of the title, not markup.
+    Markup is removed span by span: only the substrings that *are* a
+    recognizable tag (`_HTML_FRAGMENT_RE`) go, and entities are unescaped
+    only when at least one such tag was found. Everything else is left
+    exactly as the source wrote it, so a title that mixes the two --
+    `"<p>Children <18 years</p>"` -- keeps its comparison. Handing the
+    whole string to a general tag-stripper instead would swallow
+    `"<18 years</p>"` as if it were one tag and silently shorten the name.
 
     `None`, empty and whitespace-only input all return `""`, so a caller
     can keep its own fallback chain with a plain `or`.
     """
     text = str(s or "")
+    text = _HTML_DROP_ELEMENT_RE.sub(" ", text)
     if _HTML_FRAGMENT_RE.search(text):
-        text = io.strip_html(text)
+        text = html.unescape(_HTML_FRAGMENT_RE.sub(" ", text))
     text = _CONTROL_CHARS_RE.sub("", text)
     return _WHITESPACE_RUN_RE.sub(" ", text).strip()
 
