@@ -2,7 +2,7 @@
 
 - **Source id:** `gdc` · **Harvester:** `atlas/harvest/gdc.py` · **Normalizer:** `atlas/normalize/gdc.py`
 - **Endpoint(s):** `GET https://api.gdc.cancer.gov/projects?size=100&from=0&expand=summary,summary.data_categories,summary.experimental_strategies,program&format=json`, paged defensively via `from=` against `data.pagination.total` · **Auth:** none · **Politeness:** 350 ms/host (`atlas.config.POLITE_DELAY`), UA `clinical-data-atlas/<version> (+repo; mailto:...)` · **robots.txt:** none (`https://api.gdc.cancer.gov/robots.txt` → `404`, verified live)
-- **Verified:** 2026-08-22 · **Count:** 93 projects (fits in a single `size=100` page: `data.pagination` was `{"count": 93, "total": 93, "size": 100, "from": 0, "pages": 1}`) · **Deviation from brief:** the endpoint, params, and response shape all matched the brief and `m1-shared-context.md` exactly; `conditions`' study-title heuristic was later broadened past the brief's literal 5-keyword list under post-review controller ruling R13 (fix round 1/5) — see Quirks.
+- **Verified:** 2026-08-22, re-probed 2026-08-23 · **Live count:** 93 projects on both dates (fits in a single `size=100` page: `data.pagination` was `{"count": 93, "total": 93, "size": 100, "from": 0, "pages": 1}`) · **Committed snapshot:** `data/raw/gdc/manifest.json` `harvested_at` = 2026-08-23, 93 records; 92 reach `data/catalog/catalog.jsonl` (`CGCI-BLGSP` excluded as `not_released`) · **Deviation from brief:** the endpoint, params, and response shape all matched the brief and `m1-shared-context.md` exactly; `conditions`' study-title heuristic was later broadened past the brief's literal 5-keyword list under post-review controller ruling R13 (fix round 1/5) — see Quirks.
 
 ## Quirks
 
