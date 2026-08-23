@@ -1,0 +1,126 @@
+name: Monthly refresh
+
+on:
+  schedule:
+    - cron: "17 5 1 * *"
+  workflow_dispatch:
+    inputs:
+      sources:
+        description: "Comma-separated list of sources to refresh (default: all)"
+        type: string
+        default: ""
+      skip_enrich:
+        description: "Skip the LLM enrichment stage"
+        type: boolean
+        default: false
+      strict:
+        description: "Fail the run on validation warnings, not just errors"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: refresh
+  cancel-in-progress: false
+
+env:
+  # Not yet consumed by atlas/http.py -- reserved so ops can override the
+  # outbound User-Agent for bot runs without a code change; the pipeline
+  # otherwise builds it from atlas.config.VERSION + ATLAS_MAILTO.
+  ATLAS_UA: "clinical-data-atlas/0.1.0 (+https://github.com/nielspac177/clinical-data-atlas; mailto:87744596+nielspac177@users.noreply.github.com)"
+  ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+  # workflow_dispatch inputs, funneled through env: (never interpolated
+  # directly into a run: script) so a malicious --sources/etc value can't
+  # break out of shell quoting next to a real secret in this job.
+  INPUT_SOURCES: ${{ inputs.sources }}
+  INPUT_SKIP_ENRICH: ${{ inputs.skip_enrich }}
+  INPUT_STRICT: ${{ inputs.strict }}
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1
+        with:
+          enable-cache: true
+          cache-dependency-glob: "uv.lock"
+
+      - name: Install dependencies
+        run: uv sync --locked --no-dev
+
+      - name: Select LLM backend and run date
+        run: |
+          if [ -n "$ANTHROPIC_API_KEY" ] && [ "$INPUT_SKIP_ENRICH" != "true" ]; then b=anthropic; else b=none; fi
+          echo "ATLAS_LLM=$b" >> "$GITHUB_ENV"
+          echo "RUN_DATE=$(date -u +%F)" >> "$GITHUB_ENV"
+
+      - name: Positive control -- probe every source before refreshing
+        run: uv run atlas harvest --probe
+
+      - name: Refresh
+        run: |
+          mkdir -p data/changelog .cache
+          args=()
+          if [ -n "$INPUT_SOURCES" ]; then args+=(--sources "$INPUT_SOURCES"); fi
+          if [ "$INPUT_SKIP_ENRICH" = "true" ]; then args+=(--skip-enrich); fi
+          if [ "$INPUT_STRICT" = "true" ]; then args+=(--strict); fi
+          uv run python -m atlas.refresh "${args[@]}" --max-llm-calls 300 --report data/changelog/latest.md --summary-json .cache/refresh-summary.json
+
+      - name: Install dev dependencies for tests
+        run: uv sync --locked --group dev
+
+      - name: Run unit tests
+        run: uv run pytest -q -m "not live and not e2e"
+
+      - name: Validate catalog
+        run: |
+          if [ -f data/catalog/catalog.jsonl ]; then
+            uv run atlas validate --strict
+          else
+            echo "no catalog yet — skipping validate"
+          fi
+
+      - name: Build site and check for unresolved placeholders
+        run: |
+          make site BASE_URL=/clinical-data-atlas/ BUILD=${GITHUB_SHA::7}
+          ! grep -rl -e '__BUILD__' -e '__BASE_URL__' --exclude-dir=vendor _site/
+
+      - name: Write step summary
+        run: |
+          if [ -f data/changelog/latest.md ]; then
+            cat data/changelog/latest.md >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: refresh-report-${{ env.RUN_DATE }}
+          path: data/changelog/latest.md
+          retention-days: 90
+
+      - id: sum
+        name: Read PR title from the refresh summary
+        run: |
+          title=""
+          if [ -f .cache/refresh-summary.json ]; then
+            title=$(jq -r '.title // empty' .cache/refresh-summary.json)
+          fi
+          if [ -z "$title" ]; then
+            title="Monthly refresh ${RUN_DATE}"
+          fi
+          echo "title=$title" >> "$GITHUB_OUTPUT"
+
+      - uses: peter-evans/create-pull-request@v8
+        with:
+          commit-message: "data: monthly refresh ${{ env.RUN_DATE }}"
+          branch: bot/monthly-refresh
+          delete-branch: true
+          title: ${{ steps.sum.outputs.title }}
+          body-path: data/changelog/latest.md
+          labels: automated,refresh
+          add-paths: data/**, docs/sources.md
