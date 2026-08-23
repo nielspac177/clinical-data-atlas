@@ -115,7 +115,11 @@ def test_single_record_creates_dataset_and_source_nodes():
     assert source_node["label"] == "OpenNeuro"
     assert source_node["degree"] == 1
     assert source_node["backbone"] is True
-    assert "domains" not in source_node  # source nodes never get a domains key
+    assert source_node["domains"] == ["neurology"]  # dominant domain of its datasets
+
+
+def test_source_labels_cover_every_vocab_source():
+    assert set(build._SOURCE_LABELS) == set(vocab.SOURCES)
 
 
 def test_source_labels_match_human_names_map():
@@ -284,6 +288,29 @@ def test_institution_id_from_bare_ror_id_used_as_is():
     assert "institution:03abcxy99" in _node_map(graph)
 
 
+def test_institution_key_strips_whitespace_from_ror_url():
+    record = _record(
+        "openneuro:ds001",
+        institutions=[
+            {
+                "name": "Mass General Hospital",
+                "ror_id": "  https://ror.org/02mhbdp94  ",
+            }
+        ],
+    )
+    graph, _index, _stats = build.build_graph([record])
+    assert "institution:02mhbdp94" in _node_map(graph)
+
+
+def test_institution_key_strips_whitespace_from_bare_ror_id():
+    record = _record(
+        "openneuro:ds001",
+        institutions=[{"name": "Some Institute", "ror_id": "  03abcxy99  "}],
+    )
+    graph, _index, _stats = build.build_graph([record])
+    assert "institution:03abcxy99" in _node_map(graph)
+
+
 def test_institution_id_without_ror_falls_back_to_slugified_name():
     record = _record(
         "openneuro:ds001", institutions=[{"name": "Tiny Lab", "ror_id": None}]
@@ -406,6 +433,17 @@ def test_related_link_counts_toward_dataset_degree():
     assert nodes["openneuro:ds002"]["degree"] == 2
 
 
+def test_related_self_reference_does_not_create_self_loop():
+    record = _record(
+        "openneuro:ds001",
+        related=[{"id": "openneuro:ds001", "relation": "same_cohort"}],
+    )
+    graph, _index, _stats = build.build_graph([record])
+    related_links = [link for link in graph["links"] if link["type"] == "related"]
+    assert related_links == []
+    assert _node_map(graph)["openneuro:ds001"]["degree"] == 1  # has_source only
+
+
 def test_related_link_to_removed_record_is_skipped():
     records = [
         _record(
@@ -475,6 +513,25 @@ def test_non_dataset_node_domain_is_empty_list_when_no_domains():
     record = _record("openneuro:ds001", modalities=["EEG"], domains=[])
     graph, _index, _stats = build.build_graph([record])
     assert _node_map(graph)["modality:EEG"]["domains"] == []
+
+
+def test_source_node_domain_is_dominant_domain_of_connected_datasets():
+    # Source nodes get the same domains summary as modality/condition/
+    # institution nodes -- the requirement covers every non-dataset node,
+    # source included.
+    records = [
+        _record("openneuro:ds001", domains=["neurology"]),
+        _record("openneuro:ds002", domains=["neurology"]),
+        _record("openneuro:ds003", domains=["oncology"]),
+    ]
+    graph, _index, _stats = build.build_graph(records)
+    assert _node_map(graph)["source:openneuro"]["domains"] == ["neurology"]
+
+
+def test_source_node_domain_is_empty_list_when_no_domains():
+    record = _record("openneuro:ds001", domains=[])
+    graph, _index, _stats = build.build_graph([record])
+    assert _node_map(graph)["source:openneuro"]["domains"] == []
 
 
 def test_dataset_domains_are_vocab_ordered_regardless_of_input_order():
@@ -687,6 +744,37 @@ def test_write_outputs_twice_produces_identical_bytes(tmp_path):
 def test_write_outputs_default_out_dir_is_config_graph():
     default = inspect.signature(build.write_outputs).parameters["out_dir"].default
     assert default == config.GRAPH
+
+
+# --------------------------------------------------------------------------
+# Determinism: output is a pure function of the record *set*, independent
+# of the order the caller passes records in.
+# --------------------------------------------------------------------------
+
+
+def test_output_is_independent_of_input_record_order():
+    # Two records share a condition slug with different casing, and two
+    # more share an institution slug with different casing -- reversing
+    # the input order would previously flip which casing "won" for both.
+    records_in_order = [
+        _record("openneuro:ds001", conditions=[{"label": "Epilepsy"}]),
+        _record("openneuro:ds002", conditions=[{"label": "epilepsy"}]),
+        _record("openneuro:ds003", institutions=[{"name": "Zeta Lab"}]),
+        _record("openneuro:ds004", institutions=[{"name": "zeta lab"}]),
+    ]
+    reversed_records = list(reversed(records_in_order))
+
+    graph_a, index_a, stats_a = build.build_graph(records_in_order)
+    graph_b, index_b, stats_b = build.build_graph(reversed_records)
+
+    assert io.canonical_json(graph_a) == io.canonical_json(graph_b)
+    assert io.canonical_json(index_a) == io.canonical_json(index_b)
+    assert io.canonical_json(stats_a) == io.canonical_json(stats_b)
+
+    # and, concretely, the lower-id record's casing wins either way
+    nodes = _node_map(graph_a)
+    assert nodes["condition:epilepsy"]["label"] == "Epilepsy"
+    assert nodes["institution:zeta-lab"]["label"] == "Zeta Lab"
 
 
 # --------------------------------------------------------------------------
