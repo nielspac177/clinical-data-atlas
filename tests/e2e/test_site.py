@@ -525,6 +525,16 @@ def test_the_filters_disclosure_opens_the_rail_from_the_keyboard(page: Page) -> 
     expect(toggle).to_have_attribute("aria-expanded", "false")
     expect(panel).to_be_hidden()
 
+    # Space is the other half of the native button contract, and the
+    # brief names both -- so both are pinned, not just the one.
+    page.keyboard.press("Space")
+    expect(toggle).to_have_attribute("aria-expanded", "true")
+    expect(panel).to_be_visible()
+    page.keyboard.press("Space")
+    expect(toggle).to_have_attribute("aria-expanded", "false")
+    expect(panel).to_be_hidden()
+    assert toggle.evaluate("(el) => el === document.activeElement")
+
 
 def test_filtering_from_the_phone_rail_updates_the_table_and_the_count(
     page: Page, catalog: dict
@@ -589,6 +599,29 @@ def test_a_panel_chip_on_a_phone_lands_focus_on_the_filters_button(
     )
     # And it says what just happened, rather than only catching the focus.
     expect(toggle).to_have_text(re.compile(r"^Filters \(\d+\)$"))
+
+
+def test_filters_preselected_by_the_url_show_in_the_button(
+    page: Page, catalog: dict
+) -> None:
+    """`?access=open` arrives counted, and still collapsed, on a phone.
+
+    The count is unit-tested against a synthetic state object; this is
+    what guards the `readState()` -> `refresh()` -> `update()` wiring
+    that carries a real one.
+    """
+    opens = with_access(catalog, "open")
+    if not opens:
+        pytest.skip("this catalog has no open datasets")
+
+    page.set_viewport_size(MOBILE)
+    page.goto("table.html?access=open")
+    expect(page.locator("#table-body tr").first).to_be_visible()
+
+    toggle = page.locator(".facets-toggle")
+    expect(toggle).to_have_text("Filters (1)")
+    expect(toggle).to_have_attribute("aria-expanded", "false")
+    expect(page.locator("#table-status")).to_contain_text(f"{fmt(len(opens))} of ")
 
 
 def test_the_desktop_table_page_keeps_its_open_rail(page: Page) -> None:
