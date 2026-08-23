@@ -251,17 +251,32 @@ def sanitize_html(rendered: str) -> str:
 # looked like a tag -- so a heading is always a bare `<hN>`/`</hN>` and a
 # `<h1>` inside a code span is `&lt;h1&gt;` text, which these never touch.
 _HEADING_RE = re.compile(r"<(/?)h([1-6])(\s[^>]*)?>")
-_LEADING_H1_RE = re.compile(r"\A\s*<h1(?:\s[^>]*)?>.*?</h1>\s*", re.DOTALL)
+_LEADING_H1_RE = re.compile(r"\A\s*<h1(?:\s[^>]*)?>(.*?)</h1>\s*", re.DOTALL)
+# The title `atlas.diff.render_changelog` generates: "Monthly refresh
+# 2026-09-01: +1 new, …" from `summary_title`, or a bare "Refresh <date>"
+# when no title was passed. Only this shape is dropped -- see
+# `demote_headings`.
+_GENERATED_TITLE_RE = re.compile(r"\A(?:Monthly refresh|Refresh)\s+\d{4}-\d{2}-\d{2}\b")
+
+# The level the deepest-outdented heading in an embedded body should land
+# at: one below the article's own `<h2>` date.
+_EMBEDDED_TOP_LEVEL = 3
 
 
-def _demote(match: re.Match[str]) -> str:
+def _heading_text(inner_html: str) -> str:
+    """A heading's plain text, for matching only -- inline markup and
+    entities are irrelevant to whether this is the generated title."""
+    return html.unescape(re.sub(r"<[^>]+>", "", inner_html)).strip()
+
+
+def _shift(match: re.Match[str], by: int) -> str:
     slash, level, attrs = match.group(1), int(match.group(2)), match.group(3) or ""
-    return f"<{slash}h{min(level + 1, 6)}{attrs}>"
+    return f"<{slash}h{min(level + by, 6)}{attrs}>"
 
 
 def demote_headings(body: str) -> str:
-    """Shift a standalone document's headings down one level so it can be
-    embedded under a heading of its own.
+    """Re-level a standalone document's headings so it can be embedded
+    under a heading of its own.
 
     A changelog entry is a complete markdown document -- it doubles as the
     monthly refresh's PR body (`atlas.diff.render_changelog`,
@@ -271,20 +286,39 @@ def demote_headings(body: str) -> str:
     where that structure would ship a second `<h1>` and an outline that
     jumps around.
 
-    So: a leading `<h1>` is dropped (the article's `<h2>` date already
-    titles the entry, and the entry's title line only repeats counts the
-    summary line beneath it states again), and every remaining heading
-    moves down one level -- `h2` -> `h3`, `h3` -> `h4` -- keeping the
-    document's own relative outline intact. `h6` is the floor, so a
-    document already six deep merges its two deepest levels rather than
-    emitting an `<h7>`.
+    Two steps:
+
+    1. A leading `<h1>` is dropped **only if it is the generated title**
+       (`_GENERATED_TITLE_RE`), which says nothing the article's `<h2>`
+       date doesn't already say -- its counts are repeated verbatim by the
+       summary line right beneath it. A hand-written title ("Emergency
+       correction: PhysioNet license fields") is kept: it carries meaning
+       the date cannot.
+    2. Every heading then shifts by however much it takes to put the
+       body's own top level at `h3` -- one below the article's `<h2>`. A
+       shift proportional to the body, rather than a flat one, is what
+       keeps an older entry that starts at `###` (the convention this
+       module documented until Task 3.5) from landing at `h4` and skipping
+       a level, which is a WCAG 1.3.1 heading-order violation. Relative
+       depth inside the body is preserved either way. `h6` is the floor, so
+       a document already six deep merges its two deepest levels rather
+       than emitting an `<h7>`.
 
     Doing this at embed time rather than in the writer means changelogs
     committed by earlier refreshes render correctly too, without anyone
     regenerating them.
     """
-    body = _LEADING_H1_RE.sub("", body, count=1)
-    return _HEADING_RE.sub(_demote, body)
+    leading = _LEADING_H1_RE.match(body)
+    if leading and _GENERATED_TITLE_RE.match(_heading_text(leading.group(1))):
+        body = body[leading.end() :]
+
+    levels = [int(m.group(2)) for m in _HEADING_RE.finditer(body) if not m.group(1)]
+    if not levels:
+        return body
+    shift = max(0, _EMBEDDED_TOP_LEVEL - min(levels))
+    if not shift:
+        return body
+    return _HEADING_RE.sub(lambda m: _shift(m, shift), body)
 
 
 def render_changelog(entries: Sequence[Path]) -> str:
