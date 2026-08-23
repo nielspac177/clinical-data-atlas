@@ -6,14 +6,23 @@ enforced. Nothing a model returns reaches a `Record` unchecked:
 
 - **Vocabulary.** Domains and modalities outside `atlas.vocab` are
   dropped, not coerced.
-- **Evidence.** Every modality and condition must come with an
-  `evidence` string that occurs (case-insensitively) in the record's own
-  enrichment text; values whose evidence isn't there are dropped. This is
-  the single strongest anti-hallucination guard: a model cannot quote
-  text that doesn't exist.
-- **Summary.** Over 40 words (the schema's own limit) or containing a
-  number that never appears in the input, and the record keeps the
-  summary it already had.
+- **Evidence.** Every modality and condition must come with an `evidence`
+  string of at least :data:`MIN_EVIDENCE_CHARS` characters that contains
+  a space and occurs (case-insensitively, whitespace-collapsed) in the
+  record's own enrichment text. The length and space requirements are
+  what make this a real guard rather than a formality -- a one-character
+  "evidence" like ``"a"`` occurs in almost any text, so without them a
+  model could evidence anything with anything.
+- **Summary.** Refused (and the record's existing summary kept) when it
+  runs over 40 words, when it contains a number that is not a number in
+  the input, or when fewer than :data:`SUMMARY_GROUNDING_RATIO` of its
+  content words appear in the record's own name and text. The last one is
+  a soft, whole-summary check: prose can legitimately rephrase, but a
+  summary that shares almost no vocabulary with its source is either
+  about a different dataset or was written from the model's own
+  knowledge.
+- **Numbers.** Compared as *normalized tokens*, never as substrings: "20"
+  is not evidenced by "2018", and "1,000" and "1000" are the same number.
 - **Scope.** `in_scope=false` is advisory: it is *ignored* for repository
   sources (a curated repository listing a dataset is better evidence than
   a model's opinion) and only flags journal records `needs_review` for a
@@ -21,6 +30,9 @@ enforced. Nothing a model returns reaches a `Record` unchecked:
 - **Never overwrite.** Domains, modalities, conditions, and countries are
   unioned with what the source already reported; `population` is only
   filled in when the record has none. A source fact always wins.
+- **Validate.** The merged record is re-validated against `Record` before
+  it replaces the original, so a guard bug produces a counted failure
+  rather than an invalid row in the catalog.
 
 Every guard that fires is counted (`EnrichStats.guard_drops`) rather than
 logged and forgotten, so a prompt regression shows up as a number in the
@@ -29,33 +41,52 @@ refresh report.
 Batching is an efficiency detail, not a semantic one: records are asked
 about `batch_size` at a time, but each record's answer is cached under
 its *own* key (`atlas.enrich.llm.cache_key`), so re-running with a
-different batch size or source selection reuses every cached answer.
+different batch size or source selection reuses every cached answer. An
+answer served from cache is stamped with the model that *produced* it,
+not the backend running today.
+
+A batch's answers are only ever applied to the records that were in that
+batch: an item naming some other record -- the shape a prompt injection
+in one dataset's text would take -- is discarded, never merged.
 """
 
 from __future__ import annotations
 
 import re
-from dataclasses import dataclass
+import secrets
+from dataclasses import dataclass, field
 from datetime import UTC, date, datetime
 from pathlib import Path
+
+from pydantic import ValidationError
 
 from atlas import vocab
 from atlas.enrich import llm, prompts
 from atlas.schema import Condition, Provenance, Record, word_count
 
-# Sources whose listings are curated data repositories: their say-so that
-# a record is a dataset outranks the model's, so `in_scope=false` is
-# ignored for them (see the module docstring).
-REPOSITORY_SOURCES: frozenset[str] = frozenset(
-    {"openneuro", "physionet", "gdc", "tcia", "curated"}
+# Sources whose listings are curated data repositories -- i.e. everything
+# that isn't a journal. Derived rather than hardcoded so a source added to
+# `vocab.SOURCES` later defaults to repository semantics (its `in_scope`
+# answers ignored) instead of silently gaining journal semantics.
+REPOSITORY_SOURCES: frozenset[str] = frozenset(vocab.SOURCES) - frozenset(
+    vocab.JOURNAL_SOURCES
 )
 
 _ISO2_RE = re.compile(r"^[A-Z]{2}$")
-_DIGIT_RUN_RE = re.compile(r"\d+")
+# A number, with its own internal separators: "45", "1,000", "3.5".
+_NUMBER_RE = re.compile(r"\d+(?:[.,]\d+)*")
+_NUMBER_NOISE_RE = re.compile(r"[,.\s%]")
 
 # The schema's own cap, re-checked here so a too-long summary costs one
 # field rather than failing validation for the whole record.
 SUMMARY_MAX_WORDS = 40
+# Evidence must be long enough, and have enough internal structure, to
+# identify a passage rather than match by accident.
+MIN_EVIDENCE_CHARS = 10
+# How much of a summary's own vocabulary must come from the input.
+SUMMARY_GROUNDING_RATIO = 0.6
+# Words shorter than this carry no signal (articles, prepositions).
+MIN_CONTENT_WORD_CHARS = 4
 
 
 def _today() -> date:
@@ -76,6 +107,11 @@ class EnrichStats:
     guard_drops: int = 0
     failures: int = 0
     records_enriched: int = 0
+    # Model id -> how many records this pass took from cache under it.
+    # `backend`/`model` above describe the backend that *ran*; cached
+    # answers may have come from an entirely different one, and the
+    # report must not imply otherwise.
+    cached_models: dict[str, int] = field(default_factory=dict)
 
 
 # ---------------------------------------------------------------------------
@@ -83,22 +119,53 @@ class EnrichStats:
 # ---------------------------------------------------------------------------
 
 
+def _collapse(text: str) -> str:
+    """`text` with every whitespace run reduced to one space -- so a
+    model quoting across a line break still matches its source."""
+    return " ".join(text.split())
+
+
 def _evidenced(evidence: object, haystack: str) -> bool:
-    """True when `evidence` is a non-empty string occurring in
-    `haystack` (already lowercased by the caller)."""
-    return (
-        isinstance(evidence, str)
-        and bool(evidence.strip())
-        and evidence.strip().lower() in haystack
-    )
+    """True when `evidence` is a usable quotation from `haystack`.
+
+    `haystack` is already lowercased and whitespace-collapsed. The
+    length and space requirements are the guard: see the module
+    docstring.
+    """
+    if not isinstance(evidence, str):
+        return False
+    quote = _collapse(evidence).lower()
+    if len(quote) < MIN_EVIDENCE_CHARS or " " not in quote:
+        return False
+    return quote in haystack
 
 
-def _digits_are_grounded(text: str, haystack: str) -> bool:
-    """True when every run of digits in `text` also appears in
-    `haystack` -- the cheap fabrication check for free-text fields. A
-    model that invents "1,200 participants" for a dataset whose text
-    never says 1200 fails this."""
-    return all(run in haystack for run in _DIGIT_RUN_RE.findall(text))
+def _numbers(text: str) -> set[str]:
+    """The normalized numeric tokens in `text`.
+
+    Normalized (thousands separators, decimal points, and percent signs
+    removed) and compared as whole tokens, so "1,000" and "1000" are the
+    same number while "20" is *not* found inside "2018" -- the substring
+    check this replaces let a fabricated "20 patients" pass on the
+    strength of an unrelated year.
+    """
+    tokens = set()
+    for run in _NUMBER_RE.findall(text):
+        token = _NUMBER_NOISE_RE.sub("", run)
+        if token:
+            tokens.add(token)
+    return tokens
+
+
+def _content_words(text: str) -> list[str]:
+    """The lowercase, punctuation-stripped words of `text` long enough to
+    carry meaning."""
+    words = []
+    for raw in text.lower().split():
+        word = "".join(character for character in raw if character.isalnum())
+        if len(word) >= MIN_CONTENT_WORD_CHARS:
+            words.append(word)
+    return words
 
 
 def _vocab_ordered(values: set[str], order: tuple[str, ...]) -> list[str]:
@@ -115,8 +182,24 @@ def _canonical_condition_label(label: str) -> str:
     return vocab.CONDITION_ALIASES.get(stripped.lower(), stripped)
 
 
+def _as_list(value: object) -> tuple[list, int]:
+    """`(items, drops)` for a field that should hold a list. A non-list
+    costs exactly one drop -- iterating a stray string would otherwise
+    charge one per character."""
+    if value is None:
+        return [], 0
+    if isinstance(value, list):
+        return value, 0
+    return [], 1
+
+
 def apply_llm_item(
-    record: Record, item: dict, text: str, *, model: str | None = None
+    record: Record,
+    item: dict,
+    text: str,
+    *,
+    model: str | None = None,
+    prompt_version: str | None = None,
 ) -> tuple[Record, int]:
     """Merge one guarded LLM `item` into `record` against its `text`.
 
@@ -126,19 +209,26 @@ def apply_llm_item(
     an answer that contributed nothing must not be recorded as
     enrichment.
 
-    `model` is the backend's model id, recorded in
-    `provenance.enrichment.model`; it is optional so this function stays
-    callable (and testable) with just a record, an answer, and the text
-    that answer must be evidenced against.
+    `model` and `prompt_version` describe the run that *produced* `item`:
+    for a fresh answer they are the current backend's, and for one served
+    from cache they come from the cache entry, so a record never claims
+    to have been classified by a model that never saw it. Both are
+    optional so this function stays callable (and testable) with just a
+    record, an answer, and the text that answer must be evidenced
+    against.
     """
-    haystack = text.lower()
+    haystack = _collapse(text).lower()
+    numbers = _numbers(text)
+    grounding_words = set(_content_words(f"{record.name} {text}"))
     drops = 0
     updates: dict = {}
     changed: list[str] = []
 
     # -- domains: vocabulary only -----------------------------------------
+    raw_domains, malformed = _as_list(item.get("domains"))
+    drops += malformed
     proposed_domains: set[str] = set()
-    for value in item.get("domains") or []:
+    for value in raw_domains:
         if isinstance(value, str) and value in vocab.DOMAINS:
             proposed_domains.add(value)
         else:
@@ -150,8 +240,10 @@ def apply_llm_item(
         changed.append("domains")
 
     # -- modalities: vocabulary *and* evidence ----------------------------
+    raw_modalities, malformed = _as_list(item.get("modalities"))
+    drops += malformed
     proposed_modalities: set[str] = set()
-    for entry in item.get("modalities") or []:
+    for entry in raw_modalities:
         value = entry.get("value") if isinstance(entry, dict) else None
         evidence = entry.get("evidence") if isinstance(entry, dict) else None
         if value in vocab.MODALITIES and _evidenced(evidence, haystack):
@@ -164,10 +256,15 @@ def apply_llm_item(
         )
         changed.append("modalities")
 
-    # -- conditions: evidence, deduped by lowercased label ----------------
-    known_labels = {condition.label.lower() for condition in record.conditions}
+    # -- conditions: evidence, deduped by canonical lowercased label ------
+    raw_conditions, malformed = _as_list(item.get("conditions"))
+    drops += malformed
+    known_labels = {
+        _canonical_condition_label(condition.label).lower()
+        for condition in record.conditions
+    }
     new_conditions: list[Condition] = []
-    for entry in item.get("conditions") or []:
+    for entry in raw_conditions:
         label = entry.get("label") if isinstance(entry, dict) else None
         evidence = entry.get("evidence") if isinstance(entry, dict) else None
         if not (isinstance(label, str) and label.strip()):
@@ -186,13 +283,16 @@ def apply_llm_item(
         updates["conditions"] = [*record.conditions, *new_conditions]
         changed.append("conditions")
 
-    # -- summary: word limit, then no invented numbers --------------------
+    # -- summary: length, then numbers, then vocabulary grounding ---------
     summary = item.get("summary")
     if isinstance(summary, str) and summary.strip():
         summary = summary.strip()
-        too_long = word_count(summary) > SUMMARY_MAX_WORDS
-        invented_numbers = not _digits_are_grounded(summary, haystack)
-        if too_long or invented_numbers:
+        rejected = (
+            word_count(summary) > SUMMARY_MAX_WORDS
+            or not _numbers(summary) <= numbers
+            or not _is_grounded(summary, grounding_words)
+        )
+        if rejected:
             drops += 1
         elif summary != record.summary:
             updates["summary"] = summary
@@ -202,20 +302,23 @@ def apply_llm_item(
     population = item.get("population")
     if record.population is None and isinstance(population, str) and population.strip():
         population = population.strip()
-        if _digits_are_grounded(population, haystack):
+        if _numbers(population) <= numbers:
             updates["population"] = population
             changed.append("population")
         else:
             drops += 1
 
-    # -- countries: ISO-3166-1 alpha-2, uppercase -------------------------
+    # -- countries: ISO-3166-1 alpha-2 ------------------------------------
+    raw_countries, malformed = _as_list(item.get("countries"))
+    drops += malformed
     new_countries: list[str] = []
-    for value in item.get("countries") or []:
-        if not (isinstance(value, str) and _ISO2_RE.match(value)):
+    for value in raw_countries:
+        code = value.strip().upper() if isinstance(value, str) else ""
+        if not _ISO2_RE.match(code):
             drops += 1
             continue
-        if value not in record.countries and value not in new_countries:
-            new_countries.append(value)
+        if code not in record.countries and code not in new_countries:
+            new_countries.append(code)
     if new_countries:
         updates["countries"] = [*record.countries, *sorted(new_countries)]
         changed.append("countries")
@@ -231,19 +334,35 @@ def apply_llm_item(
     if not changed:
         return record, drops
 
-    updates["provenance"] = _updated_provenance(record, changed, model)
+    updates["provenance"] = _updated_provenance(record, changed, model, prompt_version)
     return record.model_copy(update=updates), drops
 
 
+def _is_grounded(summary: str, grounding_words: set[str]) -> bool:
+    """True when enough of `summary`'s content words come from the
+    record's own name and text (see the module docstring). A summary with
+    no content words at all is not evidence of fabrication, so it
+    passes."""
+    words = _content_words(summary)
+    if not words:
+        return True
+    hits = sum(1 for word in words if word in grounding_words)
+    return hits >= SUMMARY_GROUNDING_RATIO * len(words)
+
+
 def _updated_provenance(
-    record: Record, changed: list[str], model: str | None
+    record: Record,
+    changed: list[str],
+    model: str | None,
+    prompt_version: str | None,
 ) -> Provenance:
     """`record.provenance` with its enrichment block re-stamped for the
     fields the LLM actually changed.
 
     `method` records that an LLM ran *in addition to* whatever came
     before: `rules` becomes `rules+llm`, `curated` is left alone (a human
-    curator's label is not downgraded by a machine pass), anything else
+    curator's label is not downgraded by a machine pass -- and
+    :func:`enrich_records` skips such records outright), anything else
     becomes `llm`. Per-field origins are merged, not replaced, so fields
     the rules stage set keep saying `rules`.
     """
@@ -261,11 +380,11 @@ def _updated_provenance(
                 update={
                     "method": method,
                     "model": model,
-                    "prompt_version": prompts.PROMPT_VERSION,
+                    "prompt_version": prompt_version or prompts.PROMPT_VERSION,
                     "at": _today(),
                     "fields": {
                         **enrichment.fields,
-                        **{field: "llm" for field in changed},
+                        **{name: "llm" for name in changed},
                     },
                 }
             )
@@ -292,7 +411,9 @@ def enrich_records(
     `texts` maps record id -> the enrichment text to classify from (the
     caller builds it from each source's `enrichment_text(envelope)`); a
     record with no text is skipped entirely, since with no text no
-    evidence could ever be verified.
+    evidence could ever be verified. Records already enriched by hand
+    (`provenance.enrichment.method == "curated"`) are skipped too -- a
+    machine pass does not get to edit a curator's work.
 
     Records are replaced **in place** in `records` -- `Record` is
     immutable-friendly, so each merge produces a new object and this
@@ -308,15 +429,26 @@ def enrich_records(
 
     for index, record in enumerate(records):
         text = texts.get(record.id)
-        if not text:
+        if not text or record.provenance.enrichment.method == "curated":
             continue
         item_input = prompts.record_input(record, text)
         key = llm.cache_key(item_input, prompts.OUTPUT_SCHEMA)
 
-        cached = llm.cache_get(key, cache_dir=cache_dir)
-        if cached is not None:
+        entry = llm.cache_lookup(key, cache_dir=cache_dir)
+        if entry is not None:
             stats.cache_hits += 1
-            _merge(records, index, cached, text, stats, backend.model)
+            cached_model = entry.get("model")
+            label = cached_model if isinstance(cached_model, str) else "unknown"
+            stats.cached_models[label] = stats.cached_models.get(label, 0) + 1
+            _merge(
+                records,
+                index,
+                entry.get("output"),
+                text,
+                stats,
+                model=cached_model if isinstance(cached_model, str) else None,
+                prompt_version=entry.get("prompt_version"),
+            )
             continue
         pending.append((index, key, item_input))
 
@@ -324,13 +456,14 @@ def enrich_records(
         if max_calls is not None and stats.calls >= max_calls:
             break
         batch = pending[start : start + batch_size]
-        prompt = prompts.build_batch_prompt([item_input for _, _, item_input in batch])
+        nonce = secrets.token_hex(6)
+        prompt = prompts.build_batch_prompt(
+            [item_input for _, _, item_input in batch], nonce=nonce
+        )
 
         stats.calls += 1
-        try:
-            output = backend.complete_json(prompt, prompts.OUTPUT_SCHEMA)
-        except llm.LLMError as exc:
-            llm.record_error(str(exc))
+        output = llm.complete(backend, prompt, prompts.OUTPUT_SCHEMA)
+        if output is None:
             stats.failures += 1
             continue
 
@@ -342,6 +475,10 @@ def enrich_records(
             stats.failures += 1
             continue
 
+        # Keyed by id and looked up per *pending record of this batch*:
+        # an item for anything else -- including a record elsewhere in
+        # `records`, which is what a prompt injection would aim for -- is
+        # never applied.
         by_id = {
             item["id"]: item
             for item in items
@@ -352,7 +489,15 @@ def enrich_records(
             if item is None:
                 continue
             llm.cache_put(key, backend, item, cache_dir=cache_dir)
-            _merge(records, index, item, item_input["text"], stats, backend.model)
+            _merge(
+                records,
+                index,
+                item,
+                item_input["text"],
+                stats,
+                model=backend.model,
+                prompt_version=prompts.PROMPT_VERSION,
+            )
 
     return stats
 
@@ -363,15 +508,36 @@ def _merge(
     item: object,
     text: str,
     stats: EnrichStats,
+    *,
     model: str | None,
+    prompt_version: str | None,
 ) -> None:
     """Apply one answer to `records[index]`, counting drops and whether
-    anything actually changed."""
+    anything actually changed.
+
+    The merged record is re-validated before it replaces the original:
+    the guards are meant to make that impossible to fail, which is
+    exactly why a failure has to be caught and counted here rather than
+    surfacing later as an invalid catalog row.
+    """
     if not isinstance(item, dict):
         stats.failures += 1
         return
-    updated, drops = apply_llm_item(records[index], item, text, model=model)
+
+    original = records[index]
+    updated, drops = apply_llm_item(
+        original, item, text, model=model, prompt_version=prompt_version
+    )
     stats.guard_drops += drops
-    if updated is not records[index]:
-        records[index] = updated
-        stats.records_enriched += 1
+    if updated is original:
+        return
+
+    try:
+        Record.model_validate(updated.model_dump())
+    except ValidationError as exc:
+        llm.record_error(f"{original.id}: merged record failed validation: {exc}")
+        stats.failures += 1
+        return
+
+    records[index] = updated
+    stats.records_enriched += 1

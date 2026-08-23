@@ -21,9 +21,18 @@ prompt version, the output schema, and one record's
 :func:`atlas.enrich.prompts.record_input` -- so regrouping the same
 records into different batches (a different `--source` selection, a
 changed `batch_size`) cannot invalidate a single cached answer. Files
-land in ``data/raw/enrich/llm/<key>.json`` and are committed like the
-rest of ``data/raw/``: they *are* the provenance for every LLM-derived
-field, and they make a re-run reproducible with no model access at all.
+land in ``data/raw/enrich/llm/<hex>.json`` (the bare digest -- a colon
+in a committed filename is illegal on Windows) and are committed like
+the rest of ``data/raw/``: they *are* the provenance for every
+LLM-derived field, and they make a re-run reproducible with no model
+access at all. Each entry records the model that produced it, so a later
+run over the committed cache stamps *that* model into the record rather
+than whichever backend happens to be configured.
+
+:func:`cache_lookup`, :func:`complete`, and :func:`cache_put` are the
+three cache primitives; :func:`cached_complete` composes them for one
+record and `classify.enrich_records` composes the same three for a
+batch, so neither the envelope nor the failure policy exists twice.
 
 :func:`cached_complete` never raises: a failing backend yields `None` and
 its message is appended to :data:`LAST_ERRORS`, because one unavailable
@@ -58,9 +67,10 @@ DEFAULT_CLI_MODEL = os.environ.get("ATLAS_CLI_MODEL", "opus")
 # the harvest stage.
 CACHE_DIR = config.RAW / "enrich" / "llm"
 
-# Messages from every backend failure seen this process, for the enrich
-# stage's stats/report. Callers may clear it; nothing here reads it back.
+# Messages from recent backend failures, for the enrich stage's
+# stats/report. Callers may clear it; nothing here reads it back.
 LAST_ERRORS: list[str] = []
+MAX_RECORDED_ERRORS = 50
 
 # Non-streaming, so keep `max_tokens` well under the SDK's HTTP timeout.
 MAX_TOKENS = 8000
@@ -139,6 +149,9 @@ class AnthropicBackend:
         return self._client
 
     def complete_json(self, prompt: str, schema: dict) -> dict | list:
+        return _guarded(self.name, self._call, prompt, schema)
+
+    def _call(self, prompt: str, schema: dict) -> dict | list:
         anthropic = self._module()
         client = self._get_client()
         try:
@@ -187,6 +200,9 @@ class ClaudeCLIBackend:
         self.model: str | None = model
 
     def complete_json(self, prompt: str, schema: dict) -> dict | list:
+        return _guarded(self.name, self._call, prompt, schema)
+
+    def _call(self, prompt: str, schema: dict) -> dict | list:
         command = [
             "claude",
             "-p",
@@ -280,16 +296,28 @@ def cache_key(record_input: dict, schema: dict) -> str:
 
 
 def cache_path(key: str, *, cache_dir: Path = CACHE_DIR) -> Path:
-    return Path(cache_dir) / f"{key}.json"
+    """The file `key` is stored in: the bare hex digest, *without* the
+    ``sha256:`` prefix (Ruling R15). A colon is legal on POSIX but is the
+    alternate-data-stream separator on Windows, and `data/raw/` is
+    committed -- a checkout must not depend on the OS that produced it.
+    The prefix survives inside the file, in its ``key`` field."""
+    return Path(cache_dir) / f"{key.removeprefix('sha256:')}.json"
 
 
-def cache_get(key: str, *, cache_dir: Path = CACHE_DIR) -> dict | list | None:
-    """The cached `output` for `key`, or `None` on a miss.
+def cache_lookup(key: str, *, cache_dir: Path = CACHE_DIR) -> dict | None:
+    """The whole cached entry for `key` -- ``{key, backend, model,
+    prompt_version, output}`` -- or `None` on a miss.
 
-    A file that exists but doesn't parse (an interrupted write from
-    before `write_atomic`, a hand-edit) is treated as a miss rather than
-    an error: the worst case is one extra model call, which then rewrites
-    the file correctly.
+    Callers need more than the answer: the entry records *which model*
+    produced it, and that is what a later run must stamp into
+    `provenance.enrichment`, not whichever backend happens to be
+    configured today. This is the one place the cache is read; everything
+    else (`cache_get`, `cached_complete`, `classify.enrich_records`) goes
+    through it.
+
+    A file that exists but doesn't parse (a hand-edit, a write from
+    before `write_atomic`) is treated as a miss rather than an error: the
+    worst case is one extra model call, which then rewrites it correctly.
     """
     path = cache_path(key, cache_dir=cache_dir)
     if not path.exists():
@@ -298,9 +326,15 @@ def cache_get(key: str, *, cache_dir: Path = CACHE_DIR) -> dict | list | None:
         entry = json.loads(path.read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError):
         return None
-    if not isinstance(entry, dict):
+    if not isinstance(entry, dict) or entry.get("output") is None:
         return None
-    return entry.get("output")
+    return entry
+
+
+def cache_get(key: str, *, cache_dir: Path = CACHE_DIR) -> dict | list | None:
+    """Just the cached `output` for `key` (see :func:`cache_lookup`)."""
+    entry = cache_lookup(key, cache_dir=cache_dir)
+    return None if entry is None else entry.get("output")
 
 
 def cache_put(
@@ -343,30 +377,70 @@ def cached_complete(
 ) -> dict | list | None:
     """`key`'s cached answer, or one fresh call, or `None` on failure.
 
+    The single-record composition of the three cache primitives --
+    :func:`cache_lookup`, :func:`complete`, :func:`cache_put`.
+    `classify.enrich_records` composes those same three for the batch
+    case (N keys, one call), so there is one implementation of each step
+    and no second copy of the envelope or error handling to drift.
+
     Never raises: a backend failure is recorded in :data:`LAST_ERRORS`
     and reported as `None`, so a broken or missing model degrades that
     record to rules-only rather than killing the run.
     """
-    cached = cache_get(key, cache_dir=cache_dir)
-    if cached is not None:
-        return cached
-    try:
-        output = backend.complete_json(prompt, schema)
-    except LLMError as exc:
-        record_error(str(exc))
+    entry = cache_lookup(key, cache_dir=cache_dir)
+    if entry is not None:
+        return entry.get("output")
+    output = complete(backend, prompt, schema)
+    if output is None:
         return None
     cache_put(key, backend, output, cache_dir=cache_dir)
     return output
 
 
+def complete(backend: Backend, prompt: str, schema: dict) -> dict | list | None:
+    """One backend call, with the failure policy applied once: an
+    :class:`LLMError` becomes `None` plus an entry in :data:`LAST_ERRORS`,
+    never an exception the pipeline has to handle a second way."""
+    try:
+        return backend.complete_json(prompt, schema)
+    except LLMError as exc:
+        record_error(str(exc))
+        return None
+
+
 def record_error(message: str) -> None:
-    """Note a backend failure for the enrich stage's stats."""
+    """Note a backend failure for the enrich stage's stats, keeping only
+    the most recent :data:`MAX_RECORDED_ERRORS` -- a refresh over a broken
+    source could otherwise accumulate one string per record. Mutates the
+    list in place so an early `from atlas.enrich.llm import LAST_ERRORS`
+    stays live."""
     LAST_ERRORS.append(message)
+    del LAST_ERRORS[:-MAX_RECORDED_ERRORS]
 
 
 # ---------------------------------------------------------------------------
 # Small helpers
 # ---------------------------------------------------------------------------
+
+
+def _guarded(name: str, call, prompt: str, schema: dict) -> dict | list:
+    """Run `call`, guaranteeing the :class:`Backend` contract: every
+    failure leaves as an `LLMError`.
+
+    The per-SDK `except` chains inside each backend name the failures we
+    understand; this catches the ones we don't (a `TypeError` from an SDK
+    signature change, a `KeyError` from an unexpected envelope) so a
+    surprise upstream can never escape the enrich stage as an unhandled
+    exception and kill the whole refresh.
+    """
+    try:
+        return call(prompt, schema)
+    except LLMError:
+        raise
+    except Exception as exc:
+        raise LLMError(
+            f"{name} backend failed: {exc.__class__.__name__}: {exc}"
+        ) from exc
 
 
 def _parse_json(text: str, what: str) -> dict | list:
