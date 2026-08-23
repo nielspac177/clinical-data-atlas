@@ -208,8 +208,11 @@ def merge_cluster(cluster: list[Record]) -> tuple[Record, list[Excluded]]:
     rather than the primary's own, that secondary's `access_notes`/
     `access_howto` come along with it (they're prose about that specific
     tier, so the primary's own notes -- about a less restrictive tier --
-    would misdescribe the result); `access_tiers` is the union of every
-    member's tiers, in `ACCESS_ORDER`. `record_status` is
+    would misdescribe the result), each falling back to the primary's own
+    value when the escalating secondary has none (a slightly stale note
+    still tells a reader more than a blank field, and blanking one would
+    lose the only access prose in the cluster); `access_tiers` is the
+    union of every member's tiers, in `ACCESS_ORDER`. `record_status` is
     `"needs_review"` if any member is, else the primary's. `species`
     fills from the first secondary with a known species when the
     primary's is `"unknown"`; `years` fills `start`/`end` independently,
@@ -276,8 +279,8 @@ def merge_cluster(cluster: list[Record]) -> tuple[Record, list[Excluded]]:
         access_howto = primary.access_howto
     else:
         escalator = next(s for s in secondaries if s.access == access)
-        access_notes = escalator.access_notes
-        access_howto = escalator.access_howto
+        access_notes = escalator.access_notes or primary.access_notes
+        access_howto = escalator.access_howto or primary.access_howto
     access_tiers = sorted(
         {tier for r in cluster for tier in r.access_tiers},
         key=vocab.ACCESS_ORDER.index,

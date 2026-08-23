@@ -526,6 +526,30 @@ def test_merge_cluster_access_escalation_carries_notes_and_howto():
     assert merged.access_howto == "Apply via the portal."
 
 
+def test_merge_cluster_access_escalation_falls_back_to_primary_notes():
+    """An escalating secondary with no notes of its own must not blank the
+    primary's: `access` becomes the more restrictive tier, but the only
+    prose anyone wrote about access survives the merge."""
+    primary = _record(
+        id="openneuro:ds1",
+        source="openneuro",
+        access="open",
+        access_notes="Open download; some subjects need a DUA.",
+        access_howto="Ask the maintainers.",
+    )
+    secondary = _record(
+        id="curated:z",
+        source="curated",
+        access="credentialed",
+        access_notes=None,
+        access_howto=None,
+    )
+    merged, _ = merge.merge_cluster([primary, secondary])
+    assert merged.access == "credentialed"
+    assert merged.access_notes == "Open download; some subjects need a DUA."
+    assert merged.access_howto == "Ask the maintainers."
+
+
 def test_merge_cluster_access_no_escalation_keeps_primary_notes():
     primary = _record(
         id="openneuro:ds1",
