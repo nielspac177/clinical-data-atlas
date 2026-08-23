@@ -822,6 +822,51 @@ button.node-label:hover {
 
 /* ---- facets ---------------------------------------------------------- */
 
+/* Task 3.6 (Q-F): the narrow-screen disclosure that opens the rail
+   below. `facets-toggle.js` inserts the button immediately before
+   `.facets`, so the reading order is the visual order; above the 900px
+   breakpoint it has no box at all and the rail is simply the left
+   column again (layout.css owns that half). Deliberately not `.btn`:
+   this is a full-width accordion header, not a control that sits in a
+   row of other controls. */
+.facets-toggle {
+  display: none;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-2);
+  min-height: 40px;
+  padding: 0 var(--sp-3);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--r-md);
+  background: var(--surface);
+  color: var(--text);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  text-align: left;
+  transition:
+    background var(--dur-fast) var(--ease),
+    border-color var(--dur-fast) var(--ease);
+}
+
+.facets-toggle:hover {
+  background: var(--surface-2);
+  border-color: var(--accent);
+}
+
+.facets-toggle-chevron {
+  flex: none;
+  width: 16px;
+  height: 16px;
+  color: var(--muted);
+  /* Killed wholesale by base.css's reduced-motion block. */
+  transition: transform var(--dur-base) var(--ease);
+}
+
+.facets-toggle[aria-expanded="true"] .facets-toggle-chevron {
+  transform: rotate(180deg);
+}
+
 .facets-head {
   display: flex;
   align-items: baseline;
@@ -904,6 +949,30 @@ button.node-label:hover {
   border: 1px solid var(--border-strong);
   border-radius: var(--r-sm);
   background: var(--surface);
+}
+
+/* Narrow screens: the disclosure appears and takes over as the rail's
+   visible title. Placed last in this section so it wins over the base
+   rules above without extra specificity (and it is after layout.css in
+   the cascade either way, which is why both halves of the button's
+   `display` live in this file rather than next to the rail's). */
+@media (max-width: 899px) {
+  .facets-toggle {
+    display: flex;
+  }
+
+  /* The disclosure already says "Filters", so the panel's own heading
+     would be the same word twice, 40px apart. Dropped from the render
+     rather than from the markup: a node named directly by
+     `aria-labelledby` contributes its text even while `display: none`,
+     so `.facets` keeps its accessible name either way. */
+  .facets-head {
+    justify-content: flex-end;
+  }
+
+  .facets-head h2 {
+    display: none;
+  }
 }
 
 /* ---- record panel ---------------------------------------------------- */

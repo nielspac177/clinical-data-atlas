@@ -204,7 +204,12 @@
 
   /* Layout constants. Media queries can't read custom properties, so the
      breakpoint below is documentation — layout.css hard-codes 900px. */
-  --header-h: 56px;
+  /* 56px at the default root size, but in rem so the header grows with
+     the rem-sized controls inside it under text-only zoom rather than
+     spilling them out of a frozen box. Redefined to 5.5rem at <=640px,
+     where the nav wraps to its own row (layout.css). Read it from here,
+     never hard-code 56. */
+  --header-h: 3.5rem;
   --rail-w: 260px;
   --drawer-w: 380px;
   --measure: 68ch;

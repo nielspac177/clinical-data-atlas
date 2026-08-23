@@ -8,7 +8,11 @@
 
 body {
   /* The header is fixed so the graph stage can sit under it at a known
-     offset; every page pays the same 56px of top padding for it. */
+     offset; every page pays exactly its height in top padding. That is
+     3.5rem, except at phone width where the nav takes a second row and
+     the 640px block below redefines the token (Task 3.6). Both values
+     are rem so the box tracks its rem-sized contents under text-only
+     zoom. */
   padding-top: var(--header-h);
 }
 
@@ -67,12 +71,25 @@ body {
     display: none;
   }
 
-  /* The nav scrolls sideways rather than wrapping; the fade on its
-     trailing edge is the only hint that there is more to reach. */
+  /* The nav scrolls sideways rather than wrapping, faded at its
+     trailing edge — a safety net rather than the normal case now: it
+     fits beside the search box down to 640px, and below that it has a
+     row of its own (see the two blocks that follow). The padding
+     reserves the fade's own width, so the fade only ever covers
+     something when the links genuinely reach that edge, i.e. exactly
+     when there is more to scroll to; `scroll-snap` then parks whichever
+     link the reader lands next to at the leading edge rather than
+     half-clipped. */
   .site-nav {
     overflow-x: auto;
     scrollbar-width: none;
+    scroll-snap-type: x proximity;
+    padding-inline-end: 14px;
     mask-image: linear-gradient(to right, #000 calc(100% - 14px), transparent);
+  }
+
+  .site-nav a {
+    scroll-snap-align: start;
   }
 
   .site-nav::-webkit-scrollbar {
@@ -81,21 +98,54 @@ body {
 }
 
 @media (max-width: 640px) {
-  /* At phone width the row is tight, so the search box keeps a usable
-     minimum and the nav becomes a horizontal scroller around it. Search
-     is never dropped: on the graph page it is the only keyboard path to
-     a record, and it is what `/` focuses. The GitHub link goes instead
-     — every page links to the repository in its content. */
+  /* Task 3.6 (Q-G): at phone width the nav and the search box cannot
+     share one 56px row. Measured at 375px, the nav was squeezed to
+     121px of the 252px its four links need, so "What's new" and
+     "About" sat off the end of a scroller whose only affordance was a
+     14px fade - reachable in principle, invisible in practice. Neither
+     control can be dropped (search is the only keyboard path to a
+     record on the graph page and what `/` focuses; the nav is the
+     site's only navigation), so they get a row each and the header
+     grows by exactly that row.
+
+     Every frame offset on the site is `var(--header-h)` - the body's
+     top padding, the graph stage and its chrome, the drawer, the
+     table's own max-height - so redefining the token here is what
+     moves all of them together. It stays an exact height rather than
+     `min-height: auto`: the body's padding has to match it to the
+     pixel. 5.5rem = 88px at the default root size = 28px nav row + 8px
+     gap + 34px search box + 9px of breathing room top and bottom.
+
+     In rem, not px, and that matters more here than it does for the
+     one-row header: every control inside `.header-mid` is rem-sized, so
+     a raised root font size (text-only zoom, or a minimum font size -
+     WCAG 1.4.4) grows two rows of contents inside the box. At 200% a
+     px-valued 88px header put the search box through its own bottom
+     border and onto the page; in rem the box grows with them and keeps
+     its slack at every zoom level.
+
+     The GitHub link still goes at this width — every page links to the
+     repository in its content. */
+  :root {
+    --header-h: 5.5rem;
+  }
+
+  .header-mid {
+    flex-wrap: wrap;
+    gap: var(--sp-2);
+  }
+
   /* `.search` (components.css, loaded later) also sets min-width, so
      this needs the extra class to win. */
   .search.header-search {
-    flex: 1 1 9rem;
-    min-width: 9rem;
+    flex: 1 1 100%;
+    min-width: 0;
     max-width: none;
+    margin-left: 0;
   }
 
   .site-nav {
-    flex: 0 1 auto;
+    flex: 1 1 100%;
   }
 
   /* `.site-nav a` (components.css, loaded later) sets padding too. */
@@ -106,6 +156,24 @@ body {
   /* `.icon-btn` (components.css, loaded later) sets display too. */
   .header-end .github-link {
     display: none;
+  }
+}
+
+/* Under 375px (iPhone SE 1st gen and the 360px Androids) the four links
+   no longer fit the row even with one to themselves — 320px is 26px
+   short. Tightening them rather than letting them scroll is worth it
+   here: the row is the site's whole navigation, and 4px of padding
+   either side still leaves 8px between two labels. The cut is *below*
+   375 so the reference phone keeps the roomier tap targets; anything
+   narrower than these still falls back to the scroller and its fade. */
+@media (max-width: 374px) {
+  .site-nav {
+    gap: 0;
+  }
+
+  /* `.site-nav a` (components.css, loaded later) sets padding too. */
+  .site-header .site-nav a {
+    padding-inline: var(--sp-1);
   }
 }
 
@@ -260,7 +328,19 @@ body.page-graph {
     padding: var(--sp-4) var(--sp-3) var(--sp-6);
   }
 
+  /* Task 3.6 (Q-F): with the real catalog this rail is ~1,818px tall,
+     and stacked above `.table-panel` it put the table's first row
+     2,038px down a 375x812 phone - every reader had to scroll past
+     seven facet groups to reach the search box, the count line and the
+     data. Collapsed by default here instead, behind the `.facets-toggle`
+     button `facets-toggle.js` inserts immediately before this element
+     (components.css styles it; it has no box at all above 900px, where
+     nothing on this page changes). The closed state is the CSS default
+     rather than something JS applies, so the table is at the top of the
+     page from the first paint - and a JS-less visit, where the facet
+     lists are empty anyway, is not offered a rail it cannot fill. */
   .facets {
+    display: none;
     position: static;
     max-height: none;
     overflow: visible;
@@ -268,6 +348,17 @@ body.page-graph {
     border: 1px solid var(--border);
     border-radius: var(--r-md);
     background: var(--surface);
+  }
+
+  /* Opened, the rail is a bounded, self-scrolling panel rather than its
+     full natural height: 22rem keeps the toolbar, the "N of M datasets"
+     line and the top of the table on screen underneath it at 812px, so
+     ticking a facet shows its effect without a scroll back down. */
+  .facets[data-expanded="true"] {
+    display: block;
+    max-height: min(50dvh, 22rem);
+    overflow-y: auto;
+    overscroll-behavior: contain;
   }
 }
 

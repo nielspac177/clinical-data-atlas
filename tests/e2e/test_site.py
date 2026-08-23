@@ -37,6 +37,9 @@ pytestmark = pytest.mark.e2e
 #: Every page the site ships, as linked from the header and the sitemap.
 PAGES = ("index.html", "table.html", "about.html", "whats-new.html", "404.html")
 
+#: The pages that carry the site header; 404.html deliberately has none.
+NAV_PAGES = tuple(name for name in PAGES if name != "404.html")
+
 #: `table.js` renders this many rows before "Show more".
 CHUNK = 100
 
@@ -131,6 +134,75 @@ def test_no_horizontal_scroll_on_a_small_phone(page: Page, name: str) -> None:
            })"""
     )
     assert overflow["scroll"] <= overflow["inner"], f"{name} overflows: {overflow}"
+
+
+@pytest.mark.parametrize("name", NAV_PAGES)
+def test_the_whole_nav_is_on_screen_on_a_phone(page: Page, name: str) -> None:
+    """Every primary link is reachable *and* visible at 375px.
+
+    Q-G: the nav used to be a 121px scroller holding 252px of links, so
+    "What's new" and "About" sat off its end behind a 14px fade nobody
+    reads as an affordance. It now takes a row of its own. Asserted as
+    "no link is clipped by the nav's own box or by the viewport" rather
+    than by pinning a header height, so a future header that solves it
+    some other way still passes.
+    """
+    page.set_viewport_size(MOBILE)
+    page.goto(name)
+    nav = page.locator(".site-nav")
+    expect(nav).to_be_visible()
+
+    geometry = nav.evaluate(
+        """(nav) => {
+             const clip = nav.getBoundingClientRect();
+             return {
+               scrollWidth: nav.scrollWidth,
+               clientWidth: nav.clientWidth,
+               links: [...nav.querySelectorAll('a')].map((a) => {
+                 const r = a.getBoundingClientRect();
+                 return {
+                   text: a.textContent.trim(),
+                   hidden:
+                     r.left < clip.left - 0.5 ||
+                     r.right > clip.right + 0.5 ||
+                     r.left < -0.5 ||
+                     r.right > window.innerWidth + 0.5,
+                 };
+               }),
+             };
+           }"""
+    )
+    assert geometry["links"], f"{name} has no nav links"
+    clipped = [link["text"] for link in geometry["links"] if link["hidden"]]
+    assert not clipped, f"{name}: {clipped} clipped out of the nav ({geometry})"
+    assert geometry["scrollWidth"] <= geometry["clientWidth"] + 1, geometry
+
+
+@pytest.mark.parametrize("name", NAV_PAGES)
+def test_the_header_reserves_exactly_its_own_height_on_a_phone(
+    page: Page, name: str
+) -> None:
+    """`--header-h` is the fixed header's height *and* the body's padding.
+
+    The phone header is two rows tall (see above), which only works
+    because every frame offset on the site reads the same token. If one
+    of them stops tracking it, the header starts covering the first
+    screenful of content -- a failure that is invisible to a smoke test
+    but not to a reader.
+    """
+    page.set_viewport_size(MOBILE)
+    page.goto(name)
+    expect(page.locator(".site-header")).to_be_visible()
+    offsets = page.evaluate(
+        """() => ({
+             header: document.querySelector('.site-header').getBoundingClientRect().height,
+             padding: parseFloat(getComputedStyle(document.body).paddingTop),
+           })"""
+    )
+    assert offsets["header"] == pytest.approx(offsets["padding"], abs=1), (
+        name,
+        offsets,
+    )
 
 
 # ---------------------------------------------------------------------------
@@ -397,6 +469,178 @@ def test_a_table_row_opens_the_panel(page: Page, catalog: dict) -> None:
 
     expect(page.locator("#panel")).to_be_visible()
     expect(page.locator("#panel-title")).to_have_text(name)
+
+
+def test_the_table_is_at_the_top_of_the_page_on_a_phone(page: Page) -> None:
+    """Q-F: below 900px the rail is collapsed, so the data leads.
+
+    Measured against the real 2,655-record catalog the rail is ~1,818px
+    tall; stacked above `.table-panel` it put the search box 1,914px and
+    the first row 2,038px down a 375x812 phone. The whole
+    disclosure/toolbar/count/table stack now has to fit inside the first
+    screenful, with the table itself well inside it.
+    """
+    page.set_viewport_size(MOBILE)
+    page.goto("table.html")
+    expect(page.locator("#table-body tr").first).to_be_visible()
+
+    toggle = page.locator(".facets-toggle")
+    expect(toggle).to_be_visible()
+    expect(toggle).to_have_attribute("aria-expanded", "false")
+
+    tops = {}
+    for selector in (".facets-toggle", ".toolbar", "#table-status", ".table-wrap"):
+        box = page.locator(selector).bounding_box()
+        assert box is not None, selector
+        tops[selector] = box["y"]
+    assert max(tops.values()) < MOBILE["height"], tops
+    # Not merely on screen: near the top of it, above the fold on any
+    # phone this site claims to support.
+    assert tops[".table-wrap"] < 400, tops
+
+    # Collapsed means collapsed, not merely scrolled past.
+    panel = page.locator(f"#{toggle.get_attribute('aria-controls')}")
+    expect(panel).to_be_hidden()
+
+
+def test_the_filters_disclosure_opens_the_rail_from_the_keyboard(page: Page) -> None:
+    """Focus it, press Enter, and the rail it names appears."""
+    page.set_viewport_size(MOBILE)
+    page.goto("table.html")
+    expect(page.locator("#table-body tr").first).to_be_visible()
+
+    toggle = page.locator(".facets-toggle")
+    panel = page.locator(f"#{toggle.get_attribute('aria-controls')}")
+    toggle.focus()
+    assert toggle.evaluate("(el) => el === document.activeElement")
+
+    page.keyboard.press("Enter")
+    expect(toggle).to_have_attribute("aria-expanded", "true")
+    expect(panel).to_be_visible()
+    expect(page.locator("#a11y-live")).to_contain_text("Filters shown")
+    # Focus stays put, so a second press is a close rather than a hunt.
+    assert toggle.evaluate("(el) => el === document.activeElement")
+
+    page.keyboard.press("Enter")
+    expect(toggle).to_have_attribute("aria-expanded", "false")
+    expect(panel).to_be_hidden()
+
+    # Space is the other half of the native button contract, and the
+    # brief names both -- so both are pinned, not just the one.
+    page.keyboard.press("Space")
+    expect(toggle).to_have_attribute("aria-expanded", "true")
+    expect(panel).to_be_visible()
+    page.keyboard.press("Space")
+    expect(toggle).to_have_attribute("aria-expanded", "false")
+    expect(panel).to_be_hidden()
+    assert toggle.evaluate("(el) => el === document.activeElement")
+
+
+def test_filtering_from_the_phone_rail_updates_the_table_and_the_count(
+    page: Page, catalog: dict
+) -> None:
+    """A facet ticked on a phone filters the table and re-labels the button."""
+    total = len(records(catalog))
+    opens = with_access(catalog, "open")
+    if not 0 < len(opens) < total:
+        pytest.skip("this catalog is entirely open (or has no open datasets)")
+
+    page.set_viewport_size(MOBILE)
+    page.goto("table.html")
+    expect(page.locator("#table-body tr").first).to_be_visible()
+
+    toggle = page.locator(".facets-toggle")
+    expect(toggle).to_have_text("Filters")
+    toggle.click()
+    page.locator('[data-facet-options="access"] input[value="open"]').check()
+
+    expect(page.locator("#table-status")).to_contain_text(
+        f"{fmt(len(opens))} of {fmt(total)} datasets"
+    )
+    expect(page.locator("#table-body tr")).to_have_count(rendered(len(opens)))
+    # Collapsed, the button is the only thing that can still say a filter
+    # is on -- so it has to say it.
+    expect(toggle).to_have_text("Filters (1)")
+    # And the count line stays where the reader can read it.
+    status = page.locator("#table-status").bounding_box()
+    assert status is not None and 0 < status["y"] < MOBILE["height"], status
+
+
+def test_a_panel_chip_on_a_phone_lands_focus_on_the_filters_button(
+    page: Page,
+) -> None:
+    """Filtering from a record chip must not drop focus onto `<body>`.
+
+    The chip's natural landing place is the checkbox it just ticked, and
+    below 900px that checkbox is inside the collapsed rail, where
+    `.focus()` is a silent no-op. WCAG 2.4.3 is Level A, and the fallout
+    is concrete: a keyboard reader returned to the top of the document
+    has to tab past the skip link, the wordmark, four nav links, the
+    header search and the theme toggle to get back to the table.
+    """
+    page.set_viewport_size(MOBILE)
+    page.goto("table.html")
+    expect(page.locator("#table-body tr").first).to_be_visible()
+
+    page.locator("#table-body tr").first.locator(".cell-name button").click()
+    panel = page.locator("#panel")
+    expect(panel).to_be_visible()
+
+    # Whichever facet chip this record happens to carry; that it has one
+    # is what the test needs, which one it is is the catalog's business.
+    chip = panel.locator("[data-chip-kind]").first
+    expect(chip).to_be_visible()
+    chip.click()
+
+    toggle = page.locator(".facets-toggle")
+    expect(toggle).to_be_visible()
+    assert toggle.evaluate("(el) => el === document.activeElement"), page.evaluate(
+        "() => document.activeElement?.tagName + '.' + document.activeElement?.className"
+    )
+    # And it says what just happened, rather than only catching the focus.
+    expect(toggle).to_have_text(re.compile(r"^Filters \(\d+\)$"))
+
+
+def test_filters_preselected_by_the_url_show_in_the_button(
+    page: Page, catalog: dict
+) -> None:
+    """`?access=open` arrives counted, and still collapsed, on a phone.
+
+    The count is unit-tested against a synthetic state object; this is
+    what guards the `readState()` -> `refresh()` -> `update()` wiring
+    that carries a real one.
+    """
+    opens = with_access(catalog, "open")
+    if not opens:
+        pytest.skip("this catalog has no open datasets")
+
+    page.set_viewport_size(MOBILE)
+    page.goto("table.html?access=open")
+    expect(page.locator("#table-body tr").first).to_be_visible()
+
+    toggle = page.locator(".facets-toggle")
+    expect(toggle).to_have_text("Filters (1)")
+    expect(toggle).to_have_attribute("aria-expanded", "false")
+    expect(page.locator("#table-status")).to_contain_text(f"{fmt(len(opens))} of ")
+
+
+def test_the_desktop_table_page_keeps_its_open_rail(page: Page) -> None:
+    """Above the breakpoint nothing about the table page changed."""
+    page.set_viewport_size(DESKTOP)
+    page.goto("table.html")
+    expect(page.locator("#table-body tr").first).to_be_visible()
+
+    expect(page.locator(".facets-toggle")).to_be_hidden()
+    facets = page.locator(".facets")
+    expect(facets).to_be_visible()
+    expect(page.locator('[data-facet-options="domain"] input').first).to_be_visible()
+
+    # The rail is the left column and the table its neighbour, not a
+    # stack -- the two-column grid, unchanged.
+    rail = facets.bounding_box()
+    wrap = page.locator(".table-wrap").bounding_box()
+    assert rail is not None and wrap is not None
+    assert rail["x"] + rail["width"] <= wrap["x"] + 1, (rail, wrap)
 
 
 # ---------------------------------------------------------------------------
