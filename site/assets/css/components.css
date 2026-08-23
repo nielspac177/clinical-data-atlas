@@ -605,7 +605,12 @@ button.node-label:hover {
 
 .data-table thead th {
   position: sticky;
-  top: var(--header-h);
+  /* Task 3.3 fix (Ruling R22): sticks within `.table-wrap` (see
+     layout.css), which is the scrolling context now that it has a real
+     `max-height` - `top: 0` pins the header to *that* box's own top
+     edge, not `--header-h` below the page's, which is a different
+     scrolling context this element never belonged to. */
+  top: 0;
   z-index: 1;
   /* Sortable headers get their padding from the button inside them, so
      the whole cell is the click target; plain headers need their own. */
@@ -662,7 +667,11 @@ button.node-label:hover {
   background: var(--surface-2);
 }
 
-.data-table tbody tr[aria-selected="true"] {
+/* Task 3.3 fix: `aria-selected` isn't a valid state on a plain <tr> (no
+   grid/row role here), so it's a styling-only hook now (`data-active`);
+   the real "this is the open record" semantic lives on the Name button's
+   `aria-current="true"` instead (see table.js). */
+.data-table tbody tr[data-active="true"] {
   background: color-mix(in srgb, var(--accent) 12%, transparent);
 }
 
@@ -674,6 +683,16 @@ button.node-label:hover {
 .data-table .cell-num {
   font-variant-numeric: tabular-nums;
   text-align: right;
+}
+
+/* Task 3.3 addition: the domain/modality chips inside a Domains/
+   Modalities cell need their own gap without a <ul>/.chip-list wrapper
+   (a table cell can't take on list semantics the same way) - this is
+   that gap, replacing what were per-chip inline margins. */
+.cell-chips {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 2px 4px;
 }
 
 .table-more {
