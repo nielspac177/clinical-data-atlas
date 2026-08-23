@@ -45,7 +45,7 @@ harvest: ## Run harvesters (all sources, or SOURCE=<name> for one)
 normalize: ## Normalize raw records into the canonical schema
 	uv run atlas normalize $(if $(SOURCE),--source $(SOURCE))
 
-enrich: ## Classify and resolve records into data/catalog/enriched.jsonl
+enrich: ## Classify and resolve records into .cache/enriched.jsonl
 	uv run atlas enrich
 
 graph: ## Build data/graph/graph.json, search-index.json, stats.json

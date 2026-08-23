@@ -605,6 +605,18 @@ def test_enrich_without_any_input_returns_1(capsys):
     assert "nothing to enrich" in capsys.readouterr().err
 
 
+def test_enrich_help_names_the_file_it_actually_writes():
+    """Both the subcommand help and the docstring used to promise
+    `data/catalog/enriched.jsonl` -- a file this command has never
+    written, and must not: the enriched records are a cache artefact,
+    which is why they go to the gitignored `.cache/` instead."""
+    help_text = " ".join(cli.build_parser().format_help().split())
+
+    assert ".cache/enriched.jsonl" in help_text
+    assert "data/catalog/enriched.jsonl" not in help_text
+    assert "data/catalog/enriched.jsonl" not in (cli._cmd_enrich.__doc__ or "")
+
+
 def test_enrich_reads_normalized_records_and_writes_enriched_jsonl(
     tree, monkeypatch, capsys
 ):
