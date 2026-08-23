@@ -20,8 +20,24 @@ jobs:
   test:
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    outputs:
+      has_e2e: ${{ steps.e2e.outputs.has_e2e }}
     steps:
       - uses: actions/checkout@v7
+
+      - id: e2e
+        name: Detect tests/e2e
+        # `hashFiles()` can't be used for this at job level -- a job's `if:`
+        # is evaluated before that job gets a workspace, so it never sees
+        # tests/e2e even once Task 3.4 adds it. Detect it here instead, once
+        # this job actually has a checkout, and expose it as a job output
+        # the `e2e` job below can gate on via `needs.test.outputs.has_e2e`.
+        run: |
+          if [ -d tests/e2e ] && ls tests/e2e/*.py >/dev/null 2>&1; then
+            echo "has_e2e=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_e2e=false" >> "$GITHUB_OUTPUT"
+          fi
 
       - uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1
         with:
@@ -31,6 +47,9 @@ jobs:
       - name: Install dependencies
         run: uv sync --locked --group dev
 
+      - name: Lint
+        run: uv run ruff check . && uv run ruff format --check .
+
       - name: Run unit tests
         run: uv run pytest -q -m "not live and not e2e"
 
@@ -39,11 +58,9 @@ jobs:
 
       - name: Validate catalog
         # `atlas validate` is still a stub (Task 2.7) and exits 2 today; once a
-        # catalog exists this step runs for real and must not be swallowed
-        # with `|| echo "::warning ..."` -- gate on the catalog's existence
-        # instead, so the check turns on automatically once the pipeline
-        # produces data/catalog/catalog.jsonl.
-        continue-on-error: false
+        # catalog exists this step runs for real -- gate on the catalog's
+        # existence instead, so the check turns on automatically once the
+        # pipeline produces data/catalog/catalog.jsonl.
         run: |
           if [ -f data/catalog/catalog.jsonl ]; then
             uv run atlas validate --strict
@@ -54,7 +71,7 @@ jobs:
       - name: Build site and check for unresolved placeholders
         run: |
           make site BASE_URL=/clinical-data-atlas/ BUILD=${GITHUB_SHA::7}
-          ! grep -rl -e '__BUILD__' -e '__BASE_URL__' --exclude-dir=vendor _site/
+          test -d _site && ! grep -rl -e '__BUILD__' -e '__BASE_URL__' -e '__SITE_URL__' -e '__UPDATED__' -e '__MAINTAINER__' -e '__REPO_URL__' --exclude-dir=vendor _site/
           test -f _site/.nojekyll
 
       - name: Validate CITATION.cff
@@ -64,8 +81,11 @@ jobs:
     needs: test
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    # Task 3.4 adds tests/e2e/ -- skip this job cleanly until then.
-    if: hashFiles('tests/e2e/**') != ''
+    # Providing our own `if:` on a job with `needs:` replaces (does not AND
+    # with) the default success() gate -- so success() must be spelled out
+    # here, or this job could run after `test` failed as long as the has_e2e
+    # output was still set.
+    if: success() && needs.test.outputs.has_e2e == 'true'
     steps:
       - uses: actions/checkout@v7
 

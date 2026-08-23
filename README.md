@@ -37,8 +37,10 @@ detail lives under [`docs/sources/`](docs/sources/).
 ## How refresh works
 
 A [monthly GitHub Actions workflow](.github/workflows/monthly-refresh.yml)
-runs the pipeline (`python -m atlas.refresh`, what `make refresh` also
-calls locally): it re-harvests every source, re-normalizes and re-enriches
+runs the same pipeline end to end via `python -m atlas.refresh` — the
+module the `atlas refresh` CLI subcommand wraps, so it's the same pipeline
+`make refresh` runs locally (`uv run atlas refresh`), just invoked
+directly: it re-harvests every source, re-normalizes and re-enriches
 records, rebuilds the graph, and writes a human-readable diff into
 `data/changelog/`. The workflow never pushes to `main` directly — it opens
 a pull request with the diff (branch `bot/monthly-refresh`); a human

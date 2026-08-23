@@ -141,9 +141,30 @@ def test_no_workflow_floats_on_main_or_master():
     assert not offenders, f"floating action pins found: {offenders}"
 
 
-def test_ci_e2e_job_is_gated_until_task_3_4_adds_tests_e2e():
-    text = (WORKFLOWS_DIR / "ci.yml").read_text(encoding="utf-8")
-    assert "if: hashFiles('tests/e2e/**') != ''" in text
+def test_ci_test_job_detects_tests_e2e_and_exposes_it_as_an_output():
+    data = _load_yaml(WORKFLOWS_DIR / "ci.yml")
+    test_job = data["jobs"]["test"]
+    # `hashFiles()` can't gate the e2e job directly at job level (a job's
+    # `if:` is evaluated before that job has a workspace), so `test` must
+    # detect tests/e2e itself, via a step with id `e2e`, and re-expose it as
+    # a job output for `e2e` to key off.
+    assert (
+        test_job.get("outputs", {}).get("has_e2e") == "${{ steps.e2e.outputs.has_e2e }}"
+    )
+    step_ids = [step.get("id") for step in test_job["steps"]]
+    assert "e2e" in step_ids
+
+
+def test_ci_e2e_job_is_gated_on_test_jobs_has_e2e_output_and_success():
+    data = _load_yaml(WORKFLOWS_DIR / "ci.yml")
+    e2e_job = data["jobs"]["e2e"]
+    condition = e2e_job["if"]
+    assert "needs.test.outputs.has_e2e" in condition
+    assert "true" in condition
+    # A job's own `if:` replaces (does not implicitly AND with) the default
+    # success() gate that `needs:` alone would give it -- so success() must
+    # be spelled out explicitly, or this job could run after `test` failed.
+    assert "success()" in condition
 
 
 def test_monthly_refresh_cron_is_first_of_month():
@@ -169,6 +190,108 @@ def test_monthly_refresh_cron_is_first_of_month():
 def test_workflow_permissions_match_spec(filename, expected):
     data = _load_yaml(WORKFLOWS_DIR / filename)
     assert data["permissions"] == expected
+
+
+@pytest.mark.parametrize("path", WORKFLOW_PATHS, ids=lambda p: p.name)
+def test_no_run_block_contains_actions_expression_syntax(path: Path):
+    """Every `${{ }}` value that a `run:` step needs must be funneled
+    through `env:` first (see the security fix in monthly-refresh.yml's
+    `INPUT_*`/`ANTHROPIC_API_KEY` handling) -- never interpolated straight
+    into shell text, where it could break out of quoting."""
+    data = _load_yaml(path)
+    for job_name, job in data["jobs"].items():
+        for step in job.get("steps", []):
+            run_text = step.get("run")
+            if run_text is None:
+                continue
+            assert "${{" not in run_text, (
+                f"{path.name}: job {job_name!r} step "
+                f"{step.get('name', step.get('uses', '?'))!r} interpolates "
+                "${{ }} directly into a run: block"
+            )
+
+
+def test_monthly_refresh_anthropic_api_key_is_scoped_to_two_steps_not_the_job():
+    data = _load_yaml(WORKFLOWS_DIR / "monthly-refresh.yml")
+    job = data["jobs"]["refresh"]
+    assert "ANTHROPIC_API_KEY" not in (data.get("env") or {})
+    assert "ANTHROPIC_API_KEY" not in (job.get("env") or {})
+    steps_with_key = [
+        step for step in job["steps"] if "ANTHROPIC_API_KEY" in (step.get("env") or {})
+    ]
+    assert len(steps_with_key) == 2, (
+        "expected exactly the backend-selection and refresh steps to carry "
+        f"ANTHROPIC_API_KEY, found {len(steps_with_key)}"
+    )
+
+
+def test_monthly_refresh_has_no_dead_atlas_ua_env():
+    text = (WORKFLOWS_DIR / "monthly-refresh.yml").read_text(encoding="utf-8")
+    assert "ATLAS_UA" not in text
+
+
+def test_monthly_refresh_installs_llm_extra_and_freezes_the_sync():
+    text = (WORKFLOWS_DIR / "monthly-refresh.yml").read_text(encoding="utf-8")
+    assert "--extra llm" in text
+    assert "UV_NO_SYNC=1" in text
+
+
+def test_monthly_refresh_probe_step_does_not_hard_fail_on_a_single_source():
+    # The probe step must not be a bare `uv run atlas harvest --probe` (that
+    # exits 1 if even one source fails) -- it has to capture the exit code
+    # and only abort when every source failed.
+    data = _load_yaml(WORKFLOWS_DIR / "monthly-refresh.yml")
+    job = data["jobs"]["refresh"]
+    probe_step = next(
+        step for step in job["steps"] if "harvest --probe" in (step.get("run") or "")
+    )
+    run_text = probe_step["run"]
+    assert "set +e" in run_text
+    assert "GITHUB_STEP_SUMMARY" in run_text
+
+
+def test_deploy_pages_smoke_test_can_actually_fail():
+    data = _load_yaml(WORKFLOWS_DIR / "deploy-pages.yml")
+    deploy_job = data["jobs"]["deploy"]
+    smoke_step = next(
+        step
+        for step in deploy_job["steps"]
+        if step.get("name") == "Post-deploy smoke test"
+    )
+    run_text = smoke_step["run"]
+    assert "::warning" not in run_text
+    assert "record_count" in run_text
+    assert "--retry" in run_text
+
+
+def test_deploy_job_has_a_timeout():
+    data = _load_yaml(WORKFLOWS_DIR / "deploy-pages.yml")
+    assert data["jobs"]["deploy"]["timeout-minutes"] == 10
+
+
+def test_ci_runs_ruff_check_and_format():
+    text = (WORKFLOWS_DIR / "ci.yml").read_text(encoding="utf-8")
+    assert "ruff check" in text
+    assert "ruff format --check" in text
+
+
+def test_placeholder_grep_covers_all_six_tokens_everywhere():
+    expected_tokens = {
+        "__BUILD__",
+        "__BASE_URL__",
+        "__SITE_URL__",
+        "__UPDATED__",
+        "__MAINTAINER__",
+        "__REPO_URL__",
+    }
+    targets = [*WORKFLOW_PATHS, ROOT / "Makefile"]
+    for path in targets:
+        text = path.read_text(encoding="utf-8")
+        for token in expected_tokens:
+            assert f"-e '{token}'" in text, f"{path.name} is missing a grep for {token}"
+        assert "--exclude-dir=vendor" in text, (
+            f"{path.name}'s placeholder grep doesn't exclude vendor"
+        )
 
 
 # ---------------------------------------------------------------------------
@@ -267,17 +390,17 @@ def test_dataset_edit_id_field_is_required_with_tcia_placeholder():
     assert "tcia:" in field["attributes"]["placeholder"]
 
 
-def test_dataset_edit_fields_dropdown_is_a_multiselect_of_schema_field_names():
+def test_dataset_edit_fields_dropdown_equals_record_schema_fields_exactly():
+    # pydantic is a runtime dependency of atlas/ (not dev-only), so importing
+    # atlas.schema here is safe and gives an exact, not just spot-checked,
+    # comparison against the real field list.
+    from atlas import schema
+
     data = _load_yaml(ISSUE_TEMPLATE_DIR / "dataset-edit.yml")
     field = _field_by_id(data, "fields")
     assert field["type"] == "dropdown"
     assert field["attributes"].get("multiple") is True
-    options = field["attributes"]["options"]
-    # Spot-check against docs/schema.md's Record field table rather than
-    # importing atlas.schema (pydantic may not be installed for a bare
-    # `uv sync --group dev`-only environment running just this file).
-    for name in ("id", "source", "access", "provenance", "record_status"):
-        assert name in options
+    assert field["attributes"]["options"] == list(schema.Record.model_fields.keys())
 
 
 def test_dataset_edit_problem_required_evidence_url_optional():

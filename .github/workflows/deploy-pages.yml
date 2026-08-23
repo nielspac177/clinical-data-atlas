@@ -37,7 +37,7 @@ jobs:
           PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
         run: |
           make site BASE_URL="${PAGES_BASE_PATH}/" BUILD=${GITHUB_SHA::7}
-          ! grep -rl -e '__BUILD__' -e '__BASE_URL__' --exclude-dir=vendor _site/
+          test -d _site && ! grep -rl -e '__BUILD__' -e '__BASE_URL__' -e '__SITE_URL__' -e '__UPDATED__' -e '__MAINTAINER__' -e '__REPO_URL__' --exclude-dir=vendor _site/
 
       - name: Size guard (< 900 MB)
         run: test "$(du -sm _site | cut -f1)" -lt 900
@@ -49,6 +49,7 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -60,6 +61,5 @@ jobs:
         env:
           PAGE_URL: ${{ steps.deployment.outputs.page_url }}
         run: |
-          sleep 20
-          curl -fsSIL "$PAGE_URL" >/dev/null
-          curl -fsS "${PAGE_URL}data/stats.json" | python3 -c 'import sys,json; d=json.load(sys.stdin); assert d.get("record_count",0)>=0' || echo "::warning::stats.json not available yet"
+          curl --retry 10 --retry-delay 6 --retry-connrefused -fsSIL "$PAGE_URL" >/dev/null
+          curl --retry 10 --retry-delay 6 --retry-connrefused -fsS "${PAGE_URL}data/stats.json" | python3 -c 'import sys, json; d = json.load(sys.stdin); assert d["record_count"] > 0, d'

@@ -45,7 +45,7 @@ refresh: ## Run the full pipeline end to end (harvest -> ... -> diff)
 	uv run atlas refresh $(if $(SOURCE),--source $(SOURCE))
 
 site: ## Build the static site into _site/
-	uv run python -m atlas.sitebuild --base-url "$(BASE_URL)" --build "$(BUILD)" --out _site && touch _site/.nojekyll && ! grep -rl -e '__BUILD__' -e '__BASE_URL__' _site/
+	uv run python -m atlas.sitebuild --base-url "$(BASE_URL)" --build "$(BUILD)" --out _site && touch _site/.nojekyll && test -d _site && ! grep -rl -e '__BUILD__' -e '__BASE_URL__' -e '__SITE_URL__' -e '__UPDATED__' -e '__MAINTAINER__' -e '__REPO_URL__' --exclude-dir=vendor _site/
 
 serve: site ## Build the site, then serve _site/ locally on $(PORT)
 	uv run python -m http.server $(PORT) --directory _site
