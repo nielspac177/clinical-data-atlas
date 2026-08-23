@@ -219,6 +219,7 @@ def test_probe_requests_size_one(monkeypatch):
                 "pagination": {"total": 1},
             }
         },
+        {"data": {"hits": ["not-a-dict"], "pagination": {"total": 1}}},
         {"data": {"hits": [{"project_id": "X"}]}},
         {"data": {"hits": [{"project_id": "X"}], "pagination": {}}},
     ],

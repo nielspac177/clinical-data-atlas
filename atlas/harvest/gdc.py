@@ -80,7 +80,8 @@ class GDCHarvester(Harvester):
         hits = data.get("hits")
         if not isinstance(hits, list) or not hits:
             raise AssertionError("GDC projects probe: 'data.hits' is missing or empty")
-        if not hits[0].get("project_id"):
+        first_hit = hits[0]
+        if not isinstance(first_hit, dict) or not first_hit.get("project_id"):
             raise AssertionError("GDC projects probe: hits[0] missing 'project_id'")
 
         pagination = data.get("pagination")

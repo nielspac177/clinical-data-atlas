@@ -1,10 +1,15 @@
 """Tests for `atlas.normalize.gdc` (NCI GDC projects normalizer).
 
-The four "released and open" fixtures (`TCGA-LUAD`, `TCGA-GBM`,
-`TARGET-AML`, `MATCH-S1`) exercise the mapping against real, if trimmed,
-GDC data; `CGCI-BLGSP` (live `state="submitted"`) exercises the
-not-released exclusion with a real record instead of a synthetic one.
-Small hand-built envelopes cover mapping branches the five real fixtures
+The five "released and open" fixtures (`TCGA-LUAD`, `TCGA-GBM`,
+`TARGET-AML`, `MATCH-S1`, `ALCHEMIST-ALCH`) exercise the mapping against
+real, if trimmed, GDC data; `CGCI-BLGSP` (live `state="submitted"`)
+exercises the not-released exclusion with a real record instead of a
+synthetic one. `ALCHEMIST-ALCH` specifically regression-tests controller
+ruling R13: its title ("Adjuvant Lung Cancer Enrichment Marker
+Identification and Sequencing Trial") is a real live clinical-trial name
+that the original five-keyword study-title pattern missed, so it must
+never ship as a `Condition` label -- see the `conditions` section below.
+Small hand-built envelopes cover mapping branches the six real fixtures
 don't happen to hit (e.g. Proteome Profiling, a CCDI project, a project
 with no dbGaP accession anywhere).
 """
@@ -79,7 +84,13 @@ def test_source_constant():
 
 
 def test_every_released_open_fixture_normalizes_and_validates():
-    for native_id in ["TCGA-LUAD", "TCGA-GBM", "TARGET-AML", "MATCH-S1"]:
+    for native_id in [
+        "TCGA-LUAD",
+        "TCGA-GBM",
+        "TARGET-AML",
+        "MATCH-S1",
+        "ALCHEMIST-ALCH",
+    ]:
         result = normalize(native_id)
         assert isinstance(result, Record), native_id
         errors, warnings = validate_records([result.model_dump(mode="json")])
@@ -178,6 +189,26 @@ def test_summary_is_trimmed_to_forty_words_for_a_long_primary_site_list():
     assert len(result.summary.split()) == 40
 
 
+def test_summary_omits_the_cases_clause_when_case_count_is_none():
+    payload = _minimal_payload(
+        name="Small Registry",
+        summary={
+            "case_count": None,
+            "data_categories": [],
+            "experimental_strategies": [],
+        },
+    )
+    result = gdc.normalize(
+        _envelope(payload), harvested_at=HARVESTED_AT, first_seen=FIRST_SEEN
+    )
+    assert "cases" not in result.summary
+    assert result.summary.startswith(
+        "Small Registry: TEST project in the NCI Genomic Data Commons;"
+    )
+    assert result.sample_size is None
+    assert result.sample_unit is None
+
+
 # ---------------------------------------------------------------------------
 # sample_size / sample_unit
 # ---------------------------------------------------------------------------
@@ -264,6 +295,8 @@ def test_experimental_strategy_without_a_modality_mapping_contributes_none():
 
 
 def test_disease_phrase_name_becomes_sole_condition_with_alias():
+    # Also the "short disease name" regression ruling R13 asked for:
+    # short + keyword-free names must still resolve straight from `name`.
     result = normalize("TCGA-GBM")
     # "Glioblastoma Multiforme".lower() is aliased to "glioblastoma".
     assert [c.label for c in result.conditions] == ["glioblastoma"]
@@ -284,11 +317,67 @@ def test_study_title_name_uses_disease_type_entries_instead():
     assert len(labels) == len(disease_type)
 
 
-def test_study_title_pattern_matches_phase_and_study_keywords():
-    payload = _minimal_payload(name="A Phase II Trial of Something")
-    assert gdc._STUDY_NAME_RE.search(payload["name"])
-    payload2 = _minimal_payload(name="Cohort Study of Something")
-    assert gdc._STUDY_NAME_RE.search(payload2["name"])
+def test_study_title_pattern_matches_the_full_broadened_keyword_list():
+    # Ruling R13 broadened the original five keywords
+    # (MATCH|Arm|Characterization|Phase|Study) with ten more.
+    for keyword in [
+        "Phase",
+        "Study",
+        "Trial",
+        "Enrichment",
+        "Identification",
+        "Sequencing",
+        "Consortium",
+        "Program",
+        "Project",
+        "Initiative",
+        "Cohort",
+        "Screening",
+        "Pilot",
+    ]:
+        name = f"Something {keyword} of Interest"
+        assert gdc._STUDY_NAME_RE.search(name), keyword
+
+
+def test_study_name_regex_is_word_bounded_not_a_substring_search():
+    # Ruling R13 requires word-boundary matching: "Army" must not
+    # false-positive on "Arm", and "Matcha" must not false-positive on
+    # "MATCH" -- both would have matched under the original plain
+    # substring search.
+    assert gdc._STUDY_NAME_RE.search("Army General Hospital Registry") is None
+    assert gdc._STUDY_NAME_RE.search("Matcha Green Tea Biobank") is None
+    assert gdc._STUDY_NAME_RE.search("NCI MATCH Arm S1") is not None
+
+
+def test_is_disease_phrase_requires_both_short_and_keyword_free():
+    # Short and keyword-free -> disease phrase.
+    assert gdc._is_disease_phrase("Lung Adenocarcinoma") is True
+    # Short but contains a keyword -> not a disease phrase.
+    assert gdc._is_disease_phrase("NCI MATCH Arm S1") is False
+    # Long (> 6 words), even with none of the keywords, is still not a
+    # disease phrase -- this is the ALCHEMIST-ALCH case (ruling R13).
+    trial_title = (
+        "Adjuvant Lung Cancer Enrichment Marker Identification and Sequencing Trial"
+    )
+    assert len(trial_title.split()) > 6
+    assert gdc._is_disease_phrase(trial_title) is False
+
+
+def test_alchemist_alch_uses_disease_type_never_the_trial_title():
+    # Regression for controller ruling R13: ALCHEMIST-ALCH is a real,
+    # live, released+open project whose title contains none of the
+    # original five study-title keywords, so it used to ship its full
+    # trial title as a bogus "condition". It now falls back to
+    # `disease_type`, like any other study-title project.
+    result = normalize("ALCHEMIST-ALCH")
+    assert isinstance(result, Record)
+    labels = [c.label for c in result.conditions]
+    disease_type = _load("ALCHEMIST-ALCH")["payload"]["disease_type"]
+    assert labels == [d.lower() for d in disease_type]
+    trial_title = (
+        "adjuvant lung cancer enrichment marker identification and sequencing trial"
+    )
+    assert trial_title not in labels
 
 
 # ---------------------------------------------------------------------------
@@ -317,6 +406,21 @@ def test_pathology_strategy_is_a_keyword_in_addition_to_a_modality():
     )
     assert "Tissue Slide" in keywords
     assert "pathology" in gdc._modalities(payload["summary"])
+
+
+def test_keywords_are_deduplicated_and_empty_strings_dropped():
+    keywords = gdc._keywords(
+        ["Brain", "Brain", ""],
+        "",
+        {
+            "experimental_strategies": [
+                {"experimental_strategy": "WGS"},
+                {"experimental_strategy": "WGS"},
+                {},  # missing "experimental_strategy" -> defaults to ""
+            ]
+        },
+    )
+    assert keywords == ["Brain", "WGS"]
 
 
 # ---------------------------------------------------------------------------
@@ -443,6 +547,13 @@ def test_enrichment_text_is_capped_at_fifteen_hundred_chars():
 
 
 def test_enrichment_text_for_every_fixture_is_non_empty_and_bounded():
-    for native_id in ["TCGA-LUAD", "TCGA-GBM", "TARGET-AML", "MATCH-S1", "CGCI-BLGSP"]:
+    for native_id in [
+        "TCGA-LUAD",
+        "TCGA-GBM",
+        "TARGET-AML",
+        "MATCH-S1",
+        "CGCI-BLGSP",
+        "ALCHEMIST-ALCH",
+    ]:
         text = gdc.enrichment_text(_load(native_id))
         assert 0 < len(text) <= 1500

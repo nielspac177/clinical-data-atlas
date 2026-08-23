@@ -8,13 +8,16 @@ outright rather than cataloged as a placeholder.
 
 GDC mixes two very different kinds of project ``name``: a plain disease
 name (``"Lung Adenocarcinoma"``, TCGA-style) and a clinical-trial/study
-title (``"Genomic Characterization CS-MATCH-0007 Arm S1"``). `conditions`
-picks between the two: a name that reads as a study title (contains
-"MATCH", "Arm", "Characterization", "Phase", or "Study") falls back to
+title (``"Genomic Characterization CS-MATCH-0007 Arm S1"``,
+``"Adjuvant Lung Cancer Enrichment Marker Identification and Sequencing
+Trial"``). `conditions` picks between the two: a `name` counts as a
+disease phrase -- and becomes the sole `Condition` -- only when it is
+*both* free of every study-title keyword in `_STUDY_NAME_RE` *and* at
+most `_MAX_DISEASE_PHRASE_WORDS` words long; anything else falls back to
 the project's own ``disease_type`` list instead of trying to parse a
-disease out of the title. See ``docs/sources/gdc.md`` for the one known
-false negative this simple heuristic has (ALCHEMIST) and why it's kept
-anyway -- this is the mapping specified for Task 1.3, applied verbatim.
+disease out of a title. See ``docs/sources/gdc.md`` for the full rule
+(ruling R13) and why the word-count cap is needed alongside the keyword
+list.
 """
 
 from __future__ import annotations
@@ -51,14 +54,25 @@ _DATA_CATEGORY_MODALITY: dict[str, str] = {
 # `_keywords`) -- it just doesn't contribute a modality of its own.
 _PATHOLOGY_STRATEGIES = frozenset({"Tissue Slide", "Diagnostic Slide"})
 
-# A project `name` containing any of these reads as a clinical-trial/study
-# title rather than a disease name -- e.g. "Genomic Characterization
-# CS-MATCH-0007 Arm S1", "... Phase II ...", "... Study". Checked
-# case-insensitively, as a plain substring search (not word-bounded): that
-# is what the Task 1.3 mapping specifies, and it is what correctly routes
-# every MATCH/CCDI-style title in the live listing to `disease_type`-based
-# conditions instead of a garbled "condition" parsed from the title.
-_STUDY_NAME_RE = re.compile(r"MATCH|Arm|Characterization|Phase|Study", re.IGNORECASE)
+# A project `name` reads as a clinical-trial/study title -- and therefore
+# falls back to `disease_type` entries instead of the name itself -- when
+# it contains any of these words (word-boundary, case-insensitive) OR runs
+# longer than `_MAX_DISEASE_PHRASE_WORDS`. The word list started as just
+# {MATCH, Arm, Characterization, Phase, Study} (Task 1.3's original
+# mapping) but missed real live titles built the same way without any of
+# those five words -- e.g. "Adjuvant Lung Cancer Enrichment Marker
+# Identification and Sequencing Trial" (ALCHEMIST-ALCH) -- so a title that
+# simply runs long is now also routed to `disease_type`, whether or not it
+# happens to contain one of the flagged words (ruling R13; see
+# docs/sources/gdc.md).
+_STUDY_NAME_RE = re.compile(
+    r"\b("
+    r"MATCH|Arm|Characterization|Phase|Study|Trial|Enrichment|Identification|"
+    r"Sequencing|Consortium|Program|Project|Initiative|Cohort|Screening|Pilot"
+    r")\b",
+    re.IGNORECASE,
+)
+_MAX_DISEASE_PHRASE_WORDS = 6
 
 # `program.name` values that additionally mark a project pediatric.
 _PEDIATRIC_PROGRAMS = frozenset({"TARGET", "CCDI"})
@@ -94,23 +108,45 @@ def _modalities(summary: dict) -> list[str]:
     return [m for m in vocab.MODALITIES if m in found]
 
 
+def _is_disease_phrase(name: str) -> bool:
+    """True when `name` reads as a plain disease name rather than a
+    clinical-trial/study title: at most `_MAX_DISEASE_PHRASE_WORDS` words
+    long AND free of every study-title keyword in `_STUDY_NAME_RE`. Both
+    conditions must hold -- a short title can still name a study ("NCI
+    MATCH Arm S1" is 4 words), so the keyword list alone isn't enough;
+    conversely a long title with none of the flagged keywords (e.g.
+    ALCHEMIST-ALCH's) still reads as a study name to a human, so the
+    length cap catches what the keyword list alone doesn't."""
+    words = name.split()
+    return len(words) <= _MAX_DISEASE_PHRASE_WORDS and not _STUDY_NAME_RE.search(name)
+
+
 def _conditions(name: str, disease_type: list[str]) -> list[Condition]:
     """One `Condition` for a disease-phrase `name`, else one per
-    `disease_type` entry -- see the module docstring."""
-    if _STUDY_NAME_RE.search(name):
-        return [Condition(label=_alias(label.lower())) for label in disease_type]
-    return [Condition(label=_alias(name.lower()))]
+    `disease_type` entry -- see `_is_disease_phrase`."""
+    if _is_disease_phrase(name):
+        return [Condition(label=_alias(name.lower()))]
+    return [Condition(label=_alias(label.lower())) for label in disease_type]
 
 
 def _keywords(primary_site: list[str], program_name: str, summary: dict) -> list[str]:
     """`primary_site` entries, then the program name, then every
     experimental strategy verbatim (including the ones that also
-    contributed a `pathology` modality -- they still count as keywords)."""
+    contributed a `pathology` modality -- they still count as keywords),
+    deduplicated (first occurrence wins) with empty strings dropped (a
+    missing `experimental_strategy`/blank `program.name` would otherwise
+    show up as a bare `""` keyword)."""
     strategies = [
         entry.get("experimental_strategy", "")
         for entry in summary.get("experimental_strategies") or []
     ]
-    return [*primary_site, program_name, *strategies]
+    seen: set[str] = set()
+    keywords: list[str] = []
+    for candidate in (*primary_site, program_name, *strategies):
+        if candidate and candidate not in seen:
+            seen.add(candidate)
+            keywords.append(candidate)
+    return keywords
 
 
 def _top_data_categories(summary: dict, n: int = 3) -> list[str]:
@@ -142,9 +178,10 @@ def _summary_text(
 ) -> str:
     sites_text = ", ".join(sites)
     data_text = ", ".join(_top_data_categories(summary))
+    case_clause = f" with {case_count} cases" if case_count is not None else ""
     text = (
-        f"{name}: {program_name} project in the NCI Genomic Data Commons with "
-        f"{case_count} cases; primary sites: {sites_text}; data: {data_text}."
+        f"{name}: {program_name} project in the NCI Genomic Data Commons"
+        f"{case_clause}; primary sites: {sites_text}; data: {data_text}."
     )
     return io.first_words(text, 40)
 
