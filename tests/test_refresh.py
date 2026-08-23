@@ -32,15 +32,28 @@ from atlas.schema import Record
 # ---------------------------------------------------------------------------
 
 
-@pytest.fixture
-def tree(monkeypatch, tmp_path):
-    """Point every `atlas.config` path at `tmp_path` and hand back the
-    resolved `refresh.Paths` for assertions."""
+@pytest.fixture(autouse=True)
+def _isolate_data_tree(monkeypatch, tmp_path):
+    """No test in this module may touch the repo's real `data/` tree.
+
+    Autouse rather than opt-in on purpose: `refresh.run` writes the catalog,
+    the graph, the changelog and the enrich caches, so a test that forgets
+    to request `tree` would otherwise run the whole pipeline over the
+    committed data. `ROOT` is redirected too, so `.cache/` and `_site/`
+    land in `tmp_path` as well, and `RawStore` follows because it resolves
+    `config.RAW` per construction.
+    """
+    monkeypatch.setattr(config, "ROOT", tmp_path)
     monkeypatch.setattr(config, "DATA", tmp_path / "data")
     monkeypatch.setattr(config, "RAW", tmp_path / "data" / "raw")
     monkeypatch.setattr(config, "CATALOG", tmp_path / "data" / "catalog")
     monkeypatch.setattr(config, "GRAPH", tmp_path / "data" / "graph")
     monkeypatch.setattr(config, "CHANGELOG", tmp_path / "data" / "changelog")
+
+
+@pytest.fixture
+def tree():
+    """The isolated tree's resolved paths."""
     return refresh.paths()
 
 
@@ -642,7 +655,23 @@ def test_report_and_summary_json_are_written(tree, monkeypatch, tmp_path):
     ).read_text(encoding="utf-8")
 
     summary = json.loads(summary_path.read_text(encoding="utf-8"))
-    assert set(summary) == {"title", "date", "counts", "sources", "exit_code"}
+    assert set(summary) == {
+        "title",
+        "date",
+        "counts",
+        "sources",
+        "enrich",
+        "exit_code",
+    }
+    assert set(summary["enrich"]) == {
+        "backend",
+        "model",
+        "calls",
+        "cache_hits",
+        "guard_drops",
+        "failures",
+        "record_errors",
+    }
     assert summary["title"].startswith("Monthly refresh ")
     assert summary["exit_code"] == 0
     assert summary["counts"]["added"] == 1
@@ -917,6 +946,238 @@ def test_unknown_llm_backend_returns_2(tree, monkeypatch, capsys):
     assert refresh.run(None, offline=False, llm="not-a-backend") == 2
     assert "unknown LLM backend" in capsys.readouterr().err
     assert not tree.catalog_file.exists()
+
+
+# ---------------------------------------------------------------------------
+# Enrichment failures are counted and reported
+# ---------------------------------------------------------------------------
+
+
+def test_rules_failures_are_counted_reported_and_never_fatal(tree, monkeypatch, capsys):
+    """A record the rules stage blows up on is left un-enriched, counted,
+    and named -- in stdout, in the changelog and in the summary JSON."""
+    _install(monkeypatch, ["openneuro"])
+    _seed_raw(
+        tree,
+        "openneuro",
+        {
+            "ds001": _record_payload(text="An EEG study."),
+            "ds002": _record_payload(text="Another EEG study."),
+        },
+    )
+
+    def explode(text, *, source, raw_hints=None):
+        raise RuntimeError("rule table is broken")
+
+    monkeypatch.setattr(refresh.rules, "hints", explode)
+    summary_path = tree.root / "summary.json"
+
+    assert (
+        refresh.run(None, offline=True, skip_enrich=True, summary_json=summary_path)
+        == 0
+    )
+
+    out = capsys.readouterr().out
+    assert "enrich: openneuro:ds001: rules: RuntimeError: rule table is broken" in out
+    assert "record_errors=2" in out
+    assert len(_catalog(tree)) == 2  # both records survive, just un-enriched
+
+    latest = (tree.changelog / "latest.md").read_text(encoding="utf-8")
+    assert "- record_errors: 2" in latest
+    summary = json.loads(summary_path.read_text(encoding="utf-8"))
+    assert summary["enrich"]["record_errors"] == 2
+
+
+def test_enrichment_error_list_is_capped_but_the_count_is_not(
+    tree, monkeypatch, capsys
+):
+    _install(monkeypatch, ["openneuro"])
+    _seed_raw(
+        tree,
+        "openneuro",
+        {f"ds{n:03d}": _record_payload(text="An EEG study.") for n in range(15)},
+    )
+
+    def explode(text, *, source, raw_hints=None):
+        raise RuntimeError("boom")
+
+    monkeypatch.setattr(refresh.rules, "hints", explode)
+
+    assert refresh.run(None, offline=True, skip_enrich=True) == 0
+
+    out = capsys.readouterr().out
+    shown = [
+        line for line in out.splitlines() if line.startswith("  enrich: openneuro")
+    ]
+    assert len(shown) == refresh.MAX_REPORTED_RECORD_ERRORS
+    assert "enrich: … and 5 more record error(s)" in out
+    assert "record_errors=15" in out
+
+
+def test_llm_errors_are_attributed_to_this_pass_only(tree, monkeypatch):
+    """`llm.LAST_ERRORS` is a bounded, process-global log; a pass must
+    report the entries *it* caused, however full the log already was."""
+    _install(monkeypatch, ["openneuro"])
+    monkeypatch.setattr(llm, "LAST_ERRORS", ["stale"] * llm.MAX_RECORDED_ERRORS)
+
+    def fake_enrich_records(records, texts, backend, **kwargs):
+        from atlas.enrich.classify import EnrichStats
+
+        llm.record_error("this pass: bad response")
+        return EnrichStats(backend=backend.name, model=backend.model)
+
+    monkeypatch.setattr("atlas.enrich.classify.enrich_records", fake_enrich_records)
+
+    stats = refresh.stage_enrich([], {}, offline=True)
+
+    assert stats["record_errors"] == 1
+    assert stats["errors"] == ["this pass: bad response"]
+
+
+@pytest.mark.parametrize(
+    "before,after,expected",
+    [
+        ([], [], []),
+        (["a"], ["a"], []),
+        (["a", "b"], ["a", "b", "c"], ["c"]),
+        (["a", "b", "c"], ["c", "d", "e"], ["d", "e"]),  # front-trimmed
+        (["a", "b", "c"], ["d", "e", "f"], ["d", "e", "f"]),  # full turnover
+        ([], ["x"], ["x"]),
+    ],
+)
+def test_new_errors(before, after, expected):
+    assert refresh._new_errors(before, after) == expected
+
+
+# ---------------------------------------------------------------------------
+# Unselected sources are reported, not silently retained
+# ---------------------------------------------------------------------------
+
+
+def test_unselected_source_gets_its_own_reported_row(tree, monkeypatch, capsys):
+    _install(monkeypatch, ["openneuro", "physionet"])
+    _seed_raw(tree, "openneuro", {"ds001": _record_payload()})
+    _seed_raw(tree, "physionet", {"waveforms": _record_payload()})
+    assert refresh.run(None, offline=True, skip_enrich=True) == 0
+    capsys.readouterr()
+
+    summary_path = tree.root / "summary.json"
+    assert (
+        refresh.run(
+            ["openneuro"], offline=True, skip_enrich=True, summary_json=summary_path
+        )
+        == 0
+    )
+
+    rows = [" ".join(line.split()) for line in capsys.readouterr().out.splitlines()]
+    assert "physionet unselected 0 0 0 0 1 0.00" in rows
+    summary = json.loads(summary_path.read_text(encoding="utf-8"))
+    physionet = next(s for s in summary["sources"] if s["source"] == "physionet")
+    assert physionet["status"] == "unselected"
+    assert physionet["retained"] == 1
+
+    latest = (tree.changelog / "latest.md").read_text(encoding="utf-8")
+    assert "| physionet | unselected |" in latest
+    # …and it is not a failure.
+    assert latest.split("## Failures\n\n", 1)[1].startswith("none")
+
+
+def test_a_stale_retained_row_is_reported_not_fatal(tree, monkeypatch, capsys):
+    """A previous-catalog row that no longer validates is dropped and
+    counted against the source that kept it."""
+    _install(monkeypatch, ["openneuro", "physionet"])
+    _seed_raw(tree, "openneuro", {"ds001": _record_payload()})
+    io.write_jsonl(
+        tree.catalog_file,
+        [{"id": "physionet:broken", "source": "physionet", "name": "No schema here"}],
+    )
+
+    assert refresh.run(["openneuro"], offline=True, skip_enrich=True) == 0
+
+    assert _ids(tree) == ["openneuro:ds001"]
+    out = capsys.readouterr().out
+    assert "physionet:broken: retained record is no longer valid" in out
+
+
+def test_exit_3_counts_only_the_selected_sources(tree, monkeypatch):
+    """Every *selected* source failing is a total failure even when other
+    sources sit untouched in the catalog."""
+    _install(
+        monkeypatch,
+        ["openneuro", "physionet"],
+        failing={"openneuro": RuntimeError("down")},
+    )
+    _seed_raw(tree, "physionet", {"waveforms": _record_payload()})
+
+    assert refresh.run(["openneuro"], skip_enrich=True) == 3
+
+
+# ---------------------------------------------------------------------------
+# Backend validation happens before any harvesting
+# ---------------------------------------------------------------------------
+
+
+def test_unknown_backend_is_rejected_before_harvesting(tree, monkeypatch, capsys):
+    harvested: list[str] = []
+
+    def _spy_harvester(name):
+        def do_harvest(self, *, fast=False, limit=None):
+            harvested.append(name)
+            return HarvestResult(source=name, status="ok")
+
+        return type(
+            "_SpyHarvester",
+            (Harvester,),
+            {
+                "name": name,
+                "harvest_method": "api",
+                "probe": lambda self: {},
+                "harvest": do_harvest,
+            },
+        )
+
+    monkeypatch.setattr(
+        normalize,
+        "get_normalizers",
+        lambda: {"openneuro": _make_normalizer("openneuro")},
+    )
+    monkeypatch.setattr(
+        harvest, "get_registry", lambda: {"openneuro": _spy_harvester("openneuro")}
+    )
+
+    assert refresh.run(None, llm="not-a-backend") == 2
+    assert harvested == []
+    assert "unknown LLM backend" in capsys.readouterr().err
+
+
+def test_backend_name_is_validated_even_offline(tree, monkeypatch):
+    _install(monkeypatch, ["openneuro"])
+    assert refresh.run(None, offline=True, llm="not-a-backend") == 2
+
+
+# ---------------------------------------------------------------------------
+# _finalize_record reports what it cannot order
+# ---------------------------------------------------------------------------
+
+
+def test_finalize_record_reports_out_of_vocabulary_values():
+    """A value the vocabulary doesn't know cannot be ordered, so it must be
+    reported as a validation error rather than quietly dropped."""
+    record = _bare_record(domains=["neurology"], modalities=["MRI"])
+    smuggled = record.model_construct(
+        **{**record.__dict__, "domains": ["neurology", "astrology"]}
+    )
+    errors: list[str] = []
+
+    finalized = refresh._finalize_record(smuggled, errors)
+
+    assert finalized.domains == ["neurology"]
+    assert errors == ["openneuro:ds001: domain 'astrology' is not in the vocabulary"]
+
+
+def test_finalize_record_without_an_error_sink_still_orders():
+    record = _bare_record(domains=["oncology", "neurology"])
+    assert refresh._finalize_record(record).domains == ["neurology", "oncology"]
 
 
 # ---------------------------------------------------------------------------

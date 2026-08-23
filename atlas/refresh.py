@@ -78,10 +78,18 @@ class Paths:
     """Where this run reads and writes, resolved once per call to
     :func:`paths`."""
 
+    root: Path
     raw: Path
     catalog: Path
     graph: Path
     changelog: Path
+
+    @property
+    def cache(self) -> Path:
+        """Scratch space for artifacts that are *not* products -- gitignored
+        (see `.gitignore`), so nothing written here can be swept into a data
+        commit by mistake."""
+        return self.root / ".cache"
 
     @property
     def catalog_file(self) -> Path:
@@ -114,6 +122,7 @@ def paths() -> Paths:
     lets `tests/test_refresh.py` run the entire pipeline inside `tmp_path`.
     """
     return Paths(
+        root=config.ROOT,
         raw=config.RAW,
         catalog=config.CATALOG,
         graph=config.GRAPH,
@@ -121,9 +130,12 @@ def paths() -> Paths:
     )
 
 
-def _today() -> str:
+def today() -> str:
     """Today's date in UTC, ISO-8601. UTC rather than local time so two
-    machines refreshing in the same minute agree on the date."""
+    machines refreshing in the same minute agree on the date. Public
+    because it is the date every changelog this project writes is named
+    and headed by -- `atlas diff` stamps its own entry with the same one.
+    """
     return datetime.now(tz=UTC).date().isoformat()
 
 
@@ -482,12 +494,17 @@ def _run_source(
 # ---------------------------------------------------------------------------
 
 
-def _apply_rules(records: list[Record], texts: dict[str, str]) -> tuple[int, list[str]]:
+def _apply_rules(
+    records: list[Record], texts: dict[str, str]
+) -> tuple[int, list[str], int]:
     """Deterministic, network-free classification over every record that
     has an enrichment text. Replaces records in place; returns
-    `(records_changed, errors)`."""
+    `(records_changed, first_errors, total_errors)` -- the message list is
+    capped for the report, the count never is, so a stage that failed on a
+    thousand records says so."""
     changed = 0
     errors: list[str] = []
+    failures = 0
     for index, record in enumerate(records):
         text = texts.get(record.id)
         if not text:
@@ -498,13 +515,32 @@ def _apply_rules(records: list[Record], texts: dict[str, str]) -> tuple[int, lis
             )
             updated = merge.apply_enrichment(record, None, hits)
         except Exception as exc:  # noqa: BLE001 -- one record, not the whole stage
+            failures += 1
             if len(errors) < MAX_REPORTED_RECORD_ERRORS:
                 errors.append(f"{record.id}: rules: {type(exc).__name__}: {exc}")
             continue
         if updated is not record:
             records[index] = updated
             changed += 1
-    return changed, errors
+    return changed, errors, failures
+
+
+def _new_errors(before: list[str], after: list[str]) -> list[str]:
+    """The entries `after` gained relative to `before`.
+
+    `atlas.enrich.llm.LAST_ERRORS` is a *bounded* log: `record_error`
+    appends and then trims the front, so `after` is
+    `(before + new)[-MAX_RECORDED_ERRORS:]` and comparing lengths (or
+    slicing from `len(before)`) silently reports nothing once the log is
+    full. Since new entries are always a suffix of `after` and the
+    survivors of `before` are always its prefix, the smallest suffix that
+    makes those two line up *is* what this pass appended.
+    """
+    for count in range(len(after) + 1):
+        kept = len(after) - count
+        if after[:kept] == before[len(before) - kept :]:
+            return after[kept:]
+    return list(after)  # unreachable: count == len(after) always matches
 
 
 def _resolve_mesh(records: list[Record], *, offline: bool, cache_path: Path) -> int:
@@ -596,6 +632,14 @@ def stage_enrich(
     are free and cap-exempt) while never attempting -- and never counting
     as a failure -- a single model call. MeSH/ROR likewise resolve from
     their on-disk caches only.
+
+    The returned stats carry `backend`, `model`, `calls`, `cache_hits`,
+    `guard_drops`, `failures`, `records_enriched`, `cached_models`,
+    `rules_applied`, `mesh_resolved`, `ror_resolved`, plus `record_errors`
+    (how many individual records this stage failed on, uncapped) and
+    `errors` (the first few of those messages, for the run's report). A
+    per-record failure here is never fatal -- the record simply goes
+    un-enriched -- but it must be counted and shown, not swallowed.
     """
     p = paths()
     stats: dict = {
@@ -607,18 +651,20 @@ def stage_enrich(
         "failures": 0,
         "records_enriched": 0,
         "cached_models": {},
+        "record_errors": 0,
         "errors": [],
     }
 
-    rules_changed, rule_errors = _apply_rules(records, texts)
+    rules_changed, rule_errors, rule_failures = _apply_rules(records, texts)
     stats["rules_applied"] = rules_changed
+    stats["record_errors"] += rule_failures
     stats["errors"].extend(rule_errors)
 
     if not skip_enrich:
         backend = llm.NullBackend() if offline else llm.select_backend(llm_backend)
         # `llm.LAST_ERRORS` is process-global and survives across runs; only
         # the entries this pass appended belong in this pass's stats.
-        error_mark = len(llm.LAST_ERRORS)
+        errors_before = list(llm.LAST_ERRORS)
         llm_stats = classify.enrich_records(
             records,
             texts,
@@ -639,9 +685,10 @@ def stage_enrich(
                 "cached_models": dict(llm_stats.cached_models),
             }
         )
-        stats["errors"].extend(
-            llm.LAST_ERRORS[error_mark:][:MAX_REPORTED_RECORD_ERRORS]
-        )
+        llm_errors = _new_errors(errors_before, list(llm.LAST_ERRORS))
+        stats["record_errors"] += len(llm_errors)
+        stats["errors"].extend(llm_errors)
+        del stats["errors"][MAX_REPORTED_RECORD_ERRORS:]
 
     stats["mesh_resolved"] = _resolve_mesh(
         records, offline=offline, cache_path=p.mesh_cache
@@ -687,7 +734,18 @@ def stage_dedupe(records: list[Record]) -> tuple[list[Record], list[Excluded]]:
     return dedupe.link_same_cohort(merged), excluded
 
 
-def _finalize_record(record: Record) -> Record:
+def _vocab_ordered(
+    values: list[str], vocabulary: tuple[str, ...]
+) -> tuple[list[str], list[str]]:
+    """`(ordered, unknown)` -- `values` deduplicated and rendered in
+    `vocabulary` order, plus any value that isn't in `vocabulary` at all."""
+    present = set(values)
+    ordered = [value for value in vocabulary if value in present]
+    unknown = sorted(present - set(vocabulary))
+    return ordered, unknown
+
+
+def _finalize_record(record: Record, errors: list[str] | None = None) -> Record:
     """`record` with its vocabulary-backed lists deduplicated and rendered
     in vocabulary order.
 
@@ -697,12 +755,43 @@ def _finalize_record(record: Record) -> Record:
     deterministic-output rule at the catalog's edge: the same set of values
     always serializes to the same bytes, whichever stage put them there.
     Returns `record` itself, unrebuilt, when nothing needed reordering.
+
+    A value outside the vocabulary cannot survive this ordering, so it must
+    not disappear quietly: each one is appended to `errors` (which the
+    caller folds into the validation errors, failing the run) rather than
+    being filtered away. `Record`'s own Literal types make this
+    unreachable today -- which is exactly why a future path that manages it
+    should be loud instead of silently shrinking a record's classification.
     """
-    domains = [d for d in vocab.DOMAINS if d in set(record.domains)]
-    modalities = [m for m in vocab.MODALITIES if m in set(record.modalities)]
+    domains, unknown_domains = _vocab_ordered(record.domains, vocab.DOMAINS)
+    modalities, unknown_modalities = _vocab_ordered(record.modalities, vocab.MODALITIES)
+    if errors is not None:
+        errors.extend(
+            f"{record.id}: domain {value!r} is not in the vocabulary"
+            for value in unknown_domains
+        )
+        errors.extend(
+            f"{record.id}: modality {value!r} is not in the vocabulary"
+            for value in unknown_modalities
+        )
     if domains == record.domains and modalities == record.modalities:
         return record
     return record.model_copy(update={"domains": domains, "modalities": modalities})
+
+
+def _validate_backend_name(name: str | None) -> str | None:
+    """`None` when `name` is a usable LLM backend name (or `None`, meaning
+    auto-detect), else the error message to print.
+
+    Called before the first harvest so a typo in `--llm` costs a second,
+    not a full re-harvest that then refuses to enrich."""
+    if name is None:
+        return None
+    try:
+        llm.select_backend(name)
+    except ValueError as exc:
+        return str(exc)
+    return None
 
 
 # ---------------------------------------------------------------------------
@@ -874,6 +963,7 @@ def _print_report(
     warnings: int,
     timings: dict[str, float],
     dry_run: bool,
+    enrich_stats: dict | None = None,
 ) -> None:
     print(_render_table(outcomes))
     for outcome in outcomes:
@@ -882,6 +972,13 @@ def _print_report(
         if outcome.record_errors > len(outcome.first_errors):
             hidden = outcome.record_errors - len(outcome.first_errors)
             print(f"  {outcome.source}: … and {hidden} more record error(s)")
+    if enrich_stats:
+        shown = enrich_stats.get("errors") or []
+        for message in shown:
+            print(f"  enrich: {message}")
+        hidden = enrich_stats.get("record_errors", 0) - len(shown)
+        if hidden > 0:
+            print(f"  enrich: … and {hidden} more record error(s)")
     prefix = "would write " if dry_run else ""
     print(
         f"{prefix}catalog: {counts['records']} records, "
@@ -891,6 +988,15 @@ def _print_report(
         f"diff: +{counts['added']} new, ~{counts['changed']} changed, "
         f"-{counts['removed']} removed, {counts['unchanged']} unchanged"
     )
+    if enrich_stats:
+        print(
+            f"enrich: backend={enrich_stats.get('backend')} "
+            f"calls={enrich_stats.get('calls', 0)} "
+            f"cache_hits={enrich_stats.get('cache_hits', 0)} "
+            f"guard_drops={enrich_stats.get('guard_drops', 0)} "
+            f"failures={enrich_stats.get('failures', 0)} "
+            f"record_errors={enrich_stats.get('record_errors', 0)}"
+        )
     print(
         "stages: "
         + ", ".join(f"{name} {seconds:.2f}s" for name, seconds in timings.items())
@@ -951,7 +1057,7 @@ def run(
     source failed (nothing written).
     """
     p = paths()
-    date = _today()
+    date = today()
     timings: dict[str, float] = {}
     started = time.monotonic()
 
@@ -964,6 +1070,11 @@ def run(
     selected, error = _select_sources(sources, available)
     if error:
         print(error, file=sys.stderr)
+        return 2
+
+    backend_error = _validate_backend_name(llm)
+    if backend_error:
+        print(backend_error, file=sys.stderr)
         return 2
 
     try:
@@ -1008,18 +1119,27 @@ def run(
             texts.update(source_texts)
         outcomes.append(outcome)
 
-    # Sources this run did not touch keep every record they had.
+    # Every source this run *chose* to touch, for the exit code: a source
+    # left out by `--sources` cannot fail, and must not dilute "did every
+    # selected source fail?" into a no.
+    selected_outcomes = list(outcomes)
+
+    # Sources this run did not touch keep every record they had -- reported
+    # as their own row (status `unselected`) so the retained counts, and any
+    # stale row that no longer parses, are visible rather than implied.
     for source in available:
         if source not in set(selected):
             untouched = SourceOutcome(source=source, status="unselected")
             retained = _parse_retained(previous_by_source.get(source, []), untouched)
+            untouched.retained = len(retained)
             records.extend(retained)
             retained_sources.append(source)
+            outcomes.append(untouched)
 
     timings["harvest+normalize"] = time.monotonic() - started
 
-    failed = [o for o in outcomes if o.status == "failed"]
-    if len(failed) == len(outcomes):
+    failed = [o for o in selected_outcomes if o.status == "failed"]
+    if len(failed) == len(selected_outcomes):
         timings["total"] = time.monotonic() - started
         _print_report(
             outcomes,
@@ -1040,18 +1160,14 @@ def run(
 
     # -- enrich ----------------------------------------------------------
     stage_started = time.monotonic()
-    try:
-        enrich_stats = stage_enrich(
-            records,
-            texts,
-            skip_enrich=skip_enrich,
-            offline=offline,
-            llm_backend=llm,
-            max_llm_calls=max_llm_calls,
-        )
-    except ValueError as exc:  # an unknown --llm backend name
-        print(str(exc), file=sys.stderr)
-        return 2
+    enrich_stats = stage_enrich(
+        records,
+        texts,
+        skip_enrich=skip_enrich,
+        offline=offline,
+        llm_backend=llm,
+        max_llm_calls=max_llm_calls,
+    )
     timings["enrich"] = time.monotonic() - stage_started
 
     # -- dedupe ----------------------------------------------------------
@@ -1060,7 +1176,8 @@ def run(
     excluded_rows.extend(
         {"id": item.native_id, "reason": item.reason} for item in merge_excluded
     )
-    records = [_finalize_record(record) for record in records]
+    finalize_errors: list[str] = []
+    records = [_finalize_record(record, finalize_errors) for record in records]
     records.sort(key=lambda record: record.id)
 
     known_ids = {record.id for record in records}
@@ -1071,13 +1188,14 @@ def run(
                 continue
             seen_exclusions.add(row["id"])
             excluded_rows.append(row)
-    excluded_rows.sort(key=lambda row: (row["id"], row["reason"]))
+    excluded_rows.sort(key=lambda row: (row["id"], row.get("reason", "")))
     timings["dedupe"] = time.monotonic() - stage_started
 
     # -- validate (before writing anything) -------------------------------
     stage_started = time.monotonic()
     rows = [record.model_dump(mode="json") for record in records]
     errors, warnings = schema.validate_records(rows)
+    errors = [*finalize_errors, *errors]
     timings["validate"] = time.monotonic() - stage_started
     if errors:
         for message in errors[:50]:
@@ -1117,6 +1235,18 @@ def run(
             "warnings": len(warnings),
         },
         "sources": [outcome.as_summary() for outcome in outcomes],
+        "enrich": {
+            key: enrich_stats.get(key)
+            for key in (
+                "backend",
+                "model",
+                "calls",
+                "cache_hits",
+                "guard_drops",
+                "failures",
+                "record_errors",
+            )
+        },
         "exit_code": exit_code,
     }
 
@@ -1152,6 +1282,7 @@ def run(
         warnings=len(warnings),
         timings=timings,
         dry_run=dry_run,
+        enrich_stats=enrich_stats,
     )
     if failed:
         names = ", ".join(outcome.source for outcome in failed)
@@ -1189,7 +1320,12 @@ def build_parser() -> argparse.ArgumentParser:
         "--strict", action="store_true", help="Exit 2 if any source failed"
     )
     parser.add_argument(
-        "--dry-run", action="store_true", help="Run every stage, write no output"
+        "--dry-run",
+        action="store_true",
+        help=(
+            "Run every stage; write no catalog/graph/changelog "
+            "(harvest and caches still update data/)"
+        ),
     )
     parser.add_argument("--llm", default=None, help="LLM backend override")
     parser.add_argument(

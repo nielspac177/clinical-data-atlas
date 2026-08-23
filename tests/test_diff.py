@@ -364,6 +364,19 @@ def test_render_changelog_failures_lists_non_ok_sources():
     assert "`gdc`: failed — HTTP 500" in failures_section
 
 
+def test_render_changelog_does_not_call_an_unselected_source_a_failure():
+    """`refresh --sources x` reports the sources it left alone so their
+    retained counts are visible; that is an outcome, not a failure."""
+    unselected = HarvestResult(source="tcia", status="unselected")
+    d = diff.diff_catalog([], [])
+    md = diff.render_changelog(
+        d, date="2026-09-01", source_results=[_ok_result("openneuro"), unselected]
+    )
+
+    assert "| tcia | unselected |" in md
+    assert "## Failures\n\nnone" in md
+
+
 # ---------------------------------------------------------------------------
 # render_changelog: added / removed lists
 # ---------------------------------------------------------------------------
@@ -521,6 +534,29 @@ def test_render_changelog_enrichment_stats_rendered_when_given():
     assert "cache_hits: 10" in enrichment_section
     assert "guard_drops: 3" in enrichment_section
     assert "failures: 1" in enrichment_section
+
+
+def test_render_changelog_enrichment_reports_model_and_record_errors():
+    """Which model answered, and how many records the stage failed on --
+    both are part of "what did this refresh actually do"."""
+    d = diff.diff_catalog([], [])
+    stats = {"backend": "claude_cli", "model": "opus", "record_errors": 7}
+    md = diff.render_changelog(
+        d, date="2026-09-01", source_results=[], enrich_stats=stats
+    )
+
+    enrichment_section = md.split("## Enrichment\n\n", 1)[1].split("\n\n", 1)[0]
+    assert "model: `opus`" in enrichment_section
+    assert "record_errors: 7" in enrichment_section
+
+
+def test_render_changelog_enrichment_model_none_reads_as_none():
+    d = diff.diff_catalog([], [])
+    md = diff.render_changelog(
+        d, date="2026-09-01", source_results=[], enrich_stats={"backend": "none"}
+    )
+    assert "- model: `none`" in md
+    assert "- record_errors: 0" in md
 
 
 # ---------------------------------------------------------------------------

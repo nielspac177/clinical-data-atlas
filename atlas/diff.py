@@ -347,9 +347,16 @@ def _failure_line(result: HarvestResult) -> str:
     return line
 
 
+# Statuses that are outcomes, not failures: a source that ran fine, and one
+# a run deliberately left out (`refresh --sources`), which keeps its previous
+# records and therefore appears in the Sources table without anything having
+# gone wrong.
+NON_FAILURE_STATUSES: tuple[str, ...] = ("ok", "unselected")
+
+
 def _failures_section(results: list[HarvestResult]) -> str:
     failed = sorted(
-        (result for result in results if result.status != "ok"),
+        (result for result in results if result.status not in NON_FAILURE_STATUSES),
         key=lambda result: result.source,
     )
     if not failed:
@@ -408,10 +415,12 @@ def _enrichment_section(stats: dict | None) -> str:
         return "## Enrichment\n\nnot run"
     lines = [
         f"- backend: `{_plain(str(stats.get('backend', 'unknown')))}`",
+        f"- model: `{_plain(str(stats.get('model') or 'none'))}`",
         f"- calls: {_plain(str(stats.get('calls', 0)))}",
         f"- cache_hits: {_plain(str(stats.get('cache_hits', 0)))}",
         f"- guard_drops: {_plain(str(stats.get('guard_drops', 0)))}",
         f"- failures: {_plain(str(stats.get('failures', 0)))}",
+        f"- record_errors: {_plain(str(stats.get('record_errors', 0)))}",
     ]
     return "## Enrichment\n\n" + "\n".join(lines)
 
@@ -429,7 +438,8 @@ def render_changelog(
     of a monthly refresh's changelog entry / PR description.
 
     Section order: title, summary line, `## Sources` (one row per
-    `source_results` entry), `## Failures` (non-"ok" sources, or "none"),
+    `source_results` entry), `## Failures` (sources whose status is neither
+    "ok" nor "unselected" -- see `NON_FAILURE_STATUSES` -- or "none"),
     `## Added`/`## Removed` (id/name/url, capped), `## Changed` (id/name
     then each field-level diff, both capped), `## Enrichment` (from
     `enrich_stats`, or "not run"), `## Validation warnings`.
