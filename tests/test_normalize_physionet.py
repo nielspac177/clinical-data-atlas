@@ -127,6 +127,23 @@ def test_name_is_title():
     assert record.name == "MIT-BIH Polysomnographic Database"
 
 
+def test_name_with_an_embedded_newline_is_collapsed_to_one_line():
+    payload = _payload("slpdb")
+    payload["title"] = "MIT-BIH Polysomnographic\n\tDatabase"
+    record = _normalize("slpdb", payload)
+    assert record.name == "MIT-BIH Polysomnographic Database"
+
+
+def test_summary_from_short_description_is_collapsed_to_one_line():
+    """`short_description` is used verbatim when it's short enough, so it
+    is the one summary path that isn't already single-spaced by
+    `io.first_words`."""
+    payload = _payload("slpdb")
+    payload["short_description"] = "Sleep recordings\nwith  apnea annotations."
+    record = _normalize("slpdb", payload)
+    assert record.summary == "Sleep recordings with apnea annotations."
+
+
 def test_url_is_source_url():
     payload = _payload("slpdb")
     record = _normalize("slpdb")

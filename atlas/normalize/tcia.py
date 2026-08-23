@@ -136,12 +136,18 @@ def _description(datacite: dict) -> str:
 
 
 def _record_name(envelope: dict, nbia: dict, datacite: dict) -> str:
-    return (
-        main_title(datacite)
-        or nbia.get("collection")
-        or envelope.get("native_id")
-        or ""
-    )
+    """The DataCite main title, else NBIA's collection name, else the
+    native id -- each cleaned to one line, and each skipped if cleaning
+    leaves nothing (a whitespace-only title is no title at all)."""
+    for candidate in (
+        main_title(datacite),
+        nbia.get("collection"),
+        envelope.get("native_id"),
+    ):
+        cleaned = common.clean_title(candidate)
+        if cleaned:
+            return cleaned
+    return ""
 
 
 # ---------------------------------------------------------------------------

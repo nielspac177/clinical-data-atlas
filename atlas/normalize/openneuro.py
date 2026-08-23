@@ -327,7 +327,9 @@ def normalize(
     description = snapshot.get("description") or {}
     summary = snapshot.get("summary") or {}
 
-    name = (description.get("Name") or "").strip() or native_id
+    # `Name` wraps mid-sentence in a handful of live records, so it needs
+    # collapsing, not just stripping, before it can be a one-line title.
+    name = common.clean_title(description.get("Name")) or native_id
 
     cleaned_dataset_doi = common.clean_doi(description.get("DatasetDOI"))
     dataset_doi = (

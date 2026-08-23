@@ -41,6 +41,79 @@ def test_clean_doi(raw, expected):
 
 
 # ---------------------------------------------------------------------------
+# clean_title
+# ---------------------------------------------------------------------------
+
+
+@pytest.mark.parametrize(
+    "raw,expected",
+    [
+        ("Plain title", "Plain title"),
+        ("  padded  ", "padded"),
+        # The real case: 8 OpenNeuro records wrap their `name` mid-sentence.
+        (
+            (
+                "Reading-related functional activity in children with isolated\n"
+                "spelling deficits and dyslexia"
+            ),
+            (
+                "Reading-related functional activity in children with isolated "
+                "spelling deficits and dyslexia"
+            ),
+        ),
+        ("tabs\tand\r\nCRLF", "tabs and CRLF"),
+        ("blank\n\n\nlines", "blank lines"),
+        ("non-breaking\xa0space", "non-breaking space"),  # NBSP
+        # Non-whitespace control characters are dropped outright, not
+        # turned into spaces: they are corruption, not word separators.
+        ("bell\x07inside", "bellinside"),
+        ("\x00leading nul", "leading nul"),
+        ("", ""),
+        ("   ", ""),
+        (None, ""),
+    ],
+)
+def test_clean_title(raw, expected):
+    assert common.clean_title(raw) == expected
+
+
+def test_clean_title_strips_a_stray_html_fragment():
+    assert common.clean_title("<p>Sepsis <em>cohort</em></p>") == "Sepsis cohort"
+    assert common.clean_title("Cohort A<br/>Cohort B") == "Cohort A Cohort B"
+    assert common.clean_title('<a href="https://x.test">Linked</a>') == "Linked"
+    # Entities are only unescaped as part of stripping a fragment: a title
+    # that is plain text is never reinterpreted as markup.
+    assert common.clean_title("<p>A &amp; B</p>") == "A & B"
+    assert common.clean_title("A &amp; B") == "A &amp; B"
+
+
+def test_clean_title_keeps_angle_brackets_that_are_not_markup():
+    """Dataset titles really do contain `<` and `>`; only a recognizable
+    HTML tag counts as markup."""
+    assert common.clean_title("Sepsis in children <18 years") == (
+        "Sepsis in children <18 years"
+    )
+    assert common.clean_title("SpO2 < 90% vs > 95%") == "SpO2 < 90% vs > 95%"
+    assert common.clean_title("Cohort <n=40>") == "Cohort <n=40>"
+    # An allowlisted tag name is not enough: `<a ...>` needs to look like
+    # an anchor, not like prose that happens to start with "a".
+    assert common.clean_title("Compare <A and B> groups") == "Compare <A and B> groups"
+    assert common.clean_title("Reading <span 1> aloud") == "Reading <span 1> aloud"
+
+
+def test_clean_title_output_never_contains_control_characters():
+    # Whitespace control characters separate words, so they collapse to a
+    # single space; the rest are corruption and are deleted outright.
+    spaced = common.clean_title("Name with\nevery\tkind\rof\x0bwhitespace\x0chere")
+    corrupt = common.clean_title("cor\x1frup\x00ted")
+    assert spaced == "Name with every kind of whitespace here"
+    assert corrupt == "corrupted"
+    for text in (spaced, corrupt):
+        assert not any(ch.isspace() and ch != " " for ch in text)
+        assert all(ch == " " or ch.isprintable() for ch in text)
+
+
+# ---------------------------------------------------------------------------
 # collapse_version_doi
 # ---------------------------------------------------------------------------
 

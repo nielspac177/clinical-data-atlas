@@ -25,7 +25,7 @@ from __future__ import annotations
 import re
 
 from atlas import io, vocab
-from atlas.normalize.common import Excluded, make_provenance
+from atlas.normalize.common import Excluded, clean_title, make_provenance
 from atlas.schema import Condition, Record, Years
 
 SOURCE = "gdc"
@@ -195,7 +195,7 @@ def normalize(
     if not (payload.get("released") and payload.get("state") == "open"):
         return Excluded(native_id=project_id, reason="not_released")
 
-    name = payload.get("name", "")
+    name = clean_title(payload.get("name"))
     primary_site = payload.get("primary_site") or []
     disease_type = payload.get("disease_type") or []
     program = payload.get("program") or {}

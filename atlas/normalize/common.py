@@ -6,11 +6,13 @@ tiny data carrier, so this module is safe to import and unit-test in
 isolation, exactly like `atlas.io`.
 
 `atlas/normalize/<source>.py` modules (Task 1.x, "M1 — Sources") are the
-callers: they use `clean_doi`/`collapse_version_doi` on whatever DOI a
-source reports, `year_of` on date-ish fields, `regex_sample_size` to pull
-a participant/record count out of free text when a source doesn't report
-one as a structured field, `license_to_spdx` on a source's license
-string, and `make_provenance` to build every `Record.provenance`.
+callers: they use `clean_title` on every `name` (and on any other text
+field a source hands over unmassaged), `clean_doi`/`collapse_version_doi`
+on whatever DOI a source reports, `year_of` on date-ish fields,
+`regex_sample_size` to pull a participant/record count out of free text
+when a source doesn't report one as a structured field, `license_to_spdx`
+on a source's license string, and `make_provenance` to build every
+`Record.provenance`.
 """
 
 from __future__ import annotations
@@ -18,8 +20,61 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass
 
-from atlas import vocab
+from atlas import io, vocab
 from atlas.schema import EnrichmentProv, Provenance
+
+# ---------------------------------------------------------------------------
+# Titles
+# ---------------------------------------------------------------------------
+
+# Non-whitespace control characters. Tab/LF/VT/FF/CR (0x09-0x0d) are
+# deliberately excluded: they are whitespace, and the collapse below turns
+# them into a space rather than deleting them and running words together.
+_CONTROL_CHARS_RE = re.compile(r"[\x00-\x08\x0e-\x1f\x7f]")
+_WHITESPACE_RUN_RE = re.compile(r"\s+")
+
+# HTML tags a source has actually been seen to leak into a text field.
+# An allowlist, because a dataset title is full of angle brackets that are
+# not markup -- "children <18 years", "SpO2 < 90%", "Cohort <n=40>".
+_HTML_TAG_NAMES = (
+    "a|b|br|code|div|em|h[1-6]|hr|i|img|li|ol|p|pre|small|span|strong|sub|sup"
+    "|table|tbody|td|th|thead|tr|u|ul"
+)
+# Either a bare tag (`<p>`, `</em>`, `<br/>`) or one carrying something that
+# looks like an attribute (`<a href="...">`). The `=` in that second form is
+# what keeps prose such as "Compare <A and B> groups" from reading as an
+# anchor tag purely because it starts with an "a".
+_HTML_FRAGMENT_RE = re.compile(
+    rf"(?i)</?({_HTML_TAG_NAMES})\s*/?>|<({_HTML_TAG_NAMES})\s[^<>]*=[^<>]*>"
+)
+
+
+def clean_title(s: str | None) -> str:
+    """A source's title text as a single clean line.
+
+    Every run of whitespace -- including the newlines that wrap a long
+    title mid-sentence in 8 live OpenNeuro records, e.g.
+    `openneuro:ds003126` -- collapses to one space, the ends are trimmed,
+    and non-whitespace control characters are dropped outright. A `name`
+    is rendered inline everywhere it appears (graph label, table cell,
+    CSV column, changelog table row), so it must never carry a newline or
+    a control character.
+
+    Text that is *plainly* a stray HTML fragment -- a recognizable tag,
+    per `_HTML_FRAGMENT_RE` -- is run through `io.strip_html` first, which
+    also unescapes its entities. Text that merely contains `<` or `>` is
+    left exactly as the source wrote it: comparisons ("children <18
+    years") are part of the title, not markup.
+
+    `None`, empty and whitespace-only input all return `""`, so a caller
+    can keep its own fallback chain with a plain `or`.
+    """
+    text = str(s or "")
+    if _HTML_FRAGMENT_RE.search(text):
+        text = io.strip_html(text)
+    text = _CONTROL_CHARS_RE.sub("", text)
+    return _WHITESPACE_RUN_RE.sub(" ", text).strip()
+
 
 # ---------------------------------------------------------------------------
 # DOIs

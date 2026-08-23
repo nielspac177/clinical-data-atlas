@@ -133,6 +133,34 @@ def test_name_ignores_alternative_titles():
     assert record.name == "Main"
 
 
+def test_name_with_an_embedded_newline_is_collapsed_to_one_line():
+    record = tcia.normalize(
+        synthetic(
+            datacite={
+                "doi": "10.7937/x",
+                "titles": [{"title": "Data from 4D Lung Imaging\nof NSCLC Patients"}],
+            }
+        ),
+        harvested_at=HARVESTED_AT,
+        first_seen=FIRST_SEEN,
+    )
+    assert record.name == "Data from 4D Lung Imaging of NSCLC Patients"
+
+
+def test_name_falls_through_a_whitespace_only_datacite_title():
+    """A title that cleans away to nothing is no title at all -- fall back
+    to the NBIA collection rather than shipping a blank name."""
+    record = tcia.normalize(
+        synthetic(
+            nbia={"collection": "My-Collection", "modalities": ["CT"]},
+            datacite={"doi": "10.7937/x", "titles": [{"title": "  \n "}]},
+        ),
+        harvested_at=HARVESTED_AT,
+        first_seen=FIRST_SEEN,
+    )
+    assert record.name == "My-Collection"
+
+
 def test_name_and_url_fall_back_when_there_is_no_datacite_match():
     record = tcia.normalize(
         synthetic(nbia={"collection": "My-Collection", "modalities": ["CT"]}),
