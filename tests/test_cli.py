@@ -32,7 +32,8 @@ def _isolate_data_tree(monkeypatch, tmp_path):
     constants, so pointing all of them at `tmp_path` for the whole module
     means a test that forgets to isolate itself still cannot clobber the
     committed catalog, graph or changelog -- `RawStore` included, since it
-    resolves `config.RAW` per construction rather than at import time.
+    resolves `config.RAW` per construction rather than at import time, and
+    `ROOT` too, so `.cache/` and `_site/` land in `tmp_path` as well.
     Tests that need to *see* the tree use `tree` below, which resolves the
     same paths.
 
@@ -40,6 +41,7 @@ def _isolate_data_tree(monkeypatch, tmp_path):
     `cli.main(["refresh"])` for real and rewrote all four `data/raw/*/
     manifest.json` files with the offline harvest failures it produced.
     """
+    monkeypatch.setattr(config, "ROOT", tmp_path)
     monkeypatch.setattr(config, "DATA", tmp_path / "data")
     monkeypatch.setattr(config, "RAW", tmp_path / "data" / "raw")
     monkeypatch.setattr(config, "CATALOG", tmp_path / "data" / "catalog")
@@ -651,7 +653,7 @@ def test_enrich_reads_normalized_records_and_writes_enriched_jsonl(
 
     assert cli.main(["enrich", "--llm", "none"]) == 0
 
-    rows = io.read_jsonl(tree.catalog / "enriched.jsonl")
+    rows = io.read_jsonl(tree.cache / "enriched.jsonl")
     assert [row["id"] for row in rows] == ["openneuro:ds001", "openneuro:ds002"]
     assert rows[0]["modalities"] == ["EEG"]  # rules ran on the enrichment text
     assert rows[1]["modalities"] == []  # no text: left alone, never guessed
@@ -666,7 +668,10 @@ def test_enrich_falls_back_to_the_catalog_when_nothing_is_normalized(tree, capsy
 
     assert cli.main(["enrich", "--llm", "none"]) == 0
     assert str(tree.catalog_file) in capsys.readouterr().out
-    assert (tree.catalog / "enriched.jsonl").exists()
+    assert (tree.cache / "enriched.jsonl").exists()
+    # Never under data/: `.cache/` is gitignored, so a debugging artifact
+    # cannot be swept into a data commit.
+    assert not (tree.catalog / "enriched.jsonl").exists()
 
 
 def test_enrich_never_writes_the_catalog(tree):
@@ -991,7 +996,6 @@ def _pass_every_local_gate(tree, monkeypatch, tmp_path, *, records: int = 2_400)
     monkeypatch.setattr(
         normalize, "get_normalizers", lambda: {"openneuro": (None, None)}
     )
-    monkeypatch.setattr(config, "ROOT", tmp_path)
     io.write_atomic(tmp_path / "_site" / "index.html", "<!doctype html>")
     return rows
 
@@ -1016,7 +1020,8 @@ def test_dod_all_local_gates_pass(tree, monkeypatch, tmp_path, capsys):
     assert "site built pass" in out
     assert "site url 200 pass 200 https://example.org/site/" in out
     assert "e2e suite green n/a CI" in out
-    assert "(0 FAIL)" in out
+    assert "url sample 2xx/3xx pass 20/20 ok (seed 0)" in out
+    assert out.strip().endswith("phase 0: 10 pass, 3 n/a, 0 FAIL")
 
 
 def test_dod_checks_the_deployed_url_and_its_stats_json(tree, monkeypatch, tmp_path):
@@ -1030,11 +1035,27 @@ def test_dod_checks_the_deployed_url_and_its_stats_json(tree, monkeypatch, tmp_p
 
     monkeypatch.setattr(http, "head_status", fake_head_status)
 
-    assert cli.main(["dod", "--phase", "0", "--url", "https://example.org/site/"]) == 0
-    assert checked == [
+    assert (
+        cli.main(
+            [
+                "dod",
+                "--phase",
+                "0",
+                "--url",
+                "https://example.org/site/",
+                "--sample",
+                "3",
+            ]
+        )
+        == 0
+    )
+    assert checked[:2] == [
         "https://example.org/site/",
         "https://example.org/site/data/stats.json",
     ]
+    # …then a seeded sample of the catalog's own urls.
+    assert len(checked) == 5
+    assert all(url.startswith("https://example.org/ds") for url in checked[2:])
 
 
 def test_dod_offline_marks_the_url_gates_not_applicable(
@@ -1071,11 +1092,10 @@ def test_dod_fails_on_a_short_catalog_and_a_missing_site(
     out = _squeezed(capsys.readouterr().out)
     assert "catalog >= 2400 records FAIL 3 records" in out
     assert "site built FAIL" in out
-    assert "(2 FAIL)" in out
+    assert "2 FAIL" in out
 
 
 def test_dod_without_any_data_fails_loudly(tree, monkeypatch, tmp_path, capsys):
-    monkeypatch.setattr(config, "ROOT", tmp_path)
     monkeypatch.setattr(harvest, "get_registry", dict)
     monkeypatch.setattr(normalize, "get_normalizers", dict)
 

@@ -57,7 +57,9 @@ the run was misconfigured, 3 every source failed (nothing written).
 `--offline` skips harvesting and normalizes `data/raw/` as it stands, with
 the LLM/MeSH/ROR caches serving reads only. `enrich`/`graph`/`diff` run
 single stages of that same pipeline for debugging; only `refresh` writes
-`data/catalog/catalog.jsonl`.
+`data/catalog/catalog.jsonl`, and `atlas enrich` writes its records to the
+gitignored `.cache/enriched.jsonl` (its real product is the warmed
+LLM/MeSH/ROR caches under `data/raw/enrich/`).
 
 ## 4. Schema
 `atlas/schema.py` (pydantic v2) is the single source of truth. `docs/schema.json`

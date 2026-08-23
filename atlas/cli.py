@@ -339,9 +339,13 @@ def _cmd_enrich(args: argparse.Namespace) -> int:
     A debugging/cache-warming counterpart to `refresh`, which runs the
     same stage in the middle of the full pipeline: the LLM answers, MeSH
     ids and ROR ids this fills are cached on disk, so a later `refresh`
-    reuses them instead of re-asking. It deliberately does **not** touch
-    `catalog.jsonl` -- that file is `refresh`'s output, after dedupe and
-    validation, and half a pipeline must not be able to produce it.
+    reuses them instead of re-asking. Its own output goes to the
+    gitignored `.cache/`, not `data/`: it is a debugging artifact, and a
+    file under `data/catalog/` would sooner or later be swept into a data
+    commit as though it were part of the catalog. It deliberately does
+    **not** touch `catalog.jsonl` either -- that file is `refresh`'s
+    output, after dedupe and validation, and half a pipeline must not be
+    able to produce it.
 
     Exit codes: 0 on success, 1 when there is nothing to enrich (no
     normalized records and no catalog -- run `harvest`/`normalize` first)
@@ -379,15 +383,20 @@ def _cmd_enrich(args: argparse.Namespace) -> int:
         return 2
 
     records.sort(key=lambda record: record.id)
-    out_path = paths.catalog / "enriched.jsonl"
+    out_path = paths.cache / "enriched.jsonl"
     io.write_jsonl(out_path, [record.model_dump(mode="json") for record in records])
     print(
         f"backend={stats['backend']} calls={stats['calls']} "
         f"cache_hits={stats['cache_hits']} guard_drops={stats['guard_drops']} "
         f"failures={stats['failures']} rules={stats['rules_applied']} "
         f"llm={stats['records_enriched']} mesh={stats['mesh_resolved']} "
-        f"ror={stats['ror_resolved']}"
+        f"ror={stats['ror_resolved']} record_errors={stats['record_errors']}"
     )
+    for message in stats["errors"]:
+        print(f"  {message}", file=sys.stderr)
+    hidden = stats["record_errors"] - len(stats["errors"])
+    if hidden > 0:
+        print(f"  … and {hidden} more record error(s)", file=sys.stderr)
     print(f"wrote {out_path}")
     return 0
 
@@ -446,11 +455,11 @@ def _cmd_diff(args: argparse.Namespace) -> int:
     catalog_diff, markdown = refresh.stage_diff(
         refresh.head_catalog(paths.catalog_file),
         rows,
-        date=refresh._today(),
+        date=refresh.today(),
         source_results=refresh.manifest_results(sources, raw_root=paths.raw),
     )
     dated_path, _latest = diff.write_changelog(
-        markdown, date=refresh._today(), out_dir=paths.changelog
+        markdown, date=refresh.today(), out_dir=paths.changelog
     )
     counts = catalog_diff.counts
     print(
@@ -543,6 +552,34 @@ def _cmd_refresh(args: argparse.Namespace) -> int:
 _URL_OK_RANGE = range(200, 400)
 
 
+def _catalog_urls(rows: list[dict]) -> list[str]:
+    """Every distinct url in `rows`, sorted -- the population both
+    `check-urls` and `dod`'s url gate sample from. Sorted first so a given
+    seed picks the same urls whatever order the catalog was read in."""
+    return sorted({row["url"] for row in rows if row.get("url")})
+
+
+def _sample_url_statuses(
+    urls: list[str], sample_size: int, seed: int
+) -> tuple[list[str], Counter, list[tuple[int, str]]]:
+    """Check a seeded random sample of `urls`; return `(sample, counts,
+    failures)` where `counts` maps status code -> how many, and `failures`
+    lists the `(status, url)` pairs outside 2xx/3xx (0 == unreachable).
+
+    Shared by `check-urls` and `dod` so the definition-of-done gate and the
+    command a human runs to investigate it sample the *same* urls for the
+    same seed."""
+    sample = sorted(random.Random(seed).sample(urls, min(sample_size, len(urls))))
+    counts: Counter = Counter()
+    failures: list[tuple[int, str]] = []
+    for url in sample:
+        status, _final_url = http.head_status(url)
+        counts[status] += 1
+        if status not in _URL_OK_RANGE:
+            failures.append((status, url))
+    return sample, counts, failures
+
+
 def _cmd_check_urls(args: argparse.Namespace) -> int:
     """HEAD (falling back to GET) a seeded random sample of catalog URLs
     and report the status codes.
@@ -561,22 +598,12 @@ def _cmd_check_urls(args: argparse.Namespace) -> int:
         print(f"no catalog at {paths.catalog_file}", file=sys.stderr)
         return 0
 
-    urls = sorted(
-        {row["url"] for row in io.read_jsonl(paths.catalog_file) if row.get("url")}
-    )
+    urls = _catalog_urls(io.read_jsonl(paths.catalog_file))
     if not urls:
         print("no urls in the catalog")
         return 0
 
-    sample = sorted(random.Random(args.seed).sample(urls, min(args.sample, len(urls))))
-    counts: Counter = Counter()
-    failures: list[tuple[int, str]] = []
-    for url in sample:
-        status, _final_url = http.head_status(url)
-        counts[status] += 1
-        if status not in _URL_OK_RANGE:
-            failures.append((status, url))
-
+    sample, counts, failures = _sample_url_statuses(urls, args.sample, args.seed)
     print(f"checked {len(sample)} of {len(urls)} urls (seed {args.seed})")
     print("status  count")
     for status, count in sorted(counts.items()):
@@ -597,6 +624,13 @@ def _cmd_check_urls(args: argparse.Namespace) -> int:
 # one generated file with a hard size ceiling (plan §M4/T4.4).
 MAX_GRAPH_BYTES = 2_500_000
 MIN_PHASE0_RECORDS = 2_400
+# The url sample the Phase 0 gate takes, and the share of it that has to
+# answer 2xx/3xx. Not 100%: sources rename pages between refreshes, and the
+# plan's gate is "2xx/3xx or documented", so one stale link out of twenty is
+# a residual to document, not a failed phase.
+DOD_URL_SAMPLE = 20
+DOD_URL_SEED = 0
+DOD_URL_PASS_RATIO = 0.95
 
 
 def _gate(name: str, ok: bool | None, detail: str = "") -> tuple[str, str, str]:
@@ -605,7 +639,9 @@ def _gate(name: str, ok: bool | None, detail: str = "") -> tuple[str, str, str]:
     return name, status, detail
 
 
-def _phase0_gates(url: str | None, *, offline: bool) -> list[tuple[str, str, str]]:
+def _phase0_gates(
+    url: str | None, *, offline: bool, sample: int, seed: int
+) -> list[tuple[str, str, str]]:
     """Every Phase 0 gate this machine can answer, plus `n/a` rows for the
     ones only CI can (the browser suite and the Pages deploy)."""
     paths = refresh.paths()
@@ -684,12 +720,36 @@ def _phase0_gates(url: str | None, *, offline: bool) -> list[tuple[str, str, str
         ):
             status, _final = http.head_status(target)
             gates.append(_gate(label, status in _URL_OK_RANGE, f"{status} {target}"))
+
+        catalog_urls = _catalog_urls(rows)
+        if catalog_urls:
+            checked, _counts, failures = _sample_url_statuses(
+                catalog_urls, sample, seed
+            )
+            alive = len(checked) - len(failures)
+            ratio = alive / len(checked)
+            gates.append(
+                _gate(
+                    "url sample 2xx/3xx",
+                    ratio >= DOD_URL_PASS_RATIO,
+                    f"{alive}/{len(checked)} ok (seed {seed})"
+                    + (
+                        f", worst: {failures[0][0]} {failures[0][1]}"
+                        if failures
+                        else ""
+                    ),
+                )
+            )
+        else:
+            gates.append(_gate("url sample 2xx/3xx", False, "no catalog urls"))
     else:
         reason = "offline" if offline else "no --url"
         gates.append(_gate("site url 200", None, reason))
         gates.append(_gate("data/stats.json 200", None, reason))
+        gates.append(
+            _gate("url sample 2xx/3xx", None, f"{reason} — run `atlas check-urls`")
+        )
 
-    gates.append(_gate("url sample 2xx/3xx", None, "run `atlas check-urls`"))
     gates.append(_gate("e2e suite green", None, "CI"))
     gates.append(_gate("0 console errors", None, "CI"))
     gates.append(_gate("Pages deploy green", None, "CI"))
@@ -699,10 +759,12 @@ def _phase0_gates(url: str | None, *, offline: bool) -> list[tuple[str, str, str
 def _cmd_dod(args: argparse.Namespace) -> int:
     """Print a phase's definition-of-done as a pass/fail table.
 
-    Only the gates answerable from this checkout are actually evaluated;
-    the browser suite, the console-error count and the Pages deploy are
-    CI's job and print as `n/a`, so the table never claims to have checked
-    something it didn't. Exit 1 if any evaluated gate fails, 2 for a phase
+    Only the gates answerable from here are actually evaluated; the
+    browser suite, the console-error count and the Pages deploy are CI's
+    job and print as `n/a`, so the table never claims to have checked
+    something it didn't. With `--url` and a network, the deployed site, its
+    `data/stats.json`, and a `--sample`-sized seeded sample of catalog urls
+    are checked for real. Exit 1 if any evaluated gate fails, 2 for a phase
     with no gates defined yet.
     """
     if args.phase != 0:
@@ -710,15 +772,17 @@ def _cmd_dod(args: argparse.Namespace) -> int:
         return 2
 
     offline = args.offline or config.OFFLINE
-    gates = _phase0_gates(args.url, offline=offline)
+    gates = _phase0_gates(args.url, offline=offline, sample=args.sample, seed=args.seed)
     width = max(len(name) for name, _status, _detail in gates)
     for name, status, detail in gates:
         print(f"{name.ljust(width)}  {status:<4}  {detail}".rstrip())
 
+    passed = [name for name, status, _detail in gates if status == "pass"]
+    skipped = [name for name, status, _detail in gates if status == "n/a"]
     failed = [name for name, status, _detail in gates if status == "FAIL"]
     print(
-        f"phase {args.phase}: {len(gates) - len(failed)} of {len(gates)} "
-        f"gate(s) not failing ({len(failed)} FAIL)"
+        f"phase {args.phase}: {len(passed)} pass, {len(skipped)} n/a, "
+        f"{len(failed)} FAIL"
     )
     return 1 if failed else 0
 
@@ -846,7 +910,12 @@ def build_parser() -> argparse.ArgumentParser:
         "--strict", action="store_true", help="Exit 2 if any source failed"
     )
     refresh_parser.add_argument(
-        "--dry-run", action="store_true", help="Run every stage, write no output"
+        "--dry-run",
+        action="store_true",
+        help=(
+            "Run every stage; write no catalog/graph/changelog "
+            "(harvest and caches still update data/)"
+        ),
     )
     refresh_parser.add_argument("--llm", default=None, help="LLM backend override")
     refresh_parser.add_argument("--max-llm-calls", type=int, default=None)
@@ -887,6 +956,18 @@ def build_parser() -> argparse.ArgumentParser:
     )
     dod_parser.add_argument(
         "--offline", action="store_true", help="Skip the gates that need the network"
+    )
+    dod_parser.add_argument(
+        "--sample",
+        type=int,
+        default=DOD_URL_SAMPLE,
+        help="How many catalog urls the url-sample gate checks",
+    )
+    dod_parser.add_argument(
+        "--seed",
+        type=int,
+        default=DOD_URL_SEED,
+        help="Random seed for the url-sample gate",
     )
     dod_parser.set_defaults(func=_cmd_dod)
 

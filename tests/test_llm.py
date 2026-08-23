@@ -283,7 +283,10 @@ def test_cli_backend_parses_structured_output_envelope(monkeypatch):
 
     cmd = seen["cmd"]
     assert cmd[0] == "claude"
-    assert "--bare" in cmd
+    # Never `--bare`: it made the CLI answer every real request with
+    # is_error/api_error (bare mode misses the subscription credentials),
+    # while the same command without it succeeds.
+    assert "--bare" not in cmd
     assert "--no-session-persistence" in cmd
     assert cmd[cmd.index("--output-format") + 1] == "json"
     assert cmd[cmd.index("--model") + 1] == "opus"
@@ -317,6 +320,53 @@ def test_cli_backend_nonzero_exit_raises_with_stderr_tail(monkeypatch):
     _fake_run(monkeypatch, stdout="", stderr="boom: model unavailable", returncode=2)
     with pytest.raises(llm.LLMError, match="model unavailable"):
         llm.ClaudeCLIBackend().complete_json("PROMPT", prompts.OUTPUT_SCHEMA)
+
+
+def test_cli_backend_error_envelope_names_the_reason_and_detail(monkeypatch):
+    """A CLI that fails *inside* a zero-exit JSON envelope must produce a
+    message someone can act on, not a bare exit code."""
+    _fake_run(
+        monkeypatch,
+        stdout=json.dumps(
+            {
+                "type": "result",
+                "subtype": "error_during_execution",
+                "is_error": True,
+                "terminal_reason": "api_error",
+                "result": "API Error: 401 authentication_error",
+            }
+        ),
+    )
+    with pytest.raises(llm.LLMError) as exc_info:
+        llm.ClaudeCLIBackend().complete_json("PROMPT", prompts.OUTPUT_SCHEMA)
+
+    message = str(exc_info.value)
+    assert "api_error" in message
+    assert "401 authentication_error" in message
+
+
+def test_cli_backend_error_envelope_falls_back_to_subtype(monkeypatch):
+    _fake_run(
+        monkeypatch,
+        stdout=json.dumps({"type": "result", "is_error": True, "subtype": "timeout"}),
+        returncode=1,
+    )
+    with pytest.raises(llm.LLMError, match="timeout"):
+        llm.ClaudeCLIBackend().complete_json("PROMPT", prompts.OUTPUT_SCHEMA)
+
+
+def test_cli_backend_reads_the_envelope_even_on_a_nonzero_exit(monkeypatch):
+    """The CLI exits non-zero *and* writes its envelope; the envelope is
+    the better error, so stdout is read before the exit code is trusted."""
+    payload = {"items": [{"id": ID_A}]}
+    _fake_run(
+        monkeypatch,
+        stdout=json.dumps({"type": "result", "structured_output": payload}),
+        returncode=1,
+    )
+    assert (
+        llm.ClaudeCLIBackend().complete_json("PROMPT", prompts.OUTPUT_SCHEMA) == payload
+    )
 
 
 def test_cli_backend_unparsable_stdout_raises(monkeypatch):

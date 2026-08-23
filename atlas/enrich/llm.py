@@ -192,6 +192,17 @@ class ClaudeCLIBackend:
     state behind, and ``--json-schema`` gives the CLI path the same
     structured-output guarantee the API path gets. The CLI takes no
     separate system prompt, so it is prepended to the user prompt.
+
+    Deliberately **not** ``--bare``: with that flag the CLI answered every
+    request in a real run with ``is_error: true`` /
+    ``terminal_reason: "api_error"`` (bare mode does not pick up the
+    subscription credentials this machine authenticates with), while the
+    identical command without it succeeds and returns its answer through a
+    structured-output tool turn. The flag cost a whole 332-call refresh
+    before the failures were traced, because the CLI reports that failure
+    *inside* a JSON envelope rather than on stderr -- which is why
+    :meth:`_call` reads the envelope's own error fields instead of just
+    echoing an exit code.
     """
 
     name = "claude_cli"
@@ -206,7 +217,6 @@ class ClaudeCLIBackend:
         command = [
             "claude",
             "-p",
-            "--bare",
             "--no-session-persistence",
             "--output-format",
             "json",
@@ -230,15 +240,21 @@ class ClaudeCLIBackend:
         except subprocess.TimeoutExpired as exc:
             raise LLMError(f"the 'claude' CLI timed out after {CLI_TIMEOUT}s") from exc
 
-        if proc.returncode != 0:
+        # A failed run can still exit 0 and report the failure inside its
+        # JSON envelope, so an exit code alone is never the whole story --
+        # only reach for it when there is no envelope to read.
+        if proc.returncode != 0 and not proc.stdout.strip():
             raise LLMError(
                 f"the 'claude' CLI exited {proc.returncode}: {_tail(proc.stderr)}"
             )
 
         envelope = _parse_json(
-            proc.stdout, f"claude CLI stdout (stderr: {_tail(proc.stderr)})"
+            proc.stdout,
+            f"claude CLI stdout (exit {proc.returncode}, stderr: {_tail(proc.stderr)})",
         )
         if isinstance(envelope, dict):
+            if envelope.get("is_error"):
+                raise LLMError(_cli_error_message(envelope, proc.returncode))
             if "structured_output" in envelope:
                 return envelope["structured_output"]
             if isinstance(envelope.get("result"), str):
@@ -448,6 +464,23 @@ def _parse_json(text: str, what: str) -> dict | list:
         return json.loads(text)
     except json.JSONDecodeError as exc:
         raise LLMError(f"unparsable JSON from {what}: {exc}") from exc
+
+
+def _cli_error_message(envelope: dict, returncode: int) -> str:
+    """A diagnosable message from a ``claude`` CLI envelope that reported
+    ``is_error: true``.
+
+    The CLI puts the *why* in `terminal_reason` (e.g. ``"api_error"``) and
+    the *what* in `result`; without both, a failure reads as a bare
+    "exited 1:" with an empty stderr and tells whoever is debugging
+    nothing at all.
+    """
+    reason = envelope.get("terminal_reason") or envelope.get("subtype") or "unknown"
+    result = envelope.get("result")
+    detail = result if isinstance(result, str) else json.dumps(result)
+    message = f"the 'claude' CLI reported an error (exit {returncode}, {reason})"
+    tail = _tail(detail)
+    return f"{message}: {tail}" if tail and tail != "null" else message
 
 
 def _tail(text: str | None, limit: int = 400) -> str:

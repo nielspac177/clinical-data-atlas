@@ -60,10 +60,11 @@ jobs:
         run: uv run atlas schema --check
 
       - name: Validate catalog
-        # `atlas validate` is still a stub (Task 2.7) and exits 2 today; once a
-        # catalog exists this step runs for real -- gate on the catalog's
-        # existence instead, so the check turns on automatically once the
-        # pipeline produces data/catalog/catalog.jsonl.
+        # `atlas validate --strict` checks the catalog against the schema and
+        # the graph against its contract, and exits 1 on any error. Gated on
+        # the catalog's existence so a branch that has not committed data yet
+        # (or a fresh checkout before the first refresh) passes CI instead of
+        # failing on a file that is not supposed to be there.
         run: |
           if [ -f data/catalog/catalog.jsonl ]; then
             uv run atlas validate --strict
