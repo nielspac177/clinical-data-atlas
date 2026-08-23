@@ -11,8 +11,11 @@ A public, living catalog of open & gated clinical/neuroscience datasets: a
   (ADNI, PPMI, NIS, NSQIP, SEER, ...) are cataloged from public docs only.
 - **APIs first, polite scraping second, never against ToS.** Every request
   sends `atlas.config.UA` = `clinical-data-atlas/<version> (+<REPO_URL>;
-  mailto:<MAILTO>)`, rate-limited (`POLITE_DELAY`, 0.35s/host default), and
-  respects robots.txt.
+  mailto:<MAILTO>)`, rate-limited (`POLITE_DELAY`, 0.35s/host default),
+  retried with exponential backoff (429 yes, other 4xx no). robots.txt is
+  checked by hand per host when a source is onboarded and recorded in
+  `docs/sources.md`; the client does not re-fetch it per request, so a new
+  or moved endpoint needs that check redone.
 - **One canonical schema** (`atlas/schema.py`) for every record, whatever
   the source.
 - **Provenance on every record**: source, harvest method, harvested-at,
@@ -35,7 +38,7 @@ A public, living catalog of open & gated clinical/neuroscience datasets: a
 | `data/graph/` | `graph.json` + `search-index.json` consumed by the site |
 | `data/changelog/` | One markdown diff per monthly refresh |
 | `site/` | Static site (no backend), deployed to GitHub Pages |
-| `docs/` | `sources.md`, `schema.md`, `quality/`, `superpowers/` (spec + plan) |
+| `docs/` | `sources.md` + `sources/`, `schema.md`, `schema.json`, `superpowers/` (spec + plan); `quality/` once the review loop has run |
 | `tests/` | `conftest.py`, fixtures, unit/e2e tests |
 | `.github/` | CI, deploy, monthly-refresh workflows; issue forms |
 
