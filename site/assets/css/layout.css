@@ -188,11 +188,21 @@ body.page-graph {
   padding: var(--sp-5) var(--sp-5) var(--sp-7);
 }
 
+/* Task 3.3b fix: `.table-wrap` (below) isn't the only column in this
+   grid row with a viewport-relative `max-height` - `.facets` is the
+   *other* one, and with 7 facet groups (each internally capped at
+   `.facet-options`'s own 15rem) its natural content is tall enough that
+   it, not `.table-panel`, was the taller of the two columns once the
+   wrap's own height was corrected below - `.table-main`'s grid row takes
+   the taller column's height either way, so a page could still scroll
+   past *this* max-height even with `.table-wrap` perfectly tuned. Same
+   fix, same method: measured with Playwright and given the same kind of
+   margin past the exact break-even point. */
 .facets {
   position: sticky;
   top: calc(var(--header-h) + var(--sp-5));
   align-self: start;
-  max-height: calc(100dvh - var(--header-h) - var(--sp-7));
+  max-height: calc(100dvh - var(--header-h) - var(--sp-7) - 2rem);
   overflow-y: auto;
   padding-right: var(--sp-2);
 }
@@ -215,9 +225,30 @@ body.page-graph {
    viewport-relative height, with its own header staying pinned to its own
    top edge - a standard, working "frozen header" table, on both axes, and
    still never the page (no horizontal *or* vertical page scroll). */
+/* Task 3.3b fix: the `8rem` buffer above was under-calibrated - measured
+   against the real 2,655-record catalog at 1280x800 it left ~24-72px of
+   *page*-level vertical scroll (worse the more of "everything else in
+   the column" was on screen - e.g. the show-more/show-all row, hidden
+   when a filter already fits the whole result under the 100-row chunk),
+   because it didn't cover everything `.table-wrap` actually shares the
+   column with: `.table-main`'s own padding-block, the toolbar row, the
+   status line, and that show-more/show-all row (each with its own
+   margin). Measured directly with Playwright
+   (`getBoundingClientRect`/`scrollHeight` on the real build, both at
+   1280x800 and 1440x900, with the show-more row visible - the taller,
+   binding case since a fixed CSS `max-height` can't shrink to hand that
+   space back when the row is absent) and increased until the page
+   stopped scrolling: `13rem` (208px) beyond `--header-h`, with a little
+   headroom past the exact break-even point for cross-browser/font
+   rounding - past that point `.facets` (above), not this wrap, is what
+   ends up governing the page's actual height, so there's no benefit to
+   shrinking this further. `min-height` keeps the wrap - and the frozen
+   header inside it - usably tall rather than collapsing on a short
+   viewport; the page is allowed to scroll past that floor instead. */
 .table-wrap {
   overflow: auto;
-  max-height: calc(100dvh - var(--header-h) - 8rem);
+  min-height: 20rem;
+  max-height: calc(100dvh - var(--header-h) - 13rem);
   border: 1px solid var(--border);
   border-radius: var(--r-md);
   background: var(--surface);

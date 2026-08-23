@@ -74,7 +74,12 @@ function nameCell(row, onRowSelect, active) {
   button.type = "button";
   button.className = "btn btn-quiet";
   if (active) button.setAttribute("aria-current", "true");
-  button.textContent = row.name || row.id;
+  const name = row.name || row.id;
+  button.textContent = name;
+  // The cell is bounded and clamps to 3 lines (components.css); `title`
+  // is the fallback for the real catalog's longest names (some run past
+  // 200 characters), which the clamp cuts off with an ellipsis.
+  button.title = name;
   button.addEventListener("click", () => onRowSelect?.(row.id));
   td.appendChild(button);
   return td;

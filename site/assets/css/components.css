@@ -590,9 +590,67 @@ button.node-label:hover {
   font-size: var(--fs-sm);
 }
 
+/* Task 3.3b fix: `table-layout: fixed` so each column's width comes only
+   from the `th[data-column]` rules below, not from auto layout's content-
+   driven negotiation. Auto layout was the original problem in a second
+   way beyond the raw Name-column bug: when the table's own width is
+   capped (100% of `.table-wrap`) but content wants more, auto layout
+   shrinks whichever columns have the most "slack" between their min- and
+   preferred-content width to absorb the deficit - and a wrappable Name
+   column has nearly all of it (min-content near-zero once
+   `overflow-wrap: anywhere` applies), so it got squeezed to a sliver
+   while short, unwrappable columns (Source, Access, Years, Sample) kept
+   their full natural width regardless of what `.cell-name` requested.
+   Fixed layout sizes every column from its header cell once, independent
+   of content, so the explicit widths below are the actual widths, and
+   `width: 100%` becomes a floor, not a cap: the column widths summed
+   below run past it, so the table overflows into `.table-wrap`'s own
+   `overflow: auto` exactly where Countries/Species fall off the edge -
+   by design (Ruling: those two may sit beyond the fold). */
 .data-table {
   width: 100%;
+  table-layout: fixed;
   font-size: var(--fs-sm);
+}
+
+/* Budget for the six columns the spec requires visible without scrolling
+   `.table-wrap` at 1280px (Name + these) has to clear the wrap at its
+   narrowest (rail + wrap padding leave it ~948px there): 32ch (Name) +
+   6+9+9+7.5+5+6rem = well under that, measured with headroom to spare.
+   Source/Years/Sample/Countries/Species are plain text (`textCell()`,
+   normal wrapping) so a tight width just wraps them at a space if it
+   ever needs to; Access is a nowrap `.badge` sized to fit "Registration"/
+   "Credentialed" (the longest tier labels) on one line. */
+.data-table th[data-column="source"] {
+  width: 6rem;
+}
+
+.data-table th[data-column="domains"] {
+  width: 9rem;
+}
+
+.data-table th[data-column="modalities"] {
+  width: 9rem;
+}
+
+.data-table th[data-column="access"] {
+  width: 7.5rem;
+}
+
+.data-table th[data-column="years"] {
+  width: 5rem;
+}
+
+.data-table th[data-column="sample_size"] {
+  width: 6rem;
+}
+
+.data-table th[data-column="countries"] {
+  width: 11rem;
+}
+
+.data-table th[data-column="species"] {
+  width: 7rem;
 }
 
 .data-table th,
@@ -675,9 +733,48 @@ button.node-label:hover {
   background: color-mix(in srgb, var(--accent) 12%, transparent);
 }
 
+/* Task 3.3b fix: a real catalog has names up to ~230 characters (vs. the
+   fixture's short samples), and an unbounded Name column let one of them
+   stretch to ~1,134px - dragging the whole table to ~2,100px inside a
+   ~946px `.table-wrap` and scrolling every other column out of view. The
+   `th[data-column="name"]` selector carries the same width onto the
+   header cell (it has no `.cell-name` class of its own - see table.html)
+   so the column doesn't get re-widened by the sort-button label. `ch` is
+   relative to this table's own font (`--fs-sm`), so 32ch tracks the type
+   scale rather than a raw pixel guess. */
+.data-table th[data-column="name"],
 .data-table .cell-name {
-  min-width: 16rem;
+  width: 32ch;
+  max-width: 32ch;
+}
+
+.data-table .cell-name {
   font-weight: 500;
+}
+
+/* The Name button must wrap and clamp itself, not just its cell: an
+   inline-flex `.btn` (see components.css above) is shrink-to-fit and
+   sizes to its unwrapped text regardless of the td's own width. Switching
+   it to the `-webkit-box`/`line-clamp` pattern (supported in every
+   evergreen engine, not just Chromium) makes it a block that fills the
+   cell and wraps normally, then caps runaway titles at 3 lines instead of
+   pushing the row taller without bound. `overflow-wrap: anywhere` (not
+   `break-word`) is what actually lets a single unbroken token - a run
+   like "(CT4Harmonization-Multicentric)" - shrink below its own length
+   for the *column-width* calculation, not just visually: `break-word`
+   wraps but doesn't relieve auto table layout's min-content width, so
+   without `anywhere` one long token would still blow the column back out.
+   `title` on the button (table.js) carries the untruncated name. */
+.data-table .cell-name button {
+  display: -webkit-box;
+  width: 100%;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  text-align: left;
 }
 
 .data-table .cell-num {
@@ -688,11 +785,32 @@ button.node-label:hover {
 /* Task 3.3 addition: the domain/modality chips inside a Domains/
    Modalities cell need their own gap without a <ul>/.chip-list wrapper
    (a table cell can't take on list semantics the same way) - this is
-   that gap, replacing what were per-chip inline margins. */
+   that gap, replacing what were per-chip inline margins.
+   Task 3.3b: `max-width: 100%` so `flex-wrap: wrap` has a real edge to
+   wrap against - the Domains/Modalities columns are now a fixed width
+   (see `.data-table` above), so filling the cell is exactly the bound
+   real domain/modality labels ("Gastroenterology hepatology",
+   "Endocrinology metabolism", ...) need to wrap onto a second line
+   instead of pushing the column wider. */
 .cell-chips {
   display: inline-flex;
   flex-wrap: wrap;
+  max-width: 100%;
   gap: 2px 4px;
+}
+
+/* A `.chip` elsewhere (facets, legend) is always short, curated
+   vocabulary, so it stays on one line. Inside a table cell it can carry
+   an uncapitalized modality id straight from the data ("physiological_
+   signals") or the longest domain labels - a handful of them are wider
+   than the (narrow, by design) Domains/Modalities columns can fit on one
+   line. Letting a single chip wrap internally, rather than requiring the
+   whole column be sized around its widest possible pill, is what makes
+   `.cell-chips`'s own `max-width: 100%` above actually a hard bound
+   instead of an occasional overflow. */
+.cell-chips .chip {
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 
 .table-more {
