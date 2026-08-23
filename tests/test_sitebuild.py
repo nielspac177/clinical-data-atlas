@@ -102,6 +102,35 @@ def test_build_copies_the_site(built: Path) -> None:
         assert (built / name).is_file(), name
 
 
+def test_social_card_is_a_committed_1200x630_png(built: Path) -> None:
+    """`og:image` has to be a raster.
+
+    X, Slack, LinkedIn and iMessage all refuse an SVG card, so
+    `site/assets/img/og.png` (rendered from `og.svg` by
+    `python -m atlas.tools.og_png`, and committed) is what the tags point
+    at. The SVG stays alongside it as the editable source.
+    """
+    png = built / "assets" / "img" / "og.png"
+    assert png.is_file(), "run `make og` and commit site/assets/img/og.png"
+    assert (built / "assets" / "img" / "og.svg").is_file()
+
+    header = png.read_bytes()[:24]
+    assert header[:8] == b"\x89PNG\r\n\x1a\n"
+    # IHDR: width and height, big-endian, right after the signature.
+    assert int.from_bytes(header[16:20], "big") == 1200
+    assert int.from_bytes(header[20:24], "big") == 630
+
+    tags = []
+    for page in sorted(built.glob("*.html")):
+        text = page.read_text()
+        assert "og.svg" not in text, page.name
+        tags += re.findall(r"<meta[^>]+(?:og:image|twitter:image)[^>]*>", text)
+
+    assert len(tags) == 8  # og:image + twitter:image on all four real pages
+    for tag in tags:
+        assert f'content="{config.SITE_URL}assets/img/og.png"' in tag, tag
+
+
 def test_build_copies_the_graph_data(built: Path) -> None:
     for name in ("graph.json", "search-index.json", "stats.json"):
         copied = json.loads((built / "data" / name).read_text())
