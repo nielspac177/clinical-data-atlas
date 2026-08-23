@@ -17,9 +17,16 @@
 - **robots.txt:** `services.cancerimagingarchive.net` → 404 (none served);
   `api.datacite.org` → 404 (none served); `www.cancerimagingarchive.net`
   (link target only, never crawled) → `User-agent: * / Disallow:` — allow all.
-- **Verified:** 2026-08-22 · **Count:** 242 records — 156 public NBIA
-  collections (151 of them joined to a DataCite DOI) + 86 gated DataCite
-  `/collection/` DOIs that NBIA does not list publicly.
+- **Verified:** 2026-08-22, re-probed 2026-08-23 · **Live counts:** 156
+  public NBIA collections and 317 DataCite DOIs under prefix `10.7937`,
+  identical on both dates.
+- **Committed snapshot:** `data/raw/tcia/manifest.json` `harvested_at` =
+  2026-08-22, **241** records, all 241 in `data/catalog/catalog.jsonl`:
+  155 with an NBIA half (151 joined to a DataCite DOI, 4 NBIA-only) plus 86
+  gated DataCite `/collection/` DOIs that NBIA does not list publicly. The
+  156th public collection, `PSMA-PET-CT-Lesions`, is in the snapshot as a
+  DataCite-only record — see "A mixed-case url slug defeats join rule (c)"
+  under Quirks.
 - **Deviation from brief:** `getCollectionDescriptions` and every
   `*ValuesAndCounts` endpoint are unusable and are never called (see Quirks);
   the brief's example gated collection `prostate-mri-us-biopsy` is in fact a
@@ -97,7 +104,27 @@ winner; treating it as gated would list the same collection twice.
 
 **Five collections match no DOI** (`MIDI-B-*` ×4, `PSMA-PET-CT-Lesions`).
 They still produce records — from NBIA alone, `record_status="needs_review"`,
-name = the collection name, summary = a template built from NBIA facts.
+name = the collection name, summary = a template built from NBIA facts. Four
+of them (the `MIDI-B-*` set) are in the committed snapshot in exactly that
+shape; the fifth is the case below.
+
+**A mixed-case url slug defeats join rule (c).** `by_slug` in
+`_candidates()` is keyed on the DataCite landing-page slug exactly as the
+url spells it, while the lookup asks for `io.slugify(name)`, which is
+lowercased. A slug that is already lowercase (`4d-lung`) matches; one that
+is not does not. The live case is `PSMA-PET-CT-Lesions`: NBIA lists the
+collection, DataCite has `10.7937/r7ep-3x37` at
+`…/collection/PSMA-PET-CT-Lesions/`, and rules (a) and (b) do not fire for
+it either, so the DOI stays "unmatched" and is written as a *gated* record.
+Because a gated record's `native_id` is that same url slug, its envelope
+lands on the identical raw-store key as the NBIA-only record and is the one
+that survives — hence 241 records for 156 collections, and
+`tcia:psma-pet-ct-lesions` carrying `access="registration"` and
+`record_status="needs_review"` for what is really a public collection. The
+`needs_review` flag is doing its job; the fix belongs in the join rule
+(compare slugs case-insensitively) and is deliberately not papered over by
+hand-editing the catalog. Not yet fixed — recorded here so the next TCIA
+change starts from the real behavior.
 
 **`limit` caps records, not collections.** A truncated run spends what is
 left of `limit` on gated records, and gating is always decided against the
