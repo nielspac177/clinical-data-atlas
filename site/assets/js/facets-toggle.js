@@ -127,10 +127,19 @@ export function createFacetsToggle(facets, options = {}) {
   let state = {};
   let expanded = !media.matches;
 
+  // `update()` runs on every refresh, including for a keystroke in the
+  // toolbar's text box that cannot change the count — so each write is
+  // guarded rather than repeated.
   function render() {
-    label.textContent = filtersLabel(state);
-    button.setAttribute("aria-expanded", expanded ? "true" : "false");
-    facets.setAttribute("data-expanded", expanded ? "true" : "false");
+    const text = filtersLabel(state);
+    if (label.textContent !== text) label.textContent = text;
+    const open = expanded ? "true" : "false";
+    if (button.getAttribute("aria-expanded") !== open) {
+      button.setAttribute("aria-expanded", open);
+    }
+    if (facets.getAttribute("data-expanded") !== open) {
+      facets.setAttribute("data-expanded", open);
+    }
   }
 
   function onClick() {
