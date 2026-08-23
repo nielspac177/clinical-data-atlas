@@ -13,6 +13,11 @@ the site, so a font fallback or a gradient that works in the browser
 works here too, and no new runtime dependency is added for a file that is
 regenerated perhaps twice a year. Regenerate and commit the PNG whenever
 `og.svg` changes.
+
+One caveat: the card asks for `Helvetica Neue, Helvetica, Arial,
+sans-serif`, and the committed PNG was rendered on macOS. Re-rendering on
+Linux picks a different face and changes the image -- so re-render on
+macOS, or accept (and eyeball) the font change.
 """
 
 from __future__ import annotations
