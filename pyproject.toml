@@ -11,7 +11,11 @@ dependencies = [
 llm = ["anthropic>=0.40"]
 
 [dependency-groups]
-dev = ["pytest>=8", "ruff>=0.6"]
+# pyyaml is a deliberate, scoped exception to "minimal deps": dev-only, so
+# tests/test_workflows.py can parse .github/workflows/*.yml and the issue
+# forms under .github/ISSUE_TEMPLATE/ (stdlib has no YAML parser). Never a
+# runtime dependency of atlas/ itself.
+dev = ["pytest>=8", "ruff>=0.6", "pyyaml>=6"]
 e2e = ["playwright>=1.45", "pytest-playwright>=0.5"]
 
 [project.scripts]
