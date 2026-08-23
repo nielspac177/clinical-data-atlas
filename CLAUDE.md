@@ -30,6 +30,7 @@ A public, living catalog of open & gated clinical/neuroscience datasets: a
 | `atlas/normalize/` | Raw source records -> canonical schema |
 | `atlas/enrich/` | LLM classification, summaries, MeSH/ROR resolution, dedupe |
 | `atlas/graph/` | Build graph nodes+edges JSON and the search index |
+| `atlas/tools/` | Hand-run maintenance tools (og.png rasteriser); never imported by the pipeline |
 | `data/raw/<source>/` | Raw harvested metadata, committed — it IS the provenance |
 | `data/catalog/` | Merged canonical catalog (JSONL) — the product |
 | `data/graph/` | `graph.json` + `search-index.json` consumed by the site |
@@ -41,7 +42,7 @@ A public, living catalog of open & gated clinical/neuroscience datasets: a
 
 ## 3. Commands
 Makefile: `setup vendor harvest normalize enrich graph diff validate refresh
-site serve test test-live e2e dod clean` — run `make help` for one-line
+site serve test test-js test-live e2e og dod clean` — run `make help` for one-line
 descriptions.
 
 `atlas` CLI subcommands (`atlas/cli.py`): `schema` (export docs/schema.json
