@@ -9,8 +9,10 @@
 body {
   /* The header is fixed so the graph stage can sit under it at a known
      offset; every page pays exactly its height in top padding. That is
-     56px, except at phone width where the nav takes a second row and
-     the 640px block below redefines the token (Task 3.6). */
+     3.5rem, except at phone width where the nav takes a second row and
+     the 640px block below redefines the token (Task 3.6). Both values
+     are rem so the box tracks its rem-sized contents under text-only
+     zoom. */
   padding-top: var(--header-h);
 }
 
@@ -111,13 +113,21 @@ body {
      table's own max-height - so redefining the token here is what
      moves all of them together. It stays an exact height rather than
      `min-height: auto`: the body's padding has to match it to the
-     pixel. 88px = 28px nav row + 8px gap + 34px search box + 9px of
-     breathing room top and bottom.
+     pixel. 5.5rem = 88px at the default root size = 28px nav row + 8px
+     gap + 34px search box + 9px of breathing room top and bottom.
+
+     In rem, not px, and that matters more here than it does for the
+     one-row header: every control inside `.header-mid` is rem-sized, so
+     a raised root font size (text-only zoom, or a minimum font size -
+     WCAG 1.4.4) grows two rows of contents inside the box. At 200% a
+     px-valued 88px header put the search box through its own bottom
+     border and onto the page; in rem the box grows with them and keeps
+     its slack at every zoom level.
 
      The GitHub link still goes at this width — every page links to the
      repository in its content. */
   :root {
-    --header-h: 88px;
+    --header-h: 5.5rem;
   }
 
   .header-mid {
