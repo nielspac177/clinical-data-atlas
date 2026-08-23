@@ -501,3 +501,27 @@ def test_module_runs_as_a_script(tmp_path: Path) -> None:
     assert result.returncode == 0, result.stderr
     assert (out / "index.html").is_file()
     assert result.stdout.strip()  # a one-line summary
+
+
+def test_embedded_changelog_headings_are_demoted(tmp_path: Path) -> None:
+    """A changelog file is a standalone document (it doubles as the monthly
+    refresh's PR body), so it carries its own `#` title and `##` sections.
+    Embedded in the What's new page it sits under that page's own `<h1>`
+    and its `<article>`'s `<h2>` date, so every heading shifts down a
+    level and the redundant title is dropped."""
+    body = changelog_body(
+        tmp_path,
+        "# Monthly refresh 2026-09-01: +1 new, ~0 changed, -0 removed\n\n"
+        "**+1 new, ~0 changed, -0 removed, 0 unchanged**\n\n"
+        "## Sources\n\nAll four sources reported ok.\n\n"
+        "### Failures\n\nnone\n",
+    )
+
+    # The entry's own title is dropped: the article's dated `<h2>` is the
+    # heading a reader needs, and the counts repeat on the summary line.
+    assert "<h1" not in body
+    assert "Monthly refresh 2026-09-01" not in body
+    assert '<h2><time datetime="2026-09-01">2026-09-01</time></h2>' in body
+    assert "<h3>Sources</h3>" in body
+    assert "<h4>Failures</h4>" in body
+    assert "+1 new, ~0 changed, -0 removed, 0 unchanged" in body

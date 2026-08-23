@@ -17,9 +17,11 @@ Three conventions the rest of the repo relies on:
 
 - A changelog file is named `YYYY-MM-DD.md` and does **not** repeat its own
   date as a heading — this module wraps each one in
-  ``<article><h2><time datetime=…>…</time></h2>…</article>``. Bodies should
-  start at `###`. `latest.md` is a duplicate of the newest entry and is
-  skipped.
+  ``<article><h2><time datetime=…>…</time></h2>…</article>``. Bodies are
+  written as standalone documents (a `#` title, `##` sections — the same
+  markdown serves as the refresh PR's body) and `demote_headings` shifts
+  them under that `<h2>` at embed time. `latest.md` is a duplicate of the
+  newest entry and is skipped.
 - A source line ending in `<!--?updated-->` survives only when there is a
   changelog date to substitute, and one ending in `<!--?not-updated-->`
   only when there isn't — so a `<lastmod>` element or a BibTeX `urldate`
@@ -244,14 +246,58 @@ def sanitize_html(rendered: str) -> str:
     return parser.result()
 
 
+# Heading demotion. Applied to *sanitized* HTML, where the allowlist has
+# already dropped every heading attribute and escaped anything that only
+# looked like a tag -- so a heading is always a bare `<hN>`/`</hN>` and a
+# `<h1>` inside a code span is `&lt;h1&gt;` text, which these never touch.
+_HEADING_RE = re.compile(r"<(/?)h([1-6])(\s[^>]*)?>")
+_LEADING_H1_RE = re.compile(r"\A\s*<h1(?:\s[^>]*)?>.*?</h1>\s*", re.DOTALL)
+
+
+def _demote(match: re.Match[str]) -> str:
+    slash, level, attrs = match.group(1), int(match.group(2)), match.group(3) or ""
+    return f"<{slash}h{min(level + 1, 6)}{attrs}>"
+
+
+def demote_headings(body: str) -> str:
+    """Shift a standalone document's headings down one level so it can be
+    embedded under a heading of its own.
+
+    A changelog entry is a complete markdown document -- it doubles as the
+    monthly refresh's PR body (`atlas.diff.render_changelog`,
+    `.github/workflows/monthly-refresh.yml`) -- so it opens with an `#`
+    title and uses `##` sections. On the What's new page it lands inside an
+    `<article>` under the page's own `<h1>` and the article's dated `<h2>`,
+    where that structure would ship a second `<h1>` and an outline that
+    jumps around.
+
+    So: a leading `<h1>` is dropped (the article's `<h2>` date already
+    titles the entry, and the entry's title line only repeats counts the
+    summary line beneath it states again), and every remaining heading
+    moves down one level -- `h2` -> `h3`, `h3` -> `h4` -- keeping the
+    document's own relative outline intact. `h6` is the floor, so a
+    document already six deep merges its two deepest levels rather than
+    emitting an `<h7>`.
+
+    Doing this at embed time rather than in the writer means changelogs
+    committed by earlier refreshes render correctly too, without anyone
+    regenerating them.
+    """
+    body = _LEADING_H1_RE.sub("", body, count=1)
+    return _HEADING_RE.sub(_demote, body)
+
+
 def render_changelog(entries: Sequence[Path]) -> str:
-    """Render each entry as its own dated, sanitized `<article>`."""
+    """Render each entry as its own dated, sanitized `<article>`, with its
+    headings demoted to sit under the article's `<h2>` date."""
     renderer = markdown.Markdown(extensions=["tables", "fenced_code"])
     articles = []
     for path in entries:
         date = path.stem
         renderer.reset()
-        body = sanitize_html(renderer.convert(path.read_text(encoding="utf-8")))
+        body = demote_headings(
+            sanitize_html(renderer.convert(path.read_text(encoding="utf-8")))
+        )
         articles.append(
             f'<article>\n<h2><time datetime="{date}">{date}</time></h2>\n'
             f"{body}\n</article>"
