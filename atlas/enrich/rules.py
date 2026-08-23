@@ -14,18 +14,19 @@ The `_rx` word-boundary helper is ported from the user's prior project
 (`neurodatahub/scripts/lib/lexicon.py`, `_rx`): plain substring matching
 is a precision bug in both directions -- "rats" matching inside "BraTS"
 mislabels a brain-tumor imaging dataset as animal-only, "pet" matching
-inside "competition" invents a PET-imaging modality out of nothing.
-Word boundaries fix both. Terms that are themselves a word stem meant to
-match every inflected suffix (e.g. "histopatholog" -> histopatholog{y,
-ical,ic,ist}) get a leading boundary only; everything else gets both, so
-it matches whole words/phrases. Which stems qualify is fixed, not
-guessed: only stems *ending* in `at|ic|og|am|ell|hal` get the leading-
-only treatment (see `_rx`). A handful of the source lists in this
-module's brief write a stem that does not end that way (e.g.
-"electroencephalogra"); rather than special-case the helper, this module
-spells out the concrete inflected forms instead (`electroencephalogram`,
-`electroencephalography`, `electroencephalographic`) -- same coverage,
-without weakening the one fixed rule everything else relies on.
+inside "competition" invents a PET-imaging modality out of nothing. Word
+boundaries fix both -- but stemming (when a term should also match its
+own longer inflections) must be an explicit, per-term choice, never
+inferred from a term's own spelling. An earlier version of this module
+inferred it from a term's last two letters (stems ending `at|ic|og|am|
+ell|hal` got a leading boundary only); `"rat"` ends in `"at"`, so it
+silently qualified and `\\brat` (no trailing boundary) matched "rate",
+"ratio", "rational" -- a real false positive on real text ("heart rate
+variability" flagged as an animal study), not a hypothetical one, and
+the same inference had already silently done the same thing to `"ecog"`
+and `"mimic"` (see Ruling R14; both replaced below with unambiguous
+compound terms instead of being re-blessed as stems). Stemming is now
+spelled out per term with a trailing `*` in the table (see `_rx`).
 """
 
 from __future__ import annotations
@@ -39,25 +40,29 @@ from atlas import vocab
 # Word-boundary regex helper (ported from neurodatahub/scripts/lib/lexicon.py)
 # ---------------------------------------------------------------------------
 
-_STEM_SUFFIXES = ("at", "ic", "og", "am", "ell", "hal")
 _RX_CACHE: dict[str, re.Pattern[str]] = {}
 
 
 def _rx(term: str) -> re.Pattern[str]:
     """Case-insensitive word-boundary regex for `term`, cached.
 
-    A leading `\\b` always applies. A trailing `\\b` applies too *unless*
-    `term` ends in one of `_STEM_SUFFIXES` -- those are word stems meant
-    to also match their own longer inflections (`"histopatholog"` ->
-    "histopathology", "histopathological", ...). Internal spaces become
-    `\\s+` so a two-word term still matches across a run of whitespace.
+    Stemming is explicit, never inferred (Ruling R14): a term ending in a
+    literal trailing `*` is a prefix stem -- leading `\\b` only, so it
+    also matches its own longer inflections (`"histopatholog*"` matches
+    "histopathology", "histopathological", "histopathologic", ...).
+    Every other term is a whole word/phrase: `\\b` on both sides, so it
+    matches exactly that word or phrase and nothing it happens to be a
+    substring of. Internal spaces become `\\s+` so a multi-word term
+    still matches across a run of whitespace.
     """
     cached = _RX_CACHE.get(term)
     if cached is not None:
         return cached
-    tail = "" if term.endswith(_STEM_SUFFIXES) else r"\b"
+    is_stem = term.endswith("*")
+    body = term[:-1] if is_stem else term
+    tail = "" if is_stem else r"\b"
     pattern = re.compile(
-        r"\b" + re.escape(term).replace(r"\ ", r"\s+") + tail, re.IGNORECASE
+        r"\b" + re.escape(body).replace(r"\ ", r"\s+") + tail, re.IGNORECASE
     )
     _RX_CACHE[term] = pattern
     return pattern
@@ -70,22 +75,22 @@ def _rx(term: str) -> re.Pattern[str]:
 MODALITY_TERMS: dict[str, str] = {
     # ECG
     "ecg": "ECG",
-    "electrocardiogram": "ECG",
-    "electrocardiography": "ECG",
-    "electrocardiographic": "ECG",
+    "electrocardiogra*": "ECG",
     "holter": "ECG",
     "rr interval": "ECG",
     # EEG
     "eeg": "EEG",
-    "electroencephalogram": "EEG",
-    "electroencephalography": "EEG",
-    "electroencephalographic": "EEG",
+    "electroencephalogra*": "EEG",
     # MEG
     "meg": "MEG",
     "magnetoencephalography": "MEG",
-    # iEEG
+    # iEEG -- bare "ecog" removed (Ruling R14: it silently matched as a
+    # prefix under the old inferred-stemming rule); replaced with
+    # unambiguous compound terms.
     "ieeg": "iEEG",
-    "ecog": "iEEG",
+    "electrocorticograph*": "iEEG",
+    "ecog recording*": "iEEG",
+    "ecog grid*": "iEEG",
     "intracranial eeg": "iEEG",
     "stereo-eeg": "iEEG",
     "seeg": "iEEG",
@@ -94,16 +99,18 @@ MODALITY_TERMS: dict[str, str] = {
     "electromyography": "EMG",
     # PPG
     "ppg": "PPG",
-    "photoplethysmogram": "PPG",
-    "photoplethysmography": "PPG",
-    "photoplethysmographic": "PPG",
+    "photoplethysmogra*": "PPG",
     # fNIRS
     "fnirs": "fNIRS",
     "nirs": "fNIRS",
-    # fMRI
+    # fMRI -- bare "bold" removed (too common an English word); replaced
+    # with the compound forms that actually mean the BOLD fMRI signal.
     "fmri": "fMRI",
     "functional mri": "fMRI",
-    "bold": "fMRI",
+    "bold signal": "fMRI",
+    "bold fmri": "fMRI",
+    "bold contrast": "fMRI",
+    "bold response*": "fMRI",
     # dMRI
     "dti": "dMRI",
     "diffusion mri": "dMRI",
@@ -114,8 +121,19 @@ MODALITY_TERMS: dict[str, str] = {
     # MRI
     "mri": "MRI",
     "magnetic resonance": "MRI",
-    # PET
-    "pet": "PET",
+    # PET -- bare "pet" removed (matches the common English word); every
+    # remaining term names the imaging modality unambiguously.
+    "positron emission tomography": "PET",
+    "pet/ct": "PET",
+    "pet-ct": "PET",
+    "fdg-pet": "PET",
+    "fdg pet": "PET",
+    "pet scan*": "PET",
+    "pet imaging": "PET",
+    "pet tracer*": "PET",
+    "amyloid pet": "PET",
+    "tau pet": "PET",
+    "pet-mr*": "PET",
     # SPECT
     "spect": "SPECT",
     # CT
@@ -124,32 +142,21 @@ MODALITY_TERMS: dict[str, str] = {
     # xray
     "x-ray": "xray",
     "xray": "xray",
-    "radiograph": "xray",
-    "radiographs": "xray",
-    "radiography": "xray",
-    "radiographic": "xray",
+    "radiograph*": "xray",
     "chest radiograph": "xray",
     # mammography
-    "mammogram": "mammography",
-    "mammography": "mammography",
-    "mammographic": "mammography",
+    "mammogra*": "mammography",
     # ultrasound
     "ultrasound": "ultrasound",
-    "sonogram": "ultrasound",
-    "sonography": "ultrasound",
-    "sonographic": "ultrasound",
-    "echocardiogram": "ultrasound",
-    "echocardiography": "ultrasound",
-    "echocardiographic": "ultrasound",
+    "sonogra*": "ultrasound",
+    "echocardiogra*": "ultrasound",
     # pathology
     "pathology": "pathology",
-    "histopatholog": "pathology",
+    "histopatholog*": "pathology",
     "whole slide": "pathology",
     "h&e": "pathology",
     # genomics
-    "genome": "genomics",
-    "genomes": "genomics",
-    "genomic": "genomics",
+    "genom*": "genomics",
     "wgs": "genomics",
     "wes": "genomics",
     "exome": "genomics",
@@ -157,27 +164,36 @@ MODALITY_TERMS: dict[str, str] = {
     "gwas": "genomics",
     # transcriptomics
     "rna-seq": "transcriptomics",
-    "transcriptome": "transcriptomics",
-    "transcriptomic": "transcriptomics",
+    "transcriptom*": "transcriptomics",
     "gene expression": "transcriptomics",
     # proteomics
-    "proteome": "proteomics",
-    "proteomic": "proteomics",
-    # EHR
+    "proteom*": "proteomics",
+    # EHR -- bare "mimic" removed (silently matched as a prefix under the
+    # old rule, e.g. inside "mimicry"); replaced with the actual MIMIC
+    # database name variants.
     "ehr": "EHR",
-    "electronic health record": "EHR",
-    "electronic health records": "EHR",
-    "mimic": "EHR",
+    "electronic health record*": "EHR",
+    "mimic-iii": "EHR",
+    "mimic-iv": "EHR",
+    "mimic iii": "EHR",
+    "mimic iv": "EHR",
+    "mimic database": "EHR",
+    "mimic-cxr": "EHR",
+    "mimic iv-ed": "EHR",
     "eicu": "EHR",
     "clinical database": "EHR",
     # clinical_notes
     "clinical notes": "clinical_notes",
-    "discharge summary": "clinical_notes",
-    "discharge summaries": "clinical_notes",
-    "radiology report": "clinical_notes",
-    "radiology reports": "clinical_notes",
-    # claims
-    "claims": "claims",
+    "discharge summar*": "clinical_notes",
+    "radiology report*": "clinical_notes",
+    # claims -- bare "claims" removed (too generic on its own); "billing"
+    # and "insurance" are kept as-is (not flagged as false positives).
+    "insurance claims": "claims",
+    "claims data": "claims",
+    "medical claims": "claims",
+    "administrative claims": "claims",
+    "billing claims": "claims",
+    "claims database*": "claims",
     "billing": "claims",
     "insurance": "claims",
     # registry
@@ -189,9 +205,7 @@ MODALITY_TERMS: dict[str, str] = {
     # wearable
     "wearable": "wearable",
     "accelerometer": "wearable",
-    "actigraphy": "wearable",
-    "actigraph": "wearable",
-    "actigraphic": "wearable",
+    "actigraph*": "wearable",
     "smartwatch": "wearable",
     "gait sensor": "wearable",
     # eye_tracking
@@ -202,21 +216,24 @@ MODALITY_TERMS: dict[str, str] = {
     "behavioral": "behavioral",
     "behavioural": "behavioral",
     "reaction time": "behavioral",
-    "cognitive task": "behavioral",
+    "cognitive task*": "behavioral",
     # physiological_signals
-    "polysomnography": "physiological_signals",
-    "polysomnogram": "physiological_signals",
+    "polysomnogra*": "physiological_signals",
     "psg": "physiological_signals",
     "vital signs": "physiological_signals",
-    "waveform": "physiological_signals",
-    "waveforms": "physiological_signals",
+    "waveform*": "physiological_signals",
     "multiparameter": "physiological_signals",
-    "icu monitor": "physiological_signals",
-    "icu monitoring": "physiological_signals",
-    # radiotherapy
+    "icu monitor*": "physiological_signals",
+    # radiotherapy -- bare "dose" removed (far too generic on its own);
+    # replaced with radiotherapy-specific dose terminology.
     "radiotherapy": "radiotherapy",
     "rtstruct": "radiotherapy",
-    "dose": "radiotherapy",
+    "radiation dose": "radiotherapy",
+    "dose distribution*": "radiotherapy",
+    "dosimetr*": "radiotherapy",
+    "rtdose": "radiotherapy",
+    "dose-volume": "radiotherapy",
+    "treatment planning": "radiotherapy",
 }
 
 # ---------------------------------------------------------------------------
@@ -225,10 +242,8 @@ MODALITY_TERMS: dict[str, str] = {
 
 DOMAIN_TERMS: dict[str, str] = {
     # neurology
-    "epilepsy": "neurology",
-    "epileptic": "neurology",
-    "seizure": "neurology",
-    "seizures": "neurology",
+    "epilep*": "neurology",
+    "seizure*": "neurology",
     "stroke": "neurology",
     "parkinson": "neurology",
     "parkinsonism": "neurology",
@@ -236,43 +251,37 @@ DOMAIN_TERMS: dict[str, str] = {
     "dementia": "neurology",
     "multiple sclerosis": "neurology",
     "migraine": "neurology",
-    "neuropathy": "neurology",
-    "neuropathic": "neurology",
-    "neuropathies": "neurology",
+    "neuropath*": "neurology",
     "tbi": "neurology",
     "brain": "neurology",
     # psychiatry
     "depression": "psychiatry",
     "depressive": "psychiatry",
-    "schizophrenia": "psychiatry",
-    "schizophrenic": "psychiatry",
+    "schizophren*": "psychiatry",
     "bipolar": "psychiatry",
     "anxiety": "psychiatry",
     "ptsd": "psychiatry",
-    "autism": "psychiatry",
+    "autis*": "psychiatry",
     "adhd": "psychiatry",
-    "psychiatric": "psychiatry",
-    "psychiatry": "psychiatry",
-    "psychiatrist": "psychiatry",
-    # neuroscience
-    "cognitive": "neuroscience",
-    "cognition": "neuroscience",
+    "psychiatr*": "psychiatry",
+    # neuroscience -- bare "perception"/"language"/"attention" removed
+    # (too generic in a corpus that also indexes ML/data-science papers);
+    # kept as qualified multi-word phrases instead.
+    "cognit*": "neuroscience",
     "memory task": "neuroscience",
-    "perception": "neuroscience",
-    "language": "neuroscience",
-    "attention": "neuroscience",
+    "working memory": "neuroscience",
+    "visual perception": "neuroscience",
+    "speech perception": "neuroscience",
+    "language comprehension": "neuroscience",
+    "attention task*": "neuroscience",
     # cardiology
     "cardiac": "cardiology",
     "cardiology": "cardiology",
     "cardiovascular": "cardiology",
-    "arrhythmia": "cardiology",
-    "arrhythmias": "cardiology",
-    "arrhythmic": "cardiology",
+    "arrhythmi*": "cardiology",
     "atrial fibrillation": "cardiology",
     "heart failure": "cardiology",
-    "myocardial": "cardiology",
-    "myocarditis": "cardiology",
-    "myocardium": "cardiology",
+    "myocardi*": "cardiology",
     "blood pressure": "cardiology",
     "hypertension": "cardiology",
     "ecg": "cardiology",
@@ -284,21 +293,16 @@ DOMAIN_TERMS: dict[str, str] = {
     "glioma": "oncology",
     "leukemia": "oncology",
     "lymphoma": "oncology",
-    "oncolog": "oncology",
-    "neoplasm": "oncology",
-    "neoplasms": "oncology",
-    "metastasis": "oncology",
-    "metastases": "oncology",
-    "metastatic": "oncology",
-    "metastasize": "oncology",
+    "oncolog*": "oncology",
+    "neoplasm*": "oncology",
+    "metasta*": "oncology",
     # pulmonology
     "copd": "pulmonology",
     "asthma": "pulmonology",
     "pneumonia": "pulmonology",
     "pulmonary": "pulmonology",
     "lung": "pulmonology",
-    "respiratory": "pulmonology",
-    "respirator": "pulmonology",
+    "respirator*": "pulmonology",
     # critical_care
     "icu": "critical_care",
     "intensive care": "critical_care",
@@ -306,31 +310,23 @@ DOMAIN_TERMS: dict[str, str] = {
     "sepsis": "critical_care",
     "mechanical ventilation": "critical_care",
     # surgery
-    "surgery": "surgery",
+    "surger*": "surgery",
     "surgical": "surgery",
-    "surgeries": "surgery",
     "operative": "surgery",
     "postoperative": "surgery",
-    "anesthesia": "surgery",
-    "anesthetic": "surgery",
-    "anaesthesia": "surgery",
-    "anaesthetic": "surgery",
+    "anesthe*": "surgery",
+    "anaesthe*": "surgery",
     # pediatrics
-    "pediatric": "pediatrics",
-    "paediatric": "pediatrics",
-    "neonatal": "pediatrics",
-    "neonate": "pediatrics",
-    "neonates": "pediatrics",
-    "infant": "pediatrics",
-    "infants": "pediatrics",
+    "pediatric*": "pediatrics",
+    "paediatric*": "pediatrics",
+    "neonat*": "pediatrics",
+    "infant*": "pediatrics",
     "children": "pediatrics",
     # obstetrics_gynecology
-    "pregnancy": "obstetrics_gynecology",
-    "pregnant": "obstetrics_gynecology",
-    "pregnancies": "obstetrics_gynecology",
-    "obstetric": "obstetrics_gynecology",
-    "gynecolog": "obstetrics_gynecology",
-    "gynaecolog": "obstetrics_gynecology",
+    "pregnan*": "obstetrics_gynecology",
+    "obstetric*": "obstetrics_gynecology",
+    "gynecolog*": "obstetrics_gynecology",
+    "gynaecolog*": "obstetrics_gynecology",
     "fetal": "obstetrics_gynecology",
     "maternal": "obstetrics_gynecology",
     # infectious_disease
@@ -343,32 +339,28 @@ DOMAIN_TERMS: dict[str, str] = {
     "influenza": "infectious_disease",
     "infection": "infectious_disease",
     # endocrinology_metabolism
-    "diabetes": "endocrinology_metabolism",
-    "diabetic": "endocrinology_metabolism",
+    "diabet*": "endocrinology_metabolism",
     "obesity": "endocrinology_metabolism",
     "thyroid": "endocrinology_metabolism",
     "metabolic": "endocrinology_metabolism",
     # gastroenterology_hepatology
     "liver": "gastroenterology_hepatology",
-    "hepatitis": "gastroenterology_hepatology",
-    "hepatic": "gastroenterology_hepatology",
-    "hepatocellular": "gastroenterology_hepatology",
+    "hepat*": "gastroenterology_hepatology",
     "gastrointestinal": "gastroenterology_hepatology",
     "gastroenterology": "gastroenterology_hepatology",
     "crohn's disease": "gastroenterology_hepatology",
     "crohn disease": "gastroenterology_hepatology",
     "colitis": "gastroenterology_hepatology",
-    "pancreatitis": "gastroenterology_hepatology",
-    "pancreatic": "gastroenterology_hepatology",
+    "pancreat*": "gastroenterology_hepatology",
     # nephrology_urology
     "kidney": "nephrology_urology",
     "renal": "nephrology_urology",
     "dialysis": "nephrology_urology",
-    "urolog": "nephrology_urology",
+    "urolog*": "nephrology_urology",
     "prostate": "nephrology_urology",
     # musculoskeletal
-    "orthopedic": "musculoskeletal",
-    "orthopaedic": "musculoskeletal",
+    "orthopedic*": "musculoskeletal",
+    "orthopaedic*": "musculoskeletal",
     "fracture": "musculoskeletal",
     "osteoarthritis": "musculoskeletal",
     "spine": "musculoskeletal",
@@ -379,7 +371,7 @@ DOMAIN_TERMS: dict[str, str] = {
     "household survey": "public_health",
     "demographic and health": "public_health",
     "nhanes": "public_health",
-    "epidemiolog": "public_health",
+    "epidemiolog*": "public_health",
 }
 
 # ---------------------------------------------------------------------------
@@ -391,17 +383,19 @@ DOMAIN_TERMS: dict[str, str] = {
 # `vocab.CONDITION_ALIASES` (source-reported label -> canonical label,
 # used to canonicalize an *explicit* condition string), this table uses
 # that exact canonical string so the two tables never disagree on the
-# same concept. `CONDITION_LABELS` (below) is the resulting set, and
+# same concept -- every value of `vocab.CONDITION_ALIASES` is asserted to
+# appear here (see the import-time checks below). Labels are lowercase;
+# most follow plain clinical usage, a few follow MeSH's own inverted
+# form where that inversion is the real heading (e.g. "depressive
+# disorder, major", "diabetes mellitus, type 2", "arrhythmia, cardiac").
+# `CONDITION_LABELS` (below) is the resulting canonical set, and
 # `BODYPART_HINTS` targets are asserted to be a subset of it.
 # ---------------------------------------------------------------------------
 
 CONDITION_TERMS: dict[str, str] = {
     # neurology
-    "epilepsy": "epilepsy",
-    "epileptic": "epilepsy",
-    "seizure": "epilepsy",
-    "seizures": "epilepsy",
-    "seizure disorder": "epilepsy",
+    "epilep*": "epilepsy",
+    "seizure*": "epilepsy",
     "stroke": "stroke",
     "ischemic stroke": "stroke",
     "hemorrhagic stroke": "stroke",
@@ -415,8 +409,7 @@ CONDITION_TERMS: dict[str, str] = {
     "multiple sclerosis": "multiple sclerosis",
     "traumatic brain injury": "traumatic brain injury",
     "tbi": "traumatic brain injury",
-    "migraine": "migraine",
-    "migraines": "migraine",
+    "migraine*": "migraine",
     "amyotrophic lateral sclerosis": "amyotrophic lateral sclerosis",
     "als": "amyotrophic lateral sclerosis",
     "motor neuron disease": "amyotrophic lateral sclerosis",
@@ -429,12 +422,9 @@ CONDITION_TERMS: dict[str, str] = {
     "mild traumatic brain injury": "concussion",
     "mtbi": "concussion",
     "tinnitus": "tinnitus",
-    "intracranial aneurysm": "intracranial aneurysm",
-    "intracranial aneurysms": "intracranial aneurysm",
-    "cerebral aneurysm": "intracranial aneurysm",
-    "cerebral aneurysms": "intracranial aneurysm",
-    "brain aneurysm": "intracranial aneurysm",
-    "brain aneurysms": "intracranial aneurysm",
+    "intracranial aneurysm*": "intracranial aneurysm",
+    "cerebral aneurysm*": "intracranial aneurysm",
+    "brain aneurysm*": "intracranial aneurysm",
     "subarachnoid hemorrhage": "subarachnoid hemorrhage",
     "subarachnoid haemorrhage": "subarachnoid hemorrhage",
     "sah": "subarachnoid hemorrhage",
@@ -442,63 +432,82 @@ CONDITION_TERMS: dict[str, str] = {
     "intracerebral hemorrhage": "cerebral hemorrhage",
     "intracranial hemorrhage": "cerebral hemorrhage",
     "brain hemorrhage": "cerebral hemorrhage",
+    "essential tremor": "essential tremor",
+    "dystonia": "dystonia",
+    "peripheral neuropath*": "peripheral neuropathy",
+    "narcolepsy": "narcolepsy",
+    "restless legs syndrome": "restless legs syndrome",
+    "restless leg syndrome": "restless legs syndrome",
+    "guillain-barre syndrome": "guillain-barre syndrome",
+    "guillain barre syndrome": "guillain-barre syndrome",
+    "myasthenia gravis": "myasthenia gravis",
     # oncology (organ-specific; bare "cancer"/"tumor" stay in DOMAIN_TERMS
     # only -- they don't say *which* neoplasm)
-    "glioma": "glioma",
-    "gliomas": "glioma",
+    "glioma*": "glioma",
     "glioblastoma": "glioblastoma",
     "glioblastoma multiforme": "glioblastoma",
-    "meningioma": "meningioma",
-    "meningiomas": "meningioma",
+    "meningioma*": "meningioma",
     "brain tumor": "brain neoplasms",
     "brain tumour": "brain neoplasms",
-    "brain neoplasm": "brain neoplasms",
+    "brain neoplasm*": "brain neoplasms",
     "brain cancer": "brain neoplasms",
     "breast cancer": "breast neoplasms",
     "breast carcinoma": "breast neoplasms",
-    "breast neoplasm": "breast neoplasms",
+    "breast neoplasm*": "breast neoplasms",
     "breast tumor": "breast neoplasms",
     "lung cancer": "lung neoplasms",
     "lung carcinoma": "lung neoplasms",
-    "lung neoplasm": "lung neoplasms",
+    "lung neoplasm*": "lung neoplasms",
     "lung tumor": "lung neoplasms",
     "lung adenocarcinoma": "adenocarcinoma of lung",
     "prostate cancer": "prostatic neoplasms",
-    "prostatic neoplasm": "prostatic neoplasms",
+    "prostatic neoplasm*": "prostatic neoplasms",
     "prostate carcinoma": "prostatic neoplasms",
     "colorectal cancer": "colorectal neoplasms",
     "colon cancer": "colorectal neoplasms",
     "rectal cancer": "colorectal neoplasms",
-    "colorectal neoplasm": "colorectal neoplasms",
+    "colorectal neoplasm*": "colorectal neoplasms",
     "kidney cancer": "kidney neoplasms",
     "renal cell carcinoma": "kidney neoplasms",
-    "kidney neoplasm": "kidney neoplasms",
+    "kidney neoplasm*": "kidney neoplasms",
     "liver cancer": "liver neoplasms",
     "hepatocellular carcinoma": "liver neoplasms",
-    "liver neoplasm": "liver neoplasms",
+    "liver neoplasm*": "liver neoplasms",
     "head and neck cancer": "head and neck neoplasms",
-    "head and neck neoplasm": "head and neck neoplasms",
+    "head and neck neoplasm*": "head and neck neoplasms",
     "pancreatic cancer": "pancreatic neoplasms",
-    "pancreatic neoplasm": "pancreatic neoplasms",
+    "pancreatic neoplasm*": "pancreatic neoplasms",
     "bladder cancer": "urinary bladder neoplasms",
-    "urinary bladder neoplasm": "urinary bladder neoplasms",
+    "urinary bladder neoplasm*": "urinary bladder neoplasms",
     "cervical cancer": "uterine cervical neoplasms",
-    "cervical neoplasm": "uterine cervical neoplasms",
+    "cervical neoplasm*": "uterine cervical neoplasms",
     "ovarian cancer": "ovarian neoplasms",
-    "ovarian neoplasm": "ovarian neoplasms",
+    "ovarian neoplasm*": "ovarian neoplasms",
     "esophageal cancer": "esophageal neoplasms",
-    "esophageal neoplasm": "esophageal neoplasms",
+    "esophageal neoplasm*": "esophageal neoplasms",
     "gastric cancer": "stomach neoplasms",
     "stomach cancer": "stomach neoplasms",
-    "stomach neoplasm": "stomach neoplasms",
+    "stomach neoplasm*": "stomach neoplasms",
     "thyroid cancer": "thyroid neoplasms",
-    "thyroid neoplasm": "thyroid neoplasms",
+    "thyroid neoplasm*": "thyroid neoplasms",
     "leukemia": "leukemia",
     "leukaemia": "leukemia",
-    "lymphoma": "lymphoma",
+    "lymphoma*": "lymphoma",
     "hodgkin lymphoma": "lymphoma",
     "non-hodgkin lymphoma": "lymphoma",
     "melanoma": "melanoma",
+    "sarcoma*": "sarcoma",
+    "neuroblastoma": "neuroblastoma",
+    "multiple myeloma": "multiple myeloma",
+    "skin cancer": "skin neoplasms",
+    "skin neoplasm*": "skin neoplasms",
+    "testicular cancer": "testicular neoplasms",
+    "testicular neoplasm*": "testicular neoplasms",
+    "endometrial cancer": "endometrial neoplasms",
+    "endometrial neoplasm*": "endometrial neoplasms",
+    "bone cancer": "bone neoplasms",
+    "bone neoplasm*": "bone neoplasms",
+    "osteosarcoma": "bone neoplasms",
     # cardiology
     "atrial fibrillation": "atrial fibrillation",
     "afib": "atrial fibrillation",
@@ -509,6 +518,23 @@ CONDITION_TERMS: dict[str, str] = {
     "heart attack": "myocardial infarction",
     "hypertension": "hypertension",
     "high blood pressure": "hypertension",
+    "coronary artery disease": "coronary artery disease",
+    "coronary heart disease": "coronary artery disease",
+    "cardiomyopath*": "cardiomyopathy",
+    "aortic aneurysm*": "aortic aneurysm",
+    "peripheral vascular disease": "peripheral vascular disease",
+    "peripheral artery disease": "peripheral vascular disease",
+    "venous thromboembolism": "venous thromboembolism",
+    "deep vein thrombosis": "venous thromboembolism",
+    "dvt": "venous thromboembolism",
+    "pulmonary embolism": "pulmonary embolism",
+    "pulmonary embolus": "pulmonary embolism",
+    "cardiac arrest": "cardiac arrest",
+    "out-of-hospital cardiac arrest": "cardiac arrest",
+    "pericarditis": "pericarditis",
+    "endocarditis": "endocarditis",
+    "infective endocarditis": "endocarditis",
+    "cardiac arrhythmia": "arrhythmia, cardiac",
     # critical_care / infectious_disease
     "sepsis": "sepsis",
     "septic shock": "sepsis",
@@ -516,6 +542,23 @@ CONDITION_TERMS: dict[str, str] = {
     "covid": "covid-19",
     "sars-cov-2": "covid-19",
     "coronavirus disease": "covid-19",
+    "hiv infection*": "hiv infections",
+    "hiv/aids": "hiv infections",
+    "tuberculosis": "tuberculosis",
+    "influenza": "influenza, human",
+    "flu": "influenza, human",
+    "hepatitis c": "hepatitis c",
+    "hepatitis c virus": "hepatitis c",
+    "hcv": "hepatitis c",
+    "hepatitis b": "hepatitis b",
+    "hepatitis b virus": "hepatitis b",
+    "hbv": "hepatitis b",
+    "malaria": "malaria",
+    "multiple organ failure": "multiple organ failure",
+    "multi-organ failure": "multiple organ failure",
+    "multiple organ dysfunction syndrome": "multiple organ failure",
+    "delirium": "delirium",
+    "icu delirium": "delirium",
     # pulmonology
     "obstructive sleep apnea": "sleep apnea, obstructive",
     "obstructive sleep apnoea": "sleep apnea, obstructive",
@@ -525,16 +568,22 @@ CONDITION_TERMS: dict[str, str] = {
     "copd": "copd",
     "chronic obstructive pulmonary disease": "copd",
     "pneumonia": "pneumonia",
+    "pulmonary fibrosis": "pulmonary fibrosis",
+    "pulmonary hypertension": "pulmonary hypertension",
+    "bronchiectasis": "bronchiectasis",
+    "cystic fibrosis": "cystic fibrosis",
+    "pneumothorax": "pneumothorax",
+    "acute respiratory distress syndrome": "acute respiratory distress syndrome",
+    "respiratory distress syndrome": "acute respiratory distress syndrome",
+    "ards": "acute respiratory distress syndrome",
     # psychiatry
     "major depression": "depressive disorder, major",
     "major depressive disorder": "depressive disorder, major",
     "mdd": "depressive disorder, major",
-    "schizophrenia": "schizophrenia",
-    "schizophrenic": "schizophrenia",
+    "schizophren*": "schizophrenia",
     "bipolar disorder": "bipolar disorder",
     "autism spectrum disorder": "autism spectrum disorder",
-    "autism": "autism spectrum disorder",
-    "autistic": "autism spectrum disorder",
+    "autis*": "autism spectrum disorder",
     "attention deficit hyperactivity disorder": (
         "attention deficit disorder with hyperactivity"
     ),
@@ -542,29 +591,90 @@ CONDITION_TERMS: dict[str, str] = {
         "attention deficit disorder with hyperactivity"
     ),
     "adhd": "attention deficit disorder with hyperactivity",
-    "anxiety disorder": "anxiety disorders",
-    "anxiety disorders": "anxiety disorders",
+    "anxiety disorder*": "anxiety disorders",
     "generalized anxiety disorder": "anxiety disorders",
     "post-traumatic stress disorder": "post-traumatic stress disorder",
     "posttraumatic stress disorder": "post-traumatic stress disorder",
     "ptsd": "post-traumatic stress disorder",
+    "substance use disorder": "substance-related disorders",
+    "substance abuse": "substance-related disorders",
+    "substance-related disorder*": "substance-related disorders",
+    "alcoholism": "alcoholism",
+    "alcohol use disorder": "alcoholism",
+    "alcohol dependence": "alcoholism",
+    "opioid use disorder": "opioid-related disorders",
+    "opioid addiction": "opioid-related disorders",
+    "opioid dependence": "opioid-related disorders",
+    "obsessive-compulsive disorder": "obsessive-compulsive disorder",
+    "ocd": "obsessive-compulsive disorder",
+    "panic disorder": "panic disorder",
+    "insomnia": "insomnia",
+    "chronic insomnia": "insomnia",
     # endocrinology_metabolism
     "diabetes mellitus": "diabetes mellitus",
-    "type 2 diabetes": "diabetes mellitus",
-    "type 1 diabetes": "diabetes mellitus",
     "diabetes": "diabetes mellitus",
+    "type 1 diabetes": "diabetes mellitus, type 1",
+    "type 1 diabetes mellitus": "diabetes mellitus, type 1",
+    "type 2 diabetes": "diabetes mellitus, type 2",
+    "type 2 diabetes mellitus": "diabetes mellitus, type 2",
     "obesity": "obesity",
     "obese": "obesity",
+    "hypothyroidism": "hypothyroidism",
+    "hyperthyroidism": "hyperthyroidism",
+    "metabolic syndrome": "metabolic syndrome",
+    # gastroenterology_hepatology
+    "crohn's disease": "crohn disease",
+    "crohn disease": "crohn disease",
+    "ulcerative colitis": "colitis, ulcerative",
+    "peptic ulcer": "peptic ulcer",
+    "peptic ulcer disease": "peptic ulcer",
+    "liver cirrhosis": "liver cirrhosis",
+    "cirrhosis": "liver cirrhosis",
+    "fatty liver disease": "fatty liver",
+    "nonalcoholic fatty liver disease": "fatty liver",
+    "nafld": "fatty liver",
+    "irritable bowel syndrome": "irritable bowel syndrome",
+    "ibs": "irritable bowel syndrome",
+    "celiac disease": "celiac disease",
+    "coeliac disease": "celiac disease",
     # nephrology_urology
     "chronic kidney disease": "chronic kidney disease",
     "ckd": "chronic kidney disease",
     "end-stage renal disease": "chronic kidney disease",
     "esrd": "chronic kidney disease",
+    "acute kidney injury": "acute kidney injury",
+    "aki": "acute kidney injury",
+    "nephrolithiasis": "nephrolithiasis",
+    "kidney stone*": "nephrolithiasis",
+    "urinary tract infection*": "urinary tract infections",
+    "uti": "urinary tract infections",
+    "polycystic kidney disease": "polycystic kidney disease",
+    "nephrotic syndrome": "nephrotic syndrome",
+    "benign prostatic hyperplasia": "benign prostatic hyperplasia",
+    "bph": "benign prostatic hyperplasia",
+    # pediatrics
+    "premature birth": "premature birth",
+    "preterm birth": "premature birth",
+    "prematurity": "premature birth",
+    "congenital heart defect*": "congenital heart defects",
+    "congenital heart disease": "congenital heart defects",
+    "sudden infant death syndrome": "sudden infant death syndrome",
+    "sids": "sudden infant death syndrome",
+    # obstetrics_gynecology
+    "pre-eclampsia": "pre-eclampsia",
+    "preeclampsia": "pre-eclampsia",
+    "gestational diabetes": "diabetes, gestational",
+    "endometriosis": "endometriosis",
+    # musculoskeletal
+    "osteoarthritis": "osteoarthritis",
+    "rheumatoid arthritis": "arthritis, rheumatoid",
+    "osteoporosis": "osteoporosis",
+    "low back pain": "low back pain",
+    "lower back pain": "low back pain",
     # healthy
-    "healthy controls": "healthy controls",
-    "healthy control": "healthy controls",
-    "healthy volunteers": "healthy controls",
-    "normal controls": "healthy controls",
+    "healthy control*": "healthy controls",
+    "healthy volunteer*": "healthy controls",
+    "normal control*": "healthy controls",
 }
 
 # The canonical condition label set this module can ever emit (from
@@ -577,15 +687,32 @@ CONDITION_LABELS: frozenset[str] = frozenset(CONDITION_TERMS.values())
 # ---------------------------------------------------------------------------
 
 # Plain term tuples, not value tables -- the only output is the fixed
-# string "animal" (see `hints()`), never a per-term value.
+# string "animal" (see `hints()`), never a per-term value. Bare "mouse"
+# and "rat" are deliberately absent (Ruling R14): "rat" is exactly the
+# term that exposed the inferred-stemming bug (it silently matched as a
+# prefix inside "rate"/"ratio"/"rational"), and both single words are
+# common enough on their own that requiring a qualifying word ("rat
+# model", "mouse brain", a named strain) is worth the small recall cost.
 ANIMAL_TERMS: tuple[str, ...] = (
-    "mouse",
     "mice",
     "murine",
-    "rat",
+    "mouse model*",
+    "mouse brain",
+    "mouse cortex",
+    "transgenic mouse",
+    "mouse hippocamp*",
+    "knockout mouse",
+    "mouse strain*",
     "rats",
-    "rodent",
-    "rodents",
+    "rat model*",
+    "rat brain",
+    "rat cortex",
+    "rat hippocamp*",
+    "sprague-dawley",
+    "sprague dawley",
+    "wistar",
+    "long-evans",
+    "rodent*",
     "zebrafish",
     "drosophila",
     "macaque",
@@ -707,37 +834,57 @@ PHYSIONET_TOPICS: dict[str, tuple[str, str]] = {
 
 # ---------------------------------------------------------------------------
 # Import-time invariants: every table target is a real vocab value (or, for
-# conditions, part of this module's own canonical label set), and the
-# regex cache is warmed for every term now rather than on first search.
+# conditions, part of this module's own canonical label set), every
+# `vocab.CONDITION_ALIASES` value is covered, and the regex cache is warmed
+# for every term now rather than on first search. `_require` raises
+# instead of using bare `assert` so these checks run the same way whether
+# or not Python is invoked with `-O` (which strips assertions).
 # ---------------------------------------------------------------------------
 
+
+def _require(condition: bool, message: str) -> None:
+    if not condition:
+        raise RuntimeError(message)
+
+
 for _value in MODALITY_TERMS.values():
-    assert _value in vocab.MODALITIES, f"MODALITY_TERMS target {_value!r} not in vocab"
+    _require(
+        _value in vocab.MODALITIES, f"MODALITY_TERMS target {_value!r} not in vocab"
+    )
 
 for _value in DOMAIN_TERMS.values():
-    assert _value in vocab.DOMAINS, f"DOMAIN_TERMS target {_value!r} not in vocab"
+    _require(_value in vocab.DOMAINS, f"DOMAIN_TERMS target {_value!r} not in vocab")
 
 for _kind, _target in PHYSIONET_TOPICS.values():
     if _kind == "modality":
-        assert _target in vocab.MODALITIES, (
-            f"PHYSIONET_TOPICS modality target {_target!r} not in vocab"
+        _require(
+            _target in vocab.MODALITIES,
+            f"PHYSIONET_TOPICS modality target {_target!r} not in vocab",
         )
     elif _kind == "domain":
-        assert _target in vocab.DOMAINS, (
-            f"PHYSIONET_TOPICS domain target {_target!r} not in vocab"
+        _require(
+            _target in vocab.DOMAINS,
+            f"PHYSIONET_TOPICS domain target {_target!r} not in vocab",
         )
     else:
-        raise AssertionError(
+        raise RuntimeError(
             f"PHYSIONET_TOPICS kind must be modality/domain, got {_kind!r}"
         )
 
 for _label in BODYPART_HINTS.values():
-    assert _label in CONDITION_LABELS, (
-        f"BODYPART_HINTS target {_label!r} not in CONDITION_LABELS"
+    _require(
+        _label in CONDITION_LABELS,
+        f"BODYPART_HINTS target {_label!r} not in CONDITION_LABELS",
     )
 
-assert "animal" in vocab.SPECIES
-assert "human" in vocab.SPECIES
+for _alias_label in vocab.CONDITION_ALIASES.values():
+    _require(
+        _alias_label in CONDITION_LABELS,
+        f"vocab.CONDITION_ALIASES value {_alias_label!r} missing from CONDITION_TERMS",
+    )
+
+_require("animal" in vocab.SPECIES, "'animal' missing from vocab.SPECIES")
+_require("human" in vocab.SPECIES, "'human' missing from vocab.SPECIES")
 
 for _term in (
     *MODALITY_TERMS,
@@ -749,7 +896,7 @@ for _term in (
 ):
     _rx(_term)  # force compilation now, not on first hints() call
 
-del _value, _kind, _target, _label, _term
+del _value, _kind, _target, _label, _alias_label, _term
 
 
 # ---------------------------------------------------------------------------
@@ -757,13 +904,19 @@ del _value, _kind, _target, _label, _term
 # ---------------------------------------------------------------------------
 
 
-@dataclass
+@dataclass(frozen=True)
 class RuleHits:
     """Deterministic classification signal for one record's text.
 
-    `evidence` is flat across all three categories (a domain, modality,
-    and condition value never collide as strings), mapping each assigned
-    value to the literal substring(s) that matched it in the input.
+    `evidence` is flat across domains/modalities/conditions (a value
+    never collides as a string across those three categories), mapping
+    each assigned value to the literal substring(s) that matched it in
+    the input, plus one extra key, `"species"`, holding whichever
+    animal/human substrings were matched -- present whenever either kind
+    matched, regardless of whether `species` ended up `"animal"` or
+    `None` (e.g. both an animal and a human term present cancels the
+    call, but the evidence for *why* is still worth keeping). A value
+    type: frozen, so a `RuleHits` cannot be mutated in place once built.
     """
 
     domains: list[str]
@@ -839,17 +992,30 @@ def hints(text: str, *, source: str, raw_hints: dict | None = None) -> RuleHits:
                 condition_hits.add(label)
                 record(label, keyword)
 
-    animal_hit = any(_rx(term).search(full_text) for term in ANIMAL_TERMS)
-    human_hit = any(_rx(term).search(full_text) for term in HUMAN_TERMS)
-    species = "animal" if animal_hit and not human_hit else None
+    animal_matches: list[str] = []
+    for term in ANIMAL_TERMS:
+        match = _rx(term).search(full_text)
+        if match and match.group(0) not in animal_matches:
+            animal_matches.append(match.group(0))
+
+    human_matches: list[str] = []
+    for term in HUMAN_TERMS:
+        match = _rx(term).search(full_text)
+        if match and match.group(0) not in human_matches:
+            human_matches.append(match.group(0))
+
+    species = "animal" if animal_matches and not human_matches else None
+    for matched in (*animal_matches, *human_matches):
+        record("species", matched)
 
     domains = [d for d in vocab.DOMAINS if d in domain_hits]
     modalities = [m for m in vocab.MODALITIES if m in modality_hits]
     conditions = sorted(condition_hits)
 
-    ordered_evidence = {
-        value: evidence[value] for value in (*domains, *modalities, *conditions)
-    }
+    ordered_keys = [*domains, *modalities, *conditions]
+    if "species" in evidence:
+        ordered_keys.append("species")
+    ordered_evidence = {value: evidence[value] for value in ordered_keys}
 
     return RuleHits(
         domains=domains,

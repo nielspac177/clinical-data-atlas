@@ -4,12 +4,17 @@ engine (`hints()`, `RuleHits`) and its word-boundary regex helper (`_rx`).
 
 from __future__ import annotations
 
+import dataclasses
+
+import pytest
+
 from atlas import vocab
 from atlas.enrich import rules
 from atlas.enrich.rules import RuleHits, hints
 
 # ---------------------------------------------------------------------------
-# _rx: word-boundary regex helper
+# _rx: word-boundary regex helper -- stemming is explicit (trailing `*`),
+# never inferred from a term's own spelling (Ruling R14).
 # ---------------------------------------------------------------------------
 
 
@@ -18,27 +23,30 @@ def test_rx_matches_whole_word_case_insensitively():
     assert rules._rx("ecg").search("a 12-lead ecg recording")
 
 
-def test_rx_stem_ending_in_magic_suffix_matches_longer_inflections():
-    # "histopatholog" ends in "og" -> leading boundary only, so it matches
-    # every -ology/-ological/-ologic inflection from one table entry.
-    rx = rules._rx("histopatholog")
+def test_rx_explicit_stem_matches_longer_inflections():
+    # A trailing "*" is the only thing that makes a term a prefix stem.
+    rx = rules._rx("histopatholog*")
     assert rx.search("histopathology review")
     assert rx.search("histopathological grading")
     assert rx.search("histopathologic subtype")
 
 
-def test_rx_non_stem_term_requires_a_trailing_boundary_too():
-    # "cardiac" does not end in a magic suffix, so it only matches the
-    # complete word, not an arbitrary continuation of it.
+def test_rx_without_trailing_star_requires_a_whole_word():
+    # No "*" -> both boundaries, matches only the complete word.
     rx = rules._rx("cardiac")
     assert rx.search("cardiac arrest")
     assert not rx.search("cardiacyzer")  # made-up continuation, must not match
 
 
+def test_rx_strips_only_the_trailing_star_not_the_whole_term():
+    rx = rules._rx("diabet*")
+    assert rx.search("diabetes")
+    assert rx.search("diabetic")
+    assert not rx.search("diab")  # body is "diabet", not a shorter prefix
+
+
 def test_rx_does_not_match_substring_across_a_word_boundary():
     # The two false-positive traps this helper exists to fix.
-    assert not rules._rx("rat").search("BraTS glioma dataset")
-    assert not rules._rx("rats").search("BraTS glioma dataset")
     assert not rules._rx("pet").search("a machine learning competition")
 
 
@@ -47,13 +55,69 @@ def test_rx_multi_word_term_matches_across_whitespace():
 
 
 def test_rx_is_cached():
-    first = rules._rx("epilepsy")
-    second = rules._rx("epilepsy")
+    first = rules._rx("epilep*")
+    second = rules._rx("epilep*")
     assert first is second
 
 
+def test_rx_every_table_term_has_at_most_one_trailing_star():
+    # A "*" anywhere but the final character is a silent no-op bug: it
+    # would be escaped as a literal asterisk that never appears in real
+    # text, so the whole entry could never match anything.
+    for table in (rules.MODALITY_TERMS, rules.DOMAIN_TERMS, rules.CONDITION_TERMS):
+        for term in table:
+            if "*" in term:
+                assert term.endswith("*"), f"{term!r} has a non-trailing '*'"
+                assert term.count("*") == 1, f"{term!r} has more than one '*'"
+    for term in (*rules.ANIMAL_TERMS, *rules.HUMAN_TERMS):
+        if "*" in term:
+            assert term.endswith("*"), f"{term!r} has a non-trailing '*'"
+
+
 # ---------------------------------------------------------------------------
-# hints(): required scenarios from the task brief
+# CRITICAL fix regression: bare "rat" silently matched as a prefix (no
+# trailing boundary) because it happened to end in "at" under the old
+# inferred-stemming rule, so "heart rate" was flagged as an animal study.
+# ---------------------------------------------------------------------------
+
+
+def test_heart_rate_is_not_flagged_as_animal():
+    result = hints(
+        "Heart rate variability recordings during overnight sleep monitoring.",
+        source="curated",
+    )
+    assert result.species is None
+
+
+def test_mortality_and_response_rate_are_not_flagged_as_animal():
+    result = hints("Mortality rate and response rate across cohorts.", source="curated")
+    assert result.species is None
+
+
+def test_accurate_is_not_flagged_as_animal():
+    result = hints("This is a highly accurate classifier.", source="curated")
+    assert result.species is None
+
+
+def test_rats_plural_is_flagged_as_animal():
+    result = hints("Neural recordings from rats in a maze task.", source="curated")
+    assert result.species == "animal"
+
+
+def test_rat_model_is_flagged_as_animal():
+    result = hints("A rat model of traumatic brain injury.", source="curated")
+    assert result.species == "animal"
+
+
+def test_bare_rat_and_bare_mouse_are_not_in_animal_terms():
+    # Ruling R14: both were removed outright, not just re-guarded, since
+    # each is common enough as a standalone word to need a qualifier.
+    assert "rat" not in rules.ANIMAL_TERMS
+    assert "mouse" not in rules.ANIMAL_TERMS
+
+
+# ---------------------------------------------------------------------------
+# hints(): required scenarios from the original task brief
 # ---------------------------------------------------------------------------
 
 
@@ -75,19 +139,21 @@ def test_pet_modality_does_not_match_inside_competition():
     assert "PET" not in result.modalities
 
 
-def test_bare_pet_word_does_match():
-    result = hints("a PET imaging study", source="curated")
-    assert "PET" in result.modalities
-
-
-def test_rat_hippocampus_recordings_is_animal_species():
-    result = hints("rat hippocampus recordings", source="curated")
-    assert result.species == "animal"
-
-
 def test_rat_and_human_cortex_has_no_species_opinion():
     result = hints("rat and human cortex", source="curated")
     assert result.species is None
+
+
+def test_animal_signal_is_cancelled_by_a_real_human_match():
+    # A term that genuinely exists in ANIMAL_TERMS ("rat brain"), so this
+    # exercises the human-cancels-animal branch, not just "nothing matched".
+    result = hints(
+        "recordings from a rat brain alongside human control subjects",
+        source="curated",
+    )
+    assert result.species is None
+    assert "rat brain" in result.evidence["species"]
+    assert "human" in result.evidence["species"]
 
 
 def test_no_animal_or_human_terms_has_no_species_opinion():
@@ -96,13 +162,161 @@ def test_no_animal_or_human_terms_has_no_species_opinion():
 
 
 # ---------------------------------------------------------------------------
+# IMPORTANT #2: ambiguous single-word keys replaced with unambiguous
+# compound terms (ecog, mimic, pet, bold, claims).
+# ---------------------------------------------------------------------------
+
+
+def test_bare_ecog_alone_no_longer_matches():
+    result = hints("Intracranial recordings using ECoG electrodes.", source="curated")
+    assert result.modalities == []
+
+
+def test_ecog_recording_and_grid_still_match_ieeg():
+    assert (
+        "iEEG" in hints("an ECoG recording from the grid", source="curated").modalities
+    )
+    assert "iEEG" in hints("placement of the ECoG grid", source="curated").modalities
+
+
+def test_electrocorticography_stem_matches_ieeg():
+    result = hints("electrocorticography of the temporal lobe", source="curated")
+    assert "iEEG" in result.modalities
+
+
+def test_mimic_database_variants_match_ehr():
+    for text in (
+        "the MIMIC-III database",
+        "data from MIMIC-IV",
+        "the MIMIC-CXR dataset",
+    ):
+        assert "EHR" in hints(text, source="curated").modalities
+
+
+def test_bare_mimic_no_longer_matches_mimicry():
+    result = hints("A study of butterfly mimicry.", source="curated")
+    assert "EHR" not in result.modalities
+
+
+def test_pet_imaging_terms_match_pet_modality():
+    for text in (
+        "a PET imaging study",
+        "an FDG-PET tracer study",
+        "combined PET/CT acquisition",
+        "amyloid PET in early diagnosis",
+    ):
+        assert "PET" in hints(text, source="curated").modalities
+
+
+def test_bare_pet_no_longer_matches_anything():
+    assert hints("a PET study", source="curated").modalities == []
+    assert hints("a machine learning competition", source="curated").modalities == []
+
+
+def test_bold_fmri_terms_match_fmri_modality():
+    assert "fMRI" in hints("BOLD fMRI signal analysis", source="curated").modalities
+    assert "fMRI" in hints("the BOLD contrast is measured", source="curated").modalities
+
+
+def test_bare_bold_as_plain_english_does_not_match_fmri():
+    result = hints("the bold text below explains the method", source="curated")
+    assert "fMRI" not in result.modalities
+
+
+def test_claims_compound_terms_match_claims_modality():
+    result = hints("insurance claims data used for cost analysis", source="curated")
+    assert "claims" in result.modalities
+
+
+def test_bare_claims_word_alone_no_longer_matches():
+    assert hints("the paper claims a new result", source="curated").modalities == []
+
+
+# ---------------------------------------------------------------------------
+# IMPORTANT #2: animal terms replaced with qualified mouse/rat phrases.
+# ---------------------------------------------------------------------------
+
+
+def test_qualified_mouse_terms_are_flagged_as_animal():
+    for text in (
+        "mice injected with a viral vector",
+        "a knockout mouse model of the disease",
+        "recordings from mouse cortex",
+        "a transgenic mouse line",
+    ):
+        assert hints(text, source="curated").species == "animal"
+
+
+def test_bare_mouse_word_alone_does_not_flag_animal():
+    # No qualifying context and no other animal term present.
+    result = hints("a mouse click was recorded for each trial", source="curated")
+    assert result.species is None
+
+
+def test_named_rat_strains_are_flagged_as_animal():
+    for text in ("sprague-dawley rats", "a wistar rat colony", "long-evans rats"):
+        assert hints(text, source="curated").species == "animal"
+
+
+def test_rodent_stem_matches_rodent_and_rodents():
+    assert hints("a rodent model of disease", source="curated").species == "animal"
+    assert hints("several rodents were studied", source="curated").species == "animal"
+
+
+# ---------------------------------------------------------------------------
+# IMPORTANT #3: neuroscience bare words dropped; dose -> radiotherapy
+# tightened.
+# ---------------------------------------------------------------------------
+
+
+def test_bare_neuroscience_words_are_no_longer_domain_terms():
+    for term in ("perception", "language", "attention"):
+        assert term not in rules.DOMAIN_TERMS
+
+
+def test_qualified_neuroscience_phrases_still_match():
+    for text in (
+        "a working memory task",
+        "a study of visual perception",
+        "speech perception in noise",
+        "language comprehension deficits",
+        "an attention task battery",
+    ):
+        assert "neuroscience" in hints(text, source="curated").domains
+
+
+def test_unrelated_language_mention_does_not_trigger_neuroscience():
+    result = hints(
+        "a natural language processing model for text classification",
+        source="curated",
+    )
+    assert "neuroscience" not in result.domains
+
+
+def test_bare_dose_is_no_longer_a_radiotherapy_term():
+    assert "dose" not in rules.MODALITY_TERMS
+
+
+def test_drug_dose_does_not_trigger_radiotherapy():
+    result = hints("the recommended dose is 10mg twice daily", source="curated")
+    assert "radiotherapy" not in result.modalities
+
+
+def test_radiotherapy_dose_terms_still_match():
+    for text in (
+        "radiation dose distribution for treatment planning",
+        "dosimetry of the treatment plan",
+        "the dose-volume histogram",
+    ):
+        assert "radiotherapy" in hints(text, source="curated").modalities
+
+
+# ---------------------------------------------------------------------------
 # Ordering and dedup: domains/modalities in vocab order, conditions sorted
 # ---------------------------------------------------------------------------
 
 
 def test_domains_are_deduped_and_returned_in_vocab_order():
-    # Text mentions pulmonology and public_health terms before a
-    # neurology one, but vocab.DOMAINS orders neurology first.
     result = hints(
         "public health survey covering asthma and stroke patients",
         source="curated",
@@ -127,7 +341,8 @@ def test_conditions_are_deduped_and_alphabetically_sorted():
 
 
 # ---------------------------------------------------------------------------
-# Evidence: populated with the literal matched substring(s)
+# Evidence: populated with the literal matched substring(s), including the
+# dedicated "species" key.
 # ---------------------------------------------------------------------------
 
 
@@ -151,13 +366,36 @@ def test_evidence_key_order_matches_output_list_order():
     assert list(result.evidence.keys())[: len(result.domains)] == result.domains
 
 
+def test_species_evidence_present_when_animal_matches():
+    result = hints("rat model of disease", source="curated")
+    assert result.species == "animal"
+    assert result.evidence["species"] == ["rat model"]
+
+
+def test_species_evidence_absent_when_nothing_matches():
+    result = hints("a machine learning competition", source="curated")
+    assert "species" not in result.evidence
+
+
+def test_species_evidence_present_even_when_cancelled_by_human():
+    result = hints("rat brain and human cortex", source="curated")
+    assert result.species is None
+    assert set(result.evidence["species"]) == {"rat brain", "human"}
+
+
+def test_species_evidence_is_the_last_key_in_ordered_evidence():
+    result = hints(
+        "12-lead ECG recordings from a rat model in ICU patients", source="curated"
+    )
+    assert list(result.evidence.keys())[-1] == "species"
+
+
 # ---------------------------------------------------------------------------
 # raw_hints["keywords"]: folded into text for the ordinary term scan
 # ---------------------------------------------------------------------------
 
 
 def test_keywords_are_folded_into_the_text_scan():
-    # "ECG" only appears as a keyword, never in the prose itself.
     result = hints(
         "A recordings archive.", source="curated", raw_hints={"keywords": ["ECG"]}
     )
@@ -187,8 +425,6 @@ def test_empty_text_returns_an_empty_but_valid_result():
 
 
 def test_physionet_topic_keyword_hits_its_mapped_modality():
-    # A topic string with no substring overlap with any general term-table
-    # entry, so this can only fire through the PHYSIONET_TOPICS path.
     result = hints(
         "A recordings archive.",
         source="physionet",
@@ -232,9 +468,6 @@ def test_physionet_topics_are_gated_to_physionet_source():
 
 
 def test_bodypart_hint_fires_with_tcia_source_and_cancer_mention():
-    # A generic cancer word only -- the organ comes solely from the
-    # structured keyword, so "lung neoplasms" can only appear through the
-    # BODYPART_HINTS(+tcia) path, never a direct CONDITION_TERMS match.
     result = hints(
         "A collection of CT scans for tumor research.",
         source="tcia",
@@ -276,7 +509,7 @@ def test_headneck_variants_map_to_the_same_condition_label():
 # ---------------------------------------------------------------------------
 # Every table target is a real vocab value (or, for conditions, part of
 # this module's own canonical label set) -- enumerated explicitly here in
-# addition to the import-time asserts in rules.py itself.
+# addition to the import-time checks in rules.py itself.
 # ---------------------------------------------------------------------------
 
 
@@ -308,16 +541,20 @@ def test_every_bodypart_hint_target_is_in_condition_labels():
         )
 
 
-def test_condition_labels_matching_vocab_condition_aliases_use_the_exact_string():
-    # Where this module's canonical label set overlaps a label that
-    # `vocab.CONDITION_ALIASES` also canonicalizes to, the strings must
-    # agree byte-for-byte -- otherwise the two tables would silently
-    # disagree about the same clinical concept.
-    alias_values = set(vocab.CONDITION_ALIASES.values())
-    overlap = alias_values & rules.CONDITION_LABELS
-    assert len(overlap) >= 15  # sanity floor: most seed aliases are covered
-    for label in overlap:
-        assert label in rules.CONDITION_LABELS
+def test_condition_terms_covers_at_least_120_canonical_labels():
+    assert len(rules.CONDITION_LABELS) >= 120
+
+
+def test_every_condition_alias_value_is_a_condition_terms_label():
+    # The FULL set, not a sample: every canonical label vocab.py's
+    # CONDITION_ALIASES ever resolves to must be producible by this
+    # module's own CONDITION_TERMS, byte-for-byte, or the two tables
+    # would silently disagree about the same clinical concept.
+    for alias_label in vocab.CONDITION_ALIASES.values():
+        assert alias_label in rules.CONDITION_LABELS, (
+            f"vocab.CONDITION_ALIASES value {alias_label!r} "
+            "is missing from rules.CONDITION_LABELS"
+        )
 
 
 def test_animal_and_human_terms_are_nonempty_string_tuples():
@@ -331,15 +568,31 @@ def test_no_duplicate_keys_were_collapsed_in_any_term_table():
     # it is a cheap floor against that class of authoring mistake.
     assert len(rules.MODALITY_TERMS) > 60
     assert len(rules.DOMAIN_TERMS) > 60
-    assert len(rules.CONDITION_TERMS) > 60
+    assert len(rules.CONDITION_TERMS) > 100
 
 
 # ---------------------------------------------------------------------------
-# RuleHits: plain dataclass shape
+# Import-time invariants raise RuntimeError, not bare AssertionError, and
+# survive python -O (assertions stripped) -- exercised directly against
+# the same `_require` helper `rules` uses at import time.
 # ---------------------------------------------------------------------------
 
 
-def test_rule_hits_is_a_plain_dataclass_with_the_documented_fields():
+def test_require_helper_raises_runtime_error_on_failure():
+    with pytest.raises(RuntimeError, match="boom"):
+        rules._require(False, "boom")
+
+
+def test_require_helper_is_a_noop_on_success():
+    rules._require(True, "unreachable")  # must not raise
+
+
+# ---------------------------------------------------------------------------
+# RuleHits: frozen dataclass with the documented fields
+# ---------------------------------------------------------------------------
+
+
+def test_rule_hits_is_a_dataclass_with_the_documented_fields():
     result = RuleHits(
         domains=["neurology"],
         modalities=["MRI"],
@@ -352,3 +605,9 @@ def test_rule_hits_is_a_plain_dataclass_with_the_documented_fields():
     assert result.conditions == ["glioma"]
     assert result.species is None
     assert result.evidence == {"neurology": ["brain"]}
+
+
+def test_rule_hits_is_frozen():
+    result = hints("a dataset", source="curated")
+    with pytest.raises(dataclasses.FrozenInstanceError):
+        result.species = "animal"
