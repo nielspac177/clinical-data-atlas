@@ -911,3 +911,21 @@ button.node-label:hover {
 .callout > :last-child {
   margin-bottom: 0;
 }
+
+/* ---- graph page: label overlay (Task 3.2) ---------------------------- *
+ * The only rule the graph page needed beyond the design system: a
+ * containing block for the absolutely-positioned `.node-label` buttons,
+ * laid over the canvas without stealing its drags. 3d-force-graph clears
+ * the stage element on init, so this layer is appended afterwards.       */
+
+.node-labels {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.node-labels .node-label {
+  pointer-events: auto;
+}
