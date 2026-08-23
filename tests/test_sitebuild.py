@@ -386,6 +386,47 @@ def test_lastmod_and_urldate_appear_only_when_dated(tmp_path: Path) -> None:
     assert "<!--?" not in sitemap and "<!--?" not in about
 
 
+def _citation_version() -> str:
+    """`version:` from CITATION.cff, the release number of record."""
+    match = re.search(
+        r'^version:\s*"?([^"\n]+?)"?\s*$',
+        (config.ROOT / "CITATION.cff").read_text(encoding="utf-8"),
+        re.MULTILINE,
+    )
+    assert match, "CITATION.cff has no version"
+    return match.group(1)
+
+
+def test_bibtex_version_is_the_release_not_the_build(built: Path) -> None:
+    """The BibTeX used to put the build sha in `version`, which made every
+    deploy look like a new release and disagreed with CITATION.cff -- the
+    machine-readable citation the page itself calls authoritative."""
+    about = (built / "about.html").read_text()
+
+    assert f"version = {{{_citation_version()}}}" in about
+    assert f"version = {{{BUILD_ID}}}" not in about
+
+
+def test_bibtex_note_carries_the_build_id_and_the_update_date(built: Path) -> None:
+    about = (built / "about.html").read_text()
+
+    assert f"note    = {{Catalog build {BUILD_ID}, updated 2026-08-22;" in about
+    assert "metadata licensed CC BY 4.0}" in about
+
+
+def test_bibtex_note_drops_the_date_on_an_undated_build(tmp_path: Path) -> None:
+    """The note's date rides on an `IF_DATED` line, so a build with no
+    changelog must fall back to the build id alone -- with exactly one
+    `note` field left, not two and not a dangling brace."""
+    out = tmp_path / "undated"
+    assert build(out, **{"--changelog-dir": tmp_path / "nope"}) == 0
+    about = (out / "about.html").read_text()
+
+    assert f"note    = {{Catalog build {BUILD_ID};" in about
+    assert about.count("note    = {") == 1
+    assert "updated" not in about.split("@software")[1].split("</code>")[0]
+
+
 def test_repo_url_placeholder_is_substituted(built: Path) -> None:
     for name in ("index.html", "table.html", "whats-new.html", "about.html"):
         page = (built / name).read_text()
