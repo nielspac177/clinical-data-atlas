@@ -1,0 +1,124 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  ATLAS_OFFLINE: "1"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    outputs:
+      has_e2e: ${{ steps.e2e.outputs.has_e2e }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - id: e2e
+        name: Detect tests/e2e
+        # `hashFiles()` can't be used for this at job level -- a job's `if:`
+        # is evaluated before that job gets a workspace, so it never sees
+        # tests/e2e even once Task 3.4 adds it. Detect it here instead, once
+        # this job actually has a checkout, and expose it as a job output
+        # the `e2e` job below can gate on via `needs.test.outputs.has_e2e`.
+        run: |
+          if [ -d tests/e2e ] && ls tests/e2e/*.py >/dev/null 2>&1; then
+            echo "has_e2e=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_e2e=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1
+        with:
+          enable-cache: true
+          cache-dependency-glob: "uv.lock"
+
+      - name: Install dependencies
+        run: uv sync --locked --group dev
+
+      - name: Ruff check
+        run: uv run ruff check .
+
+      - name: Ruff format check
+        run: uv run ruff format --check .
+
+      - name: Run unit tests
+        run: uv run pytest -q -m "not live and not e2e"
+
+      - name: Check schema docs are up to date
+        run: uv run atlas schema --check
+
+      - name: Validate catalog
+        # `atlas validate` is still a stub (Task 2.7) and exits 2 today; once a
+        # catalog exists this step runs for real -- gate on the catalog's
+        # existence instead, so the check turns on automatically once the
+        # pipeline produces data/catalog/catalog.jsonl.
+        run: |
+          if [ -f data/catalog/catalog.jsonl ]; then
+            uv run atlas validate --strict
+          else
+            echo "no catalog yet — skipping validate"
+          fi
+
+      - name: Build site and check for unresolved placeholders
+        run: |
+          make site BASE_URL=/clinical-data-atlas/ BUILD=${GITHUB_SHA::7}
+          test -d _site && ! grep -rl -e '__BUILD__' -e '__BASE_URL__' -e '__SITE_URL__' -e '__UPDATED__' -e '__MAINTAINER__' -e '__REPO_URL__' --exclude-dir=vendor _site/
+          test -f _site/.nojekyll
+
+      - name: Validate CITATION.cff
+        run: uvx cffconvert --validate
+
+  e2e:
+    needs: test
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    # Providing our own `if:` on a job with `needs:` replaces (does not AND
+    # with) the default success() gate -- so success() must be spelled out
+    # here, or this job could run after `test` failed as long as the has_e2e
+    # output was still set.
+    if: success() && needs.test.outputs.has_e2e == 'true'
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1
+        with:
+          enable-cache: true
+          cache-dependency-glob: "uv.lock"
+
+      - name: Install dependencies
+        run: uv sync --locked --group dev --group e2e
+
+      - name: Install Playwright browsers
+        run: uv run playwright install --with-deps chromium
+
+      - name: Build site
+        run: make site BASE_URL=/clinical-data-atlas/
+
+      - name: Serve site under the real base path
+        run: |
+          mkdir -p /tmp/www
+          ln -s "$PWD/_site" /tmp/www/clinical-data-atlas
+          (cd /tmp/www && python3 -m http.server 8080 >/dev/null 2>&1 &)
+          sleep 1
+
+      - name: Run e2e tests
+        run: uv run pytest -q -m e2e tests/e2e --base-url http://127.0.0.1:8080/clinical-data-atlas/
+
+      - name: Upload e2e artifacts on failure
+        if: failure()
+        uses: actions/upload-artifact@v7
+        with:
+          name: e2e-artifacts
+          path: tests/e2e/artifacts
