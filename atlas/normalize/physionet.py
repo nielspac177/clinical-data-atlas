@@ -82,11 +82,20 @@ def normalize(
     if resource_type not in _DATASET_RESOURCE_TYPES:
         return Excluded(native_id=native_id, reason="not_a_dataset")
 
+    # An access_policy outside the four documented values is excluded,
+    # never guessed at -- see docs/sources/physionet.md's "unrecognized
+    # access_policy" quirk.
+    access_policy = payload.get("access_policy")
+    if access_policy not in _ACCESS_MAP:
+        return Excluded(
+            native_id=native_id,
+            reason=f"unmapped_access_policy:{access_policy}",
+        )
+    access = _ACCESS_MAP[access_policy]
+
     slug = payload["slug"]
     abstract_text = io.strip_html(payload.get("abstract") or "")
     short_description = payload.get("short_description") or ""
-
-    access = _ACCESS_MAP[payload["access_policy"]]
 
     keywords = list(payload.get("topics") or [])
     if resource_type == "Challenge" and "challenge" not in keywords:

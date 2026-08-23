@@ -146,6 +146,17 @@ def test_summary_uses_short_description_when_at_most_40_words():
     assert schema.word_count(record.summary) <= 40
 
 
+def test_summary_uses_short_description_at_exactly_40_words_boundary():
+    payload = _payload("slpdb")
+    exactly_40_words = " ".join(f"word{i}" for i in range(40))
+    payload["short_description"] = exactly_40_words
+    assert schema.word_count(exactly_40_words) == 40
+
+    record = _normalize("slpdb", payload)
+
+    assert record.summary == exactly_40_words
+
+
 def test_summary_falls_back_to_abstract_when_short_description_is_empty():
     payload = _payload(SOFTWARE_SLUG)  # wfdb-swig-matlab has "" short_description
     assert payload["short_description"] == ""
@@ -220,11 +231,24 @@ def test_access_notes_is_dua_name_when_present():
     assert record.access_notes == "PhysioNet Restricted Health Data Use Agreement 1.5.0"
 
 
-def test_unknown_access_policy_raises():
+def test_unknown_access_policy_is_excluded_not_raised():
     payload = _payload("slpdb")
     payload["access_policy"] = "Something Else Entirely"
-    with pytest.raises(KeyError):
-        _normalize("slpdb", payload)
+
+    outcome = _normalize("slpdb", payload)
+
+    assert outcome == Excluded(
+        native_id="slpdb", reason="unmapped_access_policy:Something Else Entirely"
+    )
+
+
+def test_missing_access_policy_is_excluded_not_raised():
+    payload = _payload("slpdb")
+    del payload["access_policy"]
+
+    outcome = _normalize("slpdb", payload)
+
+    assert outcome == Excluded(native_id="slpdb", reason="unmapped_access_policy:None")
 
 
 # ---------------------------------------------------------------------------
