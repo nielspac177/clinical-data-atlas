@@ -26,6 +26,9 @@ SITE_DIR = config.ROOT / "site"
 PLACEHOLDER_RE = re.compile(r"__[A-Z][A-Z0-9_]*__")
 ROOT_PATH_RE = re.compile(r'(?:href|src)="/')
 
+MARKER_START = sitebuild.MARKER_START
+MARKER_END = sitebuild.MARKER_END
+
 BASE_URL = "/clinical-data-atlas/"
 BUILD_ID = "abc1234"
 
@@ -58,13 +61,14 @@ def built(tmp_path: Path) -> Path:
 
 def text_files(root: Path) -> list[Path]:
     """Text assets the build owns — `vendor/` is third-party (see
-    `test_vendor_bundle_is_copied_untouched`)."""
+    `test_vendor_bundle_is_copied_untouched`). The suffix set comes from
+    production so the two cannot drift."""
     return sorted(
         p
         for p in root.rglob("*")
         if p.is_file()
-        and p.suffix in {".html", ".js", ".txt", ".xml"}
-        and "vendor" not in p.relative_to(root).parts
+        and p.suffix in sitebuild.TEXT_SUFFIXES
+        and sitebuild.VENDOR_DIR not in p.relative_to(root).parts
     )
 
 
@@ -187,32 +191,94 @@ def test_vendor_bundle_is_copied_untouched(built: Path) -> None:
     assert PLACEHOLDER_RE.search(copied.read_text())  # __THREE__ lives here
 
 
-def test_changelog_html_is_escaped_not_executed(tmp_path: Path) -> None:
-    """Changelog prose comes from harvested, submitter-controlled dataset
-    names, and `markdown` passes raw HTML straight through — so any tag in
-    an entry must arrive as visible text."""
+def changelog_body(tmp_path: Path, markdown_text: str) -> str:
+    """Build with a single changelog entry; return the rendered block."""
     changelogs = tmp_path / "changelog"
-    changelogs.mkdir()
-    (changelogs / "2026-09-01.md").write_text(
-        "Added **<img src=x onerror=alert(1)>** and "
-        "<script>alert(2)</script> and <b>bold</b>.\n"
-    )
+    changelogs.mkdir(exist_ok=True)
+    (changelogs / "2026-09-01.md").write_text(markdown_text)
 
     out = tmp_path / "_site"
     assert build(out, **{"--changelog-dir": changelogs}) == 0
-
     page = (out / "whats-new.html").read_text()
-    body = page.split("<!--CHANGELOG:START-->")[1].split("<!--CHANGELOG:END-->")[0]
+    return page.split(MARKER_START)[1].split(MARKER_END)[0]
+
+
+def test_injected_tags_render_as_visible_text(tmp_path: Path) -> None:
+    """Changelog prose is generated from harvested, submitter-controlled
+    dataset names, and `markdown` passes raw HTML straight through."""
+    body = changelog_body(
+        tmp_path,
+        "Added **<img src=x onerror=alert(1)>** and "
+        "<script>alert(2)</script> and <svg onload=alert(3)></svg>.\n",
+    )
 
     assert "<img" not in body
     assert "<script>" not in body
-    assert "onerror" in body  # present, but as text
+    assert "<svg" not in body
+    assert "onerror" in body and "onload" in body  # present, but as text
     assert "&lt;img src=x onerror=alert(1)&gt;" in body
     assert "&lt;script&gt;alert(2)&lt;/script&gt;" in body
-    # Entities, not double-escaped entities.
-    assert "&amp;lt;" not in body
-    # Real markdown still renders.
-    assert "<strong>" in body
+    assert "<strong>" in body  # real markdown still renders
+
+
+def test_code_and_quotes_survive_sanitizing(tmp_path: Path) -> None:
+    """The sanitizer runs *after* rendering precisely so that markdown
+    syntax involving angle brackets keeps working."""
+    body = changelog_body(
+        tmp_path,
+        "Filter `age < 18` from the cohort.\n\n"
+        "```\nif (a < b) then c > d\n```\n\n"
+        "> Source note: counts are provisional.\n",
+    )
+
+    # Single-escaped, never double-escaped.
+    assert "<code>age &lt; 18</code>" in body
+    assert "&lt; b" in body and "&gt; d" in body
+    assert "&amp;lt;" not in body and "&amp;gt;" not in body
+    # The blockquote marker is still a blockquote.
+    assert "<blockquote>" in body
+    assert "counts are provisional" in body
+
+
+def test_unsafe_link_targets_are_dropped(tmp_path: Path) -> None:
+    body = changelog_body(
+        tmp_path,
+        "[bad](javascript:alert%281%29) and [worse](data:text/html;base64,PHN2Zz4=)\n\n"
+        "[good](https://example.org/a?b=1&c=2)\n",
+    )
+
+    assert "javascript" not in body.lower()
+    assert "data:text/html" not in body
+    assert "<a>bad</a>" in body  # link text kept, target gone
+    assert 'href="https://example.org/a?b=1&amp;c=2"' in body
+    assert 'rel="noopener"' in body
+
+
+def test_changelog_tables_keep_their_structure(tmp_path: Path) -> None:
+    body = changelog_body(
+        tmp_path, "| Source | Added |\n|---|---|\n| openneuro | 3 |\n"
+    )
+    for tag in ("<table>", "<thead>", "<tbody>", "<th>", "<td>"):
+        assert tag in body, tag
+    assert "openneuro" in body
+
+
+def test_sanitizer_drops_attributes_and_balances_tags() -> None:
+    """Unit-level checks that need no build."""
+    dirty = (
+        '<p class="x" onclick="alert(1)">hi</p>'
+        '<a href="https://ok.test" target="_blank" onmouseover="x">link</a>'
+        '<time datetime="2026-09-01">then</time>'
+        "<p>unclosed"
+    )
+    clean = sitebuild.sanitize_html(dirty)
+
+    assert "onclick" not in clean and "onmouseover" not in clean
+    assert 'class="x"' not in clean and "target=" not in clean
+    assert '<a href="https://ok.test" rel="noopener">link</a>' in clean
+    assert '<time datetime="2026-09-01">then</time>' in clean
+    # The input left a <p> open; the sanitizer closes it on the way out.
+    assert clean.endswith("</p>")
 
 
 def test_every_asset_reference_is_cache_busted(built: Path) -> None:

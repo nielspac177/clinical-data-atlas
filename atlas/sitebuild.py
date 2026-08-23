@@ -32,10 +32,12 @@ Three conventions the rest of the repo relies on:
 from __future__ import annotations
 
 import argparse
+import html
 import re
 import shutil
 import sys
 from collections.abc import Sequence
+from html.parser import HTMLParser
 from pathlib import Path
 
 import markdown
@@ -50,7 +52,6 @@ MARKER_END = "<!--CHANGELOG:END-->"
 VENDOR_DIR = "vendor"
 PLACEHOLDER_RE = re.compile(r"__[A-Z][A-Z0-9_]*__")
 NO_CHANGELOG_HTML = '<p class="muted">No refreshes have been recorded yet.</p>'
-NO_DATE = "not yet published"
 
 # Line-level conditionals. A source line ending in `<!--?updated-->` is kept
 # only when a changelog date exists (the marker is then stripped); one ending
@@ -120,28 +121,126 @@ def changelog_entries(changelog_dir: Path) -> list[Path]:
     return entries[:CHANGELOG_LIMIT]
 
 
-def _defang(markdown_text: str) -> str:
-    """Neutralize embedded HTML in changelog markdown.
+# Rendered-changelog sanitizer.
+#
+# `markdown` passes embedded HTML straight through, and changelog entries
+# are generated from harvested dataset names -- strings a dataset submitter
+# controls. Sanitizing the *rendered* HTML rather than escaping the markdown
+# source is what keeps code spans, fenced blocks and blockquotes working:
+# escaping the source turns `age < 18` into a visible `&lt;` and destroys
+# the `> quote` marker, while the allowlist below still guarantees that no
+# tag outside it reaches a reader as markup.
+ALLOWED_TAGS = frozenset(
+    {
+        "p", "br", "hr", "h1", "h2", "h3", "h4", "h5", "h6",
+        "ul", "ol", "li", "strong", "em", "b", "i", "code", "pre",
+        "blockquote", "a", "table", "thead", "tbody", "tr", "th", "td",
+        "time", "article", "section", "span",
+    }
+)  # fmt: skip
+VOID_TAGS = frozenset({"br", "hr"})
+ALLOWED_ATTRS = {"a": frozenset({"href"}), "time": frozenset({"datetime"})}
+SAFE_SCHEMES = ("http://", "https://")
 
-    `markdown` passes raw HTML straight through, and changelog entries are
-    generated from harvested dataset names — i.e. from strings a dataset
-    submitter controls. Escaping `<` and `>` before rendering turns any
-    embedded tag into visible text. Neither character is markdown syntax
-    in anything the pipeline emits, and `markdown` recognizes the
-    resulting entities rather than double-escaping them, so `&lt;b&gt;`
-    still renders as the literal text `<b>`.
+
+class _Sanitizer(HTMLParser):
+    """Reduce rendered markdown to `ALLOWED_TAGS`.
+
+    Allowed tags survive with every attribute dropped except `href` on
+    `<a>` (http/https only, always with `rel="noopener"`) and `datetime`
+    on `<time>`. Anything else -- `<img>`, `<script>`, an event handler --
+    is emitted as escaped text: visible to the reader, inert to the
+    browser. Comments and declarations are dropped (the base class's
+    no-op handlers), and open tags are tracked so the result stays
+    balanced however unbalanced the input was.
     """
-    return markdown_text.replace("<", "&lt;").replace(">", "&gt;")
+
+    def __init__(self) -> None:
+        # convert_charrefs=False keeps `&lt;` from a code span intact instead
+        # of decoding it to `<` and re-escaping it on the way out.
+        super().__init__(convert_charrefs=False)
+        self._out: list[str] = []
+        self._open: list[str] = []
+
+    def _text(self, data: str) -> None:
+        self._out.append(html.escape(data, quote=False))
+
+    def _attributes(self, tag: str, attrs: list[tuple[str, str | None]]) -> str:
+        allowed = ALLOWED_ATTRS.get(tag, frozenset())
+        rendered: list[str] = []
+        for name, value in attrs:
+            if name not in allowed or value is None:
+                continue
+            if name == "href":
+                url = value.strip()
+                # An allowlist of schemes, so `javascript:`, `data:` and
+                # obfuscations of them are dropped without pattern-matching.
+                if not url.lower().startswith(SAFE_SCHEMES):
+                    continue
+                rendered.append(f' href="{html.escape(url)}" rel="noopener"')
+            else:
+                rendered.append(f' {name}="{html.escape(value)}"')
+        return "".join(rendered)
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        if tag not in ALLOWED_TAGS:
+            self._text(self.get_starttag_text() or f"<{tag}>")
+            return
+        self._out.append(f"<{tag}{self._attributes(tag, attrs)}>")
+        if tag not in VOID_TAGS:
+            self._open.append(tag)
+
+    def handle_startendtag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        if tag not in ALLOWED_TAGS:
+            self._text(self.get_starttag_text() or f"<{tag}/>")
+            return
+        self._out.append(f"<{tag}{self._attributes(tag, attrs)}>")
+        if tag not in VOID_TAGS:
+            self._out.append(f"</{tag}>")
+
+    def handle_endtag(self, tag: str) -> None:
+        if tag not in ALLOWED_TAGS or tag in VOID_TAGS:
+            self._text(f"</{tag}>")
+            return
+        if tag not in self._open:
+            return  # A stray close tag closes nothing.
+        while self._open:
+            current = self._open.pop()
+            self._out.append(f"</{current}>")
+            if current == tag:
+                break
+
+    def handle_data(self, data: str) -> None:
+        self._text(data)
+
+    def handle_entityref(self, name: str) -> None:
+        self._out.append(f"&{name};")
+
+    def handle_charref(self, name: str) -> None:
+        self._out.append(f"&#{name};")
+
+    def result(self) -> str:
+        self.close()
+        while self._open:
+            self._out.append(f"</{self._open.pop()}>")
+        return "".join(self._out)
+
+
+def sanitize_html(rendered: str) -> str:
+    """Reduce rendered markdown to the changelog tag allowlist."""
+    parser = _Sanitizer()
+    parser.feed(rendered)
+    return parser.result()
 
 
 def render_changelog(entries: Sequence[Path]) -> str:
-    """Render each entry as its own dated `<article>`."""
+    """Render each entry as its own dated, sanitized `<article>`."""
     renderer = markdown.Markdown(extensions=["tables", "fenced_code"])
     articles = []
     for path in entries:
         date = path.stem
         renderer.reset()
-        body = renderer.convert(_defang(path.read_text(encoding="utf-8")))
+        body = sanitize_html(renderer.convert(path.read_text(encoding="utf-8")))
         articles.append(
             f'<article>\n<h2><time datetime="{date}">{date}</time></h2>\n'
             f"{body}\n</article>"
@@ -241,18 +340,20 @@ def build(
 
     prefix = base_url if base_url.endswith("/") else f"{base_url}/"
     updated = entries[0].stem if entries else ""
-    substitute(
-        out,
-        {
-            "__BUILD__": build_id,
-            "__BASE_URL__": prefix,
-            "__SITE_URL__": config.SITE_URL,
-            "__REPO_URL__": config.REPO_URL,
-            "__UPDATED__": updated or NO_DATE,
-            "__MAINTAINER__": config.MAINTAINER,
-        },
-        dated=bool(updated),
-    )
+    values = {
+        "__BUILD__": build_id,
+        "__BASE_URL__": prefix,
+        "__SITE_URL__": config.SITE_URL,
+        "__REPO_URL__": config.REPO_URL,
+        "__MAINTAINER__": config.MAINTAINER,
+    }
+    # Every `__UPDATED__` sits on an `IF_DATED` line, so when there is no
+    # date the token is removed rather than filled -- and an unmarked use
+    # added later trips the placeholder guard instead of shipping a
+    # stand-in date. The undated wording lives once, in the page itself.
+    if updated:
+        values["__UPDATED__"] = updated
+    substitute(out, values, dated=bool(updated))
 
     if leftovers := remaining_placeholders(out):
         print("error: unsubstituted placeholders remain:", file=sys.stderr)
