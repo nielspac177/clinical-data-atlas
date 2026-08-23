@@ -457,6 +457,10 @@ async function main() {
   if (searchModule?.createSearchBox && searchInput) {
     searchModule.createSearchBox(searchInput, {
       getSearch: () => searchBox,
+      // Called only when a typed query finds no index yet — so it still
+      // starts the fetch lazily, and the box re-runs that query once the
+      // index lands instead of leaving it on a "no results" it never got.
+      ready: () => ensureSearch(),
       onSelect: (id) => selectDataset(id, { isolate: true }),
     });
     // The index is a second download: don't pay for it until it's wanted.

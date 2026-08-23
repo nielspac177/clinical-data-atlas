@@ -116,18 +116,82 @@ export function buildSearch(rows) {
 
 const DEBOUNCE_MS = 120;
 
+/** Announced while the (lazily fetched) search index is still on its way. */
+export const LOADING_MESSAGE = "Loading search index…";
+
+/**
+ * What a query currently resolves to — the pure half of the combobox, so
+ * the index-arrival race below is testable without a DOM.
+ *
+ * `search` is the `query(q, limit)` function from `buildSearch`, or
+ * `null`/`undefined` while the index is still downloading. That distinction
+ * is the whole point: without it, a query typed during the fetch searches
+ * nothing and reads as `No results for "…"` — an answer, and the wrong one.
+ *
+ * Returns `{status, query, items, message}`, `status` being:
+ * - `"idle"` — nothing typed; nothing to say.
+ * - `"loading"` — typed, but the index hasn't landed. Re-run it when it does.
+ * - `"empty"` — a real search over a real index that matched nothing.
+ * - `"results"` — hits, in rank order.
+ */
+function idleState() {
+  return { status: "idle", query: "", items: [], message: "" };
+}
+
+export function searchState(query, search, limit = 20) {
+  const trimmed = String(query ?? "").trim();
+  if (!trimmed) return idleState();
+  if (typeof search !== "function") {
+    return { status: "loading", query: trimmed, items: [], message: LOADING_MESSAGE };
+  }
+  const items = search(trimmed, limit) ?? [];
+  if (items.length === 0) {
+    return {
+      status: "empty",
+      query: trimmed,
+      items,
+      message: `No results for "${trimmed}"`,
+    };
+  }
+  return {
+    status: "results",
+    query: trimmed,
+    items,
+    message: `${items.length} result${items.length === 1 ? "" : "s"} for "${trimmed}"`,
+  };
+}
+
+/**
+ * Should the query be run again now that the index has arrived?
+ *
+ * Only when the reader still has something in the box (they may have
+ * cleared it, or picked a result, while the fetch was in flight) and what
+ * they are looking at is a non-answer: the "loading" state, or a
+ * "No results" that a stale/absent index produced.
+ */
+export function needsRerun(state, query) {
+  if (!String(query ?? "").trim()) return false;
+  return state?.status === "loading" || state?.status === "empty";
+}
+
 /**
  * Wire an `<input role="combobox">` + its `role="listbox"` result list
  * (named by the input's `aria-controls`) into a live search box.
  *
- * `getSearch()` must return the current `query(q, limit)` function (so the
- * caller can swap it once the real index has loaded); `onSelect(id)` fires
- * on Enter or a result click. Handles arrow/Home/End navigation,
- * `aria-activedescendant`, a 120 ms debounce, and announces result counts
- * via `a11y.announce()`. The page-wide `/` shortcut is `a11y.js`'s
- * `initSearchShortcut()`, not duplicated here.
+ * `getSearch()` must return the current `query(q, limit)` function, or
+ * `null` while the index is still loading (see `searchState`); `ready` is
+ * the promise that index arrives on — or a function returning one, called
+ * only once a typed query actually needs the index, so a lazily fetched
+ * index stays lazy. `onSelect(id)` fires on Enter or a result click.
+ * Handles arrow/Home/End navigation, `aria-activedescendant`, a 120 ms
+ * debounce, and announces result counts via `a11y.announce()`. The
+ * page-wide `/` shortcut is `a11y.js`'s `initSearchShortcut()`, not
+ * duplicated here.
  */
-export function createSearchBox(input, { getSearch, onSelect, limit = 20 } = {}) {
+export function createSearchBox(
+  input,
+  { getSearch, onSelect, limit = 20, ready } = {},
+) {
   const noop = { close() {}, destroy() {} };
   if (!input) return noop;
   const listId = input.getAttribute("aria-controls");
@@ -137,12 +201,21 @@ export function createSearchBox(input, { getSearch, onSelect, limit = 20 } = {})
   let items = [];
   let activeIndex = -1;
   let debounceTimer = null;
+  // What the reader is currently looking at, and whether a re-run is
+  // already queued against the index's arrival.
+  let state = idleState();
+  let awaitingIndex = false;
+  let destroyed = false;
 
   const optionId = (index) => `${list.id}-option-${index}`;
 
   function close() {
     items = [];
     activeIndex = -1;
+    // Nothing is on screen any more, so a late-arriving index has nothing
+    // to correct: without this, blurring a box with text still in it would
+    // pop the results open again once the fetch finished.
+    state = idleState();
     list.textContent = "";
     list.hidden = true;
     input.setAttribute("aria-expanded", "false");
@@ -204,19 +277,46 @@ export function createSearchBox(input, { getSearch, onSelect, limit = 20 } = {})
   }
 
   function runSearch() {
-    const q = input.value;
-    const trimmed = q.trim();
-    const search = getSearch?.();
-    items = trimmed && typeof search === "function" ? search(trimmed, limit) : [];
+    state = searchState(input.value, getSearch?.(), limit);
+    items = state.items;
     activeIndex = items.length ? 0 : -1;
     render();
-    if (trimmed) {
-      announce(
-        items.length === 0
-          ? `No results for "${trimmed}"`
-          : `${items.length} result${items.length === 1 ? "" : "s"} for "${trimmed}"`,
-      );
-    }
+    // "Loading search index…" rather than a "No results" the index never
+    // actually said. The listbox stays collapsed either way (nothing
+    // selectable in it yet), so the live region carries this, exactly as
+    // it already carries the real no-matches case.
+    if (state.message) announce(state.message);
+    if (state.status === "loading") awaitIndex();
+  }
+
+  /**
+   * The index is fetched lazily, so the reader can out-type it. Ask for it
+   * (this is what triggers the fetch when `ready` is a function) and re-run
+   * the query once it lands — otherwise the debounced query that raced it
+   * would sit there answered wrongly and never be retried.
+   */
+  function awaitIndex() {
+    if (awaitingIndex || destroyed) return;
+    const pending = typeof ready === "function" ? ready() : ready;
+    if (typeof pending?.then !== "function") return;
+    awaitingIndex = true;
+    pending.then(
+      () => {
+        awaitingIndex = false;
+        if (destroyed) return;
+        // The wait can settle *without* an index — a fetch that failed and
+        // was reported by the caller rather than rethrown. Re-running then
+        // would land back on "loading" and wait on the same settled
+        // promise again, forever; leave it for the next keystroke instead.
+        if (typeof getSearch?.() !== "function") return;
+        if (needsRerun(state, input.value)) runSearch();
+      },
+      () => {
+        // A failed index is the caller's to report (it owns the fetch);
+        // clearing the flag just lets a later query try again.
+        awaitingIndex = false;
+      },
+    );
   }
 
   input.addEventListener("input", () => {
@@ -266,6 +366,7 @@ export function createSearchBox(input, { getSearch, onSelect, limit = 20 } = {})
   return {
     close,
     destroy() {
+      destroyed = true;
       close();
       unregisterEscape();
     },

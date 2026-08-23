@@ -94,7 +94,9 @@ function main() {
   let allRows = [];
   let rowsById = new Map();
   let filterState = {};
-  let searchFn = () => [];
+  // Null, not an empty searcher, until the index lands: the search box
+  // needs "not loaded yet" to be distinguishable from "nothing matched".
+  let searchFn = null;
 
   function selectRow(id) {
     const row = rowsById.get(id);
@@ -143,6 +145,9 @@ function main() {
   // open) reaches the panel's handler. See a11y.js's `onEscape`.
   createSearchBox(searchInput, {
     getSearch: () => searchFn,
+    // A query typed while the index is still downloading is re-run once
+    // it arrives, rather than answered "No results" by an empty index.
+    ready: () => indexReady,
     onSelect(id) {
       selectRow(id);
     },
@@ -269,7 +274,9 @@ function main() {
 
   onChange((state) => applyUrlState(state));
 
-  fetchJSON("data/search-index.json")
+  // Named so the search box can wait on it (`ready` above); the `catch`
+  // is what that wait settles on if the catalog never arrives.
+  const indexReady = fetchJSON("data/search-index.json")
     .then((rows) => {
       allRows = Array.isArray(rows) ? rows : [];
       rowsById = new Map(allRows.map((r) => [r.id, r]));
