@@ -37,6 +37,7 @@ import re
 import shutil
 import sys
 from collections.abc import Sequence
+from html.entities import html5
 from html.parser import HTMLParser
 from pathlib import Path
 
@@ -214,7 +215,17 @@ class _Sanitizer(HTMLParser):
         self._text(data)
 
     def handle_entityref(self, name: str) -> None:
-        self._out.append(f"&{name};")
+        # HTMLParser reports the `&A` in `Q&A` as an entity ref named
+        # "A" -- it matches `&[a-zA-Z]+` without requiring a semicolon and
+        # without validating the name -- so re-emitting `&name;` blindly
+        # invents punctuation: `Q&A` would reach the reader as `Q&A;`,
+        # and so would AT&T, R&D and friends. Only real HTML5 entity
+        # names survive as entities; anything else is a bare ampersand
+        # followed by ordinary text.
+        if f"{name};" in html5:
+            self._out.append(f"&{name};")
+        else:
+            self._out.append("&amp;" + html.escape(name, quote=False))
 
     def handle_charref(self, name: str) -> None:
         self._out.append(f"&#{name};")
@@ -248,14 +259,14 @@ def render_changelog(entries: Sequence[Path]) -> str:
     return "\n".join(articles)
 
 
-def insert_changelog(page: Path, html: str) -> bool:
+def insert_changelog(page: Path, rendered_html: str) -> bool:
     """Replace everything between the markers in `page`. False if absent."""
     text = page.read_text(encoding="utf-8")
     start = text.find(MARKER_START)
     end = text.find(MARKER_END)
     if start == -1 or end == -1 or end < start:
         return False
-    body = html or NO_CHANGELOG_HTML
+    body = rendered_html or NO_CHANGELOG_HTML
     head = text[: start + len(MARKER_START)]
     page.write_text(f"{head}\n{body}\n{text[end:]}", encoding="utf-8")
     return True

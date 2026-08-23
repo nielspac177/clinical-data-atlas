@@ -263,6 +263,42 @@ def test_changelog_tables_keep_their_structure(tmp_path: Path) -> None:
     assert "openneuro" in body
 
 
+def test_bare_ampersands_are_not_turned_into_entities() -> None:
+    """`HTMLParser` matches `&[a-zA-Z]+` without needing a semicolon and
+    without validating the name, so `Q&A` in a raw-HTML block arrives here
+    as an "entity ref" called "A". Re-emitting it as `&name;` would invent
+    a semicolon the author never wrote."""
+    assert sitebuild.sanitize_html("<p>Q&A</p>") == "<p>Q&amp;A</p>"
+    assert (
+        sitebuild.sanitize_html("<p>AT&T and R&D</p>") == "<p>AT&amp;T and R&amp;D</p>"
+    )
+    # A bare ampersand before a space is plain data, not an entity ref.
+    assert "Ben &amp; Jerry" in sitebuild.sanitize_html("<p>Ben & Jerry</p>")
+
+
+def test_real_entities_and_numeric_refs_are_preserved() -> None:
+    named = "<p>&amp; &lt; &gt; &quot; &copy; &mdash;</p>"
+    assert sitebuild.sanitize_html(named) == named
+
+    numeric = "<p>&#169; &#x2014; &#8212;</p>"
+    assert sitebuild.sanitize_html(numeric) == numeric
+
+    # Mixed: a real entity next to a bare ampersand.
+    assert sitebuild.sanitize_html("<p>5 &lt; 6, Q&A</p>") == "<p>5 &lt; 6, Q&amp;A</p>"
+
+
+def test_changelog_keeps_ampersands_in_raw_html(tmp_path: Path) -> None:
+    """End to end: markdown escapes bare ampersands in prose itself, but
+    passes raw inline HTML through untouched -- that is where the
+    fabricated semicolon used to show up."""
+    body = changelog_body(
+        tmp_path, "Added <span>Q&A cohort from AT&T</span> and plain Q&A.\n"
+    )
+    assert "Q&amp;A cohort from AT&amp;T" in body
+    assert "Q&A;" not in body
+    assert "plain Q&amp;A" in body
+
+
 def test_sanitizer_drops_attributes_and_balances_tags() -> None:
     """Unit-level checks that need no build."""
     dirty = (
