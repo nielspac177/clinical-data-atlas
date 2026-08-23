@@ -95,11 +95,16 @@ function chevron(doc) {
  * `options.media` (a `MediaQueryList`) and `options.announce` exist for
  * tests; the defaults are `NARROW_QUERY` and `a11y.announce`.
  *
- * Returns `{ update(state), destroy() }` — `update` re-labels the button
- * from the current filter state and is safe to call on every refresh.
+ * Returns `{ update(state), focus(), destroy() }` — `update` re-labels the
+ * button from the current filter state and is safe to call on every
+ * refresh; `focus` is the narrow-screen landing place for a flow whose
+ * natural target is inside the collapsed rail, and reports whether it
+ * actually took focus.
  */
 export function createFacetsToggle(facets, options = {}) {
-  if (!facets || !facets.parentNode) return { update() {}, destroy() {} };
+  if (!facets || !facets.parentNode) {
+    return { update() {}, focus: () => false, destroy() {} };
+  }
 
   const doc = facets.ownerDocument;
   const media = options.media ?? window.matchMedia(NARROW_QUERY);
@@ -147,6 +152,16 @@ export function createFacetsToggle(facets, options = {}) {
     update(next) {
       state = next ?? {};
       render();
+    },
+    /**
+     * Move focus to the button, if it is on screen. False above the
+     * breakpoint, where the button has no box — the caller's own target
+     * is visible there and this fallback is not wanted.
+     */
+    focus() {
+      if (!button.getClientRects().length) return false;
+      button.focus();
+      return true;
     },
     destroy() {
       media.removeEventListener("change", onMediaChange);

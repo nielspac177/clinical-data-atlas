@@ -556,6 +556,41 @@ def test_filtering_from_the_phone_rail_updates_the_table_and_the_count(
     assert status is not None and 0 < status["y"] < MOBILE["height"], status
 
 
+def test_a_panel_chip_on_a_phone_lands_focus_on_the_filters_button(
+    page: Page,
+) -> None:
+    """Filtering from a record chip must not drop focus onto `<body>`.
+
+    The chip's natural landing place is the checkbox it just ticked, and
+    below 900px that checkbox is inside the collapsed rail, where
+    `.focus()` is a silent no-op. WCAG 2.4.3 is Level A, and the fallout
+    is concrete: a keyboard reader returned to the top of the document
+    has to tab past the skip link, the wordmark, four nav links, the
+    header search and the theme toggle to get back to the table.
+    """
+    page.set_viewport_size(MOBILE)
+    page.goto("table.html")
+    expect(page.locator("#table-body tr").first).to_be_visible()
+
+    page.locator("#table-body tr").first.locator(".cell-name button").click()
+    panel = page.locator("#panel")
+    expect(panel).to_be_visible()
+
+    # Whichever facet chip this record happens to carry; that it has one
+    # is what the test needs, which one it is is the catalog's business.
+    chip = panel.locator("[data-chip-kind]").first
+    expect(chip).to_be_visible()
+    chip.click()
+
+    toggle = page.locator(".facets-toggle")
+    expect(toggle).to_be_visible()
+    assert toggle.evaluate("(el) => el === document.activeElement"), page.evaluate(
+        "() => document.activeElement?.tagName + '.' + document.activeElement?.className"
+    )
+    # And it says what just happened, rather than only catching the focus.
+    expect(toggle).to_have_text(re.compile(r"^Filters \(\d+\)$"))
+
+
 def test_the_desktop_table_page_keeps_its_open_rail(page: Page) -> None:
     """Above the breakpoint nothing about the table page changed."""
     page.set_viewport_size(DESKTOP)

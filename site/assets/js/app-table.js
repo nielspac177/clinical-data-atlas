@@ -65,12 +65,22 @@ function stableFacetCounts(rows, state, facet) {
   return merged;
 }
 
-/** Focus the checkbox for `value` in `facet`'s rail, if it's on screen. */
+/**
+ * Focus the checkbox for `value` in `facet`'s rail; false if it isn't on
+ * screen to be focused.
+ *
+ * "On screen" is load-bearing, not decorative: below 900px the rail is
+ * collapsed to `display: none`, where `.focus()` is a silent no-op that
+ * leaves the active element on `<body>`. Rendered-ness is read from
+ * `getClientRects()` rather than a breakpoint, so the answer stays true
+ * however the rail comes to be hidden.
+ */
 function focusFacetCheckbox(facet, value) {
   const container = document.querySelector(`[data-facet-options="${facet}"]`);
   if (!container) return false;
   for (const input of container.querySelectorAll("input")) {
     if (input.value === value) {
+      if (!input.getClientRects().length) return false;
       input.focus();
       return true;
     }
@@ -134,7 +144,15 @@ function main() {
       // checkbox that now reflects the filter just added is guaranteed
       // to exist (it's the value the chip itself came from) and is
       // exactly what the reader's attention should confirm next.
-      focusFacetCheckbox(kind, value);
+      //
+      // On a phone that checkbox is inside the collapsed rail and cannot
+      // take focus, so the Filters button catches it instead. The button
+      // is the better landing place there than auto-expanding the rail
+      // would be: its label has just become "Filters (n)", so it both
+      // reports what the chip did and opens the panel that proves it,
+      // and the reader keeps their place instead of having 352px of
+      // facets shoved between them and the table they were reading.
+      if (!focusFacetCheckbox(kind, value)) facetsToggle.focus();
     },
     onNavigate(id) {
       // "View in graph" - the table page has no in-page graph, so this
