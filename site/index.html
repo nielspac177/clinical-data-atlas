@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark light" />
+    <title>Clinical Data Atlas — a map of the clinical data landscape</title>
+    <meta
+      name="description"
+      content="An explorable 3D map of open and gated clinical and neuroscience datasets: sources, modalities, conditions and institutions in one schema, refreshed monthly."
+    />
+    <link rel="canonical" href="__SITE_URL__" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Clinical Data Atlas" />
+    <meta property="og:title" content="Clinical Data Atlas" />
+    <meta
+      property="og:description"
+      content="An explorable 3D map of open and gated clinical and neuroscience datasets, refreshed monthly."
+    />
+    <meta property="og:url" content="__SITE_URL__" />
+    <meta property="og:image" content="__SITE_URL__assets/img/og.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Clinical Data Atlas" />
+    <meta
+      name="twitter:description"
+      content="An explorable 3D map of open and gated clinical and neuroscience datasets, refreshed monthly."
+    />
+    <meta name="twitter:image" content="__SITE_URL__assets/img/og.svg" />
+    <link rel="icon" href="assets/img/favicon.svg?v=__BUILD__" type="image/svg+xml" />
+    <script>
+      // Pre-paint: apply the stored theme before the first frame so the
+      // page never flashes the wrong palette. No storage / no choice =
+      // no attribute, and the CSS follows prefers-color-scheme.
+      (function () {
+        try {
+          var t = localStorage.getItem("cda-theme");
+          if (t === "dark" || t === "light") {
+            document.documentElement.setAttribute("data-theme", t);
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="stylesheet" href="assets/css/tokens.css?v=__BUILD__" />
+    <link rel="stylesheet" href="assets/css/base.css?v=__BUILD__" />
+    <link rel="stylesheet" href="assets/css/layout.css?v=__BUILD__" />
+    <link rel="stylesheet" href="assets/css/components.css?v=__BUILD__" />
+  </head>
+  <body class="page-graph">
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+      <a class="wordmark" href="index.html">
+        <svg
+          class="wordmark-mark"
+          width="20"
+          height="20"
+          viewBox="0 0 32 32"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <g stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none">
+            <path d="M16 8 L7 23" />
+            <path d="M16 8 L25 23" />
+            <path d="M7 23 L25 23" />
+          </g>
+          <g fill="currentColor">
+            <circle cx="16" cy="8" r="4.4" />
+            <circle cx="7" cy="23" r="3.6" />
+            <circle cx="25" cy="23" r="3.6" />
+          </g>
+        </svg>
+        <span class="wordmark-text">Clinical Data Atlas</span>
+      </a>
+
+      <div class="header-mid">
+        <nav class="site-nav" aria-label="Primary">
+          <a href="index.html" aria-current="page">Graph</a>
+          <a href="table.html">Table</a>
+          <a href="whats-new.html">What&rsquo;s new</a>
+          <a href="about.html">About</a>
+        </nav>
+
+        <div class="search header-search" role="search">
+          <svg class="search-icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+            <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+              <circle cx="7" cy="7" r="4.5" />
+              <path d="M10.5 10.5 L14 14" />
+            </g>
+          </svg>
+          <label class="visually-hidden" for="search-input">Search datasets</label>
+          <input
+            id="search-input"
+            class="search-input"
+            type="search"
+            placeholder="Search datasets  /"
+            autocomplete="off"
+            autocapitalize="off"
+            spellcheck="false"
+            role="combobox"
+            aria-expanded="false"
+            aria-controls="search-results"
+            aria-autocomplete="list"
+            aria-haspopup="listbox"
+          />
+          <ul id="search-results" class="search-results" role="listbox" aria-label="Search results" hidden></ul>
+        </div>
+      </div>
+
+      <div class="header-end">
+        <button
+          id="theme-toggle"
+          class="icon-btn"
+          type="button"
+          aria-pressed="false"
+        >
+          <svg class="icon-dark" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path
+              fill="currentColor"
+              d="M20.7 14.6A8.6 8.6 0 0 1 9.4 3.3 8.9 8.9 0 1 0 20.7 14.6Z"
+            />
+          </svg>
+          <svg class="icon-light" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+              <circle cx="12" cy="12" r="4.2" />
+              <path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.2 5.2l1.4 1.4M17.4 17.4l1.4 1.4M18.8 5.2l-1.4 1.4M6.6 17.4l-1.4 1.4" />
+            </g>
+          </svg>
+          <span class="visually-hidden">Light theme</span>
+        </button>
+
+        <a
+          class="icon-btn github-link"
+          href="https://github.com/nielspac177/clinical-data-atlas"
+          rel="noopener"
+        >
+          <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+            <path
+              fill="currentColor"
+              d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38v-1.34C3.81 14.35 3.35 12.9 3.35 12.9c-.36-.92-.88-1.16-.88-1.16-.72-.49.05-.48.05-.48.8.06 1.22.82 1.22.82.71 1.21 1.86.86 2.31.66.07-.52.28-.86.5-1.06-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.01.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 4 0c1.53-1.03 2.2-.82 2.2-.82.44 1.11.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48v2.2c0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"
+            />
+          </svg>
+          <span class="visually-hidden">Source and issues on GitHub</span>
+        </a>
+      </div>
+    </header>
+
+    <main id="main" class="graph-main" tabindex="-1">
+      <div
+        id="graph"
+        class="graph-stage"
+        role="img"
+        aria-label="Three-dimensional knowledge graph of clinical datasets: sources, modalities, conditions and institutions linked to the datasets that use them. The graph is a visual complement — search, and the Table view, are the keyboard-accessible path to the same records."
+      ></div>
+
+      <div class="graph-ui">
+        <div class="stats-bar" id="stats-bar">
+          <dl class="stats">
+            <div class="stat">
+              <dt>Datasets</dt>
+              <dd data-stat="record_count">&mdash;</dd>
+            </div>
+            <div class="stat">
+              <dt>Sources</dt>
+              <dd data-stat="sources">&mdash;</dd>
+            </div>
+            <div class="stat">
+              <dt>Modalities</dt>
+              <dd data-stat="modalities">&mdash;</dd>
+            </div>
+            <div class="stat">
+              <dt>In view</dt>
+              <dd data-stat="visible">&mdash;</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="graph-actions">
+          <button id="reset-view" class="btn" type="button">Reset view</button>
+        </div>
+
+        <details class="legend" id="legend">
+          <summary>Legend &amp; filters</summary>
+          <div class="legend-body">
+            <div class="legend-group">
+              <p class="legend-title">Node types</p>
+              <ul class="node-key">
+                <li data-node="source">Source</li>
+                <li data-node="modality">Modality</li>
+                <li data-node="condition">Condition</li>
+                <li data-node="institution">Institution</li>
+                <li data-node="dataset">Dataset</li>
+              </ul>
+              <p class="legend-note">
+                Node size grows with the number of connections. Datasets take
+                the color of their clinical domain.
+              </p>
+            </div>
+
+            <div class="legend-group">
+              <p class="legend-title" id="legend-domains-title">Domains</p>
+              <ul class="chip-list" aria-labelledby="legend-domains-title" id="domain-filters">
+                <li><button class="chip" type="button" data-domain="neurology" aria-pressed="true">Neurology</button></li>
+                <li><button class="chip" type="button" data-domain="psychiatry" aria-pressed="true">Psychiatry</button></li>
+                <li><button class="chip" type="button" data-domain="neuroscience" aria-pressed="true">Neuroscience</button></li>
+                <li><button class="chip" type="button" data-domain="cardiology" aria-pressed="true">Cardiology</button></li>
+                <li><button class="chip" type="button" data-domain="oncology" aria-pressed="true">Oncology</button></li>
+                <li><button class="chip" type="button" data-domain="pulmonology" aria-pressed="true">Pulmonology</button></li>
+                <li><button class="chip" type="button" data-domain="critical_care" aria-pressed="true">Critical care</button></li>
+                <li><button class="chip" type="button" data-domain="surgery" aria-pressed="true">Surgery</button></li>
+                <li><button class="chip" type="button" data-domain="pediatrics" aria-pressed="true">Pediatrics</button></li>
+                <li><button class="chip" type="button" data-domain="obstetrics_gynecology" aria-pressed="true">Obstetrics &amp; gynecology</button></li>
+                <li><button class="chip" type="button" data-domain="infectious_disease" aria-pressed="true">Infectious disease</button></li>
+                <li><button class="chip" type="button" data-domain="endocrinology_metabolism" aria-pressed="true">Endocrinology &amp; metabolism</button></li>
+                <li><button class="chip" type="button" data-domain="gastroenterology_hepatology" aria-pressed="true">Gastroenterology &amp; hepatology</button></li>
+                <li><button class="chip" type="button" data-domain="nephrology_urology" aria-pressed="true">Nephrology &amp; urology</button></li>
+                <li><button class="chip" type="button" data-domain="musculoskeletal" aria-pressed="true">Musculoskeletal</button></li>
+                <li><button class="chip" type="button" data-domain="public_health" aria-pressed="true">Public health</button></li>
+                <li><button class="chip" type="button" data-domain="other" aria-pressed="true">Other</button></li>
+              </ul>
+            </div>
+          </div>
+        </details>
+
+        <noscript class="graph-noscript">
+          <div class="callout">
+            <p>
+              The 3D graph needs JavaScript. Everything it shows is also in
+              the <a href="table.html">Table view</a>, and the underlying
+              catalog is downloadable from
+              <a href="https://github.com/nielspac177/clinical-data-atlas">the repository</a>.
+            </p>
+          </div>
+        </noscript>
+      </div>
+
+      <div class="scene-tooltip" id="scene-tooltip" role="presentation" hidden></div>
+
+      <aside id="panel" class="panel" role="complementary" aria-labelledby="panel-title" hidden>
+        <div class="panel-head">
+          <h2 id="panel-title" class="panel-title">Details</h2>
+          <button class="icon-btn" type="button" data-panel-close>
+            <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+              <path
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                d="M4 4l8 8M12 4l-8 8"
+              />
+            </svg>
+            <span class="visually-hidden">Close details</span>
+          </button>
+        </div>
+        <div class="panel-body" id="panel-body"></div>
+      </aside>
+    </main>
+
+    <div id="a11y-live" class="visually-hidden" role="status" aria-live="polite"></div>
+
+    <script src="vendor/3d-force-graph.min.js?v=__BUILD__" defer></script>
+    <script type="module" src="assets/js/app-graph.js?v=__BUILD__"></script>
+  </body>
+</html>

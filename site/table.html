@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark light" />
+    <title>Table — Clinical Data Atlas</title>
+    <meta
+      name="description"
+      content="Filter and sort every dataset in the Clinical Data Atlas by domain, modality, condition, access tier, source, country, species and years — then export the result as CSV."
+    />
+    <link rel="canonical" href="__SITE_URL__table.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Clinical Data Atlas" />
+    <meta property="og:title" content="Table — Clinical Data Atlas" />
+    <meta
+      property="og:description"
+      content="Filter and sort every dataset in the atlas by domain, modality, condition, access tier and more."
+    />
+    <meta property="og:url" content="__SITE_URL__table.html" />
+    <meta property="og:image" content="__SITE_URL__assets/img/og.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Table — Clinical Data Atlas" />
+    <meta
+      name="twitter:description"
+      content="Filter and sort every dataset in the atlas by domain, modality, condition, access tier and more."
+    />
+    <meta name="twitter:image" content="__SITE_URL__assets/img/og.svg" />
+    <link rel="icon" href="assets/img/favicon.svg?v=__BUILD__" type="image/svg+xml" />
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("cda-theme");
+          if (t === "dark" || t === "light") {
+            document.documentElement.setAttribute("data-theme", t);
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="stylesheet" href="assets/css/tokens.css?v=__BUILD__" />
+    <link rel="stylesheet" href="assets/css/base.css?v=__BUILD__" />
+    <link rel="stylesheet" href="assets/css/layout.css?v=__BUILD__" />
+    <link rel="stylesheet" href="assets/css/components.css?v=__BUILD__" />
+  </head>
+  <body class="page-table">
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+      <a class="wordmark" href="index.html">
+        <svg
+          class="wordmark-mark"
+          width="20"
+          height="20"
+          viewBox="0 0 32 32"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <g stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none">
+            <path d="M16 8 L7 23" />
+            <path d="M16 8 L25 23" />
+            <path d="M7 23 L25 23" />
+          </g>
+          <g fill="currentColor">
+            <circle cx="16" cy="8" r="4.4" />
+            <circle cx="7" cy="23" r="3.6" />
+            <circle cx="25" cy="23" r="3.6" />
+          </g>
+        </svg>
+        <span class="wordmark-text">Clinical Data Atlas</span>
+      </a>
+
+      <div class="header-mid">
+        <nav class="site-nav" aria-label="Primary">
+          <a href="index.html">Graph</a>
+          <a href="table.html" aria-current="page">Table</a>
+          <a href="whats-new.html">What&rsquo;s new</a>
+          <a href="about.html">About</a>
+        </nav>
+
+        <div class="search header-search" role="search" aria-label="Jump to a dataset">
+          <svg class="search-icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+            <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+              <circle cx="7" cy="7" r="4.5" />
+              <path d="M10.5 10.5 L14 14" />
+            </g>
+          </svg>
+          <label class="visually-hidden" for="search-input">Jump to a dataset</label>
+          <input
+            id="search-input"
+            class="search-input"
+            type="search"
+            placeholder="Jump to a dataset  /"
+            autocomplete="off"
+            autocapitalize="off"
+            spellcheck="false"
+            role="combobox"
+            aria-expanded="false"
+            aria-controls="search-results"
+            aria-autocomplete="list"
+            aria-haspopup="listbox"
+          />
+          <ul id="search-results" class="search-results" role="listbox" aria-label="Search results" hidden></ul>
+        </div>
+      </div>
+
+      <div class="header-end">
+        <button id="theme-toggle" class="icon-btn" type="button" aria-pressed="false">
+          <svg class="icon-dark" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path
+              fill="currentColor"
+              d="M20.7 14.6A8.6 8.6 0 0 1 9.4 3.3 8.9 8.9 0 1 0 20.7 14.6Z"
+            />
+          </svg>
+          <svg class="icon-light" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+              <circle cx="12" cy="12" r="4.2" />
+              <path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.2 5.2l1.4 1.4M17.4 17.4l1.4 1.4M18.8 5.2l-1.4 1.4M6.6 17.4l-1.4 1.4" />
+            </g>
+          </svg>
+          <span class="visually-hidden">Light theme</span>
+        </button>
+
+        <a class="icon-btn github-link" href="https://github.com/nielspac177/clinical-data-atlas" rel="noopener">
+          <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+            <path
+              fill="currentColor"
+              d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38v-1.34C3.81 14.35 3.35 12.9 3.35 12.9c-.36-.92-.88-1.16-.88-1.16-.72-.49.05-.48.05-.48.8.06 1.22.82 1.22.82.71 1.21 1.86.86 2.31.66.07-.52.28-.86.5-1.06-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.01.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 4 0c1.53-1.03 2.2-.82 2.2-.82.44 1.11.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48v2.2c0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"
+            />
+          </svg>
+          <span class="visually-hidden">Source and issues on GitHub</span>
+        </a>
+      </div>
+    </header>
+
+    <main id="main" class="table-main" tabindex="-1">
+      <h1 class="visually-hidden">Dataset table</h1>
+
+      <aside class="facets" aria-labelledby="facets-title">
+        <div class="facets-head">
+          <h2 id="facets-title">Filters</h2>
+          <button id="clear-filters" class="btn btn-quiet" type="button">Clear all</button>
+        </div>
+
+        <fieldset class="facet" data-facet="domain">
+          <legend>Domain</legend>
+          <div class="facet-options" data-facet-options="domain"></div>
+        </fieldset>
+
+        <fieldset class="facet" data-facet="modality">
+          <legend>Modality</legend>
+          <div class="facet-options" data-facet-options="modality"></div>
+        </fieldset>
+
+        <fieldset class="facet" data-facet="condition">
+          <legend>Condition</legend>
+          <div class="facet-options" data-facet-options="condition"></div>
+        </fieldset>
+
+        <fieldset class="facet" data-facet="access">
+          <legend>Access</legend>
+          <div class="facet-options" data-facet-options="access"></div>
+        </fieldset>
+
+        <fieldset class="facet" data-facet="source">
+          <legend>Source</legend>
+          <div class="facet-options" data-facet-options="source"></div>
+        </fieldset>
+
+        <fieldset class="facet" data-facet="country">
+          <legend>Country</legend>
+          <div class="facet-options" data-facet-options="country"></div>
+        </fieldset>
+
+        <fieldset class="facet" data-facet="species">
+          <legend>Species</legend>
+          <div class="facet-options" data-facet-options="species"></div>
+        </fieldset>
+
+        <fieldset class="facet" data-facet="years">
+          <legend>Years of collection</legend>
+          <div class="facet-range">
+            <label class="visually-hidden" for="year-from">Earliest year</label>
+            <input id="year-from" type="number" inputmode="numeric" placeholder="From" min="1900" max="2100" />
+            <span aria-hidden="true">&ndash;</span>
+            <label class="visually-hidden" for="year-to">Latest year</label>
+            <input id="year-to" type="number" inputmode="numeric" placeholder="To" min="1900" max="2100" />
+          </div>
+        </fieldset>
+      </aside>
+
+      <div class="table-panel">
+        <div class="toolbar">
+          <div class="search" role="search" aria-label="Filter the table">
+            <svg class="search-icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+              <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+                <circle cx="7" cy="7" r="4.5" />
+                <path d="M10.5 10.5 L14 14" />
+              </g>
+            </svg>
+            <label class="visually-hidden" for="table-search">Filter these datasets by text</label>
+            <input
+              id="table-search"
+              class="search-input"
+              type="search"
+              name="q"
+              placeholder="Filter by name, summary, condition&hellip;"
+              autocomplete="off"
+              autocapitalize="off"
+              spellcheck="false"
+            />
+          </div>
+          <button id="download-csv" class="btn" type="button" data-download-csv>
+            Download CSV
+          </button>
+        </div>
+
+        <p class="table-status" id="table-status">Loading the catalog&hellip;</p>
+
+        <noscript>
+          <div class="callout">
+            <p>
+              The table is built in the browser from
+              <code>data/search-index.json</code>, so it needs JavaScript. The
+              same data, and the full catalog, are in
+              <a href="https://github.com/nielspac177/clinical-data-atlas">the repository</a>.
+            </p>
+          </div>
+        </noscript>
+
+        <div class="table-wrap">
+          <table class="data-table" id="catalog-table">
+            <caption class="visually-hidden">
+              Datasets in the Clinical Data Atlas. Use the column header
+              buttons to sort; the filters to the left narrow the rows.
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col" aria-sort="none" data-column="name">
+                  <button type="button">Name <span class="sort-indicator" aria-hidden="true"></span></button>
+                </th>
+                <th scope="col" aria-sort="none" data-column="source">
+                  <button type="button">Source <span class="sort-indicator" aria-hidden="true"></span></button>
+                </th>
+                <th scope="col" data-column="domains">Domains</th>
+                <th scope="col" data-column="modalities">Modalities</th>
+                <th scope="col" aria-sort="none" data-column="access">
+                  <button type="button">Access <span class="sort-indicator" aria-hidden="true"></span></button>
+                </th>
+                <th scope="col" aria-sort="none" data-column="years">
+                  <button type="button">Years <span class="sort-indicator" aria-hidden="true"></span></button>
+                </th>
+                <th scope="col" aria-sort="none" data-column="sample_size">
+                  <button type="button">Sample <span class="sort-indicator" aria-hidden="true"></span></button>
+                </th>
+                <th scope="col" data-column="countries">Countries</th>
+                <th scope="col" data-column="species">Species</th>
+              </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+          </table>
+        </div>
+
+        <div class="table-more">
+          <button id="show-more" class="btn" type="button" hidden>Show more</button>
+          <button id="show-all" class="btn btn-quiet" type="button" hidden>Show all</button>
+        </div>
+      </div>
+
+      <aside id="panel" class="panel" role="complementary" aria-labelledby="panel-title" hidden>
+        <div class="panel-head">
+          <h2 id="panel-title" class="panel-title">Details</h2>
+          <button class="icon-btn" type="button" data-panel-close>
+            <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+              <path
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                d="M4 4l8 8M12 4l-8 8"
+              />
+            </svg>
+            <span class="visually-hidden">Close details</span>
+          </button>
+        </div>
+        <div class="panel-body" id="panel-body"></div>
+      </aside>
+    </main>
+
+    <div id="a11y-live" class="visually-hidden" role="status" aria-live="polite"></div>
+
+    <script type="module" src="assets/js/app-table.js?v=__BUILD__"></script>
+  </body>
+</html>

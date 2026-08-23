@@ -1,0 +1,906 @@
+/* Components: the shared vocabulary of the atlas UI. */
+
+/* ---- wordmark + nav -------------------------------------------------- */
+
+.wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  color: var(--text);
+  font-size: var(--fs-base);
+  font-weight: 600;
+  letter-spacing: var(--tracking-tight);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.wordmark-mark {
+  color: var(--accent);
+  flex: none;
+}
+
+.site-nav a {
+  padding: var(--sp-2) var(--sp-3);
+  border-radius: var(--r-md);
+  color: var(--muted);
+  font-size: var(--fs-sm);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.site-nav a:hover {
+  background: var(--surface-2);
+  color: var(--text);
+}
+
+.site-nav a[aria-current="page"] {
+  background: var(--surface-2);
+  color: var(--text);
+  box-shadow: inset 0 -2px 0 var(--accent);
+}
+
+/* ---- buttons --------------------------------------------------------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-2);
+  min-height: 34px;
+  padding: 0 var(--sp-3);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--r-md);
+  background: var(--surface);
+  color: var(--text);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    background var(--dur-fast) var(--ease),
+    border-color var(--dur-fast) var(--ease);
+}
+
+.btn:hover {
+  background: var(--surface-2);
+  border-color: var(--accent);
+}
+
+.btn[aria-disabled="true"],
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  border-color: transparent;
+  background: var(--accent);
+  color: var(--accent-contrast);
+}
+
+.btn-primary:hover {
+  background: color-mix(in srgb, var(--accent) 88%, var(--text));
+  border-color: transparent;
+}
+
+.btn-quiet {
+  border-color: transparent;
+  background: transparent;
+  color: var(--muted);
+}
+
+.btn-quiet:hover {
+  background: var(--surface-2);
+  color: var(--text);
+  border-color: transparent;
+}
+
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: var(--r-md);
+  background: transparent;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.icon-btn:hover {
+  background: var(--surface-2);
+  color: var(--text);
+}
+
+.icon-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* The toggle shows the icon of the theme currently in effect; the state
+   change itself is carried by `aria-pressed` (pressed = light). */
+#theme-toggle .icon-light {
+  display: none;
+}
+
+#theme-toggle[aria-pressed="true"] .icon-light {
+  display: block;
+}
+
+#theme-toggle[aria-pressed="true"] .icon-dark {
+  display: none;
+}
+
+/* ---- search combobox ------------------------------------------------- */
+
+.search {
+  position: relative;
+  min-width: 0;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: var(--sp-2);
+  width: 15px;
+  height: 15px;
+  color: var(--muted);
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.search-input {
+  width: 100%;
+  height: 34px;
+  padding: 0 var(--sp-3) 0 1.9rem;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--r-md);
+  background: var(--surface);
+  color: var(--text);
+  font-size: var(--fs-sm);
+}
+
+.search-input::placeholder {
+  color: var(--muted);
+}
+
+.search-input:hover {
+  border-color: var(--accent);
+}
+
+.search-results {
+  position: absolute;
+  z-index: 40;
+  top: calc(100% + 6px);
+  right: 0;
+  left: 0;
+  max-height: min(60dvh, 26rem);
+  overflow-y: auto;
+  margin: 0;
+  padding: var(--sp-1);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  list-style: none;
+}
+
+.search-results li {
+  margin: 0;
+  padding: var(--sp-2) var(--sp-3);
+  border-radius: var(--r-sm);
+  cursor: pointer;
+}
+
+.search-results li:hover,
+.search-results li[aria-selected="true"] {
+  background: var(--surface-2);
+}
+
+.search-results .result-name {
+  display: block;
+  font-weight: 500;
+}
+
+.search-results .result-meta {
+  display: block;
+  color: var(--muted);
+  font-size: var(--fs-xs);
+}
+
+.search-empty {
+  padding: var(--sp-3);
+  color: var(--muted);
+  font-size: var(--fs-sm);
+}
+
+/* ---- access badges (bg/text pairs are all >= 7:1) -------------------- */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  padding: 0.14em 0.55em;
+  border-radius: var(--r-pill);
+  background: var(--surface-2);
+  color: var(--text);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.005em;
+  white-space: nowrap;
+}
+
+.badge[data-access="open"] {
+  background: var(--acc-open-bg);
+  color: var(--acc-open-fg);
+}
+
+.badge[data-access="registration"] {
+  background: var(--acc-registration-bg);
+  color: var(--acc-registration-fg);
+}
+
+.badge[data-access="credentialed"] {
+  background: var(--acc-credentialed-bg);
+  color: var(--acc-credentialed-fg);
+}
+
+.badge[data-access="application"] {
+  background: var(--acc-application-bg);
+  color: var(--acc-application-fg);
+}
+
+.badge[data-access="purchase"] {
+  background: var(--acc-purchase-bg);
+  color: var(--acc-purchase-fg);
+}
+
+/* ---- domain chips ---------------------------------------------------- */
+
+/* The domain color is carried by the dot, not the label: the text stays
+   at full page contrast and the hue is a second, redundant cue. */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45em;
+  padding: 0.14em 0.6em;
+  border: 1px solid var(--border);
+  border-radius: var(--r-pill);
+  background: var(--surface-2);
+  color: var(--text);
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.chip::before {
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 50%;
+  background: var(--chip, var(--muted));
+  content: "";
+  flex: none;
+}
+
+button.chip {
+  cursor: pointer;
+}
+
+button.chip:hover {
+  border-color: var(--accent);
+}
+
+button.chip[aria-pressed="false"] {
+  color: var(--muted);
+  opacity: 0.7;
+}
+
+button.chip[aria-pressed="false"]::before {
+  background: none;
+  box-shadow: inset 0 0 0 1px var(--chip, var(--muted));
+}
+
+.chip[data-domain="neurology"] {
+  --chip: var(--dom-neurology);
+}
+.chip[data-domain="psychiatry"] {
+  --chip: var(--dom-psychiatry);
+}
+.chip[data-domain="neuroscience"] {
+  --chip: var(--dom-neuroscience);
+}
+.chip[data-domain="cardiology"] {
+  --chip: var(--dom-cardiology);
+}
+.chip[data-domain="oncology"] {
+  --chip: var(--dom-oncology);
+}
+.chip[data-domain="pulmonology"] {
+  --chip: var(--dom-pulmonology);
+}
+.chip[data-domain="critical_care"] {
+  --chip: var(--dom-critical_care);
+}
+.chip[data-domain="surgery"] {
+  --chip: var(--dom-surgery);
+}
+.chip[data-domain="pediatrics"] {
+  --chip: var(--dom-pediatrics);
+}
+.chip[data-domain="obstetrics_gynecology"] {
+  --chip: var(--dom-obstetrics_gynecology);
+}
+.chip[data-domain="infectious_disease"] {
+  --chip: var(--dom-infectious_disease);
+}
+.chip[data-domain="endocrinology_metabolism"] {
+  --chip: var(--dom-endocrinology_metabolism);
+}
+.chip[data-domain="gastroenterology_hepatology"] {
+  --chip: var(--dom-gastroenterology_hepatology);
+}
+.chip[data-domain="nephrology_urology"] {
+  --chip: var(--dom-nephrology_urology);
+}
+.chip[data-domain="musculoskeletal"] {
+  --chip: var(--dom-musculoskeletal);
+}
+.chip[data-domain="public_health"] {
+  --chip: var(--dom-public_health);
+}
+.chip[data-domain="other"] {
+  --chip: var(--dom-other);
+}
+
+.chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-1) var(--sp-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chip-list li + li {
+  margin-top: 0;
+}
+
+.prose .chip-list {
+  margin-bottom: var(--sp-4);
+}
+
+/* ---- stats bar ------------------------------------------------------- */
+
+.stats-bar {
+  padding: var(--sp-2) var(--sp-3);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  background: color-mix(in srgb, var(--surface) 90%, transparent);
+  backdrop-filter: blur(8px);
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2) var(--sp-4);
+  margin: 0;
+}
+
+.stat {
+  display: flex;
+  align-items: baseline;
+  gap: var(--sp-2);
+}
+
+.stat dt {
+  color: var(--muted);
+  font-size: var(--fs-xs);
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+}
+
+.stat dd {
+  margin: 0;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---- legend ---------------------------------------------------------- */
+
+.legend {
+  max-width: min(30rem, calc(100% - var(--sp-4)));
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  background: color-mix(in srgb, var(--surface) 92%, transparent);
+  backdrop-filter: blur(8px);
+  font-size: var(--fs-sm);
+}
+
+.legend > summary {
+  padding: var(--sp-2) var(--sp-3);
+  border-radius: var(--r-md);
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.legend[open] > summary {
+  border-bottom: 1px solid var(--border);
+  border-radius: var(--r-md) var(--r-md) 0 0;
+}
+
+.legend-body {
+  max-height: min(46dvh, 24rem);
+  overflow-y: auto;
+  padding: var(--sp-3);
+}
+
+.legend-group + .legend-group {
+  margin-top: var(--sp-3);
+  padding-top: var(--sp-3);
+  border-top: 1px solid var(--border);
+}
+
+.legend-title {
+  margin: 0 0 var(--sp-2);
+  color: var(--muted);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+}
+
+.node-key {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2) var(--sp-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.node-key li {
+  display: flex;
+  align-items: center;
+  gap: 0.45em;
+  margin: 0;
+  color: var(--muted);
+  font-size: var(--fs-xs);
+}
+
+.node-key li::before {
+  width: 0.55em;
+  height: 0.55em;
+  border-radius: 50%;
+  background: var(--swatch, var(--muted));
+  content: "";
+}
+
+.node-key li[data-node="source"] {
+  --swatch: var(--node-source);
+}
+.node-key li[data-node="modality"] {
+  --swatch: var(--node-modality);
+}
+.node-key li[data-node="condition"] {
+  --swatch: var(--node-condition);
+}
+.node-key li[data-node="institution"] {
+  --swatch: var(--node-institution);
+}
+.node-key li[data-node="dataset"] {
+  --swatch: var(--node-dataset);
+}
+
+.legend-note {
+  margin: var(--sp-2) 0 0;
+  color: var(--muted);
+  font-size: var(--fs-sm);
+}
+
+/* ---- graph overlay labels + tooltip ---------------------------------- */
+
+.node-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 14rem;
+  padding: 0.1em 0.3em;
+  border: 0;
+  border-radius: var(--r-sm);
+  background: none;
+  color: var(--text);
+  font-family: inherit;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  line-height: 1.25;
+  text-align: left;
+  text-shadow:
+    0 1px 2px var(--canvas),
+    0 0 6px var(--canvas);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  will-change: transform;
+}
+
+button.node-label:hover {
+  background: var(--surface-2);
+  text-shadow: none;
+}
+
+.node-label[data-quiet="true"] {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.scene-tooltip {
+  position: fixed;
+  z-index: 25;
+  max-width: 22rem;
+  padding: var(--sp-2) var(--sp-3);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  color: var(--text);
+  font-size: var(--fs-sm);
+  pointer-events: none;
+}
+
+.scene-tooltip .tooltip-meta {
+  display: block;
+  color: var(--muted);
+  font-size: var(--fs-xs);
+}
+
+.graph-empty {
+  display: grid;
+  place-content: center;
+  height: 100%;
+  padding: var(--sp-5);
+  color: var(--muted);
+  text-align: center;
+}
+
+/* ---- toolbar + table ------------------------------------------------- */
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-3);
+}
+
+.toolbar .search {
+  flex: 1 1 16rem;
+}
+
+.table-status {
+  margin: 0 0 var(--sp-3);
+  color: var(--muted);
+  font-size: var(--fs-sm);
+}
+
+.data-table {
+  width: 100%;
+  font-size: var(--fs-sm);
+}
+
+.data-table th,
+.data-table td {
+  padding: var(--sp-2) var(--sp-3);
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+}
+
+.data-table thead th {
+  position: sticky;
+  top: var(--header-h);
+  z-index: 1;
+  /* Sortable headers get their padding from the button inside them, so
+     the whole cell is the click target; plain headers need their own. */
+  padding: 0;
+  border-bottom: 1px solid var(--border-strong);
+  background: var(--surface);
+  color: var(--muted);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.data-table thead th:not(:has(button)) {
+  padding: var(--sp-3);
+}
+
+.data-table thead th button {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-1);
+  width: 100%;
+  padding: var(--sp-3);
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+}
+
+.data-table thead th button:hover {
+  color: var(--text);
+}
+
+.data-table thead th .sort-indicator::after {
+  content: "";
+}
+
+.data-table thead th[aria-sort="ascending"] .sort-indicator::after {
+  content: "▲";
+}
+
+.data-table thead th[aria-sort="descending"] .sort-indicator::after {
+  content: "▼";
+}
+
+.data-table thead th[aria-sort]:not([aria-sort="none"]) {
+  color: var(--text);
+}
+
+.data-table tbody tr:hover {
+  background: var(--surface-2);
+}
+
+.data-table tbody tr[aria-selected="true"] {
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+}
+
+.data-table .cell-name {
+  min-width: 16rem;
+  font-weight: 500;
+}
+
+.data-table .cell-num {
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.table-more {
+  display: flex;
+  justify-content: center;
+  gap: var(--sp-2);
+  margin-top: var(--sp-4);
+}
+
+/* ---- facets ---------------------------------------------------------- */
+
+.facets-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--sp-2);
+  margin-bottom: var(--sp-3);
+}
+
+.facets-head h2 {
+  margin: 0;
+  font-size: var(--fs-md);
+}
+
+.facet {
+  padding: var(--sp-3) 0;
+  border-top: 1px solid var(--border);
+}
+
+.facet > legend {
+  color: var(--muted);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+}
+
+.facet-options {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  max-height: 15rem;
+  overflow-y: auto;
+  margin-top: var(--sp-2);
+}
+
+.facet-options label {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: var(--sp-1) var(--sp-2);
+  border-radius: var(--r-sm);
+  cursor: pointer;
+  font-size: var(--fs-sm);
+}
+
+.facet-options label:hover {
+  background: var(--surface-2);
+}
+
+.facet-options input {
+  accent-color: var(--accent);
+  flex: none;
+}
+
+.facet-option-label {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.facet-count {
+  color: var(--muted);
+  font-size: var(--fs-xs);
+  font-variant-numeric: tabular-nums;
+}
+
+.facet-range {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  margin-top: var(--sp-2);
+}
+
+.facet-range input {
+  width: 5.5rem;
+  height: 30px;
+  padding: 0 var(--sp-2);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--r-sm);
+  background: var(--surface);
+}
+
+/* ---- record panel ---------------------------------------------------- */
+
+.panel-head {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--sp-2);
+  padding: var(--sp-4);
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.panel-title {
+  margin: 0;
+  font-size: var(--fs-md);
+}
+
+.panel-body {
+  padding: var(--sp-4);
+}
+
+.panel-section {
+  margin-top: var(--sp-5);
+}
+
+.panel-section h3 {
+  margin-bottom: var(--sp-2);
+  color: var(--muted);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: var(--sp-2) var(--sp-4);
+  margin: 0;
+}
+
+.facts dt {
+  color: var(--muted);
+  font-size: var(--fs-sm);
+}
+
+.facts dd {
+  margin: 0;
+  font-size: var(--fs-sm);
+}
+
+.panel-fineprint {
+  margin-top: var(--sp-5);
+  padding-top: var(--sp-3);
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: var(--fs-xs);
+}
+
+/* ---- misc content ---------------------------------------------------- */
+
+/* Access-tier glossary on the About page. */
+.tiers {
+  display: grid;
+  gap: var(--sp-3);
+  margin: 0 0 var(--sp-4);
+}
+
+.tiers > div {
+  display: grid;
+  grid-template-columns: 9.5rem minmax(0, 1fr);
+  gap: var(--sp-3);
+  align-items: baseline;
+}
+
+.tiers dt,
+.tiers dd {
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .tiers > div {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--sp-1);
+  }
+}
+
+.copy-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-2);
+  margin-bottom: var(--sp-2);
+}
+
+.copy-row .eyebrow {
+  margin: 0;
+}
+
+.changelog article {
+  margin-bottom: var(--sp-6);
+  padding-bottom: var(--sp-5);
+  border-bottom: 1px solid var(--border);
+}
+
+/* The date leads the entry; the body's own `###` headings sit under it. */
+.changelog article > h2 {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.changelog table {
+  width: 100%;
+  font-size: var(--fs-sm);
+}
+
+.changelog th,
+.changelog td {
+  padding: var(--sp-2);
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+
+.callout {
+  padding: var(--sp-4);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--r-md);
+  background: var(--surface);
+}
+
+.callout > :last-child {
+  margin-bottom: 0;
+}

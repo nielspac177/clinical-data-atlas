@@ -1,0 +1,304 @@
+/* Page frames: header, graph stage, table grid, prose column, drawer.
+ *
+ * Breakpoint: 900px. Above it the site is two-column (rail + content,
+ * or stage + right drawer); below it everything stacks and the drawer
+ * becomes a bottom sheet. Nothing uses `100vw` — that is what puts a
+ * scrollbar-width of horizontal overflow on a page.
+ */
+
+body {
+  /* The header is fixed so the graph stage can sit under it at a known
+     offset; every page pays the same 56px of top padding for it. */
+  padding-top: var(--header-h);
+}
+
+/* ---- header ---------------------------------------------------------- */
+
+.site-header {
+  position: fixed;
+  z-index: 20;
+  inset: 0 0 auto;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: var(--sp-4);
+  height: var(--header-h);
+  padding: 0 var(--sp-4);
+  border-bottom: 1px solid var(--border);
+  background: color-mix(in srgb, var(--canvas) 88%, transparent);
+  backdrop-filter: saturate(1.4) blur(10px);
+}
+
+.header-end {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  justify-self: end;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-1);
+  min-width: 0;
+}
+
+.header-search {
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: 22rem;
+  margin-left: auto;
+}
+
+.header-mid {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+  min-width: 0;
+}
+
+@media (max-width: 899px) {
+  .site-header {
+    gap: var(--sp-2);
+    padding: 0 var(--sp-3);
+  }
+
+  .wordmark-text {
+    display: none;
+  }
+
+  /* The nav scrolls sideways rather than wrapping; the fade on its
+     trailing edge is the only hint that there is more to reach. */
+  .site-nav {
+    overflow-x: auto;
+    scrollbar-width: none;
+    mask-image: linear-gradient(to right, #000 calc(100% - 14px), transparent);
+  }
+
+  .site-nav::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  /* At phone width the row is tight, so the search box keeps a usable
+     minimum and the nav becomes a horizontal scroller around it. Search
+     is never dropped: on the graph page it is the only keyboard path to
+     a record, and it is what `/` focuses. The GitHub link goes instead
+     — every page links to the repository in its content. */
+  /* `.search` (components.css, loaded later) also sets min-width, so
+     this needs the extra class to win. */
+  .search.header-search {
+    flex: 1 1 9rem;
+    min-width: 9rem;
+    max-width: none;
+  }
+
+  .site-nav {
+    flex: 0 1 auto;
+  }
+
+  .site-nav a {
+    padding: var(--sp-1) var(--sp-2);
+  }
+
+  /* `.icon-btn` (components.css, loaded later) sets display too. */
+  .header-end .github-link {
+    display: none;
+  }
+}
+
+/* ---- graph page ------------------------------------------------------ */
+
+body.page-graph {
+  height: 100%;
+  overflow: hidden;
+}
+
+.graph-stage {
+  position: fixed;
+  inset: var(--header-h) 0 0;
+  overflow: hidden;
+}
+
+/* Chrome for the stage: stats, legend, reset. A non-interactive layer
+   with interactive children, so drags pass through to the canvas. */
+.graph-ui {
+  position: fixed;
+  z-index: 10;
+  inset: var(--header-h) 0 0;
+  display: grid;
+  grid-template-areas:
+    "stats reset"
+    ".     .    "
+    "legend .   ";
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr auto;
+  gap: var(--sp-3);
+  padding: var(--sp-3);
+  pointer-events: none;
+}
+
+.graph-ui > * {
+  pointer-events: auto;
+}
+
+.graph-ui .stats-bar {
+  grid-area: stats;
+  justify-self: start;
+}
+
+.graph-ui .legend {
+  grid-area: legend;
+  justify-self: start;
+}
+
+.graph-ui .graph-actions {
+  grid-area: reset;
+  justify-self: end;
+  display: flex;
+  gap: var(--sp-2);
+}
+
+.graph-noscript {
+  display: block;
+  grid-area: 2 / 1 / 3 / 3;
+  place-self: center;
+  max-width: 34rem;
+}
+
+/* Keep the stage chrome clear of the desktop drawer. */
+@media (min-width: 900px) {
+  body:has(#panel:not([hidden])) .graph-ui {
+    right: var(--drawer-w);
+  }
+}
+
+/* ---- table page ------------------------------------------------------ */
+
+.table-main {
+  display: grid;
+  /* minmax(0, 1fr) — without it a wide table blows the grid track out
+     and the whole page scrolls sideways. */
+  grid-template-columns: var(--rail-w) minmax(0, 1fr);
+  gap: var(--sp-5);
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: var(--sp-5) var(--sp-5) var(--sp-7);
+}
+
+.facets {
+  position: sticky;
+  top: calc(var(--header-h) + var(--sp-5));
+  align-self: start;
+  max-height: calc(100dvh - var(--header-h) - var(--sp-7));
+  overflow-y: auto;
+  padding-right: var(--sp-2);
+}
+
+.table-panel {
+  min-width: 0;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  background: var(--surface);
+}
+
+@media (max-width: 899px) {
+  .table-main {
+    grid-template-columns: minmax(0, 1fr);
+    padding: var(--sp-4) var(--sp-3) var(--sp-6);
+  }
+
+  .facets {
+    position: static;
+    max-height: none;
+    overflow: visible;
+    padding: var(--sp-4);
+    border: 1px solid var(--border);
+    border-radius: var(--r-md);
+    background: var(--surface);
+  }
+}
+
+/* ---- content pages (About, What's new, 404) -------------------------- */
+
+.content-main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: var(--sp-6) var(--sp-5) var(--sp-7);
+}
+
+.page-head {
+  margin-bottom: var(--sp-6);
+  padding-bottom: var(--sp-5);
+  border-bottom: 1px solid var(--border);
+}
+
+.page-head .lede {
+  max-width: var(--measure);
+  margin: 0;
+  color: var(--muted);
+  font-size: var(--fs-md);
+  line-height: var(--lh-prose);
+}
+
+.site-footer {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: var(--sp-5);
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: var(--fs-sm);
+}
+
+.site-footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2) var(--sp-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-footer li + li {
+  margin-top: 0;
+}
+
+.site-footer li + li::before {
+  margin-right: var(--sp-3);
+  color: var(--border-strong);
+  content: "·";
+}
+
+/* ---- record drawer / bottom sheet ------------------------------------ */
+
+.panel {
+  position: fixed;
+  z-index: 30;
+  top: var(--header-h);
+  right: 0;
+  bottom: 0;
+  width: var(--drawer-w);
+  max-width: 100%;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  border-left: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+@media (max-width: 899px) {
+  .panel {
+    top: auto;
+    left: 0;
+    width: auto;
+    max-height: 72dvh;
+    border-left: 0;
+    border-top: 1px solid var(--border);
+    border-radius: var(--r-lg) var(--r-lg) 0 0;
+  }
+}
