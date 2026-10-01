@@ -8,13 +8,14 @@
     "created": "2018-03-30T13:14:28.253Z",
     "id": "ds000117",
     "latestSnapshot": {
-      "created": "2025-01-06T15:37:05.000Z",
+      "created": "2026-09-16T15:08:01.000Z",
       "description": {
         "Authors": [
           "Wakeman, DG",
+          "Apšvalka, D",
           "Henson, RN"
         ],
-        "DatasetDOI": "doi:10.18112/openneuro.ds000117.v1.1.0",
+        "DatasetDOI": "doi:10.18112/openneuro.ds000117.v2.0.0",
         "Funding": [
           "UK Medical Research Council (SUAG/010 RG91365), Elekta Ltd."
         ],
@@ -27,59 +28,55 @@
           "ftp://ftp.mrc-cbu.cam.ac.uk/personal/rik.henson/wakemandg_hensonrn/Publications/"
         ]
       },
-      "readme": "This dataset was obtained from the OpenNeuro project (https://www.openneuro.org). Accession #: ds000117\n\nThe same dataset is also available here: ftp://ftp.mrc-cbu.cam.ac.uk/personal/rik.henson/wakemandg_hensonrn/, but in a non-BIDS format (which may be easier to download by subject rather than by modality)\n\nNote that it is a subset of the data available on OpenfMRI (http://www.openfmri.org; Accession #: ds000117).\n\n\nDescription:  Multi-subject, multi-modal (sMRI+fMRI+MEG+EEG) neuroimaging dataset on face processing\n\nPlease cite the following reference if you use these data:\n\n     Wakeman, D.G. & Henson, R.N. (2015). A multi-subject, multi-modal human neuroimaging dataset. Sci. Data 2:150001 doi: 10.1038/sdata.2015.1\n\nThe data have been used in several publications including, for example:\n\n   Henson, R.N., Abdulrahman, H., Flandin, G. & Litvak, V. (2019). Multimodal integration of M/EEG and f/MRI data in SPM12. Frontiers in Neuroscience, Methods, 13, 300.\n\n    Henson, R.N., Wakeman, D.G., Litvak, V. & Friston, K.J. (2011). A Parametric Empirical Bayesian framework for the EEG/MEG inverse problem: generative models for multisubject and multimodal integration. Frontiers in Human Neuroscience, 5, 76, 1-16.\n\n    Chapter 42 of the SPM12 manual (http://www.fil.ion.ucl.ac.uk/spm/doc/manual.pdf)\n\n(see ftp://ftp.mrc-cbu.cam.ac.uk/personal/rik.henson/wakemandg_hensonrn/Publications for full list), as well as the BioMag2010 data competition and the Kaggle competition: https://www.kaggle.com/c/decoding-the-human-brain)\n\n==================================================================================\n\nfunc/\n-----\nUnlike in v1-v3 of this dataset, the first two (dummy) volumes have now been removed (as stated in *.json), so event onset times correctly refer to t=0 at start of third volume \n\nNote that, owing to scanner error, Subject 10 only has 170 volumes in last run (Run 9) \n\nmeg/\n----\nThree anatomical fiducials were digitized for aligning the MEG with the MRI: the nasion \n(lowest depression between the eyes) and the left and right ears (lowest depression \nbetween the tragus and the helix, above the tragus). This procedure is illustrated here:\nhttp://neuroimage.usc.edu/brainstorm/CoordinateSystems#Subject_Coordinate_System_.28SCS_.2F_CTF.29\nand in task-facerecognition_fidinfo.pdf \n\nThe following triggers are included in the .fif files and are also used in the “trigger” column of the meg and bold events files:\n\nTrigger            Label               Simplified Label\n\n5         Initial Famous Face               IniFF\n6         Immediate Repeat Famous Face      ImmFF\n7         Delayed Repeat Famous Face        DelFF\n13        Initial Unfamiliar Face           IniUF\n14        Immediate Repeat Unfamiliar Face  ImmUF\n15        Delayed Repeat Unfamiliar Face    DelUF\n17        Initial Scrambled Face            IniSF\n18        Immediate Repeat Scrambled Face   ImmSF\n19        Delayed Repeat Scrambled Face     DelSF\n\nstimuli/meg/\n------------\nThe .bmp files correspond to those described in the text. There are 6 additional images in this directory, which were used in the practice experiment to familiarize participants with the task (hence some more BIDS validator warnings)\n\nstimuli/mri/\n------------\nThe .bmp files correspond to those described in the text.\n\t\nDefacing\n--------\nDefacing of MPRAGE T1 images was performed by the submitter. A subset of subjects have given consent for non-defaced versions to be shared - in which case, please contact rik.henson@mrc-cbu.cam.ac.uk.\n \nQuality Control\n---------------\nMriqc was run on the dataset. Results are located in derivatives/mriqc. Learn more about it here: https://mriqc.readthedocs.io/en/latest/\n \nKnown Issues\n------------\nN/A\n\nRelationship of Subject Numbering relative to other versions of Dataset\n------------\n\nThere are multiple versions of the dataset available on the web (see notes above), and these entailed a renumbering of the subjects for various reasons. Here are all the versions and how to match subjects between them (plus some rationale and history for different versions):\n \n1. Original Paper (N=19): Wakeman & Henson (2015): doi:10.1038/sdata.2015.1 \n    Number refers to order that tested (and some, eg 4, 7, 13 etc were excluded for not completing both MRI and MEG sessions)\n \n2. openfMRI, renumbered from paper: http://openfmri.org/s3-browser/?prefix=ds000117/ds000117_R0.1.1/uncompressed/\n    Numbers 1-19 just made contiguous\n \n3. FTP subset of N=16: ftp: ftp://ftp.mrc-cbu.cam.ac.uk/personal/rik.henson/wakemandg_hensonrn/  \n    This set was used for SPM Courses\n    Designed to illustrate multimodal integration, so wanted good MRI+MEG+EEG data for all subjects\n    Removed original subject_01 and subject_06 because bad EEG data; subject_19 because poor EEG and fMRI data\n    (And renumbered subject_14 for some reason).\n \n4. Current OpenNeuro subset N=16 used for (BIDS): https://openneuro.org/datasets/ds000117 \n    OpenNeuro was rebranding of openfMRI, and enforced BIDS format\n    Since this version designed to illustrate multi-modal BIDS, kept same numbering as FTP\n \nW&H2015       openfMRI    FTP      openNeuro\n========       ======        ===     =======\nsubject_01      sub001\nsubject_02      sub002      Sub01   sub-01\nsubject_03      sub003      Sub02   sub-02\nsubject_05      sub004      Sub03   sub-03\nsubject_06      sub005\nsubject_08      sub006      Sub05   sub-05\nsubject_09      sub007      Sub06   sub-06\nsubject_10      sub008      Sub07   sub-07\nsubject_11      sub009      Sub08   sub-08\nsubject_12      sub010      Sub09   sub-09\nsubject_14      sub011      Sub04   sub-04\nsubject_15      sub012      Sub10   sub-10\nsubject_16      sub013      Sub11   sub-11\nsubject_17      sub014      Sub12   sub-12\nsubject_18      sub015      Sub13   sub-13\nsubject_19      sub016\nsubject_23      sub017      Sub14   sub-14\nsubject_24      sub018      Sub15   sub-15\nsubject_25      sub019      Sub16   sub-16\n\n",
+      "readme": "Description\n===========\n\nMulti-subject, multi-modal (sMRI+fMRI+MEG+EEG) neuroimaging dataset on face processing. 16 young healthy volunteers were scanned once in MRI and once in MEG. During the task runs, the volunteers saw three types of faces (famous, unfamiliar and scrambled), either for the first time (Initial) or Repeated either immediately or after several intervening stimuli, but otherwise randomly intermixed every few seconds. This 3x3 design results in 9 different stimulus conditions: \n\n| Label                            | Simplified Label |\n|----------------------------------|------------------|\n| Initial Famous Face              | IniFF            |\n| Immediate Repeat Famous Face     | ImmFF            |\n| Delayed Repeat Famous Face       | DelFF            |\n| Initial Unfamiliar Face          | IniUF            |\n| Immediate Repeat Unfamiliar Face | ImmUF            |\n| Delayed Repeat Unfamiliar Face   | DelUF            |\n| Initial Scrambled Face           | IniSF            |\n| Immediate Repeat Scrambled Face  | ImmSF            |\n| Delayed Repeat Scrambled Face    | DelSF            |\n\nSubjects decided whether each stimulus was more or less symmetrical around a vertical line through centre of image, resulting in a button press after each stimulus. Theses button presses are also coded as \"btnL\" for left button and \"btnR\" for right button. The symmetry task is somewhat arbitrary - designed only to ensure subjects processed the face and scrambled face stimuli to an equivalent minimal level. For more information about paradigm, see Wakeman & Henson (2015) paper below.\n\nPlease cite the following reference if you use these data:\n\nWakeman, D.G. & Henson, R.N. (2015). A multi-subject, multi-modal human neuroimaging dataset. Sci. Data 2:150001 doi: 10.1038/sdata.2015.1\n\nThe data have been used in several publications including, for example:\n\nHenson, R.N., Abdulrahman, H., Flandin, G. & Litvak, V. (2019). Multimodal integration of M/EEG and f/MRI data in SPM12. Frontiers in Neuroscience, Methods, 13, 300. (plus several other papers in that special issue, using other software like MNE)\n\nLee, S-M., Tibon, R., Zeidman, P., Yadav, P.S. & Henson, R.N. (2022). Effects of Face Repetition on Ventral Visual Stream Connectivity using Dynamic Causal Modelling of fMRI data. Neuroimage, 264, 119708.\n\nHenson, R.N., Wakeman, D.G., Litvak, V. & Friston, K.J. (2011). A Parametric Empirical Bayesian framework for the EEG/MEG inverse problem: generative models for multisubject and multimodal integration. Frontiers in Human Neuroscience, 5, 76, 1-16.\n\n Various Chapters of the SPM12 manual (http://www.fil.ion.ucl.ac.uk/spm/doc/manual.pdf)\n\nThe BioMag2010 data competition and the Kaggle competition: https://www.kaggle.com/c/decoding-the-human-brain)\n\nThe COGNESTIC summer school in neuroimaging, https://www.mrc-cbu.cam.ac.uk/events/cognestic-2026/\n\nHistory\n=======\n\nThis dataset was obtained from the OpenNeuro project (https://www.openneuro.org). Accession #: ds000117.\n\nNote that it is a subset of the data available on OpenfMRI (http://www.openfmri.org; Accession #: ds000117), and updated to BIDS.\n\nAn even older non-BIDS version is available with dedicated FTP client like FileZilla: ftp://ftp.mrc-cbu.cam.ac.uk/personal/rik.henson/wakemandg_hensonrn/\n\nFor conversion between subject IDs between these three different versions, see Table at end.\n\nThe original data were collected by Dan Wakeman, under while his PhD was supervised by Rik Henson. The latest BIDS version was recreated by Dace Apšvalka. The code for BIDS conversion are available on request.\n\nFor any questions, please contact rik.henson@mrc-cbu.cam.ac.uk\n\nFurther Notes\n=============\n\nfunc/\n-----\n\nUnlike some previous versions of these data, the first two (dummy) volumes have now been removed (as stated in *.json), to reduce T1 effects, so event onset times correctly refer to t=0 at start of third volume. (Note that scanner also tries to saturate T1 effects even before first volume). \n\nNote that, owing to scanner error, Subject 10 only has 170 volumes in last run (Run 9).\n\nmeg/\n----\n\nThree anatomical fiducials were digitized for aligning the MEG with the MRI: the nasion and the left and right pre-aricular points, as illustrated here: https://imaging.mrc-cbu.cam.ac.uk/meg/ParticipantPreparation\n\nempty-room\n----------\n\nThere are empty-room MEG data from 7 sessions (days) - to match to subject, see \"AssociatedEmptyRoom\" in subjects \"*ses-meg_task-facerecognition_run-*_meg.json\" file.\n\nstimuli\n-------\n\nNote slightly different images (views of same faces) were used for meg and func (fMRI). Note that the order of MEG and fMRI was not counterbalanced fully (see \"first_ses\" column in participants.tsv) file, and there could be longer-lag (ie across days) effects of repeatedly seeing the same person (even if different view).\n\ndefacing\n--------\n\nDefacing of MPRAGE T1 images was performed by FSL. A subset of subjects have given consent for non-defaced versions to be shared - in which case, please contact rik.henson@mrc-cbu.cam.ac.uk.\n \nKnown Issues\n------------\n\nN/A\n\n=======================================================================\n\nRelationship of Subject Numbering relative to other versions of Dataset\n-----------------------------------------------------------------------\n\nAs noted above, there are multiple versions of the dataset available on the web, and these entailed a renumbering of the subjects for various reasons. Here are all the versions and how to match subjects between them (plus some rationale and history for different versions):\n \n1. Original Paper (N=19): Wakeman & Henson (2015): doi:10.1038/sdata.2015.1 \n    Number refers to order that tested (and some, eg 4, 7, 13 etc were excluded for not completing both MRI and MEG sessions)\n \n2. OpenfMRI, renumbered from paper: http://openfmri.org/s3-browser/?prefix=ds000117/ds000117_R0.1.1/uncompressed/\n    Numbers 1-19 just made contiguous\n \n3. FTP subset of N=16: ftp: ftp://ftp.mrc-cbu.cam.ac.uk/personal/rik.henson/wakemandg_hensonrn/  \n    This set was used for SPM Courses\n    Designed to illustrate multimodal integration, so wanted good MRI+MEG+EEG data for all subjects\n    Removed original subject_01 and subject_06 because bad EEG data; subject_19 because poor EEG and fMRI data\n    (And renumbered subject_14 for some reason now forgotten (sorry)).\n \n4. Current OpenNeuro subset N=16 used for (BIDS): https://openneuro.org/datasets/ds000117 \n    OpenNeuro was a rebranding of OpenfMRI, and enforced BIDS format\n    Since this version was designed to illustrate multi-modal BIDS, kept same numbering as FTP\n \n| W&H2015    | OpenfMRI | FTP   | OpenNeuro |\n|------------|----------|-------|-----------|\n| subject_01 | sub001   |       |           |\n| subject_02 | sub002   | Sub01 | sub-01    |\n| subject_03 | sub003   | Sub02 | sub-02    |\n| subject_05 | sub004   | Sub03 | sub-03    |\n| subject_06 | sub005   |       |           |\n| subject_08 | sub006   | Sub05 | sub-05    |\n| subject_09 | sub007   | Sub06 | sub-06    |\n| subject_10 | sub008   | Sub07 | sub-07    |\n| subject_11 | sub009   | Sub08 | sub-08    |\n| subject_12 | sub010   | Sub09 | sub-09    |\n| subject_14 | sub011   | Sub04 | sub-04    |\n| subject_15 | sub012   | Sub10 | sub-10    |\n| subject_16 | sub013   | Sub11 | sub-11    |\n| subject_17 | sub014   | Sub12 | sub-12    |\n| subject_18 | sub015   | Sub13 | sub-13    |\n| subject_19 | sub016   |       |           |\n| subject_23 | sub017   | Sub14 | sub-14    |\n| subject_24 | sub018   | Sub15 | sub-15    |\n| subject_25 | sub019   | Sub16 | sub-16    |\n\n",
       "summary": {
         "dataProcessed": false,
         "modalities": [
           "mri",
-          "meg",
-          "beh"
+          "meg"
         ],
         "secondaryModalities": [
           "mri_functional",
-          "mri_structural",
-          "mri_diffusion"
+          "mri_structural"
         ],
         "sessions": [
           "mri",
           "meg",
-          "20090515",
-          "20091208",
-          "20091126",
-          "20090506",
-          "20090601",
-          "20090518",
-          "20090511",
-          "20090409"
+          "19110308",
+          "19110831",
+          "19110112",
+          "19110208",
+          "19110217",
+          "19110912",
+          "19110220"
         ],
-        "size": 94108833435,
+        "size": 90138922894,
         "subjects": [
-          "11",
-          "08",
-          "06",
-          "05",
-          "15",
+          "03",
           "16",
-          "10",
-          "09",
-          "13",
-          "12",
           "emptyroom",
-          "01",
+          "10",
+          "05",
+          "12",
+          "14",
+          "08",
           "04",
           "02",
-          "03",
-          "14",
-          "07"
+          "11",
+          "09",
+          "07",
+          "06",
+          "01",
+          "13",
+          "15"
         ],
         "tasks": [
-          "TODO: full task name for faceprocessing",
-          "faceprocessing",
-          "facerecognition"
+          "facerecognition",
+          "noise"
         ],
-        "totalFiles": 1156
+        "totalFiles": 1157
       },
-      "tag": "1.1.0"
+      "tag": "2.0.0"
     },
     "metadata": {
       "affirmedDefaced": null,
@@ -108,8 +105,7 @@
       "grantFunderName": null,
       "modalities": [
         "mri",
-        "meg",
-        "beh"
+        "meg"
       ],
       "species": null,
       "studyDesign": null,

@@ -1,0 +1,32 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "ehr-reasoncon",
+  "payload": {
+    "abstract": "<p>Electronic Health Records (EHRs) combine structured data, such as medications and laboratory measurements, with unstructured clinical notes describing patient conditions and clinical events. Although these two data types provide complementary information, discrepancies may arise between them and potentially affect patient safety and clinical decision-making. Existing datasets for note-table consistency verification mainly focus on direct matching of numerical values or individual events. However, real-world clinical documentation often requires medical interpretation, reasoning over relations between events, and analysis of changes over time. To address this limitation, we developed EHR-ReasonCon, a reasoning-intensive dataset for verifying consistency between clinical notes and structured EHR tables. EHR-ReasonCon was constructed from MIMIC-III in collaboration with clinical experts and contains manual annotations of 8,042 entities from 105 clinical notes. Each entity was checked against records from 14 structured tables and labeled as CONSISTENT or INCONSISTENT.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 70239427,
+    "core_doi": "10.13026/t7hc-k382",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 70548466,
+    "public_project_uuid": "b94c9ade-aeb0-474a-9edc-09f11087e617",
+    "publish_date": "2026-09-15",
+    "resource_type": "Database",
+    "short_description": "Reasoning-Intensive Consistency Verification Between Clinical Notes and Structured Tables in Electronic Health Records",
+    "slug": "ehr-reasoncon",
+    "source_url": "https://physionet.org/content/ehr-reasoncon/1.0.0/",
+    "title": "EHR-ReasonCon: Reasoning-Intensive Consistency Verification Between Clinical Notes and Structured Tables in Electronic Health Records",
+    "topics": [],
+    "version": "1.0.0",
+    "version_doi": "10.13026/7m91-3010"
+  },
+  "source": "physionet"
+}

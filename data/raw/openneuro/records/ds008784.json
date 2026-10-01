@@ -1,0 +1,149 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds008784",
+  "payload": {
+    "created": "2026-09-04T15:44:07.123Z",
+    "id": "ds008784",
+    "latestSnapshot": {
+      "created": "2026-09-04T17:22:46.000Z",
+      "description": {
+        "Authors": [
+          "S. Bédard",
+          "M. Kaptan",
+          "K.A. Weber II"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds008784.v1.0.0",
+        "Funding": [
+          "National Institute of Neurological Disorders and Stroke (grant number R01NS133305, R61NS118651, and K24NS126781)"
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Dermatomal_Mapping_R01_Aim1",
+        "ReferencesAndLinks": null
+      },
+      "readme": "Spinal cord fMRI activity with electrocutaneous stimulation \n\n\nData includes:\n\n- Anatomical defaced T2w spinal cord image\n- Functional spinal cord data for 3 runs of ~9min of electrocutaneaous stimulation of the right middle finger at 4 individualized stimulation intensities.\n\n\tIn derivatives/labels:\t\n\t- Anatomical T2w spinal cord image\n\t- Warping field for anatomical to PAM50 template based on rootlets registration\n\t- Anatomical T2w spinal nerve root labels \n\t- Anatomical T2w intervertebral disc labels \n\t- Motion corrected functional images for each run\n\t- Segmentation of spinal cord and canal of functional images\n\t- Warping field for functional to PAM50 template registration\n\t- Task vectors (fsl_stim_vectors)\n\t- Processed physio files \n\n\nNote: plase cite the following paper if you use this dataset: Bédard, S., et al. (2026). Spatial distribution of spinal cord fMRI activity with electrocutaneous stimulation. Imaging Neuroscience\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "spinalcord"
+        ],
+        "size": 6080617663,
+        "subjects": [
+          "DMAim1HC033",
+          "DMAim1HC002",
+          "DMAim1HC034",
+          "DMAim1HC001",
+          "DMAim1HC004",
+          "DMAim1HC005",
+          "DMAim1HC006",
+          "DMAim1HC007",
+          "DMAim1HC008",
+          "DMAim1HC009",
+          "DMAim1HC013",
+          "DMAim1HC016",
+          "DMAim1HC017",
+          "DMAim1HC037",
+          "DMAim1HC015",
+          "DMAim1HC045",
+          "DMAim1HC039",
+          "DMAim1HC042",
+          "DMAim1HC003",
+          "DMAim1HC025",
+          "DMAim1HC030",
+          "DMAim1HC047",
+          "DMAim1HC018",
+          "DMAim1HC019",
+          "DMAim1HC020",
+          "DMAim1HC022",
+          "DMAim1HC023",
+          "DMAim1HC027",
+          "DMAim1HC028",
+          "DMAim1HC029",
+          "DMAim1HC031",
+          "DMAim1HC032",
+          "DMAim1HC035",
+          "DMAim1HC036",
+          "DMAim1HC038",
+          "DMAim1HC051",
+          "DMAim1HC053",
+          "DMAim1HC052",
+          "DMAim1HC046",
+          "DMAim1HC054"
+        ],
+        "tasks": [
+          "tens"
+        ],
+        "totalFiles": 327
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        33,
+        31,
+        19,
+        57,
+        50,
+        48,
+        29,
+        36,
+        29,
+        26,
+        29,
+        66,
+        38,
+        30,
+        59,
+        60,
+        39,
+        33,
+        23,
+        64,
+        66,
+        50,
+        45,
+        57,
+        66,
+        39,
+        33,
+        34,
+        57,
+        34,
+        26,
+        26,
+        19,
+        35,
+        29,
+        21,
+        20,
+        34,
+        24,
+        36
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2026-09-04T17:24:18.792Z"
+  },
+  "source": "openneuro"
+}

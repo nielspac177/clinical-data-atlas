@@ -1,0 +1,136 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds008495",
+  "payload": {
+    "created": "2026-07-27T20:02:42.317Z",
+    "id": "ds008495",
+    "latestSnapshot": {
+      "created": "2026-09-19T00:15:38.000Z",
+      "description": {
+        "Authors": [
+          "Manasi Malik",
+          "Minjae Kim",
+          "Tianmin Shu",
+          "Shari Liu",
+          "Leyla Isik"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds008495.v1.0.2",
+        "Funding": [
+          "National Institute of Mental Health (NIMH) R01MH132826"
+        ],
+        "HowToAcknowledge": "Please cite the associated preprint: Malik, M., Kim, M., Shu, T., Liu, S., & Isik, L. (2026). Bottom-up and generative computations uniquely explain neural responses across the social brain. bioRxiv. https://doi.org/10.64898/2026.02.20.707082",
+        "License": "CC0",
+        "Name": "SI-Neural-Computations",
+        "ReferencesAndLinks": [
+          "https://doi.org/10.64898/2026.02.20.707082",
+          "https://osf.io/hq3r7"
+        ]
+      },
+      "readme": "# SI-Neural-Computations fMRI Dataset\n\n## Overview\n\nThis dataset accompanies:\n\n**Malik, M., Kim, M., Shu, T., Liu, S., & Isik, L. (2026).  \n*Bottom-up and generative computations uniquely explain neural responses across the social brain*.**\n\nThe study examines the neural computations supporting visual social interaction recognition. Participants viewed videos of animated agents depicting real-life social interactions and completed several functional localizer tasks.\n\n## Participants\n\nThe dataset contains 29 participants, labeled `sub-M02` through `sub-M30`. Twenty-five participants were included in the analyses reported in the accompanying manuscript after applying the preregistered exclusion criteria.\n\nParticipant demographics, task availability, analysis inclusion, and exclusion reasons are documented in `participants.tsv`.\n\n## Tasks\n\n### Main task (`task-main`)\n\nParticipants viewed 50 ten-second videos selected from the PHASE dataset (Netanyahu et al., 2021), which contains procedurally generated animated interactions between two agents. The selected videos depicted friendly, neutral, and adversarial interactions.\n\nMost participants completed 10 runs, with each video presented five times. Participants M15, M19, and M22 completed 8 runs.\n\n### Social interaction perception localizer (`task-sipsts`)\n\nParticipants viewed point-light figures either interacting or performing independent actions (Isik et al., 2017). Each participant completed 2 runs.\n\n### Theory of mind localizer (`task-tom`)\n\nParticipants completed a false-belief localizer containing belief and photo conditions (Dodell-Feder et al., 2011). Each participant completed 2 runs.\n\n### Physics localizer (`task-physics`)\n\nParticipants viewed videos depicting either physical-object motion or social interaction (Fischer et al., 2016). Each participant completed 1 run, except M23, for whom physics-localizer data are unavailable.\n\nThe physics localizer was not used in the analyses reported in the accompanying manuscript.\n\n*Note: Participants were instructed to respond on each ToM and physics trial, but missed or mistimed button presses were not treated as task failures when participants were otherwise following the task; response data were not analyzed.*\n\n## Additional behavioral measures\n\nParticipant-level post-scan relationship judgments for the 50 main-task PHASE videos are included in each participant's `beh/` directory. The mapping from task-specific stimulus identifiers to the original PHASE filenames is provided in `stimuli/phase_stimulus_id_mapping.tsv`.\n\nParticipants also completed the 50-item Autism Spectrum Quotient, but those data are not included in this release.\n\n## MRI acquisition\n\nMRI data were collected on a 3 Tesla Philips Elition RX scanner with a 32-channel head coil.\n\n- T1-weighted anatomical resolution: 1 mm isotropic\n- Functional repetition time: 2 s\n- Functional voxel size: 3 mm isotropic\n\nAdditional acquisition details are provided in the BIDS JSON sidecars and accompanying manuscript.\n\n## Dataset structure\n\n```text\ndataset_description.json\nparticipants.tsv\nparticipants.json\ntask-postscan_events.json\nstimuli/\n    phase_stimulus_id_mapping.tsv\nsub-M02/\n    anat/\n    func/\n    beh/\n...\nsub-M30/\nderivatives/\n    fmriprep/\n    GLMsingle/\n```\n\n## fMRIPrep derivatives\n\nThe `derivatives/fmriprep` directory contains a selected subset of outputs generated using fMRIPrep 21.0.2:\n\n- MNI152NLin2009cAsym preprocessed BOLD images\n- BOLD JSON sidecars\n- MNI152NLin2009cAsym brain masks\n- Confounds TSV and JSON files\n\nNative-space functional outputs, anatomical derivatives, HTML reports, and figures are not included.\n\n## GLMsingle derivatives\n\nThe `derivatives/GLMsingle` directory contains Type-D HDF5 outputs for the `main`, `sipsts`, and `tom` tasks.\n\nThe estimates were generated from fMRIPrep-preprocessed data in MNI152NLin2009cAsym space after 4 mm FWHM spatial smoothing. GLMsingle was run with voxel-wise HRF fitting, GLMdenoise, fractional ridge regression, autoscaling, and conversion to percent BOLD signal.\n\nPhysics-localizer GLMsingle outputs are not included.\n\n## Code and model representations\n\nAnalysis code and the model & behavioral representations used in the study are available in the companion GitHub repository:\n\nhttps://github.com/manasimalik/SI-Neural-Computations\n\n## Ethics\n\nThe study received ethical approval from the Johns Hopkins Medicine Institutional Review Board and complied with all relevant ethical regulations. All participants provided written informed consent.\n\n## Citation\n\nMalik, M., Kim, M., Shu, T., Liu, S., & Isik, L. (2026).  \n*Bottom-up and generative computations uniquely explain neural responses across the social brain*.  \nhttps://doi.org/10.64898/2026.02.20.707082\n\nPreregistration: https://osf.io/hq3r7\n\n## References\n\nDodell-Feder, D., Koster-Hale, J., Bedny, M., & Saxe, R. (2011). fMRI item analysis in a theory of mind task. *NeuroImage, 55*(2), 705–712. https://doi.org/10.1016/j.neuroimage.2010.12.040\n\nFischer, J., Mikhael, J. G., Tenenbaum, J. B., & Kanwisher, N. (2016). Functional neuroanatomy of intuitive physical inference. *Proceedings of the National Academy of Sciences, 113*(34), E5072–E5081. https://doi.org/10.1073/pnas.1610344113\n\nIsik, L., Koldewyn, K., Beeler, D., & Kanwisher, N. (2017). Perceiving social interactions in the posterior superior temporal sulcus. *Proceedings of the National Academy of Sciences, 114*(43), E9145–E9152. https://doi.org/10.1073/pnas.1714471114\n\nNetanyahu, A., Shu, T., Katz, B., Barbu, A., & Tenenbaum, J. B. (2021). PHASE: PHysically-grounded Abstract Social Events for Machine Social Perception. *Proceedings of the AAAI Conference on Artificial Intelligence, 35*(1), 845–853. https://doi.org/10.1609/aaai.v35i1.16167\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri",
+          "beh"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 15569600832,
+        "subjects": [
+          "M17",
+          "M02",
+          "M04",
+          "M29",
+          "M07",
+          "M21",
+          "M25",
+          "M06",
+          "M16",
+          "M08",
+          "M11",
+          "M13",
+          "M18",
+          "M22",
+          "M24",
+          "M05",
+          "M03",
+          "M15",
+          "M26",
+          "M27",
+          "M28",
+          "M30",
+          "M23",
+          "M19",
+          "M14",
+          "M09",
+          "M20",
+          "M12",
+          "M10"
+        ],
+        "tasks": [
+          "postscan",
+          "main",
+          "physics",
+          "sipsts",
+          "tom"
+        ],
+        "totalFiles": 1486
+      },
+      "tag": "1.0.2"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        25,
+        26,
+        24,
+        29,
+        22,
+        31,
+        32,
+        26,
+        34,
+        21,
+        19,
+        22,
+        24,
+        26,
+        23,
+        22,
+        28,
+        32,
+        24,
+        18,
+        22,
+        21,
+        19,
+        24,
+        19,
+        23,
+        35,
+        22,
+        23
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "mri",
+        "beh"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2026-09-19T00:09:43.070Z"
+  },
+  "source": "openneuro"
+}

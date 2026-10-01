@@ -1,0 +1,121 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds008701",
+  "payload": {
+    "created": "2026-08-17T08:21:04.491Z",
+    "id": "ds008701",
+    "latestSnapshot": {
+      "created": "2026-09-29T08:20:48.000Z",
+      "description": {
+        "Authors": [
+          "Weng Lam, Cheang"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds008701.v1.0.4",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "MET - Music-Induced Emotion EEG Dataset",
+        "ReferencesAndLinks": null
+      },
+      "readme": "# MET: Music-Induced EEG Dataset\n\n## Overview\n\nThe MET (Music-Induced EEG Dataset) contains EEG recordings collected from 20 participants during music-listening experiments.\n\nEach participant completed:\n- Twenty music-listening sessions are named as ses-txx. (eg. ses-t01 means the song index is 1)\n- Emotion ratings after each session through the Self-Assessment Manikin  (SAM)\n\nEach music session corresponds to a different song. The total recording duration for each song is 130 seconds, including:\n\n- 5 seconds before music onset\n- 120 seconds of music playback\n- 5 seconds after music offset\n\nEEG signals were originally recorded using a 128-channel EEG system at a sampling rate of 1000 Hz. After preprocessing and channel selection, 66 EEG channels are provided in this dataset.\n\nThe dataset follows the Brain Imaging Data Structure (BIDS) specification for EEG recordings.\n\n---\n\n## Repository Structure\n\n- participants.tsv: subject information and emotion labels (valence & arousal level) from the questionnaire they answered.\n\n- ratings.tsv: subjective ratings and song category \n\nEach EEG session contains the following files:\n\n*_eeg.eeg: EEG signal data in BrainVision format. (Unit: µV [microvolts])\n\n*_eeg.vhdr: BrainVision header file containing acquisition parameters.\n\n*_eeg.vmrk: Event marker file.\n\n*_eeg.json: EEG recording metadata.\n\n*_channels.tsv: Information about EEG channels, including channel names and units.\n\n*_events.tsv: Timing information for experimental events.\n\n*_events.json: Description of event variables stored in events.tsv.\n\n*_electrodes.tsv: Spatial coordinates of EEG electrodes.\n\n*_coordsystem.json: Coordinate system used for electrode locations.\n\n*_scans.tsv: List of files acquired during the session.\n\n---\n### Dataset Usage\n\nThe dataset contains:\n\n- EEG recordings from 20 participants\n- Twenty music-listening sessions per participant\n- Subjective ratings including:\n  - Valence (1–9)\n  - Arousal (1–9)\n  - Likeability (1–5)\n  - Familiarity (1–5)\n- Song-level affective labels:\n  - HVHA (High Valence High Arousal)\n  - HVLA (High Valence Low Arousal)\n  - LVHA (Low Valence High Arousal)\n  - LVLA (Low Valence Low Arousal)\n  - N (Neutral)\n\nUsers may utilize either the provided affective categories or the subjective ratings as prediction targets.\n\n### Recommended Tasks\n\nPossible benchmark tasks include:\n\n1. Emotion category classification (HVHA, HVLA, LVHA, LVLA, N)\n2. Valence prediction\n3. Arousal prediction\n4. Likeability prediction\n5. Familiarity prediction\n6. Cross-subject EEG classification\n7. Music-evoked neural pattern analysis\n\n---\n\n## Sample Code (PYTHON):\n\n```py\n\nfrom mne_bids import BIDSPath, read_raw_bids\n\n# 1. Set file path and file name\nbids_path = BIDSPath(\n    subject='01',          # subject index (eg. 01)\n    session='t01',          # trial index (eg. t01)\n    task='music',\n    datatype='eeg',\n    root='/Users/kathy/Documents/EEG data/EGI_preprocessed_bids' # directory root path\n)\n\n# 2. Load BIDS file\nraw_read = read_raw_bids(bids_path=bids_path, extra_params={'preload': True})\n\n# 3. Check Info\nprint(raw_read.info)\n\n```\n\n---\n\n\n\nReferences\n----------\nAppelhoff, S., Sanderson, M., Brooks, T., Vliet, M., Quentin, R., Holdgraf, C., Chaumon, M., Mikulan, E., Tavabi, K., Höchenberger, R., Welke, D., Brunner, C., Rockhill, A., Larson, E., Gramfort, A. and Jas, M. (2019). MNE-BIDS: Organizing electrophysiological data into the BIDS format and facilitating their analysis. Journal of Open Source Software 4: (1896). https://doi.org/10.21105/joss.01896\n\nPernet, C. R., Appelhoff, S., Gorgolewski, K. J., Flandin, G., Phillips, C., Delorme, A., Oostenveld, R. (2019). EEG-BIDS, an extension to the brain imaging data structure for electroencephalography. Scientific Data, 6, 103. https://doi.org/10.1038/s41597-019-0104-8\n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "eeg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [
+          "t24",
+          "t07",
+          "t06",
+          "t03",
+          "t08",
+          "t13",
+          "t01",
+          "t09",
+          "t17",
+          "t05",
+          "t18",
+          "t23",
+          "t15",
+          "t20",
+          "t02",
+          "t04",
+          "t30",
+          "t25",
+          "t27",
+          "t26"
+        ],
+        "size": 14020379430,
+        "subjects": [
+          "01",
+          "03",
+          "15",
+          "02",
+          "19",
+          "04",
+          "09",
+          "05",
+          "12",
+          "11",
+          "10",
+          "06",
+          "07",
+          "08",
+          "13",
+          "14",
+          "16",
+          "17",
+          "18",
+          "20"
+        ],
+        "tasks": [
+          "music"
+        ],
+        "totalFiles": 3198
+      },
+      "tag": "1.0.4"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        23,
+        25,
+        25,
+        22,
+        25,
+        27,
+        22,
+        29,
+        25,
+        28,
+        24,
+        25,
+        25,
+        22,
+        25,
+        26,
+        25,
+        25,
+        21,
+        23
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "eeg"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": "Longitudinal"
+    },
+    "publishDate": "2026-09-08T18:47:29.348Z"
+  },
+  "source": "openneuro"
+}

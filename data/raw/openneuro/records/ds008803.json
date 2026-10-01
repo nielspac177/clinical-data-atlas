@@ -1,0 +1,114 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds008803",
+  "payload": {
+    "created": "2026-09-12T00:06:17.002Z",
+    "id": "ds008803",
+    "latestSnapshot": {
+      "created": "2026-09-12T04:35:49.000Z",
+      "description": {
+        "Authors": [
+          "Sergio Daniel Hernandez Charpak",
+          "Nawal Kinany",
+          "Ilaria Ricchi",
+          "Raphaëlle Schlienger",
+          "Loan Mattera",
+          "Roberto Martuzzi",
+          "Bruno Nazarian",
+          "Robin Demesmaeker",
+          "Andreas Rowald",
+          "Anne Kavounoudias",
+          "Jocelyne Bloch",
+          "Grégoire Courtine",
+          "Dimitri Van De Ville"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds008803.v1.0.0",
+        "Funding": null,
+        "HowToAcknowledge": "Please cite the article: Sergio Daniel Hernandez-Charpak, Nawal Kinany, Ilaria Ricchi, Raphaëlle Schlienger, Loan Mattera, Roberto Martuzzi, Bruno Nazarian, Robin Demesmaeker, Andreas Rowald, Anne Kavounoudias, Jocelyne Bloch, Grégoire Courtine, Dimitri Van De Ville; Towards personalized mapping through lumbosacral spinal cord task fMRI. Imaging Neuroscience 2025; 3 imag_a_00455. doi: https://doi.org/10.1162/imag_a_00455",
+        "License": "CC0",
+        "Name": "Lumbosacral spinal cord task-based fMRI (motor, stretch, tendon vibration) and high-resolution anatomical MRI dataset",
+        "ReferencesAndLinks": null
+      },
+      "readme": "# Lumbosacral spinal cord task-based fMRI (motor, stretch, tendon vibration) and high-resolution anatomical MRI dataset\n\nTask-based fMRI of the lumbosacral spinal cord during active/passive limb\nmovement and tendon vibration, together with high-resolution T2-weighted\nanatomical scans and physiological recordings.\n\n```\n@article{hernandez-charpak_towards_2025,\n\ttitle = {Towards personalized mapping through lumbosacral spinal cord task {fMRI}},\n\tvolume = {3},\n\tissn = {2837-6056},\n\turl = {https://direct.mit.edu/imag/article/doi/10.1162/imag_a_00455/127406/Towards-personalized-mapping-through-lumbosacral},\n\tdoi = {10.1162/imag_a_00455},\n\tlanguage = {en},\n\turldate = {2025-04-28},\n\tjournal = {Imaging Neuroscience},\n\tauthor = {Hernandez-Charpak, Sergio Daniel and Kinany, Nawal and Ricchi, Ilaria and Schlienger, Raphaëlle and Mattera, Loan and Martuzzi, Roberto and Nazarian, Bruno and Demesmaeker, Robin and Rowald, Andreas and Kavounoudias, Anne and Bloch, Jocelyne and Courtine, Grégoire and Van De Ville, Dimitri},\n\tmonth = jan,\n\tyear = {2025},\n\tpages = {imag\\_a\\_00455},\n}\n```\n\n\n## Sessions\n\n- `ses-ankle`, `ses-hip`, `ses-knee`: high-resolution T2-weighted anatomical\n  scan(s) plus active/passive extension/flexion task fMRI runs.\n- `ses-vibration`: tendon vibration task fMRI runs (ankle, hip, knee).\n\nNote: sub-03 only has the vibration session and sub-10 did not have the vibration session.\n\n## Per-run file set\n\nEvery functional run includes:\n\n- `_bold.nii.gz` + `_bold.json` -- the functional MRI data and its\n  acquisition parameters.\n- `_events.tsv` -- onset/duration/weight of the task condition blocks.\n  `ses-vibration` runs additionally have a `trial_type` column\n  (`extension`/`flexion`) marking which direction each vibration block\n  targeted. (`weight` is a constant block-on marker at 1; see\n  `events.json` for both column descriptions.)\n- `_physio.tsv.gz` + `_physio.json` -- the synchronized physiological\n  recording. Columns are\n  `[\"respiratory\", \"cardiac\", \"trigger\", \"cardiac_filtered\"]` sampled at\n  100 Hz for every run except sub-09's `ses-ankle` session (a one-off EMG\n  test for that subject only), which instead has\n  `[\"EMG_1\", \"EMG_2\", \"respiratory\", \"cardiac\", \"trigger\", \"cardiac_filtered\"]`\n  at 1000 Hz. `cardiac_filtered` is the `cardiac` channel after a causal\n  low-pass/smoothing filter (~390ms delay). `StartTime` is negative and\n  specific to each run -- the recording starts a few seconds before the\n  first fMRI volume.\n\nEvery anatomical scan includes `_T2w.nii.gz` + `_T2w.json`. The zoomit T2w were used to trace the invidividual roots to define the personalized spinal levels. (See supplementary figure 1 in the [supplementary materials](https://mitp.silverchair-cdn.com/mitp/content_public/journal/imag/3/10.1162_imag_a_00455/2/imag_a_00455-supp.pdf?Expires=1792186908&Signature=M-QXQEOL93E~-FyMnBK67Ca9lSKa3kpAkEcGNzNkrjzZPfIg~dA0aJ2MB6gdUu0MnykpNeWdpDBAxko-0s9VTUVHcn0MLNWTXLB5KBGZyOsEWcW7RdqvK4iARdwZy4JznQrEkdDjBW6sRKgT5d8fsoYK6yLI9ZATECte5a4wDBL8eUlo2gGjB8m9S50RU1zCFHRHS7w2psBE9IvFQX5p3f~vfMa2zJruk-mUy4~jWoFelJIhYpVug-aPwWw0NmVBvRdKGoCotTxuCn5Vv7yqv69KPc-vcDAY6dBpK2UU-K3DQe4iKcR7NF5tAlbtqVCeYQTxz5nZhdUjjs27dvKPjQ__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA))\n\n- Some subjects have more than a single high-resolution \"zoomit\" T2w scan to ensure there was at least one good quality scan.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "vibration",
+          "knee",
+          "ankle",
+          "hip"
+        ],
+        "size": 11604756024,
+        "subjects": [
+          "05",
+          "01",
+          "12",
+          "04",
+          "02",
+          "11",
+          "06",
+          "09",
+          "08",
+          "07",
+          "10",
+          "03"
+        ],
+        "tasks": [
+          "ankle flexion passive",
+          "hip vibration",
+          "ankle flexion active",
+          "ankle vibration",
+          "hip flexion active",
+          "knee extension active",
+          "ankle extension active",
+          "ankle extension passive",
+          "hip extension passive",
+          "knee flexion passive",
+          "knee vibration"
+        ],
+        "totalFiles": 1347
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "https://doi.org/10.1162/imag_a_00455",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "Task-based fMRI of the lumbosacral spinal cord during active/passive limb movement and tendon vibration, together with high-resolution T2-weighted anatomical scans and physiological recordings.",
+      "studyDomain": "Lumbar spinal cord fMRI",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2026-09-12T04:41:12.266Z"
+  },
+  "source": "openneuro"
+}

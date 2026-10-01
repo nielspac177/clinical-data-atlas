@@ -8,23 +8,24 @@
     "created": "2025-11-30T02:53:52.309Z",
     "id": "ds006971",
     "latestSnapshot": {
-      "created": "2026-05-19T18:38:43.000Z",
+      "created": "2026-09-29T02:37:12.000Z",
       "description": {
         "Authors": [
           "Neha A Reddy",
           "Michelle C Medina",
+          "Julius PA Dewald",
           "Molly G Bright"
         ],
-        "DatasetDOI": "doi:10.18112/openneuro.ds006971.v2.0.0",
+        "DatasetDOI": "doi:10.18112/openneuro.ds006971.v3.0.0",
         "Funding": [
           "NIH grant (MGB) R03HD113915, NIH Funded Training Program (NAR) T32EB025766, AHA Predoctoral Fellowship (MCM) 25PRE1356822"
         ],
-        "HowToAcknowledge": "Please cite this paper: Neha A. Reddy, Michelle C. Medina, Jordan N. Northrop, Chendong Zou, Rebecca G. Clements, Aravind Nehrujee, Milap Sandhu, Molly G. Bright (2025) Impact of multi-echo ICA modeling decisions on motor-task fMRI analysis; bioRxiv 2025.11.28.690440; doi: https://doi.org/10.1101/2025.11.25.690440",
+        "HowToAcknowledge": "Please cite this paper: Neha A. Reddy, Michelle C. Medina, Ana Maria Acosta, Ahalya Mandana, Julius P. A. Dewald, Molly G. Bright (2026) Whole-brain precision functional mapping of a proximal upper-extremity motor task. Biorxiv; doi: https://doi.org/10.64898/2026.09.22.752784",
         "License": "CC0",
         "Name": "Shoulder abduction motor-task fMRI in healthy participants",
         "ReferencesAndLinks": null
       },
-      "readme": "Please cite the following reference if you use these data:\nNeha A. Reddy, Michelle C. Medina, Jordan N. Northrop, Chendong Zou, Rebecca G. Clements, Aravind Nehrujee, Milap Sandhu, Molly G. Bright (2025) Impact of multi-echo ICA modeling decisions on motor-task fMRI analysis; bioRxiv 2025.11.28.690440; doi: https://doi.org/10.1101/2025.11.25.690440\n\nRelease history:\n11/30/2025: initial upload;\n05/19/2026: update shoulder abduction maxes\n",
+      "readme": "Please cite the following reference if you use these data:\nNeha A. Reddy, Michelle C. Medina, Ana Maria Acosta, Ahalya Mandana, Julius P. A. Dewald, Molly G. Bright (2026) Whole-brain precision functional mapping of a proximal upper-extremity motor task. Biorxiv; doi: https://doi.org/10.64898/2026.09.22.752784\n\nRelease history:\n12/01/2025: initial upload\n05/19/2026: update shoulder abduction maxes\n09/20/2026: add shoulder run3, add hand run1, add sub-07",
       "summary": {
         "dataProcessed": false,
         "modalities": [
@@ -35,21 +36,24 @@
           "mri_structural"
         ],
         "sessions": [],
-        "size": 6643085760,
+        "size": 11213646411,
         "subjects": [
-          "02",
-          "01",
           "06",
-          "03",
+          "01",
+          "02",
+          "07",
           "05",
-          "04"
+          "04",
+          "03"
         ],
         "tasks": [
-          "shoulder abduction low, medium, high MVT"
+          "shoulder abduction low, medium, high MVT",
+          "shoulder abduction medium MVT",
+          "hand grasp"
         ],
-        "totalFiles": 215
+        "totalFiles": 394
       },
-      "tag": "2.0.0"
+      "tag": "3.0.0"
     },
     "metadata": {
       "affirmedDefaced": true,
@@ -59,7 +63,8 @@
         24,
         23,
         24,
-        24
+        24,
+        23
       ],
       "associatedPaperDOI": "",
       "dataProcessed": null,

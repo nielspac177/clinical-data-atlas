@@ -1,0 +1,159 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds008714",
+  "payload": {
+    "created": "2026-08-20T13:42:09.799Z",
+    "id": "ds008714",
+    "latestSnapshot": {
+      "created": "2026-10-01T08:11:41.000Z",
+      "description": {
+        "Authors": [
+          "Jure Buzinel",
+          "Jessie Y.S. Choy",
+          "Jessica Norman",
+          "Jessica Hughes-Nind",
+          "Egor Levchenko",
+          "Fred Dick",
+          "Jeremy J. Skipper",
+          "Christina O. Carlisi"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds008714.v1.0.8",
+        "Funding": [
+          "Prudence Trust",
+          "Bickbeck-UCL Centre for NeuroImaging (BUCNI)"
+        ],
+        "HowToAcknowledge": "Please cite the following preprint: https://doi.org/10.64898/2026.08.28.747840",
+        "License": "CC0",
+        "Name": "Naturalistic Neuroimaging Database - Teens",
+        "ReferencesAndLinks": [
+          "https://github.com/jbuzinel/movieproject"
+        ]
+      },
+      "readme": "# NNDb-Teens: A neuroimaging database combining movie-watching and eye-tracking in teenagers.\n\n## Overview\nThe dataset is designed to support research into brain function during naturalistic conditions. Data were acquired at 3T, complemented by physiological and behavioral measures.\nBefore their visit, participants (N=41) filled out questionnaires about demographic information, language background, mental health and emotion regulation. Participants also completed a set of cognitive tests and Ecological Momentary Assessments over the course of two weeks.\nDuring Session 1, the participant watched the entirety of 'Back To The Future' (backtothefuture), divided into three parts. Eye-tracker calibration was performed before each part. The entire process for Session 1 took about three hours.\n\n## Data Organization\nThe dataset follows the BIDS specification:\n- `sub-<participant_id>` directories contain session-level raw data.\n- `sourcedata/` includes raw files of eye-tracker (in asc and edf) and pulse oximetry (in tsv) data.\n- `derivatives/` include preprocessing outputs.\n\n## Contents\n- **fMRI data**: Preprocessed and raw fMRI from movie-watching.\n- **Eye-tracking**: Calibrated gaze and pupil data synchronized with fMRI during movie-wathing and retinotopy tasks.\n- **Physiological recordings**: Pulse oximetry.\n- **Behavioral and cognitive assessments**: Demographic and psychometric data.\n- **Derivatives**: Preprocessed files including Freesurfer and AFNI outputs.\n\nAll preprocessing scripts and analysis code are available on GitHub:\n[https://github.com/jbuzinel/movieproject](https://github.com/jbuzinel/movieproject)\n\n## Access\nThe dataset is released under the CC-BY 4.0 License",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "001"
+        ],
+        "size": 213110772089,
+        "subjects": [
+          "33",
+          "27",
+          "08",
+          "32",
+          "18",
+          "02",
+          "38",
+          "20",
+          "12",
+          "24",
+          "37",
+          "13",
+          "39",
+          "40",
+          "35",
+          "28",
+          "03",
+          "14",
+          "11",
+          "36",
+          "10",
+          "23",
+          "30",
+          "26",
+          "17",
+          "21",
+          "07",
+          "34",
+          "25",
+          "15",
+          "29",
+          "04",
+          "05",
+          "22",
+          "16",
+          "01",
+          "06",
+          "09",
+          "31",
+          "19",
+          "41"
+        ],
+        "tasks": [
+          "backtothefuture"
+        ],
+        "totalFiles": 1041
+      },
+      "tag": "1.0.8"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        45,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "Prudence Trust",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "Observational",
+      "studyDomain": "Naturalistic fMRI, mental health, cognition, ESM",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2026-08-28T09:11:45.070Z"
+  },
+  "source": "openneuro"
+}

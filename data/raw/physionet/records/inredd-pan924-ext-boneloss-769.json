@@ -1,0 +1,49 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "inredd-pan924-ext-boneloss-769",
+  "payload": {
+    "abstract": "<p>InReDD-Dataset-PAN924-Ext-BoneLoss-769 is a restricted-access extension of InReDD-Dataset-PAN924 containing 769 panoramic dental radiographs and 21,047 geometric annotations in a single COCO-compatible JSON file. It provides 18,792 tooth-crown polygons, 769 alveolar-ridge polygons, 760 mandibular reference polygons and 726 maxillary reference polygons, together with per-image sex. The annotations were produced by an expert-in-the-loop workflow in which a senior dental undergraduate delineated cementoenamel-junction and alveolar-crest references under specialist supervision, pre-existing detection and instance-segmentation models generated crown candidates geometrically from those references, two master's students in dentistry divided the manual refinement, and a specialist professor adjudicated uncertain cases and approved the final ground truth. Manual review removed 1,487 of 20,296 candidates, principally crowns on impacted or unerupted teeth, duplicate candidates, severely compromised crowns and tooth-detection failures; a later pre-release audit removed 17 further records. In a blinded re-annotation exercise covering 52 crowns in three radiographs chosen across bone-loss severity, the two annotators identified the same crowns and obtained a mean Dice similarity coefficient of 0.89 and a mean intersection over union of 0.81. Separate downstream YOLO11x-seg benchmarks reached mask mAP@.5:.95 of 70.39% for crowns and 89.63% for the alveolar ridge on a fixed patient-wise test set. The resource supports crown instance segmentation, cementoenamel junction to alveolar crest geometric analysis, and methodological research on periodontal bone-loss assessment.</p>",
+    "access_policy": "Restricted",
+    "compressed_storage_size": 1137815862,
+    "core_doi": "10.13026/yxw0-qr55",
+    "dua": {
+      "name": "PhysioNet Restricted Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Restricted Health Data License 1.5.0"
+    },
+    "main_storage_size": 1180171119,
+    "public_project_uuid": "8c259bf1-9483-4e17-bf78-36bc69e9e5ee",
+    "publish_date": "2026-09-17",
+    "resource_type": "Database",
+    "short_description": "769 panoramic dental radiographs from InReDD-Dataset-PAN924 with 21,064 COCO polygon annotations for periodontal bone-loss assessment: tooth crowns plus alveolar ridge, maxillary and mandibular reference lines.",
+    "slug": "inredd-pan924-ext-boneloss-769",
+    "source_url": "https://physionet.org/content/inredd-pan924-ext-boneloss-769/1.0.0/",
+    "title": "InReDD-Dataset-PAN924-Ext-BoneLoss-769",
+    "topics": [
+      "alveolar ridge",
+      "dentistry",
+      "medical imaging",
+      "tooth segmentation",
+      "maxilla",
+      "computer-aided diagnosis",
+      "coco format",
+      "crown segmentation",
+      "periodontitis",
+      "panoramic radiograph",
+      "mandible",
+      "deep learning",
+      "instance segmentation",
+      "dental radiograph",
+      "periodontal bone loss",
+      "oral health"
+    ],
+    "version": "1.0.0",
+    "version_doi": "10.13026/s6wh-nq14"
+  },
+  "source": "physionet"
+}

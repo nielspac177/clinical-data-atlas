@@ -1,0 +1,32 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "mimic-iii-ext-sbdh",
+  "payload": {
+    "abstract": "<p>This study presents MIMIC-III-Ext-SBDH, a manually reviewed and consolidated annotation dataset of social and behavioral determinants of health (SBDH) derived from clinical notes in the MIMIC-III database. We previously developed SBDH-Reader, a large language model (LLM)-powered method, to extract granular SBDH data from clinical notes through prompt engineering. During the iterative process of refining the SBDH-Reader prompt, we identified several instances where the original ground truth labels, derived from two previously annotated datasets, were inaccurate. These inconsistencies were systematically reviewed and corrected through consensus-based manual annotation, resulting in a consolidated and updated corpus. The final dataset includes 7,225 clinical notes from 6,382 patients across six SBDH categories: employment, housing, marital status, and substance use including alcohol, tobacco, and drug use. The release includes note-level annotations, associated metadata, and checksum files for data integrity verification.</p>\n<p>MIMIC-III-Ext-SBDH is intended to support the development and evaluation of natural language processing and (agentic) LLM methods for extracting SBDH information from unstructured clinical narratives and to facilitate reproducible research on socially informed clinical prediction and phenotyping.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 28436474,
+    "core_doi": "10.13026/6ekf-my57",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 84077496,
+    "public_project_uuid": "59281383-463a-4705-9ffd-317ce9352db3",
+    "publish_date": "2026-09-01",
+    "resource_type": "Database",
+    "short_description": "An annotated social and behavioral determinants of health dataset derived from clinical notes in the MIMIC-III database.",
+    "slug": "mimic-iii-ext-sbdh",
+    "source_url": "https://physionet.org/content/mimic-iii-ext-sbdh/1.0.0/",
+    "title": "MIMIC-III-Ext-SBDH: An annotated social and behavioral determinants of health dataset",
+    "topics": [],
+    "version": "1.0.0",
+    "version_doi": "10.13026/ej3k-2436"
+  },
+  "source": "physionet"
+}

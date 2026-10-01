@@ -8,21 +8,21 @@
     "created": "2026-05-10T00:27:11.015Z",
     "id": "ds007783",
     "latestSnapshot": {
-      "created": "2026-05-10T04:00:08.000Z",
+      "created": "2026-09-28T02:49:14.000Z",
       "description": {
         "Authors": [
-          "Ye Bo"
+          "Ye Yunshuang"
         ],
-        "DatasetDOI": "doi:10.18112/openneuro.ds007783.v1.0.0",
+        "DatasetDOI": "doi:10.18112/openneuro.ds007783.v1.1.0",
         "Funding": [
           "This work was supported by National Key Research and Development Program of China (Noncommunicable Chronic Diseases-National Science and Technology Major Project: 2024ZD0529202 to JW), National Natural Science Foundation of China (82471504 and 32271148 to JW), Key R&D Program of Ningxia Hui Autonomous Region (2026BEG02033 and 2024BEG02027 to JW), the Open Project of Translational Medicine National Major Science and Technology Infrastructure (Shanghai) (TMSK-2024-107 to JW), Medical key Discipline Project of Songjiang District (24SJYXZDA04 to DHW), the Key Discipline Project of Shanghai Municipal Health Commission (2024ZDXK0050 to DHW), and also supported by the Research Grant of Key Laboratory of Anesthesiology and Resuscitation (Huazhong University of Science and Technology), Ministry of Education, China (2025MZFS002 to YSY ).) and Shanghai Engineering Research Center of Peri-operative Organ Support and Function Preservation (No. 20DZ2254200 to JX)."
         ],
-        "HowToAcknowledge": "Ye Yunshuang (2025). fMRI Dataset for Studying Propofol Anesthesia Mechanisms with Awake Baseline in Mice. OpenNeuro. https://doi.org/10.XXXX/XXXXXX",
+        "HowToAcknowledge": "Ye Yunshuang (2026). fMRI Dataset for Studying Propofol Anesthesia Mechanisms with Awake Baseline in Mice (version 1.1.0). OpenNeuro. https://doi.org/10.18112/openneuro.ds007783.v1.1.0",
         "License": "CC0",
         "Name": "fMRI Dataset for Studying Propofol Anesthesia Mechanisms with Awake Baseline in Mice",
         "ReferencesAndLinks": []
       },
-      "readme": "# fMRI Dataset for Studying Propofol Anesthesia Mechanisms with Awake Baseline in Mice\n\n## Dataset Overview\n\nThis dataset contains resting-state functional MRI (fMRI) data from propofol-induced sleep in mice, organized according to the Brain Imaging Data Structure (BIDS) standard version 1.9.0.\n\n**Data Modality:**\n- **fMRI only**: Resting-state functional MRI data from 10 mice (sub-02 to sub-11)\n\n## Dataset Structure\n\n```\nfMRI_only_BIDS/\n├── dataset_description.json       # BIDS dataset metadata\n├── participants.tsv             # Subject metadata (fMRI only)\n├── participants.json             # Metadata column descriptions\n├── README                       # This file\n├── task-rest_bold.json          # Task-specific JSON (inherited)\n├── .bidsignore                 # BIDS ignore file\n├── sub-02/ to sub-11/         # fMRI subjects (10 subjects)\n│   ├── anat/                   # T2-weighted anatomical images\n│   │   ├── sub-XX_T2w.nii.gz\n│   │   └── sub-XX_T2w.json\n│   └── func/                   # Resting-state BOLD fMRI\n│       ├── sub-XX_task-rest_bold.nii.gz\n│       └── sub-XX_task-rest_bold.json\n└── code/                       # Python analysis scripts (see below)\n```\n\n## Acquisition Parameters\n\n### fMRI Data\n| Parameter | Value |\n|-----------|-------|\n| Scanner | Bruker BioSpec 94/20, 9.4 T |\n| Sequence | Gradient-echo EPI |\n| TR | 2000 ms |\n| TE | (see individual JSON sidecars) |\n| Slices | 30 (axial, interleaved ascending) |\n| Slice timing | 0.0 – 1.93 s (30 slices, step = 0.0667 s) |\n| Voxel size | (see individual NIfTI headers) |\n| Phase encoding direction | j- (anterior–posterior) |\n| Subjects | n=10 (sub-02 through sub-11) |\n\n## Subject ID Mapping (Original to BIDS)\n\n| Original ID | BIDS ID | Source Folder |\n|-------------|---------|---------------|\n| 1 | sub-02 | (from PRO10 dataset) |\n| 2 | sub-03 | (from PRO10 dataset) |\n| 3b | sub-04 | (from PRO10 dataset) |\n| 4 | sub-05 | (from PRO10 dataset) |\n| 5c | sub-06 | (from PRO10 dataset) |\n| 6 | sub-07 | (from PRO10 dataset) |\n| 7b | sub-08 | (from PRO10 dataset) |\n| 8 | sub-09 | (from PRO10 dataset) |\n| 9 | sub-10 | (from PRO10 dataset) |\n| 10 | sub-11 | (from PRO10 dataset) |\n\n## Code Directory (`code/`)\n\nThe `code/` directory contains Python 3 scripts used to generate all figures in the manuscript. Each script is prefixed with the figure it corresponds to.\n\n### Requirements\n- Python 3.x\n- numpy\n- scipy\n- matplotlib\n- nibabel\n- nilearn\n\n### Script List\n| Script | Description |\n|--------|-------------|\n| `Fig1F-*` | Fraction of high-motion TRs analysis |\n| `Fig3A-*` | Behavioral response rate time course |\n| `Fig3DE-*` | Modular brain network metrics |\n| `Fig3FH-*` | Graph theory statistics |\n| `Fig3G-*` | Graph theory analysis |\n| `Fig4ABC-*` | Functional connectivity matrix with significance |\n| `Fig4DEF-*` | Connectogram visualization |\n| `Fig4G-*` | ROI summary violin plots |\n| `Fig5AB-*` | Brain activation maps (mricroGL-friendly) |\n| `Fig5C-*` | Binary significance masks |\n| `Fig5D-*` | Global signal subject-level analysis |\n| `Fig5E-*` | Bubble plot of subjects |\n| `Fig5F-*` | Group mask validation |\n| `Fig5G-*` | Subject-level amplification analysis |\n| `Fig6A-Fig6J*` | Thalamus-specific analyses (connectivity, specificity, dynamics) |\n| `S-FigS1C-S-FigS6I-*` | Supplementary figure scripts |\n\n## Validation\n\nThis dataset passes `bids-validator` checks. To validate locally:\n\n```bash\nnpm install -g bids-validator\nbids-validator /path/to/fMRI_only_BIDS/\n```\n\n## Usage Notes\n\n1. **For fMRI analysis**: Use subjects sub-02 through sub-11\n2. **Code execution**: Run Python scripts from the `code/` directory\n\n## License\n\nThis dataset is made available under the **Creative Commons Attribution 4.0 International (CC-BY 4.0)** license.\n\n## Citation\n\nIf you use this dataset, please cite:\n\n> Ye Yunshuang et al. (2025). fMRI Dataset for Studying Propofol Anesthesia Mechanisms with Awake Baseline in Mice. OpenNeuro.\n\nAlso available on Figshare: https://doi.org/10.6084/m9.figshare.32227659\n\n## Contact\n\nFor questions about this dataset, please contact: Ye Yunshuang (Shanghai Jiao Tong University)\n\n## Version History\n\n| Version | Date | Changes |\n|---------|------|---------|\n| v1.0 | 2025-05-10 | Initial release (fMRI only) |\n",
+      "readme": "# fMRI Dataset for Studying Propofol Anesthesia Mechanisms with Awake Baseline in Mice\n\n## Dataset Overview\n\nThis dataset contains resting-state functional MRI (fMRI) data from propofol-induced sleep in mice, organized according to the Brain Imaging Data Structure (BIDS) standard version 1.9.0.\n\n**Data Modality:**\n- **fMRI only**: Resting-state functional MRI data from 10 mice (sub-02 to sub-11)\n\n## Dataset Structure\n\n```\nds007783/\n├── dataset_description.json       # BIDS dataset metadata\n├── participants.tsv             # Subject metadata\n├── participants.json            # Metadata column descriptions\n├── README                       # This file\n├── task-rest_bold.json          # Task-specific JSON (inherited)\n├── .bidsignore                 # BIDS ignore file\n├── sub-02/ to sub-11/         # fMRI subjects (10 subjects)\n│   ├── anat/                   # T2-weighted anatomical images\n│   │   ├── sub-XX_T2w.nii.gz\n│   │   └── sub-XX_T2w.json\n│   └── func/                   # Resting-state BOLD fMRI\n│       ├── sub-XX_task-rest_bold.nii.gz\n│       └── sub-XX_task-rest_bold.json\n└── code/                       # Python analysis scripts (see below)\n```\n\n## Acquisition Parameters\n\n### fMRI Data\n| Parameter | Value |\n|-----------|-------|\n| Scanner | Bruker BioSpec 94/20, 9.4 T |\n| Sequence | Gradient-echo EPI |\n| TR | 2000 ms |\n| TE | (see individual JSON sidecars) |\n| Slices | 30 (axial, interleaved ascending) |\n| Slice timing | 0.0 – 1.93 s (30 slices, step = 0.0667 s) |\n| Voxel size | (see individual NIfTI headers) |\n| Phase encoding direction | j- (anterior–posterior) |\n| Subjects | n=10 (sub-02 through sub-11) |\n\n## Subject ID Mapping (Original to BIDS)\n\n| Original ID | BIDS ID | Source Folder |\n|-------------|---------|---------------|\n| 1 | sub-02 | (from PRO10 dataset) |\n| 2 | sub-03 | (from PRO10 dataset) |\n| 3b | sub-04 | (from PRO10 dataset) |\n| 4 | sub-05 | (from PRO10 dataset) |\n| 5c | sub-06 | (from PRO10 dataset) |\n| 6 | sub-07 | (from PRO10 dataset) |\n| 7b | sub-08 | (from PRO10 dataset) |\n| 8 | sub-09 | (from PRO10 dataset) |\n| 9 | sub-10 | (from PRO10 dataset) |\n| 10 | sub-11 | (from PRO10 dataset) |\n\n## Code Directory (`code/`)\n\nThe `code/` directory contains Python 3 scripts used to generate all figures in the manuscript. Each script is prefixed with the figure it corresponds to.\n\n### Requirements\n- Python 3.x\n- numpy\n- scipy\n- matplotlib\n- nibabel\n- nilearn\n\n### Script List\n| Script | Description |\n|--------|-------------|\n| `Fig1F-*` | Fraction of high-motion TRs analysis |\n| `Fig3A-*` | Behavioral response rate time course |\n| `Fig3DE-*` | Modular brain network metrics |\n| `Fig3FH-*` | Graph theory statistics |\n| `Fig3G-*` | Graph theory analysis |\n| `Fig4ABC-*` | Functional connectivity matrix with significance |\n| `Fig4DEF-*` | Connectogram visualization |\n| `Fig4G-*` | ROI summary violin plots |\n| `Fig5AB-*` | Brain activation maps (mricroGL-friendly) |\n| `Fig5C-*` | Binary significance masks |\n| `Fig5D-*` | Global signal subject-level analysis |\n| `Fig5E-*` | Bubble plot of subjects |\n| `Fig5F-*` | Group mask validation |\n| `Fig5G-*` | Subject-level amplification analysis |\n| `Fig6A-Fig6J*` | Thalamus-specific analyses (connectivity, specificity, dynamics) |\n| `S-FigS1C-S-FigS6I-*` | Supplementary figure scripts |\n\n## Validation\n\nThis dataset passes `bids-validator` checks. To validate locally:\n\n```bash\nnpm install -g bids-validator\nbids-validator /path/to/ds007783/\n```\n\n## Usage Notes\n\n1. **For fMRI analysis**: Use subjects sub-02 through sub-11\n2. **Code execution**: Run Python scripts from the `code/` directory\n\n## License\n\nThis dataset is made available under the **Creative Commons CC0 1.0 Universal\n(Public Domain Dedication)** license. This is consistent with the license under\nwhich the dataset is registered and distributed on OpenNeuro; see\n`dataset_description.json` for the machine-readable declaration.\n\n## Citation\n\nIf you use this dataset, please cite:\n\n> Ye Yunshuang (2026). fMRI Dataset for Studying Propofol Anesthesia Mechanisms with Awake Baseline in Mice (version 1.1.0). OpenNeuro. https://doi.org/10.18112/openneuro.ds007783.v1.1.0\n\nAlso available on Figshare: https://doi.org/10.6084/m9.figshare.32227659\n\n## Contact\n\nFor questions about this dataset, please contact: Ye Yunshuang (Shanghai Jiao Tong University)\n\n## Version History\n\n| Version | Date | Changes |\n|---------|------|---------|\n| v1.0 | 2026-05-10 | Initial release (fMRI only) |\n| v1.1 | 2026-09-28 | Metadata corrections: author name (Ye Bo → Ye Yunshuang), citation DOI, ethics approval statement, license declaration aligned with OpenNeuro |\n",
       "summary": {
         "dataProcessed": false,
         "modalities": [
@@ -33,25 +33,25 @@
           "mri_functional"
         ],
         "sessions": [],
-        "size": 2963820093,
+        "size": 2963821501,
         "subjects": [
-          "03",
-          "11",
-          "02",
           "09",
-          "05",
-          "04",
-          "10",
+          "06",
+          "11",
           "08",
+          "02",
+          "05",
+          "03",
+          "04",
           "07",
-          "06"
+          "10"
         ],
         "tasks": [
           "rest"
         ],
         "totalFiles": 47
       },
-      "tag": "1.0.0"
+      "tag": "1.1.0"
     },
     "metadata": {
       "affirmedDefaced": true,

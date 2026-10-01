@@ -1,0 +1,77 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds008755",
+  "payload": {
+    "created": "2026-08-31T18:01:55.661Z",
+    "id": "ds008755",
+    "latestSnapshot": {
+      "created": "2026-09-04T17:52:12.000Z",
+      "description": {
+        "Authors": [
+          "Zachary Fernandez",
+          "Alice McQueney",
+          "Melinda Osowski",
+          "Xiang Liu",
+          "Yuen Gao",
+          "Andrew Bender",
+          "Norman Scheel",
+          "Erik Shapiro",
+          "Alfred J. Robison",
+          "Chunqi Qian"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds008755.v1.0.0",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Mouse Cocaine Self-Administration Withdrawal DTI",
+        "ReferencesAndLinks": null
+      },
+      "readme": "# Mouse Cocaine Self-Administration Withdrawal DTI\n\nThis dataset contains diffusion MRI data acquired from mice following cocaine or saline self-administration.\n\nThe dataset includes four subjects:\n- Two cocaine self-administration animals\n- Two saline self-administration animals\n\nOnly the withdrawal imaging time point is included in this dataset.\n\nDiffusion MRI was acquired on a 7 Tesla Bruker MRI system at Michigan State University.\n\nFiles are organized according to the Brain Imaging Data Structure (BIDS).\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_diffusion"
+        ],
+        "sessions": [],
+        "size": 55106402,
+        "subjects": [
+          "C2",
+          "S2",
+          "C1",
+          "S4"
+        ],
+        "tasks": [],
+        "totalFiles": 22
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "American Heart Association; National Institute of Health ",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Mouse",
+      "studyDesign": "",
+      "studyDomain": "Addiction ",
+      "studyLongitudinal": "Longitudinal"
+    },
+    "publishDate": "2026-09-04T17:54:21.977Z"
+  },
+  "source": "openneuro"
+}

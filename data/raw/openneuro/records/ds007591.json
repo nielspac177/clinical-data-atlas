@@ -8,7 +8,7 @@
     "created": "2026-03-28T11:25:10.663Z",
     "id": "ds007591",
     "latestSnapshot": {
-      "created": "2026-03-31T19:35:29.000Z",
+      "created": "2026-09-29T23:56:55.000Z",
       "description": {
         "Authors": [
           "Motoshige Sato",
@@ -20,7 +20,7 @@
           "Kenichi Tomeoka",
           "Shuntaro Sasai"
         ],
-        "DatasetDOI": "doi:10.18112/openneuro.ds007591.v1.0.1",
+        "DatasetDOI": "doi:10.18112/openneuro.ds007591.v1.0.3",
         "Funding": [
           "JST, Moonshot R&D Grant Number JPMJMS2012"
         ],
@@ -31,7 +31,7 @@
           "https://doi.org/10.1101/2024.05.09.591996"
         ]
       },
-      "readme": "# Delineating neural contributions to EEG-based speech decoding\n\n## Overview\n128-channel EEG recordings during speech production tasks.\nParticipants produced one of 5 color words (green, magenta, orange, violet, yellow)\nunder three speech conditions: overt, minimally overt, and covert.\n\nEach trial consists of 5 repetitions of the same word (1.25 sec per repetition).\n\n## Channel layout (139 channels total)\n- Channels 1-128: EEG\n- Channels 129-130: DISPLAY (bipolar pair, misc)\n- Channels 131-132: MIC (bipolar pair, misc)\n- Channels 133-134: EOG (bipolar pair)\n- Channels 135-136: EMG upper orbicularis oris (bipolar pair)\n- Channels 137-138: EMG lower orbicularis oris (bipolar pair)\n- Channel 139: TRIGGER (marks trial onsets)\n\n## Session types\n- calibration: Offline data collection for decoder training\n- online: Real-time decoding with trained decoder\n\n## Preprocessing note\nThe EEG channels were recorded with a 10x preamp gain.\nRaw values have been converted to Volts (×1e-6).\n\n## Code\nCode for data loading, preprocessing, and decoding models is available at:\nhttps://github.com/arayabrain/uhd-gmail-public\n",
+      "readme": "# Delineating neural contributions to EEG-based speech decoding\n\n## Overview\n128-channel EEG recordings during speech production tasks.\nParticipants produced one of 5 color words (green, magenta, orange, violet, yellow)\nunder three speech conditions: overt, minimally overt, and covert.\n\nEach trial consists of 5 repetitions of the same word (1.25 sec per repetition).\n\n## Channel layout (139 channels total)\n- Channels 1-128: EEG\n- Channels 129-130: DISPLAY (bipolar pair, misc)\n- Channels 131-132: MIC (bipolar pair, misc)\n- Channels 133-134: EOG (bipolar pair)\n- Channels 135-136: EMG upper orbicularis oris (bipolar pair)\n- Channels 137-138: EMG lower orbicularis oris (bipolar pair)\n- Channel 139: TRIGGER (marks trial onsets)\n\n## Session types\n- calibration: Offline data collection for decoder training\n- online: Real-time decoding with trained decoder\n\n## Preprocessing note\nThe EEG channels were recorded with a 10x preamp gain.\nRaw values have been converted to Volts (×1e-6).\n\n## Code\nCode for data loading, preprocessing, and decoding models is available at:\nhttps://github.com/arayabrain/uhd-gmail-public\n\n## Additional participants (sub-4 through sub-9)\nContinuous EEG is stored in float64 EEGLAB files. Event windows are the final 6.25 seconds of the saved 11.25-second raw analysis epochs, located by exact sample matching in the continuous recording. Each window contains five 1.25-second speech repetitions. These are analysis-window timestamps, not independently measured stimulus or acoustic onset times. See run-level events.json. Trailing epochs without word labels are retained in the continuous EEG but omitted from events. Common electrode coordinates are nominal, not participant-specific.\n\n## Subject 3 condition correction (draft)\nThe 2023-05-23 condition labels in earlier snapshots were reversed. The overt data retained here are subject3-1: backup_calibrated_2 (100 trials) and backup_online_3 (50 trials), both recorded on 2023-05-23. Their EEG recordings, event timing, word labels, and channel annotations are preserved; only the condition labels and BIDS task filenames are corrected.\n\nThe 2023-05-23 subject3-2 recordings (backup_calibrated_1 and backup_online_2; correctly minimally overt) have been removed from this draft. Minimally overt analyses use subject3-4 recorded on 2023-05-24: backup_calibrated_2 (100 trials) and backup_online_2 (50 trials). The 2023-05-24 minimally overt and covert recordings are unchanged. Earlier published snapshots retain their original contents.\n",
       "summary": {
         "dataProcessed": false,
         "modalities": [
@@ -39,34 +39,58 @@
         ],
         "secondaryModalities": [],
         "sessions": [
-          "20230529",
-          "20230511",
-          "20230523",
           "20230524",
+          "20230523",
+          "20230511",
+          "20230529",
+          "20260518",
+          "20260525",
+          "20260605",
           "20230516",
-          "20230512"
+          "20230512",
+          "20260602",
+          "20260601",
+          "20260604",
+          "20260520",
+          "20260527",
+          "20260522",
+          "20260529",
+          "20260523",
+          "20260530"
         ],
-        "size": 1737849881,
+        "size": 13786360297,
         "subjects": [
-          "1",
           "3",
-          "2"
+          "1",
+          "6",
+          "2",
+          "5",
+          "4",
+          "7",
+          "8",
+          "9"
         ],
         "tasks": [
-          "overt",
+          "minimallyovert",
           "covert",
-          "minimallyovert"
+          "overt"
         ],
-        "totalFiles": 102
+        "totalFiles": 298
       },
-      "tag": "1.0.1"
+      "tag": "1.0.3"
     },
     "metadata": {
       "affirmedDefaced": true,
       "ages": [
-        null,
-        null,
-        null
+        36,
+        28,
+        28,
+        45,
+        36,
+        25,
+        20,
+        70,
+        22
       ],
       "associatedPaperDOI": null,
       "dataProcessed": null,

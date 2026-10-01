@@ -1,0 +1,103 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds008837",
+  "payload": {
+    "created": "2026-09-17T18:57:09.583Z",
+    "id": "ds008837",
+    "latestSnapshot": {
+      "created": "2026-09-23T21:41:14.000Z",
+      "description": {
+        "Authors": [
+          "Cedric Cannard",
+          "Demet Yesilbas"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds008837.vv1.1.2",
+        "Funding": [
+          "BIAL Foundation grant 317/22"
+        ],
+        "HowToAcknowledge": "Supported by the BIAL Foundation (grant 317/22). The funder had no role in study design, data collection, analysis, interpretation, or the decision to submit.",
+        "License": "CC0",
+        "Name": "Neural and physiological dynamics before and after unpredictable collision events in virtual reality",
+        "ReferencesAndLinks": [
+          "Preregistration: https://osf.io/xuw34",
+          "Analysis code: https://github.com/amisepa/galea-vr-driving-hazards (GPL-3.0)",
+          "EEGLAB plugin: https://github.com/amisepa/galea-eeglab-plugin (GPL-3.0)"
+        ]
+      },
+      "readme": "BIDS dataset for Cannard & Yesilbas (2026), \"Reactive and predictive processes during unpredictable driving hazards in virtual reality: an exploratory brain and body study with multimodal neurophysiological monitoring\".\n\nPREREGISTRATION: https://osf.io/xuw34 (\"Neural and physiological dynamics before and after unpredictable collision events in virtual reality using novel wearable sensing\"). Analysis code: https://github.com/amisepa/galea-vr-driving-hazards.\n\nParticipants watched immersive VR driving scenes (Varjo Aero HMD) while EEG, EOG, EMG, PPG, EDA and IMU were recorded with the Galea multimodal headset (OpenBCI board, dry electrodes). 120 experimental trials per participant; collision vs no-collision was assigned per trial by a quantum random number generator (ANU QRNG API), independently at 50% probability. A baseline block preceded the experimental block.\n\nRAW layer: sub-XXX/eeg contains the continuous unprocessed recordings, as two EEGLAB .set files per run with _channels.tsv (typed), _eeg.json and _events.tsv (HED 8.1.0 annotated): the main recording (12 EEG + 2 EOG + 4 EMG channels at 250 Hz, task-vrCollisionHazard) and the peripheral recording (PPG, EDA and 9-axis IMU at their native ~50 Hz aux rate, acq-aux). No signal was resampled or filtered; EOG/EMG channels are re-attached to the EEG set only because galea_import splits them out.\n\nsourcedata/: the original unmodified OpenBCI recordings (.txt + Aux .txt and BrainFlow CSVs where present), as produced by the acquisition software.\n\nDERIVATIVE: derivatives/EEGPreprocessed/ holds the epoched, ICA-cleaned 12-channel EEG used for the paper's analyses. Stimulus sequences are in the analysis repository (data/stim_sequences_delivered).",
+      "summary": {
+        "dataProcessed": true,
+        "modalities": [
+          "eeg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [],
+        "size": 1308595525,
+        "subjects": [
+          "011",
+          "003",
+          "016",
+          "018",
+          "014",
+          "015",
+          "007",
+          "001",
+          "005",
+          "004",
+          "010",
+          "006",
+          "002",
+          "013",
+          "008",
+          "017",
+          "009",
+          "012"
+        ],
+        "tasks": [
+          "vrCollisionHazard"
+        ],
+        "totalFiles": 158
+      },
+      "tag": "v1.1.2"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": true,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "eeg"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2026-09-18T22:40:01.409Z"
+  },
+  "source": "openneuro"
+}

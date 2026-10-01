@@ -1,0 +1,87 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds008205",
+  "payload": {
+    "created": "2026-07-10T20:29:50.112Z",
+    "id": "ds008205",
+    "latestSnapshot": {
+      "created": "2026-07-21T20:23:32.000Z",
+      "description": {
+        "Authors": [
+          "Suely Fazio Ferraciolli",
+          "Yohan Jun",
+          "Sergio Valencia",
+          "Valeria Pena Trujillo",
+          "Harry Griffin",
+          "Shohei Fujita",
+          "Eugene Milshteyn",
+          "Berkin Bilgic",
+          "Camilo Jaimes"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds008205.v1.0.0",
+        "Funding": null,
+        "HowToAcknowledge": "Please cite Ferraciolli SF, Jun Y, Valencia S, et al. Pediatric Radiology. 2026;56:867-877. doi:10.1007/s00247-025-06510-0",
+        "License": "CC0",
+        "Name": "3D-QALAS synthetic MRI with Zero-DeepSub in children: initial experience including post-contrast imaging feasibility",
+        "ReferencesAndLinks": null
+      },
+      "readme": "Pediatric 3D-QALAS Brain MRI Dataset\n\nThis dataset contains source 3D-QALAS/MAGIC brain MRI image components\nfrom 26 pediatric participants included in the associated Pediatric\nRadiology publication.\n\nMost participants have five available image components. Participant\nsub-023 has three components in the available source export. No missing\ncomponents were synthesized, duplicated, or interpolated.\n\nThe files are source components of a single 3D-QALAS acquisition. They\nare not conventional T1-weighted images and are not derived quantitative\nT1, T2, or proton-density maps.\n\nThe run indices preserve component ordering and should not be interpreted\nas separate scanner acquisitions.\n\nAssociated publication:\nFerraciolli SF, Jun Y, Valencia S, et al.\n3D-QALAS synthetic MRI with Zero-DeepSub in children: initial experience\nincluding post-contrast imaging feasibility.\nPediatric Radiology. 2026;56:867-877.\ndoi:10.1007/s00247-025-06510-0\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [],
+        "secondaryModalities": [],
+        "sessions": [],
+        "size": 1884,
+        "subjects": [],
+        "tasks": [],
+        "totalFiles": 4
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "https://doi.org/10.1007/s00247-025-06510-0",
+      "dataProcessed": null,
+      "dxStatus": "Other",
+      "grantFunderName": "National Institute of Biomedical Imaging and Bioengineering",
+      "modalities": [],
+      "species": "Human",
+      "studyDesign": "    Prospective observational ",
+      "studyDomain": " Pediatric brain MRI; quantitative MRI; synthetic MRI; 3D-QALAS",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2026-08-31T21:40:02.134Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,130 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds008861",
+  "payload": {
+    "created": "2026-09-23T17:31:54.489Z",
+    "id": "ds008861",
+    "latestSnapshot": {
+      "created": "2026-09-25T07:40:22.000Z",
+      "description": {
+        "Authors": [
+          "[Unspecified1]",
+          "[Unspecified2]"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds008861.v1.0.1",
+        "Funding": [
+          "The study was supported by the Russian Science Foundation (project N 25-18-00739)."
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "MEG+EEG and Structural MRI Dataset: Attended and Ignored Speech-Like Sounds",
+        "ReferencesAndLinks": null
+      },
+      "readme": "# MEG+EEG and Structural MRI Dataset: Attended and Ignored Speech-Like Sounds\n\n## Overview\n\nThis dataset contains magnetoencephalography (MEG), electroencephalography (EEG), and structural magnetic resonance imaging (MRI) data collected to investigate the neural processing of vowel-like acoustic features in healthy adults.\n\nThe experiment included two listening conditions:\n\n- **Attended:** participants actively listened to the sounds and detected a brief silent gap embedded in the stimulus.\n- **Ignored:** participants listened passively to the sounds while their attention was directed to a silent visual stimulus.\n\nThe dataset is intended for studying auditory processing, attention, speech-related acoustic features, and their neural correlates using MEG/EEG recordings and MEG source reconstruction methods.\n\n## Study Design\n\nThe experiment used synthetic vowel-like sounds that varied in their spectral and temporal characteristics. The stimuli were organized into four categories:\n\n- `pv` — periodic vowels\n- `nv` — non-periodic vowels\n- `pn` — periodic non-vowels\n- `nn` — non-periodic non-vowels\n\nThe stimuli were approximately 600 ms long and included different combinations of formant structure and periodicity.\n\nIn the attended condition, a 50-ms silent gap was embedded within the stimulus. Participants were instructed to detect the gap and respond by pressing a button. The gap could occur at different positions within the stimulus.\n\nIn the ignored condition, participants listened passively and were instructed to ignore the auditory stimuli while watching a silent video.\n\n## Participants\n\nThe dataset includes 30 healthy adult participants identified using anonymized labels such as G002, G003, and so on.\n\nParticipant information and demographic characteristics are provided in the corresponding participants files.\n\nPopulation: healthy adults\nGroups: healthy adults\nAge range: 20-41 y\nNumber of participants: 30\n\n## Data Acquisition\n\nMEG data were recorded using an Elekta Neuromag VectorView system with 306 sensors, including magnetometers and planar gradiometers.\n\nMEG and EEG were recorded simultaneously. EEG was acquired using an MCScap EEG cap based on the standard 10–10 electrode placement system. The cap was designed for 64 electrodes; however, 57 electrodes were connected to the EEG inputs of the Elekta system. The 57 connected electrodes corresponded to 57 EEG channels of the MEG amplifier.\n\nThe FIF recordings contain 60 EEG channels. Three Elekta EEG channels were not connected to electrodes on the cap: T9, T10, and Iz. In addition, seven electrodes present on the MCScap were not connected because they were not included in the corresponding electrode configuration of the original Elekta system: FC3, FC4, FCz, CPz, CP5, CP6, and POz.\n\nThe EEG channels were recorded as part of the simultaneous MEG acquisition but were not used in the preprocessing or analyses described in this dataset. The preprocessing pipeline described below therefore concerns the MEG data only.\n\nThe data were sampled at 1000 Hz. Structural MRI data were acquired for individual anatomical reconstruction and source localization.\n\nThe original MEG recordings contained information about head position obtained using continuous head-position indicator (cHPI) signals.\n\n## Dataset Organization\n\nThe dataset follows the Brain Imaging Data Structure (BIDS) specification.\n\nThe main data types include:\n\n- MEG recordings\n- EEG channels recorded simultaneously with the MEG\n- Structural MRI data\n- Anatomical derivatives generated using FreeSurfer\n- Preprocessed MEG data\n- Processing scripts\n\nThe MEG data contain two experimental tasks:\n\n- `task-attended`\n- `task-ignored`\n\nThe exact directory structure and file naming conventions follow the BIDS specification.\n\n## MEG Preprocessing\n\nMEG preprocessing was performed using Elekta MaxFilter and MNE-Python.\n\nThe preprocessing pipeline included:\n\n1. Temporal signal-space separation (tSSS).\n2. Movement compensation and transformation to an optimal head position.\n3. Filtering and removal of power-line noise.\n4. Signal-space projection (SSP) for cardiac and ocular artifacts.\n5. Identification and annotation of movement-related artifacts.\n6. Segmentation of continuous recordings into stimulus-locked epochs.\n\nSSP projectors were estimated using data from both experimental conditions and subsequently applied separately to the attended and ignored recordings.\n\nEpochs were extracted from −200 ms to 800 ms relative to stimulus onset. The prestimulus interval was used for baseline correction in subsequent analyses.\n\n## Event Information\n\nThe experiment included 20 standard stimulus event codes. These codes represented combinations of vowel-like stimulus type and acoustic features.\n\nThe event codes were organized as follows:\n\n| Event codes | Stimulus category |\n|-------------|-------------------|\n| 10–50 | Periodic vowels (`pv`) |\n| 60–100 | Non-periodic vowels (`nv`) |\n| 110–150 | Periodic non-vowels (`pn`) |\n| 160–200 | Non-periodic non-vowels (`nn`) |\n\nThe attended condition also included events related to gap presentation and participant responses. These events are used in analyses of behavioral performance and response timing.\n\n## Structural MRI and Anatomical Processing\n\nIndividual structural MRI data were processed using FreeSurfer.\n\nThe anatomical processing included cortical reconstruction and the generation of subject-specific anatomical surfaces. These surfaces were used to construct the source space and forward model for MEG source reconstruction.\n\nBEM models and source spaces were generated using MNE-Python.\n\n## Source Reconstruction\n\nSource reconstruction was performed using an anatomically constrained MEG forward model and an inverse operator.\n\nThe analysis pipeline used:\n\n- A single-layer BEM model.\n- An `oct6` cortical source space.\n- sLORETA inverse estimation.\n- Noise covariance estimated from the prestimulus period.\n- A common inverse operator for the attended and ignored conditions.\n\nSource estimates were subsequently analyzed within anatomically or functionally defined cortical regions of interest.\n\n## Software\n\nThe main software packages used in the processing pipeline were:\n\n- FreeSurfer 8.1.0\n- MNE-Python 1.9\n- MNE-BIDS\n- Elekta MaxFilter 2.2\n\nAdditional Python and R dependencies are specified in the corresponding processing scripts.\n\n## Processing Scripts\n\nThe processing scripts are organized according to the main stages of the analysis pipeline.\n\nThe scripts include procedures for:\n\n- Estimating head position and transforming recordings to an optimal head position.\n- Filtering MEG data.\n- Computing and applying SSP projectors.\n- Creating stimulus-locked epochs.\n- Building forward models.\n- Computing inverse operators and source estimates.\n- Extracting data from regions of interest.\n\nThe scripts may require modification of input and output paths before execution.\n\n## Data Usage\n\nThe dataset may be used for research on:\n\n- Auditory perception\n- Neural processing of vowel-like acoustic features\n- Attention and auditory processing\n- Speech-related neural responses\n- MEG source reconstruction\n- Neurodevelopmental differences in auditory processing\n\nUsers should consult the associated publication and the dataset documentation before interpreting the data.\n\n## Associated Publications\n\n[TO BE COMPLETED]\n\n## Ethical Considerations\n\nThe study was conducted in accordance with the applicable ethical standards.\n\nAll participants or their legal representatives provided informed consent, as applicable.\n\n## Funding:\n\nThe study was supported by the Russian Science Foundation (project N 25-18-00739).\n\n## Acknowledgements\n\nWe sincerely thank all of volunteers who participated in this study.\n\n## Citation\n\nIf you use this dataset, please cite the associated publication:\n\n[TO BE COMPLETED]\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "meg",
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_structural"
+        ],
+        "sessions": [
+          "vowels"
+        ],
+        "size": 78134107521,
+        "subjects": [
+          "G025",
+          "G029",
+          "G032",
+          "G004",
+          "G011",
+          "G012",
+          "G021",
+          "G030",
+          "G006",
+          "G008",
+          "G013",
+          "G027",
+          "G016",
+          "G031",
+          "G023",
+          "G026",
+          "G033",
+          "G002",
+          "G009",
+          "G015",
+          "G024",
+          "G014",
+          "G005",
+          "G010",
+          "G003",
+          "G020",
+          "G017",
+          "G022",
+          "G028",
+          "G018"
+        ],
+        "tasks": [
+          "ignored",
+          "attended"
+        ],
+        "totalFiles": 466
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        21,
+        24,
+        40,
+        22,
+        24,
+        26,
+        34,
+        25,
+        23,
+        22,
+        26,
+        24,
+        25,
+        35,
+        24,
+        26,
+        22,
+        30,
+        24,
+        25,
+        33,
+        40,
+        30,
+        27,
+        25,
+        25,
+        22,
+        22,
+        20,
+        22
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "meg",
+        "mri"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2026-09-25T07:04:25.827Z"
+  },
+  "source": "openneuro"
+}
