@@ -1,0 +1,159 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds008836",
+  "payload": {
+    "created": "2026-09-17T17:37:30.442Z",
+    "id": "ds008836",
+    "latestSnapshot": {
+      "created": "2026-09-24T17:05:35.000Z",
+      "description": {
+        "Authors": [
+          "Cannard, C.",
+          "Nath, M.",
+          "Becattini, V.",
+          "Laukkonen, R.E.",
+          "Ganesan, S.",
+          "Hanley, A.",
+          "Holecek, A.",
+          "Simonian, N.",
+          "Lifshitz, M.",
+          "Schoeller, F.",
+          "Cahn, B.R.",
+          "Khalsa, S.",
+          "Sacchet, M.D.",
+          "Reggente, N."
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds008836.v1.0.0",
+        "Funding": [
+          "Tiny Blue Dot Foundation grant to N.R."
+        ],
+        "HowToAcknowledge": "Please cite the article associated with this dataset.",
+        "License": "CC0",
+        "Name": "Heartbeat-evoked responses and self-reported meditative depth in Vipassana practitioners",
+        "ReferencesAndLinks": [
+          "Reggente, N., Kothe, C., Brandmeyer, T., Hanada, G., Simonian, N., Mullen, S., et al. (2024). Decoding Depth of Meditation: EEG Insights from Expert Vipassana Practitioners. Biological Psychiatry Global Open Science, 100402. doi: 10.1016/j.bpsgos.2024.100402",
+          "https://github.com/Institute-for-Advanced-Consciousness"
+        ]
+      },
+      "readme": "# Heartbeat-evoked responses and self-reported meditative depth\n\nEEG (64 channels), electrocardiography, respiration, electromyography and\nelectrodermal activity recorded from experienced Vipassana meditators during two\nsessions of meditation with repeated self-reports of meditative depth. The\ndataset derives from the experiment described in Reggente et al. (2024) and\naccompanies an article analysing heartbeat-evoked responses across reported\ndepth (reference to be added on publication). The dataset contains the raw\nrecordings only; no preprocessed data are included.\n\n## Participants\n\nParticipants were experienced Vipassana meditators who self-confirmed\nproficiency in Vipassana as taught by S.N. Goenka, with at least five years of\nmeditation experience and sessions of at least ten minutes practiced at least\nfive times per week. They reported no history of hypotension, neurological or\npsychiatric disorders, or use of central nervous system medications. All study\nmaterials were approved by the Advarra Institutional Review Board (Columbia, MD;\nProtocol No. Pro00063946) and informed consent was obtained from each\nparticipant through Castor eConsent.\n\n`participants.tsv` lists the participants in this dataset. The `in_analysis`\ncolumn marks those included in the analyses of the associated article, and the\nother columns give the age, sex and meditation practice reported at screening\n(`participants.json`). Participant labels are sequential; study record\nidentifiers and session dates are not included.\n\n## Design\n\nEach session (`ses-1`, `ses-2`, at least one week apart) consisted of six blocks\nperformed with eyes closed: resting state (5 min), pre-up meditation (5 min),\nmeditation with a sustained attention passive oddball sequence (SAPO; 35 min),\nan active oddball task (5 min), meditation without the sequence (SILENT; 35 min)\nand a cool-down meditation (5 min). The two 35-minute blocks were interchanged\nbetween a participant's two sessions. During these blocks participants\nindicated the deepest level of meditation since their last report (1 to 5)\nfollowed by their confidence (1 to 5) with a clicker, either spontaneously\n(emerge) or when prompted (probe). See `task-meditation_eeg.json` for the full\ntask description.\n\n## Recording\n\n- EEG: BrainAmp DC 64 (Brain Products; two stacked 32-channel units, hence the\n  \"dual-amp\" system of Reggente et al.) with a 64-channel BrainCap TMS fitted with\n  sintered Ag/AgCl multitrodes plus one ground and one reference, 500 Hz, online\n  reference FCz, ground AFz, impedances below 10 kOhm. The cap was used unmodified:\n  the holes it allows were never cut, and no transcranial magnetic stimulation was\n  part of this study. The scalp was exfoliated with NuPrep (Weaver and Co.) and the\n  electrodes filled with Abralyt 2000, a high-chloride abrasive electrolyte gel\n  (Neurospec; EASYCAP).\n- Physiology: Cognionics Aim II system, recording electromyography from the left\n  and right sternocleidomastoid muscles, respiration by bio-impedance on the left\n  and right pectoralis major (the same leads recorded the ECG), and electrodermal\n  activity from the non-dominant palm.\n- All streams were acquired and synchronized with NeuroPype Experiment Recorder\n  (Intheon) over the Lab Streaming Layer and saved as XDF files.\n\n## Conversion to BIDS\n\nThe conversion code is in `code/` (`step0_convert_to_bids.m` for the recordings,\n`step0_convert_questionnaires.m` for the questionnaires). For each session,\nthe XDF streams were read with clock synchronization and jitter removal (EEGLAB\nxdfimport plugin) and cropped to the time span common to the EEG, physiological\nand marker streams. The physiological channels were resampled onto the EEG\nsample times by linear interpolation, and each marker was placed at the nearest\nEEG sample. Intervals of more than 0.1 s between consecutive time stamps were\ntreated as missing data (see Known issues). No filtering or re-referencing was\napplied.\n\nChannels: 64 EEG channels, `EMG1` to `EMG4` (the ExG channels of the Aim II),\n`ECG`, `RESP`, `GSR` and `PPG`. The photoplethysmography channel is not used in\nthe associated article and is flat in 36 of the 78 recordings. The Aim II oxygen\nsaturation, heart rate, temperature and trigger channels held constant values in\nnearly all recordings and no physiological signal in any, and the packet counter\nis a device counter; these channels are not included. The device labels every\nchannel in microvolts; the respiration, electrodermal and photoplethysmography\nchannels are left in the raw units of the device (`n/a` in `channels.tsv`).\n\n## Events\n\nEach `events.tsv` keeps one row per marker, with the original marker text in\n`value`, its category in `trial_type`, the block in `block`, and the depth and\nconfidence ratings, oddball response times, durations logged at the end of\nsub-blocks and blocks, and clicker keys in their own columns. All columns and\nlevels are described in `task-meditation_events.json`, which also carries the\nHED annotations (HED 8.4.0). Ratings are given as registered: values of 0 and\nabove 5 occur. In the earliest recordings (sub-005 and sub-006) the rating\nmarkers do not name the block; the block given is that of the preceding report or\nprompt window. A free-text note written by the experiment software in every file\nis omitted.\n\n## Questionnaires\n\nQuestionnaires were completed with Castor ePRO and are in `phenotype/`, in one\nfile per questionnaire and session (for example `maas_ses1.tsv` and\n`maas_ses2.tsv`) with one row per participant, each described by its JSON\nsidecar:\n\n- Before the session: Brief Profile of Mood States (`poms_pre`), Mindful\n  Attention Awareness Scale (`maas`), Cognitive and Affective Mindfulness\n  Scale-Revised (`camsr`), Five Facet Mindfulness Questionnaire (`ffmq`) and\n  Freiburg Mindfulness Inventory (`fmi`).\n- After the session: Brief Profile of Mood States (`poms_post`), Meditation Depth\n  Index (`medi`), Toronto Mindfulness Scale (`tms`) and task ratings\n  (`session_ratings`).\n- After the first and the second 35-minute meditation block: ratings in\n  `block1_ratings` and `block2_ratings`.\n\nEach file gives the scores followed by the item responses. Free-text answers are\nnot included, and the item wording of the Brief Profile of Mood States is not\nreproduced. sub-007 has no questionnaires for session 2, and a questionnaire\nmissing for a session has no row.\n\n## Known issues\n\n- sub-021, ses-1: the EEG amplifier stopped mid-recording. The file keeps the\n  31.8 minutes common to all streams.\n- sub-005, ses-2: the EEG amplifier stopped at about 87 minutes, during the SAPO\n  block. The file keeps the 86.6 minutes common to all streams.\n- sub-006, ses-1: the marker stream ends at the break after the SILENT block, so\n  the post-meditation block is not included. The file keeps the 103.7 minutes\n  common to all streams.\n- Gaps in the EEG acquisition. Where no EEG sample was recorded for more than\n  0.1 s, the samples on either side are stored contiguously, a `boundary` event\n  marks the gap, and markers registered during the gap are omitted. Times are\n  approximate, from the start of the recording:\n  - sub-004, ses-2: one 330.6 s gap at about 97 min (128 markers omitted,\n    including two depth and two confidence ratings of the SAPO block).\n  - sub-014, ses-2: one 330.6 s gap at about 77 min (38 markers omitted,\n    including two depth and two confidence ratings of the SILENT block).\n  - sub-009, ses-2: two gaps of 46.9 s and 421.1 s at about 58 and 59 min\n    (no markers).\n  - sub-002, ses-1: six gaps totalling 16.0 s at about 44 min (no markers);\n    ses-2: six gaps totalling 8.3 s at about 29 min (8 markers omitted), and about\n    500 interruptions of one or a few samples that are not marked.\n- sub-028, ses-2: a 43.7 s gap in the physiological stream at about 52 min. The\n  physiological channels are empty (NaN) during this gap.\n\n## References\n\nReggente, N., Kothe, C., Brandmeyer, T., Hanada, G., Simonian, N., Mullen, S.,\net al. (2024). Decoding Depth of Meditation: EEG Insights from Expert Vipassana\nPractitioners. Biological Psychiatry Global Open Science, 100402.\ndoi: 10.1016/j.bpsgos.2024.100402\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "eeg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [
+          "1",
+          "2"
+        ],
+        "size": 72666089224,
+        "subjects": [
+          "027",
+          "001",
+          "002",
+          "003",
+          "004",
+          "005",
+          "006",
+          "007",
+          "008",
+          "009",
+          "010",
+          "011",
+          "012",
+          "013",
+          "029",
+          "031",
+          "033",
+          "038",
+          "030",
+          "018",
+          "016",
+          "036",
+          "034",
+          "032",
+          "035",
+          "037",
+          "039",
+          "028",
+          "026",
+          "014",
+          "015",
+          "017",
+          "019",
+          "020",
+          "021",
+          "022",
+          "023",
+          "024",
+          "025"
+        ],
+        "tasks": [
+          "meditation"
+        ],
+        "totalFiles": 441
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": false,
+      "ages": [
+        34,
+        32,
+        49,
+        31,
+        42,
+        55,
+        48,
+        47,
+        57,
+        68,
+        50,
+        55,
+        60,
+        40,
+        55,
+        67,
+        55,
+        60,
+        46,
+        64,
+        59,
+        38,
+        47,
+        53,
+        27,
+        37,
+        60,
+        40,
+        41,
+        32,
+        56,
+        70,
+        35,
+        32,
+        32,
+        30,
+        29,
+        46,
+        31
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "eeg"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2026-09-24T17:29:09.095Z"
+  },
+  "source": "openneuro"
+}

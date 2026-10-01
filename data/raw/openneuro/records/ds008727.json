@@ -1,0 +1,161 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds008727",
+  "payload": {
+    "created": "2026-08-26T10:23:55.177Z",
+    "id": "ds008727",
+    "latestSnapshot": {
+      "created": "2026-09-16T03:33:35.000Z",
+      "description": {
+        "Authors": [
+          "Tang yancheng"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds008727.v1.0.2",
+        "Funding": [
+          "National Science and Technology Major Project",
+          "National Natural Science Foundation of China",
+          "National Science Foundation of Shanghai"
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "CorrNet_Dataset\n",
+        "ReferencesAndLinks": null
+      },
+      "readme": "# Natural Movie fMRI Dataset (Raw, DeepPrep Derivatives, and Questionnaires)\n\nThis dataset contains naturalistic movie-watching fMRI data collected during three movie viewing conditions: movie1, movie2, and movie3.\n\n## Dataset Contents\n\n1. Raw Data (Dataset Root)\n   - Structural (T1w) and functional fMRI raw BOLD images formatted according to BIDS standards.\n   - Tasks included: movie1, movie2, and movie3.\n\n2. Preprocessed Derivatives (derivatives/deepprep/)\n   - Preprocessed functional MRI data generated using the DeepPrep preprocessing pipeline.\n   - Functional images were spatially normalized to the MNI152NLin2009cAsym standard space.\n   - Includes preprocessed BOLD time series and accompanying confound time series (timeseries.tsv/json).\n\n3. Behavioral Data (sourcedata/)\n   - Behavioral questionnaires are stored in the `sourcedata/questionnaire battery/` directory.\n\n## Structure\nThe dataset strictly follows the Brain Imaging Data Structure (BIDS) v1.8.0 specification.",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [],
+        "size": 43070280051,
+        "subjects": [
+          "208",
+          "213",
+          "227",
+          "232",
+          "237",
+          "201",
+          "202",
+          "203",
+          "204",
+          "205",
+          "206",
+          "207",
+          "209",
+          "210",
+          "211",
+          "212",
+          "214",
+          "215",
+          "216",
+          "217",
+          "219",
+          "221",
+          "222",
+          "223",
+          "225",
+          "226",
+          "228",
+          "229",
+          "230",
+          "231",
+          "220",
+          "218",
+          "240",
+          "241",
+          "239",
+          "233",
+          "234",
+          "235",
+          "247",
+          "236",
+          "244",
+          "245",
+          "242",
+          "246",
+          "243",
+          "238"
+        ],
+        "tasks": [
+          "movie2",
+          "movie1",
+          "movie3"
+        ],
+        "totalFiles": 373
+      },
+      "tag": "1.0.2"
+    },
+    "metadata": {
+      "affirmedDefaced": false,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "Naturalistic Stimulus",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2026-08-29T06:04:20.704Z"
+  },
+  "source": "openneuro"
+}

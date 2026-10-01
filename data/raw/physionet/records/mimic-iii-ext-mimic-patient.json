@@ -1,0 +1,32 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "mimic-iii-ext-mimic-patient",
+  "payload": {
+    "abstract": "<p>This project provides MIMIC-Patient, a structured, per-patient representation of the MIMIC-III database designed for large language model (LLM)&ndash;based clinical question answering. For each of 500 admissions, we reconstruct the patient&rsquo;s episode into a single&nbsp;<code>JSON</code> file that aggregates demographics, admission information, diagnoses, procedures, medications, vital signs, laboratory results, imaging reports, and key free-text clinical notes. The schema is designed to be fine-grained yet compact, so that LLMs can access clinically relevant information without being overwhelmed by the full raw database.</p>\n<p>In addition to the dataset, we provide an answer generation script (<code>answer_agent.py</code>) that implements a patient QA system built on keyword-based routing from natural-language questions to the appropriate <code>JSON</code> fields, followed by LLM-based answer synthesis. This enables standardized benchmarking of LLM performance on retrieval, reasoning, and answer stability when operating on structured EHR abstractions.</p>\n<p>The resource is intended for researchers working on clinical NLP, medical decision-making agents, and evaluation of LLMs on real-world electronic health records. All data are derived from the de-identified MIMIC-III database and are shared under a credentialed health data license. Scientific analyses and benchmark results using this resource are described in a separate manuscript.</p>",
+    "access_policy": "Credentialed",
+    "compressed_storage_size": 3124350,
+    "core_doi": "10.13026/n19w-aw59",
+    "dua": {
+      "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
+    },
+    "is_latest_version": true,
+    "license": {
+      "name": "PhysioNet Credentialed Health Data License 1.5.0"
+    },
+    "main_storage_size": 19433996,
+    "public_project_uuid": "1eebdb42-f8c1-4c71-92af-0a21e7b4d3da",
+    "publish_date": "2026-09-11",
+    "resource_type": "Database",
+    "short_description": "MIMIC-Patient is a patient-level dataset derived from MIMIC-III, providing structured JSON representations of hospital admissions that integrate diagnoses, labs, procedures, and clinical notes to support interactive medical decision-making research.",
+    "slug": "mimic-iii-ext-mimic-patient",
+    "source_url": "https://physionet.org/content/mimic-iii-ext-mimic-patient/1.0.0/",
+    "title": "MIMIC-III-Ext-MIMIC-Patient: Structured Per-Patient JSON Records for Clinical Question Answering",
+    "topics": [],
+    "version": "1.0.0",
+    "version_doi": "10.13026/bzzd-w075"
+  },
+  "source": "physionet"
+}

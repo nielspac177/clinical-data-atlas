@@ -1,0 +1,32 @@
+{
+  "endpoints": [
+    "https://physionet.org/api/v1/project/published/"
+  ],
+  "harvest_method": "api:physionet-published",
+  "native_id": "chexmask-u",
+  "payload": {
+    "abstract": "<p>We present an extended version of the CheXmask dataset, augmenting the original anatomical segmentation masks of chest X-rays with node-wise uncertainty estimates. The dataset retains the comprehensive coverage of five public sources&mdash;ChestX-ray8, CheXpert, MIMIC-CXR-JPG, Padchest, and VinDr-CXR&mdash;while providing uncertainty estimates for each anatomical landmark. CheXmask-U enables both landmark-level and image-level uncertainty assessment, supporting uncertainty-aware segmentation research, robustness evaluation, calibration analysis, and out-of-distribution detection in medical imaging. The dataset includes preprocessed landmark-based segmentation masks for the left lung, right lung, and heart with corresponding node-wise uncertainty estimates, as well as the original individual quality control scores for each of the masks based on Reverse Classification Accuracy (RCA). The obtained uncertainty estimates were evaluated using manual landmark annotations, synthetic corruption experiments, and out-of-distribution analyses, demonstrating meaningful relationships between uncertainty and prediction reliability.</p>",
+    "access_policy": "Open",
+    "compressed_storage_size": 18052237383,
+    "core_doi": "10.13026/9yg7-dm71",
+    "dua": null,
+    "is_latest_version": true,
+    "license": {
+      "name": "Creative Commons Attribution 4.0 International Public License"
+    },
+    "main_storage_size": 42836604819,
+    "public_project_uuid": "5b86a9f9-20ec-4a5e-bd88-ebc7aceb9db4",
+    "publish_date": "2026-09-02",
+    "resource_type": "Database",
+    "short_description": "CheXmask-U provides anatomical segmentation masks of chest X-rays derived from landmarks with node-wise uncertainty estimates, enabling landmark-level and image-level analysis for uncertainty-aware research and robustness evaluation.",
+    "slug": "chexmask-u",
+    "source_url": "https://physionet.org/content/chexmask-u/1.0.0/",
+    "title": "CheXmask-U: Uncertainty Estimation for Landmark-Based Anatomical Segmentation Masks in Chest X-ray Images",
+    "topics": [
+      "uncertainty-aware landmark segmentation"
+    ],
+    "version": "1.0.0",
+    "version_doi": "10.13026/6vn3-3j51"
+  },
+  "source": "physionet"
+}

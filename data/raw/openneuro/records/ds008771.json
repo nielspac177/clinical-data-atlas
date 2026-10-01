@@ -1,0 +1,96 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds008771",
+  "payload": {
+    "created": "2026-09-02T20:19:32.349Z",
+    "id": "ds008771",
+    "latestSnapshot": {
+      "created": "2026-09-03T17:29:45.000Z",
+      "description": {
+        "Authors": [
+          "Quentin Uhl",
+          "Tommaso Pavan",
+          "Julianna Gerold",
+          "Kwok-Shing Chan",
+          "Yohan Jun",
+          "Shohei Fujita",
+          "Aneri Bhatt",
+          "Yixin Ma",
+          "Qiaochu Wang",
+          "Hong-Hsi Lee",
+          "Susie Y. Huang",
+          "Berkin Bilgic",
+          "Ileana Jelescu"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds008771.v1.0.3",
+        "Funding": [
+          "Swiss National Science Foundation (SNSF) Eccellenza grant PCEFP2_194260",
+          "NIH grants R01 EB028797, R01 EB032378, R01 EB034757, R21 AG082377, R21 EB036105, P41 EB030006, U01 EB026996, UG3 EB034875",
+          "NWO/ZonMw Rubicon award 04520232330012"
+        ],
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "Reduced NEXI protocol for the quantification of human gray matter microstructure on the Connectome 2.0 scanner",
+        "ReferencesAndLinks": null
+      },
+      "readme": "================================================================================\nBIDS Dataset: Reduced NEXI protocol for the quantification of human gray matter \nmicrostructure on the Connectome 2.0 scanner\n================================================================================\n\n1. OVERVIEW\n-----------\nThis dataset contains in vivo MRI data from healthy human adults acquired to map \ngray matter microstructure using Neurite Exchange Imaging (NEXI). Data were \ncollected on an ultra-high gradient 3T Siemens MAGNETOM Connectom.X scanner \n(Connectome 2.0) to evaluate an Explainable AI (XAI)-optimized 14-minute protocol.\n\n2. STUDY PARTICIPANTS & DESIGN\n------------------------------\n- Number of subjects: 8 healthy adults (mean age: 29.6 ± 3.9 years).\n- Sessions & Design: \n  - 7 participants underwent two identical scan sessions (scan-rescan) to evaluate \n    test-retest reproducibility using the standard 2 mm protocol.\n  - 1 participant underwent a single high-resolution session (1.6 mm isotropic) \n    without a rescan session.\n- Total files: 651 files across 8 subjects and 2 sessions (~18.1 GB).\n\n3. ACQUISITION PROTOCOL (SUMMARY)\n---------------------------------\nAll data were acquired on a MAGNETOM Connectom.X 3T scanner (500 mT/m gradients, \n600 T/m/s slew rate):\n- Anatomical Reference: High-resolution T1-weighted MPRAGE (0.9 mm isotropic).\n- Diffusion-Weighted Imaging (dMRI): Single-shot spin-echo EPI sequence featuring \n  an XAI-optimized 8-feature subset (b-values up to 12.5 ms/µm², multiple diffusion \n  times).\n- Reverse phase-encoding b0 volumes were included for susceptibility distortion \n  correction.\n\n4. RELATED PUBLICATION\n----------------------\nIf you use these data or reference this dataset, please cite the associated publication \n(Accepted/In Press):\nUhl, Q., Pavan, T., Gerold, J., Chan, K.-S., Jun, Y., Fujita, S., Bhatt, A., \nMa, Y., Wang, Q., Lee, H.-H., Huang, S. Y., Bilgic, B., & Jelescu, I. \n\"Reduced NEXI protocol for the quantification of human gray matter microstructure \non the Connectome 2.0 scanner.\" Imaging Neuroscience (Accepted).\n\n5. CODE AVAILABILITY\n--------------------\nProcessing scripts, model fitting routines, and the XGBoost-SHAP-RFE optimization \npipeline used for this dataset are publicly available at:\nhttps://github.com/Mic-map/graymatter_swissknife\nhttps://github.com/QuentinUhl/XAI-dMRI-protocol-optimization",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_diffusion",
+          "mri_structural"
+        ],
+        "sessions": [
+          "01",
+          "02"
+        ],
+        "size": 18050804345,
+        "subjects": [
+          "04",
+          "03",
+          "07",
+          "02",
+          "05",
+          "06",
+          "01",
+          "08"
+        ],
+        "tasks": [],
+        "totalFiles": 659
+      },
+      "tag": "1.0.3"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        35,
+        26,
+        26,
+        28,
+        32,
+        26,
+        36,
+        28
+      ],
+      "associatedPaperDOI": "https://doi.org/10.1162/IMAG.a.1380",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "Swiss National Science Foundation (SNSF)",
+      "modalities": [
+        "mri"
+      ],
+      "species": "Human",
+      "studyDesign": "Scan-rescan reproducibility study",
+      "studyDomain": "Diffusion MRI / Gray Matter Microstructure / Neuroscience",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2026-09-03T16:03:52.658Z"
+  },
+  "source": "openneuro"
+}

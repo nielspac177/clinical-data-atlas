@@ -8,7 +8,7 @@
     "created": "2022-01-12T11:22:55.791Z",
     "id": "ds003990",
     "latestSnapshot": {
-      "created": "2022-01-11T04:54:03.000Z",
+      "created": "2026-09-07T08:58:59.000Z",
       "description": {
         "Authors": [
           "Sarah Khalife",
@@ -17,14 +17,16 @@
           "Rosa Maria Sanchez-Panchuelo",
           "Julien Besle"
         ],
-        "DatasetDOI": "doi:10.18112/openneuro.ds003990.v1.0.2",
+        "DatasetDOI": "doi:10.18112/openneuro.ds003990.v1.0.3",
         "Funding": [
           "This work was supported by a BBSRC grant (BB/G008906/1) and by the University Research Board of the American University of Beirut. The funding sources had no involvement in the study design, collection, analysis and interpretation of data, writing of the manuscript or decision to submit the article for publication."
         ],
         "HowToAcknowledge": null,
         "License": "CC0",
-        "Name": "fastVsSlowERtactile7T",
-        "ReferencesAndLinks": null
+        "Name": "Fast Event-Related Mapping of Population Fingertip Tuning Properties in Human Sensorimotor Cortex at 7T",
+        "ReferencesAndLinks": [
+          "Khalife, S., Francis, S.T., Schluppeck, D., Sánchez-Panchuelo, R.-M., Besle, J., 2022. Fast Event-Related Mapping of Population Fingertip Tuning Properties in Human Sensorimotor Cortex at 7T. eNeuro 9. https://doi.org/10.1523/ENEURO.0069-22.2022"
+        ]
       },
       "readme": "### Overview\nIn vivo 7T MRI dataset (N=6) including:\n\n- fMRI BOLD timeseries during a fingertip vibrotactile stimulation task (1.5 mm isotropic, reduced transverse FOV centered on primary somatosensory cortex) \n- inplane T2*-weighted anatomical scan (0.25 mm inplane resolution) \n- whole-head T1-weigthed anatomical scan (1mm isotropic, acquired at 3T).\n    \nThe data were collected at the University of Nottingham's Sir Peter Mansfield Imaging Center by Julien Besle, Rosa Maria Sanchez-Panchuelo, Denis Schluppeck and Susan Francis.\n\n### fMRI task details\nVibrotactile somatosensory stimuli were delivered to the fingertips of each participant’s left hand by five piezo-electric devices (Dancer Design, St. Helens, United Kingdom; http://www.dancerdesign.co.uk), according to three different experimental designs (in different runs):\n\n- phase-encoding (PE)\n- slow event-related (ER) (4-12 sec ISI)\n- fast ER (2 sec ISI)\n\nfMRI data were acquired in two sessions. In session 1, only the PE and slow ER designs were used. In session 2, all three designs were used (except for two participants, see notes below).\nIn addition, attention to the stimuli in ER runs was manipulated in the following way:\n\n- in session 1, participants performed either a tactile or a visual discrimination task in different ER runs\n- in session 2, participants performed a tactile discrimination task on stimulations to either the index finger (D2) or the ring finger (D4). The attentional task changed every 30 seconds within each run.\n- in both sessions, participants performed a visual discrimination task during PE runs.\nTimings of the stimulations and attentional tasks (in secs) can be found in the TSV files named \"sub-0*_ses-0*_task-ER*_run-0*_events.tsv\" in the \"func\" folders.\n\nFull details of the stimulation sequences and acquisition parameters can be found in the following manuscript:\nhttps://doi.org/10.1101/2022.01.06.471906\n\n### Some notes:\n- subj 02 does not have PE data in session 2\n- subj 05 does not have slow ER data in session 2\n- subj 05 only had 4 fingertips stimulated in session 2 (due to a malfunction of the piezo-electric device attached to their little finger)\n- subj 06 performed the visual instead of the tactile discrimination task in the slow ER runs of session 2\n",
       "summary": {
@@ -40,7 +42,7 @@
           "01",
           "02"
         ],
-        "size": 7762331246,
+        "size": 7762332253,
         "subjects": [
           "01",
           "02",
@@ -55,9 +57,9 @@
           "PEForward",
           "ERFast"
         ],
-        "totalFiles": 425
+        "totalFiles": 426
       },
-      "tag": "1.0.2"
+      "tag": "1.0.3"
     },
     "metadata": {
       "affirmedDefaced": true,

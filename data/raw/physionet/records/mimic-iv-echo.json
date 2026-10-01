@@ -5,9 +5,9 @@
   "harvest_method": "api:physionet-published",
   "native_id": "mimic-iv-echo",
   "payload": {
-    "abstract": "<p>The MIMIC-IV-ECHO module contains structured echocardiographic measurements and DICOM files from echocardiography exams.</p>\n<p>Structured measurements are available from 206,488 echocardiogram studies (including 179,928 transthoracic, 16,389 stress, and 10,171 transesophageal echocardiograms). These are from 91,372 unique patients who are in the MIMIC-IV Clinical Database and who had echocardiograms conducted between 2008<span> &ndash; </span>2022. The dataset encompasses a broad range of cardiologist-recorded echocardiographic measurements, including chamber sizes and volumes, systolic and diastolic function, valvular morphology and function, aortic root and great vessel dimensions, and Doppler-derived hemodynamics. Unstructured measurements are present in the cardiologist&rsquo;s free-text reports, which will be made available later under the MIMIC-IV-Note module.</p>\n<p>The echocardiogram DICOMs contain more than 500,000 DICOMs across 7,243 studies from 4,579 distinct patients. This subset contains transthoracic echocardiograms for patients who appear in the MIMIC-IV Clinical Database and were admitted between 2017<span>&ndash;</span>2019. A given study consists of numerous sequences of images, with each sequence representing a particular view of the patient's heart.&nbsp;</p>\n<p>Records in MIMIC-IV-ECHO are matched to the MIMIC-IV Clinical Database, making it possible to link to information across the MIMIC-IV modules. We have also provided information for linking the DICOMs to the structured measurements and notes where available.</p>",
+    "abstract": "<p>The MIMIC-IV-Echo module contains structured echocardiographic measurements and DICOM files from echocardiography exams.</p>\n<p>Structured measurements are available from 206,488 echocardiogram studies (including 179,928 transthoracic, 16,389 stress, and 10,171 transesophageal echocardiograms). These are from 91,372 unique patients who are in the MIMIC-IV Clinical Database and who had echocardiograms conducted between 2008<span>&ndash;</span>2022. The dataset encompasses a broad range of cardiologist-recorded echocardiographic measurements, including chamber sizes and volumes, systolic and diastolic function, valvular morphology and function, aortic root and great vessel dimensions, and Doppler-derived hemodynamics. Clinical interpretations and additional findings are contained in cardiologist free-text reports, which will be made available under the MIMIC-IV-Note module.</p>\n<p><span>The DICOM dataset contains 524,137 files across 7,228 studies from 4,572 distinct patients.</span> This subset contains transthoracic echocardiograms for patients who appear in the MIMIC-IV Clinical Database and were admitted between 2017<span>&ndash;</span>2019. A given study consists of numerous sequences of images, with each sequence representing a particular view of the patient's heart.&nbsp;</p>\n<p>Records in MIMIC-IV-Echo are matched to the MIMIC-IV Clinical Database, making it possible to link to information across the MIMIC-IV modules. We have also provided information for linking the DICOM files to the structured measurements and notes where available. <span>This linkage supports multimodal research combining echocardiographic imaging and quantitative measurements with longitudinal clinical data.</span></p>",
     "access_policy": "Credentialed",
-    "compressed_storage_size": 0,
+    "compressed_storage_size": 1686860325027,
     "core_doi": "10.13026/agyq-zp57",
     "dua": {
       "name": "PhysioNet Credentialed Health Data Use Agreement 1.5.0"
@@ -16,17 +16,17 @@
     "license": {
       "name": "PhysioNet Credentialed Health Data License 1.5.0"
     },
-    "main_storage_size": 1896740561762,
-    "public_project_uuid": "8d69d449-04cb-441b-8a6f-dd41468ff447",
-    "publish_date": "2026-03-10",
+    "main_storage_size": 1891653079268,
+    "public_project_uuid": "4b537321-38a0-42d5-bf0c-5f981846ebd5",
+    "publish_date": "2026-08-25",
     "resource_type": "Database",
     "short_description": "The MIMIC-IV-ECHO module contains structured measurements from over 200,000 echocardiograms and more than 500,000 echocardiogram DICOM files. Patients overlap with those in the MIMIC-IV Clinical Database.",
     "slug": "mimic-iv-echo",
-    "source_url": "https://physionet.org/content/mimic-iv-echo/1.0/",
-    "title": "MIMIC-IV-ECHO: Echocardiogram Matched Subset",
+    "source_url": "https://physionet.org/content/mimic-iv-echo/1.0.1/",
+    "title": "MIMIC-IV-Echo: Echocardiogram Matched Subset",
     "topics": [],
-    "version": "1.0",
-    "version_doi": "10.13026/nrjh-5r77"
+    "version": "1.0.1",
+    "version_doi": "10.13026/307c-mr50"
   },
   "source": "physionet"
 }

@@ -1,0 +1,125 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds008834",
+  "payload": {
+    "created": "2026-09-17T08:20:25.932Z",
+    "id": "ds008834",
+    "latestSnapshot": {
+      "created": "2026-09-23T19:01:58.000Z",
+      "description": {
+        "Authors": [
+          "Boda Xiao",
+          "Xiran Xu",
+          "Yujie Yan",
+          "Songyi Li",
+          "Zifeng Zhang",
+          "Linze Zheng",
+          "Jinghua Liang",
+          "Xihong Wu",
+          "Heping Cheng",
+          "Jing Chen"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds008834.v1.0.3",
+        "Funding": null,
+        "HowToAcknowledge": null,
+        "License": "CC0",
+        "Name": "PKUEEG",
+        "ReferencesAndLinks": [
+          "https://www.gstudios.com.cn/"
+        ]
+      },
+      "readme": "PKUEEG directory index (2026-09-17)\n==================================\nData acquisition institution: SHRC, PKU.\n\nsub-XX/ses-dayY/eeg/                 Raw continuous BrainVision EEG and sidecars\nparticipants.tsv / participants.json Participant metadata\nstimuli/audio/                      Fifty shared story recordings\nstimuli/transcripts/                Story text\nstimuli/stimuli.tsv / stimuli.json   Shared stimulus index\nderivatives/preproc_40hz/            1-40 Hz EEG, sampled at 250 Hz\nderivatives/preproc_8hz/             1-8 Hz EEG, sampled at 128 Hz\nderivatives/preprocessing_reports/  Availability of ICA/template processing records\nderivatives/stimulus_features/      Envelope, Mel, wav2vec2 and BERT; static-vector status\nderivatives/stimulus_annotations/   MFA, Pinyin and legacy word boundaries\ncode/                              Processing, feature extraction and structural/BIDS checks\n\nRelease scope: behavioral comprehension accuracy and technical-validation\nanalyses/results are deferred to a future dataset update. Historical/internal\nvalidation reports are maintained outside this release. Anonymous participant\ndemographics and experimental event metadata remain included. The scope is also\nrecorded in code/config/release_scope.json.\n\nStories are allocated 17/16/17 across days (01-17, 18-33, 34-50).\nRaw recordings remain continuous by day; stories are not separate raw runs.\nFeature/annotation index paths are relative to the dataset root. Stimulus index\naudio/text paths remain relative to stimuli/. No eye-tracking data or measured\nindividual electrode coordinates are implied.\n\nThe directory reorganization on 2026-09-16 moved existing files in place, without\ncopying the EEG or feature payloads or changing scientific values. A later,\nmetadata-only correction on the same date changed channels.tsv unit labels from\nV to µV to match the BrainVision headers. It did not rescale any signal values.\nNo missing arrays were invented.\nEarlier reports/checksums are preserved outside the public release directory.\nPublication readiness is assessed separately; a directory scaffold is not evidence\nof completeness. GitHub should host code/documentation, not this full data payload.\n\nOriginal study description (paths updated)\n-----------------------------------------\nPKUEEG\n\nPKUEEG contains anonymized EEG from 25 healthy right-handed native Mandarin\nspeakers during continuous speech perception and eyes-open rest. All participants\ncompleted three recording sessions. Day 1 contains stories 1-17, Day 2 stories\n18-33, and Day 3 stories 34-50. Each session includes one approximately 300-s\neyes-open resting interval.\n\nEthics\n------\nThe protocol was approved by the Institutional Review Board of Peking University\n(IRB00001052-25045). All participants provided written informed consent before\ndata collection. The EEG data were anonymized before release.\n\nAcquisition\n-----------\nDays 1 and 2 were recorded at 1000 Hz with a NeuroScan SynAmps2 system using 62\nscalp EEG channels and two EOG channels. Day 3 was recorded at 1000 Hz with a\nNeuSen Wireless EEG/ERP system manufactured by Neuracle, with 59 scalp EEG\nchannels and five auxiliary channels. Recording system, session order, and story\nset are confounded and should not be interpreted as independent experimental\nfactors. Standard montage labels are provided, but no participant-specific\nelectrode coordinates were collected.\n\nEvents\n------\nEach events.tsv contains one selected interval per story and one rest interval.\nThe original hardware marker stream remains in the BrainVision marker file. When\nduplicate or accidental markers were present, the released interval used the last\nadjacent marker pair whose separation was at least 150 s, matching the segmenting\nrule used for the preprocessing derivatives.\n\nStimuli and behavior\n--------------------\nFifty Mandarin story audio files and matching transcripts are included. The\naudio was synthesized with the Guagua Audiobook platform. Stories 1-25 use the\nDapiaoliang female preset; stories 26-50 use the Huazai male preset.\nBehavioral comprehension accuracy is planned for a future update. Story-level\nstimulus derivatives include a 100-Hz speech envelope; uniform 50-Hz Mel, BERT\nand Wav2Vec 2.0 representations; 12-layer word-level BERT vectors; and MFA\nTextGrid, Pinyin-Hanzi and corrected word timing annotations. Detailed axes,\ndimensions and provenance are recorded under derivatives/stimulus_features and\nderivatives/stimulus_annotations.\n\nDerivatives\n-----------\nThe release includes NPZ derivatives at 1-40 Hz/250 Hz and 1-8 Hz/128 Hz. Signal\nvalues are stored in microvolts. The Day-3 raw BrainVision data and 40-Hz NPZ\nsegments were corrected by a factor of 1e-6 because the source BDF physical unit\nfield was empty even though its physical range was expressed in microvolts. The\n1-8-Hz derivative was regenerated uniformly from the corrected 40-Hz derivative.\n\nCurrent contents and reproducibility limits\n------------------------------------------\nThis copy contains legacy derivatives; it is not the later repair workflow's\noutput. The included EEG preprocessing entry point does not implement bad-segment\nrejection. Extreme amplitudes remain in some NPZ segments, and per-session ICA\nmodels, excluded-component lists and convergence records are not included.\nRaw Day-3 labels and derivative labels differ in capitalization; channel matching\nmust account for this. The existing preprocessing code still has known\ncase-sensitive montage and bad-channel matching limitations.\n\nThe release contains 100-Hz envelope, 50-Hz Mel/wav2vec2/time-aligned BERT, and\n12-layer word-level BERT arrays. word2vec_100hz is a status directory without\narrays; a complete 100-Hz Mel/wav2vec2/BERT feature set is not included.\nThe legacy word-level BERT script does not exactly reconstruct every tested\nreleased array because its terminal overlapping-window rule differs. Complete\nextraction pipelines for the other released features and an end-to-end\nreproducible MFA workflow are not included.\n\ncode/model_downloads/ contains a status README, not pinned model-download\nworkflows. The dependency list is incomplete. Internal validation reports are\nkept outside the release and are not certification of scientific reproducibility. These limitations\nwere documented, not repaired, by the metadata/documentation correction.\nAcquisition reference and ground remain unavailable, and hardware filter settings\nare not documented; no unknown acquisition parameters have been inferred.\n\nPublishing and download links\n-----------------------------\nSee code/docs/PUBLISHING.md and code/docs/GITHUB_README.md for the GitHub/OpenNeuro release plan. No public URL or DOI has been assigned yet.\nAnonymous participant age and sex match the previously confirmed participant table; no names or initials are included.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "eeg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [
+          "day1",
+          "day2",
+          "day3"
+        ],
+        "size": 125460634930,
+        "subjects": [
+          "10",
+          "03",
+          "04",
+          "01",
+          "02",
+          "05",
+          "07",
+          "08",
+          "09",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "06"
+        ],
+        "tasks": [
+          "audio"
+        ],
+        "totalFiles": 584
+      },
+      "tag": "1.0.3"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        24,
+        21,
+        22,
+        25,
+        22,
+        21,
+        21,
+        19,
+        22,
+        24,
+        26,
+        28,
+        20,
+        23,
+        23,
+        24,
+        22,
+        29,
+        23,
+        23,
+        24,
+        23,
+        22,
+        23,
+        24
+      ],
+      "associatedPaperDOI": null,
+      "dataProcessed": null,
+      "dxStatus": null,
+      "grantFunderName": null,
+      "modalities": [
+        "eeg"
+      ],
+      "species": null,
+      "studyDesign": null,
+      "studyDomain": null,
+      "studyLongitudinal": null
+    },
+    "publishDate": "2026-09-18T09:00:58.235Z"
+  },
+  "source": "openneuro"
+}

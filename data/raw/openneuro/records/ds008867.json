@@ -1,0 +1,122 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds008867",
+  "payload": {
+    "created": "2026-09-24T01:57:53.284Z",
+    "id": "ds008867",
+    "latestSnapshot": {
+      "created": "2026-09-24T01:59:28.000Z",
+      "description": {
+        "Authors": [
+          "Attila Pohlmann",
+          "Felipe Reinoso-Carvalho",
+          "Brayan Rodríguez"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds008867.v1.0.0",
+        "Funding": null,
+        "HowToAcknowledge": "Please cite the associated Data in Brief article and this dataset.",
+        "License": "CC0",
+        "Name": "EEG and hedonic responses to sonic-seasoning soundscapes",
+        "ReferencesAndLinks": null
+      },
+      "readme": "EEG and liking responses to sonic-seasoning soundscapes.\n\nPer participant: one combined EEG file (eyes-open + eyes-closed baseline + ~17 s exposure to jungle and deconstruct\nsoundscapes), events.tsv marking segments, with liking ratings and baseline-state survey items in participants.tsv,\nand stimulus audio in /stimuli. Released as recorded (EPOC X hardware bandpass only; no additional software filtering). Recording timestamps removed.\nParticipant IDs are de-identified (sequential sub-NN); the mapping to original recording IDs is held privately and\nis not part of this dataset. See the associated Data in Brief article for full description.\n\nAll participants completed the four conditions in the same fixed order: eyes-open, eyes-closed, jungle, deconstruct.\nThe soundscape order was not counterbalanced.\n\nQUALITY CHANNELS\n----------------\nEach EDF carries, alongside the 14 EEG channels, the manufacturer's continuously logged quality signals,\nall sampled at 128 Hz and listed in each channels.tsv:\n  CQ_<electrode>  per-channel contact quality, ordinal 0-4 (0 = no contact, 4 = good)\n  CQ_Overall      overall contact quality, percent\n  CQ_CMS, CQ_DRL  contact quality of the CMS and DRL reference electrodes, ordinal 0-4\n  EQ_<electrode>  per-channel EEG quality, ordinal 0-4\n  EQ_Overall      overall EEG-quality index, percent\n  EQ_SampleRate   achieved/nominal sampling-rate ratio, -1 to 1\nAcross the 30 released sessions contact quality was uniformly high (CQ_Overall M = 100.0, SD = 0.2,\nrange 99.2-100.0; no channel fell below the acceptable level in any session), while the EEG-quality index\nwas considerably more variable (EQ_Overall M = 62.0, SD = 18.4, range 22.1-90.4). Re-users are encouraged\nto apply their own thresholds to the per-channel indices rather than relying on a single summary.\n\nEEGLAB USERS\n------------\nA processed, EEGLAB-ready version of the two soundscape conditions (jungle, deconstruct)\nis provided under derivatives/eeglab/ as per-condition .set files that import directly\ninto an EEGLAB STUDY with conditions assigned. See derivatives/eeglab/README for details.\nThese derivative files contain the 14 EEG channels only; the quality channels are in the\nraw EDFs at the repository root, which remain the primary, archival data.\n\nREADING THESE FILES\n-------------------\nUse an EDF reader that handles the EMOTIV header correctly (e.g. pyedflib in Python, or EEGLAB's\nBIOSIG importer). Some general-purpose readers misinterpret the header and return flat or\nzero-valued signals; if a channel loads as all zeros, the reader is at fault, not the data.\nAlways sanity-plot one channel after loading.\n\nRESTING CALIBRATION (eyes-open / eyes-closed) — IMPORTANT NOTE\n-------------------------------------------------------------\nThe eyes-open and eyes-closed segments are resting baselines, not length-matched counterparts\nto the 17 s soundscape exposures. Each had a fixed intended duration of ~20 s, but in the\nexperiment builder each advanced on a participant-controlled \"continue\" button (not a hard\ntimer). Segment markers therefore span from segment start to that button press, so recorded\ndurations vary across participants: eyes-open 23.9-202.1 s (M = 32.1) and eyes-closed\n26.3-63.4 s (M = 32.5). The button-press times were not logged and are unrecoverable.\nThe full segments are released unmodified; how to trim or average them is left to the user.\n=> If a length-matched comparison with the soundscape exposures is wanted, the first 17 s of\n   each calibration segment falls within the fixed instructed window for all participants and\n   precedes any post-task advance interval.\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "eeg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [],
+        "size": 51884392,
+        "subjects": [
+          "22",
+          "11",
+          "13",
+          "12",
+          "29",
+          "26",
+          "27",
+          "25",
+          "03",
+          "09",
+          "17",
+          "23",
+          "01",
+          "06",
+          "18",
+          "28",
+          "07",
+          "08",
+          "14",
+          "05",
+          "15",
+          "10",
+          "16",
+          "02",
+          "04",
+          "19",
+          "20",
+          "24",
+          "21",
+          "30"
+        ],
+        "tasks": [
+          "soundscape"
+        ],
+        "totalFiles": 127
+      },
+      "tag": "1.0.0"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        26,
+        34,
+        22,
+        33,
+        30,
+        27,
+        25,
+        36,
+        30,
+        24,
+        28,
+        26,
+        37,
+        35,
+        32,
+        24,
+        24,
+        25,
+        27,
+        37,
+        23,
+        29,
+        40,
+        35,
+        32,
+        38,
+        27,
+        40,
+        27,
+        31
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "eeg"
+      ],
+      "species": "Human",
+      "studyDesign": "",
+      "studyDomain": "Consumer and cognitive neuroscience of multisensory perception: EEG and liking responses to designed soundscapes; sonic seasoning.",
+      "studyLongitudinal": "Cross-Sectional"
+    },
+    "publishDate": "2026-09-24T02:00:08.288Z"
+  },
+  "source": "openneuro"
+}

@@ -1,0 +1,82 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds008859",
+  "payload": {
+    "created": "2026-09-23T06:31:48.278Z",
+    "id": "ds008859",
+    "latestSnapshot": {
+      "created": "2026-09-25T14:17:16.000Z",
+      "description": {
+        "Authors": [
+          "Sayem Rafique",
+          "Zawwad Bin Saif",
+          "Saima Tasfia Roja",
+          "Shantanu Rahman",
+          "Nazmus Sakib",
+          "Rafia Akhter",
+          "Md. Kafiul Islam"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds008859.v1.0.2",
+        "Funding": null,
+        "HowToAcknowledge": "Cite the OpenBCI source dataset: https://doi.org/10.17632/rz2jhpvhp3.2.",
+        "License": "CC0",
+        "Name": "EEG MI-BCI Multidirectional Mouse Cursor Dataset - OpenBCI recordings",
+        "ReferencesAndLinks": [
+          "https://doi.org/10.17632/rz2jhpvhp3.2"
+        ]
+      },
+      "readme": "This dataset contains electroencephalography (EEG) recordings collected for the development and evaluation of a multidirectional motor imagery-based brain-computer interface (MI-BCI) for mouse cursor control. The recordings were acquired using an OpenBCI Ultracortex Mark IV 8-channel wireless EEG system and include neural activity associated with different motor imagery and control conditions.Participants performed trials under six experimental conditions:\nRight-hand motor imagery (RH) — imagining movement of the right hand.\nRight-leg motor imagery (RL) — imagining movement of the right leg.\nLeft-hand motor imagery (LH) — imagining movement of the left hand.\nLeft-leg motor imagery (LL) — imagining movement of the left leg.\nEye blinking (EB) — voluntary eye-blinking activity.\nRest/Break (Break) — resting periods without an instructed motor imagery task.\nThe dataset is intended to support research in brain-computer interfaces, motor imagery decoding, EEG signal processing, machine learning, and neural engineering, including the development and evaluation of algorithms for multidirectional cursor-control applications.",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "eeg"
+        ],
+        "secondaryModalities": [],
+        "sessions": [],
+        "size": 24273908,
+        "subjects": [
+          "07",
+          "02",
+          "05",
+          "01",
+          "04",
+          "06",
+          "03"
+        ],
+        "tasks": [
+          "Multidirectional motor imagery"
+        ],
+        "totalFiles": 50
+      },
+      "tag": "1.0.2"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "10.1109/RAAI67517.2025.11423376",
+      "dataProcessed": null,
+      "dxStatus": "Healthy / Control",
+      "grantFunderName": "Independent University, Bangladesh ",
+      "modalities": [
+        "eeg"
+      ],
+      "species": "Human",
+      "studyDesign": "Within-subject repeated-measures experimental design",
+      "studyDomain": "Task-based EEG study",
+      "studyLongitudinal": "Task-based EEG study"
+    },
+    "publishDate": "2026-09-25T06:06:41.563Z"
+  },
+  "source": "openneuro"
+}

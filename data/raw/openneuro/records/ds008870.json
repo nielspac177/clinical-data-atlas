@@ -1,0 +1,87 @@
+{
+  "endpoints": [
+    "https://openneuro.org/crn/graphql"
+  ],
+  "harvest_method": "api:openneuro-graphql",
+  "native_id": "ds008870",
+  "payload": {
+    "created": "2026-09-24T13:25:00.326Z",
+    "id": "ds008870",
+    "latestSnapshot": {
+      "created": "2026-09-25T07:48:18.000Z",
+      "description": {
+        "Authors": [
+          "Nieves Ruiz Ibáñez",
+          "Ella Gruber",
+          "Andreas Lindström",
+          "Mathias Sablé-Meyer",
+          "Torkel Klingberg"
+        ],
+        "DatasetDOI": "doi:10.18112/openneuro.ds008870.v1.0.1",
+        "Funding": [
+          "Marianne and Marcus Wallenbergs Stiftelse (MMW 2020.0064)",
+          "Grant to the Stockholm University Brain Imaging Centre (SU FV-5.1.2-1035-15)"
+        ],
+        "HowToAcknowledge": "Please cite: Ruiz Ibáñez, N., Gruber, E., Lindström, A., Sablé-Meyer, M., & Klingberg, T. Is Geometry the Language of Mathematics or is Space the Language of Both?",
+        "License": "CC0",
+        "Name": "Is Geometry the Language of Mathematics or is Space the Language of Both? (fMRI study)",
+        "ReferencesAndLinks": [
+          "Preregistration: https://osf.io/gd7xn/",
+          "Materials: https://doi.org/10.5281/zenodo.22744442",
+          "Analysis scripts: https://doi.org/10.5281/zenodo.22798133"
+        ]
+      },
+      "readme": "# Is Geometry the Language of Mathematics or is Space the Language of Both? — fMRI study\n\nIntra-individual, high-density task fMRI dataset (N = 3) from the study *\"Is Geometry the Language of\nMathematics or is Space the Language of Both?\"* (Ruiz Ibáñez, Gruber, Lindström, Sablé-Meyer &\nKlingberg; Department of Neuroscience, Karolinska Institutet).\n\n## Study background\nHumans show more accurate and faster responses with regular geometric shapes (e.g. squares, rectangles) than with\nirregular ones. This effect is called the *geometric regularity effect*. It has been proposed that this sensitivity to\ngeometric regularities is specifically linked to mathematical thinking, supported by the anterior intraparietal sulcus (aIPS). The study tested this\nagainst the alternative that geometry is one of many spatial abilities linked to mathematics.\n\nTwo online behavioral experiments (N = 150 and N = 200; not part of this dataset) found a robust\ngeometric regularity effect that did not explain individual differences in mathematical ability. This\nfMRI dataset tested neural specificity: each participant performed a geometry localizer, a mathematics\ntask and three spatial tasks (sequential order, mental rotation, visuospatial working memory), all with\nregular vs irregular geometric stimuli, except for the mathematical task. Analyses were done in native space per\nparticipant, to test whether any brain region (in particular within the IPS) is shared exclusively by\ngeometry and mathematics. All tasks generally activated bilateral aIPS, and no region was exclusive to\ngeometry and mathematics, pointing to a broad association between mathematics and spatial cognition\nrather than a geometry-specific link.\n\n- Preregistration (fMRI study): https://osf.io/gd7xn/\n- Materials: https://doi.org/10.5281/zenodo.22744442\n- Analysis scripts: https://doi.org/10.5281/zenodo.22798133\n\n## Participants\n3 adults (sub-01 to sub-03). Each completed two scanning sessions on the same day (ses-01, ses-02),\neach about 75 minutes, with a 15-minute break between sessions and self-paced breaks between runs.\nParticipants completed an MRI safety screening form and gave written informed consent. The study was\napproved by the Stockholm Regional Ethical Review Board (2015/975-31).\n\n## Acquisition\nSiemens MAGNETOM Prisma 3T (software XA60), 64-channel head/neck coil, Stockholm University Brain\nImaging Centre (SUBIC).\n\n- **anat**: multi-echo T1-weighted MEMPRAGE, 1 mm isotropic, TR = 2530 ms, TE = 1.69/3.55/5.41/7.27 ms,\n  TI = 1100 ms, flip angle 7°, 176 sagittal slices; the RMS combination of the four echoes is provided.\n  Acquired in ses-01. Defaced prior to BIDS conversion.\n- **func**: T2*-weighted multiband GE-EPI (CMRR), 60 interleaved oblique-axial slices (tilted ~30° from\n  AC-PC), 2 mm isotropic, FOV 208 x 208 x 120 mm, TR = 2000 ms, TE = 30 ms, flip angle 76°,\n  multiband factor 2, GRAPPA 2, phase encoding A>>P (j-), 150 volumes per run (acquisition time 5 min 20 s).\n\n## Tasks\nStimuli were presented with PsychoPy 2023.2.3. Full task descriptions are in\n`task-<label>_bold.json` (TaskDescription) and the conditions in `task-<label>_events.json`.\n\n| task label | task | \n|------------|------|\n| `oddball`  | Visual (geometry) localizer: 6-s miniblocks of six 1-s images (regular shapes, irregular shapes, arithmetic formulas, tools, houses, faces), interblock interval 4/6/8 s; button press when the fixation dot turns red \n| `math`     | Number comparison (choose the larger of two numbers in decimal/scientific notation) vs control (choose the vowel); 18-s blocks of three trials \n| `so`       | Sequential order: complete a sequence of five shapes; regular/irregular shapes vs face/tool/house control; 18-s blocks of two trials \n| `rotation` | Mental rotation: pick the correctly rotated target among four options; regular/irregular shapes vs face/tool/house control; 18-s blocks of two trials \n| `wm`       | Visuospatial working memory: five-dot sequences on a 4 x 4 grid, then judge whether a numbered dot matches location and order; regular/irregular sequences vs control; 18-s blocks of two trials \n\nTask order was fixed across participants:\n- ses-01: so, wm, oddball, math, oddball, rotation, math, oddball, rotation, oddball, so, wm, oddball\n- ses-02: rotation, math, oddball, so, wm, oddball, wm, so, oddball, rotation, oddball, math, oddball\n\nRuns are numbered per task within each session in acquisition order.\n\n## Events\nStimulus presentation was synchronised with the scanner; onsets are in seconds from the first volume\nof each run. Each `*_events.tsv` has one row per trial (`trial_type` = condition, with its duration)\nand one row per button press (`trial_type` = `button_press`, duration 0). \n\n",
+      "summary": {
+        "dataProcessed": false,
+        "modalities": [
+          "mri"
+        ],
+        "secondaryModalities": [
+          "mri_functional",
+          "mri_structural"
+        ],
+        "sessions": [
+          "02",
+          "01"
+        ],
+        "size": 13054329816,
+        "subjects": [
+          "02",
+          "03",
+          "01"
+        ],
+        "tasks": [
+          "math",
+          "oddball",
+          "rotation",
+          "so",
+          "wm"
+        ],
+        "totalFiles": 253
+      },
+      "tag": "1.0.1"
+    },
+    "metadata": {
+      "affirmedDefaced": true,
+      "ages": [
+        null,
+        null,
+        null
+      ],
+      "associatedPaperDOI": "",
+      "dataProcessed": null,
+      "dxStatus": "",
+      "grantFunderName": "",
+      "modalities": [
+        "mri"
+      ],
+      "species": "",
+      "studyDesign": "",
+      "studyDomain": "",
+      "studyLongitudinal": ""
+    },
+    "publishDate": "2026-09-25T07:14:17.924Z"
+  },
+  "source": "openneuro"
+}
